@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "396419988924",
+    "project_id": "english-exam-words-ai",
+    "storage_bucket": "english-exam-words-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396419988924:android:a611bc1e44ca770f7bbfb9",
+        "android_client_info": {
+          "package_name": "com.goodstadt.john.language.exams.en"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBu7SYoWAaXI3CcnIUXiR4yoQ2_PsPvF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
