@@ -1,0 +1,4647 @@
+{
+	"romanized" : false,
+	"native" : "",
+	"name" : "",
+	"sheetname" : "A1WordList-en",
+	"id" : "",
+	"location" : 0,
+	"googlevoiceprefix" : "",
+	"uploaddate" : 1747213019.492379,
+	"voicename" : "",
+	"nativename" : "",
+	"updatedDate" : 978307200,
+	"fileformat" : 0,
+	"tabtitles" : ["Personal","Time","More"],
+	"categories" : [
+		{
+			"tabnumber" : 1,
+			"title" : "Hello",
+			"sortOrder" : 0,"words" :
+			[
+				{
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "name",
+					"translation": "",
+					"group": "Names",
+					"sentences": [
+						{
+							"sentence": "My name is ",
+							"translation": ""
+						},
+						{
+							"sentence": "What is your name?",
+							"translation": ""
+						},
+						{
+							"sentence": "Her name is Maria.",
+							"translation": ""
+						}
+					],
+					"id": 0
+				},
+				{
+					"romanisation": "",
+					"id": 1,
+					"translation": "",
+					"word": "I",
+					"group": "Names",
+					"sentences": [
+						{
+							"sentence": "I am a student.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like coffee.",
+							"translation": ""
+						},
+						{
+							"sentence": "I have a book.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"sortOrder": 1
+				},
+				{
+					"romanisation": "",
+					"word": "last",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "My last name is ",
+							"translation": ""
+						},
+						{
+							"sentence": "His last name is Smith.",
+							"translation": ""
+						},
+						{
+							"sentence": "What is your last name?",
+							"translation": ""
+						}
+					],
+					"id": 2,
+					"partOfSpeech": "",
+					"group": "Names",
+					"translation": ""
+				},
+				{
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "It's nice to meet you.",
+							"translation": ""
+						},
+						{
+							"sentence": "This is a nice place.",
+							"translation": ""
+						},
+						{
+							"sentence": "You are nice.",
+							"translation": ""
+						}
+					],
+					"id": 3,
+					"partOfSpeech": "",
+					"word": "nice",
+					"group": "Names",
+					"sortOrder": 1
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "You can call me _",
+							"translation": ""
+						},
+						{
+							"sentence": "Call me tomorrow.",
+							"translation": ""
+						},
+						{
+							"sentence": "I will call my friend.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "call",
+					"id": 4,
+					"romanisation": "",
+					"group": "Names"
+				},
+				{
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We greet new students politely."
+						},
+						{
+							"sentence": "Greet your teacher.",
+							"translation": ""
+						},
+						{
+							"sentence": "They greet each other.",
+							"translation": ""
+						}
+					],
+					"word": "greet",
+					"group": "Names",
+					"romanisation": "",
+					"id": 5,
+					"translation": "",
+					"sortOrder": 1
+				},
+				{
+					"translation": "",
+					"group": "Names",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "Hello, I am a new student.",
+							"translation": ""
+						},
+						{
+							"sentence": "Hello everyone!",
+							"translation": ""
+						},
+						{
+							"sentence": "She says hello.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"id": 6,
+					"word": "hello",
+					"romanisation": ""
+				},
+				{
+					"translation": "",
+					"id": 7,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "I am pleased to meet you.",
+							"translation": ""
+						},
+						{
+							"sentence": "He looks pleased.",
+							"translation": ""
+						},
+						{
+							"sentence": "We are pleased.",
+							"translation": ""
+						}
+					],
+					"group": "Names",
+					"word": "pleased"
+				},
+				{
+					"translation": "",
+					"word": "we",
+					"group": "Names",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 8,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We are friends."
+						},
+						{
+							"sentence": "We study English.",
+							"translation": ""
+						},
+						{
+							"sentence": "We live here.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"word": "they",
+					"id": 9,
+					"group": "Names",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "They are teachers.",
+							"translation": ""
+						},
+						{
+							"sentence": "They eat lunch.",
+							"translation": ""
+						},
+						{
+							"sentence": "They like music.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": ""
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Mr. Brown is our teacher."
+						},
+						{
+							"sentence": "Mr. Lee is here.",
+							"translation": ""
+						},
+						{
+							"sentence": "This is Mr. Jones.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"translation": "",
+					"word": "Mr.",
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Mr, Mrs...",
+					"id": 0
+				},
+				{
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"word": "Mrs.",
+					"group": "Mr, Mrs...",
+					"sentences": [
+						{
+							"sentence": "Mrs. Johnson works at the bank.",
+							"translation": ""
+						},
+						{
+							"sentence": "Mrs. Smith cooks well.",
+							"translation": ""
+						},
+						{
+							"sentence": "Good morning, Mrs. Davis.",
+							"translation": ""
+						}
+					],
+					"id": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"romanisation": "",
+					"partOfSpeech": "",
+					"id": 2,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Miss Lee is a student."
+						},
+						{
+							"sentence": "Miss Chen is nice.",
+							"translation": ""
+						},
+						{
+							"sentence": "Goodbye, Miss Taylor.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"word": "Miss",
+					"group": "Mr, Mrs..."
+				},
+				{
+					"group": "Mr, Mrs...",
+					"translation": "",
+					"id": 3,
+					"sentences": [
+						{
+							"sentence": "Ms. Brown is the manager.",
+							"translation": ""
+						},
+						{
+							"sentence": "Ms. Wilson is busy.",
+							"translation": ""
+						},
+						{
+							"sentence": "This is Ms. Lopez.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"word": "Ms."
+				},
+				{
+					"word": "Dr.",
+					"partOfSpeech": "",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Dr. Park is a doctor."
+						},
+						{
+							"sentence": "Dr. Miller helps people.",
+							"translation": ""
+						},
+						{
+							"sentence": "See Dr. Adams.",
+							"translation": ""
+						}
+					],
+					"group": "Mr, Mrs...",
+					"id": 4,
+					"romanisation": ""
+				},
+				{
+					"group": "Mr, Mrs...",
+					"word": "Madam",
+					"id": 5,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Madam, welcome to our restaurant."
+						},
+						{
+							"sentence": "Madam, your table is ready.",
+							"translation": ""
+						},
+						{
+							"sentence": "Good evening, Madam.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": ""
+				},
+				{
+					"word": "Title",
+					"translation": "",
+					"id": 6,
+					"sortOrder": 1,
+					"group": "Mr, Mrs...",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Her title is Doctor."
+						},
+						{
+							"sentence": "What is your title?",
+							"translation": ""
+						},
+						{
+							"sentence": "His title is Professor.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"partOfSpeech": ""
+				}
+			]
+		},
+		{
+			"tabnumber": 2,
+			"sortOrder": 5,
+			"words": [
+				{
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": "",
+					"word": "morning",
+					"id": 0,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Good morning, it is 8 AM."
+						},
+						{
+							"sentence": "I drink coffee in the morning.",
+							"translation": ""
+						},
+						{
+							"sentence": "The morning sun is bright.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"group": "Days - Times"
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "Good afternoon, it is 1 PM.",
+							"translation": ""
+						},
+						{
+							"sentence": "We eat lunch in the afternoon.",
+							"translation": ""
+						},
+						{
+							"sentence": "She takes a nap in the afternoon.",
+							"translation": ""
+						}
+					],
+					"word": "afternoon",
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Days - Times",
+					"id": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"word": "evening",
+					"sortOrder": 1,
+					"group": "Days - Times",
+					"translation": "",
+					"id": 2,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "Good evening, it is 7 PM.",
+							"translation": ""
+						},
+						{
+							"sentence": "We watch TV in the evening.",
+							"translation": ""
+						},
+						{
+							"sentence": "The evening sky is beautiful.",
+							"translation": ""
+						}
+					],
+					"romanisation": ""
+				},
+				{
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "Good night, see you tomorrow.",
+							"translation": ""
+						},
+						{
+							"sentence": "I go to bed at night.",
+							"translation": ""
+						},
+						{
+							"sentence": "The stars shine at night.",
+							"translation": ""
+						}
+					],
+					"id": 3,
+					"group": "Days - Times",
+					"partOfSpeech": "",
+					"translation": "",
+					"word": "night",
+					"sortOrder": 1
+				},
+				{
+					"partOfSpeech": "",
+					"word": "today",
+					"translation": "",
+					"sortOrder": 1,
+					"id": 4,
+					"group": "Days - Times",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Today is Wednesday."
+						},
+						{
+							"sentence": "Today is a sunny day.",
+							"translation": ""
+						},
+						{
+							"sentence": "What are you doing today?",
+							"translation": ""
+						}
+					],
+					"romanisation": ""
+				},
+				{
+					"partOfSpeech": "",
+					"translation": "",
+					"word": "tomorrow",
+					"sortOrder": 1,
+					"id": 5,
+					"group": "Days - Times",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "Tomorrow is Thursday.",
+							"translation": ""
+						},
+						{
+							"sentence": "We have a test tomorrow.",
+							"translation": ""
+						},
+						{
+							"sentence": "I will call you tomorrow.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"romanisation": "",
+					"partOfSpeech": "",
+					"group": "Days - Times",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Yesterday was Tuesday."
+						},
+						{
+							"sentence": "Yesterday I went to the park.",
+							"translation": ""
+						},
+						{
+							"sentence": "She visited me yesterday.",
+							"translation": ""
+						}
+					],
+					"id": 6,
+					"translation": "",
+					"word": "yesterday",
+					"sortOrder": 1
+				},
+				{
+					"romanisation": "",
+					"word": "Monday",
+					"translation": "",
+					"id": 7,
+					"sortOrder": 1,
+					"group": "Days - Times",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "Monday is the first day of the week.",
+							"translation": ""
+						},
+						{
+							"sentence": "I don't like Monday mornings.",
+							"translation": ""
+						},
+						{
+							"sentence": "We have a meeting on Monday.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"word": "Tuesday",
+					"sentences": [
+						{
+							"sentence": "I have a meeting on Tuesday.",
+							"translation": ""
+						},
+						{
+							"sentence": "Tuesday is my busy day.",
+							"translation": ""
+						},
+						{
+							"sentence": "She comes every Tuesday.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"id": 8,
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Days - Times",
+					"romanisation": ""
+				},
+				{
+					"partOfSpeech": "",
+					"group": "Days - Times",
+					"word": "Wednesday",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "She visits her every Wednesday.",
+							"translation": ""
+						},
+						{
+							"sentence": "Wednesday is the middle of the week.",
+							"translation": ""
+						},
+						{
+							"sentence": "We have class on Wednesday.",
+							"translation": ""
+						}
+					],
+					"id": 9,
+					"translation": "",
+					"sortOrder": 1
+				},
+				{
+					"word": "Thursday",
+					"id": 10,
+					"translation": "",
+					"romanisation": "",
+					"group": "Days - Times",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Thursday is my favorite day."
+						},
+						{
+							"sentence": "Thursday is almost Friday.",
+							"translation": ""
+						},
+						{
+							"sentence": "He works late on Thursday.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1
+				},
+				{
+					"group": "Days - Times",
+					"sentences": [
+						{
+							"sentence": "We go to the cinema on Friday.",
+							"translation": ""
+						},
+						{
+							"sentence": "Friday is the last workday.",
+							"translation": ""
+						},
+						{
+							"sentence": "I love Friday evenings.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"word": "Friday",
+					"sortOrder": 1,
+					"id": 11,
+					"translation": "",
+					"romanisation": ""
+				},
+				{
+					"group": "Days - Times",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Saturday is the weekend."
+						},
+						{
+							"sentence": "I sleep late on Saturday.",
+							"translation": ""
+						},
+						{
+							"sentence": "Saturday is for relaxing.",
+							"translation": ""
+						}
+					],
+					"id": 12,
+					"word": "Saturday",
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"partOfSpeech": "",
+					"group": "Days - Times",
+					"sentences": [
+						{
+							"sentence": "Sunday is a day off.",
+							"translation": ""
+						},
+						{
+							"sentence": "We go to church on Sunday.",
+							"translation": ""
+						},
+						{
+							"sentence": "Sunday breakfast is special.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 13,
+					"word": "Sunday",
+					"translation": ""
+				},
+				{
+					"translation": "",
+					"word": "date",
+					"group": "Days - Times",
+					"sentences": [
+						{
+							"sentence": "What is the date today?",
+							"translation": ""
+						},
+						{
+							"sentence": "The date is on the calendar.",
+							"translation": ""
+						},
+						{
+							"sentence": "Write the date on the paper.",
+							"translation": ""
+						}
+					],
+					"id": 14,
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "January is the first month of the year."
+						},
+						{
+							"sentence": "My birthday is in January.",
+							"translation": ""
+						},
+						{
+							"sentence": "January is very cold.",
+							"translation": ""
+						}
+					],
+					"word": "January",
+					"group": "Months",
+					"id": 0,
+					"translation": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "My brother was born in February.",
+							"translation": ""
+						},
+						{
+							"sentence": "February has 28 days.",
+							"translation": ""
+						},
+						{
+							"sentence": "Valentine's Day is in February.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"word": "February",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": "",
+					"group": "Months",
+					"id": 1
+				},
+				{
+					"translation": "",
+					"group": "Months",
+					"word": "March",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "It often rains in March."
+						},
+						{
+							"sentence": "Spring starts in March.",
+							"translation": ""
+						},
+						{
+							"sentence": "We plant flowers in March.",
+							"translation": ""
+						}
+					],
+					"id": 2,
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "April follows March.",
+							"translation": ""
+						},
+						{
+							"sentence": "April has 30 days.",
+							"translation": ""
+						},
+						{
+							"sentence": "It's warm in April.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"group": "Months",
+					"word": "April",
+					"id": 3
+				},
+				{
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "We have holidays in May.",
+							"translation": ""
+						},
+						{
+							"sentence": "May is a beautiful month.",
+							"translation": ""
+						},
+						{
+							"sentence": "The trees are green in May.",
+							"translation": ""
+						}
+					],
+					"word": "May",
+					"partOfSpeech": "",
+					"group": "Months",
+					"sortOrder": 1,
+					"id": 4
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "June is the start of summer.",
+							"translation": ""
+						},
+						{
+							"sentence": "School ends in June.",
+							"translation": ""
+						},
+						{
+							"sentence": "June days are long.",
+							"translation": ""
+						}
+					],
+					"word": "June",
+					"partOfSpeech": "",
+					"group": "Months",
+					"translation": "",
+					"id": 5,
+					"sortOrder": 1,
+					"romanisation": ""
+				},
+				{
+					"sortOrder": 1,
+					"translation": "",
+					"id": 6,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "It's very hot in July.",
+							"translation": ""
+						},
+						{
+							"sentence": "July is the seventh month.",
+							"translation": ""
+						},
+						{
+							"sentence": "We go swimming in July.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"word": "July",
+					"group": "Months"
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Our vacation is in August."
+						},
+						{
+							"sentence": "August is very warm.",
+							"translation": ""
+						},
+						{
+							"sentence": "Many people travel in August.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"translation": "",
+					"id": 7,
+					"word": "August",
+					"group": "Months",
+					"romanisation": ""
+				},
+				{
+					"word": "September",
+					"id": 8,
+					"romanisation": "",
+					"group": "Months",
+					"partOfSpeech": "",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "School starts again in September."
+						},
+						{
+							"sentence": "September has 30 days.",
+							"translation": ""
+						},
+						{
+							"sentence": "The weather cools in September.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"word": "October",
+					"partOfSpeech": "",
+					"id": 9,
+					"sentences": [
+						{
+							"sentence": "Halloween is in October.",
+							"translation": ""
+						},
+						{
+							"sentence": "October is the tenth month.",
+							"translation": ""
+						},
+						{
+							"sentence": "Leaves fall in October.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Months",
+					"romanisation": ""
+				},
+				{
+					"word": "November",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 10,
+					"sentences": [
+						{
+							"sentence": "The leaves fall in November.",
+							"translation": ""
+						},
+						{
+							"sentence": "November is before December.",
+							"translation": ""
+						},
+						{
+							"sentence": "Thanksgiving is in November.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"group": "Months"
+				},
+				{
+					"partOfSpeech": "",
+					"translation": "",
+					"romanisation": "",
+					"id": 11,
+					"group": "Months",
+					"word": "December",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Christmas is in December."
+						},
+						{
+							"sentence": "December is the last month.",
+							"translation": ""
+						},
+						{
+							"sentence": "It snows in December.",
+							"translation": ""
+						}
+					]
+				}
+			],
+			"title": "Dates"
+		},
+		{
+			"tabnumber": 2,
+			"sortOrder": 20,
+			"words": [
+				{
+					"sortOrder": 2,
+					"id": 0,
+					"word": "0",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "0 books"
+						},
+						{
+							"sentence": "I have 0 apples.",
+							"translation": ""
+						},
+						{
+							"sentence": "The room has 0 chairs.",
+							"translation": ""
+						}
+					],
+					"group": "1 to 20",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": ""
+				},
+				{
+					"translation": "",
+					"id": 1,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sortOrder": 2,
+					"word": "1",
+					"group": "1 to 20",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "1 book"
+						},
+						{
+							"sentence": "I have 1 sister.",
+							"translation": ""
+						},
+						{
+							"sentence": "There is 1 pen on the table.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "2 books",
+							"translation": ""
+						},
+						{
+							"sentence": "I need 2 eggs.",
+							"translation": ""
+						},
+						{
+							"sentence": "She has 2 cats.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"romanisation": "",
+					"word": "2",
+					"id": 2,
+					"group": "1 to 20",
+					"partOfSpeech": ""
+				},
+				{
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": "",
+					"id": 3,
+					"group": "1 to 20",
+					"sortOrder": 1,
+					"word": "3",
+					"sentences": [
+						{
+							"sentence": "3 books",
+							"translation": ""
+						},
+						{
+							"sentence": "We need 3 chairs.",
+							"translation": ""
+						},
+						{
+							"sentence": "He has 3 brothers.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "4 books"
+						},
+						{
+							"sentence": "There are 4 seasons.",
+							"translation": ""
+						},
+						{
+							"sentence": "She bought 4 oranges.",
+							"translation": ""
+						}
+					],
+					"group": "1 to 20",
+					"word": "4",
+					"translation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 4
+				},
+				{
+					"translation": "",
+					"sortOrder": 1,
+					"id": 5,
+					"group": "1 to 20",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "5 books"
+						},
+						{
+							"sentence": "I have 5 fingers.",
+							"translation": ""
+						},
+						{
+							"sentence": "The meeting is at 5 o'clock.",
+							"translation": ""
+						}
+					],
+					"word": "5",
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"partOfSpeech": "",
+					"word": "6",
+					"sortOrder": 1,
+					"group": "1 to 20",
+					"translation": "",
+					"id": 6,
+					"sentences": [
+						{
+							"sentence": "6 books",
+							"translation": ""
+						},
+						{
+							"sentence": "There are 6 people here.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is 6 years old.",
+							"translation": ""
+						}
+					],
+					"romanisation": ""
+				},
+				{
+					"group": "1 to 20",
+					"word": "7",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "7 books",
+							"translation": ""
+						},
+						{
+							"sentence": "A week has 7 days.",
+							"translation": ""
+						},
+						{
+							"sentence": "I wake up at 7 AM.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 7,
+					"partOfSpeech": ""
+				},
+				{
+					"partOfSpeech": "",
+					"group": "1 to 20",
+					"romanisation": "",
+					"word": "8",
+					"translation": "",
+					"id": 8,
+					"sentences": [
+						{
+							"sentence": "8 books",
+							"translation": ""
+						},
+						{
+							"sentence": "An octopus has 8 legs.",
+							"translation": ""
+						},
+						{
+							"sentence": "My house number is 8.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1
+				},
+				{
+					"id": 9,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "9 books"
+						},
+						{
+							"sentence": "A cat has 9 lives.",
+							"translation": ""
+						},
+						{
+							"sentence": "I go to bed at 9 PM.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "1 to 20",
+					"partOfSpeech": "",
+					"word": "9"
+				},
+				{
+					"group": "1 to 20",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "10 books"
+						},
+						{
+							"sentence": "I have 10 fingers.",
+							"translation": ""
+						},
+						{
+							"sentence": "Count to 10.",
+							"translation": ""
+						}
+					],
+					"word": "10",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"translation": "",
+					"id": 10
+				},
+				{
+					"romanisation": "",
+					"id": 11,
+					"sortOrder": 1,
+					"group": "1 to 20",
+					"word": "11",
+					"sentences": [
+						{
+							"sentence": "11 books",
+							"translation": ""
+						},
+						{
+							"sentence": "My bus is number 11.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is 11 years old.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"translation": ""
+				},
+				{
+					"sortOrder": 1,
+					"id": 12,
+					"partOfSpeech": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "12 books",
+							"translation": ""
+						},
+						{
+							"sentence": "A year has 12 months.",
+							"translation": ""
+						},
+						{
+							"sentence": "It's 12 o'clock.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"word": "12",
+					"group": "1 to 20"
+				},
+				{
+					"translation": "",
+					"id": 13,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "13 books"
+						},
+						{
+							"sentence": "Friday the 13th is unlucky.",
+							"translation": ""
+						},
+						{
+							"sentence": "I live at number 13.",
+							"translation": ""
+						}
+					],
+					"word": "13",
+					"romanisation": "",
+					"group": "1 to 20",
+					"sortOrder": 1
+				},
+				{
+					"word": "14",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "1 to 20",
+					"sentences": [
+						{
+							"sentence": "14 books",
+							"translation": ""
+						},
+						{
+							"sentence": "Valentine's Day is February 14.",
+							"translation": ""
+						},
+						{
+							"sentence": "There are 14 students.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"id": 14,
+					"romanisation": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "15 books",
+							"translation": ""
+						},
+						{
+							"sentence": "I need 15 minutes.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is 15 years old.",
+							"translation": ""
+						}
+					],
+					"word": "15",
+					"partOfSpeech": "",
+					"group": "1 to 20",
+					"translation": "",
+					"id": 15,
+					"sortOrder": 1,
+					"romanisation": ""
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "16 books"
+						},
+						{
+							"sentence": "He is 16 years old.",
+							"translation": ""
+						},
+						{
+							"sentence": "There are 16 chairs.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"id": 16,
+					"sortOrder": 1,
+					"group": "1 to 20",
+					"romanisation": "",
+					"word": "16",
+					"partOfSpeech": ""
+				},
+				{
+					"word": "17",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "17 books"
+						},
+						{
+							"sentence": "My birthday is March 17.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is 17 years old.",
+							"translation": ""
+						}
+					],
+					"group": "1 to 20",
+					"id": 17,
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"translation": "",
+					"id": 18,
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "18 books",
+							"translation": ""
+						},
+						{
+							"sentence": "He is 18 years old.",
+							"translation": ""
+						},
+						{
+							"sentence": "The bus leaves at 18:00.",
+							"translation": ""
+						}
+					],
+					"word": "18",
+					"group": "1 to 20",
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"id": 19,
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "19 books",
+							"translation": ""
+						},
+						{
+							"sentence": "She is 19 years old.",
+							"translation": ""
+						},
+						{
+							"sentence": "There are 19 students.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"group": "1 to 20",
+					"partOfSpeech": "",
+					"word": "19"
+				},
+				{
+					"translation": "",
+					"romanisation": "",
+					"id": 20,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "20 books"
+						},
+						{
+							"sentence": "I have 20 fingers and toes.",
+							"translation": ""
+						},
+						{
+							"sentence": "The class has 20 students.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"word": "20",
+					"group": "1 to 20"
+				},
+				{
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 0,
+					"group": "to 1000",
+					"sentences": [
+						{
+							"sentence": "20 books",
+							"translation": ""
+						},
+						{
+							"sentence": "I need 20 dollars.",
+							"translation": ""
+						},
+						{
+							"sentence": "There are 20 chairs.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"word": "20"
+				},
+				{
+					"id": 1,
+					"group": "to 1000",
+					"sentences": [
+						{
+							"sentence": "21 books",
+							"translation": ""
+						},
+						{
+							"sentence": "My birthday is May 21.",
+							"translation": ""
+						},
+						{
+							"sentence": "There are 21 students.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"word": "21",
+					"romanisation": "",
+					"translation": ""
+				},
+				{
+					"romanisation": "",
+					"partOfSpeech": "",
+					"id": 2,
+					"group": "to 1000",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "30 books"
+						},
+						{
+							"sentence": "I need 30 minutes.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is 30 years old.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"word": "30"
+				},
+				{
+					"sortOrder": 1,
+					"id": 3,
+					"group": "to 1000",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "40 books",
+							"translation": ""
+						},
+						{
+							"sentence": "The speed limit is 40.",
+							"translation": ""
+						},
+						{
+							"sentence": "He is 40 years old.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"word": "40",
+					"translation": ""
+				},
+				{
+					"group": "to 1000",
+					"partOfSpeech": "",
+					"id": 4,
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "50 books"
+						},
+						{
+							"sentence": "I have 50 cents.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is 50 years old.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"word": "50"
+				},
+				{
+					"group": "to 1000",
+					"word": "60",
+					"partOfSpeech": "",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 5,
+					"sentences": [
+						{
+							"sentence": "60 books",
+							"translation": ""
+						},
+						{
+							"sentence": "An hour has 60 minutes.",
+							"translation": ""
+						},
+						{
+							"sentence": "He is 60 years old.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"translation": "",
+					"word": "70",
+					"id": 6,
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "to 1000",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "70 books",
+							"translation": ""
+						},
+						{
+							"sentence": "The temperature is 70 degrees.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is 70 years old.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"word": "80",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"group": "to 1000",
+					"id": 7,
+					"sentences": [
+						{
+							"sentence": "80 books",
+							"translation": ""
+						},
+						{
+							"sentence": "The speed limit is 80.",
+							"translation": ""
+						},
+						{
+							"sentence": "He is 80 years old.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"sortOrder": 1
+				},
+				{
+					"word": "90",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "to 1000",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "90 books",
+							"translation": ""
+						},
+						{
+							"sentence": "The angle is 90 degrees.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is 90 years old.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"id": 8
+				},
+				{
+					"romanisation": "",
+					"word": "100",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "100 books",
+							"translation": ""
+						},
+						{
+							"sentence": "I have 100 dollars.",
+							"translation": ""
+						},
+						{
+							"sentence": "There are 100 people.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"id": 9,
+					"group": "to 1000",
+					"sortOrder": 1
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "A 100 books"
+						},
+						{
+							"sentence": "100 years is a century.",
+							"translation": ""
+						},
+						{
+							"sentence": "The race is 100 meters.",
+							"translation": ""
+						}
+					],
+					"word": "100",
+					"sortOrder": 1,
+					"group": "to 1000",
+					"id": 10,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": ""
+				},
+				{
+					"id": 11,
+					"sentences": [
+						{
+							"sentence": "A 101 books",
+							"translation": ""
+						},
+						{
+							"sentence": "Room 101 is downstairs.",
+							"translation": ""
+						},
+						{
+							"sentence": "The temperature is 101.",
+							"translation": ""
+						}
+					],
+					"word": "101",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": "",
+					"group": "to 1000",
+					"sortOrder": 1
+				},
+				{
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 12,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "500 books"
+						},
+						{
+							"sentence": "I need 500 grams.",
+							"translation": ""
+						},
+						{
+							"sentence": "The bill is 500 dollars.",
+							"translation": ""
+						}
+					],
+					"group": "to 1000",
+					"word": "500"
+				},
+				{
+					"id": 13,
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "501",
+					"translation": "",
+					"group": "to 1000",
+					"sentences": [
+						{
+							"sentence": "501 books",
+							"translation": ""
+						},
+						{
+							"sentence": "The flight is 501 miles.",
+							"translation": ""
+						},
+						{
+							"sentence": "The room number is 501.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "999",
+					"translation": "",
+					"id": 14,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "999 books"
+						},
+						{
+							"sentence": "Call 999 for emergencies.",
+							"translation": ""
+						},
+						{
+							"sentence": "The price is 999 dollars.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"group": "to 1000"
+				},
+				{
+					"id": 15,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "1000",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "to 1000",
+					"sentences": [
+						{
+							"sentence": "1000 books",
+							"translation": ""
+						},
+						{
+							"sentence": "A kilometer is 1000 meters.",
+							"translation": ""
+						},
+						{
+							"sentence": "The year 1000 was long ago.",
+							"translation": ""
+						}
+					]
+				}
+			],
+			"title": "Time & Numbers"
+		},
+		{
+			"title": "Family",
+			"tabnumber": 1,
+			"sortOrder": 10,
+			"words": [
+				{
+					"id": 0,
+					"partOfSpeech": "",
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Close Family",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I have a big family."
+						},
+						{
+							"sentence": "My family eats dinner together.",
+							"translation": ""
+						},
+						{
+							"sentence": "Family is very important.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"word": "family"
+				},
+				{
+					"id": 1,
+					"partOfSpeech": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "My mother's name is Jane.",
+							"translation": ""
+						},
+						{
+							"sentence": "Mother cooks delicious food.",
+							"translation": ""
+						},
+						{
+							"sentence": "I love my mother very much.",
+							"translation": ""
+						}
+					],
+					"word": "mother",
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Close Family"
+				},
+				{
+					"word": "father",
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 2,
+					"group": "Close Family",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "My father works in an office."
+						},
+						{
+							"sentence": "Father drives me to school.",
+							"translation": ""
+						},
+						{
+							"sentence": "My father is very tall.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "son",
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Close Family",
+					"id": 3,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "My son is 5 years old."
+						},
+						{
+							"sentence": "The son plays football.",
+							"translation": ""
+						},
+						{
+							"sentence": "Their son is very smart.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "My daughter likes to play outside.",
+							"translation": ""
+						},
+						{
+							"sentence": "The daughter sings beautifully.",
+							"translation": ""
+						},
+						{
+							"sentence": "Her daughter goes to kindergarten.",
+							"translation": ""
+						}
+					],
+					"group": "Close Family",
+					"translation": "",
+					"romanisation": "",
+					"word": "daughter",
+					"id": 4,
+					"partOfSpeech": ""
+				},
+				{
+					"partOfSpeech": "",
+					"group": "Close Family",
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "I have one older brother.",
+							"translation": ""
+						},
+						{
+							"sentence": "My brother helps me with homework.",
+							"translation": ""
+						},
+						{
+							"sentence": "The brother is very kind.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"word": "brother",
+					"id": 5
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "My sister is very kind.",
+							"translation": ""
+						},
+						{
+							"sentence": "Sister shares her toys with me.",
+							"translation": ""
+						},
+						{
+							"sentence": "Their sister is a doctor.",
+							"translation": ""
+						}
+					],
+					"group": "Close Family",
+					"partOfSpeech": "",
+					"id": 6,
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "sister"
+				},
+				{
+					"romanisation": "",
+					"id": 7,
+					"group": "Close Family",
+					"sentences": [
+						{
+							"sentence": "My uncle is visiting us next week.",
+							"translation": ""
+						},
+						{
+							"sentence": "Uncle tells funny stories.",
+							"translation": ""
+						},
+						{
+							"sentence": "Her uncle lives in Canada.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"sortOrder": 1,
+					"word": "uncle",
+					"partOfSpeech": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "His aunt lives in New York.",
+							"translation": ""
+						},
+						{
+							"sentence": "Aunt bakes delicious cookies.",
+							"translation": ""
+						},
+						{
+							"sentence": "My aunt is a teacher.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"id": 8,
+					"group": "Close Family",
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "aunt",
+					"partOfSpeech": ""
+				},
+				{
+					"partOfSpeech": "",
+					"word": "grandmother",
+					"translation": "",
+					"group": "Close Family",
+					"sortOrder": 1,
+					"id": 9,
+					"sentences": [
+						{
+							"sentence": "My grandmother lives with us.",
+							"translation": ""
+						},
+						{
+							"sentence": "Grandmother makes the best soup.",
+							"translation": ""
+						},
+						{
+							"sentence": "Her grandmother is 80 years old.",
+							"translation": ""
+						}
+					],
+					"romanisation": ""
+				},
+				{
+					"group": "Close Family",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"id": 10,
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "My grandfather is retired.",
+							"translation": ""
+						},
+						{
+							"sentence": "Grandfather reads the newspaper.",
+							"translation": ""
+						},
+						{
+							"sentence": "His grandfather was a soldier.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"word": "grandfather"
+				}
+			]
+		},
+		{
+			"title": "Everyday",
+			"sortOrder": 10,
+			"words": [
+				{
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Everyday Items",
+					"word": "book",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "The book is on the table.",
+							"translation": ""
+						},
+						{
+							"sentence": "I read a book every night.",
+							"translation": ""
+						},
+						{
+							"sentence": "This book is very interesting.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"id": 0
+				},
+				{
+					"word": "bag",
+					"translation": "",
+					"partOfSpeech": "",
+					"id": 1,
+					"romanisation": "",
+					"group": "Everyday Items",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Her bag is full of books."
+						},
+						{
+							"sentence": "I carry my lunch in a bag.",
+							"translation": ""
+						},
+						{
+							"sentence": "The red bag is mine.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "mobile",
+					"id": 2,
+					"sortOrder": 1,
+					"group": "Everyday Items",
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Her mobile in in her pocket."
+						},
+						{
+							"sentence": "I use my mobile every day.",
+							"translation": ""
+						},
+						{
+							"sentence": "His mobile has a big screen.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"partOfSpeech": "",
+					"group": "Everyday Items",
+					"word": "phone",
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "My phone is charging."
+						},
+						{
+							"sentence": "I answer the phone quickly.",
+							"translation": ""
+						},
+						{
+							"sentence": "Her phone has a blue case.",
+							"translation": ""
+						}
+					],
+					"id": 3,
+					"romanisation": ""
+				},
+				{
+					"partOfSpeech": "",
+					"id": 4,
+					"word": "headphones",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "Everyday Items",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I listen to music with my headphones."
+						},
+						{
+							"sentence": "These headphones are comfortable.",
+							"translation": ""
+						},
+						{
+							"sentence": "He wears black headphones.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"translation": "",
+					"word": "computer",
+					"romanisation": "",
+					"id": 5,
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "My computer is new."
+						},
+						{
+							"sentence": "I work on the computer.",
+							"translation": ""
+						},
+						{
+							"sentence": "The computer screen is bright.",
+							"translation": ""
+						}
+					],
+					"group": "Everyday Items"
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We watch movies on the television."
+						},
+						{
+							"sentence": "The television is in the living room.",
+							"translation": ""
+						},
+						{
+							"sentence": "I turn off the television at night.",
+							"translation": ""
+						}
+					],
+					"word": "television",
+					"translation": "",
+					"id": 6,
+					"group": "Everyday Items",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sortOrder": 1
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "I am sitting on a chair.",
+							"translation": ""
+						},
+						{
+							"sentence": "The chair is very comfortable.",
+							"translation": ""
+						},
+						{
+							"sentence": "We have six chairs at the table.",
+							"translation": ""
+						}
+					],
+					"group": "Everyday Items",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "chair",
+					"translation": "",
+					"id": 7,
+					"sortOrder": 1
+				},
+				{
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"word": "table",
+					"sentences": [
+						{
+							"sentence": "The table is in the kitchen.",
+							"translation": ""
+						},
+						{
+							"sentence": "We eat at the table.",
+							"translation": ""
+						},
+						{
+							"sentence": "The wooden table is strong.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"id": 8,
+					"group": "Everyday Items",
+					"translation": ""
+				},
+				{
+					"romanisation": "",
+					"translation": "",
+					"word": "bed",
+					"id": 9,
+					"group": "Everyday Items",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "I sleep on the bed at night.",
+							"translation": ""
+						},
+						{
+							"sentence": "The bed is very soft.",
+							"translation": ""
+						},
+						{
+							"sentence": "Make your bed in the morning.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "I drink my coffee from a cup.",
+							"translation": ""
+						},
+						{
+							"sentence": "The cup is on the shelf.",
+							"translation": ""
+						},
+						{
+							"sentence": "This cup holds hot drinks.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"group": "Everyday Items",
+					"romanisation": "",
+					"translation": "",
+					"word": "cup",
+					"id": 10
+				},
+				{
+					"word": "plate",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "Everyday Items",
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "My food is served on a plate."
+						},
+						{
+							"sentence": "The plate is white and round.",
+							"translation": ""
+						},
+						{
+							"sentence": "Wash the plate after eating.",
+							"translation": ""
+						}
+					],
+					"id": 11
+				},
+				{
+					"group": "Everyday Items",
+					"romanisation": "",
+					"translation": "",
+					"sortOrder": 1,
+					"id": 12,
+					"partOfSpeech": "",
+					"word": "spoon",
+					"sentences": [
+						{
+							"sentence": "He eats cereal with a spoon.",
+							"translation": ""
+						},
+						{
+							"sentence": "The spoon is in the drawer.",
+							"translation": ""
+						},
+						{
+							"sentence": "Use a spoon to stir the soup.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "Everyday Items",
+					"partOfSpeech": "",
+					"id": 13,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I need a fork for my salad."
+						},
+						{
+							"sentence": "The fork is next to the knife.",
+							"translation": ""
+						},
+						{
+							"sentence": "This fork has four prongs.",
+							"translation": ""
+						}
+					],
+					"word": "fork",
+					"translation": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "The knife is sharp.",
+							"translation": ""
+						},
+						{
+							"sentence": "Cut the bread with a knife.",
+							"translation": ""
+						},
+						{
+							"sentence": "Be careful with the knife.",
+							"translation": ""
+						}
+					],
+					"id": 14,
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"group": "Everyday Items",
+					"romanisation": "",
+					"word": "knife",
+					"translation": ""
+				},
+				{
+					"sortOrder": 1,
+					"group": "Everyday Items",
+					"word": "pen",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "I write with a pen.",
+							"translation": ""
+						},
+						{
+							"sentence": "The pen has blue ink.",
+							"translation": ""
+						},
+						{
+							"sentence": "My favorite pen is black.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"id": 15
+				},
+				{
+					"word": "bag",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 16,
+					"group": "Everyday Items",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I carry my things in a bag."
+						},
+						{
+							"sentence": "This bag has many pockets.",
+							"translation": ""
+						},
+						{
+							"sentence": "Her bag matches her shoes.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"group": "Everyday Items",
+					"translation": "",
+					"romanisation": "",
+					"word": "clock",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"id": 17,
+					"sentences": [
+						{
+							"sentence": "The clock shows the time.",
+							"translation": ""
+						},
+						{
+							"sentence": "The clock on the wall is old.",
+							"translation": ""
+						},
+						{
+							"sentence": "I check the clock often.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"id": 18,
+					"partOfSpeech": "",
+					"translation": "",
+					"group": "Everyday Items",
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "wallet",
+					"sentences": [
+						{
+							"sentence": "I keep my money in my wallet.",
+							"translation": ""
+						},
+						{
+							"sentence": "His wallet is made of leather.",
+							"translation": ""
+						},
+						{
+							"sentence": "Don't lose your wallet.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"partOfSpeech": "",
+					"id": 19,
+					"word": "key",
+					"group": "Everyday Items",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "This key opens my front door.",
+							"translation": ""
+						},
+						{
+							"sentence": "I have three keys on my ring.",
+							"translation": ""
+						},
+						{
+							"sentence": "The small key is for the mailbox.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"sortOrder": 1
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I like to ride my bike."
+						},
+						{
+							"sentence": "My bike is red and fast.",
+							"translation": ""
+						},
+						{
+							"sentence": "I park my bike outside.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Everyday Items",
+					"partOfSpeech": "",
+					"id": 20,
+					"translation": "",
+					"word": "bike"
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "I take my umbrella when it rains.",
+							"translation": ""
+						},
+						{
+							"sentence": "The umbrella is black and large.",
+							"translation": ""
+						},
+						{
+							"sentence": "Leave the umbrella to dry.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": "",
+					"word": "umbrella",
+					"id": 21,
+					"group": "Everyday Items",
+					"partOfSpeech": ""
+				},
+				{
+					"word": "passport",
+					"sentences": [
+						{
+							"sentence": "I need my passport to travel abroad.",
+							"translation": ""
+						},
+						{
+							"sentence": "Keep your passport safe.",
+							"translation": ""
+						},
+						{
+							"sentence": "My passport has my photo.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"id": 22,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"group": "Everyday Items",
+					"sortOrder": 1
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "I wear a hat to protect myself from the sun.",
+							"translation": ""
+						},
+						{
+							"sentence": "This hat fits me perfectly.",
+							"translation": ""
+						},
+						{
+							"sentence": "Her hat has a blue ribbon.",
+							"translation": ""
+						}
+					],
+					"id": 23,
+					"group": "Everyday Items",
+					"partOfSpeech": "",
+					"word": "hat",
+					"romanisation": "",
+					"translation": "",
+					"sortOrder": 1
+				},
+				{
+					"id": 24,
+					"partOfSpeech": "",
+					"group": "Everyday Items",
+					"word": "bottle",
+					"sentences": [
+						{
+							"sentence": "I drink water from a bottle.",
+							"translation": ""
+						},
+						{
+							"sentence": "The bottle is made of glass.",
+							"translation": ""
+						},
+						{
+							"sentence": "Recycle the empty bottle.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1
+				},
+				{
+					"romanisation": "",
+					"word": "backpack",
+					"group": "Everyday Items",
+					"partOfSpeech": "",
+					"id": 25,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I carry my books in a backpack."
+						},
+						{
+							"sentence": "My backpack is very heavy.",
+							"translation": ""
+						},
+						{
+							"sentence": "The backpack has two straps.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "I check the time on my watch.",
+							"translation": ""
+						},
+						{
+							"sentence": "My watch is waterproof.",
+							"translation": ""
+						},
+						{
+							"sentence": "This watch was a gift.",
+							"translation": ""
+						}
+					],
+					"word": "watch",
+					"group": "Everyday Items",
+					"translation": "",
+					"romanisation": "",
+					"id": 26,
+					"sortOrder": 1,
+					"partOfSpeech": ""
+				}
+			],
+			"tabnumber": 1
+		},
+		{
+			"title": "Colors",
+			"tabnumber": 3,
+			"sortOrder": 10,
+			"words": [
+				{
+					"translation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"id": 0,
+					"word": "red",
+					"romanisation": "",
+					"group": "Colors - Shapes",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The apple is red."
+						},
+						{
+							"sentence": "My shirt is red.",
+							"translation": ""
+						},
+						{
+							"sentence": "I see a red car.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"id": 1,
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Colors - Shapes",
+					"word": "blue",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The sky is blue."
+						},
+						{
+							"sentence": "She has blue eyes.",
+							"translation": ""
+						},
+						{
+							"sentence": "The ball is blue.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": ""
+				},
+				{
+					"translation": "",
+					"id": 2,
+					"romanisation": "",
+					"word": "green",
+					"group": "Colors - Shapes",
+					"sentences": [
+						{
+							"sentence": "The grass is green.",
+							"translation": ""
+						},
+						{
+							"sentence": "My bag is green.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like green apples.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "The sun is yellow.",
+							"translation": ""
+						},
+						{
+							"sentence": "The flower is yellow.",
+							"translation": ""
+						},
+						{
+							"sentence": "I have a yellow pencil.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 3,
+					"partOfSpeech": "",
+					"group": "Colors - Shapes",
+					"word": "yellow"
+				},
+				{
+					"word": "black",
+					"sortOrder": 1,
+					"group": "Colors - Shapes",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "My shoes are black.",
+							"translation": ""
+						},
+						{
+							"sentence": "The cat is black.",
+							"translation": ""
+						},
+						{
+							"sentence": "I have a black pen.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"partOfSpeech": "",
+					"id": 4
+				},
+				{
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Colors - Shapes",
+					"word": "white",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "The clouds are white.",
+							"translation": ""
+						},
+						{
+							"sentence": "The paper is white.",
+							"translation": ""
+						},
+						{
+							"sentence": "I have a white dog.",
+							"translation": ""
+						}
+					],
+					"id": 5,
+					"partOfSpeech": ""
+				},
+				{
+					"translation": "",
+					"romanisation": "",
+					"group": "Colors - Shapes",
+					"sortOrder": 1,
+					"word": "circle",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The clock is a circle."
+						},
+						{
+							"sentence": "Draw a big circle.",
+							"translation": ""
+						},
+						{
+							"sentence": "The ball is a circle.",
+							"translation": ""
+						}
+					],
+					"id": 6,
+					"partOfSpeech": ""
+				},
+				{
+					"group": "Colors - Shapes",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The table has a square shape."
+						},
+						{
+							"sentence": "Draw a square.",
+							"translation": ""
+						},
+						{
+							"sentence": "The box is a square.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"word": "square",
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 7
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "The roof of the house is a triangle.",
+							"translation": ""
+						},
+						{
+							"sentence": "Draw a triangle.",
+							"translation": ""
+						},
+						{
+							"sentence": "The sign is a triangle.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "triangle",
+					"translation": "",
+					"id": 8,
+					"group": "Colors - Shapes"
+				},
+				{
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Colors - Shapes",
+					"partOfSpeech": "",
+					"word": "rectangle",
+					"id": 9,
+					"sentences": [
+						{
+							"sentence": "The window is a rectangle.",
+							"translation": ""
+						},
+						{
+							"sentence": "Draw a rectangle.",
+							"translation": ""
+						},
+						{
+							"sentence": "The door is a rectangle.",
+							"translation": ""
+						}
+					],
+					"romanisation": ""
+				}
+			]
+		},
+		{
+			"tabnumber": 3,
+			"title": "Occupations",
+			"sortOrder": 10,
+			"words": [
+				{
+					"word": "teacher",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "The teacher helps students learn.",
+							"translation": ""
+						},
+						{
+							"sentence": "My teacher is kind.",
+							"translation": ""
+						},
+						{
+							"sentence": "The teacher is in the classroom.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"translation": "",
+					"group": "Roles",
+					"romanisation": "",
+					"id": 0
+				},
+				{
+					"romanisation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "Roles",
+					"id": 1,
+					"word": "doctor",
+					"sentences": [
+						{
+							"sentence": "A doctor treats sick people.",
+							"translation": ""
+						},
+						{
+							"sentence": "The doctor is at the hospital.",
+							"translation": ""
+						},
+						{
+							"sentence": "I see the doctor.",
+							"translation": ""
+						}
+					],
+					"translation": ""
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The nurse works in a hospital."
+						},
+						{
+							"sentence": "The nurse is friendly.",
+							"translation": ""
+						},
+						{
+							"sentence": "I talk to the nurse.",
+							"translation": ""
+						}
+					],
+					"group": "Roles",
+					"word": "nurse",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": "",
+					"id": 2
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Firefighters put out fires."
+						},
+						{
+							"sentence": "The firefighter drives the truck.",
+							"translation": ""
+						},
+						{
+							"sentence": "The firefighter wears a helmet.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "firefighter",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Roles",
+					"id": 3
+				},
+				{
+					"id": 4,
+					"translation": "",
+					"group": "Roles",
+					"sentences": [
+						{
+							"sentence": "The chef cooks delicious food.",
+							"translation": ""
+						},
+						{
+							"sentence": "The chef wears a white hat.",
+							"translation": ""
+						},
+						{
+							"sentence": "I see the chef in the kitchen.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "chef",
+					"sortOrder": 1
+				},
+				{
+					"group": "Roles",
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"id": 5,
+					"sentences": [
+						{
+							"sentence": "An artist creates beautiful paintings.",
+							"translation": ""
+						},
+						{
+							"sentence": "The artist draws a picture.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like the artist's work.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"word": "artist"
+				},
+				{
+					"id": 6,
+					"romanisation": "",
+					"sortOrder": 1,
+					"word": "engineer",
+					"sentences": [
+						{
+							"sentence": "Engineers design and build things.",
+							"translation": ""
+						},
+						{
+							"sentence": "My uncle is an engineer.",
+							"translation": ""
+						},
+						{
+							"sentence": "The engineer works on the bridge.",
+							"translation": ""
+						}
+					],
+					"group": "Roles",
+					"translation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"id": 7,
+					"sentences": [
+						{
+							"sentence": "A scientist conducts experiments.",
+							"translation": ""
+						},
+						{
+							"sentence": "The scientist wears a white coat.",
+							"translation": ""
+						},
+						{
+							"sentence": "I want to be a scientist.",
+							"translation": ""
+						}
+					],
+					"group": "Roles",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "scientist"
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The farmer grows crops and raises animals."
+						},
+						{
+							"sentence": "The farmer works in the field.",
+							"translation": ""
+						},
+						{
+							"sentence": "I see the farmer with cows.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"word": "farmer",
+					"group": "Roles",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 8
+				}
+			]
+		},
+		{
+		  "sortOrder": 10,
+		  "words": [
+			{
+			  "group": "Places in the City",
+			  "partOfSpeech": "",
+			  "translation": "",
+			  "romanisation": "",
+			  "sortOrder": 1,
+			  "word": "home",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "My home is a small house."
+				},
+				{
+				  "sentence": "I go home after school.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We eat dinner at home.",
+				  "translation": ""
+				}
+			  ],
+			  "id": 0
+			},
+			{
+			  "romanisation": "",
+			  "translation": "",
+			  "partOfSpeech": "",
+			  "word": "school",
+			  "id": 1,
+			  "group": "Places in the City",
+			  "sortOrder": 1,
+			  "sentences": [
+				{
+				  "sentence": "Children go to school to learn.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "My school is near my house.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I like my school.",
+				  "translation": ""
+				}
+			  ]
+			},
+			{
+			  "translation": "",
+			  "word": "park",
+			  "id": 2,
+			  "sortOrder": 1,
+			  "romanisation": "",
+			  "partOfSpeech": "",
+			  "group": "Places in the City",
+			  "sentences": [
+				{
+				  "sentence": "We play in the park.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The park is very big.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I walk in the park.",
+				  "translation": ""
+				}
+			  ]
+			},
+			{
+			  "word": "store",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "The store sells many things."
+				},
+				{
+				  "sentence": "I buy food at the store.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The store is open.",
+				  "translation": ""
+				}
+			  ],
+			  "partOfSpeech": "",
+			  "translation": "",
+			  "id": 3,
+			  "group": "Places in the City",
+			  "romanisation": "",
+			  "sortOrder": 1
+			},
+			{
+			  "romanisation": "",
+			  "group": "Places in the City",
+			  "sortOrder": 1,
+			  "translation": "",
+			  "partOfSpeech": "",
+			  "word": "restaurant",
+			  "id": 4,
+			  "sentences": [
+				{
+				  "sentence": "We ate lunch at the restaurant.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The restaurant is busy.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We sit in the restaurant.",
+				  "translation": ""
+				}
+			  ]
+			},
+			{
+			  "group": "Places in the City",
+			  "word": "hospital",
+			  "id": 5,
+			  "romanisation": "",
+			  "translation": "",
+			  "partOfSpeech": "",
+			  "sortOrder": 1,
+			  "sentences": [
+				{
+				  "sentence": "The hospital helps sick people.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "My mother works at the hospital.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The hospital is very clean.",
+				  "translation": ""
+				}
+			  ]
+			},
+			{
+			  "sortOrder": 1,
+			  "translation": "",
+			  "id": 6,
+			  "partOfSpeech": "",
+			  "sentences": [
+				{
+				  "sentence": "The library has many books.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I read at the library.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The library is quiet.",
+				  "translation": ""
+				}
+			  ],
+			  "word": "library",
+			  "romanisation": "",
+			  "group": "Places in the City"
+			},
+			{
+			  "partOfSpeech": "",
+			  "id": 7,
+			  "group": "Places in the City",
+			  "romanisation": "",
+			  "translation": "",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "I go to the bank to deposit money."
+				},
+				{
+				  "sentence": "The bank is closed.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "My father works at the bank.",
+				  "translation": ""
+				}
+			  ],
+			  "word": "bank",
+			  "sortOrder": 1
+			},
+			{
+			  "word": "office",
+			  "partOfSpeech": "",
+			  "sentences": [
+				{
+				  "sentence": "My father works in an office.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The office is on the second floor.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "She goes to the office every day.",
+				  "translation": ""
+				}
+			  ],
+			  "translation": "",
+			  "id": 8,
+			  "romanisation": "",
+			  "sortOrder": 1,
+			  "group": "Places in the City"
+			},
+			{
+			  "id": 9,
+			  "sortOrder": 1,
+			  "sentences": [
+				{
+				  "sentence": "We live in a big city.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The city is very busy.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I like the city.",
+				  "translation": ""
+				}
+			  ],
+			  "romanisation": "",
+			  "partOfSpeech": "",
+			  "word": "city",
+			  "group": "Places in the City",
+			  "translation": ""
+			},
+			{
+			  "group": "Places in the City",
+			  "partOfSpeech": "",
+			  "sentences": [
+				{
+				  "sentence": "We watch movies at the cinema.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The cinema is full.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We go to the cinema on Saturday.",
+				  "translation": ""
+				}
+			  ],
+			  "sortOrder": 1,
+			  "id": 10,
+			  "word": "cinema",
+			  "romanisation": "",
+			  "translation": ""
+			},
+			{
+			  "word": "zoo",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "I saw elephants at the zoo."
+				},
+				{
+				  "sentence": "The zoo has many animals.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We visit the zoo every year.",
+				  "translation": ""
+				}
+			  ],
+			  "romanisation": "",
+			  "group": "Places in the City",
+			  "id": 11,
+			  "translation": "",
+			  "sortOrder": 1,
+			  "partOfSpeech": ""
+			},
+			{
+			  "group": "Nature",
+			  "id": 0,
+			  "romanisation": "",
+			  "translation": "",
+			  "partOfSpeech": "",
+			  "sentences": [
+				{
+				  "sentence": "The mountain is very tall.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We climb the mountain.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "Snow is on the mountain.",
+				  "translation": ""
+				}
+			  ],
+			  "word": "mountain",
+			  "sortOrder": 1
+			},
+			{
+			  "sortOrder": 1,
+			  "partOfSpeech": "",
+			  "sentences": [
+				{
+				  "sentence": "The river flows through the city.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The river is long.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We swim in the river.",
+				  "translation": ""
+				}
+			  ],
+			  "group": "Nature",
+			  "romanisation": "",
+			  "word": "river",
+			  "translation": "",
+			  "id": 1
+			},
+			{
+			  "word": "lake",
+			  "id": 2,
+			  "translation": "",
+			  "sortOrder": 1,
+			  "group": "Nature",
+			  "partOfSpeech": "",
+			  "romanisation": "",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "We went swimming in the lake."
+				},
+				{
+				  "sentence": "The lake is very deep.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "Fish live in the lake.",
+				  "translation": ""
+				}
+			  ]
+			},
+			{
+			  "word": "forest",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "The forest is home to many animals."
+				},
+				{
+				  "sentence": "The forest is very green.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We walk in the forest.",
+				  "translation": ""
+				}
+			  ],
+			  "partOfSpeech": "",
+			  "translation": "",
+			  "sortOrder": 1,
+			  "romanisation": "",
+			  "id": 3,
+			  "group": "Nature"
+			},
+			{
+			  "word": "beach",
+			  "group": "Nature",
+			  "partOfSpeech": "",
+			  "translation": "",
+			  "sortOrder": 1,
+			  "id": 4,
+			  "romanisation": "",
+			  "sentences": [
+				{
+				  "sentence": "People like to relax on the beach.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The beach has white sand.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We swim at the beach.",
+				  "translation": ""
+				}
+			  ]
+			},
+			{
+			  "sentences": [
+				{
+				  "sentence": "The ocean is vast and deep.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The ocean is blue.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "Fish swim in the ocean.",
+				  "translation": ""
+				}
+			  ],
+			  "partOfSpeech": "",
+			  "sortOrder": 1,
+			  "id": 5,
+			  "romanisation": "",
+			  "group": "Nature",
+			  "translation": "",
+			  "word": "ocean"
+			},
+			{
+			  "word": "island",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "They visited a beautiful island."
+				},
+				{
+				  "sentence": "The island is small.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We travel to the island by boat.",
+				  "translation": ""
+				}
+			  ],
+			  "translation": "",
+			  "partOfSpeech": "",
+			  "romanisation": "",
+			  "group": "Nature",
+			  "sortOrder": 1,
+			  "id": 6
+			},
+			{
+			  "partOfSpeech": "",
+			  "translation": "",
+			  "sentences": [
+				{
+				  "sentence": "The desert is hot and dry.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "Camels live in the desert.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The desert has little water.",
+				  "translation": ""
+				}
+			  ],
+			  "sortOrder": 1,
+			  "romanisation": "",
+			  "word": "desert",
+			  "id": 7,
+			  "group": "Nature"
+			},
+			{
+			  "group": "Nature",
+			  "partOfSpeech": "",
+			  "word": "hill",
+			  "id": 8,
+			  "sortOrder": 1,
+			  "translation": "",
+			  "sentences": [
+				{
+				  "sentence": "We picnic on the hill.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The hill is green.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "The house is on a hill.",
+				  "translation": ""
+				}
+			  ],
+			  "romanisation": ""
+			},
+			{
+			  "partOfSpeech": "",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "Flowers are growing in the garden."
+				},
+				{
+				  "sentence": "The garden has many flowers.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We play in the garden.",
+				  "translation": ""
+				}
+			  ],
+			  "word": "garden",
+			  "sortOrder": 1,
+			  "translation": "",
+			  "id": 9,
+			  "romanisation": "",
+			  "group": "Nature"
+			}
+		  ],
+		  "title": "Places",
+		  "tabnumber": 3
+		},
+		{
+		  "tabnumber": 3,
+		  "title": "Verbs",
+		  "sortOrder": 10,
+		  "words": [
+			{
+			  "translation": "",
+			  "id": 0,
+			  "sortOrder": 1,
+			  "sentences": [
+				{
+				  "sentence": "I eat breakfast every morning.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We eat together.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I eat an apple.",
+				  "translation": ""
+				}
+			  ],
+			  "group": "Verbs",
+			  "partOfSpeech": "",
+			  "word": "eat",
+			  "romanisation": ""
+			},
+			{
+			  "group": "Verbs",
+			  "id": 1,
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "drink! mum said."
+				},
+				{
+				  "sentence": "I drink water.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "Please drink your milk.",
+				  "translation": ""
+				}
+			  ],
+			  "romanisation": "",
+			  "partOfSpeech": "",
+			  "word": "drink",
+			  "sortOrder": 1,
+			  "translation": ""
+			},
+			{
+			  "romanisation": "",
+			  "translation": "",
+			  "group": "Verbs",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "I need to sleep early tonight."
+				},
+				{
+				  "sentence": "The baby will sleep now.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I sleep in my bed.",
+				  "translation": ""
+				}
+			  ],
+			  "partOfSpeech": "",
+			  "word": "sleep",
+			  "sortOrder": 1,
+			  "id": 2
+			},
+			{
+			  "sortOrder": 1,
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "We like to walk in the park."
+				},
+				{
+				  "sentence": "I walk to school.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "Let's walk together.",
+				  "translation": ""
+				}
+			  ],
+			  "partOfSpeech": "",
+			  "word": "walk",
+			  "id": 3,
+			  "romanisation": "",
+			  "translation": "",
+			  "group": "Verbs"
+			},
+			{
+			  "partOfSpeech": "",
+			  "id": 4,
+			  "group": "Verbs",
+			  "sortOrder": 1,
+			  "romanisation": "",
+			  "word": "run",
+			  "translation": "",
+			  "sentences": [
+				{
+				  "sentence": "The children run outside.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I run very fast.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We run every morning.",
+				  "translation": ""
+				}
+			  ]
+			},
+			{
+			  "word": "sit",
+			  "translation": "",
+			  "romanisation": "",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "They sit in the cafe."
+				},
+				{
+				  "sentence": "Please sit down.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I sit on the chair.",
+				  "translation": ""
+				}
+			  ],
+			  "group": "Verbs",
+			  "sortOrder": 1,
+			  "id": 5,
+			  "partOfSpeech": ""
+			},
+			{
+			  "sortOrder": 1,
+			  "id": 6,
+			  "group": "Verbs",
+			  "word": "stand",
+			  "translation": "",
+			  "partOfSpeech": "",
+			  "romanisation": "",
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "I stand in line at the store."
+				},
+				{
+				  "sentence": "Please stand here.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "We stand in the classroom.",
+				  "translation": ""
+				}
+			  ]
+			},
+			{
+			  "translation": "",
+			  "group": "Verbs",
+			  "romanisation": "",
+			  "partOfSpeech": "",
+			  "id": 7,
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "Look over there!"
+				},
+				{
+				  "sentence": "Look at the picture.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I look out the window.",
+				  "translation": ""
+				}
+			  ],
+			  "sortOrder": 1,
+			  "word": "look"
+			},
+			{
+			  "sortOrder": 1,
+			  "sentences": [
+				{
+				  "translation": "",
+				  "sentence": "I listen to music."
+				},
+				{
+				  "sentence": "Listen to your teacher.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I listen to the birds.",
+				  "translation": ""
+				}
+			  ],
+			  "partOfSpeech": "",
+			  "translation": "",
+			  "romanisation": "",
+			  "word": "listen",
+			  "id": 8,
+			  "group": "Verbs"
+			},
+			{
+			  "word": "talk",
+			  "partOfSpeech": "",
+			  "id": 9,
+			  "romanisation": "",
+			  "sortOrder": 1,
+			  "group": "Verbs",
+			  "sentences": [
+				{
+				  "sentence": "They talk for hours.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "I talk to my friend.",
+				  "translation": ""
+				},
+				{
+				  "sentence": "Let's talk after class.",
+				  "translation": ""
+				}
+			  ],
+			  "translation": ""
+			}
+		  ]
+		},
+
+		
+		{
+			"tabnumber" : 3,
+			"title" : "Adjectives",
+			"sortOrder" : 10,"words" :
+			[
+				{
+					"id" : 0,
+					"group" : "Adjectives",
+					"word" : "big",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "The house is very big.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"translation" : ""
+				},
+				{
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The dog is small and cute."
+						}
+					],
+					"word" : "small",
+					"translation" : "",
+					"romanisation" : "",
+					"id" : 1,
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"group" : "Adjectives"
+				},
+				{
+					"word" : "hot",
+					"sortOrder" : 1,
+					"translation" : "",
+					"group" : "Adjectives",
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"id" : 2,
+					"sentences" : [
+						{
+							"sentence" : "The weather is hot today.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"partOfSpeech" : "",
+					"word" : "cold",
+					"sortOrder" : 1,
+					"translation" : "",
+					"id" : 3,
+					"sentences" : [
+						{
+							"sentence" : "The water in the pool is cold.",
+							"translation" : ""
+						}
+					],
+					"group" : "Adjectives",
+					"romanisation" : ""
+				},
+				{
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "I bought a new shirt."
+						}
+					],
+					"id" : 4,
+					"partOfSpeech" : "",
+					"group" : "Adjectives",
+					"romanisation" : "",
+					"word" : "new",
+					"translation" : ""
+				},
+				{
+					"word" : "old",
+					"sentences" : [
+						{
+							"sentence" : "My grandparents are very old.",
+							"translation" : ""
+						}
+					],
+					"romanisation" : "",
+					"group" : "Adjectives",
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"translation" : "",
+					"id" : 5
+				},
+				{
+					"sortOrder" : 1,
+					"group" : "Adjectives",
+					"id" : 6,
+					"romanisation" : "",
+					"word" : "young",
+					"translation" : "",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "My baby brother is young.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"id" : 7,
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "The food at the restaurant was good.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : "",
+					"group" : "Adjectives",
+					"word" : "good",
+					"translation" : "",
+					"sortOrder" : 1
+				},
+				{
+					"group" : "Adjectives",
+					"word" : "bad",
+					"sentences" : [
+						{
+							"sentence" : "The weather was bad, so we stayed inside.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"id" : 8,
+					"translation" : ""
+				},
+				{
+					"translation" : "",
+					"id" : 9,
+					"romanisation" : "",
+					"group" : "Adjectives",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "My room is always clean and tidy."
+						}
+					],
+					"partOfSpeech" : "",
+					"word" : "clean"
+				},
+				{
+					"partOfSpeech" : "",
+					"word" : "dirty",
+					"id" : 10,
+					"translation" : "",
+					"group" : "Adjectives",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The car is dirty."
+						}
+					],
+					"sortOrder" : 1
+				},
+				{
+					"group" : "Adjectives",
+					"word" : "tall",
+					"id" : 11,
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"translation" : "",
+					"sentences" : [
+						{
+							"sentence" : "The giraffe is a tall animal.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : ""
+				},
+				{
+					"group" : "Adjectives",
+					"sentences" : [
+						{
+							"sentence" : "He is a short person.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"word" : "short",
+					"id" : 12,
+					"partOfSpeech" : ""
+				},
+				{
+					"sentences" : [
+						{
+							"sentence" : "The cheetah is a fast runner.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"word" : "fast",
+					"id" : 13,
+					"translation" : "",
+					"group" : "Adjectives",
+					"romanisation" : ""
+				},
+				{
+					"id" : 14,
+					"romanisation" : "",
+					"word" : "slow",
+					"partOfSpeech" : "",
+					"group" : "Adjectives",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The turtle moves very slowly."
+						}
+					],
+					"sortOrder" : 1,
+					"translation" : ""
+				}
+			]
+		},
+		{
+			"title": "up,in,on,at,by",
+			"tabnumber": 3,
+			"sortOrder": 10,
+			"words": [
+				{
+					"romanisation": "",
+					"group": "Particles",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "up",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Please pick up your toys."
+						},
+						{
+							"sentence": "Look up at the sky.",
+							"translation": ""
+						},
+						{
+							"sentence": "I wake up early.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"id": 0
+				},
+				{
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "down",
+					"group": "Particles",
+					"sortOrder": 1,
+					"id": 1,
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Put the book down!"
+						},
+						{
+							"sentence": "Sit down, please.",
+							"translation": ""
+						},
+						{
+							"sentence": "The ball rolls down the hill.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"id": 2,
+					"group": "Particles",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "Come in and close the door.",
+							"translation": ""
+						},
+						{
+							"sentence": "Put the toys in the box.",
+							"translation": ""
+						},
+						{
+							"sentence": "We are in the car.",
+							"translation": ""
+						}
+					],
+					"word": "in",
+					"sortOrder": 1,
+					"translation": ""
+				},
+				{
+					"id": 3,
+					"group": "Particles",
+					"sentences": [
+						{
+							"sentence": "Let's go out for a walk.",
+							"translation": ""
+						},
+						{
+							"sentence": "Go out and play.",
+							"translation": ""
+						},
+						{
+							"sentence": "The cat is out.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"word": "out",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": ""
+				},
+				{
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She turned on the light."
+						},
+						{
+							"sentence": "The TV is on.",
+							"translation": ""
+						},
+						{
+							"sentence": "Put your shoes on.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"group": "Particles",
+					"sortOrder": 1,
+					"id": 4,
+					"word": "on",
+					"romanisation": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "Switch off the television.",
+							"translation": ""
+						},
+						{
+							"sentence": "Turn off the lights.",
+							"translation": ""
+						},
+						{
+							"sentence": "The radio is off.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"group": "Particles",
+					"partOfSpeech": "",
+					"id": 5,
+					"word": "off",
+					"translation": "",
+					"sortOrder": 1
+				},
+				{
+					"translation": "",
+					"id": 6,
+					"romanisation": "",
+					"group": "Particles",
+					"word": "over",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Look over there!"
+						},
+						{
+							"sentence": "The bird flies over the tree.",
+							"translation": ""
+						},
+						{
+							"sentence": "Jump over the rope.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"group": "Particles",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "The cat is hiding under the bed.",
+							"translation": ""
+						},
+						{
+							"sentence": "The dog is under the table.",
+							"translation": ""
+						},
+						{
+							"sentence": "Put the shoes under the chair.",
+							"translation": ""
+						}
+					],
+					"word": "under",
+					"id": 7,
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"sortOrder": 1,
+					"group": "Particles",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We are going to the park."
+						},
+						{
+							"sentence": "Give this to your friend.",
+							"translation": ""
+						},
+						{
+							"sentence": "I go to school every day.",
+							"translation": ""
+						}
+					],
+					"word": "to",
+					"translation": "",
+					"id": 8,
+					"romanisation": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "This gift is from my aunt.",
+							"translation": ""
+						},
+						{
+							"sentence": "I got a letter from my friend.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is from Spain.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": "",
+					"group": "Particles",
+					"word": "from",
+					"id": 9,
+					"sortOrder": 1
+				},
+				{
+					"translation": "",
+					"group": "Particles",
+					"id": 10,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "Meet me at the entrance.",
+							"translation": ""
+						},
+						{
+							"sentence": "I am at home.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is at school.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"word": "at",
+					"sortOrder": 1
+				},
+				{
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The store is by the post office."
+						},
+						{
+							"sentence": "She sits by her mother.",
+							"translation": ""
+						},
+						{
+							"sentence": "The dog is by the door.",
+							"translation": ""
+						}
+					],
+					"word": "by",
+					"id": 11,
+					"group": "Particles",
+					"romanisation": "",
+					"translation": ""
+				},
+				{
+					"id": 12,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I write with a pen."
+						},
+						{
+							"sentence": "She eats with a spoon.",
+							"translation": ""
+						},
+						{
+							"sentence": "He plays with his brother.",
+							"translation": ""
+						}
+					],
+					"group": "Particles",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"word": "with",
+					"romanisation": "",
+					"translation": ""
+				},
+				{
+					"group": "Particles",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "What are you talking about?",
+							"translation": ""
+						},
+						{
+							"sentence": "Tell me about your day.",
+							"translation": ""
+						},
+						{
+							"sentence": "This book is about animals.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"id": 13,
+					"romanisation": "",
+					"word": "about",
+					"translation": ""
+				},
+				{
+					"sortOrder": 1,
+					"word": "into",
+					"romanisation": "",
+					"id": 14,
+					"group": "Particles",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "She walked into the room.",
+							"translation": ""
+						},
+						{
+							"sentence": "Put the apple into the bag.",
+							"translation": ""
+						},
+						{
+							"sentence": "He jumped into the pool.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": ""
+				},
+				{
+					"group": "Particles",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": "",
+					"word": "for",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "This present is for you."
+						},
+						{
+							"sentence": "I made a cake for you.",
+							"translation": ""
+						},
+						{
+							"sentence": "This is for my mother.",
+							"translation": ""
+						}
+					],
+					"id": 15,
+					"sortOrder": 1
+				},
+				{
+					"sortOrder": 1,
+					"word": "after",
+					"translation": "",
+					"id": 16,
+					"sentences": [
+						{
+							"sentence": "We'll go out after lunch.",
+							"translation": ""
+						},
+						{
+							"sentence": "I do my homework after school.",
+							"translation": ""
+						},
+						{
+							"sentence": "Wash your hands after playing.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"romanisation": "",
+					"group": "Particles"
+				},
+				{
+					"id": 17,
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Do it before dinner."
+						},
+						{
+							"sentence": "Brush your teeth before bed.",
+							"translation": ""
+						},
+						{
+							"sentence": "Wash your hands before eating.",
+							"translation": ""
+						}
+					],
+					"group": "Particles",
+					"word": "before"
+				}
+			]
+		}
+		
+	],
+	
+}

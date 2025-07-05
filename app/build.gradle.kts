@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.hilt.android)
     // Add this for Hilt compiler
     kotlin("kapt")
+    kotlin("plugin.serialization") version "1.9.23"
 }
 
 android {
@@ -103,6 +104,9 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
+
+    // Add this for JSON parsing
+    implementation(libs.kotlinx.serialization.json)
 
     // Firebase
     implementation(platform(libs.firebase.bom))

@@ -17,6 +17,7 @@ firebaseBom = "32.8.1"
 materialIconsExtended = "1.6.5"
 truth = "1.4.2"
 mockk = "1.13.10"
+kotlinxSerializationJson = "1.6.3"
 
 [libraries]
 # Core & AppCompat
@@ -24,6 +25,7 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 # Add this new library definition
 google-android-material = { group = "com.google.android.material", name = "material", version.ref = "material" } # <-- ADD THIS LINE
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 
 # Compose
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
