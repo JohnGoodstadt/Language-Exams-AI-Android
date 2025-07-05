@@ -18,6 +18,7 @@ materialIconsExtended = "1.6.5"
 truth = "1.4.2"
 mockk = "1.13.10"
 kotlinxSerializationJson = "1.6.3"
+coroutines = "1.7.3"
 
 [libraries]
 # Core & AppCompat
@@ -26,6 +27,7 @@ androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecyc
 # Add this new library definition
 google-android-material = { group = "com.google.android.material", name = "material", version.ref = "material" } # <-- ADD THIS LINE
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 
 # Compose
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
