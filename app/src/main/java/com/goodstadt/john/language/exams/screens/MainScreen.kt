@@ -1,4 +1,3 @@
-// <project-root>/app/src/main/java/com/goodstadt/john/language/exams/screens/MainScreen.kt
 package com.goodstadt.john.language.exams.screens
 
 import android.annotation.SuppressLint
@@ -23,6 +22,7 @@ import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.screens.shared.TabWithHorizontalMenu
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
+import com.goodstadt.john.language.exams.viewmodels.VocabDataUiState
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -61,8 +61,34 @@ fun MainScreen() {
                 Modifier.padding(innerPadding)
         ) {
             composable(Screen.Tab1.route) {
-                val menuItems by tabsViewModel.tab1MenuItems.collectAsState()
-                TabWithHorizontalMenu(menuItems = menuItems)
+                // --- NEW LOGIC FOR TAB 1 ---
+                val uiState by tabsViewModel.vocabUiState.collectAsState()
+                val tab1Categories by tabsViewModel.tab1Categories.collectAsState()
+                val tab1MenuItems by tabsViewModel.tab1MenuItems.collectAsState()
+                // --- NEW: Get the index map state ---
+                val categoryIndexMap by tabsViewModel.categoryIndexMap.collectAsState()
+
+                when (val state = uiState) {
+                    is VocabDataUiState.Loading -> {
+                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            CircularProgressIndicator()
+                        }
+                    }
+                    is VocabDataUiState.Error -> {
+                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                            Text(text = "Error: ${state.message}")
+                        }
+                    }
+                    is VocabDataUiState.Success -> {
+                        // If data is loaded successfully, show the main content
+                        CategoryTabScreen(
+                                menuItems = tab1MenuItems,
+                                categories = tab1Categories,
+                                categoryIndexMap = categoryIndexMap
+                        )
+                    }
+                }
+                // --- END NEW LOGIC FOR TAB 1 ---
             }
             composable(Screen.Tab2.route) {
                 val menuItems by tabsViewModel.tab2MenuItems.collectAsState()

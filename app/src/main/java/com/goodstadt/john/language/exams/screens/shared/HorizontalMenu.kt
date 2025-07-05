@@ -21,18 +21,24 @@ fun TabWithHorizontalMenu(menuItems: List<String>) {
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             items(menuItems) { item ->
-                MenuItemChip(text = item)
+                MenuItemChip(
+                        text = item,
+                        onClick = { /* Do nothing for now. This can be implemented later. */ })
             }
         }
         // You can add the rest of the tab's content here
     }
 }
 
+// ...
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MenuItemChip(text: String) {
+fun MenuItemChip(
+    text: String,
+    onClick: () -> Unit // <-- Add the onClick parameter
+) {
     Card(
-            onClick = { /* Handle click */ },
+            onClick = onClick, // <-- Use the passed-in lambda
             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Text(
