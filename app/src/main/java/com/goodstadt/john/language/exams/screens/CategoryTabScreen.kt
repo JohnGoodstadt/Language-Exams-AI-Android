@@ -23,10 +23,12 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.models.Category
+import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.ui.theme.Orange
+import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -39,7 +41,9 @@ import kotlinx.coroutines.launch
 fun CategoryTabScreen(
     menuItems: List<String>,
     categories: List<Category>,
-    categoryIndexMap: Map<String, Int> // Receive the pre-calculated index map
+    categoryIndexMap: Map<String, Int>, // Receive the pre-calculated index map
+    playbackState: PlaybackState, // <-- Add playback state
+    onRowTapped: (word: VocabWord, sentence: Sentence) -> Unit // <-- Add click handler
 ) {
     // Create and remember the state for the LazyColumn
     val lazyListState = rememberLazyListState()
@@ -93,14 +97,19 @@ fun CategoryTabScreen(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    println("Row for '${word.word}' tapped!")
+                                    println("Row for '${word.sentences[0].sentence}' tapped!")
+                                    sentenceToShow?.let { onRowTapped(word, it) }
                                 }
                     ) {
                         if (sentenceToShow != null) {
                             // 1. Prepare the data by calling our helper function
                             val displayData = buildSentenceParts(entry = word, sentence = sentenceToShow)
+                            val uniqueSentenceId = "${word.id}-${sentenceToShow.sentence.hashCode()}"
 
                             // 2. Call the new, complex VocabRow composable
+                            val isPlaying = playbackState is PlaybackState.Playing &&
+                                    playbackState.sentenceId == uniqueSentenceId
+
                             VocabRow(
                                     entry = word,
                                     parts = displayData.parts,
@@ -108,7 +117,8 @@ fun CategoryTabScreen(
                                     // Hardcoding these as per the Swift example for now
                                     isRecalling = false,
                                     displayDot = false,
-                                    wordCount = 0
+                                    wordCount = 0,
+                                    isPlaying = isPlaying // <-- Pass the playing state down
                             )
                         } else {
                             // A fallback for words that have no sentences
@@ -171,7 +181,8 @@ fun VocabRow(
     sentence: String,
     isRecalling: Boolean,
     displayDot: Boolean,
-    wordCount: Int
+    wordCount: Int,
+    isPlaying: Boolean
 ) {
     // buildAnnotatedString is the Jetpack Compose equivalent of mixing styled Text
     val annotatedString = buildAnnotatedString {
@@ -221,14 +232,18 @@ fun VocabRow(
         Text(text = annotatedString, modifier = Modifier.weight(1f))
 
         // Display the dots based on the boolean flags
-        if (displayDot) {
-            Text(text = "🔴", fontSize = 12.sp)
-            if (wordCount > 0) {
-                Text(text = "$wordCount", fontSize = 10.sp)
+        if (isPlaying) {
+            CircularProgressIndicator(modifier = Modifier.size(24.dp))
+        } else {
+            if (displayDot) {
+                Text(text = "🔴", fontSize = 12.sp)
+                if (wordCount > 0) {
+                    Text(text = "$wordCount", fontSize = 10.sp)
+                }
             }
-        }
-        if (isRecalling) {
-            Text(text = "🟢", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
+            if (isRecalling) {
+                Text(text = "🟢", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
+            }
         }
     }
     Divider()

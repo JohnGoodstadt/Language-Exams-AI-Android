@@ -10,6 +10,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavDestination.Companion.hierarchy
@@ -18,9 +19,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.goodstadt.john.language.exams.models.Category
+import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.screens.shared.TabWithHorizontalMenu
+import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
 import com.goodstadt.john.language.exams.viewmodels.VocabDataUiState
 
@@ -60,47 +65,66 @@ fun MainScreen() {
                 startDestination = Screen.Tab1.route,
                 Modifier.padding(innerPadding)
         ) {
+            // --- Reusable Logic for Tabs 1, 2, 3 ---
             composable(Screen.Tab1.route) {
-                // --- NEW LOGIC FOR TAB 1 ---
                 val uiState by tabsViewModel.vocabUiState.collectAsState()
-                val tab1Categories by tabsViewModel.tab1Categories.collectAsState()
-                val tab1MenuItems by tabsViewModel.tab1MenuItems.collectAsState()
-                // --- NEW: Get the index map state ---
-                val categoryIndexMap by tabsViewModel.categoryIndexMap.collectAsState()
+                val categories by tabsViewModel.tab1Categories.collectAsState()
+                val menuItems by tabsViewModel.tab1MenuItems.collectAsState()
+                val indexMap by tabsViewModel.tab1CategoryIndexMap.collectAsState()
+                // Collect the playback state here, where tabsViewModel is known
+                val playbackState by tabsViewModel.playbackState.collectAsState()
 
-                when (val state = uiState) {
-                    is VocabDataUiState.Loading -> {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            CircularProgressIndicator()
-                        }
-                    }
-                    is VocabDataUiState.Error -> {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text(text = "Error: ${state.message}")
-                        }
-                    }
-                    is VocabDataUiState.Success -> {
-                        // If data is loaded successfully, show the main content
-                        CategoryTabScreen(
-                                menuItems = tab1MenuItems,
-                                categories = tab1Categories,
-                                categoryIndexMap = categoryIndexMap
-                        )
-                    }
-                }
-                // --- END NEW LOGIC FOR TAB 1 ---
+                RenderCategoryTab(
+                        uiState = uiState,
+                        menuItems = menuItems,
+                        categories = categories,
+                        categoryIndexMap = indexMap,
+                        playbackState = playbackState, // Pass the state down
+                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) } // Pass the action down
+                )
             }
+
             composable(Screen.Tab2.route) {
+                val uiState by tabsViewModel.vocabUiState.collectAsState()
+                val categories by tabsViewModel.tab2Categories.collectAsState()
                 val menuItems by tabsViewModel.tab2MenuItems.collectAsState()
-                TabWithHorizontalMenu(menuItems = menuItems)
+                val indexMap by tabsViewModel.tab2CategoryIndexMap.collectAsState()
+                // Collect the playback state here, where tabsViewModel is known
+                val playbackState by tabsViewModel.playbackState.collectAsState()
+
+                RenderCategoryTab(
+                        uiState = uiState,
+                        menuItems = menuItems,
+                        categories = categories,
+                        categoryIndexMap = indexMap,
+                        playbackState = playbackState, // Pass the state down
+                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) } // Pass the action down
+                )
             }
+
             composable(Screen.Tab3.route) {
+                val uiState by tabsViewModel.vocabUiState.collectAsState()
+                val categories by tabsViewModel.tab3Categories.collectAsState()
                 val menuItems by tabsViewModel.tab3MenuItems.collectAsState()
-                TabWithHorizontalMenu(menuItems = menuItems)
+                val indexMap by tabsViewModel.tab3CategoryIndexMap.collectAsState()
+                // Collect the playback state here, where tabsViewModel is known
+                val playbackState by tabsViewModel.playbackState.collectAsState()
+
+                RenderCategoryTab(
+                        uiState = uiState,
+                        menuItems = menuItems,
+                        categories = categories,
+                        categoryIndexMap = indexMap,
+                        playbackState = playbackState, // Pass the state down
+                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) } // Pass the action down
+                )
             }
+            // --- End of Reusable Logic ---
+
             composable(Screen.Tab4.route) {
                 Tab4Screen()
             }
+
             composable(Screen.Tab5.route) {
                 val menuItems by tabsViewModel.tab5MenuItems.collectAsState()
                 TabWithHorizontalMenu(menuItems = menuItems)
@@ -113,5 +137,47 @@ fun MainScreen() {
 fun Tab4Screen() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Text("Hello, World!", style = MaterialTheme.typography.headlineMedium)
+    }
+}
+
+// Add this function inside MainScreen.kt, below the MainScreen composable
+
+/**
+ * A helper composable that handles the loading/error/success states
+ * and renders the CategoryTabScreen. This avoids duplicating the `when` statement.
+ */
+@Composable
+private fun RenderCategoryTab(
+    uiState: VocabDataUiState,
+    menuItems: List<String>,
+    categories: List<Category>,
+    categoryIndexMap: Map<String, Int>,
+        // --- ADD THIS NEW PARAMETER ---
+    playbackState: PlaybackState,
+        // --- ADD THIS NEW PARAMETER ---
+    onRowTapped: (word: VocabWord, sentence: Sentence) -> Unit
+) {
+
+    when (uiState) {
+        is VocabDataUiState.Loading -> {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator()
+            }
+        }
+        is VocabDataUiState.Error -> {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Text(text = "Error: ${uiState.message}", color = Color.Red)
+            }
+        }
+        is VocabDataUiState.Success -> {
+            CategoryTabScreen(
+                    menuItems = menuItems,
+                    categories = categories,
+                    categoryIndexMap = categoryIndexMap,
+                    // Pass the new parameters down to the next screen
+                    playbackState = playbackState,
+                    onRowTapped = onRowTapped
+            )
+        }
     }
 }

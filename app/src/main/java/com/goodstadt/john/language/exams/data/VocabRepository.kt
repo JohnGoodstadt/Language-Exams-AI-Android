@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.data
 
 import android.content.Context
 import com.goodstadt.john.language.exams.R
+import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.models.VocabFile
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -12,7 +13,10 @@ import javax.inject.Singleton
 
 @Singleton
 class VocabRepository @Inject constructor(
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+        // --- NEW: Inject the new services ---
+    private val googleCloudTts: GoogleCloudTTS,
+    private val audioPlayerService: AudioPlayerService
 ) {
     // Cache the result in memory after the first successful load
     private var cachedVocabFile: VocabFile? = null
@@ -50,5 +54,23 @@ class VocabRepository @Inject constructor(
             e.printStackTrace()
             Result.failure(e)
         }
+    }
+    /**
+     * Fetches audio data for the given text from the TTS service and plays it.
+     */
+    suspend fun playTextToSpeech(text: String): Result<Unit> {
+        // First, get the audio data from the network
+        val audioResult = googleCloudTts.getAudioData(text)
+
+        return audioResult.fold(
+                onSuccess = { audioData ->
+                    // If network call is successful, play the audio
+                    audioPlayerService.playAudio(audioData)
+                },
+                onFailure = { exception ->
+                    // If network call fails, pass the failure along
+                    Result.failure(exception)
+                }
+        )
     }
 }

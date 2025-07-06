@@ -20,6 +20,9 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
+
+        buildConfigField("String", "TTS_API_KEY", "\"AIzaSyBSGjKuHGjfCHmfMNBHxD4wuH0COGQ0biY\"")
+
         vectorDrawables {
             useSupportLibrary = true
         }
