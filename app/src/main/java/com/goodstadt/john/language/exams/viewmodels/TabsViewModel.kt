@@ -7,6 +7,7 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -118,11 +119,13 @@ class TabsViewModel @Inject constructor(
         if (_playbackState.value is PlaybackState.Playing) return
 
         viewModelScope.launch {
-            // Create a unique ID for this playback instance
-            val uniqueSentenceId = "${word.id}-${sentence.sentence.hashCode()}"
+            val uniqueSentenceId = generateUniqueSentenceId(word, sentence)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
-            val result = vocabRepository.playTextToSpeech(sentence.sentence)
+            val result = vocabRepository.playTextToSpeech(
+                    text = sentence.sentence,
+                    uniqueSentenceId = uniqueSentenceId
+            )
 
             result.onFailure { error ->
                 _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")

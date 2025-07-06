@@ -28,6 +28,7 @@ import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.ui.theme.Orange
+import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -104,7 +105,7 @@ fun CategoryTabScreen(
                         if (sentenceToShow != null) {
                             // 1. Prepare the data by calling our helper function
                             val displayData = buildSentenceParts(entry = word, sentence = sentenceToShow)
-                            val uniqueSentenceId = "${word.id}-${sentenceToShow.sentence.hashCode()}"
+                            val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow)
 
                             // 2. Call the new, complex VocabRow composable
                             val isPlaying = playbackState is PlaybackState.Playing &&
