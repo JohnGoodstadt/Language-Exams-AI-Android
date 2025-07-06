@@ -66,7 +66,7 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
  */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun SectionedVocabList(
+fun SectionedVocabList(
     categories: List<com.goodstadt.john.language.exams.models.Category>,
     playbackState: PlaybackState,
     onRowTapped: (com.goodstadt.john.language.exams.models.VocabWord, com.goodstadt.john.language.exams.models.Sentence) -> Unit

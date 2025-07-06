@@ -8,4 +8,5 @@ object LanguageConfig {
     val defaultFileName: String = "vocab_data_a1"
     val meTabMenuItems = listOf("Settings", "Search","Progress", "Quiz",  "Conjugations", "Prepositions", "Paragraph", "Conversation")
     val conjugationsFileName: String? = "conjugations_de"
+    val prepositionsFileName: String? = "prepositions_de"
 }

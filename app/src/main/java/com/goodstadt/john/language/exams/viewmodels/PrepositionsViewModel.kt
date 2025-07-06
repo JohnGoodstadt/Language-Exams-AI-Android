@@ -1,0 +1,85 @@
+package com.goodstadt.john.language.exams.viewmodels
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+// This UI State can be reused, but let's give it a specific name for clarity
+sealed interface PrepositionsUiState {
+    object Loading : PrepositionsUiState
+    data class Success(val categories: List<com.goodstadt.john.language.exams.models.Category>) : PrepositionsUiState
+    data class Error(val message: String) : PrepositionsUiState
+    object NotAvailable : PrepositionsUiState
+}
+
+@HiltViewModel
+class PrepositionsViewModel @Inject constructor(
+    private val vocabRepository: VocabRepository,
+    private val userPreferencesRepository: UserPreferencesRepository
+) : ViewModel() {
+
+    private val _uiState = MutableStateFlow<PrepositionsUiState>(PrepositionsUiState.Loading)
+    val uiState = _uiState.asStateFlow()
+
+    private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
+    val playbackState = _playbackState.asStateFlow()
+
+    init {
+        loadPrepositionsData()
+    }
+
+    private fun loadPrepositionsData() {
+        viewModelScope.launch {
+            // *** THE ONLY LOGICAL CHANGE IS HERE ***
+            val fileName = LanguageConfig.prepositionsFileName
+
+            if (fileName == null) {
+                _uiState.value = PrepositionsUiState.NotAvailable
+                return@launch
+            }
+
+            _uiState.value = PrepositionsUiState.Loading
+            val result = vocabRepository.getVocabData(fileName)
+
+            result.onSuccess { vocabFile ->
+                _uiState.value = PrepositionsUiState.Success(vocabFile.categories)
+            }.onFailure { error ->
+                _uiState.value = PrepositionsUiState.Error(error.localizedMessage ?: "Failed to load file")
+            }
+        }
+    }
+
+    fun playTrack(word: VocabWord, sentence: Sentence) {
+        if (_playbackState.value is PlaybackState.Playing) return
+
+        viewModelScope.launch {
+            val uniqueSentenceId = generateUniqueSentenceId(word, sentence)
+            _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
+
+            val currentVoiceName = userPreferencesRepository.getSelectedVoiceName()
+            val currentLanguageCode = LanguageConfig.languageCode
+
+            val result = vocabRepository.playTextToSpeech(
+                    text = sentence.sentence,
+                    uniqueSentenceId = uniqueSentenceId,
+                    voiceName = currentVoiceName,
+                    languageCode = currentLanguageCode
+            )
+
+            result.onFailure { error ->
+                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+            }
+            _playbackState.value = PlaybackState.Idle
+        }
+    }
+}
