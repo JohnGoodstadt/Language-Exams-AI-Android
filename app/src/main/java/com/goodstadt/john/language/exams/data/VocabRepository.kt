@@ -20,7 +20,7 @@ class VocabRepository @Inject constructor(
     private val audioPlayerService: AudioPlayerService
 ) {
     // Cache the result in memory after the first successful load
-    private var cachedVocabFile: VocabFile? = null
+    private val vocabCache = mutableMapOf<String, VocabFile>()
 
     // A lazy json parser instance with lenient configuration
     private val jsonParser = Json {
@@ -30,28 +30,39 @@ class VocabRepository @Inject constructor(
     }
 
     /**
-     * Loads the vocabulary data from the variant-specific JSON file.
-     * This is a suspend function to ensure it runs on a background thread.
-     * It uses an in-memory cache to avoid re-reading and re-parsing the file.
+     * Loads the vocabulary data from the specified JSON file.
+     * This version is dynamic and includes a more robust cache.
+     * @param fileName The name of the resource file to load (without the .json extension).
      */
-    suspend fun getVocabData(): Result<VocabFile> = withContext(Dispatchers.IO) {
-        // Return from cache if available
-        cachedVocabFile?.let {
+    suspend fun getVocabData(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
+        // Return from cache if available for this specific file
+        vocabCache[fileName]?.let {
+            println("Returning '$fileName' from cache.") // For debugging
             return@withContext Result.success(it)
         }
 
-        // Otherwise, read and parse the file
         try {
-            // R.raw.vocab_data will point to the correct file based on the build variant
-            val inputStream = context.resources.openRawResource(R.raw.vocab_data)
+            // Dynamically get the resource ID from the filename string
+            val resourceId = context.resources.getIdentifier(
+                    fileName,
+                    "raw",
+                    context.packageName
+            )
+
+            // Check if the resource was found
+            if (resourceId == 0) {
+                return@withContext Result.failure(Exception("Resource file not found: $fileName.json"))
+            }
+
+            println("Loading '$fileName' from resources.") // For debugging
+            val inputStream = context.resources.openRawResource(resourceId)
             val jsonString = inputStream.bufferedReader().use { it.readText() }
             val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
 
-            // Cache the result and return
-            cachedVocabFile = vocabFile
+            // Cache the result using the filename as the key
+            vocabCache[fileName] = vocabFile
             Result.success(vocabFile)
         } catch (e: Exception) {
-            // Log the exception in a real app
             e.printStackTrace()
             Result.failure(e)
         }
@@ -60,7 +71,12 @@ class VocabRepository @Inject constructor(
      * Fetches audio data for the given text from the TTS service and plays it.
      * This version includes a file-based caching mechanism.
      */
-    suspend fun playTextToSpeech(text: String, uniqueSentenceId: String): Result<Unit> {
+    suspend fun playTextToSpeech(
+        text: String,
+        uniqueSentenceId: String,
+        voiceName: String, // <-- New parameter
+        languageCode: String // <-- New parameter
+    ): Result<Unit> {
         // 1. Define the cache file based on the unique ID.
         // We use the app's private cache directory, which is the correct place for this.
         val cacheDir = context.cacheDir
@@ -68,14 +84,14 @@ class VocabRepository @Inject constructor(
 
         // 2. Check if the cached file exists.
         if (audioCacheFile.exists()) {
-            println("Playing from cache: ${audioCacheFile.name}") // For debugging
+            println("Playing from cache: Yippee!") // For debugging
             // If it exists, play the audio data from the file.
             return audioPlayerService.playAudio(audioCacheFile.readBytes())
         }
 
         // 3. If not cached, fetch from the network.
         println("Fetching from network: $text") // For debugging
-        val audioResult = googleCloudTts.getAudioData(text)
+        val audioResult = googleCloudTts.getAudioData(text, voiceName, languageCode)
 
         return audioResult.fold(
                 onSuccess = { audioData ->

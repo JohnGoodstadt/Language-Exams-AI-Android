@@ -1,0 +1,178 @@
+{
+	"id" : "languages",
+	"date" : "2023-02-01",
+	"name" : "Offered Languages",
+	"codes": [
+		{
+			"id":"1",
+			"code":"en-gb",
+			"appleLocaleCode":"en_GB",
+			"googlevoiceprefix":"en-gb",
+			"defaultMaleVoice":"en-GB-Neural2-D male",
+			"defaultFemaleVoice":"en-GB-Neural2-C female",
+			"voicename":"en-GB-Neural2-C female",
+			"name":"British English",
+			"shortname":"UK English",
+			"description":"As spoken in Great Britain and Ireland",
+			"romanized":false,
+			"isTarget":true,
+			"isApp":true,
+			"currentSkillLevel":"A1",
+			"exams": [
+				{
+					"displayName":"English A1",
+					"json":"EnglishA1Vocab",
+					"skillLevel":"A1"
+				},
+				{
+					"displayName":"English A2",
+					"json":"EnglishA2Vocab",
+					"skillLevel":"A2"
+				},
+				{
+					"displayName":"English B1",
+					"json":"EnglishB1Vocab",
+					"skillLevel":"B1"
+				},
+				{
+					"displayName":"English B2",
+					"json":"EnglishB2Vocab",
+					"skillLevel":"B2"
+				}
+			]
+		},
+		{
+			"id":"2",
+			"code":"en-us",
+			"appleLocaleCode":"en_US",
+			"googlevoiceprefix":"en-us",
+			"voicename":"en-US-Neural2-C female",
+			"defaultMaleVoice":"en-US-Neural2-D male",
+			"defaultFemaleVoice":"en-US-Neural2-C female",
+			"name":"American English",
+			"shortname":"US English",
+			"description":"As spoken in America, Canada etc",
+			"romanized":false,
+			"isTarget":true,
+			"isApp":true,
+			"currentSkillLevel":"A1",
+			"exams": [
+				{
+					"displayName":"English A1",
+					"json":"EnglishA1Vocab",
+					"skillLevel":"A1"
+				},
+				{
+					"displayName":"English A2",
+					"json":"EnglishA2Vocab",
+					"skillLevel":"A2"
+				},
+				{
+					"displayName":"English B1",
+					"json":"EnglishB1Vocab",
+					"skillLevel":"B1"
+				},
+				{
+					"displayName":"English B2",
+					"json":"EnglishB2Vocab",
+					"skillLevel":"B2"
+				}
+			]
+		},
+		{
+			"id":"3",
+			"code":"en-au",
+			"appleLocaleCode":"en_AU",
+			"googlevoiceprefix":"en-au",
+			"voicename":"en-AU-Neural2-A female",
+			"defaultMaleVoice":"en-AU-Neural2-B male",
+			"defaultFemaleVoice":"en-AU-Neural2-A female",
+			"name":"Australian English",
+			"shortname":"Australian,",
+			"description":"As spoken in Australia",
+			"romanized":false,
+			"isTarget":true,
+			"isApp":true,
+			"currentSkillLevel":"A1",
+			"exams": [
+				{
+					"displayName":"English A1",
+					"json":"EnglishA1Vocab",
+					"skillLevel":"A1"
+				},
+				{
+					"displayName":"English A2",
+					"json":"EnglishA2Vocab",
+					"skillLevel":"A2"
+				},
+				{
+					"displayName":"English B1",
+					"json":"EnglishB1Vocab",
+					"skillLevel":"B1"
+				},
+				{
+					"displayName":"English B2",
+					"json":"EnglishB2Vocab",
+					"skillLevel":"B2"
+				}
+			]
+		},
+		{
+			"id":"4",
+			"code":"de-DE",
+			"appleLocaleCode":"de_DE",
+			"googlevoiceprefix":"de",
+			"voicename":"de-DE-Neural2-A female",
+			"defaultMaleVoice":"de-DE-Neural2-B male",
+			"defaultFemaleVoice":"de-DE-Neural2-A female",
+			"name":"German",
+			"shortname":"German",
+			"description":"Modern German",
+			"romanized":false,
+			"isTarget":true,
+			"isApp":true,
+			"currentSkillLevel":"A1",
+			"exams": [
+				{
+					"displayName":"German A1",
+					"json":"GermanA1Vocab",
+					"skillLevel":"A1"
+				},
+				{
+					"displayName":"German A2",
+					"json":"GermanA2Vocab",
+					"skillLevel":"A2"
+				}
+			]
+		},
+		{
+			"id":"8",
+			"code":"zh",
+			"appleLocaleCode":"zh-Hans",
+			"googlevoiceprefix":"cmn-cn",
+			"voicename":"cmn-CN-Wavenet-A female",
+			"defaultMaleVoice":"cmn-CN-Wavenet-B male",
+			"defaultFemaleVoice":"cmn-CN-Wavenet-A female",
+			"name":"Chinese (Mandarin)",
+			"shortname":"Chinese",
+			"description":"Mandarin Chinese",
+			"romanized":true,
+			"isTarget":true,
+			"isApp":true,
+			"currentSkillLevel":"HSK1",
+			"exams": [
+				{
+					"displayName":"Chinese HSK1",
+					"json":"ChineseHSK1Vocab",
+					"skillLevel":"HSK1"
+					
+				},
+				{
+					"displayName":"Chinese HSK2",
+					"json":"ChineseHSK2Vocab",
+					"skillLevel":"HSK2"
+				}
+			]
+		}
+	]
+}

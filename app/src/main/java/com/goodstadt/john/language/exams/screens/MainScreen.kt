@@ -28,6 +28,11 @@ import com.goodstadt.john.language.exams.screens.shared.TabWithHorizontalMenu
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
 import com.goodstadt.john.language.exams.viewmodels.VocabDataUiState
+import androidx.navigation.compose.NavHost
+import com.goodstadt.john.language.exams.navigation.MeScreen
+import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
+//import com.goodstadt.john.language.exams.screens.me.MeTabMenuScreen
+import com.goodstadt.john.language.exams.screens.me.MeTabPlaceholderScreen
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -126,8 +131,7 @@ fun MainScreen() {
             }
 
             composable(Screen.Tab5.route) {
-                val menuItems by tabsViewModel.tab5MenuItems.collectAsState()
-                TabWithHorizontalMenu(menuItems = menuItems)
+                MeTabContainerScreen()
             }
         }
     }

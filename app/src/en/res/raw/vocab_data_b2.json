@@ -1,0 +1,2140 @@
+{
+	"name" : "",
+	"location" : 0,
+	"fileformat" : 0,
+	"id" : "",
+	"nativename" : "",
+	"uploaddate" : 1748295473.130368,
+	"voicename" : "",
+	"updatedDate" : 978307200,
+	"native" : "",
+	"googlevoiceprefix" : "",
+	"sheetname" : "EnglishB2Vocab",
+	"romanized" : false,
+	"tabtitles" : ["Personal","Travel etc","More"],
+	"categories" : [
+		{
+			"words" : [
+				{
+					"sortOrder" : 1,
+					"translation" : "",
+					"partOfSpeech" : "",
+					"group" : "Personal and Professional Development",
+					"sentences" : [
+						{
+							"sentence" : "His greatest achievement was completing the marathon.",
+							"translation" : ""
+						}
+					],
+					"romanisation" : "",
+					"id" : 0,
+					"word" : "achievement"
+				},
+				{
+					"translation" : "",
+					"romanisation" : "",
+					"word" : "commitment",
+					"id" : 1,
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "She has shown great commitment to her studies.",
+							"translation" : ""
+						}
+					],
+					"group" : "Personal and Professional Development",
+					"sortOrder" : 1
+				},
+				{
+					"translation" : "",
+					"group" : "Personal and Professional Development",
+					"sentences" : [
+						{
+							"sentence" : "His dedication to his job earned him a promotion.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"id" : 2,
+					"romanisation" : "",
+					"word" : "dedication",
+					"partOfSpeech" : ""
+				},
+				{
+					"sortOrder" : 1,
+					"word" : "leadership",
+					"id" : 3,
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "Effective leadership is essential for a successful team.",
+							"translation" : ""
+						}
+					],
+					"group" : "Personal and Professional Development",
+					"translation" : "",
+					"romanisation" : ""
+				},
+				{
+					"partOfSpeech" : "",
+					"group" : "Personal and Professional Development",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "Her motivation to succeed is evident in her hard work.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"id" : 4,
+					"word" : "motivation",
+					"romanisation" : ""
+				}
+			],
+			"sortOrder" : 1,
+			"tabnumber" : 1,
+			"title" : "Personal Development"
+		},
+		{
+			"tabnumber" : 1,
+			"title" : "Education",
+			"sortOrder" : 1,
+			"words" : [
+				{
+					"id" : 0,
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"word" : "academic",
+					"group" : "Education and Learning",
+					"sentences" : [
+						{
+							"sentence" : "She received an award for her academic excellence.",
+							"translation" : ""
+						}
+					],
+					"translation" : ""
+				},
+				{
+					"group" : "Education and Learning",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The school offers a diverse curriculum."
+						}
+					],
+					"translation" : "",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"id" : 1,
+					"word" : "curriculum"
+				},
+				{
+					"id" : 2,
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "He earned his diploma after four years of hard work."
+						}
+					],
+					"translation" : "",
+					"group" : "Education and Learning",
+					"word" : "diploma",
+					"partOfSpeech" : ""
+				},
+				{
+					"romanisation" : "",
+					"word" : "elective",
+					"id" : 3,
+					"partOfSpeech" : "",
+					"translation" : "",
+					"sortOrder" : 1,
+					"group" : "Education and Learning",
+					"sentences" : [
+						{
+							"sentence" : "She chose French as her elective subject.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"word" : "enrollment",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Enrollment for the new semester starts next week."
+						}
+					],
+					"group" : "Education and Learning",
+					"sortOrder" : 1,
+					"id" : 4,
+					"translation" : ""
+				},
+				{
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"group" : "Education and Learning",
+					"translation" : "",
+					"id" : 5,
+					"word" : "faculty",
+					"sentences" : [
+						{
+							"sentence" : "The faculty at the university is highly qualified.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"id" : 6,
+					"sortOrder" : 1,
+					"group" : "Education and Learning",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "We attended a fascinating lecture on ancient history."
+						}
+					],
+					"romanisation" : "",
+					"translation" : "",
+					"word" : "lecture"
+				},
+				{
+					"romanisation" : "",
+					"id" : 7,
+					"word" : "prerequisite",
+					"group" : "Education and Learning",
+					"sentences" : [
+						{
+							"sentence" : "Biology is a prerequisite for taking the advanced course.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"sortOrder" : 1,
+					"partOfSpeech" : ""
+				},
+				{
+					"sentences" : [
+						{
+							"sentence" : "She applied for a scholarship to study abroad.",
+							"translation" : ""
+						}
+					],
+					"id" : 8,
+					"sortOrder" : 1,
+					"word" : "scholarship",
+					"translation" : "",
+					"romanisation" : "",
+					"group" : "Education and Learning",
+					"partOfSpeech" : ""
+				},
+				{
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"id" : 9,
+					"group" : "Education and Learning",
+					"translation" : "",
+					"word" : "thesis",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "He is writing his thesis on renewable energy sources."
+						}
+					],
+					"romanisation" : ""
+				}
+			]
+		},
+		{
+			"tabnumber" : 1,
+			"words" : [
+				{
+					"sortOrder" : 1,
+					"id" : 0,
+					"partOfSpeech" : "",
+					"word" : "application",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "He filled out a job application online."
+						}
+					],
+					"translation" : "",
+					"romanisation" : "",
+					"group" : "Work and Employment"
+				},
+				{
+					"romanisation" : "",
+					"group" : "Work and Employment",
+					"word" : "benefits",
+					"translation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The job comes with excellent benefits, including health insurance."
+						}
+					],
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"id" : 1
+				},
+				{
+					"translation" : "",
+					"partOfSpeech" : "",
+					"group" : "Work and Employment",
+					"romanisation" : "",
+					"word" : "contract",
+					"id" : 2,
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "She signed a two-year contract with the company."
+						}
+					]
+				},
+				{
+					"word" : "entrepreneur",
+					"romanisation" : "",
+					"id" : 3,
+					"partOfSpeech" : "",
+					"translation" : "",
+					"sortOrder" : 1,
+					"group" : "Work and Employment",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "As an entrepreneur, he started his own tech company."
+						}
+					]
+				},
+				{
+					"group" : "Work and Employment",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "She is completing an internship at a law firm this summer."
+						}
+					],
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"word" : "internship",
+					"translation" : "",
+					"id" : 4,
+					"partOfSpeech" : ""
+				},
+				{
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"word" : "job description",
+					"group" : "Work and Employment",
+					"sortOrder" : 1,
+					"id" : 5,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The job description includes managing a team of five people."
+						}
+					],
+					"translation" : ""
+				},
+				{
+					"sentences" : [
+						{
+							"sentence" : "Salary negotiation is a crucial part of the hiring process.",
+							"translation" : ""
+						}
+					],
+					"word" : "negotiation",
+					"translation" : "",
+					"id" : 6,
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"group" : "Work and Employment",
+					"romanisation" : ""
+				},
+				{
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Teaching is a highly respected profession."
+						}
+					],
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"id" : 7,
+					"group" : "Work and Employment",
+					"word" : "profession",
+					"sortOrder" : 1,
+					"translation" : ""
+				},
+				{
+					"id" : 8,
+					"group" : "Work and Employment",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "The company has a recruitment drive every spring.",
+							"translation" : ""
+						}
+					],
+					"romanisation" : "",
+					"translation" : "",
+					"partOfSpeech" : "",
+					"word" : "recruitment"
+				},
+				{
+					"romanisation" : "",
+					"group" : "Work and Employment",
+					"word" : "resignation",
+					"translation" : "",
+					"id" : 9,
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "He submitted his resignation letter yesterday.",
+							"translation" : ""
+						}
+					]
+				}
+			],
+			"title" : "Work",
+			"sortOrder" : 1
+		},
+		{
+			"title" : "Travel",
+			"words" : [
+				{
+					"word" : "accommodation",
+					"translation" : "",
+					"group" : "Travel and Tourism",
+					"id" : 0,
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "We need to find suitable accommodation for our trip.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"romanisation" : ""
+				},
+				{
+					"romanisation" : "",
+					"translation" : "",
+					"sortOrder" : 1,
+					"id" : 1,
+					"word" : "itinerary",
+					"group" : "Travel and Tourism",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The travel agent provided us with a detailed itinerary."
+						}
+					],
+					"partOfSpeech" : ""
+				},
+				{
+					"romanisation" : "",
+					"word" : "landmark",
+					"group" : "Travel and Tourism",
+					"sortOrder" : 1,
+					"id" : 2,
+					"sentences" : [
+						{
+							"sentence" : "The Eiffel Tower is a famous landmark in Paris.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : "",
+					"translation" : ""
+				},
+				{
+					"translation" : "",
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "We made a reservation at a nice restaurant for dinner."
+						}
+					],
+					"id" : 3,
+					"group" : "Travel and Tourism",
+					"word" : "reservation"
+				},
+				{
+					"sentences" : [
+						{
+							"sentence" : "We spent the afternoon sightseeing in the old town.",
+							"translation" : ""
+						}
+					],
+					"group" : "Travel and Tourism",
+					"word" : "sightseeing",
+					"partOfSpeech" : "",
+					"translation" : "",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"id" : 4
+				},
+				{
+					"romanisation" : "",
+					"word" : "tourist attraction",
+					"id" : 5,
+					"sortOrder" : 1,
+					"group" : "Travel and Tourism",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "The Colosseum is a major tourist attraction in Rome.",
+							"translation" : ""
+						}
+					],
+					"translation" : ""
+				},
+				{
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "We booked our holiday through a travel agency."
+						}
+					],
+					"word" : "travel agency",
+					"id" : 6,
+					"group" : "Travel and Tourism",
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"translation" : ""
+				},
+				{
+					"word" : "traveler",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"translation" : "",
+					"id" : 7,
+					"partOfSpeech" : "",
+					"group" : "Travel and Tourism",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "She is an experienced traveler who has visited many countries."
+						}
+					]
+				},
+				{
+					"id" : 8,
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "They are planning a two-week vacation to Hawaii.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"word" : "vacation",
+					"group" : "Travel and Tourism",
+					"translation" : ""
+				},
+				{
+					"translation" : "",
+					"sortOrder" : 1,
+					"id" : 9,
+					"group" : "Travel and Tourism",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "You need a visa to enter the United States."
+						}
+					],
+					"word" : "visa",
+					"romanisation" : "",
+					"partOfSpeech" : ""
+				}
+			],
+			"sortOrder" : 1,
+			"tabnumber" : 2
+		},
+		{
+			"title" : "Health",
+			"words" : [
+				{
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "He has an allergy to peanuts."
+						}
+					],
+					"group" : "Health and Medicine",
+					"romanisation" : "",
+					"id" : 0,
+					"partOfSpeech" : "",
+					"word" : "allergy",
+					"translation" : "",
+					"sortOrder" : 1
+				},
+				{
+					"translation" : "",
+					"romanisation" : "",
+					"id" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The doctor made a quick diagnosis."
+						}
+					],
+					"group" : "Health and Medicine",
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"word" : "diagnosis"
+				},
+				{
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "She went for a medical examination yesterday.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"word" : "examination",
+					"romanisation" : "",
+					"id" : 2,
+					"group" : "Health and Medicine"
+				},
+				{
+					"romanisation" : "",
+					"group" : "Health and Medicine",
+					"sentences" : [
+						{
+							"sentence" : "Access to affordable healthcare is essential.",
+							"translation" : ""
+						}
+					],
+					"word" : "healthcare",
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"id" : 3,
+					"translation" : ""
+				},
+				{
+					"word" : "immune system",
+					"translation" : "",
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"id" : 4,
+					"group" : "Health and Medicine",
+					"sentences" : [
+						{
+							"sentence" : "A strong immune system helps fight off illnesses.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"word" : "medication",
+					"sortOrder" : 1,
+					"id" : 5,
+					"translation" : "",
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"group" : "Health and Medicine",
+					"sentences" : [
+						{
+							"sentence" : "She needs to take her medication twice a day.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"sortOrder" : 1,
+					"word" : "nutrition",
+					"id" : 6,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Good nutrition is vital for maintaining health."
+						}
+					],
+					"group" : "Health and Medicine",
+					"partOfSpeech" : "",
+					"translation" : "",
+					"romanisation" : ""
+				},
+				{
+					"sortOrder" : 1,
+					"group" : "Health and Medicine",
+					"translation" : "",
+					"word" : "prescription",
+					"partOfSpeech" : "",
+					"id" : 7,
+					"sentences" : [
+						{
+							"sentence" : "The doctor gave me a prescription for antibiotics.",
+							"translation" : ""
+						}
+					],
+					"romanisation" : ""
+				},
+				{
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "He is making a speedy recovery after the surgery."
+						}
+					],
+					"partOfSpeech" : "",
+					"word" : "recovery",
+					"romanisation" : "",
+					"translation" : "",
+					"group" : "Health and Medicine",
+					"id" : 8
+				},
+				{
+					"romanisation" : "",
+					"id" : 9,
+					"partOfSpeech" : "",
+					"group" : "Health and Medicine",
+					"translation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Children should receive their vaccinations on time."
+						}
+					],
+					"word" : "vaccination"
+				}
+			],
+			"sortOrder" : 1,
+			"tabnumber" : 1
+		},
+		{
+			"tabnumber" : 2,
+			"sortOrder" : 1,
+			"words" : [
+				{
+					"id" : 0,
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Hiking is a popular outdoor activity."
+						}
+					],
+					"word" : "activity",
+					"translation" : "",
+					"sortOrder" : 1,
+					"group" : "Leisure and Entertainment"
+				},
+				{
+					"word" : "concert",
+					"group" : "Leisure and Entertainment",
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"translation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "They went to a rock concert last weekend."
+						}
+					],
+					"id" : 1,
+					"romanisation" : ""
+				},
+				{
+					"group" : "Leisure and Entertainment",
+					"translation" : "",
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"word" : "entertainment",
+					"id" : 2,
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Movies provide great entertainment for everyone."
+						}
+					]
+				},
+				{
+					"sortOrder" : 1,
+					"translation" : "",
+					"partOfSpeech" : "",
+					"id" : 3,
+					"word" : "hobby",
+					"romanisation" : "",
+					"group" : "Leisure and Entertainment",
+					"sentences" : [
+						{
+							"sentence" : "Her favorite hobby is painting.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "Reading is one of her favorite leisure activities.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : "",
+					"group" : "Leisure and Entertainment",
+					"translation" : "",
+					"word" : "leisure",
+					"id" : 4
+				},
+				{
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "They visited the art museum on their vacation.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"word" : "museum",
+					"translation" : "",
+					"romanisation" : "",
+					"id" : 5,
+					"group" : "Leisure and Entertainment"
+				},
+				{
+					"id" : 6,
+					"translation" : "",
+					"word" : "performance",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The performance was outstanding and received a standing ovation."
+						}
+					],
+					"partOfSpeech" : "",
+					"group" : "Leisure and Entertainment"
+				},
+				{
+					"id" : 7,
+					"partOfSpeech" : "",
+					"translation" : "",
+					"sentences" : [
+						{
+							"sentence" : "The park is a great place for recreation.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"word" : "recreation",
+					"romanisation" : "",
+					"group" : "Leisure and Entertainment"
+				},
+				{
+					"word" : "theatre",
+					"translation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "They went to the theatre to watch a play."
+						}
+					],
+					"id" : 8,
+					"group" : "Leisure and Entertainment",
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"partOfSpeech" : ""
+				},
+				{
+					"id" : 9,
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"group" : "Leisure and Entertainment",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Tourism is an important industry in many countries."
+						}
+					],
+					"translation" : "",
+					"word" : "tourism"
+				}
+			],
+			"title" : "Entertainment"
+		},
+		{
+			"tabnumber" : 3,
+			"sortOrder" : 1,
+			"title" : "Technology",
+			"words" : [
+				{
+					"id" : 0,
+					"translation" : "",
+					"word" : "application",
+					"group" : "Technology and Innovation",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "There is a new application for managing tasks.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : ""
+				},
+				{
+					"sortOrder" : 1,
+					"word" : "artificial intelligence",
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"group" : "Technology and Innovation",
+					"id" : 1,
+					"translation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Artificial intelligence is transforming many industries."
+						}
+					]
+				},
+				{
+					"sentences" : [
+						{
+							"sentence" : "Digital marketing is essential for modern businesses.",
+							"translation" : ""
+						}
+					],
+					"romanisation" : "",
+					"translation" : "",
+					"group" : "Technology and Innovation",
+					"word" : "digital",
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"id" : 2
+				},
+				{
+					"partOfSpeech" : "",
+					"translation" : "",
+					"group" : "Technology and Innovation",
+					"romanisation" : "",
+					"id" : 3,
+					"word" : "innovation",
+					"sentences" : [
+						{
+							"sentence" : "Innovation drives progress in technology.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1
+				},
+				{
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The invention of the smartphone changed how we communicate."
+						}
+					],
+					"group" : "Technology and Innovation",
+					"sortOrder" : 1,
+					"translation" : "",
+					"word" : "invention",
+					"romanisation" : "",
+					"id" : 4
+				},
+				{
+					"translation" : "",
+					"sentences" : [
+						{
+							"sentence" : "She is learning programming to develop her own software.",
+							"translation" : ""
+						}
+					],
+					"group" : "Technology and Innovation",
+					"word" : "programming",
+					"partOfSpeech" : "",
+					"id" : 5,
+					"sortOrder" : 1,
+					"romanisation" : ""
+				},
+				{
+					"partOfSpeech" : "",
+					"group" : "Technology and Innovation",
+					"sortOrder" : 1,
+					"id" : 6,
+					"romanisation" : "",
+					"word" : "software",
+					"sentences" : [
+						{
+							"sentence" : "This software helps to manage your tasks efficiently.",
+							"translation" : ""
+						}
+					],
+					"translation" : ""
+				},
+				{
+					"translation" : "",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Advancements in technology have made our lives easier."
+						}
+					],
+					"sortOrder" : 1,
+					"id" : 7,
+					"group" : "Technology and Innovation",
+					"romanisation" : "",
+					"word" : "technology"
+				},
+				{
+					"sortOrder" : 1,
+					"translation" : "",
+					"romanisation" : "",
+					"group" : "Technology and Innovation",
+					"partOfSpeech" : "",
+					"word" : "user interface",
+					"id" : 8,
+					"sentences" : [
+						{
+							"sentence" : "A good user interface improves the user experience.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"group" : "Technology and Innovation",
+					"word" : "virtual reality",
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"id" : 9,
+					"translation" : "",
+					"sentences" : [
+						{
+							"sentence" : "Virtual reality games are becoming more popular.",
+							"translation" : ""
+						}
+					],
+					"romanisation" : ""
+				}
+			]
+		},
+		{
+			"tabnumber" : 3,
+			"title" : "Nature",
+			"sortOrder" : 1,
+			"words" : [
+				{
+					"group" : "Environment and Nature",
+					"sentences" : [
+						{
+							"sentence" : "Climate change is a global concern that affects everyone.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"id" : 0,
+					"sortOrder" : 1,
+					"word" : "climate change",
+					"partOfSpeech" : "",
+					"romanisation" : ""
+				},
+				{
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "Conservation efforts are crucial for protecting wildlife.",
+							"translation" : ""
+						}
+					],
+					"romanisation" : "",
+					"group" : "Environment and Nature",
+					"word" : "conservation",
+					"sortOrder" : 1,
+					"id" : 1,
+					"translation" : ""
+				},
+				{
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"word" : "deforestation",
+					"sentences" : [
+						{
+							"sentence" : "Deforestation has a major impact on the environment.",
+							"translation" : ""
+						}
+					],
+					"group" : "Environment and Nature",
+					"sortOrder" : 1,
+					"translation" : "",
+					"id" : 2
+				},
+				{
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The rainforest is a rich and diverse ecosystem."
+						}
+					],
+					"word" : "ecosystem",
+					"romanisation" : "",
+					"translation" : "",
+					"group" : "Environment and Nature",
+					"sortOrder" : 1,
+					"id" : 3
+				},
+				{
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Pandas are considered an endangered species."
+						}
+					],
+					"word" : "endangered species",
+					"translation" : "",
+					"group" : "Environment and Nature",
+					"sortOrder" : 1,
+					"id" : 4,
+					"romanisation" : "",
+					"partOfSpeech" : ""
+				},
+				{
+					"word" : "environmental protection",
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"group" : "Environment and Nature",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Environmental protection laws help reduce pollution."
+						}
+					],
+					"translation" : "",
+					"id" : 5,
+					"sortOrder" : 1
+				},
+				{
+					"group" : "Environment and Nature",
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"id" : 6,
+					"romanisation" : "",
+					"translation" : "",
+					"word" : "pollution",
+					"sentences" : [
+						{
+							"sentence" : "Air pollution is a major problem in many cities.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Recycling helps to reduce waste and conserve resources."
+						}
+					],
+					"id" : 7,
+					"group" : "Environment and Nature",
+					"translation" : "",
+					"sortOrder" : 1,
+					"word" : "recycling",
+					"romanisation" : "",
+					"partOfSpeech" : ""
+				},
+				{
+					"id" : 8,
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"translation" : "",
+					"group" : "Environment and Nature",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "Solar and wind power are forms of renewable energy.",
+							"translation" : ""
+						}
+					],
+					"word" : "renewable energy"
+				},
+				{
+					"partOfSpeech" : "",
+					"group" : "Environment and Nature",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "Sustainability is key to preserving the planet for future generations.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"id" : 9,
+					"word" : "sustainability",
+					"translation" : ""
+				}
+			]
+		},
+		{
+			"tabnumber" : 3,
+			"words" : [
+				{
+					"translation" : "",
+					"romanisation" : "",
+					"word" : "community service",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "He participates in community service every weekend.",
+							"translation" : ""
+						}
+					],
+					"id" : 0,
+					"partOfSpeech" : "",
+					"group" : "Social Issues and Justice"
+				},
+				{
+					"partOfSpeech" : "",
+					"id" : 1,
+					"romanisation" : "",
+					"word" : "equality",
+					"translation" : "",
+					"sortOrder" : 1,
+					"group" : "Social Issues and Justice",
+					"sentences" : [
+						{
+							"sentence" : "They are fighting for gender equality in the workplace.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"sortOrder" : 1,
+					"group" : "Social Issues and Justice",
+					"word" : "human rights",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "Human rights should be protected by all governments.",
+							"translation" : ""
+						}
+					],
+					"id" : 2,
+					"translation" : "",
+					"partOfSpeech" : ""
+				},
+				{
+					"romanisation" : "",
+					"word" : "justice",
+					"sortOrder" : 1,
+					"id" : 3,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "They demand justice for the victims of the crime."
+						}
+					],
+					"translation" : "",
+					"partOfSpeech" : "",
+					"group" : "Social Issues and Justice"
+				},
+				{
+					"id" : 4,
+					"word" : "legislation",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"translation" : "",
+					"partOfSpeech" : "",
+					"group" : "Social Issues and Justice",
+					"sentences" : [
+						{
+							"sentence" : "New legislation was introduced to improve environmental standards.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"romanisation" : "",
+					"word" : "protest",
+					"group" : "Social Issues and Justice",
+					"id" : 5,
+					"translation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The citizens organized a protest against the new law."
+						}
+					],
+					"partOfSpeech" : ""
+				},
+				{
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"word" : "reform",
+					"translation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Education reform is necessary to improve school systems."
+						}
+					],
+					"id" : 6,
+					"group" : "Social Issues and Justice"
+				},
+				{
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"translation" : "",
+					"id" : 7,
+					"word" : "social justice",
+					"group" : "Social Issues and Justice",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "They work towards achieving social justice for all.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"translation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "She volunteers at a local shelter every month."
+						}
+					],
+					"word" : "volunteer",
+					"sortOrder" : 1,
+					"id" : 8,
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"group" : "Social Issues and Justice"
+				},
+				{
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"translation" : "",
+					"romanisation" : "",
+					"id" : 9,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Welfare programs provide support for those in need."
+						}
+					],
+					"group" : "Social Issues and Justice",
+					"word" : "welfare"
+				}
+			],
+			"title" : "Social Issues",
+			"sortOrder" : 1
+		},
+		{
+			"title" : "Relationships",
+			"words" : [
+				{
+					"id" : 0,
+					"sentences" : [
+						{
+							"sentence" : "She met him at a party and they became acquaintances.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"translation" : "",
+					"romanisation" : "",
+					"group" : "Relationships and Communication",
+					"partOfSpeech" : "",
+					"word" : "acquaintance"
+				},
+				{
+					"id" : 1,
+					"group" : "Relationships and Communication",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "There is a strong bond between the two sisters."
+						}
+					],
+					"romanisation" : "",
+					"word" : "bond",
+					"sortOrder" : 1,
+					"translation" : ""
+				},
+				{
+					"group" : "Relationships and Communication",
+					"word" : "communication",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Effective communication is essential for a healthy relationship."
+						}
+					],
+					"id" : 2,
+					"translation" : "",
+					"sortOrder" : 1,
+					"romanisation" : ""
+				},
+				{
+					"group" : "Relationships and Communication",
+					"translation" : "",
+					"sentences" : [
+						{
+							"sentence" : "Empathy is important for understanding others' feelings.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : "",
+					"word" : "empathy",
+					"id" : 3,
+					"romanisation" : "",
+					"sortOrder" : 1
+				},
+				{
+					"id" : 4,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Social interaction is crucial for mental health."
+						}
+					],
+					"word" : "interaction",
+					"translation" : "",
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"group" : "Relationships and Communication"
+				},
+				{
+					"partOfSpeech" : "",
+					"word" : "negotiation",
+					"id" : 5,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Negotiation skills are important in business."
+						}
+					],
+					"translation" : "",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"group" : "Relationships and Communication"
+				},
+				{
+					"id" : 6,
+					"romanisation" : "",
+					"translation" : "",
+					"group" : "Relationships and Communication",
+					"word" : "networking",
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Networking can help you find new job opportunities."
+						}
+					]
+				},
+				{
+					"word" : "relationship",
+					"partOfSpeech" : "",
+					"translation" : "",
+					"sentences" : [
+						{
+							"sentence" : "They have a close and trusting relationship.",
+							"translation" : ""
+						}
+					],
+					"group" : "Relationships and Communication",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"id" : 7
+				},
+				{
+					"sortOrder" : 1,
+					"word" : "social media",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "She uses social media to keep in touch with friends."
+						}
+					],
+					"group" : "Relationships and Communication",
+					"id" : 8,
+					"translation" : "",
+					"partOfSpeech" : ""
+				},
+				{
+					"romanisation" : "",
+					"id" : 9,
+					"partOfSpeech" : "",
+					"word" : "trust",
+					"sortOrder" : 1,
+					"translation" : "",
+					"group" : "Relationships and Communication",
+					"sentences" : [
+						{
+							"sentence" : "Trust is the foundation of any strong relationship.",
+							"translation" : ""
+						}
+					]
+				}
+			],
+			"sortOrder" : 1,
+			"tabnumber" : 2
+		},
+		{
+			"words" : [
+				{
+					"sentences" : [
+						{
+							"sentence" : "Her adaptability makes her an excellent team player.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"id" : 0,
+					"group" : "Personal Qualities and Emotions",
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"word" : "adaptability",
+					"translation" : ""
+				},
+				{
+					"translation" : "",
+					"sortOrder" : 1,
+					"id" : 1,
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "His ambition drives him to achieve his goals.",
+							"translation" : ""
+						}
+					],
+					"group" : "Personal Qualities and Emotions",
+					"word" : "ambition"
+				},
+				{
+					"group" : "Personal Qualities and Emotions",
+					"translation" : "",
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"id" : 2,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "She feels anxiety before important exams."
+						}
+					],
+					"word" : "anxiety",
+					"sortOrder" : 1
+				},
+				{
+					"sortOrder" : 1,
+					"translation" : "",
+					"group" : "Personal Qualities and Emotions",
+					"word" : "confidence",
+					"id" : 3,
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "He spoke with confidence during the presentation."
+						}
+					],
+					"partOfSpeech" : ""
+				},
+				{
+					"sentences" : [
+						{
+							"sentence" : "Her curiosity led her to explore new cultures.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"partOfSpeech" : "",
+					"id" : 4,
+					"romanisation" : "",
+					"word" : "curiosity",
+					"sortOrder" : 1,
+					"group" : "Personal Qualities and Emotions"
+				},
+				{
+					"word" : "enthusiasm",
+					"romanisation" : "",
+					"group" : "Personal Qualities and Emotions",
+					"translation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "They showed great enthusiasm for the new project."
+						}
+					],
+					"id" : 5,
+					"partOfSpeech" : ""
+				},
+				{
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"id" : 6,
+					"translation" : "",
+					"word" : "gratitude",
+					"group" : "Personal Qualities and Emotions",
+					"sentences" : [
+						{
+							"sentence" : "She expressed her gratitude for the help she received.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"translation" : "",
+					"romanisation" : "",
+					"group" : "Personal Qualities and Emotions",
+					"sentences" : [
+						{
+							"sentence" : "He values his independence and prefers to work alone.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"word" : "independence",
+					"id" : 7
+				},
+				{
+					"sortOrder" : 1,
+					"id" : 8,
+					"romanisation" : "",
+					"group" : "Personal Qualities and Emotions",
+					"translation" : "",
+					"word" : "patience",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"sentence" : "Patience is essential when dealing with difficult situations.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Her resilience helped her overcome many challenges."
+						}
+					],
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"word" : "resilience",
+					"group" : "Personal Qualities and Emotions",
+					"translation" : "",
+					"id" : 9,
+					"partOfSpeech" : ""
+				}
+			],
+			"sortOrder" : 1,
+			"title" : "Emotions",
+			"tabnumber" : 2
+		},
+		{
+			"tabnumber" : 3,
+			"sortOrder" : 1,
+			"words" : [
+				{
+					"sentences" : [
+						{
+							"sentence" : "They need to analyze the data before making a decision.",
+							"translation" : ""
+						}
+					],
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"id" : 0,
+					"word" : "analyze",
+					"translation" : "",
+					"partOfSpeech" : "",
+					"group" : "Common Verbs"
+				},
+				{
+					"word" : "communicate",
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"group" : "Common Verbs",
+					"translation" : "",
+					"id" : 1,
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Effective leaders communicate clearly with their team."
+						}
+					]
+				},
+				{
+					"partOfSpeech" : "",
+					"id" : 2,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "We should consider all options before choosing one."
+						}
+					],
+					"word" : "consider",
+					"group" : "Common Verbs",
+					"translation" : "",
+					"romanisation" : "",
+					"sortOrder" : 1
+				},
+				{
+					"translation" : "",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "The teacher will demonstrate the experiment in class.",
+							"translation" : ""
+						}
+					],
+					"word" : "demonstrate",
+					"sortOrder" : 1,
+					"group" : "Common Verbs",
+					"partOfSpeech" : "",
+					"id" : 3
+				},
+				{
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"translation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Let's discuss the plan in our next meeting."
+						}
+					],
+					"word" : "discuss",
+					"id" : 4,
+					"sortOrder" : 1,
+					"group" : "Common Verbs"
+				},
+				{
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "The committee will evaluate the proposals next week.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"word" : "evaluate",
+					"id" : 5,
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"group" : "Common Verbs"
+				},
+				{
+					"romanisation" : "",
+					"translation" : "",
+					"sortOrder" : 1,
+					"word" : "implement",
+					"id" : 6,
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "They will implement the new system starting next month."
+						}
+					],
+					"group" : "Common Verbs"
+				},
+				{
+					"id" : 7,
+					"romanisation" : "",
+					"word" : "negotiate",
+					"sentences" : [
+						{
+							"sentence" : "We need to negotiate the terms of the contract.",
+							"translation" : ""
+						}
+					],
+					"group" : "Common Verbs",
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"translation" : ""
+				},
+				{
+					"translation" : "",
+					"sentences" : [
+						{
+							"sentence" : "Everyone is encouraged to participate in the discussion.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"id" : 8,
+					"word" : "participate",
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"group" : "Common Verbs"
+				},
+				{
+					"word" : "resolve",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "They worked together to resolve the conflict."
+						}
+					],
+					"romanisation" : "",
+					"translation" : "",
+					"partOfSpeech" : "",
+					"group" : "Common Verbs",
+					"sortOrder" : 1,
+					"id" : 9
+				}
+			],
+			"title" : "Verbs"
+		},
+		{
+			"tabnumber" : 3,
+			"sortOrder" : 1,
+			"title" : "Adjectives",
+			"words" : [
+				{
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "She is very ambitious and always aims high."
+						}
+					],
+					"sortOrder" : 1,
+					"group" : "Common Adjectives",
+					"word" : "ambitious",
+					"partOfSpeech" : "",
+					"id" : 0,
+					"translation" : ""
+				},
+				{
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "He feels confident about his presentation.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"partOfSpeech" : "",
+					"id" : 1,
+					"group" : "Common Adjectives",
+					"word" : "confident"
+				},
+				{
+					"partOfSpeech" : "",
+					"translation" : "",
+					"word" : "curious",
+					"sortOrder" : 1,
+					"group" : "Common Adjectives",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "Children are naturally curious about the world around them.",
+							"translation" : ""
+						}
+					],
+					"id" : 2
+				},
+				{
+					"id" : 3,
+					"partOfSpeech" : "",
+					"group" : "Common Adjectives",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "The new system is more efficient and saves time.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"romanisation" : "",
+					"word" : "efficient"
+				},
+				{
+					"group" : "Common Adjectives",
+					"word" : "enthusiastic",
+					"partOfSpeech" : "",
+					"id" : 4,
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "They were enthusiastic about the new project.",
+							"translation" : ""
+						}
+					],
+					"translation" : ""
+				},
+				{
+					"id" : 5,
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "She is very independent and likes to do things on her own.",
+							"translation" : ""
+						}
+					],
+					"word" : "independent",
+					"sortOrder" : 1,
+					"translation" : "",
+					"group" : "Common Adjectives"
+				},
+				{
+					"partOfSpeech" : "",
+					"word" : "patient",
+					"sortOrder" : 1,
+					"id" : 6,
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "He is patient and always takes time to explain things.",
+							"translation" : ""
+						}
+					],
+					"translation" : "",
+					"group" : "Common Adjectives"
+				},
+				{
+					"romanisation" : "",
+					"translation" : "",
+					"id" : 7,
+					"word" : "resilient",
+					"partOfSpeech" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "She is resilient and quickly recovers from setbacks."
+						}
+					],
+					"sortOrder" : 1,
+					"group" : "Common Adjectives"
+				},
+				{
+					"translation" : "",
+					"id" : 8,
+					"romanisation" : "",
+					"group" : "Common Adjectives",
+					"sentences" : [
+						{
+							"sentence" : "He is a successful businessman with several companies.",
+							"translation" : ""
+						}
+					],
+					"word" : "successful",
+					"partOfSpeech" : "",
+					"sortOrder" : 1
+				},
+				{
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "Her family is very supportive of her career."
+						}
+					],
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"word" : "supportive",
+					"translation" : "",
+					"group" : "Common Adjectives",
+					"id" : 9
+				}
+			]
+		},
+		{
+			"words" : [
+				{
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"translation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "We have new information, so we need to adjust our plans accordingly."
+						}
+					],
+					"group" : "Common Adverbs",
+					"id" : 0,
+					"word" : "accordingly"
+				},
+				{
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "The journey takes approximately two hours by car."
+						}
+					],
+					"partOfSpeech" : "",
+					"translation" : "",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"group" : "Common Adverbs",
+					"id" : 1,
+					"word" : "approximately"
+				},
+				{
+					"group" : "Common Adverbs",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"sentence" : "He did not study for the exam; consequently, he failed.",
+							"translation" : ""
+						}
+					],
+					"sortOrder" : 1,
+					"translation" : "",
+					"id" : 2,
+					"partOfSpeech" : "",
+					"word" : "consequently"
+				},
+				{
+					"partOfSpeech" : "",
+					"id" : 3,
+					"translation" : "",
+					"group" : "Common Adverbs",
+					"romanisation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "She deliberately chose the more challenging project.",
+							"translation" : ""
+						}
+					],
+					"word" : "deliberately"
+				},
+				{
+					"id" : 4,
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"word" : "efficiently",
+					"group" : "Common Adverbs",
+					"translation" : "",
+					"sortOrder" : 1,
+					"sentences" : [
+						{
+							"sentence" : "The new software helps us work more efficiently.",
+							"translation" : ""
+						}
+					]
+				},
+				{
+					"sentences" : [
+						{
+							"sentence" : "After several attempts, he eventually succeeded.",
+							"translation" : ""
+						}
+					],
+					"id" : 5,
+					"sortOrder" : 1,
+					"translation" : "",
+					"group" : "Common Adverbs",
+					"romanisation" : "",
+					"partOfSpeech" : "",
+					"word" : "eventually"
+				},
+				{
+					"sentences" : [
+						{
+							"sentence" : "Fortunately, no one was hurt in the accident.",
+							"translation" : ""
+						}
+					],
+					"word" : "fortunately",
+					"partOfSpeech" : "",
+					"translation" : "",
+					"sortOrder" : 1,
+					"romanisation" : "",
+					"group" : "Common Adverbs",
+					"id" : 6
+				},
+				{
+					"translation" : "",
+					"id" : 7,
+					"group" : "Common Adverbs",
+					"sortOrder" : 1,
+					"partOfSpeech" : "",
+					"romanisation" : "",
+					"sentences" : [
+						{
+							"translation" : "",
+							"sentence" : "He travels frequently for business."
+						}
+					],
+					"word" : "frequently"
+				},
+				{
+					"group" : "Common Adverbs",
+					"translation" : "",
+					"word" : "significantly",
+					"sentences" : [
+						{
+							"sentence" : "The new policy will significantly improve the working conditions.",
+							"translation" : ""
+						}
+					],
+					"partOfSpeech" : "",
+					"id" : 8,
+					"romanisation" : "",
+					"sortOrder" : 1
+				},
+				{
+					"romanisation" : "",
+					"word" : "typically",
+					"group" : "Common Adverbs",
+					"sentences" : [
+						{
+							"sentence" : "She typically goes for a run in the morning.",
+							"translation" : ""
+						}
+					],
+					"id" : 9,
+					"partOfSpeech" : "",
+					"sortOrder" : 1,
+					"translation" : ""
+				}
+			],
+			"tabnumber" : 3,
+			"title" : "Adverbs",
+			"sortOrder" : 1
+		}
+	]
+}

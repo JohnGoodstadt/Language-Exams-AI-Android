@@ -386,7 +386,7 @@
 						{ "sentence": "她做作业", "translation": "She does homework" }
 					]
 				}
-			],
+			]
 			
 		},
 		{
@@ -502,7 +502,7 @@
 						{ "sentence": "请给我一杯水", "translation": "Please give me one cup of water" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Noun (名)",
@@ -1157,7 +1157,7 @@
 						{ "sentence": "昨天我吃苹果", "translation": "I ate apples yesterday" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Measure Word (量)",
@@ -1235,7 +1235,7 @@
 						{ "sentence": "他有一些问题", "translation": "He has some questions" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Adverb (副)",
@@ -1289,7 +1289,7 @@
 						{ "sentence": "这道题太难", "translation": "This question is too hard" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Adjective (形)",
@@ -1343,7 +1343,7 @@
 						{ "sentence": "他有一个小书包", "translation": "He has a small schoolbag" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Particle (助)",
@@ -1397,7 +1397,7 @@
 						{ "sentence": "天气怎么样呢?", "translation": "How is the weather?" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Adjective/Pronoun (形/代)",
@@ -1415,7 +1415,7 @@
 						{ "sentence": "你吃了多少?", "translation": "How much did you eat?" }
 					]
 				}
-			],
+			]
 			
 		},
 		{
@@ -1591,7 +1591,7 @@
 						{ "sentence": "这本书很好", "translation": "This book is good" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Noun/Verb (名/动)",
@@ -1621,7 +1621,7 @@
 						{ "sentence": "请不要打电话", "translation": "Please do not make a call" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Conjunction/Preposition (连/介)",
@@ -1639,7 +1639,7 @@
 						{ "sentence": "猫和狗", "translation": "Cats and dogs" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Verb/Adverb (动/副)",
@@ -1657,7 +1657,7 @@
 						{ "sentence": "我们没有书", "translation": "We don't have books" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Noun/Measure Word (名/量)",
@@ -1675,7 +1675,7 @@
 						{ "sentence": "他工作了一年", "translation": "He worked for one year" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Verb/Preposition (动/介)",
@@ -1693,7 +1693,7 @@
 						{ "sentence": "书在桌子上", "translation": "The book is on the table" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Quantity (数量)",
@@ -1723,7 +1723,7 @@
 						{ "sentence": "你要买几个?", "translation": "How many do you want to buy?" }
 					]
 				}
-			],
+			]
 		},
 		{
 			"title":"Interjection (叹)",

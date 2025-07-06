@@ -1,0 +1,1772 @@
+{
+	"fileformat":1,"location":0,"sheetname":"ChineseHSK1Vocab","updatedDate":0,
+	"uploaddate":1.0,
+	"id" : "zh",
+	"native" : "zh",
+	"name" : "Chinese",
+	"romanized":true,
+	"nativename":"Chinese",
+	"googlevoiceprefix":"cmn-cn",
+	"voicename":"cmn-CN-Wavenet-A female",
+	"tabtitles" : ["1","2","3"],
+	"categories" : [
+		{
+			"title":"Verbs",
+			"tabnumber":2,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 1,
+					"sortOrder": 1,"word": "爱",
+					"romanisation": "ài",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to love",
+					"sentences": [
+						{ "sentence": "我爱我的家", "translation": "I love my home" },
+						{ "sentence": "他爱运动", "translation": "He loves sports" },
+						{ "sentence": "她爱读书", "translation": "She loves reading" }
+					]
+				},
+				{
+					"id": 11,
+					"sortOrder": 1,"word": "吃",
+					"romanisation": "chī",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to eat",
+					"sentences": [
+						{ "sentence": "我吃早饭", "translation": "I eat breakfast" },
+						{ "sentence": "他吃苹果", "translation": "He eats an apple" },
+						{ "sentence": "我们吃晚餐", "translation": "We eat dinner" }
+					]
+				},
+				{
+					"id": 22,
+					"sortOrder": 1,"word": "读",
+					"romanisation": "dú",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "read aloud",
+					"sentences": [
+						{ "sentence": "我读书", "translation": "I read a book" },
+						{ "sentence": "她读报纸", "translation": "She reads the newspaper" },
+						{ "sentence": "他们读中文", "translation": "They read Chinese" }
+					]
+				},
+				{
+					"id": 23,
+					"sortOrder": 1,"word": "对不起",
+					"romanisation": "duì bu qǐ",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "sorry",
+					"sentences": [
+						{ "sentence": "对不起，我迟到了", "translation": "Sorry, I am late" },
+						{ "sentence": "对不起，请再说一次", "translation": "Sorry, please say it again" },
+						{ "sentence": "对不起，我不明白", "translation": "Sorry, I don't understand" }
+					]
+				},
+				{
+					"id": 42,
+					"sortOrder": 1,"word": "回",
+					"romanisation": "huí",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to return",
+					"sentences": [
+						{ "sentence": "我回家", "translation": "I return home" },
+						{ "sentence": "他回学校", "translation": "He returns to school" },
+						{ "sentence": "我们回办公室", "translation": "We return to the office" }
+					]
+				},
+				{
+					"id": 43,
+					"sortOrder": 1,"word": "会",
+					"romanisation": "huì",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to know how to; can; meeting",
+					"sentences": [
+						{ "sentence": "我会游泳", "translation": "I can swim" },
+						{ "sentence": "他会说汉语", "translation": "He can speak Chinese" },
+						{ "sentence": "我们会学习", "translation": "We can study" }
+					]
+				},
+				{
+					"id": 46,
+					"sortOrder": 1,"word": "叫",
+					"romanisation": "jiào",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to call; to be named",
+					"sentences": [
+						{ "sentence": "我叫李明", "translation": "I am called Li Ming" },
+						{ "sentence": "他叫妈妈", "translation": "He calls his mother" },
+						{ "sentence": "她叫那只狗", "translation": "She calls that dog" }
+					]
+				},
+				{
+					"id": 49,
+					"sortOrder": 1,"word": "开",
+					"romanisation": "kāi",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to switch on; open",
+					"sentences": [
+						{ "sentence": "请开门", "translation": "Please open the door" },
+						{ "sentence": "他开车上班", "translation": "He drives to work" },
+						{ "sentence": "我开灯了", "translation": "I turned on the light" }
+					]
+				},
+				{
+					"id": 50,
+					"sortOrder": 1,"word": "看",
+					"romanisation": "kàn",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to see; to read; to watch; to look at",
+					"sentences": [
+						{ "sentence": "我看书", "translation": "I read a book" },
+						{ "sentence": "他看电视", "translation": "He watches TV" },
+						{ "sentence": "我们看风景", "translation": "We see the scenery" }
+					]
+				},
+				{
+					"id": 51,
+					"sortOrder": 1,"word": "看见",
+					"romanisation": "kàn jiàn",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "see",
+					"sentences": [
+						{ "sentence": "我看见小鸟", "translation": "I see a little bird" },
+						{ "sentence": "她看见朋友", "translation": "She sees her friend" },
+						{ "sentence": "他们看见太阳", "translation": "They see the sun" }
+					]
+				},
+				{
+					"id": 53,
+					"sortOrder": 1,"word": "来",
+					"romanisation": "lái",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to come",
+					"sentences": [
+						{ "sentence": "请来这里", "translation": "Please come here" },
+						{ "sentence": "他来学校", "translation": "He comes to school" },
+						{ "sentence": "我来帮忙", "translation": "I come to help" }
+					]
+				},
+				{
+					"id": 61,
+					"sortOrder": 1,"word": "买",
+					"romanisation": "mǎi",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "buy",
+					"sentences": [
+						{ "sentence": "我去买面包", "translation": "I go to buy bread" },
+						{ "sentence": "他买了苹果", "translation": "He bought apples" },
+						{ "sentence": "我们买礼物", "translation": "We buy a gift" }
+					]
+				},
+				{
+					"id": 72,
+					"sortOrder": 1,"word": "能",
+					"romanisation": "néng",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to be able to; can",
+					"sentences": [
+						{ "sentence": "我能跑步", "translation": "I can run" },
+						{ "sentence": "他能跳舞", "translation": "He can dance" },
+						{ "sentence": "我们能学习", "translation": "We can study" }
+					]
+				},
+				{
+					"id": 82,
+					"sortOrder": 1,"word": "请",
+					"romanisation": "qǐng",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to invite; please",
+					"sentences": [
+						{ "sentence": "请坐下", "translation": "Please sit down" },
+						{ "sentence": "请帮忙", "translation": "Please help" },
+						{ "sentence": "请给我水", "translation": "Please give me water" }
+					]
+				},
+				{
+					"id": 83,
+					"sortOrder": 1,"word": "去",
+					"romanisation": "qù",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to go",
+					"sentences": [
+						{ "sentence": "我去学校", "translation": "I go to school" },
+						{ "sentence": "他去商店", "translation": "He goes to the shop" },
+						{ "sentence": "我们去公园", "translation": "We go to the park" }
+					]
+				},
+				{
+					"id": 86,
+					"sortOrder": 1,"word": "认识",
+					"romanisation": "rèn shi",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to know [be familiar with]",
+					"sentences": [
+						{ "sentence": "我认识他", "translation": "I know him" },
+						{ "sentence": "她认识老师", "translation": "She knows the teacher" },
+						{ "sentence": "他们认识新朋友", "translation": "They know new friends" }
+					]
+				},
+				{
+					"id": 96,
+					"sortOrder": 1,"word": "是",
+					"romanisation": "shì",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to be",
+					"sentences": [
+						{ "sentence": "我是学生", "translation": "I am a student" },
+						{ "sentence": "这本书是新的", "translation": "This book is new" },
+						{ "sentence": "他是我的朋友", "translation": "He is my friend" }
+					]
+				},
+				{
+					"id": 100,
+					"sortOrder": 1,"word": "睡觉",
+					"romanisation": "shuì jiào",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to go to bed; to sleep",
+					"sentences": [
+						{ "sentence": "我睡觉了", "translation": "I went to sleep" },
+						{ "sentence": "他睡觉早", "translation": "He sleeps early" },
+						{ "sentence": "我们一起睡觉", "translation": "We sleep together" }
+					]
+				},
+				{
+					"id": 101,
+					"sortOrder": 1,"word": "说",
+					"romanisation": "shuō",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "speak",
+					"sentences": [
+						{ "sentence": "我说中文", "translation": "I speak Chinese" },
+						{ "sentence": "他说真话", "translation": "He speaks the truth" },
+						{ "sentence": "请说慢一点", "translation": "Please speak slowly" }
+					]
+				},
+				{
+					"id": 108,
+					"sortOrder": 1,"word": "听",
+					"romanisation": "tīng",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to listen; hear",
+					"sentences": [
+						{ "sentence": "我听音乐", "translation": "I listen to music" },
+						{ "sentence": "他听老师说话", "translation": "He listens to the teacher" },
+						{ "sentence": "我们听故事", "translation": "We listen to a story" }
+					]
+				},
+				{
+					"id": 114,
+					"sortOrder": 1,"word": "喜欢",
+					"romanisation": "xǐ huan",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to like",
+					"sentences": [
+						{ "sentence": "我喜欢猫", "translation": "I like cats" },
+						{ "sentence": "她喜欢花", "translation": "She likes flowers" },
+						{ "sentence": "他们喜欢学习", "translation": "They like to study" }
+					]
+				},
+				{
+					"id": 117,
+					"sortOrder": 1,"word": "下雨",
+					"romanisation": "xià yǔ",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "rain",
+					"sentences": [
+						{ "sentence": "今天下雨了", "translation": "It is raining today" },
+						{ "sentence": "我们不去，因为下雨", "translation": "We are not going because it is raining" },
+						{ "sentence": "下雨时，我们在家", "translation": "When it rains, we are at home" }
+					]
+				},
+				{
+					"id": 120,
+					"sortOrder": 1,"word": "想",
+					"romanisation": "xiǎng",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to want; to think",
+					"sentences": [
+						{ "sentence": "我想吃饭", "translation": "I want to eat" },
+						{ "sentence": "他想去公园", "translation": "He wants to go to the park" },
+						{ "sentence": "我们想看电影", "translation": "We want to watch a movie" }
+					]
+				},
+				{
+					"id": 124,
+					"sortOrder": 1,"word": "写",
+					"romanisation": "xiě",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to write",
+					"sentences": [
+						{ "sentence": "我写信", "translation": "I write a letter" },
+						{ "sentence": "他写字", "translation": "He writes characters" },
+						{ "sentence": "她写日记", "translation": "She writes a diary" }
+					]
+				},
+				{
+					"id": 125,
+					"sortOrder": 1,"word": "谢谢",
+					"romanisation": "xiè xie",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "thank you",
+					"sentences": [
+						{ "sentence": "我说谢谢", "translation": "I say thank you" },
+						{ "sentence": "他对我说谢谢", "translation": "He said thank you to me" },
+						{ "sentence": "请说谢谢", "translation": "Please say thank you" }
+					]
+				},
+				{
+					"id": 128,
+					"sortOrder": 1,"word": "学习",
+					"romanisation": "xué xí",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to learn; to study",
+					"sentences": [
+						{ "sentence": "我学习中文", "translation": "I study Chinese" },
+						{ "sentence": "她学习很努力", "translation": "She studies hard" },
+						{ "sentence": "他们学习新知识", "translation": "They learn new knowledge" }
+					]
+				},
+				{
+					"id": 136,
+					"sortOrder": 1,"word": "有",
+					"romanisation": "yǒu",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to have",
+					"sentences": [
+						{ "sentence": "我有一本书", "translation": "I have a book" },
+						{ "sentence": "他有两个苹果", "translation": "He has two apples" },
+						{ "sentence": "我们有很多朋友", "translation": "We have many friends" }
+					]
+				},
+				{
+					"id": 139,
+					"sortOrder": 1,"word": "再见",
+					"romanisation": "zài jiàn",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "goodbye",
+					"sentences": [
+						{ "sentence": "他说再见", "translation": "He says goodbye" },
+						{ "sentence": "我对你说再见", "translation": "I say goodbye to you" },
+						{ "sentence": "我们一起说再见", "translation": "We say goodbye together" }
+					]
+				},
+				{
+					"id": 145,
+					"sortOrder": 1,"word": "住",
+					"romanisation": "zhù",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to live; stay (a number of nights)",
+					"sentences": [
+						{ "sentence": "我住在北京", "translation": "I live in Beijing" },
+						{ "sentence": "他住在酒店", "translation": "He stays in a hotel" },
+						{ "sentence": "我们住在这间房子里", "translation": "We live in this house" }
+					]
+				},
+				{
+					"id": 149,
+					"sortOrder": 1,"word": "坐",
+					"romanisation": "zuò",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to sit",
+					"sentences": [
+						{ "sentence": "我坐在椅子上", "translation": "I sit on the chair" },
+						{ "sentence": "他坐公交车", "translation": "He takes the bus" },
+						{ "sentence": "请坐下来", "translation": "Please sit down" }
+					]
+				},
+				{
+					"id": 150,
+					"sortOrder": 1,"word": "做",
+					"romanisation": "zuò",
+					"partOfSpeech":"","group": "Verb (动)",
+					"translation": "to do; to be; become (an occupation)",
+					"sentences": [
+						{ "sentence": "我做饭", "translation": "I cook" },
+						{ "sentence": "他做老师", "translation": "He works as a teacher" },
+						{ "sentence": "她做作业", "translation": "She does homework" }
+					]
+				}
+			]
+			
+		},
+		{
+			"title":"Numeral  (数)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" :
+			[
+				{
+					"id": 2,
+					"sortOrder": 1,"word": "八",
+					"romanisation": "bā",
+					"partOfSpeech":"","group": "数",
+					"translation": "eight",
+					"sentences": [
+						{ "sentence": "我有八个苹果", "translation": "I have eight apples" },
+						{ "sentence": "桌上有八本书", "translation": "There are eight books on the table" },
+						{ "sentence": "他八点起床", "translation": "He gets up at eight o'clock" }
+					]
+				},
+				{
+					"id": 27,
+					"sortOrder": 1,"word": "二",
+					"romanisation": "èr",
+					"partOfSpeech":"","group": "数",
+					"translation": "two",
+					"sentences": [
+						{ "sentence": "我有二个孩子", "translation": "I have two children" },
+						{ "sentence": "桌上有二本书", "translation": "There are two books on the table" },
+						{ "sentence": "他二岁了", "translation": "He is two years old" }
+					]
+				},
+				{
+					"id": 48,
+					"sortOrder": 1,"word": "九",
+					"romanisation": "jiǔ",
+					"partOfSpeech":"","group": "数",
+					"translation": "nine",
+					"sentences": [
+						{ "sentence": "我有九只猫", "translation": "I have nine cats" },
+						{ "sentence": "他九点上课", "translation": "His class starts at nine" },
+						{ "sentence": "我们九个人", "translation": "There are nine of us" }
+					]
+				},
+				{
+					"id": 79,
+					"sortOrder": 1,"word": "七",
+					"romanisation": "qī",
+					"partOfSpeech":"","group": "数",
+					"translation": "seven",
+					"sentences": [
+						{ "sentence": "我有七个朋友", "translation": "I have seven friends" },
+						{ "sentence": "他七岁了", "translation": "He is seven years old" },
+						{ "sentence": "桌上有七个杯子", "translation": "There are seven cups on the table" }
+					]
+				},
+				{
+					"id": 87,
+					"sortOrder": 1,"word": "三",
+					"romanisation": "sān",
+					"partOfSpeech":"","group": "数",
+					"translation": "three",
+					"sentences": [
+						{ "sentence": "我有三本书", "translation": "I have three books" },
+						{ "sentence": "他三岁了", "translation": "He is three years old" },
+						{ "sentence": "我们三个人", "translation": "There are three of us" }
+					]
+				},
+				{
+					"id": 94,
+					"sortOrder": 1,"word": "十",
+					"romanisation": "shí",
+					"partOfSpeech":"","group": "数",
+					"translation": "ten",
+					"sentences": [
+						{ "sentence": "我有十个苹果", "translation": "I have ten apples" },
+						{ "sentence": "他十点上班", "translation": "He starts work at ten" },
+						{ "sentence": "我们十个人", "translation": "There are ten of us" }
+					]
+				},
+				{
+					"id": 102,
+					"sortOrder": 1,"word": "四",
+					"romanisation": "sì",
+					"partOfSpeech":"","group": "数",
+					"translation": "four",
+					"sentences": [
+						{ "sentence": "我有四只狗", "translation": "I have four dogs" },
+						{ "sentence": "桌上有四杯水", "translation": "There are four glasses of water on the table" },
+						{ "sentence": "他四岁了", "translation": "He is four years old" }
+					]
+				},
+				{
+					"id": 113,
+					"sortOrder": 1,"word": "五",
+					"romanisation": "wǔ",
+					"partOfSpeech":"","group": "数",
+					"translation": "five",
+					"sentences": [
+						{ "sentence": "我有五个朋友", "translation": "I have five friends" },
+						{ "sentence": "他五岁了", "translation": "He is five years old" },
+						{ "sentence": "我买了五本书", "translation": "I bought five books" }
+					]
+				},
+				{
+					"id": 130,
+					"sortOrder": 1,"word": "一",
+					"romanisation": "yī",
+					"partOfSpeech":"","group": "数",
+					"translation": "one; once; first; structural word between two of the same verb; as soon as; throughout",
+					"sentences": [
+						{ "sentence": "我有一只猫", "translation": "I have one cat" },
+						{ "sentence": "他是一名学生", "translation": "He is a student" },
+						{ "sentence": "请给我一杯水", "translation": "Please give me one cup of water" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Noun (名)",
+			"tabnumber":1,
+			"sortOrder" : 10,"words" :
+			[
+				{
+					"id": 3,
+					"sortOrder": 1,"word": "爸爸",
+					"romanisation": "bà ba",
+					"partOfSpeech":"","group": "Noun (名)",
+					"translation": "father",
+					"sentences": [
+						{ "sentence": "这是我的爸爸", "translation": "This is my father" },
+						{ "sentence": "我爱我的爸爸", "translation": "I love my father" },
+						{ "sentence": "爸爸回家了", "translation": "Father has returned home" }
+					]
+				},
+				{
+					"id": 4,
+					"sortOrder": 1,"word": "杯子",
+					"romanisation": "bēi zi",
+					"partOfSpeech":"","group": "Noun (名)",
+					"translation": "cup; glass; mug",
+					"sentences": [
+						{ "sentence": "这是一只杯子", "translation": "This is a cup" },
+						{ "sentence": "杯子在桌子上", "translation": "The cup is on the table" },
+						{ "sentence": "请拿杯子", "translation": "Please take the cup" }
+					]
+				},
+				{
+					"id": 5,
+					"sortOrder": 1,"word": "北京",
+					"romanisation": "běi jīng",
+					"partOfSpeech":"","group": "Noun (名)",
+					"translation": "Beijing",
+					"sentences": [
+						{ "sentence": "我去北京", "translation": "I go to Beijing" },
+						{ "sentence": "北京很大", "translation": "Beijing is very big" },
+						{ "sentence": "他住在北京", "translation": "He lives in Beijing" }
+					]
+				},
+				{
+					"id": 9,
+					"sortOrder": 1,"word": "菜",
+					"romanisation": "cài",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "vegetable",
+					"sentences": [
+						{ "sentence": "我喜欢吃菜", "translation": "I like to eat vegetables" },
+						{ "sentence": "这些菜很好吃", "translation": "These vegetables are delicious" },
+						{ "sentence": "妈妈做菜", "translation": "Mother cooks vegetables" }
+					]
+				},
+				{
+					"id": 10,
+					"sortOrder": 1,"word": "茶",
+					"romanisation": "chá",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "tea",
+					"sentences": [
+						{ "sentence": "我喝茶", "translation": "I drink tea" },
+						{ "sentence": "这茶很香", "translation": "This tea is very fragrant" },
+						{ "sentence": "请给我一杯茶", "translation": "Please give me a cup of tea" }
+					]
+				},
+				{
+					"id": 12,
+					"sortOrder": 1,"word": "出租车",
+					"romanisation": "chū zū chē",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "taxi",
+					"sentences": [
+						{ "sentence": "我坐出租车", "translation": "I take a taxi" },
+						{ "sentence": "出租车来了", "translation": "The taxi has arrived" },
+						{ "sentence": "他叫出租车", "translation": "He calls a taxi" }
+					]
+				},
+				{
+					"id": 17,
+					"sortOrder": 1,"word": "电脑",
+					"romanisation": "diàn nǎo",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "computer",
+					"sentences": [
+						{ "sentence": "我的电脑很新", "translation": "My computer is new" },
+						{ "sentence": "他用电脑学习", "translation": "He studies using a computer" },
+						{ "sentence": "电脑在桌上", "translation": "The computer is on the table" }
+					]
+				},
+				{
+					"id": 18,
+					"sortOrder": 1,"word": "电视",
+					"romanisation": "diàn shì",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "TV",
+					"sentences": [
+						{ "sentence": "我看电视", "translation": "I watch TV" },
+						{ "sentence": "电视很好看", "translation": "The TV is good" },
+						{ "sentence": "请关电视", "translation": "Please turn off the TV" }
+					]
+				},
+				{
+					"id": 19,
+					"sortOrder": 1,"word": "电影",
+					"romanisation": "diàn yǐng",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "film; movie",
+					"sentences": [
+						{ "sentence": "我看电影", "translation": "I watch a movie" },
+						{ "sentence": "电影很好看", "translation": "The film is very good" },
+						{ "sentence": "我们去看电影", "translation": "We go to the cinema" }
+					]
+				},
+				{
+					"id": 20,
+					"sortOrder": 1,"word": "东西",
+					"romanisation": "dōng xi",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "thing",
+					"sentences": [
+						{ "sentence": "这是什么东西?", "translation": "What is this thing?" },
+						{ "sentence": "我需要那个东西", "translation": "I need that thing" },
+						{ "sentence": "这里有很多东西", "translation": "There are many things here" }
+					]
+				},
+				{
+					"id": 26,
+					"sortOrder": 1,"word": "儿子",
+					"romanisation": "ér zi",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "son",
+					"sentences": [
+						{ "sentence": "这是我的儿子", "translation": "This is my son" },
+						{ "sentence": "儿子在学校", "translation": "The son is at school" },
+						{ "sentence": "他爱他的儿子", "translation": "He loves his son" }
+					]
+				},
+				{
+					"id": 28,
+					"sortOrder": 1,"word": "饭店",
+					"romanisation": "fàn diàn",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "restaurant",
+					"sentences": [
+						{ "sentence": "我们去饭店", "translation": "We go to a restaurant" },
+						{ "sentence": "饭店很大", "translation": "The restaurant is big" },
+						{ "sentence": "饭店有很多菜", "translation": "The restaurant has many dishes" }
+					]
+				},
+				{
+					"id": 29,
+					"sortOrder": 1,"word": "飞机",
+					"romanisation": "fēi jī",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "plane",
+					"sentences": [
+						{ "sentence": "我坐飞机", "translation": "I take a plane" },
+						{ "sentence": "飞机在天上飞", "translation": "The plane flies in the sky" },
+						{ "sentence": "他喜欢飞机", "translation": "He likes airplanes" }
+					]
+				},
+				{
+					"id": 45,
+					"sortOrder": 1,"word": "家",
+					"romanisation": "jiā",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "family; home",
+					"sentences": [
+						{ "sentence": "我回家了", "translation": "I returned home" },
+						{ "sentence": "家很温暖", "translation": "Home is warm" },
+						{ "sentence": "他和家人在一起", "translation": "He is with his family" }
+					]
+				},
+				{
+					"id": 47,
+					"sortOrder": 1,"word": "今天",
+					"romanisation": "jīn tiān",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "today",
+					"sentences": [
+						{ "sentence": "今天天气好", "translation": "The weather is nice today" },
+						{ "sentence": "今天我很忙", "translation": "I am busy today" },
+						{ "sentence": "今天是星期一", "translation": "Today is Monday" }
+					]
+				},
+				{
+					"id": 54,
+					"sortOrder": 1,"word": "老师",
+					"romanisation": "lǎo shī",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "teacher",
+					"sentences": [
+						{ "sentence": "我的老师很友好", "translation": "My teacher is friendly" },
+						{ "sentence": "老师教中文", "translation": "The teacher teaches Chinese" },
+						{ "sentence": "请问老师", "translation": "Excuse me, teacher" }
+					]
+				},
+				{
+					"id": 57,
+					"sortOrder": 1,"word": "里",
+					"romanisation": "lǐ",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "in",
+					"sentences": [
+						{ "sentence": "房间里有桌子", "translation": "There is a table in the room" },
+						{ "sentence": "包里有书", "translation": "There are books in the bag" },
+						{ "sentence": "盒子里有苹果", "translation": "There are apples in the box" }
+					]
+				},
+				{
+					"id": 59,
+					"sortOrder": 1,"word": "妈妈",
+					"romanisation": "mā ma",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "mother",
+					"sentences": [
+						{ "sentence": "这是我的妈妈", "translation": "This is my mother" },
+						{ "sentence": "我爱我的妈妈", "translation": "I love my mother" },
+						{ "sentence": "妈妈做饭了", "translation": "Mother is cooking" }
+					]
+				},
+				{
+					"id": 65,
+					"sortOrder": 1,"word": "米饭",
+					"romanisation": "mǐ fàn",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "rice [cooked; boiled]",
+					"sentences": [
+						{ "sentence": "我吃米饭", "translation": "I eat rice" },
+						{ "sentence": "米饭很香", "translation": "The rice smells good" },
+						{ "sentence": "他喜欢米饭", "translation": "He likes rice" }
+					]
+				},
+				{
+					"id": 66,
+					"sortOrder": 1,"word": "明天",
+					"romanisation": "míng tiān",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "tomorrow",
+					"sentences": [
+						{ "sentence": "明天我们去公园", "translation": "Tomorrow we go to the park" },
+						{ "sentence": "明天会下雨", "translation": "It will rain tomorrow" },
+						{ "sentence": "我明天有考试", "translation": "I have an exam tomorrow" }
+					]
+				},
+				{
+					"id": 67,
+					"sortOrder": 1,"word": "名字",
+					"romanisation": "míng zi",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "given name",
+					"sentences": [
+						{ "sentence": "你的名字是什么?", "translation": "What is your name?" },
+						{ "sentence": "我喜欢这个名字", "translation": "I like this name" },
+						{ "sentence": "他的名字很好听", "translation": "His name sounds good" }
+					]
+				},
+				{
+					"id": 75,
+					"sortOrder": 1,"word": "女儿",
+					"romanisation": "nǚ ér",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "daughter",
+					"sentences": [
+						{ "sentence": "这是我的女儿", "translation": "This is my daughter" },
+						{ "sentence": "她是一个可爱的女儿", "translation": "She is a lovely daughter" },
+						{ "sentence": "女儿在学校", "translation": "The daughter is at school" }
+					]
+				},
+				{
+					"id": 76,
+					"sortOrder": 1,"word": "朋友",
+					"romanisation": "péng you",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "friend",
+					"sentences": [
+						{ "sentence": "这是我的朋友", "translation": "This is my friend" },
+						{ "sentence": "朋友来了", "translation": "A friend has arrived" },
+						{ "sentence": "我和朋友一起玩", "translation": "I play with my friend" }
+					]
+				},
+				{
+					"id": 78,
+					"sortOrder": 1,"word": "苹果",
+					"romanisation": "píng guǒ",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "apple",
+					"sentences": [
+						{ "sentence": "我吃苹果", "translation": "I eat an apple" },
+						{ "sentence": "苹果很甜", "translation": "The apple is sweet" },
+						{ "sentence": "他买了一个苹果", "translation": "He bought an apple" }
+					]
+				},
+				{
+					"id": 80,
+					"sortOrder": 1,"word": "钱",
+					"romanisation": "qián",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "money",
+					"sentences": [
+						{ "sentence": "我有很多钱", "translation": "I have a lot of money" },
+						{ "sentence": "他没有钱", "translation": "He doesn’t have any money" },
+						{ "sentence": "请给我一些钱", "translation": "Please give me some money" }
+					]
+				},
+				{
+					"id": 81,
+					"sortOrder": 1,"word": "前面",
+					"romanisation": "qián miàn",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "front",
+					"sentences": [
+						{ "sentence": "学校在前面", "translation": "The school is in front" },
+						{ "sentence": "前面有一家商店", "translation": "There is a shop in front" },
+						{ "sentence": "车站就在前面", "translation": "The station is right in front" }
+					]
+				},
+				{
+					"id": 85,
+					"sortOrder": 1,"word": "人",
+					"romanisation": "rén",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "person; people",
+					"sentences": [
+						{ "sentence": "这里有很多人", "translation": "There are many people here" },
+						{ "sentence": "他是一个好人", "translation": "He is a good person" },
+						{ "sentence": "那个人是谁?", "translation": "Who is that person?" }
+					]
+				},
+				{
+					"id": 88,
+					"sortOrder": 1,"word": "商店",
+					"romanisation": "shāng diàn",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "shop",
+					"sentences": [
+						{ "sentence": "我去商店", "translation": "I go to the shop" },
+						{ "sentence": "商店很大", "translation": "The shop is big" },
+						{ "sentence": "商店里有面包", "translation": "There is bread in the shop" }
+					]
+				},
+				{
+					"id": 89,
+					"sortOrder": 1,"word": "上",
+					"romanisation": "shàng",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "up; above",
+					"sentences": [
+						{ "sentence": "书在桌子上", "translation": "The book is on the table" },
+						{ "sentence": "他爬上山", "translation": "He climbs up the mountain" },
+						{ "sentence": "请把手举上", "translation": "Please raise your hand" }
+					]
+				},
+				{
+					"id": 90,
+					"sortOrder": 1,"word": "上午",
+					"romanisation": "shàng wǔ",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "morning",
+					"sentences": [
+						{ "sentence": "上午我去上课", "translation": "I go to class in the morning" },
+						{ "sentence": "上午天气很好", "translation": "The weather is nice in the morning" },
+						{ "sentence": "我喜欢上午", "translation": "I like the morning" }
+					]
+				},
+				{
+					"id": 95,
+					"sortOrder": 1,"word": "时候",
+					"romanisation": "shí hou",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "[duration of] time",
+					"sentences": [
+						{ "sentence": "我学习的时候听音乐", "translation": "I listen to music when I study" },
+						{ "sentence": "吃饭的时候请安静", "translation": "Please be quiet while eating" },
+						{ "sentence": "休息的时候我玩游戏", "translation": "I play games during break" }
+					]
+				},
+				{
+					"id": 97,
+					"sortOrder": 1,"word": "书",
+					"romanisation": "shū",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "book",
+					"sentences": [
+						{ "sentence": "我有一本书", "translation": "I have a book" },
+						{ "sentence": "书在桌子上", "translation": "The book is on the table" },
+						{ "sentence": "请给我那本书", "translation": "Please give me that book" }
+					]
+				},
+				{
+					"id": 98,
+					"sortOrder": 1,"word": "水",
+					"romanisation": "shuǐ",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "water",
+					"sentences": [
+						{ "sentence": "我喝水", "translation": "I drink water" },
+						{ "sentence": "请给我水", "translation": "Please give me water" },
+						{ "sentence": "水很凉", "translation": "The water is cool" }
+					]
+				},
+				{
+					"id": 99,
+					"sortOrder": 1,"word": "水果",
+					"romanisation": "shuǐ guǒ",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "fruit",
+					"sentences": [
+						{ "sentence": "我喜欢吃水果", "translation": "I like to eat fruit" },
+						{ "sentence": "水果很甜", "translation": "Fruit is sweet" },
+						{ "sentence": "请给我一些水果", "translation": "Please give me some fruit" }
+					]
+				},
+				{
+					"id": 107,
+					"sortOrder": 1,"word": "天气",
+					"romanisation": "tiān qì",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "weather",
+					"sentences": [
+						{ "sentence": "今天天气很好", "translation": "The weather is nice today" },
+						{ "sentence": "明天的天气会下雨", "translation": "Tomorrow’s weather will be rainy" },
+						{ "sentence": "天气预报说有雨", "translation": "The weather forecast says rain" }
+					]
+				},
+				{
+					"id": 109,
+					"sortOrder": 1,"word": "同学",
+					"romanisation": "tóng xué",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "schoolmate; classmate",
+					"sentences": [
+						{ "sentence": "我是你的同学", "translation": "I am your classmate" },
+						{ "sentence": "我的同学很友好", "translation": "My classmate is friendly" },
+						{ "sentence": "同学们在教室里", "translation": "The classmates are in the classroom" }
+					]
+				},
+				{
+					"id": 115,
+					"sortOrder": 1,"word": "下",
+					"romanisation": "xià",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "down; below",
+					"sentences": [
+						{ "sentence": "请往下看", "translation": "Please look down" },
+						{ "sentence": "他走下楼梯", "translation": "He goes down the stairs" },
+						{ "sentence": "车停下了", "translation": "The car stopped" }
+					]
+				},
+				{
+					"id": 116,
+					"sortOrder": 1,"word": "下午",
+					"romanisation": "xià wǔ",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "afternoon",
+					"sentences": [
+						{ "sentence": "下午我们上课", "translation": "We have classes in the afternoon" },
+						{ "sentence": "我喜欢下午喝茶", "translation": "I like to drink tea in the afternoon" },
+						{ "sentence": "下午天气很好", "translation": "The weather is nice in the afternoon" }
+					]
+				},
+				{
+					"id": 118,
+					"sortOrder": 1,"word": "先生",
+					"romanisation": "xiān sheng",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "Mr; Sir",
+					"sentences": [
+						{ "sentence": "你好，先生", "translation": "Hello, sir" },
+						{ "sentence": "那位先生是谁?", "translation": "Who is that gentleman?" },
+						{ "sentence": "请问先生的名字", "translation": "May I ask the gentleman’s name?" }
+					]
+				},
+				{
+					"id": 119,
+					"sortOrder": 1,"word": "现在",
+					"romanisation": "xiàn zài",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "now",
+					"sentences": [
+						{ "sentence": "我现在很忙", "translation": "I am busy now" },
+						{ "sentence": "现在是三点", "translation": "It is three o’clock now" },
+						{ "sentence": "现在我们去", "translation": "Let’s go now" }
+					]
+				},
+				{
+					"id": 122,
+					"sortOrder": 1,"word": "小姐",
+					"romanisation": "xiǎo jiě",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "Miss; young lady",
+					"sentences": [
+						{ "sentence": "小姐，你好", "translation": "Hello, miss" },
+						{ "sentence": "那位小姐是谁?", "translation": "Who is that young lady?" },
+						{ "sentence": "这位小姐很漂亮", "translation": "This young lady is beautiful" }
+					]
+				},
+				{
+					"id": 126,
+					"sortOrder": 1,"word": "星期",
+					"romanisation": "xīng qī",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "week",
+					"sentences": [
+						{ "sentence": "今天是星期一", "translation": "Today is Monday" },
+						{ "sentence": "明天是星期二", "translation": "Tomorrow is Tuesday" },
+						{ "sentence": "你喜欢星期五吗?", "translation": "Do you like Friday?" }
+					]
+				},
+				{
+					"id": 127,
+					"sortOrder": 1,"word": "学生",
+					"romanisation": "xué sheng",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "student",
+					"sentences": [
+						{ "sentence": "我是学生", "translation": "I am a student" },
+						{ "sentence": "他是好学生", "translation": "He is a good student" },
+						{ "sentence": "学生在学习", "translation": "The students are studying" }
+					]
+				},
+				{
+					"id": 129,
+					"sortOrder": 1,"word": "学校",
+					"romanisation": "xué xiào",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "school",
+					"sentences": [
+						{ "sentence": "我们去学校", "translation": "We go to school" },
+						{ "sentence": "学校很远", "translation": "The school is far away" },
+						{ "sentence": "他在学校学习", "translation": "He studies at school" }
+					]
+				},
+				{
+					"id": 132,
+					"sortOrder": 1,"word": "衣服",
+					"romanisation": "yī fu",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "clothes",
+					"sentences": [
+						{ "sentence": "我买了衣服", "translation": "I bought clothes" },
+						{ "sentence": "这件衣服很好看", "translation": "This piece of clothing looks nice" },
+						{ "sentence": "请试试这件衣服", "translation": "Please try on this piece of clothing" }
+					]
+				},
+				{
+					"id": 133,
+					"sortOrder": 1,"word": "医生",
+					"romanisation": "yī shēng",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "doctor",
+					"sentences": [
+						{ "sentence": "我是医生", "translation": "I am a doctor" },
+						{ "sentence": "医生在医院", "translation": "The doctor is in the hospital" },
+						{ "sentence": "那位医生很忙", "translation": "That doctor is busy" }
+					]
+				},
+				{
+					"id": 134,
+					"sortOrder": 1,"word": "医院",
+					"romanisation": "yī yuàn",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "hospital",
+					"sentences": [
+						{ "sentence": "我去医院", "translation": "I go to the hospital" },
+						{ "sentence": "医院很大", "translation": "The hospital is very big" },
+						{ "sentence": "我在医院工作", "translation": "I work at the hospital" }
+					]
+				},
+				{
+					"id": 135,
+					"sortOrder": 1,"word": "椅子",
+					"romanisation": "yǐ zi",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "chair",
+					"sentences": [
+						{ "sentence": "我坐在椅子上", "translation": "I sit on the chair" },
+						{ "sentence": "那把椅子很舒服", "translation": "That chair is very comfortable" },
+						{ "sentence": "请拿那把椅子", "translation": "Please take that chair" }
+					]
+				},
+				{
+					"id": 137,
+					"sortOrder": 1,"word": "月",
+					"romanisation": "yuè",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "month; moon",
+					"sentences": [
+						{ "sentence": "我喜欢这个月", "translation": "I like this month" },
+						{ "sentence": "下个月我去旅行", "translation": "I will travel next month" },
+						{ "sentence": "这个月很热", "translation": "This month is hot" }
+					]
+				},
+				{
+					"id": 143,
+					"sortOrder": 1,"word": "中国",
+					"romanisation": "zhōng guó",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "China",
+					"sentences": [
+						{ "sentence": "我来自中国", "translation": "I come from China" },
+						{ "sentence": "他喜欢中国菜", "translation": "He likes Chinese food" },
+						{ "sentence": "中国很大", "translation": "China is very big" }
+					]
+				},
+				{
+					"id": 144,
+					"sortOrder": 1,"word": "中午",
+					"romanisation": "zhōng wǔ",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "midday",
+					"sentences": [
+						{ "sentence": "中午我们吃饭", "translation": "We eat lunch at noon" },
+						{ "sentence": "今天中午很热", "translation": "It is hot at noon today" },
+						{ "sentence": "他在中午休息", "translation": "He rests at midday" }
+					]
+				},
+				{
+					"id": 146,
+					"sortOrder": 1,"word": "桌子",
+					"romanisation": "zhuō zi",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "table",
+					"sentences": [
+						{ "sentence": "这是我的桌子", "translation": "This is my table" },
+						{ "sentence": "桌子上有书", "translation": "There are books on the table" },
+						{ "sentence": "请把杯子放在桌子上", "translation": "Please put the cup on the table" }
+					]
+				},
+				{
+					"id": 147,
+					"sortOrder": 1,"word": "字",
+					"romanisation": "zì",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "(Chinese) character",
+					"sentences": [
+						{ "sentence": "这个字怎么读?", "translation": "How do you read this character?" },
+						{ "sentence": "我写了一个字", "translation": "I wrote a character" },
+						{ "sentence": "汉字很有趣", "translation": "Chinese characters are interesting" }
+					]
+				},
+				{
+					"id": 148,
+					"sortOrder": 1,"word": "昨天",
+					"romanisation": "zuó tiān",
+					"partOfSpeech":"","group":"Noun (名)",
+					"translation": "yesterday",
+					"sentences": [
+						{ "sentence": "昨天我去学校", "translation": "I went to school yesterday" },
+						{ "sentence": "昨天很冷", "translation": "It was cold yesterday" },
+						{ "sentence": "昨天我吃苹果", "translation": "I ate apples yesterday" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Measure Word (量)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 6,
+					"sortOrder": 1,"word": "本",
+					"romanisation": "běn",
+					"partOfSpeech":"","group": "量",
+					"translation": "root; [measure word for books]",
+					"sentences": [
+						{ "sentence": "我有三本书", "translation": "I have three books" },
+						{ "sentence": "这本书很有意思", "translation": "This book is very interesting" },
+						{ "sentence": "请给我那本书", "translation": "Please give me that book" }
+					]
+				},
+				{
+					"id": 16,
+					"sortOrder": 1,"word": "点",
+					"romanisation": "diǎn",
+					"partOfSpeech":"","group": "量",
+					"translation": "o’clock; spot; dot",
+					"sentences": [
+						{ "sentence": "现在是三点", "translation": "It is three o'clock now" },
+						{ "sentence": "请在纸上画一个点", "translation": "Please draw a dot on the paper" },
+						{ "sentence": "五点上课", "translation": "Class starts at five o'clock" }
+					]
+				},
+				{
+					"id": 30,
+					"sortOrder": 1,"word": "分钟",
+					"romanisation": "fēn zhōng",
+					"partOfSpeech":"","group": "量",
+					"translation": "minute",
+					"sentences": [
+						{ "sentence": "我等了五分钟", "translation": "I waited for five minutes" },
+						{ "sentence": "他跑了一分钟", "translation": "He ran for one minute" },
+						{ "sentence": "还有两分钟", "translation": "There are two minutes left" }
+					]
+				},
+				{
+					"id": 32,
+					"sortOrder": 1,"word": "个",
+					"romanisation": "gè",
+					"partOfSpeech":"","group": "量",
+					"translation": "individual; [general measure word]",
+					"sentences": [
+						{ "sentence": "我有一个苹果", "translation": "I have an apple" },
+						{ "sentence": "他吃了三个橘子", "translation": "He ate three tangerines" },
+						{ "sentence": "请给我两个", "translation": "Please give me two" }
+					]
+				},
+				{
+					"id": 37,
+					"sortOrder": 1,"word": "号",
+					"romanisation": "hào",
+					"partOfSpeech":"","group": "量",
+					"translation": "number; day of a month",
+					"sentences": [
+						{ "sentence": "今天是三号", "translation": "Today is the third" },
+						{ "sentence": "我住在5号", "translation": "I live at number five" },
+						{ "sentence": "明天是十号", "translation": "Tomorrow is the tenth" }
+					]
+				},
+				{
+					"id": 123,
+					"sortOrder": 1,"word": "些",
+					"romanisation": "xiē",
+					"partOfSpeech":"","group": "量",
+					"translation": "some",
+					"sentences": [
+						{ "sentence": "我买了一些水果", "translation": "I bought some fruit" },
+						{ "sentence": "请给我一些水", "translation": "Please give me some water" },
+						{ "sentence": "他有一些问题", "translation": "He has some questions" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Adverb (副)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 8,
+					"sortOrder": 1,"word": "不",
+					"romanisation": "bù",
+					"partOfSpeech":"","group": "副",
+					"translation": "not; no",
+					"sentences": [
+						{ "sentence": "我不喜欢苹果", "translation": "I do not like apples" },
+						{ "sentence": "他不在家", "translation": "He is not at home" },
+						{ "sentence": "你不忙吗?", "translation": "Are you not busy?" }
+					]
+				},
+				{
+					"id": 21,
+					"sortOrder": 1,"word": "都",
+					"romanisation": "dōu",
+					"partOfSpeech":"","group": "副",
+					"translation": "both; all",
+					"sentences": [
+						{ "sentence": "我们都去", "translation": "We will all go" },
+						{ "sentence": "他们都喜欢", "translation": "They all like it" },
+						{ "sentence": "我都知道", "translation": "I know it all" }
+					]
+				},
+				{
+					"id": 40,
+					"sortOrder": 1,"word": "很",
+					"romanisation": "hěn",
+					"partOfSpeech":"","group": "副",
+					"translation": "very",
+					"sentences": [
+						{ "sentence": "这本书很有趣", "translation": "This book is very interesting" },
+						{ "sentence": "天气很冷", "translation": "The weather is very cold" },
+						{ "sentence": "他很高兴", "translation": "He is very happy" }
+					]
+				},
+				{
+					"id": 106,
+					"sortOrder": 1,"word": "太",
+					"romanisation": "tài",
+					"partOfSpeech":"","group": "副",
+					"translation": "very",
+					"sentences": [
+						{ "sentence": "太好了", "translation": "That’s great" },
+						{ "sentence": "今天太热", "translation": "It is too hot today" },
+						{ "sentence": "这道题太难", "translation": "This question is too hard" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Adjective (形)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 14,
+					"sortOrder": 1,"word": "大",
+					"romanisation": "dà",
+					"partOfSpeech":"","group": "Adjective",
+					"translation": "big",
+					"sentences": [
+						{ "sentence": "房子很大", "translation": "The house is big" },
+						{ "sentence": "他有一辆大车", "translation": "He has a big car" },
+						{ "sentence": "这只狗很大", "translation": "This dog is very big" }
+					]
+				},
+				{
+					"id": 56,
+					"sortOrder": 1,"word": "冷",
+					"romanisation": "lěng",
+					"partOfSpeech":"","group": "Adjective",
+					"translation": "cold",
+					"sentences": [
+						{ "sentence": "今天很冷", "translation": "It is very cold today" },
+						{ "sentence": "水太冷", "translation": "The water is too cold" },
+						{ "sentence": "教室很冷", "translation": "The classroom is cold" }
+					]
+				},
+				{
+					"id": 77,
+					"sortOrder": 1,"word": "漂亮",
+					"romanisation": "piào liang",
+					"partOfSpeech":"","group": "Adjective",
+					"translation": "beautiful",
+					"sentences": [
+						{ "sentence": "她很漂亮", "translation": "She is very beautiful" },
+						{ "sentence": "这朵花很漂亮", "translation": "This flower is beautiful" },
+						{ "sentence": "风景很漂亮", "translation": "The scenery is beautiful" }
+					]
+				},
+				{
+					"id": 121,
+					"sortOrder": 1,"word": "小",
+					"romanisation": "xiǎo",
+					"partOfSpeech":"","group": "Adjective",
+					"translation": "small",
+					"sentences": [
+						{ "sentence": "这只猫很小", "translation": "This cat is very small" },
+						{ "sentence": "房间很小", "translation": "The room is small" },
+						{ "sentence": "他有一个小书包", "translation": "He has a small schoolbag" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Particle (助)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 15,
+					"sortOrder": 1,"word": "的",
+					"romanisation": "de",
+					"partOfSpeech":"","group": "Particle",
+					"translation": "of",
+					"sentences": [
+						{ "sentence": "这是我的书", "translation": "This is my book" },
+						{ "sentence": "那是老师的笔", "translation": "That is the teacher’s pen" },
+						{ "sentence": "他的名字很长", "translation": "His name is very long" }
+					]
+				},
+				{
+					"id": 55,
+					"sortOrder": 1,"word": "了",
+					"romanisation": "le",
+					"partOfSpeech":"","group": "Particle",
+					"translation": "[makes an exclamation]",
+					"sentences": [
+						{ "sentence": "我吃了", "translation": "I have eaten" },
+						{ "sentence": "他回来了", "translation": "He has returned" },
+						{ "sentence": "她写完了", "translation": "She has finished writing" }
+					]
+				},
+				{
+					"id": 60,
+					"sortOrder": 1,"word": "吗",
+					"romanisation": "ma",
+					"partOfSpeech":"","group": "Particle",
+					"translation": "[makes a yes; no question]",
+					"sentences": [
+						{ "sentence": "你好吗?", "translation": "How are you?" },
+						{ "sentence": "他是老师吗?", "translation": "Is he a teacher?" },
+						{ "sentence": "你会说中文吗?", "translation": "Can you speak Chinese?" }
+					]
+				},
+				{
+					"id": 71,
+					"sortOrder": 1,"word": "呢",
+					"romanisation": "ne",
+					"partOfSpeech":"","group": "Particle",
+					"translation": "[returns; forwards a question]",
+					"sentences": [
+						{ "sentence": "你呢?", "translation": "And you?" },
+						{ "sentence": "他在做什么呢?", "translation": "What is he doing?" },
+						{ "sentence": "天气怎么样呢?", "translation": "How is the weather?" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Adjective/Pronoun (形/代)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 24,
+					"sortOrder": 1,"word": "多",
+					"romanisation": "duō",
+					"partOfSpeech":"","group": "Adjective/Pronoun",
+					"translation": "much/many; how [+adjective]",
+					"sentences": [
+						{ "sentence": "他有很多书", "translation": "He has many books" },
+						{ "sentence": "这有多远?", "translation": "How far is this?" },
+						{ "sentence": "你吃了多少?", "translation": "How much did you eat?" }
+					]
+				}
+			]
+			
+		},
+		{
+			"title":"Pronoun (代)",
+			"tabnumber":3,
+			
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 25,
+					"sortOrder": 1,"word": "多少",
+					"romanisation": "duō shǎo",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "how much/many?",
+					"sentences": [
+						{ "sentence": "这个多少钱?", "translation": "How much is this?" },
+						{ "sentence": "你有多少钱?", "translation": "How much money do you have?" },
+						{ "sentence": "你要多少?", "translation": "How much do you want?" }
+					]
+				},
+				{
+					"id": 68,
+					"sortOrder": 1,"word": "哪",
+					"romanisation": "nǎ",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "which?",
+					"sentences": [
+						{ "sentence": "你喜欢哪本书?", "translation": "Which book do you like?" },
+						{ "sentence": "哪件衣服漂亮?", "translation": "Which piece of clothing is beautiful?" },
+						{ "sentence": "哪种水果甜?", "translation": "Which fruit is sweet?" }
+					]
+				},
+				{
+					"id": 69,
+					"sortOrder": 1,"word": "哪儿",
+					"romanisation": "nǎ er",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "where?",
+					"sentences": [
+						{ "sentence": "你去哪儿?", "translation": "Where are you going?" },
+						{ "sentence": "厕所在哪儿?", "translation": "Where is the restroom?" },
+						{ "sentence": "他住在哪儿?", "translation": "Where does he live?" }
+					]
+				},
+				{
+					"id": 70,
+					"sortOrder": 1,"word": "那",
+					"romanisation": "nà",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "that",
+					"sentences": [
+						{ "sentence": "那是我的书", "translation": "That is my book" },
+						{ "sentence": "你喜欢那件衣服吗?", "translation": "Do you like that piece of clothing?" },
+						{ "sentence": "那个人是谁?", "translation": "Who is that person?" }
+					]
+				},
+				{
+					"id": 73,
+					"sortOrder": 1,"word": "你",
+					"romanisation": "nǐ",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "you",
+					"sentences": [
+						{ "sentence": "你叫什么名字?", "translation": "What is your name?" },
+						{ "sentence": "你会说英语吗?", "translation": "Can you speak English?" },
+						{ "sentence": "你喜欢猫吗?", "translation": "Do you like cats?" }
+					]
+				},
+				{
+					"id": 92,
+					"sortOrder": 1,"word": "谁",
+					"romanisation": "shéi",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "who?",
+					"sentences": [
+						{ "sentence": "这是谁?", "translation": "Who is this?" },
+						{ "sentence": "谁来了?", "translation": "Who came?" },
+						{ "sentence": "谁在敲门?", "translation": "Who is knocking at the door?" }
+					]
+				},
+				{
+					"id": 93,
+					"sortOrder": 1,"word": "什么",
+					"romanisation": "shén me",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "what?",
+					"sentences": [
+						{ "sentence": "这是什么?", "translation": "What is this?" },
+						{ "sentence": "你在做什么?", "translation": "What are you doing?" },
+						{ "sentence": "你想吃什么?", "translation": "What do you want to eat?" }
+					]
+				},
+				{
+					"id": 104,
+					"sortOrder": 1,"word": "他",
+					"romanisation": "tā",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "he; him",
+					"sentences": [
+						{ "sentence": "他是老师", "translation": "He is a teacher" },
+						{ "sentence": "她认识他", "translation": "She knows him" },
+						{ "sentence": "我看见他", "translation": "I see him" }
+					]
+				},
+				{
+					"id": 105,
+					"sortOrder": 1,"word": "她",
+					"romanisation": "tā",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "she; her",
+					"sentences": [
+						{ "sentence": "她是学生", "translation": "She is a student" },
+						{ "sentence": "我认识她", "translation": "I know her" },
+						{ "sentence": "他看见她", "translation": "He sees her" }
+					]
+				},
+				{
+					"id": 111,
+					"sortOrder": 1,"word": "我",
+					"romanisation": "wǒ",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "I; me",
+					"sentences": [
+						{ "sentence": "我是学生", "translation": "I am a student" },
+						{ "sentence": "我喜欢你", "translation": "I like you" },
+						{ "sentence": "你看见我吗?", "translation": "Can you see me?" }
+					]
+				},
+				{
+					"id": 112,
+					"sortOrder": 1,"word": "我们",
+					"romanisation": "wǒ men",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "we; us",
+					"sentences": [
+						{ "sentence": "我们去学校", "translation": "We go to school" },
+						{ "sentence": "老师看见我们", "translation": "The teacher sees us" },
+						{ "sentence": "你和我们一起吗?", "translation": "Are you with us?" }
+					]
+				},
+				{
+					"id": 140,
+					"sortOrder": 1,"word": "怎么",
+					"romanisation": "zěn me",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "how?",
+					"sentences": [
+						{ "sentence": "你怎么去学校?", "translation": "How do you go to school?" },
+						{ "sentence": "他怎么来?", "translation": "How does he come?" },
+						{ "sentence": "你怎么说 '你好'?", "translation": "How do you say 'hello'?" }
+					]
+				},
+				{
+					"id": 141,
+					"sortOrder": 1,"word": "怎么样",
+					"romanisation": "zěn me yàng",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "how about it",
+					"sentences": [
+						{ "sentence": "这本书怎么样?", "translation": "How is this book?" },
+						{ "sentence": "今天天气怎么样?", "translation": "How is the weather today?" },
+						{ "sentence": "这道菜怎么样?", "translation": "How is this dish?" }
+					]
+				},
+				{
+					"id": 142,
+					"sortOrder": 1,"word": "这",
+					"romanisation": "zhè",
+					"partOfSpeech":"","group": "Pronoun",
+					"translation": "this",
+					"sentences": [
+						{ "sentence": "这是我的书", "translation": "This is my book" },
+						{ "sentence": "这个苹果很好吃", "translation": "This apple is delicious" },
+						{ "sentence": "这本书很好", "translation": "This book is good" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Noun/Verb (名/动)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 33,
+					"sortOrder": 1,"word": "工作",
+					"romanisation": "gōng zuò",
+					"partOfSpeech":"","group": "Noun/Verb",
+					"translation": "job; work",
+					"sentences": [
+						{ "sentence": "我有工作", "translation": "I have a job" },
+						{ "sentence": "他在工作", "translation": "He is working" },
+						{ "sentence": "她喜欢这份工作", "translation": "She likes this job" }
+					]
+				},
+				{
+					"id": 13,
+					"sortOrder": 1,"word": "打电话",
+					"romanisation": "dǎ diàn huà",
+					"partOfSpeech":"","group": "Noun/Verb",
+					"translation": "to make a telephone call",
+					"sentences": [
+						{ "sentence": "我打电话给妈妈", "translation": "I call my mum" },
+						{ "sentence": "他在打电话", "translation": "He is making a phone call" },
+						{ "sentence": "请不要打电话", "translation": "Please do not make a call" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Conjunction/Preposition (连/介)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 39,
+					"sortOrder": 1,"word": "和",
+					"romanisation": "hé",
+					"partOfSpeech":"","group": "Conjunction/Preposition",
+					"translation": "and",
+					"sentences": [
+						{ "sentence": "我和他去学校", "translation": "He and I go to school" },
+						{ "sentence": "你和我一起学习", "translation": "You and I study together" },
+						{ "sentence": "猫和狗", "translation": "Cats and dogs" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Verb/Adverb (动/副)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 64,
+					"sortOrder": 1,"word": "没有",
+					"romanisation": "méi yǒu",
+					"partOfSpeech":"","group": "Verb/Adverb",
+					"translation": "don't have",
+					"sentences": [
+						{ "sentence": "我没有钱", "translation": "I don't have money" },
+						{ "sentence": "他没有时间", "translation": "He doesn't have time" },
+						{ "sentence": "我们没有书", "translation": "We don't have books" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Noun/Measure Word (名/量)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 74,
+					"sortOrder": 1,"word": "年",
+					"romanisation": "nián",
+					"partOfSpeech":"","group": "Noun/Measure Word",
+					"translation": "year",
+					"sentences": [
+						{ "sentence": "今年是2025年", "translation": "This year is 2025" },
+						{ "sentence": "我学习了三年", "translation": "I studied for three years" },
+						{ "sentence": "他工作了一年", "translation": "He worked for one year" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Verb/Preposition (动/介)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 138,
+					"sortOrder": 1,"word": "在",
+					"romanisation": "zài",
+					"partOfSpeech":"","group": "Verb/Prepositio",
+					"translation": "in; at; on",
+					"sentences": [
+						{ "sentence": "我在家", "translation": "I am at home" },
+						{ "sentence": "他在学校", "translation": "He is at school" },
+						{ "sentence": "书在桌子上", "translation": "The book is on the table" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Quantity (数量)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 131,
+					"sortOrder": 1,"word": "一点儿",
+					"romanisation": "yī diǎn er",
+					"partOfSpeech":"","group": "Quantity",
+					"translation": "a bit",
+					"sentences": [
+						{ "sentence": "我想喝一点儿水", "translation": "I want to drink a bit of water" },
+						{ "sentence": "他有一点儿冷", "translation": "He is a bit cold" },
+						{ "sentence": "请给我一点儿时间", "translation": "Please give me a bit of time" }
+					]
+				},
+				{
+					"id": 44,
+					"sortOrder": 1,"word": "几",
+					"romanisation": "jǐ",
+					"partOfSpeech":"","group": "Pronoun/Numeral",
+					"translation": "how much/many? [expecting a small number]",
+					"sentences": [
+						{ "sentence": "你有几本书?", "translation": "How many books do you have?" },
+						{ "sentence": "这里有几个人?", "translation": "How many people are here?" },
+						{ "sentence": "你要买几个?", "translation": "How many do you want to buy?" }
+					]
+				}
+			]
+		},
+		{
+			"title":"Interjection (叹)",
+			"tabnumber":3,
+			"sortOrder" : 10,"words" : [
+				{
+					"id": 110,
+					"sortOrder": 1,"word": "喂",
+					"romanisation": "wèi",
+					"partOfSpeech":"","group": "Interjection",
+					"translation": "hello",
+					"sentences": [
+						{ "sentence": "喂，你好!", "translation": "Hello!" },
+						{ "sentence": "喂，你在家吗?", "translation": "Hello, are you at home?" },
+						{ "sentence": "喂，我在这儿", "translation": "Hello, I'm here" }
+					]
+				},
+				{
+					"id": 7,
+					"sortOrder": 1,"word": "不客气",
+					"romanisation": "bú kè qi",
+					"partOfSpeech":"","group": "greetings",
+					"translation": "you're welcome; impolite",
+					"sentences": [
+						{ "sentence": "A: 谢谢! B: 不客气", "translation": "A: Thank you! B: You're welcome" },
+						{ "sentence": "他说不客气", "translation": "He said 'you're welcome.'" },
+						{ "sentence": "别人谢谢我, 我说不客气", "translation": "When others thank me, I say 'you're welcome.'" }
+					]
+				},
+				
+				{
+					"id": 63,
+					"sortOrder": 1,"word": "没关系",
+					"romanisation": "méi guān xi",
+					"partOfSpeech":"","group": "greetings",
+					"translation": "no problem",
+					"sentences": [
+						{ "sentence": "没关系", "translation": "No problem" },
+						{ "sentence": "他说没关系", "translation": "He said 'no problem.'" },
+						{ "sentence": "没关系, 我可以帮你", "translation": "No problem, I can help you" }
+					]
+				}
+			]
+		}
+	]
+}

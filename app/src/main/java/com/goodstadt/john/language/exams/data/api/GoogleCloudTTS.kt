@@ -1,33 +1,96 @@
 package com.goodstadt.john.language.exams.data.api
 
+import android.util.Log
+import android.util.Base64
 import com.goodstadt.john.language.exams.BuildConfig
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
+import java.io.OutputStreamWriter
+import java.net.HttpURLConnection
+import java.net.URL
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class GoogleCloudTTS @Inject constructor() {
 
+    private val TAG = "GoogleCloudTTS"
+
+    @Serializable
+    private data class TtsRequest(
+        val input: TtsInput,
+        val voice: TtsVoice,
+        val audioConfig: TtsAudioConfig
+    )
+
+    @Serializable
+    private data class TtsInput(val text: String)
+
+    @Serializable
+    private data class TtsVoice(val languageCode: String, val name: String)
+
+    // *** THE FIX IS HERE: REMOVE THE DEFAULT VALUE ***
+    @Serializable
+    private data class TtsAudioConfig(val audioEncoding: String, val speakingRate: Float)
+
+    @Serializable
+    private data class TtsResponse(val audioContent: String)
+
+
     private val apiKey = BuildConfig.TTS_API_KEY
+    private val json = Json { ignoreUnknownKeys = true }
 
-    /**
-     * Makes a network request to Google's Text-to-Speech API.
-     * @param text The text to synthesize into speech.
-     * @return A Result containing the raw MP3 audio data as a ByteArray on success,
-     * or an Exception on failure.
-     */
-    suspend fun getAudioData(text: String): Result<ByteArray> {
-        // TODO: Implement your actual network call to Google Cloud TTS here.
-        // 1. Create a JSON request body with the input text and voice parameters.
-        // 2. Use a networking library like Ktor or Retrofit to make a POST request to:
-        //    https://texttospeech.googleapis.com/v1/text:synthesize?key=$apiKey
-        // 3. The response will be JSON containing a base64 encoded string of the audio content.
-        // 4. Decode the base64 string into a ByteArray.
-        // 5. Return Result.success(byteArray) or Result.failure(exception).
+    suspend fun getAudioData(
+        text: String,
+        voiceName: String,
+        languageCode: String
+    ): Result<ByteArray> = withContext(Dispatchers.IO) {
+        val urlString = "https://texttospeech.googleapis.com/v1/text:synthesize?key=$apiKey"
+        var connection: HttpURLConnection? = null
 
-        println("TTS Request for: '$text' with key: '$apiKey'") // For debugging
+        try {
+            // This creation is now correct because TtsAudioConfig requires the parameter.
+            val request = TtsRequest(
+                    input = TtsInput(text = text),
+                    voice = TtsVoice(languageCode = languageCode, name = voiceName),
+                    audioConfig = TtsAudioConfig(
+                            audioEncoding = "MP3",
+                            speakingRate = 0.9f,
+                    )
+            )
+            val requestBody = json.encodeToString(TtsRequest.serializer(), request)
 
-        // For now, we'll return a failure as a placeholder.
-        // Replace this with your real implementation.
-        return Result.failure(NotImplementedError("Google Cloud TTS API call is not yet implemented."))
+            Log.d(TAG, "Sending TTS Request Body: $requestBody")
+
+            val url = URL(urlString)
+            connection = url.openConnection() as HttpURLConnection
+            connection.requestMethod = "POST"
+            connection.setRequestProperty("Content-Type", "application/json; charset=utf-8")
+            connection.doOutput = true
+
+            OutputStreamWriter(connection.outputStream).use {
+                it.write(requestBody)
+            }
+
+            val responseCode = connection.responseCode
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                val responseBody = connection.inputStream.bufferedReader().use { it.readText() }
+                val ttsResponse = json.decodeFromString(TtsResponse.serializer(), responseBody)
+                val audioBytes = Base64.decode(ttsResponse.audioContent, Base64.DEFAULT)
+                Result.success(audioBytes)
+            } else {
+                val errorBody = connection.errorStream?.bufferedReader()?.use { it.readText() } ?: "Unknown error"
+                Log.e(TAG, "API Error: $responseCode - $errorBody")
+                Result.failure(RuntimeException("API Error: $responseCode - $errorBody"))
+            }
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            Result.failure(e)
+        } finally {
+            connection?.disconnect()
+        }
     }
 }

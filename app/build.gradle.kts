@@ -36,16 +36,19 @@ android {
             dimension = "language"
             applicationIdSuffix = ".en"
             versionNameSuffix = "-en"
+            buildConfigField("String", "LANGUAGE_ID", "\"en\"")
         }
         create("de") {
             dimension = "language"
             applicationIdSuffix = ".de"
             versionNameSuffix = "-de"
+            buildConfigField("String", "LANGUAGE_ID", "\"de\"")
         }
         create("zh") {
             dimension = "language"
             applicationIdSuffix = ".zh"
             versionNameSuffix = "-zh"
+            buildConfigField("String", "LANGUAGE_ID", "\"zh\"")
         }
     }
 

@@ -1,0 +1,5815 @@
+{
+	"name" : "",
+	"location" : 0,
+	"sheetname" : "A2WordList-en",
+	"romanized" : false,
+	"fileformat" : 0,
+	"tabtitles" : ["Personal","Time","More"],
+	"id" : "",
+	"updatedDate" : 978307200,
+	"voicename" : "",
+	"nativename" : "",
+	"native" : "",
+	"googlevoiceprefix" : "",
+	"uploaddate" : 1748294737.597204,
+	"categories" : [
+		{
+			"tabnumber": 1,
+			"title": "Personal",
+			"sortOrder": 1,
+			"words": [
+				{
+					"translation": "",
+					"group": "Personal",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "My name is John."
+						},
+						{
+							"translation": "",
+							"sentence": "Her name is Lisa."
+						},
+						{
+							"translation": "",
+							"sentence": "What is your name?"
+						}
+					],
+					"romanisation": "",
+					"word": "name",
+					"id": 0,
+					"sortOrder": 1
+				},
+				{
+					"id": 1,
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She is 25 years old."
+						},
+						{
+							"translation": "",
+							"sentence": "My age is 30."
+						},
+						{
+							"translation": "",
+							"sentence": "What is his age?"
+						}
+					],
+					"romanisation": "",
+					"translation": "",
+					"group": "Personal",
+					"partOfSpeech": "",
+					"word": "age"
+				},
+				{
+					"word": "address",
+					"partOfSpeech": "",
+					"translation": "",
+					"group": "Personal",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I live at 123 Maple Street."
+						},
+						{
+							"translation": "",
+							"sentence": "What is your address?"
+						},
+						{
+							"translation": "",
+							"sentence": "Her address is 45 Oak Road."
+						}
+					],
+					"id": 2,
+					"romanisation": ""
+				},
+				{
+					"translation": "",
+					"group": "Personal",
+					"sortOrder": 1,
+					"id": 3,
+					"word": "phone number",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "My phone number is 555-1234."
+						},
+						{
+							"translation": "",
+							"sentence": "His phone number is 987-6543."
+						},
+						{
+							"translation": "",
+							"sentence": "What is her phone number?"
+						}
+					]
+				},
+				{
+					"translation": "",
+					"group": "Personal",
+					"sortOrder": 1,
+					"id": 4,
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He is of Italian nationality."
+						},
+						{
+							"translation": "",
+							"sentence": "My nationality is French."
+						},
+						{
+							"translation": "",
+							"sentence": "What is your nationality?"
+						}
+					],
+					"partOfSpeech": "",
+					"word": "nationality"
+				},
+
+				{
+					"translation": "",
+					"group": "Personal",
+					"sortOrder": 5,
+					"id": 5,
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She works as a teacher."
+						},
+						{
+							"translation": "",
+							"sentence": "His occupation is a doctor."
+						},
+						{
+							"translation": "",
+							"sentence": "What is your occupation?"
+						}
+					],
+					"partOfSpeech": "",
+					"word": "occupation"
+				},
+				{
+					"id": 6,
+					"language": "",
+					"birthday": "",
+					"sortOrder": 1,
+					"group": "Personal",
+					"sentences": [
+						{
+							"translation": "My birthday is on June 15th.",
+							"sentence": ""
+						},
+						{
+							"translation": "",
+							"sentence": "Her birthday is in May."
+						},
+						{
+							"translation": "",
+							"sentence": "When is your birthday?"
+						}
+					],
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "birthday"
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "You can contact me at john@example.com.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "My email is mary@email.com."
+						},
+						{
+							"translation": "",
+							"sentence": "What is your email?"
+						}
+					],
+					"partOfSpeech": "",
+					"id": 7,
+					"group": "Personal",
+					"translation": "",
+					"romanisation": "",
+					"word": "email"
+				},
+				{
+					"partOfSpeech": "",
+					"id": 8,
+					"word": "gender",
+					"sentences": [
+						{
+							"sentence": "Her gender is female.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "His gender is male."
+						},
+						{
+							"translation": "",
+							"sentence": "What is your gender?"
+						}
+					],
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Personal"
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "I need my passport to travel.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "Her passport is new."
+						},
+						{
+							"translation": "",
+							"sentence": "Where is your passport?"
+						}
+					],
+					"partOfSpeech": "",
+					"id": 9,
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "Personal",
+					"translation": "",
+					"word": "passport"
+				},
+				{
+					"translation": "",
+					"word": "marital status",
+					"group": "Personal",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "He is married.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "She is single."
+						},
+						{
+							"translation": "",
+							"sentence": "What is your marital status?"
+						}
+					],
+					"id": 10,
+					"sortOrder": 1
+				},
+				{
+					"partOfSpeech": "",
+					"word": "language",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "She speaks three languages.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I speak one language."
+						},
+						{
+							"translation": "",
+							"sentence": "What language do you speak?"
+						}
+					],
+					"id": 11,
+					"romanisation": "",
+					"translation": "",
+					"group": "Personal"
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I wake up at 7 AM every day."
+						},
+						{
+							"translation": "",
+							"sentence": "He wakes up early."
+						},
+						{
+							"translation": "",
+							"sentence": "When do you wake up?"
+						}
+					],
+					"id": 0,
+					"group": "Everyday Life",
+					"romanisation": "",
+					"translation": "",
+					"word": "wake up",
+					"partOfSpeech": ""
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She brushes her teeth after breakfast."
+						},
+						{
+							"translation": "",
+							"sentence": "I brush my teeth."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you brush your teeth?"
+						}
+					],
+					"group": "Everyday Life",
+					"sortOrder": 1,
+					"word": "brush teeth",
+					"romanisation": "",
+					"id": 1,
+					"translation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"group": "Everyday Life",
+					"translation": "",
+					"word": "have breakfast",
+					"id": 2,
+					"sentences": [
+						{
+							"sentence": "They have breakfast together every morning.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I have breakfast at 8."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you have breakfast?"
+						}
+					],
+					"romanisation": ""
+				},
+				{
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"group": "Everyday Life",
+					"word": "go to work",
+					"sortOrder": 1,
+					"id": 3,
+					"sentences": [
+						{
+							"sentence": "He goes to work by bus.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "She goes to work."
+						},
+						{
+							"translation": "",
+							"sentence": "When do you go to work?"
+						}
+					]
+				},
+				{
+					"id": 4,
+					"sortOrder": 1,
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "I take a shower in the evening.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "He takes a shower."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you take a shower?"
+						}
+					],
+					"group": "Everyday Life",
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "take a shower"
+				}
+
+			]
+		},
+		{
+			"title": "Home",
+			"sortOrder": 1,
+			"words": [
+				{
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 0,
+					"word": "kitchen",
+					"translation": "",
+					"group": "House and Home",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She cooks dinner in the kitchen."
+						},
+						{
+							"translation": "",
+							"sentence": "The kitchen is clean."
+						},
+						{
+							"translation": "",
+							"sentence": "I like my kitchen."
+						}
+					],
+					"partOfSpeech": ""
+				},
+				{
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "I take a shower in the bathroom.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The bathroom is small."
+						},
+						{
+							"translation": "",
+							"sentence": "Where is the bathroom?"
+						}
+					],
+					"translation": "",
+					"id": 1,
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "House and Home",
+					"word": "bathroom"
+				},
+				{
+					"sortOrder": 1,
+					"group": "House and Home",
+					"translation": "",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "My bedroom is upstairs.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The bedroom is big."
+						},
+						{
+							"translation": "",
+							"sentence": "I sleep in my bedroom."
+						}
+					],
+					"id": 2,
+					"word": "bedroom"
+				},
+				{
+					"word": "living room",
+					"group": "House and Home",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "We watch TV in the living room.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The living room is cozy."
+						},
+						{
+							"translation": "",
+							"sentence": "I sit in the living room."
+						}
+					],
+					"id": 3
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We eat breakfast in the dining room."
+						},
+						{
+							"translation": "",
+							"sentence": "The dining room is nice."
+						},
+						{
+							"translation": "",
+							"sentence": "We eat in the dining room."
+						}
+					],
+					"translation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"id": 4,
+					"word": "dining room",
+					"group": "House and Home"
+				},
+				{
+					"word": "garden",
+					"partOfSpeech": "",
+					"id": 5,
+					"translation": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "There are many flowers in the garden.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The garden is green."
+						},
+						{
+							"translation": "",
+							"sentence": "I work in the garden."
+						}
+					],
+					"group": "House and Home",
+					"sortOrder": 1
+				},
+				{
+					"id": 6,
+					"group": "House and Home",
+					"translation": "",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "The car is parked in the garage.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The garage is big."
+						},
+						{
+							"translation": "",
+							"sentence": "Where is the garage?"
+						}
+					],
+					"word": "garage",
+					"sortOrder": 1
+				},
+				{
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "apartment",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She lives in a small apartment."
+						},
+						{
+							"translation": "",
+							"sentence": "My apartment is new."
+						},
+						{
+							"translation": "",
+							"sentence": "I like my apartment."
+						}
+					],
+					"sortOrder": 1,
+					"id": 7,
+					"translation": "",
+					"group": "House and Home"
+				},
+				{
+					"id": 8,
+					"group": "House and Home",
+					"word": "house",
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "They have a big house in the city.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The house is old."
+						},
+						{
+							"translation": "",
+							"sentence": "I live in a house."
+						}
+					],
+					"sortOrder": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"group": "House and Home",
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Please close the door."
+						},
+						{
+							"translation": "",
+							"sentence": "The door is open."
+						},
+						{
+							"translation": "",
+							"sentence": "Where is the door?"
+						}
+					],
+					"romanisation": "",
+					"word": "door",
+					"id": 9
+				},
+				{
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"id": 10,
+					"sentences": [
+						{
+							"sentence": "I can see the garden through the window.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The window is big."
+						},
+						{
+							"translation": "",
+							"sentence": "Open the window, please."
+						}
+					],
+					"group": "House and Home",
+					"word": "window"
+				},
+				{
+					"id": 11,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The roof needs to be repaired."
+						},
+						{
+							"translation": "",
+							"sentence": "The roof is red."
+						},
+						{
+							"translation": "",
+							"sentence": "What is on the roof?"
+						}
+					],
+					"sortOrder": 1,
+					"word": "roof",
+					"partOfSpeech": "",
+					"group": "House and Home"
+				},
+				{
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "store",
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She went to the store to buy groceries."
+						},
+						{
+							"translation": "",
+							"sentence": "The store is open."
+						},
+						{
+							"translation": "",
+							"sentence": "I go to the store."
+						}
+					],
+					"partOfSpeech": "",
+					"id": 0,
+					"group": "Shopping"
+				}
+
+			],
+			"tabnumber": 1
+		},
+		{
+			"sortOrder": 1,
+			"title": "Shopping",
+			"tabnumber": 1,
+			"words":
+			[
+				{
+					"word": "supermarket",
+					"group": "Shopping",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"id": 1,
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We shop at the supermarket every Saturday."
+						},
+						{
+							"translation": "",
+							"sentence": "The supermarket is big."
+						},
+						{
+							"translation": "",
+							"sentence": "I shop at the supermarket."
+						}
+					]
+				},
+				{
+					"sortOrder": 1,
+					"translation": "",
+					"word": "mall",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "There are many shops in the mall.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The mall is busy."
+						},
+						{
+							"translation": "",
+							"sentence": "I go to the mall."
+						}
+					],
+					"group": "Shopping",
+					"id": 2
+				},
+				{
+					"sortOrder": 1,
+					"group": "Shopping",
+					"partOfSpeech": "",
+					"id": 3,
+					"word": "cashier",
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "The cashier gave me the receipt.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The cashier is kind."
+						},
+						{
+							"translation": "",
+							"sentence": "Who is the cashier?"
+						}
+					]
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "The price of this shirt is too high.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The price is low."
+						},
+						{
+							"translation": "",
+							"sentence": "What is the price?"
+						}
+					],
+					"sortOrder": 1,
+					"group": "Shopping",
+					"word": "price",
+					"partOfSpeech": "",
+					"id": 4,
+					"translation": "",
+					"romanisation": ""
+				},
+				{
+					"group": "Shopping",
+					"sentences": [
+						{
+							"sentence": "I got a discount on these shoes.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The discount is good."
+						},
+						{
+							"translation": "",
+							"sentence": "Is there a discount?"
+						}
+					],
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"translation": "",
+					"word": "discount",
+					"id": 5
+				},
+				{
+					"romanisation": "",
+					"word": "sale",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "There is a big sale at the store this weekend.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "The sale is today."
+						},
+						{
+							"translation": "",
+							"sentence": "Is there a sale?"
+						}
+					],
+					"group": "Shopping",
+					"sortOrder": 1,
+					"id": 6,
+					"translation": ""
+				},
+				{
+					"id": 7,
+					"sortOrder": 1,
+					"word": "buy",
+					"sentences": [
+						{
+							"sentence": "I want to buy a new jacket.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I buy food."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you buy clothes?"
+						}
+					],
+					"partOfSpeech": "",
+					"translation": "",
+					"group": "Shopping",
+					"romanisation": ""
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "They sell fresh fruits and vegetables.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "They sell books."
+						},
+						{
+							"translation": "",
+							"sentence": "What do they sell?"
+						}
+					],
+					"id": 8,
+					"word": "sell",
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "",
+					"group": "Shopping"
+				},
+				{
+					"romanisation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "I need to save money for my trip.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I have money."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you have money?"
+						}
+					],
+					"id": 9,
+					"translation": "",
+					"group": "Shopping",
+					"word": "money"
+				},
+				{
+					"romanisation": "",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "credit card",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "Can I pay with a credit card?",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I use a credit card."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you have a credit card?"
+						}
+					],
+					"group": "Shopping",
+					"id": 10
+				},
+				{
+					"translation": "",
+					"id": 11,
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "Shopping",
+					"word": "receipt",
+					"sentences": [
+						{
+							"sentence": "Please keep the receipt for your records.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I need the receipt."
+						},
+						{
+							"translation": "",
+							"sentence": "Where is my receipt?"
+						}
+					],
+					"romanisation": ""
+				}
+			]
+		},
+		{
+			"sortOrder": 1,
+			"title": "Food and Drink",
+			"tabnumber": 1,
+			"words":
+			[
+				{
+					"id": 0,
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "I have cereal for breakfast.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "Breakfast is at 7."
+						},
+						{
+							"translation": "",
+							"sentence": "I like breakfast."
+						}
+					],
+					"word": "breakfast",
+					"group": "Food and Drink",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"romanisation": ""
+				},
+				{
+					"partOfSpeech": "",
+					"romanisation": "",
+					"id": 1,
+					"word": "lunch",
+					"sentences": [
+						{
+							"sentence": "We usually eat lunch at noon.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "Lunch is at 12."
+						},
+						{
+							"translation": "",
+							"sentence": "I eat lunch every day."
+						}
+					],
+					"group": "Food and Drink",
+					"sortOrder": 1,
+					"translation": ""
+				},
+				{
+					"translation": "",
+					"word": "dinner",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They have dinner at 7 PM."
+						},
+						{
+							"translation": "",
+							"sentence": "Dinner is at 6."
+						},
+						{
+							"translation": "",
+							"sentence": "I like dinner."
+						}
+					],
+					"group": "Food and Drink",
+					"id": 2,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sortOrder": 1
+				},
+				{
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She likes to eat fresh fruit."
+						},
+						{
+							"translation": "",
+							"sentence": "I eat fruit every day."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you like fruit?"
+						}
+					],
+					"id": 3,
+					"romanisation": "",
+					"word": "fruit",
+					"group": "Food and Drink",
+					"translation": "",
+					"sortOrder": 1
+				},
+				{
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "We buy vegetables from the market.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I eat vegetables."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you like vegetables?"
+						}
+					],
+					"translation": "",
+					"group": "Food and Drink",
+					"word": "vegetables",
+					"id": 4,
+					"sortOrder": 1,
+					"romanisation": ""
+				},
+				{
+					"id": 5,
+					"word": "bread",
+					"translation": "",
+					"group": "Food and Drink",
+					"sentences": [
+						{
+							"sentence": "He eats bread with butter.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I like bread."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you eat bread?"
+						}
+					],
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sortOrder": 1
+				},
+				{
+					"word": "milk",
+					"romanisation": "",
+					"id": 6,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "She drinks a glass of milk every morning.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I drink milk."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you like milk?"
+						}
+					],
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Food and Drink"
+				},
+				{
+					"partOfSpeech": "",
+					"group": "Food and Drink",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I need a cup of coffee to wake up."
+						},
+						{
+							"translation": "",
+							"sentence": "I drink coffee."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you drink coffee?"
+						}
+					],
+					"id": 7,
+					"romanisation": "",
+					"word": "coffee",
+					"sortOrder": 1,
+					"translation": ""
+				},
+				{
+					"sortOrder": 1,
+					"id": 8,
+					"group": "Food and Drink",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "It's important to drink enough water."
+						},
+						{
+							"translation": "",
+							"sentence": "I drink water."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you drink water?"
+						}
+					],
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "water",
+					"translation": ""
+				},
+				{
+					"romanisation": "",
+					"group": "Food and Drink",
+					"id": 9,
+					"word": "juice",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The children love orange juice."
+						},
+						{
+							"translation": "",
+							"sentence": "I drink juice."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you like juice?"
+						}
+					],
+					"translation": "",
+					"sortOrder": 1
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They bought some meat for the barbecue."
+						},
+						{
+							"translation": "",
+							"sentence": "I eat meat."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you like meat?"
+						}
+					],
+					"sortOrder": 1,
+					"id": 10,
+					"word": "meat",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"group": "Food and Drink",
+					"translation": ""
+				},
+				{
+					"romanisation": "",
+					"id": 11,
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "He prefers fish to chicken.",
+							"translation": ""
+						},
+						{
+							"translation": "",
+							"sentence": "I eat fish."
+						},
+						{
+							"translation": "",
+							"sentence": "Do you like fish?"
+						}
+					],
+					"translation": "",
+					"group": "Food and Drink",
+					"partOfSpeech": "",
+					"word": "fish"
+				}
+			]
+		},
+		{
+			"sortOrder": 1,
+			"title": "Health",
+			"tabnumber": 1,
+			"words": [
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I have an appointment with the doctor."
+						},
+						{
+							"sentence": "The doctor is very kind.",
+							"translation": ""
+						},
+						{
+							"sentence": "I see the doctor at the hospital.",
+							"translation": ""
+						}
+					],
+					"id": 0,
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "Health and Body",
+					"word": "doctor",
+					"partOfSpeech": "",
+					"translation": ""
+				},
+				{
+					"group": "Health and Body",
+					"romanisation": "",
+					"word": "nurse",
+					"id": 1,
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The nurse gave me a vaccine."
+						},
+						{
+							"sentence": "The nurse works in the clinic.",
+							"translation": ""
+						},
+						{
+							"sentence": "I talk to the nurse.",
+							"translation": ""
+						}
+					],
+					"translation": ""
+				},
+				{
+					"word": "hospital",
+					"sortOrder": 1,
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"group": "Health and Body",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She works at the hospital."
+						},
+						{
+							"sentence": "The hospital is very big.",
+							"translation": ""
+						},
+						{
+							"sentence": "Many doctors are in the hospital.",
+							"translation": ""
+						}
+					],
+					"id": 2
+				},
+				{
+					"id": 3,
+					"sortOrder": 1,
+					"word": "clinic",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": "",
+					"group": "Health and Body",
+					"sentences": [
+						{
+							"sentence": "He went to the clinic for a check-up.",
+							"translation": ""
+						},
+						{
+							"sentence": "The clinic is near my house.",
+							"translation": ""
+						},
+						{
+							"sentence": "I wait at the clinic.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"partOfSpeech": "",
+					"word": "medicine",
+					"group": "Health and Body",
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "You need to take your medicine twice a day.",
+							"translation": ""
+						},
+						{
+							"sentence": "The medicine is on the table.",
+							"translation": ""
+						},
+						{
+							"sentence": "I drink my medicine.",
+							"translation": ""
+						}
+					],
+					"id": 4
+				},
+				{
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "headache",
+					"translation": "",
+					"group": "Health and Body",
+					"partOfSpeech": "",
+					"id": 5,
+					"sentences": [
+						{
+							"sentence": "I have a terrible headache.",
+							"translation": ""
+						},
+						{
+							"sentence": "My headache is very bad.",
+							"translation": ""
+						},
+						{
+							"sentence": "I need to rest because of my headache.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"translation": "",
+					"sortOrder": 1,
+					"word": "fever",
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She has a high fever."
+						},
+						{
+							"sentence": "I have a fever today.",
+							"translation": ""
+						},
+						{
+							"sentence": "The child has a fever.",
+							"translation": ""
+						}
+					],
+					"id": 6,
+					"partOfSpeech": "",
+					"group": "Health and Body"
+				},
+				{
+					"word": "cough",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": "",
+					"group": "Health and Body",
+					"sentences": [
+						{
+							"sentence": "He has a bad cough.",
+							"translation": ""
+						},
+						{
+							"sentence": "My cough is loud.",
+							"translation": ""
+						},
+						{
+							"sentence": "I have a cough and a cold.",
+							"translation": ""
+						}
+					],
+					"id": 7,
+					"sortOrder": 1
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "Eating vegetables is healthy.",
+							"translation": ""
+						},
+						{
+							"sentence": "It is healthy to walk every day.",
+							"translation": ""
+						},
+						{
+							"sentence": "My lunch is healthy.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"group": "Health and Body",
+					"partOfSpeech": "",
+					"id": 8,
+					"word": "healthy",
+					"sortOrder": 1,
+					"romanisation": ""
+				},
+				{
+					"id": 9,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "sick",
+					"group": "Health and Body",
+					"sentences": [
+						{
+							"sentence": "She is sick and cannot go to school.",
+							"translation": ""
+						},
+						{
+							"sentence": "I feel sick today.",
+							"translation": ""
+						},
+						{
+							"sentence": "He is sick in bed.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"sortOrder": 1,
+					"id": 10,
+					"sentences": [
+						{
+							"sentence": "Exercise is good for your body.",
+							"translation": ""
+						},
+						{
+							"sentence": "My body is strong.",
+							"translation": ""
+						},
+						{
+							"sentence": "Wash your body every day.",
+							"translation": ""
+						}
+					],
+					"group": "Health and Body",
+					"word": "body",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": ""
+				},
+				{
+					"word": "exercise",
+					"id": 11,
+					"group": "Health and Body",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "I exercise every morning.",
+							"translation": ""
+						},
+						{
+							"sentence": "Exercise is fun.",
+							"translation": ""
+						},
+						{
+							"sentence": "We exercise at the park.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": ""
+				}
+			]
+		},
+		{
+			"sortOrder": 1,
+			"title": "Education",
+			"tabnumber": 1,
+			"words": [
+				{
+					"group": "Education",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "The children go to school every day.",
+							"translation": ""
+						},
+						{
+							"sentence": "My school is big.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like my school.",
+							"translation": ""
+						}
+					],
+					"id": 0,
+					"word": "school",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": ""
+				},
+				{
+					"word": "teacher",
+					"sentences": [
+						{
+							"sentence": "My teacher is very helpful.",
+							"translation": ""
+						},
+						{
+							"sentence": "The teacher writes on the board.",
+							"translation": ""
+						},
+						{
+							"sentence": "I talk to the teacher.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"translation": "",
+					"group": "Education",
+					"sortOrder": 1,
+					"id": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"romanisation": "",
+					"id": 2,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "She is a hardworking student.",
+							"translation": ""
+						},
+						{
+							"sentence": "The student reads a book.",
+							"translation": ""
+						},
+						{
+							"sentence": "I am a student.",
+							"translation": ""
+						}
+					],
+					"word": "student",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Education"
+				},
+				{
+					"sortOrder": 1,
+					"group": "Education",
+					"word": "classroom",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"translation": "",
+					"id": 3,
+					"sentences": [
+						{
+							"sentence": "We study in the classroom.",
+							"translation": ""
+						},
+						{
+							"sentence": "The classroom is clean.",
+							"translation": ""
+						},
+						{
+							"sentence": "Our classroom has many chairs.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I need to finish my homework."
+						},
+						{
+							"sentence": "My homework is easy.",
+							"translation": ""
+						},
+						{
+							"sentence": "I do my homework after school.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"word": "homework",
+					"romanisation": "",
+					"id": 4,
+					"partOfSpeech": "",
+					"group": "Education"
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They are preparing for the final exam."
+						},
+						{
+							"sentence": "The exam is tomorrow.",
+							"translation": ""
+						},
+						{
+							"sentence": "I study for the exam.",
+							"translation": ""
+						}
+					],
+					"word": "exam",
+					"translation": "",
+					"group": "Education",
+					"romanisation": "",
+					"id": 5,
+					"sortOrder": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"translation": "",
+					"id": 6,
+					"group": "Education",
+					"word": "lesson",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "Today's lesson is about history.",
+							"translation": ""
+						},
+						{
+							"sentence": "The lesson is interesting.",
+							"translation": ""
+						},
+						{
+							"sentence": "We have a lesson every day.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1
+				},
+				{
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "My favorite subject is math.",
+							"translation": ""
+						},
+						{
+							"sentence": "English is an easy subject.",
+							"translation": ""
+						},
+						{
+							"sentence": "We have many subjects at school.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"id": 7,
+					"group": "Education",
+					"translation": "",
+					"word": "subject"
+				},
+				{
+					"translation": "",
+					"partOfSpeech": "",
+					"id": 8,
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Education",
+					"word": "library",
+					"sentences": [
+						{
+							"sentence": "I borrowed a book from the library.",
+							"translation": ""
+						},
+						{
+							"sentence": "The library is quiet.",
+							"translation": ""
+						},
+						{
+							"sentence": "I read in the library.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "She wants to study at the university.",
+							"translation": ""
+						},
+						{
+							"sentence": "The university is in the city.",
+							"translation": ""
+						},
+						{
+							"sentence": "He goes to university.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"group": "Education",
+					"id": 9,
+					"partOfSpeech": "",
+					"word": "university",
+					"romanisation": "",
+					"translation": ""
+				},
+				{
+					"sortOrder": 1,
+					"group": "Education",
+					"id": 10,
+					"word": "textbook",
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "I need a new textbook for my science class.",
+							"translation": ""
+						},
+						{
+							"sentence": "The textbook is heavy.",
+							"translation": ""
+						},
+						{
+							"sentence": "I read my textbook every day.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"id": 11,
+					"group": "Education",
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "He writes notes in his notebook.",
+							"translation": ""
+						},
+						{
+							"sentence": "My notebook is blue.",
+							"translation": ""
+						},
+						{
+							"sentence": "I draw in my notebook.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"word": "notebook",
+					"partOfSpeech": ""
+				}
+			]
+		},
+		{
+			"sortOrder": 1,
+			"title": "Jobs",
+			"tabnumber": 1,
+			"words": [
+				{
+					"romanisation": "",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "office",
+					"group": "Work and Jobs",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "She works in an office downtown.",
+							"translation": ""
+						},
+						{
+							"sentence": "The office is on the third floor.",
+							"translation": ""
+						},
+						{
+							"sentence": "My mother works at an office.",
+							"translation": ""
+						}
+					],
+					"id": 0
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The manager is responsible for the team."
+						},
+						{
+							"sentence": "The manager has a big office.",
+							"translation": ""
+						},
+						{
+							"sentence": "I spoke to the manager.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"id": 1,
+					"partOfSpeech": "",
+					"group": "Work and Jobs",
+					"romanisation": "",
+					"sortOrder": 1,
+					"word": "manager"
+				},
+				{
+					"word": "colleague",
+					"translation": "",
+					"group": "Work and Jobs",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "He has a meeting with his colleagues.",
+							"translation": ""
+						},
+						{
+							"sentence": "My colleague is very friendly.",
+							"translation": ""
+						},
+						{
+							"sentence": "I work with my colleague.",
+							"translation": ""
+						}
+					],
+					"id": 2,
+					"romanisation": "",
+					"sortOrder": 1
+				},
+				{
+					"sortOrder": 1,
+					"word": "meeting",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "We have a meeting every Monday morning.",
+							"translation": ""
+						},
+						{
+							"sentence": "The meeting starts at nine.",
+							"translation": ""
+						},
+						{
+							"sentence": "I am late for the meeting.",
+							"translation": ""
+						}
+					],
+					"id": 3,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"group": "Work and Jobs"
+				},
+				{
+					"sortOrder": 1,
+					"word": "job",
+					"romanisation": "",
+					"group": "Work and Jobs",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She loves her job as a nurse."
+						},
+						{
+							"sentence": "I have a new job.",
+							"translation": ""
+						},
+						{
+							"sentence": "His job is interesting.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"id": 4,
+					"translation": ""
+				},
+				{
+					"id": 5,
+					"group": "Work and Jobs",
+					"romanisation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He is planning his career path."
+						},
+						{
+							"sentence": "She wants a good career.",
+							"translation": ""
+						},
+						{
+							"sentence": "His career is in medicine.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"translation": "",
+					"word": "career"
+				},
+				{
+					"romanisation": "",
+					"group": "Work and Jobs",
+					"word": "profession",
+					"translation": "",
+					"id": 6,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Teaching is a noble profession."
+						},
+						{
+							"sentence": "Medicine is a difficult profession.",
+							"translation": ""
+						},
+						{
+							"sentence": "My profession is teaching.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"sortOrder": 1,
+					"translation": "",
+					"word": "employment",
+					"id": 7,
+					"romanisation": "",
+					"group": "Work and Jobs",
+					"sentences": [
+						{
+							"sentence": "She is seeking employment in the IT sector.",
+							"translation": ""
+						},
+						{
+							"sentence": "He found employment last month.",
+							"translation": ""
+						},
+						{
+							"sentence": "Employment is important for everyone.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": ""
+				},
+				{
+					"sortOrder": 1,
+					"romanisation": "",
+					"translation": "",
+					"group": "Work and Jobs",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He receives his salary at the end of each month."
+						},
+						{
+							"sentence": "My salary is paid on Friday.",
+							"translation": ""
+						},
+						{
+							"sentence": "She gets her salary every month.",
+							"translation": ""
+						}
+					],
+					"id": 8,
+					"partOfSpeech": "",
+					"word": "salary"
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "She has a job interview tomorrow.",
+							"translation": ""
+						},
+						{
+							"sentence": "The interview is at ten o'clock.",
+							"translation": ""
+						},
+						{
+							"sentence": "He is nervous for the interview.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "Work and Jobs",
+					"id": 9,
+					"word": "interview",
+					"romanisation": "",
+					"translation": ""
+				},
+				{
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "He updated his resume for the application.",
+							"translation": ""
+						},
+						{
+							"sentence": "My resume is on the table.",
+							"translation": ""
+						},
+						{
+							"sentence": "She wrote her resume last night.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"group": "Work and Jobs",
+					"id": 10,
+					"word": "resume"
+				},
+				{
+					"group": "Work and Jobs",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "The company is expanding its operations.",
+							"translation": ""
+						},
+						{
+							"sentence": "He works for a big company.",
+							"translation": ""
+						},
+						{
+							"sentence": "The company has many employees.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"word": "company",
+					"id": 11,
+					"romanisation": ""
+				}
+			]
+		},
+		{
+			"words": [
+				{
+					"word": "car",
+					"translation": "",
+					"group": "Travel and Transportation",
+					"id": 0,
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "She drives a car to work every day.",
+							"translation": ""
+						},
+						{
+							"sentence": "The car is red.",
+							"translation": ""
+						},
+						{
+							"sentence": "I wash my car.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"translation": "",
+					"word": "bus",
+					"group": "Travel and Transportation",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "He takes the bus to school.",
+							"translation": ""
+						},
+						{
+							"sentence": "The bus is full.",
+							"translation": ""
+						},
+						{
+							"sentence": "We wait for the bus.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"id": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"id": 2,
+					"group": "Travel and Transportation",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The train arrives at 5 PM."
+						},
+						{
+							"sentence": "I travel by train.",
+							"translation": ""
+						},
+						{
+							"sentence": "The train is fast.",
+							"translation": ""
+						}
+					],
+					"word": "train"
+				},
+				{
+					"sortOrder": 1,
+					"word": "airplane",
+					"translation": "",
+					"partOfSpeech": "",
+					"group": "Travel and Transportation",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They traveled to Paris by airplane."
+						},
+						{
+							"sentence": "The airplane is very big.",
+							"translation": ""
+						},
+						{
+							"sentence": "I see an airplane in the sky.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"id": 3
+				},
+				{
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "bicycle",
+					"id": 4,
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She rides her bicycle in the park."
+						},
+						{
+							"sentence": "My bicycle is blue.",
+							"translation": ""
+						},
+						{
+							"sentence": "I go to school by bicycle.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"group": "Travel and Transportation"
+				},
+				{
+					"id": 5,
+					"word": "taxi",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "We took a taxi to the hotel.",
+							"translation": ""
+						},
+						{
+							"sentence": "The taxi is yellow.",
+							"translation": ""
+						},
+						{
+							"sentence": "I called a taxi.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "Travel and Transportation",
+					"translation": ""
+				},
+				{
+					"sortOrder": 1,
+					"group": "Travel and Transportation",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He bought a ticket for the concert."
+						},
+						{
+							"sentence": "I have a train ticket.",
+							"translation": ""
+						},
+						{
+							"sentence": "The ticket is in my pocket.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "ticket",
+					"translation": "",
+					"id": 6
+				},
+				{
+					"partOfSpeech": "",
+					"id": 7,
+					"translation": "",
+					"romanisation": "",
+					"word": "station",
+					"sortOrder": 1,
+					"group": "Travel and Transportation",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The train station is very busy."
+						},
+						{
+							"sentence": "I wait at the station.",
+							"translation": ""
+						},
+						{
+							"sentence": "We meet at the station.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"partOfSpeech": "",
+					"romanisation": "",
+					"word": "airport",
+					"translation": "",
+					"group": "Travel and Transportation",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They arrived at the airport early."
+						},
+						{
+							"sentence": "The airport is very big.",
+							"translation": ""
+						},
+						{
+							"sentence": "I go to the airport by taxi.",
+							"translation": ""
+						}
+					],
+					"id": 8
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "Her luggage is very heavy.",
+							"translation": ""
+						},
+						{
+							"sentence": "I carry my luggage.",
+							"translation": ""
+						},
+						{
+							"sentence": "The luggage is on the floor.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Travel and Transportation",
+					"word": "luggage",
+					"id": 9,
+					"translation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We used a map to find the restaurant."
+						},
+						{
+							"sentence": "The map is on the table.",
+							"translation": ""
+						},
+						{
+							"sentence": "I look at the map.",
+							"translation": ""
+						}
+					],
+					"word": "map",
+					"partOfSpeech": "",
+					"id": 10,
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Travel and Transportation"
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "The journey took three hours.",
+							"translation": ""
+						},
+						{
+							"sentence": "Our journey was fun.",
+							"translation": ""
+						},
+						{
+							"sentence": "The journey starts today.",
+							"translation": ""
+						}
+					],
+					"id": 11,
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": "",
+					"word": "journey",
+					"group": "Travel and Transportation"
+				}
+			],
+			"sortOrder": 1,
+			"tabnumber": 2,
+			"title": "Travel"
+		},
+		{
+			"sortOrder": 1,
+			"tabnumber": 2,
+			"title": "Leisure",
+			"words": [
+				{
+					"sentences": [
+						{
+							"sentence": "She enjoys reading books in her free time.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like reading at night.",
+							"translation": ""
+						},
+						{
+							"sentence": "Reading is fun.",
+							"translation": ""
+						}
+					],
+					"id": 0,
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "reading",
+					"romanisation": "",
+					"group": "Leisure and Hobbies",
+					"sortOrder": 1
+				},
+				{
+					"translation": "",
+					"word": "sports",
+					"sortOrder": 1,
+					"group": "Leisure and Hobbies",
+					"sentences": [
+						{
+							"sentence": "He plays sports every weekend.",
+							"translation": ""
+						},
+						{
+							"sentence": "Sports are good for health.",
+							"translation": ""
+						},
+						{
+							"sentence": "My brother likes sports.",
+							"translation": ""
+						}
+					],
+					"id": 1,
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"romanisation": "",
+					"id": 2,
+					"partOfSpeech": "",
+					"group": "Leisure and Hobbies",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "music",
+					"sentences": [
+						{
+							"sentence": "They love listening to music.",
+							"translation": ""
+						},
+						{
+							"sentence": "I listen to music every day.",
+							"translation": ""
+						},
+						{
+							"sentence": "Music makes me happy.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"romanisation": "",
+					"id": 3,
+					"word": "painting",
+					"translation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"group": "Leisure and Hobbies",
+					"sentences": [
+						{
+							"sentence": "She is learning painting at the art school.",
+							"translation": ""
+						},
+						{
+							"sentence": "Painting is my hobby.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like painting pictures.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"word": "dancing",
+					"romanisation": "",
+					"id": 4,
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They go dancing every Friday night."
+						},
+						{
+							"sentence": "Dancing is fun.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like dancing with my friends.",
+							"translation": ""
+						}
+					],
+					"group": "Leisure and Hobbies",
+					"translation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"translation": "",
+					"word": "hiking",
+					"sortOrder": 1,
+					"id": 5,
+					"group": "Leisure and Hobbies",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We went hiking in the mountains."
+						},
+						{
+							"sentence": "Hiking is good exercise.",
+							"translation": ""
+						},
+						{
+							"sentence": "I go hiking on weekends.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"id": 6,
+					"translation": "",
+					"group": "Leisure and Hobbies",
+					"word": "photography",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He has a passion for photography."
+						},
+						{
+							"sentence": "Photography is an interesting hobby.",
+							"translation": ""
+						},
+						{
+							"sentence": "I take photos as photography.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"group": "Leisure and Hobbies",
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"word": "gardening",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "My mother spends her weekends gardening."
+						},
+						{
+							"sentence": "Gardening is relaxing.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like gardening with my dad.",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"id": 7
+				},
+				{
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She loves cooking new recipes."
+						},
+						{
+							"sentence": "Cooking is my favorite hobby.",
+							"translation": ""
+						},
+						{
+							"sentence": "I help my mom with cooking.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"word": "cooking",
+					"group": "Leisure and Hobbies",
+					"translation": "",
+					"partOfSpeech": "",
+					"id": 8
+				},
+				{
+					"word": "fishing",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "They went fishing by the lake.",
+							"translation": ""
+						},
+						{
+							"sentence": "Fishing is quiet and peaceful.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like fishing with my grandpa.",
+							"translation": ""
+						}
+					],
+					"group": "Leisure and Hobbies",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"id": 9,
+					"sortOrder": 1
+				},
+				{
+					"id": 10,
+					"romanisation": "",
+					"group": "Leisure and Hobbies",
+					"translation": "",
+					"word": "traveling",
+					"sentences": [
+						{
+							"sentence": "Traveling is one of her favorite hobbies.",
+							"translation": ""
+						},
+						{
+							"sentence": "I love traveling to new places.",
+							"translation": ""
+						},
+						{
+							"sentence": "Traveling is exciting.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"partOfSpeech": ""
+				},
+				{
+					"sortOrder": 1,
+					"group": "Leisure and Hobbies",
+					"word": "watching movies",
+					"id": 11,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He enjoys watching movies with his family."
+						},
+						{
+							"sentence": "Watching movies is fun.",
+							"translation": ""
+						},
+						{
+							"sentence": "I watch movies every weekend.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 1,
+			"tabnumber": 2,
+			"title": "Weather",
+			"words": [
+				{
+					"word": "sunny",
+					"romanisation": "",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "It is sunny today."
+						},
+						{
+							"sentence": "I like sunny days.",
+							"translation": ""
+						},
+						{
+							"sentence": "The weather is sunny and warm.",
+							"translation": ""
+						}
+					],
+					"id": 0,
+					"partOfSpeech": "",
+					"group": "Weather and Seasons"
+				},
+				{
+					"word": "rainy",
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Tomorrow will be rainy."
+						},
+						{
+							"sentence": "I use an umbrella on rainy days.",
+							"translation": ""
+						},
+						{
+							"sentence": "It is rainy this morning.",
+							"translation": ""
+						}
+					],
+					"id": 1,
+					"group": "Weather and Seasons",
+					"partOfSpeech": ""
+				},
+				{
+					"group": "Weather and Seasons",
+					"id": 2,
+					"word": "cloudy",
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The sky is cloudy this morning."
+						},
+						{
+							"sentence": "It looks cloudy today.",
+							"translation": ""
+						},
+						{
+							"sentence": "Cloudy weather is cool.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": "",
+					"word": "windy",
+					"id": 3,
+					"group": "Weather and Seasons",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "It's very windy outside."
+						},
+						{
+							"sentence": "The windy weather moves the trees.",
+							"translation": ""
+						},
+						{
+							"sentence": "I wear a jacket when it is windy.",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"word": "snowy",
+					"sentences": [
+						{
+							"sentence": "The weather forecast says it will be snowy tomorrow.",
+							"translation": ""
+						},
+						{
+							"sentence": "It is snowy in winter.",
+							"translation": ""
+						},
+						{
+							"sentence": "We play outside when it is snowy.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 4,
+					"partOfSpeech": "",
+					"translation": "",
+					"group": "Weather and Seasons"
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "It gets very hot in the summer.",
+							"translation": ""
+						},
+						{
+							"sentence": "The soup is hot.",
+							"translation": ""
+						},
+						{
+							"sentence": "I wear shorts when it is hot.",
+							"translation": ""
+						}
+					],
+					"id": 5,
+					"translation": "",
+					"group": "Weather and Seasons",
+					"partOfSpeech": "",
+					"word": "hot",
+					"sortOrder": 1,
+					"romanisation": ""
+				},
+				{
+					"word": "cold",
+					"group": "Weather and Seasons",
+					"id": 6,
+					"sentences": [
+						{
+							"sentence": "Winters are cold in my country.",
+							"translation": ""
+						},
+						{
+							"sentence": "The water is cold.",
+							"translation": ""
+						},
+						{
+							"sentence": "I wear a coat when it is cold.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"translation": "",
+					"word": "spring",
+					"group": "Weather and Seasons",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Spring is my favorite season."
+						},
+						{
+							"sentence": "Flowers bloom in spring.",
+							"translation": ""
+						},
+						{
+							"sentence": "Spring is warm and nice.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"id": 7,
+					"partOfSpeech": "",
+					"sortOrder": 1
+				},
+				{
+					"sortOrder": 1,
+					"word": "summer",
+					"id": 8,
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We go to the beach in the summer."
+						},
+						{
+							"sentence": "Summer is very hot.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like summer holidays.",
+							"translation": ""
+						}
+					],
+					"group": "Weather and Seasons",
+					"translation": "",
+					"partOfSpeech": ""
+				},
+				{
+					"partOfSpeech": "",
+					"group": "Weather and Seasons",
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "autumn",
+					"sentences": [
+						{
+							"sentence": "The leaves fall in autumn.",
+							"translation": ""
+						},
+						{
+							"sentence": "Autumn is cool and windy.",
+							"translation": ""
+						},
+						{
+							"sentence": "I like autumn colors.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"id": 9
+				},
+				{
+					"id": 10,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We build snowmen in winter."
+						},
+						{
+							"sentence": "Winter is very cold.",
+							"translation": ""
+						},
+						{
+							"sentence": "I wear gloves in winter.",
+							"translation": ""
+						}
+					],
+					"group": "Weather and Seasons",
+					"sortOrder": 1,
+					"word": "winter",
+					"translation": ""
+				},
+				{
+					"translation": "",
+					"group": "Weather and Seasons",
+					"sentences": [
+						{
+							"sentence": "The temperature dropped below zero last night.",
+							"translation": ""
+						},
+						{
+							"sentence": "The temperature is high today.",
+							"translation": ""
+						},
+						{
+							"sentence": "Check the temperature before you go out.",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"sortOrder": 1,
+					"word": "temperature",
+					"id": 11,
+					"partOfSpeech": ""
+				}
+			]
+		},
+		{
+			"words":
+			[
+				{
+					"id": 11,
+					"word": "social media",
+					"group": "Technology",
+					"sentences": [{
+						"translation": "",
+						"sentence": "He spends a lot of time on social media."
+					}, {
+						"translation": "",
+						"sentence": "Social media is popular."
+					}, {
+						"translation": "",
+						"sentence": "I use social media often."
+					}],
+					"partOfSpeech": "",
+					"romanisation": "",
+					"translation": "",
+					"sortOrder": 1
+				}, {
+				"word": "forest",
+				"sortOrder": 1,
+				"romanisation": "",
+				"id": 0,
+				"sentences": [{
+					"translation": "",
+					"sentence": "We went for a walk in the forest."
+				}, {
+					"translation": "",
+					"sentence": "The forest is green."
+				}, {
+					"translation": "",
+					"sentence": "Many animals live in the forest."
+				}],
+				"translation": "",
+				"partOfSpeech": "",
+				"group": "Environment and Nature"
+			}, {
+				"word": "river",
+				"partOfSpeech": "",
+				"translation": "",
+				"id": 1,
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "The river flows through the city."
+				}, {
+					"translation": "",
+					"sentence": "I like to swim in the river."
+				}, {
+					"translation": "",
+					"sentence": "The river is long."
+				}],
+				"romanisation": "",
+				"group": "Environment and Nature"
+			}, {
+				"sortOrder": 1,
+				"group": "Environment and Nature",
+				"sentences": [{
+					"translation": "",
+					"sentence": "They climbed the mountain last summer."
+				}, {
+					"translation": "",
+					"sentence": "The mountain is very high."
+				}, {
+					"translation": "",
+					"sentence": "We saw snow on the mountain."
+				}],
+				"word": "mountain",
+				"translation": "",
+				"partOfSpeech": "",
+				"id": 2,
+				"romanisation": ""
+			}, {
+				"romanisation": "",
+				"translation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"sentence": "The beach is beautiful at sunset.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I like to go to the beach."
+				}, {
+					"translation": "",
+					"sentence": "We played on the beach."
+				}],
+				"id": 3,
+				"group": "Environment and Nature",
+				"word": "beach"
+			}, {
+				"id": 4,
+				"romanisation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "There is a big tree in my garden."
+				}, {
+					"translation": "",
+					"sentence": "The tree has green leaves."
+				}, {
+					"translation": "",
+					"sentence": "Birds live in the tree."
+				}],
+				"word": "tree",
+				"translation": "",
+				"sortOrder": 1,
+				"group": "Environment and Nature",
+				"partOfSpeech": ""
+			}, {
+				"translation": "",
+				"id": 5,
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "She planted flowers in the garden."
+				}, {
+					"translation": "",
+					"sentence": "The flower smells nice."
+				}, {
+					"translation": "",
+					"sentence": "I picked a red flower."
+				}],
+				"romanisation": "",
+				"group": "Environment and Nature",
+				"partOfSpeech": "",
+				"word": "flower"
+			}, {
+				"translation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"romanisation": "",
+				"group": "Environment and Nature",
+				"word": "animal",
+				"sentences": [{
+					"translation": "",
+					"sentence": "The zoo has many different animals."
+				}, {
+					"translation": "",
+					"sentence": "A dog is a friendly animal."
+				}, {
+					"translation": "",
+					"sentence": "Wild animals live in the forest."
+				}],
+				"id": 6
+			}, {
+				"id": 7,
+				"word": "bird",
+				"sortOrder": 1,
+				"translation": "",
+				"group": "Environment and Nature",
+				"partOfSpeech": "",
+				"sentences": [{
+					"sentence": "A bird is singing outside my window.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "The bird has blue feathers."
+				}, {
+					"translation": "",
+					"sentence": "I saw a small bird."
+				}],
+				"romanisation": ""
+			}, {
+				"group": "Environment and Nature",
+				"sortOrder": 1,
+				"translation": "",
+				"partOfSpeech": "",
+				"id": 8,
+				"romanisation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "Air pollution is a serious problem in big cities."
+				}, {
+					"translation": "",
+					"sentence": "Pollution is bad for the earth."
+				}, {
+					"translation": "",
+					"sentence": "We need to reduce pollution."
+				}],
+				"word": "pollution"
+			}, {
+				"word": "recycling",
+				"translation": "",
+				"sortOrder": 1,
+				"id": 9,
+				"sentences": [{
+					"sentence": "Recycling helps to protect the environment.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "Recycling is good for our planet."
+				}, {
+					"translation": "",
+					"sentence": "We do recycling at home."
+				}],
+				"partOfSpeech": "",
+				"romanisation": "",
+				"group": "Environment and Nature"
+			}, {
+				"translation": "",
+				"romanisation": "",
+				"word": "climate",
+				"partOfSpeech": "",
+				"group": "Environment and Nature",
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "The climate is changing rapidly."
+				}, {
+					"translation": "",
+					"sentence": "The climate is warm here."
+				}, {
+					"translation": "",
+					"sentence": "Climate change is a big issue."
+				}],
+				"id": 10
+			}, {
+				"id": 11,
+				"sortOrder": 1,
+				"group": "Environment and Nature",
+				"word": "nature",
+				"sentences": [{
+					"translation": "",
+					"sentence": "We should respect nature and protect it."
+				}, {
+					"translation": "",
+					"sentence": "I love spending time in nature."
+				}, {
+					"translation": "",
+					"sentence": "Nature is beautiful."
+				}],
+				"translation": "",
+				"partOfSpeech": "",
+				"romanisation": ""
+			}
+			],
+			"tabnumber": 2,
+			"title": "Nature",
+			"sortOrder": 1
+		},
+		{
+			"tabnumber": 2,
+			"title": "Social",
+			"sortOrder": 1 ,
+			"words" :
+			[
+				{
+					"group": "Social Interactions",
+					"sentences": [{
+						"translation": "",
+						"sentence": "She always greets her neighbors with a smile."
+					}, {
+						"translation": "",
+						"sentence": "I greet my teacher."
+					}, {
+						"translation": "",
+						"sentence": "He greeted me loudly."
+					}],
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "greet",
+					"romanisation": "",
+					"id": 0,
+					"sortOrder": 1
+				}, {
+				"sentences": [{
+					"translation": "",
+					"sentence": "I would like to introduce you to my friend."
+				}, {
+					"translation": "",
+					"sentence": "Let me introduce myself."
+				}, {
+					"translation": "",
+					"sentence": "Can you introduce him?"
+				}],
+				"translation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"word": "introduce",
+				"romanisation": "",
+				"id": 1,
+				"group": "Social Interactions"
+			}, {
+				"sentences": [{
+					"translation": "",
+					"sentence": "They invited us to their wedding."
+				}, {
+					"translation": "",
+					"sentence": "I will invite her to my party."
+				}, {
+					"translation": "",
+					"sentence": "Did you invite him?"
+				}],
+				"word": "invite",
+				"group": "Social Interactions",
+				"id": 2,
+				"partOfSpeech": "",
+				"translation": "",
+				"sortOrder": 1,
+				"romanisation": ""
+			}, {
+				"word": "apologize",
+				"id": 3,
+				"translation": "",
+				"group": "Social Interactions",
+				"romanisation": "",
+				"partOfSpeech": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "He apologized for being late."
+				}, {
+					"translation": "",
+					"sentence": "I apologize for the mistake."
+				}, {
+					"translation": "",
+					"sentence": "You should apologize to her."
+				}],
+				"sortOrder": 1
+			}, {
+				"romanisation": "",
+				"word": "thank",
+				"sentences": [{
+					"sentence": "Thank you for your help.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I thank you for coming."
+				}, {
+					"translation": "",
+					"sentence": "She thanked me."
+				}],
+				"id": 4,
+				"translation": "",
+				"sortOrder": 1,
+				"group": "Social Interactions",
+				"partOfSpeech": ""
+			}, {
+				"id": 5,
+				"word": "congratulate",
+				"romanisation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "We congratulated her on her promotion."
+				}, {
+					"translation": "",
+					"sentence": "I congratulate you!"
+				}, {
+					"translation": "",
+					"sentence": "He congratulated the winner."
+				}],
+				"partOfSpeech": "",
+				"group": "Social Interactions",
+				"sortOrder": 1,
+				"translation": ""
+			}, {
+				"romanisation": "",
+				"id": 6,
+				"translation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"group": "Social Interactions",
+				"sentences": [{
+					"sentence": "She complimented him on his new haircut.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "He complimented her dress."
+				}, {
+					"translation": "",
+					"sentence": "I complimented his cooking."
+				}],
+				"word": "compliment"
+			}, {
+				"word": "ask",
+				"group": "Social Interactions",
+				"sortOrder": 1,
+				"romanisation": "",
+				"id": 7,
+				"partOfSpeech": "",
+				"sentences": [{
+					"sentence": "He asked her for directions to the museum.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I ask a question."
+				}, {
+					"translation": "",
+					"sentence": "She asked for help."
+				}],
+				"translation": ""
+			}, {
+				"sentences": [{
+					"sentence": "They agreed to meet at the coffee shop.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I agree with you."
+				}, {
+					"translation": "",
+					"sentence": "We agreed on the price."
+				}],
+				"sortOrder": 1,
+				"word": "agree",
+				"romanisation": "",
+				"id": 8,
+				"partOfSpeech": "",
+				"translation": "",
+				"group": "Social Interactions"
+			}, {
+				"group": "Social Interactions",
+				"id": 9,
+				"sentences": [{
+					"sentence": "I disagree with his opinion.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "She disagrees with him."
+				}, {
+					"translation": "",
+					"sentence": "I disagree completely."
+				}],
+				"romanisation": "",
+				"sortOrder": 1,
+				"word": "disagree",
+				"translation": "",
+				"partOfSpeech": ""
+			}, {
+				"sentences": [{
+					"sentence": "She suggested a new restaurant for dinner.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I suggest a walk."
+				}, {
+					"translation": "",
+					"sentence": "He suggested a good idea."
+				}],
+				"translation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"group": "Social Interactions",
+				"word": "suggest",
+				"romanisation": "",
+				"id": 10
+			}, {
+				"translation": "",
+				"romanisation": "",
+				"group": "Social Interactions",
+				"word": "advise",
+				"sortOrder": 1,
+				"partOfSpeech": "",
+				"id": 11,
+				"sentences": [{
+					"sentence": "He advised her to see a doctor.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I advise you to rest."
+				}, {
+					"translation": "",
+					"sentence": "She advised him wisely."
+				}]
+			}
+			]
+		},
+		{
+			"tabnumber": 2,
+			"title": "Technology",
+			"sortOrder": 1,
+			"words" : [
+				{
+					"romanisation": "",
+					"group": "Technology",
+					"sentences": [{
+						"sentence": "I use a computer for my work.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "My computer is new."
+					}, {
+						"translation": "",
+						"sentence": "I play games on my computer."
+					}],
+					"word": "computer",
+					"id": 0,
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"translation": ""
+				}, {
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 1,
+					"group": "Technology",
+					"translation": "",
+					"sentences": [{
+						"sentence": "The internet is very fast here.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I use the internet every day."
+					}, {
+						"translation": "",
+						"sentence": "The internet helps me learn."
+					}],
+					"word": "internet"
+				}, {
+					"word": "smartphone",
+					"romanisation": "",
+					"id": 2,
+					"group": "Technology",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"sentences": [{
+						"translation": "",
+						"sentence": "She bought a new smartphone."
+					}, {
+						"translation": "",
+						"sentence": "I use my smartphone to call."
+					}, {
+						"translation": "",
+						"sentence": "My smartphone has many apps."
+					}],
+					"translation": ""
+				}, {
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"id": 3,
+					"group": "Technology",
+					"translation": "",
+					"word": "tablet",
+					"sentences": [{
+						"sentence": "He reads books on his tablet.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I have a small tablet."
+					}, {
+						"translation": "",
+						"sentence": "She watches movies on her tablet."
+					}]
+				}, {
+					"id": 4,
+					"sentences": [{
+						"translation": "",
+						"sentence": "I received an important email this morning."
+					}, {
+						"translation": "",
+						"sentence": "I send emails for work."
+					}, {
+						"translation": "",
+						"sentence": "Did you get my email?"
+					}],
+					"translation": "",
+					"group": "Technology",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "email",
+					"sortOrder": 1
+				}, {
+					"word": "software",
+					"romanisation": "",
+					"id": 5,
+					"partOfSpeech": "",
+					"translation": "",
+					"sentences": [{
+						"translation": "",
+						"sentence": "This software needs to be updated."
+					}, {
+						"translation": "",
+						"sentence": "I use new software."
+					}, {
+						"translation": "",
+						"sentence": "The software is easy to use."
+					}],
+					"group": "Technology",
+					"sortOrder": 1
+				}, {
+					"group": "Technology",
+					"sentences": [{
+						"translation": "",
+						"sentence": "I found the information on their website."
+					}, {
+						"translation": "",
+						"sentence": "This website is useful."
+					}, {
+						"translation": "",
+						"sentence": "I visit many websites."
+					}],
+					"id": 6,
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "website",
+					"sortOrder": 1,
+					"romanisation": ""
+				}, {
+					"translation": "",
+					"sentences": [{
+						"translation": "",
+						"sentence": "The keyboard is not working properly."
+					}, {
+						"translation": "",
+						"sentence": "My keyboard is black."
+					}, {
+						"translation": "",
+						"sentence": "I type fast on the keyboard."
+					}],
+					"group": "Technology",
+					"romanisation": "",
+					"id": 7,
+					"word": "keyboard",
+					"partOfSpeech": "",
+					"sortOrder": 1
+				}, {
+					"id": 8,
+					"sentences": [{
+						"translation": "",
+						"sentence": "I need a new mouse for my computer."
+					}, {
+						"translation": "",
+						"sentence": "My mouse is wireless."
+					}, {
+						"translation": "",
+						"sentence": "The cat chased the mouse."
+					}],
+					"group": "Technology",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "mouse",
+					"translation": "",
+					"sortOrder": 1
+				}, {
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"group": "Technology",
+					"translation": "",
+					"word": "charger",
+					"sentences": [{
+						"sentence": "Can I borrow your phone charger?",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I lost my charger."
+					}, {
+						"translation": "",
+						"sentence": "My phone needs a charger."
+					}],
+					"romanisation": "",
+					"id": 9
+				}, {
+					"sentences": [{
+						"sentence": "She takes photos with her digital camera.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I have a new camera."
+					}, {
+						"translation": "",
+						"sentence": "He bought a video camera."
+					}],
+					"id": 10,
+					"word": "camera",
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"group": "Technology",
+					"translation": ""
+				}
+			]
+		},
+		{
+			"words": [
+				{
+					"sentences": [
+						{
+							"sentence": "He was very happy yesterday.",
+							"translation": ""
+						}, {
+							"translation": "",
+							"sentence": "I was at home."
+						}, {
+							"translation": "",
+							"sentence": "Was she tired?"
+						}
+					],
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"romanisation": "",
+					"id": 0,
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"word": "was",
+					"translation": ""
+				}, {
+					"sentences": [{
+						"sentence": "She went to the park last Saturday.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I went to the store."
+					}, {
+						"translation": "",
+						"sentence": "They went home early."
+					}],
+					"romanisation": "",
+					"word": "went",
+					"id": 1,
+					"sortOrder": 1,
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"partOfSpeech": "",
+					"translation": ""
+				}, {
+					"translation": "",
+					"word": "saw",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"translation": "",
+					"sortOrder": 1,
+					"id": 2,
+					"sentences": [{
+						"translation": "",
+						"sentence": "I saw a movie last night."
+					}, {
+						"translation": "",
+						"sentence": "She saw a bird."
+					}, {
+						"translation": "",
+						"sentence": "We saw them yesterday?"
+					}]
+				}, {
+					"translation": "",
+					"word": "had",
+					"partOfSpeech": "",
+					"id": 3,
+					"romanisation": "",
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"sentences": [{
+						"translation": "",
+						"sentence": "They had a great time at the party."
+					}, {
+						"translation": "",
+						"sentence": "I had breakfast."
+					}, {
+						"translation": "",
+						"sentence": "She had a red car."
+					}],
+					"sortOrder": 1
+				}, {
+					"id": 4,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sentences": [{
+						"sentence": "We ate dinner at a new restaurant.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I ate an apple."
+					}, {
+						"translation": "",
+						"sentence": "He ate quickly."
+					}],
+					"translation": "",
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"word": "ate",
+					"sortOrder": 1
+				}, {
+					"sentences": [{
+						"translation": "",
+						"sentence": "He bought a new phone last week."
+					}, {
+						"translation": "",
+						"sentence": "I bought milk."
+					}, {
+						"translation": "",
+						"sentence": "She bought a present."
+					}],
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"translation": "",
+					"id": 5,
+					"romanisation": "",
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"word": "bought"
+				}, {
+					"id": 6,
+					"translation": "",
+					"word": "took",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"sentences": [{
+						"sentence": "She took a lot of photos during her trip.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I took a bus."
+					}, {
+						"translation": "",
+						"sentence": "He took my hand."
+					}],
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"romanisation": ""
+				}, {
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"word": "made",
+					"translation": "",
+					"sentences": [{
+						"sentence": "I made a cake for her birthday.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "She made dinner."
+					}, {
+						"translation": "",
+						"sentence": "He made a mistake."
+					}],
+					"partOfSpeech": "",
+					"id": 7,
+					"sortOrder": 1,
+					"romanisation": ""
+				}, {
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"romanisation": "",
+					"sentences": [{
+						"translation": "",
+						"sentence": "He said goodbye before leaving."
+					}, {
+						"translation": "",
+						"sentence": "She said hello."
+					}, {
+						"translation": "",
+						"sentence": "I said thank you."
+					}],
+					"id": 8,
+					"sortOrder": 1,
+					"translation": "",
+					"word": "said",
+					"partOfSpeech": ""
+				}, {
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"sortOrder": 1,
+					"romanisation": "",
+					"sentences": [{
+						"sentence": "She wrote a letter to her friend.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I wrote a poem."
+					}, {
+						"translation": "",
+						"sentence": "He wrote a message."
+					}],
+					"word": "wrote",
+					"partOfSpeech": "",
+					"translation": "",
+					"id": 9
+				}, {
+					"id": 10,
+					"partOfSpeech": "",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "drove",
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"sentences": [{
+						"sentence": "We drove to the beach on Sunday.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "She drove the car."
+					}, {
+						"translation": "",
+						"sentence": "He drove fast."
+					}],
+					"romanisation": ""
+				}, {
+					"id": 11,
+					"word": "gave",
+					"sentences": [{
+						"sentence": "He gave her a beautiful gift.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I gave him a book."
+					}, {
+						"translation": "",
+						"sentence": "She gave me a smile."
+					}],
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "Basic Grammar and Structures: Simple Past Tense",
+					"romanisation": "",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentences": [{
+						"sentence": "I am a student.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I am happy."
+					}, {
+						"translation": "",
+						"sentence": "I am tired."
+					}],
+					"id": 0,
+					"word": "am",
+					"romanisation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "Basic Grammar and Structures: Present Tense"
+				}, {
+					"sentences": [{
+						"translation": "",
+						"sentence": "She is a teacher."
+					}, {
+						"translation": "",
+						"sentence": "He is tall."
+					}, {
+						"translation": "",
+						"sentence": "It is cold."
+					}],
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 1,
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "is",
+					"group": "Basic Grammar and Structures: Present Tense"
+				}, {
+					"word": "are",
+					"group": "Basic Grammar and Structures: Present Tense",
+					"sentences": [{
+						"translation": "",
+						"sentence": "They are friends."
+					}, {
+						"translation": "",
+						"sentence": "We are here."
+					}, {
+						"translation": "",
+						"sentence": "You are good."
+					}],
+					"translation": "",
+					"id": 2,
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": ""
+				}, {
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"word": "have",
+					"group": "Basic Grammar and Structures: Present Tense",
+					"sentences": [{
+						"translation": "",
+						"sentence": "I have a cat."
+					}, {
+						"translation": "",
+						"sentence": "They have a house."
+					}, {
+						"translation": "",
+						"sentence": "We have time."
+					}],
+					"id": 3
+				}, {
+					"sentences": [{
+						"translation": "",
+						"sentence": "He likes to play soccer."
+					}, {
+						"translation": "",
+						"sentence": "I like ice cream."
+					}, {
+						"translation": "",
+						"sentence": "She likes to read."
+					}],
+					"romanisation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"word": "like",
+					"id": 4,
+					"translation": "",
+					"group": "Basic Grammar and Structures: Present Tense"
+				}, {
+					"group": "Basic Grammar and Structures: Present Tense",
+					"word": "go",
+					"id": 5,
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"sentences": [{
+						"translation": "",
+						"sentence": "We go to the park every weekend."
+					}, {
+						"translation": "",
+						"sentence": "I go to school."
+					}, {
+						"translation": "",
+						"sentence": "She goes to work."
+					}],
+					"translation": "",
+					"romanisation": ""
+				}, {
+					"partOfSpeech": "",
+					"id": 6,
+					"word": "eat",
+					"group": "Basic Grammar and Structures: Present Tense",
+					"sentences": [{
+						"translation": "",
+						"sentence": "She eats breakfast at 7 AM."
+					}, {
+						"translation": "",
+						"sentence": "I eat healthy food."
+					}, {
+						"translation": "",
+						"sentence": "They eat dinner together."
+					}],
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": ""
+				}, {
+					"id": 7,
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "",
+					"sentences": [{
+						"sentence": "He reads a book before bed.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I read news online."
+					}, {
+						"translation": "",
+						"sentence": "She reads fast."
+					}],
+					"word": "read",
+					"romanisation": "",
+					"group": "Basic Grammar and Structures: Present Tense"
+				}, {
+					"word": "write",
+					"sentences": [{
+						"sentence": "They write letters to their grandparents.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I write in my notebook."
+					}, {
+						"translation": "",
+						"sentence": "He writes stories."
+					}],
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 8,
+					"group": "Basic Grammar and Structures: Present Tense",
+					"romanisation": ""
+				}, {
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 9,
+					"word": "run",
+					"translation": "",
+					"group": "Basic Grammar and Structures: Present Tense",
+					"sentences": [{
+						"translation": "",
+						"sentence": "I run every morning."
+					}, {
+						"translation": "",
+						"sentence": "She runs fast."
+					}, {
+						"translation": "",
+						"sentence": "Dogs run in the park."
+					}],
+					"partOfSpeech": ""
+				}, {
+					"group": "Basic Grammar and Structures: Present Tense",
+					"sentences": [{
+						"translation": "",
+						"sentence": "She works in an office."
+					}, {
+						"translation": "",
+						"sentence": "I work hard."
+					}, {
+						"translation": "",
+						"sentence": "He works from home."
+					}],
+					"partOfSpeech": "",
+					"word": "work",
+					"sortOrder": 1,
+					"id": 10,
+					"translation": "",
+					"romanisation": ""
+				}, {
+					"translation": "",
+					"sentences": [{
+						"translation": "",
+						"sentence": "He studies English every day."
+					}, {
+						"translation": "",
+						"sentence": "I study at university."
+					}, {
+						"translation": "",
+						"sentence": "She studies hard."
+					}],
+					"word": "study",
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "Basic Grammar and Structures: Present Tense",
+					"partOfSpeech": "",
+					"id": 11
+				}, {
+					"sortOrder": 1,
+					"group": "Basic Grammar and Structures: Future Tense",
+					"id": 0,
+					"word": "will",
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"sentences": [{
+						"translation": "",
+						"sentence": "I will visit my grandparents next week."
+					}, {
+						"translation": "",
+						"sentence": "She will come soon."
+					}, {
+						"translation": "",
+						"sentence": "We will eat dinner."
+					}]
+				}, {
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"sentences": [{
+						"sentence": "She is going to start a new job soon.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I am going to eat."
+					}, {
+						"translation": "",
+						"sentence": "They are going to play."
+					}],
+					"translation": "",
+					"id": 1,
+					"romanisation": "",
+					"word": "going to",
+					"group": "Basic Grammar and Structures: Future Tense"
+				}, {
+					"sortOrder": 1,
+					"sentences": [{
+						"sentence": "We shall meet at the cafe at 5 PM.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I shall help you."
+					}, {
+						"translation": "",
+						"sentence": "They shall overcome."
+					}],
+					"partOfSpeech": "",
+					"romanisation": "",
+					"group": "Basic Grammar and Structures: Future Tense",
+					"word": "shall",
+					"id": 2,
+					"translation": ""
+				}, {
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"word": "intend",
+					"romanisation": "",
+					"translation": "",
+					"group": "Basic Grammar and Structures: Future Tense",
+					"sentences": [{
+						"sentence": "He intends to travel to Japan next year.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I intend to study more."
+					}, {
+						"translation": "",
+						"sentence": "She intends to finish early."
+					}],
+					"id": 3
+				}, {
+					"id": 4,
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": "",
+					"word": "plan",
+					"partOfSpeech": "",
+					"group": "Basic Grammar and Structures: Future Tense",
+					"sentences": [{
+						"translation": "",
+						"sentence": "They plan to move to a new house."
+					}, {
+						"translation": "",
+						"sentence": "I plan to visit you."
+					}, {
+						"translation": "",
+						"sentence": "She has a plan."
+					}]
+				}, {
+					"id": 5,
+					"translation": "",
+					"romanisation": "",
+					"word": "expect",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "Basic Grammar and Structures: Future Tense",
+					"sentences": [{
+						"sentence": "I expect to receive my package tomorrow.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I expect good news."
+					}, {
+						"translation": "",
+						"sentence": "He expects to win."
+					}]
+				}, {
+					"word": "aim",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"translation": "",
+					"romanisation": "",
+					"id": 6,
+					"sentences": [{
+						"translation": "",
+						"sentence": "She aims to finish her project by Friday."
+					}, {
+						"translation": "",
+						"sentence": "My aim is to pass the test."
+					}, {
+						"translation": "",
+						"sentence": "He aims for success."
+					}],
+					"group": "Basic Grammar and Structures: Future Tense"
+				}, {
+					"sentences": [{
+						"translation": "",
+						"sentence": "He hopes to get good grades this semester."
+					}, {
+						"translation": "",
+						"sentence": "I hope you are well."
+					}, {
+						"translation": "",
+						"sentence": "She hopes for good weather."
+					}],
+					"word": "hope",
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"id": 7,
+					"group": "Basic Grammar and Structures: Future Tense"
+				}, {
+					"translation": "",
+					"partOfSpeech": "",
+					"sentences": [{
+						"sentence": "We have decided to adopt a pet.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "I decided to go."
+					}, {
+						"translation": "",
+						"sentence": "She decided quickly."
+					}],
+					"sortOrder": 1,
+					"group": "Basic Grammar and Structures: Future Tense",
+					"romanisation": "",
+					"word": "decide",
+					"id": 8
+				}, {
+					"id": 9,
+					"sortOrder": 1,
+					"word": "promise",
+					"romanisation": "",
+					"group": "Basic Grammar and Structures: Future Tense",
+					"sentences": [{
+						"sentence": "I promise to help you with your homework.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "She made a promise."
+					}, {
+						"translation": "",
+						"sentence": "He promised to call."
+					}],
+					"translation": "",
+					"partOfSpeech": ""
+				}, {
+					"sortOrder": 1,
+					"word": "wish",
+					"sentences": [{
+						"translation": "",
+						"sentence": "She wishes to become a doctor."
+					}, {
+						"translation": "",
+						"sentence": "I wish you good luck."
+					}, {
+						"translation": "",
+						"sentence": "He made a wish."
+					}],
+					"romanisation": "",
+					"group": "Basic Grammar and Structures: Future Tense",
+					"partOfSpeech": "",
+					"id": 10,
+					"translation": ""
+				}, {
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "dream",
+					"id": 11,
+					"romanisation": "",
+					"sentences": [{
+						"translation": "",
+						"sentence": "They dream of traveling the world."
+					}, {
+						"translation": "",
+						"sentence": "I had a strange dream."
+					}, {
+						"translation": "",
+						"sentence": "She dreams big."
+					}],
+					"sortOrder": 1,
+					"group": "Basic Grammar and Structures: Future Tense"
+				}],
+			"sortOrder": 1,
+			"tabnumber": 3,
+			"title": "Past Tense"
+		},
+		{
+			"words":
+			[
+				{
+					"translation": "",
+					"group": "Common Prepositions",
+					"sentences": [{
+						"translation": "",
+						"sentence": "The book is in the bag."
+					}, {
+						"translation": "",
+						"sentence": "I am in the house."
+					}, {
+						"translation": "",
+						"sentence": "She is in the car."
+					}],
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"word": "in",
+					"id": 0,
+					"romanisation": ""
+				},
+				{
+					"partOfSpeech": "",
+					"id": 1,
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Common Prepositions",
+					"sentences": [{
+						"sentence": "The keys are on the table.",
+						"translation": ""
+					}, {
+						"translation": "",
+						"sentence": "The cat is on the roof."
+					}, {
+						"translation": "",
+						"sentence": "Put the book on the shelf."
+					}],
+					"word": "on",
+					"romanisation": ""
+				}, {
+				"id": 2,
+				"word": "at",
+				"group": "Common Prepositions",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "He is at the park."
+				}, {
+					"translation": "",
+					"sentence": "I am at home."
+				}, {
+					"translation": "",
+					"sentence": "We meet at 3 PM."
+				}],
+				"translation": "",
+				"romanisation": ""
+			}, {
+				"translation": "",
+				"partOfSpeech": "",
+				"word": "under",
+				"romanisation": "",
+				"group": "Common Prepositions",
+				"sortOrder": 1,
+				"sentences": [{
+					"sentence": "The cat is under the chair.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "The ball is under the bed."
+				}, {
+					"translation": "",
+					"sentence": "The treasure is under the tree."
+				}],
+				"id": 3
+			}, {
+				"word": "between",
+				"group": "Common Prepositions",
+				"sentences": [{
+					"sentence": "The ball is between the shoes.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "The shop is between the bank and the post office."
+				}, {
+					"translation": "",
+					"sentence": "I sit between my friends."
+				}],
+				"romanisation": "",
+				"partOfSpeech": "",
+				"translation": "",
+				"sortOrder": 1,
+				"id": 4
+			}, {
+				"partOfSpeech": "",
+				"word": "next to",
+				"id": 5,
+				"translation": "",
+				"romanisation": "",
+				"sortOrder": 1,
+				"group": "Common Prepositions",
+				"sentences": [{
+					"sentence": "She sits next to her friend.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "The dog is next to the boy."
+				}, {
+					"translation": "",
+					"sentence": "My car is next to the red one."
+				}]
+			}, {
+				"sortOrder": 1,
+				"sentences": [{
+					"sentence": "The garden is behind the house.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "The sun sets behind the mountains."
+				}, {
+					"translation": "",
+					"sentence": "My bag is behind the door."
+				}],
+				"word": "behind",
+				"romanisation": "",
+				"id": 6,
+				"group": "Common Prepositions",
+				"partOfSpeech": "",
+				"translation": ""
+			}, {
+				"romanisation": "",
+				"partOfSpeech": "",
+				"group": "Common Prepositions",
+				"translation": "",
+				"id": 7,
+				"sortOrder": 1,
+				"sentences": [{
+					"sentence": "There is a tree in front of the school.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "He stood in front of the line."
+				}, {
+					"translation": "",
+					"sentence": "The car is in front of the house."
+				}],
+				"word": "in front of"
+			}, {
+				"partOfSpeech": "",
+				"translation": "",
+				"id": 8,
+				"word": "over",
+				"sentences": [{
+					"translation": "",
+					"sentence": "The plane flew over the mountains."
+				}, {
+					"translation": "",
+					"sentence": "The bird flew over the tree."
+				}, {
+					"translation": "",
+					"sentence": "Put a blanket over the baby."
+				}],
+				"sortOrder": 1,
+				"group": "Common Prepositions",
+				"romanisation": ""
+			}, {
+				"translation": "",
+				"sortOrder": 1,
+				"word": "into",
+				"sentences": [{
+					"translation": "",
+					"sentence": "She walked into the room."
+				}, {
+					"translation": "",
+					"sentence": "He jumped into the water."
+				}, {
+					"translation": "",
+					"sentence": "Put the milk into the glass."
+				}],
+				"romanisation": "",
+				"id": 9,
+				"partOfSpeech": "",
+				"group": "Common Prepositions"
+			}, {
+				"romanisation": "",
+				"translation": "",
+				"sortOrder": 1,
+				"group": "Common Prepositions",
+				"id": 10,
+				"partOfSpeech": "",
+				"word": "out of",
+				"sentences": [{
+					"translation": "",
+					"sentence": "He took the book out of the bag."
+				}, {
+					"translation": "",
+					"sentence": "She walked out of the store."
+				}, {
+					"translation": "",
+					"sentence": "Get out of here!"
+				}]
+			}, {
+				"romanisation": "",
+				"sortOrder": 1,
+				"group": "Common Prepositions",
+				"sentences": [{
+					"sentence": "They walked around the park.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "The earth goes around the sun."
+				}, {
+					"translation": "",
+					"sentence": "We drove around the city."
+				}],
+				"word": "around",
+				"translation": "",
+				"partOfSpeech": "",
+				"id": 11
+			}, {
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"word": "and",
+				"id": 0,
+				"romanisation": "",
+				"group": "Common Conjunctions",
+				"translation": "",
+				"sentences": [{
+					"sentence": "She likes apples and oranges.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I have a cat and a dog."
+				}, {
+					"translation": "",
+					"sentence": "He is tall and strong."
+				}]
+			}, {
+				"romanisation": "",
+				"sentences": [{
+					"sentence": "He is tired but happy.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "It is cold but sunny."
+				}, {
+					"translation": "",
+					"sentence": "She wants to go, but she is busy."
+				}],
+				"translation": "",
+				"word": "but",
+				"sortOrder": 1,
+				"id": 1,
+				"group": "Common Conjunctions",
+				"partOfSpeech": ""
+			}, {
+				"sortOrder": 1,
+				"romanisation": "",
+				"translation": "",
+				"id": 2,
+				"group": "Common Conjunctions",
+				"partOfSpeech": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "You can have tea or coffee."
+				}, {
+					"translation": "",
+					"sentence": "Do you want to play or read?"
+				}, {
+					"translation": "",
+					"sentence": "Is it red or blue?"
+				}],
+				"word": "or"
+			}, {
+				"word": "because",
+				"sentences": [{
+					"sentence": "She stayed home because she was sick.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I am happy because it is sunny."
+				}, {
+					"translation": "",
+					"sentence": "He ran fast because he was late."
+				}],
+				"romanisation": "",
+				"translation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"group": "Common Conjunctions",
+				"id": 3
+			}, {
+				"sortOrder": 1,
+				"group": "Common Conjunctions",
+				"translation": "",
+				"id": 4,
+				"partOfSpeech": "",
+				"word": "so",
+				"romanisation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "It was raining, so we stayed inside."
+				}, {
+					"translation": "",
+					"sentence": "I am hungry, so I will eat."
+				}, {
+					"translation": "",
+					"sentence": "He studied hard, so he passed the test."
+				}]
+			}, {
+				"translation": "",
+				"partOfSpeech": "",
+				"id": 5,
+				"romanisation": "",
+				"group": "Common Conjunctions",
+				"sortOrder": 1,
+				"sentences": [{
+					"sentence": "Although it was cold, we went for a walk.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "Although she is small, she is strong."
+				}, {
+					"translation": "",
+					"sentence": "He went to work, although he was sick."
+				}],
+				"word": "although"
+			}, {
+				"word": "if",
+				"id": 6,
+				"partOfSpeech": "",
+				"romanisation": "",
+				"group": "Common Conjunctions",
+				"translation": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"sentence": "If it rains, we will cancel the picnic.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "If you are ready, we can go."
+				}, {
+					"translation": "",
+					"sentence": "Call me if you need help."
+				}]
+			}, {
+				"group": "Common Conjunctions",
+				"sentences": [{
+					"translation": "",
+					"sentence": "Call me when you arrive."
+				}, {
+					"translation": "",
+					"sentence": "I was sleeping when the phone rang."
+				}, {
+					"translation": "",
+					"sentence": "He smiles when he is happy."
+				}],
+				"sortOrder": 1,
+				"id": 7,
+				"partOfSpeech": "",
+				"translation": "",
+				"romanisation": "",
+				"word": "when"
+			}, {
+				"id": 8,
+				"translation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "She read a book while waiting."
+				}, {
+					"translation": "",
+					"sentence": "I listened to music while I worked."
+				}, {
+					"translation": "",
+					"sentence": "He slept while she drove."
+				}],
+				"group": "Common Conjunctions",
+				"romanisation": "",
+				"partOfSpeech": "",
+				"word": "while",
+				"sortOrder": 1
+			}, {
+				"romanisation": "",
+				"sentences": [{
+					"sentence": "Wait here until I come back.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "Don't open the door until I say so."
+				}, {
+					"translation": "",
+					"sentence": "He worked until late at night."
+				}],
+				"word": "until",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"translation": "",
+				"group": "Common Conjunctions",
+				"id": 9
+			}, {
+				"sentences": [{
+					"translation": "",
+					"sentence": "I haven't seen her since last year."
+				}, {
+					"translation": "",
+					"sentence": "She has been here since morning."
+				}, {
+					"translation": "",
+					"sentence": "He has lived here since 2010."
+				}],
+				"id": 10,
+				"partOfSpeech": "",
+				"translation": "",
+				"sortOrder": 1,
+				"romanisation": "",
+				"word": "since",
+				"group": "Common Conjunctions"
+			}, {
+				"sortOrder": 1,
+				"romanisation": "",
+				"partOfSpeech": "",
+				"group": "Common Conjunctions",
+				"id": 11,
+				"sentences": [{
+					"sentence": "He went out, though it was late.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "Though it was raining, we went outside."
+				}, {
+					"translation": "",
+					"sentence": "I like him, though he is sometimes rude."
+				}],
+				"word": "though",
+				"translation": ""
+			}, {
+				"sortOrder": 1,
+				"id": 0,
+				"group": "Common Adjectives",
+				"translation": "",
+				"romanisation": "",
+				"word": "big",
+				"sentences": [{
+					"sentence": "The house is big.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "He has a big car."
+				}, {
+					"translation": "",
+					"sentence": "The elephant is big."
+				}],
+				"partOfSpeech": ""
+			}, {
+				"word": "small",
+				"group": "Common Adjectives",
+				"id": 1,
+				"sortOrder": 1,
+				"romanisation": "",
+				"partOfSpeech": "",
+				"sentences": [{
+					"sentence": "She has a small dog.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "The mouse is small."
+				}, {
+					"translation": "",
+					"sentence": "I live in a small town."
+				}],
+				"translation": ""
+			}, {
+				"word": "happy",
+				"translation": "",
+				"group": "Common Adjectives",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "He is very happy today."
+				}, {
+					"translation": "",
+					"sentence": "She has a happy smile."
+				}, {
+					"translation": "",
+					"sentence": "I feel happy now."
+				}],
+				"id": 2,
+				"romanisation": ""
+			}, {
+				"romanisation": "",
+				"partOfSpeech": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "She felt sad after the movie."
+				}, {
+					"translation": "",
+					"sentence": "He looks sad."
+				}, {
+					"translation": "",
+					"sentence": "Don't be sad."
+				}],
+				"group": "Common Adjectives",
+				"sortOrder": 1,
+				"word": "sad",
+				"id": 3,
+				"translation": ""
+			}, {
+				"id": 4,
+				"word": "beautiful",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"romanisation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "The garden looks beautiful in spring."
+				}, {
+					"translation": "",
+					"sentence": "She is a beautiful girl."
+				}, {
+					"translation": "",
+					"sentence": "The flowers are beautiful."
+				}],
+				"translation": "",
+				"group": "Common Adjectives"
+			}, {
+				"romanisation": "",
+				"id": 5,
+				"word": "tall",
+				"group": "Common Adjectives",
+				"translation": "",
+				"partOfSpeech": "",
+				"sentences": [{
+					"sentence": "He is tall and strong.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "The tree is tall."
+				}, {
+					"translation": "",
+					"sentence": "She is a tall woman."
+				}],
+				"sortOrder": 1
+			}, {
+				"sentences": [{
+					"translation": "",
+					"sentence": "She is short but very fast."
+				}, {
+					"translation": "",
+					"sentence": "He has short hair."
+				}, {
+					"translation": "",
+					"sentence": "The street is short."
+				}],
+				"translation": "",
+				"id": 6,
+				"partOfSpeech": "",
+				"word": "short",
+				"sortOrder": 1,
+				"romanisation": "",
+				"group": "Common Adjectives"
+			}, {
+				"id": 7,
+				"sentences": [{
+					"translation": "",
+					"sentence": "They are young and energetic."
+				}, {
+					"translation": "",
+					"sentence": "She is a young student."
+				}, {
+					"translation": "",
+					"sentence": "The puppy is young."
+				}],
+				"group": "Common Adjectives",
+				"word": "young",
+				"translation": "",
+				"romanisation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1
+			}, {
+				"group": "Common Adjectives",
+				"translation": "",
+				"partOfSpeech": "",
+				"id": 8,
+				"sortOrder": 1,
+				"word": "old",
+				"romanisation": "",
+				"sentences": [{
+					"sentence": "The building is very old.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "He is an old man."
+				}, {
+					"translation": "",
+					"sentence": "This car is old."
+				}]
+			}, {
+				"word": "new",
+				"id": 9,
+				"sentences": [{
+					"sentence": "She bought a new car.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "This is a new book."
+				}, {
+					"translation": "",
+					"sentence": "I have new shoes."
+				}],
+				"partOfSpeech": "",
+				"group": "Common Adjectives",
+				"romanisation": "",
+				"sortOrder": 1,
+				"translation": ""
+			}, {
+				"group": "Common Adjectives",
+				"romanisation": "",
+				"word": "hot",
+				"sortOrder": 1,
+				"partOfSpeech": "",
+				"id": 10,
+				"sentences": [{
+					"translation": "",
+					"sentence": "The soup is hot."
+				}, {
+					"translation": "",
+					"sentence": "The sun is hot today."
+				}, {
+					"translation": "",
+					"sentence": "Be careful, the plate is hot."
+				}],
+				"translation": ""
+			}, {
+				"romanisation": "",
+				"id": 11,
+				"partOfSpeech": "",
+				"translation": "",
+				"sentences": [{
+					"sentence": "It is cold outside.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I feel cold."
+				}, {
+					"translation": "",
+					"sentence": "The water is cold."
+				}],
+				"group": "Common Adjectives",
+				"sortOrder": 1,
+				"word": "cold"
+			}, {
+				"romanisation": "",
+				"translation": "",
+				"group": "Common Adverbs",
+				"word": "quickly",
+				"sentences": [{
+					"translation": "",
+					"sentence": "She finished her homework quickly."
+				}, {
+					"translation": "",
+					"sentence": "He ran quickly."
+				}, {
+					"translation": "",
+					"sentence": "Do it quickly."
+				}],
+				"sortOrder": 1,
+				"id": 0,
+				"partOfSpeech": ""
+			}, {
+				"group": "Common Adverbs",
+				"id": 1,
+				"sentences": [{
+					"sentence": "He walked slowly to the store.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "The snail moves slowly."
+				}, {
+					"translation": "",
+					"sentence": "Speak slowly, please."
+				}],
+				"translation": "",
+				"partOfSpeech": "",
+				"word": "slowly",
+				"sortOrder": 1,
+				"romanisation": ""
+			}, {
+				"sortOrder": 1,
+				"id": 2,
+				"translation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "They danced happily at the party."
+				}, {
+					"translation": "",
+					"sentence": "She smiled happily."
+				}, {
+					"translation": "",
+					"sentence": "He sang happily."
+				}],
+				"partOfSpeech": "",
+				"word": "happily",
+				"romanisation": "",
+				"group": "Common Adverbs"
+			}, {
+				"partOfSpeech": "",
+				"group": "Common Adverbs",
+				"translation": "",
+				"word": "sadly",
+				"sortOrder": 1,
+				"id": 3,
+				"romanisation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "She sadly waved goodbye."
+				}, {
+					"translation": "",
+					"sentence": "He looked sadly at the empty plate."
+				}, {
+					"translation": "",
+					"sentence": "The dog barked sadly."
+				}]
+			}, {
+				"romanisation": "",
+				"sentences": [{
+					"sentence": "The baby slept quietly.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "Please speak quietly."
+				}, {
+					"translation": "",
+					"sentence": "She closed the door quietly."
+				}],
+				"translation": "",
+				"partOfSpeech": "",
+				"id": 4,
+				"sortOrder": 1,
+				"word": "quietly",
+				"group": "Common Adverbs"
+			}, {
+				"sentences": [{
+					"translation": "",
+					"sentence": "He spoke loudly to be heard."
+				}, {
+					"translation": "",
+					"sentence": "Please do not talk loudly."
+				}, {
+					"translation": "",
+					"sentence": "She sang loudly."
+				}],
+				"group": "Common Adverbs",
+				"translation": "",
+				"word": "loudly",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"romanisation": "",
+				"id": 5
+			}, {
+				"translation": "",
+				"romanisation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "She sings very well."
+				}, {
+					"translation": "",
+					"sentence": "He plays football well."
+				}, {
+					"translation": "",
+					"sentence": "You did well on the test."
+				}],
+				"word": "well",
+				"id": 6,
+				"group": "Common Adverbs"
+			}, {
+				"translation": "",
+				"partOfSpeech": "",
+				"word": "badly",
+				"romanisation": "",
+				"id": 7,
+				"group": "Common Adverbs",
+				"sentences": [{
+					"translation": "",
+					"sentence": "He played badly in the match."
+				}, {
+					"translation": "",
+					"sentence": "I sing badly."
+				}, {
+					"translation": "",
+					"sentence": "The car was damaged badly."
+				}],
+				"sortOrder": 1
+			}, {
+				"word": "often",
+				"group": "Common Adverbs",
+				"translation": "",
+				"sentences": [{
+					"sentence": "They often visit their grandparents.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I often drink tea."
+				}, {
+					"translation": "",
+					"sentence": "She often reads books."
+				}],
+				"sortOrder": 1,
+				"partOfSpeech": "",
+				"id": 8,
+				"romanisation": ""
+			}, {
+				"word": "rarely",
+				"sentences": [{
+					"translation": "",
+					"sentence": "He rarely eats junk food."
+				}, {
+					"translation": "",
+					"sentence": "She rarely watches TV."
+				}, {
+					"translation": "",
+					"sentence": "I rarely go to the cinema."
+				}],
+				"partOfSpeech": "",
+				"translation": "",
+				"id": 9,
+				"sortOrder": 1,
+				"romanisation": "",
+				"group": "Common Adverbs"
+			}, {
+				"id": 10,
+				"partOfSpeech": "",
+				"group": "Common Adverbs",
+				"sentences": [{
+					"translation": "",
+					"sentence": "She always drinks coffee in the morning."
+				}, {
+					"translation": "",
+					"sentence": "He always smiles."
+				}, {
+					"translation": "",
+					"sentence": "I always do my homework."
+				}],
+				"romanisation": "",
+				"word": "always",
+				"translation": "",
+				"sortOrder": 1
+			}, {
+				"romanisation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "He never forgets to do his homework."
+				}, {
+					"translation": "",
+					"sentence": "I never eat meat."
+				}, {
+					"translation": "",
+					"sentence": "She never comes late."
+				}],
+				"word": "never",
+				"group": "Common Adverbs",
+				"translation": "",
+				"id": 11
+			}],
+			"sortOrder": 1,
+			"title": "in, and, big, quickly",
+			"tabnumber": 3
+		},
+		{
+			"words":
+			[
+				{
+					"romanisation": "",
+					"id": 0,
+					"word": "eat",
+					"group": "Present Simple and Present Continuous Tenses",
+					"sentences": [{
+						"translation": "",
+						"sentence": "I eat breakfast every morning."
+					}, {
+						"translation": "",
+						"sentence": "She eats an apple."
+					}, {
+						"translation": "",
+						"sentence": "We eat dinner at 7 PM."
+					}],
+					"translation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1
+				}, {
+				"romanisation": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"sentence": "She is studying for her exams right now.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I study English every day."
+				}, {
+					"translation": "",
+					"sentence": "They are studying in the library."
+				}],
+				"id": 1,
+				"translation": "",
+				"group": "Present Simple and Present Continuous Tenses",
+				"word": "study",
+				"partOfSpeech": ""
+			}, {
+				"sentences": [{
+					"sentence": "They play soccer every weekend.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I play games with friends."
+				}, {
+					"translation": "",
+					"sentence": "She is playing the piano."
+				}],
+				"sortOrder": 1,
+				"translation": "",
+				"partOfSpeech": "",
+				"romanisation": "",
+				"word": "play",
+				"id": 2,
+				"group": "Present Simple and Present Continuous Tenses"
+			}, {
+				"id": 3,
+				"word": "watch",
+				"translation": "",
+				"romanisation": "",
+				"group": "Present Simple and Present Continuous Tenses",
+				"sentences": [{
+					"translation": "",
+					"sentence": "He is watching a movie at the moment."
+				}, {
+					"translation": "",
+					"sentence": "I watch TV in the evening."
+				}, {
+					"translation": "",
+					"sentence": "We watch birds in the park."
+				}],
+				"sortOrder": 1,
+				"partOfSpeech": ""
+			}, {
+				"sortOrder": 1,
+				"id": 4,
+				"partOfSpeech": "",
+				"word": "work",
+				"translation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "My father works at a bank."
+				}, {
+					"translation": "",
+					"sentence": "I work from home."
+				}, {
+					"translation": "",
+					"sentence": "She is working now."
+				}],
+				"group": "Present Simple and Present Continuous Tenses",
+				"romanisation": ""
+			}, {
+				"romanisation": "",
+				"id": 5,
+				"group": "Present Simple and Present Continuous Tenses",
+				"sentences": [{
+					"translation": "",
+					"sentence": "She reads a book before bed."
+				}, {
+					"translation": "",
+					"sentence": "I read newspapers online."
+				}, {
+					"translation": "",
+					"sentence": "He is reading a story."
+				}],
+				"translation": "",
+				"partOfSpeech": "",
+				"word": "read",
+				"sortOrder": 1
+			}, {
+				"romanisation": "",
+				"partOfSpeech": "",
+				"sentences": [{
+					"sentence": "I am writing an email to my friend.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "She writes letters to her grandma."
+				}, {
+					"translation": "",
+					"sentence": "He is writing a book."
+				}],
+				"sortOrder": 1,
+				"translation": "",
+				"group": "Present Simple and Present Continuous Tenses",
+				"id": 6,
+				"word": "write"
+			}, {
+				"romanisation": "",
+				"word": "drink",
+				"translation": "",
+				"group": "Present Simple and Present Continuous Tenses",
+				"sentences": [{
+					"sentence": "He drinks coffee every morning.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I drink water."
+				}, {
+					"translation": "",
+					"sentence": "She is drinking juice."
+				}],
+				"partOfSpeech": "",
+				"id": 7,
+				"sortOrder": 1
+			}, {
+				"id": 8,
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "They are running in the park."
+				}, {
+					"translation": "",
+					"sentence": "I run every day."
+				}, {
+					"translation": "",
+					"sentence": "He is running fast."
+				}],
+				"word": "run",
+				"translation": "",
+				"romanisation": "",
+				"group": "Present Simple and Present Continuous Tenses"
+			}, {
+				"group": "Present Simple and Present Continuous Tenses",
+				"sortOrder": 1,
+				"partOfSpeech": "",
+				"romanisation": "",
+				"word": "teach",
+				"id": 9,
+				"sentences": [{
+					"sentence": "She teaches English at a high school.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I teach math."
+				}, {
+					"translation": "",
+					"sentence": "He is teaching online."
+				}],
+				"translation": ""
+			}, {
+				"word": "visit",
+				"sentences": [{
+					"sentence": "I visited my grandparents last weekend.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "She will visit her friends."
+				}, {
+					"translation": "",
+					"sentence": "They visit museums."
+				}],
+				"translation": "",
+				"romanisation": "",
+				"group": "Past Simple and Past Continuous Tenses",
+				"id": 0,
+				"sortOrder": 1,
+				"partOfSpeech": ""
+			}, {
+				"id": 1,
+				"romanisation": "",
+				"partOfSpeech": "",
+				"group": "Past Simple and Past Continuous Tenses",
+				"word": "watch",
+				"sortOrder": 1,
+				"translation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "They were watching TV when the power went out."
+				}, {
+					"translation": "",
+					"sentence": "I watched a movie yesterday."
+				}, {
+					"translation": "",
+					"sentence": "She was watching the children."
+				}]
+			}, {
+				"id": 2,
+				"romanisation": "",
+				"sentences": [{
+					"sentence": "He played soccer with his friends yesterday.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "They played cards last night."
+				}, {
+					"translation": "",
+					"sentence": "She was playing piano."
+				}],
+				"word": "play",
+				"group": "Past Simple and Past Continuous Tenses",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"translation": ""
+			}, {
+				"word": "read",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"translation": "",
+				"romanisation": "",
+				"group": "Past Simple and Past Continuous Tenses",
+				"sentences": [{
+					"sentence": "She was reading a book when I called her.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I read a book last week."
+				}, {
+					"translation": "",
+					"sentence": "He was reading the news."
+				}],
+				"id": 3
+			}, {
+				"partOfSpeech": "",
+				"word": "walk",
+				"sortOrder": 1,
+				"translation": "",
+				"romanisation": "",
+				"group": "Past Simple and Past Continuous Tenses",
+				"id": 4,
+				"sentences": [{
+					"sentence": "We walked to the park in the morning.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "She was walking her dog."
+				}, {
+					"translation": "",
+					"sentence": "They walked home together."
+				}]
+			}, {
+				"romanisation": "",
+				"word": "eat",
+				"sortOrder": 1,
+				"id": 5,
+				"sentences": [{
+					"sentence": "They were eating dinner when I arrived.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I ate pizza yesterday."
+				}, {
+					"translation": "",
+					"sentence": "He was eating an apple."
+				}],
+				"group": "Past Simple and Past Continuous Tenses",
+				"partOfSpeech": "",
+				"translation": ""
+			}, {
+				"word": "study",
+				"partOfSpeech": "",
+				"group": "Past Simple and Past Continuous Tenses",
+				"romanisation": "",
+				"translation": "",
+				"id": 6,
+				"sentences": [{
+					"sentence": "She studied for her exam last night.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I was studying when you called."
+				}, {
+					"translation": "",
+					"sentence": "He studied hard for the test."
+				}],
+				"sortOrder": 1
+			}, {
+				"word": "drive",
+				"id": 7,
+				"sortOrder": 1,
+				"romanisation": "",
+				"sentences": [{
+					"sentence": "He was driving to work when he heard the news.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I drove to the beach last weekend."
+				}, {
+					"translation": "",
+					"sentence": "She is learning to drive."
+				}],
+				"partOfSpeech": "",
+				"translation": "",
+				"group": "Past Simple and Past Continuous Tenses"
+			}, {
+				"sentences": [{
+					"sentence": "She listened to music all afternoon.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I listened to the radio."
+				}, {
+					"translation": "",
+					"sentence": "He was listening carefully."
+				}],
+				"word": "listen",
+				"translation": "",
+				"id": 8,
+				"sortOrder": 1,
+				"romanisation": "",
+				"partOfSpeech": "",
+				"group": "Past Simple and Past Continuous Tenses"
+			}, {
+				"group": "Past Simple and Past Continuous Tenses",
+				"id": 9,
+				"translation": "",
+				"word": "work",
+				"sortOrder": 1,
+				"romanisation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "They were working on the project when the manager came in."
+				}, {
+					"translation": "",
+					"sentence": "I worked all day."
+				}, {
+					"translation": "",
+					"sentence": "She was working from home."
+				}],
+				"partOfSpeech": ""
+			}, {
+				"sortOrder": 1,
+				"group": "Future Simple",
+				"translation": "",
+				"partOfSpeech": "",
+				"word": "go",
+				"id": 0,
+				"sentences": [{
+					"sentence": "We will go to the park tomorrow.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I will go home now."
+				}, {
+					"translation": "",
+					"sentence": "She will go to the party."
+				}],
+				"romanisation": ""
+			}, {
+				"id": 1,
+				"partOfSpeech": "",
+				"romanisation": "",
+				"translation": "",
+				"word": "visit",
+				"sortOrder": 1,
+				"group": "Future Simple",
+				"sentences": [{
+					"translation": "",
+					"sentence": "She will visit her grandparents next weekend."
+				}, {
+					"translation": "",
+					"sentence": "I will visit you soon."
+				}, {
+					"translation": "",
+					"sentence": "They will visit the museum."
+				}]
+			}, {
+				"sortOrder": 1,
+				"id": 2,
+				"word": "buy",
+				"partOfSpeech": "",
+				"sentences": [{
+					"sentence": "He will buy a new car next month.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I will buy some food."
+				}, {
+					"translation": "",
+					"sentence": "She will buy a dress."
+				}],
+				"translation": "",
+				"romanisation": "",
+				"group": "Future Simple"
+			}, {
+				"word": "start",
+				"sentences": [{
+					"sentence": "They will start the project next week.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I will start work at 9 AM."
+				}, {
+					"translation": "",
+					"sentence": "Let's start the game."
+				}],
+				"partOfSpeech": "",
+				"romanisation": "",
+				"group": "Future Simple",
+				"sortOrder": 1,
+				"id": 3,
+				"translation": ""
+			}, {
+				"word": "travel",
+				"group": "Future Simple",
+				"sentences": [{
+					"sentence": "I will travel to Japan next year.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "She will travel by train."
+				}, {
+					"translation": "",
+					"sentence": "They will travel the world."
+				}],
+				"id": 4,
+				"partOfSpeech": "",
+				"translation": "",
+				"romanisation": "",
+				"sortOrder": 1
+			}, {
+				"sentences": [{
+					"sentence": "She stayed home because she was sick.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I am happy because you are here."
+				}, {
+					"translation": "",
+					"sentence": "He ate because he was hungry."
+				}],
+				"romanisation": "",
+				"partOfSpeech": "",
+				"word": "because",
+				"id": 0,
+				"sortOrder": 1,
+				"translation": "",
+				"group": "Subordinate Clauses"
+			}, {
+				"translation": "",
+				"sentences": [{
+					"sentence": "Although it was raining, they went for a walk.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "Although he is old, he is strong."
+				}, {
+					"translation": "",
+					"sentence": "She smiled, although she was sad."
+				}],
+				"romanisation": "",
+				"partOfSpeech": "",
+				"word": "although",
+				"id": 1,
+				"sortOrder": 1,
+				"group": "Subordinate Clauses"
+			}, {
+				"sentences": [{
+					"sentence": "I will call you when I arrive.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "She sings when she is happy."
+				}, {
+					"translation": "",
+					"sentence": "We left when it was dark."
+				}],
+				"translation": "",
+				"word": "when",
+				"id": 2,
+				"group": "Subordinate Clauses",
+				"romanisation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1
+			}, {
+				"sortOrder": 1,
+				"id": 3,
+				"romanisation": "",
+				"word": "if",
+				"sentences": [{
+					"sentence": "We will go to the beach if the weather is nice.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "If you study, you will pass."
+				}, {
+					"translation": "",
+					"sentence": "Call me if you need help."
+				}],
+				"partOfSpeech": "",
+				"translation": "",
+				"group": "Subordinate Clauses"
+			}, {
+				"sentences": [{
+					"sentence": "They went out to eat after they finished their work.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I will go after dinner."
+				}, {
+					"translation": "",
+					"sentence": "She arrived after me."
+				}],
+				"group": "Subordinate Clauses",
+				"partOfSpeech": "",
+				"romanisation": "",
+				"id": 4,
+				"sortOrder": 1,
+				"translation": "",
+				"word": "after"
+			}, {
+				"group": "Subjunctive Mood",
+				"word": "suggest",
+				"id": 0,
+				"translation": "",
+				"partOfSpeech": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "I suggest that he see a doctor."
+				}, {
+					"translation": "",
+					"sentence": "I suggest you take a break."
+				}, {
+					"translation": "",
+					"sentence": "She suggests that we leave early."
+				}],
+				"romanisation": ""
+			}, {
+				"word": "recommend",
+				"romanisation": "",
+				"sortOrder": 1,
+				"sentences": [{
+					"translation": "",
+					"sentence": "She recommends that we arrive early."
+				}, {
+					"translation": "",
+					"sentence": "I recommend this book."
+				}, {
+					"translation": "",
+					"sentence": "They recommend visiting the museum."
+				}],
+				"translation": "",
+				"partOfSpeech": "",
+				"id": 1,
+				"group": "Subjunctive Mood"
+			}, {
+				"sentences": [{
+					"sentence": "It is important that she be present at the meeting.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "It is important to learn English."
+				}, {
+					"translation": "",
+					"sentence": "Your health is important."
+				}],
+				"group": "Subjunctive Mood",
+				"romanisation": "",
+				"word": "important",
+				"sortOrder": 1,
+				"translation": "",
+				"partOfSpeech": "",
+				"id": 2
+			}, {
+				"sortOrder": 1,
+				"partOfSpeech": "",
+				"translation": "",
+				"group": "Subjunctive Mood",
+				"id": 3,
+				"word": "necessary",
+				"romanisation": "",
+				"sentences": [{
+					"translation": "",
+					"sentence": "It is necessary that you finish the project on time."
+				}, {
+					"translation": "",
+					"sentence": "Food and water are necessary."
+				}, {
+					"translation": "",
+					"sentence": "Is it necessary to go?"
+				}]
+			}, {
+				"word": "insist",
+				"id": 4,
+				"sortOrder": 1,
+				"group": "Subjunctive Mood",
+				"romanisation": "",
+				"partOfSpeech": "",
+				"translation": "",
+				"sentences": [{
+					"sentence": "They insist that he stay for dinner.",
+					"translation": ""
+				}, {
+					"translation": "",
+					"sentence": "I insist on paying."
+				}, {
+					"translation": "",
+					"sentence": "She insisted that he listen."
+				}]
+			}],
+			"sortOrder": 1,
+			"title": "Patterns",
+			"tabnumber": 3
+		}
+
+	]
+
+
+}
