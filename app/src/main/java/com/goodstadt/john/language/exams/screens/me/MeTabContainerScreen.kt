@@ -86,7 +86,7 @@ fun MeTabContainerScreen(viewModel: TabsViewModel = hiltViewModel()) {
             composable(MeScreen.Search.route) { SearchScreen() }
             composable(MeScreen.Quiz.route) { MeTabPlaceholderScreen("Quiz") }
             composable(MeScreen.Progress.route) { MeTabPlaceholderScreen("Progress") }
-            composable(MeScreen.Conjugations.route) { MeTabPlaceholderScreen("Conjugations") }
+            composable(MeScreen.Conjugations.route) { ConjugationsScreen() }
             composable(MeScreen.Prepositions.route) { MeTabPlaceholderScreen("Prepositions") }
             composable(MeScreen.Paragraph.route) { MeTabPlaceholderScreen("Paragraph") }
             composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }

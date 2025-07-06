@@ -7,4 +7,5 @@ object LanguageConfig {
     val languageCode: String = "cmn-CN"
     val defaultFileName: String = "vocab_data_a1"
     val meTabMenuItems = listOf("Settings", "Search", "Progress")
+    val conjugationsFileName: String? = null
 }

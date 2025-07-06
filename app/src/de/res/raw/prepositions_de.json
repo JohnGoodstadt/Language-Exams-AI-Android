@@ -1,0 +1,703 @@
+{
+	"romanized" : false,
+	"native" : "",
+	"name" : "",
+	"sheetname" : "GermanConjugations",
+	"id" : "",
+	"location" : 0,
+	"googlevoiceprefix" : "",
+	"uploaddate" : 1747213019.492379,
+	"voicename" : "",
+	"nativename" : "",
+	"updatedDate" : 978307200,
+	"fileformat" : 1,
+	"tabtitles" : ["Personal","Time","More"],
+	"categories" :
+	[
+		{
+			"sortOrder": 1,
+			"tabnumber": 1,
+			"title": "Zu (To, At, For)",
+			"words": [
+				{
+					"group": "Präpositionen",
+					"sortOrder": 1,
+					"word": "zu (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 1,
+					"romanisation": "",
+					"translation": "to, at, for",
+					"sentences": [
+						{
+							"translation": "I'm going to the train station.",
+							"sentence": "Ich gehe zum (zu dem) Bahnhof."
+						},
+						{
+							"translation": "See you at Christmas!",
+							"sentence": "Bis bald zu Weihnachten!"
+						},
+						{
+							"translation": "She invited me for her birthday.",
+							"sentence": "Sie hat mich zu ihrem Geburtstag eingeladen."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 2,
+					"word": "zu (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 2,
+					"romanisation": "",
+					"translation": "to, at, for",
+					"sentences": [
+						{
+							"translation": "Let's go to the party!",
+							"sentence": "Lasst uns zur (zu der) Party gehen!"
+						},
+						{
+							"translation": "I'm going to my grandmother's house.",
+							"sentence": "Ich gehe zu meiner Großmutter."
+						},
+						{
+							"translation": "He said yes to my proposal.",
+							"sentence": "Er hat zu meinem Vorschlag Ja gesagt."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 3,
+					"word": "zu (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 3,
+					"romanisation": "",
+					"translation": "to, at, for",
+					"sentences": [
+						{
+							"translation": "The door is closed.",
+							"sentence": "Die Tür ist zu."
+						},
+						{
+							"translation": "He is home for dinner.",
+							"sentence": "Er ist zum (zu dem) Abendessen zu Hause."
+						},
+						{
+							"translation": "I wish you good luck for your exam.",
+							"sentence": "Ich wünsche dir viel Glück zur (zu der) Prüfung."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 4,
+			"tabnumber": 2,
+			"title": "Mit (With, By)",
+			"words": [
+				{
+					"group": "Präpositionen",
+					"sortOrder": 4,
+					"word": "mit (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 4,
+					"romanisation": "",
+					"translation": "with, by",
+					"sentences": [
+						{
+							"translation": "I am traveling with my friends.",
+							"sentence": "Ich reise mit meinen Freunden."
+						},
+						{
+							"translation": "I go to work by bus.",
+							"sentence": "Ich fahre mit dem Bus zur Arbeit."
+						},
+						{
+							"translation": "She writes with a pen.",
+							"sentence": "Sie schreibt mit einem Stift."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 5,
+					"word": "mit (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 5,
+					"romanisation": "",
+					"translation": "with, by",
+					"sentences": [
+						{
+							"translation": "He drinks coffee with milk.",
+							"sentence": "Er trinkt Kaffee mit Milch."
+						},
+						{
+							"translation": "We are walking with the dog.",
+							"sentence": "Wir gehen mit dem Hund spazieren."
+						},
+						{
+							"translation": "The package arrived by post.",
+							"sentence": "Das Paket kam mit der Post an."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 6,
+					"word": "mit (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 6,
+					"romanisation": "",
+					"translation": "with, by",
+					"sentences": [
+						{
+							"translation": "She plays with her children.",
+							"sentence": "Sie spielt mit ihren Kindern."
+						},
+						{
+							"translation": "I paid with my credit card.",
+							"sentence": "Ich habe mit meiner Kreditkarte bezahlt."
+						},
+						{
+							"translation": "The house was built with great effort.",
+							"sentence": "Das Haus wurde mit großer Mühe gebaut."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 7,
+			"tabnumber": 3,
+			"title": "Für (For)",
+			"words": [
+				{
+					"group": "Präpositionen",
+					"sortOrder": 7,
+					"word": "für (Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 7,
+					"romanisation": "",
+					"translation": "for",
+					"sentences": [
+						{
+							"translation": "This gift is for you.",
+							"sentence": "Dieses Geschenk ist für dich."
+						},
+						{
+							"translation": "I am grateful for your help.",
+							"sentence": "Ich bin dankbar für deine Hilfe."
+						},
+						{
+							"translation": "He works for a big company.",
+							"sentence": "Er arbeitet für eine große Firma."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 8,
+					"word": "für (Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 8,
+					"romanisation": "",
+					"translation": "for",
+					"sentences": [
+						{
+							"translation": "It is good for your health.",
+							"sentence": "Es ist gut für deine Gesundheit."
+						},
+						{
+							"translation": "We're leaving for Munich tomorrow.",
+							"sentence": "Wir fahren morgen nach München. (Note: 'nach' for cities, but 'für' can be used with a purpose like 'for vacation')"
+						},
+						{
+							"translation": "He fought for his country.",
+							"sentence": "Er kämpfte für sein Land."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 9,
+					"word": "für (Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 9,
+					"romanisation": "",
+					"translation": "for",
+					"sentences": [
+						{
+							"translation": "I have no time for that.",
+							"sentence": "Ich habe keine Zeit dafür."
+						},
+						{
+							"translation": "What can I do for you?",
+							"sentence": "Was kann ich für Sie tun?"
+						},
+						{
+							"translation": "She prepared dinner for us.",
+							"sentence": "Sie hat das Abendessen für uns zubereitet."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 10,
+			"tabnumber": 4,
+			"title": "An (At, On, To - Two-way)",
+			"words": [
+				{
+					"group": "Präpositionen",
+					"sortOrder": 10,
+					"word": "an (Dativ/Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 10,
+					"romanisation": "",
+					"translation": "at, on, to (two-way preposition)",
+					"sentences": [
+						{
+							"translation": "The picture is hanging on the wall. (No motion, Dativ)",
+							"sentence": "Das Bild hängt an der Wand."
+						},
+						{
+							"translation": "I'm hanging the picture on the wall. (Motion, Akkusativ)",
+							"sentence": "Ich hänge das Bild an die Wand."
+						},
+						{
+							"translation": "We are at the lake. (No motion, Dativ)",
+							"sentence": "Wir sind am (an dem) See."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 11,
+					"word": "an (Dativ/Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 11,
+					"romanisation": "",
+					"translation": "at, on, to (two-way preposition)",
+					"sentences": [
+						{
+							"translation": "He lives close to the border. (No motion, Dativ)",
+							"sentence": "Er wohnt an der Grenze."
+						},
+						{
+							"translation": "Please stick the note on the door. (Motion, Akkusativ)",
+							"sentence": "Klebe den Zettel bitte an die Tür."
+						},
+						{
+							"translation": "I am thinking of you. (Fixed expression, Akkusativ)",
+							"sentence": "Ich denke an dich."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 12,
+					"word": "an (Dativ/Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 12,
+					"romanisation": "",
+					"translation": "at, on, to (two-way preposition)",
+					"sentences": [
+						{
+							"translation": "The meeting is on Monday. (Time, Dativ)",
+							"sentence": "Das Treffen ist am (an dem) Montag."
+						},
+						{
+							"translation": "He is sitting at the window. (No motion, Dativ)",
+							"sentence": "Er sitzt am (an dem) Fenster."
+						},
+						{
+							"translation": "She knocked on the door. (Motion implied, Akkusativ)",
+							"sentence": "Sie klopfte an die Tür."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 13,
+			"tabnumber": 5,
+			"title": "Auf (On, On top of - Two-way)",
+			"words": [
+				{
+					"group": "Präpositionen",
+					"sortOrder": 13,
+					"word": "auf (Dativ/Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 13,
+					"romanisation": "",
+					"translation": "on, on top of (two-way preposition)",
+					"sentences": [
+						{
+							"translation": "The book is on the table. (No motion, Dativ)",
+							"sentence": "Das Buch liegt auf dem Tisch."
+						},
+						{
+							"translation": "I put the book on the table. (Motion, Akkusativ)",
+							"sentence": "Ich lege das Buch auf den Tisch."
+						},
+						{
+							"translation": "She is waiting for you at the station. (Figurative 'on', Akkusativ)",
+							"sentence": "Sie wartet auf dich am Bahnhof."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 14,
+					"word": "auf (Dativ/Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 14,
+					"romanisation": "",
+					"translation": "on, on top of (two-way preposition)",
+					"sentences": [
+						{
+							"translation": "The cat is sleeping on the sofa. (No motion, Dativ)",
+							"sentence": "Die Katze schläft auf dem Sofa."
+						},
+						{
+							"translation": "He climbed onto the roof. (Motion, Akkusativ)",
+							"sentence": "Er kletterte auf das Dach."
+						},
+						{
+							"translation": "She is happy about the gift. (Fixed expression, Akkusativ)",
+							"sentence": "Sie freut sich auf das Geschenk."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 15,
+					"word": "auf (Dativ/Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 15,
+					"romanisation": "",
+					"translation": "on, on top of (two-way preposition)",
+					"sentences": [
+						{
+							"translation": "The children are playing on the street. (No motion, Dativ)",
+							"sentence": "Die Kinder spielen auf der Straße."
+						},
+						{
+							"translation": "I wrote it on a piece of paper. (Motion, Akkusativ)",
+							"sentence": "Ich habe es auf ein Blatt Papier geschrieben."
+						},
+						{
+							"translation": "Look at the picture! (Fixed expression, Akkusativ)",
+							"sentence": "Schau auf das Bild!"
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 16,
+			"tabnumber": 6,
+			"title": "In (In, Into - Two-way)",
+			"words": [
+				{
+					"group": "Präpositionen",
+					"sortOrder": 16,
+					"word": "in (Dativ/Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 16,
+					"romanisation": "",
+					"translation": "in, into (two-way preposition)",
+					"sentences": [
+						{
+							"translation": "The keys are in the bag. (No motion, Dativ)",
+							"sentence": "Die Schlüssel sind in der Tasche."
+						},
+						{
+							"translation": "I put the keys into the bag. (Motion, Akkusativ)",
+							"sentence": "Ich stecke die Schlüssel in die Tasche."
+						},
+						{
+							"translation": "We live in Germany.",
+							"sentence": "Wir leben in Deutschland."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 17,
+					"word": "in (Dativ/Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 17,
+					"romanisation": "",
+					"translation": "in, into (two-way preposition)",
+					"sentences": [
+						{
+							"translation": "I am in the city center. (No motion, Dativ)",
+							"sentence": "Ich bin in der Innenstadt."
+						},
+						{
+							"translation": "We are going into the cinema. (Motion, Akkusativ)",
+							"sentence": "Wir gehen ins (in das) Kino."
+						},
+						{
+							"translation": "In summer, it is warm. (Time, Dativ)",
+							"sentence": "Im (in dem) Sommer ist es warm."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 18,
+					"word": "in (Dativ/Akkusativ)",
+					"partOfSpeech": "Präposition",
+					"id": 18,
+					"romanisation": "",
+					"translation": "in, into (two-way preposition)",
+					"sentences": [
+						{
+							"translation": "He is sitting in the car. (No motion, Dativ)",
+							"sentence": "Er sitzt im (in dem) Auto."
+						},
+						{
+							"translation": "She poured water into the glass. (Motion, Akkusativ)",
+							"sentence": "Sie goss Wasser in das Glas."
+						},
+						{
+							"translation": "In an hour, I'll be there. (Time, Dativ)",
+							"sentence": "In einer Stunde bin ich da."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 19,
+			"tabnumber": 7,
+			"title": "Von (From, Of, By)",
+			"words": [
+				{
+					"group": "Präpositionen",
+					"sortOrder": 19,
+					"word": "von (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 19,
+					"romanisation": "",
+					"translation": "from, of, by",
+					"sentences": [
+						{
+							"translation": "I come from Germany. (Note: 'aus' is also 'from' for origin from inside, 'von' often for direction/source)",
+							"sentence": "Ich komme aus Deutschland. (But also: Ich komme von der Arbeit.)"
+						},
+						{
+							"translation": "This is a book by Goethe.",
+							"sentence": "Das ist ein Buch von Goethe."
+						},
+						{
+							"translation": "The picture was painted by her.",
+							"sentence": "Das Bild wurde von ihr gemalt."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 20,
+					"word": "von (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 20,
+					"romanisation": "",
+					"translation": "from, of, by",
+					"sentences": [
+						{
+							"translation": "The train departs from platform 5.",
+							"sentence": "Der Zug fährt von Gleis 5 ab."
+						},
+						{
+							"translation": "He is speaking of the weather.",
+							"sentence": "Er spricht vom (von dem) Wetter."
+						},
+						{
+							"translation": "The decision depends on him.",
+							"sentence": "Die Entscheidung hängt von ihm ab."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 21,
+					"word": "von (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 21,
+					"romanisation": "",
+					"translation": "from, of, by",
+					"sentences": [
+						{
+							"translation": "This is a piece of art by a famous painter.",
+							"sentence": "Das ist ein Kunstwerk von einem berühmten Maler."
+						},
+						{
+							"translation": "He received a letter from his aunt.",
+							"sentence": "Er bekam einen Brief von seiner Tante."
+						},
+						{
+							"translation": "From now on, I will study more.",
+							"sentence": "Von nun an werde ich mehr lernen."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 22,
+			"tabnumber": 8,
+			"title": "Nach (To, After)",
+			"words": [
+				{
+					"group": "Präpositionen",
+					"sortOrder": 22,
+					"word": "nach (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 22,
+					"romanisation": "",
+					"translation": "to (cities/countries), after",
+					"sentences": [
+						{
+							"translation": "I'm flying to Berlin.",
+							"sentence": "Ich fliege nach Berlin."
+						},
+						{
+							"translation": "After work, I go home.",
+							"sentence": "Nach der Arbeit gehe ich nach Hause."
+						},
+						{
+							"translation": "It's quarter past three. (After three)",
+							"sentence": "Es ist Viertel nach drei."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 23,
+					"word": "nach (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 23,
+					"romanisation": "",
+					"translation": "to (cities/countries), after",
+					"sentences": [
+						{
+							"translation": "We travel to France every year.",
+							"sentence": "Wir reisen jedes Jahr nach Frankreich."
+						},
+						{
+							"translation": "He always asks about the way.",
+							"sentence": "Er fragt immer nach dem Weg."
+						},
+						{
+							"translation": "According to my opinion, it's not good.",
+							"sentence": "Meiner Meinung nach ist es nicht gut."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 24,
+					"word": "nach (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 24,
+					"romanisation": "",
+					"translation": "to (cities/countries), after",
+					"sentences": [
+						{
+							"translation": "The dog is running after the ball.",
+							"sentence": "Der Hund läuft nach dem Ball."
+						},
+						{
+							"translation": "She searched for the keys.",
+							"sentence": "Sie suchte nach den Schlüsseln."
+						},
+						{
+							"translation": "After the concert, we went for a drink.",
+							"sentence": "Nach dem Konzert sind wir noch etwas trinken gegangen."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 25,
+			"tabnumber": 9,
+			"title": "Bei (At, With, Near)",
+			"words": [
+				{
+					"group": "Präpositionen",
+					"sortOrder": 25,
+					"word": "bei (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 25,
+					"romanisation": "",
+					"translation": "at, with, near (a person's place/company)",
+					"sentences": [
+						{
+							"translation": "I live with my parents.",
+							"sentence": "Ich wohne bei meinen Eltern."
+						},
+						{
+							"translation": "She works at Siemens.",
+							"sentence": "Sie arbeitet bei Siemens."
+						},
+						{
+							"translation": "I have my phone with me.",
+							"sentence": "Ich habe mein Handy bei mir."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 26,
+					"word": "bei (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 26,
+					"romanisation": "",
+					"translation": "at, with, near (a person's place/company)",
+					"sentences": [
+						{
+							"translation": "He's visiting his aunt.",
+							"sentence": "Er ist bei seiner Tante zu Besuch."
+						},
+						{
+							"translation": "The restaurant is near the station.",
+							"sentence": "Das Restaurant ist beim (bei dem) Bahnhof."
+						},
+						{
+							"translation": "I noticed it during the conversation.",
+							"sentence": "Es ist mir beim (bei dem) Gespräch aufgefallen."
+						}
+					]
+				},
+				{
+					"group": "Präpositionen",
+					"sortOrder": 27,
+					"word": "bei (Dativ)",
+					"partOfSpeech": "Präposition",
+					"id": 27,
+					"romanisation": "",
+					"translation": "at, with, near (a person's place/company)",
+					"sentences": [
+						{
+							"translation": "She always has money with her.",
+							"sentence": "Sie hat immer Geld bei sich."
+						},
+						{
+							"translation": "He is currently with his family.",
+							"sentence": "Er ist gerade bei seiner Familie."
+						},
+						{
+							"translation": "During sports, I like to listen to music.",
+							"sentence": "Beim (bei dem) Sport höre ich gerne Musik."
+						}
+					]
+				}
+			]
+		}
+	]
+	
+}

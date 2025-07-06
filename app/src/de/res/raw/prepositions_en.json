@@ -1,0 +1,287 @@
+{
+	"romanized": false,
+	"native": "",
+	"name": "",
+	"sheetname": "EnglishPrepositions",
+	"id": "",
+	"location": 0,
+	"googlevoiceprefix": "",
+	"uploaddate": 1747213019.492379,
+	"voicename": "",
+	"nativename": "",
+	"updatedDate": 978307200,
+	"fileformat": 1,
+	"tabtitles": ["Not Used"],
+	"categories": [
+		{
+			"sortOrder": 1,
+			"tabnumber": 1,
+			"title": "to",
+			"words": [
+				{
+					"group": "Prepositions",
+					"sortOrder": 1,
+					"word": "to",
+					"partOfSpeech": "Prepositions",
+					"id": 1,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "I am going to the park.",
+							"translation": ""
+						},
+						{
+							"sentence": "We are going to visit grandma.",
+							"translation": ""
+						},
+						{
+							"sentence": "He gave the book to her.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 2,
+			"tabnumber": 1,
+			"title": "with",
+			"words": [
+				{
+					"group": "Prepositions",
+					"sortOrder": 2,
+					"word": "with",
+					"partOfSpeech": "Prepositions",
+					"id": 2,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "She is playing with her dog.",
+							"translation": ""
+						},
+						{
+							"sentence": "I am coming with you.",
+							"translation": ""
+						},
+						{
+							"sentence": "He painted the picture with a brush.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 3,
+			"tabnumber": 1,
+			"title": "on",
+			"words": [
+				{
+					"group": "Prepositions",
+					"sortOrder": 3,
+					"word": "on",
+					"partOfSpeech": "Prepositions",
+					"id": 3,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "The book is on the table.",
+							"translation": ""
+						},
+						{
+							"sentence": "He is on the phone.",
+							"translation": ""
+						},
+						{
+							"sentence": "We met on Monday.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 4,
+			"tabnumber": 1,
+			"title": "in",
+			"words": [
+				{
+					"group": "Prepositions",
+					"sortOrder": 4,
+					"word": "in",
+					"partOfSpeech": "Prepositions",
+					"id": 4,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "The keys are in my bag.",
+							"translation": ""
+						},
+						{
+							"sentence": "She lives in London.",
+							"translation": ""
+						},
+						{
+							"sentence": "We will go in the morning.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 5,
+			"tabnumber": 1,
+			"title": "at",
+			"words": [
+				{
+					"group": "Prepositions",
+					"sortOrder": 5,
+					"word": "at",
+					"partOfSpeech": "Prepositions",
+					"id": 5,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "He is at home.",
+							"translation": ""
+						},
+						{
+							"sentence": "I arrived at the station.",
+							"translation": ""
+						},
+						{
+							"sentence": "She smiled at me.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 6,
+			"tabnumber": 1,
+			"title": "for",
+			"words": [
+				{
+					"group": "Prepositions",
+					"sortOrder": 6,
+					"word": "for",
+					"partOfSpeech": "Prepositions",
+					"id": 6,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "This gift is for you.",
+							"translation": ""
+						},
+						{
+							"sentence": "I have worked here for two years.",
+							"translation": ""
+						},
+						{
+							"sentence": "They left for Paris this morning.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 7,
+			"tabnumber": 1,
+			"title": "by",
+			"words": [
+				{
+					"group": "Prepositions",
+					"sortOrder": 7,
+					"word": "by",
+					"partOfSpeech": "Prepositions",
+					"id": 7,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "The book was written by her.",
+							"translation": ""
+						},
+						{
+							"sentence": "I travel by bus.",
+							"translation": ""
+						},
+						{
+							"sentence": "He stood by the door.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 8,
+			"tabnumber": 1,
+			"title": "over",
+			"words": [
+				{
+					"group": "Prepositions",
+					"sortOrder": 8,
+					"word": "over",
+					"partOfSpeech": "Prepositions",
+					"id": 8,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "The plane flew over the city.",
+							"translation": ""
+						},
+						{
+							"sentence": "He jumped over the wall.",
+							"translation": ""
+						},
+						{
+							"sentence": "They talked over coffee.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 9,
+			"tabnumber": 1,
+			"title": "under",
+			"words": [
+				{
+					"group": "Prepositions",
+					"sortOrder": 9,
+					"word": "under",
+					"partOfSpeech": "Prepositions",
+					"id": 9,
+					"romanisation": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "The cat is under the chair.",
+							"translation": ""
+						},
+						{
+							"sentence": "He hid under the bed.",
+							"translation": ""
+						},
+						{
+							"sentence": "We walked under the bridge.",
+							"translation": ""
+						}
+					]
+				}
+			]
+		}
+	]
+}

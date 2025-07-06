@@ -1,0 +1,1568 @@
+{
+	"romanized" : false,
+	"native" : "",
+	"name" : "",
+	"sheetname" : "GermanConjugationsHaben",
+	"id" : "",
+	"location" : 0,
+	"googlevoiceprefix" : "",
+	"uploaddate" : 1747213019.492379,
+	"voicename" : "",
+	"nativename" : "",
+	"updatedDate" : 978307200,
+	"fileformat" : 1,
+	"tabtitles" : ["Personal","Time","More"],
+	"categories" :
+	[
+		{
+			"sortOrder": 1,
+			"tabnumber": 1,
+			"title": "Präsens (Present Tense)",
+			"words": [
+				{
+					"group": "Präsens (Present Tense)",
+					"sortOrder": 1,
+					"word": "Ich habe",
+					"partOfSpeech": "Präsens (Present Tense)",
+					"id": 1,
+					"romanisation": "",
+					"translation": "I have",
+					"sentences": [
+						{
+							"translation": "I have a book.",
+							"sentence": "Ich habe ein Buch."
+						},
+						{
+							"translation": "I have time.",
+							"sentence": "Ich habe Zeit."
+						},
+						{
+							"translation": "I have a question.",
+							"sentence": "Ich habe eine Frage."
+						}
+					]
+				},
+				{
+					"group": "Präsens (Present Tense)",
+					"sortOrder": 2,
+					"word": "Du hast",
+					"partOfSpeech": "Präsens (Present Tense)",
+					"id": 2,
+					"romanisation": "",
+					"translation": "You have (informal singular)",
+					"sentences": [
+						{
+							"translation": "Do you have a car?",
+							"sentence": "Hast du ein Auto?"
+						},
+						{
+							"translation": "You have a nice smile.",
+							"sentence": "Du hast ein schönes Lächeln."
+						},
+						{
+							"translation": "Do you have a dog?",
+							"sentence": "Hast du einen Hund?"
+						}
+					]
+				},
+				{
+					"group": "Präsens (Present Tense)",
+					"sortOrder": 3,
+					"word": "Er/Sie/Es hat",
+					"partOfSpeech": "Präsens (Present Tense)",
+					"id": 3,
+					"romanisation": "",
+					"translation": "He/She/It has",
+					"sentences": [
+						{
+							"translation": "He has a new job.",
+							"sentence": "Er hat einen neuen Job."
+						},
+						{
+							"translation": "She has long hair.",
+							"sentence": "Sie hat lange Haare."
+						},
+						{
+							"translation": "It has four legs.",
+							"sentence": "Es hat vier Beine."
+						}
+					]
+				},
+				{
+					"group": "Präsens (Present Tense)",
+					"sortOrder": 4,
+					"word": "Wir haben",
+					"partOfSpeech": "Präsens (Present Tense)",
+					"id": 4,
+					"romanisation": "",
+					"translation": "We have",
+					"sentences": [
+						{
+							"translation": "We have much to do.",
+							"sentence": "Wir haben viel zu tun."
+						},
+						{
+							"translation": "We have fun.",
+							"sentence": "Wir haben Spaß."
+						},
+						{
+							"translation": "We have two children.",
+							"sentence": "Wir haben zwei Kinder."
+						}
+					]
+				},
+				{
+					"group": "Präsens (Present Tense)",
+					"sortOrder": 5,
+					"word": "Ihr habt",
+					"partOfSpeech": "Präsens (Present Tense)",
+					"id": 5,
+					"romanisation": "",
+					"translation": "You have (informal plural)",
+					"sentences": [
+						{
+							"translation": "Do you have problems?",
+							"sentence": "Habt ihr Probleme?"
+						},
+						{
+							"translation": "You have good ideas.",
+							"sentence": "Ihr habt gute Ideen."
+						},
+						{
+							"translation": "Do you have time tomorrow?",
+							"sentence": "Habt ihr morgen Zeit?"
+						}
+					]
+				},
+				{
+					"group": "Präsens (Present Tense)",
+					"sortOrder": 6,
+					"word": "Sie/Sie haben",
+					"partOfSpeech": "Präsens (Present Tense)",
+					"id": 6,
+					"romanisation": "",
+					"translation": "They have / You have (formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "They have a big house.",
+							"sentence": "Sie haben ein großes Haus."
+						},
+						{
+							"translation": "Do you have a moment, please?",
+							"sentence": "Haben Sie einen Moment, bitte?"
+						},
+						{
+							"translation": "They have a lot of money.",
+							"sentence": "Sie haben viel Geld."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 7,
+			"tabnumber": 2,
+			"title": "Präteritum (Simple Past Tense / Imperfect)",
+			"words": [
+				{
+					"group": "Präteritum (Simple Past Tense / Imperfect)",
+					"sortOrder": 7,
+					"word": "Ich hatte",
+					"partOfSpeech": "Präteritum (Simple Past Tense / Imperfect)",
+					"id": 7,
+					"romanisation": "",
+					"translation": "I had",
+					"sentences": [
+						{
+							"translation": "I had a cat.",
+							"sentence": "Ich hatte eine Katze."
+						},
+						{
+							"translation": "I had no time.",
+							"sentence": "Ich hatte keine Zeit."
+						},
+						{
+							"translation": "I had a dream.",
+							"sentence": "Ich hatte einen Traum."
+						}
+					]
+				},
+				{
+					"group": "Präteritum (Simple Past Tense / Imperfect)",
+					"sortOrder": 8,
+					"word": "Du hattest",
+					"partOfSpeech": "Präteritum (Simple Past Tense / Imperfect)",
+					"id": 8,
+					"romanisation": "",
+					"translation": "You had (informal singular)",
+					"sentences": [
+						{
+							"translation": "Did you have fun?",
+							"sentence": "Hattest du Spaß?"
+						},
+						{
+							"translation": "You had a good idea.",
+							"sentence": "Du hattest eine gute Idee."
+						},
+						{
+							"translation": "Did you have breakfast?",
+							"sentence": "Hattest du Frühstück?"
+						}
+					]
+				},
+				{
+					"group": "Präteritum (Simple Past Tense / Imperfect)",
+					"sortOrder": 9,
+					"word": "Er/Sie/Es hatte",
+					"partOfSpeech": "Präteritum (Simple Past Tense / Imperfect)",
+					"id": 9,
+					"romanisation": "",
+					"translation": "He/She/It had",
+					"sentences": [
+						{
+							"translation": "He had a cold.",
+							"sentence": "Er hatte Schnupfen."
+						},
+						{
+							"translation": "She had long hair as a child.",
+							"sentence": "Sie hatte als Kind lange Haare."
+						},
+						{
+							"translation": "It had a broken leg.",
+							"sentence": "Es hatte ein gebrochenes Bein."
+						}
+					]
+				},
+				{
+					"group": "Präteritum (Simple Past Tense / Imperfect)",
+					"sortOrder": 10,
+					"word": "Wir hatten",
+					"partOfSpeech": "Präteritum (Simple Past Tense / Imperfect)",
+					"id": 10,
+					"romanisation": "",
+					"translation": "We had",
+					"sentences": [
+						{
+							"translation": "We had a party.",
+							"sentence": "Wir hatten eine Party."
+						},
+						{
+							"translation": "We had no problems.",
+							"sentence": "Wir hatten keine Probleme."
+						},
+						{
+							"translation": "We had a lot of work.",
+							"sentence": "Wir hatten viel Arbeit."
+						}
+					]
+				},
+				{
+					"group": "Präteritum (Simple Past Tense / Imperfect)",
+					"sortOrder": 11,
+					"word": "Ihr hattet",
+					"partOfSpeech": "Präteritum (Simple Past Tense / Imperfect)",
+					"id": 11,
+					"romanisation": "",
+					"translation": "You had (informal plural)",
+					"sentences": [
+						{
+							"translation": "Did you have a good time?",
+							"sentence": "Hattet ihr eine gute Zeit?"
+						},
+						{
+							"translation": "You had many guests.",
+							"sentence": "Ihr hattet viele Gäste."
+						},
+						{
+							"translation": "Did you have any difficulties?",
+							"sentence": "Hattet ihr Schwierigkeiten?"
+						}
+					]
+				},
+				{
+					"group": "Präteritum (Simple Past Tense / Imperfect)",
+					"sortOrder": 12,
+					"word": "Sie/Sie hatten",
+					"partOfSpeech": "Präteritum (Simple Past Tense / Imperfect)",
+					"id": 12,
+					"romanisation": "",
+					"translation": "They had / You had (formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "They had a great time.",
+							"sentence": "Sie hatten eine tolle Zeit."
+						},
+						{
+							"translation": "Did you have a good trip?",
+							"sentence": "Hatten Sie eine gute Reise?"
+						},
+						{
+							"translation": "They had no choice.",
+							"sentence": "Sie hatten keine Wahl."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 13,
+			"tabnumber": 3,
+			"title": "Perfekt (Present Perfect Tense)",
+			"words": [
+				{
+					"group": "Perfekt (Present Perfect Tense)",
+					"sortOrder": 13,
+					"word": "Ich habe gehabt",
+					"partOfSpeech": "Perfekt (Present Tense)",
+					"id": 13,
+					"romanisation": "",
+					"translation": "I have had",
+					"sentences": [
+						{
+							"translation": "I have had a good day.",
+							"sentence": "Ich habe einen guten Tag gehabt."
+						},
+						{
+							"translation": "I have had enough.",
+							"sentence": "Ich habe genug gehabt."
+						},
+						{
+							"translation": "I have had a lot of work.",
+							"sentence": "Ich habe viel Arbeit gehabt."
+						}
+					]
+				},
+				{
+					"group": "Perfekt (Present Perfect Tense)",
+					"sortOrder": 14,
+					"word": "Du hast gehabt",
+					"partOfSpeech": "Perfekt (Present Tense)",
+					"id": 14,
+					"romanisation": "",
+					"translation": "You have had (informal singular)",
+					"sentences": [
+						{
+							"translation": "Have you had fun?",
+							"sentence": "Hast du Spaß gehabt?"
+						},
+						{
+							"translation": "You have had good luck.",
+							"sentence": "Du hast Glück gehabt."
+						},
+						{
+							"translation": "Have you had breakfast?",
+							"sentence": "Hast du Frühstück gehabt?"
+						}
+					]
+				},
+				{
+					"group": "Perfekt (Present Perfect Tense)",
+					"sortOrder": 15,
+					"word": "Er/Sie/Es hat gehabt",
+					"partOfSpeech": "Perfekt (Present Tense)",
+					"id": 15,
+					"romanisation": "",
+					"translation": "He/She/It has had",
+					"sentences": [
+						{
+							"translation": "He has had a fever.",
+							"sentence": "Er hat Fieber gehabt."
+						},
+						{
+							"translation": "She has had a successful career.",
+							"sentence": "Sie hat eine erfolgreiche Karriere gehabt."
+						},
+						{
+							"translation": "It has had a long life.",
+							"sentence": "Es hat ein langes Leben gehabt."
+						}
+					]
+				},
+				{
+					"group": "Perfekt (Present Perfect Tense)",
+					"sortOrder": 16,
+					"word": "Wir haben gehabt",
+					"partOfSpeech": "Perfekt (Present Tense)",
+					"id": 16,
+					"romanisation": "",
+					"translation": "We have had",
+					"sentences": [
+						{
+							"translation": "We have had problems.",
+							"sentence": "Wir haben Probleme gehabt."
+						},
+						{
+							"translation": "We have had a good time.",
+							"sentence": "Wir haben eine gute Zeit gehabt."
+						},
+						{
+							"translation": "We have had guests.",
+							"sentence": "Wir haben Gäste gehabt."
+						}
+					]
+				},
+				{
+					"group": "Perfekt (Present Perfect Tense)",
+					"sortOrder": 17,
+					"word": "Ihr habt gehabt",
+					"partOfSpeech": "Perfekt (Present Tense)",
+					"id": 17,
+					"romanisation": "",
+					"translation": "You have had (informal plural)",
+					"sentences": [
+						{
+							"translation": "Have you had a good vacation?",
+							"sentence": "Habt ihr einen schönen Urlaub gehabt?"
+						},
+						{
+							"translation": "You have had enough rest.",
+							"sentence": "Ihr habt genug Ruhe gehabt."
+						},
+						{
+							"translation": "Have you had dinner?",
+							"sentence": "Habt ihr zu Abend gegessen gehabt?"
+						}
+					]
+				},
+				{
+					"group": "Perfekt (Present Perfect Tense)",
+					"sortOrder": 18,
+					"word": "Sie/Sie haben gehabt",
+					"partOfSpeech": "Perfekt (Present Tense)",
+					"id": 18,
+					"romanisation": "",
+					"translation": "They have had / You have had (formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "They have had success.",
+							"sentence": "Sie haben Erfolg gehabt."
+						},
+						{
+							"translation": "Have you had a good day?",
+							"sentence": "Haben Sie einen guten Tag gehabt?"
+						},
+						{
+							"translation": "They have had no difficulties.",
+							"sentence": "Sie haben keine Schwierigkeiten gehabt."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 19,
+			"tabnumber": 4,
+			"title": "Plusquamperfekt (Past Perfect Tense)",
+			"words": [
+				{
+					"group": "Plusquamperfekt (Past Perfect Tense)",
+					"sortOrder": 19,
+					"word": "Ich hatte gehabt",
+					"partOfSpeech": "Plusquamperfekt (Past Perfect Tense)",
+					"id": 19,
+					"romanisation": "",
+					"translation": "I had had",
+					"sentences": [
+						{
+							"translation": "I had had enough.",
+							"sentence": "Ich hatte genug gehabt."
+						},
+						{
+							"translation": "I had had a headache.",
+							"sentence": "Ich hatte Kopfschmerzen gehabt."
+						},
+						{
+							"translation": "Before that, I had had no problems.",
+							"sentence": "Davor hatte ich keine Probleme gehabt."
+						}
+					]
+				},
+				{
+					"group": "Plusquamperfekt (Past Perfect Tense)",
+					"sortOrder": 20,
+					"word": "Du hattest gehabt",
+					"partOfSpeech": "Plusquamperfekt (Past Perfect Tense)",
+					"id": 20,
+					"romanisation": "",
+					"translation": "You had had (informal singular)",
+					"sentences": [
+						{
+							"translation": "You had had a good time before.",
+							"sentence": "Du hattest vorher eine gute Zeit gehabt."
+						},
+						{
+							"translation": "Had you had dinner?",
+							"sentence": "Hattest du zu Abend gegessen gehabt?"
+						},
+						{
+							"translation": "You had had bad luck.",
+							"sentence": "Du hattest Pech gehabt."
+						}
+					]
+				},
+				{
+					"group": "Plusquamperfekt (Past Perfect Tense)",
+					"sortOrder": 21,
+					"word": "Er/Sie/Es hatte gehabt",
+					"partOfSpeech": "Plusquamperfekt (Past Perfect Tense)",
+					"id": 21,
+					"romanisation": "",
+					"translation": "He/She/It had had",
+					"sentences": [
+						{
+							"translation": "He had had a cold for days.",
+							"sentence": "Er hatte tagelang Schnupfen gehabt."
+						},
+						{
+							"translation": "She had had a good life.",
+							"sentence": "Sie hatte ein gutes Leben gehabt."
+						},
+						{
+							"translation": "It had had a long history.",
+							"sentence": "Es hatte eine lange Geschichte gehabt."
+						}
+					]
+				},
+				{
+					"group": "Plusquamperfekt (Past Perfect Tense)",
+					"sortOrder": 22,
+					"word": "Wir hatten gehabt",
+					"partOfSpeech": "Plusquamperfekt (Past Perfect Tense)",
+					"id": 22,
+					"romanisation": "",
+					"translation": "We had had",
+					"sentences": [
+						{
+							"translation": "We had had a lot of work.",
+							"sentence": "Wir hatten viel Arbeit gehabt."
+						},
+						{
+							"translation": "We had had no problems until then.",
+							"sentence": "Wir hatten bis dahin keine Probleme gehabt."
+						},
+						{
+							"translation": "We had had guests yesterday.",
+							"sentence": "Wir hatten gestern Gäste gehabt."
+						}
+					]
+				},
+				{
+					"group": "Plusquamperfekt (Past Perfect Tense)",
+					"sortOrder": 23,
+					"word": "Ihr hattet gehabt",
+					"partOfSpeech": "Plusquamperfekt (Past Perfect Tense)",
+					"id": 23,
+					"romanisation": "",
+					"translation": "You had had (informal plural)",
+					"sentences": [
+						{
+							"translation": "Had you had a good time?",
+							"sentence": "Hattet ihr eine gute Zeit gehabt?"
+						},
+						{
+							"translation": "You had had enough to eat.",
+							"sentence": "Ihr hattet genug zu essen gehabt."
+						},
+						{
+							"translation": "You had had many experiences.",
+							"sentence": "Ihr hattet viele Erfahrungen gehabt."
+						}
+					]
+				},
+				{
+					"group": "Plusquamperfekt (Past Perfect Tense)",
+					"sortOrder": 24,
+					"word": "Sie/Sie hatten gehabt",
+					"partOfSpeech": "Plusquamperfekt (Past Perfect Tense)",
+					"id": 24,
+					"romanisation": "",
+					"translation": "They had had / You had had (formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "They had had a good opportunity.",
+							"sentence": "Sie hatten eine gute Gelegenheit gehabt."
+						},
+						{
+							"translation": "Had you had difficulties?",
+							"sentence": "Hatten Sie Schwierigkeiten gehabt?"
+						},
+						{
+							"translation": "They had had a lot of patience.",
+							"sentence": "Sie hatten viel Geduld gehabt."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 25,
+			"tabnumber": 5,
+			"title": "Futur I (Simple Future Tense)",
+			"words": [
+				{
+					"group": "Futur I (Simple Future Tense)",
+					"sortOrder": 25,
+					"word": "Ich werde haben",
+					"partOfSpeech": "Futur I (Simple Future Tense)",
+					"id": 25,
+					"romanisation": "",
+					"translation": "I will have",
+					"sentences": [
+						{
+							"translation": "I will have time tomorrow.",
+							"sentence": "Ich werde morgen Zeit haben."
+						},
+						{
+							"translation": "I will have a new car.",
+							"sentence": "Ich werde ein neues Auto haben."
+						},
+						{
+							"translation": "I will have questions.",
+							"sentence": "Ich werde Fragen haben."
+						}
+					]
+				},
+				{
+					"group": "Futur I (Simple Future Tense)",
+					"sortOrder": 26,
+					"word": "Du wirst haben",
+					"partOfSpeech": "Futur I (Simple Future Tense)",
+					"id": 26,
+					"romanisation": "",
+					"translation": "You will have (informal singular)",
+					"sentences": [
+						{
+							"translation": "You will have fun.",
+							"sentence": "Du wirst Spaß haben."
+						},
+						{
+							"translation": "Will you have a good day?",
+							"sentence": "Wirst du einen guten Tag haben?"
+						},
+						{
+							"translation": "You will have to work.",
+							"sentence": "Du wirst arbeiten müssen."
+						}
+					]
+				},
+				{
+					"group": "Futur I (Simple Future Tense)",
+					"sortOrder": 27,
+					"word": "Er/Sie/Es wird haben",
+					"partOfSpeech": "Futur I (Simple Future Tense)",
+					"id": 27,
+					"romanisation": "",
+					"translation": "He/She/It will have",
+					"sentences": [
+						{
+							"translation": "He will have a new apartment.",
+							"sentence": "Er wird eine neue Wohnung haben."
+						},
+						{
+							"translation": "She will have good news.",
+							"sentence": "Sie wird gute Nachrichten haben."
+						},
+						{
+							"translation": "It will have a positive effect.",
+							"sentence": "Es wird eine positive Wirkung haben."
+						}
+					]
+				},
+				{
+					"group": "Futur I (Simple Future Tense)",
+					"sortOrder": 28,
+					"word": "Wir werden haben",
+					"partOfSpeech": "Futur I (Simple Future Tense)",
+					"id": 28,
+					"romanisation": "",
+					"translation": "We will have",
+					"sentences": [
+						{
+							"translation": "We will have dinner at 7.",
+							"sentence": "Wir werden um 7 Uhr Abendessen haben."
+						},
+						{
+							"translation": "We will have success.",
+							"sentence": "Wir werden Erfolg haben."
+						},
+						{
+							"translation": "We will have a lot of guests.",
+							"sentence": "Wir werden viele Gäste haben."
+						}
+					]
+				},
+				{
+					"group": "Futur I (Simple Future Tense)",
+					"sortOrder": 29,
+					"word": "Ihr werdet haben",
+					"partOfSpeech": "Futur I (Simple Future Tense)",
+					"id": 29,
+					"romanisation": "",
+					"translation": "You will have (informal plural)",
+					"sentences": [
+						{
+							"translation": "You will have to wait.",
+							"sentence": "Ihr werdet warten müssen."
+						},
+						{
+							"translation": "Will you have time?",
+							"sentence": "Werdet ihr Zeit haben?"
+						},
+						{
+							"translation": "You will have a great time.",
+							"sentence": "Ihr werdet eine tolle Zeit haben."
+						}
+					]
+				},
+				{
+					"group": "Futur I (Simple Future Tense)",
+					"sortOrder": 30,
+					"word": "Sie/Sie werden haben",
+					"partOfSpeech": "Futur I (Simple Future Tense)",
+					"id": 30,
+					"romanisation": "",
+					"translation": "They will have / You will have (formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "They will have no choice.",
+							"sentence": "Sie werden keine Wahl haben."
+						},
+						{
+							"translation": "Will you have a good trip?",
+							"sentence": "Werden Sie eine gute Reise haben?"
+						},
+						{
+							"translation": "They will have a meeting.",
+							"sentence": "Sie werden eine Besprechung haben."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 31,
+			"tabnumber": 6,
+			"title": "Futur II (Future Perfect Tense)",
+			"words": [
+				{
+					"group": "Futur II (Future Perfect Tense)",
+					"sortOrder": 31,
+					"word": "Ich werde gehabt haben",
+					"partOfSpeech": "Futur II (Future Perfect Tense)",
+					"id": 31,
+					"romanisation": "",
+					"translation": "I will have had",
+					"sentences": [
+						{
+							"translation": "By then, I will have had enough.",
+							"sentence": "Bis dahin werde ich genug gehabt haben."
+						},
+						{
+							"translation": "I will have had a great experience.",
+							"sentence": "Ich werde eine tolle Erfahrung gehabt haben."
+						},
+						{
+							"translation": "I will have had time to prepare.",
+							"sentence": "Ich werde Zeit gehabt haben, mich vorzubereiten."
+						}
+					]
+				},
+				{
+					"group": "Futur II (Future Perfect Tense)",
+					"sortOrder": 32,
+					"word": "Du wirst gehabt haben",
+					"partOfSpeech": "Futur II (Future Perfect Tense)",
+					"id": 32,
+					"romanisation": "",
+					"translation": "You will have had (informal singular)",
+					"sentences": [
+						{
+							"translation": "You will have had success.",
+							"sentence": "Du wirst Erfolg gehabt haben."
+						},
+						{
+							"translation": "Will you have had enough sleep?",
+							"sentence": "Wirst du genug Schlaf gehabt haben?"
+						},
+						{
+							"translation": "You will have had fun.",
+							"sentence": "Du wirst Spaß gehabt haben."
+						}
+					]
+				},
+				{
+					"group": "Futur II (Future Perfect Tense)",
+					"sortOrder": 33,
+					"word": "Er/Sie/Es wird gehabt haben",
+					"partOfSpeech": "Futur II (Future Perfect Tense)",
+					"id": 33,
+					"romanisation": "",
+					"translation": "He/She/It will have had",
+					"sentences": [
+						{
+							"translation": "He will have had a good life.",
+							"sentence": "Er wird ein gutes Leben gehabt haben."
+						},
+						{
+							"translation": "She will have had a successful career.",
+							"sentence": "Sie wird eine erfolgreiche Karriere gehabt haben."
+						},
+						{
+							"translation": "It will have had no impact.",
+							"sentence": "Es wird keine Auswirkungen gehabt haben."
+						}
+					]
+				},
+				{
+					"group": "Futur II (Future Perfect Tense)",
+					"sortOrder": 34,
+					"word": "Wir werden gehabt haben",
+					"partOfSpeech": "Futur II (Future Perfect Tense)",
+					"id": 34,
+					"romanisation": "",
+					"translation": "We will have had",
+					"sentences": [
+						{
+							"translation": "We will have had a great time.",
+							"sentence": "Wir werden eine tolle Zeit gehabt haben."
+						},
+						{
+							"translation": "We will have had enough experience.",
+							"sentence": "Wir werden genug Erfahrung gehabt haben."
+						},
+						{
+							"translation": "We will have had many visitors.",
+							"sentence": "Wir werden viele Besucher gehabt haben."
+						}
+					]
+				},
+				{
+					"group": "Futur II (Future Perfect Tense)",
+					"sortOrder": 35,
+					"word": "Ihr werdet gehabt haben",
+					"partOfSpeech": "Futur II (Future Perfect Tense)",
+					"id": 35,
+					"romanisation": "",
+					"translation": "You will have had (informal plural)",
+					"sentences": [
+						{
+							"translation": "You will have had problems.",
+							"sentence": "Ihr werdet Probleme gehabt haben."
+						},
+						{
+							"translation": "Will you have had dinner?",
+							"sentence": "Werdet ihr zu Abend gegessen haben?"
+						},
+						{
+							"translation": "You will have had a good education.",
+							"sentence": "Ihr werdet eine gute Ausbildung gehabt haben."
+						}
+					]
+				},
+				{
+					"group": "Futur II (Future Perfect Tense)",
+					"sortOrder": 36,
+					"word": "Sie/Sie werden gehabt haben",
+					"partOfSpeech": "Futur II (Future Perfect Tense)",
+					"id": 36,
+					"romanisation": "",
+					"translation": "They will have had / You will have had (formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "They will have had no choice.",
+							"sentence": "Sie werden keine Wahl gehabt haben."
+						},
+						{
+							"translation": "You will have had success.",
+							"sentence": "Sie werden Erfolg gehabt haben."
+						},
+						{
+							"translation": "They will have had enough information.",
+							"sentence": "Sie werden genug Informationen gehabt haben."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 37,
+			"tabnumber": 7,
+			"title": "Konjunktiv I (Present Subjunctive)",
+			"words": [
+				{
+					"group": "Konjunktiv I (Present Subjunctive)",
+					"sortOrder": 37,
+					"word": "Ich habe",
+					"partOfSpeech": "Konjunktiv I (Present Subjunctive)",
+					"id": 37,
+					"romanisation": "",
+					"translation": "I have (subjunctive)",
+					"sentences": [
+						{
+							"translation": "He says that I have time.",
+							"sentence": "Er sagt, ich habe Zeit."
+						},
+						{
+							"translation": "I wish that I have luck.",
+							"sentence": "Ich wünschte, ich habe Glück."
+						},
+						{
+							"translation": "It is important that I have a good idea.",
+							"sentence": "Es ist wichtig, dass ich eine gute Idee habe."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv I (Present Subjunctive)",
+					"sortOrder": 38,
+					"word": "Du habest",
+					"partOfSpeech": "Konjunktiv I (Present Subjunctive)",
+					"id": 38,
+					"romanisation": "",
+					"translation": "You have (subjunctive, informal singular)",
+					"sentences": [
+						{
+							"translation": "He demands that you have patience.",
+							"sentence": "Er verlangt, dass du Geduld habest."
+						},
+						{
+							"translation": "I wish that you have good luck.",
+							"sentence": "Ich wünschte, dass du Glück habest."
+						},
+						{
+							"translation": "She suggested that you have a rest.",
+							"sentence": "Sie schlug vor, dass du eine Pause habest."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv I (Present Subjunctive)",
+					"sortOrder": 39,
+					"word": "Er/Sie/Es habe",
+					"partOfSpeech": "Konjunktiv I (Present Subjunctive)",
+					"id": 39,
+					"romanisation": "",
+					"translation": "He/She/It have (subjunctive)",
+					"sentences": [
+						{
+							"translation": "He thinks that he have no time.",
+							"sentence": "Er meint, er habe keine Zeit."
+						},
+						{
+							"translation": "She says that she have a dog.",
+							"sentence": "Sie sagt, sie habe einen Hund."
+						},
+						{
+							"translation": "It is said that it have no effect.",
+							"sentence": "Man sagt, es habe keine Wirkung."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv I (Present Subjunctive)",
+					"sortOrder": 40,
+					"word": "Wir haben",
+					"partOfSpeech": "Konjunktiv I (Present Subjunctive)",
+					"id": 40,
+					"romanisation": "",
+					"translation": "We have (subjunctive)",
+					"sentences": [
+						{
+							"translation": "They wish that we have success.",
+							"sentence": "Sie wünschen, dass wir Erfolg haben."
+						},
+						{
+							"translation": "It is important that we have a good plan.",
+							"sentence": "Es ist wichtig, dass wir einen guten Plan haben."
+						},
+						{
+							"translation": "We hope that we have enough time.",
+							"sentence": "Wir hoffen, dass wir genug Zeit haben."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv I (Present Subjunctive)",
+					"sortOrder": 41,
+					"word": "Ihr habet",
+					"partOfSpeech": "Konjunktiv I (Present Subjunctive)",
+					"id": 41,
+					"romanisation": "",
+					"translation": "You have (subjunctive, informal plural)",
+					"sentences": [
+						{
+							"translation": "He insisted that you have fun.",
+							"sentence": "Er bestand darauf, dass ihr Spaß habet."
+						},
+						{
+							"translation": "I hope that you have a good trip.",
+							"sentence": "Ich hoffe, dass ihr eine gute Reise habet."
+						},
+						{
+							"translation": "It's important that you have all documents.",
+							"sentence": "Es ist wichtig, dass ihr alle Unterlagen habet."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv I (Present Subjunctive)",
+					"sortOrder": 42,
+					"word": "Sie/Sie haben",
+					"partOfSpeech": "Konjunktiv I (Present Subjunctive)",
+					"id": 42,
+					"romanisation": "",
+					"translation": "They have / You have (subjunctive, formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "He hopes that they have a good day.",
+							"sentence": "Er hofft, dass sie einen guten Tag haben."
+						},
+						{
+							"translation": "I request that you have patience.",
+							"sentence": "Ich bitte Sie, dass Sie Geduld haben."
+						},
+						{
+							"translation": "It is important that they have all information.",
+							"sentence": "Es ist wichtig, dass sie alle Informationen haben."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 43,
+			"tabnumber": 8,
+			"title": "Konjunktiv II (Past Subjunctive / Conditional)",
+			"words": [
+				{
+					"group": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"sortOrder": 43,
+					"word": "Ich hätte",
+					"partOfSpeech": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"id": 43,
+					"romanisation": "",
+					"translation": "I would have / I had (subjunctive)",
+					"sentences": [
+						{
+							"translation": "If I had time, I would help.",
+							"sentence": "Wenn ich Zeit hätte, würde ich helfen."
+						},
+						{
+							"translation": "I would have a new car.",
+							"sentence": "Ich hätte ein neues Auto."
+						},
+						{
+							"translation": "I wish I had more money.",
+							"sentence": "Ich hätte gern mehr Geld."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"sortOrder": 44,
+					"word": "Du hättest",
+					"partOfSpeech": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"id": 44,
+					"romanisation": "",
+					"translation": "You would have / you had (subjunctive, informal singular)",
+					"sentences": [
+						{
+							"translation": "If you had a car, it would be easier.",
+							"sentence": "Wenn du ein Auto hättest, wäre es einfacher."
+						},
+						{
+							"translation": "You would have no problems.",
+							"sentence": "Du hättest keine Probleme."
+						},
+						{
+							"translation": "I wish you had more luck.",
+							"sentence": "Ich wünschte, du hättest mehr Glück."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"sortOrder": 45,
+					"word": "Er/Sie/Es hätte",
+					"partOfSpeech": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"id": 45,
+					"romanisation": "",
+					"translation": "He/She/It would have / had (subjunctive)",
+					"sentences": [
+						{
+							"translation": "If he had more time, he would learn German.",
+							"sentence": "Wenn er mehr Zeit hätte, würde er Deutsch lernen."
+						},
+						{
+							"translation": "She would have a bigger house.",
+							"sentence": "Sie hätte ein größeres Haus."
+						},
+						{
+							"translation": "It would have no effect.",
+							"sentence": "Es hätte keine Wirkung."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"sortOrder": 46,
+					"word": "Wir hätten",
+					"partOfSpeech": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"id": 46,
+					"romanisation": "",
+					"translation": "We would have / had (subjunctive)",
+					"sentences": [
+						{
+							"translation": "If we had money, we would buy it.",
+							"sentence": "Wenn wir Geld hätten, würden wir es kaufen."
+						},
+						{
+							"translation": "We would have a good time.",
+							"sentence": "Wir hätten eine gute Zeit."
+						},
+						{
+							"translation": "We would have no problems.",
+							"sentence": "Wir hätten keine Probleme."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"sortOrder": 47,
+					"word": "Ihr hättet",
+					"partOfSpeech": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"id": 47,
+					"romanisation": "",
+					"translation": "You would have / had (subjunctive, informal plural)",
+					"sentences": [
+						{
+							"translation": "If you had time, you would visit us.",
+							"sentence": "Wenn ihr Zeit hättet, würdet ihr uns besuchen."
+						},
+						{
+							"translation": "You would have a big house.",
+							"sentence": "Ihr hättet ein großes Haus."
+						},
+						{
+							"translation": "I wish you had more patience.",
+							"sentence": "Ich wünschte, ihr hättet mehr Geduld."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"sortOrder": 48,
+					"word": "Sie/Sie hätten",
+					"partOfSpeech": "Konjunktiv II (Past Subjunctive / Conditional)",
+					"id": 48,
+					"romanisation": "",
+					"translation": "They would have / You would have (subjunctive, formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "If they had more time, they would help.",
+							"sentence": "Wenn sie mehr Zeit hätten, würden sie helfen."
+						},
+						{
+							"translation": "You would have a good opportunity.",
+							"sentence": "Sie hätten eine gute Gelegenheit."
+						},
+						{
+							"translation": "They would have no complaints.",
+							"sentence": "Sie hätten keine Beschwerden."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 49,
+			"tabnumber": 9,
+			"title": "Konjunktiv Perfekt (Perfect Subjunctive)",
+			"words": [
+				{
+					"group": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"sortOrder": 49,
+					"word": "Ich habe gehabt",
+					"partOfSpeech": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"id": 49,
+					"romanisation": "",
+					"translation": "I might have had",
+					"sentences": [
+						{
+							"translation": "He said that I might have had a problem.",
+							"sentence": "Er sagte, ich habe ein Problem gehabt."
+						},
+						{
+							"translation": "I regret that I might have had a bad day.",
+							"sentence": "Ich bedauere, dass ich einen schlechten Tag gehabt habe."
+						},
+						{
+							"translation": "It is possible that I might have had a headache.",
+							"sentence": "Es ist möglich, dass ich Kopfschmerzen gehabt habe."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"sortOrder": 50,
+					"word": "Du habest gehabt",
+					"partOfSpeech": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"id": 50,
+					"romanisation": "",
+					"translation": "You might have had (informal singular)",
+					"sentences": [
+						{
+							"translation": "She claimed that you might have had no time.",
+							"sentence": "Sie behauptete, du habest keine Zeit gehabt."
+						},
+						{
+							"translation": "It's a pity that you might have had bad luck.",
+							"sentence": "Es ist schade, dass du Pech gehabt habest."
+						},
+						{
+							"translation": "He wondered if you might have had fun.",
+							"sentence": "Er fragte sich, ob du Spaß gehabt habest."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"sortOrder": 51,
+					"word": "Er/Sie/Es habe gehabt",
+					"partOfSpeech": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"id": 51,
+					"romanisation": "",
+					"translation": "He/She/It might have had",
+					"sentences": [
+						{
+							"translation": "He said that he might have had a good opportunity.",
+							"sentence": "Er sagte, er habe eine gute Gelegenheit gehabt."
+						},
+						{
+							"translation": "It is unlikely that she might have had time.",
+							"sentence": "Es ist unwahrscheinlich, dass sie Zeit gehabt habe."
+						},
+						{
+							"translation": "It's a shame that it might have had no effect.",
+							"sentence": "Es ist schade, dass es keine Wirkung gehabt habe."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"sortOrder": 52,
+					"word": "Wir haben gehabt",
+					"partOfSpeech": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"id": 52,
+					"romanisation": "",
+					"translation": "We might have had",
+					"sentences": [
+						{
+							"translation": "They assumed that we might have had problems.",
+							"sentence": "Sie nahmen an, dass wir Probleme gehabt haben."
+						},
+						{
+							"translation": "It's possible that we might have had success.",
+							"sentence": "Es ist möglich, dass wir Erfolg gehabt haben."
+						},
+						{
+							"translation": "We hope that we might have had enough time.",
+							"sentence": "Wir hoffen, dass wir genug Zeit gehabt haben."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"sortOrder": 53,
+					"word": "Ihr habet gehabt",
+					"partOfSpeech": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"id": 53,
+					"romanisation": "",
+					"translation": "You might have had (informal plural)",
+					"sentences": [
+						{
+							"translation": "He told me that you might have had a party.",
+							"sentence": "Er erzählte mir, dass ihr eine Party gehabt habet."
+						},
+						{
+							"translation": "It's a pity that you might have had no fun.",
+							"sentence": "Es ist schade, dass ihr keinen Spaß gehabt habet."
+						},
+						{
+							"translation": "I heard that you might have had good luck.",
+							"sentence": "Ich hörte, dass ihr Glück gehabt habet."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"sortOrder": 54,
+					"word": "Sie/Sie haben gehabt",
+					"partOfSpeech": "Konjunktiv Perfekt (Perfect Subjunctive)",
+					"id": 54,
+					"romanisation": "",
+					"translation": "They might have had / You might have had (formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "It is said that they might have had financial problems.",
+							"sentence": "Es heißt, sie haben finanzielle Probleme gehabt."
+						},
+						{
+							"translation": "You might have had to wait a long time.",
+							"sentence": "Sie haben lange warten müssen gehabt."
+						},
+						{
+							"translation": "They might have had enough information.",
+							"sentence": "Sie haben genug Informationen gehabt."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 55,
+			"tabnumber": 10,
+			"title": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+			"words": [
+				{
+					"group": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"sortOrder": 55,
+					"word": "Ich hätte gehabt",
+					"partOfSpeech": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"id": 55,
+					"romanisation": "",
+					"translation": "I would have had",
+					"sentences": [
+						{
+							"translation": "If I had had more time, I would have helped.",
+							"sentence": "Wenn ich mehr Zeit gehabt hätte, hätte ich geholfen."
+						},
+						{
+							"translation": "I would have had a better chance.",
+							"sentence": "Ich hätte eine bessere Chance gehabt."
+						},
+						{
+							"translation": "It would have been better if I had had more patience.",
+							"sentence": "Es wäre besser gewesen, wenn ich mehr Geduld gehabt hätte."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"sortOrder": 56,
+					"word": "Du hättest gehabt",
+					"partOfSpeech": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"id": 56,
+					"romanisation": "",
+					"translation": "You would have had (informal singular)",
+					"sentences": [
+						{
+							"translation": "If you had had enough money, you would have bought it.",
+							"sentence": "Wenn du genug Geld gehabt hättest, hättest du es gekauft."
+						},
+						{
+							"translation": "You would have had no problems.",
+							"sentence": "Du hättest keine Probleme gehabt."
+						},
+						{
+							"translation": "I wish you had had more luck.",
+							"sentence": "Ich wünschte, du hättest mehr Glück gehabt."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"sortOrder": 57,
+					"word": "Er/Sie/Es hätte gehabt",
+					"partOfSpeech": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"id": 57,
+					"romanisation": "",
+					"translation": "He/She/It would have had",
+					"sentences": [
+						{
+							"translation": "If he had had a car, he would have driven there.",
+							"sentence": "Wenn er ein Auto gehabt hätte, wäre er dorthin gefahren."
+						},
+						{
+							"translation": "She would have had a happy childhood.",
+							"sentence": "Sie hätte eine glückliche Kindheit gehabt."
+						},
+						{
+							"translation": "It would have had a good impact.",
+							"sentence": "Es hätte eine gute Auswirkung gehabt."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"sortOrder": 58,
+					"word": "Wir hätten gehabt",
+					"partOfSpeech": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"id": 58,
+					"romanisation": "",
+					"translation": "We would have had",
+					"sentences": [
+						{
+							"translation": "If we had had more time, we would have finished.",
+							"sentence": "Wenn wir mehr Zeit gehabt hätten, hätten wir es beendet."
+						},
+						{
+							"translation": "We would have had a great time.",
+							"sentence": "Wir hätten eine tolle Zeit gehabt."
+						},
+						{
+							"translation": "We would have had no difficulties.",
+							"sentence": "Wir hätten keine Schwierigkeiten gehabt."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"sortOrder": 59,
+					"word": "Ihr hättet gehabt",
+					"partOfSpeech": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"id": 59,
+					"romanisation": "",
+					"translation": "You would have had (informal plural)",
+					"sentences": [
+						{
+							"translation": "If you had had fun, that would be good.",
+							"sentence": "Wenn ihr Spaß gehabt hättet, wäre das gut."
+						},
+						{
+							"translation": "You would have had enough rest.",
+							"sentence": "Ihr hättet genug Ruhe gehabt."
+						},
+						{
+							"translation": "You would have had a good education.",
+							"sentence": "Ihr hättet eine gute Ausbildung gehabt."
+						}
+					]
+				},
+				{
+					"group": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"sortOrder": 60,
+					"word": "Sie/Sie hätten gehabt",
+					"partOfSpeech": "Konjunktiv Plusquamperfekt (Past Perfect Subjunctive)",
+					"id": 60,
+					"romanisation": "",
+					"translation": "They would have had / You would have had (formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "If they had had time, they would have come.",
+							"sentence": "Wenn sie Zeit gehabt hätten, wären sie gekommen."
+						},
+						{
+							"translation": "You would have had no choice.",
+							"sentence": "Sie hätten keine Wahl gehabt."
+						},
+						{
+							"translation": "They would have had more opportunities.",
+							"sentence": "Sie hätten mehr Möglichkeiten gehabt."
+						}
+					]
+				}
+			]
+		},
+		{
+			"sortOrder": 61,
+			"tabnumber": 11,
+			"title": "Imperativ (Commands)",
+			"words": [
+				{
+					"group": "Imperativ (Commands)",
+					"sortOrder": 61,
+					"word": "Hab!",
+					"partOfSpeech": "Imperativ (Commands)",
+					"id": 61,
+					"romanisation": "",
+					"translation": "Have! (informal singular)",
+					"sentences": [
+						{
+							"translation": "Have patience!",
+							"sentence": "Hab Geduld!"
+						},
+						{
+							"translation": "Have fun!",
+							"sentence": "Hab Spaß!"
+						},
+						{
+							"translation": "Have courage!",
+							"sentence": "Hab Mut!"
+						}
+					]
+				},
+				{
+					"group": "Imperativ (Commands)",
+					"sortOrder": 62,
+					"word": "Habt!",
+					"partOfSpeech": "Imperativ (Commands)",
+					"id": 62,
+					"romanisation": "",
+					"translation": "Have! (informal plural)",
+					"sentences": [
+						{
+							"translation": "Have fun!",
+							"sentence": "Habt Spaß!"
+						},
+						{
+							"translation": "Have patience!",
+							"sentence": "Habt Geduld!"
+						},
+						{
+							"translation": "Have a good time!",
+							"sentence": "Habt eine gute Zeit!"
+						}
+					]
+				},
+				{
+					"group": "Imperativ (Commands)",
+					"sortOrder": 63,
+					"word": "Haben Sie!",
+					"partOfSpeech": "Imperativ (Commands)",
+					"id": 63,
+					"romanisation": "",
+					"translation": "Have! (formal singular and plural)",
+					"sentences": [
+						{
+							"translation": "Have patience, please!",
+							"sentence": "Haben Sie bitte Geduld!"
+						},
+						{
+							"translation": "Have a nice day!",
+							"sentence": "Haben Sie einen schönen Tag!"
+						},
+						{
+							"translation": "Have courage!",
+							"sentence": "Haben Sie Mut!"
+						}
+					]
+				},
+				{
+					"group": "Imperativ (Commands)",
+					"sortOrder": 64,
+					"word": "Haben wir!",
+					"partOfSpeech": "Imperativ (Commands)",
+					"id": 64,
+					"romanisation": "",
+					"translation": "Let's have!",
+					"sentences": [
+						{
+							"translation": "Let's have fun!",
+							"sentence": "Haben wir Spaß!"
+						},
+						{
+							"translation": "Let's have coffee!",
+							"sentence": "Haben wir Kaffee!"
+						},
+						{
+							"translation": "Let's have a look!",
+							"sentence": "Haben wir einen Blick!"
+						}
+					]
+				}
+			]
+		}
+	]
+	
+}
