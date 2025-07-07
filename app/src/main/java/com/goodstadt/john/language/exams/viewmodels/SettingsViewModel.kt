@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
@@ -11,18 +12,22 @@ import com.goodstadt.john.language.exams.models.ExamDetails
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-// Data class to hold all the display state for the screen
+// --- MODIFICATION 1: Add pending state to UiState ---
 data class SettingsUiState(
     val appVersion: String = "",
     val currentVoiceName: String = "",
     val currentExamName: String = "",
     val availableExams: List<ExamDetails> = emptyList(),
     val availableVoices: List<VoiceOption> = emptyList(),
-    val currentFriendlyVoiceName: String = ""
+    val currentFriendlyVoiceName: String = "",
+        // Add nullable fields to hold the user's selection inside the bottom sheet
+    val pendingSelectedExam: ExamDetails? = null,
+    val pendingSelectedVoice: VoiceOption? = null
 )
 
 // Sealed class to represent which bottom sheet should be shown
@@ -46,29 +51,19 @@ class SettingsViewModel @Inject constructor(
     val sheetState = _sheetState.asStateFlow()
 
     init {
-        // Observe BOTH flows to keep the UI perfectly in sync
-        // Observe the voice name flow to update the friendly name
+        // This initialization logic is correct and remains the same.
+        // It keeps the "current" state in sync with saved preferences.
         viewModelScope.launch {
-            // Observe the saved voice ID
             userPreferencesRepository.selectedVoiceNameFlow.collect { voiceId ->
-                // When the ID changes, get its friendly name asynchronously
                 val friendlyName = voiceRepository.getFriendlyNameForVoice(voiceId)
-                _uiState.update { it.copy(currentFriendlyVoiceName = friendlyName) }
+                _uiState.update { it.copy(currentFriendlyVoiceName = friendlyName, currentVoiceName = voiceId) }
             }
         }
-
         viewModelScope.launch {
             userPreferencesRepository.selectedFileNameFlow.collect { fileName ->
                 _uiState.update { it.copy(currentExamName = fileName) }
             }
         }
-
-        viewModelScope.launch {
-            userPreferencesRepository.selectedVoiceNameFlow.collect { voiceName ->
-                _uiState.update { it.copy(currentVoiceName = voiceName) }
-            }
-        }
-        // Load the static data
         loadInitialData()
     }
     private fun loadInitialData() {
@@ -88,56 +83,78 @@ class SettingsViewModel @Inject constructor(
             }
         }
     }
-//    private fun loadCurrentSettingsObsolete() {
-//        viewModelScope.launch {
-//            val languageDetailsResult = controlRepository.getActiveLanguageDetails()
-//            languageDetailsResult.onSuccess { details ->
-//                _uiState.update {
-//                    it.copy(
-//                            appVersion = BuildConfig.VERSION_NAME,
-//                            currentVoiceName = userPreferencesRepository.getSelectedVoiceName(),
-//                            // We'll use the filename for now; this can be mapped to a display name later
-//                            currentExamName = userPreferencesRepository.getSelectedFileName(),
-//                            availableExams = details.exams
-//                    )
-//                }
-//            }
-//        }
-//    }
-fun onVoiceSelected(voiceOption: VoiceOption) {
-    viewModelScope.launch {
-        userPreferencesRepository.saveSelectedVoiceName(voiceOption.id)
-        hideBottomSheet()
-    }
-}
-    fun onExamSelected(exam: ExamDetails) {
-        viewModelScope.launch {
-            // The only job here is to SAVE the new preference.
-            // The flows will handle notifying the rest of the app automatically.
-            userPreferencesRepository.saveSelectedFileName(exam.json)
-            // Hiding the sheet is still a local UI concern.
-           // hideBottomSheet()
-        }
-    }
-    // --- NEW FUNCTION to handle exam selection ---
-    fun onExamSelectedObsolete(exam: ExamDetails, onComplete: () -> Unit) {
-        viewModelScope.launch {
-            // Save the 'json' field (e.g., "vocab_data_a2") to preferences
-            userPreferencesRepository.saveSelectedFileName(exam.json)
-            // Update the UI state to reflect the new selection immediately
-            _uiState.update { it.copy(currentExamName = exam.json) }
-            // Hide the bottom sheet
-            hideBottomSheet()
-            // Call the completion handler
-            onComplete()
-        }
-    }
 
+    // --- MODIFICATION 2: Update onSettingClicked to set the initial pending state ---
     fun onSettingClicked(type: SheetContent) {
-        _sheetState.value = type
+        viewModelScope.launch {
+            val currentState = uiState.value
+            // Pre-populate the pending state with the currently active selection
+            val updatedUiState = when (type) {
+                SheetContent.ExamSelection -> {
+                    val currentExam = currentState.availableExams.find { it.json == currentState.currentExamName }
+                    currentState.copy(pendingSelectedExam = currentExam)
+                }
+                SheetContent.SpeakerSelection -> {
+                    val currentVoice = currentState.availableVoices.find { it.id == currentState.currentVoiceName }
+                    currentState.copy(pendingSelectedVoice = currentVoice)
+                }
+                SheetContent.Hidden -> currentState
+            }
+            _uiState.value = updatedUiState
+            _sheetState.value = type
+        }
     }
 
+    // --- MODIFICATION 3: Create functions to handle PENDING selections ---
+    fun onPendingExamSelect(exam: ExamDetails) {
+        // This only updates the state for the UI inside the sheet. Does NOT save.
+        _uiState.update { it.copy(pendingSelectedExam = exam) }
+    }
+
+    fun onPendingVoiceSelect(voice: VoiceOption) {
+        // This only updates the state for the UI inside the sheet. Does NOT save.
+        _uiState.update { it.copy(pendingSelectedVoice = voice) }
+        Log.d("SettingsViewModel", "Voice selected: ${voice.friendlyName}")
+    }
+
+    // --- MODIFICATION 4: Create a SAVE function for the new button ---
+    fun saveSelection() {
+        viewModelScope.launch {
+            val pendingExam = _uiState.value.pendingSelectedExam
+            val pendingVoice = _uiState.value.pendingSelectedVoice
+
+            when (_sheetState.value) {
+                SheetContent.ExamSelection -> {
+                    pendingExam?.let { userPreferencesRepository.saveSelectedFileName(it.json) }
+                }
+                SheetContent.SpeakerSelection -> {
+                    pendingVoice?.let { userPreferencesRepository.saveSelectedVoiceName(it.id) }
+                }
+                SheetContent.Hidden -> { /* Do nothing */ }
+            }
+            // After saving, hide the sheet, which will also clear the pending state.
+            hideBottomSheet()
+        }
+    }
+
+
+    // --- MODIFICATION 5: Update hideBottomSheet to clear pending state ---
     fun hideBottomSheet() {
         _sheetState.value = SheetContent.Hidden
+        // Reset the pending states so they are fresh the next time the sheet opens
+        _uiState.update {
+            it.copy(
+                    pendingSelectedExam = null,
+                    pendingSelectedVoice = null
+            )
+        }
     }
+
+    // --- These functions are now obsolete as their logic is moved into saveSelection() ---
+    // You can safely remove them.
+    /*
+    fun onVoiceSelected(voiceOption: VoiceOption) { ... }
+    fun onExamSelected(exam: ExamDetails) { ... }
+    fun onExamSelectedObsolete(exam: ExamDetails, onComplete: () -> Unit) { ... }
+    */
 }

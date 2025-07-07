@@ -3,7 +3,7 @@ package com.goodstadt.john.language.exams.screens.me
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items // <-- Make sure this is imported
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Info
@@ -33,34 +33,35 @@ fun SettingsScreen(
     val sheetContent by viewModel.sheetState.collectAsState()
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    val scope = rememberCoroutineScope()
 
-    LaunchedEffect(sheetContent) {
+    // This LaunchedEffect now handles both showing and hiding cleanly.
+    LaunchedEffect(sheetContent, sheetState.isVisible) {
         if (sheetContent != SheetContent.Hidden) {
             sheetState.show()
         } else {
-            sheetState.hide()
+            if (sheetState.isVisible) {
+                sheetState.hide()
+            }
         }
     }
 
     // --- The Bottom Sheet Composable ---
     if (sheetContent != SheetContent.Hidden) {
         ModalBottomSheet(
+                // Dismissing via swipe or scrim tap is a "Cancel" action
                 onDismissRequest = { viewModel.hideBottomSheet() },
                 sheetState = sheetState
         ) {
-            // --- NEW, SIMPLIFIED STRUCTURE ---
-            // The main `when` block is now inside the ModalBottomSheet content lambda.
-            // This ensures it has the latest state when the sheet is composed.
             Column(
-                    modifier = Modifier.fillMaxWidth().padding(16.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
                     horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 when (sheetContent) {
                     SheetContent.ExamSelection -> {
                         Text("Choose an Exam Level", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                         Spacer(modifier = Modifier.height(16.dp))
-                        // --- ADD THIS IF/ELSE BLOCK FOR DEBUGGING ---
                         if (uiState.availableExams.isEmpty()) {
                             Text(
                                     "No exams found for this language. Check ViewModel logs.",
@@ -68,29 +69,30 @@ fun SettingsScreen(
                                     modifier = Modifier.padding(vertical = 24.dp)
                             )
                         } else {
-                            LazyColumn {
+                            LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
                                 items(uiState.availableExams, key = { it.json }) { exam ->
                                     ExamSelectionRow(
                                             exam = exam,
-                                            isSelected = uiState.currentExamName == exam.json,
-                                            onClick = {
-                                                viewModel.onExamSelected(exam)
-                                            }
+                                            // MODIFIED: Compare with the PENDING state
+                                            isSelected = uiState.pendingSelectedExam?.json == exam.json,
+                                            // MODIFIED: Click updates PENDING state, doesn't close
+                                            onClick = { viewModel.onPendingExamSelect(exam) }
                                     )
                                 }
                             }
                         }
-                        // --- END OF DEBUGGING BLOCK ---
                     }
                     SheetContent.SpeakerSelection -> {
                         Text("Choose a Speaker", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                         Spacer(modifier = Modifier.height(16.dp))
-                        LazyColumn {
+                        LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
                             items(uiState.availableVoices, key = { it.id }) { voice ->
                                 VoiceSelectionRow(
                                         voice = voice,
-                                        isSelected = uiState.currentFriendlyVoiceName == voice.friendlyName,
-                                        onClick = { viewModel.onVoiceSelected(voice) }
+                                        // MODIFIED: Compare with the PENDING state
+                                        isSelected = uiState.pendingSelectedVoice?.id == voice.id,
+                                        // MODIFIED: Click updates PENDING state, doesn't close
+                                        onClick = { viewModel.onPendingVoiceSelect(voice) }
                                 )
                             }
                         }
@@ -99,17 +101,21 @@ fun SettingsScreen(
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
-                Button(onClick = {
-                    scope.launch { sheetState.hide() }.invokeOnCompletion {
-                        if (!sheetState.isVisible) {
-                            viewModel.hideBottomSheet()
-                        }
+
+                // --- MODIFIED: Replaced "Close" with "Cancel" and "Save" buttons ---
+                Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.End)
+                ) {
+                    OutlinedButton(onClick = { viewModel.hideBottomSheet() }) {
+                        Text("Cancel")
                     }
-                }) {
-                    Text("Close")
+                    Button(onClick = { viewModel.saveSelection() }) {
+                        Text("Save")
+                    }
                 }
+                // --- END OF MODIFICATION ---
             }
-            // --- END OF NEW STRUCTURE ---
         }
     }
 
@@ -131,7 +137,8 @@ fun SettingsScreen(
             SettingsActionItem(
                     icon = Icons.Default.School,
                     title = "Change Exam",
-                    currentValue = uiState.currentExamName,
+                    // Use displayName from the full ExamDetails object for a better UI
+                    currentValue = uiState.availableExams.find { it.json == uiState.currentExamName }?.displayName ?: uiState.currentExamName,
                     onClick = { viewModel.onSettingClicked(SheetContent.ExamSelection) }
             )
         }
@@ -147,7 +154,8 @@ fun SettingsScreen(
     }
 }
 
-// The helper composables below remain unchanged
+// The helper composables below remain unchanged. Their `onClick` and `isSelected`
+// props are controlled by the parent, so they work perfectly with the new logic.
 
 @Composable
 private fun SectionHeader(title: String) {
@@ -167,7 +175,10 @@ private fun SettingsActionItem(
     onClick: () -> Unit
 ) {
     Row(
-            modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(horizontal = 16.dp, vertical = 12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(horizontal = 16.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(imageVector = icon, contentDescription = title, tint = MaterialTheme.colorScheme.primary)
@@ -182,7 +193,9 @@ private fun SettingsActionItem(
 @Composable
 private fun SettingsInfoItem(icon: ImageVector, title: String, value: String) {
     Row(
-            modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 16.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(imageVector = icon, contentDescription = title, tint = MaterialTheme.colorScheme.secondary)
@@ -201,7 +214,10 @@ private fun ExamSelectionRow(
     onClick: () -> Unit
 ) {
     Row(
-            modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(vertical = 12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
     ) {
         Text(text = exam.displayName, modifier = Modifier.weight(1f), fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal)
