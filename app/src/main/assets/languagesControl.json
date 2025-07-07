@@ -21,22 +21,22 @@
 			"exams": [
 				{
 					"displayName":"English A1",
-					"json":"EnglishA1Vocab",
+					"json":"vocab_data_a1",
 					"skillLevel":"A1"
 				},
 				{
 					"displayName":"English A2",
-					"json":"EnglishA2Vocab",
+					"json":"vocab_data_a2",
 					"skillLevel":"A2"
 				},
 				{
 					"displayName":"English B1",
-					"json":"EnglishB1Vocab",
+					"json":"vocab_data_b1",
 					"skillLevel":"B1"
 				},
 				{
 					"displayName":"English B2",
-					"json":"EnglishB2Vocab",
+					"json":"vocab_data_b2",
 					"skillLevel":"B2"
 				}
 			]
@@ -59,22 +59,22 @@
 			"exams": [
 				{
 					"displayName":"English A1",
-					"json":"EnglishA1Vocab",
+					"json":"vocab_data_a1",
 					"skillLevel":"A1"
 				},
 				{
 					"displayName":"English A2",
-					"json":"EnglishA2Vocab",
+					"json":"vocab_data_a2",
 					"skillLevel":"A2"
 				},
 				{
 					"displayName":"English B1",
-					"json":"EnglishB1Vocab",
+					"json":"vocab_data_b1",
 					"skillLevel":"B1"
 				},
 				{
 					"displayName":"English B2",
-					"json":"EnglishB2Vocab",
+					"json":"vocab_data_b2",
 					"skillLevel":"B2"
 				}
 			]
@@ -97,22 +97,22 @@
 			"exams": [
 				{
 					"displayName":"English A1",
-					"json":"EnglishA1Vocab",
+					"json":"vocab_data_a1",
 					"skillLevel":"A1"
 				},
 				{
 					"displayName":"English A2",
-					"json":"EnglishA2Vocab",
+					"json":"vocab_data_a2",
 					"skillLevel":"A2"
 				},
 				{
 					"displayName":"English B1",
-					"json":"EnglishB1Vocab",
+					"json":"vocab_data_b1",
 					"skillLevel":"B1"
 				},
 				{
 					"displayName":"English B2",
-					"json":"EnglishB2Vocab",
+					"json":"vocab_data_b2",
 					"skillLevel":"B2"
 				}
 			]
@@ -135,12 +135,12 @@
 			"exams": [
 				{
 					"displayName":"German A1",
-					"json":"GermanA1Vocab",
+					"json":"vocab_data_a1",
 					"skillLevel":"A1"
 				},
 				{
 					"displayName":"German A2",
-					"json":"GermanA2Vocab",
+					"json":"vocab_data_a2",
 					"skillLevel":"A2"
 				}
 			]

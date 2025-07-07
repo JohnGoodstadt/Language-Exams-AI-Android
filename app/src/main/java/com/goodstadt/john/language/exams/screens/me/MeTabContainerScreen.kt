@@ -31,10 +31,10 @@ import com.goodstadt.john.language.exams.screens.me.SearchScreen
  * horizontal menu and a NavHost below it to display the content for the selected item.
  */
 @Composable
-fun MeTabContainerScreen(viewModel: TabsViewModel = hiltViewModel()) {
+fun MeTabContainerScreen(tabsViewModel: TabsViewModel = hiltViewModel()) {
     // 1. Create the NavController that will manage the content area below the menu.
     val meTabNavController = rememberNavController()
-    val menuItems by viewModel.meTabMenuItems.collectAsState()
+    val menuItems by tabsViewModel.meTabMenuItems.collectAsState()
 
     // 2. Use a Column to stack the menu on top of the content area.
     Column(modifier = Modifier.fillMaxSize()) {
@@ -81,7 +81,7 @@ fun MeTabContainerScreen(viewModel: TabsViewModel = hiltViewModel()) {
                 }
             }
             // Define a destination for each possible screen
-            composable(MeScreen.Settings.route) { MeTabPlaceholderScreen("Settings") }
+            composable(MeScreen.Settings.route) { SettingsScreen( onExamChanged = { tabsViewModel.loadData() }) }
 //            composable(MeScreen.Search.route) { MeTabPlaceholderScreen("Search") }
             composable(MeScreen.Search.route) { SearchScreen() }
             composable(MeScreen.Quiz.route) { MeTabPlaceholderScreen("Quiz") }

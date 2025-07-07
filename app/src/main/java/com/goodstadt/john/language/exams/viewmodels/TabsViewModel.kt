@@ -107,7 +107,7 @@ class TabsViewModel @Inject constructor(
         loadData()
     }
 
-    private fun loadData() {
+    fun loadData() {
         viewModelScope.launch {
             _vocabUiState.value = VocabDataUiState.Loading
 
