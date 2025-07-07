@@ -1,74 +1,74 @@
 [
 	{
 		"id": "en-GB-Neural2-A",
-		"friendlyName": "Olivia"
+		"friendlyName": "Olivia", "gender": 0
 	},
 	{
 		"id": "en-GB-Neural2-C",
-		"friendlyName": "Amelia"
+		"friendlyName": "Amelia", "gender": 0
 	},
 	{
 		"id": "en-GB-Neural2-F",
-		"friendlyName": "Isla"
+		"friendlyName": "Isla", "gender": 0
 	},
 	{
 		"id": "en-GB-News-G",
-		"friendlyName": "Ava"
+		"friendlyName": "Ava", "gender": 0
 	},
 	{
 		"id": "en-GB-News-I",
-		"friendlyName": "Maria"
+		"friendlyName": "Maria", "gender": 0
 	},
 	{
 		"id": "en-GB-Standard-A",
-		"friendlyName": "Sophia"
+		"friendlyName": "Sophia", "gender": 0
 	},
 	{
 		"id": "en-GB-Standard-C",
-		"friendlyName": "Grace"
+		"friendlyName": "Grace", "gender": 0
 	},
 	{
 		"id": "en-GB-Standard-F",
-		"friendlyName": "Lily"
+		"friendlyName": "Lily", "gender": 0
 	},
 	{
 		"id": "en-GB-Wavenet-A",
-		"friendlyName": "Julia"
+		"friendlyName": "Julia", "gender": 0
 	},
 	{
 		"id": "en-GB-Wavenet-C",
-		"friendlyName": "Poppy"
+		"friendlyName": "Poppy", "gender": 0
 	},
 	{
 		"id": "en-GB-Neural2-B",
-		"friendlyName": "Oliver"
+		"friendlyName": "Oliver", "gender": 0
 	},
 	{
 		"id": "en-GB-Neural2-D",
-		"friendlyName": "George"
+		"friendlyName": "George", "gender": 0
 	},
 	{
 		"id": "en-GB-News-K",
-		"friendlyName": "Noah"
+		"friendlyName": "Noah", "gender": 0
 	},
 	{
 		"id": "en-GB-News-L",
-		"friendlyName": "Jack"
+		"friendlyName": "Jack", "gender": 0
 	},
 	{
 		"id": "en-GB-Standard-B",
-		"friendlyName": "Arthur"
+		"friendlyName": "Arthur", "gender": 0
 	},
 	{
 		"id": "en-GB-Standard-D",
-		"friendlyName": "Muhammad"
+		"friendlyName": "Muhammad", "gender": 0
 	},
 	{
 		"id":s "en-GB-Wavenet-B",
-		"friendlyName": "Charlie"
+		"friendlyName": "Charlie", "gender": 0
 	},
 	{
 		"id": "en-GB-Wavenet-D",
-		"friendlyName": "John"
+		"friendlyName": "John", "gender": 0
 	}
 ]

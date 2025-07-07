@@ -1,66 +1,66 @@
 [
 	{
 		"id": "cmn-CN-Standard-A",
-		"friendlyName": "马利亚 (Mǎlìyà) - Mary"
+		"friendlyName": "马利亚 (Mǎlìyà) - Mary", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Standard-D",
-		"friendlyName": "路得 (Lùdé) - Ruth"
+		"friendlyName": "路得 (Lùdé) - Ruth", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Standard-B",
-		"friendlyName": "约翰 (Yuēhàn) - John"
+		"friendlyName": "约翰 (Yuēhàn) - John", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Standard-C",
-		"friendlyName": "彼得 (Bǐdé) - Peter"
+		"friendlyName": "彼得 (Bǐdé) - Peter", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Wavenet-A",
-		"friendlyName": "以斯帖 (Yǐsītè) - Esther"
+		"friendlyName": "以斯帖 (Yǐsītè) - Esther", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Wavenet-D",
-		"friendlyName": "夏娃 (Xiàwá) - Eve"
+		"friendlyName": "夏娃 (Xiàwá) - Eve", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Wavenet-B",
-		"friendlyName": "大卫 (Dàwèi) - David"
+		"friendlyName": "大卫 (Dàwèi) - David", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Wavenet-C",
-		"friendlyName": "安德烈 (Āndéliè) - Andrew"
+		"friendlyName": "安德烈 (Āndéliè) - Andrew", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Chirp3-HD-Aoed",
-		"friendlyName": "美丽 (Měilì)"
+		"friendlyName": "美丽 (Měilì)", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Chirp3-HD-Charon",
-		"friendlyName": "浩然 (Hàorán)"
+		"friendlyName": "浩然 (Hàorán)", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Chirp3-HD-Fenrir",
-		"friendlyName": "嘉伟 (Jiāwěi)"
+		"friendlyName": "嘉伟 (Jiāwěi)", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Chirp3-HD-Kore",
-		"friendlyName": "丽 (Lì)"
+		"friendlyName": "丽 (Lì)", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Chirp3-HD-Leda",
-		"friendlyName": "伟 (Wěi)"
+		"friendlyName": "伟 (Wěi)", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Chirp3-HD-Orus",
-		"friendlyName": "俊杰 (Jùnjié)"
+		"friendlyName": "俊杰 (Jùnjié)", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Chirp3-HD-Puck",
-		"friendlyName": "智勇 (Zhìyǒng)"
+		"friendlyName": "智勇 (Zhìyǒng)", "gender": 0
 	},
 	{
 		"id": "cmn-CN-Chirp3-HD-Zephyr",
-		"friendlyName": "静 (Jìng)"
+		"friendlyName": "静 (Jìng)", "gender": 0
 	}
 ]

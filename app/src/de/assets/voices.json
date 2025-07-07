@@ -1,70 +1,70 @@
 [
 	{
 		"id": "de-DE-Neural2-A",
-		"friendlyName": "Emma"
+		"friendlyName": "Emma", "gender": 0,"gender": 0
 	},
 	{
 		"id": "de-DE-Neural2-C",
-		"friendlyName": "Maria"
+		"friendlyName": "Maria", "gender": 0
 	},
 	{
 		"id": "de-DE-Neural2-F",
-		"friendlyName": "Hannah"
+		"friendlyName": "Hannah", "gender": 0
 	},
 	{
 		"id": "de-DE-Standard-A",
-		"friendlyName": "Emilia"
+		"friendlyName": "Emilia", "gender": 0
 	},
 	{
 		"id": "de-DE-Standard-C",
-		"friendlyName": "Sofia"
+		"friendlyName": "Sofia", "gender": 0
 	},
 	{
 		"id": "de-DE-Standard-F",
-		"friendlyName": "Lina"
+		"friendlyName": "Lina", "gender": 0
 	},
 	{
 		"id": "de-DE-Wavenet-A",
-		"friendlyName": "Mila"
+		"friendlyName": "Mila", "gender": 0
 	},
 	{
 		"id": "de-DE-Wavenet-C",
-		"friendlyName": "Lea"
+		"friendlyName": "Lea", "gender": 0
 	},
 	{
 		"id": "de-DE-Wavenet-F",
-		"friendlyName": "Lena"
+		"friendlyName": "Lena", "gender": 0
 	},
 	{
 		"id": "de-DE-Neural2-B",
-		"friendlyName": "Ben"
+		"friendlyName": "Ben", "gender": 0
 	},
 	{
 		"id": "de-DE-Neural2-D",
-		"friendlyName": "Paul"
+		"friendlyName": "Paul", "gender": 0
 	},
 	{
 		"id": "de-DE-Standard-B",
-		"friendlyName": "Finn"
+		"friendlyName": "Finn", "gender": 0
 	},
 	{
 		"id": "de-DE-Standard-D",
-		"friendlyName": "Jonas"
+		"friendlyName": "Jonas", "gender": 0
 	},
 	{
 		"id": "de-DE-Standard-E",
-		"friendlyName": "Luis"
+		"friendlyName": "Luis", "gender": 0
 	},
 	{
 		"id": "de-DE-Wavenet-B",
-		"friendlyName": "Noah"
+		"friendlyName": "Noah", "gender": 0
 	},
 	{
 		"id": "de-DE-Wavenet-D",
-		"friendlyName": "Felix"
+		"friendlyName": "Felix", "gender": 0
 	},
 	{
 		"id": "de-DE-Wavenet-E",
-		"friendlyName": "Lukas"
+		"friendlyName": "Lukas", "gender": 0
 	}
 ]
