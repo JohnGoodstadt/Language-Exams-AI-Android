@@ -1,7 +1,7 @@
 [
 	{
 		"id": "de-DE-Neural2-A",
-		"friendlyName": "Emma", "gender": 0,"gender": 0
+		"friendlyName": "Emma", "gender": 0
 	},
 	{
 		"id": "de-DE-Neural2-C",
@@ -37,34 +37,34 @@
 	},
 	{
 		"id": "de-DE-Neural2-B",
-		"friendlyName": "Ben", "gender": 0
+		"friendlyName": "Ben", "gender": 1
 	},
 	{
 		"id": "de-DE-Neural2-D",
-		"friendlyName": "Paul", "gender": 0
+		"friendlyName": "Paul", "gender": 1
 	},
 	{
 		"id": "de-DE-Standard-B",
-		"friendlyName": "Finn", "gender": 0
+		"friendlyName": "Finn", "gender": 1
 	},
 	{
 		"id": "de-DE-Standard-D",
-		"friendlyName": "Jonas", "gender": 0
+		"friendlyName": "Jonas", "gender": 1
 	},
 	{
 		"id": "de-DE-Standard-E",
-		"friendlyName": "Luis", "gender": 0
+		"friendlyName": "Luis", "gender": 1
 	},
 	{
 		"id": "de-DE-Wavenet-B",
-		"friendlyName": "Noah", "gender": 0
+		"friendlyName": "Noah", "gender": 1
 	},
 	{
 		"id": "de-DE-Wavenet-D",
-		"friendlyName": "Felix", "gender": 0
+		"friendlyName": "Felix", "gender": 1
 	},
 	{
 		"id": "de-DE-Wavenet-E",
-		"friendlyName": "Lukas", "gender": 0
+		"friendlyName": "Lukas", "gender": 1
 	}
 ]

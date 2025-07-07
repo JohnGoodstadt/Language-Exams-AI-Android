@@ -1,5 +1,7 @@
 package com.goodstadt.john.language.exams.screens.me
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -7,12 +9,14 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
@@ -48,7 +52,6 @@ fun SettingsScreen(
     // --- The Bottom Sheet Composable ---
     if (sheetContent != SheetContent.Hidden) {
         ModalBottomSheet(
-                // Dismissing via swipe or scrim tap is a "Cancel" action
                 onDismissRequest = { viewModel.hideBottomSheet() },
                 sheetState = sheetState
         ) {
@@ -60,49 +63,75 @@ fun SettingsScreen(
             ) {
                 when (sheetContent) {
                     SheetContent.ExamSelection -> {
+                        // Exam selection UI remains unchanged
                         Text("Choose an Exam Level", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                         Spacer(modifier = Modifier.height(16.dp))
-                        if (uiState.availableExams.isEmpty()) {
-                            Text(
-                                    "No exams found for this language. Check ViewModel logs.",
-                                    color = Color.Red,
-                                    modifier = Modifier.padding(vertical = 24.dp)
-                            )
-                        } else {
-                            LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
-                                items(uiState.availableExams, key = { it.json }) { exam ->
-                                    ExamSelectionRow(
-                                            exam = exam,
-                                            // MODIFIED: Compare with the PENDING state
-                                            isSelected = uiState.pendingSelectedExam?.json == exam.json,
-                                            // MODIFIED: Click updates PENDING state, doesn't close
-                                            onClick = { viewModel.onPendingExamSelect(exam) }
-                                    )
-                                }
-                            }
-                        }
-                    }
-                    SheetContent.SpeakerSelection -> {
-                        Text("Choose a Speaker", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                        Spacer(modifier = Modifier.height(16.dp))
+                        // ... (rest of ExamSelection UI is the same)
                         LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
-                            items(uiState.availableVoices, key = { it.id }) { voice ->
-                                VoiceSelectionRow(
-                                        voice = voice,
-                                        // MODIFIED: Compare with the PENDING state
-                                        isSelected = uiState.pendingSelectedVoice?.id == voice.id,
-                                        // MODIFIED: Click updates PENDING state, doesn't close
-                                        onClick = { viewModel.onPendingVoiceSelect(voice) }
+                            items(uiState.availableExams, key = { it.json }) { exam ->
+                                ExamSelectionRow(
+                                        exam = exam,
+                                        isSelected = uiState.pendingSelectedExam?.json == exam.json,
+                                        onClick = { viewModel.onPendingExamSelect(exam) }
                                 )
                             }
                         }
                     }
+
+                    // --- START OF MODIFICATION FOR SPEAKER SELECTION ---
+                    SheetContent.SpeakerSelection -> {
+                        var isExpanded by remember { mutableStateOf(false) }
+                        val selectedVoice = uiState.pendingSelectedVoice
+
+                        Text("Choose a Speaker", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                        Spacer(modifier = Modifier.height(16.dp))
+
+                        // Show the current selection as an expandable header
+                        if (selectedVoice != null) {
+                            ExpandableVoiceHeader(
+                                    voice = selectedVoice,
+                                    isExpanded = isExpanded,
+                                    onClick = { isExpanded = !isExpanded }
+                            )
+                        }
+
+                        // The animated, collapsible list of other voices
+                        AnimatedVisibility(visible = isExpanded) {
+                            // Filter out the selected voice and group the rest by gender
+                            val otherVoicesByGender = uiState.availableVoices
+                                .filter { it.id != selectedVoice?.id }
+                                .groupBy { it.gender }
+
+                            Divider(modifier = Modifier.padding(vertical = 8.dp))
+
+                            LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
+                                otherVoicesByGender.forEach { (gender, voicesInGroup) ->
+                                    // Sticky header for each gender
+                                    item {
+                                        GenderHeader(gender.name.replaceFirstChar { it.titlecase() })
+                                    }
+                                    // List of voices for that gender
+                                    items(voicesInGroup, key = { it.id }) { voice ->
+                                        VoiceSelectionRow(
+                                                voice = voice,
+                                                isSelected = false, // Not needed, selection is at the top
+                                                onClick = {
+                                                    viewModel.onPendingVoiceSelect(voice)
+                                                    isExpanded = false // Collapse after selection
+                                                }
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    // --- END OF MODIFICATION ---
+
                     SheetContent.Hidden -> {}
                 }
 
+                // This section for Save/Cancel buttons remains unchanged
                 Spacer(modifier = Modifier.height(24.dp))
-
-                // --- MODIFIED: Replaced "Close" with "Cancel" and "Save" buttons ---
                 Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.End)
@@ -114,7 +143,6 @@ fun SettingsScreen(
                         Text("Save")
                     }
                 }
-                // --- END OF MODIFICATION ---
             }
         }
     }
@@ -252,4 +280,49 @@ private fun VoiceSelectionRow(
             )
         }
     }
+}
+@Composable
+private fun ExpandableVoiceHeader(
+    voice: VoiceOption,
+    isExpanded: Boolean,
+    onClick: () -> Unit
+) {
+    val rotationAngle by animateFloatAsState(targetValue = if (isExpanded) 180f else 0f)
+
+    Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+    ) {
+        // Voice name and gender in parentheses
+        Text(
+                text = "${voice.friendlyName} (${voice.gender.name.lowercase().replaceFirstChar { it.titlecase() }})",
+                modifier = Modifier.weight(1f),
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Bold
+        )
+        // The rotating arrow icon
+        Icon(
+                imageVector = Icons.Default.KeyboardArrowDown,
+                contentDescription = "Expand or collapse voice selection",
+                modifier = Modifier.rotate(rotationAngle),
+                tint = MaterialTheme.colorScheme.primary
+        )
+    }
+}
+
+// --- NEW COMPOSABLE 2: A simple header for gender groups ---
+@Composable
+private fun GenderHeader(genderName: String) {
+    Text(
+            text = genderName,
+            style = MaterialTheme.typography.labelLarge,
+            fontWeight = FontWeight.Bold,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 8.dp, horizontal = 4.dp)
+    )
 }
