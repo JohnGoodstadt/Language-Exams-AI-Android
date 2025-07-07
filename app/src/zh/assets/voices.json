@@ -1,0 +1,66 @@
+[
+	{
+		"id": "cmn-CN-Standard-A",
+		"friendlyName": "马利亚 (Mǎlìyà) - Mary"
+	},
+	{
+		"id": "cmn-CN-Standard-D",
+		"friendlyName": "路得 (Lùdé) - Ruth"
+	},
+	{
+		"id": "cmn-CN-Standard-B",
+		"friendlyName": "约翰 (Yuēhàn) - John"
+	},
+	{
+		"id": "cmn-CN-Standard-C",
+		"friendlyName": "彼得 (Bǐdé) - Peter"
+	},
+	{
+		"id": "cmn-CN-Wavenet-A",
+		"friendlyName": "以斯帖 (Yǐsītè) - Esther"
+	},
+	{
+		"id": "cmn-CN-Wavenet-D",
+		"friendlyName": "夏娃 (Xiàwá) - Eve"
+	},
+	{
+		"id": "cmn-CN-Wavenet-B",
+		"friendlyName": "大卫 (Dàwèi) - David"
+	},
+	{
+		"id": "cmn-CN-Wavenet-C",
+		"friendlyName": "安德烈 (Āndéliè) - Andrew"
+	},
+	{
+		"id": "cmn-CN-Chirp3-HD-Aoed",
+		"friendlyName": "美丽 (Měilì)"
+	},
+	{
+		"id": "cmn-CN-Chirp3-HD-Charon",
+		"friendlyName": "浩然 (Hàorán)"
+	},
+	{
+		"id": "cmn-CN-Chirp3-HD-Fenrir",
+		"friendlyName": "嘉伟 (Jiāwěi)"
+	},
+	{
+		"id": "cmn-CN-Chirp3-HD-Kore",
+		"friendlyName": "丽 (Lì)"
+	},
+	{
+		"id": "cmn-CN-Chirp3-HD-Leda",
+		"friendlyName": "伟 (Wěi)"
+	},
+	{
+		"id": "cmn-CN-Chirp3-HD-Orus",
+		"friendlyName": "俊杰 (Jùnjié)"
+	},
+	{
+		"id": "cmn-CN-Chirp3-HD-Puck",
+		"friendlyName": "智勇 (Zhìyǒng)"
+	},
+	{
+		"id": "cmn-CN-Chirp3-HD-Zephyr",
+		"friendlyName": "静 (Jìng)"
+	}
+]

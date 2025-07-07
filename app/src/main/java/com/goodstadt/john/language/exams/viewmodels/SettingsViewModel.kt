@@ -5,6 +5,8 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.VoiceOption
+import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.models.ExamDetails
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,7 +20,9 @@ data class SettingsUiState(
     val appVersion: String = "",
     val currentVoiceName: String = "",
     val currentExamName: String = "",
-    val availableExams: List<ExamDetails> = emptyList()
+    val availableExams: List<ExamDetails> = emptyList(),
+    val availableVoices: List<VoiceOption> = emptyList(),
+    val currentFriendlyVoiceName: String = ""
 )
 
 // Sealed class to represent which bottom sheet should be shown
@@ -31,7 +35,8 @@ sealed interface SheetContent {
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val controlRepository: ControlRepository
+    private val controlRepository: ControlRepository,
+    private val voiceRepository: VoiceRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SettingsUiState())
@@ -42,11 +47,22 @@ class SettingsViewModel @Inject constructor(
 
     init {
         // Observe BOTH flows to keep the UI perfectly in sync
+        // Observe the voice name flow to update the friendly name
+        viewModelScope.launch {
+            // Observe the saved voice ID
+            userPreferencesRepository.selectedVoiceNameFlow.collect { voiceId ->
+                // When the ID changes, get its friendly name asynchronously
+                val friendlyName = voiceRepository.getFriendlyNameForVoice(voiceId)
+                _uiState.update { it.copy(currentFriendlyVoiceName = friendlyName) }
+            }
+        }
+
         viewModelScope.launch {
             userPreferencesRepository.selectedFileNameFlow.collect { fileName ->
                 _uiState.update { it.copy(currentExamName = fileName) }
             }
         }
+
         viewModelScope.launch {
             userPreferencesRepository.selectedVoiceNameFlow.collect { voiceName ->
                 _uiState.update { it.copy(currentVoiceName = voiceName) }
@@ -58,12 +74,16 @@ class SettingsViewModel @Inject constructor(
     private fun loadInitialData() {
         viewModelScope.launch {
             val languageDetailsResult = controlRepository.getActiveLanguageDetails()
+            val availableVoicesResult = voiceRepository.getAvailableVoices()
             languageDetailsResult.onSuccess { details ->
-                _uiState.update {
-                    it.copy(
-                            appVersion = BuildConfig.VERSION_NAME,
-                            availableExams = details.exams
-                    )
+                availableVoicesResult.onSuccess { voices ->
+                    _uiState.update {
+                        it.copy(
+                                appVersion = BuildConfig.VERSION_NAME,
+                                availableVoices = voices,
+                                availableExams = details.exams
+                        )
+                    }
                 }
             }
         }
@@ -84,7 +104,12 @@ class SettingsViewModel @Inject constructor(
 //            }
 //        }
 //    }
-
+fun onVoiceSelected(voiceOption: VoiceOption) {
+    viewModelScope.launch {
+        userPreferencesRepository.saveSelectedVoiceName(voiceOption.id)
+        hideBottomSheet()
+    }
+}
     fun onExamSelected(exam: ExamDetails) {
         viewModelScope.launch {
             // The only job here is to SAVE the new preference.

@@ -1,0 +1,70 @@
+[
+	{
+		"id": "de-DE-Neural2-A",
+		"friendlyName": "Emma"
+	},
+	{
+		"id": "de-DE-Neural2-C",
+		"friendlyName": "Maria"
+	},
+	{
+		"id": "de-DE-Neural2-F",
+		"friendlyName": "Hannah"
+	},
+	{
+		"id": "de-DE-Standard-A",
+		"friendlyName": "Emilia"
+	},
+	{
+		"id": "de-DE-Standard-C",
+		"friendlyName": "Sofia"
+	},
+	{
+		"id": "de-DE-Standard-F",
+		"friendlyName": "Lina"
+	},
+	{
+		"id": "de-DE-Wavenet-A",
+		"friendlyName": "Mila"
+	},
+	{
+		"id": "de-DE-Wavenet-C",
+		"friendlyName": "Lea"
+	},
+	{
+		"id": "de-DE-Wavenet-F",
+		"friendlyName": "Lena"
+	},
+	{
+		"id": "de-DE-Neural2-B",
+		"friendlyName": "Ben"
+	},
+	{
+		"id": "de-DE-Neural2-D",
+		"friendlyName": "Paul"
+	},
+	{
+		"id": "de-DE-Standard-B",
+		"friendlyName": "Finn"
+	},
+	{
+		"id": "de-DE-Standard-D",
+		"friendlyName": "Jonas"
+	},
+	{
+		"id": "de-DE-Standard-E",
+		"friendlyName": "Luis"
+	},
+	{
+		"id": "de-DE-Wavenet-B",
+		"friendlyName": "Noah"
+	},
+	{
+		"id": "de-DE-Wavenet-D",
+		"friendlyName": "Felix"
+	},
+	{
+		"id": "de-DE-Wavenet-E",
+		"friendlyName": "Lukas"
+	}
+]

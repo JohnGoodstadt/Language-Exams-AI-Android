@@ -53,7 +53,8 @@ class ControlRepository @Inject constructor(
             val currentLanguageCode = LanguageConfig.languageCode
 
             // 2. Search through all data to find the matching 'codes' entry
-            val activeDetails = allCodes.find { it.code == currentLanguageCode }
+            //val activeDetails = allCodes.find { it.code == currentLanguageCode }
+            val activeDetails = allCodes.find { it.code.equals(currentLanguageCode, ignoreCase = true) }
 
             if (activeDetails != null) {
                 cachedActiveLanguageDetails = activeDetails

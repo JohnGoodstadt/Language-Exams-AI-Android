@@ -1,0 +1,74 @@
+[
+	{
+		"id": "en-GB-Neural2-A",
+		"friendlyName": "Olivia"
+	},
+	{
+		"id": "en-GB-Neural2-C",
+		"friendlyName": "Amelia"
+	},
+	{
+		"id": "en-GB-Neural2-F",
+		"friendlyName": "Isla"
+	},
+	{
+		"id": "en-GB-News-G",
+		"friendlyName": "Ava"
+	},
+	{
+		"id": "en-GB-News-I",
+		"friendlyName": "Maria"
+	},
+	{
+		"id": "en-GB-Standard-A",
+		"friendlyName": "Sophia"
+	},
+	{
+		"id": "en-GB-Standard-C",
+		"friendlyName": "Grace"
+	},
+	{
+		"id": "en-GB-Standard-F",
+		"friendlyName": "Lily"
+	},
+	{
+		"id": "en-GB-Wavenet-A",
+		"friendlyName": "Julia"
+	},
+	{
+		"id": "en-GB-Wavenet-C",
+		"friendlyName": "Poppy"
+	},
+	{
+		"id": "en-GB-Neural2-B",
+		"friendlyName": "Oliver"
+	},
+	{
+		"id": "en-GB-Neural2-D",
+		"friendlyName": "George"
+	},
+	{
+		"id": "en-GB-News-K",
+		"friendlyName": "Noah"
+	},
+	{
+		"id": "en-GB-News-L",
+		"friendlyName": "Jack"
+	},
+	{
+		"id": "en-GB-Standard-B",
+		"friendlyName": "Arthur"
+	},
+	{
+		"id": "en-GB-Standard-D",
+		"friendlyName": "Muhammad"
+	},
+	{
+		"id":s "en-GB-Wavenet-B",
+		"friendlyName": "Charlie"
+	},
+	{
+		"id": "en-GB-Wavenet-D",
+		"friendlyName": "John"
+	}
+]

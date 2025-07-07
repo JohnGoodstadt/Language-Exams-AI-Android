@@ -28,6 +28,7 @@ android {
         }
     }
 
+
     // Define a dimension for your product flavors
     flavorDimensions += "language"
 
@@ -51,6 +52,28 @@ android {
             buildConfigField("String", "LANGUAGE_ID", "\"zh\"")
         }
     }
+
+    // --- ADD THIS ENTIRE sourceSets BLOCK ---
+    sourceSets {
+        getByName("main") {
+            // This line is optional but good practice. It confirms where the main assets are.
+            assets.srcDirs("src/main/assets")
+        }
+        getByName("en") {
+            // For the 'en' flavor, add its specific assets directory.
+            assets.srcDir("src/en/assets")
+        }
+        getByName("de") {
+            // For the 'de' flavor, add its specific assets directory.
+            assets.srcDir("src/de/assets")
+        }
+        getByName("zh") {
+            // For the 'zh' flavor, add its specific assets directory.
+            assets.srcDir("src/zh/assets")
+        }
+    }
+    // --- END OF NEW BLOCK ---
+
 
     buildTypes {
         debug {

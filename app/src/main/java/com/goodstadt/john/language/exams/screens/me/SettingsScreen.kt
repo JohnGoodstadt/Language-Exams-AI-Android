@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
@@ -84,7 +85,15 @@ fun SettingsScreen(
                     SheetContent.SpeakerSelection -> {
                         Text("Choose a Speaker", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                         Spacer(modifier = Modifier.height(16.dp))
-                        Text("Speaker selection content will go here.")
+                        LazyColumn {
+                            items(uiState.availableVoices, key = { it.id }) { voice ->
+                                VoiceSelectionRow(
+                                        voice = voice,
+                                        isSelected = uiState.currentFriendlyVoiceName == voice.friendlyName,
+                                        onClick = { viewModel.onVoiceSelected(voice) }
+                                )
+                            }
+                        }
                     }
                     SheetContent.Hidden -> {}
                 }
@@ -114,7 +123,7 @@ fun SettingsScreen(
             SettingsActionItem(
                     icon = Icons.Default.RecordVoiceOver,
                     title = "Change Speaker",
-                    currentValue = uiState.currentVoiceName,
+                    currentValue = uiState.currentFriendlyVoiceName,
                     onClick = { viewModel.onSettingClicked(SheetContent.SpeakerSelection) }
             )
         }
@@ -198,6 +207,33 @@ private fun ExamSelectionRow(
         Text(text = exam.displayName, modifier = Modifier.weight(1f), fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal)
         if (isSelected) {
             Icon(imageVector = Icons.Default.Check, contentDescription = "Selected", tint = MaterialTheme.colorScheme.primary)
+        }
+    }
+}
+@Composable
+private fun VoiceSelectionRow(
+    voice: VoiceOption,
+    isSelected: Boolean,
+    onClick: () -> Unit
+) {
+    Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clickable(onClick = onClick)
+                .padding(vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+                text = voice.friendlyName,
+                modifier = Modifier.weight(1f),
+                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
+        )
+        if (isSelected) {
+            Icon(
+                    imageVector = Icons.Default.Check,
+                    contentDescription = "Selected",
+                    tint = MaterialTheme.colorScheme.primary
+            )
         }
     }
 }
