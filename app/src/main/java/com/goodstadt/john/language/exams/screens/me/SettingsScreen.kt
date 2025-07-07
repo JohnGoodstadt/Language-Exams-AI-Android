@@ -26,8 +26,7 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
-    viewModel: SettingsViewModel = hiltViewModel(),
-    onExamChanged: () -> Unit = {}
+    viewModel: SettingsViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val sheetContent by viewModel.sheetState.collectAsState()
@@ -74,9 +73,7 @@ fun SettingsScreen(
                                             exam = exam,
                                             isSelected = uiState.currentExamName == exam.json,
                                             onClick = {
-                                                viewModel.onExamSelected(exam) {
-                                                    onExamChanged()
-                                                }
+                                                viewModel.onExamSelected(exam)
                                             }
                                     )
                                 }

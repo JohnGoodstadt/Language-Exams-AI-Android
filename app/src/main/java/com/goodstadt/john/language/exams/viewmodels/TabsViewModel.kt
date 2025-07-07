@@ -15,6 +15,7 @@ import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -35,8 +36,8 @@ sealed interface PlaybackState {
 @HiltViewModel
 class TabsViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
-    private val userPreferencesRepository: UserPreferencesRepository,
-    private val controlRepository: ControlRepository
+    private val userPreferencesRepository: UserPreferencesRepository//,
+   // private val controlRepository: ControlRepository
 ) : ViewModel() {
 
     // A StateFlow to hold the overall UI state for the vocab data
@@ -86,40 +87,44 @@ class TabsViewModel @Inject constructor(
         Log.d(TAG, "Language Voice Name: ${LanguageConfig.voiceName}")
         // --- END OF VERIFICATION ---
 
-        // --- UPDATED: Use the new, more direct function ---
-        viewModelScope.launch {
-            val activeDetailsResult = controlRepository.getActiveLanguageDetails()
-            activeDetailsResult.onSuccess { activeDetails ->
-                // activeDetails is now the single LanguageCodeDetails object we need!
-                Log.d(TAG, "Successfully loaded active language details.")
-                Log.d(TAG, "Default Female Voice from Control File: ${activeDetails.defaultFemaleVoice}")
-                Log.d(TAG, "Current Skill Level: ${activeDetails.currentSkillLevel}")
 
-            }.onFailure { error ->
-                Log.e(TAG, "Failed to load active language details: ${error.message}")
+// --- THIS IS THE FIX ---
+        // Launch a new coroutine in the ViewModel's lifecycle scope
+        viewModelScope.launch {
+            // Now it's safe to call the suspend function 'collect'
+            userPreferencesRepository.selectedFileNameFlow.collect { fileName ->
+                loadDataForFile(fileName) // This inner block will be executed every time a new filename is saved
             }
         }
+        // --- END OF FIX ---
         // --- END OF UPDATE ---
 
         // Load the menu items from the flavor-specific config
         _meTabMenuItems.value = LanguageConfig.meTabMenuItems
 
-        loadData()
+        // --- ALSO FIX THE CONTROL REPOSITORY CALL ---
+        // This call should also be in its own launch block
+//        viewModelScope.launch {
+//            val controlDataResult = controlRepository.getActiveLanguageDetails()
+//            controlDataResult.onSuccess { controlDataList ->
+//                Log.d(TAG, "Successfully loaded control data.")
+//                // ... more logging
+//            }.onFailure { error ->
+//                Log.e(TAG, "Failed to load control data: ${error.message}")
+//            }
+//        }
+
     }
 
-    fun loadData() {
+
+    // Renamed loadData to be more specific
+    private fun loadDataForFile(fileName: String) {
         viewModelScope.launch {
             _vocabUiState.value = VocabDataUiState.Loading
-
-            // 1. Get the current filename (from prefs or flavor default)
-//            val currentFileName = userPreferencesRepository.getSelectedFileName()
-            val currentFileName =  "vocab_data_a2"
-
-            // 2. Call the repository with the dynamic filename
-            val result = vocabRepository.getVocabData(currentFileName)
-
+            val result = vocabRepository.getVocabData(fileName)
             result.onSuccess { vocabFile ->
                 _vocabUiState.value = VocabDataUiState.Success(vocabFile)
+                // ... (processing logic is the same)
                 processCategoriesForTab(vocabFile, 1, _tab1Categories, _tab1MenuItems, _tab1CategoryIndexMap)
                 processCategoriesForTab(vocabFile, 2, _tab2Categories, _tab2MenuItems, _tab2CategoryIndexMap)
                 processCategoriesForTab(vocabFile, 3, _tab3Categories, _tab3MenuItems, _tab3CategoryIndexMap)
@@ -128,7 +133,6 @@ class TabsViewModel @Inject constructor(
             }
         }
     }
-
     /**
      * A reusable helper function to filter and process data for a given tab number.
      */
@@ -163,7 +167,8 @@ class TabsViewModel @Inject constructor(
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
             // 1. Get the current voice name (from prefs or flavor default)
-            val currentVoiceName = userPreferencesRepository.getSelectedVoiceName()
+//            val currentVoiceName = userPreferencesRepository.getSelectedVoiceName()
+            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             // 2. Get the corresponding language code from our config
             val currentLanguageCode = LanguageConfig.languageCode
 

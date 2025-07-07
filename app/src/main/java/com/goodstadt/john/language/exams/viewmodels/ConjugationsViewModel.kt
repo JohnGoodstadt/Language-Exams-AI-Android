@@ -12,6 +12,7 @@ import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -68,7 +69,8 @@ class ConjugationsViewModel @Inject constructor(
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
-            val currentVoiceName = userPreferencesRepository.getSelectedVoiceName()
+            // Use .first() to get the most recent value from the Flow
+            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val currentLanguageCode = LanguageConfig.languageCode
 
             val result = vocabRepository.playTextToSpeech(

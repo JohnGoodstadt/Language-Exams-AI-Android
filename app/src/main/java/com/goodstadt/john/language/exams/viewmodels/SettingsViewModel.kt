@@ -41,29 +41,61 @@ class SettingsViewModel @Inject constructor(
     val sheetState = _sheetState.asStateFlow()
 
     init {
-        loadCurrentSettings()
+        // Observe BOTH flows to keep the UI perfectly in sync
+        viewModelScope.launch {
+            userPreferencesRepository.selectedFileNameFlow.collect { fileName ->
+                _uiState.update { it.copy(currentExamName = fileName) }
+            }
+        }
+        viewModelScope.launch {
+            userPreferencesRepository.selectedVoiceNameFlow.collect { voiceName ->
+                _uiState.update { it.copy(currentVoiceName = voiceName) }
+            }
+        }
+        // Load the static data
+        loadInitialData()
     }
-
-    private fun loadCurrentSettings() {
+    private fun loadInitialData() {
         viewModelScope.launch {
             val languageDetailsResult = controlRepository.getActiveLanguageDetails()
             languageDetailsResult.onSuccess { details ->
                 _uiState.update {
                     it.copy(
                             appVersion = BuildConfig.VERSION_NAME,
-                            currentVoiceName = userPreferencesRepository.getSelectedVoiceName(),
-                            // We'll use the filename for now; this can be mapped to a display name later
-                            currentExamName = userPreferencesRepository.getSelectedFileName(),
                             availableExams = details.exams
                     )
                 }
             }
         }
     }
+//    private fun loadCurrentSettingsObsolete() {
+//        viewModelScope.launch {
+//            val languageDetailsResult = controlRepository.getActiveLanguageDetails()
+//            languageDetailsResult.onSuccess { details ->
+//                _uiState.update {
+//                    it.copy(
+//                            appVersion = BuildConfig.VERSION_NAME,
+//                            currentVoiceName = userPreferencesRepository.getSelectedVoiceName(),
+//                            // We'll use the filename for now; this can be mapped to a display name later
+//                            currentExamName = userPreferencesRepository.getSelectedFileName(),
+//                            availableExams = details.exams
+//                    )
+//                }
+//            }
+//        }
+//    }
 
-
+    fun onExamSelected(exam: ExamDetails) {
+        viewModelScope.launch {
+            // The only job here is to SAVE the new preference.
+            // The flows will handle notifying the rest of the app automatically.
+            userPreferencesRepository.saveSelectedFileName(exam.json)
+            // Hiding the sheet is still a local UI concern.
+           // hideBottomSheet()
+        }
+    }
     // --- NEW FUNCTION to handle exam selection ---
-    fun onExamSelected(exam: ExamDetails, onComplete: () -> Unit) {
+    fun onExamSelectedObsolete(exam: ExamDetails, onComplete: () -> Unit) {
         viewModelScope.launch {
             // Save the 'json' field (e.g., "vocab_data_a2") to preferences
             userPreferencesRepository.saveSelectedFileName(exam.json)

@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -52,7 +53,7 @@ class SearchViewModel @Inject constructor(
 
     private fun loadFullWordList() {
         viewModelScope.launch {
-            val fileName = userPreferencesRepository.getSelectedFileName()
+            val fileName = userPreferencesRepository.selectedFileNameFlow.first()
             vocabRepository.getVocabData(fileName).onSuccess { vocabFile ->
                 // Flatten the entire structure into a single list of words
                 allWords = vocabFile.categories.flatMap { it.words }
@@ -97,7 +98,8 @@ class SearchViewModel @Inject constructor(
             val uniqueSentenceId = generateUniqueSentenceId(searchResult.word, searchResult.word.sentences.first())
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
-            val currentVoiceName = userPreferencesRepository.getSelectedVoiceName()
+            // Use .first() to get the most recent value from the Flow
+            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val currentLanguageCode = LanguageConfig.languageCode
 
             val result = vocabRepository.playTextToSpeech(

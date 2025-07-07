@@ -131,7 +131,7 @@ fun MainScreen() {
             }
 
             composable(Screen.Tab5.route) {
-                MeTabContainerScreen(tabsViewModel = tabsViewModel)
+                MeTabContainerScreen()
             }
         }
     }

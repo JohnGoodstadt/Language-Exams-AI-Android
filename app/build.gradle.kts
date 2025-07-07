@@ -120,6 +120,8 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.firestore)
 
+    implementation(libs.androidx.datastore.preferences)
+    
     // Unit Tests
     testImplementation(libs.junit)
     testImplementation(libs.truth)
@@ -135,6 +137,7 @@ dependencies {
     kaptAndroidTest(libs.hilt.compiler)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
 }
 
 // Allow Hilt to access classes in different build variants
