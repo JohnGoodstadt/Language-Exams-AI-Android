@@ -98,7 +98,7 @@ class VocabRepository @Inject constructor(
                     // 4. On successful fetch, SAVE the data to the cache file.
                     try {
                         audioCacheFile.writeBytes(audioData)
-                        println("Saved to cache: ${audioCacheFile.name}") // For debugging
+                        println("Saved to cache: ${audioCacheFile.name}  ${audioCacheFile.absolutePath}") // For debugging
                     } catch (e: Exception) {
                         // Caching failed, but we can still proceed with playback.
                         // Log this error in a real app.

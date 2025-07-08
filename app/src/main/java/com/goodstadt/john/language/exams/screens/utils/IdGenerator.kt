@@ -11,9 +11,17 @@ import com.goodstadt.john.language.exams.models.VocabWord
  * @param sentence The sentence object associated with the word.
  * @return A filesystem-safe string, e.g., "hello_world_This_is_the_sentence".
  */
-fun generateUniqueSentenceId(word: VocabWord, sentence: Sentence): String {
+fun generateUniqueSentenceId(word: VocabWord, sentence: Sentence, googleVoice:String): String {
     // Combine the word and sentence
-    val rawId = "${word.word}.${sentence.sentence}"
+    val rawId = "${googleVoice}_${word.word}.${sentence.sentence}"
+
+    // Sanitize the string to make it safe for use as a filename.
+    // This replaces any character that is NOT a letter, number, or period with an underscore.
+    return rawId.replace(Regex("[^a-zA-Z0-9.]"), "_")
+}
+fun generateUniqueSentenceId(sentence: String, googleVoice:String): String {
+
+    val rawId = "${googleVoice}_$sentence"
 
     // Sanitize the string to make it safe for use as a filename.
     // This replaces any character that is NOT a letter, number, or period with an underscore.

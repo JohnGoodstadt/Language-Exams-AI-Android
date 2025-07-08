@@ -26,6 +26,7 @@ import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsUiState
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsViewModel
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
+import hilt_aggregated_deps._com_goodstadt_john_language_exams_viewmodels_ConjugationsViewModel_HiltModules_BindsModule
 
 @Composable
 fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
@@ -85,7 +86,9 @@ fun SectionedVocabList(
 
                 if (sentenceToShow != null) {
                     val displayData = buildSentenceParts(entry = word, sentence = sentenceToShow)
-                    val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow)
+                    val googleVoice = "en-GB-Neural2-C"
+                   // val fred = googleVoice
+                    val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow,googleVoice)
 
                     val isPlaying = playbackState is PlaybackState.Playing &&
                             playbackState.sentenceId == uniqueSentenceId

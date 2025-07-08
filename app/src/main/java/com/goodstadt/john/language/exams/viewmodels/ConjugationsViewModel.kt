@@ -61,16 +61,23 @@ class ConjugationsViewModel @Inject constructor(
         }
     }
 
+//    fun currentVoiceName() : String {
+//        userPreferencesRepository.selectedVoiceNameFlow.first()
+//    }
     // This function is almost identical to the ones in our other ViewModels
     fun playTrack(word: VocabWord, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing) return
 
         viewModelScope.launch {
-            val uniqueSentenceId = generateUniqueSentenceId(word, sentence)
+//            val googleVoice = "en-GB-Neural2-C"
+
+            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+            val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
+
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
             // Use .first() to get the most recent value from the Flow
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+
             val currentLanguageCode = LanguageConfig.languageCode
 
             val result = vocabRepository.playTextToSpeech(

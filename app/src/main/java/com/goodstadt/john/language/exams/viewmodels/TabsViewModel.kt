@@ -71,12 +71,14 @@ class TabsViewModel @Inject constructor(
     val tab3CategoryIndexMap = _tab3CategoryIndexMap.asStateFlow()
     // --- End of data slices ---
 
-    //private val _tab5MenuItems = MutableStateFlow(listOf("Settings", "Search", "Quiz"))
-    //val tab5MenuItems = _tab5MenuItems.asStateFlow()
-
     // --- ADD THE NEW DYNAMIC LIST ---
     private val _meTabMenuItems = MutableStateFlow<List<String>>(emptyList())
     val meTabMenuItems = _meTabMenuItems.asStateFlow()
+
+    // --- NEW STATE FOR VOICE PREFERENCE ---
+    private val _selectedVoiceName = MutableStateFlow("")
+    val selectedVoiceName = _selectedVoiceName.asStateFlow() // <-- 2. ADD STATEFLOW
+
 
     private val TAG = "TabsViewModel"
 
@@ -102,18 +104,7 @@ class TabsViewModel @Inject constructor(
         // Load the menu items from the flavor-specific config
         _meTabMenuItems.value = LanguageConfig.meTabMenuItems
 
-        // --- ALSO FIX THE CONTROL REPOSITORY CALL ---
-        // This call should also be in its own launch block
-//        viewModelScope.launch {
-//            val controlDataResult = controlRepository.getActiveLanguageDetails()
-//            controlDataResult.onSuccess { controlDataList ->
-//                Log.d(TAG, "Successfully loaded control data.")
-//                // ... more logging
-//            }.onFailure { error ->
-//                Log.e(TAG, "Failed to load control data: ${error.message}")
-//            }
-//        }
-
+        observeVoicePreference() // <-- 3. CALL THE OBSERVER FUNCTION
     }
 
 
@@ -156,6 +147,15 @@ class TabsViewModel @Inject constructor(
         indexMapStateFlow.value = indexMap
     }
 
+    // --- NEW FUNCTION TO OBSERVE PREFERENCES ---
+    private fun observeVoicePreference() {
+        viewModelScope.launch {
+            userPreferencesRepository.selectedVoiceNameFlow.collect { voiceName ->
+                _selectedVoiceName.value = voiceName
+            }
+        }
+    }
+
     // --- NEW: The function called by the UI ---
     fun playTrack(word: VocabWord, sentence: Sentence) {
         // Prevent starting a new track while one is already playing
@@ -163,12 +163,14 @@ class TabsViewModel @Inject constructor(
 
 
         viewModelScope.launch {
-            val uniqueSentenceId = generateUniqueSentenceId(word, sentence)
+//            val googleVoice = "en-GB-Neural2-C"
+            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+            val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
             // 1. Get the current voice name (from prefs or flavor default)
 //            val currentVoiceName = userPreferencesRepository.getSelectedVoiceName()
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+//            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             // 2. Get the corresponding language code from our config
             val currentLanguageCode = LanguageConfig.languageCode
 

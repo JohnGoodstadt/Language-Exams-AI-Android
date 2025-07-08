@@ -24,21 +24,17 @@ import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
-import com.goodstadt.john.language.exams.screens.shared.TabWithHorizontalMenu
+import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
 import com.goodstadt.john.language.exams.viewmodels.VocabDataUiState
-import androidx.navigation.compose.NavHost
-import com.goodstadt.john.language.exams.navigation.MeScreen
-import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
-//import com.goodstadt.john.language.exams.screens.me.MeTabMenuScreen
-import com.goodstadt.john.language.exams.screens.me.MeTabPlaceholderScreen
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
     val tabsViewModel: TabsViewModel = hiltViewModel()
+    val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
 
     Scaffold(
             bottomBar = {
@@ -70,13 +66,14 @@ fun MainScreen() {
                 startDestination = Screen.Tab1.route,
                 Modifier.padding(innerPadding)
         ) {
-            // --- Reusable Logic for Tabs 1, 2, 3 ---
+            // --- Collect the shared voice preference ONCE here ---
+
+
             composable(Screen.Tab1.route) {
                 val uiState by tabsViewModel.vocabUiState.collectAsState()
                 val categories by tabsViewModel.tab1Categories.collectAsState()
                 val menuItems by tabsViewModel.tab1MenuItems.collectAsState()
                 val indexMap by tabsViewModel.tab1CategoryIndexMap.collectAsState()
-                // Collect the playback state here, where tabsViewModel is known
                 val playbackState by tabsViewModel.playbackState.collectAsState()
 
                 RenderCategoryTab(
@@ -84,8 +81,9 @@ fun MainScreen() {
                         menuItems = menuItems,
                         categories = categories,
                         categoryIndexMap = indexMap,
-                        playbackState = playbackState, // Pass the state down
-                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) } // Pass the action down
+                        playbackState = playbackState,
+                        selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
+                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
                 )
             }
 
@@ -94,7 +92,6 @@ fun MainScreen() {
                 val categories by tabsViewModel.tab2Categories.collectAsState()
                 val menuItems by tabsViewModel.tab2MenuItems.collectAsState()
                 val indexMap by tabsViewModel.tab2CategoryIndexMap.collectAsState()
-                // Collect the playback state here, where tabsViewModel is known
                 val playbackState by tabsViewModel.playbackState.collectAsState()
 
                 RenderCategoryTab(
@@ -102,8 +99,9 @@ fun MainScreen() {
                         menuItems = menuItems,
                         categories = categories,
                         categoryIndexMap = indexMap,
-                        playbackState = playbackState, // Pass the state down
-                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) } // Pass the action down
+                        playbackState = playbackState,
+                        selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
+                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
                 )
             }
 
@@ -112,7 +110,6 @@ fun MainScreen() {
                 val categories by tabsViewModel.tab3Categories.collectAsState()
                 val menuItems by tabsViewModel.tab3MenuItems.collectAsState()
                 val indexMap by tabsViewModel.tab3CategoryIndexMap.collectAsState()
-                // Collect the playback state here, where tabsViewModel is known
                 val playbackState by tabsViewModel.playbackState.collectAsState()
 
                 RenderCategoryTab(
@@ -120,11 +117,11 @@ fun MainScreen() {
                         menuItems = menuItems,
                         categories = categories,
                         categoryIndexMap = indexMap,
-                        playbackState = playbackState, // Pass the state down
-                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) } // Pass the action down
+                        playbackState = playbackState,
+                        selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
+                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
                 )
             }
-            // --- End of Reusable Logic ---
 
             composable(Screen.Tab4.route) {
                 Tab4Screen()
@@ -144,21 +141,15 @@ fun Tab4Screen() {
     }
 }
 
-// Add this function inside MainScreen.kt, below the MainScreen composable
 
-/**
- * A helper composable that handles the loading/error/success states
- * and renders the CategoryTabScreen. This avoids duplicating the `when` statement.
- */
 @Composable
 private fun RenderCategoryTab(
     uiState: VocabDataUiState,
     menuItems: List<String>,
     categories: List<Category>,
     categoryIndexMap: Map<String, Int>,
-        // --- ADD THIS NEW PARAMETER ---
     playbackState: PlaybackState,
-        // --- ADD THIS NEW PARAMETER ---
+    selectedVoiceName: String, // <-- ADD NEW PARAMETER
     onRowTapped: (word: VocabWord, sentence: Sentence) -> Unit
 ) {
 
@@ -178,8 +169,8 @@ private fun RenderCategoryTab(
                     menuItems = menuItems,
                     categories = categories,
                     categoryIndexMap = categoryIndexMap,
-                    // Pass the new parameters down to the next screen
                     playbackState = playbackState,
+                    selectedVoiceName = selectedVoiceName, // <-- USE THE PARAMETER
                     onRowTapped = onRowTapped
             )
         }

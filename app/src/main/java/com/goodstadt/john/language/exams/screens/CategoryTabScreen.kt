@@ -42,17 +42,16 @@ import kotlinx.coroutines.launch
 fun CategoryTabScreen(
     menuItems: List<String>,
     categories: List<Category>,
-    categoryIndexMap: Map<String, Int>, // Receive the pre-calculated index map
-    playbackState: PlaybackState, // <-- Add playback state
-    onRowTapped: (word: VocabWord, sentence: Sentence) -> Unit // <-- Add click handler
+    categoryIndexMap: Map<String, Int>,
+    playbackState: PlaybackState,
+    selectedVoiceName: String, // <-- MODIFICATION 1: Add new parameter
+    onRowTapped: (word: VocabWord, sentence: Sentence) -> Unit
 ) {
-    // Create and remember the state for the LazyColumn
     val lazyListState = rememberLazyListState()
-    // Create and remember a coroutine scope for launching the scroll action
     val coroutineScope = rememberCoroutineScope()
 
     Column(modifier = Modifier.fillMaxSize()) {
-        // 1. Horizontal scrolling menu at the top
+        // Horizontal scrolling menu at the top
         LazyRow(
                 modifier = Modifier.fillMaxWidth(),
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
@@ -62,7 +61,6 @@ fun CategoryTabScreen(
                 MenuItemChip(
                         text = title,
                         onClick = {
-                            // When a chip is clicked, find its index and scroll
                             scrollToCategory(
                                     title = title,
                                     coroutineScope = coroutineScope,
@@ -74,10 +72,7 @@ fun CategoryTabScreen(
             }
         }
 
-        // 2. Vertically scrolling list with sticky headers for each category
-// ... inside CategoryTabScreen.kt ...
-
-// Vertically scrolling list with sticky headers for each category
+        // Vertically scrolling list with sticky headers for each category
         LazyColumn(
                 modifier = Modifier.fillMaxSize(),
                 state = lazyListState,
@@ -88,41 +83,38 @@ fun CategoryTabScreen(
                     CategoryHeader(title = category.title)
                 }
 
-                // *** NEW, REVISED LOGIC FOR RENDERING ROWS ***
                 items(category.words, key = { "${it.id}-${it.word}" }) { word ->
-                    // For each word, we must decide which sentence to show.
-                    // For now, we will robustly pick the first sentence if it exists.
                     val sentenceToShow = word.sentences.firstOrNull()
 
                     Box(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .clickable {
-                                    println("Row for '${word.sentences[0].sentence}' tapped!")
                                     sentenceToShow?.let { onRowTapped(word, it) }
                                 }
                     ) {
                         if (sentenceToShow != null) {
-                            // 1. Prepare the data by calling our helper function
-                            val displayData = buildSentenceParts(entry = word, sentence = sentenceToShow)
-                            val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow)
+                            // Only proceed if we have a valid voice name from preferences
+                            if (selectedVoiceName.isNotEmpty()) { // <-- MODIFICATION 2: Safety check
+                                val displayData = buildSentenceParts(entry = word, sentence = sentenceToShow)
 
-                            // 2. Call the new, complex VocabRow composable
-                            val isPlaying = playbackState is PlaybackState.Playing &&
-                                    playbackState.sentenceId == uniqueSentenceId
+                                // <-- MODIFICATION 3: Use the parameter instead of hardcoded value
+                                val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName)
 
-                            VocabRow(
-                                    entry = word,
-                                    parts = displayData.parts,
-                                    sentence = displayData.sentence,
-                                    // Hardcoding these as per the Swift example for now
-                                    isRecalling = false,
-                                    displayDot = false,
-                                    wordCount = 0,
-                                    isPlaying = isPlaying // <-- Pass the playing state down
-                            )
+                                val isPlaying = playbackState is PlaybackState.Playing &&
+                                        playbackState.sentenceId == uniqueSentenceId
+
+                                VocabRow(
+                                        entry = word,
+                                        parts = displayData.parts,
+                                        sentence = displayData.sentence,
+                                        isRecalling = false,
+                                        displayDot = false,
+                                        wordCount = 0,
+                                        isPlaying = isPlaying
+                                )
+                            }
                         } else {
-                            // A fallback for words that have no sentences
                             Text(
                                     text = "Error: No sentence found for '${word.word}'",
                                     color = Color.Red,
@@ -134,31 +126,12 @@ fun CategoryTabScreen(
                 }
             }
         }
-
-// ... (CategoryHeader composable remains the same) ...
-
-// *** DELETE THE OLD, SIMPLE WordRow COMPOSABLE IF IT'S STILL HERE ***
-// *** ADD THE NEW, COMPLEX VocabRow COMPOSABLE FROM STEP 2 HERE ***
-    }
-}
-
-// A helper function to keep the onClick logic clean
-private fun scrollToCategory(
-    title: String,
-    coroutineScope: CoroutineScope,
-    lazyListState: LazyListState,
-    indexMap: Map<String, Int>
-) {
-    // Launch a coroutine to call the suspend function `scrollToItem`
-    coroutineScope.launch {
-        // Find the index from our map
-        val index = indexMap[title] ?: return@launch // Do nothing if title not found
-        // Command the LazyColumn to scroll to the item at that index
-        lazyListState.animateScrollToItem(index = index)
     }
 }
 
 
+// Helper functions (scrollToCategory, CategoryHeader, VocabRow) remain unchanged.
+// ...
 @Composable
 fun CategoryHeader(title: String) {
     Text(
@@ -173,8 +146,6 @@ fun CategoryHeader(title: String) {
     )
 }
 
-// ... (at the bottom of CategoryTabScreen.kt, alongside CategoryHeader)
-
 @Composable
 fun VocabRow(
     entry: VocabWord,
@@ -185,10 +156,8 @@ fun VocabRow(
     wordCount: Int,
     isPlaying: Boolean
 ) {
-    // buildAnnotatedString is the Jetpack Compose equivalent of mixing styled Text
     val annotatedString = buildAnnotatedString {
         when (parts.size) {
-            // Case for a single word split (e.g., "part1", "part2")
             2 -> {
                 append(parts[0])
                 withStyle(
@@ -201,7 +170,6 @@ fun VocabRow(
                 }
                 append(parts[1])
             }
-            // Case for a two-word split (e.g., "part1", "part2", "part3")
             3 -> {
                 val words = entry.word.split(",").map { it.trim() }
                 if (words.size >= 2) {
@@ -215,11 +183,9 @@ fun VocabRow(
                     }
                     append(parts[2])
                 } else {
-                    // Fallback if the word format is unexpected
                     append(sentence)
                 }
             }
-            // Fallback for any other case
             else -> {
                 append(sentence)
             }
@@ -232,7 +198,6 @@ fun VocabRow(
     ) {
         Text(text = annotatedString, modifier = Modifier.weight(1f))
 
-        // Display the dots based on the boolean flags
         if (isPlaying) {
             CircularProgressIndicator(modifier = Modifier.size(24.dp))
         } else {
@@ -250,18 +215,14 @@ fun VocabRow(
     Divider()
 }
 
-@Composable
-fun WordRow(word: VocabWord) {
-    Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically
-    ) {
-        Column(modifier = Modifier.weight(1f)) {
-            Text(text = word.word, fontWeight = FontWeight.SemiBold)
-            Text(text = word.translation, style = MaterialTheme.typography.bodySmall)
-        }
+private fun scrollToCategory(
+    title: String,
+    coroutineScope: CoroutineScope,
+    lazyListState: LazyListState,
+    indexMap: Map<String, Int>
+) {
+    coroutineScope.launch {
+        val index = indexMap[title] ?: return@launch
+        lazyListState.animateScrollToItem(index = index)
     }
-    Divider()
 }

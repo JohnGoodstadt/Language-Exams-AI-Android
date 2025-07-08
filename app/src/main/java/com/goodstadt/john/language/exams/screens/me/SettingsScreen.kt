@@ -26,13 +26,6 @@ import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
-import kotlinx.coroutines.launch
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.ui.draw.rotate
 import com.goodstadt.john.language.exams.data.Gender
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -45,7 +38,6 @@ fun SettingsScreen(
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-    // This LaunchedEffect now handles both showing and hiding cleanly.
     LaunchedEffect(sheetContent, sheetState.isVisible) {
         if (sheetContent != SheetContent.Hidden) {
             sheetState.show()
@@ -56,7 +48,6 @@ fun SettingsScreen(
         }
     }
 
-    // --- The Bottom Sheet Composable ---
     if (sheetContent != SheetContent.Hidden) {
         ModalBottomSheet(
                 onDismissRequest = { viewModel.hideBottomSheet() },
@@ -70,7 +61,6 @@ fun SettingsScreen(
             ) {
                 when (sheetContent) {
                     SheetContent.ExamSelection -> {
-                        // Exam selection UI remains unchanged
                         Text("Choose an Exam Level", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                         Spacer(modifier = Modifier.height(16.dp))
                         LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
@@ -84,18 +74,14 @@ fun SettingsScreen(
                         }
                     }
 
-                    // --- START OF MODIFIED SPEAKER SELECTION UI ---
                     SheetContent.SpeakerSelection -> {
-                        // 1. State for each dropdown
                         var isFemaleExpanded by remember { mutableStateOf(false) }
                         var isMaleExpanded by remember { mutableStateOf(false) }
 
                         val pendingSelectedVoice = uiState.pendingSelectedVoice
 
-                        // 2. Filter voices into gender-specific lists
                         val femaleVoices = uiState.availableVoices.filter { it.gender == Gender.FEMALE }
                         val maleVoices = uiState.availableVoices.filter { it.gender == Gender.MALE }
-                        // Note: You could also handle Gender.UNKNOWN here if needed
 
                         Text("Choose a Speaker", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                         Spacer(modifier = Modifier.height(16.dp))
@@ -104,7 +90,6 @@ fun SettingsScreen(
                         Column {
                             VoiceCategoryDropdownHeader(
                                     title = "Female Voices",
-                                    // Show selected name if it's a female voice
                                     selectedVoiceName = if (pendingSelectedVoice?.gender == Gender.FEMALE) pendingSelectedVoice.friendlyName else null,
                                     isExpanded = isFemaleExpanded,
                                     onClick = { isFemaleExpanded = !isFemaleExpanded; isMaleExpanded = false }
@@ -113,14 +98,14 @@ fun SettingsScreen(
                             AnimatedVisibility(visible = isFemaleExpanded) {
                                 Column(modifier = Modifier.padding(start = 16.dp)) {
                                     femaleVoices.forEach { voice ->
+                                        // --- MODIFICATION 1: onClick no longer closes the dropdown ---
                                         VoiceSelectionRow(
                                                 voice = voice,
                                                 isSelected = pendingSelectedVoice?.id == voice.id,
                                                 onClick = {
                                                     viewModel.onPendingVoiceSelect(voice)
-                                                    // Collapse both dropdowns after selection
-                                                    isFemaleExpanded = false
-                                                    isMaleExpanded = false
+                                                    // The dropdown now remains open for further processing.
+                                                    // The user can close it via the chevron or by opening the other dropdown.
                                                 }
                                         )
                                     }
@@ -136,7 +121,6 @@ fun SettingsScreen(
                         Column {
                             VoiceCategoryDropdownHeader(
                                     title = "Male Voices",
-                                    // Show selected name if it's a male voice
                                     selectedVoiceName = if (pendingSelectedVoice?.gender == Gender.MALE) pendingSelectedVoice.friendlyName else null,
                                     isExpanded = isMaleExpanded,
                                     onClick = { isMaleExpanded = !isMaleExpanded; isFemaleExpanded = false }
@@ -145,14 +129,13 @@ fun SettingsScreen(
                             AnimatedVisibility(visible = isMaleExpanded) {
                                 Column(modifier = Modifier.padding(start = 16.dp)) {
                                     maleVoices.forEach { voice ->
+                                        // --- MODIFICATION 2: onClick no longer closes the dropdown ---
                                         VoiceSelectionRow(
                                                 voice = voice,
                                                 isSelected = pendingSelectedVoice?.id == voice.id,
                                                 onClick = {
                                                     viewModel.onPendingVoiceSelect(voice)
-                                                    // Collapse both dropdowns after selection
-                                                    isFemaleExpanded = false
-                                                    isMaleExpanded = false
+                                                    // The dropdown now remains open.
                                                 }
                                         )
                                     }
@@ -160,13 +143,10 @@ fun SettingsScreen(
                             }
                         }
                     }
-                    // --- END OF MODIFIED SPEAKER SELECTION UI ---
-
                     SheetContent.Hidden -> {}
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
-                // Save/Cancel buttons remain unchanged
                 Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.End)
@@ -181,7 +161,7 @@ fun SettingsScreen(
             }
         }
     }
-    // The Main Screen Content (LazyColumn) remains unchanged.
+    // Main Screen Content
     LazyColumn(
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(vertical = 16.dp)
@@ -199,7 +179,6 @@ fun SettingsScreen(
             SettingsActionItem(
                     icon = Icons.Default.School,
                     title = "Change Exam",
-                    // Use displayName from the full ExamDetails object for a better UI
                     currentValue = uiState.availableExams.find { it.json == uiState.currentExamName }?.displayName ?: uiState.currentExamName,
                     onClick = { viewModel.onSettingClicked(SheetContent.ExamSelection) }
             )
@@ -216,9 +195,7 @@ fun SettingsScreen(
     }
 }
 
-// The helper composables below remain unchanged. Their `onClick` and `isSelected`
-// props are controlled by the parent, so they work perfectly with the new logic.
-
+// Helper Composables (unchanged)
 @Composable
 private fun SectionHeader(title: String) {
     Text(
@@ -282,7 +259,7 @@ private fun ExamSelectionRow(
                 .padding(vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = exam.displayName, modifier = Modifier.weight(1f), fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal)
+        Text(text = "${exam.displayName}", modifier = Modifier.weight(1f), fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal)
         if (isSelected) {
             Icon(imageVector = Icons.Default.Check, contentDescription = "Selected", tint = MaterialTheme.colorScheme.primary)
         }
@@ -316,51 +293,6 @@ private fun VoiceSelectionRow(
     }
 }
 @Composable
-private fun ExpandableVoiceHeaderObsolete(
-    voice: VoiceOption,
-    isExpanded: Boolean,
-    onClick: () -> Unit
-) {
-    val rotationAngle by animateFloatAsState(targetValue = if (isExpanded) 180f else 0f)
-
-    Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable(onClick = onClick)
-                .padding(vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically
-    ) {
-        // Voice name and gender in parentheses
-        Text(
-                text = "${voice.friendlyName} (${voice.gender.name.lowercase().replaceFirstChar { it.titlecase() }})",
-                modifier = Modifier.weight(1f),
-                style = MaterialTheme.typography.bodyLarge,
-                fontWeight = FontWeight.Bold
-        )
-        // The rotating arrow icon
-        Icon(
-                imageVector = Icons.Default.KeyboardArrowDown,
-                contentDescription = "Expand or collapse voice selection",
-                modifier = Modifier.rotate(rotationAngle),
-                tint = MaterialTheme.colorScheme.primary
-        )
-    }
-}
-
-// --- NEW COMPOSABLE 2: A simple header for gender groups ---
-@Composable
-private fun GenderHeaderObsolete(genderName: String) {
-    Text(
-            text = genderName,
-            style = MaterialTheme.typography.labelLarge,
-            fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 8.dp, horizontal = 4.dp)
-    )
-}
-@Composable
 private fun VoiceCategoryDropdownHeader(
     title: String,
     selectedVoiceName: String?,
@@ -382,7 +314,6 @@ private fun VoiceCategoryDropdownHeader(
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.primary
             )
-            // Show the selected name underneath the title, or a placeholder
             Text(
                     text = selectedVoiceName ?: "Tap to select",
                     style = MaterialTheme.typography.bodyLarge,
@@ -396,3 +327,13 @@ private fun VoiceCategoryDropdownHeader(
         )
     }
 }
+
+// Obsolete composables can be removed if you wish
+@Composable
+private fun ExpandableVoiceHeaderObsolete(
+    voice: VoiceOption,
+    isExpanded: Boolean,
+    onClick: () -> Unit
+) {}
+@Composable
+private fun GenderHeaderObsolete(genderName: String) {}

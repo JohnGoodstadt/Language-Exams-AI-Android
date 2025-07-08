@@ -95,11 +95,11 @@ class SearchViewModel @Inject constructor(
         if (_playbackState.value is PlaybackState.Playing) return
 
         viewModelScope.launch {
-            val uniqueSentenceId = generateUniqueSentenceId(searchResult.word, searchResult.word.sentences.first())
+            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+            val uniqueSentenceId = generateUniqueSentenceId(searchResult.word, searchResult.word.sentences.first(),currentVoiceName)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
             // Use .first() to get the most recent value from the Flow
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val currentLanguageCode = LanguageConfig.languageCode
 
             val result = vocabRepository.playTextToSpeech(

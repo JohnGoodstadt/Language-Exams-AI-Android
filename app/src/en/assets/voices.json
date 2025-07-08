@@ -41,34 +41,34 @@
 	},
 	{
 		"id": "en-GB-Neural2-B",
-		"friendlyName": "Oliver", "gender": 0
+		"friendlyName": "Oliver", "gender": 1
 	},
 	{
 		"id": "en-GB-Neural2-D",
-		"friendlyName": "George", "gender": 0
+		"friendlyName": "George", "gender": 1
 	},
 	{
 		"id": "en-GB-News-K",
-		"friendlyName": "Noah", "gender": 0
+		"friendlyName": "Noah", "gender": 1
 	},
 	{
 		"id": "en-GB-News-L",
-		"friendlyName": "Jack", "gender": 0
+		"friendlyName": "Jack", "gender": 1
 	},
 	{
 		"id": "en-GB-Standard-B",
-		"friendlyName": "Arthur", "gender": 0
+		"friendlyName": "Arthur", "gender": 1
 	},
 	{
 		"id": "en-GB-Standard-D",
-		"friendlyName": "Muhammad", "gender": 0
+		"friendlyName": "Muhammad", "gender": 1
 	},
 	{
-		"id":s "en-GB-Wavenet-B",
-		"friendlyName": "Charlie", "gender": 0
+		"id": "en-GB-Wavenet-B",
+		"friendlyName": "Charlie", "gender": 1
 	},
 	{
 		"id": "en-GB-Wavenet-D",
-		"friendlyName": "John", "gender": 0
+		"friendlyName": "John", "gender": 1
 	}
 ]

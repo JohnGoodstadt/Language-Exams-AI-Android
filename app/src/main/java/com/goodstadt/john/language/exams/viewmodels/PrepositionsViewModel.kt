@@ -64,7 +64,8 @@ class PrepositionsViewModel @Inject constructor(
         if (_playbackState.value is PlaybackState.Playing) return
 
         viewModelScope.launch {
-            val uniqueSentenceId = generateUniqueSentenceId(word, sentence)
+            val googleVoice = "en-GB-Neural2-C"
+            val uniqueSentenceId = generateUniqueSentenceId(word, sentence,googleVoice)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
             // Use .first() to get the most recent value from the Flow

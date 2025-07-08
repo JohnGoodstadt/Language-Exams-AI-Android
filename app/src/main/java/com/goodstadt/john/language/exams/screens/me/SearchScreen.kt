@@ -41,7 +41,8 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
         LazyColumn(modifier = Modifier.fillMaxSize().padding(top = 8.dp)) {
             items(searchResults, key = { "${it.word.id}-${it.word.word}" }) { result ->
                 val displayData = buildSentenceParts(result.word, result.word.sentences.first())
-                val uniqueSentenceId = generateUniqueSentenceId(result.word, result.word.sentences.first())
+                val googleVoice = "en-GB-Neural2-C"
+                val uniqueSentenceId = generateUniqueSentenceId(result.word, result.word.sentences.first(),googleVoice)
 
                 val isPlaying = playbackState is PlaybackState.Playing &&
                         (playbackState as PlaybackState.Playing).sentenceId == uniqueSentenceId
