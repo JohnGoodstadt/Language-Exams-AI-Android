@@ -114,4 +114,25 @@ class VocabRepository @Inject constructor(
                 }
         )
     }
+    /**
+     * Returns a list of 8 unique, randomly selected words from the full vocabulary.
+     * This is a more direct and efficient Kotlin equivalent of the provided Swift logic
+     * when working with a flat list of words.
+     *
+     * If the vocabulary isn't loaded, it returns a default list of words.
+     *
+     * @return A list of 8 random word strings.
+     */
+//    fun getShuffledWords(): List<String> {
+//        // The entire function can be a single return expression.
+//        return if (vocabCache.isNotEmpty()) {
+//            // 1. Shuffle the entire list of VocabWord objects.
+//            // 2. Take the first 8 elements from the shuffled list.
+//            // 3. Map the resulting List<VocabWord> to a List<String> by extracting the 'word' property.
+//            vocabCache[]..shuffled().take(8).map { it.word }
+//        } else {
+//            // Fallback case if the allWords list is empty.
+//            listOf("hello", "I", "Father", "red", "breakfast", "how")
+//        }
+//    }
 }

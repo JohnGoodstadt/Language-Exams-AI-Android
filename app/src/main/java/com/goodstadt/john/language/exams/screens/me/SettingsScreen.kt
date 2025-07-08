@@ -20,6 +20,7 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.data.VoiceOption
@@ -53,14 +54,16 @@ fun SettingsScreen(
                 onDismissRequest = { viewModel.hideBottomSheet() },
                 sheetState = sheetState
         ) {
+            // --- CHANGE 1: Adjust padding to add more space at the bottom ---
             Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(16.dp),
+                        .padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 24.dp), // More bottom padding
                     horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 when (sheetContent) {
                     SheetContent.ExamSelection -> {
+                        // This part remains the same
                         Text("Choose an Exam Level", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                         Spacer(modifier = Modifier.height(16.dp))
                         LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
@@ -75,11 +78,12 @@ fun SettingsScreen(
                     }
 
                     SheetContent.SpeakerSelection -> {
+                        // This part remains the same, as the centering logic is moved
+                        // into the VoiceCategoryDropdownHeader composable itself.
                         var isFemaleExpanded by remember { mutableStateOf(false) }
                         var isMaleExpanded by remember { mutableStateOf(false) }
 
                         val pendingSelectedVoice = uiState.pendingSelectedVoice
-
                         val femaleVoices = uiState.availableVoices.filter { it.gender == Gender.FEMALE }
                         val maleVoices = uiState.availableVoices.filter { it.gender == Gender.MALE }
 
@@ -94,19 +98,13 @@ fun SettingsScreen(
                                     isExpanded = isFemaleExpanded,
                                     onClick = { isFemaleExpanded = !isFemaleExpanded; isMaleExpanded = false }
                             )
-
                             AnimatedVisibility(visible = isFemaleExpanded) {
                                 Column(modifier = Modifier.padding(start = 16.dp)) {
                                     femaleVoices.forEach { voice ->
-                                        // --- MODIFICATION 1: onClick no longer closes the dropdown ---
                                         VoiceSelectionRow(
                                                 voice = voice,
                                                 isSelected = pendingSelectedVoice?.id == voice.id,
-                                                onClick = {
-                                                    viewModel.onPendingVoiceSelect(voice)
-                                                    // The dropdown now remains open for further processing.
-                                                    // The user can close it via the chevron or by opening the other dropdown.
-                                                }
+                                                onClick = { viewModel.onPendingVoiceSelect(voice) }
                                         )
                                     }
                                 }
@@ -125,18 +123,13 @@ fun SettingsScreen(
                                     isExpanded = isMaleExpanded,
                                     onClick = { isMaleExpanded = !isMaleExpanded; isFemaleExpanded = false }
                             )
-
                             AnimatedVisibility(visible = isMaleExpanded) {
                                 Column(modifier = Modifier.padding(start = 16.dp)) {
                                     maleVoices.forEach { voice ->
-                                        // --- MODIFICATION 2: onClick no longer closes the dropdown ---
                                         VoiceSelectionRow(
                                                 voice = voice,
                                                 isSelected = pendingSelectedVoice?.id == voice.id,
-                                                onClick = {
-                                                    viewModel.onPendingVoiceSelect(voice)
-                                                    // The dropdown now remains open.
-                                                }
+                                                onClick = { viewModel.onPendingVoiceSelect(voice) }
                                         )
                                     }
                                 }
@@ -147,9 +140,11 @@ fun SettingsScreen(
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
+                // --- CHANGE 2: Center the buttons ---
                 Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.End)
+                        // Change Arrangement.End to Arrangement.CenterHorizontally
+                        horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally)
                 ) {
                     OutlinedButton(onClick = { viewModel.hideBottomSheet() }) {
                         Text("Cancel")
@@ -158,6 +153,7 @@ fun SettingsScreen(
                         Text("Save")
                     }
                 }
+                Spacer(modifier = Modifier.height(12.dp)) //extra space below buttons
             }
         }
     }
@@ -259,9 +255,18 @@ private fun ExamSelectionRow(
                 .padding(vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(text = "${exam.displayName}", modifier = Modifier.weight(1f), fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal)
+        Text(
+                text = exam.displayName,
+                modifier = Modifier.weight(1f),
+                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                textAlign = TextAlign.Center // <-- ADD THIS LINE TO CENTER THE TEXT
+        )
         if (isSelected) {
-            Icon(imageVector = Icons.Default.Check, contentDescription = "Selected", tint = MaterialTheme.colorScheme.primary)
+            Icon(
+                    imageVector = Icons.Default.Check,
+                    contentDescription = "Selected",
+                    tint = MaterialTheme.colorScheme.primary
+            )
         }
     }
 }
@@ -292,6 +297,7 @@ private fun VoiceSelectionRow(
         }
     }
 }
+
 @Composable
 private fun VoiceCategoryDropdownHeader(
     title: String,
@@ -308,7 +314,12 @@ private fun VoiceCategoryDropdownHeader(
                 .padding(vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
     ) {
-        Column(modifier = Modifier.weight(1f)) {
+        // --- CHANGE 3: Center the text content ---
+        Column(
+                modifier = Modifier.weight(1f),
+                // Add this line to center the text elements inside the column
+                horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             Text(
                     text = title,
                     style = MaterialTheme.typography.labelLarge,

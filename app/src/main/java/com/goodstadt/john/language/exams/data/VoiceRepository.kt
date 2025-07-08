@@ -55,7 +55,7 @@ class VoiceRepository @Inject constructor(
             val voices = jsonParser.decodeFromString<List<VoiceInfo>>(jsonString)
                 .map { voiceInfo ->
                     // Now you have access to the strongly-typed enum!
-                    println("Parsed ${voiceInfo.friendlyName} with gender ${voiceInfo.gender}")
+                    //println("Parsed ${voiceInfo.friendlyName} with gender ${voiceInfo.gender}")
                     VoiceOption(voiceInfo.id, voiceInfo.friendlyName, voiceInfo.gender)
                 }
 
