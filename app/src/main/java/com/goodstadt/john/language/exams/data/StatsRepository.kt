@@ -1,17 +1,36 @@
 package com.goodstadt.john.language.exams.data // Or wherever your repositories live
 
+import com.goodstadt.john.language.exams.models.WordAndSentence
+import com.goodstadt.john.language.exams.models.WordHistory
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.SetOptions
 import kotlinx.coroutines.tasks.await
+import java.util.Date
 import javax.inject.Inject
 import javax.inject.Singleton
+
+
 
 @Singleton
 class StatsRepository @Inject constructor(
     private val firestore: FirebaseFirestore
 ) {
 
+    private companion object fb {
+        const val words = "words"
+        const val users = "users"
+        const val sentenceCount = "sentenceCount"
+        const val timestamp = "timestamp"
+        const val wordCount = "wordCount"
+
+    }
+    private object fb2 {
+        const val words = "words"
+        const val users = "users"
+    }
     /**
      * Increments the "play count" for a specific vocabulary word.
      * @param uid The ID of the currently logged-in user.
@@ -33,7 +52,65 @@ class StatsRepository @Inject constructor(
             Result.failure(e)
         }
     }
+    fun fsUpdateSentenceHistoryIncCount(
+        wordAndSentence: WordAndSentence,
+        count: Int = 1
+    ) {
+        val auth = FirebaseAuth.getInstance()
+        val firestore = FirebaseFirestore.getInstance()
 
+        val currentUser = auth.currentUser
+            ?: return // User is not authenticated
+
+        val itemRef = firestore.collection(fb.users)
+            .document(currentUser.uid)
+            .collection(fb.words)
+            .document(wordAndSentence.word)
+
+        // Update the Firestore document
+        itemRef.update(
+            mapOf(
+                sentenceCount to FieldValue.increment(count.toLong()),
+                wordCount to FieldValue.increment(count.toLong()),
+                timestamp to Date()
+            )
+        ).addOnFailureListener { exception ->
+            println("Error updating field: ${exception.message}")
+
+            // Check if the error is due to a missing document (Firestore error code 5)
+            if ((exception as? FirebaseFirestoreException)?.code == FirebaseFirestoreException.Code.NOT_FOUND) {
+                fsCreateWordHistoryDoc(wordAndSentence)
+            }
+        }
+    }
+    fun fsCreateWordHistoryDoc(words: WordAndSentence) {
+        val auth = FirebaseAuth.getInstance()
+        val firestore = FirebaseFirestore.getInstance()
+
+        val uid = auth.currentUser?.uid
+        if (uid == null) {
+            return // User is not authenticated
+        }
+
+        // Create the WordHistory object
+        val wordHistoryDoc = WordHistory(
+            word = words.word,
+            sentence = words.sentence,
+            wordCount = 1,
+            sentenceCount = 1,
+            timestamp = Date()
+        )
+
+        // Save the data to Firestore
+        firestore.collection(fb.users)
+            .document(uid)
+            .collection(fb.words)
+            .document(words.word)
+            .set(wordHistoryDoc)
+            .addOnFailureListener { exception ->
+                println("Error writing document: ${exception.message}")
+            }
+    }
     /**
      * Records that a user has completed an exam.
      */

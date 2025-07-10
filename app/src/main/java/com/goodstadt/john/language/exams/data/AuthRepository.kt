@@ -23,17 +23,24 @@ import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
 
-object fb {
-    const val users = "users"
-    const val lastActivityDate = "lastActivityDate"
-    const val activityDays = "activityDays"
-}
+
 @Singleton
 class AuthRepository @Inject constructor(
     private val auth: FirebaseAuth,
     private val firestore: FirebaseFirestore
 ) {
 
+    private object fb {
+        const val users = "users"
+        const val lastActivityDate = "lastActivityDate"
+        const val activityDays = "activityDays"
+        const val isAnon = "isAnon"
+        const val email = "email"
+        const val isEmailVerified = "isEmailVerified"
+        const val languageCode = "languageCode"
+        const val regionCode = "regionCode"
+        const val version = "version"
+    }
     /**
      * A Flow that emits the current user, or null if logged out.
      * The UI layer can collect this to react to auth state changes.
@@ -156,6 +163,14 @@ class AuthRepository @Inject constructor(
                 }else {
 //                    updateLastLoginTimestamp(user.uid)
                     fsUpdateUserActivityProperty()
+                    fsUpdateUserMainStats(
+                        property1 = fb.languageCode,
+                        value1 =  Locale.getDefault().language,
+                        property2 = fb.regionCode,
+                        value2 = Locale.getDefault().country,
+                        property3 = fb.version,
+                        value3 = BuildConfig.VERSION_NAME
+                    )
                 }
 
                 Result.success(user)
@@ -222,6 +237,44 @@ class AuthRepository @Inject constructor(
         itemRef.update(updates)
             .addOnFailureListener { e ->
                 println("Error updating field ${fb.lastActivityDate}: $e")
+                if (e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.NOT_FOUND) {
+                    val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+                    applicationScope.launch {
+                        fsCreateUserDoc()
+                    }
+                }
+            }
+    }
+    suspend fun <T, U, V> fsUpdateUserMainStats(
+        property1: String,
+        value1: T,
+        property2: String,
+        value2: U,
+        property3: String,
+        value3: V
+    ) {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+        val isAnon = currentUser.isAnonymous
+        val email = currentUser.email ?: "unknown"
+        val isEmailVerified = currentUser.isEmailVerified
+
+        val db = FirebaseFirestore.getInstance()
+        val itemRef = db.collection(fb.users).document(currentUser.uid)
+
+        val updates = mapOf(
+            property1 to value1,
+            property2 to value2,
+            property3 to value3,
+            fb.isAnon to isAnon,
+            fb.email to email,
+            fb.isEmailVerified to isEmailVerified
+        )
+
+        itemRef.update(updates)
+            .addOnFailureListener { e ->
+                // Handle failure
+
                 if (e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.NOT_FOUND) {
                     val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
                     applicationScope.launch {
