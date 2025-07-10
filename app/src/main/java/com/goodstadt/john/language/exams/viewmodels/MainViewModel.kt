@@ -30,7 +30,7 @@ class MainViewModel @Inject constructor(
 
     init {
         // When the ViewModel is created (on app start), trigger the sign-in check.
-        performAnonymousSignIn()
+       // performAnonymousSignIn()
     }
 
     private fun performAnonymousSignIn() {
@@ -41,7 +41,7 @@ class MainViewModel @Inject constructor(
                 _currentUser.value = user
                 _authState.value = AuthState.SIGNED_IN
                 // Optional: Save a record to Firestore after successful sign-in
-                authRepository.saveUserRecord(user)
+                authRepository.fsCreateUserDoc()
             } else {
                 _authState.value = AuthState.ERROR
             }

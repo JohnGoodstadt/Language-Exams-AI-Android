@@ -1,14 +1,33 @@
 package com.goodstadt.john.language.exams.data // Or wherever your repositories live
 
+import android.os.Build
+import android.util.Log
+import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.models.UserFirebase
+import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.SetOptions
+import com.google.firebase.firestore.firestore
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
 
+object fb {
+    const val users = "users"
+    const val lastActivityDate = "lastActivityDate"
+    const val activityDays = "activityDays"
+}
 @Singleton
 class AuthRepository @Inject constructor(
     private val auth: FirebaseAuth,
@@ -47,7 +66,7 @@ class AuthRepository @Inject constructor(
      * Example of how to expand your "library" for Firestore.
      * Saves or updates a user record in a 'users' collection.
      */
-    suspend fun saveUserRecord(user: FirebaseUser) {
+    suspend fun fsCreateUserDocObsolete(user: FirebaseUser) {
         try {
             val userRecord = mapOf(
                 "uid" to user.uid,
@@ -61,6 +80,53 @@ class AuthRepository @Inject constructor(
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+    // region Create Functions
+
+    suspend fun fsCreateUserDoc(user: UserFirebase) {
+        val db = Firebase.firestore
+        try {
+            db.collection(fb.users).document(user.UID)
+                .set(user)
+                .await()
+        } catch (e: Exception) {
+            Log.e("Firebase Library", e.localizedMessage, e)
+
+        }
+    }
+    suspend fun fsCreateUserDoc() {
+
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+        val user = UserFirebase(id = currentUser?.uid ?: "",
+            UID = currentUser?.uid ?: "",
+            name = currentUser?.displayName ?: "",
+            spokenName = "",
+            loggedIn = true,
+            isAnon = true,
+            provider = currentUser?.providerId ?: "",
+            providerCompany = "",
+            email = currentUser?.email ?: "unknown",
+            platform = "android",
+            version = BuildConfig.VERSION_NAME,
+            isEmailVerified = currentUser.isEmailVerified ?: false,
+            lastUpdateDate = Date(),
+            lastLoggedInDate = Date(),
+            lastLoggedOutDate = Date(),
+            lastActivityDate = Date(),
+            languageCode = Locale.getDefault().language,
+            regionCode = Locale.getDefault().country,
+            deviceManufacturer = Build.MANUFACTURER,
+            deviceModel = Build.MODEL,
+            deviceBrand = Build.BRAND,
+            deviceProduct = Build.PRODUCT,
+            deviceHardware = Build.HARDWARE,
+            deviceBoard = Build.BOARD,
+            createdAt = Date()
+        )
+
+        fsCreateUserDoc(user)
+
     }
     /**
      * The main entry point for user session handling.
@@ -77,11 +143,21 @@ class AuthRepository @Inject constructor(
                 val newUser = auth.signInAnonymously().await().user
                     ?: throw IllegalStateException("Firebase returned a null user after anonymous sign-in.")
 
-                createUserRecord(newUser)
+//                createUserRecord(newUser)
+                fsCreateUserDoc()
                 Result.success(newUser)
             } else {
                 // CASE 2: RETURNING USER - Just update the timestamp
-                updateLastLoginTimestamp(user.uid)
+                if (false && BuildConfig.DEBUG) { //Just for JG 10 July 2025
+                    val exists = fsDoesUserExist()
+                    if (exists == false){
+                        fsCreateUserDoc()
+                    }
+                }else {
+//                    updateLastLoginTimestamp(user.uid)
+                    fsUpdateUserActivityProperty()
+                }
+
                 Result.success(user)
             }
         } catch (e: Exception) {
@@ -93,7 +169,7 @@ class AuthRepository @Inject constructor(
      * Creates the initial user document in Firestore.
      * Called only once when a new anonymous user is created.
      */
-    private suspend fun createUserRecord(user: FirebaseUser) {
+    private suspend fun createUserRecordObsolete(user: FirebaseUser) {
         val userRecord = mapOf(
             "uid" to user.uid,
             "isAnonymous" to true,
@@ -106,10 +182,52 @@ class AuthRepository @Inject constructor(
      * Updates the 'lastLoginAt' field for an existing user.
      * Called every time a returning user opens the app.
      */
-    private suspend fun updateLastLoginTimestamp(uid: String) {
+    private suspend fun updateLastLoginTimestampObsolete(uid: String) {
         val timestampUpdate = mapOf(
             "lastLoginAt" to FieldValue.serverTimestamp() // Best practice: use server time
         )
         firestore.collection("users").document(uid).update(timestampUpdate).await()
+    }
+    suspend fun fsDoesUserExist(): Boolean {
+        val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return false
+
+        return try {
+            val snapshot = FirebaseFirestore.getInstance()
+                .collection(fb.users) // Replace with your actual collection name
+                .document(uid)
+                .get()
+                .await()
+            snapshot.exists()
+        } catch (e: Exception) {
+            // Handle the exception, e.g., log it
+            println(e)
+            false
+        }
+    }
+    private fun fsUpdateUserActivityProperty() {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+        val date = Date()
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val today = dateFormat.format(date)
+
+        val db = FirebaseFirestore.getInstance()
+        val itemRef = db.collection(fb.users).document(currentUser.uid)
+
+        val updates = mapOf(
+            fb.lastActivityDate to date,
+            fb.activityDays to FieldValue.arrayUnion(today)
+        )
+
+        itemRef.update(updates)
+            .addOnFailureListener { e ->
+                println("Error updating field ${fb.lastActivityDate}: $e")
+                if (e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.NOT_FOUND) {
+                    val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+                    applicationScope.launch {
+                        fsCreateUserDoc()
+                    }
+                }
+            }
     }
 }
