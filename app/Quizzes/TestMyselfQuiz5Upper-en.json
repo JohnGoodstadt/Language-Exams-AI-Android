@@ -1,0 +1,206 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz5Upper-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 77,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (write/right/rite) \u2014 B1/B2 level.",
+					"explain": "Correct usage of the word 'write' in a sentence.",
+					"words": [
+						{
+							"word": "Please write your name here.",
+							"ok": true
+						},
+						{
+							"word": "Please right your name here.",
+							"ok": false
+						},
+						{
+							"word": "Please rite your name here.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 78,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (write/right/rite) \u2014 B1/B2 level.",
+					"explain": "Correct usage of the word 'right' in a sentence.",
+					"words": [
+						{
+							"word": "Turn right at the next corner.",
+							"ok": true
+						},
+						{
+							"word": "Turn write at the next corner.",
+							"ok": false
+						},
+						{
+							"word": "Turn rite at the next corner.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 79,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (write/right/rite) \u2014 B1/B2 level.",
+					"explain": "Correct usage of the word 'rite' in a sentence.",
+					"words": [
+						{
+							"word": "The tribe performed a sacred rite.",
+							"ok": true
+						},
+						{
+							"word": "The tribe performed a sacred right.",
+							"ok": false
+						},
+						{
+							"word": "The tribe performed a sacred write.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 95,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (capital/capitol/cattle) \u2014 B1/B2 level.",
+					"explain": "Correct usage of the word 'capital' in a sentence.",
+					"words": [
+						{
+							"word": "Paris is the capital of France.",
+							"ok": true
+						},
+						{
+							"word": "Paris is the capitol of France.",
+							"ok": false
+						},
+						{
+							"word": "Paris is the cattle of France.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 96,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (capital/capitol/cattle) \u2014 B1/B2 level.",
+					"explain": "Correct usage of the word 'capitol' in a sentence.",
+					"words": [
+						{
+							"word": "The capitol building was surrounded by tourists.",
+							"ok": true
+						},
+						{
+							"word": "The capital building was surrounded by tourists.",
+							"ok": false
+						},
+						{
+							"word": "The cattle building was surrounded by tourists.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 97,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (capital/capitol/cattle) \u2014 B1/B2 level.",
+					"explain": "Correct usage of the word 'cattle' in a sentence.",
+					"words": [
+						{
+							"word": "The farmer owns many cattle on his ranch.",
+							"ok": true
+						},
+						{
+							"word": "The farmer owns many capital on his ranch.",
+							"ok": false
+						},
+						{
+							"word": "The farmer owns many capitol on his ranch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 98,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (vain/vein/vane) \u2014 B1/B2 level.",
+					"explain": "Correct usage of the word 'vain' in a sentence.",
+					"words": [
+						{
+							"word": "She is too vain about her looks.",
+							"ok": true
+						},
+						{
+							"word": "She is too vein about her looks.",
+							"ok": false
+						},
+						{
+							"word": "She is too vane about her looks.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 99,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (vain/vein/vane) \u2014 B1/B2 level.",
+					"explain": "Correct usage of the word 'vein' in a sentence.",
+					"words": [
+						{
+							"word": "The nurse found a vein to insert the needle.",
+							"ok": true
+						},
+						{
+							"word": "The nurse found a vain to insert the needle.",
+							"ok": false
+						},
+						{
+							"word": "The nurse found a vane to insert the needle.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 100,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (vain/vein/vane) \u2014 B1/B2 level.",
+					"explain": "Correct usage of the word 'vane' in a sentence.",
+					"words": [
+						{
+							"word": "The wind vane shows which direction the wind blows.",
+							"ok": true
+						},
+						{
+							"word": "The wind vein shows which direction the wind blows.",
+							"ok": false
+						},
+						{
+							"word": "The wind vain shows which direction the wind blows.",
+							"ok": false
+						}
+					]
+				}
+				
+			]
+		}
+	]
+}
+

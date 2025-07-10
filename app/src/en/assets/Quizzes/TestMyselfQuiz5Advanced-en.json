@@ -1,0 +1,206 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz5Advanced-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,
+			
+			"sections": [
+				{
+					"title": "",
+					"page": 80,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (air/heir/err) \u2014 C1+ level.",
+					"explain": "Correct usage of the word 'air' in a sentence.",
+					"words": [
+						{
+							"word": "I opened the window to let in some fresh air.",
+							"ok": true
+						},
+						{
+							"word": "I opened the window to let in some fresh heir.",
+							"ok": false
+						},
+						{
+							"word": "I opened the window to let in some fresh err.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 81,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (air/heir/err) \u2014 C1+ level.",
+					"explain": "Correct usage of the word 'heir' in a sentence.",
+					"words": [
+						{
+							"word": "He is the heir to the throne.",
+							"ok": true
+						},
+						{
+							"word": "He is the air to the throne.",
+							"ok": false
+						},
+						{
+							"word": "He is the err to the throne.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 82,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (air/heir/err) \u2014 C1+ level.",
+					"explain": "Correct usage of the word 'err' in a sentence.",
+					"words": [
+						{
+							"word": "To err is human, to forgive divine.",
+							"ok": true
+						},
+						{
+							"word": "To air is human, to forgive divine.",
+							"ok": false
+						},
+						{
+							"word": "To heir is human, to forgive divine.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 101,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (cue/queue/kew) \u2014 C1+ level.",
+					"explain": "Correct usage of the word 'cue' in a sentence.",
+					"words": [
+						{
+							"word": "That was your cue to enter the stage.",
+							"ok": true
+						},
+						{
+							"word": "That was your queue to enter the stage.",
+							"ok": false
+						},
+						{
+							"word": "That was your kew to enter the stage.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 102,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (cue/queue/kew) \u2014 C1+ level.",
+					"explain": "Correct usage of the word 'queue' in a sentence.",
+					"words": [
+						{
+							"word": "We had to wait in a long queue for tickets.",
+							"ok": true
+						},
+						{
+							"word": "We had to wait in a long cue for tickets.",
+							"ok": false
+						},
+						{
+							"word": "We had to wait in a long kew for tickets.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 103,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (cue/queue/kew) \u2014 C1+ level.",
+					"explain": "Correct usage of the word 'kew' in a sentence.",
+					"words": [
+						{
+							"word": "Kew Gardens is a famous botanical garden in London.",
+							"ok": true
+						},
+						{
+							"word": "Queue Gardens is a famous botanical garden in London.",
+							"ok": false
+						},
+						{
+							"word": "Cue Gardens is a famous botanical garden in London.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 104,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (cite/site/sight) \u2014 C1+ level.",
+					"explain": "Correct usage of the word 'cite' in a sentence.",
+					"words": [
+						{
+							"word": "The professor will cite several sources in her article.",
+							"ok": true
+						},
+						{
+							"word": "The professor will site several sources in her article.",
+							"ok": false
+						},
+						{
+							"word": "The professor will sight several sources in her article.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 105,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (cite/site/sight) \u2014 C1+ level.",
+					"explain": "Correct usage of the word 'site' in a sentence.",
+					"words": [
+						{
+							"word": "The construction site is off-limits to visitors.",
+							"ok": true
+						},
+						{
+							"word": "The construction cite is off-limits to visitors.",
+							"ok": false
+						},
+						{
+							"word": "The construction sight is off-limits to visitors.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 106,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (cite/site/sight) \u2014 C1+ level.",
+					"explain": "Correct usage of the word 'sight' in a sentence.",
+					"words": [
+						{
+							"word": "The mountain view was a breathtaking sight.",
+							"ok": true
+						},
+						{
+							"word": "The mountain view was a breathtaking site.",
+							"ok": false
+						},
+						{
+							"word": "The mountain view was a breathtaking cite.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

@@ -1,0 +1,136 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz3Upper-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,			
+			"sections": [
+				{
+					"title": "",
+					"page": 21,
+					"sentence": "",
+					"summary": "Teaching Focus: Inversion after negative adverbials.",
+					"explain": "Fronted adverbial: Never. Verb: have I seen. Object: such chaos.",
+					"words": [
+						{"word": "Never have I seen such chaos.", "ok": true},
+						{"word": "I never have seen such chaos.", "ok": false},
+						{"word": "Never I have seen such chaos.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 22,
+					"sentence": "",
+					"summary": "Teaching Focus: Cleft sentence for emphasis.",
+					"explain": "Cleft structure: It was her kindness. Relative clause: that impressed me.",
+					"words": [
+						{"word": "It was her kindness that impressed me.", "ok": true},
+						{"word": "Her kindness was it that impressed me.", "ok": false},
+						{"word": "It that impressed me was her kindness.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 23,
+					"sentence": "",
+					"summary": "Teaching Focus: Mixed conditional (past condition + present result).",
+					"explain": "If-clause: If I had taken the job. Main clause: I would be living in Paris now.",
+					"words": [
+						{"word": "If I had taken the job, I would be living in Paris now.", "ok": true},
+						{"word": "If I would have taken the job, I would live in Paris now.", "ok": false},
+						{"word": "If I took the job, I would have been living in Paris.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 24,
+					"sentence": "",
+					"summary": "Teaching Focus: Participle clause for cause.",
+					"explain": "Participle clause: Being tired. Main clause: he went to bed early.",
+					"words": [
+						{"word": "Being tired, he went to bed early.", "ok": true},
+						{"word": "He being tired went to bed early.", "ok": false},
+						{"word": "He went being tired to bed early.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 25,
+					"sentence": "",
+					"summary": "Teaching Focus: Fronting for emphasis.",
+					"explain": "Fronted object: This issue. Verb: I want to discuss.",
+					"words": [
+						{"word": "This issue, I want to discuss.", "ok": true},
+						{"word": "I want to this issue discuss.", "ok": false},
+						{"word": "Discuss I want this issue.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 26,
+					"sentence": "",
+					"summary": "Teaching Focus: Modal verbs in the past (deduction).",
+					"explain": "Subject: She. Modal: must have forgotten. Object: the meeting.",
+					"words": [
+						{"word": "She must have forgotten the meeting.", "ok": true},
+						{"word": "She must has forgotten the meeting.", "ok": false},
+						{"word": "She must forgot the meeting.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 27,
+					"sentence": "",
+					"summary": "Teaching Focus: Subjunctive mood (formal expressions).",
+					"explain": "Expression: It is essential that. Clause: he be on time.",
+					"words": [
+						{"word": "It is essential that he be on time.", "ok": true},
+						{"word": "It is essential that he is on time.", "ok": false},
+						{"word": "It is essential he to be on time.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 28,
+					"sentence": "",
+					"summary": "Teaching Focus: Passive causative.",
+					"explain": "Structure: I had my car repaired. Passive causative for service performed by someone else.",
+					"words": [
+						{"word": "I had my car repaired.", "ok": true},
+						{"word": "I have repaired my car.", "ok": false},
+						{"word": "I got repaired my car.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 29,
+					"sentence": "",
+					"summary": "Teaching Focus: Defining relative clause with preposition.",
+					"explain": "Clause: The man to whom I spoke. Verb: was very polite.",
+					"words": [
+						{"word": "The man to whom I spoke was very polite.", "ok": true},
+						{"word": "The man whom I spoke to was very polite.", "ok": false},
+						{"word": "The man who I spoke was very polite.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 30,
+					"sentence": "",
+					"summary": "Teaching Focus: Emphasis using 'do'.",
+					"explain": "Emphasis: I do appreciate. Object: your support.",
+					"words": [
+						{"word": "I do appreciate your support.", "ok": true},
+						{"word": "Do I appreciate your support.", "ok": false},
+						{"word": "I appreciate do your support.", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}
+

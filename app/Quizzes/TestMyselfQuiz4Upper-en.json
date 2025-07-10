@@ -1,0 +1,186 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz4Upper-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 51,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (one/won) \u2014 B1 level.",
+					"explain": "Distinguishing between 'one' and 'won' in everyday usage.",
+					"words": [
+						{
+							"word": "She has one cat.",
+							"ok": true
+						},
+						{
+							"word": "She has won cat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 52,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (one/won) \u2014 B1 level.",
+					"explain": "Distinguishing between 'won' and 'one' in everyday usage.",
+					"words": [
+						{
+							"word": "He won the race.",
+							"ok": true
+						},
+						{
+							"word": "He one the race.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 53,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (would/wood) \u2014 B1 level.",
+					"explain": "Distinguishing between 'would' and 'wood' in everyday usage.",
+					"words": [
+						{
+							"word": "I would like a cup of tea.",
+							"ok": true
+						},
+						{
+							"word": "I wood like a cup of tea.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 54,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (would/wood) \u2014 B1 level.",
+					"explain": "Distinguishing between 'wood' and 'would' in everyday usage.",
+					"words": [
+						{
+							"word": "The table is made of wood.",
+							"ok": true
+						},
+						{
+							"word": "The table is made of would.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 55,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (allowed/aloud) \u2014 B1 level.",
+					"explain": "Distinguishing between 'allowed' and 'aloud' in everyday usage.",
+					"words": [
+						{
+							"word": "You are not allowed to smoke here.",
+							"ok": true
+						},
+						{
+							"word": "You are not aloud to smoke here.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 56,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (allowed/aloud) \u2014 B1 level.",
+					"explain": "Distinguishing between 'aloud' and 'allowed' in everyday usage.",
+					"words": [
+						{
+							"word": "Read the text aloud.",
+							"ok": true
+						},
+						{
+							"word": "Read the text allowed.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 57,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (meet/meat) \u2014 B1 level.",
+					"explain": "Distinguishing between 'meet' and 'meat' in everyday usage.",
+					"words": [
+						{
+							"word": "Let\u2019s meet at 5 PM.",
+							"ok": true
+						},
+						{
+							"word": "Let\u2019s meat at 5 PM.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 58,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (meet/meat) \u2014 B1 level.",
+					"explain": "Distinguishing between 'meat' and 'meet' in everyday usage.",
+					"words": [
+						{
+							"word": "I don't eat meat.",
+							"ok": true
+						},
+						{
+							"word": "I don't eat meet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 59,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (pail/pale) \u2014 B1 level.",
+					"explain": "Distinguishing between 'pail' and 'pale' in everyday usage.",
+					"words": [
+						{
+							"word": "He carried a pail of water.",
+							"ok": true
+						},
+						{
+							"word": "He carried a pale of water.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 60,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (pail/pale) \u2014 B1 level.",
+					"explain": "Distinguishing between 'pale' and 'pail' in everyday usage.",
+					"words": [
+						{
+							"word": "She looked pale and tired.",
+							"ok": true
+						},
+						{
+							"word": "She looked pail and tired.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

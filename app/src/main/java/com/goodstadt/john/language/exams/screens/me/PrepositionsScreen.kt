@@ -41,6 +41,7 @@ fun PrepositionsScreen(viewModel: PrepositionsViewModel = hiltViewModel()) {
             SectionedVocabList(
                     categories = state.categories,
                     playbackState = playbackState,
+                    googleVoice = state.selectedVoiceName,
                     onRowTapped = { word, sentence ->
                         viewModel.playTrack(word, sentence)
                     }

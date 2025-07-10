@@ -29,15 +29,15 @@
 					"sentences": [
 						{
 							"sentence": "I am going to the park.",
-							"translation": ""
+							"translation": "I go Park"
 						},
 						{
 							"sentence": "We are going to visit grandma.",
-							"translation": ""
+							"translation": "visit grandma"
 						},
 						{
 							"sentence": "He gave the book to her.",
-							"translation": ""
+							"translation": "gave book"
 						}
 					]
 				}

@@ -1,0 +1,146 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz1Upper-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "1",
+					"page": 1,
+					"sentence": "If she _ harder, she would have passed the exam.",
+					"summary": "Teaching Focus: Third conditional for hypothetical situations in the past.",
+					"explain": "Key Differences Addressed: Distinguishes between past perfect, simple past, and present tense in unreal past situations.",
+					"words": [
+						{"word": "studies", "ok": false},
+						{"word": "had studied", "ok": true},
+						{"word": "studied", "ok": false},
+						{"word": "study", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 2,
+					"sentence": "The book, _ I borrowed from the library, was fascinating.",
+					"summary": "Teaching Focus: Using relative pronouns correctly for defining clauses.",
+					"explain": "Key Differences Addressed: Distinguishes between 'that' for restrictive clauses and other relative pronouns.",
+					"words": [
+						{"word": "that", "ok": true},
+						{"word": "which", "ok": false},
+						{"word": "what", "ok": false},
+						{"word": "who", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 3,
+					"sentence": "I regret _ him about the problem so soon.",
+					"summary": "Teaching Focus: Verb patterns after 'regret'—gerund vs. infinitive.",
+					"explain": "Key Differences Addressed: Explains when 'regret + gerund' is used to describe past actions.",
+					"words": [
+						{"word": "to tell", "ok": false},
+						{"word": "telling", "ok": true},
+						{"word": "told", "ok": false},
+						{"word": "tell", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 4,
+					"sentence": "Despite _ tired, she managed to finish the project on time.",
+					"summary": "Teaching Focus: Using gerunds after 'despite' to show contrast.",
+					"explain": "Key Differences Addressed: Differentiates gerunds from infinitives in subordinate clauses.",
+					"words": [
+						{"word": "feeling", "ok": true},
+						{"word": "feel", "ok": false},
+						{"word": "felt", "ok": false},
+						{"word": "to feel", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 5,
+					"sentence": "By the time we arrived, the movie _ already.",
+					"summary": "Teaching Focus: Past perfect tense for actions completed before another past action.",
+					"explain": "Key Differences Addressed: Differentiates past perfect from simple past and progressive forms.",
+					"words": [
+						{"word": "has started", "ok": false},
+						{"word": "started", "ok": false},
+						{"word": "had started", "ok": true},
+						{"word": "was starting", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 6,
+					"sentence": "It’s high time he _ more responsible for his actions.",
+					"summary": "Teaching Focus: Using 'high time' followed by past simple to express urgency.",
+					"explain": "Key Differences Addressed: Highlights the correct tense after 'high time' to emphasize necessity.",
+					"words": [
+						{"word": "becomes", "ok": false},
+						{"word": "became", "ok": true},
+						{"word": "had become", "ok": false},
+						{"word": "will become", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 7,
+					"sentence": "He refused to admit _ wrong.",
+					"summary": "Teaching Focus: Gerunds as objects after verbs like 'admit.'",
+					"explain": "Key Differences Addressed: Highlights the use of gerunds to express actions as nouns.",
+					"words": [
+						{"word": "being", "ok": true},
+						{"word": "to be", "ok": false},
+						{"word": "been", "ok": false},
+						{"word": "be", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 8,
+					"sentence": "She was so tired that she _ asleep immediately.",
+					"summary": "Teaching Focus: Correct past tense form of irregular verbs.",
+					"explain": "Key Differences Addressed: Differentiates between regular and irregular past tense verb forms.",
+					"words": [
+						{"word": "fall", "ok": false},
+						{"word": "fell", "ok": true},
+						{"word": "had fallen", "ok": false},
+						{"word": "falls", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 9,
+					"sentence": "Hardly _ the plane landed when the storm began.",
+					"summary": "Teaching Focus: Inversion for emphasis with 'hardly.'",
+					"explain": "Key Differences Addressed: Explains the structure and use of inversion in complex sentences.",
+					"words": [
+						{"word": "had", "ok": true},
+						{"word": "did", "ok": false},
+						{"word": "was", "ok": false},
+						{"word": "has", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 10,
+					"sentence": "If I _ you, I would take that job offer.",
+					"summary": "Teaching Focus: Second conditional for unreal situations in the present or future.",
+					"explain": "Key Differences Addressed: Highlights the use of 'were' instead of 'was' in formal or hypothetical contexts.",
+					"words": [
+						{"word": "am", "ok": false},
+						{"word": "was", "ok": false},
+						{"word": "were", "ok": true},
+						{"word": "would be", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}
+

@@ -1,0 +1,137 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz3Inter-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,
+			
+			"sections": [
+				{
+					"title": "",
+					"page": 11,
+					"sentence": "",
+					"summary": "Teaching Focus: Modal verb + base verb + object.",
+					"explain": "Subject: You. Modal Verb: should. Base Verb: check. Object: your email.",
+					"words": [
+						{"word": "You should check your email.", "ok": true},
+						{"word": "You check should your email.", "ok": false},
+						{"word": "Should check your email you.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"sentence": "",
+					"summary": "Teaching Focus: Present perfect continuous tense.",
+					"explain": "Subject: They. Verb phrase: have been waiting. Time marker: for an hour.",
+					"words": [
+						{"word": "They have been waiting for an hour.", "ok": true},
+						{"word": "They waiting have been for an hour.", "ok": false},
+						{"word": "Have they been for an hour waiting.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"sentence": "",
+					"summary": "Teaching Focus: Relative clause (who).",
+					"explain": "Subject: The woman. Relative clause: who lives next door. Verb: is a teacher.",
+					"words": [
+						{"word": "The woman who lives next door is a teacher.", "ok": true},
+						{"word": "The woman lives who next door is a teacher.", "ok": false},
+						{"word": "The who woman lives next door is a teacher.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"sentence": "",
+					"summary": "Teaching Focus: Passive voice (present simple).",
+					"explain": "Subject: The dishes. Passive verb: are washed. Agent: every evening.",
+					"words": [
+						{"word": "The dishes are washed every evening.", "ok": true},
+						{"word": "Are washed the dishes every evening.", "ok": false},
+						{"word": "The every evening are dishes washed.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"sentence": "",
+					"summary": "Teaching Focus: Adverb position in compound tense.",
+					"explain": "Subject: He. Verb: has always been. Complement: a good friend.",
+					"words": [
+						{"word": "He has always been a good friend.", "ok": true},
+						{"word": "He has been always a good friend.", "ok": false},
+						{"word": "Always he has been a good friend.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 16,
+					"sentence": "",
+					"summary": "Teaching Focus: First conditional.",
+					"explain": "If-clause: If you study hard. Main clause: you will pass the test.",
+					"words": [
+						{"word": "If you study hard, you will pass the test.", "ok": true},
+						{"word": "If study hard you, pass you will the test.", "ok": false},
+						{"word": "You will pass the test if hard you study.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 17,
+					"sentence": "",
+					"summary": "Teaching Focus: Relative clause (that) with object.",
+					"explain": "Subject: I. Verb: bought. Object with clause: the book that you recommended.",
+					"words": [
+						{"word": "I bought the book that you recommended.", "ok": true},
+						{"word": "I the book bought that you recommended.", "ok": false},
+						{"word": "That book I recommended bought you.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 18,
+					"sentence": "",
+					"summary": "Teaching Focus: Present perfect with object.",
+					"explain": "Subject: We. Verb phrase: have finished. Object: our homework.",
+					"words": [
+						{"word": "We have finished our homework.", "ok": true},
+						{"word": "We our homework have finished.", "ok": false},
+						{"word": "Have we our homework finished.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 19,
+					"sentence": "",
+					"summary": "Teaching Focus: Passive voice (past simple).",
+					"explain": "Subject: The room. Passive verb: was cleaned. Time: yesterday.",
+					"words": [
+						{"word": "The room was cleaned yesterday.", "ok": true},
+						{"word": "The room yesterday cleaned was.", "ok": false},
+						{"word": "Cleaned was the room yesterday.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 20,
+					"sentence": "",
+					"summary": "Teaching Focus: Infinitive of purpose.",
+					"explain": "Subject: She. Verb phrase: went to the library. Purpose (infinitive): to study.",
+					"words": [
+						{"word": "She went to the library to study.", "ok": true},
+						{"word": "To study she went to the library.", "ok": false},
+						{"word": "She to study went the library.", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}
+

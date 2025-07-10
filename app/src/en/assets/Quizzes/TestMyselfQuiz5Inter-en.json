@@ -1,0 +1,207 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz5Inter-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,
+			
+			"sections": [
+				{
+				  "title": "",
+				  "page": 74,
+				  "sentence": "",
+				  "summary": "Teaching Focus: Homophones (no/know/now) \u2014 A2 level.",
+				  "explain": "Correct usage of the word 'no' in a sentence.",
+				  "words": [
+					{
+					  "word": "There is no milk left.",
+					  "ok": true
+					},
+					{
+					  "word": "There is know milk left.",
+					  "ok": false
+					},
+					{
+					  "word": "There is now milk left.",
+					  "ok": false
+					}
+				  ]
+				},
+				{
+				  "title": "",
+				  "page": 75,
+				  "sentence": "",
+				  "summary": "Teaching Focus: Homophones (no/know/now) \u2014 A2 level.",
+				  "explain": "Correct usage of the word 'know' in a sentence.",
+				  "words": [
+					{
+					  "word": "I know the answer.",
+					  "ok": true
+					},
+					{
+					  "word": "I no the answer.",
+					  "ok": false
+					},
+					{
+					  "word": "I now the answer.",
+					  "ok": false
+					}
+				  ]
+				},
+				{
+				  "title": "",
+				  "page": 76,
+				  "sentence": "",
+				  "summary": "Teaching Focus: Homophones (no/know/now) \u2014 A2 level.",
+				  "explain": "Correct usage of the word 'now' in a sentence.",
+				  "words": [
+					{
+					  "word": "We are leaving now.",
+					  "ok": true
+					},
+					{
+					  "word": "We are leaving no.",
+					  "ok": false
+					},
+					{
+					  "word": "We are leaving know.",
+					  "ok": false
+					}
+				  ]
+				},
+				{
+				  "title": "",
+				  "page": 89,
+				  "sentence": "",
+				  "summary": "Teaching Focus: Homophones (nose/knows/no's) \u2014 A2 level.",
+				  "explain": "Correct usage of the word 'nose' in a sentence.",
+				  "words": [
+					{
+					  "word": "He touched his nose because it was itchy.",
+					  "ok": true
+					},
+					{
+					  "word": "He touched his knows because it was itchy.",
+					  "ok": false
+					},
+					{
+					  "word": "He touched his no's because it was itchy.",
+					  "ok": false
+					}
+				  ]
+				},
+				{
+				  "title": "",
+				  "page": 90,
+				  "sentence": "",
+				  "summary": "Teaching Focus: Homophones (nose/knows/no's) \u2014 A2 level.",
+				  "explain": "Correct usage of the word 'knows' in a sentence.",
+				  "words": [
+					{
+					  "word": "She knows how to solve the problem.",
+					  "ok": true
+					},
+					{
+					  "word": "She nose how to solve the problem.",
+					  "ok": false
+					},
+					{
+					  "word": "She no's how to solve the problem.",
+					  "ok": false
+					}
+				  ]
+				},
+				{
+				  "title": "",
+				  "page": 91,
+				  "sentence": "",
+				  "summary": "Teaching Focus: Homophones (nose/knows/no's) \u2014 A2 level.",
+				  "explain": "Correct usage of the word 'no's' in a sentence.",
+				  "words": [
+					{
+					  "word": "He always says no's to unhealthy food.",
+					  "ok": true
+					},
+					{
+					  "word": "He always says nose to unhealthy food.",
+					  "ok": false
+					},
+					{
+					  "word": "He always says knows to unhealthy food.",
+					  "ok": false
+					}
+				  ]
+				},
+				{
+				  "title": "",
+				  "page": 92,
+				  "sentence": "",
+				  "summary": "Teaching Focus: Homophones (piece/peace/peas) \u2014 A2 level.",
+				  "explain": "Correct usage of the word 'piece' in a sentence.",
+				  "words": [
+					{
+					  "word": "I would like a piece of cake, please.",
+					  "ok": true
+					},
+					{
+					  "word": "I would like a peace of cake, please.",
+					  "ok": false
+					},
+					{
+					  "word": "I would like a peas of cake, please.",
+					  "ok": false
+					}
+				  ]
+				},
+				{
+				  "title": "",
+				  "page": 93,
+				  "sentence": "",
+				  "summary": "Teaching Focus: Homophones (piece/peace/peas) \u2014 A2 level.",
+				  "explain": "Correct usage of the word 'peace' in a sentence.",
+				  "words": [
+					{
+					  "word": "The country has enjoyed many years of peace.",
+					  "ok": true
+					},
+					{
+					  "word": "The country has enjoyed many years of piece.",
+					  "ok": false
+					},
+					{
+					  "word": "The country has enjoyed many years of peas.",
+					  "ok": false
+					}
+				  ]
+				},
+				{
+				  "title": "",
+				  "page": 94,
+				  "sentence": "",
+				  "summary": "Teaching Focus: Homophones (piece/peace/peas) \u2014 A2 level.",
+				  "explain": "Correct usage of the word 'peas' in a sentence.",
+				  "words": [
+					{
+					  "word": "She added some peas to the soup.",
+					  "ok": true
+					},
+					{
+					  "word": "She added some piece to the soup.",
+					  "ok": false
+					},
+					{
+					  "word": "She added some peace to the soup.",
+					  "ok": false
+					}
+				  ]
+				}
+			]
+			
+		}
+	]
+}
+

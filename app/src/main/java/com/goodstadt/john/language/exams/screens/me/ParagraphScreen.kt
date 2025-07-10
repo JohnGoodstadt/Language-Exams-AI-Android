@@ -2,78 +2,112 @@ package com.goodstadt.john.language.exams.screens
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Button
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-//import androidx.lifecycle.compose.collectAsStateWithLifecycle
+
+import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 
 @Composable
 fun ParagraphScreen(
+        // We get the ViewModel instance, but we don't use it yet.
     viewModel: ParagraphViewModel = hiltViewModel()
 ) {
-    // Collect state from the ViewModel in a lifecycle-aware manner
-    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    // --- STEP 1: Collect the state from the ViewModel ---
+    // The `by` keyword unwraps the State<ParagraphUiState> into a plain ParagraphUiState object.
+    // This line creates the subscription. Whenever the ViewModel updates its state,
+    // this `uiState` variable will change, triggering a recomposition.
+//    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+    val uiState by viewModel.uiState.collectAsState()
 
-    // This block replaces `onAppear` to trigger the initial data load.
-    // `Unit` as a key means it runs only once when the composable enters the screen.
     LaunchedEffect(Unit) {
+        // Call the same function that the "Generate" button calls.
         viewModel.generateNewParagraph()
     }
 
     Column(
+            // Fills the whole screen
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp),
+            // Centers all children horizontally
             horizontalAlignment = Alignment.CenterHorizontally,
+            // Adds consistent spacing between elements
             verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-
+        // --- Top Section ---
         Text(
-                text = "Listen to this sentence.",
+                text = "Listen to this Sentence",
                 style = MaterialTheme.typography.titleLarge
         )
 
         Text(
-                text = "It's made up of words from the other pages. Listen carefully.",
+                text = "It's made up of words from other pages. Listen carefully.",
                 style = MaterialTheme.typography.titleMedium,
-                textAlign = TextAlign.Center
+                textAlign = TextAlign.Center // Ensures multi-line text is also centered
         )
 
-        Button(onClick = { viewModel.generateNewParagraph() }) {
+        Button(onClick = {
+             viewModel.generateNewParagraph()
+        }) {
             Text("Generate")
         }
 
-        AnimatedVisibility(visible = uiState.isLoading) {
-            CircularProgressIndicator()
+        Box(
+                modifier = Modifier.height(24.dp), // Reserve space equal to the indicator's size
+                contentAlignment = Alignment.Center
+        ) {
+            if (uiState.isLoading) {
+                CircularProgressIndicator(
+                        modifier = Modifier.size(24.dp), // Make it smaller
+                        strokeWidth = 2.dp // Thinner stroke looks better when small
+                )
+            }
         }
 
-        Divider(modifier = Modifier.padding(top = 10.dp))
+        // --- Divider ---
+        HorizontalDivider(modifier = Modifier.padding(top = 10.dp))
 
-        // Sentence with highlighted words
+
+        // --- Middle Section ---
         AttributedHighlightedText(
-                paragraph = uiState.sentence,
+                paragraph = uiState.generatedSentence,
                 highlightedWords = uiState.highlightedWords,
-                modifier = Modifier
-                    .padding(vertical = 16.dp)
-                    .clickable { viewModel.speakSentence() }
+                // You can also add modifiers here if needed, e.g.,
+                modifier = Modifier.clickable { viewModel.speakSentence() }
         )
 
-        // English translation
         Text(
                 text = uiState.translation,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                style = MaterialTheme.typography.bodyMedium, // Smaller for the subtitle/translation
+                color = MaterialTheme.colorScheme.onSurfaceVariant, // A more subtle color
+                textAlign = TextAlign.Center
         )
-
-        // Error display
+        // Show an error message if one exists in the state
         uiState.error?.let {
             Text(
                     text = "Error: $it",
@@ -81,13 +115,27 @@ fun ParagraphScreen(
                     style = MaterialTheme.typography.bodySmall
             )
         }
-
+        // This Spacer pushes the "Play" button towards the bottom
         Spacer(modifier = Modifier.weight(1f))
 
-        Button(onClick = { viewModel.speakSentence() }) {
+        // --- Bottom Section ---
+        Button(onClick = { viewModel.speakSentence() }) { // Changed from empty lambda
             Text("Play")
         }
 
+        // Adds some padding at the very bottom of the screen
         Spacer(modifier = Modifier.height(16.dp))
+    }
+}
+
+
+// A @Preview function allows you to see your Composable in the design view of Android Studio.
+@Preview(showBackground = true)
+@Composable
+fun ParagraphScreenPreview() {
+    // You must wrap your preview in a Theme to see it correctly.
+    // Replace YourAppTheme with the actual name of your app's theme.
+    LanguageExamsAITheme {
+        ParagraphScreen()
     }
 }

@@ -12,9 +12,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -25,6 +27,7 @@ import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
+import com.goodstadt.john.language.exams.viewmodels.AuthUiState
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
 import com.goodstadt.john.language.exams.viewmodels.VocabDataUiState
@@ -36,35 +39,65 @@ fun MainScreen() {
     val tabsViewModel: TabsViewModel = hiltViewModel()
     val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
 
-    Scaffold(
-            bottomBar = {
-                NavigationBar {
-                    val navBackStackEntry by navController.currentBackStackEntryAsState()
-                    val currentDestination = navBackStackEntry?.destination
+    val authState by tabsViewModel.authUiState.collectAsState()
 
-                    bottomNavItems.forEach { screen ->
-                        NavigationBarItem(
-                                icon = { Icon(screen.icon, contentDescription = screen.title) },
-                                label = { Text(screen.title, maxLines = 1, textAlign = TextAlign.Center) },
-                                selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
-                                onClick = {
-                                    navController.navigate(screen.route) {
-                                        popUpTo(navController.graph.findStartDestination().id) {
-                                            saveState = true
-                                        }
-                                        launchSingleTop = true
-                                        restoreState = true
-                                    }
+    when (authState) {
+        is AuthUiState.Loading -> {
+            // Show a full-screen loading indicator while Firebase connects
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator()
+                Text(modifier = Modifier.padding(top = 60.dp), text = "Connecting...")
+            }
+        }
+        is AuthUiState.Error -> {
+            // Show an error message if sign-in fails
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Text(text = "Error: ${(authState as AuthUiState.Error).message}", color = Color.Red)
+            }
+        }
+        is AuthUiState.Success -> {
+            // Once successful, show the main app content
+            // The entire Scaffold and NavHost goes inside here
+            MainAppContent(navController = navController, tabsViewModel = tabsViewModel)
+        }
+    }
+
+}
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
+@Composable
+fun MainAppContent(navController: NavHostController, tabsViewModel: TabsViewModel) {
+
+    val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
+
+    Scaffold(
+        bottomBar = {
+            NavigationBar {
+                val navBackStackEntry by navController.currentBackStackEntryAsState()
+                val currentDestination = navBackStackEntry?.destination
+
+                bottomNavItems.forEach { screen ->
+                    NavigationBarItem(
+                        icon = { Icon(screen.icon, contentDescription = screen.title) },
+                        label = { Text(screen.title, maxLines = 1, textAlign = TextAlign.Center) },
+                        selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
+                        onClick = {
+                            navController.navigate(screen.route) {
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    saveState = true
                                 }
-                        )
-                    }
+                                launchSingleTop = true
+                                restoreState = true
+                            }
+                        }
+                    )
                 }
             }
+        }
     ) { innerPadding ->
         NavHost(
-                navController,
-                startDestination = Screen.Tab1.route,
-                Modifier.padding(innerPadding)
+            navController,
+            startDestination = Screen.Tab1.route,
+            Modifier.padding(innerPadding)
         ) {
             // --- Collect the shared voice preference ONCE here ---
 
@@ -77,13 +110,13 @@ fun MainScreen() {
                 val playbackState by tabsViewModel.playbackState.collectAsState()
 
                 RenderCategoryTab(
-                        uiState = uiState,
-                        menuItems = menuItems,
-                        categories = categories,
-                        categoryIndexMap = indexMap,
-                        playbackState = playbackState,
-                        selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
-                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
+                    uiState = uiState,
+                    menuItems = menuItems,
+                    categories = categories,
+                    categoryIndexMap = indexMap,
+                    playbackState = playbackState,
+                    selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
+                    onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
                 )
             }
 
@@ -95,13 +128,13 @@ fun MainScreen() {
                 val playbackState by tabsViewModel.playbackState.collectAsState()
 
                 RenderCategoryTab(
-                        uiState = uiState,
-                        menuItems = menuItems,
-                        categories = categories,
-                        categoryIndexMap = indexMap,
-                        playbackState = playbackState,
-                        selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
-                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
+                    uiState = uiState,
+                    menuItems = menuItems,
+                    categories = categories,
+                    categoryIndexMap = indexMap,
+                    playbackState = playbackState,
+                    selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
+                    onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
                 )
             }
 
@@ -113,13 +146,13 @@ fun MainScreen() {
                 val playbackState by tabsViewModel.playbackState.collectAsState()
 
                 RenderCategoryTab(
-                        uiState = uiState,
-                        menuItems = menuItems,
-                        categories = categories,
-                        categoryIndexMap = indexMap,
-                        playbackState = playbackState,
-                        selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
-                        onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
+                    uiState = uiState,
+                    menuItems = menuItems,
+                    categories = categories,
+                    categoryIndexMap = indexMap,
+                    playbackState = playbackState,
+                    selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
+                    onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
                 )
             }
 
@@ -133,7 +166,6 @@ fun MainScreen() {
         }
     }
 }
-
 @Composable
 fun Tab4Screen() {
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {

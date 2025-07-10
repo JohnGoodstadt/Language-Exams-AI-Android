@@ -1,16 +1,28 @@
+
 // <project-root>/app/build.gradle.kts
+
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.android)
-    // Add this for Hilt compiler
+    alias(libs.plugins.compose.compiler)// <-- ADD THIS LINE to apply the new plugin
+    alias(libs.plugins.kotlinSerialization)
     kotlin("kapt")
-    kotlin("plugin.serialization") version "1.9.23"
+    alias(libs.plugins.google.gms.google.services)
+}
+
+val secretsProperties = Properties()
+val secretsFile = rootProject.file("secrets.properties")
+if (secretsFile.exists()) {
+    secretsProperties.load(FileInputStream(secretsFile))
 }
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
-    compileSdk = 34
+    compileSdk = 35 //was 34
 
     defaultConfig {
         applicationId = "com.goodstadt.john.language.exams"
@@ -21,7 +33,19 @@ android {
 
         testInstrumentationRunner = "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
 
-        buildConfigField("String", "TTS_API_KEY", "\"AIzaSyBSGjKuHGjfCHmfMNBHxD4wuH0COGQ0biY\"")
+        buildConfigField(
+                "String",
+                "TTS_API_KEY",
+                secretsProperties.getProperty("TTS_API_KEY")
+        )
+
+        buildConfigField(
+                "String",
+                "OPENAI_API_KEY",
+                secretsProperties.getProperty("OPENAI_API_KEY")
+        )
+
+       // buildConfigField("String", "TTS_API_KEY", "\"AIzaSyBSGjKuHGjfCHmfMNBHxD4wuH0COGQ0biY\"")
 
         vectorDrawables {
             useSupportLibrary = true
@@ -102,9 +126,9 @@ android {
         compose = true
         buildConfig = true // Enable BuildConfig generation
     }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
-    }
+//    composeOptions {
+//        kotlinCompilerExtensionVersion = "1.5.11"
+//    }
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -131,11 +155,13 @@ dependencies {
 
     // Hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.lifecycle.runtime.compose.android)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
 
     // Add this for JSON parsing
     implementation(libs.kotlinx.serialization.json)
+//    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     // Firebase
     implementation(platform(libs.firebase.bom))
@@ -160,7 +186,7 @@ dependencies {
     kaptAndroidTest(libs.hilt.compiler)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
+    implementation(libs.okhttp)
 }
 
 // Allow Hilt to access classes in different build variants

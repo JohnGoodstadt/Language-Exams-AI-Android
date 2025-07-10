@@ -1,0 +1,137 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz3Advanced-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,
+			
+			"sections": [
+				{
+					"title": "",
+					"page": 31,
+					"sentence": "",
+					"summary": "Teaching Focus: Ellipsis in coordinated clauses.",
+					"explain": "Ellipsis: Omission of repeated subject and verb (I could go, and you could too → I could go, and you too).",
+					"words": [
+						{"word": "I could go, and you too.", "ok": true},
+						{"word": "I could go, and also you could.", "ok": false},
+						{"word": "I could go and you could go too.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 32,
+					"sentence": "",
+					"summary": "Teaching Focus: Nominalisation.",
+					"explain": "Verb phrase: The government decided to act. Nominalised: The government's decision to act.",
+					"words": [
+						{"word": "The government's decision to act was surprising.", "ok": true},
+						{"word": "The government decided action was surprising.", "ok": false},
+						{"word": "The government to act decision was surprising.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 33,
+					"sentence": "",
+					"summary": "Teaching Focus: Inversion in conditional structures (third conditional).",
+					"explain": "Inversion: Had I known. Meaning: If I had known.",
+					"words": [
+						{"word": "Had I known, I would have acted differently.", "ok": true},
+						{"word": "If had I known, I would have acted differently.", "ok": false},
+						{"word": "Had I knew, I would act differently.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 34,
+					"sentence": "",
+					"summary": "Teaching Focus: Passive with reporting verbs.",
+					"explain": "Structure: He is said to have left early. Passive + infinitive perfect.",
+					"words": [
+						{"word": "He is said to have left early.", "ok": true},
+						{"word": "He said to have left early.", "ok": false},
+						{"word": "He is said he left early.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 35,
+					"sentence": "",
+					"summary": "Teaching Focus: Idiomatic expression with subjunctive.",
+					"explain": "Phrase: Be it rain or shine. Meaning: Whether it rains or shines.",
+					"words": [
+						{"word": "Be it rain or shine, the event will go on.", "ok": true},
+						{"word": "Is it rain or shine, the event goes on.", "ok": false},
+						{"word": "Rain or shine be it, the event continues.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 36,
+					"sentence": "",
+					"summary": "Teaching Focus: Cleft sentence with noun emphasis.",
+					"explain": "Structure: What she needs is support. Cleft for focus.",
+					"words": [
+						{"word": "What she needs is support.", "ok": true},
+						{"word": "She needs is what support.", "ok": false},
+						{"word": "What is she needs support.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 37,
+					"sentence": "",
+					"summary": "Teaching Focus: Advanced collocation with abstract noun.",
+					"explain": "Collocation: Pose a threat. Common in formal writing.",
+					"words": [
+						{"word": "Climate change poses a serious threat to humanity.", "ok": true},
+						{"word": "Climate change gives a serious threat to humanity.", "ok": false},
+						{"word": "Climate change threatens serious to humanity.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 38,
+					"sentence": "",
+					"summary": "Teaching Focus: Reduced relative clause.",
+					"explain": "Original: The man who was talking. Reduced: The man talking.",
+					"words": [
+						{"word": "The man talking to her is my brother.", "ok": true},
+						{"word": "The man is talking to her is my brother.", "ok": false},
+						{"word": "The talking man to her is my brother.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 39,
+					"sentence": "",
+					"summary": "Teaching Focus: Complex noun phrase with pre-modifiers.",
+					"explain": "Noun phrase: a well-known international human rights organization.",
+					"words": [
+						{"word": "She works for a well-known international human rights organization.", "ok": true},
+						{"word": "She works for international rights a well-known human organization.", "ok": false},
+						{"word": "She works a human rights well-known organization for.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 40,
+					"sentence": "",
+					"summary": "Teaching Focus: Emphatic 'did' in past tense.",
+					"explain": "Use: He did complete the task. Adds emphasis to past action.",
+					"words": [
+						{"word": "He did complete the task on time.", "ok": true},
+						{"word": "He complete did the task on time.", "ok": false},
+						{"word": "He did completed the task on time.", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}
+

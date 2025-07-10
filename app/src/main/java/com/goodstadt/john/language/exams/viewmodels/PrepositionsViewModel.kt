@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -18,7 +19,9 @@ import javax.inject.Inject
 // This UI State can be reused, but let's give it a specific name for clarity
 sealed interface PrepositionsUiState {
     object Loading : PrepositionsUiState
-    data class Success(val categories: List<com.goodstadt.john.language.exams.models.Category>) : PrepositionsUiState
+    data class Success(val categories: List<Category>,
+                       val selectedVoiceName: String = "" )
+        : PrepositionsUiState
     data class Error(val message: String) : PrepositionsUiState
     object NotAvailable : PrepositionsUiState
 }
@@ -64,16 +67,21 @@ class PrepositionsViewModel @Inject constructor(
         if (_playbackState.value is PlaybackState.Playing) return
 
         viewModelScope.launch {
-            val googleVoice = "en-GB-Neural2-C"
-            val uniqueSentenceId = generateUniqueSentenceId(word, sentence,googleVoice)
-            _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
+           // val googleVoice = "en-GB-Neural2-C"
+
+
 
             // Use .first() to get the most recent value from the Flow
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val currentLanguageCode = LanguageConfig.languageCode
 
+            val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
+            _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
+//maybe just de. remove any (zu dem)
+            val cleanedSentence =  sentence.sentence.replace( "\\s*\\([^)]*\\)\\s*".toRegex(), " ")
+
             val result = vocabRepository.playTextToSpeech(
-                    text = sentence.sentence,
+                    text = cleanedSentence,
                     uniqueSentenceId = uniqueSentenceId,
                     voiceName = currentVoiceName,
                     languageCode = currentLanguageCode
@@ -85,4 +93,8 @@ class PrepositionsViewModel @Inject constructor(
             _playbackState.value = PlaybackState.Idle
         }
     }
+
+//    fun getCurrentGoogleVoice() : String {
+//        return  "en GB-Neural2-C"
+//    }
 }

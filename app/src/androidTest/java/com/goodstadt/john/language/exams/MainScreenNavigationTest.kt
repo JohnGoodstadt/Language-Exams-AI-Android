@@ -24,7 +24,7 @@ class MainScreenNavigationTest {
         composeTestRule.onNodeWithText("Tab 1").assertIsDisplayed()
         composeTestRule.onNodeWithText("Tab 2").assertIsDisplayed()
         composeTestRule.onNodeWithText("Tab 3").assertIsDisplayed()
-        composeTestRule.onNodeWithText("Focussing").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Focusing").assertIsDisplayed()
         composeTestRule.onNodeWithText("Me").assertIsDisplayed()
     }
 

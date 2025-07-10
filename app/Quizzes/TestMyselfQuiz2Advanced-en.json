@@ -1,0 +1,196 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz2Advanced-en",
+	"updatedDate": 0,
+	"data":[
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Confusing Word Pair",
+			"sortorder": 1,
+			"sections":
+			[
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "The new law will _ many small businesses.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "affect",
+							"ok": true
+						},
+						{
+							"word": "effect",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "The _ of climate change is visible around the world.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "effect",
+							"ok": true
+						},
+						{
+							"word": "affect",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Stress can negatively _ your health over time.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "affect",
+							"ok": true
+						},
+						{
+							"word": "effect",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "The medicine had an immediate _ on her headache.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "effect",
+							"ok": true
+						},
+						{
+							"word": "affect",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "How will this decision _ the overall project timeline?",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "affect",
+							"ok": true
+						},
+						{
+							"word": "effect",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "The long-term _ of the policy remains to be seen.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "effect",
+							"ok": true
+						},
+						{
+							"word": "affect",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Lack of sleep can seriously _ your ability to concentrate.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "affect",
+							"ok": true
+						},
+						{
+							"word": "effect",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "The new technology had a transformative _ on the industry.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "effect",
+							"ok": true
+						},
+						{
+							"word": "affect",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Her criticism didn’t _ his confidence at all.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "affect",
+							"ok": true
+						},
+						{
+							"word": "effect",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "We are studying the _ of pollution on marine life.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "effect",
+							"ok": true
+						},
+						{
+							"word": "affect",
+							"ok": false
+						}
+					]
+					
+				}
+			]
+		}
+	]
+}

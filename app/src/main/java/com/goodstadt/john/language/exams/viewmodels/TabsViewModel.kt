@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -33,12 +34,23 @@ sealed interface PlaybackState {
     data class Error(val message: String) : PlaybackState
 }
 
+sealed interface AuthUiState {
+    object Loading : AuthUiState
+    data class Success(val uid: String) : AuthUiState
+    data class Error(val message: String) : AuthUiState
+}
+
 @HiltViewModel
 class TabsViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
-    private val userPreferencesRepository: UserPreferencesRepository//,
+    private val userPreferencesRepository: UserPreferencesRepository,
+    private val authRepository: AuthRepository,
+    //,
    // private val controlRepository: ControlRepository
 ) : ViewModel() {
+
+    private val _authUiState = MutableStateFlow<AuthUiState>(AuthUiState.Loading)
+    val authUiState = _authUiState.asStateFlow()
 
     // A StateFlow to hold the overall UI state for the vocab data
     private val _vocabUiState = MutableStateFlow<VocabDataUiState>(VocabDataUiState.Loading)
@@ -79,6 +91,9 @@ class TabsViewModel @Inject constructor(
     private val _selectedVoiceName = MutableStateFlow("")
     val selectedVoiceName = _selectedVoiceName.asStateFlow() // <-- 2. ADD STATEFLOW
 
+    // --- Add the new auth state flows ---
+    private val _authState = MutableStateFlow(AuthState.LOADING)
+    val authState = _authState.asStateFlow()
 
     private val TAG = "TabsViewModel"
 
@@ -89,6 +104,7 @@ class TabsViewModel @Inject constructor(
         Log.d(TAG, "Language Voice Name: ${LanguageConfig.voiceName}")
         // --- END OF VERIFICATION ---
 
+        initializeAppSession()
 
 // --- THIS IS THE FIX ---
         // Launch a new coroutine in the ViewModel's lifecycle scope
@@ -105,9 +121,41 @@ class TabsViewModel @Inject constructor(
         _meTabMenuItems.value = LanguageConfig.meTabMenuItems
 
         observeVoicePreference() // <-- 3. CALL THE OBSERVER FUNCTION
+
+
     }
+    private fun initializeAppSession() {
+        // Use viewModelScope to launch a coroutine safely
+        viewModelScope.launch {
+            Log.d("TabsViewModel", "Initializing user session...")
+            val result = authRepository.signInOrUpdateUser()
 
+            result.onSuccess { user ->
+                Log.d("TabsViewModel", "Session success. User UID: ${user.uid}, Is Anonymous: ${user.isAnonymous}")
+                _authUiState.value = AuthUiState.Success(user.uid)
+                // You can now proceed with loading user-specific data if needed
+            }
 
+            result.onFailure { exception ->
+                Log.e("TabsViewModel", "Session failed", exception)
+                _authUiState.value = AuthUiState.Error(exception.message ?: "Unknown error")
+                // Handle the error, maybe show a message to the user
+            }
+        }
+    }
+    // 3. Add the auth function from MainViewModel
+//    private fun initializeUserSession() {
+//        viewModelScope.launch {
+//            _authState.value = AuthState.LOADING
+//            val result = authRepository.signInOrUpdateUser()
+//            result.onSuccess { user ->
+//                _currentUser.value = user
+//                _authState.value = AuthState.SIGNED_IN
+//            }.onFailure {
+//                _authState.value = AuthState.ERROR
+//            }
+//        }
+//    }
     // Renamed loadData to be more specific
     private fun loadDataForFile(fileName: String) {
         viewModelScope.launch {

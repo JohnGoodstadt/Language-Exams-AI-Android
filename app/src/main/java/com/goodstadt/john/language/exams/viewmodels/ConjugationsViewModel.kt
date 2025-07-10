@@ -19,7 +19,10 @@ import javax.inject.Inject
 // A UI state for this specific screen
 sealed interface ConjugationsUiState {
     object Loading : ConjugationsUiState
-    data class Success(val categories: List<Category>) : ConjugationsUiState
+    data class Success(
+        val categories: List<Category>,
+        val selectedVoiceName: String = "" // Add a default empty value
+    ) : ConjugationsUiState
     data class Error(val message: String) : ConjugationsUiState
     object NotAvailable : ConjugationsUiState // For flavors like 'zh'
 }
@@ -52,6 +55,7 @@ class ConjugationsViewModel @Inject constructor(
 
             _uiState.value = ConjugationsUiState.Loading
             val result = vocabRepository.getVocabData(fileName)
+           // val selectedVoice = userPreferencesRepository.selectedVoiceNameFlow.first()
 
             result.onSuccess { vocabFile ->
                 _uiState.value = ConjugationsUiState.Success(vocabFile.categories)
@@ -93,4 +97,9 @@ class ConjugationsViewModel @Inject constructor(
             _playbackState.value = PlaybackState.Idle
         }
     }
+    //fun getCurrentGoogleVoice() : String {
+//        return userPreferencesRepository.selectedVoiceNameFlow.first()
+      //  return  "en-GB-Neural2-C"
+   // }
+
 }

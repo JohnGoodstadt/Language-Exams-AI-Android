@@ -1,0 +1,144 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz1Inter-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "1",
+					"page": 1,
+					"sentence": "I _ dinner when you called.",
+					"summary": "Teaching Focus: Using the past continuous tense to describe an action in progress at a specific time in the past.",
+					"explain": "Key Differences Addressed: Distinguishes between simple past and past continuous tenses.",
+					"words": [
+						{"word": "eating", "ok": false},
+						{"word": "eat", "ok": false},
+						{"word": "was eating", "ok": true},
+						{"word": "ate", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 2,
+					"sentence": "'I wish I _ taller.' he said.",
+					"summary": "Teaching Focus: Using the subjunctive mood to express hypothetical or unreal situations.",
+					"explain": "Key Differences Addressed: Contrasts the subjunctive 'were' with other verb forms that do not express unreal conditions.",
+					"words": [
+						{"word": "am", "ok": false},
+						{"word": "were", "ok": true},
+						{"word": "was being", "ok": false},
+						{"word": "have been", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 3,
+					"sentence": "I _ going home now.",
+					"summary": "Teaching Focus: Correct use of present continuous tense for actions happening at the moment of speaking.",
+					"explain": "Key Differences Addressed: Highlights the use of 'am' in present continuous for first-person singular.",
+					"words": [
+						{"word": "am", "ok": true},
+						{"word": "were", "ok": false},
+						{"word": "did", "ok": false},
+						{"word": "have been", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 4,
+					"sentence": "She _ to the store every day.",
+					"summary": "Teaching Focus: Third person singular verbs in the present tense require an 's' at the end.",
+					"explain": "Key Differences Addressed: Reinforces subject-verb agreement for habitual actions.",
+					"words": [
+						{"word": "go", "ok": false},
+						{"word": "goes", "ok": true},
+						{"word": "going", "ok": false},
+						{"word": "gone", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 5,
+					"sentence": "They _ soccer after school.",
+					"summary": "Teaching Focus: Plural subjects use the base form of the verb in the present tense.",
+					"explain": "Key Differences Addressed: Differentiates plural subject verb agreement from singular forms.",
+					"words": [
+						{"word": "plays", "ok": false},
+						{"word": "playing", "ok": false},
+						{"word": "play", "ok": true}
+					]
+				},
+				{
+					"title": "1",
+					"page": 6,
+					"sentence": "We _ the movie last night.",
+					"summary": "Teaching Focus: Past tense of regular verbs is formed by adding 'ed.'",
+					"explain": "Key Differences Addressed: Contrasts past tense and present tense forms of 'watch.'",
+					"words": [
+						{"word": "watching", "ok": false},
+						{"word": "watch", "ok": false},
+						{"word": "watched", "ok": true},
+						{"word": "watches", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 7,
+					"sentence": "I _ breakfast every morning.",
+					"summary": "Teaching Focus: First-person singular verbs in the present tense use the base form without 's.'",
+					"explain": "Key Differences Addressed: Reinforces habitual actions in first-person singular.",
+					"words": [
+						{"word": "eat", "ok": true},
+						{"word": "eating", "ok": false},
+						{"word": "ate", "ok": false},
+						{"word": "eats", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 8,
+					"sentence": "He _ a book right now.",
+					"summary": "Teaching Focus: Present continuous tense is formed with 'is' and the 'ing' form of the verb.",
+					"explain": "Key Differences Addressed: Emphasizes correct construction of present continuous for third person singular.",
+					"words": [
+						{"word": "is reading", "ok": true},
+						{"word": "reads", "ok": false},
+						{"word": "read", "ok": false},
+						{"word": "reading", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 9,
+					"sentence": "The children _ happily in the park.",
+					"summary": "Teaching Focus: Plural subjects take the base form of the verb in the present tense.",
+					"explain": "Key Differences Addressed: Highlights subject-verb agreement for plural subjects.",
+					"words": [
+						{"word": "play", "ok": true},
+						{"word": "playing", "ok": false},
+						{"word": "plays", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 10,
+					"sentence": "She _ her homework before dinner.",
+					"summary": "Teaching Focus: Third person singular in the present tense uses 'does' for affirmative actions.",
+					"explain": "Key Differences Addressed: Differentiates between auxiliary and main verb forms for singular subjects.",
+					"words": [
+						{"word": "does", "ok": true},
+						{"word": "do", "ok": false},
+						{"word": "doing", "ok": false},
+						{"word": "done", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}
+

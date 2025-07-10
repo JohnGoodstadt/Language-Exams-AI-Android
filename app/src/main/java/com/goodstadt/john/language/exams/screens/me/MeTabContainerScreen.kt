@@ -16,6 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.goodstadt.john.language.exams.navigation.MeScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
+import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
 
@@ -73,11 +74,16 @@ fun MeTabContainerScreen() {
             // All the screen destinations remain the same
             composable(MeScreen.Settings.route) { SettingsScreen() }
             composable(MeScreen.Search.route) { SearchScreen() }
-            composable(MeScreen.Quiz.route) { MeTabPlaceholderScreen("Quiz") }
+            //composable(MeScreen.Quiz.route) { MeTabPlaceholderScreen("Quiz") }
+
+            composable(MeScreen.Quiz.route) { QuizScreen() }
+
             composable(MeScreen.Progress.route) { MeTabPlaceholderScreen("Progress") }
             composable(MeScreen.Conjugations.route) { ConjugationsScreen() }
             composable(MeScreen.Prepositions.route) { PrepositionsScreen() }
-            composable(MeScreen.Paragraph.route) { MeTabPlaceholderScreen("Paragraph") }
+           // composable(MeScreen.Paragraph.route) { MeTabPlaceholderScreen("Paragraph") }
+            composable(MeScreen.Paragraph.route) { ParagraphScreen() }
+
             composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
         }
     }

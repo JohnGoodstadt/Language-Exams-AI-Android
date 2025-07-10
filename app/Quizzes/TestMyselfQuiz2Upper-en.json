@@ -1,0 +1,231 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz2Upper-en",
+	"updatedDate": 0,
+	"data":[
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Confusing Word Pair",
+			"sortorder": 1,
+			"sections":
+			[
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "You should _ both sides of the road before crossing.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "look at",
+							"ok": true
+						},
+						{
+							"word": "watch",
+							"ok": false
+						},
+						{
+							"word": "see",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "We need to _ what happens next in the experiment.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "watch",
+							"ok": true
+						},
+						{
+							"word": "look at",
+							"ok": false
+						},
+						{
+							"word": "see",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "She likes to _ the sunset every evening from her balcony.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "watch",
+							"ok": true
+						},
+						{
+							"word": "see",
+							"ok": false
+						},
+						{
+							"word": "look at",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "He wanted to _ if the shop was still open.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "see",
+							"ok": true
+						},
+						{
+							"word": "watch",
+							"ok": false
+						},
+						{
+							"word": "look at",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Do you think this hairstyle _ me?",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "suits",
+							"ok": true
+						},
+						{
+							"word": "fits",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "This job really _ your skills and personality.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "suits",
+							"ok": true
+						},
+						{
+							"word": "fits",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "That tie really _ your suit. You look great.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "suits",
+							"ok": true
+						},
+						{
+							"word": "fits",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "The color of the curtains doesn’t _ the room’s decor.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "suit",
+							"ok": true
+						},
+						{
+							"word": "fit",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Do you _ if I borrow your book for a while?",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "mind",
+							"ok": true
+						},
+						{
+							"word": "matter",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "It doesn’t _ what people think. Just do your best.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "matter",
+							"ok": true
+						},
+						{
+							"word": "mind",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Would you _ helping me move this table?",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "mind",
+							"ok": true
+						},
+						{
+							"word": "matter",
+							"ok": false
+						}
+					]
+					
+				}
+				
+			]
+		}
+	]
+}

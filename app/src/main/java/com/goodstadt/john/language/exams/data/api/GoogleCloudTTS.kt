@@ -1,11 +1,12 @@
 package com.goodstadt.john.language.exams.data.api
 
-import android.util.Log
 import android.util.Base64
+import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.io.OutputStreamWriter
 import java.net.HttpURLConnection
@@ -18,6 +19,7 @@ class GoogleCloudTTS @Inject constructor() {
 
     private val TAG = "GoogleCloudTTS"
 
+    // --- Data classes remain the same ---
     @Serializable
     private data class TtsRequest(
         val input: TtsInput,
@@ -31,7 +33,6 @@ class GoogleCloudTTS @Inject constructor() {
     @Serializable
     private data class TtsVoice(val languageCode: String, val name: String)
 
-    // *** THE FIX IS HERE: REMOVE THE DEFAULT VALUE ***
     @Serializable
     private data class TtsAudioConfig(val audioEncoding: String, val speakingRate: Float)
 
@@ -51,7 +52,6 @@ class GoogleCloudTTS @Inject constructor() {
         var connection: HttpURLConnection? = null
 
         try {
-            // This creation is now correct because TtsAudioConfig requires the parameter.
             val request = TtsRequest(
                     input = TtsInput(text = text),
                     voice = TtsVoice(languageCode = languageCode, name = voiceName),
@@ -60,7 +60,9 @@ class GoogleCloudTTS @Inject constructor() {
                             speakingRate = 0.9f,
                     )
             )
-            val requestBody = json.encodeToString(TtsRequest.serializer(), request)
+
+            // --- FIX 1: Update encodeToString syntax ---
+            val requestBody = json.encodeToString<TtsRequest>(request)
 
             Log.d(TAG, "Sending TTS Request Body: $requestBody")
 
@@ -77,7 +79,10 @@ class GoogleCloudTTS @Inject constructor() {
             val responseCode = connection.responseCode
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 val responseBody = connection.inputStream.bufferedReader().use { it.readText() }
-                val ttsResponse = json.decodeFromString(TtsResponse.serializer(), responseBody)
+
+                // --- FIX 2: Update decodeFromString syntax ---
+                val ttsResponse = json.decodeFromString<TtsResponse>(responseBody)
+
                 val audioBytes = Base64.decode(ttsResponse.audioContent, Base64.DEFAULT)
                 Result.success(audioBytes)
             } else {

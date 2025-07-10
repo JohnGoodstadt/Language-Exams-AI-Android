@@ -1,0 +1,218 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz2Elementary-en",
+	"updatedDate": 0,
+	"data":[
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Confusing Word Pair",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "That is a very _ house with many rooms.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "big",
+							"ok": true
+						},
+						{
+							"word": "large",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "They need a _ table for the dining room to fit everyone.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "large",
+							"ok": true
+						},
+						{
+							"word": "big",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "She bought a _ bag to carry all her books.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "big",
+							"ok": true
+						},
+						{
+							"word": "large",
+							"ok": false
+						}
+					]
+					
+				},
+				
+				{
+					"title": "",
+					"page": 11,
+					"sentence": "What time does the movie _?",
+					"summary":"* 'Start': Used in informal and conversational contexts (e.g., 'start the game').\n\n* 'Begin': More formal or precise (e.g., 'begin the meeting').",
+					"explain":"* Learners often default to 'start' because it’s simpler and more common in casual speech.\nThey may struggle to recognize when 'begin' is more appropriate in formal or structured contexts.'\n\n* Teaching Focus:  Highlight that both verbs are synonyms and generally interchangeable but differ slightly in tone",
+					"words": [
+						{
+							"word": "start",
+							"ok": true
+						},
+						{
+							"word": "begin",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 12,
+					"sentence": "The teacher asked us to _ our homework now.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "begin",
+							"ok": true
+						},
+						{
+							"word": "start",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 13,
+					"sentence": "I always _ my day with a cup of coffee.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "start",
+							"ok": true
+						},
+						{
+							"word": "begin",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 14,
+					"sentence": "We need to _ the meeting on time.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "begin",
+							"ok": true
+						},
+						{
+							"word": "start",
+							"ok": false
+						}
+					]
+					
+				},
+				
+				
+				{
+					"title": "",
+					"page": 21,
+					"sentence": "Can you _ to my house after school?",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "come",
+							"ok": true
+						},
+						{
+							"word": "go",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 22,
+					"sentence": "I have to _ to the shop to buy some bread.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "go",
+							"ok": true
+						},
+						{
+							"word": "come",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 23,
+					"sentence": "She asked me to _ to her office for a meeting.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "come",
+							"ok": true
+						},
+						{
+							"word": "go",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 24,
+					"sentence": "We’ll _ to the park after lunch.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "go",
+							"ok": true
+						},
+						{
+							"word": "come",
+							"ok": false
+						}
+					]
+					
+				}
+				
+			]
+		}
+	]
+}
+

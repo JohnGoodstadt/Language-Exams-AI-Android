@@ -1,0 +1,128 @@
+{
+	"fileformat":10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz3Elementary-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Verbs",
+			"sortorder": 1,
+			
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "",
+					"summary": "Teaching Focus: SVC Word Order.",
+					"explain": "Subject: The coffee. Verb: is. Complement (Adjective): hot.",
+					"words": [
+						{"word": "The coffee hot is.", "ok": false},
+						{"word": "The coffee is hot.", "ok": true}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "",
+					"summary": "Teaching Focus: SVOO Word Order.",
+					"explain": "Subject: She. Verb: gave. Indirect Object: her brother. Direct Object: a new book (with adjective new).",
+					"words": [
+						{"word": "She gave her brother a new book.", "ok": true},
+						{"word": "She gave a new book her brother.", "ok": false},
+						{"word": "A new book gave she to her brother.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "",
+					"summary": "Teaching Focus: SV Word Order with Adverb.",
+					"explain": "Subject: They. Verb: walk. Adverb: slowly.",
+					"words": [
+						{"word": "They walk slowly.", "ok": true},
+						{"word": "Slowly walk they.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "",
+					"summary": "Teaching Focus: SVO Word Order.",
+					"explain": "Subject: The cat. Verb: caught. Object: the mouse.",
+					"words": [
+						{"word": "The cat caught the mouse.", "ok": true},
+						{"word": "Caught the mouse the cat.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "",
+					"summary": "Teaching Focus: SVC with Adjective.",
+					"explain": "Subject: The children. Verb: are. Complement: happy.",
+					"words": [
+						{"word": "The children are happy.", "ok": true},
+						{"word": "The happy are children.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "",
+					"summary": "Teaching Focus: SVOO Word Order.",
+					"explain": "Subject: I. Verb: sent. Indirect Object: my friend. Direct Object: a message.",
+					"words": [
+						{"word": "I sent my friend a message.", "ok": true},
+						{"word": "I sent a message my friend.", "ok": false},
+						{"word": "My friend I a message sent.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "",
+					"summary": "Teaching Focus: SV Word Order with Adverb.",
+					"explain": "Subject: He. Verb: speaks. Adverb: clearly.",
+					"words": [
+						{"word": "He speaks clearly.", "ok": true},
+						{"word": "Speaks he clearly.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "",
+					"summary": "Teaching Focus: SVO Word Order with Adjective.",
+					"explain": "Subject: The girl. Verb: read. Object: an interesting book (with adjective interesting).",
+					"words": [
+						{"word": "The girl read an interesting book.", "ok": true},
+						{"word": "An interesting book read the girl.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "",
+					"summary": "Teaching Focus: SVC Word Order.",
+					"explain": "Subject: The weather. Verb: was. Complement: cold.",
+					"words": [
+						{"word": "The weather was cold.", "ok": true},
+						{"word": "The cold was weather.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "",
+					"summary": "Teaching Focus: SVO Word Order with Adverb.",
+					"explain": "Subject: She. Verb: finished. Object: the test. Adverb: quickly.",
+					"words": [
+						{"word": "She finished the test quickly.", "ok": true},
+						{"word": "She quickly the test finished.", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}

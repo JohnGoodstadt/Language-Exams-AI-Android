@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.viewmodels
 
 import com.goodstadt.john.language.exams.MainCoroutineRule
+import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -29,6 +30,7 @@ class TabsViewModelTest {
     private lateinit var mockControlRepository: ControlRepository
     private lateinit var mockUserPreferencesRepository: UserPreferencesRepository
     private lateinit var mockVocabRepository: VocabRepository
+    private lateinit var mockAuthRepository: AuthRepository
     private lateinit var viewModel: TabsViewModel
 
     @Before
@@ -59,7 +61,7 @@ class TabsViewModelTest {
         // 2. Act
         // Initialize the ViewModel with ALL THREE mocks. This solves the "too many arguments" error.
 //        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository, mockControlRepository)
-        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository)
+        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository,mockAuthRepository)
 
         // Allow the coroutines launched in the init block to complete
         advanceUntilIdle()
@@ -80,7 +82,7 @@ class TabsViewModelTest {
 
         // 2. Act
 //        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository, mockControlRepository)
-        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository)
+        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository,mockAuthRepository)
         advanceUntilIdle()
 
         // 3. Assert

@@ -1,0 +1,293 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz2Inter-en",
+	"updatedDate": 0,
+	"data":[
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Confusing Word Pair",
+			"sortorder": 1,
+			"sections":
+			[
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Can you _ that sound coming from the kitchen?",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "hear",
+							"ok": true
+						},
+						{
+							"word": "listen",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "She loves to _ to music while studying.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "listen",
+							"ok": true
+						},
+						{
+							"word": "hear",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Can you _ the clock on the wall and tell me the time?",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "look at",
+							"ok": true
+						},
+						{
+							"word": "see",
+							"ok": false
+						},
+						{
+							"word": "watch",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Did you _ that bird fly past the window?",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "see",
+							"ok": true
+						},
+						{
+							"word": "look at",
+							"ok": false
+						},
+						{
+							"word": "watch",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "We _ a movie together last night at the cinema.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "watched",
+							"ok": true
+						},
+						{
+							"word": "looked at",
+							"ok": false
+						},
+						{
+							"word": "saw",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Did you _ the news on TV last night?",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "watch",
+							"ok": true
+						},
+						{
+							"word": "look at",
+							"ok": false
+						},
+						{
+							"word": "see",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "I can’t _ the screen because someone is blocking my view.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "see",
+							"ok": true
+						},
+						{
+							"word": "look at",
+							"ok": false
+						},
+						{
+							"word": "watch",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Please _ this picture and tell me what you think.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "look at",
+							"ok": true
+						},
+						{
+							"word": "watch",
+							"ok": false
+						},
+						{
+							"word": "see",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "This dress doesn’t _ me. It’s too small.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "fit",
+							"ok": true
+						},
+						{
+							"word": "suit",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "That color really _ you. You should wear it more often.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "suits",
+							"ok": true
+						},
+						{
+							"word": "fits",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "These shoes _ perfectly. They’re the right size.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "fit",
+							"ok": true
+						},
+						{
+							"word": "suit",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "I love the jacket, but it doesn’t _ my shoulders.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "fit",
+							"ok": true
+						},
+						{
+							"word": "suit",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "I need to try on a larger size; this one doesn’t _.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "fit",
+							"ok": true
+						},
+						{
+							"word": "suit",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "These jeans don’t _ me anymore. I’ve gained weight.",
+					"summary":"",
+					"explain":"",
+					"words": [
+						{
+							"word": "fit",
+							"ok": true
+						},
+						{
+							"word": "suit",
+							"ok": false
+						}
+					]
+					
+				}
+				
+			]
+		}
+	]
+}

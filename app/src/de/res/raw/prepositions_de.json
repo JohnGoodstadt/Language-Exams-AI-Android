@@ -22,7 +22,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 1,
-					"word": "zu (Dativ)",
+					"word": "zu",
 					"partOfSpeech": "Präposition",
 					"id": 1,
 					"romanisation": "",
@@ -45,7 +45,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 2,
-					"word": "zu (Dativ)",
+					"word": "zu",
 					"partOfSpeech": "Präposition",
 					"id": 2,
 					"romanisation": "",
@@ -68,7 +68,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 3,
-					"word": "zu (Dativ)",
+					"word": "zu",
 					"partOfSpeech": "Präposition",
 					"id": 3,
 					"romanisation": "",
@@ -98,7 +98,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 4,
-					"word": "mit (Dativ)",
+					"word": "mit",
 					"partOfSpeech": "Präposition",
 					"id": 4,
 					"romanisation": "",
@@ -121,7 +121,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 5,
-					"word": "mit (Dativ)",
+					"word": "mit",
 					"partOfSpeech": "Präposition",
 					"id": 5,
 					"romanisation": "",
@@ -144,7 +144,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 6,
-					"word": "mit (Dativ)",
+					"word": "mit",
 					"partOfSpeech": "Präposition",
 					"id": 6,
 					"romanisation": "",
@@ -174,7 +174,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 7,
-					"word": "für (Akkusativ)",
+					"word": "für",
 					"partOfSpeech": "Präposition",
 					"id": 7,
 					"romanisation": "",
@@ -197,7 +197,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 8,
-					"word": "für (Akkusativ)",
+					"word": "für",
 					"partOfSpeech": "Präposition",
 					"id": 8,
 					"romanisation": "",
@@ -220,7 +220,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 9,
-					"word": "für (Akkusativ)",
+					"word": "für",
 					"partOfSpeech": "Präposition",
 					"id": 9,
 					"romanisation": "",
@@ -250,7 +250,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 10,
-					"word": "an (Dativ/Akkusativ)",
+					"word": "für",
 					"partOfSpeech": "Präposition",
 					"id": 10,
 					"romanisation": "",
@@ -273,7 +273,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 11,
-					"word": "an (Dativ/Akkusativ)",
+					"word": "für",
 					"partOfSpeech": "Präposition",
 					"id": 11,
 					"romanisation": "",
@@ -296,7 +296,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 12,
-					"word": "an (Dativ/Akkusativ)",
+					"word": "für",
 					"partOfSpeech": "Präposition",
 					"id": 12,
 					"romanisation": "",
@@ -326,7 +326,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 13,
-					"word": "auf (Dativ/Akkusativ)",
+					"word": "auf",
 					"partOfSpeech": "Präposition",
 					"id": 13,
 					"romanisation": "",
@@ -349,7 +349,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 14,
-					"word": "auf (Dativ/Akkusativ)",
+					"word": "auf",
 					"partOfSpeech": "Präposition",
 					"id": 14,
 					"romanisation": "",
@@ -372,7 +372,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 15,
-					"word": "auf (Dativ/Akkusativ)",
+					"word": "auf",
 					"partOfSpeech": "Präposition",
 					"id": 15,
 					"romanisation": "",
@@ -402,7 +402,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 16,
-					"word": "in (Dativ/Akkusativ)",
+					"word": "in",
 					"partOfSpeech": "Präposition",
 					"id": 16,
 					"romanisation": "",
@@ -425,7 +425,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 17,
-					"word": "in (Dativ/Akkusativ)",
+					"word": "in",
 					"partOfSpeech": "Präposition",
 					"id": 17,
 					"romanisation": "",
@@ -448,7 +448,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 18,
-					"word": "in (Dativ/Akkusativ)",
+					"word": "in",
 					"partOfSpeech": "Präposition",
 					"id": 18,
 					"romanisation": "",
@@ -478,7 +478,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 19,
-					"word": "von (Dativ)",
+					"word": "von",
 					"partOfSpeech": "Präposition",
 					"id": 19,
 					"romanisation": "",
@@ -501,7 +501,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 20,
-					"word": "von (Dativ)",
+					"word": "von",
 					"partOfSpeech": "Präposition",
 					"id": 20,
 					"romanisation": "",
@@ -524,7 +524,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 21,
-					"word": "von (Dativ)",
+					"word": "von",
 					"partOfSpeech": "Präposition",
 					"id": 21,
 					"romanisation": "",
@@ -554,7 +554,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 22,
-					"word": "nach (Dativ)",
+					"word": "nach",
 					"partOfSpeech": "Präposition",
 					"id": 22,
 					"romanisation": "",
@@ -577,7 +577,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 23,
-					"word": "nach (Dativ)",
+					"word": "nach",
 					"partOfSpeech": "Präposition",
 					"id": 23,
 					"romanisation": "",
@@ -600,7 +600,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 24,
-					"word": "nach (Dativ)",
+					"word": "nach",
 					"partOfSpeech": "Präposition",
 					"id": 24,
 					"romanisation": "",
@@ -630,7 +630,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 25,
-					"word": "bei (Dativ)",
+					"word": "bei",
 					"partOfSpeech": "Präposition",
 					"id": 25,
 					"romanisation": "",
@@ -653,7 +653,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 26,
-					"word": "bei (Dativ)",
+					"word": "bei",
 					"partOfSpeech": "Präposition",
 					"id": 26,
 					"romanisation": "",
@@ -676,7 +676,7 @@
 				{
 					"group": "Präpositionen",
 					"sortOrder": 27,
-					"word": "bei (Dativ)",
+					"word": "bei",
 					"partOfSpeech": "Präposition",
 					"id": 27,
 					"romanisation": "",

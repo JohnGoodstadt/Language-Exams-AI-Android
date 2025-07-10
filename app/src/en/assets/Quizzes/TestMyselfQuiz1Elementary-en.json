@@ -1,0 +1,136 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz1Elementary-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Verbs",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "He _ to school every day.",
+					"summary": "Teaching Focus: Third person singular verbs in the present tense require an 's' at the end.",
+					"explain": "Key Differences Addressed: This focuses on recognizing the correct form for habitual actions in the present tense.",
+					"words": [
+						{"word": "go", "ok": false},
+						{"word": "goes", "ok": true},
+						{"word": "going", "ok": false},
+						{"word": "gone", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 2,
+					"sentence": "I _ tea every morning.",
+					"summary": "Teaching Focus: First-person singular verbs in the present tense do not add an 's'.",
+					"explain": "Key Differences Addressed: Identifies correct verb forms for first-person singular in habitual actions.",
+					"words": [
+						{"word": "drinks", "ok": false},
+						{"word": "drink", "ok": true},
+						{"word": "drinking", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 3,
+					"sentence": "They _ soccer in the park.",
+					"summary": "Teaching Focus: Plural subjects take the base form of the verb in the present tense.",
+					"explain": "Key Differences Addressed: Highlights subject-verb agreement for plural subjects.",
+					"words": [
+						{"word": "play", "ok": true},
+						{"word": "plays", "ok": false},
+						{"word": "playing", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 4,
+					"sentence": "She _ happy when she got the gift.",
+					"summary": "Teaching Focus: Past tense verbs are used for completed actions in the past.",
+					"explain": "Key Differences Addressed: Contrasts present and past forms of 'to be' for singular subjects.",
+					"words": [
+						{"word": "is", "ok": false},
+						{"word": "was", "ok": true},
+						{"word": "are", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 5,
+					"sentence": "We _ to the cinema yesterday.",
+					"summary": "Teaching Focus: Past tense of irregular verbs like 'go' changes to 'went.'",
+					"explain": "Key Differences Addressed: Differentiates between present and past irregular verb forms.",
+					"words": [
+						{"word": "go", "ok": false},
+						{"word": "goes", "ok": false},
+						{"word": "went", "ok": true}
+					]
+				},
+				{
+					"title": "1",
+					"page": 6,
+					"sentence": "Can you _ the door, please?",
+					"summary": "Teaching Focus: Base verb forms are used after modal verbs like 'can.'",
+					"explain": "Key Differences Addressed: Emphasizes correct use of modal verbs with base forms.",
+					"words": [
+						{"word": "open", "ok": true},
+						{"word": "opens", "ok": false},
+						{"word": "opened", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 7,
+					"sentence": "She _ to music in her free time.",
+					"summary": "Teaching Focus: Third person singular in present tense requires 's' at the end of the verb.",
+					"explain": "Key Differences Addressed: Reinforces subject-verb agreement for habitual actions in the present tense.",
+					"words": [
+						{"word": "listens", "ok": true},
+						{"word": "listen", "ok": false},
+						{"word": "listening", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 8,
+					"sentence": "We always _ our homework after dinner.",
+					"summary": "Teaching Focus: Plural subjects use the base form of the verb in the present tense.",
+					"explain": "Key Differences Addressed: Correct verb forms for plural subjects in routine activities.",
+					"words": [
+						{"word": "does", "ok": false},
+						{"word": "do", "ok": true},
+						{"word": "doing", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 9,
+					"sentence": "She _ a letter to her friend last week.",
+					"summary": "Teaching Focus: Past tense of irregular verbs like 'write' changes to 'wrote.'",
+					"explain": "Key Differences Addressed: Differentiates between present and past irregular verb forms.",
+					"words": [
+						{"word": "write", "ok": false},
+						{"word": "wrote", "ok": true},
+						{"word": "writes", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 10,
+					"sentence": "He _ his room every weekend.",
+					"summary": "Teaching Focus: Third person singular in present tense requires 's' at the end of the verb.",
+					"explain": "Key Differences Addressed: Reinforces subject-verb agreement for habitual actions in the present tense.",
+					"words": [
+						{"word": "clean", "ok": false},
+						{"word": "cleans", "ok": true},
+						{"word": "cleaning", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}

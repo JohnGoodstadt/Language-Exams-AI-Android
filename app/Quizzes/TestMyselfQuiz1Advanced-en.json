@@ -1,0 +1,145 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz1Advanced-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "description",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "1",
+					"page": 1,
+					"sentence": "Had he _ earlier, he would have caught the train.",
+					"summary": "Teaching Focus: Inversion with past perfect in conditional sentences.",
+					"explain": "Key Differences Addressed: Highlights the use of past perfect in inverted third conditionals.",
+					"words": [
+						{"word": "left", "ok": true},
+						{"word": "leave", "ok": false},
+						{"word": "leaving", "ok": false},
+						{"word": "leaves", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 2,
+					"sentence": "Only after the meeting _ how serious the situation was.",
+					"summary": "Teaching Focus: Inversion for emphasis with 'only after.'",
+					"explain": "Key Differences Addressed: Shows how inversion follows time phrases for emphasis.",
+					"words": [
+						{"word": "we realised", "ok": false},
+						{"word": "did we realise", "ok": true},
+						{"word": "realise we", "ok": false},
+						{"word": "had we realised", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 3,
+					"sentence": "It’s essential that the report _ by the end of the day.",
+					"summary": "Teaching Focus: Subjunctive mood for formal requirements.",
+					"explain": "Key Differences Addressed: Differentiates between indicative and subjunctive moods in formal contexts.",
+					"words": [
+						{"word": "is finished", "ok": true},
+						{"word": "will finish", "ok": false},
+						{"word": "has been finished", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 4,
+					"sentence": "He _ for a promotion, only to be rejected.",
+					"summary": "Teaching Focus: Use of past simple to describe completed actions.",
+					"explain": "Key Differences Addressed: Highlights correct tense for narrative sequences.",
+					"words": [
+						{"word": "applied", "ok": true},
+						{"word": "had applied", "ok": false},
+						{"word": "applies", "ok": false},
+						{"word": "applying", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 5,
+					"sentence": "No sooner _ the house than it started raining.",
+					"summary": "Teaching Focus: Inversion with 'no sooner' for emphasis.",
+					"explain": "Key Differences Addressed: Highlights inversion structure with past perfect tense.",
+					"words": [
+						{"word": "we left", "ok": false},
+						{"word": "had we left", "ok": true},
+						{"word": "we had left", "ok": false},
+						{"word": "left we had", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 6,
+					"sentence": "The project was delayed _ the unexpected complications.",
+					"summary": "Teaching Focus: Correct use of prepositions to express causality.",
+					"explain": "Key Differences Addressed: Differentiates 'because of' from other prepositions of cause.",
+					"words": [
+						{"word": "because of", "ok": true},
+						{"word": "due", "ok": false},
+						{"word": "because", "ok": false},
+						{"word": "by", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 7,
+					"sentence": "Were it not for his determination, he _ the competition.",
+					"summary": "Teaching Focus: Inverted conditionals with 'were it not for.'",
+					"explain": "Key Differences Addressed: Highlights structure of hypothetical conditionals with inversion.",
+					"words": [
+						{"word": "won’t have won", "ok": false},
+						{"word": "wouldn’t have won", "ok": true},
+						{"word": "didn’t win", "ok": false},
+						{"word": "hasn’t won", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 8,
+					"sentence": "She is said _ a new novel next year.",
+					"summary": "Teaching Focus: Use of infinitives in passive reporting structures.",
+					"explain": "Key Differences Addressed: Differentiates between infinitive forms in reported speech.",
+					"words": [
+						{"word": "to write", "ok": false},
+						{"word": "to be writing", "ok": false},
+						{"word": "to have written", "ok": false},
+						{"word": "to be publishing", "ok": true}
+					]
+				},
+				{
+					"title": "1",
+					"page": 9,
+					"sentence": "He suggested that she _ the issue in more detail.",
+					"summary": "Teaching Focus: Subjunctive in indirect suggestions.",
+					"explain": "Key Differences Addressed: Emphasizes subjunctive forms after verbs like 'suggest.'",
+					"words": [
+						{"word": "discusses", "ok": false},
+						{"word": "discuss", "ok": true},
+						{"word": "is discussing", "ok": false},
+						{"word": "has discussed", "ok": false}
+					]
+				},
+				{
+					"title": "1",
+					"page": 10,
+					"sentence": "By the time we got there, they _ already.",
+					"summary": "Teaching Focus: Past perfect for actions completed before another past action.",
+					"explain": "Key Differences Addressed: Differentiates between past perfect and simple past tense.",
+					"words": [
+						{"word": "will leave", "ok": false},
+						{"word": "had left", "ok": true},
+						{"word": "left", "ok": false},
+						{"word": "were leaving", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}
+

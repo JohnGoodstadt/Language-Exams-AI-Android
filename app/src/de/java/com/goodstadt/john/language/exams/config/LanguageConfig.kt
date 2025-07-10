@@ -6,7 +6,7 @@ object LanguageConfig {
     val voiceName: String = "de-DE-Neural2-F"
     val languageCode: String = "de-DE"
     val defaultFileName: String = "vocab_data_a1"
-    val meTabMenuItems = listOf("Settings", "Search","Progress", "Quiz",  "Conjugations", "Prepositions", "Paragraph", "Conversation")
+    val meTabMenuItems = listOf("Settings", "Search","Progress", "Conjugations", "Prepositions", "Paragraph", "Conversation")
     val conjugationsFileName: String? = "conjugations_de"
     val prepositionsFileName: String? = "prepositions_de"
 }

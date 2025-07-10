@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.me
 
+import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -19,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.screens.CategoryHeader
 import com.goodstadt.john.language.exams.screens.VocabRow
 import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
@@ -53,6 +55,7 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
             SectionedVocabList(
                     categories = state.categories,
                     playbackState = playbackState,
+                    googleVoice = state.selectedVoiceName,
                     onRowTapped = { word, sentence ->
                         viewModel.playTrack(word, sentence)
                     }
@@ -70,40 +73,52 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
 fun SectionedVocabList(
     categories: List<com.goodstadt.john.language.exams.models.Category>,
     playbackState: PlaybackState,
+    googleVoice:String,
     onRowTapped: (com.goodstadt.john.language.exams.models.VocabWord, com.goodstadt.john.language.exams.models.Sentence) -> Unit
 ) {
     LazyColumn(
             modifier = Modifier.fillMaxSize(),
             contentPadding = PaddingValues(horizontal = 16.dp)
     ) {
+// ... inside your LazyColumn scope ...
+
         categories.forEach { category ->
             stickyHeader {
                 CategoryHeader(title = category.title)
             }
 
-            items(category.words, key = { "${it.id}-${it.word}" }) { word ->
-                val sentenceToShow = word.sentences.firstOrNull()
+            // 1. Create a new, flat list where each element is a pairing of a word and one of its sentences.
+            val wordSentencePairs = category.words.flatMap { word ->
+                // For each word, create a list of pairs, then flatMap will merge all these lists together.
+                word.sentences.map { sentence ->
+                    Pair(word, sentence)
+                }
+            }
 
-                if (sentenceToShow != null) {
-                    val displayData = buildSentenceParts(entry = word, sentence = sentenceToShow)
-                    val googleVoice = "en-GB-Neural2-C"
-                   // val fred = googleVoice
-                    val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow,googleVoice)
+            // 2. Now use the standard `items` call on this new flat list.
+            items(
+                    items = wordSentencePairs,
+                    key = { (word, sentence) -> "${word.id}-${sentence.sentence}" } // Destructure the pair for the key
+            ) { (word, sentence) -> // Destructure the pair for use in the body
 
-                    val isPlaying = playbackState is PlaybackState.Playing &&
-                            playbackState.sentenceId == uniqueSentenceId
+                // Your existing logic now works perfectly here
+                val displayData = buildSentenceParts(entry = word, sentence = sentence)
+                //val googleVoice = viewModel.getCurrentGoogleVoice()
+                val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
 
-                    Column(modifier = Modifier.clickable { onRowTapped(word, sentenceToShow) }) {
-                        VocabRow(
-                                entry = word,
-                                parts = displayData.parts,
-                                sentence = displayData.sentence,
-                                isRecalling = false,
-                                displayDot = false,
-                                wordCount = 0,
-                                isPlaying = isPlaying
-                        )
-                    }
+                val isPlaying = playbackState is PlaybackState.Playing &&
+                        playbackState.sentenceId == uniqueSentenceId
+
+                Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
+                    VocabRow(
+                            entry = word,
+                            parts = displayData.parts,
+                            sentence = displayData.sentence,
+                            isRecalling = false,
+                            displayDot = false,
+                            wordCount = 0,
+                            isPlaying = isPlaying
+                    )
                 }
             }
         }

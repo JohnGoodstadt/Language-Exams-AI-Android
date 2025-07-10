@@ -1,7 +1,8 @@
 # <project-root>/gradle/libs.versions.toml
 [versions]
 agp = "8.8.0"
-kotlin = "1.9.23"
+kotlin = "2.0.0"
+compose-compiler = "2.0.0"
 coreKtx = "1.12.0"
 material = "1.12.0" # <-- ADD THIS LINE
 hilt = "2.51.1"
@@ -17,9 +18,12 @@ firebaseBom = "32.8.1"
 materialIconsExtended = "1.6.5"
 truth = "1.4.2"
 mockk = "1.13.10"
-kotlinxSerializationJson = "1.6.3"
+kotlinxSerializationJson = "1.7.1"
 coroutines = "1.7.3"
 datastore = "1.0.0"
+okhttp = "4.12.0"
+lifecycleRuntimeComposeAndroid = "2.9.1"
+googleGmsGoogleServices = "4.4.2"
 
 [libraries]
 # Core & AppCompat
@@ -30,6 +34,7 @@ google-android-material = { group = "com.google.android.material", name = "mater
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
 androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 
 # Compose
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -65,8 +70,13 @@ androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-co
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose-android", version.ref = "lifecycleRuntimeComposeAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+#org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "compose-compiler" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }

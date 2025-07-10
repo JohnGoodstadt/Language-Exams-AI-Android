@@ -1,0 +1,205 @@
+{
+	"fileformat":10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz5Elementary-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Spelling",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 71,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (to/too/two) \u2014 A1 level.",
+					"explain": "Correct usage of the word 'to' in a sentence.",
+					"words": [
+						{
+							"word": "I am going to the store.",
+							"ok": true
+						},
+						{
+							"word": "I am going too the store.",
+							"ok": false
+						},
+						{
+							"word": "I am going two the store.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 72,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (to/too/two) \u2014 A1 level.",
+					"explain": "Correct usage of the word 'too' in a sentence.",
+					"words": [
+						{
+							"word": "She was too tired to continue.",
+							"ok": true
+						},
+						{
+							"word": "She was to tired to continue.",
+							"ok": false
+						},
+						{
+							"word": "She was two tired to continue.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 73,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (to/too/two) \u2014 A1 level.",
+					"explain": "Correct usage of the word 'two' in a sentence.",
+					"words": [
+						{
+							"word": "He has two cats at home.",
+							"ok": true
+						},
+						{
+							"word": "He has too cats at home.",
+							"ok": false
+						},
+						{
+							"word": "He has to cats at home.",
+							"ok": false
+						}
+					]
+					
+				},
+				{
+					"title": "",
+					"page": 83,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (be/bee/b) \u2014 A1 level.",
+					"explain": "Correct usage of the word 'be' in a sentence.",
+					"words": [
+						{
+							"word": "I want to be a teacher.",
+							"ok": true
+						},
+						{
+							"word": "I want to bee a teacher.",
+							"ok": false
+						},
+						{
+							"word": "I want to b a teacher.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 84,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (be/bee/b) \u2014 A1 level.",
+					"explain": "Correct usage of the word 'bee' in a sentence.",
+					"words": [
+						{
+							"word": "The bee landed on the flower.",
+							"ok": true
+						},
+						{
+							"word": "The be landed on the flower.",
+							"ok": false
+						},
+						{
+							"word": "The b landed on the flower.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 85,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (be/bee/b) \u2014 A1 level.",
+					"explain": "Correct usage of the word 'b' in a sentence.",
+					"words": [
+						{
+							"word": "The letter B comes after A.",
+							"ok": true
+						},
+						{
+							"word": "The letter bee comes after A.",
+							"ok": false
+						},
+						{
+							"word": "The letter be comes after A.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 86,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (eye/I/aye) \u2014 A1 level.",
+					"explain": "Correct usage of the word 'eye' in a sentence.",
+					"words": [
+						{
+							"word": "I saw a dog in the park.",
+							"ok": true
+						},
+						{
+							"word": "Eye saw a dog in the park.",
+							"ok": false
+						},
+						{
+							"word": "Aye saw a dog in the park.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 87,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (eye/I/aye) \u2014 A1 level.",
+					"explain": "Correct usage of the word 'I' in a sentence.",
+					"words": [
+						{
+							"word": "She hurt her eye playing football.",
+							"ok": true
+						},
+						{
+							"word": "She hurt her I playing football.",
+							"ok": false
+						},
+						{
+							"word": "She hurt her aye playing football.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 88,
+					"sentence": "",
+					"summary": "Teaching Focus: Homophones (eye/I/aye) \u2014 A1 level.",
+					"explain": "Correct usage of the word 'aye' in a sentence.",
+					"words": [
+						{
+							"word": "The sailor shouted aye to agree.",
+							"ok": true
+						},
+						{
+							"word": "The sailor shouted eye to agree.",
+							"ok": false
+						},
+						{
+							"word": "The sailor shouted I to agree.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
