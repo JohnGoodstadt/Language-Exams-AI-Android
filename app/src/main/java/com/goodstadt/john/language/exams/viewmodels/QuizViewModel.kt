@@ -7,12 +7,14 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.LanguagesControlFile
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
+import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 //import com.google.gson.Gson
@@ -98,7 +100,8 @@ sealed interface QuizUiState {
 class QuizViewModel @Inject constructor(
     private val application: Application,
     private val vocabRepository: VocabRepository,
-    private val userPreferencesRepository: UserPreferencesRepository
+    private val userPreferencesRepository: UserPreferencesRepository,
+    private val statsRepository: StatsRepository
 //    private val pronounceSharedPreferences: PronounceSharedPreferences,
 //    private val remoteConfigRepository: RemoteConfigRepository,
 //    private val musicPlayer: MusicPlayer,
@@ -213,7 +216,10 @@ class QuizViewModel @Inject constructor(
                     voiceName = currentVoiceName,
                     languageCode = currentLanguageCode
             )
-
+            result.onSuccess {
+                //TODO: Do I want to save the quiz?
+                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence.sentence))
+            }
             result.onFailure { error ->
                 _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
             }

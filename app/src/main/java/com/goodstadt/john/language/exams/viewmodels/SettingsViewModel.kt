@@ -6,11 +6,13 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.ControlRepository
+import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.models.ExamDetails
+import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -46,6 +48,7 @@ class SettingsViewModel @Inject constructor(
     private val controlRepository: ControlRepository,
     private val voiceRepository: VoiceRepository,
     private val vocabRepository: VocabRepository,
+    private val statsRepository: StatsRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SettingsUiState())
@@ -149,7 +152,10 @@ class SettingsViewModel @Inject constructor(
                     voiceName = googleVoice,
                     languageCode = currentLanguageCode
             )
-
+            result.onSuccess {
+                //TODO: DO I need to save settings sentence?
+                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence))
+            }
             result.onFailure { error ->
                 _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
             }

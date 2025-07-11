@@ -3,9 +3,11 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.FlowPreview
@@ -28,7 +30,8 @@ data class SearchResult(
 @HiltViewModel
 class SearchViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
-    private val userPreferencesRepository: UserPreferencesRepository
+    private val userPreferencesRepository: UserPreferencesRepository,
+    private val statsRepository: StatsRepository
 ) : ViewModel() {
 
     // Holds the complete list of all words from the current file
@@ -108,7 +111,9 @@ class SearchViewModel @Inject constructor(
                     voiceName = currentVoiceName,
                     languageCode = currentLanguageCode
             )
-
+            result.onSuccess {
+                statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+            }
             result.onFailure { error ->
                 _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
             }

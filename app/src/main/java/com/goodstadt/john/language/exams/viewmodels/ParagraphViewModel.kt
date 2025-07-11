@@ -4,9 +4,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.OpenAIRepository
+import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.models.VocabFile
+import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,7 +33,8 @@ data class ParagraphUiState(
 class ParagraphViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val openAIRepository: OpenAIRepository // <-- INJECT THE REPOSITORY
+    private val openAIRepository: OpenAIRepository, // <-- INJECT THE REPOSITORY,
+    private val statsRepository: StatsRepository
 
 ) : ViewModel() {
 
@@ -150,6 +153,10 @@ class ParagraphViewModel @Inject constructor(
                             _uiState.update { it.copy(isLoading = false) }
                         }
                 )
+                result.onSuccess {
+                    //TODO: Do I want to save the paragraph?
+                    //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence.sentence))
+                }
                 result.onFailure { error ->
                     _uiState.update { it.copy(error = "Text-to-speech failed: ${error.message}") }
                 }
