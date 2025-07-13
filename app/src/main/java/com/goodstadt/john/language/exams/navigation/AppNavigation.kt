@@ -18,7 +18,7 @@ sealed class Screen(
     object Tab2 : Screen("tab2", "Tab 2", Icons.Outlined.Filter2)
     object Tab3 : Screen("tab3", "Tab 3", Icons.Outlined.Filter3)
     // Using a standard icon as a placeholder for the brain
-    object Tab4 : Screen("tab4", "Focussing", Icons.Default.Psychology)
+    object Tab4 : Screen("tab4", "Focusing", Icons.Default.Psychology)
     object Tab5 : Screen("tab5", "Me", Icons.Default.Face)
 }
 

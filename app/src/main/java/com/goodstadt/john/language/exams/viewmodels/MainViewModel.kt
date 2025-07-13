@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AuthRepository
+import com.goodstadt.john.language.exams.data.RecallingItems
 import com.google.firebase.auth.FirebaseUser
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -18,8 +19,9 @@ enum class AuthState {
 }
 
 @HiltViewModel
-class MainViewModel @Inject constructor(
-    private val authRepository: AuthRepository
+class MainViewModelObsolete @Inject constructor(
+    private val authRepository: AuthRepository,
+    private val recallingItemsManager: RecallingItems
 ) : ViewModel() {
 
     private val _authState = MutableStateFlow(AuthState.LOADING)

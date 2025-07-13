@@ -31,7 +31,7 @@ class MainScreenNavigationTest {
     @Test
     fun navigateToTab4_showsHelloWorld() {
         // Click on the "Focussing" tab
-        composeTestRule.onNodeWithText("Focussing").performClick()
+        composeTestRule.onNodeWithText("Focusing").performClick()
 
         // Verify that the content for Tab 4 is displayed
         composeTestRule.onNodeWithText("Hello, World!").assertIsDisplayed()

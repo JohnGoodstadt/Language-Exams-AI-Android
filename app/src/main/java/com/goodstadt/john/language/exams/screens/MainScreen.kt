@@ -27,6 +27,7 @@ import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
+import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.viewmodels.AuthUiState
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
@@ -37,7 +38,7 @@ import com.goodstadt.john.language.exams.viewmodels.VocabDataUiState
 fun MainScreen() {
     val navController = rememberNavController()
     val tabsViewModel: TabsViewModel = hiltViewModel()
-    val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
+   // val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
 
     val authState by tabsViewModel.authUiState.collectAsState()
 
@@ -168,9 +169,7 @@ fun MainAppContent(navController: NavHostController, tabsViewModel: TabsViewMode
 }
 @Composable
 fun Tab4Screen() {
-    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text("Hello, World!", style = MaterialTheme.typography.headlineMedium)
-    }
+    RecallScreen()
 }
 
 

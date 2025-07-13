@@ -2,9 +2,11 @@ package com.goodstadt.john.language.exams.data
 
 import android.content.Context
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
+import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.VocabFile
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import java.io.File
@@ -16,10 +18,12 @@ class VocabRepository @Inject constructor(
     @ApplicationContext private val context: Context,
         // --- NEW: Inject the new services ---
     private val googleCloudTts: GoogleCloudTTS,
-    private val audioPlayerService: AudioPlayerService
+    private val audioPlayerService: AudioPlayerService,
+    private val userPreferencesRepository: UserPreferencesRepository
 ) {
     // Cache the result in memory after the first successful load
     private val vocabCache = mutableMapOf<String, VocabFile>()
+
 
     // A lazy json parser instance with lenient configuration
     private val jsonParser = Json {
@@ -116,6 +120,72 @@ class VocabRepository @Inject constructor(
                     // If network call fails, pass the failure along.
                     Result.failure(exception)
                 }
+        )
+    }
+    // --- THIS IS THE NEW, SIMPLIFIED FUNCTION ---
+    /**
+     * Searches the cached vocabulary for a specific word and returns its sentences.
+     * It will automatically load the current exam's vocab file if it's not already in the cache.
+     *
+     * @param wordKey The word to search for (e.g., "hello").
+     * @return A list of sentence strings, or an empty list if not found.
+     */
+    suspend fun getSentencesForWord(wordKey: String): List<String> {
+        // 1. Get the current exam file name from user preferences.
+        val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
+
+        // 2. Use your existing getVocabData function. This will automatically
+        //    load from the file if needed, or return instantly from the cache.
+        val vocabDataResult = getVocabData(currentExamFile)
+
+        // 3. Process the result to find the word.
+        return vocabDataResult.fold(
+            onSuccess = { vocabFile ->
+                // Search within the successfully loaded/cached VocabFile
+                val foundWord = vocabFile.categories
+                    .flatMap { it.words }
+                    .firstOrNull { it.word == wordKey }
+
+                // Return the sentences or an empty list
+                foundWord?.sentences?.map { it.sentence } ?: emptyList()
+            },
+            onFailure = {
+                // If loading the file fails for any reason, return an empty list.
+                emptyList()
+            }
+        )
+    }
+    /**
+     * Finds the title and tab number for the first category that contains the target word.
+     *
+     * @param wordKey The word to search for.
+     * @return A [TabDetails] object with the category's info, or default values if not found.
+     */
+    suspend fun findTabDetailsForWord(wordKey: String): TabDetails {
+        // 1. Get the current exam file name from user preferences.
+        val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
+
+        // 2. Use your existing getVocabData function to load from cache or file.
+        val vocabDataResult = getVocabData(currentExamFile)
+
+        return vocabDataResult.fold(
+            onSuccess = { vocabFile ->
+                // 3. Search for the category containing the word.
+                val matchingCategory = vocabFile.categories.firstOrNull { category ->
+                    // The 'any' function is the Kotlin equivalent of Swift's 'contains(where:)'
+                    category.words.any { it.word == wordKey }
+                }
+
+                // 4. Return the details, using the Elvis operator (?:) for default values.
+                TabDetails(
+                    title = matchingCategory?.title ?: "Unknown",
+                    tabNumber = matchingCategory?.tabNumber ?: 1 // Default to 1 if not found
+                )
+            },
+            onFailure = {
+                // If the vocab file fails to load, return default details.
+                TabDetails("Error", 1)
+            }
         )
     }
     /**

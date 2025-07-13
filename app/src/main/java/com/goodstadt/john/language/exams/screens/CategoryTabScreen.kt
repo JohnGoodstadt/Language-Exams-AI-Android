@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens
 
+import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -11,6 +12,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -22,6 +25,8 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
@@ -29,8 +34,14 @@ import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.ui.theme.Orange
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
+import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
+import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 /**
@@ -40,13 +51,16 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun CategoryTabScreen(
+    viewModel: CategoryTabViewModel = hiltViewModel(),
     menuItems: List<String>,
     categories: List<Category>,
     categoryIndexMap: Map<String, Int>,
     playbackState: PlaybackState,
     selectedVoiceName: String, // <-- MODIFICATION 1: Add new parameter
     onRowTapped: (word: VocabWord, sentence: Sentence) -> Unit
+
 ) {
+    val uiState by viewModel.uiState.collectAsState()
     val lazyListState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
 
@@ -104,15 +118,32 @@ fun CategoryTabScreen(
                                 val isPlaying = playbackState is PlaybackState.Playing &&
                                         playbackState.sentenceId == uniqueSentenceId
 
-                                VocabRow(
-                                        entry = word,
-                                        parts = displayData.parts,
-                                        sentence = displayData.sentence,
-                                        isRecalling = false,
-                                        displayDot = false,
-                                        wordCount = 0,
-                                        isPlaying = isPlaying
+//                                VocabRow(
+//                                        entry = word,
+//                                        parts = displayData.parts,
+//                                        sentence = displayData.sentence,
+//                                        isRecalling = false,
+//                                        displayDot = false,
+//                                        wordCount = 0,
+//                                        isPlaying = isPlaying
+//                                )
+                                // --- THIS IS THE REPLACEMENT ---
+                                val isRecalling = uiState.recalledWordKeys.contains(word.word)
+                                if (isRecalling){
+                                    Log.d("RecompositionCheck", "Word: '${word.word}', isRecalling: $isRecalling")
+                                }
+
+                                SwipeableVocabRow(
+                                    word = word,
+                                    sentence = sentenceToShow,
+                                    selectedVoiceName = selectedVoiceName,
+                                    isPlaying = (uiState.playbackState as? PlaybackState.Playing)?.sentenceId == generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName),
+                                    recalledWordKeys = uiState.recalledWordKeys,
+                                    onRowTapped = { w, s -> viewModel.onRowTapped(w, s) },
+                                    onFocus = { viewModel.onFocusClicked(word) },
+                                    onCancel = { viewModel.onCancelClicked(word) }
                                 )
+                                // --- END REPLACEMENT ---
                             }
                         } else {
                             Text(
@@ -127,6 +158,8 @@ fun CategoryTabScreen(
             }
         }
     }
+
+
 }
 
 

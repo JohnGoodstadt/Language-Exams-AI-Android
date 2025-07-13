@@ -1,11 +1,13 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.app.Application
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
+import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -19,6 +21,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -46,8 +49,10 @@ sealed interface AuthUiState {
 class TabsViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
+    private val recallingItemsManager: RecallingItems,
     private val authRepository: AuthRepository,
     private val statsRepository: StatsRepository,
+    private val application: Application // Hilt can provide this
     //,
    // private val controlRepository: ControlRepository
 ) : ViewModel() {
@@ -125,6 +130,16 @@ class TabsViewModel @Inject constructor(
 
         observeVoicePreference() // <-- 3. CALL THE OBSERVER FUNCTION
 
+        viewModelScope.launch {
+            // Get the currently saved exam key from preferences.
+            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
+
+            Log.d("MainViewModel", "Triggering initial load of recalled items for key: '$currentExamKey'")
+            recallingItemsManager.load(currentExamKey)
+        }
+
+        //Log.d("MainViewModel", "Triggering initial load of recalled items.")
+        //recallingItemsManager.load("Spanis hA1Vocab")
 
     }
     private fun initializeAppSession() {
@@ -146,6 +161,7 @@ class TabsViewModel @Inject constructor(
             }
         }
     }
+
     // 3. Add the auth function from MainViewModel
 //    private fun initializeUserSession() {
 //        viewModelScope.launch {
@@ -174,7 +190,9 @@ class TabsViewModel @Inject constructor(
                 _vocabUiState.value = VocabDataUiState.Error(error.localizedMessage ?: "Unknown error")
             }
         }
+
     }
+
     /**
      * A reusable helper function to filter and process data for a given tab number.
      */

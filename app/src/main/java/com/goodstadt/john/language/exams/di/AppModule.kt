@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.di
 import android.content.Context
 import com.goodstadt.john.language.exams.data.AudioPlayerService
 import com.goodstadt.john.language.exams.data.ControlRepository
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import dagger.Module
@@ -39,9 +40,10 @@ object AppModule {
     fun provideVocabRepository(
         @ApplicationContext context: Context,
         googleCloudTts: GoogleCloudTTS,
-        audioPlayerService: AudioPlayerService
+        audioPlayerService: AudioPlayerService,
+        userPreferencesRepository: UserPreferencesRepository
     ): VocabRepository {
-        return VocabRepository(context, googleCloudTts, audioPlayerService)
+        return VocabRepository(context, googleCloudTts, audioPlayerService, userPreferencesRepository)
     }
 
     @Provides

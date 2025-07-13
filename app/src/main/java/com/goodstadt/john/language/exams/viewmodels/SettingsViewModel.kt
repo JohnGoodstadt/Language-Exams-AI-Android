@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.ControlRepository
+import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -48,7 +49,8 @@ class SettingsViewModel @Inject constructor(
     private val controlRepository: ControlRepository,
     private val voiceRepository: VoiceRepository,
     private val vocabRepository: VocabRepository,
-    private val statsRepository: StatsRepository
+    private val statsRepository: StatsRepository,
+    private val recallingItemsManager: RecallingItems
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SettingsUiState())
@@ -173,7 +175,19 @@ class SettingsViewModel @Inject constructor(
 
             when (_sheetState.value) {
                 SheetContent.ExamSelection -> {
-                    pendingExam?.let { userPreferencesRepository.saveSelectedFileName(it.json) }
+
+                    pendingExam?.let { selectedExam ->
+                        // 1. Save the user's preference (already here)
+                        userPreferencesRepository.saveSelectedFileName(selectedExam.json)
+
+                        // --- THIS IS THE NEW, CRITICAL PART ---
+                        // 2. Tell the shared manager to load the recalled items for the NEW exam
+                        Log.d("SettingsViewModel", "New exam selected. Reloading recalled items for key: ${selectedExam.json}")
+                        recallingItemsManager.load(selectedExam.json)
+                    }
+
+
+                   // pendingExam?.let { userPreferencesRepository.saveSelectedFileName(it.json) }
                 }
                 SheetContent.SpeakerSelection -> {
                     pendingVoice?.let { userPreferencesRepository.saveSelectedVoiceName(it.id) }
