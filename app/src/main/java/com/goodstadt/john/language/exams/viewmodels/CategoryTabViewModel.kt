@@ -19,13 +19,19 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.toSet
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import android.content.Context
+import com.goodstadt.john.language.exams.data.PlaybackSource
+import dagger.hilt.android.qualifiers.ApplicationContext
+import java.io.File
 import javax.inject.Inject
 
 // This data class represents everything the UI needs to draw itself.
 data class CategoryTabUiState(
     val isLoading: Boolean = true,
+    val categories: List<Category> = emptyList(),
     val recalledWordKeys: Set<String> = emptySet(),
     val playbackState: PlaybackState = PlaybackState.Idle,
+    val wordsOnDisk: Set<String> = emptySet()
    // private val recallingItemsManager: RecallingItems
 )
 
@@ -34,6 +40,7 @@ class CategoryTabViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val vocabRepository: VocabRepository, // For getting categories/words and playing audio
     private val recallingItemsManager: RecallingItems,
+    @ApplicationContext private val context: Context,
     private val application: Application // Needed for RecallingItems SharedPreferences
 ) : ViewModel() {
 
@@ -61,27 +68,34 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
 
-    private fun loadContentObsolete() {
+    fun loadContentForTab(tabIdentifier: String, voiceName: String) {
+        if (!_uiState.value.isLoading && _uiState.value.categories.isNotEmpty()) return
+
+        _uiState.update { it.copy(isLoading = true) }
+
         viewModelScope.launch {
-            // Load the list of categories for this tab from your repository
-            // I'm assuming a function like this exists in your VocabRepository
-         //   val categories = vocabRepository.getTab1Categories() // or getTab2Categories etc.
+            val categories = vocabRepository.getCategoriesForTab(tabIdentifier)
 
-            // Load the recalled items from storage
-            // TODO: Use a real exam key from user preferences
-            val currentExamKey = "Spanish A1Vocab"
-            //recallingItemsManager.load(currentExamKey)
-            val recalledKeys = recallingItemsManager.items.value.map { it.key }.toSet()
+            if (categories.isNotEmpty()) {
+                // --- THIS IS THE NEW LOGIC ---
+                // After getting the categories, ask the repository to check the disk cache for them.
+                val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+                val cachedKeys = vocabRepository.getWordKeysWithCachedAudio(categories, currentVoiceName)
 
-            _uiState.update {
-                it.copy(
-                    isLoading = false,
-//                    categories = categories,
-                    recalledWordKeys = recalledKeys
-                )
+                _uiState.update {
+                    it.copy(
+                        isLoading = false,
+                        categories = categories,
+                        // Update the newly named state with the result of the disk check.
+                        wordsOnDisk = cachedKeys
+                    )
+                }
+            } else {
+                _uiState.update { it.copy(isLoading = false) }
             }
         }
     }
+
 
     // --- User Action Handlers ---
 
@@ -133,6 +147,9 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
     fun onRowTapped(word: VocabWord, sentence: Sentence) {
+
+        if (_uiState.value.playbackState is PlaybackState.Playing) return
+
         viewModelScope.launch {
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
@@ -143,17 +160,31 @@ class CategoryTabViewModel @Inject constructor(
             _uiState.update { it.copy(playbackState = PlaybackState.Playing(uniqueSentenceId)) }
 
             // Call your repository to play the audio
-             vocabRepository.playTextToSpeech(
-                 sentence.sentence,
-                 uniqueSentenceId = uniqueSentenceId,
-                 voiceName = currentVoiceName,
-                 languageCode = LanguageConfig.languageCode//,
-                 //onTTSApiCallStart = null,
-                 //onTTSApiCallComplete = null
-             )
+            val result = vocabRepository.playTextToSpeech(
+                text = sentence.sentence,
+                uniqueSentenceId = uniqueSentenceId,
+                voiceName = currentVoiceName,
+                languageCode = LanguageConfig.languageCode
+            )
 
-            // Update state back to idle when done
-            _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+            result.onSuccess { playbackSource ->
+                if (playbackSource == PlaybackSource.NETWORK) {
+                    // ...add the word's key to our set of cached keys to show the red dot.
+                    _uiState.update { currentState ->
+                        currentState.copy(
+                            wordsOnDisk = currentState.wordsOnDisk + word.word
+                        )
+                    }
+                }
+                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+            }
+            result.onFailure { error ->
+                // Optionally handle the error state in the UI
+                _uiState.update { it.copy(playbackState = PlaybackState.Error(error.message ?: "Playback failed")) }
+                // After a short delay or user action, you might want to reset to Idle
+                // For now, we can just set it to Idle.
+                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+            }
         }
     }
 }

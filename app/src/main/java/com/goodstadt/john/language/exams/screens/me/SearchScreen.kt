@@ -55,7 +55,7 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                             sentence = displayData.sentence,
                             isRecalling = false,
                             displayDot = false,
-                            wordCount = 0,
+                            wordsOnDisk = setOf(),
                             isPlaying = isPlaying
                     )
                 }

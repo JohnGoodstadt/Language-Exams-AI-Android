@@ -1,9 +1,12 @@
 package com.goodstadt.john.language.exams.data
 
 import android.content.Context
+import android.util.Log
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
+import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.VocabFile
+import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
@@ -12,6 +15,11 @@ import kotlinx.serialization.json.Json
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
+
+enum class PlaybackSource {
+    CACHE,
+    NETWORK
+}
 
 @Singleton
 class VocabRepository @Inject constructor(
@@ -70,6 +78,26 @@ class VocabRepository @Inject constructor(
             Result.failure(e)
         }
     }
+    fun getWordKeysWithCachedAudioObsolete(categories: List<Category>, voiceName: String): Set<String> {
+        val cacheDir = context.cacheDir
+
+        // 1. Flatten all words from all categories into a single list.
+        val allWords = categories.flatMap { it.words }
+
+        // 2. Filter this list to keep only the words that have a cached file.
+        val wordsWithCache = allWords.filter { word ->
+            // Use 'any' to check if at least ONE sentence's audio exists.
+            // This is efficient because it stops checking as soon as it finds one.
+            word.sentences.any { sentence ->
+                val uniqueSentenceId = generateUniqueSentenceId(word, sentence, voiceName)
+                val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
+                audioCacheFile.exists()
+            }
+        }
+
+        // 3. Map the filtered list of VocabWord objects to just their keys and return as a Set.
+        return wordsWithCache.map { it.word }.toSet()
+    }
     /**
      * Fetches audio data for the given text from the TTS service and plays it.
      * This version includes a file-based caching mechanism.
@@ -81,7 +109,7 @@ class VocabRepository @Inject constructor(
         languageCode: String, // <-- New parameter
         onTTSApiCallStart: () -> Unit = {}, //slow call to TTS API
         onTTSApiCallComplete: () -> Unit = {} //slow call to TTS API
-    ): Result<Unit> {
+    ): Result<PlaybackSource> {
         // 1. Define the cache file based on the unique ID.
         // We use the app's private cache directory, which is the correct place for this.
         val cacheDir = context.cacheDir
@@ -91,7 +119,8 @@ class VocabRepository @Inject constructor(
         if (audioCacheFile.exists()) {
             println("Playing from cache: Yippee!") // For debugging
             // If it exists, play the audio data from the file.
-            return audioPlayerService.playAudio(audioCacheFile.readBytes())
+            audioPlayerService.playAudio(audioCacheFile.readBytes())
+            return Result.success(PlaybackSource.CACHE)
         }
 
         // 3. If not cached, fetch from the network.
@@ -115,6 +144,7 @@ class VocabRepository @Inject constructor(
 
                     // 5. Play the newly fetched audio data.
                     audioPlayerService.playAudio(audioData)
+                    Result.success(PlaybackSource.NETWORK)
                 },
                 onFailure = { exception ->
                     // If network call fails, pass the failure along.
@@ -156,6 +186,35 @@ class VocabRepository @Inject constructor(
         )
     }
     /**
+     * Checks a list of categories and returns the keys of words that have
+     * at least one audio sentence cached on disk for the given voice.
+     *
+     * @param categories The list of categories to check.
+     * @param voiceName The specific voice name used to generate the cache filename.
+     * @return A Set of word keys (strings) that have cached audio.
+     */
+    fun getWordKeysWithCachedAudio(categories: List<Category>, voiceName: String): Set<String> {
+        val cacheDir = context.cacheDir
+
+        // 1. Flatten all words from all categories into a single list.
+        val allWords = categories.flatMap { it.words }
+
+        // 2. Filter this list to keep only the words that have a cached file.
+        val wordsWithCache = allWords.filter { word ->
+            // Use 'any' to check if at least ONE sentence's audio exists.
+            // This is efficient because it stops checking as soon as it finds one.
+            word.sentences.any { sentence ->
+                val uniqueSentenceId = generateUniqueSentenceId(word, sentence, voiceName)
+                Log.e("VocabRepository","Looking for $uniqueSentenceId")
+                val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
+                audioCacheFile.exists()
+            }
+        }
+
+        // 3. Map the filtered list of VocabWord objects to just their keys and return as a Set.
+        return wordsWithCache.map { it.word }.toSet()
+    }
+    /**
      * Finds the title and tab number for the first category that contains the target word.
      *
      * @param wordKey The word to search for.
@@ -185,6 +244,30 @@ class VocabRepository @Inject constructor(
             onFailure = {
                 // If the vocab file fails to load, return default details.
                 TabDetails("Error", 1)
+            }
+        )
+    }
+
+// In data/VocabRepository.kt
+
+    // Add a function like this:
+    suspend fun getCategoriesForTab(tabIdentifier: String): List<Category> {
+        val tabNumber = tabIdentifier.filter { it.isDigit() }.toIntOrNull() ?: return emptyList()
+
+        // Get the current exam file name from user preferences.
+        val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
+
+        // Use your existing getVocabData function to load from cache or file.
+        val vocabDataResult = getVocabData(currentExamFile)
+
+        return vocabDataResult.fold(
+            onSuccess = { vocabFile ->
+                // Filter the categories to only include ones for the current tab
+                vocabFile.categories.filter { it.tabNumber == tabNumber }
+            },
+            onFailure = { error ->
+                Log.e("VocabRepository", "Failed to get vocab data for tab $tabIdentifier", error)
+                emptyList()
             }
         )
     }

@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -33,14 +34,20 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material3.Divider
 import androidx.compose.material3.SwipeToDismissBoxValue
 
 // --- Other necessary UI imports ---
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 // --- Your project-specific classes ---
 // You will need to add the imports for your own models and utility functions, for example:
@@ -50,6 +57,9 @@ import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
 
 
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId // Or wherever this is
+import androidx.compose.material3.CircularProgressIndicator
+
+//import com.google.android.material.progressindicator.CircularProgressIndicator
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -59,7 +69,7 @@ fun SwipeableVocabRow(
     selectedVoiceName: String,
     isPlaying: Boolean,
     recalledWordKeys: Set<String>,
-//    isRecalling: Boolean,
+    wordsOnDisk: Set<String>,
     onRowTapped: (VocabWord, Sentence) -> Unit,
     onFocus: () -> Unit,
     onCancel: () -> Unit,
@@ -67,6 +77,7 @@ fun SwipeableVocabRow(
 ) {
 
     val isRecalling = recalledWordKeys.contains(word.word)
+    val displayDot = wordsOnDisk.contains(word.word)
 
     // --- CHANGE 1: Use the new state remember function ---
     val dismissState = rememberSwipeToDismissBoxState(
@@ -124,8 +135,9 @@ fun SwipeableVocabRow(
                 parts = displayData.parts,
                 sentence = displayData.sentence,
                 isRecalling = isRecalling,
-                displayDot = true,
-                wordCount = 0,
+                displayDot = displayDot,
+                wordsOnDisk ,
+                //wordCount = 0,
                 isPlaying = isPlaying
             )
         }
@@ -153,4 +165,81 @@ fun SwipeBackground(isRecalling: Boolean, modifier: Modifier = Modifier) {
             Icon(imageVector = icon, contentDescription = text, tint = Color.White)
         }
     }
+}
+
+
+@Composable
+fun VocabRow(
+    entry: VocabWord,
+    parts: List<String>,
+    sentence: String,
+    isRecalling: Boolean,
+    displayDot: Boolean,
+    wordsOnDisk: Set<String>,
+    isPlaying: Boolean
+) {
+    // This logic builds the styled text with underlined words.
+    val annotatedString = buildAnnotatedString {
+        when (parts.size) {
+            2 -> {
+                append(parts[0])
+                withStyle(
+                    style = SpanStyle(
+                        color = Color.Cyan, // Use theme color
+                        textDecoration = TextDecoration.Underline
+                    )
+                ) {
+                    append(entry.word)
+                }
+                append(parts[1])
+            }
+            3 -> {
+                val words = entry.word.split(",").map { it.trim() }
+                if (words.size >= 2) {
+                    append(parts[0])
+                    withStyle(style = SpanStyle(color =  Color.Cyan, textDecoration = TextDecoration.Underline)) {
+                        append(words[0])
+                    }
+                    append(parts[1])
+                    withStyle(style = SpanStyle(color =  Color.Cyan, textDecoration = TextDecoration.Underline)) {
+                        append(words[1])
+                    }
+                    append(parts[2])
+                } else {
+                    append(sentence)
+                }
+            }
+            else -> {
+                append(sentence)
+            }
+        }
+    }
+
+    // This Row lays out the text and the status indicators.
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        // The main text content
+        Text(text = annotatedString, modifier = Modifier.weight(1f))
+
+        // Status indicators on the right
+        if (isPlaying) {
+            CircularProgressIndicator(modifier = Modifier.size(24.dp))
+        } else {
+            // Check if the red dot should be displayed
+            val displayRedDot = wordsOnDisk.contains(entry.word)
+
+            if (displayRedDot) {
+                Text(text = "🔴", fontSize = 12.sp)
+            }
+            // Check if the green dot should be displayed
+            if (isRecalling) {
+                Text(text = "🟢", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
+            }
+        }
+    }
+    Divider()
 }

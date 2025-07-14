@@ -33,16 +33,17 @@ import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.viewmodels.AuthUiState
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
-import com.goodstadt.john.language.exams.viewmodels.VocabDataUiState
+//import com.goodstadt.john.language.exams.viewmodels.VocabDataUiState
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
     val tabsViewModel: TabsViewModel = hiltViewModel()
+    val globalUiState by tabsViewModel.uiState.collectAsState()
    // val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
 
-    val authState by tabsViewModel.authUiState.collectAsState()
+    val authState = globalUiState.authState
 
     when (authState) {
         is AuthUiState.Loading -> {
@@ -61,16 +62,19 @@ fun MainScreen() {
         is AuthUiState.Success -> {
             // Once successful, show the main app content
             // The entire Scaffold and NavHost goes inside here
-            MainAppContent(navController = navController, tabsViewModel = tabsViewModel)
+            MainAppContent(
+                navController = navController,
+                selectedVoiceName = globalUiState.selectedVoiceName
+            )
         }
     }
 
 }
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
-fun MainAppContent(navController: NavHostController, tabsViewModel: TabsViewModel) {
+fun MainAppContent(navController: NavHostController, selectedVoiceName: String) {
 
-    val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
+    //val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
 
     Scaffold(
         bottomBar = {
@@ -112,70 +116,42 @@ fun MainAppContent(navController: NavHostController, tabsViewModel: TabsViewMode
             }
         }
     ) { innerPadding ->
+        // ... inside MainAppContent function ...
+
         NavHost(
             navController,
             startDestination = Screen.Tab1.route,
             Modifier.padding(innerPadding)
         ) {
-            // --- Collect the shared voice preference ONCE here ---
 
+            // --- THE NEW, SIMPLIFIED NAVIGATION ---
 
             composable(Screen.Tab1.route) {
-                val uiState by tabsViewModel.vocabUiState.collectAsState()
-                val categories by tabsViewModel.tab1Categories.collectAsState()
-                val menuItems by tabsViewModel.tab1MenuItems.collectAsState()
-                val indexMap by tabsViewModel.tab1CategoryIndexMap.collectAsState()
-                val playbackState by tabsViewModel.playbackState.collectAsState()
-
-                RenderCategoryTab(
-                    uiState = uiState,
-                    menuItems = menuItems,
-                    categories = categories,
-                    categoryIndexMap = indexMap,
-                    playbackState = playbackState,
-                    selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
-                    onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
+                // Hilt automatically provides a unique instance of CategoryTabViewModel
+                // scoped to this specific destination in the navigation graph.
+                CategoryTabScreen(
+                    tabIdentifier = "tab1", // Tell the screen which tab it is
+                    selectedVoiceName = selectedVoiceName
                 )
             }
 
             composable(Screen.Tab2.route) {
-                val uiState by tabsViewModel.vocabUiState.collectAsState()
-                val categories by tabsViewModel.tab2Categories.collectAsState()
-                val menuItems by tabsViewModel.tab2MenuItems.collectAsState()
-                val indexMap by tabsViewModel.tab2CategoryIndexMap.collectAsState()
-                val playbackState by tabsViewModel.playbackState.collectAsState()
-
-                RenderCategoryTab(
-                    uiState = uiState,
-                    menuItems = menuItems,
-                    categories = categories,
-                    categoryIndexMap = indexMap,
-                    playbackState = playbackState,
-                    selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
-                    onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
+                // Hilt provides another, separate instance of the ViewModel for this screen.
+                CategoryTabScreen(
+                    tabIdentifier = "tab2",
+                    selectedVoiceName = selectedVoiceName
                 )
             }
 
             composable(Screen.Tab3.route) {
-                val uiState by tabsViewModel.vocabUiState.collectAsState()
-                val categories by tabsViewModel.tab3Categories.collectAsState()
-                val menuItems by tabsViewModel.tab3MenuItems.collectAsState()
-                val indexMap by tabsViewModel.tab3CategoryIndexMap.collectAsState()
-                val playbackState by tabsViewModel.playbackState.collectAsState()
-
-                RenderCategoryTab(
-                    uiState = uiState,
-                    menuItems = menuItems,
-                    categories = categories,
-                    categoryIndexMap = indexMap,
-                    playbackState = playbackState,
-                    selectedVoiceName = selectedVoiceName, // <-- PASS THE COLLECTED STATE
-                    onRowTapped = { word, sentence -> tabsViewModel.playTrack(word, sentence) }
+                CategoryTabScreen(
+                    tabIdentifier = "tab3",
+                    selectedVoiceName = selectedVoiceName
                 )
             }
 
             composable(Screen.Tab4.route) {
-                Tab4Screen()
+                RecallScreen() // This was already correct
             }
 
             composable(Screen.Tab5.route) {
@@ -183,44 +159,9 @@ fun MainAppContent(navController: NavHostController, tabsViewModel: TabsViewMode
             }
         }
     }
-}
-@Composable
-fun Tab4Screen() {
-    RecallScreen()
+
+// You can now DELETE the RenderCategoryTab composable entirely, as it's no longer needed.
+// The NavHost now calls CategoryTabScreen directly.
+
 }
 
-
-@Composable
-private fun RenderCategoryTab(
-    uiState: VocabDataUiState,
-    menuItems: List<String>,
-    categories: List<Category>,
-    categoryIndexMap: Map<String, Int>,
-    playbackState: PlaybackState,
-    selectedVoiceName: String, // <-- ADD NEW PARAMETER
-    onRowTapped: (word: VocabWord, sentence: Sentence) -> Unit
-) {
-
-    when (uiState) {
-        is VocabDataUiState.Loading -> {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator()
-            }
-        }
-        is VocabDataUiState.Error -> {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(text = "Error: ${uiState.message}", color = Color.Red)
-            }
-        }
-        is VocabDataUiState.Success -> {
-            CategoryTabScreen(
-                    menuItems = menuItems,
-                    categories = categories,
-                    categoryIndexMap = categoryIndexMap,
-                    playbackState = playbackState,
-                    selectedVoiceName = selectedVoiceName, // <-- USE THE PARAMETER
-                    onRowTapped = onRowTapped
-            )
-        }
-    }
-}

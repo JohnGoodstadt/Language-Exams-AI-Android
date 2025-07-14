@@ -14,6 +14,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.MeScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
@@ -34,7 +35,18 @@ fun MeTabContainerScreen() {
     // --- END OF CORRECTION ---
 
     val meTabNavController = rememberNavController()
-    val menuItems by tabsViewModel.meTabMenuItems.collectAsState()
+   // val menuItems by tabsViewModel.meTabMenuItems.collectAsState()
+    val menuItems = LanguageConfig.meTabMenuItems
+//    val menuItems = listOf(
+//        "Settings",
+//        "Search",
+//        "Quiz",
+//        "Progress",
+//        "Conjugations",
+//        "Prepositions",
+//        "Paragraph",
+//        "Conversation"
+//    )
 
     Column(modifier = Modifier.fillMaxSize()) {
         // Part A: The Persistent Horizontal Menu

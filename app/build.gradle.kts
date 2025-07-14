@@ -10,8 +10,9 @@ plugins {
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.compose.compiler)// <-- ADD THIS LINE to apply the new plugin
     alias(libs.plugins.kotlinSerialization)
-    kotlin("kapt")
+   // kotlin("kapt")
     alias(libs.plugins.google.gms.google.services)
+    id("com.google.devtools.ksp")
 }
 
 val secretsProperties = Properties()
@@ -155,9 +156,10 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
 
     // Hilt
+
     implementation(libs.hilt.android)
     implementation(libs.androidx.lifecycle.runtime.compose.android)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
 
     // Add this for JSON parsing
@@ -184,13 +186,14 @@ dependencies {
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     androidTestImplementation(libs.hilt.android.testing)
-    kaptAndroidTest(libs.hilt.compiler)
+//    kaptAndroidTest(libs.hilt.compiler)
+    kspAndroidTest(libs.hilt.compiler)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.okhttp)
 }
 
-// Allow Hilt to access classes in different build variants
-kapt {
-    correctErrorTypes = true
-}
+//// Allow Hilt to access classes in different build variants
+//kapt {
+//    correctErrorTypes = true
+//}

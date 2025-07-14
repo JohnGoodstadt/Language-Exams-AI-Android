@@ -1,44 +1,26 @@
 package com.goodstadt.john.language.exams.viewmodels
 
-import android.app.Application
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AuthRepository
-import com.goodstadt.john.language.exams.data.ControlRepository
-import com.goodstadt.john.language.exams.data.RecallingItems
-import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.VocabFile
-import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
-import com.goodstadt.john.language.exams.models.WordAndSentence
-import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-// Represents the state of our data loading
-sealed interface VocabDataUiState {
-    object Loading : VocabDataUiState
-    data class Success(val vocabFile: VocabFile) : VocabDataUiState
-    data class Error(val message: String) : VocabDataUiState
-}
+// --- The UI State for this ViewModel is now much simpler ---
+// It only holds truly global state.
+data class GlobalUiState(
+    val authState: AuthUiState = AuthUiState.Loading,
+    val selectedVoiceName: String = ""
+)
 
-// --- NEW: A sealed interface to represent the playback state ---
-sealed interface PlaybackState {
-    object Idle : PlaybackState
-    data class Playing(val sentenceId: String) : PlaybackState // Use a unique ID
-    data class Error(val message: String) : PlaybackState
-}
-
+// The AuthUiState can remain as it was.
 sealed interface AuthUiState {
     object Loading : AuthUiState
     data class Success(val uid: String) : AuthUiState
@@ -47,218 +29,44 @@ sealed interface AuthUiState {
 
 @HiltViewModel
 class TabsViewModel @Inject constructor(
-    private val vocabRepository: VocabRepository,
-    private val userPreferencesRepository: UserPreferencesRepository,
-    private val recallingItemsManager: RecallingItems,
     private val authRepository: AuthRepository,
-    private val statsRepository: StatsRepository,
-    private val application: Application // Hilt can provide this
-    //,
-   // private val controlRepository: ControlRepository
+    private val userPreferencesRepository: UserPreferencesRepository // For shared preferences
 ) : ViewModel() {
 
-    private val _authUiState = MutableStateFlow<AuthUiState>(AuthUiState.Loading)
-    val authUiState = _authUiState.asStateFlow()
-
-    // A StateFlow to hold the overall UI state for the vocab data
-    private val _vocabUiState = MutableStateFlow<VocabDataUiState>(VocabDataUiState.Loading)
-    val vocabUiState = _vocabUiState.asStateFlow()
-
-    // --- NEW: StateFlow for playback status ---
-    private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
-    val playbackState = _playbackState.asStateFlow()
-
-    // --- Data slices for each tab ---
-    private val _tab1Categories = MutableStateFlow<List<Category>>(emptyList())
-    val tab1Categories = _tab1Categories.asStateFlow()
-    private val _tab1MenuItems = MutableStateFlow<List<String>>(emptyList())
-    val tab1MenuItems = _tab1MenuItems.asStateFlow()
-    private val _tab1CategoryIndexMap = MutableStateFlow<Map<String, Int>>(emptyMap())
-    val tab1CategoryIndexMap = _tab1CategoryIndexMap.asStateFlow()
-
-    private val _tab2Categories = MutableStateFlow<List<Category>>(emptyList())
-    val tab2Categories = _tab2Categories.asStateFlow()
-    private val _tab2MenuItems = MutableStateFlow<List<String>>(emptyList())
-    val tab2MenuItems = _tab2MenuItems.asStateFlow()
-    private val _tab2CategoryIndexMap = MutableStateFlow<Map<String, Int>>(emptyMap())
-    val tab2CategoryIndexMap = _tab2CategoryIndexMap.asStateFlow()
-
-    private val _tab3Categories = MutableStateFlow<List<Category>>(emptyList())
-    val tab3Categories = _tab3Categories.asStateFlow()
-    private val _tab3MenuItems = MutableStateFlow<List<String>>(emptyList())
-    val tab3MenuItems = _tab3MenuItems.asStateFlow()
-    private val _tab3CategoryIndexMap = MutableStateFlow<Map<String, Int>>(emptyMap())
-    val tab3CategoryIndexMap = _tab3CategoryIndexMap.asStateFlow()
-    // --- End of data slices ---
-
-    // --- ADD THE NEW DYNAMIC LIST ---
-    private val _meTabMenuItems = MutableStateFlow<List<String>>(emptyList())
-    val meTabMenuItems = _meTabMenuItems.asStateFlow()
-
-    // --- NEW STATE FOR VOICE PREFERENCE ---
-    private val _selectedVoiceName = MutableStateFlow("")
-    val selectedVoiceName = _selectedVoiceName.asStateFlow() // <-- 2. ADD STATEFLOW
-
-    // --- Add the new auth state flows ---
-    private val _authState = MutableStateFlow(AuthState.LOADING)
-    val authState = _authState.asStateFlow()
-
-    private val TAG = "TabsViewModel"
+    private val _uiState = MutableStateFlow(GlobalUiState())
+    val uiState = _uiState.asStateFlow()
 
     init {
-        // --- THIS IS THE VERIFICATION STEP ---
-        Log.d(TAG, "ViewModel Initialized for flavor.")
-        Log.d(TAG, "Language Greeting: ${LanguageConfig.defaultFileName}")
-        Log.d(TAG, "Language Voice Name: ${LanguageConfig.voiceName}")
-        // --- END OF VERIFICATION ---
-
+        // 1. Initialize the user session (as before).
         initializeAppSession()
 
-// --- THIS IS THE FIX ---
-        // Launch a new coroutine in the ViewModel's lifecycle scope
+        // 2. Listen for changes to shared preferences.
         viewModelScope.launch {
-            // Now it's safe to call the suspend function 'collect'
-            userPreferencesRepository.selectedFileNameFlow.collect { fileName ->
-                loadDataForFile(fileName) // This inner block will be executed every time a new filename is saved
+            userPreferencesRepository.selectedVoiceNameFlow.collect { voiceName ->
+                _uiState.update { it.copy(selectedVoiceName = voiceName) }
             }
         }
-        // --- END OF FIX ---
-        // --- END OF UPDATE ---
-
-        // Load the menu items from the flavor-specific config
-        _meTabMenuItems.value = LanguageConfig.meTabMenuItems
-
-        observeVoicePreference() // <-- 3. CALL THE OBSERVER FUNCTION
-
-        viewModelScope.launch {
-            // Get the currently saved exam key from preferences.
-            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-
-            Log.d("MainViewModel", "Triggering initial load of recalled items for key: '$currentExamKey'")
-            recallingItemsManager.load(currentExamKey)
-        }
-
-        //Log.d("MainViewModel", "Triggering initial load of recalled items.")
-        //recallingItemsManager.load("Spanis hA1Vocab")
-
     }
+
     private fun initializeAppSession() {
-        // Use viewModelScope to launch a coroutine safely
         viewModelScope.launch {
             Log.d("TabsViewModel", "Initializing user session...")
             val result = authRepository.signInOrUpdateUser()
 
             result.onSuccess { user ->
-                Log.d("TabsViewModel", "Session success. User UID: ${user.uid}, Is Anonymous: ${user.isAnonymous}")
-                _authUiState.value = AuthUiState.Success(user.uid)
-                // You can now proceed with loading user-specific data if needed
+                Log.d("TabsViewModel", "Session success. UID: ${user.uid}")
+                _uiState.update { it.copy(authState = AuthUiState.Success(user.uid)) }
             }
 
             result.onFailure { exception ->
                 Log.e("TabsViewModel", "Session failed", exception)
-                _authUiState.value = AuthUiState.Error(exception.message ?: "Unknown error")
-                // Handle the error, maybe show a message to the user
+                _uiState.update { it.copy(authState = AuthUiState.Error(exception.message ?: "Unknown error")) }
             }
         }
     }
 
-    // 3. Add the auth function from MainViewModel
-//    private fun initializeUserSession() {
-//        viewModelScope.launch {
-//            _authState.value = AuthState.LOADING
-//            val result = authRepository.signInOrUpdateUser()
-//            result.onSuccess { user ->
-//                _currentUser.value = user
-//                _authState.value = AuthState.SIGNED_IN
-//            }.onFailure {
-//                _authState.value = AuthState.ERROR
-//            }
-//        }
-//    }
-    // Renamed loadData to be more specific
-    private fun loadDataForFile(fileName: String) {
-        viewModelScope.launch {
-            _vocabUiState.value = VocabDataUiState.Loading
-            val result = vocabRepository.getVocabData(fileName)
-            result.onSuccess { vocabFile ->
-                _vocabUiState.value = VocabDataUiState.Success(vocabFile)
-                // ... (processing logic is the same)
-                processCategoriesForTab(vocabFile, 1, _tab1Categories, _tab1MenuItems, _tab1CategoryIndexMap)
-                processCategoriesForTab(vocabFile, 2, _tab2Categories, _tab2MenuItems, _tab2CategoryIndexMap)
-                processCategoriesForTab(vocabFile, 3, _tab3Categories, _tab3MenuItems, _tab3CategoryIndexMap)
-            }.onFailure { error ->
-                _vocabUiState.value = VocabDataUiState.Error(error.localizedMessage ?: "Unknown error")
-            }
-        }
-
-    }
-
-    /**
-     * A reusable helper function to filter and process data for a given tab number.
-     */
-    private fun processCategoriesForTab(
-        vocabFile: VocabFile,
-        tabNumber: Int,
-        categoriesStateFlow: MutableStateFlow<List<Category>>,
-        menuItemsStateFlow: MutableStateFlow<List<String>>,
-        indexMapStateFlow: MutableStateFlow<Map<String, Int>>
-    ) {
-        val filteredCategories = vocabFile.categories.filter { it.tabNumber == tabNumber }
-        categoriesStateFlow.value = filteredCategories
-        menuItemsStateFlow.value = filteredCategories.map { it.title }
-
-        val indexMap = mutableMapOf<String, Int>()
-        var currentIndex = 0
-        filteredCategories.forEach { category ->
-            indexMap[category.title] = currentIndex
-            currentIndex += 1 + category.words.size
-        }
-        indexMapStateFlow.value = indexMap
-    }
-
-    // --- NEW FUNCTION TO OBSERVE PREFERENCES ---
-    private fun observeVoicePreference() {
-        viewModelScope.launch {
-            userPreferencesRepository.selectedVoiceNameFlow.collect { voiceName ->
-                _selectedVoiceName.value = voiceName
-            }
-        }
-    }
-
-    // --- NEW: The function called by the UI ---
-    fun playTrack(word: VocabWord, sentence: Sentence) {
-        // Prevent starting a new track while one is already playing
-        if (_playbackState.value is PlaybackState.Playing) return
-
-
-        viewModelScope.launch {
-//            val googleVoice = "en-GB-Neural2-C"
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
-            _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
-
-            // 1. Get the current voice name (from prefs or flavor default)
-//            val currentVoiceName = userPreferencesRepository.getSelectedVoiceName()
-//            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            // 2. Get the corresponding language code from our config
-            val currentLanguageCode = LanguageConfig.languageCode
-
-            val result = vocabRepository.playTextToSpeech(
-                    text = sentence.sentence,
-                    uniqueSentenceId = uniqueSentenceId,
-                    voiceName = currentVoiceName,
-                    languageCode = currentLanguageCode
-            )
-
-            result.onSuccess {
-                statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence.sentence))
-            }
-            result.onFailure { error ->
-                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
-            }
-
-            // Reset state to Idle when done or on failure
-            _playbackState.value = PlaybackState.Idle
-        }
-    }
+    // --- ALL THE OLD DATA LOADING FUNCTIONS ARE GONE ---
+    // loadDataForFile(), playTrack(), all the category/menu/indexMap flows...
+    // They are no longer the responsibility of this ViewModel.
+    // They have been moved to CategoryTabViewModel.
 }

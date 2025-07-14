@@ -21,6 +21,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.goodstadt.john.language.exams.models.Category
+import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.screens.CategoryHeader
 import com.goodstadt.john.language.exams.screens.VocabRow
 import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
@@ -28,6 +31,7 @@ import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsUiState
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsViewModel
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
+//import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import hilt_aggregated_deps._com_goodstadt_john_language_exams_viewmodels_ConjugationsViewModel_HiltModules_BindsModule
 
 @Composable
@@ -71,10 +75,10 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SectionedVocabList(
-    categories: List<com.goodstadt.john.language.exams.models.Category>,
+    categories: List<Category>,
     playbackState: PlaybackState,
     googleVoice:String,
-    onRowTapped: (com.goodstadt.john.language.exams.models.VocabWord, com.goodstadt.john.language.exams.models.Sentence) -> Unit
+    onRowTapped: (VocabWord, Sentence) -> Unit
 ) {
     LazyColumn(
             modifier = Modifier.fillMaxSize(),
@@ -111,13 +115,14 @@ fun SectionedVocabList(
 
                 Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
                     VocabRow(
-                            entry = word,
-                            parts = displayData.parts,
-                            sentence = displayData.sentence,
-                            isRecalling = false,
-                            displayDot = false,
-                            wordCount = 0,
-                            isPlaying = isPlaying
+                        entry = word,
+                        parts = displayData.parts,
+                        sentence = displayData.sentence,
+                        isRecalling = false,
+                        displayDot = false,
+//                            wordCount = 0,
+                        isPlaying = isPlaying,
+                        wordsOnDisk = TODO()
                     )
                 }
             }
