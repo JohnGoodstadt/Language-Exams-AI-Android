@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -24,6 +25,7 @@ import androidx.navigation.compose.rememberNavController
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
@@ -78,7 +80,22 @@ fun MainAppContent(navController: NavHostController, tabsViewModel: TabsViewMode
 
                 bottomNavItems.forEach { screen ->
                     NavigationBarItem(
-                        icon = { Icon(screen.icon, contentDescription = screen.title) },
+                        icon = {
+                            when (val icon = screen.icon) {
+                                is IconResource.VectorIcon -> {
+                                    Icon(
+                                        imageVector = icon.imageVector,
+                                        contentDescription = screen.title
+                                    )
+                                }
+                                is IconResource.DrawableIcon -> {
+                                    Icon(
+                                        painter = painterResource(id = icon.id),
+                                        contentDescription = screen.title
+                                    )
+                                }
+                            }
+                        },
                         label = { Text(screen.title, maxLines = 1, textAlign = TextAlign.Center) },
                         selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
                         onClick = {

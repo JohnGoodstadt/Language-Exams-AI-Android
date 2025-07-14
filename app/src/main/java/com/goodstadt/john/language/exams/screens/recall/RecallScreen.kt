@@ -20,13 +20,16 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.data.RecallingItem
 import com.goodstadt.john.language.exams.models.TabDetails
+import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.utils.STOPS
 import com.goodstadt.john.language.exams.viewmodels.RecallViewModel
 import kotlinx.coroutines.delay
@@ -244,22 +247,32 @@ fun RecallingItemContent(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(4.dp)
             ) {
-                val tabIcon = when (tabDetails.tabNumber) {
-                    1 -> Icons.Outlined.Filter1
-                    2 -> Icons.Outlined.Filter2
-                    3 -> Icons.Outlined.Filter3
-                    else -> Icons.Default.Info // A sensible default for any other cases
+                val iconResource: IconResource = when (tabDetails.tabNumber) {
+                    1 -> IconResource.DrawableIcon(R.drawable.counter_0_24px) // Use your new drawable
+                    2 -> IconResource.VectorIcon(Icons.Outlined.Filter2)
+                    3 -> IconResource.VectorIcon(Icons.Outlined.Filter3)
+                    else -> IconResource.VectorIcon(Icons.Default.Info) // Default is still a VectorIcon
                 }
-
-                Icon(
-                    imageVector = tabIcon,
-                    contentDescription = "Tab Info",
-                    modifier = Modifier.size(16.dp)
-                )
+                when (iconResource) {
+                    is IconResource.VectorIcon -> {
+                        Icon(
+                            imageVector = iconResource.imageVector,
+                            contentDescription = "Tab Info",
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
+                    is IconResource.DrawableIcon -> {
+                        Icon(
+                            painter = painterResource(id = iconResource.id),
+                            contentDescription = "Tab Info",
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
+                }
                 // TODO: Replace with your tab lookup logic
 //                Text("Tab 1: Basics", style = MaterialTheme.typography.bodySmall)
             Text(
-                text = "Tab ${tabDetails.tabNumber}: ${tabDetails.title}",
+                text = tabDetails.title,
                 style = MaterialTheme.typography.bodySmall
                  )
             }

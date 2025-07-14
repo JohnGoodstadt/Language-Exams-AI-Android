@@ -124,7 +124,7 @@ fun SwipeableVocabRow(
                 parts = displayData.parts,
                 sentence = displayData.sentence,
                 isRecalling = isRecalling,
-                displayDot = false,
+                displayDot = true,
                 wordCount = 0,
                 isPlaying = isPlaying
             )
