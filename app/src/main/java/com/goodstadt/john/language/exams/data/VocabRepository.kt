@@ -79,7 +79,7 @@ class VocabRepository @Inject constructor(
         }
     }
     fun getWordKeysWithCachedAudioObsolete(categories: List<Category>, voiceName: String): Set<String> {
-        val cacheDir = context.cacheDir
+        val cacheDir = context.filesDir
 
         // 1. Flatten all words from all categories into a single list.
         val allWords = categories.flatMap { it.words }
@@ -112,7 +112,7 @@ class VocabRepository @Inject constructor(
     ): Result<PlaybackSource> {
         // 1. Define the cache file based on the unique ID.
         // We use the app's private cache directory, which is the correct place for this.
-        val cacheDir = context.cacheDir
+        val cacheDir = context.filesDir
         val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
 
         // 2. Check if the cached file exists.
@@ -194,7 +194,7 @@ class VocabRepository @Inject constructor(
      * @return A Set of word keys (strings) that have cached audio.
      */
     fun getWordKeysWithCachedAudio(categories: List<Category>, voiceName: String): Set<String> {
-        val cacheDir = context.cacheDir
+        val cacheDir = context.filesDir
 
         // 1. Flatten all words from all categories into a single list.
         val allWords = categories.flatMap { it.words }
