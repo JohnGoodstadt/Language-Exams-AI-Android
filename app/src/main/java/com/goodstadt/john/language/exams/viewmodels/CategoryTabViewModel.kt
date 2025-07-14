@@ -99,51 +99,63 @@ class CategoryTabViewModel @Inject constructor(
 
     // --- User Action Handlers ---
 
-    fun onFocusClickedObsolete(word: VocabWord) {
-        val key = word.word
-        if (!recallingItemsManager.amIRecalling(key)) {
-            recallingItemsManager.add(key, text = word.translation, imageId = "", additionalText = word.romanisation)
-            recallingItemsManager.recalledOK(key)
-            recallingItemsManager.save("Spanish A1Vocab")
-            _uiState.update { it.copy(recalledWordKeys = it.recalledWordKeys + key) }
-            // TODO: Add notification logic here
-        }
-    }
-    fun onFocusClickedObsolete2(word: VocabWord) {
-        recallingItemsManager.add(word.word, text = word.translation, imageId = "", additionalText = word.romanisation)
-        recallingItemsManager.recalledOK(word.word)
-        recallingItemsManager.save("SpanishA1Vocab")
-    }
-    fun onCancelClickedObsolete(word: VocabWord) {
-        val key = word.word
-        if (recallingItemsManager.amIRecalling(key)) {
-            recallingItemsManager.remove(key)
-            recallingItemsManager.save("Spanish A1Vocab")
-            _uiState.update { it.copy(recalledWordKeys = it.recalledWordKeys - key) }
-            // TODO: Add notification/badge logic here
-        }
-    }
-    fun onCancelClickeObsoleted(word: VocabWord) {
-        recallingItemsManager.remove(word.word)
-        recallingItemsManager.save("SpanishA1Vocab")
-    }
+//    fun onFocusClickedObsolete3(word: VocabWord) {
+//        val key = word.word
+//        if (!recallingItemsManager.amIRecalling(key)) {
+//            recallingItemsManager.add(key, text = word.translation, imageId = "", additionalText = word.romanisation)
+//            recallingItemsManager.recalledOK(key)
+//            recallingItemsManager.save("Spanish A1Vocab")
+//            _uiState.update { it.copy(recalledWordKeys = it.recalledWordKeys + key) }
+//            // TODO: Add notification logic here
+//        }
+//    }
+//    fun onFocusClickedObsolete2(word: VocabWord) {
+//        recallingItemsManager.add(word.word, text = word.translation, imageId = "", additionalText = word.romanisation)
+//        recallingItemsManager.recalledOK(word.word)
+//        recallingItemsManager.save("SpanishA1Vocab")
+//    }
+//    fun onCancelClickedObsolete4(word: VocabWord) {
+//        val key = word.word
+//        if (recallingItemsManager.amIRecalling(key)) {
+//            recallingItemsManager.remove(key)
+//            recallingItemsManager.save("Spanish A1Vocab")
+//            _uiState.update { it.copy(recalledWordKeys = it.recalledWordKeys - key) }
+//            // TODO: Add notification/badge logic here
+//        }
+//    }
+//    fun onCancelClickeObsoleted(word: VocabWord) {
+//        recallingItemsManager.remove(word.word)
+//        recallingItemsManager.save("SpanishA1Vocab")
+//    }
 
+//    fun onFocusClickedObsolete(word: VocabWord) {
+//        viewModelScope.launch {
+//            recallingItemsManager.add(word.word, text = word.translation, imageId = "", additionalText = word.romanisation)
+//            recallingItemsManager.recalledOK(word.word)
+//            // --- 2. THE FIX ---
+//            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
+//            recallingItemsManager.save(currentExamKey)
+//        }
+//    }
+//
+//    fun onCancelClickedObsolete(word: VocabWord) {
+//        viewModelScope.launch {
+//            recallingItemsManager.remove(word.word)
+//            // --- 2. THE FIX ---
+//            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
+//            recallingItemsManager.save(currentExamKey)
+//        }
+//    }
     fun onFocusClicked(word: VocabWord) {
         viewModelScope.launch {
-            recallingItemsManager.add(word.word, text = word.translation, imageId = "", additionalText = word.romanisation)
-            recallingItemsManager.recalledOK(word.word)
-            // --- 2. THE FIX ---
-            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-            recallingItemsManager.save(currentExamKey)
+            // We create a new, single function in RecallingItems for this
+            recallingItemsManager.focusOnWord(word)
         }
     }
 
     fun onCancelClicked(word: VocabWord) {
         viewModelScope.launch {
             recallingItemsManager.remove(word.word)
-            // --- 2. THE FIX ---
-            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-            recallingItemsManager.save(currentExamKey)
         }
     }
     fun onRowTapped(word: VocabWord, sentence: Sentence) {

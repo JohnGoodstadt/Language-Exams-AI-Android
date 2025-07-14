@@ -68,7 +68,7 @@ class TabsViewModelTest {
         // Initialize the ViewModel with ALL THREE mocks. This solves the "too many arguments" error.
 //        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository, mockControlRepository)
        // viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockAuthRepository,mockStatsRepository,mockApplication)
-        viewModel = TabsViewModel(mockAuthRepository, mockUserPreferencesRepository)
+        viewModel = TabsViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager)
         // Allow the coroutines launched in the init block to complete
         advanceUntilIdle()
 
@@ -88,7 +88,7 @@ class TabsViewModelTest {
 
         // 2. Act
 //        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository, mockControlRepository)
-        viewModel = TabsViewModel(mockAuthRepository, mockUserPreferencesRepository)
+        viewModel = TabsViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager)
         advanceUntilIdle()
 
         // 3. Assert

@@ -5,6 +5,7 @@ package com.goodstadt.john.language.exams.data
 import android.app.Application
 import android.content.Context
 import android.util.Log
+import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.utils.timingToDurationMillis
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
@@ -12,10 +13,13 @@ import kotlinx.serialization.json.Json
 import java.util.UUID
 import java.util.concurrent.TimeUnit
 import com.goodstadt.john.language.exams.utils.STOPS
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -104,7 +108,9 @@ data class RecallingItem(
 // This class will be instantiated as a Singleton by Hilt later
 @Singleton
 class RecallingItems @Inject constructor (
-    private val application: Application
+    private val application: Application,
+    private val userPreferencesRepository: UserPreferencesRepository,
+    private val appScope: CoroutineScope
 ) {
 
     // The list of items. In a ViewModel, this would be a StateFlow.
@@ -127,7 +133,7 @@ class RecallingItems @Inject constructor (
         }
     }
 
-    fun recalledOK(key: String) {
+    fun recalledOKObsolete(key: String) {
         _items.update { currentList ->
             currentList.map { item ->
                 if (item.key == key) {
@@ -143,7 +149,40 @@ class RecallingItems @Inject constructor (
             }
         }
     }
+// ... inside RecallingItems class ...
 
+    suspend fun recalledOK(key: String) {
+        _items.update { currentList ->
+            currentList.map { item ->
+                // Find the item to update
+                if (item.key == key) {
+                    // Logic to move to the next stop
+                    val nextStopNumber = if (item.currentStopNumber < STOPS.size) {
+                        item.currentStopNumber + 1
+                    } else {
+                        item.currentStopNumber // Stay at the last stop
+                    }
+
+                    val nextStopCode = STOPS.getOrNull(nextStopNumber - 1) ?: STOPS.last()
+                    val eventTimeMillis = timingToDurationMillis(nextStopCode)
+
+                    // Return a modified copy of the item
+                    item.copy(
+                        recallState = RecallState.Waiting,
+                        currentStopNumber = nextStopNumber,
+                        prevEventTime = System.currentTimeMillis(),
+                        nextEventTime = System.currentTimeMillis() + eventTimeMillis
+                    )
+                } else {
+                    // Return all other items unchanged
+                    item
+                }
+            }
+        }
+
+        // After updating the state, save it.
+        appScope.launch { _save() }
+    }
     // In data/RecallIt.kt, inside the RecallingItems class
 
 
@@ -171,14 +210,16 @@ class RecallingItems @Inject constructor (
         return _items.value.firstOrNull { it.key == key }
     }
 
-    fun remove(key: String) {
-        _items.update { currentList ->
-            currentList.filterNot { it.key == key } // Create a new list without the item
-        }
+    suspend fun remove(key: String) {
+        _items.update { currentList -> currentList.filterNot { it.key == key } }
+        // Launch the save in the app's scope so it's not cancelled with the ViewModel.
+        appScope.launch { _save() }
     }
-    fun removeAll() {
-        _items.update { emptyList() } // Set the state to an empty list
+    suspend fun removeAll() {
+        _items.update { emptyList() }
+        appScope.launch { _save() }
     }
+
 
     // --- Private Helper Methods ---
 
@@ -197,8 +238,24 @@ class RecallingItems @Inject constructor (
     }
 
     // --- Save/Load Logic (equivalent to UserDefaults) ---
+    private suspend fun _save() {
+        try {
+            val storageKey = userPreferencesRepository.selectedFileNameFlow.first()
+            val listToSave = _items.value
+            val jsonString = Json.encodeToString(listToSave)
 
-    fun save(storageKey: String = RECALL_IT_SAVED_FILENAME) {
+            val prefs = context.getSharedPreferences("RecallItPrefs", Context.MODE_PRIVATE)
+            prefs.edit().putString(storageKey, jsonString).apply()
+
+            // Add a log to confirm saving
+            Log.d("RecallingItems", "Saved ${listToSave.size} items to key '$storageKey'")
+//            Log.d("RecallingItems", "SUCCESS: Save to '$storageKey' completed.")
+        } catch (e: Exception) {
+            Log.e("RecallingItems", "FAILED to save", e)
+        }
+    }
+
+    fun saveObsolete(storageKey: String = RECALL_IT_SAVED_FILENAME) {
         try {
             // THE FIX: We get the current list from the .value property
             val listToSave = _items.value
@@ -236,6 +293,37 @@ class RecallingItems @Inject constructor (
             e.printStackTrace()
         }
     }
+
+    suspend fun focusOnWord(word: VocabWord) {
+        val key = word.word
+        if (amIRecalling(key)) return
+
+        val newItem = RecallingItem(
+            key = key,
+            text = word.translation,
+            imageId = "",
+            additionalText = word.romanisation
+        )
+        // Perform both state updates sequentially
+        _items.update { it + newItem }
+        _items.update { currentList ->
+            currentList.map { item ->
+                if (item.key == key) {
+                    val eventTimeMillis = timingToDurationMillis("10m")
+                    item.copy(
+                        recallState = RecallState.Waiting,
+                        prevEventTime = System.currentTimeMillis(),
+                        nextEventTime = System.currentTimeMillis() + eventTimeMillis
+                    )
+                } else {
+                    item
+                }
+            }
+        }
+        // Launch the save operation in the background
+        appScope.launch { _save() }
+    }
+
 }
 
 

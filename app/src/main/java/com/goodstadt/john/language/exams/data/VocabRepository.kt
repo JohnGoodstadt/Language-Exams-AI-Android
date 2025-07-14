@@ -205,7 +205,7 @@ class VocabRepository @Inject constructor(
             // This is efficient because it stops checking as soon as it finds one.
             word.sentences.any { sentence ->
                 val uniqueSentenceId = generateUniqueSentenceId(word, sentence, voiceName)
-                Log.e("VocabRepository","Looking for $uniqueSentenceId")
+//                Log.e("VocabRepository","Looking for $uniqueSentenceId")
                 val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
                 audioCacheFile.exists()
             }

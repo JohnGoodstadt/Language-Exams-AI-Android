@@ -112,65 +112,61 @@ class RecallViewModel @Inject constructor(
         // Placeholder
         _uiState.update { it.copy(wordCounts = mapOf("Can you Answer this?" to 5)) }
     }
-
-    fun onClearAllClickedObsolete() {
-        recallingItemsManager.removeAll()
-        // Save the now-empty list to storage to make the change permanent
-        // TODO: Use a real exam key
-        recallingItemsManager.save("Spanish A1Vocab")
-    }
     fun onClearAllClicked() {
+        // This is also correct.
         viewModelScope.launch {
             recallingItemsManager.removeAll()
-            // --- 2. THE FIX ---
-            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-            recallingItemsManager.save(currentExamKey)
         }
     }
-    fun onRemoveClickedObsolete(key: String) {
-
-        recallingItemsManager.items.value.forEach { fred ->
-            Log.d("RecompositionCheck", "Word: '${fred.key}', isRecalling")
-
-        }
-
-//        val isRecalling = recallingItemsManager.items.contains(key)
-//        if (isRecalling){
-//            Log.d("RecompositionCheck", "Word: '${key}', isRecalling: $isRecalling")
+//    fun onClearAllClickedObsolete() {
+//        recallingItemsManager.removeAll()
+//        // Save the now-empty list to storage to make the change permanent
+//        // TODO: Use a real exam key
+//        recallingItemsManager.save("Spanish A1Vocab")
+//    }
+//    fun onClearAllClickedO() {
+//        viewModelScope.launch {
+//            recallingItemsManager.removeAll()
+//            // --- 2. THE FIX ---
+//            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
+//            recallingItemsManager.save(currentExamKey)
 //        }
-
-        recallingItemsManager.remove(key)
-        // TODO: Save to correct key from SharedPreferences/DataStore
-        recallingItemsManager.save("Spanish A1Vocab")
-        filterAndSortItemsObsolete()
-        // TODO: update app badge and manage notifications
-    }
+//    }
+//    fun onRemoveClickedObsolete(key: String) {
+//
+//        recallingItemsManager.items.value.forEach { fred ->
+//            Log.d("RecompositionCheck", "Word: '${fred.key}', isRecalling")
+//
+//        }
+//
+////        val isRecalling = recallingItemsManager.items.contains(key)
+////        if (isRecalling){
+////            Log.d("RecompositionCheck", "Word: '${key}', isRecalling: $isRecalling")
+////        }
+//
+//        recallingItemsManager.remove(key)
+//        // TODO: Save to correct key from SharedPreferences/DataStore
+//        recallingItemsManager.save("Spanish A1Vocab")
+//        filterAndSortItemsObsolete()
+//        // TODO: update app badge and manage notifications
+//    }
     fun onRemoveClicked(key: String) {
-        viewModelScope.launch { // Use a coroutine to access the flow
+        viewModelScope.launch {
             recallingItemsManager.remove(key)
-            // --- 2. THE FIX ---
-            // Get the current key from the repository and save
-            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-            recallingItemsManager.save(currentExamKey)
         }
-    }
-
-    fun onOkClickedObsolete(key: String) {
-        recallingItemsManager.recalledOK(key)
-        // TODO: Save to correct key from SharedPreferences/DataStore
-        recallingItemsManager.save("Spanish A1Vocab")
-        filterAndSortItemsObsolete()
-        // TODO: update app badge and manage notifications
     }
     fun onOkClicked(key: String) {
-        viewModelScope.launch { // Use a coroutine to access the flow
+        viewModelScope.launch {
             recallingItemsManager.recalledOK(key)
-            // --- 2. THE FIX ---
-            // Get the current key from the repository and save
-            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-            recallingItemsManager.save(currentExamKey)
         }
     }
+
+    // Your onClearAllClicked is also simpler now
+//    fun onClearAllClicked() {
+//        viewModelScope.launch {
+//            recallingItemsManager.removeAll()
+//        }
+//    }
     fun onPlayWord(word: String) {
         viewModelScope.launch {
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
