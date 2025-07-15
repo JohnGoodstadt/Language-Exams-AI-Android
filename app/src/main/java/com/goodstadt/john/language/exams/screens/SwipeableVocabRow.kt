@@ -67,7 +67,7 @@ fun SwipeableVocabRow(
     word: VocabWord,
     sentence: Sentence,
     selectedVoiceName: String,
-    isPlaying: Boolean,
+    isDownloading: Boolean,
     recalledWordKeys: Set<String>,
     wordsOnDisk: Set<String>,
     onRowTapped: (VocabWord, Sentence) -> Unit,
@@ -138,7 +138,7 @@ fun SwipeableVocabRow(
                 displayDot = displayDot,
                 wordsOnDisk ,
                 //wordCount = 0,
-                isPlaying = isPlaying
+                isDownloading = isDownloading
             )
         }
     }
@@ -176,7 +176,7 @@ fun VocabRow(
     isRecalling: Boolean,
     displayDot: Boolean,
     wordsOnDisk: Set<String>,
-    isPlaying: Boolean
+    isDownloading:Boolean
 ) {
     // This logic builds the styled text with underlined words.
     val annotatedString = buildAnnotatedString {
@@ -226,7 +226,7 @@ fun VocabRow(
         Text(text = annotatedString, modifier = Modifier.weight(1f))
 
         // Status indicators on the right
-        if (isPlaying) {
+        if (isDownloading) {
             CircularProgressIndicator(modifier = Modifier.size(24.dp))
         } else {
             // Check if the red dot should be displayed

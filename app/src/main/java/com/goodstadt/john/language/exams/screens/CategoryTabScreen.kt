@@ -107,12 +107,15 @@ fun CategoryTabScreen(
                         val sentenceToShow = word.sentences.firstOrNull()
 
                         if (sentenceToShow != null) {
-                            // --- THE FIX: We now call the ViewModel directly ---
+                            val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName)
+                            val isDownloading = uiState.downloadingSentenceId == uniqueSentenceId
+
                             SwipeableVocabRow(
                                 word = word,
                                 sentence = sentenceToShow,
                                 selectedVoiceName = selectedVoiceName,
-                                isPlaying = (uiState.playbackState as? PlaybackState.Playing)?.sentenceId == generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName),
+                                isDownloading = isDownloading,
+//                                isPlaying = (uiState.playbackState as? PlaybackState.Playing)?.sentenceId == generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName),
                                 recalledWordKeys = uiState.recalledWordKeys,
                                 wordsOnDisk = uiState.wordsOnDisk, // Pass the new state
                                 onRowTapped = { w, s -> viewModel.onRowTapped(w, s) }, // Call ViewModel's function

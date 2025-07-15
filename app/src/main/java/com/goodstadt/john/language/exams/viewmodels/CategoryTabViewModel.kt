@@ -31,7 +31,8 @@ data class CategoryTabUiState(
     val categories: List<Category> = emptyList(),
     val recalledWordKeys: Set<String> = emptySet(),
     val playbackState: PlaybackState = PlaybackState.Idle,
-    val wordsOnDisk: Set<String> = emptySet()
+    val wordsOnDisk: Set<String> = emptySet(),
+    val downloadingSentenceId: String? = null
    // private val recallingItemsManager: RecallingItems
 )
 
@@ -181,11 +182,12 @@ class CategoryTabViewModel @Inject constructor(
                     // This lambda is the communication channel.
                     // It will ONLY be executed by the repository if it's making a network call.
                     // NOW we show the progress indicator.
-                    _uiState.update { it.copy(isLoading = true) }
+                    _uiState.update { it.copy(downloadingSentenceId = uniqueSentenceId) }
                 },
                 onTTSApiCallComplete = {
-                    _uiState.update { it.copy(isLoading = false) }
-                    _uiState.update { it.copy(isLoading = true,playbackState = PlaybackState.Idle) }
+                    _uiState.update { it.copy(downloadingSentenceId = null) }
+//                    _uiState.update { it.copy(isLoading = false) }
+//                    _uiState.update { it.copy(isLoading = true,playbackState = PlaybackState.Idle) }
                 }
 
             )

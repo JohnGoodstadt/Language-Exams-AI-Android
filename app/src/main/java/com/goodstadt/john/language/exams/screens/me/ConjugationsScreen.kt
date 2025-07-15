@@ -121,7 +121,7 @@ fun SectionedVocabList(
                         isRecalling = false,
                         displayDot = false,
 //                            wordCount = 0,
-                        isPlaying = isPlaying,
+                        isDownloading = false, //TODO: maybe dynamic?
                         wordsOnDisk = TODO()
                     )
                 }
