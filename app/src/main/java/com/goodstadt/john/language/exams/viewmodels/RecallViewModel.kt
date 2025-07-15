@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.RecallingItem
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -180,13 +181,17 @@ class RecallViewModel @Inject constructor(
                 voiceName = currentVoiceName,
                 languageCode = currentLanguageCode
             )
-            result.onSuccess {
-                // statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+//            result.onSuccess {
+//                // statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+//            }
+//            result.onFailure { error ->
+//                //  _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+//            }
+            when (result) {
+                is PlaybackResult.PlayedFromNetworkAndCached -> {}
+                is PlaybackResult.PlayedFromCache -> {}
+                is PlaybackResult.Failure -> {}
             }
-            result.onFailure { error ->
-                //  _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
-            }
-
             // TODO: update word counts
         }
     }
@@ -204,11 +209,16 @@ class RecallViewModel @Inject constructor(
                 voiceName = currentVoiceName,
                 languageCode = currentLanguageCode
             )
-            result.onSuccess {
-               // statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
-            }
-            result.onFailure { error ->
-              //  _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+//            result.onSuccess {
+//               // statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+//            }
+//            result.onFailure { error ->
+//              //  _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+//            }
+            when (result) {
+                is PlaybackResult.PlayedFromNetworkAndCached -> {}
+                is PlaybackResult.PlayedFromCache -> {}
+                is PlaybackResult.Failure -> {}
             }
            // _playbackState.value = PlaybackState.Idle
         }

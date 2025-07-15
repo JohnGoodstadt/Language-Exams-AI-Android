@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -70,31 +71,30 @@ class PrepositionsViewModel @Inject constructor(
         if (_playbackState.value is PlaybackState.Playing) return
 
         viewModelScope.launch {
-           // val googleVoice = "en-GB-Neural2-C"
-
+            // val googleVoice = "en-GB-Neural2-C"
 
 
             // Use .first() to get the most recent value from the Flow
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val currentLanguageCode = LanguageConfig.languageCode
 
-            val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
+            val uniqueSentenceId = generateUniqueSentenceId(word, sentence, currentVoiceName)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 //maybe just de. remove any (zu dem)
-            val cleanedSentence =  sentence.sentence.replace( "\\s*\\([^)]*\\)\\s*".toRegex(), " ")
+            val cleanedSentence = sentence.sentence.replace("\\s*\\([^)]*\\)\\s*".toRegex(), " ")
 
             val result = vocabRepository.playTextToSpeech(
-                    text = cleanedSentence,
-                    uniqueSentenceId = uniqueSentenceId,
-                    voiceName = currentVoiceName,
-                    languageCode = currentLanguageCode
+                text = cleanedSentence,
+                uniqueSentenceId = uniqueSentenceId,
+                voiceName = currentVoiceName,
+                languageCode = currentLanguageCode
             )
-            result.onSuccess {
-                //TODO: DO I need to save Prepositions - many 'to' words
-                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence.sentence))
-            }
-            result.onFailure { error ->
-                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+            when (result) {
+                is PlaybackResult.PlayedFromNetworkAndCached -> {}
+                is PlaybackResult.PlayedFromCache -> {}
+                is PlaybackResult.Failure -> {
+                    _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
+                }
             }
             _playbackState.value = PlaybackState.Idle
         }

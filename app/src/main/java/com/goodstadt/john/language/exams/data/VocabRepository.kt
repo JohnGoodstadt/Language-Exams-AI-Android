@@ -21,6 +21,13 @@ enum class PlaybackSource {
     NETWORK
 }
 
+// In data/VocabRepository.kt
+sealed class PlaybackResult {
+    data object PlayedFromCache : PlaybackResult()
+    data object PlayedFromNetworkAndCached : PlaybackResult()
+    data class Failure(val exception: Exception) : PlaybackResult()
+}
+
 @Singleton
 class VocabRepository @Inject constructor(
     @ApplicationContext private val context: Context,
@@ -109,7 +116,7 @@ class VocabRepository @Inject constructor(
         languageCode: String, // <-- New parameter
         onTTSApiCallStart: () -> Unit = {}, //slow call to TTS API
         onTTSApiCallComplete: () -> Unit = {} //slow call to TTS API
-    ): Result<PlaybackSource> {
+    ): PlaybackResult {
         // 1. Define the cache file based on the unique ID.
         // We use the app's private cache directory, which is the correct place for this.
         val cacheDir = context.filesDir
@@ -119,8 +126,13 @@ class VocabRepository @Inject constructor(
         if (audioCacheFile.exists()) {
             println("Playing from cache: Yippee!") // For debugging
             // If it exists, play the audio data from the file.
-            audioPlayerService.playAudio(audioCacheFile.readBytes())
-            return Result.success(PlaybackSource.CACHE)
+            val playResult = audioPlayerService.playAudio(audioCacheFile.readBytes())
+
+            return if (playResult.isSuccess) {
+                PlaybackResult.PlayedFromCache
+            } else {
+                PlaybackResult.Failure(playResult.exceptionOrNull() as? Exception ?: Exception("Unknown cache playback error"))
+            }
         }
 
         // 3. If not cached, fetch from the network.
@@ -143,12 +155,32 @@ class VocabRepository @Inject constructor(
                     }
 
                     // 5. Play the newly fetched audio data.
-                    audioPlayerService.playAudio(audioData)
-                    Result.success(PlaybackSource.NETWORK)
+                    val playResult = audioPlayerService.playAudio(audioData)
+
+                    if (playResult.isSuccess){
+                        PlaybackResult.PlayedFromNetworkAndCached
+                    }else{
+                        PlaybackResult.Failure(playResult.exceptionOrNull() as? Exception ?: Exception("Unknown network playback error"))
+                    }
+//                    if (playResult.isSuccess) {
+//                        PlaybackResult.PlayedFromNetworkAndCached
+//                    } else {
+//                        PlaybackResult.Failure(playResult.exceptionOrNull() as? Exception ?: Exception("Unknown network playback error"))
+//                    }
+
+                    //Result.success(PlaybackSource.NETWORK)
                 },
                 onFailure = { exception ->
                     // If network call fails, pass the failure along.
-                    Result.failure(exception)
+//                    PlaybackResult.Failure(exception)
+                    if (exception is Exception) {
+                        // If it's a standard exception, pass it along.
+                        PlaybackResult.Failure(exception)
+                    } else {
+                        // If it's a more serious error (like OutOfMemoryError),
+                        // wrap it in a new Exception so it fits our data class.
+                        PlaybackResult.Failure(Exception("A critical error occurred", exception))
+                    }
                 }
         )
     }

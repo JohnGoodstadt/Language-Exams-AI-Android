@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.ControlRepository
+import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -154,12 +155,19 @@ class SettingsViewModel @Inject constructor(
                     voiceName = googleVoice,
                     languageCode = currentLanguageCode
             )
-            result.onSuccess {
-                //TODO: DO I need to save settings sentence?
-                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence))
-            }
-            result.onFailure { error ->
-                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+//            result.onSuccess {
+//                //TODO: DO I need to save settings sentence?
+//                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence))
+//            }
+//            result.onFailure { error ->
+//                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+//            }
+            when (result) {
+                is PlaybackResult.PlayedFromNetworkAndCached -> {}
+                is PlaybackResult.PlayedFromCache -> {}
+                is PlaybackResult.Failure -> {
+                    _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
+                }
             }
             _playbackState.value = PlaybackState.Idle
         }

@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.toSet
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import android.content.Context
+import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.PlaybackSource
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.io.File
@@ -32,8 +33,9 @@ data class CategoryTabUiState(
     val recalledWordKeys: Set<String> = emptySet(),
     val playbackState: PlaybackState = PlaybackState.Idle,
     val wordsOnDisk: Set<String> = emptySet(),
-    val downloadingSentenceId: String? = null
-   // private val recallingItemsManager: RecallingItems
+    val downloadingSentenceId: String? = null,
+    val cachedAudioCount: Int = 0,
+    val totalWordsInTab: Int = 0
 )
 
 @HiltViewModel
@@ -82,13 +84,16 @@ class CategoryTabViewModel @Inject constructor(
                 // After getting the categories, ask the repository to check the disk cache for them.
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
                 val cachedKeys = vocabRepository.getWordKeysWithCachedAudio(categories, currentVoiceName)
+                val totalWords = categories.flatMap { it.words }.size
 
                 _uiState.update {
                     it.copy(
                         isLoading = false,
                         categories = categories,
                         // Update the newly named state with the result of the disk check.
-                        wordsOnDisk = cachedKeys
+                        wordsOnDisk = cachedKeys,
+                        cachedAudioCount = cachedKeys.size,
+                        totalWordsInTab = totalWords
                     )
                 }
             } else {
@@ -192,23 +197,47 @@ class CategoryTabViewModel @Inject constructor(
 
             )
 
-            result.onSuccess { playbackSource ->
-                if (playbackSource == PlaybackSource.NETWORK) {
-                    // ...add the word's key to our set of cached keys to show the red dot.
-                    _uiState.update { currentState ->
-                        currentState.copy(
-                            wordsOnDisk = currentState.wordsOnDisk + word.word
+//            result.onSuccess { playbackSource ->
+//                if (playbackSource == PlaybackSource.NETWORK) {
+//                    // ...add the word's key to our set of cached keys to show the red dot.
+//                    _uiState.update { currentState ->
+//                        currentState.copy(
+//                            wordsOnDisk = currentState.wordsOnDisk + word.word
+//                        )
+//                    }
+//                }
+//                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+//            }
+//            result.onFailure { error ->
+//                // Optionally handle the error state in the UI
+//                _uiState.update { it.copy(playbackState = PlaybackState.Error(error.message ?: "Playback failed")) }
+//                // After a short delay or user action, you might want to reset to Idle
+//                // For now, we can just set it to Idle.
+//                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+//            }
+            when (result) {
+                is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    // A new file was cached! Increment the count.
+                    _uiState.update {
+                        it.copy(
+                            playbackState = PlaybackState.Idle,
+                            // Increment the count
+                            cachedAudioCount = it.cachedAudioCount + 1,
+                            // Also add the word to the set of cached keys for the red dot
+                            wordsOnDisk = it.wordsOnDisk + word.word
                         )
                     }
                 }
-                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
-            }
-            result.onFailure { error ->
-                // Optionally handle the error state in the UI
-                _uiState.update { it.copy(playbackState = PlaybackState.Error(error.message ?: "Playback failed")) }
-                // After a short delay or user action, you might want to reset to Idle
-                // For now, we can just set it to Idle.
-                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                is PlaybackResult.PlayedFromCache -> {
+                    // The file was already cached, just reset the playback state.
+                    _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                }
+                is PlaybackResult.Failure -> {
+                    // Handle the error
+                    _uiState.update { it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed")) }
+                    // Optionally reset to Idle after a delay
+                    _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                }
             }
         }
     }

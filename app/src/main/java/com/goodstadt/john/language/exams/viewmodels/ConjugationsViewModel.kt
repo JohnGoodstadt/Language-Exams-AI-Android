@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -15,6 +16,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -93,13 +95,40 @@ class ConjugationsViewModel @Inject constructor(
                     voiceName = currentVoiceName,
                     languageCode = currentLanguageCode
             )
-            result.onSuccess {
-                //TODO: Could be many "I have..." do I need this?
-                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence.sentence))
+//            result.onSuccess {
+//                //TODO: Could be many "I have..." do I need this?
+//                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence.sentence))
+//            }
+//            result.onFailure { error ->
+//                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+//            }
+            when (result) {
+                is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    // A new file was cached! Increment the count.
+//                    _uiState.update {
+//                        it.copy(
+//                            playbackState = PlaybackState.Idle,
+                            // Increment the count
+//                            cachedAudioCount = it.cachedAudioCount + 1,
+//                            // Also add the word to the set of cached keys for the red dot
+//                            wordsOnDisk = it.wordsOnDisk + word.word
+//                        )
+//                    }
+                }
+                is PlaybackResult.PlayedFromCache -> {
+                    // The file was already cached, just reset the playback state.
+                  //  _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                }
+                is PlaybackResult.Failure -> {
+                    // Handle the error
+//                    _uiState.update { it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed")) }
+                    // Optionally reset to Idle after a delay
+//                    _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                    _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
+//                    _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }
+                }
             }
-            result.onFailure { error ->
-                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
-            }
+
             _playbackState.value = PlaybackState.Idle
         }
     }

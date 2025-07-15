@@ -31,6 +31,7 @@ import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
+import androidx.compose.material3.LinearProgressIndicator
 /**
  * A self-contained screen that displays vocabulary for a specific tab.
  * It manages its own state and logic via the CategoryTabViewModel.
@@ -71,6 +72,13 @@ fun CategoryTabScreen(
         }
     } else {
         Column(modifier = Modifier.fillMaxSize()) {
+            CacheProgressBar(
+                cachedCount = uiState.cachedAudioCount,
+                totalCount = uiState.totalWordsInTab,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 64.dp, vertical = 8.dp)
+            )
             // Horizontal scrolling menu
             LazyRow(
                 modifier = Modifier.fillMaxWidth(),
@@ -166,6 +174,43 @@ private fun scrollToCategory(
     }
 }
 
-// NOTE: The VocabRow, SwipeableVocabRow, and SwipeBackground composables should also
-// be in this file or imported correctly if they are in their own files.
-// I am assuming they are accessible here.
+
+@Composable
+fun CacheProgressBar(
+    cachedCount: Int,
+    totalCount: Int,
+    modifier: Modifier = Modifier
+) {
+    // This 'if' check replaces SwiftUI's .opacity() modifier.
+    // The entire composable will not be part of the UI if the count is zero.
+    if (cachedCount > 0) {
+        // Calculate progress as a float between 0.0 and 1.0
+        val progress = if (totalCount > 0) {
+            cachedCount.toFloat() / totalCount.toFloat()
+        } else {
+            0f // Avoid division by zero
+        }
+
+        Row(
+            modifier = modifier.height(30.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = "$cachedCount",
+                style = MaterialTheme.typography.labelSmall
+            )
+            // Use a weight modifier to make the progress bar fill the available space
+            LinearProgressIndicator(
+                progress = { progress },
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(horizontal = 10.dp)
+            )
+            Text(
+                text = "$totalCount",
+                style = MaterialTheme.typography.labelSmall
+            )
+        }
+    }
+}

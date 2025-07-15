@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.StatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -111,11 +112,23 @@ class SearchViewModel @Inject constructor(
                     voiceName = currentVoiceName,
                     languageCode = currentLanguageCode
             )
-            result.onSuccess {
-                statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
-            }
-            result.onFailure { error ->
-                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+//            result.onSuccess {
+//                statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+//            }
+//            result.onFailure { error ->
+//                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+//            }
+            when (result) {
+                is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+                }
+                is PlaybackResult.PlayedFromCache -> {
+                    statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+                }
+                is PlaybackResult.Failure -> {
+//                    _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
+                    _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
+                }
             }
             _playbackState.value = PlaybackState.Idle
         }

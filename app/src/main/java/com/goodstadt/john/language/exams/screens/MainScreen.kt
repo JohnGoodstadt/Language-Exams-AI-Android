@@ -74,7 +74,8 @@ fun MainScreen() {
 @Composable
 fun MainAppContent(navController: NavHostController, selectedVoiceName: String) {
 
-    //val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
+    val tabsViewModel: TabsViewModel = hiltViewModel()
+    val globalUiState by tabsViewModel.uiState.collectAsState()
 
     Scaffold(
         bottomBar = {
@@ -83,20 +84,26 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                 val currentDestination = navBackStackEntry?.destination
 
                 bottomNavItems.forEach { screen ->
+                    val badgeCount = globalUiState.badgeCounts[screen.route] ?: 0
+
                     NavigationBarItem(
                         icon = {
-                            when (val icon = screen.icon) {
-                                is IconResource.VectorIcon -> {
-                                    Icon(
-                                        imageVector = icon.imageVector,
-                                        contentDescription = screen.title
-                                    )
+                            BadgedBox(
+                                badge = {
+                                    // The badge will only be shown if the count > 0
+                                    if (badgeCount > 0) {
+                                        Badge {
+                                            // To prevent a huge number, show "99+" for large counts
+                                            val text = if (badgeCount > 99) "99+" else badgeCount.toString()
+                                            Text(text)
+                                        }
+                                    }
                                 }
-                                is IconResource.DrawableIcon -> {
-                                    Icon(
-                                        painter = painterResource(id = icon.id),
-                                        contentDescription = screen.title
-                                    )
+                            ) {
+                                // This is your existing icon rendering logic. It goes inside the BadgedBox.
+                                when (val icon = screen.icon) {
+                                    is IconResource.VectorIcon -> Icon(icon.imageVector, contentDescription = screen.title)
+                                    is IconResource.DrawableIcon -> Icon(painterResource(id = icon.id), contentDescription = screen.title)
                                 }
                             }
                         },

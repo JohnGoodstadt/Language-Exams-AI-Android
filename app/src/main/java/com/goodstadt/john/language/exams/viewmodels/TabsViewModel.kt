@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.navigation.Screen
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -13,13 +14,15 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.util.Calendar
 import javax.inject.Inject
 
 // --- The UI State for this ViewModel is now much simpler ---
 // It only holds truly global state.
 data class GlobalUiState(
     val authState: AuthUiState = AuthUiState.Loading,
-    val selectedVoiceName: String = ""
+    val selectedVoiceName: String = "",
+    val badgeCounts: Map<String, Int> = emptyMap()
 )
 
 // The AuthUiState can remain as it was.
@@ -51,6 +54,35 @@ class TabsViewModel @Inject constructor(
         }
 
         loadInitialRecalledItems()
+
+        calcBadgeNumber()
+    }
+
+    private fun calcBadgeNumber() {
+        viewModelScope.launch {
+            // Collect the flow of recalled items from the singleton manager.
+            recallingItemsManager.items.collect { recalledItems ->
+                // Every time the list of recalled items changes, this block will run.
+                val todayItemsCount = recalledItems.count { item ->
+                    // Use the same "isOverdue" logic from your RecallViewModel
+                    val today = Calendar.getInstance()
+                    val nextEventCal =
+                        Calendar.getInstance().apply { timeInMillis = item.nextEventTime }
+                    item.nextEventTime < today.timeInMillis ||
+                            (today.get(Calendar.DAY_OF_YEAR) == nextEventCal.get(Calendar.DAY_OF_YEAR) &&
+                                    today.get(Calendar.YEAR) == nextEventCal.get(Calendar.YEAR))
+                }
+
+                // Update the badge count for the "Focusing" tab (Tab 4).
+                _uiState.update {
+                    it.copy(
+                        badgeCounts = it.badgeCounts.toMutableMap().apply {
+                            this[Screen.Tab4.route] = todayItemsCount
+                        }
+                    )
+                }
+            }
+        }
     }
 
     private fun loadInitialRecalledItems() {
