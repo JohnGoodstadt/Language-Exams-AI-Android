@@ -176,7 +176,18 @@ class CategoryTabViewModel @Inject constructor(
                 text = sentence.sentence,
                 uniqueSentenceId = uniqueSentenceId,
                 voiceName = currentVoiceName,
-                languageCode = LanguageConfig.languageCode
+                languageCode = LanguageConfig.languageCode,
+                onTTSApiCallStart = {
+                    // This lambda is the communication channel.
+                    // It will ONLY be executed by the repository if it's making a network call.
+                    // NOW we show the progress indicator.
+                    _uiState.update { it.copy(isLoading = true) }
+                },
+                onTTSApiCallComplete = {
+                    _uiState.update { it.copy(isLoading = false) }
+                    _uiState.update { it.copy(isLoading = true,playbackState = PlaybackState.Idle) }
+                }
+
             )
 
             result.onSuccess { playbackSource ->

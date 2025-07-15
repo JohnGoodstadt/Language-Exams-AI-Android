@@ -2,6 +2,7 @@
 package com.goodstadt.john.language.exams.ui.theme
 
 import android.app.Activity
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
@@ -23,10 +24,18 @@ private val AppDarkColorScheme = darkColorScheme(
 
 @Composable
 fun LanguageExamsAITheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
+    val colorScheme = if (darkTheme) {
+        AppDarkColorScheme
+    } else {
+        // For now, we can fall back to the dark one if you haven't defined a light one
+        AppDarkColorScheme
+    }
+
     // Forcing dark theme
-    val colorScheme = AppDarkColorScheme
+   // val colorScheme = AppDarkColorScheme
     val view = LocalView.current
     if (!view.isInEditMode) {
         SideEffect {

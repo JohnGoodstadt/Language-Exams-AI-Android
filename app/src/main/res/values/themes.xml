@@ -1,30 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- 1. This is your existing main app theme. It does not change. -->
+    <style name="Theme.LanguageExamsAI.NoActionBar" parent="android:Theme.Material.Light.NoActionBar" >
+        <item name="android:windowBackground">@color/app_background_dark</item>
+    </style>
+
     <style name="Theme.LanguageExamsAI" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Your main app theme customizations would go here -->
     </style>
 
 
-    <!-- 2. V V V  ADD THIS NEW STYLE BLOCK  V V V -->
-    <!-- This is the new theme specifically for the splash screen -->
     <style name="Theme.App.Starting" parent="Theme.SplashScreen">
 
-        <!-- Sets the background color of the splash screen to black. -->
         <item name="windowSplashScreenBackground">@android:color/black</item>
 
-        <!-- Sets the icon that appears in the center. -->
-        <!-- This should point to your app's launcher icon drawable. -->
         <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
 
-        <!-- (Optional) If your icon has a background, you can set it here -->
-        <!-- <item name="windowSplashScreenIconBackgroundColor">@android:color/black</item> -->
-
-        <!-- After the splash screen finishes, it will transition to your main app theme. -->
-        <item name="postSplashScreenTheme">@style/Theme.LanguageExamsAI</item>
+        <item name="postSplashScreenTheme">@style/Theme.LanguageExamsAI.NoActionBar</item>
 
     </style>
-    <!-- ^ ^ ^  ADD THIS NEW STYLE BLOCK  ^ ^ ^ -->
 
 </resources>
