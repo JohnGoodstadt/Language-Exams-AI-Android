@@ -1,104 +1,174 @@
 package com.goodstadt.john.language.exams.screens.me
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.MeScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
+import com.goodstadt.john.language.exams.viewmodels.MeTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
+import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
+import com.google.accompanist.navigation.material.ModalBottomSheetLayout
+import com.google.accompanist.navigation.material.bottomSheet
+import com.google.accompanist.navigation.material.rememberBottomSheetNavigator
+import kotlinx.coroutines.launch
+import urlEncode
 
 /**
  * This is the main container for the entire "Me" tab. It sets up the persistent
  * horizontal menu and a NavHost below it to display the content for the selected item.
  */
+@OptIn(ExperimentalMaterialNavigationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun MeTabContainerScreen() {
+fun MeTabContainerScreen( viewModel: MeTabViewModel = hiltViewModel()) {
+
     // --- THIS IS THE CORRECTED LOGIC ---
     // 1. Get an instance of the main TabsViewModel. Hilt will correctly scope this
     //    to the parent navigation graph (the main NavHost) automatically.
     //    The complex 'findActivity' logic is not needed here.
-    val tabsViewModel: TabsViewModel = hiltViewModel()
+    //val tabsViewModel: TabsViewModel = hiltViewModel()
     // --- END OF CORRECTION ---
 
+//    val bottomSheetNavigator = rememberBottomSheetNavigator()
+
+
     val meTabNavController = rememberNavController()
-   // val menuItems by tabsViewModel.meTabMenuItems.collectAsState()
-    val menuItems = LanguageConfig.meTabMenuItems
-//    val menuItems = listOf(
-//        "Settings",
-//        "Search",
-//        "Quiz",
-//        "Progress",
-//        "Conjugations",
-//        "Prepositions",
-//        "Paragraph",
-//        "Conversation"
-//    )
+    val uiState by viewModel.uiState.collectAsState()
+    val sheetState = rememberModalBottomSheetState(
+        skipPartiallyExpanded = true // This is the correct M3 parameter
+    )
+    val scope = rememberCoroutineScope()
+    val isSheetVisible = uiState.selectedCategoryTitle != null
 
-    Column(modifier = Modifier.fillMaxSize()) {
-        // Part A: The Persistent Horizontal Menu
-        LazyRow(
-                modifier = Modifier.fillMaxWidth(),
-                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            items(menuItems) { title ->
-                MenuItemChip(
-                        text = title,
-                        onClick = {
-                            getMeScreenRouteFromTitle(title)?.let { route ->
-                                meTabNavController.navigate(route) {
-                                    launchSingleTop = true
-                                }
-                            }
-                        }
-                )
-            }
-        }
-
-        // Part B: The NavHost that displays the content
-        NavHost(
-                navController = meTabNavController,
-                startDestination = MeScreen.Settings.route,
-                modifier = Modifier.weight(1f)
-        ) {
-            composable(MeScreen.MeRoot.route) {
-                Box(
-                        modifier = Modifier.fillMaxSize().padding(16.dp),
-                        contentAlignment = Alignment.Center
-                ) {
-                    Text("Select an option from the menu above.")
-                }
-            }
-            // All the screen destinations remain the same
-            composable(MeScreen.Settings.route) { SettingsScreen() }
-            composable(MeScreen.Search.route) { SearchScreen() }
-            //composable(MeScreen.Quiz.route) { MeTabPlaceholderScreen("Quiz") }
-
-            composable(MeScreen.Quiz.route) { QuizScreen() }
-
-            composable(MeScreen.Progress.route) { MeTabPlaceholderScreen("Progress") }
-            composable(MeScreen.Conjugations.route) { ConjugationsScreen() }
-            composable(MeScreen.Prepositions.route) { PrepositionsScreen() }
-           // composable(MeScreen.Paragraph.route) { MeTabPlaceholderScreen("Paragraph") }
-            composable(MeScreen.Paragraph.route) { ParagraphScreen() }
-
-            composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
+    LaunchedEffect(isSheetVisible) {
+        if (!isSheetVisible) {
+            scope.launch { sheetState.hide() }.join()
         }
     }
+
+   // val menuItems by tabsViewModel.meTabMenuItems.collectAsState()
+    val menuItems = LanguageConfig.meTabMenuItems
+    // --- THIS IS THE KEY ---
+    // 1. Observe the back stack of the NESTED NavController.
+    val navBackStackEntry by meTabNavController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
+
+//    ModalBottomSheetLayout(bottomSheetNavigator = bottomSheetNavigator) {
+
+
+        Column(modifier = Modifier.fillMaxSize()) {
+            // Part A: The Persistent Horizontal Menu
+            LazyRow(
+                    modifier = Modifier.fillMaxWidth(),
+                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                items(menuItems) { title ->
+                    MenuItemChip(
+                            text = title,
+                            onClick = {
+                                getMeScreenRouteFromTitle(title)?.let { route ->
+                                    meTabNavController.navigate(route) {
+                                        launchSingleTop = true
+                                    }
+                                }
+                            }
+                    )
+                }
+            }
+
+            // Part B: The NavHost that displays the content
+            NavHost(
+                    navController = meTabNavController,
+                    startDestination = MeScreen.Settings.route,
+//                    startDestination = "progress_detail/Initial",
+                    modifier = Modifier.weight(1f)
+            ) {
+                composable(MeScreen.MeRoot.route) {
+                    Box(
+                            modifier = Modifier.fillMaxSize().padding(16.dp),
+                            contentAlignment = Alignment.Center
+                    ) {
+                        Text("Select an option from the menu above.")
+                    }
+                }
+                // All the screen destinations remain the same
+                composable(MeScreen.Settings.route) { SettingsScreen() }
+                composable(MeScreen.Search.route) { SearchScreen() }
+                //composable(MeScreen.Quiz.route) { MeTabPlaceholderScreen("Quiz") }
+
+                composable(MeScreen.Quiz.route) { QuizScreen() }
+
+                composable(MeScreen.Progress.route) {
+                    ProgressMapScreen(
+                        //activeRoute = currentRoute,
+                        // --- Add a callback for when a tile is tapped ---
+                        onTileTapped = { categoryTitle ->
+                            viewModel.onTileTapped(categoryTitle)
+//                            val encodedTitle = categoryTitle.urlEncode()
+//                          meTabNavController.navigate("progress_detail/$encodedTitle")
+//                            Log.d("NavigationTest", "Attempting to navigate to: progress_detail/Test")
+                        }
+                    )
+                }
+
+                composable(MeScreen.Conjugations.route) { ConjugationsScreen() }
+                composable(MeScreen.Prepositions.route) { PrepositionsScreen() }
+               // composable(MeScreen.Paragraph.route) { MeTabPlaceholderScreen("Paragraph") }
+                composable(MeScreen.Paragraph.route) { ParagraphScreen() }
+
+                composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
+
+                // --- THE FIX: The bottom sheet destination is defined HERE ---
+                // It is now a direct destination within this NavHost.
+//                bottomSheet(
+//                    route = "progress_detail/{categoryTitle}",
+//                    arguments = listOf(navArgument("categoryTitle") { type = NavType.StringType })
+//                ) { backStackEntry ->
+//                    Log.d("NavigationTest", "BottomSheet destination reached!")
+////                    ProgressDetailView(title = "Hardcoded Test Title")
+//                    val categoryTitle = backStackEntry.arguments?.getString("categoryTitle") ?: "Unknown"
+//                    ProgressDetailView(title = categoryTitle)
+//                }
+            }
+        } //:Column
+
+    // --- The M3 ModalBottomSheet ---
+    // This is placed at the end so it draws on top of everything else.
+    if (isSheetVisible) {
+        ModalBottomSheet(
+            onDismissRequest = { viewModel.onSheetDismissed() },
+            sheetState = sheetState
+        ) {
+            // The content of the sheet.
+            // The '!' is safe because we know selectedCategoryTitle is not null here.
+            ProgressDetailView(title = uiState.selectedCategoryTitle!!)
+        }
+    }
+//    }
 }
 /**
  * A reusable placeholder screen for any destination within the "Me" tab.

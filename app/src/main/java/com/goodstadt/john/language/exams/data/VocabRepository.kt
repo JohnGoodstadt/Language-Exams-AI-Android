@@ -272,6 +272,27 @@ class VocabRepository @Inject constructor(
         )
     }
     /**
+     * Calculates how many words in a given category have at least one cached audio file.
+     *
+     * @param category The Category to check.
+     * @param voiceName The specific voice used for caching.
+     * @return The number of words with cached audio as an Int.
+     */
+    fun getCompletedWordCountForCategory(category: Category, voiceName: String): Int {
+        val filesDir = context.filesDir
+       // val audioDir = File(filesDir, "audio_cache")
+        //if (!audioDir.exists()) return 0
+
+        return category.words.count { word ->
+            // .any is efficient, it stops as soon as one cached sentence is found for a word.
+            word.sentences.any { sentence ->
+                val uniqueSentenceId = generateUniqueSentenceId(word, sentence, voiceName)
+                val audioCacheFile = File(filesDir, "$uniqueSentenceId.mp3")
+                audioCacheFile.exists()
+            }
+        }
+    }
+    /**
      * Returns a list of 8 unique, randomly selected words from the full vocabulary.
      * This is a more direct and efficient Kotlin equivalent of the provided Swift logic
      * when working with a flat list of words.

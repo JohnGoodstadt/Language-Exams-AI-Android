@@ -151,9 +151,10 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.androidx.compose.navigation)
+//    implementation(libs.androidx.compose.navigation)
     implementation(libs.androidx.material.icons.extended)
     implementation(libs.androidx.core.splashscreen)
+    implementation(libs.accompanist.navigation.material)
 
     // Hilt
 
