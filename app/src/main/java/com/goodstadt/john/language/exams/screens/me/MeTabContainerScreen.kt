@@ -29,8 +29,10 @@ import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.MeScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
+import com.goodstadt.john.language.exams.screens.CategoryTabScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
+import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.MeTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
@@ -65,6 +67,8 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
     )
     val scope = rememberCoroutineScope()
     val isSheetVisible = uiState.selectedCategoryTitle != null
+
+
 
     LaunchedEffect(isSheetVisible) {
         if (!isSheetVisible) {
@@ -146,22 +150,8 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
 
             composable(MeScreen.Conjugations.route) { ConjugationsScreen() }
             composable(MeScreen.Prepositions.route) { PrepositionsScreen() }
-            // composable(MeScreen.Paragraph.route) { MeTabPlaceholderScreen("Paragraph") }
             composable(MeScreen.Paragraph.route) { ParagraphScreen() }
-
             composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
-
-            // --- THE FIX: The bottom sheet destination is defined HERE ---
-            // It is now a direct destination within this NavHost.
-//                bottomSheet(
-//                    route = "progress_detail/{categoryTitle}",
-//                    arguments = listOf(navArgument("categoryTitle") { type = NavType.StringType })
-//                ) { backStackEntry ->
-//                    Log.d("NavigationTest", "BottomSheet destination reached!")
-////                    ProgressDetailView(title = "Hardcoded Test Title")
-//                    val categoryTitle = backStackEntry.arguments?.getString("categoryTitle") ?: "Unknown"
-//                    ProgressDetailView(title = categoryTitle)
-//                }
         }
     } //:Column
 
@@ -172,9 +162,10 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
             onDismissRequest = { viewModel.onSheetDismissed() },
             sheetState = sheetState
         ) {
-            // The content of the sheet.
-            // The '!' is safe because we know selectedCategoryTitle is not null here.
-            ProgressDetailView(title = uiState.selectedCategoryTitle!!)
+            ProgressDetailView(
+                title = uiState.selectedCategoryTitle!!, // The title from the parent screen
+                selectedVoiceName =  uiState.currentVoiceName
+            )
         }
     }
 //    }
@@ -192,4 +183,15 @@ fun MeTabPlaceholderScreen(title: String) {
     ) {
         Text("Hello, World! from $title Screen")
     }
+}
+@Composable
+fun ProgressDetailView(title: String, selectedVoiceName: String) {
+    // It's just a wrapper around your super-flexible CategoryTabScreen!
+    val viewModel: CategoryTabViewModel = hiltViewModel(key = title)
+
+    CategoryTabScreen(
+        categoryTitle = title, // <-- Provide the category title
+        selectedVoiceName = selectedVoiceName,
+        viewModel = viewModel
+    )
 }

@@ -29,8 +29,8 @@ android {
         applicationId = "com.goodstadt.john.language.exams"
         minSdk = 26 // Covers over 90% of devices
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
 

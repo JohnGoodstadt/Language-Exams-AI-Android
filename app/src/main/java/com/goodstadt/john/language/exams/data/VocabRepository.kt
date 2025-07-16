@@ -286,6 +286,14 @@ class VocabRepository @Inject constructor(
             }
         )
     }
+    suspend fun getCategoryByTitle(categoryTitle: String): Category? {
+        val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
+        val vocabDataResult = getVocabData(currentExamFile)
+
+        return vocabDataResult.getOrNull()?.categories?.firstOrNull {
+            it.title == categoryTitle
+        }
+    }
     /**
      * Calculates how many words in a given category have at least one cached audio file.
      *

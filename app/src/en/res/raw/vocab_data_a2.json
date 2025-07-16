@@ -47,7 +47,7 @@
 					"sentences": [
 						{
 							"translation": "",
-							"sentence": "She is 25 years old."
+							"sentence": "She is 25 years of age."
 						},
 						{
 							"translation": "",
@@ -165,16 +165,16 @@
 					"group": "Personal",
 					"sentences": [
 						{
-							"translation": "My birthday is on June 15th.",
+							"translation": "",
+							"sentence": "My birthday is on June 15th"
+						},
+						{
+							"translation": "Her birthday is in May",
 							"sentence": ""
 						},
 						{
-							"translation": "",
-							"sentence": "Her birthday is in May."
-						},
-						{
-							"translation": "",
-							"sentence": "When is your birthday?"
+							"translation": "When is your birthday?",
+							"sentence": ""
 						}
 					],
 					"romanisation": "",

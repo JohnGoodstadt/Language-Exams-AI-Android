@@ -191,4 +191,43 @@ class CategoryTabViewModel @Inject constructor(
             }
         }
     }
+    // ... inside CategoryTabViewModel ...
+
+// The existing loadContentForTab remains unchanged.
+
+    // --- ADD THIS NEW FUNCTION ---
+    fun loadContentForCategory(categoryTitle: String, voiceName: String) {
+        if (!_uiState.value.isLoading && _uiState.value.categories.isNotEmpty()) return
+
+        _uiState.update { it.copy(isLoading = true) }
+
+        viewModelScope.launch {
+            // Use the new repository function
+            val category = vocabRepository.getCategoryByTitle(categoryTitle)
+
+            // The rest of the logic is very similar to loadContentForTab
+            if (category != null) {
+                val categoriesList = listOf(category) // Wrap it in a list for the UI
+                val cachedKeys = vocabRepository.getWordKeysWithCachedAudio(categoriesList, voiceName)
+                val totalWords = category.words.size
+
+                _uiState.update {
+                    it.copy(
+                        isLoading = false,
+                        categories = categoriesList,
+                        wordsOnDisk = cachedKeys,
+                        cachedAudioCount = cachedKeys.size,
+                        totalWordsInTab = totalWords
+                    )
+                }
+            } else {
+                _uiState.update { it.copy(isLoading = false) }
+            }
+        }
+    }
+
+    fun resetState() {
+        // Reset the UI state back to its initial, default values.
+        _uiState.value = CategoryTabUiState()
+    }
 }

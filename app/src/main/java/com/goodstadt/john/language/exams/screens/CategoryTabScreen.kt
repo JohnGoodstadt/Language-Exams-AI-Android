@@ -43,7 +43,8 @@ import removeContentInBracketsAndTrim
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun CategoryTabScreen(
-    tabIdentifier: String,
+    tabIdentifier: String? = null,
+    categoryTitle: String? = null,
     selectedVoiceName: String,
     viewModel: CategoryTabViewModel = hiltViewModel()
 ) {
@@ -51,8 +52,14 @@ fun CategoryTabScreen(
     val snackbarHostState = remember { SnackbarHostState() }
 
     // This effect ensures the ViewModel loads data for this specific tab, once.
-    LaunchedEffect(key1 = tabIdentifier, key2 = selectedVoiceName) {
-        viewModel.loadContentForTab(tabIdentifier, selectedVoiceName)
+    LaunchedEffect(key1 = tabIdentifier, key2 = categoryTitle, key3 = selectedVoiceName) {
+        if (selectedVoiceName.isNotEmpty()) {
+            if (tabIdentifier != null) {
+                viewModel.loadContentForTab(tabIdentifier, selectedVoiceName)
+            } else if (categoryTitle != null) {
+                viewModel.loadContentForCategory(categoryTitle, selectedVoiceName)
+            }
+        }
     }
 
     LaunchedEffect(Unit) {
@@ -137,32 +144,35 @@ fun CategoryTabScreen(
                             .padding(horizontal = 64.dp, vertical = 8.dp)
                     )
                     // Horizontal scrolling menu
-                    LazyRow(
-                        modifier = Modifier.fillMaxWidth(),
-                        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        items(menuItems, key = { it }) { title ->
-                            // --- 3. PASS THE `isSelected` STATE DOWN AND UPDATE IT ON CLICK ---
-                            MenuItemChip(
-                                text = title,
+                    if (tabIdentifier != null){
+                        LazyRow(
+                            modifier = Modifier.fillMaxWidth(),
+                            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            items(menuItems, key = { it }) { title ->
+                                // --- 3. PASS THE `isSelected` STATE DOWN AND UPDATE IT ON CLICK ---
+                                MenuItemChip(
+                                    text = title,
 
-                                isSelected = (title == selectedChipTitle), // Calculate if this chip is selected
-                                onClick = {
-                                    // First, update our state to the newly clicked title
-                                    selectedChipTitle = title
+                                    isSelected = (title == selectedChipTitle), // Calculate if this chip is selected
+                                    onClick = {
+                                        // First, update our state to the newly clicked title
+                                        selectedChipTitle = title
 
-                                    // Then, perform the original scroll action
-                                    scrollToCategory(
-                                        title = title,
-                                        coroutineScope = coroutineScope,
-                                        lazyListState = lazyListState,
-                                        indexMap = categoryIndexMap
-                                    )
-                                }
-                            )
+                                        // Then, perform the original scroll action
+                                        scrollToCategory(
+                                            title = title,
+                                            coroutineScope = coroutineScope,
+                                            lazyListState = lazyListState,
+                                            indexMap = categoryIndexMap
+                                        )
+                                    }
+                                )
+                            }
                         }
                     }
+
 
                     // Vertically scrolling list with vocabulary
                     LazyColumn(
