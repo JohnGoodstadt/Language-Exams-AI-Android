@@ -9,18 +9,12 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 
 // --- Material 3 (The key imports for the fix) ---
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -53,11 +47,11 @@ import androidx.compose.ui.unit.sp
 // You will need to add the imports for your own models and utility functions, for example:
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
-import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
 
 
-import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId // Or wherever this is
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.ui.text.AnnotatedString
+import com.goodstadt.john.language.exams.screens.utils.buildSentencePartsSimple
 
 //import com.google.android.material.progressindicator.CircularProgressIndicator
 
@@ -121,7 +115,7 @@ fun SwipeableVocabRow(
         }
     ) { // --- CHANGE 5: 'dismissContent' is now the main content lambda ---
         // This is your actual row content
-        val displayData = buildSentenceParts(entry = word, sentence = sentence)
+        val displayData = buildSentencePartsSimple(word = word.word, sentence = sentence.sentence)
        // val uniqueSentenceId = generateUniqueSentenceId(word, sentence, selectedVoiceName)
 
         Box(
@@ -179,41 +173,7 @@ fun VocabRow(
     isDownloading:Boolean
 ) {
     // This logic builds the styled text with underlined words.
-    val annotatedString = buildAnnotatedString {
-        when (parts.size) {
-            2 -> {
-                append(parts[0])
-                withStyle(
-                    style = SpanStyle(
-                        color = Color.Cyan, // Use theme color
-                        textDecoration = TextDecoration.Underline
-                    )
-                ) {
-                    append(entry.word)
-                }
-                append(parts[1])
-            }
-            3 -> {
-                val words = entry.word.split(",").map { it.trim() }
-                if (words.size >= 2) {
-                    append(parts[0])
-                    withStyle(style = SpanStyle(color =  Color.Cyan, textDecoration = TextDecoration.Underline)) {
-                        append(words[0])
-                    }
-                    append(parts[1])
-                    withStyle(style = SpanStyle(color =  Color.Cyan, textDecoration = TextDecoration.Underline)) {
-                        append(words[1])
-                    }
-                    append(parts[2])
-                } else {
-                    append(sentence)
-                }
-            }
-            else -> {
-                append(sentence)
-            }
-        }
-    }
+    val annotatedString = annotatedSentence(parts, entry.word, sentence)
 
     // This Row lays out the text and the status indicators.
     Row(
@@ -242,4 +202,60 @@ fun VocabRow(
         }
     }
     Divider()
+}
+
+@Composable
+fun annotatedSentence(
+    parts: List<String>,
+    word: String,
+    sentence: String
+): AnnotatedString {
+    val annotatedString = buildAnnotatedString {
+        when (parts.size) {
+            2 -> {
+                append(parts[0])
+                withStyle(
+                    style = SpanStyle(
+                        color = Color.Cyan, // Use theme color
+                        textDecoration = TextDecoration.Underline
+                    )
+                ) {
+                    append(word)
+                }
+                append(parts[1])
+            }
+
+            3 -> {
+                val words = word.split(",").map { it.trim() }
+                if (words.size >= 2) {
+                    append(parts[0])
+                    withStyle(
+                        style = SpanStyle(
+                            color = Color.Cyan,
+                            textDecoration = TextDecoration.Underline
+                        )
+                    ) {
+                        append(words[0])
+                    }
+                    append(parts[1])
+                    withStyle(
+                        style = SpanStyle(
+                            color = Color.Cyan,
+                            textDecoration = TextDecoration.Underline
+                        )
+                    ) {
+                        append(words[1])
+                    }
+                    append(parts[2])
+                } else {
+                    append(sentence)
+                }
+            }
+
+            else -> {
+                append(sentence)
+            }
+        }
+    }
+    return annotatedString
 }

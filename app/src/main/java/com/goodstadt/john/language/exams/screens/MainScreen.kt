@@ -30,6 +30,9 @@ import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
 import com.goodstadt.john.language.exams.screens.recall.RecallScreen
+import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
+import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.viewmodels.AuthUiState
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
@@ -83,6 +86,14 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentDestination = navBackStackEntry?.destination
 
+                val navBarColors = NavigationBarItemDefaults.colors(
+                    selectedIconColor = accentColor, // Your "accentColor"
+                    selectedTextColor = accentColor,
+                    unselectedIconColor = DarkSecondary,
+                    unselectedTextColor = DarkSecondary,
+                    indicatorColor = Color.Transparent
+                )
+
                 bottomNavItems.forEach { screen ->
                     val badgeCount = globalUiState.badgeCounts[screen.route] ?: 0
 
@@ -90,10 +101,12 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                         icon = {
                             BadgedBox(
                                 badge = {
-                                    // The badge will only be shown if the count > 0
                                     if (badgeCount > 0) {
-                                        Badge {
-                                            // To prevent a huge number, show "99+" for large counts
+                                        Badge (
+                                            containerColor = Color.Red,
+                                            contentColor = Color.White
+                                        ) {
+
                                             val text = if (badgeCount > 99) "99+" else badgeCount.toString()
                                             Text(text)
                                         }
@@ -108,6 +121,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                             }
                         },
                         label = { Text(screen.title, maxLines = 1, textAlign = TextAlign.Center) },
+                        colors = navBarColors,
                         selected = currentDestination?.hierarchy?.any { it.route == screen.route } == true,
                         onClick = {
                             navController.navigate(screen.route) {

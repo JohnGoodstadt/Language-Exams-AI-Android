@@ -32,6 +32,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 import androidx.compose.material3.LinearProgressIndicator
+import com.goodstadt.john.language.exams.ui.theme.accentColor
+
 /**
  * A self-contained screen that displays vocabulary for a specific tab.
  * It manages its own state and logic via the CategoryTabViewModel.
@@ -71,6 +73,9 @@ fun CategoryTabScreen(
             CircularProgressIndicator()
         }
     } else {
+        var selectedChipTitle by remember(menuItems) {
+            mutableStateOf(menuItems.firstOrNull() ?: "")
+        }
         Column(modifier = Modifier.fillMaxSize()) {
             CacheProgressBar(
                 cachedCount = uiState.cachedAudioCount,
@@ -86,9 +91,15 @@ fun CategoryTabScreen(
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 items(menuItems, key = { it }) { title ->
+                    // --- 3. PASS THE `isSelected` STATE DOWN AND UPDATE IT ON CLICK ---
                     MenuItemChip(
                         text = title,
+                        isSelected = (title == selectedChipTitle), // Calculate if this chip is selected
                         onClick = {
+                            // First, update our state to the newly clicked title
+                            selectedChipTitle = title
+
+                            // Then, perform the original scroll action
                             scrollToCategory(
                                 title = title,
                                 coroutineScope = coroutineScope,
@@ -154,7 +165,7 @@ fun CategoryHeader(title: String) {
         text = title,
         fontSize = 20.sp,
         fontWeight = FontWeight.Bold,
-        color = Orange,
+        color = accentColor,
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surface)

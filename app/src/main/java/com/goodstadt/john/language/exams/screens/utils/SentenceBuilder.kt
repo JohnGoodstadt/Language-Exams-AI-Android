@@ -12,8 +12,11 @@ data class SentenceDisplayParts(val sentence: String, val parts: List<String>)
  * into parts, with the word(s) being the "holes".
  */
 fun buildSentenceParts(entry: VocabWord, sentence: Sentence): SentenceDisplayParts {
-    val sentenceText = sentence.sentence
-    val wordToFind = entry.word
+    return buildSentencePartsSimple(entry.word,sentence.sentence)
+}
+fun buildSentencePartsSimple(word: String, sentence: String): SentenceDisplayParts {
+    val sentenceText = sentence
+    val wordToFind = word
 
     // Case 1: The word contains a comma, indicating two words to find (e.g., "word1,word2")
     if (wordToFind.contains(",")) {

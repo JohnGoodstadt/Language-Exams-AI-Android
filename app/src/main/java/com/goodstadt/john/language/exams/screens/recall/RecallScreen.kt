@@ -30,10 +30,16 @@ import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.data.RecallingItem
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.navigation.IconResource
+import com.goodstadt.john.language.exams.screens.annotatedSentence
+import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
+import com.goodstadt.john.language.exams.screens.utils.buildSentencePartsSimple
+import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.utils.STOPS
 import com.goodstadt.john.language.exams.viewmodels.RecallViewModel
 import kotlinx.coroutines.delay
 import java.util.concurrent.TimeUnit
+import kotlin.math.abs
 
 // ===== Top-Level Screen (Replaces RecallingView) =====
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
@@ -171,9 +177,20 @@ fun RecallingListItem(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                Button(onClick = onRemove) { Text("Remove") }
+                Button(
+                    onClick = onRemove,
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = buttonColor,
+                        contentColor = Color.White
+                    )
+                ) { Text("Remove") }
                 if (isOverdue) {
-                    Button(onClick = onOk) { Text("OK") }
+                    Button(onClick = onOk,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = buttonColor,
+                            contentColor = Color.White
+                        )
+                    ) { Text("OK") }
                 }
             }
         }
@@ -225,8 +242,19 @@ fun RecallingItemContent(
 
         // Sentences
         sentences.forEach { sentence ->
+
+            val word = item.key
+            val displayData = buildSentencePartsSimple(word = word, sentence = sentence)
+
+            val annotatedString = annotatedSentence(
+                displayData.parts,
+                word,
+                sentence = displayData.sentence
+            )
+
             Text(
-                text = sentence,
+                text = annotatedString,
+                color = Color.White,
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable { onPlaySentence(item.key, sentence) }
@@ -285,7 +313,7 @@ fun RecallingItemContent(
 fun getDebugString(item: RecallingItem): String {
     val durationInMillis = item.nextEventTime - System.currentTimeMillis()
     val suffix = if (durationInMillis < 0) "ago" else "left"
-    val absMillis = kotlin.math.abs(durationInMillis)
+    val absMillis = abs(durationInMillis)
 
     val days = TimeUnit.MILLISECONDS.toDays(absMillis)
     val hours = TimeUnit.MILLISECONDS.toHours(absMillis) % 24

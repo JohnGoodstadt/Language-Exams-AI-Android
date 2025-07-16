@@ -28,6 +28,7 @@ import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
 import com.goodstadt.john.language.exams.data.Gender
+import com.goodstadt.john.language.exams.ui.theme.accentColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -197,7 +198,7 @@ private fun SectionHeader(title: String) {
     Text(
             text = title,
             style = MaterialTheme.typography.titleSmall,
-            color = MaterialTheme.colorScheme.primary,
+            color = accentColor,
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
     )
 }
@@ -216,7 +217,7 @@ private fun SettingsActionItem(
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
     ) {
-        Icon(imageVector = icon, contentDescription = title, tint = MaterialTheme.colorScheme.primary)
+        Icon(imageVector = icon, contentDescription = title, tint = accentColor)
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
             Text(text = title, style = MaterialTheme.typography.bodyLarge)

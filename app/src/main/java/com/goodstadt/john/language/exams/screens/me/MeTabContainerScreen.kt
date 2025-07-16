@@ -89,6 +89,7 @@ fun MeTabContainerScreen( viewModel: MeTabViewModel = hiltViewModel()) {
                 items(menuItems) { title ->
                     MenuItemChip(
                             text = title,
+                            isSelected = false,
                             onClick = {
                                 getMeScreenRouteFromTitle(title)?.let { route ->
                                     meTabNavController.navigate(route) {
