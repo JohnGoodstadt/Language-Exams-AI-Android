@@ -19,16 +19,17 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge(
-            navigationBarStyle = SystemBarStyle.dark(
-                Color.argb(
-                    0x80,
-                    0x1b,
-                    0x1b,
-                    0x1b
-                )
-            )
-        )
+        enableEdgeToEdge()
+//        enableEdgeToEdge(
+//            navigationBarStyle = SystemBarStyle.dark(
+//                Color.argb(
+//                    0x80,
+//                    0x1b,
+//                    0x1b,
+//                    0x1b
+//                )
+//            )
+//        )
         setContent {
             LanguageExamsAITheme(darkTheme = true) {
                 Surface(

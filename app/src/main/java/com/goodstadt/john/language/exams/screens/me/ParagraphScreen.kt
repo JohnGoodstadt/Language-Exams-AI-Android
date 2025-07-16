@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
 import androidx.compose.material3.HorizontalDivider
@@ -24,12 +25,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
+import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 
 @Composable
@@ -73,7 +76,10 @@ fun ParagraphScreen(
 
         Button(onClick = {
              viewModel.generateNewParagraph()
-        }) {
+        }, colors = ButtonDefaults.buttonColors(
+            containerColor = buttonColor,
+            contentColor = Color.White
+        )) {
             Text("Generate")
         }
 
@@ -119,7 +125,10 @@ fun ParagraphScreen(
         Spacer(modifier = Modifier.weight(1f))
 
         // --- Bottom Section ---
-        Button(onClick = { viewModel.speakSentence() }) { // Changed from empty lambda
+        Button(onClick = { viewModel.speakSentence() }, colors = ButtonDefaults.buttonColors(
+            containerColor = buttonColor,
+            contentColor = Color.White
+        )) { // Changed from empty lambda
             Text("Play")
         }
 

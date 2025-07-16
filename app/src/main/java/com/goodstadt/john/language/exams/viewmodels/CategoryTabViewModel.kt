@@ -20,9 +20,14 @@ import kotlinx.coroutines.flow.toSet
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import android.content.Context
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.runtime.remember
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.PlaybackSource
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import java.io.File
 import javax.inject.Inject
 
@@ -38,19 +43,30 @@ data class CategoryTabUiState(
     val totalWordsInTab: Int = 0
 )
 
+sealed interface UiEvent {
+    data class ShowSnackbar(val message: String, val actionLabel: String? = null) : UiEvent
+    // You can add other one-off events here later
+}
 @HiltViewModel
 class CategoryTabViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val vocabRepository: VocabRepository, // For getting categories/words and playing audio
+    private val connectivityRepository: ConnectivityRepository,
     private val recallingItemsManager: RecallingItems,
     @ApplicationContext private val context: Context,
     private val application: Application // Needed for RecallingItems SharedPreferences
 ) : ViewModel() {
 
-    // This manager handles the logic for recalling items (focus/cancel)
+
 
     private val _uiState = MutableStateFlow(CategoryTabUiState())
     val uiState = _uiState.asStateFlow()
+
+    private val _uiEvent = MutableSharedFlow<UiEvent>()
+    val uiEvent = _uiEvent.asSharedFlow()
+
+    private data class LastAction(val word: VocabWord, val sentence: Sentence, val voiceName: String)
+    private val _lastFailedAction = MutableStateFlow<LastAction?>(null)
 
     init {
         // Load all data when the ViewModel is first created
@@ -103,55 +119,6 @@ class CategoryTabViewModel @Inject constructor(
     }
 
 
-    // --- User Action Handlers ---
-
-//    fun onFocusClickedObsolete3(word: VocabWord) {
-//        val key = word.word
-//        if (!recallingItemsManager.amIRecalling(key)) {
-//            recallingItemsManager.add(key, text = word.translation, imageId = "", additionalText = word.romanisation)
-//            recallingItemsManager.recalledOK(key)
-//            recallingItemsManager.save("Spanish A1Vocab")
-//            _uiState.update { it.copy(recalledWordKeys = it.recalledWordKeys + key) }
-//            // TODO: Add notification logic here
-//        }
-//    }
-//    fun onFocusClickedObsolete2(word: VocabWord) {
-//        recallingItemsManager.add(word.word, text = word.translation, imageId = "", additionalText = word.romanisation)
-//        recallingItemsManager.recalledOK(word.word)
-//        recallingItemsManager.save("SpanishA1Vocab")
-//    }
-//    fun onCancelClickedObsolete4(word: VocabWord) {
-//        val key = word.word
-//        if (recallingItemsManager.amIRecalling(key)) {
-//            recallingItemsManager.remove(key)
-//            recallingItemsManager.save("Spanish A1Vocab")
-//            _uiState.update { it.copy(recalledWordKeys = it.recalledWordKeys - key) }
-//            // TODO: Add notification/badge logic here
-//        }
-//    }
-//    fun onCancelClickeObsoleted(word: VocabWord) {
-//        recallingItemsManager.remove(word.word)
-//        recallingItemsManager.save("SpanishA1Vocab")
-//    }
-
-//    fun onFocusClickedObsolete(word: VocabWord) {
-//        viewModelScope.launch {
-//            recallingItemsManager.add(word.word, text = word.translation, imageId = "", additionalText = word.romanisation)
-//            recallingItemsManager.recalledOK(word.word)
-//            // --- 2. THE FIX ---
-//            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-//            recallingItemsManager.save(currentExamKey)
-//        }
-//    }
-//
-//    fun onCancelClickedObsolete(word: VocabWord) {
-//        viewModelScope.launch {
-//            recallingItemsManager.remove(word.word)
-//            // --- 2. THE FIX ---
-//            val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-//            recallingItemsManager.save(currentExamKey)
-//        }
-//    }
     fun onFocusClicked(word: VocabWord) {
         viewModelScope.launch {
             // We create a new, single function in RecallingItems for this
@@ -166,10 +133,21 @@ class CategoryTabViewModel @Inject constructor(
     }
     fun onRowTapped(word: VocabWord, sentence: Sentence) {
 
+
         if (_uiState.value.playbackState is PlaybackState.Playing) return
 
         viewModelScope.launch {
 
+            if (!connectivityRepository.isCurrentlyOnline()) {
+                // Instead of a boolean, we will emit an event
+                // This is a common pattern to trigger one-off UI actions
+                _lastFailedAction.value = LastAction(word, sentence, "selectedVoiceName")
+
+                _uiEvent.emit(UiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
+                return@launch
+            }
+
+            _lastFailedAction.value = null
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
 //            _playbackState.value = PlaybackState.Playing(uniqueSentenceId)

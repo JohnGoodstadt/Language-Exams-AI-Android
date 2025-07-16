@@ -33,6 +33,7 @@ import kotlinx.coroutines.launch
 
 import androidx.compose.material3.LinearProgressIndicator
 import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.viewmodels.UiEvent
 
 /**
  * A self-contained screen that displays vocabulary for a specific tab.
@@ -45,10 +46,33 @@ fun CategoryTabScreen(
     selectedVoiceName: String,
     viewModel: CategoryTabViewModel = hiltViewModel()
 ) {
+
+    val snackbarHostState = remember { SnackbarHostState() }
+
     // This effect ensures the ViewModel loads data for this specific tab, once.
     LaunchedEffect(key1 = tabIdentifier, key2 = selectedVoiceName) {
         viewModel.loadContentForTab(tabIdentifier, selectedVoiceName)
     }
+
+    LaunchedEffect(Unit) {
+        viewModel.uiEvent.collect { event ->
+            when (event) {
+                is UiEvent.ShowSnackbar -> {
+                    // a) Show the snackbar and wait for its result
+                    val result = snackbarHostState.showSnackbar(
+                        message = event.message,
+                        actionLabel = event.actionLabel,
+                        // Optional: make it stay longer on screen since it has an action
+                        duration = SnackbarDuration.Long
+                    )
+
+                    // b) Check if the user tapped the action button
+                    if (result == SnackbarResult.ActionPerformed) {/*just close*/ }
+                }
+            }
+        }
+    }
+
 
     val uiState by viewModel.uiState.collectAsState()
     val lazyListState = rememberLazyListState()
@@ -68,92 +92,126 @@ fun CategoryTabScreen(
         map
     }
 
-    if (uiState.isLoading) {
-        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            CircularProgressIndicator()
-        }
-    } else {
-        var selectedChipTitle by remember(menuItems) {
-            mutableStateOf(menuItems.firstOrNull() ?: "")
-        }
-        Column(modifier = Modifier.fillMaxSize()) {
-            CacheProgressBar(
-                cachedCount = uiState.cachedAudioCount,
-                totalCount = uiState.totalWordsInTab,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 64.dp, vertical = 8.dp)
-            )
-            // Horizontal scrolling menu
-            LazyRow(
-                modifier = Modifier.fillMaxWidth(),
-                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                items(menuItems, key = { it }) { title ->
-                    // --- 3. PASS THE `isSelected` STATE DOWN AND UPDATE IT ON CLICK ---
-                    MenuItemChip(
-                        text = title,
-                        isSelected = (title == selectedChipTitle), // Calculate if this chip is selected
-                        onClick = {
-                            // First, update our state to the newly clicked title
-                            selectedChipTitle = title
+    Scaffold(
+        // DO NOT set a containerColor here, so it uses the theme's default background.
 
-                            // Then, perform the original scroll action
-                            scrollToCategory(
-                                title = title,
-                                coroutineScope = coroutineScope,
-                                lazyListState = lazyListState,
-                                indexMap = categoryIndexMap
+        snackbarHost = {
+            SnackbarHost(hostState = snackbarHostState) { snackbarData ->
+                // Apply the error colors ONLY to the Snackbar component itself.
+                Snackbar(
+                    snackbarData = snackbarData,
+                    containerColor = MaterialTheme.colorScheme.inverseSurface,
+                    contentColor = MaterialTheme.colorScheme.inverseOnSurface,
+                    actionColor = MaterialTheme.colorScheme.inversePrimary
+                )
+            }
+        }
+    ) { innerPadding ->
+        // This is the main content area of your screen.
+        // It will have the correct, non-red background.
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding) // IMPORTANT: Apply the padding from the Scaffold
+        ) {
+            //
+            // --- ALL OF YOUR SCREEN'S UI GOES HERE ---
+            // e.g., Your LazyRow with MenuItemChip,
+            // your LazyColumn with vocab words, etc.
+            //
+            if (uiState.isLoading) {
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    CircularProgressIndicator()
+                }
+            } else {
+                var selectedChipTitle by remember(menuItems) {
+                    mutableStateOf(menuItems.firstOrNull() ?: "")
+                }
+                Column(modifier = Modifier.fillMaxSize()) {
+                    CacheProgressBar(
+                        cachedCount = uiState.cachedAudioCount,
+                        totalCount = uiState.totalWordsInTab,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 64.dp, vertical = 8.dp)
+                    )
+                    // Horizontal scrolling menu
+                    LazyRow(
+                        modifier = Modifier.fillMaxWidth(),
+                        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        items(menuItems, key = { it }) { title ->
+                            // --- 3. PASS THE `isSelected` STATE DOWN AND UPDATE IT ON CLICK ---
+                            MenuItemChip(
+                                text = title,
+
+                                isSelected = (title == selectedChipTitle), // Calculate if this chip is selected
+                                onClick = {
+                                    // First, update our state to the newly clicked title
+                                    selectedChipTitle = title
+
+                                    // Then, perform the original scroll action
+                                    scrollToCategory(
+                                        title = title,
+                                        coroutineScope = coroutineScope,
+                                        lazyListState = lazyListState,
+                                        indexMap = categoryIndexMap
+                                    )
+                                }
                             )
                         }
-                    )
-                }
-            }
-
-            // Vertically scrolling list with vocabulary
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                state = lazyListState,
-                contentPadding = PaddingValues(horizontal = 16.dp)
-            ) {
-                categories.forEach { category ->
-                    stickyHeader {
-                        CategoryHeader(title = category.title)
                     }
 
-                    items(category.words, key = { "${it.id}-${it.word}" }) { word ->
-                        val sentenceToShow = word.sentences.firstOrNull()
+                    // Vertically scrolling list with vocabulary
+                    LazyColumn(
+                        modifier = Modifier.fillMaxSize(),
+                        state = lazyListState,
+                        contentPadding = PaddingValues(horizontal = 16.dp)
+                    ) {
+                        categories.forEach { category ->
+                            stickyHeader {
+                                CategoryHeader(title = category.title)
+                            }
 
-                        if (sentenceToShow != null) {
-                            val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName)
-                            val isDownloading = uiState.downloadingSentenceId == uniqueSentenceId
+                            items(category.words, key = { "${it.id}-${it.word}" }) { word ->
+                                val sentenceToShow = word.sentences.firstOrNull()
 
-                            SwipeableVocabRow(
-                                word = word,
-                                sentence = sentenceToShow,
-                                selectedVoiceName = selectedVoiceName,
-                                isDownloading = isDownloading,
+                                if (sentenceToShow != null) {
+                                    val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName)
+                                    val isDownloading = uiState.downloadingSentenceId == uniqueSentenceId
+
+                                    SwipeableVocabRow(
+                                        word = word,
+                                        sentence = sentenceToShow,
+                                        selectedVoiceName = selectedVoiceName,
+                                        isDownloading = isDownloading,
 //                                isPlaying = (uiState.playbackState as? PlaybackState.Playing)?.sentenceId == generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName),
-                                recalledWordKeys = uiState.recalledWordKeys,
-                                wordsOnDisk = uiState.wordsOnDisk, // Pass the new state
-                                onRowTapped = { w, s -> viewModel.onRowTapped(w, s) }, // Call ViewModel's function
-                                onFocus = { viewModel.onFocusClicked(word) },
-                                onCancel = { viewModel.onCancelClicked(word) }
-                            )
-                        } else {
-                            Text(
-                                text = "Error: No sentence found for '${word.word}'",
-                                color = Color.Red,
-                                modifier = Modifier.padding(vertical = 12.dp)
-                            )
-                            Divider()
+                                        recalledWordKeys = uiState.recalledWordKeys,
+                                        wordsOnDisk = uiState.wordsOnDisk, // Pass the new state
+                                        onRowTapped = { w, s -> viewModel.onRowTapped(w, s) }, // Call ViewModel's function
+                                        onFocus = { viewModel.onFocusClicked(word) },
+                                        onCancel = { viewModel.onCancelClicked(word) }
+                                    )
+                                } else {
+                                    Text(
+                                        text = "Error: No sentence found for '${word.word}'",
+                                        color = Color.Red,
+                                        modifier = Modifier.padding(vertical = 12.dp)
+                                    )
+                                    Divider()
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
+
+
+
+
 }
 
 
@@ -216,7 +274,11 @@ fun CacheProgressBar(
                 progress = { progress },
                 modifier = Modifier
                     .weight(1f)
-                    .padding(horizontal = 10.dp)
+                    .padding(horizontal = 10.dp) ,
+                color = accentColor,
+                trackColor = MaterialTheme.colorScheme.surfaceVariant
+
+
             )
             Text(
                 text = "$totalCount",

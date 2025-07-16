@@ -32,11 +32,13 @@ import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
 import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
 import com.goodstadt.john.language.exams.ui.theme.accentColor
-import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.viewmodels.AuthUiState
-import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
-//import com.goodstadt.john.language.exams.viewmodels.VocabDataUiState
+
+import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.WindowCompat
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -47,6 +49,8 @@ fun MainScreen() {
    // val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
 
     val authState = globalUiState.authState
+
+    ChangeStatusBarColor(color = Color.Transparent, darkIcons = false)
 
     when (authState) {
         is AuthUiState.Loading -> {
@@ -186,3 +190,18 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
 
 }
 
+
+
+@Composable
+fun ChangeStatusBarColor(color: Color, darkIcons: Boolean) {
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            val window = (view.context as android.app.Activity).window
+            // Set the status bar color
+            window.statusBarColor = color.toArgb()
+            // Set the status bar icon/text color
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkIcons
+        }
+    }
+}

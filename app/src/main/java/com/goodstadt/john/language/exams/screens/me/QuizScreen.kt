@@ -43,7 +43,9 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
+import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
+import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
@@ -292,7 +294,7 @@ fun QuizScreen(
                     Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Previous",
-                            tint = if (currentQuestionIndex == 0) Color.Gray else blueBright2, // Conditional color
+                            tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor, // Conditional color
                             modifier = Modifier.size(36.dp)
                     )
                 }
@@ -314,7 +316,7 @@ fun QuizScreen(
                     Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                             contentDescription = "Next",
-                            tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else blueBright2, // Conditional color
+                            tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor, // Conditional color
                             modifier = Modifier.size(36.dp)
                     )
                 }
@@ -499,6 +501,7 @@ fun HorizontalLevelPicker(
             ) {
                 Text(
                         text = option,
+                        color =  if (isSelected) accentColor else Color.Transparent,
                         maxLines = 1,
                         fontSize = 16.sp,
                         textAlign = TextAlign.Center
@@ -531,7 +534,7 @@ fun InfoButtonRow(infoDisabled: Boolean, onClick: () -> Unit) {
                     .size(32.dp)
                     .clickable(enabled = !infoDisabled, onClick = onClick)
                     .padding(start = 4.dp),
-                tint = if (infoDisabled) Color.Gray else Color.Blue
+                tint = if (infoDisabled) Color.Gray else buttonColor
 //                tint = Color.White
         )
         Spacer(modifier = Modifier.weight(1f)) // Pushes the icon to the left

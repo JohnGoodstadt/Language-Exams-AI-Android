@@ -29,6 +29,8 @@ import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
 import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import com.goodstadt.john.language.exams.ui.theme.greyLight2
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -97,7 +99,7 @@ fun SettingsScreen(
                                     title = "Female Voices",
                                     selectedVoiceName = if (pendingSelectedVoice?.gender == Gender.FEMALE) pendingSelectedVoice.friendlyName else null,
                                     isExpanded = isFemaleExpanded,
-                                    onClick = { isFemaleExpanded = !isFemaleExpanded; isMaleExpanded = false }
+                                    onClick = { isFemaleExpanded = !isFemaleExpanded; isMaleExpanded = false },
                             )
                             AnimatedVisibility(visible = isFemaleExpanded) {
                                 Column(modifier = Modifier.padding(start = 16.dp)) {
@@ -147,10 +149,16 @@ fun SettingsScreen(
                         // Change Arrangement.End to Arrangement.CenterHorizontally
                         horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally)
                 ) {
-                    OutlinedButton(onClick = { viewModel.hideBottomSheet() }) {
+                    OutlinedButton(onClick = { viewModel.hideBottomSheet() }, colors = ButtonDefaults.buttonColors(
+                        containerColor = buttonColor,
+                        contentColor = Color.White
+                    )) {
                         Text("Cancel")
                     }
-                    Button(onClick = { viewModel.saveSelection() }) {
+                    Button(onClick = { viewModel.saveSelection() }, colors = ButtonDefaults.buttonColors(
+                        containerColor = buttonColor,
+                        contentColor = Color.White
+                    )) {
                         Text("Save")
                     }
                 }
@@ -198,7 +206,7 @@ private fun SectionHeader(title: String) {
     Text(
             text = title,
             style = MaterialTheme.typography.titleSmall,
-            color = accentColor,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
     )
 }
@@ -217,10 +225,10 @@ private fun SettingsActionItem(
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
     ) {
-        Icon(imageVector = icon, contentDescription = title, tint = accentColor)
+        Icon(imageVector = icon, contentDescription = title, tint = MaterialTheme.colorScheme.onSurfaceVariant)
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
-            Text(text = title, style = MaterialTheme.typography.bodyLarge)
+            Text(text = title, style = MaterialTheme.typography.bodyLarge, color = accentColor)
             Text(text = currentValue, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
@@ -324,7 +332,7 @@ private fun VoiceCategoryDropdownHeader(
             Text(
                     text = title,
                     style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.primary
+                    color = accentColor
             )
             Text(
                     text = selectedVoiceName ?: "Tap to select",

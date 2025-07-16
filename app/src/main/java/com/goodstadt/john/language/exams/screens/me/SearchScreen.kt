@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,7 +35,8 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                 onValueChange = { viewModel.onSearchQueryChanged(it) },
                 label = { Text("Search for a word...") },
                 modifier = Modifier.fillMaxWidth(),
-                singleLine = true
+                singleLine = true,
+//            colors = MaterialTheme {  }
         )
 
         // List of results
