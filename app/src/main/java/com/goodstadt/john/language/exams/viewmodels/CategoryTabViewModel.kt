@@ -20,12 +20,14 @@ import kotlinx.coroutines.flow.toSet
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import android.content.Context
+import android.util.Log
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.remember
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.PlaybackSource
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import java.io.File
@@ -65,8 +67,8 @@ class CategoryTabViewModel @Inject constructor(
     private val _uiEvent = MutableSharedFlow<UiEvent>()
     val uiEvent = _uiEvent.asSharedFlow()
 
-    private data class LastAction(val word: VocabWord, val sentence: Sentence, val voiceName: String)
-    private val _lastFailedAction = MutableStateFlow<LastAction?>(null)
+//    private data class LastAction(val word: VocabWord, val sentence: Sentence, val voiceName: String)
+//    private val _lastFailedAction = MutableStateFlow<LastAction?>(null)
 
     init {
         // Load all data when the ViewModel is first created
@@ -82,8 +84,11 @@ class CategoryTabViewModel @Inject constructor(
 
         // This block handles the one-time load for this tab's specific categories.
         viewModelScope.launch {
-            //val categories = vocabRepository.getTab1Categories() // or getTab2Categories etc.
-            //_uiState.update { it.copy(isLoading = false, categories = categories) }
+            delay(3000) //  wait until page has loaded
+            if (!connectivityRepository.isCurrentlyOnline()) {
+                _uiEvent.emit(UiEvent.ShowSnackbar("No internet connection", actionLabel = "Please Connect" ))
+                return@launch
+            }
         }
     }
 
@@ -132,27 +137,18 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
     fun onRowTapped(word: VocabWord, sentence: Sentence) {
-
-
         if (_uiState.value.playbackState is PlaybackState.Playing) return
 
         viewModelScope.launch {
 
             if (!connectivityRepository.isCurrentlyOnline()) {
-                // Instead of a boolean, we will emit an event
-                // This is a common pattern to trigger one-off UI actions
-                _lastFailedAction.value = LastAction(word, sentence, "selectedVoiceName")
-
                 _uiEvent.emit(UiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
                 return@launch
             }
 
-            _lastFailedAction.value = null
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
-//            _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
-            // Update playback state
             _uiState.update { it.copy(playbackState = PlaybackState.Playing(uniqueSentenceId)) }
 
             // Call your repository to play the audio
@@ -162,59 +158,35 @@ class CategoryTabViewModel @Inject constructor(
                 voiceName = currentVoiceName,
                 languageCode = LanguageConfig.languageCode,
                 onTTSApiCallStart = {
-                    // This lambda is the communication channel.
-                    // It will ONLY be executed by the repository if it's making a network call.
-                    // NOW we show the progress indicator.
                     _uiState.update { it.copy(downloadingSentenceId = uniqueSentenceId) }
                 },
                 onTTSApiCallComplete = {
                     _uiState.update { it.copy(downloadingSentenceId = null) }
-//                    _uiState.update { it.copy(isLoading = false) }
-//                    _uiState.update { it.copy(isLoading = true,playbackState = PlaybackState.Idle) }
                 }
 
             )
 
-//            result.onSuccess { playbackSource ->
-//                if (playbackSource == PlaybackSource.NETWORK) {
-//                    // ...add the word's key to our set of cached keys to show the red dot.
-//                    _uiState.update { currentState ->
-//                        currentState.copy(
-//                            wordsOnDisk = currentState.wordsOnDisk + word.word
-//                        )
-//                    }
-//                }
-//                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
-//            }
-//            result.onFailure { error ->
-//                // Optionally handle the error state in the UI
-//                _uiState.update { it.copy(playbackState = PlaybackState.Error(error.message ?: "Playback failed")) }
-//                // After a short delay or user action, you might want to reset to Idle
-//                // For now, we can just set it to Idle.
-//                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
-//            }
+
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    // A new file was cached! Increment the count.
                     _uiState.update {
                         it.copy(
                             playbackState = PlaybackState.Idle,
-                            // Increment the count
                             cachedAudioCount = it.cachedAudioCount + 1,
-                            // Also add the word to the set of cached keys for the red dot
                             wordsOnDisk = it.wordsOnDisk + word.word
                         )
                     }
                 }
                 is PlaybackResult.PlayedFromCache -> {
-                    // The file was already cached, just reset the playback state.
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
                 }
                 is PlaybackResult.Failure -> {
                     // Handle the error
-                    _uiState.update { it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed")) }
+                   // _uiState.update { it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed")) }
                     // Optionally reset to Idle after a delay
+                    _uiEvent.emit(UiEvent.ShowSnackbar("Could not play audio. Please check your connection."))
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                    Log.e("CTVM", "Playback failed", result.exception)
                 }
             }
         }

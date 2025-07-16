@@ -138,23 +138,18 @@ class VocabRepository @Inject constructor(
         // 3. If not cached, fetch from the network.
         println("Fetching from network: $text") // For debugging
         onTTSApiCallStart()
-        val audioResult = googleCloudTts.getAudioData(text, voiceName, languageCode)
+        try {
+            val audioResult = googleCloudTts.getAudioData(text, voiceName, languageCode)
 
-        return audioResult.fold(
+            return audioResult.fold(
                 onSuccess = { audioData ->
                     // 4. On successful fetch, SAVE the data to the cache file.
                     try {
                         audioCacheFile.writeBytes(audioData)
-                        println("Saved to cache: ${audioCacheFile.name}  ${audioCacheFile.absolutePath}") // For debugging
+                        // println("Saved to cache: ${audioCacheFile.name}  ${audioCacheFile.absolutePath}") // For debugging
                     } catch (e: Exception) {
-                        // Caching failed, but we can still proceed with playback.
-                        // Log this error in a real app.
                         e.printStackTrace()
-                    } finally {
-                        onTTSApiCallComplete()
                     }
-
-                    // 5. Play the newly fetched audio data.
                     val playResult = audioPlayerService.playAudio(audioData)
 
                     if (playResult.isSuccess){
@@ -162,27 +157,15 @@ class VocabRepository @Inject constructor(
                     }else{
                         PlaybackResult.Failure(playResult.exceptionOrNull() as? Exception ?: Exception("Unknown network playback error"))
                     }
-//                    if (playResult.isSuccess) {
-//                        PlaybackResult.PlayedFromNetworkAndCached
-//                    } else {
-//                        PlaybackResult.Failure(playResult.exceptionOrNull() as? Exception ?: Exception("Unknown network playback error"))
-//                    }
-
-                    //Result.success(PlaybackSource.NETWORK)
                 },
                 onFailure = { exception ->
-                    // If network call fails, pass the failure along.
-//                    PlaybackResult.Failure(exception)
-                    if (exception is Exception) {
-                        // If it's a standard exception, pass it along.
-                        PlaybackResult.Failure(exception)
-                    } else {
-                        // If it's a more serious error (like OutOfMemoryError),
-                        // wrap it in a new Exception so it fits our data class.
-                        PlaybackResult.Failure(Exception("A critical error occurred", exception))
-                    }
+                    PlaybackResult.Failure(exception as? Exception ?: Exception("Network error", exception))
                 }
-        )
+            )
+        } finally {
+            onTTSApiCallComplete()
+        }
+
     }
     // --- THIS IS THE NEW, SIMPLIFIED FUNCTION ---
     /**

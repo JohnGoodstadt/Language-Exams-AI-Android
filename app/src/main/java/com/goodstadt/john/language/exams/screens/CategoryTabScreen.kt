@@ -34,6 +34,7 @@ import kotlinx.coroutines.launch
 import androidx.compose.material3.LinearProgressIndicator
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
+import removeContentInBracketsAndTrim
 
 /**
  * A self-contained screen that displays vocabulary for a specific tab.
@@ -63,7 +64,7 @@ fun CategoryTabScreen(
                         message = event.message,
                         actionLabel = event.actionLabel,
                         // Optional: make it stay longer on screen since it has an action
-                        duration = SnackbarDuration.Long
+                        duration = SnackbarDuration.Short
                     )
 
                     // b) Check if the user tapped the action button
@@ -121,7 +122,7 @@ fun CategoryTabScreen(
             //
             if (uiState.isLoading) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator()
+                    CircularProgressIndicator(color = accentColor)
                 }
             } else {
                 var selectedChipTitle by remember(menuItems) {
@@ -171,7 +172,7 @@ fun CategoryTabScreen(
                     ) {
                         categories.forEach { category ->
                             stickyHeader {
-                                CategoryHeader(title = category.title)
+                                CategoryHeader(title = category.title.removeContentInBracketsAndTrim())
                             }
 
                             items(category.words, key = { "${it.id}-${it.word}" }) { word ->
