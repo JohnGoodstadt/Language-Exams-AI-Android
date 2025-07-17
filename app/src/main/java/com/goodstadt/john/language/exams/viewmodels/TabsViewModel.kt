@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
+import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.screens.utils.AppLifecycleObserver
@@ -38,7 +39,8 @@ sealed interface AuthUiState {
 class TabsViewModel @Inject constructor(
     private val authRepository: AuthRepository,
     private val userPreferencesRepository: UserPreferencesRepository, // For shared preferences
-    private val recallingItemsManager: RecallingItems
+    private val recallingItemsManager: RecallingItems,
+    private val ttsStatsRepository : TTSStatsRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(GlobalUiState())
@@ -47,9 +49,17 @@ class TabsViewModel @Inject constructor(
     private val lifecycleObserver = AppLifecycleObserver(
         onAppBackgrounded = {
             // This lambda will be called when onStop() is triggered.
-            flushStatsToFirestore()
+            if (ttsStatsRepository.checkIfStatsFlushNeeded()) {
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+            }
+        },
+        onAppForeground = {
+            if (ttsStatsRepository.checkIfStatsFlushNeeded()) {
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+            }
         }
     )
+
     init {
         // 1. Initialize the user session (as before).
         initializeAppSession()

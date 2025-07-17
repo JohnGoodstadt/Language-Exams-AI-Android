@@ -8,7 +8,8 @@ import android.util.Log
 
 // Your observer can take repositories as dependencies so it can do work.
 class AppLifecycleObserver(
-    private val onAppBackgrounded: () -> Unit
+    private val onAppBackgrounded: () -> Unit,
+    private val onAppForeground: () -> Unit
 ) : DefaultLifecycleObserver {
 
     // Called when the app comes to the foreground
@@ -16,6 +17,7 @@ class AppLifecycleObserver(
         super.onStart(owner)
         Log.d("AppLifecycle", "App came to FOREGROUND.")
         // You can add logic here if needed.
+        onAppForeground()
     }
 
     // Called when the app goes to the background

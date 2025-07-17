@@ -21,6 +21,7 @@ import android.content.Context
 import android.util.Log
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
+import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -49,6 +50,7 @@ class CategoryTabViewModel @Inject constructor(
     private val vocabRepository: VocabRepository, // For getting categories/words and playing audio
     private val connectivityRepository: ConnectivityRepository,
     private val recallingItemsManager: RecallingItems,
+    private val ttsStatsRepository : TTSStatsRepository,
     @ApplicationContext private val context: Context,
     private val application: Application // Needed for RecallingItems SharedPreferences
 ) : ViewModel() {
@@ -170,6 +172,8 @@ class CategoryTabViewModel @Inject constructor(
                             cachedAudioWordKeys = it.cachedAudioWordKeys + word.word
                         )
                     }
+                    ttsStatsRepository.updateTTSStats( sentence.sentence,currentVoiceName)
+
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }

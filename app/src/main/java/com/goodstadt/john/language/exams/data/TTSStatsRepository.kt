@@ -63,6 +63,7 @@ class TTSStatsRepository @Inject constructor(
 
             googleVoice.lowercase().contains("news") -> GoogleTTSChargingLevels.PREMIUM
             googleVoice.lowercase().contains("studio") -> GoogleTTSChargingLevels.STUDIO
+            googleVoice.lowercase().contains("chirp") -> GoogleTTSChargingLevels.PREMIUM
             else -> GoogleTTSChargingLevels.OTHER
         }
     }
