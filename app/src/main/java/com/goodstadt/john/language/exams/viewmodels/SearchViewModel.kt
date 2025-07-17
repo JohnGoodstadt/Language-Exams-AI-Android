@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.PlaybackResult
+import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -32,8 +33,10 @@ data class SearchResult(
 class SearchViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val userStatsRepository: UserStatsRepository
-) : ViewModel() {
+    private val userStatsRepository: UserStatsRepository,
+    private val ttsStatsRepository : TTSStatsRepository,
+
+    ) : ViewModel() {
 
     // Holds the complete list of all words from the current file
     private var allWords: List<VocabWord> = emptyList()
@@ -121,6 +124,7 @@ class SearchViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+                    ttsStatsRepository.updateTTSStats(  searchResult.firstSentence,currentVoiceName)
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))

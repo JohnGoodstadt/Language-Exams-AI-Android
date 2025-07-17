@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.PlaybackResult
+import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -32,7 +33,8 @@ sealed interface PrepositionsUiState {
 class PrepositionsViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val userStatsRepository: UserStatsRepository
+    private val userStatsRepository: UserStatsRepository,
+    private val ttsStatsRepository : TTSStatsRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<PrepositionsUiState>(PrepositionsUiState.Loading)
@@ -89,7 +91,9 @@ class PrepositionsViewModel @Inject constructor(
                 languageCode = currentLanguageCode
             )
             when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {}
+                is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    ttsStatsRepository.updateTTSStats( sentence.sentence,currentVoiceName)
+                }
                 is PlaybackResult.PlayedFromCache -> {}
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")

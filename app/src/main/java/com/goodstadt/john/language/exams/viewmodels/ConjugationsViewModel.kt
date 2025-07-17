@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.PlaybackResult
+import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -33,7 +34,8 @@ sealed interface ConjugationsUiState {
 class ConjugationsViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val userStatsRepository: UserStatsRepository
+    private val userStatsRepository: UserStatsRepository,
+    private val ttsStatsRepository: TTSStatsRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
@@ -102,6 +104,7 @@ class ConjugationsViewModel @Inject constructor(
 //            }
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    ttsStatsRepository.updateTTSStats( sentence.sentence,currentVoiceName)
                     // A new file was cached! Increment the count.
 //                    _uiState.update {
 //                        it.copy(

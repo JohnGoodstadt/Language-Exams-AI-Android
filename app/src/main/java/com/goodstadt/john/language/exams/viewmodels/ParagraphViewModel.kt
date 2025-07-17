@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
+import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -35,9 +36,10 @@ class ParagraphViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val openAIRepository: OpenAIRepository, // <-- INJECT THE REPOSITORY,
-    private val userStatsRepository: UserStatsRepository
+    private val userStatsRepository: UserStatsRepository,
+    private val ttsStatsRepository : TTSStatsRepository
 
-) : ViewModel() {
+    ) : ViewModel() {
 
     private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
     private val _uiState = MutableStateFlow(
@@ -171,16 +173,8 @@ class ParagraphViewModel @Inject constructor(
 //                }
                 when (result) {
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
-                        // A new file was cached! Increment the count.
-//                        _uiState.update {
-//                            it.copy(
-//                                playbackState = PlaybackState.Idle,
-//                                // Increment the count
-//                                cachedAudioCount = it.cachedAudioCount + 1,
-//                                // Also add the word to the set of cached keys for the red dot
-//                                wordsOnDisk = it.wordsOnDisk + word.word
-//                            )
-//                        }
+                        ttsStatsRepository.updateTTSStats( sentenceToSpeak,currentVoiceName)
+
                     }
                     is PlaybackResult.PlayedFromCache -> {
                         // The file was already cached, just reset the playback state.

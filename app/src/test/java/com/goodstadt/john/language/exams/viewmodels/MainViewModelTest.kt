@@ -23,7 +23,7 @@ import org.junit.Rule
 import org.junit.Test
 
 @ExperimentalCoroutinesApi
-class TabsViewModelTest {
+class MainViewModelTest {
 
     // This rule swaps the main dispatcher with a test dispatcher, crucial for Flow testing
     @get:Rule
@@ -37,7 +37,7 @@ class TabsViewModelTest {
     private lateinit var mockAuthRepository: AuthRepository
     private lateinit var mockUserStatsRepository: UserStatsRepository
     private lateinit var mockTTSStatsRepository: TTSStatsRepository
-    private lateinit var viewModel: TabsViewModel
+    private lateinit var viewModel: MainViewModel
     private lateinit var mockApplication: Application
 
     @Before
@@ -69,7 +69,7 @@ class TabsViewModelTest {
         // Initialize the ViewModel with ALL THREE mocks. This solves the "too many arguments" error.
 //        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository, mockControlRepository)
        // viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockAuthRepository,mockStatsRepository,mockApplication)
-        viewModel = TabsViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockTTSStatsRepository)
+        viewModel = MainViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockTTSStatsRepository)
         // Allow the coroutines launched in the init block to complete
         advanceUntilIdle()
 
@@ -89,7 +89,7 @@ class TabsViewModelTest {
 
         // 2. Act
 //        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository, mockControlRepository)
-        viewModel = TabsViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockTTSStatsRepository)
+        viewModel = MainViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockTTSStatsRepository)
         advanceUntilIdle()
 
         // 3. Assert

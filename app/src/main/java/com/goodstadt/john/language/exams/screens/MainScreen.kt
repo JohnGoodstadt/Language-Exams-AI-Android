@@ -22,9 +22,6 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
@@ -33,7 +30,7 @@ import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.viewmodels.AuthUiState
-import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
+import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
@@ -44,8 +41,8 @@ import androidx.core.view.WindowCompat
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
-    val tabsViewModel: TabsViewModel = hiltViewModel()
-    val globalUiState by tabsViewModel.uiState.collectAsState()
+    val mainViewModel: MainViewModel = hiltViewModel()
+    val globalUiState by mainViewModel.uiState.collectAsState()
    // val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
 
     val authState = globalUiState.authState
@@ -81,8 +78,8 @@ fun MainScreen() {
 @Composable
 fun MainAppContent(navController: NavHostController, selectedVoiceName: String) {
 
-    val tabsViewModel: TabsViewModel = hiltViewModel()
-    val globalUiState by tabsViewModel.uiState.collectAsState()
+    val mainViewModel: MainViewModel = hiltViewModel()
+    val globalUiState by mainViewModel.uiState.collectAsState()
 
     Scaffold(
         bottomBar = {

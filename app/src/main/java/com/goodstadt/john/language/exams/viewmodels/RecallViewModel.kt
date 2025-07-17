@@ -9,6 +9,7 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.RecallingItem
 import com.goodstadt.john.language.exams.data.RecallingItems
+import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.models.TabDetails
@@ -37,6 +38,7 @@ class RecallViewModel @Inject constructor(
     private val vocabRepository: VocabRepository, // For playing audio
     private val recallingItemsManager: RecallingItems,
     private val userPreferencesRepository: UserPreferencesRepository,
+    private val ttsStatsRepository : TTSStatsRepository,
     private val application: Application // For context
 ) : ViewModel() {
 
@@ -188,7 +190,9 @@ class RecallViewModel @Inject constructor(
 //                //  _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
 //            }
             when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {}
+                is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    ttsStatsRepository.updateTTSStats( word,currentVoiceName)
+                }
                 is PlaybackResult.PlayedFromCache -> {}
                 is PlaybackResult.Failure -> {}
             }
@@ -216,7 +220,9 @@ class RecallViewModel @Inject constructor(
 //              //  _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
 //            }
             when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {}
+                is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    ttsStatsRepository.updateTTSStats( word,currentVoiceName)
+                }
                 is PlaybackResult.PlayedFromCache -> {}
                 is PlaybackResult.Failure -> {}
             }

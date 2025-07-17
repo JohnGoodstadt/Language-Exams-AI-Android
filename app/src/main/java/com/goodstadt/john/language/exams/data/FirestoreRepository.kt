@@ -192,7 +192,7 @@ class FirestoreRepository  @Inject constructor(
         return transformedMap
     }
     fun fsUpdateGlobalStats(stats: Map<String, Int>) {
-        val _ = FirebaseAuth.getInstance().currentUser ?: return
+        FirebaseAuth.getInstance().currentUser ?: return
 
         val formattedDate = SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date()) // e.g., 2024-04
 
