@@ -173,10 +173,12 @@ class CategoryTabViewModel @Inject constructor(
                         )
                     }
                     ttsStatsRepository.updateTTSStats( sentence.sentence,currentVoiceName)
+                    ttsStatsRepository.updateUserPlayedSentenceCount() //count how many mp3s user has played
 
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                    ttsStatsRepository.updateUserPlayedSentenceCount()
                 }
                 is PlaybackResult.Failure -> {
                     // Handle the error

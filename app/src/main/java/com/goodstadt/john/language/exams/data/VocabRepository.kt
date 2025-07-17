@@ -136,7 +136,6 @@ class VocabRepository @Inject constructor(
         }
 
         // 3. If not cached, fetch from the network.
-        println("Fetching from network: $text") // For debugging
         onTTSApiCallStart()
         try {
             val audioResult = googleCloudTts.getAudioData(text, voiceName, languageCode)

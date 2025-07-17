@@ -174,9 +174,10 @@ class ParagraphViewModel @Inject constructor(
                 when (result) {
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
                         ttsStatsRepository.updateTTSStats( sentenceToSpeak,currentVoiceName)
-
+                        ttsStatsRepository.updateUserPlayedSentenceCount()
                     }
                     is PlaybackResult.PlayedFromCache -> {
+                        ttsStatsRepository.updateUserPlayedSentenceCount()
                         // The file was already cached, just reset the playback state.
 //                        _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
                     }

@@ -50,11 +50,13 @@ class MainViewModel @Inject constructor(
             // This lambda will be called when onStop() is triggered.
             if (ttsStatsRepository.checkIfStatsFlushNeeded()) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
         },
         onAppForeground = {
             if (ttsStatsRepository.checkIfStatsFlushNeeded()) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
         }
     )
@@ -122,26 +124,23 @@ class MainViewModel @Inject constructor(
 
     private fun loadInitialRecalledItems() {
         viewModelScope.launch {
-            // Get the currently saved exam key to ensure we load the right data.
             val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-            Log.d("TabsViewModel", "Triggering initial load of recalled items for key: '$currentExamKey'")
-            // Call the load function on the singleton manager.
             recallingItemsManager.load(currentExamKey)
         }
     }
 
     private fun initializeAppSession() {
         viewModelScope.launch {
-            Log.d("TabsViewModel", "Initializing user session...")
+            Log.d("MainViewModel", "Initializing user session...")
             val result = authRepository.signInOrUpdateUser()
 
             result.onSuccess { user ->
-                Log.d("TabsViewModel", "Session success. UID: ${user.uid}")
+                Log.d("MainViewModel", "Session success. UID: ${user.uid}")
                 _uiState.update { it.copy(authState = AuthUiState.Success(user.uid)) }
             }
 
             result.onFailure { exception ->
-                Log.e("TabsViewModel", "Session failed", exception)
+                Log.e("MainViewModel", "Session failed", exception)
                 _uiState.update { it.copy(authState = AuthUiState.Error(exception.message ?: "Unknown error")) }
             }
         }

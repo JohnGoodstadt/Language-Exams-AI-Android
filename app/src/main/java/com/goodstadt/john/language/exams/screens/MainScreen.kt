@@ -43,8 +43,6 @@ fun MainScreen() {
     val navController = rememberNavController()
     val mainViewModel: MainViewModel = hiltViewModel()
     val globalUiState by mainViewModel.uiState.collectAsState()
-   // val selectedVoiceName by tabsViewModel.selectedVoiceName.collectAsState()
-
     val authState = globalUiState.authState
 
     ChangeStatusBarColor(color = Color.Transparent, darkIcons = false)

@@ -10,7 +10,6 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import javax.inject.Inject
 import javax.inject.Singleton
-import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TRCalls
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TRChars
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSCacheHit
@@ -77,6 +76,8 @@ class TTSStatsRepository @Inject constructor(
 
     // Stat names
     companion object {
+        const val MP3PlayedCount = "MP3PlayedCount"
+
         const val TR_CHARS = "TRChars"
         const val TR_CALLS = "TRCalls"
         const val TTS_OTHER = "TTSOther"
@@ -276,19 +277,19 @@ class TTSStatsRepository @Inject constructor(
             statsDictionary[FirestoreRepository.fb.B1WordList_en] = stats[FirestoreRepository.fb.B1WordList_en] as? Int ?: 0
             statsDictionary[FirestoreRepository.fb.B2WordList_en] = stats[FirestoreRepository.fb.B2WordList_en] as? Int ?: 0
             statsDictionary[FirestoreRepository.fb.USvsBritishWordList_en] = stats[FirestoreRepository.fb.USvsBritishWordList_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.DontWordList_en] = stats[FirestoreRepository.fb.DontWordList_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.January_en] = stats[FirestoreRepository.fb.January_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.February_en] = stats[FirestoreRepository.fb.February_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.March_en] = stats[FirestoreRepository.fb.March_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.April_en] = stats[FirestoreRepository.fb.April_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.May_en] = stats[FirestoreRepository.fb.May_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.June_en] = stats[FirestoreRepository.fb.June_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.July_en] = stats[FirestoreRepository.fb.July_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.August_en] = stats[FirestoreRepository.fb.August_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.September_en] = stats[FirestoreRepository.fb.September_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.October_en] = stats[FirestoreRepository.fb.October_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.November_en] = stats[FirestoreRepository.fb.November_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.December_en] = stats[FirestoreRepository.fb.December_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.DontWordList_en] = stats[FirestoreRepository.fb.DontWordList_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.January_en] = stats[FirestoreRepository.fb.January_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.February_en] = stats[FirestoreRepository.fb.February_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.March_en] = stats[FirestoreRepository.fb.March_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.April_en] = stats[FirestoreRepository.fb.April_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.May_en] = stats[FirestoreRepository.fb.May_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.June_en] = stats[FirestoreRepository.fb.June_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.July_en] = stats[FirestoreRepository.fb.July_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.August_en] = stats[FirestoreRepository.fb.August_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.September_en] = stats[FirestoreRepository.fb.September_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.October_en] = stats[FirestoreRepository.fb.October_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.November_en] = stats[FirestoreRepository.fb.November_en] as? Int ?: 0
+//            statsDictionary[FirestoreRepository.fb.December_en] = stats[FirestoreRepository.fb.December_en] as? Int ?: 0
 
             statsDictionary[viewSentencesCount] = stats[viewSentencesCount] as? Int ?: 0
             statsDictionary[viewWordsCount] = stats[viewWordsCount] as? Int ?: 0
@@ -346,7 +347,9 @@ class TTSStatsRepository @Inject constructor(
         inc(fsDOC.TTSStats, TTSChars, characters)
         inc(fsDOC.TTSStats, TTSStats)
     }
-
+    fun updateUserPlayedSentenceCount() {
+        inc(fsDOC.USER, MP3PlayedCount)
+    }
     fun updateFSCharCount(charcount: Int, sheetname: String = "") {
 
         if (charcount <= 0) {

@@ -125,9 +125,11 @@ class SearchViewModel @Inject constructor(
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
                     ttsStatsRepository.updateTTSStats(  searchResult.firstSentence,currentVoiceName)
+                    ttsStatsRepository.updateUserPlayedSentenceCount()
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+                    ttsStatsRepository.updateUserPlayedSentenceCount()
                 }
                 is PlaybackResult.Failure -> {
 //                    _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")

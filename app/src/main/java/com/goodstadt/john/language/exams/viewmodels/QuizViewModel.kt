@@ -223,8 +223,11 @@ class QuizViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateTTSStats( sentence,currentVoiceName)
+                    ttsStatsRepository.updateUserPlayedSentenceCount()
                 }
-                is PlaybackResult.PlayedFromCache -> {}
+                is PlaybackResult.PlayedFromCache -> {
+                    ttsStatsRepository.updateUserPlayedSentenceCount()
+                }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }

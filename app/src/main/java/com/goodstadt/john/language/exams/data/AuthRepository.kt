@@ -150,10 +150,12 @@ class AuthRepository @Inject constructor(
                 val newUser = auth.signInAnonymously().await().user
                     ?: throw IllegalStateException("Firebase returned a null user after anonymous sign-in.")
 
+                Log.d("AuthRepository","uid is ${newUser.uid}")
 //                createUserRecord(newUser)
                 fsCreateUserDoc()
                 Result.success(newUser)
             } else {
+                Log.d("AuthRepository","uid is ${user.uid}")
                 // CASE 2: RETURNING USER - Just update the timestamp
                 if (false && BuildConfig.DEBUG) { //Just for JG 10 July 2025
                     val exists = fsDoesUserExist()

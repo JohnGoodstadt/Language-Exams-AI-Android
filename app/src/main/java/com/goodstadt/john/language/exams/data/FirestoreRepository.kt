@@ -19,7 +19,7 @@ class FirestoreRepository  @Inject constructor(
         const val global = "global"
         const val WordListControl = "WordListControl"
 
-        const val usersPronounce = "usersPronounce"
+        const val users = "users"
         const val categories = "categories"
         const val subcategories = "subcategories"
         const val permissions = "permissions"
@@ -84,6 +84,7 @@ class FirestoreRepository  @Inject constructor(
         const val TTSChars = "TTSChars"
         const val TTSStats = "TTSStats"
 
+
         const val TTSPremium = "TTSPremium"
         const val TTSStudio = "TTSStudio"
         const val TTSStandard = "TTSStandard"
@@ -101,19 +102,19 @@ class FirestoreRepository  @Inject constructor(
 //    const val B1WordList_en = "B1WordList_en"
 //    const val B2WordList_en = "B2WordList_en"
 //    const val USvsBritishWordList_en = "USvsBritishWordList_en"
-        const val DontWordList_en = "DontWordList-en"
-        const val January_en = "January-en"
-        const val February_en = "February-en"
-        const val March_en = "March-n"
-        const val April_en = "April-en"
-        const val May_en = "May-en"
-        const val June_en = "June-en"
-        const val July_en = "July-en"
-        const val August_en = "August-en"
-        const val September_en = "September-en"
-        const val October_en = "October-en"
-        const val November_en = "November-en"
-        const val December_en = "December-en"
+//        const val DontWordList_en = "DontWordList-en"
+//        const val January_en = "January-en"
+//        const val February_en = "February-en"
+//        const val March_en = "March-n"
+//        const val April_en = "April-en"
+//        const val May_en = "May-en"
+//        const val June_en = "June-en"
+//        const val July_en = "July-en"
+//        const val August_en = "August-en"
+//        const val September_en = "September-en"
+//        const val October_en = "October-en"
+//        const val November_en = "November-en"
+//        const val December_en = "December-en"
         //
 //    const val downloadedCEFRA1 = "downloadedCEFRA1"
 //    const val downloadedCEFRA2 = "downloadedCEFRA2"
@@ -165,7 +166,7 @@ class FirestoreRepository  @Inject constructor(
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 
 
-        val itemRef = FirebaseFirestore.getInstance().collection(fb.usersPronounce).document(currentUser.uid)
+        val itemRef = FirebaseFirestore.getInstance().collection(fb.users).document(currentUser.uid)
 
         try {
             val incrementedStats = transformToIncrements(statToUpload)
