@@ -2,20 +2,15 @@ package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Application
 import android.content.Context
-import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.PlaybackResult
-import com.goodstadt.john.language.exams.data.StatsRepository
+import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
-import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.LanguagesControlFile
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
-import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 //import com.google.gson.Gson
@@ -29,7 +24,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
-import java.io.File
 import java.util.*
 import javax.inject.Inject
 
@@ -102,7 +96,7 @@ class QuizViewModel @Inject constructor(
     private val application: Application,
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val statsRepository: StatsRepository
+    private val userStatsRepository: UserStatsRepository
 //    private val pronounceSharedPreferences: PronounceSharedPreferences,
 //    private val remoteConfigRepository: RemoteConfigRepository,
 //    private val musicPlayer: MusicPlayer,

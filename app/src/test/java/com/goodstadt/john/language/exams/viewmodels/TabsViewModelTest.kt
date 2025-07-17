@@ -5,12 +5,11 @@ import com.goodstadt.john.language.exams.MainCoroutineRule
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
-import com.goodstadt.john.language.exams.data.StatsRepository
+import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.models.VocabFile
-import com.google.common.truth.Truth.assertThat
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
@@ -35,7 +34,7 @@ class TabsViewModelTest {
     private lateinit var mockRecallingItemsManager: RecallingItems
     private lateinit var mockVocabRepository: VocabRepository
     private lateinit var mockAuthRepository: AuthRepository
-    private lateinit var mockStatsRepository: StatsRepository
+    private lateinit var mockUserStatsRepository: UserStatsRepository
     private lateinit var viewModel: TabsViewModel
     private lateinit var mockApplication: Application
 

@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.PlaybackResult
-import com.goodstadt.john.language.exams.data.StatsRepository
+import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.models.VocabWord
@@ -32,7 +32,7 @@ data class SearchResult(
 class SearchViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val statsRepository: StatsRepository
+    private val userStatsRepository: UserStatsRepository
 ) : ViewModel() {
 
     // Holds the complete list of all words from the current file
@@ -120,10 +120,10 @@ class SearchViewModel @Inject constructor(
 //            }
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+                    userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
                 }
                 is PlaybackResult.PlayedFromCache -> {
-                    statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+                    userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
                 }
                 is PlaybackResult.Failure -> {
 //                    _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")

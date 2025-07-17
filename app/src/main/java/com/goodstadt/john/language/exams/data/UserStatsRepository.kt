@@ -15,7 +15,7 @@ import javax.inject.Singleton
 
 
 @Singleton
-class StatsRepository @Inject constructor(
+class UserStatsRepository @Inject constructor(
     private val firestore: FirebaseFirestore
 ) {
 
@@ -27,10 +27,10 @@ class StatsRepository @Inject constructor(
         const val wordCount = "wordCount"
 
     }
-    private object fb2 {
-        const val words = "words"
-        const val users = "users"
-    }
+//    private object fb2 {
+//        const val words = "words"
+//        const val users = "users"
+//    }
     /**
      * Increments the "play count" for a specific vocabulary word.
      * @param uid The ID of the currently logged-in user.
@@ -111,10 +111,4 @@ class StatsRepository @Inject constructor(
                 println("Error writing document: ${exception.message}")
             }
     }
-    /**
-     * Records that a user has completed an exam.
-     */
-//    suspend fun recordExamCompletion(uid: String, examId: String, score: Int): Result<Unit> {
-//        // Your Firestore logic to save exam results...
-//    }
 }

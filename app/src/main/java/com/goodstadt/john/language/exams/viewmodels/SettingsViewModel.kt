@@ -8,18 +8,16 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.RecallingItems
-import com.goodstadt.john.language.exams.data.StatsRepository
+import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.models.ExamDetails
-import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -50,7 +48,7 @@ class SettingsViewModel @Inject constructor(
     private val controlRepository: ControlRepository,
     private val voiceRepository: VoiceRepository,
     private val vocabRepository: VocabRepository,
-    private val statsRepository: StatsRepository,
+    private val userStatsRepository: UserStatsRepository,
     private val recallingItemsManager: RecallingItems
 ) : ViewModel() {
 

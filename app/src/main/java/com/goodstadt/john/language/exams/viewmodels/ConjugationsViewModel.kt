@@ -4,19 +4,17 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.PlaybackResult
-import com.goodstadt.john.language.exams.data.StatsRepository
+import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
-import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -35,7 +33,7 @@ sealed interface ConjugationsUiState {
 class ConjugationsViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val statsRepository: StatsRepository
+    private val userStatsRepository: UserStatsRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)

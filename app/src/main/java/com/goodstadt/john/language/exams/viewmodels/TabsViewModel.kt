@@ -1,12 +1,14 @@
 package com.goodstadt.john.language.exams.viewmodels
 
 import android.util.Log
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.navigation.Screen
+import com.goodstadt.john.language.exams.screens.utils.AppLifecycleObserver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -42,6 +44,12 @@ class TabsViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(GlobalUiState())
     val uiState = _uiState.asStateFlow()
 
+    private val lifecycleObserver = AppLifecycleObserver(
+        onAppBackgrounded = {
+            // This lambda will be called when onStop() is triggered.
+            flushStatsToFirestore()
+        }
+    )
     init {
         // 1. Initialize the user session (as before).
         initializeAppSession()
@@ -56,6 +64,24 @@ class TabsViewModel @Inject constructor(
         loadInitialRecalledItems()
 
         calcBadgeNumber()
+    }
+    fun registerLifecycleObserver(lifecycle: Lifecycle) {
+        lifecycle.addObserver(lifecycleObserver)
+    }
+
+    private fun flushStatsToFirestore() {
+        // Launch a coroutine to do the background work
+        viewModelScope.launch {
+            //statsRepository.flushPendingStats() // Assume a function like this exists
+            Log.d("MainViewModel","flushStatsToFirestore")
+        }
+    }
+
+    // Ensure the observer is removed when the ViewModel is cleared.
+    override fun onCleared() {
+        // This step is not strictly necessary if you add the observer to the
+        // process lifecycle, but it's good practice.
+        super.onCleared()
     }
 
     private fun calcBadgeNumber() {

@@ -11,8 +11,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.MainScreen
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme
+import com.goodstadt.john.language.exams.viewmodels.TabsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,17 +22,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-//        enableEdgeToEdge(
-//            navigationBarStyle = SystemBarStyle.dark(
-//                Color.argb(
-//                    0x80,
-//                    0x1b,
-//                    0x1b,
-//                    0x1b
-//                )
-//            )
-//        )
+
         setContent {
+            val mainViewModel: TabsViewModel = hiltViewModel()
+            mainViewModel.registerLifecycleObserver(this.lifecycle) // Register the observer with the activity's lifecycle
+
             LanguageExamsAITheme(darkTheme = true) {
                 Surface(
                         modifier = Modifier.fillMaxSize(),

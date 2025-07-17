@@ -5,11 +5,10 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
-import com.goodstadt.john.language.exams.data.StatsRepository
+import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.models.VocabFile
-import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -27,7 +26,8 @@ data class ParagraphUiState(
     val generatedSentence: String = "Tap 'Generate' to begin.",
     val translation: String = "",
     val highlightedWords: Set<String> = emptySet(), // <-- ADD THIS
-    val error: String? = null // <-- Add this for showing errors
+    val error: String? = null, // <-- Add this for showing errors
+    val currentLlmEngine: String = ""
 )
 
 @HiltViewModel
@@ -35,11 +35,17 @@ class ParagraphViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val openAIRepository: OpenAIRepository, // <-- INJECT THE REPOSITORY,
-    private val statsRepository: StatsRepository
+    private val userStatsRepository: UserStatsRepository
 
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(ParagraphUiState())
+    private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
+    private val _uiState = MutableStateFlow(
+        // Initialize the state with the first model from our list
+        ParagraphUiState(currentLlmEngine = availableModels.first())
+    )
+
+//    private val _uiState = MutableStateFlow(ParagraphUiState())
     // This line exposes the stream of data for the UI to listen to.
     val uiState = _uiState.asStateFlow()
 
@@ -65,9 +71,11 @@ class ParagraphViewModel @Inject constructor(
                 val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
 
 
+                //TODO: Make this specific to de,en,zh etc
                 val systemMessage = "I am learning American English and I need to learn new words in a sentence. You are a teacher of American in America, and want to help me. I will give you a few words in American in America, and you will construct simple sentences using these words in any order. Do not give any extra words than the text you send back. Put the English response in square brackets []. give me a paragraph of text including the list of words at the level of A1. try to make the paragraph sensible. Fill between these words with verbs, adjectives, prepositions, other nouns etc at the level of A1. "
                 val llmResponse = openAIRepository.fetchOpenAIData(
-                        llmEngine = "gpt-4.1", // or another model
+//                        llmEngine = "gpt-4.1", // or another model
+                        llmEngine = _uiState.value.currentLlmEngine,
                         systemMessage = systemMessage,
                         userQuestion = userQuestion
                 )
@@ -191,5 +199,19 @@ class ParagraphViewModel @Inject constructor(
             }
 
         }
+    }
+    /**
+     * Cycles to the next available LLM engine in the list for debugging.
+     */
+    fun cycleLlmEngine() {
+        val currentState = _uiState.value
+        val currentIndex = availableModels.indexOf(currentState.currentLlmEngine)
+
+        // Use the modulus operator to wrap around to the beginning of the list
+        val nextIndex = (currentIndex + 1) % availableModels.size
+
+        val newModel = availableModels[nextIndex]
+
+        _uiState.update { it.copy(currentLlmEngine = newModel) }
     }
 }
