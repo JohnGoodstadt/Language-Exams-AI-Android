@@ -2,10 +2,8 @@ package com.goodstadt.john.language.exams.screens // Or your correct package
 
 // --- All Necessary Imports ---
 //import android.media.session.PlaybackState
-import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
@@ -22,16 +20,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
-import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
-import com.goodstadt.john.language.exams.ui.theme.Orange
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
-import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
 import removeContentInBracketsAndTrim
@@ -51,7 +49,6 @@ fun CategoryTabScreen(
 
     val snackbarHostState = remember { SnackbarHostState() }
 
-    // This effect ensures the ViewModel loads data for this specific tab, once.
     LaunchedEffect(key1 = tabIdentifier, key2 = categoryTitle, key3 = selectedVoiceName) {
         if (selectedVoiceName.isNotEmpty()) {
             if (tabIdentifier != null) {
@@ -59,6 +56,22 @@ fun CategoryTabScreen(
             } else if (categoryTitle != null) {
                 viewModel.loadContentForCategory(categoryTitle, selectedVoiceName)
             }
+        }
+    }
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            // We refresh the cache state every time the screen enters the RESUMED state.
+            if (event == Lifecycle.Event.ON_RESUME) {
+                viewModel.refreshCacheState(selectedVoiceName)
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+
+        // This is called when the composable leaves the screen
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
         }
     }
 
@@ -199,7 +212,7 @@ fun CategoryTabScreen(
                                         isDownloading = isDownloading,
 //                                isPlaying = (uiState.playbackState as? PlaybackState.Playing)?.sentenceId == generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName),
                                         recalledWordKeys = uiState.recalledWordKeys,
-                                        wordsOnDisk = uiState.wordsOnDisk, // Pass the new state
+                                        cachedAudioWordKeys = uiState.cachedAudioWordKeys, // Pass the new state
                                         onRowTapped = { w, s -> viewModel.onRowTapped(w, s) }, // Call ViewModel's function
                                         onFocus = { viewModel.onFocusClicked(word) },
                                         onCancel = { viewModel.onCancelClicked(word) }

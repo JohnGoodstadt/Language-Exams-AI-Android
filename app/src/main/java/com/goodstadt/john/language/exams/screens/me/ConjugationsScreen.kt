@@ -1,13 +1,11 @@
 package com.goodstadt.john.language.exams.screens.me
 
-import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.CircularProgressIndicator
@@ -20,7 +18,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
@@ -32,7 +29,6 @@ import com.goodstadt.john.language.exams.viewmodels.ConjugationsUiState
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsViewModel
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 //import com.goodstadt.john.language.exams.viewmodels.PlaybackState
-import hilt_aggregated_deps._com_goodstadt_john_language_exams_viewmodels_ConjugationsViewModel_HiltModules_BindsModule
 
 @Composable
 fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
@@ -122,7 +118,7 @@ fun SectionedVocabList(
                         displayDot = false,
 //                            wordCount = 0,
                         isDownloading = false, //TODO: maybe dynamic?
-                        wordsOnDisk = setOf()
+                        cachedAudioWordKeys = setOf()
                     )
                 }
             }

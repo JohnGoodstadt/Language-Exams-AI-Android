@@ -63,7 +63,7 @@ fun SwipeableVocabRow(
     selectedVoiceName: String,
     isDownloading: Boolean,
     recalledWordKeys: Set<String>,
-    wordsOnDisk: Set<String>,
+    cachedAudioWordKeys: Set<String>,
     onRowTapped: (VocabWord, Sentence) -> Unit,
     onFocus: () -> Unit,
     onCancel: () -> Unit,
@@ -71,7 +71,7 @@ fun SwipeableVocabRow(
 ) {
 
     val isRecalling = recalledWordKeys.contains(word.word)
-    val displayDot = wordsOnDisk.contains(word.word)
+    val displayDot = cachedAudioWordKeys.contains(word.word)
 
     // --- CHANGE 1: Use the new state remember function ---
     val dismissState = rememberSwipeToDismissBoxState(
@@ -130,7 +130,7 @@ fun SwipeableVocabRow(
                 sentence = displayData.sentence,
                 isRecalling = isRecalling,
                 displayDot = displayDot,
-                wordsOnDisk ,
+                cachedAudioWordKeys ,
                 //wordCount = 0,
                 isDownloading = isDownloading
             )
@@ -169,7 +169,7 @@ fun VocabRow(
     sentence: String,
     isRecalling: Boolean,
     displayDot: Boolean,
-    wordsOnDisk: Set<String>,
+    cachedAudioWordKeys: Set<String>,
     isDownloading:Boolean
 ) {
     // This logic builds the styled text with underlined words.
@@ -190,7 +190,7 @@ fun VocabRow(
             CircularProgressIndicator(modifier = Modifier.size(24.dp))
         } else {
             // Check if the red dot should be displayed
-            val displayRedDot = wordsOnDisk.contains(entry.word)
+            val displayRedDot = cachedAudioWordKeys.contains(entry.word)
 
             if (displayRedDot) {
                 Text(text = "🔴", fontSize = 12.sp)

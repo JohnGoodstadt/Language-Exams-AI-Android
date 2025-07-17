@@ -15,22 +15,16 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.toSet
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import android.content.Context
 import android.util.Log
-import androidx.compose.material3.SnackbarHostState
-import androidx.compose.runtime.remember
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
-import com.goodstadt.john.language.exams.data.PlaybackSource
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import java.io.File
 import javax.inject.Inject
 
 // This data class represents everything the UI needs to draw itself.
@@ -39,7 +33,7 @@ data class CategoryTabUiState(
     val categories: List<Category> = emptyList(),
     val recalledWordKeys: Set<String> = emptySet(),
     val playbackState: PlaybackState = PlaybackState.Idle,
-    val wordsOnDisk: Set<String> = emptySet(),
+    val cachedAudioWordKeys: Set<String> = emptySet(),
     val downloadingSentenceId: String? = null,
     val cachedAudioCount: Int = 0,
     val totalWordsInTab: Int = 0
@@ -112,7 +106,7 @@ class CategoryTabViewModel @Inject constructor(
                         isLoading = false,
                         categories = categories,
                         // Update the newly named state with the result of the disk check.
-                        wordsOnDisk = cachedKeys,
+                        cachedAudioWordKeys = cachedKeys,
                         cachedAudioCount = cachedKeys.size,
                         totalWordsInTab = totalWords
                     )
@@ -173,7 +167,7 @@ class CategoryTabViewModel @Inject constructor(
                         it.copy(
                             playbackState = PlaybackState.Idle,
                             cachedAudioCount = it.cachedAudioCount + 1,
-                            wordsOnDisk = it.wordsOnDisk + word.word
+                            cachedAudioWordKeys = it.cachedAudioWordKeys + word.word
                         )
                     }
                 }
@@ -215,7 +209,7 @@ class CategoryTabViewModel @Inject constructor(
                     it.copy(
                         isLoading = false,
                         categories = categoriesList,
-                        wordsOnDisk = cachedKeys,
+                        cachedAudioWordKeys = cachedKeys,
                         cachedAudioCount = cachedKeys.size,
                         totalWordsInTab = totalWords
                     )
@@ -226,6 +220,34 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
 
+    /**
+     * Re-checks the disk for cached audio files and updates the UI state.
+     * This is useful for refreshing the screen when it becomes visible again.
+     */
+    fun refreshCacheState(voiceName: String) {
+        // We only proceed if data is already loaded and we have a valid voice name.
+        if (_uiState.value.isLoading || _uiState.value.categories.isEmpty() || voiceName.isEmpty()) {
+            return
+        }
+
+        viewModelScope.launch {
+            Log.d("ViewModel", "Refreshing cache state...")
+            // Get the current categories from the state
+            val currentCategories = _uiState.value.categories
+
+            // Ask the repository to re-check the disk with the current data
+            val cachedKeys =
+                vocabRepository.getWordKeysWithCachedAudio(currentCategories, voiceName)
+
+            // Update the UI state with the fresh cache information
+            _uiState.update {
+                it.copy(
+                    cachedAudioWordKeys = cachedKeys,
+                    cachedAudioCount = cachedKeys.size
+                )
+            }
+        }
+    }
     fun resetState() {
         // Reset the UI state back to its initial, default values.
         _uiState.value = CategoryTabUiState()
