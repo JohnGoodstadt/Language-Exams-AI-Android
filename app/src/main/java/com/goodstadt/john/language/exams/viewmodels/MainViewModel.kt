@@ -4,9 +4,11 @@ import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.UpdateState
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.screens.utils.AppLifecycleObserver
@@ -40,10 +42,14 @@ class MainViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository, // For shared preferences
     private val recallingItemsManager: RecallingItems,
     private val ttsStatsRepository : TTSStatsRepository,
+    private val appConfigRepository: AppConfigRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(GlobalUiState())
     val uiState = _uiState.asStateFlow()
+
+    private val _updateState = MutableStateFlow<UpdateState>(UpdateState.NoUpdateNeeded)
+    val updateState = _updateState.asStateFlow()
 
     private val lifecycleObserver = AppLifecycleObserver(
         onAppBackgrounded = {
@@ -75,6 +81,8 @@ class MainViewModel @Inject constructor(
         loadInitialRecalledItems()
 
         calcBadgeNumber()
+
+        checkForAppUpdate()
     }
     fun registerLifecycleObserver(lifecycle: Lifecycle) {
         lifecycle.addObserver(lifecycleObserver)
@@ -150,4 +158,14 @@ class MainViewModel @Inject constructor(
     // loadDataForFile(), playTrack(), all the category/menu/indexMap flows...
     // They are no longer the responsibility of this ViewModel.
     // They have been moved to CategoryTabViewModel.
+    private fun checkForAppUpdate() {
+        viewModelScope.launch {
+            _updateState.value = appConfigRepository.checkAppUpdateStatus()
+        }
+    }
+
+    // A function the UI can call to dismiss the optional dialog
+    fun dismissOptionalUpdate() {
+        _updateState.value = UpdateState.NoUpdateNeeded
+    }
 }

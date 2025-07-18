@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>android_minimum_version_code</key>
+        <value>1</value> <!-- A safe, low default that won't block anyone -->
+    </entry>
+    <entry>
+        <key>android_recommended_version_code</key>
+        <value>1</value> <!-- A safe, low default -->
+    </entry>
+    <entry>
+        <key>update_message_optional</key>
+        <value>A new update is available!</value>
+    </entry>
+    <entry>
+        <key>update_message_forced</key>
+        <value>Please update your app to continue.</value>
+    </entry>
+    <entry>
+        <key>update_url_android</key>
+        <!-- Replace with your actual package name -->
+        <value>https://play.google.com/store/apps/details?id=com.goodstadt.john.language.exams</value>
+    </entry>
+</defaultsMap>

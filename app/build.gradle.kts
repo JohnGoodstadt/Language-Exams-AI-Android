@@ -28,7 +28,7 @@ android {
     defaultConfig {
         applicationId = "com.goodstadt.john.language.exams"
         minSdk = 26 // Covers over 90% of devices
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 2
         versionName = "1.1"
 
@@ -160,6 +160,7 @@ dependencies {
 
     implementation(libs.hilt.android)
     implementation(libs.androidx.lifecycle.runtime.compose.android)
+
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
 
@@ -169,18 +170,27 @@ dependencies {
 
     // Firebase
     implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.config.ktx)
     implementation(libs.firebase.analytics)
     implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore) {
+        exclude(group = "com.google.firebase", module = "firebase-common")
+    }
     implementation(libs.firebase.firestore)
-
+    implementation(libs.google.firebase.config.ktx)
     implementation(libs.androidx.datastore.preferences)
+
     
     // Unit Tests
     testImplementation(libs.junit)
     testImplementation(libs.truth)
     testImplementation(libs.mockk)
     testImplementation(libs.kotlinx.coroutines.test)
-
+    testImplementation(libs.mockito.core) // Core Mockito library
+    testImplementation(libs.mockito.kotlin) // Helper library for Mockito with Kotlin
+    testImplementation(libs.kotlinx.coroutines.test) // For testing suspend functions
+    testImplementation(libs.kotlin.test)
+    
     // Instrumented/UI Tests
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

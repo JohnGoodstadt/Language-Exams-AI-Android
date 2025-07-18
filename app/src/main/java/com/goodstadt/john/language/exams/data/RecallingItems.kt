@@ -133,22 +133,7 @@ class RecallingItems @Inject constructor (
         }
     }
 
-    fun recalledOKObsolete(key: String) {
-        _items.update { currentList ->
-            currentList.map { item ->
-                if (item.key == key) {
-                    // Create a modified copy of the item
-                    item.copy(
-                        recallState = RecallState.Waiting,
-                        prevEventTime = System.currentTimeMillis()
-                        // ... other changes
-                    )
-                } else {
-                    item // Return the original item if it's not the one we're changing
-                }
-            }
-        }
-    }
+
 // ... inside RecallingItems class ...
 
     suspend fun recalledOK(key: String) {
@@ -255,24 +240,6 @@ class RecallingItems @Inject constructor (
         }
     }
 
-    fun saveObsolete(storageKey: String = RECALL_IT_SAVED_FILENAME) {
-        try {
-            // THE FIX: We get the current list from the .value property
-            val listToSave = _items.value
-            val jsonString = Json.encodeToString(listToSave)
-
-            val prefs = context.getSharedPreferences("RecallItPrefs", Context.MODE_PRIVATE)
-            prefs.edit().putString(storageKey, jsonString).apply()
-
-            // Add a log to confirm saving
-            Log.d("RecallingItems", "Saved ${listToSave.size} items to key '$storageKey'")
-
-        } catch (e: Exception) {
-            Log.e("RecallingItems", "Failed to save items", e)
-            e.printStackTrace()
-        }
-    }
-
 
     fun load(storageKey: String = RECALL_IT_SAVED_FILENAME) {
         try {
@@ -326,30 +293,10 @@ class RecallingItems @Inject constructor (
 
 }
 
-
-// --- DEPENDENCIES: These functions need to be implemented ---
-
-/**
- * Parses a string like "10m", "1h", "1D" into a duration in milliseconds.
- * This is the Kotlin equivalent of your 'StringToDateInterval'.
- */
-private fun stringToTimeIntervalMillisObsolete(stopCode: String): Long {
-    val value = stopCode.dropLast(1).toLongOrNull() ?: return 0
-    val unit = stopCode.last().uppercaseChar()
-
-    return when (unit) {
-        'M' -> if (stopCode.endsWith("m")) TimeUnit.MINUTES.toMillis(value) else TimeUnit.DAYS.toMillis(value * 30) // Assuming M is month
-        'H' -> TimeUnit.HOURS.toMillis(value)
-        'D' -> TimeUnit.DAYS.toMillis(value)
-        'W' -> TimeUnit.DAYS.toMillis(value * 7)
-        else -> 0L
-    }
-}
-
 // You will also need to provide implementations for these Swift functions
 // that were used in your original file.
 
-fun printhires(message: String) { /* TODO: Implement logging */ }
-fun String.getAcronyms(): String { /* TODO: Implement acronym logic */ return "?" }
-fun secondsToString(seconds: Int): String { /* TODO: Implement time formatting */ return "" }
-fun recallingStateString(item: RecallingItem): String { /* TODO: Implement logic */ return "" }
+//fun printhires(message: String) { /* TODO: Implement logging */ }
+//fun String.getAcronyms(): String { /* TODO: Implement acronym logic */ return "?" }
+//fun secondsToString(seconds: Int): String { /* TODO: Implement time formatting */ return "" }
+//fun recallingStateString(item: RecallingItem): String { /* TODO: Implement logic */ return "" }

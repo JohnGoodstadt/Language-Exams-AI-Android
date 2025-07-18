@@ -1,6 +1,8 @@
 package com.goodstadt.john.language.exams.screens
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -34,8 +36,10 @@ import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.goodstadt.john.language.exams.data.UpdateState
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -44,6 +48,7 @@ fun MainScreen() {
     val mainViewModel: MainViewModel = hiltViewModel()
     val globalUiState by mainViewModel.uiState.collectAsState()
     val authState = globalUiState.authState
+    val updateState by mainViewModel.updateState.collectAsState()
 
     ChangeStatusBarColor(color = Color.Transparent, darkIcons = false)
 
@@ -71,6 +76,28 @@ fun MainScreen() {
         }
     }
 
+    // This will conditionally display the update dialog on top of your app content.
+    when (val state = updateState) {
+        is UpdateState.ForcedUpdate -> {
+            UpdateDialog(
+                message = state.message,
+                updateUrl = state.url,
+                isForced = true,
+                onDismiss = { /* Non-dismissible, so this does nothing */ }
+            )
+        }
+        is UpdateState.OptionalUpdate -> {
+            UpdateDialog(
+                message = state.message,
+                updateUrl = state.url,
+                isForced = false,
+                onDismiss = { mainViewModel.dismissOptionalUpdate() }
+            )
+        }
+        is UpdateState.NoUpdateNeeded -> {
+            // Do nothing, no dialog is shown
+        }
+    }
 }
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -199,4 +226,41 @@ fun ChangeStatusBarColor(color: Color, darkIcons: Boolean) {
             WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkIcons
         }
     }
+}
+@Composable
+fun UpdateDialog(
+    message: String,
+    updateUrl: String,
+    isForced: Boolean,
+    onDismiss: () -> Unit
+) {
+    val context = LocalContext.current
+
+    AlertDialog(
+        onDismissRequest = {
+            // Only allow dismissal if it's not a forced update
+            if (!isForced) {
+                onDismiss()
+            }
+        },
+        title = { Text("Update Available") },
+        text = { Text(message) },
+        confirmButton = {
+            TextButton(
+                onClick = {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(updateUrl))
+                    context.startActivity(intent)
+                }
+            ) {
+                Text("Update Now")
+            }
+        },
+        dismissButton = {
+            if (!isForced) {
+                TextButton(onClick = onDismiss) {
+                    Text("Later")
+                }
+            }
+        }
+    )
 }
