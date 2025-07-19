@@ -24,6 +24,7 @@ class UserPreferencesRepository @Inject constructor(
     private object PreferenceKeys {
         val SELECTED_VOICE_NAME = stringPreferencesKey("selected_voice_name")
         val SELECTED_FILE_NAME = stringPreferencesKey("selected_file_name")
+        val SELECTED_SKILL_LEVEL = stringPreferencesKey("selected_skill_level")
     }
 
     /**
@@ -44,6 +45,11 @@ class UserPreferencesRepository @Inject constructor(
             preferences[PreferenceKeys.SELECTED_VOICE_NAME] ?: LanguageConfig.voiceName
         }
 
+    val selectedSkillLevelFlow: Flow<String> = context.dataStore.data
+        .map { preferences ->
+            preferences[PreferenceKeys.SELECTED_SKILL_LEVEL] ?: LanguageConfig.defaulSkillLevel
+        }
+
     /**
      * Saves the user's selected file name to DataStore.
      */
@@ -59,6 +65,14 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun saveSelectedVoiceName(voiceName: String) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.SELECTED_VOICE_NAME] = voiceName
+        }
+    }
+    /**
+     * Saves the user's selected Skill Level A1,A2,B1 or B2
+     */
+    suspend fun saveSelectedSkillLevel(skillLevel: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.SELECTED_SKILL_LEVEL] = skillLevel
         }
     }
 }

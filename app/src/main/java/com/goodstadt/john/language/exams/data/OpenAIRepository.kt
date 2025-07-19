@@ -1,6 +1,7 @@
 // Create a new file in your .../data/ package
 package com.goodstadt.john.language.exams.data
 
+import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig.OPENAI_API_KEY
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -56,6 +57,8 @@ class OpenAIRepository @Inject constructor() {
                     })
                 })
             }
+
+            Log.d("OpenAIRepository","model used in call is ${llmEngine}")
 
             // 2. Create the request
             val body = jsonBody.toString().toRequestBody("application/json".toMediaType())

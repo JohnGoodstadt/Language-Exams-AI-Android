@@ -2,11 +2,11 @@
 <defaultsMap>
     <entry>
         <key>android_minimum_version_code</key>
-        <value>1</value> <!-- A safe, low default that won't block anyone -->
+        <value>2</value> <!-- A safe, low default that won't block anyone -->
     </entry>
     <entry>
         <key>android_recommended_version_code</key>
-        <value>1</value> <!-- A safe, low default -->
+        <value>2</value> <!-- A safe, low default -->
     </entry>
     <entry>
         <key>update_message_optional</key>
@@ -20,5 +20,20 @@
         <key>update_url_android</key>
         <!-- Replace with your actual package name -->
         <value>https://play.google.com/store/apps/details?id=com.goodstadt.john.language.exams</value>
+    </entry>
+    <entry>
+        <key>llm_models_config</key>
+        <value>
+            <![CDATA[
+            [
+              {
+                "id": "gpt-4.1-nano",
+                "title": "GPT 4.1 nano",
+                "pricePerMillionInputTokens": 0.40,
+                "isDefault": true
+              }
+            ]
+            ]]>
+        </value>
     </entry>
 </defaultsMap>

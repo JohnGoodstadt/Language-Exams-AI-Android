@@ -3,12 +3,14 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -28,7 +30,8 @@ data class ParagraphUiState(
     val translation: String = "",
     val highlightedWords: Set<String> = emptySet(), // <-- ADD THIS
     val error: String? = null, // <-- Add this for showing errors
-    val currentLlmEngine: String = ""
+    val availableModels: List<LlmModelInfo> = emptyList(),
+    val currentLlmModel: LlmModelInfo? = null
 )
 
 @HiltViewModel
@@ -37,20 +40,23 @@ class ParagraphViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val openAIRepository: OpenAIRepository, // <-- INJECT THE REPOSITORY,
     private val userStatsRepository: UserStatsRepository,
-    private val ttsStatsRepository : TTSStatsRepository
+    private val ttsStatsRepository : TTSStatsRepository,
+    private val appConfigRepository: AppConfigRepository,
 
     ) : ViewModel() {
 
     private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
-    private val _uiState = MutableStateFlow(
-        // Initialize the state with the first model from our list
-        ParagraphUiState(currentLlmEngine = availableModels.first())
-    )
+//    private val availableModels99 = LlmModelInfo.entries
 
-//    private val _uiState = MutableStateFlow(ParagraphUiState())
-    // This line exposes the stream of data for the UI to listen to.
+    private val _uiState = MutableStateFlow(
+        ParagraphUiState(),
+
+    )
     val uiState = _uiState.asStateFlow()
 
+    init{
+        loadLlmModels()
+    }
     //private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
     //val uiState = _uiState.asStateFlow()
 
@@ -72,12 +78,14 @@ class ParagraphViewModel @Inject constructor(
 //                val systemMessage = "You are a helpful language teacher..." // Define your system message
                 val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
 
+                val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
                 //TODO: Make this specific to de,en,zh etc
-                val systemMessage = "I am learning American English and I need to learn new words in a sentence. You are a teacher of American in America, and want to help me. I will give you a few words in American in America, and you will construct simple sentences using these words in any order. Do not give any extra words than the text you send back. Put the English response in square brackets []. give me a paragraph of text including the list of words at the level of A1. try to make the paragraph sensible. Fill between these words with verbs, adjectives, prepositions, other nouns etc at the level of A1. "
+//                val systemMessage = "I am learning American English and I need to learn new words in a sentence. You are a teacher of American in America, and want to help me. I will give you a few words in American in America, and you will construct simple sentences using these words in any order. Do not give any extra words than the text you send back. Put the English response in square brackets []. give me a paragraph of text including the list of words at the level of A1. try to make the paragraph sensible. Fill between these words with verbs, adjectives, prepositions, other nouns etc at the level of A1. "
+                val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
                 val llmResponse = openAIRepository.fetchOpenAIData(
 //                        llmEngine = "gpt-4.1", // or another model
-                        llmEngine = _uiState.value.currentLlmEngine,
+                        llmEngine = _uiState.value.currentLlmModel?.id ?: "gpt4.1-nano",//_uiState.value.currentLlmEngine,
                         systemMessage = systemMessage,
                         userQuestion = userQuestion
                 )
@@ -198,15 +206,53 @@ class ParagraphViewModel @Inject constructor(
     /**
      * Cycles to the next available LLM engine in the list for debugging.
      */
+//    fun cycleLlmEngine88() {
+//        val currentState = _uiState.value
+//        val currentIndex = availableModels.indexOf(currentState.currentLlmEngine)
+//
+//        // Use the modulus operator to wrap around to the beginning of the list
+//        val nextIndex = (currentIndex + 1) % availableModels.size
+//
+//        val newModel = availableModels[nextIndex]
+//
+//        _uiState.update { it.copy(currentLlmEngine = newModel) }
+//    }
+    private fun loadLlmModels() {
+        viewModelScope.launch {
+            val models = appConfigRepository.getAvailableLlmModels()
+            _uiState.update {
+                it.copy(
+                    availableModels = models,
+                    // Set the current model to the one marked as default, or the first one
+                    currentLlmModel = models.find { it.isDefault } ?: models.firstOrNull()
+                )
+            }
+        }
+    }
     fun cycleLlmEngine() {
         val currentState = _uiState.value
-        val currentIndex = availableModels.indexOf(currentState.currentLlmEngine)
 
-        // Use the modulus operator to wrap around to the beginning of the list
-        val nextIndex = (currentIndex + 1) % availableModels.size
+        // 2. Use a guard clause with the elvis operator (?:) to handle the null case.
+        //    If currentLlmModel is null, just 'return' and exit the function.
+        val currentModel = currentState.currentLlmModel ?: return
 
-        val newModel = availableModels[nextIndex]
+        // 3. Get the list of available models from the state.
+        val models = currentState.availableModels
 
-        _uiState.update { it.copy(currentLlmEngine = newModel) }
+        // 4. Add another guard for the edge case of an empty list.
+        if (models.isEmpty()) return
+
+        // --- THE COMPILER ERROR IS NOW GONE ---
+        // The compiler now knows that 'currentModel' is a non-nullable LlmModelInfo
+        // because of the guard clause above.
+        val currentIndex = models.indexOf(currentModel)
+
+        // Check if the item was found (indexOf returns -1 if not found)
+        if (currentIndex == -1) return
+
+        // The rest of your logic is correct.
+        val nextIndex = (currentIndex + 1) % models.size
+
+        _uiState.update { it.copy(currentLlmModel = models[nextIndex]) }
     }
 }
