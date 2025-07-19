@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
@@ -21,6 +22,8 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+
+val DEFAULT_GPT = "GPT-4.1-nano"
 // This data class will hold all the dynamic state for our screen later.
 // For now, it's not used, but it's good practice to have it ready.
 data class ParagraphUiState(
@@ -45,7 +48,7 @@ class ParagraphViewModel @Inject constructor(
 
     ) : ViewModel() {
 
-    private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
+   // private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
 //    private val availableModels99 = LlmModelInfo.entries
 
     private val _uiState = MutableStateFlow(
@@ -80,12 +83,14 @@ class ParagraphViewModel @Inject constructor(
 
                 val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
-                //TODO: Make this specific to de,en,zh etc
+                val llmEngine =  _uiState.value.currentLlmModel?.id ?: DEFAULT_GPT
+                Log.d("ParagraphViewModel","$llmEngine skill:$currentSkillLevel")
+
 //                val systemMessage = "I am learning American English and I need to learn new words in a sentence. You are a teacher of American in America, and want to help me. I will give you a few words in American in America, and you will construct simple sentences using these words in any order. Do not give any extra words than the text you send back. Put the English response in square brackets []. give me a paragraph of text including the list of words at the level of A1. try to make the paragraph sensible. Fill between these words with verbs, adjectives, prepositions, other nouns etc at the level of A1. "
                 val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
                 val llmResponse = openAIRepository.fetchOpenAIData(
 //                        llmEngine = "gpt-4.1", // or another model
-                        llmEngine = _uiState.value.currentLlmModel?.id ?: "gpt4.1-nano",//_uiState.value.currentLlmEngine,
+                        llmEngine = llmEngine,
                         systemMessage = systemMessage,
                         userQuestion = userQuestion
                 )
@@ -142,14 +147,11 @@ class ParagraphViewModel @Inject constructor(
     fun speakSentence() {
         val sentenceToSpeak = _uiState.value.generatedSentence
 
-
-        // Don't try to play placeholder text
         if (sentenceToSpeak.isBlank() || sentenceToSpeak == "Tap 'Generate' to begin." || _uiState.value.isSpeaking) {
             return // Prevent multiple clicks or playing placeholder text
         }
 
         viewModelScope.launch {
-
             try {
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
                 val currentLanguageCode = LanguageConfig.languageCode
@@ -157,28 +159,22 @@ class ParagraphViewModel @Inject constructor(
                 val uniqueSentenceId = generateUniqueSentenceId(sentenceToSpeak,currentVoiceName)
 
                 // --- CHANGE 2: The logic is now a single, clean call ---
+                _uiState.update { it.copy(isLoading = false) }
                 val result = vocabRepository.playTextToSpeech(
                         text = sentenceToSpeak,
                         uniqueSentenceId = uniqueSentenceId,
                         voiceName = currentVoiceName,
                         languageCode = currentLanguageCode,
                         onTTSApiCallStart = {
-                            // This lambda is the communication channel.
-                            // It will ONLY be executed by the repository if it's making a network call.
-                            // NOW we show the progress indicator.
+                            Log.d("ParagraphViewModel","onTTSApiCallStart()")
                             _uiState.update { it.copy(isLoading = true) }
                         },
                         onTTSApiCallComplete = {
+                            Log.d("ParagraphViewModel","onTTSApiCallComplete()")
                             _uiState.update { it.copy(isLoading = false) }
                         }
                 )
-//                result.onSuccess {
-//                    //TODO: Do I want to save the paragraph?
-//                    //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence.sentence))
-//                }
-//                result.onFailure { error ->
-//                    _uiState.update { it.copy(error = "Text-to-speech failed: ${error.message}") }
-//                }
+
                 when (result) {
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
                         ttsStatsRepository.updateTTSStats( sentenceToSpeak,currentVoiceName)
@@ -186,14 +182,8 @@ class ParagraphViewModel @Inject constructor(
                     }
                     is PlaybackResult.PlayedFromCache -> {
                         ttsStatsRepository.updateUserPlayedSentenceCount()
-                        // The file was already cached, just reset the playback state.
-//                        _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
                     }
                     is PlaybackResult.Failure -> {
-                        // Handle the error
-//                        _uiState.update { it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed")) }
-                        // Optionally reset to Idle after a delay
-                        //_uiState.update { it.copy(playbackState = PlaybackState.Idle) }
                         _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }
                     }
                 }
@@ -254,5 +244,11 @@ class ParagraphViewModel @Inject constructor(
         val nextIndex = (currentIndex + 1) % models.size
 
         _uiState.update { it.copy(currentLlmModel = models[nextIndex]) }
+    }
+
+    fun stopPlayback() {
+        Log.d("ParagraphViewModel", "ViewModel cleared. Stopping audio playback.")
+        // Call the new stop function in the repository.
+        vocabRepository.stopPlayback()
     }
 }

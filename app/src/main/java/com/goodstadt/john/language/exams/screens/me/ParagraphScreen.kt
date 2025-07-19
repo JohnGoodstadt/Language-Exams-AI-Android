@@ -20,6 +20,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -31,6 +32,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
@@ -48,10 +52,30 @@ fun ParagraphScreen(
     // this `uiState` variable will change, triggering a recomposition.
 //    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiState by viewModel.uiState.collectAsState()
+    val lifecycleOwner = LocalLifecycleOwner.current
 
     LaunchedEffect(Unit) {
         // Call the same function that the "Generate" button calls.
         viewModel.generateNewParagraph()
+    }
+    // Use DisposableEffect to tie logic to the composable's lifecycle.
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            // When the screen is paused (e.g., user navigates to another tab,
+            // presses home, or a dialog appears over it), stop the audio.
+            if (event == Lifecycle.Event.ON_PAUSE) {
+                viewModel.stopPlayback()
+            }
+        }
+
+        // Add the observer to the screen's lifecycle
+        lifecycleOwner.lifecycle.addObserver(observer)
+
+        // This is called when the composable is removed from the screen (disposed).
+        // It's the perfect place to clean up the observer.
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
     }
 
     Column(
@@ -144,7 +168,8 @@ fun ParagraphScreen(
         // Show an error message if one exists in the state
         uiState.error?.let {
             Text(
-                    text = "Error: $it",
+//                    text = "Error: $it",
+                    text = "Error: API Call failed. Please try again.",
                     color = MaterialTheme.colorScheme.error,
                     style = MaterialTheme.typography.bodySmall
             )

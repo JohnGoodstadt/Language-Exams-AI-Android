@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.data
 
 import android.media.AudioAttributes
 import android.media.MediaPlayer
+import android.util.Log
 import kotlinx.coroutines.suspendCancellableCoroutine
 import java.io.File
 import java.io.FileOutputStream
@@ -19,6 +20,7 @@ class AudioPlayerService @Inject constructor() {
      */
     suspend fun playAudio(data: ByteArray): Result<Unit> = suspendCancellableCoroutine { continuation ->
         try {
+            stopPlayback()
             // MediaPlayer can't play from a byte array directly.
             // We write it to a temporary file.
             val tempMp3 = File.createTempFile("temp_audio", "mp3")
@@ -73,5 +75,15 @@ class AudioPlayerService @Inject constructor() {
                 continuation.resume(Result.failure(e))
             }
         }
+    }
+    fun stopPlayback() {
+        mediaPlayer?.let {
+            if (it.isPlaying) {
+                it.stop()
+            }
+            it.release()
+        }
+        mediaPlayer = null
+        Log.d("AudioPlayerService", "Playback stopped and resources released.")
     }
 }

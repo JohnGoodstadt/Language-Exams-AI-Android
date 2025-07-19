@@ -142,6 +142,7 @@ class VocabRepository @Inject constructor(
 
             return audioResult.fold(
                 onSuccess = { audioData ->
+                    onTTSApiCallComplete()
                     // 4. On successful fetch, SAVE the data to the cache file.
                     try {
                         audioCacheFile.writeBytes(audioData)
@@ -150,6 +151,7 @@ class VocabRepository @Inject constructor(
                         e.printStackTrace()
                     }
                     val playResult = audioPlayerService.playAudio(audioData)
+
 
                     if (playResult.isSuccess){
                         PlaybackResult.PlayedFromNetworkAndCached
@@ -161,9 +163,8 @@ class VocabRepository @Inject constructor(
                     PlaybackResult.Failure(exception as? Exception ?: Exception("Network error", exception))
                 }
             )
-        } finally {
-            onTTSApiCallComplete()
         }
+        finally { }
 
     }
     // --- THIS IS THE NEW, SIMPLIFIED FUNCTION ---
@@ -314,25 +315,13 @@ class VocabRepository @Inject constructor(
             }
         }
     }
+
+
+    // --- ADD THIS NEW FUNCTION ---
     /**
-     * Returns a list of 8 unique, randomly selected words from the full vocabulary.
-     * This is a more direct and efficient Kotlin equivalent of the provided Swift logic
-     * when working with a flat list of words.
-     *
-     * If the vocabulary isn't loaded, it returns a default list of words.
-     *
-     * @return A list of 8 random word strings.
+     * Delegates the command to stop audio playback to the AudioPlayerService.
      */
-//    fun getShuffledWords(): List<String> {
-//        // The entire function can be a single return expression.
-//        return if (vocabCache.isNotEmpty()) {
-//            // 1. Shuffle the entire list of VocabWord objects.
-//            // 2. Take the first 8 elements from the shuffled list.
-//            // 3. Map the resulting List<VocabWord> to a List<String> by extracting the 'word' property.
-//            vocabCache[]..shuffled().take(8).map { it.word }
-//        } else {
-//            // Fallback case if the allWords list is empty.
-//            listOf("hello", "I", "Father", "red", "breakfast", "how")
-//        }
-//    }
+    fun stopPlayback() {
+        audioPlayerService.stopPlayback()
+    }
 }
