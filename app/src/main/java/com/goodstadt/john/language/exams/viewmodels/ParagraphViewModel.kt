@@ -16,8 +16,10 @@ import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -37,6 +39,8 @@ data class ParagraphUiState(
     val currentLlmModel: LlmModelInfo? = null
 )
 
+private const val TOKEN_LIMIT = 1000
+
 @HiltViewModel
 class ParagraphViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
@@ -50,6 +54,9 @@ class ParagraphViewModel @Inject constructor(
 
    // private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
 //    private val availableModels99 = LlmModelInfo.entries
+
+    val totalTokenCount = userPreferencesRepository.totalTokenCountFlow
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
 
     private val _uiState = MutableStateFlow(
         ParagraphUiState(),
@@ -65,6 +72,16 @@ class ParagraphViewModel @Inject constructor(
 
     fun generateNewParagraph() {
         viewModelScope.launch {
+
+
+            val currentTokenCount = userPreferencesRepository.totalTokenCountFlow.first()
+            if (currentTokenCount >= TOKEN_LIMIT) {
+                Log.w("ParagraphVM", "User has exceeded token limit of $TOKEN_LIMIT. Current: $currentTokenCount")
+                // Update the UI to show an error message
+                _uiState.update { it.copy(error = "You have reached your free generation limit.") }
+                return@launch // Stop execution immediately
+            }
+
             _uiState.update { it.copy(isLoading = true, error = null) }
 
             try {
@@ -88,12 +105,22 @@ class ParagraphViewModel @Inject constructor(
 
 //                val systemMessage = "I am learning American English and I need to learn new words in a sentence. You are a teacher of American in America, and want to help me. I will give you a few words in American in America, and you will construct simple sentences using these words in any order. Do not give any extra words than the text you send back. Put the English response in square brackets []. give me a paragraph of text including the list of words at the level of A1. try to make the paragraph sensible. Fill between these words with verbs, adjectives, prepositions, other nouns etc at the level of A1. "
                 val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
+//                val llmResponse = openAIRepository.fetchOpenAIData(
+////                        llmEngine = "gpt-4.1", // or another model
+//                        llmEngine = llmEngine,
+//                        systemMessage = systemMessage,
+//                        userQuestion = userQuestion
+//                )
+
                 val llmResponse = openAIRepository.fetchOpenAIData(
 //                        llmEngine = "gpt-4.1", // or another model
-                        llmEngine = llmEngine,
-                        systemMessage = systemMessage,
-                        userQuestion = userQuestion
+                    llmEngine = llmEngine,
+                    systemMessage = systemMessage,
+                    userQuestion = userQuestion
                 )
+
+
+                userPreferencesRepository.incrementTokenCount(llmResponse.totalTokensUsed)
 
                 // Phase 3: Update the UI with the response
                 // Simple parsing, you can make this more robust
@@ -113,7 +140,8 @@ class ParagraphViewModel @Inject constructor(
 
             } catch (e: Exception) {
                 e.printStackTrace()
-                _uiState.update { it.copy(isLoading = false, error = e.message) }
+//                _uiState.update { it.copy(isLoading = false, error = e.message) }
+                _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
             }
         }
     }
@@ -251,4 +279,14 @@ class ParagraphViewModel @Inject constructor(
         // Call the new stop function in the repository.
         vocabRepository.stopPlayback()
     }
+    fun getTokenLimit() : Int {
+        return TOKEN_LIMIT
+    }
+
+    fun resetTokensUsed() {
+        viewModelScope.launch {
+            userPreferencesRepository.resetTokenCount()
+        }
+    }
+
 }

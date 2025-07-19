@@ -34,12 +34,14 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
+import kotlinx.coroutines.delay
 
 @Composable
 fun ParagraphScreen(
@@ -52,10 +54,12 @@ fun ParagraphScreen(
     // this `uiState` variable will change, triggering a recomposition.
 //    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiState by viewModel.uiState.collectAsState()
+    val tokenCount by viewModel.totalTokenCount.collectAsState()
+
     val lifecycleOwner = LocalLifecycleOwner.current
 
     LaunchedEffect(Unit) {
-        // Call the same function that the "Generate" button calls.
+        delay(600) // GPT model might not have been chosen yet
         viewModel.generateNewParagraph()
     }
     // Use DisposableEffect to tie logic to the composable's lifecycle.
@@ -112,6 +116,25 @@ fun ParagraphScreen(
                         Text("Change Model")
                     }
                 }
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Text(
+                        text = "Tokens Used: $tokenCount / ${viewModel.getTokenLimit()}", // TOKEN_LIMIT needs to be exposed from VM
+                        style = MaterialTheme.typography.labelMedium,
+                        color = if (tokenCount >= viewModel.getTokenLimit()) MaterialTheme.colorScheme.error else Color.Unspecified
+                    )
+                }
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Button(onClick = { viewModel.resetTokensUsed() }) {
+                        Text("Reset Tokens")
+                    }
+                }
+
             }
         }
         // --- Top Section ---
@@ -168,8 +191,8 @@ fun ParagraphScreen(
         // Show an error message if one exists in the state
         uiState.error?.let {
             Text(
-//                    text = "Error: $it",
-                    text = "Error: API Call failed. Please try again.",
+                    text = it,
+//                    text = "Error: API Call failed. Please try again.",
                     color = MaterialTheme.colorScheme.error,
                     style = MaterialTheme.typography.bodySmall
             )

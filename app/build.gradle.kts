@@ -180,7 +180,13 @@ dependencies {
     implementation(libs.google.firebase.config.ktx)
     implementation(libs.androidx.datastore.preferences)
 
-    
+    implementation(libs.ktor.client.core)
+    implementation(libs.ktor.client.cio)
+
+    // --- ADD THESE TWO IMPLEMENTATIONS ---
+    implementation(libs.ktor.client.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
+
     // Unit Tests
     testImplementation(libs.junit)
     testImplementation(libs.truth)

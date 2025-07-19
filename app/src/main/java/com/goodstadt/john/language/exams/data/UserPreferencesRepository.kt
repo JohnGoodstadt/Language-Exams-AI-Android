@@ -1,15 +1,21 @@
 package com.goodstadt.john.language.exams.data
 
 import android.content.Context
+import android.util.Log
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.emptyPreferences
+import androidx.datastore.preferences.core.intPreferencesKey
+import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
+import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -25,6 +31,8 @@ class UserPreferencesRepository @Inject constructor(
         val SELECTED_VOICE_NAME = stringPreferencesKey("selected_voice_name")
         val SELECTED_FILE_NAME = stringPreferencesKey("selected_file_name")
         val SELECTED_SKILL_LEVEL = stringPreferencesKey("selected_skill_level")
+        val TOTAL_TOKEN_COUNT = intPreferencesKey("total_token_count")
+        val LAST_TOKEN_RESET_TIMESTAMP = longPreferencesKey("last_token_reset_timestamp")
     }
 
     /**
@@ -75,4 +83,30 @@ class UserPreferencesRepository @Inject constructor(
             preferences[PreferenceKeys.SELECTED_SKILL_LEVEL] = skillLevel
         }
     }
-}
+
+    // 2. Expose the token count as a Flow
+    val totalTokenCountFlow: Flow<Int> = context.dataStore.data
+        .catch { exception ->
+            if (exception is IOException) { emit(emptyPreferences()) } else { throw exception }
+        }
+        .map { preferences ->
+            preferences[PreferenceKeys.TOTAL_TOKEN_COUNT] ?: 0
+        }
+
+    // 3. Create a function to increment the token count
+    suspend fun incrementTokenCount(count: Int) {
+        context.dataStore.edit { preferences ->
+            val currentTotal = preferences[PreferenceKeys.TOTAL_TOKEN_COUNT] ?: 0
+            preferences[PreferenceKeys.TOTAL_TOKEN_COUNT] = currentTotal + count
+            Log.d("UserPrefs", "Token count updated to: ${currentTotal + count}")
+        }
+    }
+
+    // 4. (For future use) A function to reset the count
+    suspend fun resetTokenCount() {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.TOTAL_TOKEN_COUNT] = 0
+            preferences[PreferenceKeys.LAST_TOKEN_RESET_TIMESTAMP] = System.currentTimeMillis()
+        }
+    }
+ }
