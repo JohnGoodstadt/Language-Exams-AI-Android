@@ -148,6 +148,7 @@ class MainViewModel @Inject constructor(
             }
 
             result.onFailure { exception ->
+                Log.e("MainViewModel", "Session failed ${exception.localizedMessage}")
                 Log.e("MainViewModel", "Session failed", exception)
                 _uiState.update { it.copy(authState = AuthUiState.Error(exception.message ?: "Unknown error")) }
             }

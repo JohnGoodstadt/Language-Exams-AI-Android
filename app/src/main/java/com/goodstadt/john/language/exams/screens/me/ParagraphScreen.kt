@@ -72,7 +72,7 @@ fun ParagraphScreen(
             }
         }
 
-        // Add the observer to the screen's lifecycle
+        // Add the observer to the screen's lifecyclegoogle
         lifecycleOwner.lifecycle.addObserver(observer)
 
         // This is called when the composable is removed from the screen (disposed).

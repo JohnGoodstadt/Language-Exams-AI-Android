@@ -50,6 +50,7 @@ import com.goodstadt.john.language.exams.models.VocabWord
 
 
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.ui.text.AnnotatedString
 import com.goodstadt.john.language.exams.screens.utils.buildSentencePartsSimple
 
@@ -201,7 +202,7 @@ fun VocabRow(
             }
         }
     }
-    Divider()
+    HorizontalDivider()
 }
 
 @Composable

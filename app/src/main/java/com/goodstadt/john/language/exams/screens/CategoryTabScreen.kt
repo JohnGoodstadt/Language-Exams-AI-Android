@@ -223,7 +223,7 @@ fun CategoryTabScreen(
                                         color = Color.Red,
                                         modifier = Modifier.padding(vertical = 12.dp)
                                     )
-                                    Divider()
+                                    HorizontalDivider()
                                 }
                             }
                         }

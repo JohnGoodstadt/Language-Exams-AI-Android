@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "521418994684",
+    "project_id": "chinese-exam-words-ai",
+    "storage_bucket": "chinese-exam-words-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521418994684:android:e915120e8721b0ef32f879",
+        "android_client_info": {
+          "package_name": "com.goodstadt.john.language.exams.zh"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBA29jxmEq_SkQQtxq495XAolsSApsrCRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
