@@ -114,7 +114,6 @@ fun CategoryTabScreen(
     }
 
     Scaffold(
-        // DO NOT set a containerColor here, so it uses the theme's default background.
 
         snackbarHost = {
             SnackbarHost(hostState = snackbarHostState) { snackbarData ->
@@ -149,13 +148,7 @@ fun CategoryTabScreen(
                     mutableStateOf(menuItems.firstOrNull() ?: "")
                 }
                 Column(modifier = Modifier.fillMaxSize()) {
-                    CacheProgressBar(
-                        cachedCount = uiState.cachedAudioCount,
-                        totalCount = uiState.totalWordsInTab,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 64.dp, vertical = 8.dp)
-                    )
+
                     // Horizontal scrolling menu
                     if (tabIdentifier != null){
                         LazyRow(
@@ -186,6 +179,13 @@ fun CategoryTabScreen(
                         }
                     }
 
+                    CacheProgressBar(
+                        cachedCount = uiState.cachedAudioCount,
+                        totalCount = uiState.totalWordsInTab,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 64.dp, vertical = 8.dp)
+                    )
 
                     // Vertically scrolling list with vocabulary
                     LazyColumn(
