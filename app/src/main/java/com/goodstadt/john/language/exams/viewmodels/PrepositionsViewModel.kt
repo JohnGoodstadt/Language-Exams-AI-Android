@@ -94,6 +94,7 @@ class PrepositionsViewModel @Inject constructor(
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateTTSStats( sentence.sentence,currentVoiceName)
                     ttsStatsRepository.updateUserPlayedSentenceCount()
+                    ttsStatsRepository.updateUserTTSTokenCount(sentence.sentence.count())
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateUserPlayedSentenceCount()

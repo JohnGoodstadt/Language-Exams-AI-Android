@@ -39,6 +39,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
+import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 import kotlinx.coroutines.delay
@@ -164,6 +165,7 @@ fun ParagraphScreen(
         ) {
             if (uiState.isLoading) {
                 CircularProgressIndicator(
+                    color = accentColor,
                         modifier = Modifier.size(24.dp), // Make it smaller
                         strokeWidth = 2.dp // Thinner stroke looks better when small
                 )

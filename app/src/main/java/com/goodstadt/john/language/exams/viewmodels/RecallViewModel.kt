@@ -192,7 +192,9 @@ class RecallViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateTTSStats( word,currentVoiceName)
+                    ttsStatsRepository.updateUserTTSTokenCount(word.count())
                 }
+
                 is PlaybackResult.PlayedFromCache -> {}
                 is PlaybackResult.Failure -> {}
             }
@@ -221,7 +223,8 @@ class RecallViewModel @Inject constructor(
 //            }
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    ttsStatsRepository.updateTTSStats( word,currentVoiceName)
+                    ttsStatsRepository.updateTTSStats( sentence,currentVoiceName)
+                    ttsStatsRepository.updateUserTTSTokenCount(sentence.count())
                 }
                 is PlaybackResult.PlayedFromCache -> {}
                 is PlaybackResult.Failure -> {}

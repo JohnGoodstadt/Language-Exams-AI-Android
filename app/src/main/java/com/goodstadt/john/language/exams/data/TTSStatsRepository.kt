@@ -76,7 +76,11 @@ class TTSStatsRepository @Inject constructor(
 
     // Stat names
     companion object {
-        const val MP3PlayedCount = "MP3PlayedCount"
+        const val StatMP3PlayedCount = "statMP3PlayedCount"
+        const val StatGPTTotalTokenCount = "statGPTTotalTokenCount"
+        const val StatGPTTokenExecutionCount = "statGPTTokenExecutionCount"
+        const val StatTTSTotalTokenCount = "statTTSTotalTokenCount"
+        const val StatTTSTokenExecutionCount = "statTTSTokenExecutionCount"
 
         const val TR_CHARS = "TRChars"
         const val TR_CALLS = "TRCalls"
@@ -226,7 +230,6 @@ class TTSStatsRepository @Inject constructor(
 
         when (doc) {
             fsDOC.USER -> flushUserStatsToFirebase()
-
             fsDOC.TRANSLATION -> println("TODO: flush translation stats")
             fsDOC.TTSStats -> flushTTSStatsToFirebase()
         }
@@ -348,7 +351,15 @@ class TTSStatsRepository @Inject constructor(
         inc(fsDOC.TTSStats, TTSStats)
     }
     fun updateUserPlayedSentenceCount() {
-        inc(fsDOC.USER, MP3PlayedCount)
+        inc(fsDOC.USER, StatMP3PlayedCount)
+    }
+    fun updateUserStatGPTTotalTokenCount(count:Int) {
+        inc(fsDOC.USER, StatGPTTokenExecutionCount)
+        inc(fsDOC.USER, StatGPTTotalTokenCount,count)
+    }
+    fun updateUserTTSTokenCount(count:Int) {
+        inc(fsDOC.USER, StatTTSTokenExecutionCount)
+        inc(fsDOC.USER, StatTTSTotalTokenCount,count)
     }
     fun updateFSCharCount(charcount: Int, sheetname: String = "") {
 
@@ -580,6 +591,8 @@ class TTSStatsRepository @Inject constructor(
             Date(0)
         }
     }
+
+
 
     //endregion
 }

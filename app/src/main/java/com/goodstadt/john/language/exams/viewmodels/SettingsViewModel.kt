@@ -8,6 +8,7 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.RecallingItems
+import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -18,6 +19,7 @@ import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -48,7 +50,7 @@ class SettingsViewModel @Inject constructor(
     private val controlRepository: ControlRepository,
     private val voiceRepository: VoiceRepository,
     private val vocabRepository: VocabRepository,
-    private val userStatsRepository: UserStatsRepository,
+    private val ttsStatsRepository : TTSStatsRepository,
     private val recallingItemsManager: RecallingItems
 ) : ViewModel() {
 
@@ -142,6 +144,7 @@ class SettingsViewModel @Inject constructor(
         if (_playbackState.value is PlaybackState.Playing) return
 
         viewModelScope.launch {
+//            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(sentence,googleVoice)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
@@ -161,7 +164,10 @@ class SettingsViewModel @Inject constructor(
 //                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
 //            }
             when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {}
+                is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    ttsStatsRepository.updateTTSStats( sentence,googleVoice)
+                    ttsStatsRepository.updateUserTTSTokenCount(sentence.count())
+                }
                 is PlaybackResult.PlayedFromCache -> {}
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")

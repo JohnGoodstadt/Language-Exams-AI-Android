@@ -39,7 +39,7 @@ data class ParagraphUiState(
     val currentLlmModel: LlmModelInfo? = null
 )
 
-private const val TOKEN_LIMIT = 1000
+private const val TOKEN_LIMIT = 2000
 
 @HiltViewModel
 class ParagraphViewModel @Inject constructor(
@@ -49,6 +49,7 @@ class ParagraphViewModel @Inject constructor(
     private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
+
 
     ) : ViewModel() {
 
@@ -103,29 +104,22 @@ class ParagraphViewModel @Inject constructor(
                 val llmEngine =  _uiState.value.currentLlmModel?.id ?: DEFAULT_GPT
                 Log.d("ParagraphViewModel","$llmEngine skill:$currentSkillLevel")
 
-//                val systemMessage = "I am learning American English and I need to learn new words in a sentence. You are a teacher of American in America, and want to help me. I will give you a few words in American in America, and you will construct simple sentences using these words in any order. Do not give any extra words than the text you send back. Put the English response in square brackets []. give me a paragraph of text including the list of words at the level of A1. try to make the paragraph sensible. Fill between these words with verbs, adjectives, prepositions, other nouns etc at the level of A1. "
                 val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
-//                val llmResponse = openAIRepository.fetchOpenAIData(
-////                        llmEngine = "gpt-4.1", // or another model
-//                        llmEngine = llmEngine,
-//                        systemMessage = systemMessage,
-//                        userQuestion = userQuestion
-//                )
 
                 val llmResponse = openAIRepository.fetchOpenAIData(
-//                        llmEngine = "gpt-4.1", // or another model
                     llmEngine = llmEngine,
                     systemMessage = systemMessage,
                     userQuestion = userQuestion
                 )
 
-
-                userPreferencesRepository.incrementTokenCount(llmResponse.totalTokensUsed)
+                val totalTokensUsed = llmResponse.totalTokensUsed
+                userPreferencesRepository.incrementTokenCount(totalTokensUsed)
+                ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
 
                 // Phase 3: Update the UI with the response
                 // Simple parsing, you can make this more robust
                 val sentence = llmResponse.content.substringAfter("[").substringBefore("]")
-                val translation = llmResponse.content.substringAfter("{").substringBefore("}")
+               // val translation = llmResponse.content.substringAfter("{").substringBefore("}")
 
 
                 // --- CHANGE 2: Pass the highlightedWords to the state ---
@@ -207,6 +201,8 @@ class ParagraphViewModel @Inject constructor(
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
                         ttsStatsRepository.updateTTSStats( sentenceToSpeak,currentVoiceName)
                         ttsStatsRepository.updateUserPlayedSentenceCount()
+                        ttsStatsRepository.updateUserTTSTokenCount(sentenceToSpeak.count())
+                        Log.d("ParagraphViewModel","updateUserTTSTokenCount ${sentenceToSpeak.count()}")
                     }
                     is PlaybackResult.PlayedFromCache -> {
                         ttsStatsRepository.updateUserPlayedSentenceCount()
