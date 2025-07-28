@@ -138,6 +138,9 @@ class MainViewModel @Inject constructor(
     }
 
     private fun initializeAppSession() {
+
+        _uiState.update { it.copy(authState = AuthUiState.Loading) }
+
         viewModelScope.launch {
             Log.d("MainViewModel", "Initializing user session...")
             val result = authRepository.signInOrUpdateUser()
@@ -150,9 +153,18 @@ class MainViewModel @Inject constructor(
             result.onFailure { exception ->
                 Log.e("MainViewModel", "Session failed ${exception.localizedMessage}")
                 Log.e("MainViewModel", "Session failed", exception)
-                _uiState.update { it.copy(authState = AuthUiState.Error(exception.message ?: "Unknown error")) }
+//                _uiState.update { it.copy(authState = AuthUiState.Error(exception.message ?: "Unknown error")) }
+                val errorMessage = when (exception) {
+                    is java.net.UnknownHostException -> "Could not connect. Please check your internet connection."
+                    else -> exception.message ?: "An unknown error occurred."
+                }
+                _uiState.update { it.copy(authState = AuthUiState.Error(errorMessage)) }
             }
         }
+    }
+
+    fun onRetryConnection() {
+        initializeAppSession()
     }
 
     // --- ALL THE OLD DATA LOADING FUNCTIONS ARE GONE ---

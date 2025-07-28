@@ -24,9 +24,12 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -37,6 +40,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.managers.TokenOptionsDialog
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
 import com.goodstadt.john.language.exams.ui.theme.accentColor
@@ -55,9 +59,12 @@ fun ParagraphScreen(
     // this `uiState` variable will change, triggering a recomposition.
 //    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiState by viewModel.uiState.collectAsState()
-    val tokenCount by viewModel.totalTokenCount.collectAsState()
+   // val tokenCount by viewModel.totalTokenCount.collectAsState()
 
     val lifecycleOwner = LocalLifecycleOwner.current
+
+    val showDialog by viewModel.showTokenDialog.collectAsState()
+    val canWait by viewModel.canWait.collectAsState()
 
     LaunchedEffect(Unit) {
         delay(600) // GPT model might not have been chosen yet
@@ -81,6 +88,14 @@ fun ParagraphScreen(
         onDispose {
             lifecycleOwner.lifecycle.removeObserver(observer)
         }
+    }
+
+    if (showDialog) {
+        TokenOptionsDialog(
+            canWait = canWait,
+            onOptionSelected = { viewModel.onTokenTopUpSelected(it) },
+            onDismiss = {} // optional
+        )
     }
 
     Column(
@@ -117,14 +132,17 @@ fun ParagraphScreen(
                         Text("Change Model")
                     }
                 }
+                val tokenBalance by viewModel.tokenBalance.collectAsState()
+                val tokenLimit = viewModel.tokenLimit
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Text(
-                        text = "Tokens Used: $tokenCount / ${viewModel.getTokenLimit()}", // TOKEN_LIMIT needs to be exposed from VM
+                        text = "Tokens Left: $tokenBalance / $tokenLimit",
                         style = MaterialTheme.typography.labelMedium,
-                        color = if (tokenCount >= viewModel.getTokenLimit()) MaterialTheme.colorScheme.error else Color.Unspecified
+                        color = if (tokenBalance < tokenLimit) MaterialTheme.colorScheme.error else Color.Unspecified
+
                     )
                 }
                 Row(

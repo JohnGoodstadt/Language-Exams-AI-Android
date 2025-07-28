@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.OpenAIRepository
@@ -11,19 +12,24 @@ import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.managers.TokenTopUpOption
+import com.goodstadt.john.language.exams.managers.TokenUsageManager
 import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.VocabFile
+import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
+//import com.goodstadt.john.language.exams.data.LlmResponse
 
 val DEFAULT_GPT = "GPT-4.1-nano"
 // This data class will hold all the dynamic state for our screen later.
@@ -39,7 +45,7 @@ data class ParagraphUiState(
     val currentLlmModel: LlmModelInfo? = null
 )
 
-private const val TOKEN_LIMIT = 2000
+//private const val TOKEN_LIMIT = 2000
 
 @HiltViewModel
 class ParagraphViewModel @Inject constructor(
@@ -53,37 +59,73 @@ class ParagraphViewModel @Inject constructor(
 
     ) : ViewModel() {
 
-   // private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
-//    private val availableModels99 = LlmModelInfo.entries
 
-    val totalTokenCount = userPreferencesRepository.totalTokenCountFlow
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
+//    val totalTokenCount = userPreferencesRepository.totalTokenCountFlow
+//        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
 
-    private val _uiState = MutableStateFlow(
-        ParagraphUiState(),
-
-    )
+    private val _uiState = MutableStateFlow(ParagraphUiState(), )
     val uiState = _uiState.asStateFlow()
+
+    private val _showTokenDialog = MutableStateFlow(false)
+    val showTokenDialog = _showTokenDialog.asStateFlow()
+
+    private val _canWait = MutableStateFlow(true)
+    val canWait = _canWait.asStateFlow()
+
+    private val _tokenBalance = MutableStateFlow(0)
+    val tokenBalance = _tokenBalance.asStateFlow()
+
+    val tokenLimit = TokenUsageManager.freeTokens
+   // val tokenLimit = 4600 //gives about 20 calls
+
+    private var retryAction: (() -> Unit)? = null
 
     init{
         loadLlmModels()
     }
-    //private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
-    //val uiState = _uiState.asStateFlow()
+    private fun fetchTokenBalance() {
+        viewModelScope.launch {
+            val balance = TokenUsageManager.getCurrentTokenBalance()
+            _tokenBalance.value = balance
 
+            Log.d("fetchTokenBalance","Balance :${_tokenBalance.value}")
+
+        }
+    }
     fun generateNewParagraph() {
         viewModelScope.launch {
 
 
-            val currentTokenCount = userPreferencesRepository.totalTokenCountFlow.first()
-            if (currentTokenCount >= TOKEN_LIMIT) {
-                Log.w("ParagraphVM", "User has exceeded token limit of $TOKEN_LIMIT. Current: $currentTokenCount")
-                // Update the UI to show an error message
-                _uiState.update { it.copy(error = "You have reached your free generation limit.") }
-                return@launch // Stop execution immediately
-            }
+//            val currentTokenCount = userPreferencesRepository.totalTokenCountFlow.first()
+//            if (currentTokenCount >= TOKEN_LIMIT) {
+//                Log.w("ParagraphVM", "User has exceeded token limit of $TOKEN_LIMIT. Current: $currentTokenCount")
+//                // Update the UI to show an error message
+//                _uiState.update { it.copy(error = "You have reached your free generation limit.") }
+//                return@launch // Stop execution immediately
+//            }
 
-            _uiState.update { it.copy(isLoading = true, error = null) }
+
+           // _uiState.update { it.copy(isLoading = true, error = null) }
+
+            val hasEnough = TokenUsageManager.checkTokenAvailability()
+
+            if (hasEnough) {
+                Log.d("ParagraphVM","We have some tokens left")
+                _uiState.update { it.copy(isLoading = true, error = null) }
+                generateNewParagraphInternal()
+            } else {
+                Log.d("ParagraphVM","No tokens left")
+                val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@launch
+                val snapshot = FirebaseFirestore.getInstance().collection("users").document(uid).get().await()
+                val lastTopUp = snapshot.getLong("lastTopUp") ?: 0L
+                val now = System.currentTimeMillis()
+                _canWait.value = now - lastTopUp >= TokenUsageManager.waitDurationMillis
+
+                _showTokenDialog.value = true
+                retryAction = { generateNewParagraph() }
+            }
+/*
+
 
             try {
                 // Phase 1: Get words from local data
@@ -106,6 +148,7 @@ class ParagraphViewModel @Inject constructor(
 
                 val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
 
+                //Do the call
                 val llmResponse = openAIRepository.fetchOpenAIData(
                     llmEngine = llmEngine,
                     systemMessage = systemMessage,
@@ -113,8 +156,22 @@ class ParagraphViewModel @Inject constructor(
                 )
 
                 val totalTokensUsed = llmResponse.totalTokensUsed
+                val completionTokens = llmResponse.completionTokens
+                val promptTokens = llmResponse.promptTokens
+
+                if (DEBUG) {
+                    val result = calculateCallCost(promptTokens, completionTokens)
+
+                    println("Total tokens: ${result.totalTokens}")
+                    println("Estimated characters (for TTS): ${result.estimatedCharacters}")
+                    println("TTS cost: $${"%.6f".format(result.ttsCostUSD)}")
+                    println("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
+                    println("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
+                    println("Total cost: $${"%.6f".format(result.totalCostUSD)}")
+                }
+
                 userPreferencesRepository.incrementTokenCount(totalTokensUsed)
-                ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
+//                ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
 
                 // Phase 3: Update the UI with the response
                 // Simple parsing, you can make this more robust
@@ -137,6 +194,92 @@ class ParagraphViewModel @Inject constructor(
 //                _uiState.update { it.copy(isLoading = false, error = e.message) }
                 _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
             }
+             */
+
+        }
+    }
+    private suspend fun generateNewParagraphInternal() {
+        try {
+            val fileName = userPreferencesRepository.selectedFileNameFlow.first()
+            val vocabFile = vocabRepository.getVocabData(fileName).getOrNull()
+                ?: throw Exception("Could not load vocabulary file.")
+
+            val wordsToHighlight = getLanguageSpecificWords(vocabFile)
+            val wordsForPrompt = wordsToHighlight.joinToString(", ")
+            val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+            val llmEngine = uiState.value.currentLlmModel?.id ?: DEFAULT_GPT
+            val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
+            val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
+
+            val llmResponse = openAIRepository.fetchOpenAIData(
+                llmEngine = llmEngine,
+                systemMessage = systemMessage,
+                userQuestion = userQuestion
+            )
+
+            if (DEBUG) {
+                val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
+
+                println("Total tokens: ${result.totalTokens}")
+                println("Estimated characters (for TTS): ${result.estimatedCharacters}")
+                println("TTS cost: $${"%.6f".format(result.ttsCostUSD)}")
+                println("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
+                println("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
+                println("Total cost: $${"%.6f".format(result.totalCostUSD)}")
+            }
+
+            val totalTokensUsed = llmResponse.totalTokensUsed
+            Log.d("paragraphVM","Balancec 1:${_tokenBalance.value}")
+            TokenUsageManager.deductTokens(totalTokensUsed)
+            Log.d("paragraphVM","Balance 2:${_tokenBalance.value}")
+            fetchTokenBalance()
+            Log.d("paragraphVM","Balance 3:${_tokenBalance.value}")
+
+            val sentence = llmResponse.content.substringAfter("[").substringBefore("]")
+
+            _uiState.update {
+                it.copy(
+                    isLoading = false,
+                    generatedSentence = sentence.ifBlank { "Could not parse sentence." },
+                    translation = "",
+                    highlightedWords = wordsToHighlight.toSet()
+                )
+            }
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+            _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
+        }
+    }
+    fun onTokenTopUpSelected(option: TokenTopUpOption) {
+        viewModelScope.launch {
+            val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@launch
+            val userDoc = FirebaseFirestore.getInstance().collection("users").document(uid)
+            val now = System.currentTimeMillis()
+
+            when (option) {
+                TokenTopUpOption.FREE -> {
+                    userDoc.update(
+                        mapOf(
+                            TokenUsageManager.firestoreCurrentToken to TokenUsageManager.bundle99Tokens,
+                            "lastTopUp" to now
+                        )
+                    ).await()
+                }
+                TokenTopUpOption.BUY_099 -> {
+                    // TODO: Implement real IAP logic
+                    userDoc.update(TokenUsageManager.firestoreCurrentToken, TokenUsageManager.bundle99Tokens).await()
+                }
+                TokenTopUpOption.BUY_199 -> {
+                    // TODO: Implement real IAP logic
+                    userDoc.update(TokenUsageManager.firestoreCurrentToken, TokenUsageManager.bundle199Tokens).await()
+                }
+            }
+
+            _showTokenDialog.value = false
+            fetchTokenBalance()
+            retryAction?.invoke()
+            retryAction = null
         }
     }
     // We will add a StateFlow for the UI state here later.
@@ -217,20 +360,6 @@ class ParagraphViewModel @Inject constructor(
 
         }
     }
-    /**
-     * Cycles to the next available LLM engine in the list for debugging.
-     */
-//    fun cycleLlmEngine88() {
-//        val currentState = _uiState.value
-//        val currentIndex = availableModels.indexOf(currentState.currentLlmEngine)
-//
-//        // Use the modulus operator to wrap around to the beginning of the list
-//        val nextIndex = (currentIndex + 1) % availableModels.size
-//
-//        val newModel = availableModels[nextIndex]
-//
-//        _uiState.update { it.copy(currentLlmEngine = newModel) }
-//    }
     private fun loadLlmModels() {
         viewModelScope.launch {
             val models = appConfigRepository.getAvailableLlmModels()
@@ -275,9 +404,9 @@ class ParagraphViewModel @Inject constructor(
         // Call the new stop function in the repository.
         vocabRepository.stopPlayback()
     }
-    fun getTokenLimit() : Int {
-        return TOKEN_LIMIT
-    }
+//    fun getTokenLimit() : Int {
+//        return TOKEN_LIMIT
+//    }
 
     fun resetTokensUsed() {
         viewModelScope.launch {

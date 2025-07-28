@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.screens
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -41,6 +42,12 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 import com.goodstadt.john.language.exams.data.UpdateState
 
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CloudOff
+import androidx.compose.material3.*
+import androidx.compose.ui.unit.dp
+
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MainScreen() {
@@ -55,20 +62,27 @@ fun MainScreen() {
     when (authState) {
         is AuthUiState.Loading -> {
             // Show a full-screen loading indicator while Firebase connects
+            Log.d("MainScreen","MainScreen.Loading")
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
                 Text(modifier = Modifier.padding(top = 60.dp), text = "Connecting...")
             }
         }
         is AuthUiState.Error -> {
+            Log.d("MainScreen","MainScreen.Error")
             // Show an error message if sign-in fails
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                Text(text = "Error: ${(authState as AuthUiState.Error).message}", color = Color.Red)
-            }
+//            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+//                Text(text = "Error: ${(authState as AuthUiState.Error).message}", color = Color.Red)
+//            }
+            NoConnectionScreen(
+                errorMessage = authState.message,
+                onRetry = { mainViewModel.onRetryConnection() } // Hook up the retry button
+            )
         }
         is AuthUiState.Success -> {
             // Once successful, show the main app content
             // The entire Scaffold and NavHost goes inside here
+            Log.d("MainScreen","MainScreen.Success - Load app data")
             MainAppContent(
                 navController = navController,
                 selectedVoiceName = globalUiState.selectedVoiceName
@@ -263,4 +277,43 @@ fun UpdateDialog(
             }
         }
     )
+}
+
+
+
+@Composable
+fun NoConnectionScreen(
+    errorMessage: String,
+    onRetry: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Column(
+        modifier = modifier.fillMaxSize().padding(32.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Icon(
+            imageVector = Icons.Default.CloudOff,
+            contentDescription = "No Connection",
+            modifier = Modifier.size(64.dp),
+            tint = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(24.dp))
+        Text(
+            text = "Connection Error",
+            style = MaterialTheme.typography.headlineSmall,
+            textAlign = TextAlign.Center
+        )
+        Spacer(modifier = Modifier.height(8.dp))
+        Text(
+            text = errorMessage,
+            style = MaterialTheme.typography.bodyMedium,
+            textAlign = TextAlign.Center,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(modifier = Modifier.height(32.dp))
+        Button(onClick = onRetry) {
+            Text("Retry")
+        }
+    }
 }
