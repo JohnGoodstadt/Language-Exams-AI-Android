@@ -114,20 +114,11 @@ fun ParagraphScreen(
                     .padding(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-//                Text(
-//                    text = "Debug Controls",
-//                    style = MaterialTheme.typography.titleSmall,
-//                    fontWeight = FontWeight.Bold
-//                )
-//                Spacer(modifier = Modifier.height(8.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Text("${uiState.currentLlmModel?.title}")
-//                    Button(onClick = { viewModel.cycleLlmEngine() }) {
-//                        Text("Change Model")
-//                    }
                 }
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -178,7 +169,7 @@ fun ParagraphScreen(
         Button(onClick = {
              viewModel.generateNewParagraph()
 
-        },  enabled = uiState.areCreditsInitialized && uiState.userCredits.current > 0,
+        },  //enabled = uiState.areCreditsInitialized && uiState.userCredits.current > 0,
             colors = ButtonDefaults.buttonColors(
             containerColor = buttonColor,
             contentColor = Color.White
@@ -269,7 +260,7 @@ fun CreditsBottomSheetContent(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("Out of Generations", style = MaterialTheme.typography.headlineSmall)
+        Text("Out of Paragraphs", style = MaterialTheme.typography.headlineSmall)
         Text("Choose an option to continue.", style = MaterialTheme.typography.bodyMedium)
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -280,7 +271,7 @@ fun CreditsBottomSheetContent(
             enabled = isWaitButtonEnabled,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text(if (isWaitButtonEnabled) "Get 20 Free Generations" else waitTimeText)
+            Text(if (isWaitButtonEnabled) "Get 20 Free Paragraphs" else waitTimeText)
         }
 
         // IAP Option 1
@@ -288,7 +279,7 @@ fun CreditsBottomSheetContent(
             onClick = { onPurchase(100) },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Buy 100 Generations for $1.99")
+            Text("Buy 100 Paragraphs for $1.99")
         }
 
         // IAP Option 2
@@ -296,7 +287,7 @@ fun CreditsBottomSheetContent(
             onClick = { onPurchase(500) },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Buy 500 Generations for $2.99")
+            Text("Buy 500 Paragraphs for $2.99")
         }
     }
 }

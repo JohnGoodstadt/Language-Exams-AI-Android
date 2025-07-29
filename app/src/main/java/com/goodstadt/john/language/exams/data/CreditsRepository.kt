@@ -103,11 +103,14 @@ class CreditsRepository @Inject constructor(
     /**
      * Decrements the credit count. Updates Firestore first, then updates the local in-memory state on success.
      */
-    suspend fun decrementCredit(): Result<Unit> {
+    suspend fun decrementCredit(promptTokens:Int,completionTokens :Int,totalTokensUsed:Int): Result<Unit> {
         val uid = userId ?: return Result.failure(Exception("User not logged in"))
+
         return try {
             val userDocRef = firestore.collection("users").document(uid)
-            userDocRef.update("llmCurrentCredit", FieldValue.increment(-1)).await()
+            userDocRef.update("llmCurrentCredit", FieldValue.increment(-1),
+                "llmPromptTokens",FieldValue.increment(promptTokens.toLong()),
+                "llmTotalTokens",FieldValue.increment(completionTokens.toLong())).await()
 
             // On success, manually update our in-memory state
             _userCredits.update { it?.copy(current = it.current - 1) }

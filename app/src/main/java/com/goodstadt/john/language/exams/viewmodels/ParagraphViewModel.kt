@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.CreditsRepository
@@ -15,6 +16,7 @@ import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.VocabFile
+import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -165,12 +167,27 @@ class ParagraphViewModel @Inject constructor(
                     userQuestion = userQuestion
                 )
 
+                if (DEBUG) {
+                    val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
+
+                    println("Total tokens: ${result.totalTokens}")
+                    println("Estimated characters (for TTS): ${result.estimatedCharacters}")
+                    println("TTS cost: $${"%.6f".format(result.ttsCostUSD)}")
+                    println("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
+                    println("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
+                    println("Total cost: $${"%.6f".format(result.totalCostUSD)}")
+                }
+
 
                 val totalTokensUsed = llmResponse.totalTokensUsed
                // userPreferencesRepository.incrementTokenCount(totalTokensUsed)
                 ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
 
-                creditsRepository.decrementCredit()
+                creditsRepository.decrementCredit(
+                    llmResponse.promptTokens,
+                    llmResponse.completionTokens,
+                    totalTokensUsed
+                )
 
                 // Phase 3: Update the UI with the response
                 // Simple parsing, you can make this more robust

@@ -51,18 +51,18 @@ data class LLMResponse(
     val totalTokens: Int,
     val model: String
 )
-@kotlinx.serialization.Serializable
+@Serializable
 data class OpenAIResponse(
     val choices: List<Choice>,
     val usage: UsageData // <-- ADD THIS
 )
 
-@kotlinx.serialization.Serializable
+@Serializable
 data class Choice(
     val message: Message
 )
 
-@kotlinx.serialization.Serializable
+@Serializable
 data class Message(
     val role: String,
     val content: String
@@ -79,7 +79,9 @@ data class UsageData(
 // --- A NEW DATA HOLDER for a cleaner return type ---
 data class LlmResponse(
     val content: String,
-    val totalTokensUsed: Int
+    val totalTokensUsed: Int,
+    val promptTokens: Int,
+    val completionTokens: Int
 )
 
 @Serializable
@@ -198,8 +200,8 @@ class OpenAIRepository @Inject constructor() {
 
         val response: OpenAIResponse = client99.post(OPENAI_URL) {
             headers {
-                append(HttpHeaders.Authorization, "Bearer ${BuildConfig.OPENAI_API_KEY}")
-                append(HttpHeaders.ContentType, ContentType.Application.Json)
+                append(HttpHeaders.Authorization, "Bearer $OPENAI_API_KEY")
+                append(HttpHeaders.ContentType, Json)
             }
 
 
@@ -211,8 +213,14 @@ class OpenAIRepository @Inject constructor() {
         // Extract the content and the token count
         val content = response.choices.firstOrNull()?.message?.content ?: ""
         val tokensUsed = response.usage.totalTokens
+        val completionTokens = response.usage.completionTokens
+        val promptTokens = response.usage.promptTokens
 
         // Return the new, richer data object
-        return LlmResponse(content = content, totalTokensUsed = tokensUsed)
+        return LlmResponse(
+            content = content, totalTokensUsed = tokensUsed,
+            promptTokens = promptTokens,
+            completionTokens = completionTokens
+        )
     }
 }
