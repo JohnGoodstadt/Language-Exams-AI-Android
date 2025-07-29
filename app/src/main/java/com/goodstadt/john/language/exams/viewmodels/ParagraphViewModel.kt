@@ -71,34 +71,29 @@ class ParagraphViewModel @Inject constructor(
     init{
         loadLlmModels()
 
-        viewModelScope.launch { // Start listening to the user's credits from Firestore in real-time
-//            creditsRepository.userCreditsFlow.collect { credits ->
-//                _uiState.update { it.copy(userCredits = credits) }
-//            }
-
+        // This listener ensures that any change to the in-memory state in the
+        // repository is immediately reflected in this ViewModel's UI state.
+        viewModelScope.launch {
             creditsRepository.userCreditsFlow.collect { credits ->
-                _uiState.update { it.copy(userCredits = credits) }
+                // Once we receive the first valid credit object, we can consider it initialized.
+                _uiState.update { it.copy(
+                    userCredits = credits,
+                    areCreditsInitialized = true
+                )}
             }
         }
 
-        // --- THIS IS THE KEY CHANGE IN THE VIEWMODEL ---
-        // Ensure the user is set up with free credits on the first load of this screen.
-        // This call will either create the free tier or fetch the existing credits.
+        // --- THIS IS THE UPDATED LOGIC ---
+        // Call the new one-time fetch function to populate the repository's state.
         viewModelScope.launch {
-            val initialCreditsResult = creditsRepository.setupFreeTierIfNeeded()
-            initialCreditsResult.onSuccess { initialCredits ->
+            val result = creditsRepository.initialFetchAndSetupCredits()
+            result.onFailure { error ->
                 _uiState.update { it.copy(
-                    userCredits = initialCredits,
-                    areCreditsInitialized = true // <-- SET THE FLAG
+                    error = "Could not initialize user credits.",
+                    areCreditsInitialized = true // Unblock UI even on failure
                 )}
+                Log.e("ParagraphVM", "Failed to setup free tier", error)
             }
-//            initialCreditsResult.onFailure { error ->
-//                _uiState.update { it.copy(
-//                    error = "Could not initialize credits.",
-//                    areCreditsInitialized = true // Also set true on failure to unblock UI
-//                )}
-//                Log.e("ParagraphVM", "Failed to setup free tier", error)
-//            }
         }
 
     }

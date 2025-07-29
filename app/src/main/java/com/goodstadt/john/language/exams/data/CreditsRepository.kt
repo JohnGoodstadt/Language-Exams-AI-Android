@@ -5,25 +5,25 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
-import com.google.firebase.firestore.snapshots
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.mapNotNull
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlinx.coroutines.flow.first
 
-// --- Constants (Easy to move to Remote Config later) ---
+// --- The data classes and config object remain the same ---
 object CreditSystemConfig {
     const val FREE_TIER_CREDITS = 20
     const val WAIT_PERIOD_HOURS = 1
 }
 
-// --- Data class to represent the user's credit state ---
 data class UserCredits(
     val current: Int = 0,
     val total: Int = 0,
-    val lastRefillTimestamp: Long = 0L // For the wait period
+    val lastRefillTimestamp: Long = 0L
 )
 
 @Singleton
@@ -34,22 +34,20 @@ class CreditsRepository @Inject constructor(
     private val userId: String?
         get() = auth.currentUser?.uid
 
-    // --- Public Flow to observe the user's credits in real-time ---
-    val userCreditsFlow: Flow<UserCredits> = firestore.collection("users")
-        .document(userId ?: "null_user") // Use a non-existent doc if not logged in
-        .snapshots() // This is a real-time listener
-        .mapNotNull { snapshot ->
-            if (snapshot.exists()) {
-                snapshot.toObject(UserCreditsFirestore::class.java)?.toUserCredits()
-            } else {
-                null // Return null if the user document doesn't exist yet
-            }
-        }
+    // --- NEW: A private, in-memory state holder for the credits ---
+    // It's nullable to represent the "not yet loaded" state.
+    private val _userCredits = MutableStateFlow<UserCredits?>(null)
 
+    /**
+     * A Flow that exposes the in-memory user credits.
+     * The ViewModel will collect this. It filters out the initial null value.
+     */
+    val userCreditsFlow: Flow<UserCredits> = _userCredits.asStateFlow().filterNotNull()
 
-    // --- Firestore-specific data class for safe mapping ---
+    /**
+     * A private data class that exactly matches the field names in the Firestore document.
+     */
     private data class UserCreditsFirestore(
-        // These are the new field names that match your Firestore document
         val llmCurrentCredit: Int = 0,
         val llmTotalCredit: Int = 0,
         val llmLastRefillTimestamp: Long = 0L
@@ -62,34 +60,82 @@ class CreditsRepository @Inject constructor(
     }
 
     /**
-     * Decrements the user's credit count by 1.
-     * This is the main function called after a successful API call.
+     * Performs a ONE-TIME fetch from Firestore to initialize the in-memory state.
+     * If the user is new, it creates their free tier credits in Firestore and in memory.
+     * This should be called once when the relevant ViewModel is initialized.
+     */
+    suspend fun initialFetchAndSetupCredits(): Result<Unit> {
+        val uid = userId ?: return Result.failure(Exception("User not logged in"))
+
+        return try {
+            val userDocRef = firestore.collection("users").document(uid)
+            val doc = userDocRef.get().await() // One-time fetch
+
+            if (!doc.exists() || !doc.contains("llmCurrentCredit")) {
+                Log.d("CreditsRepository", "User document missing credit fields. Setting up free tier.")
+                val freeTierCredits = UserCredits(
+                    current = CreditSystemConfig.FREE_TIER_CREDITS,
+                    total = CreditSystemConfig.FREE_TIER_CREDITS
+                )
+
+                val freeTierData = mapOf(
+                    "llmCurrentCredit" to freeTierCredits.current,
+                    "llmTotalCredit" to freeTierCredits.total,
+                    "llmLastRefillTimestamp" to 0L
+                )
+
+                userDocRef.set(freeTierData, SetOptions.merge()).await()
+                // Update the local, in-memory state
+                _userCredits.value = freeTierCredits
+
+            } else {
+                Log.d("CreditsRepository", "User already has credit fields. Loading into memory.")
+                val existingCredits = doc.toObject(UserCreditsFirestore::class.java)!!.toUserCredits()
+                // Update the local, in-memory state
+                _userCredits.value = existingCredits
+            }
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    /**
+     * Decrements the credit count. Updates Firestore first, then updates the local in-memory state on success.
      */
     suspend fun decrementCredit(): Result<Unit> {
         val uid = userId ?: return Result.failure(Exception("User not logged in"))
         return try {
             val userDocRef = firestore.collection("users").document(uid)
-            // Use the new field name here
             userDocRef.update("llmCurrentCredit", FieldValue.increment(-1)).await()
+
+            // On success, manually update our in-memory state
+            _userCredits.update { it?.copy(current = it.current - 1) }
+
             Result.success(Unit)
         } catch (e: Exception) {
             Result.failure(e)
         }
     }
 
-
     /**
-     * Adds a specific number of credits to the user's total.
+     * Adds purchased credits. Updates Firestore first, then updates the local in-memory state on success.
      */
     suspend fun purchaseCredits(amount: Int): Result<Unit> {
         val uid = userId ?: return Result.failure(Exception("User not logged in"))
         return try {
             val userDocRef = firestore.collection("users").document(uid)
-            // Use the new field names here
             userDocRef.update(
                 "llmCurrentCredit", FieldValue.increment(amount.toLong()),
                 "llmTotalCredit", FieldValue.increment(amount.toLong())
             ).await()
+
+            // On success, manually update our in-memory state
+            _userCredits.update { it?.copy(
+                current = it.current + amount,
+                total = it.total + amount
+            )}
+
             Result.success(Unit)
         } catch (e: Exception) {
             Result.failure(e)
@@ -97,70 +143,28 @@ class CreditsRepository @Inject constructor(
     }
 
     /**
-     * Resets the user's credits back to the free tier amount after the wait period.
+     * Applies a timed refill. Updates Firestore first, then updates the local in-memory state on success.
      */
     suspend fun applyTimedRefill(): Result<Unit> {
         val uid = userId ?: return Result.failure(Exception("User not logged in"))
         return try {
             val userDocRef = firestore.collection("users").document(uid)
-            // Use the new field names here
+            val timestamp = System.currentTimeMillis()
             val updateData = mapOf(
                 "llmCurrentCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
                 "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
-                "llmLastRefillTimestamp" to System.currentTimeMillis()
+                "llmLastRefillTimestamp" to timestamp
             )
             userDocRef.update(updateData).await()
+
+            // On success, manually update our in-memory state
+            _userCredits.update { it?.copy(
+                current = CreditSystemConfig.FREE_TIER_CREDITS,
+                total = CreditSystemConfig.FREE_TIER_CREDITS,
+                lastRefillTimestamp = timestamp
+            )}
+
             Result.success(Unit)
-        } catch (e: Exception) {
-            Result.failure(e)
-        }
-    }
-    /**
-     * Checks if the user's credit document exists in Firestore. If not, it creates it
-     * with the default free tier credits and returns that new state. If it already
-     * exists, it simply returns the current state.
-     *
-     * This ensures a user always has their initial credits available on the first check.
-     *
-     * @return A Result containing the up-to-date UserCredits on success, or an Exception on failure.
-     */
-    suspend fun setupFreeTierIfNeeded(): Result<UserCredits> {
-        val uid = userId ?: return Result.failure(Exception("User not logged in"))
-
-        return try {
-            val userDocRef = firestore.collection("users").document(uid)
-            val doc = userDocRef.get().await()
-
-            if (!doc.exists() || !doc.contains("llmCurrentCredit")) {
-                // --- THIS IS THE CORRECTED LOGIC ---
-                // 1. User is new or doesn't have credit fields. Create the free tier data.
-                Log.d("CreditsRepository", "User document missing credit fields. Setting up free tier.")
-                val freeTierCredits = UserCredits(
-                    current = CreditSystemConfig.FREE_TIER_CREDITS,
-                    total = CreditSystemConfig.FREE_TIER_CREDITS,
-                    lastRefillTimestamp = 0L
-                )
-
-                // 2. Create the map to save to Firestore.
-                val freeTierData = mapOf(
-                    "llmCurrentCredit" to freeTierCredits.current,
-                    "llmTotalCredit" to freeTierCredits.total,
-                    "llmLastRefillTimestamp" to freeTierCredits.lastRefillTimestamp
-                )
-
-                // 3. Save this data to Firestore.
-                userDocRef.set(freeTierData, SetOptions.merge()).await()
-
-                // 4. IMPORTANT: Immediately return the new freeTierCredits object.
-                //    The app doesn't have to wait for the Firestore listener to get this initial state.
-                Result.success(freeTierCredits)
-
-            } else {
-                // User already exists and has credits, just return their current state.
-                Log.d("CreditsRepository", "User already has credit fields.")
-                val existingCredits = doc.toObject(UserCreditsFirestore::class.java)!!.toUserCredits()
-                Result.success(existingCredits)
-            }
         } catch (e: Exception) {
             Result.failure(e)
         }
