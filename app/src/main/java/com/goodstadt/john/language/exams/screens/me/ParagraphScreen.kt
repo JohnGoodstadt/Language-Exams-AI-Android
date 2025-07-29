@@ -10,20 +10,27 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -37,6 +44,8 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.CreditSystemConfig
+import com.goodstadt.john.language.exams.data.UserCredits
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
 import com.goodstadt.john.language.exams.ui.theme.accentColor
@@ -44,6 +53,7 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 import kotlinx.coroutines.delay
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ParagraphScreen(
         // We get the ViewModel instance, but we don't use it yet.
@@ -55,7 +65,9 @@ fun ParagraphScreen(
     // this `uiState` variable will change, triggering a recomposition.
 //    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiState by viewModel.uiState.collectAsState()
-    val tokenCount by viewModel.totalTokenCount.collectAsState()
+    val sheetState = rememberModalBottomSheetState()
+
+//    val tokenCount by viewModel.totalTokenCount.collectAsState()
 
     val lifecycleOwner = LocalLifecycleOwner.current
 
@@ -102,29 +114,29 @@ fun ParagraphScreen(
                     .padding(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
-                    text = "Debug Controls",
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.Bold
-                )
-                Spacer(modifier = Modifier.height(8.dp))
+//                Text(
+//                    text = "Debug Controls",
+//                    style = MaterialTheme.typography.titleSmall,
+//                    fontWeight = FontWeight.Bold
+//                )
+//                Spacer(modifier = Modifier.height(8.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Text("${uiState.currentLlmModel?.title}")
-                    Button(onClick = { viewModel.cycleLlmEngine() }) {
-                        Text("Change Model")
-                    }
+//                    Button(onClick = { viewModel.cycleLlmEngine() }) {
+//                        Text("Change Model")
+//                    }
                 }
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Text(
-                        text = "Tokens Used: $tokenCount / ${viewModel.getTokenLimit()}", // TOKEN_LIMIT needs to be exposed from VM
+                        text = "Calls Used: ${uiState.userCredits.current} / ${uiState.userCredits.total}", // TOKEN_LIMIT needs to be exposed from VM
                         style = MaterialTheme.typography.labelMedium,
-                        color = if (tokenCount >= viewModel.getTokenLimit()) MaterialTheme.colorScheme.error else Color.Unspecified
+                        color = if (uiState.userCredits.current >= viewModel.getTokenLimit()) MaterialTheme.colorScheme.error else Color.Unspecified
                     )
                 }
                 Row(
@@ -139,6 +151,19 @@ fun ParagraphScreen(
             }
         }
         // --- Top Section ---
+        if (uiState.showCreditsSheet) {
+            ModalBottomSheet(
+                onDismissRequest = { viewModel.hideCreditsSheet() },
+                sheetState = sheetState
+            ) {
+                CreditsBottomSheetContent(
+                    userCredits = uiState.userCredits,
+                    onPurchase = { amount -> viewModel.onPurchaseCredits(amount) },
+                    onTimedRefill = { viewModel.onTimedRefill() }
+                )
+            }
+        }
+        
         Text(
                 text = "Listen to this Sentence",
                 style = MaterialTheme.typography.titleLarge
@@ -152,7 +177,9 @@ fun ParagraphScreen(
 
         Button(onClick = {
              viewModel.generateNewParagraph()
-        }, colors = ButtonDefaults.buttonColors(
+
+        },  enabled = uiState.areCreditsInitialized && uiState.userCredits.current > 0,
+            colors = ButtonDefaults.buttonColors(
             containerColor = buttonColor,
             contentColor = Color.White
         )) {
@@ -215,6 +242,64 @@ fun ParagraphScreen(
     }
 }
 
+@Composable
+fun CreditsBottomSheetContent(
+    userCredits: UserCredits,
+    onPurchase: (Int) -> Unit,
+    onTimedRefill: () -> Unit
+) {
+    val waitTimeMillis = (CreditSystemConfig.WAIT_PERIOD_HOURS * 60 * 60 * 1000) - (System.currentTimeMillis() - userCredits.lastRefillTimestamp)
+    val isWaitButtonEnabled = waitTimeMillis <= 0
+
+    var waitTimeText by remember { mutableStateOf("") }
+    LaunchedEffect(waitTimeMillis) {
+        var remaining = waitTimeMillis
+        while (remaining > 0) {
+            val minutes = (remaining / 1000 / 60) % 60
+            val seconds = (remaining / 1000) % 60
+            waitTimeText = "Wait (${String.format("%02d:%02d", minutes, seconds)})"
+            delay(1000)
+            remaining -= 1000
+        }
+        waitTimeText = "Get Free Refill"
+    }
+
+    Column(
+        modifier = Modifier.padding(16.dp).navigationBarsPadding(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Text("Out of Generations", style = MaterialTheme.typography.headlineSmall)
+        Text("Choose an option to continue.", style = MaterialTheme.typography.bodyMedium)
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // Timed Refill Button
+        Button(
+            onClick = onTimedRefill,
+            enabled = isWaitButtonEnabled,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(if (isWaitButtonEnabled) "Get 20 Free Generations" else waitTimeText)
+        }
+
+        // IAP Option 1
+        Button(
+            onClick = { onPurchase(100) },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Buy 100 Generations for $1.99")
+        }
+
+        // IAP Option 2
+        Button(
+            onClick = { onPurchase(500) },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Buy 500 Generations for $2.99")
+        }
+    }
+}
 
 // A @Preview function allows you to see your Composable in the design view of Android Studio.
 @Preview(showBackground = true)

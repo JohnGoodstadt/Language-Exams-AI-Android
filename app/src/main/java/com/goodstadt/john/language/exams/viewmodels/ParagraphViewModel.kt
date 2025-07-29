@@ -5,9 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
+import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
@@ -36,7 +38,10 @@ data class ParagraphUiState(
     val highlightedWords: Set<String> = emptySet(), // <-- ADD THIS
     val error: String? = null, // <-- Add this for showing errors
     val availableModels: List<LlmModelInfo> = emptyList(),
-    val currentLlmModel: LlmModelInfo? = null
+    val currentLlmModel: LlmModelInfo? = null,
+    val areCreditsInitialized: Boolean = false,
+    val showCreditsSheet: Boolean = false, // To control the bottom sheet
+    val userCredits: UserCredits = UserCredits() // To display current credits
 )
 
 private const val TOKEN_LIMIT = 2000
@@ -49,6 +54,7 @@ class ParagraphViewModel @Inject constructor(
     private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
+    private val creditsRepository: CreditsRepository,
 
 
     ) : ViewModel() {
@@ -56,32 +62,84 @@ class ParagraphViewModel @Inject constructor(
    // private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
 //    private val availableModels99 = LlmModelInfo.entries
 
-    val totalTokenCount = userPreferencesRepository.totalTokenCountFlow
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
+//    val totalTokenCount = userPreferencesRepository.totalTokenCountFlow
+//        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
 
-    private val _uiState = MutableStateFlow(
-        ParagraphUiState(),
-
-    )
+    private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
 
     init{
         loadLlmModels()
+
+        viewModelScope.launch { // Start listening to the user's credits from Firestore in real-time
+//            creditsRepository.userCreditsFlow.collect { credits ->
+//                _uiState.update { it.copy(userCredits = credits) }
+//            }
+
+            creditsRepository.userCreditsFlow.collect { credits ->
+                _uiState.update { it.copy(userCredits = credits) }
+            }
+        }
+
+        // --- THIS IS THE KEY CHANGE IN THE VIEWMODEL ---
+        // Ensure the user is set up with free credits on the first load of this screen.
+        // This call will either create the free tier or fetch the existing credits.
+        viewModelScope.launch {
+            val initialCreditsResult = creditsRepository.setupFreeTierIfNeeded()
+            initialCreditsResult.onSuccess { initialCredits ->
+                _uiState.update { it.copy(
+                    userCredits = initialCredits,
+                    areCreditsInitialized = true // <-- SET THE FLAG
+                )}
+            }
+//            initialCreditsResult.onFailure { error ->
+//                _uiState.update { it.copy(
+//                    error = "Could not initialize credits.",
+//                    areCreditsInitialized = true // Also set true on failure to unblock UI
+//                )}
+//                Log.e("ParagraphVM", "Failed to setup free tier", error)
+//            }
+        }
+
     }
     //private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
     //val uiState = _uiState.asStateFlow()
 
     fun generateNewParagraph() {
         viewModelScope.launch {
+            val currentState = _uiState.value
 
-
-            val currentTokenCount = userPreferencesRepository.totalTokenCountFlow.first()
-            if (currentTokenCount >= TOKEN_LIMIT) {
-                Log.w("ParagraphVM", "User has exceeded token limit of $TOKEN_LIMIT. Current: $currentTokenCount")
-                // Update the UI to show an error message
-                _uiState.update { it.copy(error = "You have reached your free generation limit.") }
-                return@launch // Stop execution immediately
+            // --- THE NEW, ROBUST CHECK ---
+            // 1. Wait until credits are initialized.
+            // 2. Then check if the count is zero or less.
+            if (currentState.areCreditsInitialized && currentState.userCredits.current <= 0) {
+                Log.w("ParagraphVM", "User is out of credits. Showing sheet.")
+                _uiState.update { it.copy(showCreditsSheet = true) }
+                return@launch
             }
+
+            // Optionally, you can prevent generation if credits aren't initialized yet,
+            // though the user would have to be incredibly fast to tap the button.
+            if (!currentState.areCreditsInitialized) {
+                _uiState.update { it.copy(error = "Initializing credits, please wait...") }
+                return@launch
+            }
+
+            val currentCredits = _uiState.value.userCredits.current
+
+            if (currentCredits <= 0) {
+                Log.w("ParagraphVM", "User is out of credits. Showing sheet.")
+                _uiState.update { it.copy(showCreditsSheet = true) }
+                return@launch
+            }
+
+//            val currentTokenCount = userPreferencesRepository.totalTokenCountFlow.first()
+//            if (currentTokenCount >= TOKEN_LIMIT) {
+//                Log.w("ParagraphVM", "User has exceeded token limit of $TOKEN_LIMIT. Current: $currentTokenCount")
+//                // Update the UI to show an error message
+//                _uiState.update { it.copy(error = "You have reached your free generation limit.") }
+//                return@launch // Stop execution immediately
+//            }
 
             _uiState.update { it.copy(isLoading = true, error = null) }
 
@@ -112,13 +170,16 @@ class ParagraphViewModel @Inject constructor(
                     userQuestion = userQuestion
                 )
 
+
                 val totalTokensUsed = llmResponse.totalTokensUsed
-                userPreferencesRepository.incrementTokenCount(totalTokensUsed)
+               // userPreferencesRepository.incrementTokenCount(totalTokensUsed)
                 ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
+
+                creditsRepository.decrementCredit()
 
                 // Phase 3: Update the UI with the response
                 // Simple parsing, you can make this more robust
-                val sentence = llmResponse.content.substringAfter("[").substringBefore("]")
+                val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
                // val translation = llmResponse.content.substringAfter("{").substringBefore("}")
 
 
@@ -138,6 +199,25 @@ class ParagraphViewModel @Inject constructor(
                 _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
             }
         }
+    }
+    // --- Functions to be called from the Bottom Sheet ---
+
+    fun onPurchaseCredits(amount: Int) {
+        viewModelScope.launch {
+            creditsRepository.purchaseCredits(amount)
+            hideCreditsSheet()
+        }
+    }
+
+    fun onTimedRefill() {
+        viewModelScope.launch {
+            creditsRepository.applyTimedRefill()
+            hideCreditsSheet()
+        }
+    }
+
+    fun hideCreditsSheet() {
+        _uiState.update { it.copy(showCreditsSheet = false) }
     }
     // We will add a StateFlow for the UI state here later.
     // For now, the ViewModel is empty as per the request.
