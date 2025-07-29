@@ -33,6 +33,8 @@ object TokenUsageManager {
     var firestoreTotalTokenField = "llmTotalTokens"
     var firestoreCurrentToken = "llmCurrentTokens"
 
+    val MISSING_FIELD = -1
+
     private fun getFirestore(): FirebaseFirestore = FirebaseFirestore.getInstance()
     private fun getAuth(): FirebaseAuth = FirebaseAuth.getInstance()
 
@@ -41,17 +43,12 @@ object TokenUsageManager {
         val userDoc = getFirestore().collection("users").document(uid)
         val snapshot = userDoc.get().await()
 
-        val balance = snapshot.getLong(firestoreCurrentToken)
-        return if (balance == null) {
-            // No token field exists yet — first use
+        val balance = snapshot.getLong(firestoreCurrentToken)?.toInt() ?: MISSING_FIELD
+        return if (balance == MISSING_FIELD) {// No token field exists yet — first use
             userDoc.update(firestoreCurrentToken, freeTokens,firestoreTotalTokenField,freeTokens)
-                .addOnFailureListener {
-                    // If update fails (e.g., document doesn't exist), create the field
-                    userDoc.set(mapOf(firestoreCurrentToken to freeTokens, firestoreTotalTokenField to freeTokens), SetOptions.merge())
-                }.await()
             freeTokens
         } else {
-            balance.toInt()
+            balance
         }
     }
 
@@ -59,9 +56,9 @@ object TokenUsageManager {
         val uid = getAuth().currentUser?.uid ?: return false
         val userDoc = getFirestore().collection("users").document(uid)
         val snapshot = userDoc.get().await()
-        val current = snapshot.getLong(firestoreCurrentToken)?.toInt() ?: 0
-        if (current < amount)  {
-            userDoc.update(firestoreCurrentToken, current - amount).await() //can be minus amount
+        val current = snapshot.getLong(firestoreCurrentToken)?.toInt() ?: MISSING_FIELD
+        if (current == MISSING_FIELD)  {
+            userDoc.update(firestoreCurrentToken, freeTokens,firestoreTotalTokenField,freeTokens).await()
             return false
         }
         else{
@@ -164,7 +161,7 @@ enum class TokenTopUpOption {
 }
 
 @Composable
-fun TokenOptionsDialog(canWait: Boolean, onOptionSelected: (TokenTopUpOption) -> Unit, onDismiss: () -> Unit) {
+fun TokenOptionsDialogObsolete(canWait: Boolean, onOptionSelected: (TokenTopUpOption) -> Unit, onDismiss: () -> Unit) {
     Dialog(onDismissRequest = { onDismiss() }) {
         Surface(shape = MaterialTheme.shapes.medium, tonalElevation = 4.dp) {
             Column(modifier = Modifier.padding(16.dp)) {

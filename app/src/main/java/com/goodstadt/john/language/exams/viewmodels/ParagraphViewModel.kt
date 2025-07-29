@@ -92,6 +92,14 @@ class ParagraphViewModel @Inject constructor(
 
         }
     }
+    fun resetTokenBalanceForDebug() {
+        viewModelScope.launch {
+            val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@launch
+            FirebaseFirestore.getInstance().collection("users").document(uid)
+                .update(TokenUsageManager.firestoreCurrentToken, TokenUsageManager.freeTokens).await()
+            fetchTokenBalance()
+        }
+    }
     fun generateNewParagraph() {
         viewModelScope.launch {
 
@@ -115,6 +123,7 @@ class ParagraphViewModel @Inject constructor(
                 generateNewParagraphInternal()
             } else {
                 Log.d("ParagraphVM","No tokens left")
+                _uiState.update { it.copy(isLoading = false, error = null) }
                 val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@launch
                 val snapshot = FirebaseFirestore.getInstance().collection("users").document(uid).get().await()
                 val lastTopUp = snapshot.getLong("lastTopUp") ?: 0L
@@ -229,11 +238,11 @@ class ParagraphViewModel @Inject constructor(
             }
 
             val totalTokensUsed = llmResponse.totalTokensUsed
-            Log.d("paragraphVM","Balancec 1:${_tokenBalance.value}")
+//            Log.d("paragraphVM","Balancec 1:${_tokenBalance.value}")
             TokenUsageManager.deductTokens(totalTokensUsed)
-            Log.d("paragraphVM","Balance 2:${_tokenBalance.value}")
+//            Log.d("paragraphVM","Balance 2:${_tokenBalance.value}")
             fetchTokenBalance()
-            Log.d("paragraphVM","Balance 3:${_tokenBalance.value}")
+//            Log.d("paragraphVM","Balance 3:${_tokenBalance.value}")
 
             val sentence = llmResponse.content.substringAfter("[").substringBefore("]")
 

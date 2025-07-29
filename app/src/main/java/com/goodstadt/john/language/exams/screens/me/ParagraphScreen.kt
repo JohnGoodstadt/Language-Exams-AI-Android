@@ -16,9 +16,12 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
@@ -26,6 +29,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -40,14 +44,17 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
-import com.goodstadt.john.language.exams.managers.TokenOptionsDialog
+//import com.goodstadt.john.language.exams.managers.TokenOptionsDialog
+import com.goodstadt.john.language.exams.managers.TokenTopUpOption
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ParagraphScreen(
         // We get the ViewModel instance, but we don't use it yet.
@@ -65,6 +72,8 @@ fun ParagraphScreen(
 
     val showDialog by viewModel.showTokenDialog.collectAsState()
     val canWait by viewModel.canWait.collectAsState()
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val coroutineScope = rememberCoroutineScope()
 
     LaunchedEffect(Unit) {
         delay(600) // GPT model might not have been chosen yet
@@ -90,13 +99,30 @@ fun ParagraphScreen(
         }
     }
 
-    if (showDialog) {
-        TokenOptionsDialog(
-            canWait = canWait,
-            onOptionSelected = { viewModel.onTokenTopUpSelected(it) },
-            onDismiss = {} // optional
-        )
+    LaunchedEffect(showDialog) {
+        if (!showDialog && sheetState.isVisible) {
+            sheetState.hide()
+        }
     }
+
+    if (showDialog) {
+        ModalBottomSheet(
+            onDismissRequest = { /* prevent user from dismissing */ },
+            sheetState = sheetState
+        ) {
+            TokenOptionsBottomSheet(
+                canWait = canWait,
+                onOptionSelected = {
+                    viewModel.onTokenTopUpSelected(it)
+                    // DO NOT hide the sheet here — let ViewModel trigger hide via state
+                },
+                onResetClicked = {
+                    viewModel.resetTokenBalanceForDebug()
+                }
+            )
+        }
+    }
+
 
     Column(
             // Fills the whole screen
@@ -117,12 +143,12 @@ fun ParagraphScreen(
                     .padding(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(
-                    text = "Debug Controls",
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.Bold
-                )
-                Spacer(modifier = Modifier.height(8.dp))
+//                Text(
+//                    text = "Debug Controls",
+//                    style = MaterialTheme.typography.bodySmall,
+//                    fontWeight = FontWeight.Normal
+//                )
+//                Spacer(modifier = Modifier.height(8.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -242,5 +268,57 @@ fun ParagraphScreenPreview() {
     // Replace YourAppTheme with the actual name of your app's theme.
     LanguageExamsAITheme {
         ParagraphScreen()
+    }
+}
+
+@Composable
+fun TokenOptionsBottomSheet(
+    canWait: Boolean,
+    onOptionSelected: (TokenTopUpOption) -> Unit,
+    onResetClicked: () -> Unit
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+    ) {
+        Text("You're out of tokens.", style = MaterialTheme.typography.titleMedium)
+        Spacer(modifier = Modifier.height(12.dp))
+
+        if (canWait) {
+            Button(
+                onClick = { onOptionSelected(TokenTopUpOption.FREE) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Wait 1 Hour for Free Top-Up")
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+        }
+
+        Button(
+            onClick = { onOptionSelected(TokenTopUpOption.BUY_099) },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Buy More – £0.99")
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        Button(
+            onClick = { onOptionSelected(TokenTopUpOption.BUY_199) },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Buy More – £1.99")
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Button(
+            onClick = { onResetClicked() },
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
+        ) {
+            Text("DEBUG: Reset Tokens")
+        }
     }
 }
