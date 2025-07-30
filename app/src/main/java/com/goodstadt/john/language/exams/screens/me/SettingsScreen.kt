@@ -197,6 +197,15 @@ fun SettingsScreen(
                     value = uiState.appVersion
             )
         }
+        item { SectionHeader("Debug") }
+        item {
+            SettingsActionItem(
+                icon = Icons.Default.Info,
+                title = "TTS Voices",
+                currentValue = "",
+                onClick = { viewModel.downloadAndSaveVoiceList() }
+            )
+        }
     }
 }
 

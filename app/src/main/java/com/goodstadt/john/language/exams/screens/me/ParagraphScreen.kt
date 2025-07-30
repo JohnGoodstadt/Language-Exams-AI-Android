@@ -82,6 +82,7 @@ fun ParagraphScreen(
             // presses home, or a dialog appears over it), stop the audio.
             if (event == Lifecycle.Event.ON_PAUSE) {
                 viewModel.stopPlayback()
+                viewModel.saveDataOnExit()
             }
         }
 
@@ -184,7 +185,7 @@ fun ParagraphScreen(
             if (uiState.isLoading) {
                 CircularProgressIndicator(
                     color = accentColor,
-                        modifier = Modifier.size(24.dp), // Make it smaller
+                        modifier = Modifier.size(12.dp), // Make it smaller
                         strokeWidth = 2.dp // Thinner stroke looks better when small
                 )
             }

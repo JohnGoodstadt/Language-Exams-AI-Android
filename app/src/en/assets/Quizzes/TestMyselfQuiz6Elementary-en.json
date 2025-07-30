@@ -1,0 +1,103 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz6Elementary-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Voiced vs Unvoiced sounds",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Just have an hour",
+					"summary": "Voiced vs Unvoiced sounds",
+					"explain": "Select the sentence matching the voiced vs unvoiced sounds.",
+					"words": [
+						{ "word": "Just have an hour.",  "ok": true  },
+						{ "word": "Just half an hour.",  "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "Just half an hour",
+					"summary": "Voiced vs Unvoiced sounds",
+					"explain": "Select the sentence matching the voiced vs unvoiced sounds.",
+					"words": [
+						{ "word": "Just half an hour.",  "ok": true  },
+						{ "word": "Just have an hour.",  "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"sentence": "Keep it safe",
+					"summary": "Voiced vs Unvoiced sounds",
+					"explain": "Select the sentence matching the voiced vs unvoiced sounds.",
+					"words": [
+						{ "word": "Keep it safe.", "ok": true  },
+						{ "word": "Keep it save.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 12,
+					"sentence": "Take off your coat",
+					"summary": "Voiced vs Unvoiced sounds",
+					"explain": "Select the sentence matching the voiced vs unvoiced sounds.",
+					"words": [
+						{ "word": "Take off your coat.", "ok": true  },
+						{ "word": "Take of your coat.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 13,
+					"sentence": "They're such great prizes",
+					"summary": "Voiced vs Unvoiced sounds",
+					"explain": "Select the sentence matching the voiced vs unvoiced sounds.",
+					"words": [
+						{ "word": "They're such great prizes.", "ok": true  },
+						{ "word": "They're such great prices.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 14,
+					"sentence": "Put a new log on the fire",
+					"summary": "Voiced vs Unvoiced sounds",
+					"explain": "Select the sentence matching the voiced vs unvoiced sounds.",
+					"words": [
+						{ "word": "Put a new log on the fire.",   "ok": true  },
+						{ "word": "Put a new block on the fire.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 15,
+					"sentence": "He has a bat",
+					"summary": "Voiced vs Unvoiced sounds",
+					"explain": "Select the sentence matching the voiced vs unvoiced sounds.",
+					"words": [
+						{ "word": "He has a bat.", "ok": true  },
+						{ "word": "He has a pat.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 16,
+					"sentence": "The goat is mine",
+					"summary": "Voiced vs Unvoiced sounds",
+					"explain": "Select the sentence matching the voiced vs unvoiced sounds.",
+					"words": [
+						{ "word": "The goat is mine.", "ok": true  },
+						{ "word": "The coat is mine.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

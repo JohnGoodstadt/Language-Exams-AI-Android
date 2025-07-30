@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
@@ -13,6 +14,7 @@ import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
@@ -35,7 +37,8 @@ class ConjugationsViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val userStatsRepository: UserStatsRepository,
-    private val ttsStatsRepository: TTSStatsRepository
+    private val ttsStatsRepository: TTSStatsRepository,
+    private val appScope: CoroutineScope
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
@@ -135,9 +138,15 @@ class ConjugationsViewModel @Inject constructor(
             _playbackState.value = PlaybackState.Idle
         }
     }
-    //fun getCurrentGoogleVoice() : String {
-//        return userPreferencesRepository.selectedVoiceNameFlow.first()
-      //  return  "en-GB-Neural2-C"
-   // }
-
+    fun saveDataOnExit() {
+        // We use appScope to ensure this save operation completes even if the
+        // viewModelScope is paused or cancelled as the user navigates away.
+        appScope.launch {
+            Log.d("ViewModelLifecycle", "Saving data because screen is no longer active.")
+            if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+            }
+        }
+    }
 }

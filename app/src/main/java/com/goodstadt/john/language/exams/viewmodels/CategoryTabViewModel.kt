@@ -23,6 +23,7 @@ import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -52,19 +53,15 @@ class CategoryTabViewModel @Inject constructor(
     private val recallingItemsManager: RecallingItems,
     private val ttsStatsRepository : TTSStatsRepository,
     @ApplicationContext private val context: Context,
-    private val application: Application // Needed for RecallingItems SharedPreferences
+//    private val application: Application, // Needed for RecallingItems SharedPreferences
+    private val appScope: CoroutineScope // Inject a non-cancellable, app-level scope
 ) : ViewModel() {
-
-
 
     private val _uiState = MutableStateFlow(CategoryTabUiState())
     val uiState = _uiState.asStateFlow()
 
     private val _uiEvent = MutableSharedFlow<UiEvent>()
     val uiEvent = _uiEvent.asSharedFlow()
-
-//    private data class LastAction(val word: VocabWord, val sentence: Sentence, val voiceName: String)
-//    private val _lastFailedAction = MutableStateFlow<LastAction?>(null)
 
     init {
         // Load all data when the ViewModel is first created
@@ -174,7 +171,7 @@ class CategoryTabViewModel @Inject constructor(
                     }
                     ttsStatsRepository.updateTTSStats( sentence.sentence,currentVoiceName)
                     ttsStatsRepository.updateUserPlayedSentenceCount() //count how many mp3s user has played
-                    ttsStatsRepository.updateUserTTSTokenCount(sentence.sentence.count())
+                    ttsStatsRepository.updateUserTTSCounts(sentence.sentence.count())
 
                 }
                 is PlaybackResult.PlayedFromCache -> {
@@ -258,5 +255,16 @@ class CategoryTabViewModel @Inject constructor(
     fun resetState() {
         // Reset the UI state back to its initial, default values.
         _uiState.value = CategoryTabUiState()
+    }
+    fun saveDataOnExit() {
+        // We use appScope to ensure this save operation completes even if the
+        // viewModelScope is paused or cancelled as the user navigates away.
+        appScope.launch {
+            Log.d("ViewModelLifecycle", "Saving data because screen is no longer active.")
+            if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+            }
+        }
     }
 }

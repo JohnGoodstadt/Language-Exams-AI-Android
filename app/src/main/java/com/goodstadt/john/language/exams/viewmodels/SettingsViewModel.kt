@@ -6,10 +6,12 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.ControlRepository
+import com.goodstadt.john.language.exams.data.FirestoreRepository
+import com.goodstadt.john.language.exams.data.GoogleTTSInfoRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.UserStatsRepository
+import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.currentGoogleVoiceName
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
@@ -17,11 +19,14 @@ import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.serialization.encodeToString
+import kotlinx.serialization.json.Json
 import javax.inject.Inject
 
 // --- MODIFICATION 1: Add pending state to UiState ---
@@ -44,6 +49,13 @@ sealed interface SheetContent {
     object ExamSelection : SheetContent
 }
 
+sealed interface SettingsUiEvent {
+    data class ShowSnackbar(val message: String, val actionLabel: String? = null) : SettingsUiEvent
+    // You could add other events here later, like:
+    // data object NavigateToProfileScreen : SettingsUiEvent
+}
+
+
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
@@ -51,7 +63,9 @@ class SettingsViewModel @Inject constructor(
     private val voiceRepository: VoiceRepository,
     private val vocabRepository: VocabRepository,
     private val ttsStatsRepository : TTSStatsRepository,
-    private val recallingItemsManager: RecallingItems
+    private val recallingItemsManager: RecallingItems,
+    private val googleTtsInfoRepository: GoogleTTSInfoRepository,
+    private val firestoreRepository:FirestoreRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SettingsUiState())
@@ -62,6 +76,9 @@ class SettingsViewModel @Inject constructor(
 
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
     val playbackState = _playbackState.asStateFlow()
+
+    private val _uiEvent = MutableSharedFlow<SettingsUiEvent>()
+    val uiEvent = _uiEvent.asSharedFlow()
 
     init {
         // This initialization logic is correct and remains the same.
@@ -166,7 +183,7 @@ class SettingsViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateTTSStats( sentence,googleVoice)
-                    ttsStatsRepository.updateUserTTSTokenCount(sentence.count())
+                    ttsStatsRepository.updateUserTTSCounts(sentence.count())
                 }
                 is PlaybackResult.PlayedFromCache -> {}
                 is PlaybackResult.Failure -> {
@@ -203,7 +220,14 @@ class SettingsViewModel @Inject constructor(
                    // pendingExam?.let { userPreferencesRepository.saveSelectedFileName(it.json) }
                 }
                 SheetContent.SpeakerSelection -> {
-                    pendingVoice?.let { userPreferencesRepository.saveSelectedVoiceName(it.id) }
+                    pendingVoice?.let {
+                        val voiceName = it.id
+                        userPreferencesRepository.saveSelectedVoiceName(voiceName)
+                        ttsStatsRepository.updateUserStatField(currentGoogleVoiceName,voiceName)
+
+                        firestoreRepository.fsUpdateUseCurrentGoogleVoice(voiceName)
+                    }
+
                 }
                 SheetContent.Hidden -> { /* Do nothing */ }
             }
@@ -224,12 +248,31 @@ class SettingsViewModel @Inject constructor(
             )
         }
     }
+    fun downloadAndSaveVoiceList() {
+        viewModelScope.launch {
+            _uiEvent.emit(SettingsUiEvent.ShowSnackbar("Fetching voice list..."))
 
-    // --- These functions are now obsolete as their logic is moved into saveSelection() ---
-    // You can safely remove them.
-    /*
-    fun onVoiceSelected(voiceOption: VoiceOption) { ... }
-    fun onExamSelected(exam: ExamDetails) { ... }
-    fun onExamSelectedObsolete(exam: ExamDetails, onComplete: () -> Unit) { ... }
-    */
+            val result = googleTtsInfoRepository.fetchVoices()
+
+            result.onSuccess { voicesResponse ->
+                // Use a Json parser with pretty printing for a readable file
+                val jsonParser = Json { prettyPrint = true }
+                val jsonString = jsonParser.encodeToString(voicesResponse)
+
+                // Save the pretty-printed string to a file
+                val saveResult = googleTtsInfoRepository.saveContentToFile(jsonString, "google_tts_voices.json")
+
+                saveResult.onSuccess { path ->
+                    _uiEvent.emit(SettingsUiEvent.ShowSnackbar(path))
+                }
+                saveResult.onFailure { error ->
+                    _uiEvent.emit(SettingsUiEvent.ShowSnackbar("Error saving file: ${error.message}"))
+                }
+            }
+
+            result.onFailure { error ->
+                _uiEvent.emit(SettingsUiEvent.ShowSnackbar("Error fetching voices: ${error.message}"))
+            }
+        }
+    }
 }

@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.data
 import android.content.Context
 import android.content.SharedPreferences
 import android.icu.util.Calendar
+import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -76,11 +77,12 @@ class TTSStatsRepository @Inject constructor(
 
     // Stat names
     companion object {
-        const val StatMP3PlayedCount = "statMP3PlayedCount"
-        const val StatGPTTotalTokenCount = "statGPTTotalTokenCount"
-        const val StatGPTTokenExecutionCount = "statGPTTokenExecutionCount"
-        const val StatTTSTotalTokenCount = "statTTSTotalTokenCount"
-        const val StatTTSTokenExecutionCount = "statTTSTokenExecutionCount"
+        const val MP3PlayedCount = "mp3PlayedCount"
+        const val GPTTotalTokenCount = "gptTotalTokenCount"
+        const val GPTAPICallCount = "gptAPICallCount"
+        const val TTSTotalCharCount = "ttsTotalCharCount"
+        const val TTSAPICallCount = "ttsAPICallCount"
+        const val currentGoogleVoiceName = "currentGoogleVoiceName"
 
         const val TR_CHARS = "TRChars"
         const val TR_CALLS = "TRCalls"
@@ -350,16 +352,19 @@ class TTSStatsRepository @Inject constructor(
         inc(fsDOC.TTSStats, TTSChars, characters)
         inc(fsDOC.TTSStats, TTSStats)
     }
+    fun updateUserStatField(fieldName:String,value:String) {
+        update(fsDOC.USER,currentGoogleVoiceName,value)
+    }
     fun updateUserPlayedSentenceCount() {
-        inc(fsDOC.USER, StatMP3PlayedCount)
+        inc(fsDOC.USER, MP3PlayedCount)
     }
     fun updateUserStatGPTTotalTokenCount(count:Int) {
-        inc(fsDOC.USER, StatGPTTokenExecutionCount)
-        inc(fsDOC.USER, StatGPTTotalTokenCount,count)
+        inc(fsDOC.USER, GPTAPICallCount)
+        inc(fsDOC.USER, GPTTotalTokenCount,count)
     }
-    fun updateUserTTSTokenCount(count:Int) {
-        inc(fsDOC.USER, StatTTSTokenExecutionCount)
-        inc(fsDOC.USER, StatTTSTotalTokenCount,count)
+    fun updateUserTTSCounts(count:Int) {
+        inc(fsDOC.USER, TTSAPICallCount)
+        inc(fsDOC.USER, TTSTotalCharCount,count)
     }
     fun updateFSCharCount(charcount: Int, sheetname: String = "") {
 
@@ -427,9 +432,10 @@ class TTSStatsRepository @Inject constructor(
         }
     }
 
-    fun checkIfStatsFlushNeeded(): Boolean {
+    fun checkIfStatsFlushNeeded(forced:Boolean = false): Boolean {
 
-        if (BuildConfig.DEBUG){
+        if (forced || BuildConfig.DEBUG){
+            Log.d("TTSStatsRepository","DEBUG or forced = $forced: so flush now. don't rely on dates/times")
             return true
         }
 

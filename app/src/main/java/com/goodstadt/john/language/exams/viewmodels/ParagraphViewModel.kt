@@ -19,11 +19,10 @@ import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -57,9 +56,9 @@ class ParagraphViewModel @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
     private val creditsRepository: CreditsRepository,
+    private val appScope: CoroutineScope
 
-
-    ) : ViewModel() {
+) : ViewModel() {
 
    // private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
 //    private val availableModels99 = LlmModelInfo.entries
@@ -293,7 +292,7 @@ class ParagraphViewModel @Inject constructor(
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
                         ttsStatsRepository.updateTTSStats( sentenceToSpeak,currentVoiceName)
                         ttsStatsRepository.updateUserPlayedSentenceCount()
-                        ttsStatsRepository.updateUserTTSTokenCount(sentenceToSpeak.count())
+                        ttsStatsRepository.updateUserTTSCounts(sentenceToSpeak.count())
                         Log.d("ParagraphViewModel","updateUserTTSTokenCount ${sentenceToSpeak.count()}")
                     }
                     is PlaybackResult.PlayedFromCache -> {
@@ -374,6 +373,14 @@ class ParagraphViewModel @Inject constructor(
     fun resetTokensUsed() {
         viewModelScope.launch {
             userPreferencesRepository.resetTokenCount()
+        }
+    }
+    fun saveDataOnExit() {
+        appScope.launch {
+            if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+            }
         }
     }
 

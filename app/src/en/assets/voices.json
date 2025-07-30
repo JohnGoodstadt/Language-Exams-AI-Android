@@ -12,6 +12,14 @@
 		"friendlyName": "Isla", "gender": 0
 	},
 	{
+		"id": "en-GB-Neural2-B",
+		"friendlyName": "Oliver", "gender": 1
+	},
+	{
+		"id": "en-GB-Neural2-D",
+		"friendlyName": "George", "gender": 1
+	},
+	{
 		"id": "en-GB-News-G",
 		"friendlyName": "Ava", "gender": 0
 	},
@@ -36,17 +44,10 @@
 		"friendlyName": "Julia", "gender": 0
 	},
 	{
-		"id": "en-GB-Wavenet-C",
+		"id": "en-GB-Chirp3-HD-Autonoe",
 		"friendlyName": "Poppy", "gender": 0
 	},
-	{
-		"id": "en-GB-Neural2-B",
-		"friendlyName": "Oliver", "gender": 1
-	},
-	{
-		"id": "en-GB-Neural2-D",
-		"friendlyName": "George", "gender": 1
-	},
+
 	{
 		"id": "en-GB-News-K",
 		"friendlyName": "Noah", "gender": 1
@@ -68,7 +69,7 @@
 		"friendlyName": "Charlie", "gender": 1
 	},
 	{
-		"id": "en-GB-Wavenet-D",
+		"id": "en-GB-Chirp3-HD-Achird",
 		"friendlyName": "John", "gender": 1
 	}
 ]

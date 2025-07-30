@@ -62,9 +62,10 @@ fun CategoryTabScreen(
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
-            // We refresh the cache state every time the screen enters the RESUMED state.
-            if (event == Lifecycle.Event.ON_RESUME) {
+            if (event == Lifecycle.Event.ON_RESUME) {// We refresh the cache state every time the screen enters the RESUMED state. to get accurate stats
                 viewModel.refreshCacheState(selectedVoiceName)
+            }else if (event == Lifecycle.Event.ON_PAUSE) {//reliable signal that the user is leaving the screen.
+                viewModel.saveDataOnExit()
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)

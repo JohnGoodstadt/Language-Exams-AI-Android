@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -18,6 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
@@ -60,6 +64,20 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
                         viewModel.playTrack(word, sentence)
                     }
             )
+        }
+    }
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_PAUSE) {//reliable signal that the user is leaving the screen.
+                viewModel.saveDataOnExit()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+
+        // This is called when the composable leaves the screen
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
         }
     }
 }

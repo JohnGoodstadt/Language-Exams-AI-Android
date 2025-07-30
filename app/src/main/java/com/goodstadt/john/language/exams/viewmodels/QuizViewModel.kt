@@ -224,7 +224,7 @@ class QuizViewModel @Inject constructor(
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateTTSStats( sentence,currentVoiceName)
                     ttsStatsRepository.updateUserPlayedSentenceCount()
-                    ttsStatsRepository.updateUserTTSTokenCount(sentence.count())
+                    ttsStatsRepository.updateUserTTSCounts(sentence.count())
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateUserPlayedSentenceCount()
