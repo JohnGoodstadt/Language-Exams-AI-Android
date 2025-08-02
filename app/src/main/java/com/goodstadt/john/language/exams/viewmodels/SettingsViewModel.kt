@@ -225,7 +225,7 @@ class SettingsViewModel @Inject constructor(
                         userPreferencesRepository.saveSelectedVoiceName(voiceName)
                         ttsStatsRepository.updateUserStatField(currentGoogleVoiceName,voiceName)
 
-                        firestoreRepository.fsUpdateUseCurrentGoogleVoice(voiceName)
+                        firestoreRepository.fsUpdateUserGoogleVoices(voiceName)
                     }
 
                 }

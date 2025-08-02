@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens
 
+import android.util.Log
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -45,6 +46,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
+import com.goodstadt.john.language.exams.data.CreditSystemConfig.BOUGHT_TIER_CREDITS
 import com.goodstadt.john.language.exams.data.UserCredits
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
@@ -70,10 +72,12 @@ fun ParagraphScreen(
 //    val tokenCount by viewModel.totalTokenCount.collectAsState()
 
     val lifecycleOwner = LocalLifecycleOwner.current
+   // val waitTimeText = viewModel.getFormattedWaitTimeLeft()
 
     LaunchedEffect(Unit) {
         delay(600) // GPT model might not have been chosen yet
         viewModel.generateNewParagraph()
+        Log.d("ParagraphScreen","waitTimeText:$viewModel.getFormattedWaitTimeLeft()")
     }
     // Use DisposableEffect to tie logic to the composable's lifecycle.
     DisposableEffect(lifecycleOwner) {
@@ -106,7 +110,7 @@ fun ParagraphScreen(
             // Adds consistent spacing between elements
             verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        if (BuildConfig.DEBUG) {
+        if (false && BuildConfig.DEBUG) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -115,15 +119,15 @@ fun ParagraphScreen(
                     .padding(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+//                Row(
+//                    verticalAlignment = Alignment.CenterVertically,
+//                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+//                ) {
+//                    Text("${uiState.currentLlmModel?.title}")
+//                }
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    Text("${uiState.currentLlmModel?.title}")
-                }
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(2.dp)
                 ) {
                     Text(
                         text = "Calls Used: ${uiState.userCredits.current} / ${uiState.userCredits.total}", // TOKEN_LIMIT needs to be exposed from VM
@@ -133,7 +137,7 @@ fun ParagraphScreen(
                 }
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(2.dp)
                 ) {
                     Button(onClick = { viewModel.resetTokensUsed() }) {
                         Text("Reset Tokens")
@@ -142,6 +146,7 @@ fun ParagraphScreen(
 
             }
         }
+
         // --- Top Section ---
         if (uiState.showCreditsSheet) {
             ModalBottomSheet(
@@ -150,8 +155,10 @@ fun ParagraphScreen(
             ) {
                 CreditsBottomSheetContent(
                     userCredits = uiState.userCredits,
-                    onPurchase = { amount -> viewModel.onPurchaseCredits(amount) },
-                    onTimedRefill = { viewModel.onTimedRefill() }
+                    onPurchase = { amount -> viewModel.onPurchaseCredits(
+                        amount = amount
+                    ) },
+                    onTimedRefill = { viewModel.onTimedRefillClicked() }
                 )
             }
         }
@@ -169,7 +176,6 @@ fun ParagraphScreen(
 
         Button(onClick = {
              viewModel.generateNewParagraph()
-
         },  //enabled = uiState.areCreditsInitialized && uiState.userCredits.current > 0,
             colors = ButtonDefaults.buttonColors(
             containerColor = buttonColor,
@@ -177,6 +183,15 @@ fun ParagraphScreen(
         )) {
             Text("Generate")
         }
+
+        CacheProgressBar(
+            cachedCount = uiState.userCredits.current,
+            totalCount = uiState.userCredits.total,
+            displayLowNumber = false,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 64.dp, vertical = 8.dp)
+        )
 
         Box(
                 modifier = Modifier.height(24.dp), // Reserve space equal to the indicator's size
@@ -192,7 +207,7 @@ fun ParagraphScreen(
         }
 
         // --- Divider ---
-        HorizontalDivider(modifier = Modifier.padding(top = 10.dp))
+        HorizontalDivider(modifier = Modifier.padding(top = 2.dp))
 
 
         // --- Middle Section ---
@@ -219,7 +234,7 @@ fun ParagraphScreen(
             )
         }
         // This Spacer pushes the "Play" button towards the bottom
-        Spacer(modifier = Modifier.weight(1f))
+       // Spacer(modifier = Modifier.weight(1f))
 
         // --- Bottom Section ---
         Button(onClick = { viewModel.speakSentence() }, colors = ButtonDefaults.buttonColors(
@@ -228,6 +243,8 @@ fun ParagraphScreen(
         )) { // Changed from empty lambda
             Text("Play")
         }
+
+
 
         // Adds some padding at the very bottom of the screen
         Spacer(modifier = Modifier.height(16.dp))
@@ -238,18 +255,22 @@ fun ParagraphScreen(
 fun CreditsBottomSheetContent(
     userCredits: UserCredits,
     onPurchase: (Int) -> Unit,
-    onTimedRefill: () -> Unit
+    onTimedRefill: () -> Unit//,
+   // timeLeft: String = "To do"
 ) {
     val waitTimeMillis = (CreditSystemConfig.WAIT_PERIOD_HOURS * 60 * 60 * 1000) - (System.currentTimeMillis() - userCredits.lastRefillTimestamp)
-    val isWaitButtonEnabled = waitTimeMillis <= 0
+   // val isWaitButtonEnabled = waitTimeMillis <= 0
 
     var waitTimeText by remember { mutableStateOf("") }
+
+
     LaunchedEffect(waitTimeMillis) {
         var remaining = waitTimeMillis
         while (remaining > 0) {
             val minutes = (remaining / 1000 / 60) % 60
             val seconds = (remaining / 1000) % 60
-            waitTimeText = "Wait (${String.format("%02d:%02d", minutes, seconds)})"
+            //waitTimeText = "Wait (${String.format("%02d:%02d", minutes, seconds)})"
+            waitTimeText = "Generate ready in ${String.format("%02d minutes", minutes)}"
             delay(1000)
             remaining -= 1000
         }
@@ -262,34 +283,30 @@ fun CreditsBottomSheetContent(
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
         Text("Out of Paragraphs", style = MaterialTheme.typography.headlineSmall)
-        Text("Choose an option to continue.", style = MaterialTheme.typography.bodyMedium)
+       // Text("Choose an option to continue.", style = MaterialTheme.typography.bodyMedium)
 
         Spacer(modifier = Modifier.height(16.dp))
 
+
+        Text(waitTimeText, style = MaterialTheme.typography.bodyMedium)
         // Timed Refill Button
-        Button(
-            onClick = onTimedRefill,
-            enabled = isWaitButtonEnabled,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text(if (isWaitButtonEnabled) "Get 20 Free Paragraphs" else waitTimeText)
-        }
+//        Button(
+//            onClick = onTimedRefill,
+//            enabled = isWaitButtonEnabled,
+//            modifier = Modifier.fillMaxWidth()
+//        ) {
+//            Text(if (isWaitButtonEnabled) "Get 20 Free Paragraphs" else waitTimeText)
+//        }
 
         // IAP Option 1
         Button(
-            onClick = { onPurchase(100) },
+            onClick = { onPurchase(BOUGHT_TIER_CREDITS) },
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Buy 100 Paragraphs for $1.99")
+            Text("Buy $BOUGHT_TIER_CREDITS Paragraphs for $1.99")
         }
 
-        // IAP Option 2
-        Button(
-            onClick = { onPurchase(500) },
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Buy 500 Paragraphs for $2.99")
-        }
+
     }
 }
 

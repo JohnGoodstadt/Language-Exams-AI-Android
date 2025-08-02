@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
+import com.goodstadt.john.language.exams.data.CreditSystemConfig
 import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
@@ -25,6 +26,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 
@@ -213,19 +215,7 @@ class ParagraphViewModel @Inject constructor(
     }
     // --- Functions to be called from the Bottom Sheet ---
 
-    fun onPurchaseCredits(amount: Int) {
-        viewModelScope.launch {
-            creditsRepository.purchaseCredits(amount)
-            hideCreditsSheet()
-        }
-    }
 
-    fun onTimedRefill() {
-        viewModelScope.launch {
-            creditsRepository.applyTimedRefill()
-            hideCreditsSheet()
-        }
-    }
 
     fun hideCreditsSheet() {
         _uiState.update { it.copy(showCreditsSheet = false) }
@@ -372,7 +362,7 @@ class ParagraphViewModel @Inject constructor(
 
     fun resetTokensUsed() {
         viewModelScope.launch {
-            userPreferencesRepository.resetTokenCount()
+            creditsRepository.purchaseCredits(CreditSystemConfig.FREE_TIER_CREDITS)
         }
     }
     fun saveDataOnExit() {
@@ -382,6 +372,65 @@ class ParagraphViewModel @Inject constructor(
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
         }
+    }
+    fun onPurchaseCredits(amount: Int) {
+        viewModelScope.launch {
+            creditsRepository.purchaseCredits(amount)
+            hideCreditsSheet()
+        }
+    }
+
+//    fun onTimedRefill() {
+//        viewModelScope.launch {
+//            creditsRepository.applyTimedRefill()
+//            hideCreditsSheet()
+//        }
+//    }
+    fun onTimedRefillClicked() {
+        viewModelScope.launch {
+            val result = creditsRepository.attemptTimedRefill()
+            result.onSuccess { refillApplied ->
+                if (refillApplied) {
+                    // If the refill was successful, hide the sheet and show a confirmation.
+                    hideCreditsSheet()
+                    //_uiEvent.emit(UiEvent.ShowSnackbar("Your free credits have been refilled!"))
+                } else {
+                    // If not eligible yet, inform the user.
+                   // _uiEvent.emit(UiEvent.ShowSnackbar("Please wait for the cool-down period to end."))
+                }
+            }
+            result.onFailure {
+               // _uiEvent.emit(UiEvent.ShowSnackbar("An error occurred. Please try again."))
+            }
+        }
+    }
+
+    /**
+     * Calculates the remaining wait time in minutes and seconds.
+     * The UI will call this to get the display string.
+     *
+     * @return A formatted string like "Wait (59:30)" or an empty string if not applicable.
+     */
+    fun getFormattedWaitTimeLeft(): String {
+        val credits = _uiState.value.userCredits
+
+        // Only calculate if the user has a refill timestamp and is out of credits.
+        if (credits.lastRefillTimestamp == 0L || credits.current > 0) {
+            return ""
+        }
+
+        val waitPeriodMillis = TimeUnit.HOURS.toMillis(CreditSystemConfig.WAIT_PERIOD_HOURS.toLong())
+        val elapsedTime = System.currentTimeMillis() - credits.lastRefillTimestamp
+        val remainingMillis = waitPeriodMillis - elapsedTime
+
+        if (remainingMillis <= 0) {
+            return "Get Free Refill"
+        }
+
+        val minutes = TimeUnit.MILLISECONDS.toMinutes(remainingMillis)
+        val seconds = TimeUnit.MILLISECONDS.toSeconds(remainingMillis) % 60
+
+        return "Wait (${String.format("%02d:%02d", minutes, seconds)})"
     }
 
 }

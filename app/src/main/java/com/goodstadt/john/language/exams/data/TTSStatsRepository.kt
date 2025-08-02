@@ -353,7 +353,7 @@ class TTSStatsRepository @Inject constructor(
         inc(fsDOC.TTSStats, TTSStats)
     }
     fun updateUserStatField(fieldName:String,value:String) {
-        update(fsDOC.USER,currentGoogleVoiceName,value)
+        update(fsDOC.USER,fieldName,value)
     }
     fun updateUserPlayedSentenceCount() {
         inc(fsDOC.USER, MP3PlayedCount)

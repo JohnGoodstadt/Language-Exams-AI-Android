@@ -11,12 +11,14 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.tasks.await
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
 
 // --- The data classes and config object remain the same ---
 object CreditSystemConfig {
-    const val FREE_TIER_CREDITS = 20
+    const val FREE_TIER_CREDITS = 3//20
+    const val BOUGHT_TIER_CREDITS = 4 //100
     const val WAIT_PERIOD_HOURS = 1
 }
 
@@ -126,17 +128,31 @@ class CreditsRepository @Inject constructor(
      */
     suspend fun purchaseCredits(amount: Int): Result<Unit> {
         val uid = userId ?: return Result.failure(Exception("User not logged in"))
+
         return try {
             val userDocRef = firestore.collection("users").document(uid)
+//            userDocRef.update(
+//                "llmCurrentCredit", FieldValue.increment(amount.toLong()),
+//                "llmTotalCredit", FieldValue.increment(amount.toLong())
+//            ).await()
+
+            val current = (_userCredits.value?.current ?: 0) + amount
+           // val total = (_userCredits.value?.total ?: 0) + amount
+
             userDocRef.update(
-                "llmCurrentCredit", FieldValue.increment(amount.toLong()),
-                "llmTotalCredit", FieldValue.increment(amount.toLong())
+                "llmCurrentCredit",current.toLong(),
+                "llmTotalCredit", current.toLong() //total same as current
             ).await()
 
             // On success, manually update our in-memory state
+//            _userCredits.update { it?.copy(
+//                current = it.current + amount,
+//                total = it.total + amount
+//            )}
+
             _userCredits.update { it?.copy(
-                current = it.current + amount,
-                total = it.total + amount
+                current = current,
+                total =  current
             )}
 
             Result.success(Unit)
@@ -168,6 +184,84 @@ class CreditsRepository @Inject constructor(
             )}
 
             Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    suspend fun applyRefill(): Result<Unit> {
+        val uid = userId ?: return Result.failure(Exception("User not logged in"))
+
+        return try {
+            val userDocRef = firestore.collection("users").document(uid)
+            val timestamp = System.currentTimeMillis()
+            val updateData = mapOf(
+                "llmCurrentCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
+                "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
+                "llmLastRefillTimestamp" to timestamp
+            )
+            userDocRef.update(updateData).await()
+
+            // On success, manually update our in-memory state
+            _userCredits.update { it?.copy(
+                current = CreditSystemConfig.FREE_TIER_CREDITS,
+                total = CreditSystemConfig.FREE_TIER_CREDITS,
+                lastRefillTimestamp = timestamp
+            )}
+
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+    // ... inside CreditsRepository class ...
+
+    /**
+     * Checks if the user is eligible for a timed refill (i.e., they are out of credits
+     * and the wait period has passed). If eligible, it resets their credits to the free
+     * tier amount and updates the last refill timestamp.
+     *
+     * @return A Result containing 'true' if a refill was successfully applied,
+     *         'false' if the user was not eligible, or an Exception on failure.
+     */
+    suspend fun attemptTimedRefill(): Result<Boolean> {
+        val uid = userId ?: return Result.failure(Exception("User not logged in"))
+        val currentCredits = _userCredits.value ?: return Result.failure(Exception("Credits not loaded"))
+
+        // Condition 1: User must be out of credits.
+        if (currentCredits.current > 0) {
+            return Result.success(false) // Not eligible, has credits
+        }
+
+        // Condition 2: Check if the cool-down period has passed.
+        val waitPeriodMillis = TimeUnit.HOURS.toMillis(CreditSystemConfig.WAIT_PERIOD_HOURS.toLong())
+        val timeSinceLastRefill = System.currentTimeMillis() - currentCredits.lastRefillTimestamp
+
+        if (timeSinceLastRefill < waitPeriodMillis) {
+            return Result.success(false) // Not eligible, still in cool-down
+        }
+
+        // If both conditions are met, proceed with the refill.
+        Log.d("CreditsRepository", "User is eligible for a timed refill. Applying now.")
+        return try {
+            val userDocRef = firestore.collection("users").document(uid)
+            val timestamp = System.currentTimeMillis()
+            val updateData = mapOf(
+                "llmCurrentCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
+                "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
+                "llmLastRefillTimestamp" to timestamp
+            )
+            userDocRef.update(updateData).await()
+
+            // Manually update our in-memory state
+            _userCredits.update {
+                it?.copy(
+                    current = CreditSystemConfig.FREE_TIER_CREDITS,
+                    total = CreditSystemConfig.FREE_TIER_CREDITS,
+                    lastRefillTimestamp = timestamp
+                )
+            }
+            Result.success(true) // Refill was successful
         } catch (e: Exception) {
             Result.failure(e)
         }

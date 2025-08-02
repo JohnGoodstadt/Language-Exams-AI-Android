@@ -260,7 +260,6 @@ class CategoryTabViewModel @Inject constructor(
         // We use appScope to ensure this save operation completes even if the
         // viewModelScope is paused or cancelled as the user navigates away.
         appScope.launch {
-            Log.d("ViewModelLifecycle", "Saving data because screen is no longer active.")
             if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
