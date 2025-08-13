@@ -1,8 +1,10 @@
 package com.goodstadt.john.language.exams.viewmodels
 
 import android.util.Log
+import android.util.Log.DEBUG
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
@@ -20,6 +22,7 @@ import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.google.firebase.Timestamp
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -28,7 +31,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
+import java.util.Locale
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
@@ -95,6 +101,7 @@ class ParagraphViewModel @Inject constructor(
         // --- THIS IS THE UPDATED LOGIC ---
         // Call the new one-time fetch function to populate the repository's state.
         viewModelScope.launch {
+            Log.d("ParagraphVM", "calling initialFetchAndSetupCredits()",)
             val result = creditsRepository.initialFetchAndSetupCredits()
             result.onFailure { error ->
                 _uiState.update { it.copy(
@@ -103,6 +110,40 @@ class ParagraphViewModel @Inject constructor(
                 )}
                 Log.e("ParagraphVM", "Failed to setup free tier", error)
             }
+            result.onSuccess {
+                Log.e("ParagraphVM", "initialFetchAndSetupCredits OK",)
+                Log.d("ParagraphVM", "see if still in countdown?",)
+                Log.e("ParagraphVM", "freeTierCredits:${creditsRepository.freeTierCredits.value}",)
+                Log.e("ParagraphVM", "nextCreditRefillDate:${creditsRepository.nextCreditRefillDate.value}",)
+                Log.e("ParagraphVM", "llmCurrentCredit:${uiState.value.userCredits.current}")
+                Log.e("ParagraphVM", "llmNextCreditRefill:${uiState.value.userCredits.llmNextCreditRefill.toDate()}")
+                Log.e("ParagraphVM", "waitingForCredits:${uiState.value.waitingForCredits}")
+
+                if (uiState.value.userCredits.current <= 0){
+//                    val targetDate: Date = uiState.value.userCredits.llmNextCreditRefill.toDate()
+                    val targetDate: Date = creditsRepository.nextCreditRefillDate.value ?: Date()
+                    val now = Date()
+//
+                    println("comparing  and $now and $targetDate")
+                    if (now.before(targetDate)) {
+                        // ts is in the past
+                        println("Still counting down")
+                        _uiState.update { it.copy(waitingForCredits = true,areCreditsInitialized = true ) }
+                        var userCredits = uiState.value.userCredits
+//                        userCredits.llmNextCreditRefill = Timestamp((0,0))
+                        val nd = creditsRepository.nextCreditRefillDate
+                        val td = targetDate
+                        creditsRepository.setNextCreditRefillDate(targetDate)
+
+                    } else {
+                        println("Expired counting")
+                    }
+                }
+            }
+
+
+
+
         }
 
     }
@@ -174,7 +215,7 @@ class ParagraphViewModel @Inject constructor(
                     userQuestion = userQuestion
                 )
 
-                if (DEBUG) {
+                if (BuildConfig.DEBUG) {
                     val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
 
                     println("Total tokens: ${result.totalTokens}")
@@ -400,61 +441,13 @@ class ParagraphViewModel @Inject constructor(
         }
     }
 
-//    fun onTimedRefill() {
-//        viewModelScope.launch {
-//            creditsRepository.applyTimedRefill()
-//            hideCreditsSheet()
-//        }
-//    }
-    fun onTimedRefillClicked() {
-        viewModelScope.launch {
-            val result = creditsRepository.attemptTimedRefill()
-            result.onSuccess { refillApplied ->
-                if (refillApplied) {
-                    // If the refill was successful, hide the sheet and show a confirmation.
-                    hideCreditsSheet()
-                    //_uiEvent.emit(UiEvent.ShowSnackbar("Your free credits have been refilled!"))
-                } else {
-                    // If not eligible yet, inform the user.
-                   // _uiEvent.emit(UiEvent.ShowSnackbar("Please wait for the cool-down period to end."))
-                }
-            }
-            result.onFailure {
-               // _uiEvent.emit(UiEvent.ShowSnackbar("An error occurred. Please try again."))
-            }
-        }
-    }
 
-    /**
-     * Calculates the remaining wait time in minutes and seconds.
-     * The UI will call this to get the display string.
-     *
-     * @return A formatted string like "Wait (59:30)" or an empty string if not applicable.
-     */
-    fun getFormattedWaitTimeLeft(): String {
-        val credits = _uiState.value.userCredits
 
-        // Only calculate if the user has a refill timestamp and is out of credits.
-        if (credits.lastRefillTimestamp == 0L || credits.current > 0) {
-            return ""
-        }
 
-        val waitPeriodMillis = TimeUnit.HOURS.toMillis(CreditSystemConfig.WAIT_PERIOD_MINUTES.toLong())
-        val elapsedTime = System.currentTimeMillis() - credits.lastRefillTimestamp
-        val remainingMillis = waitPeriodMillis - elapsedTime
-
-        if (remainingMillis <= 0) {
-            return "Get Free Refill"
-        }
-
-        val minutes = TimeUnit.MILLISECONDS.toMinutes(remainingMillis)
-        val seconds = TimeUnit.MILLISECONDS.toSeconds(remainingMillis) % 60
-
-        return "Wait (${String.format("%02d:%02d", minutes, seconds)})"
-    }
 
     //from swift
     fun secondsRemaining(now: Date = Date()): Int {
+//        val NCRD = _uiState.value.userCredits.llmNextCreditRefill
         val NCRD = creditsRepository.nextCreditRefillDate.value
 
         println("secondsRemaining.nextCreditRefillDate: $NCRD ")
@@ -474,6 +467,23 @@ class ParagraphViewModel @Inject constructor(
             "%02dm %02ds".format(minutes, secs)
         }
     }
+    fun formatDateSmart(date: Date): String {
+        println("formatDateSmart: $date")
+        val now = Calendar.getInstance()
+        val cal = Calendar.getInstance().apply { time = date }
+
+        val isToday = now.get(Calendar.YEAR) == cal.get(Calendar.YEAR) &&
+                now.get(Calendar.DAY_OF_YEAR) == cal.get(Calendar.DAY_OF_YEAR)
+
+        return if (isToday) {
+            // Show only hour and minute
+            SimpleDateFormat("HH:mm", Locale.getDefault()).format(date)
+            // Or for 12-hour with AM/PM: SimpleDateFormat("h:mm a", Locale.getDefault()).format(date)
+        } else {
+            // Show day and month
+            SimpleDateFormat("dd MMM", Locale.getDefault()).format(date)
+        }
+    }
     suspend fun clearWaitPeriod() {
 
         val freeTierCredits = UserCredits(
@@ -491,5 +501,13 @@ class ParagraphViewModel @Inject constructor(
 
         creditsRepository.clearWaitPeriod()
     }
+
+    fun getFormattedCreditRepositoryDate() : String {
+        return formatDateSmart(creditsRepository.nextCreditRefillDate.value ?: Date())
+    }
+//    fun getCreditRepositoryDate() : Date {
+//        return creditsRepository.nextCreditRefillDate.value ?: Date()
+//    }
+
 
 }

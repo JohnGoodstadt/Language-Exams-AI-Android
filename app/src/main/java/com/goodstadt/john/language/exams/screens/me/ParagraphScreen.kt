@@ -263,7 +263,8 @@ fun ParagraphScreen(
 
             Column {
                 Text("Wait: ${viewModel.formattedCountdown(now)}")
-                Text("Next refill at:")
+//                Text("Next refill at:${uiState.userCredits.llmNextCreditRefill.toDate()}")
+                Text("Next refill at:${viewModel.getFormattedCreditRepositoryDate()}")
             }
         } else {
             Text("Credits left: ${uiState.userCredits.current}")
@@ -292,64 +293,7 @@ fun ParagraphScreen(
     } //:Column
 }
 
-@Composable
-fun CreditsBottomSheetContent(
-    userCredits: UserCredits,
-    onPurchase: (Int) -> Unit,
-    onTimedRefill: () -> Unit//,
-   // timeLeft: String = "To do"
-) {
-    val waitTimeMillis = (CreditSystemConfig.WAIT_PERIOD_MINUTES * 60 * 60 * 1000) - (System.currentTimeMillis() - userCredits.lastRefillTimestamp)
-   // val isWaitButtonEnabled = waitTimeMillis <= 0
 
-    var waitTimeText by remember { mutableStateOf("") }
-
-
-    LaunchedEffect(waitTimeMillis) {
-        var remaining = waitTimeMillis
-        while (remaining > 0) {
-            val minutes = (remaining / 1000 / 60) % 60
-            val seconds = (remaining / 1000) % 60
-            //waitTimeText = "Wait (${String.format("%02d:%02d", minutes, seconds)})"
-            waitTimeText = "Generate ready in ${String.format("%02d minutes", minutes)}"
-            delay(1000)
-            remaining -= 1000
-        }
-        waitTimeText = "Get Free Refill"
-    }
-
-    Column(
-        modifier = Modifier.padding(16.dp).navigationBarsPadding(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        Text("Out of Paragraphs", style = MaterialTheme.typography.headlineSmall)
-       // Text("Choose an option to continue.", style = MaterialTheme.typography.bodyMedium)
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-
-        Text(waitTimeText, style = MaterialTheme.typography.bodyMedium)
-        // Timed Refill Button
-//        Button(
-//            onClick = onTimedRefill,
-//            enabled = isWaitButtonEnabled,
-//            modifier = Modifier.fillMaxWidth()
-//        ) {
-//            Text(if (isWaitButtonEnabled) "Get 20 Free Paragraphs" else waitTimeText)
-//        }
-
-        // IAP Option 1
-        Button(
-            onClick = { onPurchase(BOUGHT_TIER_CREDITS) },
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Buy $BOUGHT_TIER_CREDITS Paragraphs for $1.99")
-        }
-
-
-    }
-}
 
 // A @Preview function allows you to see your Composable in the design view of Android Studio.
 @Preview(showBackground = true)

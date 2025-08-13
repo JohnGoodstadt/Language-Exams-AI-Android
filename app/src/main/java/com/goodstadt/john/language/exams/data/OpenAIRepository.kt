@@ -187,7 +187,7 @@ class OpenAIRepository @Inject constructor() {
         llmEngine: String,
         systemMessage: String,
         userQuestion: String
-    ): LlmResponse { // <-- Change the return type
+    ):  com.goodstadt.john.language.exams.data.LlmResponse { // <-- Change the return type
         // ... your existing Ktor client and request setup logic ...
 
         val requestBody = OpenAIRequest(

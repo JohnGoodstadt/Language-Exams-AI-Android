@@ -5,6 +5,7 @@ import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.IgnoreExtraProperties
 import com.google.firebase.firestore.SetOptions
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -30,7 +31,8 @@ object CreditSystemConfig {
 data class UserCredits(
     val current: Int = 0,
     val total: Int = 0,
-    val lastRefillTimestamp: Long = 0L
+//    val lastRefillTimestamp: Long = 0L,
+    val llmNextCreditRefill: Timestamp = Timestamp(0,0)
 )
 
 @Singleton
@@ -66,15 +68,18 @@ class CreditsRepository @Inject constructor(
     /**
      * A private data class that exactly matches the field names in the Firestore document.
      */
+    @IgnoreExtraProperties
     private data class UserCreditsFirestore(
         val llmCurrentCredit: Int = 0,
         val llmTotalCredit: Int = 0,
-        val llmLastRefillTimestamp: Long = 0L
+//        val llmLastRefillTimestamp: Long = 0L,
+        val llmNextCreditRefill: Timestamp =  Timestamp(0,0)
     ) {
         fun toUserCredits() = UserCredits(
             current = llmCurrentCredit,
             total = llmTotalCredit,
-            lastRefillTimestamp = llmLastRefillTimestamp
+//            lastRefillTimestamp = llmLastRefillTimestamp,
+            llmNextCreditRefill = llmNextCreditRefill
         )
     }
     /** Loads user credit info — can be called from viewModelScope.launch {} in UI */
@@ -134,8 +139,7 @@ class CreditsRepository @Inject constructor(
 
                 val freeTierData = mapOf(
                     "llmCurrentCredit" to freeTierCredits.current,
-                    "llmTotalCredit" to freeTierCredits.total,
-                    "llmLastRefillTimestamp" to 0L
+                    "llmTotalCredit" to freeTierCredits.total
                 )
 
                 userDocRef.set(freeTierData, SetOptions.merge()).await()
@@ -147,11 +151,12 @@ class CreditsRepository @Inject constructor(
                 val existingCredits = doc.toObject(UserCreditsFirestore::class.java)!!.toUserCredits()
                 // Update the local, in-memory state
                 _userCredits.value = existingCredits
-                Log.d("CreditsRepository","$existingCredits")
+                _nextCreditRefillDate.value = existingCredits.llmNextCreditRefill.toDate()
+                Log.d("CreditsRepository","existingCredits:$existingCredits")
             }
             Result.success(Unit)
         } catch (e: Exception) {
-            e.localizedMessage?.let { Log.d("CreditsRepository", it) }
+            e.localizedMessage?.let { Log.e("CreditsRepository", it) }
             Result.failure(e)
         }
     }
@@ -235,16 +240,17 @@ class CreditsRepository @Inject constructor(
             val timestamp = System.currentTimeMillis()
             val updateData = mapOf(
                 "llmCurrentCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
-                "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
-                "llmLastRefillTimestamp" to timestamp
+                "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS
+//                "llmLastRefillTimestamp" to timestamp
             )
             userDocRef.update(updateData).await()
 
             // On success, manually update our in-memory state
             _userCredits.update { it?.copy(
                 current = CreditSystemConfig.FREE_TIER_CREDITS,
-                total = CreditSystemConfig.FREE_TIER_CREDITS,
-                lastRefillTimestamp = timestamp
+                total = CreditSystemConfig.FREE_TIER_CREDITS
+//                lastRefillTimestamp = timestamp,
+//                llmNextCreditRefill = timestamp
             )}
 
             Result.success(Unit)
@@ -261,8 +267,8 @@ class CreditsRepository @Inject constructor(
             val timestamp = System.currentTimeMillis()
             val updateData = mapOf(
                 "llmCurrentCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
-                "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
-                "llmLastRefillTimestamp" to timestamp
+                "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS
+//                "llmLastRefillTimestamp" to timestamp
             )
             userDocRef.update(updateData).await()
 
@@ -270,7 +276,7 @@ class CreditsRepository @Inject constructor(
             _userCredits.update { it?.copy(
                 current = CreditSystemConfig.FREE_TIER_CREDITS,
                 total = CreditSystemConfig.FREE_TIER_CREDITS,
-                lastRefillTimestamp = timestamp
+                llmNextCreditRefill = Timestamp(0,0)
             )}
 
             Result.success(Unit)
@@ -288,48 +294,7 @@ class CreditsRepository @Inject constructor(
      * @return A Result containing 'true' if a refill was successfully applied,
      *         'false' if the user was not eligible, or an Exception on failure.
      */
-    suspend fun attemptTimedRefill(): Result<Boolean> {
-        val uid = userId ?: return Result.failure(Exception("User not logged in"))
-        val currentCredits = _userCredits.value ?: return Result.failure(Exception("Credits not loaded"))
 
-        // Condition 1: User must be out of credits.
-        if (currentCredits.current > 0) {
-            return Result.success(false) // Not eligible, has credits
-        }
-
-        // Condition 2: Check if the cool-down period has passed.
-        val waitPeriodMillis = TimeUnit.HOURS.toMillis(CreditSystemConfig.WAIT_PERIOD_MINUTES.toLong())
-        val timeSinceLastRefill = System.currentTimeMillis() - currentCredits.lastRefillTimestamp
-
-        if (timeSinceLastRefill < waitPeriodMillis) {
-            return Result.success(false) // Not eligible, still in cool-down
-        }
-
-        // If both conditions are met, proceed with the refill.
-        Log.d("CreditsRepository", "User is eligible for a timed refill. Applying now.")
-        return try {
-            val userDocRef = firestore.collection("users").document(uid)
-            val timestamp = System.currentTimeMillis()
-            val updateData = mapOf(
-                "llmCurrentCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
-                "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
-                "llmLastRefillTimestamp" to timestamp
-            )
-            userDocRef.update(updateData).await()
-
-            // Manually update our in-memory state
-            _userCredits.update {
-                it?.copy(
-                    current = CreditSystemConfig.FREE_TIER_CREDITS,
-                    total = CreditSystemConfig.FREE_TIER_CREDITS,
-                    lastRefillTimestamp = timestamp
-                )
-            }
-            Result.success(true) // Refill was successful
-        } catch (e: Exception) {
-            Result.failure(e)
-        }
-    }
     //from swift
     suspend fun setCredits(newCredits: Int) {
         _freeTierCredits.value = newCredits
@@ -386,7 +351,9 @@ class CreditsRepository @Inject constructor(
             .set(mapOf(llmNextCreditRefillField to Timestamp(targetDate)), SetOptions.merge())
             .await()
     }
-
+    fun setNextCreditRefillDate(date:Date){
+       _nextCreditRefillDate.value = date
+    }
     suspend fun clearWaitPeriod() {
         val userId = auth.currentUser?.uid ?: return
         _isInWaitPeriod.value = false
