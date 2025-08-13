@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.models
 
+
 data class CallCost(
     val inputTokens: Int,
     val outputTokens: Int,

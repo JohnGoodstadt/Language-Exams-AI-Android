@@ -62,9 +62,10 @@ fun CategoryTabScreen(
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
-            // We refresh the cache state every time the screen enters the RESUMED state.
-            if (event == Lifecycle.Event.ON_RESUME) {
+            if (event == Lifecycle.Event.ON_RESUME) {// We refresh the cache state every time the screen enters the RESUMED state. to get accurate stats
                 viewModel.refreshCacheState(selectedVoiceName)
+            }else if (event == Lifecycle.Event.ON_PAUSE) {//reliable signal that the user is leaving the screen.
+                viewModel.saveDataOnExit()
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
@@ -272,11 +273,13 @@ private fun scrollToCategory(
 fun CacheProgressBar(
     cachedCount: Int,
     totalCount: Int,
+    displayIfZero:Boolean = false,
+    displayLowNumber:Boolean = true,
     modifier: Modifier = Modifier
 ) {
     // This 'if' check replaces SwiftUI's .opacity() modifier.
     // The entire composable will not be part of the UI if the count is zero.
-    if (cachedCount > 0) {
+    if (!displayIfZero || cachedCount > 0) {
         // Calculate progress as a float between 0.0 and 1.0
         val progress = if (totalCount > 0) {
             cachedCount.toFloat() / totalCount.toFloat()
@@ -289,10 +292,12 @@ fun CacheProgressBar(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
-            Text(
-                text = "$cachedCount",
-                style = MaterialTheme.typography.labelSmall
-            )
+            if (displayLowNumber) {
+                Text(
+                    text = "$cachedCount",
+                    style = MaterialTheme.typography.labelSmall
+                )
+            }
             // Use a weight modifier to make the progress bar fill the available space
             LinearProgressIndicator(
                 progress = { progress },

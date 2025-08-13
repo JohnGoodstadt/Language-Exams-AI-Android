@@ -1,35 +1,43 @@
 package com.goodstadt.john.language.exams.viewmodels
 
 import android.util.Log
+import android.util.Log.DEBUG
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
+import com.goodstadt.john.language.exams.data.CreditSystemConfig
+import com.goodstadt.john.language.exams.data.CreditSystemConfig.FREE_TIER_CREDITS
+import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.managers.TokenTopUpOption
-import com.goodstadt.john.language.exams.managers.TokenUsageManager
 import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.Timestamp
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.tasks.await
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
-//import com.goodstadt.john.language.exams.data.LlmResponse
 
 val DEFAULT_GPT = "GPT-4.1-nano"
 // This data class will hold all the dynamic state for our screen later.
@@ -42,10 +50,13 @@ data class ParagraphUiState(
     val highlightedWords: Set<String> = emptySet(), // <-- ADD THIS
     val error: String? = null, // <-- Add this for showing errors
     val availableModels: List<LlmModelInfo> = emptyList(),
-    val currentLlmModel: LlmModelInfo? = null
+    val currentLlmModel: LlmModelInfo? = null,
+    val areCreditsInitialized: Boolean = false,
+    val waitingForCredits: Boolean = false, // To control the bottom sheet
+    val userCredits: UserCredits = UserCredits() // To display current credits
 )
 
-//private const val TOKEN_LIMIT = 2000
+private const val TOKEN_LIMIT = 2000
 
 @HiltViewModel
 class ParagraphViewModel @Inject constructor(
@@ -55,54 +66,117 @@ class ParagraphViewModel @Inject constructor(
     private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
+    private val creditsRepository: CreditsRepository,
+    private val appScope: CoroutineScope
 
+) : ViewModel() {
 
-    ) : ViewModel() {
-
+   // private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
+//    private val availableModels99 = LlmModelInfo.entries
 
 //    val totalTokenCount = userPreferencesRepository.totalTokenCountFlow
 //        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
 
-    private val _uiState = MutableStateFlow(ParagraphUiState(), )
+    private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
 
-    private val _showTokenDialog = MutableStateFlow(false)
-    val showTokenDialog = _showTokenDialog.asStateFlow()
-
-    private val _canWait = MutableStateFlow(true)
-    val canWait = _canWait.asStateFlow()
-
-    private val _tokenBalance = MutableStateFlow(0)
-    val tokenBalance = _tokenBalance.asStateFlow()
-
-    val tokenLimit = TokenUsageManager.freeTokens
-   // val tokenLimit = 4600 //gives about 20 calls
-
-    private var retryAction: (() -> Unit)? = null
+//    private val _nextCreditRefillDate = MutableStateFlow<Date?>(null)
+//    val nextCreditRefillDate: StateFlow<Date?> = _nextCreditRefillDate.asStateFlow()
 
     init{
         loadLlmModels()
-    }
-    private fun fetchTokenBalance() {
-        viewModelScope.launch {
-            val balance = TokenUsageManager.getCurrentTokenBalance()
-            _tokenBalance.value = balance
 
-            Log.d("fetchTokenBalance","Balance :${_tokenBalance.value}")
+        // This listener ensures that any change to the in-memory state in the
+        // repository is immediately reflected in this ViewModel's UI state.
+        viewModelScope.launch {
+            creditsRepository.userCreditsFlow.collect { credits ->
+                // Once we receive the first valid credit object, we can consider it initialized.
+                _uiState.update { it.copy(
+                    userCredits = credits,
+                    areCreditsInitialized = true
+                )}
+            }
+        }
+
+        // --- THIS IS THE UPDATED LOGIC ---
+        // Call the new one-time fetch function to populate the repository's state.
+        viewModelScope.launch {
+            Log.d("ParagraphVM", "calling initialFetchAndSetupCredits()",)
+            val result = creditsRepository.initialFetchAndSetupCredits()
+            result.onFailure { error ->
+                _uiState.update { it.copy(
+                    error = "Could not initialize user credits.",
+                    areCreditsInitialized = true // Unblock UI even on failure
+                )}
+                Log.e("ParagraphVM", "Failed to setup free tier", error)
+            }
+            result.onSuccess {
+                Log.e("ParagraphVM", "initialFetchAndSetupCredits OK",)
+                Log.d("ParagraphVM", "see if still in countdown?",)
+                Log.e("ParagraphVM", "freeTierCredits:${creditsRepository.freeTierCredits.value}",)
+                Log.e("ParagraphVM", "nextCreditRefillDate:${creditsRepository.nextCreditRefillDate.value}",)
+                Log.e("ParagraphVM", "llmCurrentCredit:${uiState.value.userCredits.current}")
+                Log.e("ParagraphVM", "llmNextCreditRefill:${uiState.value.userCredits.llmNextCreditRefill.toDate()}")
+                Log.e("ParagraphVM", "waitingForCredits:${uiState.value.waitingForCredits}")
+
+                if (uiState.value.userCredits.current <= 0){
+//                    val targetDate: Date = uiState.value.userCredits.llmNextCreditRefill.toDate()
+                    val targetDate: Date = creditsRepository.nextCreditRefillDate.value ?: Date()
+                    val now = Date()
+//
+                    println("comparing  and $now and $targetDate")
+                    if (now.before(targetDate)) {
+                        // ts is in the past
+                        println("Still counting down")
+                        _uiState.update { it.copy(waitingForCredits = true,areCreditsInitialized = true ) }
+                        var userCredits = uiState.value.userCredits
+//                        userCredits.llmNextCreditRefill = Timestamp((0,0))
+                        val nd = creditsRepository.nextCreditRefillDate
+                        val td = targetDate
+                        creditsRepository.setNextCreditRefillDate(targetDate)
+
+                    } else {
+                        println("Expired counting")
+                    }
+                }
+            }
+
+
+
 
         }
+
     }
-    fun resetTokenBalanceForDebug() {
-        viewModelScope.launch {
-            val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@launch
-            FirebaseFirestore.getInstance().collection("users").document(uid)
-                .update(TokenUsageManager.firestoreCurrentToken, TokenUsageManager.freeTokens).await()
-            fetchTokenBalance()
-        }
-    }
+    //private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
+    //val uiState = _uiState.asStateFlow()
+
     fun generateNewParagraph() {
         viewModelScope.launch {
+            val currentState = _uiState.value
 
+            // --- THE NEW, ROBUST CHECK ---
+            // 1. Wait until credits are initialized.
+            // 2. Then check if the count is zero or less.
+            if (currentState.areCreditsInitialized && currentState.userCredits.current <= 0) {
+                Log.w("ParagraphVM", "User is out of credits. Showing sheet.")
+                _uiState.update { it.copy(waitingForCredits = true) }
+                return@launch
+            }
+
+            // Optionally, you can prevent generation if credits aren't initialized yet,
+            // though the user would have to be incredibly fast to tap the button.
+            if (!currentState.areCreditsInitialized) {
+                _uiState.update { it.copy(error = "Initializing credits, please wait...") }
+                return@launch
+            }
+
+            val currentCredits = _uiState.value.userCredits.current
+
+            if (currentCredits <= 0) {
+                Log.w("ParagraphVM", "User is out of credits. Showing sheet.")
+                _uiState.update { it.copy(waitingForCredits = true) }
+                return@launch
+            }
 
 //            val currentTokenCount = userPreferencesRepository.totalTokenCountFlow.first()
 //            if (currentTokenCount >= TOKEN_LIMIT) {
@@ -112,29 +186,7 @@ class ParagraphViewModel @Inject constructor(
 //                return@launch // Stop execution immediately
 //            }
 
-
-           // _uiState.update { it.copy(isLoading = true, error = null) }
-
-            val hasEnough = TokenUsageManager.checkTokenAvailability()
-
-            if (hasEnough) {
-                Log.d("ParagraphVM","We have some tokens left")
-                _uiState.update { it.copy(isLoading = true, error = null) }
-                generateNewParagraphInternal()
-            } else {
-                Log.d("ParagraphVM","No tokens left")
-                _uiState.update { it.copy(isLoading = false, error = null) }
-                val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@launch
-                val snapshot = FirebaseFirestore.getInstance().collection("users").document(uid).get().await()
-                val lastTopUp = snapshot.getLong("lastTopUp") ?: 0L
-                val now = System.currentTimeMillis()
-                _canWait.value = now - lastTopUp >= TokenUsageManager.waitDurationMillis
-
-                _showTokenDialog.value = true
-                retryAction = { generateNewParagraph() }
-            }
-/*
-
+            _uiState.update { it.copy(isLoading = true, error = null) }
 
             try {
                 // Phase 1: Get words from local data
@@ -157,19 +209,14 @@ class ParagraphViewModel @Inject constructor(
 
                 val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
 
-                //Do the call
                 val llmResponse = openAIRepository.fetchOpenAIData(
                     llmEngine = llmEngine,
                     systemMessage = systemMessage,
                     userQuestion = userQuestion
                 )
 
-                val totalTokensUsed = llmResponse.totalTokensUsed
-                val completionTokens = llmResponse.completionTokens
-                val promptTokens = llmResponse.promptTokens
-
-                if (DEBUG) {
-                    val result = calculateCallCost(promptTokens, completionTokens)
+                if (BuildConfig.DEBUG) {
+                    val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
 
                     println("Total tokens: ${result.totalTokens}")
                     println("Estimated characters (for TTS): ${result.estimatedCharacters}")
@@ -179,12 +226,33 @@ class ParagraphViewModel @Inject constructor(
                     println("Total cost: $${"%.6f".format(result.totalCostUSD)}")
                 }
 
-                userPreferencesRepository.incrementTokenCount(totalTokensUsed)
-//                ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
+
+                val totalTokensUsed = llmResponse.totalTokensUsed
+
+                ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
+
+                println("current credits A: ${_uiState.value.userCredits.current}")
+
+                creditsRepository.decrementCredit(
+                    llmResponse.promptTokens,
+                    llmResponse.completionTokens,
+                    totalTokensUsed
+                )
+
+                println("current credits B: ${_uiState.value.userCredits.current}")
+                //check seconds to go
+//                val currentUIState = _uiState.value
+
+                if (_uiState.value.userCredits.current <= 0){
+                    val FRED = secondsRemaining()
+                    println("seconds to go: $FRED")
+
+                }
+
 
                 // Phase 3: Update the UI with the response
                 // Simple parsing, you can make this more robust
-                val sentence = llmResponse.content.substringAfter("[").substringBefore("]")
+                val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
                // val translation = llmResponse.content.substringAfter("{").substringBefore("}")
 
 
@@ -194,7 +262,8 @@ class ParagraphViewModel @Inject constructor(
                             isLoading = false,
                             generatedSentence = sentence.ifBlank { "Could not parse sentence." },
                             translation = "",//translation.ifBlank { "Could not parse translation." },
-                            highlightedWords = wordsToHighlight.toSet() // <-- SET THE WORDS HERE
+                            highlightedWords = wordsToHighlight.toSet(),
+                            waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
                     )
                 }
 
@@ -203,93 +272,14 @@ class ParagraphViewModel @Inject constructor(
 //                _uiState.update { it.copy(isLoading = false, error = e.message) }
                 _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
             }
-             */
-
         }
     }
-    private suspend fun generateNewParagraphInternal() {
-        try {
-            val fileName = userPreferencesRepository.selectedFileNameFlow.first()
-            val vocabFile = vocabRepository.getVocabData(fileName).getOrNull()
-                ?: throw Exception("Could not load vocabulary file.")
+    // --- Functions to be called from the Bottom Sheet ---
 
-            val wordsToHighlight = getLanguageSpecificWords(vocabFile)
-            val wordsForPrompt = wordsToHighlight.joinToString(", ")
-            val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-            val llmEngine = uiState.value.currentLlmModel?.id ?: DEFAULT_GPT
-            val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
-            val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
 
-            val llmResponse = openAIRepository.fetchOpenAIData(
-                llmEngine = llmEngine,
-                systemMessage = systemMessage,
-                userQuestion = userQuestion
-            )
 
-            if (DEBUG) {
-                val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
-
-                println("Total tokens: ${result.totalTokens}")
-                println("Estimated characters (for TTS): ${result.estimatedCharacters}")
-                println("TTS cost: $${"%.6f".format(result.ttsCostUSD)}")
-                println("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
-                println("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
-                println("Total cost: $${"%.6f".format(result.totalCostUSD)}")
-            }
-
-            val totalTokensUsed = llmResponse.totalTokensUsed
-//            Log.d("paragraphVM","Balancec 1:${_tokenBalance.value}")
-            TokenUsageManager.deductTokens(totalTokensUsed)
-//            Log.d("paragraphVM","Balance 2:${_tokenBalance.value}")
-            fetchTokenBalance()
-//            Log.d("paragraphVM","Balance 3:${_tokenBalance.value}")
-
-            val sentence = llmResponse.content.substringAfter("[").substringBefore("]")
-
-            _uiState.update {
-                it.copy(
-                    isLoading = false,
-                    generatedSentence = sentence.ifBlank { "Could not parse sentence." },
-                    translation = "",
-                    highlightedWords = wordsToHighlight.toSet()
-                )
-            }
-
-        } catch (e: Exception) {
-            e.printStackTrace()
-            _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
-        }
-    }
-    fun onTokenTopUpSelected(option: TokenTopUpOption) {
-        viewModelScope.launch {
-            val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return@launch
-            val userDoc = FirebaseFirestore.getInstance().collection("users").document(uid)
-            val now = System.currentTimeMillis()
-
-            when (option) {
-                TokenTopUpOption.FREE -> {
-                    userDoc.update(
-                        mapOf(
-                            TokenUsageManager.firestoreCurrentToken to TokenUsageManager.bundle99Tokens,
-                            "lastTopUp" to now
-                        )
-                    ).await()
-                }
-                TokenTopUpOption.BUY_099 -> {
-                    // TODO: Implement real IAP logic
-                    userDoc.update(TokenUsageManager.firestoreCurrentToken, TokenUsageManager.bundle99Tokens).await()
-                }
-                TokenTopUpOption.BUY_199 -> {
-                    // TODO: Implement real IAP logic
-                    userDoc.update(TokenUsageManager.firestoreCurrentToken, TokenUsageManager.bundle199Tokens).await()
-                }
-            }
-
-            _showTokenDialog.value = false
-            fetchTokenBalance()
-            retryAction?.invoke()
-            retryAction = null
-        }
+    fun hideCreditsSheet() {
+        _uiState.update { it.copy(waitingForCredits = false) }
     }
     // We will add a StateFlow for the UI state here later.
     // For now, the ViewModel is empty as per the request.
@@ -353,7 +343,7 @@ class ParagraphViewModel @Inject constructor(
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
                         ttsStatsRepository.updateTTSStats( sentenceToSpeak,currentVoiceName)
                         ttsStatsRepository.updateUserPlayedSentenceCount()
-                        ttsStatsRepository.updateUserTTSTokenCount(sentenceToSpeak.count())
+                        ttsStatsRepository.updateUserTTSCounts(sentenceToSpeak.count())
                         Log.d("ParagraphViewModel","updateUserTTSTokenCount ${sentenceToSpeak.count()}")
                     }
                     is PlaybackResult.PlayedFromCache -> {
@@ -369,6 +359,20 @@ class ParagraphViewModel @Inject constructor(
 
         }
     }
+    /**
+     * Cycles to the next available LLM engine in the list for debugging.
+     */
+//    fun cycleLlmEngine88() {
+//        val currentState = _uiState.value
+//        val currentIndex = availableModels.indexOf(currentState.currentLlmEngine)
+//
+//        // Use the modulus operator to wrap around to the beginning of the list
+//        val nextIndex = (currentIndex + 1) % availableModels.size
+//
+//        val newModel = availableModels[nextIndex]
+//
+//        _uiState.update { it.copy(currentLlmEngine = newModel) }
+//    }
     private fun loadLlmModels() {
         viewModelScope.launch {
             val models = appConfigRepository.getAvailableLlmModels()
@@ -413,14 +417,97 @@ class ParagraphViewModel @Inject constructor(
         // Call the new stop function in the repository.
         vocabRepository.stopPlayback()
     }
-//    fun getTokenLimit() : Int {
-//        return TOKEN_LIMIT
-//    }
+    fun getTokenLimit() : Int {
+        return TOKEN_LIMIT
+    }
 
     fun resetTokensUsed() {
         viewModelScope.launch {
-            userPreferencesRepository.resetTokenCount()
+            creditsRepository.purchaseCredits(CreditSystemConfig.FREE_TIER_CREDITS)
         }
     }
+    fun saveDataOnExit() {
+        appScope.launch {
+            if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+            }
+        }
+    }
+    fun onPurchaseCredits(amount: Int) {
+        viewModelScope.launch {
+            creditsRepository.purchaseCredits(amount)
+            hideCreditsSheet()
+        }
+    }
+
+
+
+
+
+    //from swift
+    fun secondsRemaining(now: Date = Date()): Int {
+//        val NCRD = _uiState.value.userCredits.llmNextCreditRefill
+        val NCRD = creditsRepository.nextCreditRefillDate.value
+
+        println("secondsRemaining.nextCreditRefillDate: $NCRD ")
+        val target = NCRD ?: return 0
+        Log.d("PVM","${((target.time - now.time) / 1000).coerceAtLeast(0).toInt()}")
+        return ((target.time - now.time) / 1000).coerceAtLeast(0).toInt()
+    }
+    fun formattedCountdown(now: Date = Date()): String {
+        val seconds = secondsRemaining(now)
+        return if (seconds >= 3600) {
+            val hours = seconds / 3600
+            val minutes = (seconds % 3600) / 60
+            "%02dh %02dm".format(hours, minutes)
+        } else {
+            val minutes = seconds / 60
+            val secs = seconds % 60
+            "%02dm %02ds".format(minutes, secs)
+        }
+    }
+    fun formatDateSmart(date: Date): String {
+        println("formatDateSmart: $date")
+        val now = Calendar.getInstance()
+        val cal = Calendar.getInstance().apply { time = date }
+
+        val isToday = now.get(Calendar.YEAR) == cal.get(Calendar.YEAR) &&
+                now.get(Calendar.DAY_OF_YEAR) == cal.get(Calendar.DAY_OF_YEAR)
+
+        return if (isToday) {
+            // Show only hour and minute
+            SimpleDateFormat("HH:mm", Locale.getDefault()).format(date)
+            // Or for 12-hour with AM/PM: SimpleDateFormat("h:mm a", Locale.getDefault()).format(date)
+        } else {
+            // Show day and month
+            SimpleDateFormat("dd MMM", Locale.getDefault()).format(date)
+        }
+    }
+    suspend fun clearWaitPeriod() {
+
+        val freeTierCredits = UserCredits(
+            current = CreditSystemConfig.FREE_TIER_CREDITS,
+            total = CreditSystemConfig.FREE_TIER_CREDITS
+        )
+
+        _uiState.update {
+            it.copy(waitingForCredits = false,userCredits = freeTierCredits)
+        }
+
+//        _nextCreditRefillDate.value = null
+
+//        creditsRepository.setCredits(FREE_TIER_CREDITS)
+
+        creditsRepository.clearWaitPeriod()
+    }
+
+    fun getFormattedCreditRepositoryDate() : String {
+        return formatDateSmart(creditsRepository.nextCreditRefillDate.value ?: Date())
+    }
+//    fun getCreditRepositoryDate() : Date {
+//        return creditsRepository.nextCreditRefillDate.value ?: Date()
+//    }
+
 
 }

@@ -1,70 +1,60 @@
 [
 	{
-		"id": "de-DE-Neural2-A",
-		"friendlyName": "Emma", "gender": 0
-	},
-	{
-		"id": "de-DE-Neural2-C",
-		"friendlyName": "Maria", "gender": 0
-	},
-	{
-		"id": "de-DE-Neural2-F",
-		"friendlyName": "Hannah", "gender": 0
-	},
-	{
-		"id": "de-DE-Standard-A",
+		"id": "de-DE-Standard-G",
 		"friendlyName": "Emilia", "gender": 0
 	},
 	{
-		"id": "de-DE-Standard-C",
+		"id": "de-DE-Chirp-HD-F",
 		"friendlyName": "Sofia", "gender": 0
 	},
 	{
-		"id": "de-DE-Standard-F",
+		"id": "de-DE-Chirp-HD-O",
 		"friendlyName": "Lina", "gender": 0
 	},
 	{
-		"id": "de-DE-Wavenet-A",
+		"id": "de-DE-Chirp3-HD-Erinome",
 		"friendlyName": "Mila", "gender": 0
 	},
 	{
-		"id": "de-DE-Wavenet-C",
+		"id": "de-DE-Chirp3-HD-Leda",
 		"friendlyName": "Lea", "gender": 0
 	},
 	{
-		"id": "de-DE-Wavenet-F",
+		"id": "de-DE-Chirp3-HD-Sulafat",
 		"friendlyName": "Lena", "gender": 0
 	},
+
+
+
 	{
-		"id": "de-DE-Neural2-B",
-		"friendlyName": "Ben", "gender": 1
-	},
-	{
-		"id": "de-DE-Neural2-D",
-		"friendlyName": "Paul", "gender": 1
-	},
-	{
-		"id": "de-DE-Standard-B",
+		"id": "de-DE-Standard-H",
 		"friendlyName": "Finn", "gender": 1
 	},
 	{
-		"id": "de-DE-Standard-D",
+		"id": "de-DE-Chirp-HD-D",
 		"friendlyName": "Jonas", "gender": 1
 	},
 	{
-		"id": "de-DE-Standard-E",
+		"id": "de-DE-Chirp3-HD-Algenib",
 		"friendlyName": "Luis", "gender": 1
 	},
 	{
-		"id": "de-DE-Wavenet-B",
+		"id": "de-DE-Chirp3-HD-Charon",
 		"friendlyName": "Noah", "gender": 1
 	},
 	{
-		"id": "de-DE-Wavenet-D",
+		"id": "de-DE-Chirp3-HD-Sadachbia",
 		"friendlyName": "Felix", "gender": 1
 	},
 	{
-		"id": "de-DE-Wavenet-E",
+		"id": "de-DE-Chirp3-HD-Schedar",
 		"friendlyName": "Lukas", "gender": 1
 	}
 ]
+
+
+
+
+
+
+

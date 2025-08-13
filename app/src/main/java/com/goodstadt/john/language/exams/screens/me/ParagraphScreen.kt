@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens
 
+import android.util.Log
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -10,6 +11,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,7 +21,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -29,30 +30,29 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
-//import com.goodstadt.john.language.exams.managers.TokenOptionsDialog
-import com.goodstadt.john.language.exams.managers.TokenTopUpOption
+import com.goodstadt.john.language.exams.data.CreditSystemConfig
+import com.goodstadt.john.language.exams.data.CreditSystemConfig.BOUGHT_TIER_CREDITS
+import com.goodstadt.john.language.exams.data.CreditSystemConfig.FREE_TIER_CREDITS
+import com.goodstadt.john.language.exams.data.UserCredits
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import java.util.Date
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -66,18 +66,20 @@ fun ParagraphScreen(
     // this `uiState` variable will change, triggering a recomposition.
 //    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiState by viewModel.uiState.collectAsState()
-   // val tokenCount by viewModel.totalTokenCount.collectAsState()
+    val sheetState = rememberModalBottomSheetState()
+
+//    val tokenCount by viewModel.totalTokenCount.collectAsState()
 
     val lifecycleOwner = LocalLifecycleOwner.current
+   // val waitTimeText = viewModel.getFormattedWaitTimeLeft()
 
-    val showDialog by viewModel.showTokenDialog.collectAsState()
-    val canWait by viewModel.canWait.collectAsState()
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    val coroutineScope = rememberCoroutineScope()
-
+//    LaunchedEffect(Unit) {
+//        viewModel.loadCredits()
+//    }
     LaunchedEffect(Unit) {
-        delay(600) // GPT model might not have been chosen yet
+        delay(600) // GPT model might not have been initialised yet
         viewModel.generateNewParagraph()
+        Log.d("ParagraphScreen","waitTimeText:$viewModel.getFormattedWaitTimeLeft()")
     }
     // Use DisposableEffect to tie logic to the composable's lifecycle.
     DisposableEffect(lifecycleOwner) {
@@ -86,6 +88,7 @@ fun ParagraphScreen(
             // presses home, or a dialog appears over it), stop the audio.
             if (event == Lifecycle.Event.ON_PAUSE) {
                 viewModel.stopPlayback()
+                viewModel.saveDataOnExit()
             }
         }
 
@@ -99,31 +102,6 @@ fun ParagraphScreen(
         }
     }
 
-    LaunchedEffect(showDialog) {
-        if (!showDialog && sheetState.isVisible) {
-            sheetState.hide()
-        }
-    }
-
-    if (showDialog) {
-        ModalBottomSheet(
-            onDismissRequest = { /* prevent user from dismissing */ },
-            sheetState = sheetState
-        ) {
-            TokenOptionsBottomSheet(
-                canWait = canWait,
-                onOptionSelected = {
-                    viewModel.onTokenTopUpSelected(it)
-                    // DO NOT hide the sheet here — let ViewModel trigger hide via state
-                },
-                onResetClicked = {
-                    viewModel.resetTokenBalanceForDebug()
-                }
-            )
-        }
-    }
-
-
     Column(
             // Fills the whole screen
             modifier = Modifier
@@ -134,7 +112,7 @@ fun ParagraphScreen(
             // Adds consistent spacing between elements
             verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        if (BuildConfig.DEBUG) {
+        if (false && BuildConfig.DEBUG) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -143,37 +121,25 @@ fun ParagraphScreen(
                     .padding(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-//                Text(
-//                    text = "Debug Controls",
-//                    style = MaterialTheme.typography.bodySmall,
-//                    fontWeight = FontWeight.Normal
-//                )
-//                Spacer(modifier = Modifier.height(8.dp))
+//                Row(
+//                    verticalAlignment = Alignment.CenterVertically,
+//                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+//                ) {
+//                    Text("${uiState.currentLlmModel?.title}")
+//                }
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    Text("${uiState.currentLlmModel?.title}")
-                    Button(onClick = { viewModel.cycleLlmEngine() }) {
-                        Text("Change Model")
-                    }
-                }
-                val tokenBalance by viewModel.tokenBalance.collectAsState()
-                val tokenLimit = viewModel.tokenLimit
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(2.dp)
                 ) {
                     Text(
-                        text = "Tokens Left: $tokenBalance / $tokenLimit",
+                        text = "Calls Used: ${uiState.userCredits.current} / ${uiState.userCredits.total}", // TOKEN_LIMIT needs to be exposed from VM
                         style = MaterialTheme.typography.labelMedium,
-                        color = if (tokenBalance < tokenLimit) MaterialTheme.colorScheme.error else Color.Unspecified
-
+                        color = if (uiState.userCredits.current >= viewModel.getTokenLimit()) MaterialTheme.colorScheme.error else Color.Unspecified
                     )
                 }
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    horizontalArrangement = Arrangement.spacedBy(2.dp)
                 ) {
                     Button(onClick = { viewModel.resetTokensUsed() }) {
                         Text("Reset Tokens")
@@ -182,7 +148,26 @@ fun ParagraphScreen(
 
             }
         }
+
         // --- Top Section ---
+        if (uiState.waitingForCredits) {
+
+//            ModalBottomSheet(
+//                onDismissRequest = { viewModel.hideCreditsSheet() },
+//                sheetState = sheetState
+//            ) {
+//                CreditsBottomSheetContent(
+//                    userCredits = uiState.userCredits,
+//                    onPurchase = { amount -> viewModel.onPurchaseCredits(
+//                        amount = amount
+//                    ) },
+//                    onTimedRefill = { viewModel.onTimedRefillClicked() }
+//                )
+//            }
+        }
+
+
+
         Text(
                 text = "Listen to this Sentence",
                 style = MaterialTheme.typography.titleLarge
@@ -196,12 +181,22 @@ fun ParagraphScreen(
 
         Button(onClick = {
              viewModel.generateNewParagraph()
-        }, colors = ButtonDefaults.buttonColors(
+        },  //enabled = uiState.areCreditsInitialized && uiState.userCredits.current > 0,
+            colors = ButtonDefaults.buttonColors(
             containerColor = buttonColor,
             contentColor = Color.White
         )) {
             Text("Generate")
         }
+
+        CacheProgressBar(
+            cachedCount = uiState.userCredits.current,
+            totalCount = FREE_TIER_CREDITS,
+            displayLowNumber = true,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 64.dp, vertical = 8.dp)
+        )
 
         Box(
                 modifier = Modifier.height(24.dp), // Reserve space equal to the indicator's size
@@ -210,14 +205,14 @@ fun ParagraphScreen(
             if (uiState.isLoading) {
                 CircularProgressIndicator(
                     color = accentColor,
-                        modifier = Modifier.size(24.dp), // Make it smaller
+                        modifier = Modifier.size(12.dp), // Make it smaller
                         strokeWidth = 2.dp // Thinner stroke looks better when small
                 )
             }
         }
 
         // --- Divider ---
-        HorizontalDivider(modifier = Modifier.padding(top = 10.dp))
+        HorizontalDivider(modifier = Modifier.padding(top = 2.dp))
 
 
         // --- Middle Section ---
@@ -244,7 +239,38 @@ fun ParagraphScreen(
             )
         }
         // This Spacer pushes the "Play" button towards the bottom
-        Spacer(modifier = Modifier.weight(1f))
+       // Spacer(modifier = Modifier.weight(1f))
+
+        if (uiState.waitingForCredits) {
+            var now by remember { mutableStateOf(Date()) }
+
+            LaunchedEffect(uiState.waitingForCredits) { // runs once when waiting starts
+                while (true) { // keep looping while in wait mode
+                    now = Date() // triggers recomposition immediately
+                    val remaining = viewModel.secondsRemaining(now)
+
+                    println("Compose timer tick: $remaining seconds remaining")
+
+                    if (remaining == 0) {
+                        println("Resetting credits automatically...")
+                        viewModel.clearWaitPeriod()
+                        break // stop this loop
+                    }
+
+                    delay(2000) // wait 2s before next tick
+                }
+            }
+
+            Column {
+                Text("Wait: ${viewModel.formattedCountdown(now)}")
+//                Text("Next refill at:${uiState.userCredits.llmNextCreditRefill.toDate()}")
+                Text("Next refill at:${viewModel.getFormattedCreditRepositoryDate()}")
+            }
+        } else {
+            Text("Credits left: ${uiState.userCredits.current}")
+        }
+
+        Spacer(modifier = Modifier.weight(1f)) //push to bottom
 
         // --- Bottom Section ---
         Button(onClick = { viewModel.speakSentence() }, colors = ButtonDefaults.buttonColors(
@@ -254,10 +280,19 @@ fun ParagraphScreen(
             Text("Play")
         }
 
+
+        Text(
+            text = "AI can make mistakes. Beware of bizarre sentences",
+            style = MaterialTheme.typography.bodySmall, // smaller font
+            color = Color.Gray,
+            modifier = Modifier.padding(top = 8.dp)
+        )
         // Adds some padding at the very bottom of the screen
-        Spacer(modifier = Modifier.height(16.dp))
-    }
+        Spacer(modifier = Modifier.height(4.dp))
+
+    } //:Column
 }
+
 
 
 // A @Preview function allows you to see your Composable in the design view of Android Studio.
@@ -268,57 +303,5 @@ fun ParagraphScreenPreview() {
     // Replace YourAppTheme with the actual name of your app's theme.
     LanguageExamsAITheme {
         ParagraphScreen()
-    }
-}
-
-@Composable
-fun TokenOptionsBottomSheet(
-    canWait: Boolean,
-    onOptionSelected: (TokenTopUpOption) -> Unit,
-    onResetClicked: () -> Unit
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-    ) {
-        Text("You're out of tokens.", style = MaterialTheme.typography.titleMedium)
-        Spacer(modifier = Modifier.height(12.dp))
-
-        if (canWait) {
-            Button(
-                onClick = { onOptionSelected(TokenTopUpOption.FREE) },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text("Wait 1 Hour for Free Top-Up")
-            }
-            Spacer(modifier = Modifier.height(8.dp))
-        }
-
-        Button(
-            onClick = { onOptionSelected(TokenTopUpOption.BUY_099) },
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Buy More – £0.99")
-        }
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        Button(
-            onClick = { onOptionSelected(TokenTopUpOption.BUY_199) },
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Buy More – £1.99")
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Button(
-            onClick = { onResetClicked() },
-            modifier = Modifier.fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(containerColor = Color.Red)
-        ) {
-            Text("DEBUG: Reset Tokens")
-        }
     }
 }

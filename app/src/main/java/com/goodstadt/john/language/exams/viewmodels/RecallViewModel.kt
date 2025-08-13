@@ -13,14 +13,11 @@ import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.models.TabDetails
-import com.goodstadt.john.language.exams.models.VocabWord
-import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.forEach
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import java.util.Calendar
@@ -192,7 +189,7 @@ class RecallViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateTTSStats( word,currentVoiceName)
-                    ttsStatsRepository.updateUserTTSTokenCount(word.count())
+                    ttsStatsRepository.updateUserTTSCounts(word.count())
                 }
 
                 is PlaybackResult.PlayedFromCache -> {}
@@ -224,7 +221,7 @@ class RecallViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateTTSStats( sentence,currentVoiceName)
-                    ttsStatsRepository.updateUserTTSTokenCount(sentence.count())
+                    ttsStatsRepository.updateUserTTSCounts(sentence.count())
                 }
                 is PlaybackResult.PlayedFromCache -> {}
                 is PlaybackResult.Failure -> {}

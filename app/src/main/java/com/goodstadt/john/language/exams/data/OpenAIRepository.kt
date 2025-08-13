@@ -4,7 +4,6 @@ package com.goodstadt.john.language.exams.data
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.OPENAI_API_KEY
-import com.goodstadt.john.language.exams.models.calculateCallCost
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -78,11 +77,11 @@ data class UsageData(
 )
 
 // --- A NEW DATA HOLDER for a cleaner return type ---
-public data class LlmResponse(
+data class LlmResponse(
     val content: String,
     val totalTokensUsed: Int,
-    val completionTokens: Int,
-    val promptTokens: Int
+    val promptTokens: Int,
+    val completionTokens: Int
 )
 
 @Serializable
@@ -113,12 +112,82 @@ class OpenAIRepository @Inject constructor() {
         }
     }
 
+    /**
+     * Fetches a sentence completion from the OpenAI API.
+     * This is a suspend function, making it safe to call from a coroutine.
+     * It returns a result directly or throws an exception on failure.
+     */
+    suspend fun fetchOpenAIDataObsolete(
+        llmEngine: String,
+        systemMessage: String,
+        userQuestion: String
+    ): LLMResponse {
+        // Ensure this network call runs on a background thread
+        return withContext(Dispatchers.IO) {
+            // 1. Build the JSON request body using org.json
+            val jsonBody = JSONObject().apply {
+                put("model", llmEngine)
+                put("messages", JSONArray().apply {
+                    put(JSONObject().apply {
+                        put("role", "system")
+                        put("content", systemMessage)
+                    })
+                    put(JSONObject().apply {
+                        put("role", "user")
+                        put("content", userQuestion)
+                    })
+                })
+            }
 
+            Log.d("OpenAIRepository","model used in call is ${llmEngine}")
+
+            // 2. Create the request
+            val body = jsonBody.toString().toRequestBody("application/json".toMediaType())
+            val request = Request.Builder()
+                .url(OPENAI_URL)
+                .header("Authorization", "Bearer $OPENAI_API_KEY")
+                .header("Content-Type", "application/json")
+                .post(body)
+                .build()
+
+            // 3. Execute the request and process the response
+            val response = client.newCall(request).execute()
+
+            if (!response.isSuccessful) {
+                throw Exception("API call failed with code: ${response.code} and message: ${response.message}")
+            }
+
+            val responseBody = response.body?.string()
+                ?: throw Exception("Received an empty response body from the API.")
+
+            // 4. Parse the JSON response
+            val jsonResponse = JSONObject(responseBody)
+
+            val content = jsonResponse.getJSONArray("choices")
+                .getJSONObject(0)
+                .getJSONObject("message")
+                .getString("content")
+
+            val totalTokens = jsonResponse.getJSONObject("usage")
+                .getInt("total_tokens")
+
+
+            val model = jsonResponse.getString("model")
+
+            Log.d("OpenAIRepository","totalTokens:$totalTokens model:$model")
+            // 5. Return the structured data class
+            LLMResponse(
+                    content = content,
+                    totalTokens = totalTokens,
+                    model = model
+            )
+        }
+    }
     suspend fun fetchOpenAIData(
         llmEngine: String,
         systemMessage: String,
         userQuestion: String
-    ): LlmResponse { // <-- Change the return type
+    ):  com.goodstadt.john.language.exams.data.LlmResponse { // <-- Change the return type
         // ... your existing Ktor client and request setup logic ...
 
         val requestBody = OpenAIRequest(
@@ -139,8 +208,7 @@ class OpenAIRepository @Inject constructor() {
             // b) Set the request body. Ktor will automatically serialize it to JSON.
             setBody(requestBody)
         }.body()
-        Log.e("OpenAIRepository","$response")
-
+//        Log.e("OpenAIRepository","$response")
 
         // Extract the content and the token count
         val content = response.choices.firstOrNull()?.message?.content ?: ""
@@ -148,13 +216,12 @@ class OpenAIRepository @Inject constructor() {
         val completionTokens = response.usage.completionTokens
         val promptTokens = response.usage.promptTokens
 
-
-
         // Return the new, richer data object
         return LlmResponse(
-            content = content, totalTokensUsed = tokensUsed,
-            completionTokens = completionTokens,
-            promptTokens = promptTokens
+            content = content,
+            totalTokensUsed = tokensUsed,
+            promptTokens = promptTokens,
+            completionTokens = completionTokens
         )
     }
 }

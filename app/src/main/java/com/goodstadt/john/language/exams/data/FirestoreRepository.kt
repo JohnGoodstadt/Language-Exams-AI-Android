@@ -4,7 +4,6 @@ import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.FirebaseFirestoreException
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -53,6 +52,7 @@ class FirestoreRepository  @Inject constructor(
         const val countTimestamp = "countTimestamp"
         const val sortorder = "sortorder"
         const val quiz = "quiz"
+        const val googleVoices = "googleVoices"
 
 
         const val en = "en"
@@ -162,6 +162,23 @@ class FirestoreRepository  @Inject constructor(
 
 //endregion
 
+    fun fsUpdateUserGoogleVoices(voice:String) {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+        val date = Date()
+        val db = FirebaseFirestore.getInstance()
+        val itemRef = db.collection(fb.users).document(currentUser.uid)
+
+        val updates = mapOf(
+            fb.lastActivityDate to date,
+            fb.googleVoices to FieldValue.arrayUnion(voice)
+        )
+
+        itemRef.update(updates)
+            .addOnFailureListener { e ->
+                println("Error updating field ${fb.lastActivityDate}: $e")
+            }
+    }
     fun fsUpdateUserStatsCounts(statToUpload: kotlin.collections.Map<String, Any>) {
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 
