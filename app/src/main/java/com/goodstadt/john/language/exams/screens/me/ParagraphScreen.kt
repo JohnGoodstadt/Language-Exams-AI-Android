@@ -268,6 +268,16 @@ fun ParagraphScreen(
             }
         } else {
             Text("Credits left: ${uiState.userCredits.current}")
+            if (BuildConfig.DEBUG){
+                val av = uiState.availableModels
+                if (av.isNotEmpty()){
+                    val f = av.first()
+                    Text("${f.title} (D)")
+
+                }
+
+
+            }
         }
 
         Spacer(modifier = Modifier.weight(1f)) //push to bottom
