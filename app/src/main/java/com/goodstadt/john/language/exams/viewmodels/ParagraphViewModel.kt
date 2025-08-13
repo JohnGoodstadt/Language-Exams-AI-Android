@@ -7,6 +7,7 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
+import com.goodstadt.john.language.exams.data.CreditSystemConfig.FREE_TIER_CREDITS
 import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
@@ -22,10 +23,12 @@ import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.util.Date
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
@@ -43,7 +46,7 @@ data class ParagraphUiState(
     val availableModels: List<LlmModelInfo> = emptyList(),
     val currentLlmModel: LlmModelInfo? = null,
     val areCreditsInitialized: Boolean = false,
-    val showCreditsSheet: Boolean = false, // To control the bottom sheet
+    val waitingForCredits: Boolean = false, // To control the bottom sheet
     val userCredits: UserCredits = UserCredits() // To display current credits
 )
 
@@ -70,6 +73,9 @@ class ParagraphViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
+
+//    private val _nextCreditRefillDate = MutableStateFlow<Date?>(null)
+//    val nextCreditRefillDate: StateFlow<Date?> = _nextCreditRefillDate.asStateFlow()
 
     init{
         loadLlmModels()
@@ -112,7 +118,7 @@ class ParagraphViewModel @Inject constructor(
             // 2. Then check if the count is zero or less.
             if (currentState.areCreditsInitialized && currentState.userCredits.current <= 0) {
                 Log.w("ParagraphVM", "User is out of credits. Showing sheet.")
-                _uiState.update { it.copy(showCreditsSheet = true) }
+                _uiState.update { it.copy(waitingForCredits = true) }
                 return@launch
             }
 
@@ -127,7 +133,7 @@ class ParagraphViewModel @Inject constructor(
 
             if (currentCredits <= 0) {
                 Log.w("ParagraphVM", "User is out of credits. Showing sheet.")
-                _uiState.update { it.copy(showCreditsSheet = true) }
+                _uiState.update { it.copy(waitingForCredits = true) }
                 return@launch
             }
 
@@ -181,14 +187,27 @@ class ParagraphViewModel @Inject constructor(
 
 
                 val totalTokensUsed = llmResponse.totalTokensUsed
-               // userPreferencesRepository.incrementTokenCount(totalTokensUsed)
+
                 ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
+
+                println("current credits A: ${_uiState.value.userCredits.current}")
 
                 creditsRepository.decrementCredit(
                     llmResponse.promptTokens,
                     llmResponse.completionTokens,
                     totalTokensUsed
                 )
+
+                println("current credits B: ${_uiState.value.userCredits.current}")
+                //check seconds to go
+//                val currentUIState = _uiState.value
+
+                if (_uiState.value.userCredits.current <= 0){
+                    val FRED = secondsRemaining()
+                    println("seconds to go: $FRED")
+
+                }
+
 
                 // Phase 3: Update the UI with the response
                 // Simple parsing, you can make this more robust
@@ -202,7 +221,8 @@ class ParagraphViewModel @Inject constructor(
                             isLoading = false,
                             generatedSentence = sentence.ifBlank { "Could not parse sentence." },
                             translation = "",//translation.ifBlank { "Could not parse translation." },
-                            highlightedWords = wordsToHighlight.toSet() // <-- SET THE WORDS HERE
+                            highlightedWords = wordsToHighlight.toSet(),
+                            waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
                     )
                 }
 
@@ -218,7 +238,7 @@ class ParagraphViewModel @Inject constructor(
 
 
     fun hideCreditsSheet() {
-        _uiState.update { it.copy(showCreditsSheet = false) }
+        _uiState.update { it.copy(waitingForCredits = false) }
     }
     // We will add a StateFlow for the UI state here later.
     // For now, the ViewModel is empty as per the request.
@@ -419,7 +439,7 @@ class ParagraphViewModel @Inject constructor(
             return ""
         }
 
-        val waitPeriodMillis = TimeUnit.HOURS.toMillis(CreditSystemConfig.WAIT_PERIOD_HOURS.toLong())
+        val waitPeriodMillis = TimeUnit.HOURS.toMillis(CreditSystemConfig.WAIT_PERIOD_MINUTES.toLong())
         val elapsedTime = System.currentTimeMillis() - credits.lastRefillTimestamp
         val remainingMillis = waitPeriodMillis - elapsedTime
 
@@ -431,6 +451,45 @@ class ParagraphViewModel @Inject constructor(
         val seconds = TimeUnit.MILLISECONDS.toSeconds(remainingMillis) % 60
 
         return "Wait (${String.format("%02d:%02d", minutes, seconds)})"
+    }
+
+    //from swift
+    fun secondsRemaining(now: Date = Date()): Int {
+        val NCRD = creditsRepository.nextCreditRefillDate.value
+
+        println("secondsRemaining.nextCreditRefillDate: $NCRD ")
+        val target = NCRD ?: return 0
+        Log.d("PVM","${((target.time - now.time) / 1000).coerceAtLeast(0).toInt()}")
+        return ((target.time - now.time) / 1000).coerceAtLeast(0).toInt()
+    }
+    fun formattedCountdown(now: Date = Date()): String {
+        val seconds = secondsRemaining(now)
+        return if (seconds >= 3600) {
+            val hours = seconds / 3600
+            val minutes = (seconds % 3600) / 60
+            "%02dh %02dm".format(hours, minutes)
+        } else {
+            val minutes = seconds / 60
+            val secs = seconds % 60
+            "%02dm %02ds".format(minutes, secs)
+        }
+    }
+    suspend fun clearWaitPeriod() {
+
+        val freeTierCredits = UserCredits(
+            current = CreditSystemConfig.FREE_TIER_CREDITS,
+            total = CreditSystemConfig.FREE_TIER_CREDITS
+        )
+
+        _uiState.update {
+            it.copy(waitingForCredits = false,userCredits = freeTierCredits)
+        }
+
+//        _nextCreditRefillDate.value = null
+
+//        creditsRepository.setCredits(FREE_TIER_CREDITS)
+
+        creditsRepository.clearWaitPeriod()
     }
 
 }

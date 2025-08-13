@@ -1,25 +1,30 @@
 package com.goodstadt.john.language.exams.data
 
 import android.util.Log
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.tasks.await
+import java.util.Date
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
 
 // --- The data classes and config object remain the same ---
+
+
 object CreditSystemConfig {
     const val FREE_TIER_CREDITS = 3//20
-    const val BOUGHT_TIER_CREDITS = 4 //100
-    const val WAIT_PERIOD_HOURS = 1
+    const val BOUGHT_TIER_CREDITS = 4 //10
+    const val WAIT_PERIOD_MINUTES = 1L
 }
 
 data class UserCredits(
@@ -33,12 +38,24 @@ class CreditsRepository @Inject constructor(
     private val firestore: FirebaseFirestore,
     private val auth: FirebaseAuth
 ) {
+
+    private val usersCollection = "users"
+    private val llmCurrentCreditField = "llmCurrentCredit"
+    private val llmTotalCreditField = "llmTotalCredit"
+    private val llmNextCreditRefillField = "llmNextCreditRefill"
+
     private val userId: String?
         get() = auth.currentUser?.uid
 
     // --- NEW: A private, in-memory state holder for the credits ---
     // It's nullable to represent the "not yet loaded" state.
     private val _userCredits = MutableStateFlow<UserCredits?>(null)
+    private val _freeTierCredits = MutableStateFlow(CreditSystemConfig.FREE_TIER_CREDITS)
+    val freeTierCredits: StateFlow<Int> = _freeTierCredits.asStateFlow()
+    private val _nextCreditRefillDate = MutableStateFlow<Date?>(null)
+    val nextCreditRefillDate: StateFlow<Date?> = _nextCreditRefillDate.asStateFlow()
+    private val _isInWaitPeriod = MutableStateFlow(false)
+    val isInWaitPeriod: StateFlow<Boolean> = _isInWaitPeriod.asStateFlow()
 
     /**
      * A Flow that exposes the in-memory user credits.
@@ -60,6 +77,41 @@ class CreditsRepository @Inject constructor(
             lastRefillTimestamp = llmLastRefillTimestamp
         )
     }
+    /** Loads user credit info — can be called from viewModelScope.launch {} in UI */
+    suspend fun loadCredits() {
+        val userId = auth.currentUser?.uid ?: return
+
+        try {
+            val doc = firestore.collection(usersCollection)
+                .document(userId)
+                .get()
+                .await() // This is suspendable; needs 'kotlinx-coroutines-play-services'
+
+            val data = doc.data ?: emptyMap<String, Any>()
+            val credits = (data[llmCurrentCreditField] as? Long)?.toInt() ?: CreditSystemConfig.FREE_TIER_CREDITS
+            val refillTimestamp = data[llmNextCreditRefillField] as? Timestamp
+
+            _freeTierCredits.value = credits
+
+            if (refillTimestamp != null) {
+                val refillDate = refillTimestamp.toDate()
+                _nextCreditRefillDate.value = refillDate
+                if (Date().before(refillDate)) {
+                    _isInWaitPeriod.value = true
+                } else {
+                    _isInWaitPeriod.value = false
+                    setCredits(CreditSystemConfig.FREE_TIER_CREDITS)
+                    clearRefillDateInDB(userId)
+                }
+            } else {
+                _isInWaitPeriod.value = false
+                _nextCreditRefillDate.value = null
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
 
     /**
      * Performs a ONE-TIME fetch from Firestore to initialize the in-memory state.
@@ -95,9 +147,11 @@ class CreditsRepository @Inject constructor(
                 val existingCredits = doc.toObject(UserCreditsFirestore::class.java)!!.toUserCredits()
                 // Update the local, in-memory state
                 _userCredits.value = existingCredits
+                Log.d("CreditsRepository","$existingCredits")
             }
             Result.success(Unit)
         } catch (e: Exception) {
+            e.localizedMessage?.let { Log.d("CreditsRepository", it) }
             Result.failure(e)
         }
     }
@@ -114,8 +168,18 @@ class CreditsRepository @Inject constructor(
                 "llmPromptTokens",FieldValue.increment(promptTokens.toLong()),
                 "llmTotalTokens",FieldValue.increment(completionTokens.toLong())).await()
 
+            val newCredit = _userCredits.value?.current?.minus(1) ?: 0
+
             // On success, manually update our in-memory state
-            _userCredits.update { it?.copy(current = it.current - 1) }
+            println("decrementCredit current credits A: ${newCredit}")
+            _userCredits.update { it?.copy(current = newCredit) }
+            println("decrementCredit current credits B: ${newCredit}")
+
+           // val current = (_userCredits.value?.current ?: 0)
+
+            if (newCredit == 0) {
+                startWaitPeriod()
+            }
 
             Result.success(Unit)
         } catch (e: Exception) {
@@ -234,7 +298,7 @@ class CreditsRepository @Inject constructor(
         }
 
         // Condition 2: Check if the cool-down period has passed.
-        val waitPeriodMillis = TimeUnit.HOURS.toMillis(CreditSystemConfig.WAIT_PERIOD_HOURS.toLong())
+        val waitPeriodMillis = TimeUnit.HOURS.toMillis(CreditSystemConfig.WAIT_PERIOD_MINUTES.toLong())
         val timeSinceLastRefill = System.currentTimeMillis() - currentCredits.lastRefillTimestamp
 
         if (timeSinceLastRefill < waitPeriodMillis) {
@@ -265,5 +329,72 @@ class CreditsRepository @Inject constructor(
         } catch (e: Exception) {
             Result.failure(e)
         }
+    }
+    //from swift
+    suspend fun setCredits(newCredits: Int) {
+        _freeTierCredits.value = newCredits
+        _userCredits.value = UserCredits( //keep in line with vieModel
+            current = CreditSystemConfig.FREE_TIER_CREDITS,
+            total = CreditSystemConfig.FREE_TIER_CREDITS
+        )
+        saveCredits(newCredits)
+    }
+    private suspend fun saveCredits(credits: Int) {
+        val userId = auth.currentUser?.uid ?: return
+        firestore.collection(usersCollection).document(userId)
+            .update(
+                mapOf(
+                    llmCurrentCreditField to credits,
+                    llmTotalCreditField to FieldValue.increment(credits.toLong())
+                )
+            )
+            .await()
+    }
+    /** Deducts a credit or starts wait if none left */
+    suspend fun  deductCredit() {
+        val currentCredits = _freeTierCredits.value
+        if (currentCredits <= 0) return
+        val newCredits = currentCredits - 1
+        _freeTierCredits.value = newCredits
+        saveCreditsOnly(newCredits)
+        if (newCredits == 0) {
+            startWaitPeriod()
+        }
+    }
+    private suspend fun clearRefillDateInDB(userId: String) {
+        firestore.collection(usersCollection).document(userId)
+            .update(llmNextCreditRefillField, FieldValue.delete())
+            .await()
+    }
+    private suspend fun saveCreditsOnly(credits: Int) {
+        val userId = auth.currentUser?.uid ?: return
+        firestore.collection(usersCollection)
+            .document(userId)
+            .set(mapOf(llmCurrentCreditField to credits), SetOptions.merge())
+            .await()
+    }
+    suspend fun startWaitPeriod() {
+
+        val userId = auth.currentUser?.uid ?: return
+        val targetDate = Date(System.currentTimeMillis() + CreditSystemConfig.WAIT_PERIOD_MINUTES * 60 * 1000)
+        Log.d("CreditsRepository","startWaitPeriod().targetDate : $targetDate")
+        _nextCreditRefillDate.value = targetDate
+        _isInWaitPeriod.value = true
+
+       // val FRED = 999
+        firestore.collection(usersCollection).document(userId)
+            .set(mapOf(llmNextCreditRefillField to Timestamp(targetDate)), SetOptions.merge())
+            .await()
+    }
+
+    suspend fun clearWaitPeriod() {
+        val userId = auth.currentUser?.uid ?: return
+        _isInWaitPeriod.value = false
+        _nextCreditRefillDate.value = null
+        setCredits(CreditSystemConfig.FREE_TIER_CREDITS)
+
+        firestore.collection(usersCollection).document(userId)
+            .update(llmNextCreditRefillField, FieldValue.delete())
+            .await()
     }
 }

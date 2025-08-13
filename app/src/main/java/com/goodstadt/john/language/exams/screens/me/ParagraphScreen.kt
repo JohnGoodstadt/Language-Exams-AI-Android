@@ -21,7 +21,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -35,18 +34,17 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
 import com.goodstadt.john.language.exams.data.CreditSystemConfig.BOUGHT_TIER_CREDITS
+import com.goodstadt.john.language.exams.data.CreditSystemConfig.FREE_TIER_CREDITS
 import com.goodstadt.john.language.exams.data.UserCredits
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
@@ -54,6 +52,7 @@ import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 import kotlinx.coroutines.delay
+import java.util.Date
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -74,8 +73,11 @@ fun ParagraphScreen(
     val lifecycleOwner = LocalLifecycleOwner.current
    // val waitTimeText = viewModel.getFormattedWaitTimeLeft()
 
+//    LaunchedEffect(Unit) {
+//        viewModel.loadCredits()
+//    }
     LaunchedEffect(Unit) {
-        delay(600) // GPT model might not have been chosen yet
+        delay(600) // GPT model might not have been initialised yet
         viewModel.generateNewParagraph()
         Log.d("ParagraphScreen","waitTimeText:$viewModel.getFormattedWaitTimeLeft()")
     }
@@ -148,21 +150,24 @@ fun ParagraphScreen(
         }
 
         // --- Top Section ---
-        if (uiState.showCreditsSheet) {
-            ModalBottomSheet(
-                onDismissRequest = { viewModel.hideCreditsSheet() },
-                sheetState = sheetState
-            ) {
-                CreditsBottomSheetContent(
-                    userCredits = uiState.userCredits,
-                    onPurchase = { amount -> viewModel.onPurchaseCredits(
-                        amount = amount
-                    ) },
-                    onTimedRefill = { viewModel.onTimedRefillClicked() }
-                )
-            }
+        if (uiState.waitingForCredits) {
+
+//            ModalBottomSheet(
+//                onDismissRequest = { viewModel.hideCreditsSheet() },
+//                sheetState = sheetState
+//            ) {
+//                CreditsBottomSheetContent(
+//                    userCredits = uiState.userCredits,
+//                    onPurchase = { amount -> viewModel.onPurchaseCredits(
+//                        amount = amount
+//                    ) },
+//                    onTimedRefill = { viewModel.onTimedRefillClicked() }
+//                )
+//            }
         }
-        
+
+
+
         Text(
                 text = "Listen to this Sentence",
                 style = MaterialTheme.typography.titleLarge
@@ -186,8 +191,8 @@ fun ParagraphScreen(
 
         CacheProgressBar(
             cachedCount = uiState.userCredits.current,
-            totalCount = uiState.userCredits.total,
-            displayLowNumber = false,
+            totalCount = FREE_TIER_CREDITS,
+            displayLowNumber = true,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(horizontal = 64.dp, vertical = 8.dp)
@@ -236,6 +241,36 @@ fun ParagraphScreen(
         // This Spacer pushes the "Play" button towards the bottom
        // Spacer(modifier = Modifier.weight(1f))
 
+        if (uiState.waitingForCredits) {
+            var now by remember { mutableStateOf(Date()) }
+
+            LaunchedEffect(uiState.waitingForCredits) { // runs once when waiting starts
+                while (true) { // keep looping while in wait mode
+                    now = Date() // triggers recomposition immediately
+                    val remaining = viewModel.secondsRemaining(now)
+
+                    println("Compose timer tick: $remaining seconds remaining")
+
+                    if (remaining == 0) {
+                        println("Resetting credits automatically...")
+                        viewModel.clearWaitPeriod()
+                        break // stop this loop
+                    }
+
+                    delay(2000) // wait 2s before next tick
+                }
+            }
+
+            Column {
+                Text("Wait: ${viewModel.formattedCountdown(now)}")
+                Text("Next refill at:")
+            }
+        } else {
+            Text("Credits left: ${uiState.userCredits.current}")
+        }
+
+        Spacer(modifier = Modifier.weight(1f)) //push to bottom
+
         // --- Bottom Section ---
         Button(onClick = { viewModel.speakSentence() }, colors = ButtonDefaults.buttonColors(
             containerColor = buttonColor,
@@ -245,10 +280,16 @@ fun ParagraphScreen(
         }
 
 
-
+        Text(
+            text = "AI can make mistakes. Beware of bizarre sentences",
+            style = MaterialTheme.typography.bodySmall, // smaller font
+            color = Color.Gray,
+            modifier = Modifier.padding(top = 8.dp)
+        )
         // Adds some padding at the very bottom of the screen
-        Spacer(modifier = Modifier.height(16.dp))
-    }
+        Spacer(modifier = Modifier.height(4.dp))
+
+    } //:Column
 }
 
 @Composable
@@ -258,7 +299,7 @@ fun CreditsBottomSheetContent(
     onTimedRefill: () -> Unit//,
    // timeLeft: String = "To do"
 ) {
-    val waitTimeMillis = (CreditSystemConfig.WAIT_PERIOD_HOURS * 60 * 60 * 1000) - (System.currentTimeMillis() - userCredits.lastRefillTimestamp)
+    val waitTimeMillis = (CreditSystemConfig.WAIT_PERIOD_MINUTES * 60 * 60 * 1000) - (System.currentTimeMillis() - userCredits.lastRefillTimestamp)
    // val isWaitButtonEnabled = waitTimeMillis <= 0
 
     var waitTimeText by remember { mutableStateOf("") }

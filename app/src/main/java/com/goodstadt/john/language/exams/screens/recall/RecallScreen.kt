@@ -49,31 +49,38 @@ fun RecallScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Focus on these Words") },
-                actions = {
-                    // Add an icon button to the top right
-                    IconButton(onClick = { viewModel.onClearAllClicked() }) {
-                        Icon(
-                            imageVector = Icons.Default.DeleteSweep,
-                            contentDescription = "Clear All"
-                        )
-                    }
-                    if(BuildConfig.DEBUG) {
-                        IconButton(onClick = { viewModel.onDebugPrintSummaryClicked() }) {
+    if (uiState.todayItems.isEmpty() && uiState.laterItems.isEmpty()){
+        MaterialTheme {
+            FocusWordsScreen()
+        }
+    }else{
+
+
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = { Text("Focus on these Words") },
+                    actions = {
+                        // Add an icon button to the top right
+                        IconButton(onClick = { viewModel.onClearAllClicked() }) {
                             Icon(
-                                imageVector = Icons.Default.BugReport,
+                                imageVector = Icons.Default.DeleteSweep,
                                 contentDescription = "Clear All"
                             )
                         }
-                    }
+                        if(BuildConfig.DEBUG) {
+                            IconButton(onClick = { viewModel.onDebugPrintSummaryClicked() }) {
+                                Icon(
+                                    imageVector = Icons.Default.BugReport,
+                                    contentDescription = "Clear All"
+                                )
+                            }
+                        }
 
-                }
-            )
-        }
-    ) { paddingValues ->
+                    }
+                )
+            }
+        ) { paddingValues ->
         LazyColumn(
             modifier = Modifier.padding(paddingValues),
             contentPadding = PaddingValues(16.dp),
@@ -115,6 +122,7 @@ fun RecallScreen(
                 }
             }
         }
+    }
     }
 }
 
@@ -327,4 +335,40 @@ fun getDebugString(item: RecallingItem): String {
 
 
     return "${item.recallState} | $countdown\n${item.currentStopNumber} of ${STOPS.size}: (${item.currentStopCode()})"
+}
+@Composable
+fun FocusWordsScreen() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 16.dp), // Horizontal padding for all text
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "Focus on a few words",
+            style = MaterialTheme.typography.titleLarge, // Similar to SwiftUI .title2
+            modifier = Modifier.padding(vertical = 32.dp, horizontal = 16.dp)
+        )
+
+        Text(
+            text = "Concentrate on only a few tricky words at any one time",
+            style = MaterialTheme.typography.titleSmall,
+            modifier = Modifier.padding(vertical = 16.dp, horizontal = 16.dp)
+        )
+
+        Text(
+            text = "On tab 1, 2 or 3 swipe to the left to add the word to this page.",
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.padding(vertical = 16.dp, horizontal = 16.dp)
+        )
+
+        Text(
+            text = "It will remind you to hear these words at specific later times. This helps cement the sound in your head, making for easier pronunciation.",
+            style = MaterialTheme.typography.bodyMedium,
+            modifier = Modifier.padding(vertical = 16.dp, horizontal = 16.dp)
+        )
+
+        Spacer(modifier = Modifier.weight(1f)) // Pushes content to top
+    }
 }
