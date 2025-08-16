@@ -46,12 +46,15 @@ class TTSStatsRepository @Inject constructor(
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
     }
 
-    enum class GoogleTTSChargingLevels {
-        PREMIUM, //expensive TTS
-        STUDIO,
-        STANDARD,
-        QUALITY, //least expensive TTS
-        OTHER
+    // --- 1. The Augmented Enum Class ---
+// We add a constructor and a 'val' property to the enum.
+// Each enum constant now holds its associated cost per character.
+    enum class GoogleTTSChargingLevels(val costPerCharacter: Double) {
+        PREMIUM(0.000030),
+        STUDIO(0.000160),
+        STANDARD(0.000004),
+        QUALITY(0.000016),
+        OTHER(0.000060)
     }
 
     private fun googleVoiceToChargingLevel(googleVoice: String): GoogleTTSChargingLevels {

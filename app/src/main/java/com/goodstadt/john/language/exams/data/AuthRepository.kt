@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.data // Or wherever your repositories live
 
+import android.app.Application
 import android.os.Build
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
@@ -27,7 +28,8 @@ import javax.inject.Singleton
 @Singleton
 class AuthRepository @Inject constructor(
     private val auth: FirebaseAuth,
-    private val firestore: FirebaseFirestore
+    private val firestore: FirebaseFirestore,
+    private val application: Application,
 ) {
 
     private object fb {
@@ -105,6 +107,8 @@ class AuthRepository @Inject constructor(
 
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 
+        val packageName = application.applicationContext.packageName
+
         val user = UserFirebase(id = currentUser?.uid ?: "",
             UID = currentUser?.uid ?: "",
             name = currentUser?.displayName ?: "",
@@ -123,6 +127,7 @@ class AuthRepository @Inject constructor(
             lastActivityDate = Date(),
             languageCode = Locale.getDefault().language,
             regionCode = Locale.getDefault().country,
+            packageName = packageName,
             deviceManufacturer = Build.MANUFACTURER,
             deviceModel = Build.MODEL,
             deviceBrand = Build.BRAND,

@@ -17,6 +17,7 @@ data class UserFirebase(
     val version: String,
     val languageCode: String,
     val regionCode: String,
+    val packageName: String,
     val isEmailVerified: Boolean,
     val lastUpdateDate: Date,
     val lastLoggedInDate: Date,

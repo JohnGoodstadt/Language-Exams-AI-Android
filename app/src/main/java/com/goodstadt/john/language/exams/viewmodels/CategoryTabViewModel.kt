@@ -235,7 +235,7 @@ class CategoryTabViewModel @Inject constructor(
         }
 
         viewModelScope.launch {
-            Log.d("ViewModel", "Refreshing cache state...")
+            //Log.d("ViewModel", "Refreshing cache state...")
             // Get the current categories from the state
             val currentCategories = _uiState.value.categories
 

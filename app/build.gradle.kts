@@ -29,8 +29,8 @@ android {
         applicationId = "com.goodstadt.john.language.exams"
         minSdk = 26 // Covers over 90% of devices
         targetSdk = 35
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 10
+        versionName = "1.0"
 
         testInstrumentationRunner = "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
 
@@ -62,18 +62,24 @@ android {
             dimension = "language"
             applicationIdSuffix = ".en"
             versionNameSuffix = "-en"
+            versionCode = 11
+            versionName = "1.1"
             buildConfigField("String", "LANGUAGE_ID", "\"en\"")
         }
         create("de") {
             dimension = "language"
             applicationIdSuffix = ".de"
             versionNameSuffix = "-de"
+            versionCode = 12
+            versionName = "1.2"
             buildConfigField("String", "LANGUAGE_ID", "\"de\"")
         }
         create("zh") {
             dimension = "language"
             applicationIdSuffix = ".zh"
             versionNameSuffix = "-zh"
+            versionCode = 13
+            versionName = "1.3"
             buildConfigField("String", "LANGUAGE_ID", "\"zh\"")
         }
     }

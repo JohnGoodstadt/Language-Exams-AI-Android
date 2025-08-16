@@ -31,7 +31,7 @@ import javax.inject.Inject
 
 // --- MODIFICATION 1: Add pending state to UiState ---
 data class SettingsUiState(
-    val appVersion: String = "",
+    val appVersion: String = BuildConfig.VERSION_NAME,
     val currentVoiceName: String = "",
     val currentExamName: String = "",
     val availableExams: List<ExamDetails> = emptyList(),

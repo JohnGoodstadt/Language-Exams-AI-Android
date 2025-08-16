@@ -12,7 +12,16 @@
           "package_name": "com.goodstadt.john.language.exams.en"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "396419988924-k4tml4a5hbvc4k83hed1nf29j1p4idro.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goodstadt.john.language.exams.en",
+            "certificate_hash": "92f84a499fc66f4cadd5357340171338374c713c"
+          }
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBBu7SYoWAaXI3CcnIUXiR4yoQ2_PsPvF4"

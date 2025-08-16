@@ -23,6 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
@@ -197,15 +198,18 @@ fun SettingsScreen(
                     value = uiState.appVersion
             )
         }
-        item { SectionHeader("Debug") }
-        item {
-            SettingsActionItem(
-                icon = Icons.Default.Info,
-                title = "TTS Voices",
-                currentValue = "",
-                onClick = { viewModel.downloadAndSaveVoiceList() }
-            )
+        if (DEBUG){
+            item { SectionHeader("Debug") }
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.Info,
+                    title = "TTS Voices",
+                    currentValue = "",
+                    onClick = { viewModel.downloadAndSaveVoiceList() }
+                )
+            }
         }
+
     }
 }
 
