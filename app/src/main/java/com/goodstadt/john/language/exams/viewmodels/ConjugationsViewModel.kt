@@ -107,7 +107,7 @@ class ConjugationsViewModel @Inject constructor(
 //            }
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    ttsStatsRepository.updateTTSStats( sentence.sentence,currentVoiceName)
+                    ttsStatsRepository.updateGlobalTTSStats( sentence.sentence,currentVoiceName)
                     ttsStatsRepository.updateUserPlayedSentenceCount()
                     // A new file was cached! Increment the count.
 //                    _uiState.update {

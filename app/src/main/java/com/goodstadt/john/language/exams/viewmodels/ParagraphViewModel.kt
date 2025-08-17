@@ -1,15 +1,12 @@
 package com.goodstadt.john.language.exams.viewmodels
 
 import android.util.Log
-import android.util.Log.DEBUG
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
-import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
-import com.goodstadt.john.language.exams.data.CreditSystemConfig.FREE_TIER_CREDITS
 import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
@@ -22,11 +19,9 @@ import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
-import com.google.firebase.Timestamp
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
@@ -35,7 +30,6 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
-import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 
@@ -220,12 +214,13 @@ class ParagraphViewModel @Inject constructor(
 
                     println("Total tokens: ${result.totalTokens}")
                     println("Estimated characters (for TTS): ${result.estimatedCharacters}")
-                    println("TTS cost: $${"%.6f".format(result.ttsCostUSD)}")
+                    println("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
                     println("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
                     println("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
                     println("Total cost: $${"%.6f".format(result.totalCostUSD)}")
                 }
 
+                //TODO: update gpt call costs as double
 
                 val totalTokensUsed = llmResponse.totalTokensUsed
 
@@ -341,7 +336,7 @@ class ParagraphViewModel @Inject constructor(
 
                 when (result) {
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
-                        ttsStatsRepository.updateTTSStats( sentenceToSpeak,currentVoiceName)
+                        ttsStatsRepository.updateGlobalTTSStats( sentenceToSpeak,currentVoiceName)
                         ttsStatsRepository.updateUserPlayedSentenceCount()
                         ttsStatsRepository.updateUserTTSCounts(sentenceToSpeak.count())
                         Log.d("ParagraphViewModel","updateUserTTSTokenCount ${sentenceToSpeak.count()}")

@@ -21,6 +21,7 @@ import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSQuality
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStandard
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStats
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStudio
+import com.goodstadt.john.language.exams.models.Sentence
 
 @Singleton
 class TTSStatsRepository @Inject constructor(
@@ -57,6 +58,11 @@ class TTSStatsRepository @Inject constructor(
         OTHER(0.000060)
     }
 
+    fun calculateTTSCallCost(characterCount: Int, googleVoice: String): Double {
+        // Multiply character count by the per-character cost
+        val chargingLevel = googleVoiceToChargingLevel(googleVoice)
+        return characterCount.toDouble() * chargingLevel.costPerCharacter
+    }
     private fun googleVoiceToChargingLevel(googleVoice: String): GoogleTTSChargingLevels {
         return when {
             googleVoice.lowercase().contains("standard") -> GoogleTTSChargingLevels.STANDARD
@@ -87,6 +93,8 @@ class TTSStatsRepository @Inject constructor(
         const val TTSAPICallCount = "ttsAPICallCount"
         const val currentGoogleVoiceName = "currentGoogleVoiceName"
 
+
+
         const val TR_CHARS = "TRChars"
         const val TR_CALLS = "TRCalls"
         const val TTS_OTHER = "TTSOther"
@@ -98,6 +106,7 @@ class TTSStatsRepository @Inject constructor(
         const val QUIZ_QUESTION_FAIL_COUNT = "quizQuestionFailCount"
         const val QUIZ_QUESTION_SUCCESS_COUNT = "quizQuestionSuccessCount"
         const val RECORD_COUNT = "recordCount"
+        const val TTSAPIEstCostUSD = "ttsAPIEstCostUSD"
 
         const val FSDownloadCharCount = "FSDownloadCharCount"
         const val FSDownloadCharCalls = "FSDownloadCharCalls"
@@ -207,7 +216,11 @@ class TTSStatsRepository @Inject constructor(
         val current = prefs.getInt(statName, 0)
         prefs.edit().putInt(statName, current + value).apply()
     }
-
+    fun incDouble(category: fsDOC, statName: String, value: Double = 0.0) {
+        val prefs = getPrefs(category)
+        val current = prefs.getFloat(statName, 0f).toDouble()
+        prefs.edit().putFloat(statName, (current + value).toFloat()).apply()
+    }
     fun incSheet(category: fsDOC, sheetname: String, value: Int = 1) {
         val prefs = getPrefs(category)
         val current = prefs.getInt(sheetname, 0)
@@ -327,7 +340,7 @@ class TTSStatsRepository @Inject constructor(
     }
 
     //region copied from iOS
-    fun updateTTSStats(words: String, googleVoiceName: String) {
+    fun updateGlobalTTSStats(words: String, googleVoiceName: String) {
 
 
         val characters = words.count()
@@ -344,8 +357,21 @@ class TTSStatsRepository @Inject constructor(
         }
 
     }
+    fun updateTTSStats(
+        sentence: Sentence,
+        currentVoiceName: String
+    ) {
+        updateGlobalTTSStats(sentence.sentence, currentVoiceName)
+        updateUserPlayedSentenceCount() //count how many mp3s user has played
+        updateUserTTSCounts(sentence.sentence.count())
 
-    fun updateTTSStats(words: String) {
+
+        val cost = calculateTTSCallCost(sentence.sentence.count(), currentVoiceName)
+        println("Cost: $${"%.8f".format(cost)}")
+
+        updateUserStatDouble(TTSAPIEstCostUSD, cost)
+    }
+    fun updateGlobalTTSStatsObsolete(words: String) {
         if (words.isEmpty()) {
             return
         }
@@ -354,6 +380,9 @@ class TTSStatsRepository @Inject constructor(
 
         inc(fsDOC.TTSStats, TTSChars, characters)
         inc(fsDOC.TTSStats, TTSStats)
+    }
+    fun updateUserStatDouble(fieldName:String,value:Double) {
+        incDouble(fsDOC.USER,fieldName,value)
     }
     fun updateUserStatField(fieldName:String,value:String) {
         update(fsDOC.USER,fieldName,value)

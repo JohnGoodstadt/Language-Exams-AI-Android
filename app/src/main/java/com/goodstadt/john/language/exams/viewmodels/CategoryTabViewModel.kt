@@ -1,6 +1,5 @@
 package com.goodstadt.john.language.exams.viewmodels
 
-import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
@@ -22,6 +21,7 @@ import android.util.Log
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.TTSAPIEstCostUSD
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
@@ -169,9 +169,7 @@ class CategoryTabViewModel @Inject constructor(
                             cachedAudioWordKeys = it.cachedAudioWordKeys + word.word
                         )
                     }
-                    ttsStatsRepository.updateTTSStats( sentence.sentence,currentVoiceName)
-                    ttsStatsRepository.updateUserPlayedSentenceCount() //count how many mp3s user has played
-                    ttsStatsRepository.updateUserTTSCounts(sentence.sentence.count())
+                    ttsStatsRepository.updateTTSStats(sentence, currentVoiceName)
 
                 }
                 is PlaybackResult.PlayedFromCache -> {
@@ -189,6 +187,8 @@ class CategoryTabViewModel @Inject constructor(
             }
         }
     }
+
+
     // ... inside CategoryTabViewModel ...
 
 // The existing loadContentForTab remains unchanged.

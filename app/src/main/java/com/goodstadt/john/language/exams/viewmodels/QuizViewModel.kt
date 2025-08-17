@@ -222,7 +222,7 @@ class QuizViewModel @Inject constructor(
 //            }
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    ttsStatsRepository.updateTTSStats( sentence,currentVoiceName)
+                    ttsStatsRepository.updateGlobalTTSStats( sentence,currentVoiceName)
                     ttsStatsRepository.updateUserPlayedSentenceCount()
                     ttsStatsRepository.updateUserTTSCounts(sentence.count())
                 }

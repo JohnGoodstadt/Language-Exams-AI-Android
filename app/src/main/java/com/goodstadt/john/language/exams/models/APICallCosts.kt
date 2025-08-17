@@ -6,7 +6,7 @@ data class CallCost(
     val outputTokens: Int,
     val totalTokens: Int,
     val estimatedCharacters: Int,
-    val ttsCostUSD: Double,
+    val gptEstCallCostUSD: Double,
     val gptInputCostUSD: Double,
     val gptOutputCostUSD: Double,
     val totalCostUSD: Double
@@ -31,7 +31,7 @@ fun calculateCallCost(
         outputTokens = outputTokens,
         totalTokens = inputTokens + outputTokens,
         estimatedCharacters = estimatedChars,
-        ttsCostUSD = ttsCost,
+        gptEstCallCostUSD = ttsCost,
         gptInputCostUSD = gptInputCost,
         gptOutputCostUSD = gptOutputCost,
         totalCostUSD = gptInputCost + gptOutputCost + ttsCost

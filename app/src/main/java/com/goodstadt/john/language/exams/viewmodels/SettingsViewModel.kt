@@ -182,7 +182,7 @@ class SettingsViewModel @Inject constructor(
 //            }
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    ttsStatsRepository.updateTTSStats( sentence,googleVoice)
+                    ttsStatsRepository.updateGlobalTTSStats( sentence,googleVoice)
                     ttsStatsRepository.updateUserTTSCounts(sentence.count())
                 }
                 is PlaybackResult.PlayedFromCache -> {}

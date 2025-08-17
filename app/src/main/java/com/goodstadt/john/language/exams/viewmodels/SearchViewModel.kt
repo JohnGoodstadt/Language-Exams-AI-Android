@@ -124,7 +124,7 @@ class SearchViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
-                    ttsStatsRepository.updateTTSStats(  searchResult.firstSentence,currentVoiceName)
+                    ttsStatsRepository.updateGlobalTTSStats(  searchResult.firstSentence,currentVoiceName)
                     ttsStatsRepository.updateUserPlayedSentenceCount()
                     ttsStatsRepository.updateUserTTSCounts(searchResult.firstSentence.count())
                 }
