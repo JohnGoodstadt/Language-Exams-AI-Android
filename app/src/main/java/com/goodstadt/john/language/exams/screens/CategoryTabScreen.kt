@@ -30,6 +30,7 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.categories
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
 import removeContentInBracketsAndTrim
@@ -56,6 +57,13 @@ fun CategoryTabScreen(
             } else if (categoryTitle != null) {
                 viewModel.loadContentForCategory(categoryTitle, selectedVoiceName)
             }
+        }
+    }
+// 2) When data is ready, kick off the background recalculation (no UI updates)
+    LaunchedEffect(categories, selectedVoiceName) {
+        if (selectedVoiceName.isNotEmpty() && categories.isNotEmpty()) {
+            viewModel.recalcProgress(selectedVoiceName) // suspend call
+            // If you also want to upload here, you can call another VM method after this.
         }
     }
 

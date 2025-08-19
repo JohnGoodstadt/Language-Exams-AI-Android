@@ -152,9 +152,9 @@ class VocabRepository @Inject constructor(
                     }
                     val playResult = audioPlayerService.playAudio(audioData)
 
-
                     if (playResult.isSuccess){
                         PlaybackResult.PlayedFromNetworkAndCached
+
                     }else{
                         PlaybackResult.Failure(playResult.exceptionOrNull() as? Exception ?: Exception("Unknown network playback error"))
                     }
@@ -282,6 +282,22 @@ class VocabRepository @Inject constructor(
             },
             onFailure = { error ->
                 Log.e("VocabRepository", "Failed to get vocab data for tab $tabIdentifier", error)
+                emptyList()
+            }
+        )
+    }
+    suspend fun getCategories(): List<Category> {
+
+        // Get the current exam file name from user preferences.
+        val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
+        val vocabDataResult = getVocabData(currentExamFile)
+
+        return vocabDataResult.fold(
+            onSuccess = { vocabFile ->
+                vocabFile.categories
+            },
+            onFailure = { error ->
+                Log.e("VocabRepository", "Failed to get vocab data categories", error)
                 emptyList()
             }
         )

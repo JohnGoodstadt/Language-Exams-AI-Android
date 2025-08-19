@@ -5,7 +5,6 @@ import android.content.SharedPreferences
 import android.icu.util.Calendar
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
-import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -21,12 +20,17 @@ import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSQuality
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStandard
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStats
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStudio
+import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import java.io.File
 
 @Singleton
 class TTSStatsRepository @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val firestore: FirebaseFirestore, //if direct call
+//    private val firestore: FirebaseFirestore, //if direct call
     private val firestoreRepository:FirestoreRepository
 ) {
     private val PREFS_NAME = "pronounceDates"
@@ -42,6 +46,10 @@ class TTSStatsRepository @Inject constructor(
     private val LAST_CHECK_APP_UPGRADE_DATE_KEY = "LastCheckAppUpgradeDate"
     private val LAST_CHECK_LOGIN_DATE_KEY = "LastCheckLoginDate"
 
+    // ---- Public, cached stats (like Swift's private(set) var) ----
+    @Volatile
+    var progressStats: ProgressStats = ProgressStats(size = 0, completed = 0)
+        private set
 
     private val sharedPreferences: SharedPreferences by lazy {
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
@@ -92,6 +100,10 @@ class TTSStatsRepository @Inject constructor(
         const val TTSTotalCharCount = "ttsTotalCharCount"
         const val TTSAPICallCount = "ttsAPICallCount"
         const val currentGoogleVoiceName = "currentGoogleVoiceName"
+
+        const val statProgressCompleted = "statProgress__Completed" // '__" replaced with Exam A1,A2,B1,B2
+        const val statProgressTotal = "statProgress__Total"
+
 
 
 
@@ -230,6 +242,10 @@ class TTSStatsRepository @Inject constructor(
     fun update(category: fsDOC, statName: String, value: String) {
         val prefs = getPrefs(category)
         prefs.edit().putString(statName, value).apply()
+    }
+    fun update(category: fsDOC, statName: String, value: Int) {
+        val prefs = getPrefs(category)
+        prefs.edit().putInt(statName, value).apply()
     }
 
     // Retrieve all stats in a specific category
@@ -385,6 +401,9 @@ class TTSStatsRepository @Inject constructor(
         incDouble(fsDOC.USER,fieldName,value)
     }
     fun updateUserStatField(fieldName:String,value:String) {
+        update(fsDOC.USER,fieldName,value)
+    }
+    fun updateUserStatField(fieldName:String,value:Int) {
         update(fsDOC.USER,fieldName,value)
     }
     fun updateUserPlayedSentenceCount() {
@@ -632,5 +651,130 @@ class TTSStatsRepository @Inject constructor(
 
 
 
+
+
+    // region Progress Stats
+// --- Models you already have ---
+// data class Category(val title: String, val words: List<VocabWord>)
+// data class VocabWord(val word: String, val sentences: List<Sentence>)
+// data class Sentence(val sentence: String)
+
+    data class ProgressStats(
+        val size: Int,
+        val completed: Int
+    ) {
+        val percent: Double
+            get() = if (size == 0) 0.0 else completed.toDouble() / size.toDouble()
+    }
+
+    // Matches Swift's .removingBrackets()
+    private fun String.removeBrackets(): String =
+        replace(Regex("""[\[\]\(\)<>]"""), "")
+
+    /**
+     * Recalculates progress by scanning the app's files directory once,
+     * then counting matches against filenames like:
+     *   "<voiceName>_<wordWithoutBrackets>.<firstSentence>.mp3"
+     *
+     * @param context   Android context
+     * @param categories List of categories
+     * @param voiceName  e.g. "en-GB-Neural2-A"
+     * @param directory  where the mp3s live (defaults to internal files dir)
+     */
+    suspend fun recalcProgressObsolete(
+        context: android.content.Context,
+        categories: List<Category>,
+        voiceName: String,
+        directory: java.io.File = context.filesDir
+    ): ProgressStats = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+
+        // 1) List directory once -> Set<String> of filenames
+        val namesOnDisk: Set<String> = directory.list()?.toSet() ?: emptySet()
+
+        var total = 0
+        var completed = 0
+        val prefix = "${voiceName}_"
+
+        // 2) Count totals + membership matches
+        for (category in categories) {
+            total += category.words.size
+            for (w in category.words) {
+                val firstSentence = w.sentences.firstOrNull()?.sentence ?: continue
+                val fname = "$prefix${w.word.removeBrackets()}.$firstSentence.mp3"
+                if (namesOnDisk.contains(fname)) completed++
+            }
+        }
+
+       ProgressStats(size = total, completed = completed)
+       // progressStats = ProgressStats(size = total, completed = completed)
+    }
+
+    /**
+     * Recalculate by scanning the directory once (off the main thread).
+     * Filename pattern:
+     *   "<voiceName>_<word.removeBrackets()>.<firstSentence>.mp3"
+     */
+    suspend fun recalcProgress(
+        categories: List<Category>,
+        voiceName: String,
+        directory: File = context.filesDir
+    ) = withContext(Dispatchers.IO) {
+
+        val total = categories.sumOf { it.words.size }
+        var completed = directory.list { _, name ->
+            name.endsWith(".mp3", ignoreCase = true) &&
+                    name.startsWith("${voiceName}_")
+        }?.size ?: 0
+
+
+        val namesOnDisk: Set<String> =
+            directory.list { _, name -> name.endsWith(".mp3", ignoreCase = true) }
+                ?.toSet()
+                ?: emptySet()
+
+        if (namesOnDisk.isEmpty()) {
+            //total = categories.sumOf { it.words.size }
+            progressStats = ProgressStats(size = total, completed = 0)
+            return@withContext
+        }
+
+        for (cat in categories) {
+           // total += cat.words.size
+            for (w in cat.words) {
+                val firstSentence = w.sentences.firstOrNull()?.sentence ?: continue
+                val word = w.word.removeBrackets()
+
+               // val fname = "$prefix${word}.$firstSentence.mp3"
+                val uniqueSentenceId = generateUniqueSentenceId(word, firstSentence, voiceName)
+                val fullFilename = "$uniqueSentenceId.mp3"
+               // println(fullFilename)
+                if (namesOnDisk.contains(fullFilename)) completed++
+            }
+        }
+
+        progressStats = ProgressStats(size = total, completed = completed)
+        println("recalcProgress $progressStats")
+    }
+    /**
+     * Increment the *total* count by 1 (e.g., when user clicks-to-play).
+     * No disk cache, no I/O; just update the in-memory snapshot.
+     */
+    fun incProgressSize(skillLevel:String,by: Int = 1) {
+        synchronized(this) {
+            val s = progressStats
+            progressStats = s.copy(size = s.size + by)
+            println("incProgressStats $progressStats skill $skillLevel")
+
+           // val d = statProgressCompleted.replace("_", skillLevel)
+
+            val fieldNameCompleted = statProgressCompleted.replace("__", skillLevel)
+            val fieldNameTotal= statProgressTotal.replace("__", skillLevel)
+
+            updateUserStatField(fieldNameCompleted,progressStats.completed)
+            updateUserStatField(fieldNameTotal,progressStats.size)
+
+
+        }
+    }
     //endregion
 }

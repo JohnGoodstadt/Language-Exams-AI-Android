@@ -5,6 +5,7 @@ import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.OPENAI_API_KEY
 
+
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.SerialName
@@ -46,11 +47,20 @@ import javax.inject.Singleton
 private const val OPENAI_URL = "https://api.openai.com/v1/chat/completions"
 
 // Data class to hold the parsed response, matching the Swift LLMResponse
-data class LLMResponse(
+//data class LLMResponse(
+//    val content: String,
+//    val totalTokens: Int,
+//    val model: String
+//)
+
+ //--- A NEW DATA HOLDER for a cleaner return type ---
+data class LlmResponse(
     val content: String,
-    val totalTokens: Int,
-    val model: String
+    val totalTokensUsed: Int,
+    val promptTokens: Int,
+    val completionTokens: Int
 )
+
 @Serializable
 data class OpenAIResponse(
     val choices: List<Choice>,
@@ -76,13 +86,7 @@ data class UsageData(
     @SerialName("total_tokens") val totalTokens: Int
 )
 
-// --- A NEW DATA HOLDER for a cleaner return type ---
-data class LlmResponse(
-    val content: String,
-    val totalTokensUsed: Int,
-    val promptTokens: Int,
-    val completionTokens: Int
-)
+
 
 @Serializable
 data class OpenAIRequest(
@@ -117,77 +121,12 @@ class OpenAIRepository @Inject constructor() {
      * This is a suspend function, making it safe to call from a coroutine.
      * It returns a result directly or throws an exception on failure.
      */
-    suspend fun fetchOpenAIDataObsolete(
-        llmEngine: String,
-        systemMessage: String,
-        userQuestion: String
-    ): LLMResponse {
-        // Ensure this network call runs on a background thread
-        return withContext(Dispatchers.IO) {
-            // 1. Build the JSON request body using org.json
-            val jsonBody = JSONObject().apply {
-                put("model", llmEngine)
-                put("messages", JSONArray().apply {
-                    put(JSONObject().apply {
-                        put("role", "system")
-                        put("content", systemMessage)
-                    })
-                    put(JSONObject().apply {
-                        put("role", "user")
-                        put("content", userQuestion)
-                    })
-                })
-            }
 
-            Log.d("OpenAIRepository","model used in call is ${llmEngine}")
-
-            // 2. Create the request
-            val body = jsonBody.toString().toRequestBody("application/json".toMediaType())
-            val request = Request.Builder()
-                .url(OPENAI_URL)
-                .header("Authorization", "Bearer $OPENAI_API_KEY")
-                .header("Content-Type", "application/json")
-                .post(body)
-                .build()
-
-            // 3. Execute the request and process the response
-            val response = client.newCall(request).execute()
-
-            if (!response.isSuccessful) {
-                throw Exception("API call failed with code: ${response.code} and message: ${response.message}")
-            }
-
-            val responseBody = response.body?.string()
-                ?: throw Exception("Received an empty response body from the API.")
-
-            // 4. Parse the JSON response
-            val jsonResponse = JSONObject(responseBody)
-
-            val content = jsonResponse.getJSONArray("choices")
-                .getJSONObject(0)
-                .getJSONObject("message")
-                .getString("content")
-
-            val totalTokens = jsonResponse.getJSONObject("usage")
-                .getInt("total_tokens")
-
-
-            val model = jsonResponse.getString("model")
-
-            Log.d("OpenAIRepository","totalTokens:$totalTokens model:$model")
-            // 5. Return the structured data class
-            LLMResponse(
-                    content = content,
-                    totalTokens = totalTokens,
-                    model = model
-            )
-        }
-    }
     suspend fun fetchOpenAIData(
         llmEngine: String,
         systemMessage: String,
         userQuestion: String
-    ):  com.goodstadt.john.language.exams.data.LlmResponse { // <-- Change the return type
+    ): LlmResponse { // <-- Change the return type
         // ... your existing Ktor client and request setup logic ...
 
         val requestBody = OpenAIRequest(

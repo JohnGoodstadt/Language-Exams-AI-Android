@@ -21,7 +21,6 @@ import android.util.Log
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.TTSAPIEstCostUSD
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
@@ -171,6 +170,10 @@ class CategoryTabViewModel @Inject constructor(
                     }
                     ttsStatsRepository.updateTTSStats(sentence, currentVoiceName)
 
+                    val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+
+                    ttsStatsRepository.incProgressSize(currentSkillLevel)
+
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
@@ -265,5 +268,15 @@ class CategoryTabViewModel @Inject constructor(
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
         }
+    }
+    /** Fire-and-forget: compute + store in repo var (off main thread inside). */
+    fun recalcProgress(voiceName: String) = viewModelScope.launch {
+        val categories = vocabRepository.getCategories()
+
+
+        ttsStatsRepository.recalcProgress(categories, voiceName)
+        println("progressStats: ${ttsStatsRepository.progressStats}")
+        // Optionally: trigger your Firebase repo here to upload using statsRepo.progressStats
+        // firebaseRepo.uploadA1Progress(statsRepo.progressStats)
     }
 }

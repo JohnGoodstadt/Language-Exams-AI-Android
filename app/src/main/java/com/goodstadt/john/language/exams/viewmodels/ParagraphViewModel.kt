@@ -32,6 +32,12 @@ import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
 
+// Data class to hold the parsed response, matching the Swift LLMResponse
+data class LLMResponseObsolete(
+    val content: String,
+    val totalTokens: Int,
+    val model: String
+)
 
 val DEFAULT_GPT = "GPT-4.1-nano"
 // This data class will hold all the dynamic state for our screen later.
@@ -203,14 +209,14 @@ class ParagraphViewModel @Inject constructor(
 
                 val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
 
-                val llmResponse = openAIRepository.fetchOpenAIData(
+                val llmResponse99 = openAIRepository.fetchOpenAIData(
                     llmEngine = llmEngine,
                     systemMessage = systemMessage,
                     userQuestion = userQuestion
                 )
 
                 if (BuildConfig.DEBUG) {
-                    val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
+                    val result = calculateCallCost(llmResponse99.promptTokens, llmResponse99.completionTokens)
 
                     println("Total tokens: ${result.totalTokens}")
                     println("Estimated characters (for TTS): ${result.estimatedCharacters}")
@@ -222,15 +228,15 @@ class ParagraphViewModel @Inject constructor(
 
                 //TODO: update gpt call costs as double
 
-                val totalTokensUsed = llmResponse.totalTokensUsed
+                val totalTokensUsed = llmResponse99.totalTokensUsed
 
                 ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
 
                 println("current credits A: ${_uiState.value.userCredits.current}")
 
                 creditsRepository.decrementCredit(
-                    llmResponse.promptTokens,
-                    llmResponse.completionTokens,
+                    llmResponse99.promptTokens,
+                    llmResponse99.completionTokens,
                     totalTokensUsed
                 )
 
@@ -247,7 +253,7 @@ class ParagraphViewModel @Inject constructor(
 
                 // Phase 3: Update the UI with the response
                 // Simple parsing, you can make this more robust
-                val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
+                val sentence = llmResponse99.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
                // val translation = llmResponse.content.substringAfter("{").substringBefore("}")
 
 
