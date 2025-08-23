@@ -27,6 +27,7 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.MeScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
+import com.goodstadt.john.language.exams.screens.GeminiExampleScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
@@ -142,7 +143,8 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
 
             composable(MeScreen.Conjugations.route) { ConjugationsScreen() }
             composable(MeScreen.Prepositions.route) { PrepositionsScreen() }
-            composable(MeScreen.Paragraph.route) { ParagraphScreen() }
+           composable(MeScreen.Paragraph.route) { ParagraphScreen() }
+//            composable(MeScreen.Paragraph.route) { GeminiExampleScreen() }
             composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
         }
     } //:Column

@@ -8,9 +8,15 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
 import com.goodstadt.john.language.exams.data.CreditsRepository
+import com.goodstadt.john.language.exams.data.GeminiRepository
+import com.goodstadt.john.language.exams.data.LLMProvider
+import com.goodstadt.john.language.exams.data.LLMProviderManager
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.GeminiEstCostUSD
+import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.OpenAIEstCostUSD
+import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.llmModel_
 import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -19,6 +25,7 @@ import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.google.ai.client.generativeai.type.GenerateContentResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,6 +38,8 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
+
+
 
 // Data class to hold the parsed response, matching the Swift LLMResponse
 data class LLMResponseObsolete(
@@ -49,8 +58,14 @@ data class ParagraphUiState(
     val translation: String = "",
     val highlightedWords: Set<String> = emptySet(), // <-- ADD THIS
     val error: String? = null, // <-- Add this for showing errors
-    val availableModels: List<LlmModelInfo> = emptyList(),
-    val currentLlmModel: LlmModelInfo? = null,
+    val availableOpenAIModels: List<LlmModelInfo> = emptyList(),
+    val currentOpenAIModel: LlmModelInfo? = null,
+
+    val lastUsedLLMModel: String = "",
+
+    val availableGeminiModels: List<LlmModelInfo> = emptyList(),
+    val currentGeminiModel: LlmModelInfo? = null,
+
     val areCreditsInitialized: Boolean = false,
     val waitingForCredits: Boolean = false, // To control the bottom sheet
     val userCredits: UserCredits = UserCredits() // To display current credits
@@ -67,23 +82,24 @@ class ParagraphViewModel @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
     private val creditsRepository: CreditsRepository,
+    private val geminiRepository: GeminiRepository,
+    private val providerManager: LLMProviderManager,
     private val appScope: CoroutineScope
 
 ) : ViewModel() {
 
-   // private val availableModels = listOf("gpt-4.1", "gpt-4.1-mini", "gpt-4.1-nano")
-//    private val availableModels99 = LlmModelInfo.entries
-
-//    val totalTokenCount = userPreferencesRepository.totalTokenCountFlow
-//        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), 0)
-
     private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
 
-//    private val _nextCreditRefillDate = MutableStateFlow<Date?>(null)
-//    val nextCreditRefillDate: StateFlow<Date?> = _nextCreditRefillDate.asStateFlow()
+    //private val generativeModel: GenerativeModel
 
     init{
+            // Initialize the GenerativeModel with the API key from BuildConfig
+//        generativeModel = GenerativeModel(
+//            modelName = "gemini-1.5-flash", // Use a fast and efficient model
+//            apiKey = BuildConfig.GEMINI_API_KEY
+//        )
+
         loadLlmModels()
 
         // This listener ensures that any change to the in-memory state in the
@@ -154,6 +170,9 @@ class ParagraphViewModel @Inject constructor(
         viewModelScope.launch {
             val currentState = _uiState.value
 
+            val providerToUse = providerManager.getNextProviderAndIncrement()
+            Log.w("ParagraphVM", "$providerToUse")
+
             // --- THE NEW, ROBUST CHECK ---
             // 1. Wait until credits are initialized.
             // 2. Then check if the count is zero or less.
@@ -178,14 +197,6 @@ class ParagraphViewModel @Inject constructor(
                 return@launch
             }
 
-//            val currentTokenCount = userPreferencesRepository.totalTokenCountFlow.first()
-//            if (currentTokenCount >= TOKEN_LIMIT) {
-//                Log.w("ParagraphVM", "User has exceeded token limit of $TOKEN_LIMIT. Current: $currentTokenCount")
-//                // Update the UI to show an error message
-//                _uiState.update { it.copy(error = "You have reached your free generation limit.") }
-//                return@launch // Stop execution immediately
-//            }
-
             _uiState.update { it.copy(isLoading = true, error = null) }
 
             try {
@@ -203,70 +214,194 @@ class ParagraphViewModel @Inject constructor(
                 val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
 
                 val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-
-                val llmEngine =  _uiState.value.currentLlmModel?.id ?: DEFAULT_GPT
-                Log.d("ParagraphViewModel","$llmEngine skill:$currentSkillLevel")
-
                 val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
 
-                val llmResponse99 = openAIRepository.fetchOpenAIData(
-                    llmEngine = llmEngine,
-                    systemMessage = systemMessage,
-                    userQuestion = userQuestion
-                )
 
-                if (BuildConfig.DEBUG) {
-                    val result = calculateCallCost(llmResponse99.promptTokens, llmResponse99.completionTokens)
+                val openAIModel = _uiState.value.currentOpenAIModel
+                val llmEngine =  _uiState.value.currentOpenAIModel?.id ?: DEFAULT_GPT
+                Log.d("ParagraphViewModel","$llmEngine skill:$currentSkillLevel")
+                Log.d("ParagraphViewModel","$systemMessage")
+                Log.d("ParagraphViewModel","$userQuestion")
 
-                    println("Total tokens: ${result.totalTokens}")
-                    println("Estimated characters (for TTS): ${result.estimatedCharacters}")
-                    println("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
-                    println("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
-                    println("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
-                    println("Total cost: $${"%.6f".format(result.totalCostUSD)}")
+                _uiState.update { it.copy(isLoading = true, error = null,lastUsedLLMModel = openAIModel?.title ?: "Unknown Open AI Model") }
+
+               // val p = providerManager.getCurrentProviderInfo()
+                when(providerToUse) {
+                    LLMProvider.OpenAI -> { /* ... */
+
+                        val llmResponse = openAIRepository.fetchOpenAIData(
+                            llmEngine = llmEngine,
+                            systemMessage = systemMessage,
+                            userQuestion = userQuestion
+                        )
+
+                        val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
+                        val totalCostUSD = result.totalCostUSD
+
+                        if (BuildConfig.DEBUG) {
+                            Log.d("ParagraphViewModel", llmResponse.content)
+                            println("Total tokens: ${result.totalTokens}")
+                            println("Estimated characters (for TTS): ${result.estimatedCharacters}")
+                            println("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
+                            println("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
+                            println("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
+                            println("Total cost: $${"%.6f".format(totalCostUSD)}")
+                        }
+
+                        //TODO: update gpt call costs as double
+
+                        val totalTokensUsed = llmResponse.totalTokensUsed
+                        ttsStatsRepository.updateUserGeminiTotalTokenCount(totalTokensUsed)
+                        ttsStatsRepository.updateUserStatDouble(GeminiEstCostUSD,totalCostUSD)
+                        val modelFieldName = "${llmModel_}${openAIModel?.title}" //e.g. llmModel_gemini-2.5-flash
+                        ttsStatsRepository.updateUserStatField(modelFieldName)
+
+                        creditsRepository.decrementCredit(
+                            llmResponse.promptTokens,
+                            llmResponse.completionTokens,
+                            totalTokensUsed
+                        )
+
+                        println("current credits B: ${_uiState.value.userCredits.current}")
+                        if (_uiState.value.userCredits.current <= 0){
+                            val FRED = secondsRemaining()
+                            println("seconds to go: $FRED")
+
+                        }
+
+                        // Phase 3: Update the UI with the response
+                        // Simple parsing, you can make this more robust
+                        val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
+
+                        // --- CHANGE 2: Pass the highlightedWords to the state ---
+                        _uiState.update {
+                            it.copy(
+                                isLoading = false,
+                                generatedSentence = sentence.ifBlank { "Could not parse sentence." },
+                                translation = "",//translation.ifBlank { "Could not parse translation." },
+                                highlightedWords = wordsToHighlight.toSet(),
+                                waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
+                            )
+                        }
+                    } //: OpenAI call
+                    LLMProvider.Gemini -> { /* ... */
+
+
+                        try {
+
+                            val selectedModel = _uiState.value.currentGeminiModel ?: return@launch
+
+                            _uiState.update { it.copy(isLoading = true,lastUsedLLMModel = selectedModel.title) }
+
+
+
+
+
+                            val prompt = promptForLLM(vocabFile,currentSkillLevel)
+                           //val prompt = "Why is the sky blue? Explain it simply."
+
+                            // The main API call. This is a suspend function.
+                            //val response = generativeModel.generateContent(prompt)
+                            val result = geminiRepository.generateContent(prompt, selectedModel.id)
+
+                            result.onSuccess { response: GenerateContentResponse ->
+                                val generatedText = response.text ?: "No text was generated due to safety filters or an error."
+
+                                val usageMetadata = response.usageMetadata
+                                if (usageMetadata != null) {
+                                    val inputTokens = usageMetadata.promptTokenCount
+                                    val outputTokens = usageMetadata.candidatesTokenCount
+                                    val totalTokenCount = usageMetadata.totalTokenCount
+
+                                    Log.d("GeminiViewModel", "Input Tokens: $inputTokens, Output Tokens: $outputTokens totalTokenCount: $totalTokenCount")
+
+                                    val cost = geminiRepository.calculateGeminiCallCost(
+                                        inputTokens = inputTokens,
+                                        outputTokens = outputTokens,
+                                        inputPricePerMillion = uiState.value.currentGeminiModel?.inputPrice ?: 0.0F,
+                                        outputPricePerMillion = uiState.value.currentGeminiModel?.outputPrice ?: 0.0F
+                                    )
+
+                                    if (BuildConfig.DEBUG) {
+                                        println("Total tokens: ${cost.totalTokens}")
+                                        println("Input tokens: ${cost.inputTokens}")
+                                        println("Output tokens: ${cost.outputTokens}")
+                                        println("GPT input cost: $${"%.6f".format(cost.gptInputCostUSD)}")
+                                        println("GPT output cost: $${"%.6f".format(cost.gptOutputCostUSD)}")
+                                        println("Total cost: $${"%.6f".format(cost.totalCostUSD)}")
+                                    }
+
+                                    println("current credits A: ${_uiState.value.userCredits.current}")
+                                    if (_uiState.value.userCredits.current <= 0){
+                                        val FRED = secondsRemaining()
+                                        println("seconds to go: $FRED")
+
+                                    }
+
+                                    val modelFieldName = "${llmModel_}${selectedModel.title}" //e.g. llmModel_gemini-2.5-flash
+                                    ttsStatsRepository.updateUserStatField(modelFieldName)
+                                    ttsStatsRepository.updateUserOpenAITotalTokenCount(totalTokenCount)
+                                    ttsStatsRepository.updateUserStatDouble(OpenAIEstCostUSD,cost.totalCostUSD.toDouble())
+                                    ttsStatsRepository.updateUserOpenAITotalTokenCount( cost.totalTokens)
+
+                                    creditsRepository.decrementCredit(
+                                        inputTokens,
+                                        outputTokens,
+                                        totalTokenCount
+                                    )
+
+                                    val sentence = generatedText.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
+
+                                    _uiState.update {
+                                        it.copy(
+                                            isLoading = false,
+                                            generatedSentence = sentence, //"No text was generated.",
+                                            translation = "",//translation.ifBlank { "Could not parse translation." },
+                                            highlightedWords = wordsToHighlight.toSet(),
+                                            waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
+                                        )
+                                    }
+
+                                }
+                                else{ //should not happen
+                                    Log.w("GeminiViewModel", "Usage metadata was null in the response.")
+                                    _uiState.update {
+                                        it.copy(
+                                            isLoading = false,
+                                            generatedSentence = generatedText
+                                        )
+                                    }
+                                }
+                                // Update the state with the successful response
+
+                            }
+                            result.onFailure { e ->
+                                Log.e("ParagraphViewModel",e.localizedMessage)
+                                _uiState.update {
+                                    it.copy(
+                                        isLoading = false,
+                                        error = e.localizedMessage ?: "An unknown error occurred."
+                                    )
+                                }
+                                e.printStackTrace()
+                            }
+
+
+
+                        } catch (e: Exception) {
+                            // Update the state with the error message
+                            _uiState.update {
+                                it.copy(
+                                    isLoading = false,
+                                    error = e.localizedMessage ?: "An unknown error occurred."
+                                )
+                            }
+                            e.printStackTrace()
+                        }
+                    }
                 }
 
-                //TODO: update gpt call costs as double
 
-                val totalTokensUsed = llmResponse99.totalTokensUsed
-
-                ttsStatsRepository.updateUserStatGPTTotalTokenCount(totalTokensUsed)
-
-                println("current credits A: ${_uiState.value.userCredits.current}")
-
-                creditsRepository.decrementCredit(
-                    llmResponse99.promptTokens,
-                    llmResponse99.completionTokens,
-                    totalTokensUsed
-                )
-
-                println("current credits B: ${_uiState.value.userCredits.current}")
-                //check seconds to go
-//                val currentUIState = _uiState.value
-
-                if (_uiState.value.userCredits.current <= 0){
-                    val FRED = secondsRemaining()
-                    println("seconds to go: $FRED")
-
-                }
-
-
-                // Phase 3: Update the UI with the response
-                // Simple parsing, you can make this more robust
-                val sentence = llmResponse99.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
-               // val translation = llmResponse.content.substringAfter("{").substringBefore("}")
-
-
-                // --- CHANGE 2: Pass the highlightedWords to the state ---
-                _uiState.update {
-                    it.copy(
-                            isLoading = false,
-                            generatedSentence = sentence.ifBlank { "Could not parse sentence." },
-                            translation = "",//translation.ifBlank { "Could not parse translation." },
-                            highlightedWords = wordsToHighlight.toSet(),
-                            waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
-                    )
-                }
 
             } catch (e: Exception) {
                 e.printStackTrace()
@@ -277,7 +412,27 @@ class ParagraphViewModel @Inject constructor(
     }
     // --- Functions to be called from the Bottom Sheet ---
 
+    fun promptForLLM(vocabFile:VocabFile,skillLevel:String) : String {
 
+//        try {
+        val wordsToHighlight = getLanguageSpecificWords(vocabFile)
+        val wordsForPrompt = wordsToHighlight.joinToString(", ")
+
+        // Phase 2: Call the OpenAI API via the repository
+//                val systemMessage = "You are a helpful language teacher..." // Define your system message
+        val userQuestion =  "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
+        val systemMessage =  LanguageConfig.LLMSystemText.replace("<skilllevel>", skillLevel)
+
+        val prompt = "$systemMessage$userQuestion"
+        return prompt
+
+//        } catch (e: Exception) {
+//            Log.e("ParagraphViewModel","${e.localizedMessage}")
+//            return ""
+//        }
+
+
+    }
 
     fun hideCreditsSheet() {
         _uiState.update { it.copy(waitingForCredits = false) }
@@ -363,54 +518,28 @@ class ParagraphViewModel @Inject constructor(
     /**
      * Cycles to the next available LLM engine in the list for debugging.
      */
-//    fun cycleLlmEngine88() {
-//        val currentState = _uiState.value
-//        val currentIndex = availableModels.indexOf(currentState.currentLlmEngine)
-//
-//        // Use the modulus operator to wrap around to the beginning of the list
-//        val nextIndex = (currentIndex + 1) % availableModels.size
-//
-//        val newModel = availableModels[nextIndex]
-//
-//        _uiState.update { it.copy(currentLlmEngine = newModel) }
-//    }
+
     private fun loadLlmModels() {
         viewModelScope.launch {
-            val models = appConfigRepository.getAvailableLlmModels()
+            val models = appConfigRepository.getAvailableOpenAIModels()
             _uiState.update {
                 it.copy(
-                    availableModels = models,
-                    // Set the current model to the one marked as default, or the first one
-                    currentLlmModel = models.find { it.isDefault } ?: models.firstOrNull()
+                    availableOpenAIModels = models,
+                    currentOpenAIModel = models.find { it.isDefault } ?: models.firstOrNull()
                 )
             }
+
+            val geminiModels = appConfigRepository.getAvailableGeminiModels()
+            _uiState.update {
+                it.copy(
+                    availableGeminiModels = geminiModels,
+                    currentGeminiModel = geminiModels.find { it.isDefault } ?: geminiModels.firstOrNull()
+                )
+            }
+
+            Log.d("ParagraphViewModel","AI Model: ${uiState.value.currentOpenAIModel?.title} Gemini Model: ${_uiState.value.currentGeminiModel?.title}")
+
         }
-    }
-    fun cycleLlmEngine() {
-        val currentState = _uiState.value
-
-        // 2. Use a guard clause with the elvis operator (?:) to handle the null case.
-        //    If currentLlmModel is null, just 'return' and exit the function.
-        val currentModel = currentState.currentLlmModel ?: return
-
-        // 3. Get the list of available models from the state.
-        val models = currentState.availableModels
-
-        // 4. Add another guard for the edge case of an empty list.
-        if (models.isEmpty()) return
-
-        // --- THE COMPILER ERROR IS NOW GONE ---
-        // The compiler now knows that 'currentModel' is a non-nullable LlmModelInfo
-        // because of the guard clause above.
-        val currentIndex = models.indexOf(currentModel)
-
-        // Check if the item was found (indexOf returns -1 if not found)
-        if (currentIndex == -1) return
-
-        // The rest of your logic is correct.
-        val nextIndex = (currentIndex + 1) % models.size
-
-        _uiState.update { it.copy(currentLlmModel = models[nextIndex]) }
     }
 
     fun stopPlayback() {
@@ -435,15 +564,6 @@ class ParagraphViewModel @Inject constructor(
             }
         }
     }
-    fun onPurchaseCredits(amount: Int) {
-        viewModelScope.launch {
-            creditsRepository.purchaseCredits(amount)
-            hideCreditsSheet()
-        }
-    }
-
-
-
 
 
     //from swift

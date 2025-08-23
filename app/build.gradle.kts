@@ -29,8 +29,8 @@ android {
         applicationId = "com.goodstadt.john.language.exams"
         minSdk = 26 // Covers over 90% of devices
         targetSdk = 35
-        versionCode = 10
-        versionName = "1.0"
+        versionCode = 12
+        versionName = "1.2"
 
         testInstrumentationRunner = "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
 
@@ -46,7 +46,13 @@ android {
                 secretsProperties.getProperty("OPENAI_API_KEY")
         )
 
-       // buildConfigField("String", "TTS_API_KEY", "\"AIzaSyBSGjKuHGjfCHmfMNBHxD4wuH0COGQ0biY\"")
+        buildConfigField(
+            "String",
+            "GEMINI_API_KEY",
+            secretsProperties.getProperty("GEMINI_API_KEY")
+        )
+
+       // buildCon figField("String", "TTS _API_ KEY", "\"AIzaSyBSG jKuHGjf CHmfMNBHxD4w uH0CO GQ0biY\"")
 
         vectorDrawables {
             useSupportLibrary = true
@@ -62,8 +68,8 @@ android {
             dimension = "language"
             applicationIdSuffix = ".en"
             versionNameSuffix = "-en"
-            versionCode = 11
-            versionName = "1.1"
+            versionCode = 12
+            versionName = "1.2"
             buildConfigField("String", "LANGUAGE_ID", "\"en\"")
         }
         create("de") {
@@ -78,8 +84,8 @@ android {
             dimension = "language"
             applicationIdSuffix = ".zh"
             versionNameSuffix = "-zh"
-            versionCode = 13
-            versionName = "1.3"
+            versionCode = 12
+            versionName = "1.2"
             buildConfigField("String", "LANGUAGE_ID", "\"zh\"")
         }
     }
@@ -152,6 +158,7 @@ dependencies {
 
     // Add the new dependency here
     implementation(libs.google.android.material) // <-- ADD THIS LINE
+    implementation(libs.google.ai.generativeai)
 
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)

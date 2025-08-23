@@ -95,11 +95,21 @@ class TTSStatsRepository @Inject constructor(
     // Stat names
     companion object {
         const val MP3PlayedCount = "mp3PlayedCount"
-        const val GPTTotalTokenCount = "gptTotalTokenCount"
-        const val GPTAPICallCount = "gptAPICallCount"
+        const val OpenAITotalTokenCount = "openAITotalTokenCount"
+        const val OpenAICallCount = "openAICallCount"
+        const val OpenAIEstCostUSD = "openAIEstCostUSD"
+        const val GeminiTotalTokenCount = "geminiTotalTokenCount"
+        const val GeminiCallCount = "geminiCallCount"
+        const val GeminiEstCostUSD = "geminiEstCostUSD"
+
+
+        const val TTSAPIEstCostUSD = "ttsAPIEstCostUSD"
         const val TTSTotalCharCount = "ttsTotalCharCount"
         const val TTSAPICallCount = "ttsAPICallCount"
         const val currentGoogleVoiceName = "currentGoogleVoiceName"
+        const val llmModel_ = "llmModel_"
+
+
 
         const val statProgressCompleted = "statProgress__Completed" // '__" replaced with Exam A1,A2,B1,B2
         const val statProgressTotal = "statProgress__Total"
@@ -118,7 +128,7 @@ class TTSStatsRepository @Inject constructor(
         const val QUIZ_QUESTION_FAIL_COUNT = "quizQuestionFailCount"
         const val QUIZ_QUESTION_SUCCESS_COUNT = "quizQuestionSuccessCount"
         const val RECORD_COUNT = "recordCount"
-        const val TTSAPIEstCostUSD = "ttsAPIEstCostUSD"
+//        const val TTSAPIEstCostUSD = "ttsAPIEstCostUSD"
 
         const val FSDownloadCharCount = "FSDownloadCharCount"
         const val FSDownloadCharCalls = "FSDownloadCharCalls"
@@ -403,15 +413,19 @@ class TTSStatsRepository @Inject constructor(
     fun updateUserStatField(fieldName:String,value:String) {
         update(fsDOC.USER,fieldName,value)
     }
-    fun updateUserStatField(fieldName:String,value:Int) {
+    fun updateUserStatField(fieldName:String,value:Int = 1) {
         update(fsDOC.USER,fieldName,value)
     }
     fun updateUserPlayedSentenceCount() {
         inc(fsDOC.USER, MP3PlayedCount)
     }
-    fun updateUserStatGPTTotalTokenCount(count:Int) {
-        inc(fsDOC.USER, GPTAPICallCount)
-        inc(fsDOC.USER, GPTTotalTokenCount,count)
+    fun updateUserOpenAITotalTokenCount(count:Int) {
+        inc(fsDOC.USER, OpenAICallCount)
+        inc(fsDOC.USER, OpenAITotalTokenCount,count)
+    }
+    fun updateUserGeminiTotalTokenCount(count:Int) {
+        inc(fsDOC.USER, GeminiCallCount)
+        inc(fsDOC.USER, GeminiTotalTokenCount,count)
     }
     fun updateUserTTSCounts(count:Int) {
         inc(fsDOC.USER, TTSAPICallCount)

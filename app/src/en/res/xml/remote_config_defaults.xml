@@ -21,4 +21,14 @@
         <!-- Replace with your actual package name -->
         <value>https://play.google.com/store/apps/details?id=com.goodstadt.john.language.exams</value>
     </entry>
+    <entry>
+        <key>llm_models_config</key>
+        <value>[{"id": "gpt-5-nano","title": "GPT-5_Nano","pricePerMillionInputTokens": 0.40,"inputPrice": 0.15,
+            "outputPrice": 0.4,"isDefault": true} ]</value>
+    </entry>
+    <entry>
+        <key>gemini_models_config</key>
+        <value>[{"id": "gemini-2.5-flash","title": "Gemini 2_5 Flash","pricePerMillionInputTokens": 0.55,"inputPrice": 0.15,
+            "outputPrice": 0.4,"isDefault": true }]</value>
+    </entry>
 </defaultsMap>

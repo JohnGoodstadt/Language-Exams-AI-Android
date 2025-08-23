@@ -22,8 +22,11 @@ class AppConfigRepository @Inject constructor(
 ) {
 
     private val defaultModels = listOf(
-
-        LlmModelInfo("gpt-4.1-nano", "GPT-4.1-nano", 0.40f, isDefault = true)
+        LlmModelInfo(
+            "gpt-4.1-nano", "GPT-4.1-nano", 0.40f, isDefault = true,
+            inputPrice = 0.05F,
+            outputPrice = 0.4F
+        )
     )
 
    // val TAG = "AppConfigRepository"
@@ -69,7 +72,7 @@ class AppConfigRepository @Inject constructor(
             }
         }
     }
-    suspend fun getAvailableLlmModels(): List<LlmModelInfo> {
+    suspend fun getAvailableOpenAIModels(): List<LlmModelInfo> {
         // Ensure the latest values are fetched and activated
         try {
             remoteConfig.fetchAndActivate().await()
@@ -82,10 +85,34 @@ class AppConfigRepository @Inject constructor(
         return if (jsonString.isNotBlank()) {
             try {
                 // Try to parse the JSON string from Remote Config
+                return Json.decodeFromString<List<LlmModelInfo>>(jsonString)
+            } catch (e: Exception) {
+                // If parsing fails (e.g., malformed JSON in the console), return the safe default
+                Log.e("AppConfigRepo", "Failed to parse open AI LLM models JSON", e)
+                defaultModels
+            }
+        } else {
+            // If the remote value is empty, return the safe default
+            defaultModels
+        }
+    }
+    suspend fun getAvailableGeminiModels(): List<LlmModelInfo> {
+        // Ensure the latest values are fetched and activated
+        try {
+            remoteConfig.fetchAndActivate().await()
+        } catch (e: Exception) {
+            e.printStackTrace() // Log the error, but proceed with cached/default values
+        }
+
+        val jsonString = remoteConfig.getString("gemini_models_config")
+
+        return if (jsonString.isNotBlank()) {
+            try {
+                // Try to parse the JSON string from Remote Config
                 Json.decodeFromString<List<LlmModelInfo>>(jsonString)
             } catch (e: Exception) {
                 // If parsing fails (e.g., malformed JSON in the console), return the safe default
-                Log.e("AppConfigRepo", "Failed to parse LLM models JSON", e)
+                Log.e("AppConfigRepo", "Failed to parse LLM Gemini models JSON", e)
                 defaultModels
             }
         } else {

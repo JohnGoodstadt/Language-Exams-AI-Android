@@ -9,7 +9,7 @@
 	"updatedDate" : 978307200,
 	"native" : "",
 	"googlevoiceprefix" : "",
-	"sheetname" : "EnglishB2Vocab",
+	"sheetname" : "vocab_data_b2",
 	"romanized" : false,
 	"tabtitles" : ["Personal","Travel etc","More"],
 	"categories" : [

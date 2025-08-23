@@ -23,7 +23,7 @@ import javax.inject.Singleton
 
 
 object CreditSystemConfig {
-    const val FREE_TIER_CREDITS = 3//20
+    const val FREE_TIER_CREDITS = 20
     const val BOUGHT_TIER_CREDITS = 4 //10
     const val WAIT_PERIOD_MINUTES = 1L
 }
@@ -130,7 +130,7 @@ class CreditsRepository @Inject constructor(
             val userDocRef = firestore.collection("users").document(uid)
             val doc = userDocRef.get().await() // One-time fetch
 
-            if (!doc.exists() || !doc.contains("llmCurrentCredit")) {
+            if (!doc.exists() || !doc.contains(llmCurrentCreditField)) {
                 Log.d("CreditsRepository", "User document missing credit fields. Setting up free tier.")
                 val freeTierCredits = UserCredits(
                     current = CreditSystemConfig.FREE_TIER_CREDITS,
@@ -138,7 +138,7 @@ class CreditsRepository @Inject constructor(
                 )
 
                 val freeTierData = mapOf(
-                    "llmCurrentCredit" to freeTierCredits.current,
+                    llmCurrentCreditField to freeTierCredits.current,
                     "llmTotalCredit" to freeTierCredits.total
                 )
 
@@ -169,7 +169,7 @@ class CreditsRepository @Inject constructor(
 
         return try {
             val userDocRef = firestore.collection("users").document(uid)
-            userDocRef.update("llmCurrentCredit", FieldValue.increment(-1),
+            userDocRef.update(llmCurrentCreditField, FieldValue.increment(-1),
                 "llmPromptTokens",FieldValue.increment(promptTokens.toLong()),
                 "llmTotalTokens",FieldValue.increment(completionTokens.toLong())).await()
 
@@ -209,7 +209,7 @@ class CreditsRepository @Inject constructor(
            // val total = (_userCredits.value?.total ?: 0) + amount
 
             userDocRef.update(
-                "llmCurrentCredit",current.toLong(),
+                llmCurrentCreditField,current.toLong(),
                 "llmTotalCredit", current.toLong() //total same as current
             ).await()
 
@@ -239,7 +239,7 @@ class CreditsRepository @Inject constructor(
             val userDocRef = firestore.collection("users").document(uid)
             val timestamp = System.currentTimeMillis()
             val updateData = mapOf(
-                "llmCurrentCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
+                llmCurrentCreditField to CreditSystemConfig.FREE_TIER_CREDITS,
                 "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS
 //                "llmLastRefillTimestamp" to timestamp
             )
@@ -266,7 +266,7 @@ class CreditsRepository @Inject constructor(
             val userDocRef = firestore.collection("users").document(uid)
             val timestamp = System.currentTimeMillis()
             val updateData = mapOf(
-                "llmCurrentCredit" to CreditSystemConfig.FREE_TIER_CREDITS,
+                llmCurrentCreditField to CreditSystemConfig.FREE_TIER_CREDITS,
                 "llmTotalCredit" to CreditSystemConfig.FREE_TIER_CREDITS
 //                "llmLastRefillTimestamp" to timestamp
             )

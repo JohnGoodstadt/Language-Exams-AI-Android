@@ -31,6 +31,7 @@ firebaseConfigKtx = "22.1.2"
 mockito-core = "5.11.0"      # <-- ADD THIS LINE
 mockito-kotlin = "5.2.1"     # <-- ADD THIS LINE
 ktor = "2.3.11"
+google-ai-generativeai = "0.5.0"
 
 [libraries]
 # Core & AppCompat
@@ -89,6 +90,8 @@ ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref =
 ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+google-ai-generativeai = { group = "com.google.ai.client.generativeai", name = "generativeai", version.ref = "google-ai-generativeai" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

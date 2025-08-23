@@ -33,6 +33,9 @@ class UserPreferencesRepository @Inject constructor(
         val SELECTED_SKILL_LEVEL = stringPreferencesKey("selected_skill_level")
         val TOTAL_TOKEN_COUNT = intPreferencesKey("total_token_count")
         val LAST_TOKEN_RESET_TIMESTAMP = longPreferencesKey("last_token_reset_timestamp")
+        val LLM_CALL_COUNTER = intPreferencesKey("llm_call_counter")
+        val LLM_CURRENT_PROVIDER = stringPreferencesKey("llm_current_provider")
+
     }
 
     /**
@@ -107,6 +110,28 @@ class UserPreferencesRepository @Inject constructor(
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.TOTAL_TOKEN_COUNT] = 0
             preferences[PreferenceKeys.LAST_TOKEN_RESET_TIMESTAMP] = System.currentTimeMillis()
+        }
+    }
+    val llmCallCounterFlow: Flow<Int> = context.dataStore.data
+        .map { preferences ->
+            preferences[PreferenceKeys.LLM_CALL_COUNTER] ?: 0
+        }
+
+    val llmProviderFlow: Flow<String> = context.dataStore.data
+        .map { preferences ->
+            preferences[PreferenceKeys.LLM_CURRENT_PROVIDER] ?: "openai" // Default to openai
+        }
+
+    // --- ADD THESE TWO NEW SAVE FUNCTIONS ---
+    suspend fun saveLlmCallCounter(count: Int) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.LLM_CALL_COUNTER] = count
+        }
+    }
+
+    suspend fun saveLlmProvider(provider: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.LLM_CURRENT_PROVIDER] = provider
         }
     }
  }

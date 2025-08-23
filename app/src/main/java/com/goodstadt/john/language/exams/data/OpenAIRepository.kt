@@ -1,21 +1,12 @@
 // Create a new file in your .../data/ package
 package com.goodstadt.john.language.exams.data
 
-import android.util.Log
-import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.OPENAI_API_KEY
 
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.RequestBody.Companion.toRequestBody
-import org.json.JSONArray
-import org.json.JSONObject
 
 
 import io.ktor.client.*
@@ -24,20 +15,16 @@ import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.request.post
 import io.ktor.client.request.setBody
-import io.ktor.client.utils.EmptyContent.headers
-import io.ktor.http.ContentType
 import io.ktor.http.ContentType.Application.Json
 import io.ktor.http.HttpHeaders
 import io.ktor.http.append
-import io.ktor.http.headers
 import io.ktor.serialization.kotlinx.json.*
 
 
 
 
 import io.ktor.client.request.*
-import io.ktor.http.*
- // The specific JSON serializer
+// The specific JSON serializer
 import kotlinx.serialization.json.Json
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -54,7 +41,7 @@ private const val OPENAI_URL = "https://api.openai.com/v1/chat/completions"
 //)
 
  //--- A NEW DATA HOLDER for a cleaner return type ---
-data class LlmResponse(
+data class OpenAILLMResponse(
     val content: String,
     val totalTokensUsed: Int,
     val promptTokens: Int,
@@ -126,7 +113,7 @@ class OpenAIRepository @Inject constructor() {
         llmEngine: String,
         systemMessage: String,
         userQuestion: String
-    ): LlmResponse { // <-- Change the return type
+    ): OpenAILLMResponse { // <-- Change the return type
         // ... your existing Ktor client and request setup logic ...
 
         val requestBody = OpenAIRequest(
@@ -156,7 +143,7 @@ class OpenAIRepository @Inject constructor() {
         val promptTokens = response.usage.promptTokens
 
         // Return the new, richer data object
-        return LlmResponse(
+        return OpenAILLMResponse(
             content = content,
             totalTokensUsed = tokensUsed,
             promptTokens = promptTokens,

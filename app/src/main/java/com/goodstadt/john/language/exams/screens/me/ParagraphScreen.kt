@@ -11,7 +11,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -42,10 +41,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
-import com.goodstadt.john.language.exams.data.CreditSystemConfig
-import com.goodstadt.john.language.exams.data.CreditSystemConfig.BOUGHT_TIER_CREDITS
 import com.goodstadt.john.language.exams.data.CreditSystemConfig.FREE_TIER_CREDITS
-import com.goodstadt.john.language.exams.data.UserCredits
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
 import com.goodstadt.john.language.exams.ui.theme.accentColor
@@ -121,12 +117,6 @@ fun ParagraphScreen(
                     .padding(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-//                Row(
-//                    verticalAlignment = Alignment.CenterVertically,
-//                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-//                ) {
-//                    Text("${uiState.currentLlmModel?.title}")
-//                }
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(2.dp)
@@ -149,39 +139,21 @@ fun ParagraphScreen(
             }
         }
 
-        // --- Top Section ---
-        if (uiState.waitingForCredits) {
-
-//            ModalBottomSheet(
-//                onDismissRequest = { viewModel.hideCreditsSheet() },
-//                sheetState = sheetState
-//            ) {
-//                CreditsBottomSheetContent(
-//                    userCredits = uiState.userCredits,
-//                    onPurchase = { amount -> viewModel.onPurchaseCredits(
-//                        amount = amount
-//                    ) },
-//                    onTimedRefill = { viewModel.onTimedRefillClicked() }
-//                )
-//            }
-        }
-
-
-
         Text(
                 text = "Listen to this Sentence",
                 style = MaterialTheme.typography.titleLarge
         )
 
         Text(
-                text = "It's made up of words from other pages. Listen carefully.",
-                style = MaterialTheme.typography.titleMedium,
+                text = "It's made up of words from your vocabulary list. Listen carefully.",
+                style = MaterialTheme.typography.titleSmall,
                 textAlign = TextAlign.Center // Ensures multi-line text is also centered
         )
 
         Button(onClick = {
              viewModel.generateNewParagraph()
-        },  //enabled = uiState.areCreditsInitialized && uiState.userCredits.current > 0,
+        },
+            enabled = !uiState.isLoading,
             colors = ButtonDefaults.buttonColors(
             containerColor = buttonColor,
             contentColor = Color.White
@@ -268,16 +240,6 @@ fun ParagraphScreen(
             }
         } else {
             Text("Credits left: ${uiState.userCredits.current}")
-            if (BuildConfig.DEBUG){
-                val av = uiState.availableModels
-                if (av.isNotEmpty()){
-                    val f = av.first()
-                    Text("${f.title} (D)")
-
-                }
-
-
-            }
         }
 
         Spacer(modifier = Modifier.weight(1f)) //push to bottom
@@ -297,6 +259,11 @@ fun ParagraphScreen(
             color = Color.Gray,
             modifier = Modifier.padding(top = 8.dp)
         )
+        if (BuildConfig.DEBUG){
+            if (uiState.lastUsedLLMModel.isNotEmpty()){
+                Text("${uiState.lastUsedLLMModel} (D)", style = MaterialTheme.typography.labelSmall)
+            }
+        }
         // Adds some padding at the very bottom of the screen
         Spacer(modifier = Modifier.height(4.dp))
 
