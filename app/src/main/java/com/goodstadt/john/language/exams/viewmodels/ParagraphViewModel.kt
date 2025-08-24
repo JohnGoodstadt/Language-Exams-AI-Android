@@ -248,13 +248,13 @@ class ParagraphViewModel @Inject constructor(
                             println("Total cost: $${"%.6f".format(totalCostUSD)}")
                         }
 
-                        //TODO: update gpt call costs as double
-
+                        //TODO: update gpt call costs
                         val totalTokensUsed = llmResponse.totalTokensUsed
-                        ttsStatsRepository.updateUserGeminiTotalTokenCount(totalTokensUsed)
-                        ttsStatsRepository.updateUserStatDouble(GeminiEstCostUSD,totalCostUSD)
+                        ttsStatsRepository.updateUserOpenAITotalTokenCount(totalTokensUsed)
+                        ttsStatsRepository.updateUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
                         val modelFieldName = "${llmModel_}${openAIModel?.title}" //e.g. llmModel_gemini-2.5-flash
                         ttsStatsRepository.updateUserStatField(modelFieldName)
+
 
                         creditsRepository.decrementCredit(
                             llmResponse.promptTokens,
@@ -286,22 +286,14 @@ class ParagraphViewModel @Inject constructor(
                     } //: OpenAI call
                     LLMProvider.Gemini -> { /* ... */
 
-
                         try {
 
                             val selectedModel = _uiState.value.currentGeminiModel ?: return@launch
 
                             _uiState.update { it.copy(isLoading = true,lastUsedLLMModel = selectedModel.title) }
 
-
-
-
-
                             val prompt = promptForLLM(vocabFile,currentSkillLevel)
-                           //val prompt = "Why is the sky blue? Explain it simply."
 
-                            // The main API call. This is a suspend function.
-                            //val response = generativeModel.generateContent(prompt)
                             val result = geminiRepository.generateContent(prompt, selectedModel.id)
 
                             result.onSuccess { response: GenerateContentResponse ->
@@ -340,9 +332,9 @@ class ParagraphViewModel @Inject constructor(
 
                                     val modelFieldName = "${llmModel_}${selectedModel.title}" //e.g. llmModel_gemini-2.5-flash
                                     ttsStatsRepository.updateUserStatField(modelFieldName)
-                                    ttsStatsRepository.updateUserOpenAITotalTokenCount(totalTokenCount)
-                                    ttsStatsRepository.updateUserStatDouble(OpenAIEstCostUSD,cost.totalCostUSD.toDouble())
-                                    ttsStatsRepository.updateUserOpenAITotalTokenCount( cost.totalTokens)
+                                    ttsStatsRepository.updateUserGeminiTotalTokenCount(totalTokenCount)
+                                    ttsStatsRepository.updateUserStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
+
 
                                     creditsRepository.decrementCredit(
                                         inputTokens,
