@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
@@ -272,6 +273,10 @@ class ParagraphViewModel @Inject constructor(
                         // Phase 3: Update the UI with the response
                         // Simple parsing, you can make this more robust
                         val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
+
+                        if (DEBUG){
+                            Log.i("ParagraphViewModel","${sentence}")
+                        }
 
                         // --- CHANGE 2: Pass the highlightedWords to the state ---
                         _uiState.update {

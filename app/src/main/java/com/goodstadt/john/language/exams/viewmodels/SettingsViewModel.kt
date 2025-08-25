@@ -275,4 +275,8 @@ class SettingsViewModel @Inject constructor(
             }
         }
     }
+    fun firebaseUid() : String {
+       return  firestoreRepository.firebaseUid()?.substring(0,4) ?: "unknown uid"
+    }
+
 }

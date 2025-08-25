@@ -35,6 +35,8 @@ class UserPreferencesRepository @Inject constructor(
         val LAST_TOKEN_RESET_TIMESTAMP = longPreferencesKey("last_token_reset_timestamp")
         val LLM_CALL_COUNTER = intPreferencesKey("llm_call_counter")
         val LLM_CURRENT_PROVIDER = stringPreferencesKey("llm_current_provider")
+        val TTS_CURRENT_CREDITS = intPreferencesKey("tts_current_credits")
+        val TTS_TOTAL_CREDITS = intPreferencesKey("tts_total_credits")
 
     }
 
@@ -132,6 +134,35 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun saveLlmProvider(provider: String) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.LLM_CURRENT_PROVIDER] = provider
+        }
+    }
+    // --- ADD THESE NEW FLOWS for TTS Credits ---
+    val ttsCurrentCreditsFlow: Flow<Int> = context.dataStore.data
+        .map { preferences -> preferences[PreferenceKeys.TTS_CURRENT_CREDITS] ?: 0 }
+
+    val ttsTotalCreditsFlow: Flow<Int> = context.dataStore.data
+        .map { preferences -> preferences[PreferenceKeys.TTS_TOTAL_CREDITS] ?: 0 }
+
+    // A combined flow for convenience
+    val ttsUserCreditsFlow: Flow<TtsUserCredits> = context.dataStore.data
+        .map { preferences ->
+            TtsUserCredits(
+                current = preferences[PreferenceKeys.TTS_CURRENT_CREDITS] ?: 0,
+                total = preferences[PreferenceKeys.TTS_TOTAL_CREDITS] ?: 0
+            )
+        }
+
+    // --- ADD THESE NEW SAVE FUNCTIONS for TTS Credits ---
+    suspend fun saveTtsCurrentCredits(current: Int) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.TTS_CURRENT_CREDITS] = current
+        }
+    }
+
+    suspend fun saveTtsCredits(current: Int, total: Int) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.TTS_CURRENT_CREDITS] = current
+            preferences[PreferenceKeys.TTS_TOTAL_CREDITS] = total
         }
     }
  }

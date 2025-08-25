@@ -21,6 +21,7 @@ import android.util.Log
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.TtsCreditsRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
@@ -52,6 +53,7 @@ class CategoryTabViewModel @Inject constructor(
     private val recallingItemsManager: RecallingItems,
     private val ttsStatsRepository : TTSStatsRepository,
     @ApplicationContext private val context: Context,
+    private val ttsCreditsRepository: TtsCreditsRepository,
 //    private val application: Application, // Needed for RecallingItems SharedPreferences
     private val appScope: CoroutineScope // Inject a non-cancellable, app-level scope
 ) : ViewModel() {
@@ -137,6 +139,8 @@ class CategoryTabViewModel @Inject constructor(
                 _uiEvent.emit(UiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
                 return@launch
             }
+
+            ttsCreditsRepository.decrementCredit()
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)

@@ -109,7 +109,8 @@ class TTSStatsRepository @Inject constructor(
         const val currentGoogleVoiceName = "currentGoogleVoiceName"
         const val llmModel_ = "llmModel_"
 
-
+        const val TTSCurrentTokenCount = "ttsCurrentTokenCount"
+        const val TTSTotalTokenCount = "ttsTotalTokenCount"
 
         const val statProgressCompleted = "statProgress__Completed" // '__" replaced with Exam A1,A2,B1,B2
         const val statProgressTotal = "statProgress__Total"
@@ -290,15 +291,7 @@ class TTSStatsRepository @Inject constructor(
         }
     }
 
-    fun flushTTSStatsToFirebaseObsolete() {
 
-        val stats = getAllStats(fsDOC.TTSStats)
-
-        if (stats.isNotEmpty()) {
-            firestoreRepository.fsUpdateUserStatsCounts(stats)
-            clearStats(fsDOC.USER)
-        }
-    }
 
     fun flushTTSStatsToFirebase() {
         val stats = getAllStats(fsDOC.TTSStats)
@@ -422,6 +415,12 @@ class TTSStatsRepository @Inject constructor(
     fun updateUserOpenAITotalTokenCount(count:Int) {
         inc(fsDOC.USER, OpenAICallCount)
         inc(fsDOC.USER, OpenAITotalTokenCount,count)
+    }
+    fun updateUserTTSCurrentTokenCount(value:Int) {
+        update(fsDOC.USER,TTSCurrentTokenCount,value)
+    }
+    fun incUserTTSTotalTokenCount(value:Int = 1) {
+        inc(fsDOC.USER, TTSTotalTokenCount, value)
     }
     fun updateUserGeminiTotalTokenCount(count:Int) {
         inc(fsDOC.USER, GeminiCallCount)

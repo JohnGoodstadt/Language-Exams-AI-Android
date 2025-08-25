@@ -199,6 +199,13 @@ fun SettingsScreen(
             )
         }
         if (DEBUG){
+            item {
+                SettingsInfoItem(
+                    icon = Icons.Default.Info,
+                    title = "UID",
+                    value = viewModel.firebaseUid()
+                )
+            }
             item { SectionHeader("Debug") }
             item {
                 SettingsActionItem(
