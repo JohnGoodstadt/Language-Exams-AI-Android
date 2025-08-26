@@ -32,6 +32,8 @@ mockito-core = "5.11.0"      # <-- ADD THIS LINE
 mockito-kotlin = "5.2.1"     # <-- ADD THIS LINE
 ktor = "2.3.11"
 google-ai-generativeai = "0.5.0"
+billing-ktx = "6.2.1"
+
 
 [libraries]
 # Core & AppCompat
@@ -47,6 +49,7 @@ okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhtt
 accompanist-navigation-material = { group = "com.google.accompanist", name = "accompanist-navigation-material", version.ref = "accompanist" }
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito-core" }          # <-- ADD THIS LINE
 mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockito-kotlin" } # <-- ADD THIS LINE
+androidx-billing-ktx = { group = "com.android.billingclient", name = "billing-ktx", version.ref = "billing-ktx" }
 
 # Compose
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -92,6 +95,7 @@ ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-conte
 ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 
 google-ai-generativeai = { group = "com.google.ai.client.generativeai", name = "generativeai", version.ref = "google-ai-generativeai" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

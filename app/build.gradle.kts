@@ -29,8 +29,8 @@ android {
         applicationId = "com.goodstadt.john.language.exams"
         minSdk = 26 // Covers over 90% of devices
         targetSdk = 35
-        versionCode = 12
-        versionName = "1.2"
+        versionCode = 16
+       versionName = "1.16"
 
         testInstrumentationRunner = "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
 
@@ -68,24 +68,24 @@ android {
             dimension = "language"
             applicationIdSuffix = ".en"
             versionNameSuffix = "-en"
-            versionCode = 12
-            versionName = "1.2"
+            versionCode = 16
+           versionName = "1.16"
             buildConfigField("String", "LANGUAGE_ID", "\"en\"")
         }
         create("de") {
             dimension = "language"
             applicationIdSuffix = ".de"
             versionNameSuffix = "-de"
-            versionCode = 12
-            versionName = "1.2"
+            versionCode = 16
+           versionName = "1.16"
             buildConfigField("String", "LANGUAGE_ID", "\"de\"")
         }
         create("zh") {
             dimension = "language"
             applicationIdSuffix = ".zh"
             versionNameSuffix = "-zh"
-            versionCode = 12
-            versionName = "1.2"
+            versionCode = 16
+           versionName = "1.16"
             buildConfigField("String", "LANGUAGE_ID", "\"zh\"")
         }
     }
@@ -173,6 +173,7 @@ dependencies {
 
     implementation(libs.hilt.android)
     implementation(libs.androidx.lifecycle.runtime.compose.android)
+//    implementation(libs.billing.ktx)
 
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
@@ -221,6 +222,11 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.okhttp)
+
+    //billin IAP
+    implementation(libs.androidx.billing.ktx)
+
+
 }
 
 //// Allow Hilt to access classes in different build variants

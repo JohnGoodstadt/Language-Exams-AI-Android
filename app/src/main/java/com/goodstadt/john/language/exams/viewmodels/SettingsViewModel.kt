@@ -1,10 +1,12 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.app.Activity
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.GoogleTTSInfoRepository
@@ -65,7 +67,8 @@ class SettingsViewModel @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val recallingItemsManager: RecallingItems,
     private val googleTtsInfoRepository: GoogleTTSInfoRepository,
-    private val firestoreRepository:FirestoreRepository
+    private val firestoreRepository:FirestoreRepository,
+    private val billingRepository: BillingRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(SettingsUiState())
@@ -79,6 +82,10 @@ class SettingsViewModel @Inject constructor(
 
     private val _uiEvent = MutableSharedFlow<SettingsUiEvent>()
     val uiEvent = _uiEvent.asSharedFlow()
+
+    // Expose the product and premium status to the UI
+    val premiumProduct = billingRepository.premiumProduct
+    val isPremiumUser = billingRepository.isPremiumUser
 
     init {
         // This initialization logic is correct and remains the same.
@@ -134,7 +141,9 @@ class SettingsViewModel @Inject constructor(
             _sheetState.value = type
         }
     }
+   fun  onBuyIAPClicked (){
 
+   }
     // --- MODIFICATION 3: Create functions to handle PENDING selections ---
     fun onPendingExamSelect(exam: ExamDetails) {
         // This only updates the state for the UI inside the sheet. Does NOT save.
@@ -277,6 +286,9 @@ class SettingsViewModel @Inject constructor(
     }
     fun firebaseUid() : String {
        return  firestoreRepository.firebaseUid()?.substring(0,4) ?: "unknown uid"
+    }
+    fun onPurchaseClicked(activity: Activity) {
+        billingRepository.launchPurchaseFlow(activity)
     }
 
 }

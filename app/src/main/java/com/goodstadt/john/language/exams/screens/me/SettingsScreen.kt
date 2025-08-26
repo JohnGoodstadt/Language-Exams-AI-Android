@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.me
 
+import android.app.Activity
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
@@ -19,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -42,6 +44,10 @@ fun SettingsScreen(
     val sheetContent by viewModel.sheetState.collectAsState()
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    val premiumProduct by viewModel.premiumProduct.collectAsState()
+    val isPremiumUser by viewModel.isPremiumUser.collectAsState()
+    val context = LocalContext.current
 
     LaunchedEffect(sheetContent, sheetState.isVisible) {
         if (sheetContent != SheetContent.Hidden) {
@@ -199,6 +205,39 @@ fun SettingsScreen(
             )
         }
         if (DEBUG){
+
+            if (!isPremiumUser && premiumProduct != null) {
+                item {
+                    SettingsActionItem(
+                        icon = Icons.Default.Info,
+                        title = "Buy IAP",
+                        currentValue = "Premium Product",
+                        onClick = {
+                            (context as? Activity)?.let { activity ->
+                                viewModel.onPurchaseClicked(activity)
+                            }
+                        }
+                    )
+                }
+            } else if (isPremiumUser) {
+
+                item {
+                    SettingsInfoItem(
+                        icon = Icons.Default.Info,
+                        title = "You are a Premium user! Thank you!",
+                        value = ""
+                    )
+                }
+            }else {
+                item {
+                    SettingsInfoItem(
+                        icon = Icons.Default.Info,
+                        title = "Unlock IAP" ,
+                        value = "Not set up yet"
+                    )
+                }
+            }
+
             item {
                 SettingsInfoItem(
                     icon = Icons.Default.Info,
