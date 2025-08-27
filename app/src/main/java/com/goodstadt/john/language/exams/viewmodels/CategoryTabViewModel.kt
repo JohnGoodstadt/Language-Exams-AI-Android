@@ -18,15 +18,21 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import android.content.Context
 import android.util.Log
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
+import com.goodstadt.john.language.exams.data.PremiumStatus
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.TtsCreditsRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 // This data class represents everything the UI needs to draw itself.
@@ -55,8 +61,23 @@ class CategoryTabViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
     private val ttsCreditsRepository: TtsCreditsRepository,
 //    private val application: Application, // Needed for RecallingItems SharedPreferences
-    private val appScope: CoroutineScope // Inject a non-cancellable, app-level scope
+    private val appScope: CoroutineScope ,// Inject a non-cancellable, app-level scope
+    private val billingRepository: BillingRepository,
 ) : ViewModel() {
+
+    val isPremium: StateFlow<Boolean> = billingRepository.premiumStatus
+        .map { status ->
+            // The logic is simple: if the status is IsPremium, the value is true.
+            // For all other states (Checking, NotPremium, Unavailable), it's false.
+            status is PremiumStatus.IsPremium
+        }
+        // .stateIn() converts the resulting Flow<Boolean> into a StateFlow<Boolean>
+        // that the UI can collect. It also gives it an initial value and a lifecycle scope.
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = false // Start with a safe default of false
+        )
 
     private val _uiState = MutableStateFlow(CategoryTabUiState())
     val uiState = _uiState.asStateFlow()
@@ -84,6 +105,8 @@ class CategoryTabViewModel @Inject constructor(
                 return@launch
             }
         }
+
+        billingRepository.logCurrentStatus()
     }
 
     fun loadContentForTab(tabIdentifier: String, voiceName: String) {
@@ -135,10 +158,20 @@ class CategoryTabViewModel @Inject constructor(
 
         viewModelScope.launch {
 
+
+
             if (!connectivityRepository.isCurrentlyOnline()) {
                 _uiEvent.emit(UiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
                 return@launch
             }
+
+//            val isPremiumUser = isPremium.value
+            if (isPremium.value) {
+                Log.i("CategoryTabViewModel","User is a isPremiumUser")
+            }else{
+                Log.i("CategoryTabViewModel","User is NOT a isPremiumUser")
+            }
+
 
             ttsCreditsRepository.decrementCredit()
 

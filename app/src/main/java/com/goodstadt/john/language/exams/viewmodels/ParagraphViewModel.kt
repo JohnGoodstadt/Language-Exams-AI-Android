@@ -7,6 +7,7 @@ import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
 import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.GeminiRepository
@@ -14,6 +15,7 @@ import com.goodstadt.john.language.exams.data.LLMProvider
 import com.goodstadt.john.language.exams.data.LLMProviderManager
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
+import com.goodstadt.john.language.exams.data.PremiumStatus
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.GeminiEstCostUSD
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.OpenAIEstCostUSD
@@ -30,8 +32,12 @@ import com.google.ai.client.generativeai.type.GenerateContentResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -85,9 +91,24 @@ class ParagraphViewModel @Inject constructor(
     private val creditsRepository: CreditsRepository,
     private val geminiRepository: GeminiRepository,
     private val providerManager: LLMProviderManager,
-    private val appScope: CoroutineScope
+    private val appScope: CoroutineScope,
+    private val billingRepository: BillingRepository,
 
-) : ViewModel() {
+    ) : ViewModel() {
+
+    val isPremium: StateFlow<Boolean> = billingRepository.premiumStatus
+        .map { status ->
+            // The logic is simple: if the status is IsPremium, the value is true.
+            // For all other states (Checking, NotPremium, Unavailable), it's false.
+            status is PremiumStatus.IsPremium
+        }
+        // .stateIn() converts the resulting Flow<Boolean> into a StateFlow<Boolean>
+        // that the UI can collect. It also gives it an initial value and a lifecycle scope.
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = false // Start with a safe default of false
+        )
 
     private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
@@ -170,6 +191,14 @@ class ParagraphViewModel @Inject constructor(
     fun generateNewParagraph() {
         viewModelScope.launch {
             val currentState = _uiState.value
+
+            billingRepository.logCurrentStatus()
+
+            if (isPremium.value) {
+                Log.i("ParagraphVM","generateNewParagraph().User is a isPremiumUser")
+            }else{
+                Log.i("ParagraphVM","generateNewParagraph().User is NOT a isPremiumUser")
+            }
 
             val providerToUse = providerManager.getNextProviderAndIncrement()
             Log.w("ParagraphVM", "$providerToUse")

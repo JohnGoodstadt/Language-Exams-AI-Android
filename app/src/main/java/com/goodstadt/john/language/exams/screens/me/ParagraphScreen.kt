@@ -46,6 +46,7 @@ import com.goodstadt.john.language.exams.data.CreditSystemConfig.FREE_TIER_CREDI
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 import kotlinx.coroutines.delay
 import java.util.Date
@@ -54,8 +55,13 @@ import java.util.Date
 @Composable
 fun ParagraphScreen(
         // We get the ViewModel instance, but we don't use it yet.
-    viewModel: ParagraphViewModel = hiltViewModel()
+    viewModel: ParagraphViewModel = hiltViewModel()//,
+  //  mainViewModel: MainViewModel = hiltViewModel()
 ) {
+
+//    val globalUiState by mainViewModel.uiState.collectAsState()
+//    val isPremium = globalUiState.isPremiumUser
+
     // --- STEP 1: Collect the state from the ViewModel ---
     // The `by` keyword unwraps the State<ParagraphUiState> into a plain ParagraphUiState object.
     // This line creates the subscription. Whenever the ViewModel updates its state,

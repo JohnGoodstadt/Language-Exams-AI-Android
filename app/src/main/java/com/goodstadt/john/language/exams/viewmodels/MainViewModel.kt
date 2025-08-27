@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.AuthRepository
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UpdateState
@@ -26,7 +27,8 @@ import javax.inject.Inject
 data class GlobalUiState(
     val authState: AuthUiState = AuthUiState.Loading,
     val selectedVoiceName: String = "",
-    val badgeCounts: Map<String, Int> = emptyMap()
+    val badgeCounts: Map<String, Int> = emptyMap(),
+    val isPremiumUser: Boolean = false
 )
 
 // The AuthUiState can remain as it was.
@@ -43,6 +45,7 @@ class MainViewModel @Inject constructor(
     private val recallingItemsManager: RecallingItems,
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
+    private val billingRepository: BillingRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(GlobalUiState())
@@ -77,6 +80,15 @@ class MainViewModel @Inject constructor(
                 _uiState.update { it.copy(selectedVoiceName = voiceName) }
             }
         }
+
+//        viewModelScope.launch {
+//            // This creates a permanent subscription. Whenever the BillingRepository
+//            // updates the premium status, this block will run.
+//            billingRepository.isPremiumUser.collect { isPremium ->
+//                // Update the global UI state with the new value.
+//                _uiState.update { it.copy(isPremiumUser = isPremium) }
+//            }
+//        }
 
         loadInitialRecalledItems()
 

@@ -1,6 +1,8 @@
 package com.goodstadt.john.language.exams.screens.me
 
 import android.app.Activity
+import android.util.Log
+
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
@@ -9,10 +11,14 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.CloudOff
+import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Verified
+import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -31,6 +37,7 @@ import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
 import com.goodstadt.john.language.exams.data.Gender
+import com.goodstadt.john.language.exams.data.PremiumStatus
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
@@ -41,12 +48,15 @@ fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+
     val sheetContent by viewModel.sheetState.collectAsState()
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-    val premiumProduct by viewModel.premiumProduct.collectAsState()
-    val isPremiumUser by viewModel.isPremiumUser.collectAsState()
+    val isPremiumUser by viewModel.isPremium.collectAsState()
+
+   // val premiumProduct by viewModel.premiumProduct.collectAsState()
+    //val isPremiumUser by viewModel.isPremiumUser.collectAsState()
     val context = LocalContext.current
 
     LaunchedEffect(sheetContent, sheetState.isVisible) {
@@ -204,14 +214,64 @@ fun SettingsScreen(
                     value = uiState.appVersion
             )
         }
-        if (DEBUG){
+        item {
+            SettingsInfoItem(
+                icon = Icons.Default.Info,
+                title = "Version Code",
+                value =" ${uiState.appVersionCode}"
+            )
+        }
 
-            if (!isPremiumUser && premiumProduct != null) {
-                item {
+//        if (true) { //TODO: remote for real live
+//        item {
+//            SettingsInfoItem(
+//                icon = Icons.Default.Info,
+//                title = "Version 1.20",
+//                value = "Hard Coded v1.20"
+//            )
+//        }
+
+        item {
+            SettingsActionItem(
+                icon = Icons.Default.Info,
+                title = "Debug IAP",
+                currentValue = "Tap to Log IAP Status",
+                onClick = {
+                    viewModel.logIAP()
+                }
+            )
+        }
+
+        item {
+            // --- THIS IS THE CORRECTED LOGIC ---
+            // Use a 'when' statement to exhaustively handle all possible states.
+            when (val status = uiState.premiumStatus) {
+
+                is PremiumStatus.Checking -> {
+                    // State 1: Still loading. Show an informative item.
+                    SettingsInfoItem(
+                        icon = Icons.Default.CloudSync, // Use a more descriptive icon
+                        title = "Checking Purchase Status...",
+                        value = "Please wait"
+                    )
+                }
+
+                is PremiumStatus.IsPremium -> {
+                    // State 2: User is a premium member.
+                    SettingsInfoItem(
+                        icon = Icons.Default.Verified, // Use a checkmark icon
+                        title = "You are a Premium user!",
+                        value = "Thank you for your support."
+                    )
+                }
+
+                is PremiumStatus.NotPremium -> {
+                    // State 3: User can buy the product. Show the action item.
+                    // Note: We get the product details directly from the 'status' variable.
                     SettingsActionItem(
-                        icon = Icons.Default.Info,
-                        title = "Buy IAP",
-                        currentValue = "Premium Product",
+                        icon = Icons.Default.WorkspacePremium, // Use a premium icon
+                        title = "Upgrade to Premium",
+                        currentValue = status.product.formattedPrice, // Display the price
                         onClick = {
                             (context as? Activity)?.let { activity ->
                                 viewModel.onPurchaseClicked(activity)
@@ -219,25 +279,26 @@ fun SettingsScreen(
                         }
                     )
                 }
-            } else if (isPremiumUser) {
 
-                item {
+                is PremiumStatus.Unavailable -> {
+                    // State 4: IAP is disabled (e.g., debug build, no network).
                     SettingsInfoItem(
-                        icon = Icons.Default.Info,
-                        title = "You are a Premium user! Thank you!",
-                        value = ""
+                        icon = Icons.Default.CloudOff, // Use an offline icon
+                        title = "In-App Purchase Unavailable",
+                        value = "Please check your connection or Play Store."
                     )
                 }
-            }else {
-                item {
-                    SettingsInfoItem(
-                        icon = Icons.Default.Info,
-                        title = "Unlock IAP" ,
-                        value = "Not set up yet"
-                    )
+                else -> { //should not need this!
+                    // You can leave this empty or add a log for debugging.
+                    Log.e("SettingsScreen", "Reached an unexpected 'else' in PremiumStatus 'when' block.")
                 }
             }
 
+            // --- END OF CORRECTED LOGIC ---
+        }
+
+//        }
+            if (DEBUG){
             item {
                 SettingsInfoItem(
                     icon = Icons.Default.Info,

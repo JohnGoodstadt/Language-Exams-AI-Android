@@ -1,4 +1,3 @@
-
 // <project-root>/app/build.gradle.kts
 
 import java.util.Properties
@@ -10,7 +9,7 @@ plugins {
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.compose.compiler)// <-- ADD THIS LINE to apply the new plugin
     alias(libs.plugins.kotlinSerialization)
-   // kotlin("kapt")
+    // kotlin("kapt")
     alias(libs.plugins.google.gms.google.services)
     id("com.google.devtools.ksp")
 }
@@ -29,21 +28,22 @@ android {
         applicationId = "com.goodstadt.john.language.exams"
         minSdk = 26 // Covers over 90% of devices
         targetSdk = 35
-        versionCode = 16
-       versionName = "1.16"
+        versionCode = 28
+            versionName = "1.28"
 
-        testInstrumentationRunner = "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
+        testInstrumentationRunner =
+            "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
 
         buildConfigField(
-                "String",
-                "TTS_API_KEY",
-                secretsProperties.getProperty("TTS_API_KEY")
+            "String",
+            "TTS_API_KEY",
+            secretsProperties.getProperty("TTS_API_KEY")
         )
 
         buildConfigField(
-                "String",
-                "OPENAI_API_KEY",
-                secretsProperties.getProperty("OPENAI_API_KEY")
+            "String",
+            "OPENAI_API_KEY",
+            secretsProperties.getProperty("OPENAI_API_KEY")
         )
 
         buildConfigField(
@@ -52,7 +52,7 @@ android {
             secretsProperties.getProperty("GEMINI_API_KEY")
         )
 
-       // buildCon figField("String", "TTS _API_ KEY", "\"AIzaSyBSG jKuHGjf CHmfMNBHxD4w uH0CO GQ0biY\"")
+        // buildCon figField("String", "TTS _API_ KEY", "\"AIzaSyBSG jKuHGjf CHmfMNBHxD4w uH0CO GQ0biY\"")
 
         vectorDrawables {
             useSupportLibrary = true
@@ -68,24 +68,24 @@ android {
             dimension = "language"
             applicationIdSuffix = ".en"
             versionNameSuffix = "-en"
-            versionCode = 16
-           versionName = "1.16"
+            versionCode = 28
+           versionName = "1.28"
             buildConfigField("String", "LANGUAGE_ID", "\"en\"")
         }
         create("de") {
             dimension = "language"
             applicationIdSuffix = ".de"
             versionNameSuffix = "-de"
-            versionCode = 16
-           versionName = "1.16"
+            versionCode = 28
+           versionName = "1.28"
             buildConfigField("String", "LANGUAGE_ID", "\"de\"")
         }
         create("zh") {
             dimension = "language"
             applicationIdSuffix = ".zh"
             versionNameSuffix = "-zh"
-            versionCode = 16
-           versionName = "1.16"
+            versionCode = 28
+           versionName = "1.28"
             buildConfigField("String", "LANGUAGE_ID", "\"zh\"")
         }
     }
@@ -121,11 +121,12 @@ android {
         release {
             isMinifyEnabled = true
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
             // BuildConfig field for release builds
             buildConfigField("Boolean", "IS_DEBUG", "false")
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
@@ -193,6 +194,9 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.google.firebase.config.ktx)
     implementation(libs.androidx.datastore.preferences)
+//    implementation(platform(libs.google.play.services.bom))
+    implementation("com.google.android.gms:play-services-auth")
+
 
     implementation(libs.ktor.client.core)
     implementation(libs.ktor.client.cio)
@@ -210,7 +214,7 @@ dependencies {
     testImplementation(libs.mockito.kotlin) // Helper library for Mockito with Kotlin
     testImplementation(libs.kotlinx.coroutines.test) // For testing suspend functions
     testImplementation(libs.kotlin.test)
-    
+
     // Instrumented/UI Tests
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

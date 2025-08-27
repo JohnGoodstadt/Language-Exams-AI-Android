@@ -32,6 +32,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.categories
 import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
 import removeContentInBracketsAndTrim
 
@@ -45,8 +46,12 @@ fun CategoryTabScreen(
     tabIdentifier: String? = null,
     categoryTitle: String? = null,
     selectedVoiceName: String,
-    viewModel: CategoryTabViewModel = hiltViewModel()
+    viewModel: CategoryTabViewModel = hiltViewModel()//,
+//    mainViewModel: MainViewModel = hiltViewModel()
 ) {
+
+//    val globalUiState by mainViewModel.uiState.collectAsState()
+//    val isPremium = globalUiState.isPremiumUser
 
     val snackbarHostState = remember { SnackbarHostState() }
 
