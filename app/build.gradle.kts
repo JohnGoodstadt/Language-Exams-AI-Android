@@ -20,6 +20,12 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
+val VERSION_CODE = 33
+val VERSION_NAME = "1.33"
+
+println("DEBUG: MYAPP_UPLOAD_STORE_PASSWORD from properties file is: '${secretsProperties.getProperty("MYAPP_UPLOAD_STORE_PASSWORD")}'")
+println("DEBUG: MYAPP_UPLOAD_KEY_PASSWORD from properties file is: '${secretsProperties.getProperty("MYAPP_UPLOAD_KEY_PASSWORD")}'")
+
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
     compileSdk = 35 //was 34
@@ -28,8 +34,8 @@ android {
         applicationId = "com.goodstadt.john.language.exams"
         minSdk = 26 // Covers over 90% of devices
         targetSdk = 35
-        versionCode = 28
-            versionName = "1.28"
+        versionCode = VERSION_CODE
+        versionName = VERSION_NAME
 
         testInstrumentationRunner =
             "com.goodstadt.john.language.exams.CustomTestRunner" // For Hilt testing
@@ -68,24 +74,24 @@ android {
             dimension = "language"
             applicationIdSuffix = ".en"
             versionNameSuffix = "-en"
-            versionCode = 28
-           versionName = "1.28"
+            versionCode = VERSION_CODE
+            versionName = VERSION_NAME
             buildConfigField("String", "LANGUAGE_ID", "\"en\"")
         }
         create("de") {
             dimension = "language"
             applicationIdSuffix = ".de"
             versionNameSuffix = "-de"
-            versionCode = 28
-           versionName = "1.28"
+            versionCode = VERSION_CODE
+            versionName = VERSION_NAME
             buildConfigField("String", "LANGUAGE_ID", "\"de\"")
         }
         create("zh") {
             dimension = "language"
             applicationIdSuffix = ".zh"
             versionNameSuffix = "-zh"
-            versionCode = 28
-           versionName = "1.28"
+            versionCode = VERSION_CODE
+            versionName = VERSION_NAME
             buildConfigField("String", "LANGUAGE_ID", "\"zh\"")
         }
     }
@@ -110,23 +116,35 @@ android {
         }
     }
     // --- END OF NEW BLOCK ---
+    //            storeFile = file(secretsProperties.getProperty("MYAPP_UPLOAD_STORE_FILE"))
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("/Users/johngoodstadt/Library/Mobile Documents/com~apple~CloudDocs/keystore/android_memorize_law_demo")
+            storePassword = secretsProperties.getProperty("MYAPP_UPLOAD_STORE_PASSWORD")
+            keyAlias = secretsProperties.getProperty("MYAPP_UPLOAD_KEY_ALIAS")
+            keyPassword = secretsProperties.getProperty("MYAPP_UPLOAD_KEY_PASSWORD")
+        }
+    }
 
     buildTypes {
         debug {
             isMinifyEnabled = false
             // BuildConfig field to detect debug builds at runtime
             buildConfigField("Boolean", "IS_DEBUG", "true")
+            signingConfig = signingConfigs.getByName("debug")
+
         }
         release {
-            isMinifyEnabled = true
+
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
             // BuildConfig field for release builds
             buildConfigField("Boolean", "IS_DEBUG", "false")
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
@@ -184,19 +202,63 @@ dependencies {
 //    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     // Firebase
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.config.ktx)
-    implementation(libs.firebase.analytics)
-    implementation(libs.firebase.auth)
-    implementation(libs.firebase.firestore) {
-        exclude(group = "com.google.firebase", module = "firebase-common")
-    }
-    implementation(libs.firebase.firestore)
-    implementation(libs.google.firebase.config.ktx)
+//    implementation(platform(libs.firebase.bom))
+//    implementation(libs.firebase.config.ktx)
+//    implementation(libs.firebase.analytics)
+//    implementation(libs.firebase.auth)
+//    implementation(libs.firebase.firestore) {
+//        exclude(group = "com.google.firebase", module = "firebase-common")
+//    }
+//    implementation(libs.firebase.firestore)
+//    implementation(libs.google.firebase.config.ktx)
     implementation(libs.androidx.datastore.preferences)
-//    implementation(platform(libs.google.play.services.bom))
-    implementation("com.google.android.gms:play-services-auth")
+////    implementation(platform(libs.google.play.services.bom))
+//    implementation("com.google.android.gms:play-services-auth")
 
+//    implementation("com.google.android.gms:play-services-base:18.7.2")
+
+    //
+    // 1. Declare the Bills of Materials (BOMs) FIRST.
+    //    This tells Gradle to use these as the "master version list".
+    implementation(platform(libs.firebase.bom))
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.firebase:firebase-config-ktx")
+    implementation("com.google.firebase:firebase-analytics-ktx") // If you have it
+
+    // This library is NOT part of the Firebase BOM, so it needs its own version.
+    // Ensure this is defined correctly in your TOML file.
+//    implementation(libs.androidx.billing.ktx)
+    implementation(libs.billing)
+    implementation(libs.billing.ktx)
+    implementation(libs.play.services.auth)
+    implementation(libs.play.services.maps)
+
+    constraints {
+        implementation("com.android.billingclient:billing:7.0.0") {
+            because("Enforce consistent billing library version across all dependencies")
+        }
+        implementation("com.android.billingclient:billing-ktx:7.0.0") {
+            because("Enforce consistent billing library version across all dependencies")
+        }
+    }
+
+//    implementation(platform(libs.play.services.bom))
+
+    // 2. Now declare all your Firebase and GMS libraries WITHOUT versions.
+    //    The BOMs will provide the correct, compatible versions for all of them.
+//    implementation(libs.firebase.auth)
+//    implementation(libs.firebase.firestore)
+//    implementation(libs.firebase.config.ktx)
+//    implementation(libs.firebase.analytics) // If you decided to keep it
+//
+    // It's good practice to explicitly include common dependencies
+//    implementation("com.google.firebase:firebase-common-ktx")
+//    implementation("com.google.android.gms:play-services-base")
+
+    // --- YOUR BILLING LIBRARY ---
+    // This is an AndroidX library, not a GMS library, so it's fine on its own.
+//    implementation(libs.androidx.billing.ktx)
 
     implementation(libs.ktor.client.core)
     implementation(libs.ktor.client.cio)
@@ -227,8 +289,7 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.okhttp)
 
-    //billin IAP
-    implementation(libs.androidx.billing.ktx)
+
 
 
 }

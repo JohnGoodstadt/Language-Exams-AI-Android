@@ -31,9 +31,10 @@ firebaseConfigKtx = "22.1.2"
 mockito-core = "5.11.0"      # <-- ADD THIS LINE
 mockito-kotlin = "5.2.1"     # <-- ADD THIS LINE
 ktor = "2.3.11"
-google-ai-generativeai = "0.5.0"
-billing-ktx = "6.2.1"
-#play-services-bom = "18.3.0"
+google-ai-generativeai = "0.9.0"
+billing = "7.0.0"
+play-services-auth = "21.4.0"
+play-services-maps = "19.2.0"
 
 [libraries]
 # Core & AppCompat
@@ -49,7 +50,11 @@ okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhtt
 accompanist-navigation-material = { group = "com.google.accompanist", name = "accompanist-navigation-material", version.ref = "accompanist" }
 mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito-core" }          # <-- ADD THIS LINE
 mockito-kotlin = { group = "org.mockito.kotlin", name = "mockito-kotlin", version.ref = "mockito-kotlin" } # <-- ADD THIS LINE
-androidx-billing-ktx = { group = "com.android.billingclient", name = "billing-ktx", version.ref = "billing-ktx" }
+#androidx-billing-ktx = { group = "com.android.billingclient", name = "billing-ktx", version.ref = "billing-ktx" }
+billing = { module = "com.android.billingclient:billing", version.ref = "billing" }
+billing-ktx = { module = "com.android.billingclient:billing-ktx", version.ref = "billing" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "play-services-auth" }
+play-services-maps = { module = "com.google.android.gms:play-services-maps", version.ref = "play-services-maps" }
 
 # Compose
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
@@ -97,6 +102,7 @@ ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serializatio
 google-ai-generativeai = { group = "com.google.ai.client.generativeai", name = "generativeai", version.ref = "google-ai-generativeai" }
 # Play Services
 #google-play-services-bom = { group = "com.google.android.gms", name = "play-services-bom", version.ref = "play-services-bom" }
+#play-services-bom = { group = "com.google.android.gms", name = "play-services-bom", version.ref = "play-services-bom" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -1,62 +1,56 @@
 package com.goodstadt.john.language.exams.data
 
+
 import android.app.Activity
 import android.content.Context
 import android.util.Log
 import com.android.billingclient.api.*
-import com.android.billingclient.api.ProductDetails
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.update
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import javax.inject.Singleton
 
-// Data class to hold product details for the UI
+
+// --- Use a consistent TAG for easy filtering in Logcat ---
+private const val BILLING_TAG = "BillingRepo"
+
+// --- Sealed Interface to represent the user's IAP status ---
+sealed interface PremiumStatus {
+    data object Checking : PremiumStatus
+    data object IsPremium : PremiumStatus
+    data class NotPremium(val product: InAppProduct) : PremiumStatus
+    data object Unavailable : PremiumStatus
+}
+
+// --- Data class to hold product details for the UI ---
 data class InAppProduct(
     val id: String,
     val title: String,
     val description: String,
     val formattedPrice: String,
-    // Internal detail needed to launch the purchase flow
     internal val productDetails: ProductDetails
 )
 
-sealed interface PremiumStatus {
-    /** The status is still being determined. Show a loading state. */
-    data object Checking : PremiumStatus
-
-    /** The user has purchased the premium unlock. */
-    data object IsPremium : PremiumStatus
-
-    /** The user has not purchased, but the IAP product is available to be bought. */
-    data class NotPremium(val product: InAppProduct) : PremiumStatus
-
-    /** The billing service is unavailable or the product could not be found. */
-    data object Unavailable : PremiumStatus
-}
-
-private const val BILLING_TAG = "BillingRepo"
-private const val PRODUCT_ID = "unlock_premium_features_v1"
 
 @Singleton
 class BillingRepository @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
 
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+
+    // The single, reactive source of truth for the app's premium status.
     private val _premiumStatus = MutableStateFlow<PremiumStatus>(PremiumStatus.Checking)
     val premiumStatus = _premiumStatus.asStateFlow()
 
-    // --- State Flows to expose billing status to the rest of the app ---
-//    private val _premiumProduct = MutableStateFlow<InAppProduct?>(null)
-//    val premiumProduct = _premiumProduct.asStateFlow()
-//
-//    private val _isPremiumUser = MutableStateFlow(false)
-//    val isPremiumUser = _isPremiumUser.asStateFlow()
-
-
-
-    private val purchasesUpdatedListener = PurchasesUpdatedListener { billingResult, purchases ->
+    // 1. Define the listener FIRST to avoid initialization errors.
+    private val purchasesUpdatedListener999 = PurchasesUpdatedListener { billingResult, purchases ->
         Log.i(BILLING_TAG, "✅ in purchasesUpdatedListener().")
         if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && purchases != null) {
             Log.i(BILLING_TAG, "✅ Purchase successful! Processing ${purchases.size} new purchase(s).")
@@ -71,126 +65,141 @@ class BillingRepository @Inject constructor(
             Log.e(BILLING_TAG, "❌ Purchase flow error! Response code: ${billingResult.responseCode} - ${billingResult.debugMessage}")
         }
     }
+    private val purchasesUpdatedListener = object : PurchasesUpdatedListener {
 
-    // 2. Now that the listener is initialized, we can safely use it to build the client.
+        override fun onPurchasesUpdated(billingResult: BillingResult, purchases: MutableList<Purchase>?) {
+            // Your existing listener logic goes inside this override method.
+            Log.i(BILLING_TAG, "✅ in onPurchasesUpdated().")
+            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && purchases != null) {
+                Log.i(BILLING_TAG, "✅ Purchase successful! Processing ${purchases.size} new purchase(s).")
+                for (purchase in purchases) {
+                    if (purchase.purchaseState == Purchase.PurchaseState.PURCHASED) {
+                        handlePurchase(purchase)
+                    }
+                    // You could also add logic here to handle Purchase.PurchaseState.PENDING
+                }
+            } else if (billingResult.responseCode == BillingClient.BillingResponseCode.USER_CANCELED) {
+                Log.w(BILLING_TAG, "⚠️ User cancelled the purchase flow.")
+            } else {
+                Log.e(BILLING_TAG, "❌ Purchase flow error! Response code: ${billingResult.responseCode} - ${billingResult.debugMessage}")
+            }
+        }
+    }
+    // 2. Now, build the client using the listener.
     private val billingClient = BillingClient.newBuilder(context)
         .setListener(purchasesUpdatedListener)
-        .enablePendingPurchases()
         .build()
-    // --- END OF FIX ---
 
-    // The init block can now safely use the fully constructed billingClient.
     init {
         connectToBillingService()
     }
 
     private fun connectToBillingService() {
         Log.d(BILLING_TAG, "Attempting to start billing service connection...")
-
+        if (billingClient.isReady) {
+            Log.d(BILLING_TAG, "BillingClient is already ready.")
+            return
+        }
         billingClient.startConnection(object : BillingClientStateListener {
             override fun onBillingSetupFinished(billingResult: BillingResult) {
-                // --- THIS LOG TELLS YOU IF THE CONNECTION IS SUCCESSFUL ---
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                     Log.i(BILLING_TAG, "✅ Billing service setup finished successfully.")
-                    // Now that connection is successful, query products and purchases.
-//                    queryPremiumProductDetails()
+                    // Start by checking for existing purchases.
                     checkCurrentUserPurchases()
                 } else {
-                    _premiumStatus.value = PremiumStatus.Unavailable
                     Log.e(BILLING_TAG, "❌ Billing service setup failed! Response code: ${billingResult.responseCode} - ${billingResult.debugMessage}")
+                    _premiumStatus.value = PremiumStatus.Unavailable
                 }
             }
-
             override fun onBillingServiceDisconnected() {
-                Log.w(BILLING_TAG, "⚠️ Billing service disconnected. Will retry connection...")
-                // You might want to add a retry with backoff logic here in a real app
-                // connectToBillingService()
+                Log.w(BILLING_TAG, "⚠️ Billing service disconnected. Consider retrying connection.")
             }
         })
     }
 
+    private fun checkCurrentUserPurchases() {
+        Log.d(BILLING_TAG, "Checking for existing user purchases...")
+        val params = QueryPurchasesParams.newBuilder()
+            .setProductType(BillingClient.ProductType.INAPP)
+            .build()
+
+        scope.launch {
+            // This function is also now a suspend function
+            val result = withContext(Dispatchers.IO) {
+                billingClient.queryPurchasesAsync(params)
+            }
+
+            val billingResult = result.billingResult
+            val purchases = result.purchasesList
+
+            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                val hasPremium = purchases.any { it.products.contains("unlock_premium_features_v1") && it.isAcknowledged }
+                if (hasPremium) {
+                    _premiumStatus.value = PremiumStatus.IsPremium
+                } else {
+                    queryPremiumProductDetails() // Still query for products if not premium
+                }
+            } else {
+                _premiumStatus.value = PremiumStatus.Unavailable
+            }
+        }
+    }
 
     private fun queryPremiumProductDetails() {
         Log.d(BILLING_TAG, "Querying for product details...")
         val productList = listOf(
             QueryProductDetailsParams.Product.newBuilder()
-                .setProductId(PRODUCT_ID)
+                .setProductId("unlock_premium_features_v1")
                 .setProductType(BillingClient.ProductType.INAPP)
                 .build()
         )
-        val params = QueryProductDetailsParams.newBuilder().setProductList(productList)
+        val params = QueryProductDetailsParams.newBuilder().setProductList(productList).build()
 
-//        billingClient.queryProductDetailsAsync(params.build()) { billingResult, productDetailsList ->
-//            // --- THESE LOGS TELL YOU THE RESULT OF THE PRODUCT QUERY ---
-//            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-//                if (productDetailsList.isNotEmpty()) {
-//                    val productDetails = productDetailsList[0]
-//                    Log.i(BILLING_TAG, "✅ Successfully found product details:")
-//                    Log.i(BILLING_TAG, "   - ID: ${productDetails.productId}")
-//                    Log.i(BILLING_TAG, "   - Name: ${productDetails.name}")
-//                    Log.i(BILLING_TAG, "   - Price: ${productDetails.oneTimePurchaseOfferDetails?.formattedPrice}")
-//                    Log.i(BILLING_TAG, "   - Description: ${productDetails.description}")
-//
-//                    // This is where your _premiumProduct StateFlow is updated
-//                    // ... your existing logic to create and set _premiumProduct.value ...
-//
-//                } else {
-//                    Log.w(BILLING_TAG, "⚠️ Query successful, but the product list is EMPTY. Check your Product ID ('unlock_premium_features_v1') and ensure the product is 'Active' in the Play Console.")
-//                }
-//            } else {
-//                Log.e(BILLING_TAG, "❌ Failed to query product details! Response code: ${billingResult.responseCode} - ${billingResult.debugMessage}")
-//                Log.e(BILLING_TAG, "   - Common causes: App signature mismatch (running a debug build?), incorrect tester account, or Play Store cache issues.")
-//            }
-//        }
+        // Launch a coroutine to call the new suspend function
+        scope.launch {
+            // Use withContext to ensure we are on a background thread
+            val result = withContext(Dispatchers.IO) {
+                // This is the new suspend function. It returns a BillingResult and a List.
+                billingClient.queryProductDetails(params)
+            }
 
-        billingClient.queryProductDetailsAsync(params.build()) { billingResult, productDetailsList ->
+            val billingResult = result.billingResult
+            val productDetailsList = result.productDetailsList ?: emptyList()
+
+            // The rest of the logic is the same as before
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && productDetailsList.isNotEmpty()) {
-                // Product found! The user is not premium, but the product is available.
                 val productDetails = productDetailsList[0]
+                // ... (update _premiumStatus to NotPremium) ...
                 Log.i(BILLING_TAG, "✅ Successfully found product details:")
                 Log.i(BILLING_TAG, "   - ID: ${productDetails.productId}")
                 Log.i(BILLING_TAG, "   - Name: ${productDetails.name}")
                 Log.i(BILLING_TAG, "   - Price: ${productDetails.oneTimePurchaseOfferDetails?.formattedPrice}")
                 Log.i(BILLING_TAG, "   - Description: ${productDetails.description}")
 
-                val offerDetails = productDetails.oneTimePurchaseOfferDetails
-                if (offerDetails != null) {
-                    _premiumStatus.value = PremiumStatus.NotPremium(
-                        InAppProduct(
-                            id = productDetails.productId,
-                            title = productDetails.name,
-                            description = productDetails.description,
-                            formattedPrice = offerDetails.formattedPrice,
-                            productDetails = productDetails
-                        )
-                    )
-                } else {
-                    _premiumStatus.value = PremiumStatus.Unavailable
-                }
             } else {
-                // If we can't find the product, the IAP system is effectively unavailable.
+                Log.e(BILLING_TAG, "❌ Failed to query product details! Response code: ${billingResult.responseCode} - ${billingResult.debugMessage}")
                 _premiumStatus.value = PremiumStatus.Unavailable
             }
         }
-
     }
 
-//    fun launchPurchaseFlow(activity: Activity) {
-//        val product = _premiumProduct.value ?: return
-//        val productDetailsParamsList = listOf(
-//            BillingFlowParams.ProductDetailsParams.newBuilder()
-//                .setProductDetails(product.productDetails)
-//                .build()
-//        )
-//        val billingFlowParams = BillingFlowParams.newBuilder()
-//            .setProductDetailsParamsList(productDetailsParamsList)
-//            .build()
-//
-//        billingClient.launchBillingFlow(activity, billingFlowParams)
-//    }
+    private fun handlePurchase(purchase: Purchase) {
+        if (!purchase.isAcknowledged) {
+            val acknowledgePurchaseParams = AcknowledgePurchaseParams.newBuilder()
+                .setPurchaseToken(purchase.purchaseToken)
+                .build()
+
+            billingClient.acknowledgePurchase(acknowledgePurchaseParams) { billingResult ->
+                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                    Log.i(BILLING_TAG, "✅ Purchase acknowledged. User is now premium.")
+                    _premiumStatus.value = PremiumStatus.IsPremium
+                }
+            }
+        }
+    }
+
     fun launchPurchaseFlow(activity: Activity, productDetails: ProductDetails) {
         Log.d(BILLING_TAG, "Launching purchase flow for product: ${productDetails.productId}")
-
         val productDetailsParamsList = listOf(
             BillingFlowParams.ProductDetailsParams.newBuilder()
                 .setProductDetails(productDetails)
@@ -200,97 +209,29 @@ class BillingRepository @Inject constructor(
             .setProductDetailsParamsList(productDetailsParamsList)
             .build()
 
-        // The actual call to the billing client remains the same.
         billingClient.launchBillingFlow(activity, billingFlowParams)
     }
-    private fun handlePurchase(purchase: Purchase) {
-        // Here you would typically verify the purchase on your backend server.
-        // For a simple unlock, we can proceed if the purchase is not acknowledged yet.
-        if (!purchase.isAcknowledged) {
-            val acknowledgePurchaseParams = AcknowledgePurchaseParams.newBuilder()
-                .setPurchaseToken(purchase.purchaseToken)
-                .build()
 
-            billingClient.acknowledgePurchase(acknowledgePurchaseParams) { billingResult ->
-                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                    // Purchase is successful and acknowledged! Grant entitlement.
-                    Log.d("BillingRepo", "Purchase acknowledged. User is now premium.")
-                    _premiumStatus.value = PremiumStatus.IsPremium
-                    // You might want to save this to Firestore or UserPreferences as well
-                }
-            }
-        }
-    }
-
-
-
-    private fun checkCurrentUserPurchases() {
-        Log.d(BILLING_TAG, "Checking for existing user purchases...")
-        val params = QueryPurchasesParams.newBuilder()
-            .setProductType(BillingClient.ProductType.INAPP)
-
-
-
-        billingClient.queryPurchasesAsync(params.build()) { billingResult, purchases ->
-            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                val hasPremium = purchases.any { it.products.contains(PRODUCT_ID) && it.isAcknowledged }
-                if (hasPremium) {
-                    // If the user is premium, we are done. Set the state.
-                    _premiumStatus.value = PremiumStatus.IsPremium
-                } else {
-                    // If not premium, we now need to query for the product to sell.
-                    queryPremiumProductDetails()
-                }
-            } else {
-                // If we can't query purchases, the service is unavailable.
-                _premiumStatus.value = PremiumStatus.Unavailable
-            }
-        }
-
-    }
     /**
-     * A utility function for debugging. It prints the current state of the
-     * premiumStatus StateFlow to Logcat. This is useful for calling from a
-     * debug-only button in the UI to instantly check the billing state.
+     * A utility function for debugging. Prints the current billing status to Logcat.
      */
     fun logCurrentStatus() {
-        // Get the current value from the StateFlow.
         val currentStatus = _premiumStatus.value
-
-        // Use a StringBuilder for clean, multi-line logging.
         val summary = StringBuilder("\n--- BILLING REPOSITORY DEBUG STATUS ---\n")
 
-        // Use a 'when' block to log details specific to the current state.
         when (currentStatus) {
-            is PremiumStatus.Checking -> {
-                summary.append("Status: Checking\n")
-                summary.append("Details: The repository is currently connecting to the billing service or querying purchases.\n")
-            }
-            is PremiumStatus.IsPremium -> {
-                summary.append("Status: IsPremium\n")
-                summary.append("Details: The user is a confirmed premium member.\n")
-            }
+            is PremiumStatus.Checking -> summary.append("Status: Checking\n")
+            is PremiumStatus.IsPremium -> summary.append("Status: IsPremium\n")
             is PremiumStatus.NotPremium -> {
                 summary.append("Status: NotPremium\n")
-                summary.append("Details: The user is not premium, but a product is available for purchase.\n")
                 summary.append("  Product ID: ${currentStatus.product.id}\n")
-                summary.append("  Product Name: ${currentStatus.product.title}\n")
                 summary.append("  Formatted Price: ${currentStatus.product.formattedPrice}\n")
             }
-            is PremiumStatus.Unavailable -> {
-                summary.append("Status: Unavailable\n")
-                summary.append("Details: The billing service could not be reached, or the product was not found. This is expected for standard debug builds.\n")
-            }
-
-            else -> {
-                summary.append("Status: Unknown\n")
-            }
+            is PremiumStatus.Unavailable -> summary.append("Status: Unavailable\n")
+            else -> {summary.append("Status: Non of the above!\n")}
         }
 
         summary.append("--------------------------------------")
-
-        // Print the entire summary to Logcat using your consistent tag.
         Log.d(BILLING_TAG, summary.toString())
     }
-
 }

@@ -31,7 +31,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.IAPBillingRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
@@ -40,7 +42,6 @@ import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.data.PremiumStatus
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
-import com.goodstadt.john.language.exams.ui.theme.greyLight2
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -53,11 +54,35 @@ fun SettingsScreen(
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
-    val isPremiumUser by viewModel.isPremium.collectAsState()
+    val isPremiumUser = false//by viewModel.isPremium.collectAsState()
 
    // val premiumProduct by viewModel.premiumProduct.collectAsState()
     //val isPremiumUser by viewModel.isPremiumUser.collectAsState()
     val context = LocalContext.current
+    val isPremiumUnlocked by viewModel.isPremiumUnlocked.collectAsStateWithLifecycle()
+    val purchaseState by viewModel.purchaseState.collectAsStateWithLifecycle()
+    val productDetails by viewModel.productDetails.collectAsStateWithLifecycle()
+
+
+    LaunchedEffect(purchaseState) {
+        when (purchaseState) {
+            is IAPBillingRepository.PurchaseState.Success -> {
+                // Optionally show a success message or navigate
+            }
+            is IAPBillingRepository.PurchaseState.Error -> {
+                // Handle error - you might want to show a Snackbar or Toast
+            }
+            else -> { /* No action needed */ }
+        }
+    }
+
+//test
+    LaunchedEffect(Unit) {
+        val isAvailable = viewModel.isGooglePlayServicesAvailable(context)
+        if (!isAvailable) {
+            // Handle Google Play Services not available
+        }
+    }
 
     LaunchedEffect(sheetContent, sheetState.isVisible) {
         if (sheetContent != SheetContent.Hidden) {
@@ -242,60 +267,112 @@ fun SettingsScreen(
             )
         }
 
-        item {
-            // --- THIS IS THE CORRECTED LOGIC ---
-            // Use a 'when' statement to exhaustively handle all possible states.
-            when (val status = uiState.premiumStatus) {
-
-                is PremiumStatus.Checking -> {
-                    // State 1: Still loading. Show an informative item.
-                    SettingsInfoItem(
-                        icon = Icons.Default.CloudSync, // Use a more descriptive icon
-                        title = "Checking Purchase Status...",
-                        value = "Please wait"
-                    )
-                }
-
-                is PremiumStatus.IsPremium -> {
-                    // State 2: User is a premium member.
-                    SettingsInfoItem(
-                        icon = Icons.Default.Verified, // Use a checkmark icon
-                        title = "You are a Premium user!",
-                        value = "Thank you for your support."
-                    )
-                }
-
-                is PremiumStatus.NotPremium -> {
-                    // State 3: User can buy the product. Show the action item.
-                    // Note: We get the product details directly from the 'status' variable.
-                    SettingsActionItem(
-                        icon = Icons.Default.WorkspacePremium, // Use a premium icon
-                        title = "Upgrade to Premium",
-                        currentValue = status.product.formattedPrice, // Display the price
-                        onClick = {
-                            (context as? Activity)?.let { activity ->
-                                viewModel.onPurchaseClicked(activity)
+        if (isPremiumUnlocked) {
+            productDetails?.let { details ->
+                details.oneTimePurchaseOfferDetails?.let { offerDetails ->
+                    item {
+                        SettingsActionItem(
+                            icon = Icons.Default.WorkspacePremium, // Use a premium icon
+                            title = "Upgrade to Premium",
+                            currentValue = offerDetails.formattedPrice, // Display the price
+                            onClick = {
+                                if (context is androidx.activity.ComponentActivity) {
+                                    viewModel.purchasePremium(context)
+                                }
                             }
-                        }
-                    )
+                        )
+                    }
                 }
 
-                is PremiumStatus.Unavailable -> {
-                    // State 4: IAP is disabled (e.g., debug build, no network).
-                    SettingsInfoItem(
-                        icon = Icons.Default.CloudOff, // Use an offline icon
-                        title = "In-App Purchase Unavailable",
-                        value = "Please check your connection or Play Store."
-                    )
-                }
-                else -> { //should not need this!
-                    // You can leave this empty or add a log for debugging.
-                    Log.e("SettingsScreen", "Reached an unexpected 'else' in PremiumStatus 'when' block.")
-                }
+
+
+
             }
 
-            // --- END OF CORRECTED LOGIC ---
+        }else {
+            productDetails?.let { details ->
+                item {
+                    SettingsInfoItem(
+                        icon = Icons.Default.Info,
+                        title = "Name",
+                        value = details.name
+                    )
+                }
+                item {
+                    SettingsInfoItem(
+                        icon = Icons.Default.Info,
+                        title = "Description",
+                        value = details.description
+                    )
+                }
+
+                details.oneTimePurchaseOfferDetails?.let { offerDetails ->
+                    item {
+                        SettingsInfoItem(
+                            icon = Icons.Default.Info,
+                            title = "Price",
+                            value = offerDetails.formattedPrice,
+                        )
+                    }
+
+                }
+            }
         }
+
+//        item {
+//            // --- THIS IS THE CORRECTED LOGIC ---
+//            // Use a 'when' statement to exhaustively handle all possible states.
+//            when (val status = uiState.premiumStatus) {
+//
+//                is PremiumStatus.Checking -> {
+//                    // State 1: Still loading. Show an informative item.
+//                    SettingsInfoItem(
+//                        icon = Icons.Default.CloudSync, // Use a more descriptive icon
+//                        title = "Checking Purchase Status...",
+//                        value = "Please wait"
+//                    )
+//                }
+//
+//                is PremiumStatus.IsPremium -> {
+//                    // State 2: User is a premium member.
+//                    SettingsInfoItem(
+//                        icon = Icons.Default.Verified, // Use a checkmark icon
+//                        title = "You are a Premium user!",
+//                        value = "Thank you for your support."
+//                    )
+//                }
+//
+//                is PremiumStatus.NotPremium -> {
+//                    // State 3: User can buy the product. Show the action item.
+//                    // Note: We get the product details directly from the 'status' variable.
+//                    SettingsActionItem(
+//                        icon = Icons.Default.WorkspacePremium, // Use a premium icon
+//                        title = "Upgrade to Premium",
+//                        currentValue = status.product.formattedPrice, // Display the price
+//                        onClick = {
+//                            (context as? Activity)?.let { activity ->
+//                                viewModel.onPurchaseClicked(activity)
+//                            }
+//                        }
+//                    )
+//                }
+//
+//                is PremiumStatus.Unavailable -> {
+//                    // State 4: IAP is disabled (e.g., debug build, no network).
+//                    SettingsInfoItem(
+//                        icon = Icons.Default.CloudOff, // Use an offline icon
+//                        title = "In-App Purchase Unavailable",
+//                        value = "Please check your connection or Play Store."
+//                    )
+//                }
+//                else -> { //should not need this!
+//                    // You can leave this empty or add a log for debugging.
+//                    Log.e("SettingsScreen", "Reached an unexpected 'else' in PremiumStatus 'when' block.")
+//                }
+//            }
+
+            // --- END OF CORRECTED LOGIC ---
+//        }
 
 //        }
             if (DEBUG){
