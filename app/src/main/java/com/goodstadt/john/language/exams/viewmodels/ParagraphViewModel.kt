@@ -7,7 +7,6 @@ import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
-import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
 import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.GeminiRepository
@@ -15,7 +14,6 @@ import com.goodstadt.john.language.exams.data.LLMProvider
 import com.goodstadt.john.language.exams.data.LLMProviderManager
 import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
-import com.goodstadt.john.language.exams.data.PremiumStatus
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.GeminiEstCostUSD
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.OpenAIEstCostUSD
@@ -92,23 +90,25 @@ class ParagraphViewModel @Inject constructor(
     private val geminiRepository: GeminiRepository,
     private val providerManager: LLMProviderManager,
     private val appScope: CoroutineScope,
-    private val billingRepository: BillingRepository,
+//    private val billingRepository: IAPBillingRepository
 
     ) : ViewModel() {
 
-    val isPremium: StateFlow<Boolean> = billingRepository.premiumStatus
-        .map { status ->
-            // The logic is simple: if the status is IsPremium, the value is true.
-            // For all other states (Checking, NotPremium, Unavailable), it's false.
-            status is PremiumStatus.IsPremium
-        }
-        // .stateIn() converts the resulting Flow<Boolean> into a StateFlow<Boolean>
-        // that the UI can collect. It also gives it an initial value and a lifecycle scope.
-        .stateIn(
-            scope = viewModelScope,
-            started = SharingStarted.WhileSubscribed(5000),
-            initialValue = false // Start with a safe default of false
-        )
+//    private val isPremiumUser = billingRepository.isPremiumUnlocked
+   // val isPremium = false
+//    val isPremium: StateFlow<Boolean> = billingRepository.premiumStatus
+//        .map { status ->
+//            // The logic is simple: if the status is IsPremium, the value is true.
+//            // For all other states (Checking, NotPremium, Unavailable), it's false.
+//            status is PremiumStatus.IsPremium
+//        }
+//        // .stateIn() converts the resulting Flow<Boolean> into a StateFlow<Boolean>
+//        // that the UI can collect. It also gives it an initial value and a lifecycle scope.
+//        .stateIn(
+//            scope = viewModelScope,
+//            started = SharingStarted.WhileSubscribed(5000),
+//            initialValue = false // Start with a safe default of false
+//        )
 
     private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
@@ -192,13 +192,13 @@ class ParagraphViewModel @Inject constructor(
         viewModelScope.launch {
             val currentState = _uiState.value
 
-            billingRepository.logCurrentStatus()
+            //billingRepository.logCurrentStatus()
 
-            if (isPremium.value) {
-                Log.i("ParagraphVM","generateNewParagraph().User is a isPremiumUser")
-            }else{
-                Log.i("ParagraphVM","generateNewParagraph().User is NOT a isPremiumUser")
-            }
+//            if (isPremiumUser.value) {
+//                Log.i("ParagraphVM","generateNewParagraph().User is a isPremiumUser")
+//            }else{
+//                Log.i("ParagraphVM","generateNewParagraph().User is NOT a isPremiumUser")
+//            }
 
             val providerToUse = providerManager.getNextProviderAndIncrement()
             Log.w("ParagraphVM", "$providerToUse")

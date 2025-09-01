@@ -20,11 +20,11 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 33
-val VERSION_NAME = "1.33"
+val VERSION_CODE = 43
+val VERSION_NAME = "1.43"
 
-println("DEBUG: MYAPP_UPLOAD_STORE_PASSWORD from properties file is: '${secretsProperties.getProperty("MYAPP_UPLOAD_STORE_PASSWORD")}'")
-println("DEBUG: MYAPP_UPLOAD_KEY_PASSWORD from properties file is: '${secretsProperties.getProperty("MYAPP_UPLOAD_KEY_PASSWORD")}'")
+//println("DEBUG: MYAPP_UPLOAD_STORE_PASSWORD from properties file is: '${secretsProperties.getProperty("MYAPP_UPLOAD_STORE_PASSWORD")}'")
+//println("DEBUG: MYAPP_UPLOAD_KEY_PASSWORD from properties file is: '${secretsProperties.getProperty("MYAPP_UPLOAD_KEY_PASSWORD")}'")
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
@@ -32,7 +32,7 @@ android {
 
     defaultConfig {
         applicationId = "com.goodstadt.john.language.exams"
-        minSdk = 26 // Covers over 90% of devices
+        minSdk = 30//26 // Covers over 90% of devices
         targetSdk = 35
         versionCode = VERSION_CODE
         versionName = VERSION_NAME
@@ -125,24 +125,34 @@ android {
             keyAlias = secretsProperties.getProperty("MYAPP_UPLOAD_KEY_ALIAS")
             keyPassword = secretsProperties.getProperty("MYAPP_UPLOAD_KEY_PASSWORD")
         }
+
+        create("releaseNew") {
+            storeFile = file(secretsProperties.getProperty("UPLOAD_STORE_FILE"))
+            storePassword = secretsProperties.getProperty("UPLOAD_STORE_PASSWORD")
+            keyAlias = secretsProperties.getProperty("UPLOAD_KEY_ALIAS")
+            keyPassword = secretsProperties.getProperty("UPLOAD_KEY_PASSWORD")
+        }
+//        create("debug") {
+//            storeFile = file("~/.android/debug.keystore")
+//            storePassword = secretsProperties.getProperty("android")
+//            keyAlias = secretsProperties.getProperty("androiddebugkey")
+//            keyPassword = secretsProperties.getProperty("android")
+//        }
     }
 
     buildTypes {
         debug {
             isMinifyEnabled = false
-            // BuildConfig field to detect debug builds at runtime
             buildConfigField("Boolean", "IS_DEBUG", "true")
             signingConfig = signingConfigs.getByName("debug")
 
         }
         release {
-
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            // BuildConfig field for release builds
             buildConfigField("Boolean", "IS_DEBUG", "false")
             signingConfig = signingConfigs.getByName("release")
         }
@@ -234,14 +244,14 @@ dependencies {
     implementation(libs.play.services.auth)
     implementation(libs.play.services.maps)
 
-    constraints {
-        implementation("com.android.billingclient:billing:7.0.0") {
-            because("Enforce consistent billing library version across all dependencies")
-        }
-        implementation("com.android.billingclient:billing-ktx:7.0.0") {
-            because("Enforce consistent billing library version across all dependencies")
-        }
-    }
+//    constraints {
+//        implementation("com.android.billingclient:billing:8.0.0") {
+//            because("Enforce consistent billing library version across all dependencies")
+//        }
+//        implementation("com.android.billingclient:billing-ktx:8.0.0") {
+//            because("Enforce consistent billing library version across all dependencies")
+//        }
+//    }
 
 //    implementation(platform(libs.play.services.bom))
 

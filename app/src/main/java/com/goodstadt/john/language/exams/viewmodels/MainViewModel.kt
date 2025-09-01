@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.AuthRepository
-import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UpdateState
@@ -45,7 +44,7 @@ class MainViewModel @Inject constructor(
     private val recallingItemsManager: RecallingItems,
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
-    private val billingRepository: BillingRepository,
+//    private val billingRepository: BillingRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(GlobalUiState())

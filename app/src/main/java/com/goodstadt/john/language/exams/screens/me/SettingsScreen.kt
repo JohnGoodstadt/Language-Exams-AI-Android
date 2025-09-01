@@ -1,8 +1,6 @@
 package com.goodstadt.john.language.exams.screens.me
 
 import android.app.Activity
-import android.util.Log
-
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
@@ -11,7 +9,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.CloudOff
 import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -33,13 +30,12 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
-import com.goodstadt.john.language.exams.IAPBillingRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
 import com.goodstadt.john.language.exams.data.Gender
-import com.goodstadt.john.language.exams.data.PremiumStatus
+//import com.goodstadt.john.language.exams.data.PremiumStatus
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 
@@ -48,33 +44,35 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel()
 ) {
+
+
     val uiState by viewModel.uiState.collectAsState()
-
     val sheetContent by viewModel.sheetState.collectAsState()
-
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-
     val isPremiumUser = false//by viewModel.isPremium.collectAsState()
 
    // val premiumProduct by viewModel.premiumProduct.collectAsState()
     //val isPremiumUser by viewModel.isPremiumUser.collectAsState()
+    val isPurchased by viewModel.isPurchased.collectAsState(initial = false)
+    val productDetails by viewModel.productDetails.collectAsState(initial = null)
+    val billingError by viewModel.billingError.collectAsState(initial = null)
     val context = LocalContext.current
-    val isPremiumUnlocked by viewModel.isPremiumUnlocked.collectAsStateWithLifecycle()
-    val purchaseState by viewModel.purchaseState.collectAsStateWithLifecycle()
-    val productDetails by viewModel.productDetails.collectAsStateWithLifecycle()
+//    val isPremiumUnlocked by viewModel.isPremiumUnlockedIAP.collectAsStateWithLifecycle()
+//    val purchaseState by viewModel.purchaseStateIAP.collectAsStateWithLifecycle()
+//    val productDetails by viewModel.productDetailsIAP.collectAsStateWithLifecycle()
 
-
-    LaunchedEffect(purchaseState) {
-        when (purchaseState) {
-            is IAPBillingRepository.PurchaseState.Success -> {
-                // Optionally show a success message or navigate
-            }
-            is IAPBillingRepository.PurchaseState.Error -> {
-                // Handle error - you might want to show a Snackbar or Toast
-            }
-            else -> { /* No action needed */ }
-        }
-    }
+//
+//    LaunchedEffect(purchaseState) {
+//        when (purchaseState) {
+//            is IAPBillingRepository.PurchaseState.Success -> {
+//                // Optionally show a success message or navigate
+//            }
+//            is IAPBillingRepository.PurchaseState.Error -> {
+//                // Handle error - you might want to show a Snackbar or Toast
+//            }
+//            else -> { /* No action needed */ }
+//        }
+//    }
 
 //test
     LaunchedEffect(Unit) {
@@ -242,6 +240,13 @@ fun SettingsScreen(
         item {
             SettingsInfoItem(
                 icon = Icons.Default.Info,
+                title = "Hard Coded Version",
+                value = "1.37"
+            )
+        }
+        item {
+            SettingsInfoItem(
+                icon = Icons.Default.Info,
                 title = "Version Code",
                 value =" ${uiState.appVersionCode}"
             )
@@ -258,66 +263,115 @@ fun SettingsScreen(
 
         item {
             SettingsActionItem(
-                icon = Icons.Default.Info,
+                icon = Icons.Default.CloudSync,
                 title = "Debug IAP",
                 currentValue = "Tap to Log IAP Status",
                 onClick = {
-                    viewModel.logIAP()
+//                    viewModel.logIAP()
+                    if (context is androidx.activity.ComponentActivity) {
+                        viewModel.onDebugPrintBillingStatus(context)
+                    }
+                    //viewModel.onDebugPrintBillingStatus()
                 }
             )
         }
 
-        if (isPremiumUnlocked) {
-            productDetails?.let { details ->
-                details.oneTimePurchaseOfferDetails?.let { offerDetails ->
-                    item {
-                        SettingsActionItem(
-                            icon = Icons.Default.WorkspacePremium, // Use a premium icon
-                            title = "Upgrade to Premium",
-                            currentValue = offerDetails.formattedPrice, // Display the price
-                            onClick = {
-                                if (context is androidx.activity.ComponentActivity) {
-                                    viewModel.purchasePremium(context)
-                                }
-                            }
-                        )
+        if (true){
+            if (isPurchased) {
+                productDetails?.let { details ->
+
+                    details.oneTimePurchaseOfferDetails?.let { offerDetails ->
+                        item {
+                            SettingsInfoItem(
+                                icon =  Icons.Default.Verified,
+                                title = "You are a Premium user!",
+                                value = "Thank you for your support."
+                            )
+                        }
+
                     }
                 }
-
-
-
-
             }
-
-        }else {
-            productDetails?.let { details ->
-                item {
-                    SettingsInfoItem(
-                        icon = Icons.Default.Info,
-                        title = "Name",
-                        value = details.name
-                    )
-                }
-                item {
-                    SettingsInfoItem(
-                        icon = Icons.Default.Info,
-                        title = "Description",
-                        value = details.description
-                    )
-                }
-
-                details.oneTimePurchaseOfferDetails?.let { offerDetails ->
+            else {
+                productDetails?.let { details ->
                     item {
                         SettingsInfoItem(
                             icon = Icons.Default.Info,
-                            title = "Price",
-                            value = offerDetails.formattedPrice,
+                            title = "Name",
+                            value = details.name
                         )
+                    }
+                    details.oneTimePurchaseOfferDetails?.let { offerDetails ->
+                        item {
+                            SettingsActionItem(
+                                icon = Icons.Default.WorkspacePremium, // Use a premium icon
+                                title = "Tap to become a Premium user",
+                                currentValue = offerDetails.formattedPrice, // Display the price
+
+                                onClick = {
+                                    if (context is androidx.activity.ComponentActivity) {
+                                        viewModel.purchasePremium(context)
+                                    }
+                                },
+//                            enabled = purchaseState != IAPBillingRepository.PurchaseState.Loading,
+                            )
+                        }
                     }
 
                 }
             }
+        }else{
+//            when (val status = uiState.premiumStatus) {
+//
+//                is PremiumStatus.Checking -> {
+//                    item {
+//                        SettingsInfoItem(
+//                            icon = Icons.Default.Info,
+//                            title = "Checking",
+//                            value ="..."
+//                        )
+//                    }
+//                }
+//
+//                is PremiumStatus.IsPremium -> {
+//                    item {
+//                        SettingsInfoItem(
+//                            icon =  Icons.Default.Verified,
+//                            title = "You are a Premium user!",
+//                            value = "Thank you for your support."
+//                        )
+//                    }
+//                }
+//
+//                is PremiumStatus.NotPremium -> {
+//                    // The UI gets the price and title directly from the state object.
+//                    item {
+//                        SettingsActionItem(
+//                            icon = Icons.Default.WorkspacePremium,
+//                            title = "Upgrade to Premium",
+//                            currentValue = status.product.formattedPrice,
+//                            onClick = {
+//                                // The UI tells the ViewModel what the user's intent is.
+//                                (context as? Activity)?.let { activity ->
+//                                    viewModel.onPurchaseClicked(activity)
+//                                }
+//                            }
+//                        )
+//                    }
+//                }
+//
+//                is PremiumStatus.Unavailable -> {
+//                    item {
+//                        SettingsInfoItem(
+//                            icon = Icons.Default.Info,
+//                            title = "Purchase not available",
+//                            value ="..."
+//                        )
+//                    }
+//                }
+//            }
         }
+
 
 //        item {
 //            // --- THIS IS THE CORRECTED LOGIC ---

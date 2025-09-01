@@ -32,7 +32,7 @@ mockito-core = "5.11.0"      # <-- ADD THIS LINE
 mockito-kotlin = "5.2.1"     # <-- ADD THIS LINE
 ktor = "2.3.11"
 google-ai-generativeai = "0.9.0"
-billing = "7.0.0"
+billing = "8.0.0"
 play-services-auth = "21.4.0"
 play-services-maps = "19.2.0"
 
