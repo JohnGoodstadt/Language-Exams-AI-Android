@@ -228,7 +228,7 @@ fun SettingsScreen(
             SettingsInfoItem(
                 icon = Icons.Default.Info,
                 title = "Hard Coded Version",
-                value = "1.37"
+                value = "1.45"
             )
         }
         item {
@@ -269,11 +269,11 @@ fun SettingsScreen(
 
                 }
             }
-            if (DEBUG) {
+//            if (DEBUG) {
                 item {
                     SettingsActionItem(
                         icon = Icons.Default.WorkspacePremium, // Use a premium icon
-                        title = "Tap to UNDO a Premium user (D)",
+                        title = "Tap to UNDO a Premium user (T  )",
                         currentValue = "", // Display the price
                         onClick = {
                             viewModel.onDebugResetPurchases()
@@ -281,7 +281,7 @@ fun SettingsScreen(
                     )
                 }
 
-            }
+//            }
         }
         else {
             productDetails?.let { details ->
@@ -323,14 +323,21 @@ fun SettingsScreen(
             }
             item { SectionHeader("Debug") }
             item {
-                SettingsActionItem(
+                SettingsInfoItem(
                     icon = Icons.Default.Info,
-                    title = "TTS Voices",
-                    currentValue = "",
-                    onClick = { viewModel.downloadAndSaveVoiceList() }
+                    title = "Hard coded version",
+                    value = "V1.45"
                 )
             }
         }
+//        item {
+//            SettingsActionItem(
+//                icon = Icons.Default.Info,
+//                title = "TTS Voices",
+//                currentValue = "",
+//                onClick = { viewModel.downloadAndSaveVoiceList() }
+//            )
+//        }
 
     }
 }

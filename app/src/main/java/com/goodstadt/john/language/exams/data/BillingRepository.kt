@@ -266,7 +266,7 @@ class BillingRepository @Inject constructor(
      * This effectively "resets" the user's premium status for re-testing.
      */
     fun debugResetAllPurchases() {
-        if (!BuildConfig.DEBUG) return // Safety check
+       // if (!BuildConfig.DEBUG) return // Safety check
 
         Log.i(tag, "Debug reset triggered. Querying all owned items...")
         val params = QueryPurchasesParams.newBuilder()

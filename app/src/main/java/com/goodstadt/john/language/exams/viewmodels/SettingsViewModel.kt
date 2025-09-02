@@ -325,6 +325,7 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun onDebugResetPurchases() {
+        Log.i("SettingsViewModel", "onDebugResetPurchases()")
         billingRepository.debugResetAllPurchases()
     }
 }
