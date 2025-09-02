@@ -23,16 +23,16 @@
 
 #-keep class com.android.billingclient.** { *; }
 #
-## =========== Firebase / Google Play Services (General) ===========
-## These are the standard rules to prevent crashes with Firebase and GMS.
-#-keep class com.google.android.gms.common.** { *; }
-#-keep class com.google.android.gms.ads.identifier.** { *; }
+# =========== Firebase / Google Play Services (General) ===========
+# These are the standard rules to prevent crashes with Firebase and GMS.
+-keep class com.google.android.gms.common.** { *; }
+-keep class com.google.android.gms.ads.identifier.** { *; }
 #-keep class com.google.firebase.** { *; }
 #
 ## =========== Your App's Data Models ===========
 ## Keep all data models that are used with serialization (Firestore, Remote Config JSON, etc.)
-#-keep class com.goodstadt.john.language.exams.data.** { *; }
-#-keep class com.goodstadt.john.language.exams.models.** { *; }
+-keep class com.goodstadt.john.language.exams.data.** { *; }
+-keep class com.goodstadt.john.language.exams.models.** { *; }
 #
 ## =========== Kotlinx Serialization ===========
 ## If you use kotlinx.serialization, these rules are recommended.

@@ -268,16 +268,17 @@ class BillingRepository @Inject constructor(
     fun debugResetAllPurchases() {
         if (!BuildConfig.DEBUG) return // Safety check
 
-        Log.d(tag, "Debug reset triggered. Querying all owned items...")
+        Log.i(tag, "Debug reset triggered. Querying all owned items...")
         val params = QueryPurchasesParams.newBuilder()
             .setProductType(BillingClient.ProductType.INAPP).build()
 
         billingClient.queryPurchasesAsync(params) { billingResult, purchases ->
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                Log.d(tag, "Found ${purchases.size} items to reset.")
+                Log.i(tag, "Found ${purchases.size} items to reset.")
                 for (purchase in purchases) {
                     // We only care about our specific product
                     if (purchase.products.contains(PRODUCT_ID)) {
+                        Log.i(tag, "Found ${PRODUCT_ID} consuming.")
                         consumeTestPurchase(purchase)
                     }
                 }
