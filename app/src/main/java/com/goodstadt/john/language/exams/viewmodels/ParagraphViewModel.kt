@@ -7,6 +7,7 @@ import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
 import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.GeminiRepository
@@ -90,25 +91,12 @@ class ParagraphViewModel @Inject constructor(
     private val geminiRepository: GeminiRepository,
     private val providerManager: LLMProviderManager,
     private val appScope: CoroutineScope,
-//    private val billingRepository: IAPBillingRepository
+    private val billingRepository: BillingRepository
 
     ) : ViewModel() {
 
-//    private val isPremiumUser = billingRepository.isPremiumUnlocked
-   // val isPremium = false
-//    val isPremium: StateFlow<Boolean> = billingRepository.premiumStatus
-//        .map { status ->
-//            // The logic is simple: if the status is IsPremium, the value is true.
-//            // For all other states (Checking, NotPremium, Unavailable), it's false.
-//            status is PremiumStatus.IsPremium
-//        }
-//        // .stateIn() converts the resulting Flow<Boolean> into a StateFlow<Boolean>
-//        // that the UI can collect. It also gives it an initial value and a lifecycle scope.
-//        .stateIn(
-//            scope = viewModelScope,
-//            started = SharingStarted.WhileSubscribed(5000),
-//            initialValue = false // Start with a safe default of false
-//        )
+    private val _isPremiumUser = MutableStateFlow(false)
+    val isPremiumUser = _isPremiumUser.asStateFlow()
 
     private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
@@ -116,12 +104,6 @@ class ParagraphViewModel @Inject constructor(
     //private val generativeModel: GenerativeModel
 
     init{
-            // Initialize the GenerativeModel with the API key from BuildConfig
-//        generativeModel = GenerativeModel(
-//            modelName = "gemini-1.5-flash", // Use a fast and efficient model
-//            apiKey = BuildConfig.GEMINI_API_KEY
-//        )
-
         loadLlmModels()
 
         // This listener ensures that any change to the in-memory state in the
@@ -178,10 +160,17 @@ class ParagraphViewModel @Inject constructor(
                     }
                 }
             }
+        }
 
-
-
-
+        viewModelScope.launch {
+            billingRepository.isPurchased.collect { purchasedStatus ->
+                // This block runs AUTOMATICALLY whenever the value in the
+                // BillingRepository's 'isPurchased' flow changes.
+                _isPremiumUser.value = purchasedStatus
+                if (DEBUG) {
+                    billingRepository.logCurrentStatus()
+                }
+            }
         }
 
     }
@@ -192,13 +181,13 @@ class ParagraphViewModel @Inject constructor(
         viewModelScope.launch {
             val currentState = _uiState.value
 
-            //billingRepository.logCurrentStatus()
+            if (isPremiumUser.value) {
+                Log.i("ParagraphVM","generateNewParagraph() User is a isPremiumUser")
+            }else{
+                Log.i("ParagraphVM","generateNewParagraph() User is NOT a isPremiumUser")
+            }
 
-//            if (isPremiumUser.value) {
-//                Log.i("ParagraphVM","generateNewParagraph().User is a isPremiumUser")
-//            }else{
-//                Log.i("ParagraphVM","generateNewParagraph().User is NOT a isPremiumUser")
-//            }
+
 
             val providerToUse = providerManager.getNextProviderAndIncrement()
             Log.w("ParagraphVM", "$providerToUse")

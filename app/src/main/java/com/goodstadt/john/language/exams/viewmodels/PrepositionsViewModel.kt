@@ -3,7 +3,9 @@ package com.goodstadt.john.language.exams.viewmodels
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
@@ -37,8 +39,12 @@ class PrepositionsViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository : TTSStatsRepository,
-    private val appScope: CoroutineScope
+    private val appScope: CoroutineScope,
+    private val billingRepository: BillingRepository
 ) : ViewModel() {
+
+    private val _isPremiumUser = MutableStateFlow(false)
+    val isPremiumUser = _isPremiumUser.asStateFlow()
 
     private val _uiState = MutableStateFlow<PrepositionsUiState>(PrepositionsUiState.Loading)
     val uiState = _uiState.asStateFlow()
@@ -48,6 +54,17 @@ class PrepositionsViewModel @Inject constructor(
 
     init {
         loadPrepositionsData()
+
+        viewModelScope.launch {
+            billingRepository.isPurchased.collect { purchasedStatus ->
+                // This block runs AUTOMATICALLY whenever the value in the
+                // BillingRepository's 'isPurchased' flow changes.
+                _isPremiumUser.value = purchasedStatus
+                if (DEBUG) {
+                    billingRepository.logCurrentStatus()
+                }
+            }
+        }
     }
 
     private fun loadPrepositionsData() {
@@ -73,6 +90,13 @@ class PrepositionsViewModel @Inject constructor(
 
     fun playTrack(word: VocabWord, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing) return
+
+        if (isPremiumUser.value) {
+            Log.i("PrepositionsViewModel","playTrack() User is a isPremiumUser")
+        }else{
+            Log.i("PrepositionsViewModel","playTrack() User is NOT a isPremiumUser")
+        }
+
 
         viewModelScope.launch {
             // val googleVoice = "en-GB-Neural2-C"

@@ -5,7 +5,9 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.RecallingItem
 import com.goodstadt.john.language.exams.data.RecallingItems
@@ -36,13 +38,16 @@ class RecallViewModel @Inject constructor(
     private val recallingItemsManager: RecallingItems,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val ttsStatsRepository : TTSStatsRepository,
-    private val application: Application // For context
+    private val billingRepository: BillingRepository
 ) : ViewModel() {
 
-    val recalledItemsFlow = recallingItemsManager.items
+  //  val recalledItemsFlow = recallingItemsManager.items
 
     private val _uiState = MutableStateFlow(RecallUiState())
     val uiState = _uiState.asStateFlow()
+
+    private val _isPremiumUser = MutableStateFlow(false)
+    val isPremiumUser = _isPremiumUser.asStateFlow()
 
     init {
         // Equivalent of .onAppear for the whole screen
@@ -75,6 +80,15 @@ class RecallViewModel @Inject constructor(
         loadWordCounts()
 
        requestNotificationPermission()
+
+        viewModelScope.launch {
+            billingRepository.isPurchased.collect { purchasedStatus ->
+                _isPremiumUser.value = purchasedStatus
+                if (DEBUG) {
+                    billingRepository.logCurrentStatus()
+                }
+            }
+        }
     }
 
 
@@ -168,6 +182,13 @@ class RecallViewModel @Inject constructor(
 //        }
 //    }
     fun onPlayWord(word: String) {
+
+        if (isPremiumUser.value) {
+            Log.i("RecallViewModel","onPlayWord() User is a isPremiumUser")
+        }else{
+            Log.i("RecallViewModel","onPlayWord() User is NOT a isPremiumUser")
+        }
+
         viewModelScope.launch {
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(word, currentVoiceName)
@@ -180,12 +201,7 @@ class RecallViewModel @Inject constructor(
                 voiceName = currentVoiceName,
                 languageCode = currentLanguageCode
             )
-//            result.onSuccess {
-//                // statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
-//            }
-//            result.onFailure { error ->
-//                //  _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
-//            }
+
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateGlobalTTSStats( word,currentVoiceName)
@@ -200,6 +216,13 @@ class RecallViewModel @Inject constructor(
     }
 
     fun onPlaySentence(word: String, sentence: String) {
+
+        if (isPremiumUser.value) {
+            Log.i("RecallViewModel","onPlaySentence() User is a isPremiumUser")
+        }else{
+            Log.i("RecallViewModel","onPlaySentence() User is NOT a isPremiumUser")
+        }
+
         viewModelScope.launch {
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(sentence,currentVoiceName)
@@ -212,12 +235,7 @@ class RecallViewModel @Inject constructor(
                 voiceName = currentVoiceName,
                 languageCode = currentLanguageCode
             )
-//            result.onSuccess {
-//               // statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
-//            }
-//            result.onFailure { error ->
-//              //  _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
-//            }
+
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateGlobalTTSStats( sentence,currentVoiceName)

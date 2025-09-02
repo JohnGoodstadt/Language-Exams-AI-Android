@@ -21,29 +21,29 @@
 #-renamesourcefileattribute SourceFile
 -dontwarn org.slf4j.impl.StaticLoggerBinder
 
--keep class com.android.billingclient.** { *; }
-
-# =========== Firebase / Google Play Services (General) ===========
-# These are the standard rules to prevent crashes with Firebase and GMS.
--keep class com.google.android.gms.common.** { *; }
--keep class com.google.android.gms.ads.identifier.** { *; }
--keep class com.google.firebase.** { *; }
-
-# =========== Your App's Data Models ===========
-# Keep all data models that are used with serialization (Firestore, Remote Config JSON, etc.)
--keep class com.goodstadt.john.language.exams.data.** { *; }
--keep class com.goodstadt.john.language.exams.models.** { *; }
-
-# =========== Kotlinx Serialization ===========
-# If you use kotlinx.serialization, these rules are recommended.
--keepclasseswithmembernames class * {
-    @kotlinx.serialization.Serializable <methods>;
-}
--keep class **$$serializer { *; }
-
-# =========== Kotlinx Coroutines ===========
-# This prevents issues with coroutines in minified builds.
--keepclassmembers class kotlinx.coroutines.internal.MainDispatcherFactory {
-    private final java.util.List a;
-    private final java.lang.String b;
-}
+#-keep class com.android.billingclient.** { *; }
+#
+## =========== Firebase / Google Play Services (General) ===========
+## These are the standard rules to prevent crashes with Firebase and GMS.
+#-keep class com.google.android.gms.common.** { *; }
+#-keep class com.google.android.gms.ads.identifier.** { *; }
+#-keep class com.google.firebase.** { *; }
+#
+## =========== Your App's Data Models ===========
+## Keep all data models that are used with serialization (Firestore, Remote Config JSON, etc.)
+#-keep class com.goodstadt.john.language.exams.data.** { *; }
+#-keep class com.goodstadt.john.language.exams.models.** { *; }
+#
+## =========== Kotlinx Serialization ===========
+## If you use kotlinx.serialization, these rules are recommended.
+#-keepclasseswithmembernames class * {
+#    @kotlinx.serialization.Serializable <methods>;
+#}
+#-keep class **$$serializer { *; }
+#
+## =========== Kotlinx Coroutines ===========
+## This prevents issues with coroutines in minified builds.
+#-keepclassmembers class kotlinx.coroutines.internal.MainDispatcherFactory {
+#    private final java.util.List a;
+#    private final java.lang.String b;
+#}

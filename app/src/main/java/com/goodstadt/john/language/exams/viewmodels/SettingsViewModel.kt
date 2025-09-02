@@ -50,16 +50,7 @@ data class SettingsUiState(
         // Add nullable fields to hold the user's selection inside the bottom sheet
     val pendingSelectedExam: ExamDetails? = null,
     val pendingSelectedVoice: VoiceOption? = null,
-    //val premiumStatus: PremiumStatus = PremiumStatus.Checking,
 )
-//data class IAPSettingsUiState(
-//
-////    val isPremiumUser: Boolean = false,
-////    val isLoading: Boolean = true, // To show a spinner while products are loading
-////    val premiumProduct: InAppProduct? = null,
-//    val premiumStatus: PremiumStatus = PremiumStatus.Checking
-//)
-
 // Sealed class to represent which bottom sheet should be shown
 sealed interface SheetContent {
     object Hidden : SheetContent
@@ -85,14 +76,9 @@ class SettingsViewModel @Inject constructor(
     private val googleTtsInfoRepository: GoogleTTSInfoRepository,
     private val firestoreRepository:FirestoreRepository,
     private val billingRepository: BillingRepository,
-//    private val billingRepository: BillingRepository,
-//    private val iapBillingRepository: IAPBillingRepository,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
 
-//    val isPremiumUnlockedIAP = iapBillingRepository.isPremiumUnlocked
-//    val purchaseStateIAP = iapBillingRepository.purchaseState
-//    val productDetailsIAP = iapBillingRepository.productDetails
     val isPurchased = billingRepository.isPurchased
     val productDetails = billingRepository.productDetails
     val billingError = billingRepository.billingError
@@ -100,10 +86,6 @@ class SettingsViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(SettingsUiState())
     val uiState = _uiState.asStateFlow()
-
-//    private val _iapUiState = MutableStateFlow(    IAPSettingsUiState())
-//    val iapUiState = _iapUiState.asStateFlow()
-
 
     private val _sheetState = MutableStateFlow<SheetContent>(SheetContent.Hidden)
     val sheetState = _sheetState.asStateFlow()
@@ -114,34 +96,8 @@ class SettingsViewModel @Inject constructor(
     private val _uiEvent = MutableSharedFlow<SettingsUiEvent>()
     val uiEvent = _uiEvent.asSharedFlow()
 
-//    val isPremium: StateFlow<Boolean> = billingRepository.premiumStatus
-//        .map { status ->
-//            // The logic is simple: if the status is IsPremium, the value is true.
-//            // For all other states (Checking, NotPremium, Unavailable), it's false.
-//            status is PremiumStatus.IsPremium
-//        }
-//        // .stateIn() converts the resulting Flow<Boolean> into a StateFlow<Boolean>
-//        // that the UI can collect. It also gives it an initial value and a lifecycle scope.
-//        .stateIn(
-//            scope = viewModelScope,
-//            started = SharingStarted.WhileSubscribed(5000),
-//            initialValue = false // Start with a safe default of false
-//        )
-
-    // Expose the product and premium status to the UI
-   // val premiumProduct = billingRepository.premiumProduct
-    //val isPremiumUser = billingRepository.isPremiumUser
-
     init {
-        // This is the reactive link that keeps our screen's state in sync with the repository.
-        // It runs once when the ViewModel is created and listens for all future changes.
-//        viewModelScope.launch {
-//            billingRepository.premiumStatus.collect { newStatus ->
-//                Log.d("SettingsViewModel", "Received new premium status: $newStatus")
-//                // Update this ViewModel's state, which will trigger a UI recomposition.
-//                _uiState.update { it.copy(premiumStatus = newStatus) }
-//            }
-//        }
+
         // This initialization logic is correct and remains the same.
         // It keeps the "current" state in sync with saved preferences.
         viewModelScope.launch {
@@ -168,15 +124,6 @@ class SettingsViewModel @Inject constructor(
                 billingRepository._billingError.value = e.message
             }
         }
-//
-//        Log.i("SettingsViewModel","isPremiumUnlocked:${isPremiumUnlockedIAP.value}")
-//        Log.i("SettingsViewModel","purchaseState:${purchaseStateIAP.value}")
-//        Log.i("SettingsViewModel","productDetails:${productDetailsIAP.value?.productId}")
-
-
-
-        //checkGooglePlayServices(context)
-
 
     }
 
@@ -224,9 +171,7 @@ class SettingsViewModel @Inject constructor(
             _sheetState.value = type
         }
     }
-   fun  onBuyIAPClicked (){
 
-   }
     // --- MODIFICATION 3: Create functions to handle PENDING selections ---
     fun onPendingExamSelect(exam: ExamDetails) {
         // This only updates the state for the UI inside the sheet. Does NOT save.
@@ -265,13 +210,7 @@ class SettingsViewModel @Inject constructor(
                     voiceName = googleVoice,
                     languageCode = currentLanguageCode
             )
-//            result.onSuccess {
-//                //TODO: DO I need to save settings sentence?
-//                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence))
-//            }
-//            result.onFailure { error ->
-//                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
-//            }
+
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateGlobalTTSStats( sentence,googleVoice)
@@ -370,38 +309,6 @@ class SettingsViewModel @Inject constructor(
     fun firebaseUid() : String {
        return  firestoreRepository.firebaseUid()?.substring(0,4) ?: "unknown uid"
     }
-    fun onPurchaseClicked(activity: Activity) {
-//        viewModelScope.launch {
-//            iapBillingRepository.purchasePremium(activity)
-//        }
-    }
-//    fun onPurchaseClickedOriginal(activity: Activity) {
-//        val currentStatus = _uiState.value.premiumStatus
-//
-//      //  billingRepository.logCurrentStatus()
-//
-//        Log.d("SettingsViewModel", "IAP status $currentStatus")
-//
-//        // 2. Check if the status is NotPremium. If it is, we have the product details we need.
-//        //    We use 'is' for a smart cast.
-//        if (currentStatus is PremiumStatus.NotPremium) {
-//            Log.e("SettingsViewModel", "Purchase clicked,and premium status is NotPremium. Status: $currentStatus")
-//            // 3. Extract the internal productDetails object from our InAppProduct wrapper.
-//            val productDetails = currentStatus.product.productDetails
-//
-//            Log.e("SettingsViewModel", "$productDetails")
-//
-//            // 4. Call the repository's updated function, passing in the details.
-//            billingRepository.launchPurchaseFlow(activity, productDetails)
-//        } else {
-//            // This case should ideally not happen if the button is only shown
-//            // in the NotPremium state, but it's good practice to handle it.
-//            Log.e("SettingsViewModel", "Purchase clicked, but premium status is not NotPremium. Status: $currentStatus")
-//        }
-//    }
-//    fun logIAP(){
-//        iapBillingRepository.logCurrentStatus()
-//    }
     fun onDebugPrintBillingStatus(activity: Activity) {
         billingRepository.logCurrentStatus()
         Log.i("SettingsViewModel", "and now logGmsState")
@@ -415,5 +322,9 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch {
             billingRepository.launchPurchase(activity)
         }
+    }
+
+    fun onDebugResetPurchases() {
+        billingRepository.debugResetAllPurchases()
     }
 }

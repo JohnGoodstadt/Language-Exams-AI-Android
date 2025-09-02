@@ -18,6 +18,8 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import android.content.Context
 import android.util.Log
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
@@ -56,29 +58,16 @@ class CategoryTabViewModel @Inject constructor(
     private val connectivityRepository: ConnectivityRepository,
     private val recallingItemsManager: RecallingItems,
     private val ttsStatsRepository : TTSStatsRepository,
-    @ApplicationContext private val context: Context,
+//    @ApplicationContext private val context: Context,
     private val ttsCreditsRepository: TtsCreditsRepository,
-//    private val application: Application, // Needed for RecallingItems SharedPreferences
-    private val appScope: CoroutineScope ,// Inject a non-cancellable, app-level scope
-//    private val billingRepository: IAPBillingRepository
-//    private val billingRepository: BillingRepository,
+    private val appScope: CoroutineScope,// Inject a non-cancellable, app-level scope
+    private val billingRepository: BillingRepository
 ) : ViewModel() {
 
-//    val isPremium = false
-//private val isPremiumUser = billingRepository.isPremiumUnlocked
-//    val isPremium: StateFlow<Boolean> = billingRepository.premiumStatus
-//        .map { status ->
-//            // The logic is simple: if the status is IsPremium, the value is true.
-//            // For all other states (Checking, NotPremium, Unavailable), it's false.
-//            status is PremiumStatus.IsPremium
-//        }
-//        // .stateIn() converts the resulting Flow<Boolean> into a StateFlow<Boolean>
-//        // that the UI can collect. It also gives it an initial value and a lifecycle scope.
-//        .stateIn(
-//            scope = viewModelScope,
-//            started = SharingStarted.WhileSubscribed(5000),
-//            initialValue = false // Start with a safe default of false
-//        )
+
+    //val isPurchased = billingRepository.isPurchased
+    private val _isPremiumUser = MutableStateFlow(false)
+    val isPremiumUser = _isPremiumUser.asStateFlow()
 
     private val _uiState = MutableStateFlow(CategoryTabUiState())
     val uiState = _uiState.asStateFlow()
@@ -107,7 +96,18 @@ class CategoryTabViewModel @Inject constructor(
             }
         }
 
-       // billingRepository.logCurrentStatus()
+        viewModelScope.launch {
+            billingRepository.isPurchased.collect { purchasedStatus ->
+                // This block runs AUTOMATICALLY whenever the value in the
+                // BillingRepository's 'isPurchased' flow changes.
+                _isPremiumUser.value = purchasedStatus
+                if (DEBUG) {
+                    billingRepository.logCurrentStatus()
+                }
+            }
+        }
+
+
     }
 
     fun loadContentForTab(tabIdentifier: String, voiceName: String) {
@@ -166,12 +166,11 @@ class CategoryTabViewModel @Inject constructor(
                 return@launch
             }
 
-//            val isPremiumUser = isPremium.value
-//            if (isPremiumUser.value) {
-//                Log.i("CategoryTabViewModel","User is a isPremiumUser")
-//            }else{
-//                Log.i("CategoryTabViewModel","User is NOT a isPremiumUser")
-//            }
+            if (isPremiumUser.value) {
+                Log.i("CategoryTabViewModel","User is a isPremiumUser")
+            }else{
+                Log.i("CategoryTabViewModel","User is NOT a isPremiumUser")
+            }
 
 
             ttsCreditsRepository.decrementCredit()
@@ -229,10 +228,6 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
 
-
-    // ... inside CategoryTabViewModel ...
-
-// The existing loadContentForTab remains unchanged.
 
     // --- ADD THIS NEW FUNCTION ---
     fun loadContentForCategory(categoryTitle: String, voiceName: String) {

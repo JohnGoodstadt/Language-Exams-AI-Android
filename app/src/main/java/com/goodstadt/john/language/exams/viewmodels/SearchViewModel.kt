@@ -1,8 +1,11 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
@@ -35,11 +38,15 @@ class SearchViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository : TTSStatsRepository,
+    private val billingRepository: BillingRepository
 
     ) : ViewModel() {
 
     // Holds the complete list of all words from the current file
     private var allWords: List<VocabWord> = emptyList()
+
+    private val _isPremiumUser = MutableStateFlow(false)
+    val isPremiumUser = _isPremiumUser.asStateFlow()
 
     // State for the user's search query
     private val _searchQuery = MutableStateFlow("")
@@ -56,6 +63,14 @@ class SearchViewModel @Inject constructor(
     init {
         loadFullWordList()
         observeSearchQuery()
+        viewModelScope.launch {
+            billingRepository.isPurchased.collect { purchasedStatus ->
+                _isPremiumUser.value = purchasedStatus
+                if (DEBUG) {
+                    billingRepository.logCurrentStatus()
+                }
+            }
+        }
     }
 
     private fun loadFullWordList() {
@@ -101,6 +116,12 @@ class SearchViewModel @Inject constructor(
     fun playTrack(searchResult: SearchResult) {
         if (_playbackState.value is PlaybackState.Playing) return
 
+        if (isPremiumUser.value) {
+            Log.i("SearchViewModel","playTrack() User is a isPremiumUser")
+        }else{
+            Log.i("SearchViewModel","playTrack() User is NOT a isPremiumUser")
+        }
+
         viewModelScope.launch {
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(searchResult.word, searchResult.word.sentences.first(),currentVoiceName)
@@ -115,12 +136,7 @@ class SearchViewModel @Inject constructor(
                     voiceName = currentVoiceName,
                     languageCode = currentLanguageCode
             )
-//            result.onSuccess {
-//                statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
-//            }
-//            result.onFailure { error ->
-//                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
-//            }
+
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))

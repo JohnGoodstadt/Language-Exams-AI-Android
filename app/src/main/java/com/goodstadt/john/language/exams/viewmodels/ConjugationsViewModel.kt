@@ -3,7 +3,9 @@ package com.goodstadt.john.language.exams.viewmodels
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
@@ -38,11 +40,15 @@ class ConjugationsViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository: TTSStatsRepository,
-    private val appScope: CoroutineScope
+    private val appScope: CoroutineScope,
+    private val billingRepository: BillingRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
     val uiState = _uiState.asStateFlow()
+
+    private val _isPremiumUser = MutableStateFlow(false)
+    val isPremiumUser = _isPremiumUser.asStateFlow()
 
     // Reuse the playback state logic
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
@@ -50,6 +56,14 @@ class ConjugationsViewModel @Inject constructor(
 
     init {
         loadConjugationsData()
+        viewModelScope.launch {
+            billingRepository.isPurchased.collect { purchasedStatus ->
+                _isPremiumUser.value = purchasedStatus
+                if (DEBUG) {
+                    billingRepository.logCurrentStatus()
+                }
+            }
+        }
     }
 
     private fun loadConjugationsData() {
@@ -80,7 +94,14 @@ class ConjugationsViewModel @Inject constructor(
     fun playTrack(word: VocabWord, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing) return
 
-        viewModelScope.launch {
+        if (isPremiumUser.value) {
+            Log.i("ConjugationsViewModel","playTrack() User is a isPremiumUser")
+        }else{
+            Log.i("ConjugationsViewModel","playTrack() User is NOT a isPremiumUser")
+        }
+
+
+    viewModelScope.launch {
 //            val googleVoice = "en-GB-Neural2-C"
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()

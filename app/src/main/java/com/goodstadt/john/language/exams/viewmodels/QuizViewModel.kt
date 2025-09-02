@@ -2,10 +2,13 @@ package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Application
 import android.content.Context
+import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
@@ -98,11 +101,8 @@ class QuizViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val userStatsRepository: UserStatsRepository,
-    private val ttsStatsRepository : TTSStatsRepository
-//    private val pronounceSharedPreferences: PronounceSharedPreferences,
-//    private val remoteConfigRepository: RemoteConfigRepository,
-//    private val musicPlayer: MusicPlayer,
-//    private val statsManager: StatsManager
+    private val ttsStatsRepository : TTSStatsRepository,
+    private val billingRepository: BillingRepository
 ) : ViewModel() {
     private val appContext: Context = application.applicationContext
    // private val rateLimiter = RateLimiterManager.getInstance()
@@ -111,6 +111,9 @@ class QuizViewModel @Inject constructor(
     val uiState99 = _uiState99.asStateFlow()
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
     val playbackState = _playbackState.asStateFlow()
+
+    private val _isPremiumUser = MutableStateFlow(false)
+    val isPremiumUser = _isPremiumUser.asStateFlow()
 
     // region State FLow
     private val _questions = MutableStateFlow<List<QuizQuestion>>(emptyList())
@@ -156,6 +159,14 @@ class QuizViewModel @Inject constructor(
 
     init {
         loadQuestions()
+        viewModelScope.launch {
+            billingRepository.isPurchased.collect { purchasedStatus ->
+                _isPremiumUser.value = purchasedStatus
+                if (DEBUG) {
+                    billingRepository.logCurrentStatus()
+                }
+            }
+        }
     }
     fun hideDailyRateLimitSheet(){
         _showRateDailyLimitSheet.value = false
@@ -195,6 +206,12 @@ class QuizViewModel @Inject constructor(
     fun playTrack(sentence: String) {
 
         if (_playbackState.value is PlaybackState.Playing) return
+
+        if (isPremiumUser.value) {
+            Log.i("QuizViewModel","playTrack() User is a isPremiumUser")
+        }else{
+            Log.i("QuizViewModel","playTrack() User is NOT a isPremiumUser")
+        }
 
         viewModelScope.launch {
 

@@ -9,12 +9,14 @@ import com.android.billingclient.api.BillingClient.ConnectionState
 import com.android.billingclient.api.BillingClientStateListener
 import com.android.billingclient.api.BillingFlowParams
 import com.android.billingclient.api.BillingResult
+import com.android.billingclient.api.ConsumeParams
 import com.android.billingclient.api.PendingPurchasesParams
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.Purchase
 import com.android.billingclient.api.PurchasesUpdatedListener
 import com.android.billingclient.api.QueryProductDetailsParams
 import com.android.billingclient.api.QueryPurchasesParams
+import com.goodstadt.john.language.exams.BuildConfig
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -37,6 +39,9 @@ import kotlin.coroutines.resumeWithException
 class BillingRepository @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
+
+    private val PRODUCT_ID = "unlock_premium_features_v1"
+
     private val tag = "BillingRepository"
 
     private val _connectionState = MutableStateFlow(ConnectionState.DISCONNECTED)
@@ -112,7 +117,7 @@ class BillingRepository @Inject constructor(
             .setProductList(
                 listOf(
                     QueryProductDetailsParams.Product.newBuilder()
-                        .setProductId("unlock_premium_features_v1")
+                        .setProductId(PRODUCT_ID)
                         .setProductType(BillingClient.ProductType.INAPP)
                         .build()
                 )
@@ -152,7 +157,7 @@ class BillingRepository @Inject constructor(
             billingClient.queryPurchasesAsync(params) { billingResult, purchases ->
                 Log.d(tag, "Purchases query: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                    val purchased = purchases.any { it.products.contains("unlock_premium_features_v1") && it.isAcknowledged }
+                    val purchased = purchases.any { it.products.contains(PRODUCT_ID) && it.isAcknowledged }
                     _isPurchased.value = purchased
                     cont.resume(Unit)
                 } else {
@@ -164,7 +169,7 @@ class BillingRepository @Inject constructor(
     }
 
     private suspend fun handlePurchase(purchase: Purchase) {
-        if (purchase.products.contains("unlock_premium_features_v1") &&
+        if (purchase.products.contains(PRODUCT_ID) &&
             purchase.purchaseState == Purchase.PurchaseState.PURCHASED &&
             !purchase.isAcknowledged
         ) {
@@ -253,6 +258,56 @@ class BillingRepository @Inject constructor(
 
             else ->             // Disable GMS features gracefully
                 Log.w("GMS", "Google Play Services unavailable: $resultCode")
+        }
+    }
+
+    /**
+     * DEBUG ONLY. Queries all owned non-consumable products and consumes them.
+     * This effectively "resets" the user's premium status for re-testing.
+     */
+    fun debugResetAllPurchases() {
+        if (!BuildConfig.DEBUG) return // Safety check
+
+        Log.d(tag, "Debug reset triggered. Querying all owned items...")
+        val params = QueryPurchasesParams.newBuilder()
+            .setProductType(BillingClient.ProductType.INAPP).build()
+
+        billingClient.queryPurchasesAsync(params) { billingResult, purchases ->
+            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                Log.d(tag, "Found ${purchases.size} items to reset.")
+                for (purchase in purchases) {
+                    // We only care about our specific product
+                    if (purchase.products.contains(PRODUCT_ID)) {
+                        consumeTestPurchase(purchase)
+                    }
+                }
+            }
+        }
+    }
+    /**
+     * Consumes a purchase for a license tester. This makes a non-consumable product
+     * available to be purchased again. THIS SHOULD ONLY BE CALLED IN DEBUG BUILDS.
+     */
+    private fun consumeTestPurchase(purchase: Purchase) {
+        Log.d(tag, "Debug build detected. Consuming test purchase to allow re-testing...")
+
+        val consumeParams = ConsumeParams.newBuilder()
+            .setPurchaseToken(purchase.purchaseToken)
+            .build()
+
+        billingClient.consumeAsync(consumeParams) { billingResult, purchaseToken ->
+            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                Log.i(tag, "✅ Test purchase consumed successfully. The item can be bought again.")
+                // After consuming, the user is no longer a premium member.
+                // We reset the status back to NotPremium.
+                // We need to re-query the product details to do this.
+                //queryProductDetails()
+                CoroutineScope(Dispatchers.IO).launch {
+                    queryProductDetails()
+                }
+            } else {
+                Log.e(tag, "❌ Failed to consume test purchase. Code: ${billingResult.responseCode}")
+            }
         }
     }
 }

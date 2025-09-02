@@ -9,7 +9,6 @@ plugins {
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.compose.compiler)// <-- ADD THIS LINE to apply the new plugin
     alias(libs.plugins.kotlinSerialization)
-    // kotlin("kapt")
     alias(libs.plugins.google.gms.google.services)
     id("com.google.devtools.ksp")
 }
@@ -20,11 +19,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 43
-val VERSION_NAME = "1.43"
-
-//println("DEBUG: MYAPP_UPLOAD_STORE_PASSWORD from properties file is: '${secretsProperties.getProperty("MYAPP_UPLOAD_STORE_PASSWORD")}'")
-//println("DEBUG: MYAPP_UPLOAD_KEY_PASSWORD from properties file is: '${secretsProperties.getProperty("MYAPP_UPLOAD_KEY_PASSWORD")}'")
+val VERSION_CODE = 44
+val VERSION_NAME = "1.44"
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
@@ -57,8 +53,6 @@ android {
             "GEMINI_API_KEY",
             secretsProperties.getProperty("GEMINI_API_KEY")
         )
-
-        // buildCon figField("String", "TTS _API_ KEY", "\"AIzaSyBSG jKuHGjf CHmfMNBHxD4w uH0CO GQ0biY\"")
 
         vectorDrawables {
             useSupportLibrary = true
@@ -96,7 +90,6 @@ android {
         }
     }
 
-    // --- ADD THIS ENTIRE sourceSets BLOCK ---
     sourceSets {
         getByName("main") {
             // This line is optional but good practice. It confirms where the main assets are.
@@ -115,8 +108,6 @@ android {
             assets.srcDir("src/zh/assets")
         }
     }
-    // --- END OF NEW BLOCK ---
-    //            storeFile = file(secretsProperties.getProperty("MYAPP_UPLOAD_STORE_FILE"))
 
     signingConfigs {
         create("release") {
@@ -132,12 +123,6 @@ android {
             keyAlias = secretsProperties.getProperty("UPLOAD_KEY_ALIAS")
             keyPassword = secretsProperties.getProperty("UPLOAD_KEY_PASSWORD")
         }
-//        create("debug") {
-//            storeFile = file("~/.android/debug.keystore")
-//            storePassword = secretsProperties.getProperty("android")
-//            keyAlias = secretsProperties.getProperty("androiddebugkey")
-//            keyPassword = secretsProperties.getProperty("android")
-//        }
     }
 
     buildTypes {
@@ -148,7 +133,7 @@ android {
 
         }
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -209,18 +194,7 @@ dependencies {
 
     // Add this for JSON parsing
     implementation(libs.kotlinx.serialization.json)
-//    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
-    // Firebase
-//    implementation(platform(libs.firebase.bom))
-//    implementation(libs.firebase.config.ktx)
-//    implementation(libs.firebase.analytics)
-//    implementation(libs.firebase.auth)
-//    implementation(libs.firebase.firestore) {
-//        exclude(group = "com.google.firebase", module = "firebase-common")
-//    }
-//    implementation(libs.firebase.firestore)
-//    implementation(libs.google.firebase.config.ktx)
     implementation(libs.androidx.datastore.preferences)
 ////    implementation(platform(libs.google.play.services.bom))
 //    implementation("com.google.android.gms:play-services-auth")
@@ -244,31 +218,6 @@ dependencies {
     implementation(libs.play.services.auth)
     implementation(libs.play.services.maps)
 
-//    constraints {
-//        implementation("com.android.billingclient:billing:8.0.0") {
-//            because("Enforce consistent billing library version across all dependencies")
-//        }
-//        implementation("com.android.billingclient:billing-ktx:8.0.0") {
-//            because("Enforce consistent billing library version across all dependencies")
-//        }
-//    }
-
-//    implementation(platform(libs.play.services.bom))
-
-    // 2. Now declare all your Firebase and GMS libraries WITHOUT versions.
-    //    The BOMs will provide the correct, compatible versions for all of them.
-//    implementation(libs.firebase.auth)
-//    implementation(libs.firebase.firestore)
-//    implementation(libs.firebase.config.ktx)
-//    implementation(libs.firebase.analytics) // If you decided to keep it
-//
-    // It's good practice to explicitly include common dependencies
-//    implementation("com.google.firebase:firebase-common-ktx")
-//    implementation("com.google.android.gms:play-services-base")
-
-    // --- YOUR BILLING LIBRARY ---
-    // This is an AndroidX library, not a GMS library, so it's fine on its own.
-//    implementation(libs.androidx.billing.ktx)
 
     implementation(libs.ktor.client.core)
     implementation(libs.ktor.client.cio)
