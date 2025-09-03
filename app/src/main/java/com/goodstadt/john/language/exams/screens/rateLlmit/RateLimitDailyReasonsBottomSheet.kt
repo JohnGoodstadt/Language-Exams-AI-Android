@@ -130,9 +130,18 @@ fun RateLimitDailyReasonsBottomSheet (
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 4.dp)
             ) {
-                Text("OK", modifier = Modifier
+                Text("Lift All Restrictions", modifier = Modifier
                     .padding(horizontal = 64.dp, vertical = 4.dp))
             }
+            Text(
+                text = "All exam lists A1,A2,B1,B2 for all time",
+                fontSize = 12.sp,
+                color = Color.White,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                    .fillMaxWidth()
+            )
         }
     }
 }
