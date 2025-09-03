@@ -3,6 +3,8 @@ package com.goodstadt.john.language.exams.utils // Or your preferred package
 import java.util.Calendar
 import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
+import kotlin.time.DurationUnit
+import kotlin.time.toDuration
 
 /**
  * A data class to hold the parsed components of a timing string.
@@ -79,4 +81,22 @@ fun timingToDurationMillis(timing: String): Long {
 fun timingToFutureDate(timing: String, now: java.util.Date = java.util.Date()): java.util.Date {
     val durationMillis = timingToDurationMillis(timing)
     return java.util.Date(now.time + durationMillis)
+}
+
+fun formatTimeInterval(interval: Double): String {
+    val duration = interval.toDuration(DurationUnit.SECONDS)
+    val hours = duration.inWholeHours
+    val minutes = duration.inWholeMinutes % 60
+
+    return if (hours == 0L) {
+        if (minutes == 1L) {
+            "1 minute"
+        } else if (minutes > 54){ //round up
+            "1 hour"
+        } else {
+            String.format("%02d minutes", minutes)
+        }
+    } else {
+        String.format("%02d:%02d", hours, minutes)
+    }
 }

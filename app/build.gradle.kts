@@ -129,6 +129,7 @@ android {
         debug {
             isMinifyEnabled = false
             buildConfigField("Boolean", "IS_DEBUG", "true")
+            buildConfigField("Boolean", "TEST_RATE_LIMITING", "true")
             signingConfig = signingConfigs.getByName("debug")
 
         }
@@ -139,6 +140,7 @@ android {
                 "proguard-rules.pro"
             )
             buildConfigField("Boolean", "IS_DEBUG", "false")
+            buildConfigField("Boolean", "TEST_RATE_LIMITING", "true")
             signingConfig = signingConfigs.getByName("release")
         }
     }

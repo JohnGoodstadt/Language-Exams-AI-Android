@@ -92,6 +92,7 @@ class TTSStatsRepository @Inject constructor(
         USER("users") //stats to go to User table/Doc
     }
 
+    //see also FirestoreRepository.kt
     // Stat names
     companion object {
         const val MP3PlayedCount = "mp3PlayedCount"
@@ -152,6 +153,7 @@ class TTSStatsRepository @Inject constructor(
         const val viewTryOutCount = "viewTryOutCount"
         const val viewPracticeCount = "viewPracticeCount"
 
+        //const val rateLimitDailyViewCount = "statProgress__Total"
     }
 
 
@@ -411,6 +413,9 @@ class TTSStatsRepository @Inject constructor(
     }
     fun updateUserPlayedSentenceCount() {
         inc(fsDOC.USER, MP3PlayedCount)
+    }
+    fun incUserStatCount(fieldNamw:String,value:Int = 1) {
+        inc(fsDOC.USER, fieldNamw,value)
     }
     fun updateUserOpenAITotalTokenCount(count:Int) {
         inc(fsDOC.USER, OpenAICallCount)

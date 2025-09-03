@@ -34,6 +34,7 @@ import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.categories
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import removeContentInBracketsAndTrim
 
 /**
@@ -126,6 +127,10 @@ fun CategoryTabScreen(
         }
         map
     }
+
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
     Scaffold(
 
@@ -242,6 +247,15 @@ fun CategoryTabScreen(
                             }
                         }
                     }
+                }
+                if (isRateLimitingSheetVisible){
+                    RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+                }
+                if (isDailyRateLimitingSheetVisible){
+                    RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+                }
+                if (isHourlyRateLimitingSheetVisible){
+                    RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
                 }
             }
         }

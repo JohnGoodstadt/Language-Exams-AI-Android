@@ -14,6 +14,8 @@ import javax.inject.Singleton
 class FirestoreRepository  @Inject constructor(
     private val firestore: FirebaseFirestore
 ) {
+
+    //see also TTSStatsRepository
     object fb {
         const val global = "global"
         const val WordListControl = "WordListControl"

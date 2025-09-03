@@ -24,6 +24,8 @@ import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.TtsCreditsRepository
+import com.goodstadt.john.language.exams.managers.RateLimiterManager
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
@@ -59,7 +61,7 @@ class CategoryTabViewModel @Inject constructor(
     private val recallingItemsManager: RecallingItems,
     private val ttsStatsRepository : TTSStatsRepository,
 //    @ApplicationContext private val context: Context,
-    private val ttsCreditsRepository: TtsCreditsRepository,
+//    private val ttsCreditsRepository: TtsCreditsRepository,
     private val appScope: CoroutineScope,// Inject a non-cancellable, app-level scope
     private val billingRepository: BillingRepository
 ) : ViewModel() {
@@ -74,6 +76,17 @@ class CategoryTabViewModel @Inject constructor(
 
     private val _uiEvent = MutableSharedFlow<UiEvent>()
     val uiEvent = _uiEvent.asSharedFlow()
+
+    //NOTE: rate Limiting
+    private val rateLimiter = RateLimiterManager.getInstance()
+    private val _showRateLimitSheet = MutableStateFlow(false)
+    val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
+
+    private val _showRateDailyLimitSheet = MutableStateFlow(false)
+    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
+
+    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
+    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     init {
         // Load all data when the ViewModel is first created
@@ -159,8 +172,6 @@ class CategoryTabViewModel @Inject constructor(
 
         viewModelScope.launch {
 
-
-
             if (!connectivityRepository.isCurrentlyOnline()) {
                 _uiEvent.emit(UiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
                 return@launch
@@ -172,13 +183,34 @@ class CategoryTabViewModel @Inject constructor(
                 Log.i("CategoryTabViewModel","User is NOT a isPremiumUser")
             }
 
+            if (!isPremiumUser.value) { //if premium user don't check credits
+                if (rateLimiter.doIForbidCall()){
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    println(failType.canICallAPI)
+                    println(failType.failReason)
+                    println(failType.timeLeftToWait)
+                    if (!failType.canICallAPI){
+                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
+                            _showRateDailyLimitSheet.value = true
+                        }else {
+                            _showRateHourlyLimitSheet.value = true
+                        }
+                    } else {
+                        _showRateLimitSheet.value = true
+                    }
 
-            ttsCreditsRepository.decrementCredit()
+                    return@launch
+                }
+            }
+
+
+
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
 
             _uiState.update { it.copy(playbackState = PlaybackState.Playing(uniqueSentenceId)) }
+
 
             // Call your repository to play the audio
             val result = vocabRepository.playTextToSpeech(
@@ -205,6 +237,9 @@ class CategoryTabViewModel @Inject constructor(
                             cachedAudioWordKeys = it.cachedAudioWordKeys + word.word
                         )
                     }
+
+                    rateLimiter.recordCall()
+                    Log.v("CategoryTabViewModel",rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStats(sentence, currentVoiceName)
 
                     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
@@ -312,4 +347,14 @@ class CategoryTabViewModel @Inject constructor(
         // Optionally: trigger your Firebase repo here to upload using statsRepo.progressStats
         // firebaseRepo.uploadA1Progress(statsRepo.progressStats)
     }
+    fun hideDailyRateLimitSheet(){
+        _showRateDailyLimitSheet.value = false
+    }
+    fun hideHourlyRateLimitSheet(){
+        _showRateHourlyLimitSheet.value = false
+    }
+    fun hideRateOKLimitSheet(){
+        _showRateLimitSheet.value = false
+    }
+
 }
