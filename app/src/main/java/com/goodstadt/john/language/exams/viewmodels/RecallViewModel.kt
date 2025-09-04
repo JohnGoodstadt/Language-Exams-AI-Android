@@ -184,9 +184,9 @@ class RecallViewModel @Inject constructor(
     fun onPlayWord(word: String) {
 
         if (isPremiumUser.value) {
-            Timber.i("onPlayWord() User is a isPremiumUser")
+            Timber.i("onPlayWord() User is a paid user !")
         }else{
-            Timber.i("onPlayWord() User is NOT a isPremiumUser")
+            Timber.i("onPlayWord() User is a FREE user")
         }
 
         viewModelScope.launch {
@@ -222,9 +222,9 @@ class RecallViewModel @Inject constructor(
     fun onPlaySentence(word: String, sentence: String) {
 
         if (isPremiumUser.value) {
-            Timber.i("onPlaySentence() User is a isPremiumUser")
+            Timber.i("onPlaySentence() User is a paid user !")
         }else{
-            Timber.i("onPlaySentence() User is NOT a isPremiumUser")
+            Timber.i("onPlaySentence() User is a FREE user")
         }
 
         viewModelScope.launch {

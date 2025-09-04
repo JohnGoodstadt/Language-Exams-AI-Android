@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
@@ -24,8 +25,10 @@ import com.goodstadt.john.language.exams.viewmodels.SearchViewModel
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
+
 @Composable
 fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
+    val context = LocalContext.current
     val searchQuery by viewModel.searchQuery.collectAsState()
     val searchResults by viewModel.searchResults.collectAsState()
     val playbackState by viewModel.playbackState.collectAsState()
@@ -74,9 +77,23 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
         RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
     }
     if (isDailyRateLimitingSheetVisible){
-        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+//        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitDailyReasonsBottomSheet(
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+            )
+        }
     }
     if (isHourlyRateLimitingSheetVisible){
-        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+//        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitHourlyReasonsBottomSheet(
+                onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+            )
+        }
+
     }
+
 }

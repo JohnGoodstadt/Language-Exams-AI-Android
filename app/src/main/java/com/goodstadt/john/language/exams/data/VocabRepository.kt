@@ -56,7 +56,7 @@ class VocabRepository @Inject constructor(
     suspend fun getVocabData(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
         // Return from cache if available for this specific file
         vocabCache[fileName]?.let {
-            println("Returning '$fileName' from cache.") // For debugging
+            Timber.v("Returning '$fileName' from cache.") // For debugging
             return@withContext Result.success(it)
         }
 
@@ -73,7 +73,7 @@ class VocabRepository @Inject constructor(
                 return@withContext Result.failure(Exception("Resource file not found: $fileName.json"))
             }
 
-            println("Loading '$fileName' from resources.") // For debugging
+            Timber.v("Loading '$fileName' from resources.") // For debugging
             val inputStream = context.resources.openRawResource(resourceId)
             val jsonString = inputStream.bufferedReader().use { it.readText() }
             val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
@@ -125,7 +125,7 @@ class VocabRepository @Inject constructor(
 
         // 2. Check if the cached file exists.
         if (audioCacheFile.exists()) {
-            println("Playing from cache: Yippee!") // For debugging
+            Timber.v("Playing from cache: Yippee!") // For debugging
             // If it exists, play the audio data from the file.
             val playResult = audioPlayerService.playAudio(audioCacheFile.readBytes())
 
@@ -147,7 +147,7 @@ class VocabRepository @Inject constructor(
                     // 4. On successful fetch, SAVE the data to the cache file.
                     try {
                         audioCacheFile.writeBytes(audioData)
-                        // println("Saved to cache: ${audioCacheFile.name}  ${audioCacheFile.absolutePath}") // For debugging
+                        // Timber.v("Saved to cache: ${audioCacheFile.name}  ${audioCacheFile.absolutePath}") // For debugging
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }

@@ -36,6 +36,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun RateLimitDailyReasonsBottomSheet (
     viewModel: RateLimitSheetViewModel = hiltViewModel(),
+    onBuyPremiumButtonPressed: () -> Unit,
     onCloseSheet: () -> Unit
 ) {
 
@@ -145,13 +146,13 @@ fun RateLimitDailyReasonsBottomSheet (
         }
     }
 }
-@OptIn(ExperimentalMaterial3Api::class)
-@Preview(showBackground = true)
-@Composable
-fun RateLimitDailyReasonsBottomSheetPreview() {
-    MaterialTheme {
-        RateLimitDailyReasonsBottomSheet(
-                onCloseSheet = { /* No-op for preview */ }
-        )
-    }
-}
+//@OptIn(ExperimentalMaterial3Api::class)
+//@Preview(showBackground = true)
+//@Composable
+//fun RateLimitDailyReasonsBottomSheetPreview() {
+//    MaterialTheme {
+//        RateLimitDailyReasonsBottomSheet(
+//                onCloseSheet = { /* No-op for preview */ }
+//        )
+//    }
+//}

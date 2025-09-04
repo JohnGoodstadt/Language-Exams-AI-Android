@@ -55,18 +55,18 @@ import com.goodstadt.john.language.exams.ui.theme.selectedBackground
 import com.goodstadt.john.language.exams.viewmodels.QuizLevels
 import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+import timber.log.Timber
 
 
 @Composable
 fun QuizScreen(
     viewModel: QuizViewModel = hiltViewModel()
 ) {
-
+    val context = LocalContext.current
     val options = listOf("Quiz 1", "Quiz 2 - Word Pairs","Quiz 3 - Word Order","Quiz 4 - Spelling 2","Quiz 5 - Spelling 3")
     var infoDisabled by remember { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
 
-    val context = LocalContext.current
     val questions by viewModel.questions.collectAsState()
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
@@ -86,7 +86,7 @@ fun QuizScreen(
     var currentQuizFormat = viewModel.quizFillInTheBlanks
 
     LaunchedEffect(true) {
-       println("QuizScreen LaunchedEffect")
+       Timber.v("QuizScreen LaunchedEffect")
     }
 
     /* TODO: review
@@ -108,7 +108,7 @@ fun QuizScreen(
     /*
     LaunchedEffect(key1 = true) {
         if (viewModel.checkIfAppUpgradeCheckStillToDoToday()){
-            println("App Upgrade check not yet done for today")
+            Timber.v("App Upgrade check not yet done for today")
 
             if (viewModel.adviseUpgradeApp()){
                 if (viewModel.forceUpgradeApp()){
@@ -189,7 +189,7 @@ fun QuizScreen(
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
                                 modifier = Modifier.clickable {
-                                    //println(" ${ question.sentence.replace("_", option)}")
+                                    //Timber.v(" ${ question.sentence.replace("_", option)}")
                                     val isCorrect = option == question.correctOption
                                     viewModel.updateAnswer(isCorrect)
 
@@ -214,7 +214,7 @@ fun QuizScreen(
                                     .padding(vertical = 4.dp)
                                     .clickable {
                                        // val fullSentence = question.sentence.replace("_", option)
-                                       // println(fullSentence)
+                                       // Timber.v(fullSentence)
                                         val fullSentence = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                             question.sentence.replace("_", option)
                                         } else {
@@ -240,7 +240,7 @@ fun QuizScreen(
                                 if (isOptionCorrect){
 //                                    googleCloudTTS.start(text = question.sentence.replace("_", option))
 //                                    val fullSentence = question.sentence.replace("_", option)
-//                                    println(fullSentence)
+//                                    Timber.v(fullSentence)
                                     val fullSentence = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                         question.sentence.replace("_", option)
                                     } else {
@@ -376,10 +376,22 @@ fun QuizScreen(
         RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
     }
     if (isDailyRateLimitingSheetVisible){
-        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+//        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitDailyReasonsBottomSheet(
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+            )
+        }
     }
     if (isHourlyRateLimitingSheetVisible){
-        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+//        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitHourlyReasonsBottomSheet(
+                onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+            )
+        }
     }
     /*
 

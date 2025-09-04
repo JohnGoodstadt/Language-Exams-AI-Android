@@ -179,7 +179,7 @@ class FirestoreRepository  @Inject constructor(
 
         itemRef.update(updates)
             .addOnFailureListener { e ->
-                println("Error updating field ${fb.lastActivityDate}: $e")
+                Timber.e("Error updating field ${fb.lastActivityDate}: $e")
             }
     }
     fun fsUpdateUserStatsCounts(statToUpload: kotlin.collections.Map<String, Any>) {
@@ -190,8 +190,8 @@ class FirestoreRepository  @Inject constructor(
 
         try {
             val incrementedStats = transformToIncrements(statToUpload)
-//        println(statToUpload)
-//        println(incrementedStats)
+//        Timber.e(statToUpload)
+//        Timber.e(incrementedStats)
 
             itemRef.update(incrementedStats)
 
@@ -227,7 +227,7 @@ class FirestoreRepository  @Inject constructor(
         val docRef = FirebaseFirestore.getInstance().collection(fb.stats).document(formattedDate)
         docRef.update(firestoreUpdateFields as Map<String, Any>)
             .addOnFailureListener { e ->
-                println("Error updating inc field fsUpdateGlobalStats (Download field): $e")
+                Timber.e("Error updating inc field fsUpdateGlobalStats (Download field): $e")
             }
 
         // 2. Individual user stats area for month (TODO: Implement this part if needed)

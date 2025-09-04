@@ -33,6 +33,9 @@ class LanguageExamsApp : Application() {
         FirebaseApp.initializeApp(this)
 
         initializeRateLimiter()
+
+
+
     }
     private fun initializeRateLimiter() {
         RateLimiterManager.initialize(this)

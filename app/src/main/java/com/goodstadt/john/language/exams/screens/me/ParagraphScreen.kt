@@ -228,10 +228,10 @@ fun ParagraphScreen(
                     now = Date() // triggers recomposition immediately
                     val remaining = viewModel.secondsRemaining(now)
 
-                    println("Compose timer tick: $remaining seconds remaining")
+                    Timber.v("Compose timer tick: $remaining seconds remaining")
 
                     if (remaining == 0) {
-                        println("Resetting credits automatically...")
+                        Timber.v("Resetting credits automatically...")
                         viewModel.clearWaitPeriod()
                         break // stop this loop
                     }

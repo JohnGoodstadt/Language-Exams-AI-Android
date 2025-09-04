@@ -27,6 +27,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
 import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
@@ -53,7 +54,7 @@ fun CategoryTabScreen(
 
 //    val globalUiState by mainViewModel.uiState.collectAsState()
 //    val isPremium = globalUiState.isPremiumUser
-
+    val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
 
     LaunchedEffect(key1 = tabIdentifier, key2 = categoryTitle, key3 = selectedVoiceName) {
@@ -252,10 +253,20 @@ fun CategoryTabScreen(
                     RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
                 }
                 if (isDailyRateLimitingSheetVisible){
-                    RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+                    if (context is androidx.activity.ComponentActivity) {
+                        RateLimitDailyReasonsBottomSheet(
+                            onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                            onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+                        )
+                    }
                 }
                 if (isHourlyRateLimitingSheetVisible){
-                    RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+                    if (context is androidx.activity.ComponentActivity) {
+                        RateLimitHourlyReasonsBottomSheet(
+                            onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                            onCloseSheet = { viewModel.hideHourlyRateLimitSheet() }
+                        )
+                    }
                 }
             }
         }

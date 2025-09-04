@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -23,6 +24,7 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
 
 @Composable
 fun PrepositionsScreen(viewModel: PrepositionsViewModel = hiltViewModel()) {
+    val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
     val playbackState by viewModel.playbackState.collectAsState()
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
@@ -62,10 +64,22 @@ fun PrepositionsScreen(viewModel: PrepositionsViewModel = hiltViewModel()) {
         RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
     }
     if (isDailyRateLimitingSheetVisible){
-        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+//        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitDailyReasonsBottomSheet(
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+            )
+        }
     }
     if (isHourlyRateLimitingSheetVisible){
-        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+//        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitHourlyReasonsBottomSheet(
+                onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+            )
+        }
     }
 
     val lifecycleOwner = LocalLifecycleOwner.current

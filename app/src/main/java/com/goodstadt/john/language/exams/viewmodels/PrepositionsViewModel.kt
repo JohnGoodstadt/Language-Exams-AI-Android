@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.app.Activity
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -106,17 +107,17 @@ class PrepositionsViewModel @Inject constructor(
         if (_playbackState.value is PlaybackState.Playing) return
 
         if (isPremiumUser.value) {
-            Timber.i("playTrack() User is a isPremiumUser")
+            Timber.i("playTrack() User is a paid user !")
         }else{
-            Timber.i("playTrack() User is NOT a isPremiumUser")
+            Timber.i("playTrack() User is a FREE user")
         }
 
         if (!isPremiumUser.value) { //if premium user don't check credits
             if (rateLimiter.doIForbidCall()){
                 val failType = rateLimiter.canMakeCallWithResult()
-                println(failType.canICallAPI)
-                println(failType.failReason)
-                println(failType.timeLeftToWait)
+                Timber.v("${failType.canICallAPI}")
+                Timber.v("${failType.failReason}")
+                Timber.v("${failType.timeLeftToWait}")
                 if (!failType.canICallAPI){
                     if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
                         _showRateDailyLimitSheet.value = true
@@ -186,5 +187,12 @@ class PrepositionsViewModel @Inject constructor(
     }
     fun hideRateOKLimitSheet(){
         _showRateLimitSheet.value = false
+    }
+
+    fun buyPremiumButtonPressed(activity: Activity) {
+        Timber.i("purchasePremium()")
+        viewModelScope.launch {
+            billingRepository.launchPurchase(activity)
+        }
     }
 }

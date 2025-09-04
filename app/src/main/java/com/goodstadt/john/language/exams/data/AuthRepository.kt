@@ -223,7 +223,7 @@ class AuthRepository @Inject constructor(
             snapshot.exists()
         } catch (e: Exception) {
             // Handle the exception, e.g., log it
-            println(e)
+            Timber.e(e)
             false
         }
     }
@@ -244,7 +244,7 @@ class AuthRepository @Inject constructor(
 
         itemRef.update(updates)
             .addOnFailureListener { e ->
-                println("Error updating field ${fb.lastActivityDate}: $e")
+                Timber.e("Error updating field ${fb.lastActivityDate}: $e")
                 if (e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.NOT_FOUND) {
                     val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
                     applicationScope.launch {

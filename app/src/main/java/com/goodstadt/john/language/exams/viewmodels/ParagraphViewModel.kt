@@ -145,10 +145,10 @@ class ParagraphViewModel @Inject constructor(
                     val targetDate: Date = creditsRepository.nextCreditRefillDate.value ?: Date()
                     val now = Date()
 //
-                    println("comparing  and $now and $targetDate")
+                    Timber.v("comparing  and $now and $targetDate")
                     if (now.before(targetDate)) {
                         // ts is in the past
-                        println("Still counting down")
+                        Timber.v("Still counting down")
                         _uiState.update { it.copy(waitingForCredits = true,areCreditsInitialized = true ) }
                         var userCredits = uiState.value.userCredits
 //                        userCredits.llmNextCreditRefill = Timestamp((0,0))
@@ -157,7 +157,7 @@ class ParagraphViewModel @Inject constructor(
                         creditsRepository.setNextCreditRefillDate(targetDate)
 
                     } else {
-                        println("Expired counting")
+                        Timber.v("Expired counting")
                     }
                 }
             }
@@ -183,9 +183,9 @@ class ParagraphViewModel @Inject constructor(
             val currentState = _uiState.value
 
             if (isPremiumUser.value) {
-                Timber.i("generateNewParagraph() User is a isPremiumUser")
+                Timber.i("generateNewParagraph() User is a paid user !")
             }else{
-                Timber.i("generateNewParagraph() User is NOT a isPremiumUser")
+                Timber.i("generateNewParagraph() User is a FREE user")
             }
 
 
@@ -260,12 +260,12 @@ class ParagraphViewModel @Inject constructor(
 
                         if (BuildConfig.DEBUG) {
                             Timber.d(llmResponse.content)
-                            println("Total tokens: ${result.totalTokens}")
-                            println("Estimated characters (for TTS): ${result.estimatedCharacters}")
-                            println("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
-                            println("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
-                            println("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
-                            println("Total cost: $${"%.6f".format(totalCostUSD)}")
+                            Timber.v("Total tokens: ${result.totalTokens}")
+                            Timber.v("Estimated characters (for TTS): ${result.estimatedCharacters}")
+                            Timber.v("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
+                            Timber.v("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
+                            Timber.v("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
+                            Timber.v("Total cost: $${"%.6f".format(totalCostUSD)}")
                         }
 
                         //TODO: update gpt call costs
@@ -282,10 +282,10 @@ class ParagraphViewModel @Inject constructor(
                             totalTokensUsed
                         )
 
-                        println("current credits B: ${_uiState.value.userCredits.current}")
+                        Timber.v("current credits B: ${_uiState.value.userCredits.current}")
                         if (_uiState.value.userCredits.current <= 0){
                             val FRED = secondsRemaining()
-                            println("seconds to go: $FRED")
+                            Timber.v("seconds to go: $FRED")
 
                         }
 
@@ -339,18 +339,18 @@ class ParagraphViewModel @Inject constructor(
                                     )
 
                                     if (BuildConfig.DEBUG) {
-                                        println("Total tokens: ${cost.totalTokens}")
-                                        println("Input tokens: ${cost.inputTokens}")
-                                        println("Output tokens: ${cost.outputTokens}")
-                                        println("GPT input cost: $${"%.6f".format(cost.gptInputCostUSD)}")
-                                        println("GPT output cost: $${"%.6f".format(cost.gptOutputCostUSD)}")
-                                        println("Total cost: $${"%.6f".format(cost.totalCostUSD)}")
+                                        Timber.v("Total tokens: ${cost.totalTokens}")
+                                        Timber.v("Input tokens: ${cost.inputTokens}")
+                                        Timber.v("Output tokens: ${cost.outputTokens}")
+                                        Timber.v("GPT input cost: $${"%.6f".format(cost.gptInputCostUSD)}")
+                                        Timber.v("GPT output cost: $${"%.6f".format(cost.gptOutputCostUSD)}")
+                                        Timber.v("Total cost: $${"%.6f".format(cost.totalCostUSD)}")
                                     }
 
-                                    println("current credits A: ${_uiState.value.userCredits.current}")
+                                    Timber.v("current credits A: ${_uiState.value.userCredits.current}")
                                     if (_uiState.value.userCredits.current <= 0){
                                         val FRED = secondsRemaining()
-                                        println("seconds to go: $FRED")
+                                        Timber.v("seconds to go: $FRED")
 
                                     }
 
@@ -491,9 +491,9 @@ class ParagraphViewModel @Inject constructor(
         if (!isPremiumUser.value) { //if premium user don't check credits
             if (rateLimiter.doIForbidCall()){
                 val failType = rateLimiter.canMakeCallWithResult()
-                println(failType.canICallAPI)
-                println(failType.failReason)
-                println(failType.timeLeftToWait)
+                Timber.v("${failType.canICallAPI}")
+                Timber.v("${failType.failReason}")
+                Timber.v("${failType.timeLeftToWait}")
                 if (!failType.canICallAPI){
                     if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
                         Timber.v("User would fail DAILY rate limiting")
@@ -607,7 +607,7 @@ class ParagraphViewModel @Inject constructor(
 //        val NCRD = _uiState.value.userCredits.llmNextCreditRefill
         val NCRD = creditsRepository.nextCreditRefillDate.value
 
-        println("secondsRemaining.nextCreditRefillDate: $NCRD ")
+        Timber.v("secondsRemaining.nextCreditRefillDate: $NCRD ")
         val target = NCRD ?: return 0
         Timber.d("${((target.time - now.time) / 1000).coerceAtLeast(0).toInt()}")
         return ((target.time - now.time) / 1000).coerceAtLeast(0).toInt()
@@ -625,7 +625,7 @@ class ParagraphViewModel @Inject constructor(
         }
     }
     fun formatDateSmart(date: Date): String {
-        println("formatDateSmart: $date")
+        Timber.v("formatDateSmart: $date")
         val now = Calendar.getInstance()
         val cal = Calendar.getInstance().apply { time = date }
 

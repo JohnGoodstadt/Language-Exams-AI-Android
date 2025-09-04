@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.managers
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.annotation.VisibleForTesting
+import timber.log.Timber
 import java.util.*
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -114,7 +115,7 @@ class SimpleRateLimiter @Inject constructor(
 
         resetIfNeeded()
 
-        println(printCurrentStatus)
+        Timber.v(printCurrentStatus)
 
         return when {
             dailyCount >= dailyLimit -> Triple(false, FailReason.DAILY, timeUntilNextDay())

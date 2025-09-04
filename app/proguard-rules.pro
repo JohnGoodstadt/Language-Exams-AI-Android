@@ -35,18 +35,18 @@
 -keep class com.goodstadt.john.language.exams.models.** { *; }
 
 # Strip out android.util.Log methods: v, d, i, println
--assumenosideeffects class android.util.Log {
-    public static int v(...);
-    public static int d(...);
-    public static int i(...);
-    public static int println(...);
-}
-
-# Strip out Java/Kotlin print/println
--assumenosideeffects class java.io.PrintStream {
-    public void print(...);
-    public void println(...);
-}
+#-assumenosideeffects class android.util.Log {
+#    public static int v(...);
+#    public static int d(...);
+#    public static int i(...);
+#    public static int println(...);
+#}
+#
+## Strip out Java/Kotlin print/println
+#-assumenosideeffects class java.io.PrintStream {
+#    public void print(...);
+#    public void println(...);
+#}
 #
 ## =========== Kotlinx Serialization ===========
 ## If you use kotlinx.serialization, these rules are recommended.

@@ -198,7 +198,7 @@ class BillingRepository @Inject constructor(
      */
     fun launchPurchase(activity: android.app.Activity) {
         val productDetails = _productDetails.value ?: run {
-            Timber.d("No product details available")
+            Timber.e("No product details available")
             return
         }
 

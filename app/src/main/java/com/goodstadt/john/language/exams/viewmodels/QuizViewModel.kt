@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.app.Activity
 import android.app.Application
 import android.content.Context
 import android.util.Log
@@ -212,16 +213,16 @@ class QuizViewModel @Inject constructor(
         if (_playbackState.value is PlaybackState.Playing) return
 
         if (isPremiumUser.value) {
-            Timber.i("playTrack() User is a isPremiumUser")
+            Timber.i("playTrack() User is a paid user !")
         }else{
-            Timber.i("playTrack() User is NOT a isPremiumUser")
+            Timber.i("playTrack() User is a FREE user")
         }
         if (!isPremiumUser.value) { //if premium user don't check credits
             if (rateLimiter.doIForbidCall()){
                 val failType = rateLimiter.canMakeCallWithResult()
-                println(failType.canICallAPI)
-                println(failType.failReason)
-                println(failType.timeLeftToWait)
+                Timber.v("${failType.canICallAPI}")
+                Timber.v("${failType.failReason}")
+                Timber.v("${failType.timeLeftToWait}")
                 if (!failType.canICallAPI){
                     if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
                         _showRateDailyLimitSheet.value = true
@@ -337,13 +338,13 @@ class QuizViewModel @Inject constructor(
 
 
             _questions.value = generateQuestionsFromJson(appContext, fileName)
-            println(_questions.value.count())
+            Timber.v("${_questions.value.count()}")
 
             resetQuiz()
 
 
 //            if (_questions.value[0] != null){
-//                println("First question: ${_questions.value[0]}")
+//                Timber.v("First question: ${_questions.value[0]}")
 //            }
         }
     }
@@ -351,7 +352,7 @@ class QuizViewModel @Inject constructor(
         val testData = readTestMyselfDataFromAssets(context, fileName)
 
         if (testData == null) {
-            println("Failed to parse JSON file: $fileName")
+            Timber.v("Failed to parse JSON file: $fileName")
             return emptyList()
         }
 
@@ -419,8 +420,8 @@ class QuizViewModel @Inject constructor(
 //            false -> statsManager.inc(StatsManager.fsDOC.USER, StatsManager.QUIZ_QUESTION_FAIL_COUNT, 1)
 //        }
 
-//        println("${currentQuestionIndex.value} and ${_questions.value.count()}")
-//        println("selectedLevel: ${selectedLevel.value}")
+//        Timber.v("${currentQuestionIndex.value} and ${_questions.value.count()}")
+//        Timber.v("selectedLevel: ${selectedLevel.value}")
 
         val currentQuestion = currentQuestionIndex.value + 1 // one based
         if (currentQuestion >= _questions.value.count() ) { //completed
@@ -437,7 +438,7 @@ class QuizViewModel @Inject constructor(
 
     fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyselfListRoot? {
         return try {
-            println("reading json: $fileName")
+            Timber.v("reading json: $fileName")
 
             val jsonString = context.assets.open("Quizzes/$fileName")
                 .bufferedReader()
@@ -477,10 +478,10 @@ class QuizViewModel @Inject constructor(
      return isUserVersionOlder(currentAppVersion,latestVersion)
 //
 //       if ( remoteConfigRepository.getAppUpdateNeeded()) {
-//        println("getAppUpdateNeeded")
+//        Timber.v("getAppUpdateNeeded")
 //        return true
 //       }else{
-//           println("getAppUpdateNeeded false")
+//           Timber.v("getAppUpdateNeeded false")
 //           return false
 //       }
  }
@@ -491,10 +492,10 @@ class QuizViewModel @Inject constructor(
      return isUserVersionVeryOld(currentAppVersion,latestVersion)
 //
 //        if ( remoteConfigRepository.getAppUpdateNeeded()) {
-//            println("getAppUpdateNeeded")
+//            Timber.v("getAppUpdateNeeded")
 //            return true
 //        }else{
-//            println("getAppUpdateNeeded false")
+//            Timber.v("getAppUpdateNeeded false")
 //            return false
 //        }
  }
@@ -510,6 +511,13 @@ class QuizViewModel @Inject constructor(
             true
         }else{
             false
+        }
+    }
+
+    fun buyPremiumButtonPressed(activity: Activity) {
+        Timber.i("purchasePremium()")
+        viewModelScope.launch {
+            billingRepository.launchPurchase(activity)
         }
     }
 

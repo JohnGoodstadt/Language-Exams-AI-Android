@@ -177,9 +177,9 @@ class CreditsRepository @Inject constructor(
             val newCredit = _userCredits.value?.current?.minus(1) ?: 0
 
             // On success, manually update our in-memory state
-            println("decrementCredit current credits A: ${newCredit}")
+            Timber.v("decrementCredit current credits A: ${newCredit}")
             _userCredits.update { it?.copy(current = newCredit) }
-            println("decrementCredit current credits B: ${newCredit}")
+            Timber.v("decrementCredit current credits B: ${newCredit}")
 
            // val current = (_userCredits.value?.current ?: 0)
 

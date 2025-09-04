@@ -184,7 +184,7 @@ class TTSStatsRepository @Inject constructor(
             sharedPreferences.edit().putString(LAST_FLUSH_DATE_KEY, dateString).apply()
             true
         } catch (e: Exception) {
-            println("Error saving date for key '$LAST_FLUSH_DATE_KEY': ${e.localizedMessage}")
+            Timber.e("Error saving date for key '$LAST_FLUSH_DATE_KEY': ${e.localizedMessage}")
             false
         }
     }
@@ -199,7 +199,7 @@ class TTSStatsRepository @Inject constructor(
                 null
             }
         } catch (e: Exception) {
-            println("Error retrieving date for key '$LAST_GLOBAL_UPDATE_DATE_KEY': ${e.localizedMessage}")
+            Timber.e("Error retrieving date for key '$LAST_GLOBAL_UPDATE_DATE_KEY': ${e.localizedMessage}")
             null
         }
     }
@@ -219,7 +219,7 @@ class TTSStatsRepository @Inject constructor(
                 null
             }
         } catch (e: Exception) {
-            println("Error retrieving date for key '$LAST_FLUSH_DATE_KEY': ${e.localizedMessage}")
+            Timber.e("Error retrieving date for key '$LAST_FLUSH_DATE_KEY': ${e.localizedMessage}")
             null
         }
     }
@@ -231,7 +231,7 @@ class TTSStatsRepository @Inject constructor(
             val prefs = getPrefs(fsDOC.USER)
             prefs.edit().putString(LAST_FLUSH_DATE_KEY, dateString).apply()
         } catch (e: Exception) {
-            println(e.localizedMessage)
+            Timber.e(e.localizedMessage)
         }
     }
 
@@ -278,7 +278,7 @@ class TTSStatsRepository @Inject constructor(
 
         when (doc) {
             fsDOC.USER -> flushUserStatsToFirebase()
-            fsDOC.TRANSLATION -> println("TODO: flush translation stats")
+            fsDOC.TRANSLATION -> Timber.d("TODO: flush translation stats")
             fsDOC.TTSStats -> flushTTSStatsToFirebase()
         }
     }
@@ -354,7 +354,7 @@ class TTSStatsRepository @Inject constructor(
 
 
 
-            println("Updating Firebase with stats: $stats for uid: ${firestoreRepository.firebaseUid()}")
+            Timber.d("Updating Firebase with stats: $stats for uid: ${firestoreRepository.firebaseUid()}")
             firestoreRepository.fsUpdateGlobalStats(stats = statsDictionary)
 
             clearStats(fsDOC.TTSStats)
@@ -390,7 +390,7 @@ class TTSStatsRepository @Inject constructor(
 
 
         val cost = calculateTTSCallCost(sentence.sentence.count(), currentVoiceName)
-        println("Cost: $${"%.8f".format(cost)}")
+        Timber.d("Cost: $${"%.8f".format(cost)}")
 
         updateUserStatDouble(TTSAPIEstCostUSD, cost)
     }
@@ -405,7 +405,7 @@ class TTSStatsRepository @Inject constructor(
 
 
         val cost = calculateTTSCallCost(sentence.count(), currentVoiceName)
-        println("Cost: $${"%.8f".format(cost)}")
+        Timber.d("Cost: $${"%.8f".format(cost)}")
 
         updateUserStatDouble(TTSAPIEstCostUSD, cost)
     }
@@ -496,7 +496,7 @@ class TTSStatsRepository @Inject constructor(
 
         val lastDueDate = getLastCheckAppUpgradeDate()
 
-        println("getLastCheckAppUpgradeDate:$lastDueDate")
+        Timber.d("getLastCheckAppUpgradeDate:$lastDueDate")
 
         return if (lastDueDate != null) {
 
@@ -538,7 +538,7 @@ class TTSStatsRepository @Inject constructor(
 
         val lastFlushDate = getLastFlushDate()
 
-        println("lastFlushDateString:$lastFlushDate")
+        Timber.d("lastFlushDateString:$lastFlushDate")
 
         return if (lastFlushDate != null) {
 
@@ -553,7 +553,7 @@ class TTSStatsRepository @Inject constructor(
             if (lastFlushDateStartOfDay < today) {
                 // Last flush was not today, so flush now
                 updateLastFlushDate(today)
-                println("Stats flushed and lastFlushDate updated.")
+                Timber.d("Stats flushed and lastFlushDate updated.")
                 true
             } else {
                 false
@@ -582,7 +582,7 @@ class TTSStatsRepository @Inject constructor(
             sharedPreferences.edit().putString(LAST_WORD_LIST_DOWNLOAD_DATE_KEY, dateString).apply()
             true
         } catch (e: Exception) {
-            println("Error saving date for key '$LAST_WORD_LIST_DOWNLOAD_DATE_KEY': ${e.localizedMessage}")
+            Timber.e("Error saving date for key '$LAST_WORD_LIST_DOWNLOAD_DATE_KEY': ${e.localizedMessage}")
             false
         }
     }
@@ -596,7 +596,7 @@ class TTSStatsRepository @Inject constructor(
                 Date(0)
             }
         } catch (e: Exception) {
-            println("Error retrieving date for key '$LAST_WORD_LIST_DOWNLOAD_DATE_KEY': ${e.localizedMessage}")
+            Timber.e("Error retrieving date for key '$LAST_WORD_LIST_DOWNLOAD_DATE_KEY': ${e.localizedMessage}")
             Date(0)
         }
     }
@@ -608,7 +608,7 @@ class TTSStatsRepository @Inject constructor(
             sharedPreferences.edit().putString(LAST_CHECK_APP_UPGRADE_DATE_KEY, dateString).apply()
             true
         } catch (e: Exception) {
-            println("Error saving date for key '$LAST_CHECK_APP_UPGRADE_DATE_KEY': ${e.localizedMessage}")
+            Timber.e("Error saving date for key '$LAST_CHECK_APP_UPGRADE_DATE_KEY': ${e.localizedMessage}")
             false
         }
     }
@@ -622,7 +622,7 @@ class TTSStatsRepository @Inject constructor(
                 Date(0)
             }
         } catch (e: Exception) {
-            println("Error retrieving date for key '$LAST_CHECK_APP_UPGRADE_DATE_KEY': ${e.localizedMessage}")
+            Timber.e("Error retrieving date for key '$LAST_CHECK_APP_UPGRADE_DATE_KEY': ${e.localizedMessage}")
             Date(0)
         }
     }
@@ -668,7 +668,7 @@ class TTSStatsRepository @Inject constructor(
             sharedPreferences.edit().putString(LAST_CHECK_LOGIN_DATE_KEY, dateString).apply()
             true
         } catch (e: Exception) {
-            println("Error saving date for key '$LAST_CHECK_LOGIN_DATE_KEY': ${e.localizedMessage}")
+            Timber.e("Error saving date for key '$LAST_CHECK_LOGIN_DATE_KEY': ${e.localizedMessage}")
             false
         }
     }
@@ -682,7 +682,7 @@ class TTSStatsRepository @Inject constructor(
                 Date(0)
             }
         } catch (e: Exception) {
-            println("Error retrieving date for key '$LAST_CHECK_LOGIN_DATE_KEY': ${e.localizedMessage}")
+            Timber.e("Error retrieving date for key '$LAST_CHECK_LOGIN_DATE_KEY': ${e.localizedMessage}")
             Date(0)
         }
     }
@@ -785,13 +785,13 @@ class TTSStatsRepository @Inject constructor(
                // val fname = "$prefix${word}.$firstSentence.mp3"
                 val uniqueSentenceId = generateUniqueSentenceId(word, firstSentence, voiceName)
                 val fullFilename = "$uniqueSentenceId.mp3"
-               // println(fullFilename)
+               // Timber.e(fullFilename)
                 if (namesOnDisk.contains(fullFilename)) completed++
             }
         }
 
         progressStats = ProgressStats(size = total, completed = completed)
-        println("recalcProgress $progressStats")
+        Timber.d("recalcProgress $progressStats")
     }
     /**
      * Increment the *total* count by 1 (e.g., when user clicks-to-play).
@@ -801,7 +801,7 @@ class TTSStatsRepository @Inject constructor(
         synchronized(this) {
             val s = progressStats
             progressStats = s.copy(size = s.size + by)
-            println("incProgressStats $progressStats skill $skillLevel")
+            Timber.d("incProgressStats $progressStats skill $skillLevel")
 
            // val d = statProgressCompleted.replace("_", skillLevel)
 

@@ -114,6 +114,11 @@ class SettingsViewModel @Inject constructor(
         }
         loadInitialData()
 
+        initializeBilling()
+
+    }
+
+    private fun initializeBilling() {
         viewModelScope.launch {
             try {
                 billingRepository.connect()
@@ -125,7 +130,6 @@ class SettingsViewModel @Inject constructor(
                 billingRepository._billingError.value = e.message
             }
         }
-
     }
 
     fun isGooglePlayServicesAvailable(context: Context): Boolean {

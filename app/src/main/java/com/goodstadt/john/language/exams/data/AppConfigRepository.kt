@@ -52,23 +52,23 @@ class AppConfigRepository @Inject constructor(
         val forcedMessage = remoteConfig.getString("update_message_forced")
         val updateUrl = remoteConfig.getString("update_url_android")
 
-        println("AppConfigRepository comparing min:$minRequiredVersion and rec:$recommendedVersion and $currentVersionCode")
+        Timber.v("AppConfigRepository comparing min:$minRequiredVersion and rec:$recommendedVersion and $currentVersionCode")
 
         return when {
            //
             // 1. Check for forced update first (most critical)
             currentVersionCode < minRequiredVersion -> {
-                println("AppConfigRepository.ForcedUpdate()")
+                Timber.v("AppConfigRepository.ForcedUpdate()")
                 UpdateState.ForcedUpdate(forcedMessage, updateUrl)
             }
             // 2. Then check for optional update
             currentVersionCode < recommendedVersion -> {
-                println("AppConfigRepository.OptionalUpdate()")
+                Timber.v("AppConfigRepository.OptionalUpdate()")
                 UpdateState.OptionalUpdate(optionalMessage, updateUrl)
             }
             // 3. Otherwise, no update is needed
             else -> {
-                println("AppConfigRepository.NoUpdateNeeded()")
+                Timber.v("AppConfigRepository.NoUpdateNeeded()")
                 UpdateState.NoUpdateNeeded
             }
         }

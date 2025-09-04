@@ -43,8 +43,8 @@ object RateLimiterManager {
 
         rateLimiter = SimpleRateLimiter( //called from ivar use
                 context = appContext,
-                hourlyLimit = 100, //NOTE: for MB testing
-                dailyLimit = 300,
+                hourlyLimit = 50, //Maybe 200ish words in A1 + reference + Paragraph
+                dailyLimit = 200,
                 schemeID = "scheme1",
                 name = "scheme1", //same as main prod scheme. so no download is done on app start
                 description = "Unit Test Rate Limiter"

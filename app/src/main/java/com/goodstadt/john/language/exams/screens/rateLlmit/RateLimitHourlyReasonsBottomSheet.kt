@@ -33,6 +33,7 @@ import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
 @Composable
 fun RateLimitHourlyReasonsBottomSheet(
     viewModel: RateLimitSheetViewModel = hiltViewModel(),
+    onBuyPremiumButtonPressed: () -> Unit,
     onCloseSheet: () -> Unit
 ) {
 
@@ -126,7 +127,9 @@ fun RateLimitHourlyReasonsBottomSheet(
                     onClick = {
                         coroutineScope.launch {
                             sheetState.hide() // Slide out animation
-                            onCloseSheet() // Remove after animation
+//                            onCloseSheet() // Remove after animation
+                            onBuyPremiumButtonPressed()
+                            onCloseSheet()
                         }
                     },
                     modifier = Modifier

@@ -8,6 +8,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.SetOptions
 import kotlinx.coroutines.tasks.await
+import timber.log.Timber
 import java.util.Date
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -75,7 +76,7 @@ class UserStatsRepository @Inject constructor(
                 timestamp to Date()
             )
         ).addOnFailureListener { exception ->
-            println("Error updating field: ${exception.message}")
+            Timber.e("Error updating field: ${exception.message}")
 
             // Check if the error is due to a missing document (Firestore error code 5)
             if ((exception as? FirebaseFirestoreException)?.code == FirebaseFirestoreException.Code.NOT_FOUND) {
@@ -108,7 +109,7 @@ class UserStatsRepository @Inject constructor(
             .document(words.word)
             .set(wordHistoryDoc)
             .addOnFailureListener { exception ->
-                println("Error writing document: ${exception.message}")
+                Timber.e("Error writing document: ${exception.message}")
             }
     }
 }

@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.config.LanguageConfig
@@ -102,8 +103,21 @@ class CategoryTabViewModel @Inject constructor(
                 return@launch
             }
         }
+        initializeBilling()
 
+    }
+
+    private fun initializeBilling() {
         viewModelScope.launch {
+            try {
+                billingRepository.connect()
+                billingRepository.checkPurchases()
+                billingRepository.logCurrentStatus()  // Debug log on init
+            } catch (e: Exception) {
+                Timber.e("${e.message}")
+                billingRepository._billingError.value = e.message
+            }
+
             billingRepository.isPurchased.collect { purchasedStatus ->
                 // This block runs AUTOMATICALLY whenever the value in the
                 // BillingRepository's 'isPurchased' flow changes.
@@ -113,8 +127,6 @@ class CategoryTabViewModel @Inject constructor(
                 }
             }
         }
-
-
     }
 
     fun loadContentForTab(tabIdentifier: String, voiceName: String) {
@@ -172,9 +184,9 @@ class CategoryTabViewModel @Inject constructor(
             }
 
             if (isPremiumUser.value) {
-                Timber.i("User is a isPremiumUser")
+                Timber.i("User is a paid user!")
             }else{
-                Timber.i("User is NOT a isPremiumUser")
+                Timber.i("User is a FREE user")
             }
 
             if (!isPremiumUser.value) { //if premium user don't check credits
@@ -233,7 +245,7 @@ class CategoryTabViewModel @Inject constructor(
                     }
 
                     rateLimiter.recordCall()
-                    Timber.v(rateLimiter.printCurrentStatus)
+                    Timber.w(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
 
                     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
@@ -349,6 +361,13 @@ class CategoryTabViewModel @Inject constructor(
     }
     fun hideRateOKLimitSheet(){
         _showRateLimitSheet.value = false
+    }
+
+    fun buyPremiumButtonPressed(activity: Activity) {
+        Timber.i("purchasePremium()")
+        viewModelScope.launch {
+            billingRepository.launchPurchase(activity)
+        }
     }
 
 }
