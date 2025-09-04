@@ -593,10 +593,12 @@ class ParagraphViewModel @Inject constructor(
         }
     }
     fun saveDataOnExit() {
-        appScope.launch {
-            if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
-                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
-                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+        if (false) {
+            appScope.launch {
+                if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+                }
             }
         }
     }

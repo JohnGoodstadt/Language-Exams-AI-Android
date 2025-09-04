@@ -64,6 +64,10 @@ class UserPreferencesRepository @Inject constructor(
             preferences[PreferenceKeys.SELECTED_SKILL_LEVEL] ?: LanguageConfig.defaulSkillLevel
         }
 
+    fun getSkillLevelKey() : String {
+//        val a = PreferenceKeys.SELECTED_SKILL_LEVEL.toString()
+        return PreferenceKeys.SELECTED_SKILL_LEVEL.toString()
+    }
     /**
      * Saves the user's selected file name to DataStore.
      */

@@ -171,11 +171,13 @@ class PrepositionsViewModel @Inject constructor(
     fun saveDataOnExit() {
         // We use appScope to ensure this save operation completes even if the
         // viewModelScope is paused or cancelled as the user navigates away.
-        appScope.launch {
-            Timber.d("Saving data because screen is no longer active.")
-            if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
-                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
-                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+        if (false) {
+            appScope.launch {
+                Timber.d("Saving data because screen is no longer active.")
+                if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+                }
             }
         }
     }

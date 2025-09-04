@@ -218,7 +218,7 @@ class CategoryTabViewModel @Inject constructor(
 
             _uiState.update { it.copy(playbackState = PlaybackState.Playing(uniqueSentenceId)) }
 
-            // Call your repository to play the audio
+
             val result = vocabRepository.playTextToSpeech(
                 text = sentence.sentence,
                 uniqueSentenceId = uniqueSentenceId,
@@ -247,7 +247,7 @@ class CategoryTabViewModel @Inject constructor(
                     rateLimiter.recordCall()
                     Timber.w(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-
+                    ttsStatsRepository.incWordStats(word.word)
                     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
                     ttsStatsRepository.incProgressSize(currentSkillLevel)
@@ -256,6 +256,9 @@ class CategoryTabViewModel @Inject constructor(
                 is PlaybackResult.PlayedFromCache -> {
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
+//                    ttsStatsRepository.printStats(TTSStatsRepository.fsDOC.WORDSTATS)
+                    ttsStatsRepository.incWordStats(word.word)
+//                    ttsStatsRepository.printStats(TTSStatsRepository.fsDOC.WORDSTATS)
                 }
                 is PlaybackResult.Failure -> {
                     // Handle the error
@@ -336,10 +339,12 @@ class CategoryTabViewModel @Inject constructor(
     fun saveDataOnExit() {
         // We use appScope to ensure this save operation completes even if the
         // viewModelScope is paused or cancelled as the user navigates away.
-        appScope.launch {
-            if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
-                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
-                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+        if (false) {
+            appScope.launch {
+                if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+                }
             }
         }
     }

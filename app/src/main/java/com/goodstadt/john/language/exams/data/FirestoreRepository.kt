@@ -4,6 +4,8 @@ import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.FirebaseFirestoreException
+import sanitizedForFirestore
 import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -212,6 +214,7 @@ class FirestoreRepository  @Inject constructor(
 
         return transformedMap
     }
+
     fun fsUpdateGlobalStats(stats: Map<String, Int>) {
         FirebaseAuth.getInstance().currentUser ?: return
 
@@ -234,6 +237,111 @@ class FirestoreRepository  @Inject constructor(
     //TODO: implement
     // fbUpdateUserGlobalStats(stats)
     }
+
+    fun fsUpdateWordHistoryIncCounts(
+        currentExamName: String,
+        stats: Map<String, Any>
+    ) {
+        val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return
+        if (stats.isEmpty()) return
+
+        val db = FirebaseFirestore.getInstance()
+
+
+        val docRef = firestore.collection(fb.users).document(uid)
+            .collection(fb.words).document(currentExamName)
+
+        val updates = mutableMapOf<String, Any>()
+
+        for ((rawKey, rawValue) in stats) {
+            val key = rawKey.sanitizedForFirestore()
+
+            when (rawValue) {
+                is Int -> {
+                    updates[key] = FieldValue.increment(rawValue.toLong())
+                }
+                is Long -> {
+                    updates[key] = FieldValue.increment(rawValue)
+                }
+                is Double -> {
+                    updates[key] = FieldValue.increment(rawValue)
+                }
+                is Float -> {
+                    updates[key] = FieldValue.increment(rawValue.toDouble())
+                }
+                // ignore non-numeric types
+            }
+        }
+
+        if (updates.isEmpty()) return
+
+
+        docRef.update(updates)
+            .addOnFailureListener { e ->
+                Timber.e("Error updating field ${fb.lastActivityDate}: $e")
+                val fxe = e as? FirebaseFirestoreException
+                if (fxe?.code == FirebaseFirestoreException.Code.NOT_FOUND) {
+                    // No doc yet — create it with initial values
+                    fsCreateUserWordStatsDoc(currentExamName, stats)
+                } else {
+                    Timber.e( "Error updating inc fields for '$currentExamName': ${e.message}", e)
+                }
+            }
+
+    }
+    /**
+     * Creates or overwrites a document containing word statistics for a specific user and exam.
+     * It takes a map of stats, sanitizes the keys to be Firestore-safe, and converts all
+     * numeric values to Longs before writing.
+     *
+     * @param currentExamName The name of the exam, which will be the document ID.
+     * @param stats A map where the key is the word/field and the value is a numeric count.
+     * @return A [Result] indicating success or failure.
+     */
+    fun fsCreateUserWordStatsDoc(
+        currentExamName: String,
+        stats: Map<String, Any>
+    ): Result<Unit> {
+
+        // 1. Get the current user's ID. Fail early if not logged in.
+        val currentUser = FirebaseAuth.getInstance().currentUser ?:  return Result.success(Unit)
+
+        // 2. Guard clause: If there's nothing to write, succeed immediately.
+        if (stats.isEmpty()) {
+            return Result.success(Unit)
+        }
+
+        return try {
+            // 3. Point to the specific document in the subcollection:
+            //    users/{userId}/words/{examName}
+            val docRef = firestore.collection(fb.users).document(currentUser.uid)
+                .collection(fb.words).document(currentExamName)
+
+            // 4. Sanitize and transform the input map into a Firestore-safe map.
+            //    This is the core logic, made clean with Kotlin's collection functions.
+            val firestoreUpdateFields = stats.mapKeys { (key, _) ->
+                key.sanitizedForFirestore() // Sanitize each key
+            }.mapValues { (_, value) ->
+                // Convert the value to a Long, handling both Int and Double.
+                when (value) {
+                    is Number -> value.toLong() // toLong() works for Int, Double, Float, etc.
+                    else -> 0L // Default to 0 if the value is not a number
+                }
+            }
+
+            // 5. Perform the database write using .set().
+            //    This will create the document if it doesn't exist or completely
+            //    overwrite it if it does. Use SetOptions.merge() for a non-destructive update.
+            docRef.set(firestoreUpdateFields)
+            Result.success(Unit)
+
+        } catch (e: Exception) {
+            Timber.e( "Failed to create word stats for '$currentExamName'", e)
+            Result.failure(e)
+        }
+    }
+
+
 //    fun fbUpdateUserGlobalStats(stats: Map<String, Int>) {
 //        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 //

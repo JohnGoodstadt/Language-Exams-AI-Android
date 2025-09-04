@@ -19,8 +19,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 46
-val VERSION_NAME = "1.46"
+val VERSION_CODE = 49
+val VERSION_NAME = "1.49"
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
@@ -28,7 +28,7 @@ android {
 
     defaultConfig {
         applicationId = "com.goodstadt.john.language.exams"
-        minSdk = 30//26 // Covers over 90% of devices
+        minSdk = 28 //Perplexity recommended //30 for IAP testing //26 originally// Covers over 90% of devices
         targetSdk = 35
         versionCode = VERSION_CODE
         versionName = VERSION_NAME

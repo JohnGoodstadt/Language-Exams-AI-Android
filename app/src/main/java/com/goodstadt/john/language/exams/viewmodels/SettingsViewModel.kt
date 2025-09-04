@@ -244,6 +244,7 @@ class SettingsViewModel @Inject constructor(
             when (_sheetState.value) {
                 SheetContent.ExamSelection -> {
 
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)//so that old exeam has correct stat
                     pendingExam?.let { selectedExam ->
                         // 1. Save the user's preference (already here)
                         userPreferencesRepository.saveSelectedFileName(selectedExam.json)

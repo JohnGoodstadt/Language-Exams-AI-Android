@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.icu.util.Calendar
 import android.util.Log
+import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.text.SimpleDateFormat
@@ -23,7 +24,10 @@ import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStudio
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.io.File
@@ -32,7 +36,8 @@ import java.io.File
 class TTSStatsRepository @Inject constructor(
     @ApplicationContext private val context: Context,
 //    private val firestore: FirebaseFirestore, //if direct call
-    private val firestoreRepository:FirestoreRepository
+    private val firestoreRepository:FirestoreRepository,
+    private val userPreferencesRepository: UserPreferencesRepository,
 ) {
     private val PREFS_NAME = "pronounceDates"
     private val DATE_FORMAT = "yyyy-MM-dd" // ISO 8601 format
@@ -56,6 +61,11 @@ class TTSStatsRepository @Inject constructor(
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
     }
 
+    suspend fun currentSkillLevel(): String =
+        userPreferencesRepository.selectedSkillLevelFlow.first()
+
+//    suspend fun currentSkillLevel(): String =
+//        userPreferencesRepository.selectedSkillLevelFlow.first()
     // --- 1. The Augmented Enum Class ---
 // We add a constructor and a 'val' property to the enum.
 // Each enum constant now holds its associated cost per character.
@@ -90,7 +100,8 @@ class TTSStatsRepository @Inject constructor(
     enum class fsDOC(val docName: String) {
         TRANSLATION("stats_translation"), //Translate sentence stats
         TTSStats("TTSStats"),  //Text to Speech usage
-        USER("users") //stats to go to User table/Doc
+        USER("users"), //stats to go to User table/Doc
+        WORDSTATS("word_stats")
     }
 
     //see also FirestoreRepository.kt
@@ -190,6 +201,24 @@ class TTSStatsRepository @Inject constructor(
     }
 
     //if any word list is updated this 1 field will be changed
+    suspend fun getSkillevelObsolete(): String {
+
+
+
+        val a = this.currentSkillLevel()
+        return try {
+            val key = userPreferencesRepository.getSkillLevelKey()
+            val skilllevel = sharedPreferences.getString(key, null)
+            if (!skilllevel.isNullOrBlank()) {
+                skilllevel
+            } else {
+                "A0"
+            }
+        } catch (e: Exception) {
+            Timber.e("Error retrieving date for key 'Skill Level': ${e.localizedMessage}")
+            "A0"
+        }
+    }
     fun getLastGlobalUpdateCheckDate(): Date? {
         return try {
             val dateString = sharedPreferences.getString(LAST_GLOBAL_UPDATE_DATE_KEY, null)
@@ -237,6 +266,7 @@ class TTSStatsRepository @Inject constructor(
 
 
     // Increment stat within a specific category
+
     fun inc(category: fsDOC, statName: String, value: Int = 1) {
         val prefs = getPrefs(category)
         val current = prefs.getInt(statName, 0)
@@ -274,13 +304,35 @@ class TTSStatsRepository @Inject constructor(
         getPrefs(fsDOC).edit().clear().apply()
     }
 
-    fun flushStats(doc: fsDOC) {
+    suspend fun flushStats(doc: fsDOC) {
 
         when (doc) {
             fsDOC.USER -> flushUserStatsToFirebase()
             fsDOC.TRANSLATION -> Timber.d("TODO: flush translation stats")
             fsDOC.TTSStats -> flushTTSStatsToFirebase()
+            fsDOC.WORDSTATS ->  flushWordStatsToFirebase()
+
+
         }
+    }
+
+    suspend private fun flushWordStatsToFirebase() {
+        val stats = getAllStats(fsDOC.WORDSTATS)
+
+        if (stats.isNotEmpty()) {
+
+            val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+            Timber.i(currentSkillLevel)
+           //val currentSkillLevel = getSkillevel()
+            firestoreRepository.fsUpdateWordHistoryIncCounts(currentSkillLevel, stats)
+            clearStats(fsDOC.WORDSTATS)
+        }
+    }
+    fun printStats(doc: fsDOC)  {
+        val s = getAllStats(doc)
+        Timber.v(s.keys.toString())
+        Timber.v(s.entries.toString())
+        return
     }
 
     fun flushUserStatsToFirebase() {
@@ -454,6 +506,16 @@ class TTSStatsRepository @Inject constructor(
     fun updateUserTTSCounts(count:Int) {
         inc(fsDOC.USER, TTSAPICallCount)
         inc(fsDOC.USER, TTSTotalCharCount,count)
+    }
+    fun incWordStats(word:String,value:Int = 1){
+        val prefs = getPrefs(fsDOC.WORDSTATS)
+        val current = prefs.getInt(word, 0)
+        prefs.edit().putInt(word, current + value).apply()
+    }
+    fun incW(category: fsDOC, word: String, value: Int = 1) {
+        val prefs = getPrefs(category)
+        val current = prefs.getInt(word, 0)
+        prefs.edit().putInt(word, current + value).apply()
     }
     fun updateFSCharCount(charcount: Int, sheetname: String = "") {
 
