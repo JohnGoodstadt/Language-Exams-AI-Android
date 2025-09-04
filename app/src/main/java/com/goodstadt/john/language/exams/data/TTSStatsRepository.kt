@@ -3,8 +3,6 @@ package com.goodstadt.john.language.exams.data
 import android.content.Context
 import android.content.SharedPreferences
 import android.icu.util.Calendar
-import android.util.Log
-import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.text.SimpleDateFormat
@@ -24,10 +22,8 @@ import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStudio
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.io.File
@@ -272,12 +268,12 @@ class TTSStatsRepository @Inject constructor(
         val current = prefs.getInt(statName, 0)
         prefs.edit().putInt(statName, current + value).apply()
     }
-    fun incDouble(category: fsDOC, statName: String, value: Double = 0.0) {
+    private fun incDouble(category: fsDOC, statName: String, value: Double = 0.0) {
         val prefs = getPrefs(category)
         val current = prefs.getFloat(statName, 0f).toDouble()
         prefs.edit().putFloat(statName, (current + value).toFloat()).apply()
     }
-    fun incSheet(category: fsDOC, sheetname: String, value: Int = 1) {
+    private fun incSheet(category: fsDOC, sheetname: String, value: Int = 1) {
         val prefs = getPrefs(category)
         val current = prefs.getInt(sheetname, 0)
         prefs.edit().putInt(sheetname, current + value).apply()
@@ -437,14 +433,14 @@ class TTSStatsRepository @Inject constructor(
         currentVoiceName: String
     ) {
         updateGlobalTTSStats(sentence.sentence, currentVoiceName)
-        updateUserPlayedSentenceCount() //count how many mp3s user has played
-        updateUserTTSCounts(sentence.sentence.count())
+        incUserPlayedSentenceCount() //count how many mp3s user has played
+        incUserTTSCounts(sentence.sentence.count())
 
 
         val cost = calculateTTSCallCost(sentence.sentence.count(), currentVoiceName)
         Timber.d("Cost: $${"%.8f".format(cost)}")
 
-        updateUserStatDouble(TTSAPIEstCostUSD, cost)
+        incUserStatDouble(TTSAPIEstCostUSD, cost)
     }
     //Main grouping of updates to different stats - Convenient String only
     fun updateTTSStatsWithCosts(
@@ -452,17 +448,17 @@ class TTSStatsRepository @Inject constructor(
         currentVoiceName: String
     ) {
         updateGlobalTTSStats(sentence, currentVoiceName)
-        updateUserPlayedSentenceCount() //count how many mp3s user has played
-        updateUserTTSCounts(sentence.count())
+        incUserPlayedSentenceCount() //count how many mp3s user has played
+        incUserTTSCounts(sentence.count())
 
 
         val cost = calculateTTSCallCost(sentence.count(), currentVoiceName)
         Timber.d("Cost: $${"%.8f".format(cost)}")
 
-        updateUserStatDouble(TTSAPIEstCostUSD, cost)
+        incUserStatDouble(TTSAPIEstCostUSD, cost)
     }
     fun updateTTSStatsWithoutCosts() {
-        updateUserPlayedSentenceCount() //count how many mp3s user has played
+        incUserPlayedSentenceCount() //count how many mp3s user has played
     }
     fun updateGlobalTTSStatsObsolete(words: String) {
         if (words.isEmpty()) {
@@ -474,7 +470,7 @@ class TTSStatsRepository @Inject constructor(
         inc(fsDOC.TTSStats, TTSChars, characters)
         inc(fsDOC.TTSStats, TTSStats)
     }
-    fun updateUserStatDouble(fieldName:String,value:Double) {
+    fun incUserStatDouble(fieldName:String, value:Double) {
         incDouble(fsDOC.USER,fieldName,value)
     }
     fun updateUserStatField(fieldName:String,value:String) {
@@ -483,13 +479,13 @@ class TTSStatsRepository @Inject constructor(
     fun updateUserStatField(fieldName:String,value:Int = 1) {
         update(fsDOC.USER,fieldName,value)
     }
-    fun updateUserPlayedSentenceCount() {
+    private fun incUserPlayedSentenceCount() {
         inc(fsDOC.USER, MP3PlayedCount)
     }
     fun incUserStatCount(fieldNamw:String,value:Int = 1) {
         inc(fsDOC.USER, fieldNamw,value)
     }
-    fun updateUserOpenAITotalTokenCount(count:Int) {
+    fun uncUserOpenAITotalTokenCount(count:Int) {
         inc(fsDOC.USER, OpenAICallCount)
         inc(fsDOC.USER, OpenAITotalTokenCount,count)
     }
@@ -499,11 +495,11 @@ class TTSStatsRepository @Inject constructor(
     fun incUserTTSTotalTokenCount(value:Int = 1) {
         inc(fsDOC.USER, TTSTotalTokenCount, value)
     }
-    fun updateUserGeminiTotalTokenCount(count:Int) {
+    fun incUserGeminiTotalTokenCount(count:Int) {
         inc(fsDOC.USER, GeminiCallCount)
         inc(fsDOC.USER, GeminiTotalTokenCount,count)
     }
-    fun updateUserTTSCounts(count:Int) {
+    fun incUserTTSCounts(count:Int) {
         inc(fsDOC.USER, TTSAPICallCount)
         inc(fsDOC.USER, TTSTotalCharCount,count)
     }
@@ -512,11 +508,7 @@ class TTSStatsRepository @Inject constructor(
         val current = prefs.getInt(word, 0)
         prefs.edit().putInt(word, current + value).apply()
     }
-    fun incW(category: fsDOC, word: String, value: Int = 1) {
-        val prefs = getPrefs(category)
-        val current = prefs.getInt(word, 0)
-        prefs.edit().putInt(word, current + value).apply()
-    }
+
     fun updateFSCharCount(charcount: Int, sheetname: String = "") {
 
         if (charcount <= 0) {

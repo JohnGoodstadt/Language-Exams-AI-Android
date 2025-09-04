@@ -1,7 +1,6 @@
 // In a new file, e.g., viewmodels/RecallViewModel.kt
 package com.goodstadt.john.language.exams.viewmodels
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
@@ -244,7 +243,7 @@ class RecallViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateGlobalTTSStats( sentence,currentVoiceName)
-                    ttsStatsRepository.updateUserTTSCounts(sentence.count())
+                    ttsStatsRepository.incUserTTSCounts(sentence.count())
                     ttsStatsRepository.incWordStats(word)
                 }
                 is PlaybackResult.PlayedFromCache -> {

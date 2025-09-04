@@ -1,6 +1,5 @@
 package com.goodstadt.john.language.exams.viewmodels
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
@@ -270,8 +269,8 @@ class ParagraphViewModel @Inject constructor(
 
                         //TODO: update gpt call costs
                         val totalTokensUsed = llmResponse.totalTokensUsed
-                        ttsStatsRepository.updateUserOpenAITotalTokenCount(totalTokensUsed)
-                        ttsStatsRepository.updateUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
+                        ttsStatsRepository.uncUserOpenAITotalTokenCount(totalTokensUsed)
+                        ttsStatsRepository.incUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
                         val modelFieldName = "${llmModel_}${openAIModel?.title}" //e.g. llmModel_gemini-2.5-flash
                         ttsStatsRepository.updateUserStatField(modelFieldName)
 
@@ -356,8 +355,8 @@ class ParagraphViewModel @Inject constructor(
 
                                     val modelFieldName = "${llmModel_}${selectedModel.title}" //e.g. llmModel_gemini-2.5-flash
                                     ttsStatsRepository.updateUserStatField(modelFieldName)
-                                    ttsStatsRepository.updateUserGeminiTotalTokenCount(totalTokenCount)
-                                    ttsStatsRepository.updateUserStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
+                                    ttsStatsRepository.incUserGeminiTotalTokenCount(totalTokenCount)
+                                    ttsStatsRepository.incUserStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
 
 
                                     creditsRepository.decrementCredit(
