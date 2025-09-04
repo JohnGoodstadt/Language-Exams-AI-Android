@@ -221,9 +221,11 @@ class SettingsViewModel @Inject constructor(
 //                    ttsStatsRepository.updateGlobalTTSStats( sentence,googleVoice)
 //                    ttsStatsRepository.updateUserTTSCounts(sentence.count())
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, googleVoice)
+                    ttsStatsRepository.incWordStats(sentence)
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
+                    ttsStatsRepository.incWordStats(sentence)
                 }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")

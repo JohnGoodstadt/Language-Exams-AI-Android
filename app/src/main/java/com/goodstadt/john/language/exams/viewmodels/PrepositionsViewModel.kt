@@ -155,11 +155,13 @@ class PrepositionsViewModel @Inject constructor(
                     rateLimiter.recordCall()
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
+                    ttsStatsRepository.incWordStats(cleanedSentence)
                     //TODO: not inc but update!
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
+                    ttsStatsRepository.incWordStats(cleanedSentence)
                 }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")

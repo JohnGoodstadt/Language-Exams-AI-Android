@@ -207,11 +207,12 @@ class RecallViewModel @Inject constructor(
 //                    ttsStatsRepository.updateGlobalTTSStats( word,currentVoiceName)
 //                    ttsStatsRepository.updateUserTTSCounts(word.count())
                     ttsStatsRepository.updateTTSStatsWithCosts(word, currentVoiceName)
-
+                    ttsStatsRepository.incWordStats(word)
                 }
 
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
+                    ttsStatsRepository.incWordStats(word)
                 }
                 is PlaybackResult.Failure -> {}
             }
@@ -244,9 +245,11 @@ class RecallViewModel @Inject constructor(
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     ttsStatsRepository.updateGlobalTTSStats( sentence,currentVoiceName)
                     ttsStatsRepository.updateUserTTSCounts(sentence.count())
+                    ttsStatsRepository.incWordStats(word)
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
+                    ttsStatsRepository.incWordStats(word)
                 }
                 is PlaybackResult.Failure -> {}
             }

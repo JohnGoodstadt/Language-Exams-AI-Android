@@ -156,11 +156,13 @@ class ConjugationsViewModel @Inject constructor(
                     rateLimiter.recordCall()
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
+                    ttsStatsRepository.incWordStats(word.word)
                     //TODO: not inc but update!
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
+                    ttsStatsRepository.incWordStats(word.word)
                 }
                 is PlaybackResult.Failure -> {
                     // Handle the error

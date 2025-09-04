@@ -266,9 +266,11 @@ class QuizViewModel @Inject constructor(
                     rateLimiter.recordCall()
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
+                    ttsStatsRepository.incWordStats(sentence)
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
+                    ttsStatsRepository.incWordStats(sentence)
                 }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")

@@ -536,10 +536,12 @@ class ParagraphViewModel @Inject constructor(
                         rateLimiter.recordCall()
                         Timber.v(rateLimiter.printCurrentStatus)
                         ttsStatsRepository.updateTTSStatsWithCosts(Sentence(sentenceToSpeak,""), currentVoiceName)
+                        ttsStatsRepository.incWordStats(sentenceToSpeak)
                         Timber.d("updateUserTTSTokenCount ${sentenceToSpeak.count()}")
                     }
                     is PlaybackResult.PlayedFromCache -> {
                         ttsStatsRepository.updateTTSStatsWithoutCosts()
+                        ttsStatsRepository.incWordStats(sentenceToSpeak)
                     }
                     is PlaybackResult.Failure -> {
                         _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }

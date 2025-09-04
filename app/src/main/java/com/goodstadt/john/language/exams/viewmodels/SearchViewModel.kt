@@ -177,9 +177,11 @@ class SearchViewModel @Inject constructor(
                     Timber.v(rateLimiter.printCurrentStatus)
 //                    userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
                     ttsStatsRepository.updateTTSStatsWithCosts(searchResult.firstSentence, currentVoiceName)
+                    ttsStatsRepository.incWordStats(searchResult.firstSentence,)
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
+                    ttsStatsRepository.incWordStats(searchResult.firstSentence,)
                 }
                 is PlaybackResult.Failure -> {
 //                    _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
