@@ -15,6 +15,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
+import timber.log.Timber
 import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -103,7 +104,7 @@ class UserPreferencesRepository @Inject constructor(
         context.dataStore.edit { preferences ->
             val currentTotal = preferences[PreferenceKeys.TOTAL_TOKEN_COUNT] ?: 0
             preferences[PreferenceKeys.TOTAL_TOKEN_COUNT] = currentTotal + count
-            Log.d("UserPrefs", "Token count updated to: ${currentTotal + count}")
+            Timber.d("Token count updated to: ${currentTotal + count}")
         }
     }
 

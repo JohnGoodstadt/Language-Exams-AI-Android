@@ -15,17 +15,24 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.VocabRow
-import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
+import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.SearchViewModel
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 @Composable
 fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
     val searchQuery by viewModel.searchQuery.collectAsState()
     val searchResults by viewModel.searchResults.collectAsState()
     val playbackState by viewModel.playbackState.collectAsState()
+
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
         // Input text field
@@ -62,5 +69,14 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                 }
             }
         }
+    }
+    if (isRateLimitingSheetVisible){
+        RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+    }
+    if (isDailyRateLimitingSheetVisible){
+        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+    }
+    if (isHourlyRateLimitingSheetVisible){
+        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
     }
 }

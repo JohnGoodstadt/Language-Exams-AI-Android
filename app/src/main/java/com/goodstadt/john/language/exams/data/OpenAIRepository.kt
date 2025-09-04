@@ -134,7 +134,7 @@ class OpenAIRepository @Inject constructor() {
             // b) Set the request body. Ktor will automatically serialize it to JSON.
             setBody(requestBody)
         }.body()
-//        Log.e("OpenAIRepository","$response")
+//        Timber.e("$response")
 
         // Extract the content and the token count
         val content = response.choices.firstOrNull()?.message?.content ?: ""

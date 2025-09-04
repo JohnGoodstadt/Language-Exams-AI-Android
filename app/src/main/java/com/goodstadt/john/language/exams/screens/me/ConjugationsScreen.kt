@@ -29,7 +29,7 @@ import com.goodstadt.john.language.exams.screens.CategoryHeader
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.VocabRow
-import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
+import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsUiState
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsViewModel

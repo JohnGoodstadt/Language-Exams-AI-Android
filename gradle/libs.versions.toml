@@ -35,6 +35,7 @@ google-ai-generativeai = "0.9.0"
 billing = "8.0.0"
 play-services-auth = "21.4.0"
 play-services-maps = "19.2.0"
+timber = "5.0.1"
 
 [libraries]
 # Core & AppCompat
@@ -103,6 +104,8 @@ google-ai-generativeai = { group = "com.google.ai.client.generativeai", name = "
 # Play Services
 #google-play-services-bom = { group = "com.google.android.gms", name = "play-services-bom", version.ref = "play-services-bom" }
 #play-services-bom = { group = "com.google.android.gms", name = "play-services-bom", version.ref = "play-services-bom" }
+
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -38,6 +38,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -121,23 +122,23 @@ class ParagraphViewModel @Inject constructor(
         // --- THIS IS THE UPDATED LOGIC ---
         // Call the new one-time fetch function to populate the repository's state.
         viewModelScope.launch {
-            Log.d("ParagraphVM", "calling initialFetchAndSetupCredits()",)
+            Timber.d("calling initialFetchAndSetupCredits()",)
             val result = creditsRepository.initialFetchAndSetupCredits()
             result.onFailure { error ->
                 _uiState.update { it.copy(
                     error = "Could not initialize user credits.",
                     areCreditsInitialized = true // Unblock UI even on failure
                 )}
-                Log.e("ParagraphVM", "Failed to setup free tier", error)
+                Timber.e("Failed to setup free tier", error)
             }
             result.onSuccess {
-                Log.e("ParagraphVM", "initialFetchAndSetupCredits OK",)
-                Log.d("ParagraphVM", "see if still in countdown?",)
-                Log.e("ParagraphVM", "freeTierCredits:${creditsRepository.freeTierCredits.value}",)
-                Log.e("ParagraphVM", "nextCreditRefillDate:${creditsRepository.nextCreditRefillDate.value}",)
-                Log.e("ParagraphVM", "llmCurrentCredit:${uiState.value.userCredits.current}")
-                Log.e("ParagraphVM", "llmNextCreditRefill:${uiState.value.userCredits.llmNextCreditRefill.toDate()}")
-                Log.e("ParagraphVM", "waitingForCredits:${uiState.value.waitingForCredits}")
+                Timber.e("initialFetchAndSetupCredits OK",)
+                Timber.d("see if still in countdown?",)
+                Timber.e("freeTierCredits:${creditsRepository.freeTierCredits.value}",)
+                Timber.e("nextCreditRefillDate:${creditsRepository.nextCreditRefillDate.value}",)
+                Timber.e("llmCurrentCredit:${uiState.value.userCredits.current}")
+                Timber.e("llmNextCreditRefill:${uiState.value.userCredits.llmNextCreditRefill.toDate()}")
+                Timber.e("waitingForCredits:${uiState.value.waitingForCredits}")
 
                 if (uiState.value.userCredits.current <= 0){
 //                    val targetDate: Date = uiState.value.userCredits.llmNextCreditRefill.toDate()
@@ -182,21 +183,21 @@ class ParagraphViewModel @Inject constructor(
             val currentState = _uiState.value
 
             if (isPremiumUser.value) {
-                Log.i("ParagraphVM","generateNewParagraph() User is a isPremiumUser")
+                Timber.i("generateNewParagraph() User is a isPremiumUser")
             }else{
-                Log.i("ParagraphVM","generateNewParagraph() User is NOT a isPremiumUser")
+                Timber.i("generateNewParagraph() User is NOT a isPremiumUser")
             }
 
 
 
             val providerToUse = providerManager.getNextProviderAndIncrement()
-            Log.w("ParagraphVM", "$providerToUse")
+            Timber.w("$providerToUse")
 
             // --- THE NEW, ROBUST CHECK ---
             // 1. Wait until credits are initialized.
             // 2. Then check if the count is zero or less.
             if (currentState.areCreditsInitialized && currentState.userCredits.current <= 0) {
-                Log.w("ParagraphVM", "User is out of credits. Showing sheet.")
+                Timber.w("User is out of credits. Showing sheet.")
                 _uiState.update { it.copy(waitingForCredits = true) }
                 return@launch
             }
@@ -211,7 +212,7 @@ class ParagraphViewModel @Inject constructor(
             val currentCredits = _uiState.value.userCredits.current
 
             if (currentCredits <= 0) {
-                Log.w("ParagraphVM", "User is out of credits. Showing sheet.")
+                Timber.w("User is out of credits. Showing sheet.")
                 _uiState.update { it.copy(waitingForCredits = true) }
                 return@launch
             }
@@ -238,9 +239,9 @@ class ParagraphViewModel @Inject constructor(
 
                 val openAIModel = _uiState.value.currentOpenAIModel
                 val llmEngine =  _uiState.value.currentOpenAIModel?.id ?: DEFAULT_GPT
-                Log.d("ParagraphViewModel","$llmEngine skill:$currentSkillLevel")
-                Log.d("ParagraphViewModel","$systemMessage")
-                Log.d("ParagraphViewModel","$userQuestion")
+                Timber.d("$llmEngine skill:$currentSkillLevel")
+                Timber.d("$systemMessage")
+                Timber.d("$userQuestion")
 
                 _uiState.update { it.copy(isLoading = true, error = null,lastUsedLLMModel = openAIModel?.title ?: "Unknown Open AI Model") }
 
@@ -258,7 +259,7 @@ class ParagraphViewModel @Inject constructor(
                         val totalCostUSD = result.totalCostUSD
 
                         if (BuildConfig.DEBUG) {
-                            Log.d("ParagraphViewModel", llmResponse.content)
+                            Timber.d(llmResponse.content)
                             println("Total tokens: ${result.totalTokens}")
                             println("Estimated characters (for TTS): ${result.estimatedCharacters}")
                             println("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
@@ -328,7 +329,7 @@ class ParagraphViewModel @Inject constructor(
                                     val outputTokens = usageMetadata.candidatesTokenCount
                                     val totalTokenCount = usageMetadata.totalTokenCount
 
-                                    Log.d("GeminiViewModel", "Input Tokens: $inputTokens, Output Tokens: $outputTokens totalTokenCount: $totalTokenCount")
+                                    Timber.d("Input Tokens: $inputTokens, Output Tokens: $outputTokens totalTokenCount: $totalTokenCount")
 
                                     val cost = geminiRepository.calculateGeminiCallCost(
                                         inputTokens = inputTokens,
@@ -379,7 +380,7 @@ class ParagraphViewModel @Inject constructor(
 
                                 }
                                 else{ //should not happen
-                                    Log.w("GeminiViewModel", "Usage metadata was null in the response.")
+                                    Timber.w("Usage metadata was null in the response.")
                                     _uiState.update {
                                         it.copy(
                                             isLoading = false,
@@ -391,7 +392,7 @@ class ParagraphViewModel @Inject constructor(
 
                             }
                             result.onFailure { e ->
-                                Log.e("ParagraphViewModel",e.localizedMessage)
+                                Timber.e(e.localizedMessage)
                                 _uiState.update {
                                     it.copy(
                                         isLoading = false,
@@ -442,7 +443,7 @@ class ParagraphViewModel @Inject constructor(
         return prompt
 
 //        } catch (e: Exception) {
-//            Log.e("ParagraphViewModel","${e.localizedMessage}")
+//            Timber.e("${e.localizedMessage}")
 //            return ""
 //        }
 
@@ -495,9 +496,9 @@ class ParagraphViewModel @Inject constructor(
                 println(failType.timeLeftToWait)
                 if (!failType.canICallAPI){
                     if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
-                        Log.v("ParagraphViewModel","User would fail DAILY rate limiting")
+                        Timber.v("User would fail DAILY rate limiting")
                     }else {
-                        Log.v("ParagraphViewModel","User would fail HOURLY rate limiting")
+                        Timber.v("User would fail HOURLY rate limiting")
                     }
                 }
 
@@ -520,11 +521,11 @@ class ParagraphViewModel @Inject constructor(
                         voiceName = currentVoiceName,
                         languageCode = currentLanguageCode,
                         onTTSApiCallStart = {
-                            Log.d("ParagraphViewModel","onTTSApiCallStart()")
+                            Timber.d("onTTSApiCallStart()")
                             _uiState.update { it.copy(isLoading = true) }
                         },
                         onTTSApiCallComplete = {
-                            Log.d("ParagraphViewModel","onTTSApiCallComplete()")
+                            Timber.d("onTTSApiCallComplete()")
                             _uiState.update { it.copy(isLoading = false) }
                         }
                 )
@@ -533,9 +534,9 @@ class ParagraphViewModel @Inject constructor(
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
                         //NOTE: record call but don't disallow on Paragraph screen
                         rateLimiter.recordCall()
-                        Log.v("CategoryTabViewModel",rateLimiter.printCurrentStatus)
+                        Timber.v(rateLimiter.printCurrentStatus)
                         ttsStatsRepository.updateTTSStatsWithCosts(Sentence(sentenceToSpeak,""), currentVoiceName)
-                        Log.d("ParagraphViewModel","updateUserTTSTokenCount ${sentenceToSpeak.count()}")
+                        Timber.d("updateUserTTSTokenCount ${sentenceToSpeak.count()}")
                     }
                     is PlaybackResult.PlayedFromCache -> {
                         ttsStatsRepository.updateTTSStatsWithoutCosts()
@@ -572,13 +573,13 @@ class ParagraphViewModel @Inject constructor(
                 )
             }
 
-            Log.d("ParagraphViewModel","AI Model: ${uiState.value.currentOpenAIModel?.title} Gemini Model: ${_uiState.value.currentGeminiModel?.title}")
+            Timber.d("AI Model: ${uiState.value.currentOpenAIModel?.title} Gemini Model: ${_uiState.value.currentGeminiModel?.title}")
 
         }
     }
 
     fun stopPlayback() {
-        Log.d("ParagraphViewModel", "ViewModel cleared. Stopping audio playback.")
+        Timber.d("ViewModel cleared. Stopping audio playback.")
         // Call the new stop function in the repository.
         vocabRepository.stopPlayback()
     }
@@ -608,7 +609,7 @@ class ParagraphViewModel @Inject constructor(
 
         println("secondsRemaining.nextCreditRefillDate: $NCRD ")
         val target = NCRD ?: return 0
-        Log.d("PVM","${((target.time - now.time) / 1000).coerceAtLeast(0).toInt()}")
+        Timber.d("${((target.time - now.time) / 1000).coerceAtLeast(0).toInt()}")
         return ((target.time - now.time) / 1000).coerceAtLeast(0).toInt()
     }
     fun formattedCountdown(now: Date = Date()): String {

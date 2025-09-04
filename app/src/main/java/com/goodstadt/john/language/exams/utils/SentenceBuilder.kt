@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.utils
+package com.goodstadt.john.language.exams.utils
 
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord

@@ -35,6 +35,7 @@ import javax.inject.Inject
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import dagger.hilt.android.qualifiers.ApplicationContext
+import timber.log.Timber
 
 // --- MODIFICATION 1: Add pending state to UiState ---
 data class SettingsUiState(
@@ -119,7 +120,7 @@ class SettingsViewModel @Inject constructor(
                 billingRepository.checkPurchases()
                 billingRepository.logCurrentStatus()  // Debug log on init
             } catch (e: Exception) {
-                Log.e("SVM","${e.message}")
+                Timber.e("${e.message}")
                 // Handle connection or query failure
                 billingRepository._billingError.value = e.message
             }
@@ -182,7 +183,7 @@ class SettingsViewModel @Inject constructor(
     fun onPendingVoiceSelect(voice: VoiceOption) {
         // This only updates the state for the UI inside the sheet. Does NOT save.
         _uiState.update { it.copy(pendingSelectedVoice = voice) }
-        Log.d("SettingsViewModel", "Voice selected: ${voice.friendlyName} google: ${voice.id}")
+        Timber.d("Voice selected: ${voice.friendlyName} google: ${voice.id}")
 
         // Use val for an immutable variable, as it's only assigned once.
         val sentence = when (LanguageConfig.languageCode.substring(0, 2).lowercase()) {
@@ -245,7 +246,7 @@ class SettingsViewModel @Inject constructor(
                         userPreferencesRepository.saveSelectedSkillLevel(selectedExam.skillLevel)
                         // --- THIS IS THE NEW, CRITICAL PART ---
                         // 2. Tell the shared manager to load the recalled items for the NEW exam
-                        Log.d("SettingsViewModel", "New exam selected. Reloading recalled items for key: ${selectedExam.json}")
+                        Timber.d("New exam selected. Reloading recalled items for key: ${selectedExam.json}")
                         recallingItemsManager.load(selectedExam.json)
 
                     }

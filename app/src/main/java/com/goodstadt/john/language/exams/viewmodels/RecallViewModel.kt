@@ -21,6 +21,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.util.Calendar
 import javax.inject.Inject
 
@@ -148,13 +149,13 @@ class RecallViewModel @Inject constructor(
 //    fun onRemoveClickedObsolete(key: String) {
 //
 //        recallingItemsManager.items.value.forEach { fred ->
-//            Log.d("RecompositionCheck", "Word: '${fred.key}', isRecalling")
+//            Timber.d("Word: '${fred.key}', isRecalling")
 //
 //        }
 //
 ////        val isRecalling = recallingItemsManager.items.contains(key)
 ////        if (isRecalling){
-////            Log.d("RecompositionCheck", "Word: '${key}', isRecalling: $isRecalling")
+////            Timber.d("Word: '${key}', isRecalling: $isRecalling")
 ////        }
 //
 //        recallingItemsManager.remove(key)
@@ -294,6 +295,6 @@ class RecallViewModel @Inject constructor(
         }
 
         // Print the final summary to Logcat with a custom tag
-        Log.e("RecallDebug", summary.toString())
+        Timber.e(summary.toString())
     }
 }

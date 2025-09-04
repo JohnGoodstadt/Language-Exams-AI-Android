@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 // A UI state for this specific screen
@@ -152,7 +153,7 @@ class ConjugationsViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     rateLimiter.recordCall()
-                    Log.v("CategoryTabViewModel",rateLimiter.printCurrentStatus)
+                    Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
                     //TODO: not inc but update!
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
@@ -176,7 +177,7 @@ class ConjugationsViewModel @Inject constructor(
         // We use appScope to ensure this save operation completes even if the
         // viewModelScope is paused or cancelled as the user navigates away.
         appScope.launch {
-            Log.d("ViewModelLifecycle", "Saving data because screen is no longer active.")
+            Timber.d("Saving data because screen is no longer active.")
             if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)

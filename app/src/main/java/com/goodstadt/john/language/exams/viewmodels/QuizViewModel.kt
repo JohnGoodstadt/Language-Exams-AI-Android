@@ -30,6 +30,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
+import timber.log.Timber
 import java.util.*
 import javax.inject.Inject
 
@@ -262,7 +263,7 @@ class QuizViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     rateLimiter.recordCall()
-                    Log.v("CategoryTabViewModel",rateLimiter.printCurrentStatus)
+                    Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
                 }
                 is PlaybackResult.PlayedFromCache -> {

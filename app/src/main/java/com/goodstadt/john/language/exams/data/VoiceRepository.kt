@@ -2,7 +2,7 @@ package com.goodstadt.john.language.exams.data
 
 import android.content.Context
 import com.goodstadt.john.language.exams.models.VoiceInfo
-import com.goodstadt.john.language.exams.screens.utils.GenderAsIntSerializer
+import com.goodstadt.john.language.exams.utils.GenderAsIntSerializer
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

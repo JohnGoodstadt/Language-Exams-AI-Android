@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.tasks.await
+import timber.log.Timber
 import java.util.Date
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
@@ -131,7 +132,7 @@ class CreditsRepository @Inject constructor(
             val doc = userDocRef.get().await() // One-time fetch
 
             if (!doc.exists() || !doc.contains(llmCurrentCreditField)) {
-                Log.d("CreditsRepository", "User document missing credit fields. Setting up free tier.")
+                Timber.d("User document missing credit fields. Setting up free tier.")
                 val freeTierCredits = UserCredits(
                     current = CreditSystemConfig.FREE_TIER_CREDITS,
                     total = CreditSystemConfig.FREE_TIER_CREDITS
@@ -147,16 +148,16 @@ class CreditsRepository @Inject constructor(
                 _userCredits.value = freeTierCredits
 
             } else {
-                Log.d("CreditsRepository", "User already has credit fields. Loading into memory.")
+                Timber.d("User already has credit fields. Loading into memory.")
                 val existingCredits = doc.toObject(UserCreditsFirestore::class.java)!!.toUserCredits()
                 // Update the local, in-memory state
                 _userCredits.value = existingCredits
                 _nextCreditRefillDate.value = existingCredits.llmNextCreditRefill.toDate()
-                Log.d("CreditsRepository","existingCredits:$existingCredits")
+                Timber.d("existingCredits:$existingCredits")
             }
             Result.success(Unit)
         } catch (e: Exception) {
-            e.localizedMessage?.let { Log.e("CreditsRepository", it) }
+            e.localizedMessage?.let { Timber.e(it) }
             Result.failure(e)
         }
     }
@@ -342,7 +343,7 @@ class CreditsRepository @Inject constructor(
 
         val userId = auth.currentUser?.uid ?: return
         val targetDate = Date(System.currentTimeMillis() + CreditSystemConfig.WAIT_PERIOD_MINUTES * 60 * 1000)
-        Log.d("CreditsRepository","startWaitPeriod().targetDate : $targetDate")
+        Timber.d("startWaitPeriod().targetDate : $targetDate")
         _nextCreditRefillDate.value = targetDate
         _isInWaitPeriod.value = true
 

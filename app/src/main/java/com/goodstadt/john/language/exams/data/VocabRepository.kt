@@ -12,6 +12,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -220,7 +221,7 @@ class VocabRepository @Inject constructor(
             // This is efficient because it stops checking as soon as it finds one.
             word.sentences.any { sentence ->
                 val uniqueSentenceId = generateUniqueSentenceId(word, sentence, voiceName)
-//                Log.e("VocabRepository","Looking for $uniqueSentenceId")
+//                Timber.e("Looking for $uniqueSentenceId")
                 val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
                 audioCacheFile.exists()
             }
@@ -281,7 +282,7 @@ class VocabRepository @Inject constructor(
                 vocabFile.categories.filter { it.tabNumber == tabNumber }
             },
             onFailure = { error ->
-                Log.e("VocabRepository", "Failed to get vocab data for tab $tabIdentifier", error)
+                Timber.e("Failed to get vocab data for tab $tabIdentifier", error)
                 emptyList()
             }
         )
@@ -297,7 +298,7 @@ class VocabRepository @Inject constructor(
                 vocabFile.categories
             },
             onFailure = { error ->
-                Log.e("VocabRepository", "Failed to get vocab data categories", error)
+                Timber.e("Failed to get vocab data categories", error)
                 emptyList()
             }
         )

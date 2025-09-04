@@ -40,6 +40,7 @@ import com.goodstadt.john.language.exams.data.Gender
 //import com.goodstadt.john.language.exams.data.PremiumStatus
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -65,7 +66,7 @@ fun SettingsScreen(
         val isAvailable = viewModel.isGooglePlayServicesAvailable(context)
         if (!isAvailable) {
             // Handle Google Play Services not available
-            Log.e("SettingsScreen","Google Play Services is NOT available")
+            Timber.e("Google Play Services is NOT available")
         }
     }
 

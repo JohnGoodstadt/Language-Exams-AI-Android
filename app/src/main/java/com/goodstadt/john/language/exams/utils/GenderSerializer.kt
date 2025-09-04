@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.utils
+package com.goodstadt.john.language.exams.utils
 
 import com.goodstadt.john.language.exams.data.Gender
 import kotlinx.serialization.KSerializer

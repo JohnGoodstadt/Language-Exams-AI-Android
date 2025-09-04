@@ -28,6 +28,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
+import timber.log.Timber
 import javax.inject.Inject
 
 // This data class represents everything the UI needs to draw itself.
@@ -171,17 +172,18 @@ class CategoryTabViewModel @Inject constructor(
             }
 
             if (isPremiumUser.value) {
-                Log.i("CategoryTabViewModel","User is a isPremiumUser")
+                Timber.i("User is a isPremiumUser")
             }else{
-                Log.i("CategoryTabViewModel","User is NOT a isPremiumUser")
+                Timber.i("User is NOT a isPremiumUser")
             }
 
             if (!isPremiumUser.value) { //if premium user don't check credits
                 if (rateLimiter.doIForbidCall()){
                     val failType = rateLimiter.canMakeCallWithResult()
-                    println(failType.canICallAPI)
-                    println(failType.failReason)
-                    println(failType.timeLeftToWait)
+                    Timber.d("canICallAPI = %s", failType.canICallAPI)
+                    Timber.d("failReason = %s", (failType.failReason))
+                    Timber.d("timeLeftToWait = %s",failType.timeLeftToWait)
+
                     if (!failType.canICallAPI){
                         if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
                             _showRateDailyLimitSheet.value = true
@@ -231,7 +233,7 @@ class CategoryTabViewModel @Inject constructor(
                     }
 
                     rateLimiter.recordCall()
-                    Log.v("CategoryTabViewModel",rateLimiter.printCurrentStatus)
+                    Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
 
                     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
@@ -249,7 +251,7 @@ class CategoryTabViewModel @Inject constructor(
                     // Optionally reset to Idle after a delay
                     _uiEvent.emit(UiEvent.ShowSnackbar("Could not play audio. Please check your connection."))
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
-                    Log.e("CTVM", "Playback failed", result.exception)
+                    Timber.e("Playback failed", result.exception)
                 }
             }
         }
@@ -298,7 +300,7 @@ class CategoryTabViewModel @Inject constructor(
         }
 
         viewModelScope.launch {
-            //Log.d("ViewModel", "Refreshing cache state...")
+            //Timber.d("Refreshing cache state...")
             // Get the current categories from the state
             val currentCategories = _uiState.value.categories
 
@@ -335,7 +337,7 @@ class CategoryTabViewModel @Inject constructor(
 
 
         ttsStatsRepository.recalcProgress(categories, voiceName)
-        println("progressStats: ${ttsStatsRepository.progressStats}")
+        Timber.d("progressStats: ${ttsStatsRepository.progressStats}")
         // Optionally: trigger your Firebase repo here to upload using statsRepo.progressStats
         // firebaseRepo.uploadA1Progress(statsRepo.progressStats)
     }

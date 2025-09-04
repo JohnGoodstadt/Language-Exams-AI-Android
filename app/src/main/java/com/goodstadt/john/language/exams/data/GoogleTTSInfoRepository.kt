@@ -15,6 +15,7 @@ import io.ktor.serialization.kotlinx.json.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -44,7 +45,7 @@ class GoogleTTSInfoRepository @Inject constructor(
             }.body()
             Result.success(response)
         } catch (e: Exception) {
-            Log.e("GoogleTtsInfoRepo", "Failed to fetch voices", e)
+            Timber.e("Failed to fetch voices", e)
             Result.failure(e)
         }
     }
@@ -69,7 +70,7 @@ class GoogleTTSInfoRepository @Inject constructor(
                 Result.failure(Exception("External storage not available."))
             }
         } catch (e: Exception) {
-            Log.e("GoogleTtsInfoRepo", "Failed to save file", e)
+            Timber.e("Failed to save file", e)
             Result.failure(e)
         }
     }

@@ -4,6 +4,7 @@ import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
 import com.google.ai.client.generativeai.GenerativeModel
 import com.google.ai.client.generativeai.type.GenerateContentResponse
+import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -28,7 +29,7 @@ class GeminiRepository @Inject constructor() {
                 apiKey = BuildConfig.GEMINI_API_KEY
             )
 
-            Log.d("GeminiRepository", "Generating content with model: $modelName")
+            Timber.d("Generating content with model: $modelName")
 
             // 2. Call the API. This is a suspend function.
             val response = generativeModel.generateContent(prompt)
@@ -38,7 +39,7 @@ class GeminiRepository @Inject constructor() {
 
         } catch (e: Exception) {
             // 4. If any part of the process fails, catch the exception and return a Failure result.
-            Log.e("GeminiRepository", "Failed to generate content with model: $modelName", e)
+            Timber.e("Failed to generate content with model: $modelName", e)
             e.printStackTrace()
             Result.failure(e)
         }

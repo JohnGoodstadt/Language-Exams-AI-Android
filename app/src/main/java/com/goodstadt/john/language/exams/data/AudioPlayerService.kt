@@ -4,6 +4,7 @@ import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.util.Log
 import kotlinx.coroutines.suspendCancellableCoroutine
+import timber.log.Timber
 import java.io.File
 import java.io.FileOutputStream
 import javax.inject.Inject
@@ -84,6 +85,6 @@ class AudioPlayerService @Inject constructor() {
             it.release()
         }
         mediaPlayer = null
-        Log.d("AudioPlayerService", "Playback stopped and resources released.")
+        Timber.d("Playback stopped and resources released.")
     }
 }

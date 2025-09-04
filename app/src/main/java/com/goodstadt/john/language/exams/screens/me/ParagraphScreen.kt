@@ -49,6 +49,7 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 import kotlinx.coroutines.delay
+import timber.log.Timber
 import java.util.Date
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -81,7 +82,7 @@ fun ParagraphScreen(
     LaunchedEffect(Unit) {
         delay(600) // GPT model might not have been initialised yet
         viewModel.generateNewParagraph()
-        Log.d("ParagraphScreen","waitTimeText:$viewModel.getFormattedWaitTimeLeft()")
+        Timber.d("waitTimeText:$viewModel.getFormattedWaitTimeLeft()")
     }
     // Use DisposableEffect to tie logic to the composable's lifecycle.
     DisposableEffect(lifecycleOwner) {

@@ -18,6 +18,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -99,7 +100,7 @@ class AuthRepository @Inject constructor(
                 .set(user)
                 .await()
         } catch (e: Exception) {
-            Log.e("Firebase Library", e.localizedMessage, e)
+            Timber.e(e.localizedMessage, e)
 
         }
     }
@@ -155,12 +156,12 @@ class AuthRepository @Inject constructor(
                 val newUser = auth.signInAnonymously().await().user
                     ?: throw IllegalStateException("Firebase returned a null user after anonymous sign-in.")
 
-                Log.d("AuthRepository","uid is ${newUser.uid}")
+                Timber.d("uid is ${newUser.uid}")
 //                createUserRecord(newUser)
                 fsCreateUserDoc()
                 Result.success(newUser)
             } else {
-                Log.d("AuthRepository","uid is ${user.uid}")
+                Timber.d("uid is ${user.uid}")
                 // CASE 2: RETURNING USER - Just update the timestamp
                 if (false && BuildConfig.DEBUG) { //Just for JG 10 July 2025
                     val exists = fsDoesUserExist()

@@ -52,7 +52,7 @@ import com.goodstadt.john.language.exams.models.VocabWord
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.ui.text.AnnotatedString
-import com.goodstadt.john.language.exams.screens.utils.buildSentencePartsSimple
+import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
 
 //import com.google.android.material.progressindicator.CircularProgressIndicator
 

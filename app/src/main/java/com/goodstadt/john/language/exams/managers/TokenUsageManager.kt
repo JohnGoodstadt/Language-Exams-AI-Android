@@ -19,6 +19,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import timber.log.Timber
 import java.util.concurrent.TimeUnit
 
 object TokenUsageManager {
@@ -146,7 +147,7 @@ object TokenUsageManager {
                             bundle199Tokens
                         }
                     }
-                    Log.d("TokenUsageManager", "Top-up success, added $newTokens tokens")
+                    Timber.d("Top-up success, added $newTokens tokens")
                     onContinue()
                 }
             }

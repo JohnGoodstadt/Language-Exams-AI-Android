@@ -11,13 +11,14 @@ import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UpdateState
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.navigation.Screen
-import com.goodstadt.john.language.exams.screens.utils.AppLifecycleObserver
+import com.goodstadt.john.language.exams.utils.AppLifecycleObserver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.util.Calendar
 import javax.inject.Inject
 
@@ -103,7 +104,7 @@ class MainViewModel @Inject constructor(
         // Launch a coroutine to do the background work
         viewModelScope.launch {
             //statsRepository.flushPendingStats() // Assume a function like this exists
-            Log.d("MainViewModel","flushStatsToFirestore")
+            Timber.d("flushStatsToFirestore")
         }
     }
 
@@ -153,17 +154,17 @@ class MainViewModel @Inject constructor(
         _uiState.update { it.copy(authState = AuthUiState.Loading) }
 
         viewModelScope.launch {
-            Log.d("MainViewModel", "Initializing user session...")
+            Timber.d("Initializing user session...")
             val result = authRepository.signInOrUpdateUser()
 
             result.onSuccess { user ->
-                Log.d("MainViewModel", "Session success. UID: ${user.uid}")
+                Timber.d("Session success. UID: ${user.uid}")
                 _uiState.update { it.copy(authState = AuthUiState.Success(user.uid)) }
             }
 
             result.onFailure { exception ->
-                Log.e("MainViewModel", "Session failed ${exception.localizedMessage}")
-                Log.e("MainViewModel", "Session failed", exception)
+                Timber.e("Session failed ${exception.localizedMessage}")
+                Timber.e("Session failed", exception)
 //                _uiState.update { it.copy(authState = AuthUiState.Error(exception.message ?: "Unknown error")) }
                 val errorMessage = when (exception) {
                     is java.net.UnknownHostException -> "Could not connect. Please check your internet connection."

@@ -8,6 +8,7 @@ import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import timber.log.Timber
 import java.io.OutputStreamWriter
 import java.net.HttpURLConnection
 import java.net.URL
@@ -64,7 +65,7 @@ class GoogleCloudTTS @Inject constructor() {
             // --- FIX 1: Update encodeToString syntax ---
             val requestBody = json.encodeToString<TtsRequest>(request)
 
-            Log.d(TAG, "Sending TTS Request Body: $requestBody")
+            Timber.d("Sending TTS Request Body: $requestBody")
 
             val url = URL(urlString)
             connection = url.openConnection() as HttpURLConnection
@@ -87,7 +88,7 @@ class GoogleCloudTTS @Inject constructor() {
                 Result.success(audioBytes)
             } else {
                 val errorBody = connection.errorStream?.bufferedReader()?.use { it.readText() } ?: "Unknown error"
-                Log.e(TAG, "API Error: $responseCode - $errorBody")
+                Timber.e("API Error: $responseCode - $errorBody")
                 Result.failure(RuntimeException("API Error: $responseCode - $errorBody"))
             }
 

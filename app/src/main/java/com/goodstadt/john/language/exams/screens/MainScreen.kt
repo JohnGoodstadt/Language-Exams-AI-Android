@@ -47,6 +47,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CloudOff
 import androidx.compose.material3.*
 import androidx.compose.ui.unit.dp
+import timber.log.Timber
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
@@ -62,14 +63,14 @@ fun MainScreen() {
     when (authState) {
         is AuthUiState.Loading -> {
             // Show a full-screen loading indicator while Firebase connects
-            Log.d("MainScreen","MainScreen.Loading")
+            Timber.d("MainScreen.Loading")
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
                 Text(modifier = Modifier.padding(top = 60.dp), text = "Connecting...")
             }
         }
         is AuthUiState.Error -> {
-            Log.d("MainScreen","MainScreen.Error")
+            Timber.d("MainScreen.Error")
             // Show an error message if sign-in fails
 //            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
 //                Text(text = "Error: ${(authState as AuthUiState.Error).message}", color = Color.Red)
@@ -82,7 +83,7 @@ fun MainScreen() {
         is AuthUiState.Success -> {
             // Once successful, show the main app content
             // The entire Scaffold and NavHost goes inside here
-            Log.d("MainScreen","MainScreen.Success - Load app data")
+            Timber.d("MainScreen.Success - Load app data")
             MainAppContent(
                 navController = navController,
                 selectedVoiceName = globalUiState.selectedVoiceName

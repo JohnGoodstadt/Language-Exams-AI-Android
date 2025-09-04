@@ -27,6 +27,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
+import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlin.coroutines.resume
@@ -58,7 +59,7 @@ class BillingRepository @Inject constructor(
     val billingError: StateFlow<String?> = _billingError.asStateFlow()
 
     private val purchasesUpdatedListener = PurchasesUpdatedListener { billingResult, purchases ->
-        Log.d(tag, "Purchases updated: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
+        Timber.d("Purchases updated: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
         if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && purchases != null) {
             CoroutineScope(Dispatchers.IO).launch {
                 purchases.forEach { handlePurchase(it) }
@@ -83,14 +84,14 @@ class BillingRepository @Inject constructor(
     @RequiresApi(30)  // For package visibility; adjust if lower minSdk
     suspend fun connect() {
         if (billingClient.connectionState == ConnectionState.CONNECTED) {
-            Log.d(tag, "Already connected")
+            Timber.d("Already connected")
             return
         }
 
         suspendCancellableCoroutine { cont ->
             billingClient.startConnection(object : BillingClientStateListener {
                 override fun onBillingSetupFinished(billingResult: BillingResult) {
-                    Log.d(tag, "Setup finished: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
+                    Timber.d("Setup finished: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
                     if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                         _connectionState.value = ConnectionState.CONNECTED
                         cont.resume(Unit)
@@ -105,7 +106,7 @@ class BillingRepository @Inject constructor(
                 }
 
                 override fun onBillingServiceDisconnected() {
-                    Log.d(tag, "Service disconnected")
+                    Timber.d("Service disconnected")
                     _connectionState.value = ConnectionState.DISCONNECTED
                 }
             })
@@ -126,8 +127,8 @@ class BillingRepository @Inject constructor(
 
         suspendCancellableCoroutine { cont ->
             billingClient.queryProductDetailsAsync(params) { billingResult, queryResult ->
-                Log.d(tag, "QueryProductDetailsResult type: ${queryResult.javaClass.name}")
-                Log.d(tag, "Product details query: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
+                Timber.d("QueryProductDetailsResult type: ${queryResult.javaClass.name}")
+                Timber.d("Product details query: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                     val detailsList = queryResult.productDetailsList
                     if (detailsList.isNotEmpty()) {
@@ -155,7 +156,7 @@ class BillingRepository @Inject constructor(
 
         suspendCancellableCoroutine { cont ->
             billingClient.queryPurchasesAsync(params) { billingResult, purchases ->
-                Log.d(tag, "Purchases query: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
+                Timber.d("Purchases query: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                     val purchased = purchases.any { it.products.contains(PRODUCT_ID) && it.isAcknowledged }
                     _isPurchased.value = purchased
@@ -179,7 +180,7 @@ class BillingRepository @Inject constructor(
 
             suspendCancellableCoroutine { cont ->
                 billingClient.acknowledgePurchase(acknowledgeParams) { billingResult ->
-                    Log.d(tag, "Acknowledge: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
+                    Timber.d("Acknowledge: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
                     if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                         _isPurchased.value = true
                         cont.resume(Unit)
@@ -197,7 +198,7 @@ class BillingRepository @Inject constructor(
      */
     fun launchPurchase(activity: android.app.Activity) {
         val productDetails = _productDetails.value ?: run {
-            Log.d(tag, "No product details available")
+            Timber.d("No product details available")
             return
         }
 
@@ -210,31 +211,31 @@ class BillingRepository @Inject constructor(
             .build()
 
         val billingResult = billingClient.launchBillingFlow(activity, billingFlowParams)
-        Log.d(tag, "Launch billing flow: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
+        Timber.d("Launch billing flow: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
     }
 
     /**
      * Logs current billing status for debugging.
      */
     fun logCurrentStatus() {
-        Log.e(tag,"logCurrentStatus")
+        Timber.e("logCurrentStatus")
         val apiAvailability = GoogleApiAvailability.getInstance()
         val resultCode = apiAvailability.isGooglePlayServicesAvailable(context)
         if (resultCode != ConnectionResult.SUCCESS) {
-            Log.e(tag, "Google Play Services not available: $resultCode")
+            Timber.e("Google Play Services not available: $resultCode")
         }else{
-            Log.e(tag, "Google Play Services IS available: $resultCode")
+            Timber.e("Google Play Services IS available: $resultCode")
         }
 
-        Log.d(tag, "Connection State: ${connectionState.value}")
-        Log.d(tag, "Product Details: ${_productDetails.value?.let { "${it.name} - ${it.oneTimePurchaseOfferDetails?.formattedPrice}" } ?: "None"}")
-        Log.d(tag, "Is Purchased: ${_isPurchased.value}")
-        Log.d(tag, "Last Error: ${_billingError.value ?: "None"}")
+        Timber.d("Connection State: ${connectionState.value}")
+        Timber.d("Product Details: ${_productDetails.value?.let { "${it.name} - ${it.oneTimePurchaseOfferDetails?.formattedPrice}" } ?: "None"}")
+        Timber.d("Is Purchased: ${_isPurchased.value}")
+        Timber.d("Last Error: ${_billingError.value ?: "None"}")
     }
     fun logGmsState(ctx: Context) {
         val gmsAvail = GoogleApiAvailability.getInstance()
             .isGooglePlayServicesAvailable(ctx)
-        Log.d("GMS", "availabilityCode=$gmsAvail") // 0 == SUCCESS
+        Timber.d("availabilityCode=$gmsAvail") // 0 == SUCCESS
 
         fun pkgInfo(p: String) = try {
             val pm = ctx.packageManager
@@ -242,22 +243,22 @@ class BillingRepository @Inject constructor(
             "v=${pi.versionName} (${pi.longVersionCode}) updated=${pi.lastUpdateTime}"
         } catch (e: Exception) { "not installed" }
 
-        Log.d("GMS", "com.google.android.gms: ${pkgInfo("com.google.android.gms")}")
-        Log.d("GMS", "com.android.vending: ${pkgInfo("com.android.vending")}")
+        Timber.d("com.google.android.gms: ${pkgInfo("com.google.android.gms")}")
+        Timber.d("com.android.vending: ${pkgInfo("com.android.vending")}")
     }
     fun initializeGoogleServices(ctx: Context) {
-        Log.d(tag, "initializeGoogleServices()")
+        Timber.d("initializeGoogleServices()")
         val availability = GoogleApiAvailability.getInstance()
         val resultCode = availability.isGooglePlayServicesAvailable(ctx)
 
         when (resultCode) {
             ConnectionResult.SUCCESS -> {}
             ConnectionResult.SERVICE_MISSING, ConnectionResult.SERVICE_VERSION_UPDATE_REQUIRED, ConnectionResult.SERVICE_DISABLED ->
-                Log.d(tag, "initializeGoogleServices() resultCode:$resultCode")
+                Timber.d("initializeGoogleServices() resultCode:$resultCode")
                 //availability.getErrorDialog(this, resultCode, 0).show()
 
             else ->             // Disable GMS features gracefully
-                Log.w("GMS", "Google Play Services unavailable: $resultCode")
+                Timber.w("Google Play Services unavailable: $resultCode")
         }
     }
 
@@ -290,7 +291,7 @@ class BillingRepository @Inject constructor(
      * available to be purchased again. THIS SHOULD ONLY BE CALLED IN DEBUG BUILDS.
      */
     private fun consumeTestPurchase(purchase: Purchase) {
-        Log.d(tag, "Debug build detected. Consuming test purchase to allow re-testing...")
+        Timber.d("Debug build detected. Consuming test purchase to allow re-testing...")
 
         val consumeParams = ConsumeParams.newBuilder()
             .setPurchaseToken(purchase.purchaseToken)
@@ -307,7 +308,7 @@ class BillingRepository @Inject constructor(
                     queryProductDetails()
                 }
             } else {
-                Log.e(tag, "❌ Failed to consume test purchase. Code: ${billingResult.responseCode}")
+                Timber.e("❌ Failed to consume test purchase. Code: ${billingResult.responseCode}")
             }
         }
     }

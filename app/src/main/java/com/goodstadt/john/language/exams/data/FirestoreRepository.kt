@@ -4,6 +4,7 @@ import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import timber.log.Timber
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -195,7 +196,7 @@ class FirestoreRepository  @Inject constructor(
             itemRef.update(incrementedStats)
 
         } catch (e: Exception) {
-            Log.e("Firebase Library", e.localizedMessage, e)
+            Timber.e(e.localizedMessage, e)
         }
     }
     private fun transformToIncrements(originalMap: Map<String, Any>): Map<String, Any> {
@@ -256,7 +257,7 @@ class FirestoreRepository  @Inject constructor(
 //                    )
 //                    // NOTE: can be loop fbUpdateUserStatsPropertyCount(property)
 //                } else {
-//                    Log.e("Firebase Library", "Error updating inc field: fbUpdateUserGlobalStats: ${e.localizedMessage}", e)
+//                    Timber.e("Error updating inc field: fbUpdateUserGlobalStats: ${e.localizedMessage}", e)
 //                }
 //            }
 //    }

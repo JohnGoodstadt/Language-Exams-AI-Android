@@ -136,7 +136,7 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
                         viewModel.onTileTapped(categoryTitle)
 //                            val encodedTitle = categoryTitle.urlEncode()
 //                          meTabNavController.navigate("progress_detail/$encodedTitle")
-//                            Log.d("NavigationTest", "Attempting to navigate to: progress_detail/Test")
+//                            Timber.d("Attempting to navigate to: progress_detail/Test")
                     }
                 )
             }

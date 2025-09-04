@@ -6,6 +6,7 @@ import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import kotlinx.coroutines.tasks.await
 import kotlinx.serialization.json.Json
+import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -88,7 +89,7 @@ class AppConfigRepository @Inject constructor(
                 return Json.decodeFromString<List<LlmModelInfo>>(jsonString)
             } catch (e: Exception) {
                 // If parsing fails (e.g., malformed JSON in the console), return the safe default
-                Log.e("AppConfigRepo", "Failed to parse open AI LLM models JSON", e)
+                Timber.e("Failed to parse open AI LLM models JSON", e)
                 defaultModels
             }
         } else {
@@ -112,7 +113,7 @@ class AppConfigRepository @Inject constructor(
                 Json.decodeFromString<List<LlmModelInfo>>(jsonString)
             } catch (e: Exception) {
                 // If parsing fails (e.g., malformed JSON in the console), return the safe default
-                Log.e("AppConfigRepo", "Failed to parse LLM Gemini models JSON", e)
+                Timber.e("Failed to parse LLM Gemini models JSON", e)
                 defaultModels
             }
         } else {

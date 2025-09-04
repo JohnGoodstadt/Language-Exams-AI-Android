@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.data
 import android.util.Log
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
+import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -41,7 +42,7 @@ class TtsCreditsRepository @Inject constructor(
 
         // If the total is 0, it means they've never been set up.
         if (currentTotal == 0) {
-            Log.d("TtsCreditsRepo", "First use detected. Setting up free TTS credits.")
+            Timber.d("First use detected. Setting up free TTS credits.")
             userPreferencesRepository.saveTtsCredits(
                 current = TtsCreditSystemConfig.FREE_TIER_CREDITS,
                 total = TtsCreditSystemConfig.FREE_TIER_CREDITS
@@ -61,12 +62,12 @@ class TtsCreditsRepository @Inject constructor(
 //        if (false) {
             // If the user has credits, just decrement.
             userPreferencesRepository.saveTtsCurrentCredits(currentCredits - 1)
-            Log.d("TtsCreditsRepo", "TTS Credits remaining:$currentCredits")
+            Timber.d("TTS Credits remaining:$currentCredits")
             //this will inc not update
            // ttsStatsRepository.updateUserTTSCurrentTokenCount(currentCredits)
         } else {
             // User is out of credits. Time to handle the "do something" logic.
-            Log.d("TtsCreditsRepo", "User out of TTS credits. Applying automatic refill.")
+            Timber.d("User out of TTS credits. Applying automatic refill.")
             ttsStatsRepository.incUserTTSTotalTokenCount(TtsCreditSystemConfig.REFILL_AMOUNT)
             // --- THIS IS THE PLACEHOLDER FOR YOUR FUTURE LOGIC ---
             // For now, we just top up with another 100 credits.

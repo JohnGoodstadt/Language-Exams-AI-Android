@@ -31,8 +31,8 @@ import com.goodstadt.john.language.exams.data.RecallingItem
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.screens.annotatedSentence
-import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
-import com.goodstadt.john.language.exams.screens.utils.buildSentencePartsSimple
+import com.goodstadt.john.language.exams.utils.buildSentenceParts
+import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.utils.STOPS

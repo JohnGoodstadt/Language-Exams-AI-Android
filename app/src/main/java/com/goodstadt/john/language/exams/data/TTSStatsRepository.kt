@@ -25,6 +25,7 @@ import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import timber.log.Timber
 import java.io.File
 
 @Singleton
@@ -523,7 +524,7 @@ class TTSStatsRepository @Inject constructor(
     fun checkIfStatsFlushNeeded(forced:Boolean = false): Boolean {
 
         if (forced || BuildConfig.DEBUG){
-            Log.d("TTSStatsRepository","DEBUG or forced = $forced: so flush now. don't rely on dates/times")
+            Timber.d("DEBUG or forced = $forced: so flush now. don't rely on dates/times")
             return true
         }
 

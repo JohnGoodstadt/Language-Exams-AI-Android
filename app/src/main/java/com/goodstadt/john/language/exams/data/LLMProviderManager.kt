@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.data
 
 import android.util.Log
 import kotlinx.coroutines.flow.first
+import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -33,7 +34,7 @@ class LLMProviderManager @Inject constructor(
         if (currentCount >= CALL_THRESHOLD) {
             currentProviderString = if (currentProviderString == "openai") "gemini" else "openai"
             currentCount = 0
-            Log.d("LLMProviderManager", "Call threshold reached. Switching to $currentProviderString.")
+            Timber.d("Call threshold reached. Switching to $currentProviderString.")
         }
 
         val nextCount = currentCount + 1
@@ -42,7 +43,7 @@ class LLMProviderManager @Inject constructor(
         userPreferencesRepository.saveLlmCallCounter(nextCount)
         userPreferencesRepository.saveLlmProvider(currentProviderString)
 
-        Log.d("LLMProviderManager", "Using $currentProviderString. Call count is now $nextCount.")
+        Timber.d("Using $currentProviderString. Call count is now $nextCount.")
 
         return if (currentProviderString == "gemini") LLMProvider.Gemini else LLMProvider.OpenAI
     }
@@ -63,6 +64,6 @@ class LLMProviderManager @Inject constructor(
     suspend fun reset() {
         userPreferencesRepository.saveLlmCallCounter(0)
         userPreferencesRepository.saveLlmProvider("openai") // Reset to default
-        Log.d("LLMProviderManager", "State has been reset.")
+        Timber.d("State has been reset.")
     }
 }

@@ -11,6 +11,8 @@ import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.managers.RateLimiterManager
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -23,6 +25,7 @@ import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 // A simple data class to hold a word and its first sentence for the flat list
@@ -59,6 +62,17 @@ class SearchViewModel @Inject constructor(
     // Re-use the playback state from the TabsViewModel
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
     val playbackState = _playbackState.asStateFlow()
+
+    //NOTE: rate Limiting
+    private val rateLimiter = RateLimiterManager.getInstance()
+    private val _showRateLimitSheet = MutableStateFlow(false)
+    val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
+
+    private val _showRateDailyLimitSheet = MutableStateFlow(false)
+    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
+
+    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
+    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     init {
         loadFullWordList()
@@ -121,6 +135,25 @@ class SearchViewModel @Inject constructor(
         }else{
             Log.i("SearchViewModel","playTrack() User is NOT a isPremiumUser")
         }
+        if (!isPremiumUser.value) { //if premium user don't check credits
+            if (rateLimiter.doIForbidCall()){
+                val failType = rateLimiter.canMakeCallWithResult()
+                println(failType.canICallAPI)
+                println(failType.failReason)
+                println(failType.timeLeftToWait)
+                if (!failType.canICallAPI){
+                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
+                        _showRateDailyLimitSheet.value = true
+                    }else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
+                } else {
+                    _showRateLimitSheet.value = true
+                }
+
+                return
+            }
+        }
 
         viewModelScope.launch {
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
@@ -139,7 +172,9 @@ class SearchViewModel @Inject constructor(
 
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+                    rateLimiter.recordCall()
+                    Timber.v(rateLimiter.printCurrentStatus)
+//                    userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
                     ttsStatsRepository.updateTTSStatsWithCosts(searchResult.firstSentence, currentVoiceName)
                 }
                 is PlaybackResult.PlayedFromCache -> {
@@ -152,5 +187,14 @@ class SearchViewModel @Inject constructor(
             }
             _playbackState.value = PlaybackState.Idle
         }
+    }
+    fun hideDailyRateLimitSheet(){
+        _showRateDailyLimitSheet.value = false
+    }
+    fun hideHourlyRateLimitSheet(){
+        _showRateHourlyLimitSheet.value = false
+    }
+    fun hideRateOKLimitSheet(){
+        _showRateLimitSheet.value = false
     }
 }

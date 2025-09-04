@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -233,10 +234,10 @@ class RecallingItems @Inject constructor (
             prefs.edit().putString(storageKey, jsonString).apply()
 
             // Add a log to confirm saving
-            Log.d("RecallingItems", "Saved ${listToSave.size} items to key '$storageKey'")
-//            Log.d("RecallingItems", "SUCCESS: Save to '$storageKey' completed.")
+            Timber.d("Saved ${listToSave.size} items to key '$storageKey'")
+//            Timber.d("SUCCESS: Save to '$storageKey' completed.")
         } catch (e: Exception) {
-            Log.e("RecallingItems", "FAILED to save", e)
+            Timber.e("FAILED to save", e)
         }
     }
 
@@ -252,10 +253,10 @@ class RecallingItems @Inject constructor (
                 emptyList()
             }
             // Add a log to confirm loading
-            Log.d("RecallingItems", "Loaded ${_items.value.size} items from key '$storageKey'")
+            Timber.d("Loaded ${_items.value.size} items from key '$storageKey'")
 
         } catch (e: Exception) {
-            Log.e("RecallingItems", "Failed to load items, starting fresh.", e)
+            Timber.e("Failed to load items, starting fresh.", e)
             _items.value = emptyList() // Use emptyList() for consistency
             e.printStackTrace()
         }
