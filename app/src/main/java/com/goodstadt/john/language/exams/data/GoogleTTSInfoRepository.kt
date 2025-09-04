@@ -64,7 +64,7 @@ class GoogleTTSInfoRepository @Inject constructor(
             if (dir != null) {
                 val file = File(dir, fileName)
                 file.writeText(content)
-                Log.i("GoogleTtsInfoRepo", "Successfully saved file to: ${file.absolutePath}")
+                Timber.i("Successfully saved file to: ${file.absolutePath}")
                 Result.success("Saved to: ${file.absolutePath}")
             } else {
                 Result.failure(Exception("External storage not available."))

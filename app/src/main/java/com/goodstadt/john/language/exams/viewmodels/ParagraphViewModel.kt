@@ -294,7 +294,7 @@ class ParagraphViewModel @Inject constructor(
                         val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
 
                         if (DEBUG){
-                            Log.i("ParagraphViewModel","${sentence}")
+                            Timber.i("${sentence}")
                         }
 
                         // --- CHANGE 2: Pass the highlightedWords to the state ---

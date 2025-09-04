@@ -269,17 +269,17 @@ class BillingRepository @Inject constructor(
     fun debugResetAllPurchases() {
        // if (!BuildConfig.DEBUG) return // Safety check
 
-        Log.i(tag, "Debug reset triggered. Querying all owned items...")
+        Timber.i("Debug reset triggered. Querying all owned items...")
         val params = QueryPurchasesParams.newBuilder()
             .setProductType(BillingClient.ProductType.INAPP).build()
 
         billingClient.queryPurchasesAsync(params) { billingResult, purchases ->
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                Log.i(tag, "Found ${purchases.size} items to reset.")
+                Timber.i("Found ${purchases.size} items to reset.")
                 for (purchase in purchases) {
                     // We only care about our specific product
                     if (purchase.products.contains(PRODUCT_ID)) {
-                        Log.i(tag, "Found ${PRODUCT_ID} consuming.")
+                        Timber.i("Found ${PRODUCT_ID} consuming.")
                         consumeTestPurchase(purchase)
                     }
                 }
@@ -299,7 +299,7 @@ class BillingRepository @Inject constructor(
 
         billingClient.consumeAsync(consumeParams) { billingResult, purchaseToken ->
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                Log.i(tag, "✅ Test purchase consumed successfully. The item can be bought again.")
+                Timber.i("✅ Test purchase consumed successfully. The item can be bought again.")
                 // After consuming, the user is no longer a premium member.
                 // We reset the status back to NotPremium.
                 // We need to re-query the product details to do this.

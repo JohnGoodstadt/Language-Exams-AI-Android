@@ -315,21 +315,21 @@ class SettingsViewModel @Inject constructor(
     }
     fun onDebugPrintBillingStatus(activity: Activity) {
         billingRepository.logCurrentStatus()
-        Log.i("SettingsViewModel", "and now logGmsState")
+        Timber.i("and now logGmsState")
         billingRepository.logGmsState(activity)
-        Log.i("SettingsViewModel", "and now initializeGoogleServices")
+        Timber.i("and now initializeGoogleServices")
         billingRepository.initializeGoogleServices(activity)
     }
 
     fun purchasePremium(activity: Activity) {
-        Log.i("SettingsViewModel", "purchasePremium()")
+        Timber.i("purchasePremium()")
         viewModelScope.launch {
             billingRepository.launchPurchase(activity)
         }
     }
 
     fun onDebugResetPurchases() {
-        Log.i("SettingsViewModel", "onDebugResetPurchases()")
+        Timber.i("onDebugResetPurchases()")
         billingRepository.debugResetAllPurchases()
     }
 }

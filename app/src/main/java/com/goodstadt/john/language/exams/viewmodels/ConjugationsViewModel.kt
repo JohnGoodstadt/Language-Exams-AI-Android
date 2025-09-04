@@ -105,9 +105,9 @@ class ConjugationsViewModel @Inject constructor(
         if (_playbackState.value is PlaybackState.Playing) return
 
         if (isPremiumUser.value) {
-            Log.i("ConjugationsViewModel","playTrack() User is a isPremiumUser")
+            Timber.i("playTrack() User is a isPremiumUser")
         }else{
-            Log.i("ConjugationsViewModel","playTrack() User is NOT a isPremiumUser")
+            Timber.i("playTrack() User is NOT a isPremiumUser")
         }
 
         if (!isPremiumUser.value) { //if premium user don't check credits
