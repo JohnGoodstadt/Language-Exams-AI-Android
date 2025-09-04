@@ -8,9 +8,10 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.managers.RateLimiterManager
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
@@ -34,14 +35,14 @@ sealed interface ConjugationsUiState {
     object NotAvailable : ConjugationsUiState // For flavors like 'zh'
 }
 
+
 @HiltViewModel
 class ConjugationsViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository: TTSStatsRepository,
     private val appScope: CoroutineScope,
-    private val billingRepository: BillingRepository
+    private val billingRepository: BillingRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
@@ -53,6 +54,17 @@ class ConjugationsViewModel @Inject constructor(
     // Reuse the playback state logic
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
     val playbackState = _playbackState.asStateFlow()
+
+    //NOTE: rate Limiting
+    private val rateLimiter = RateLimiterManager.getInstance()
+    private val _showRateLimitSheet = MutableStateFlow(false)
+    val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
+
+    private val _showRateDailyLimitSheet = MutableStateFlow(false)
+    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
+
+    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
+    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     init {
         loadConjugationsData()
@@ -87,9 +99,6 @@ class ConjugationsViewModel @Inject constructor(
         }
     }
 
-//    fun currentVoiceName() : String {
-//        userPreferencesRepository.selectedVoiceNameFlow.first()
-//    }
     // This function is almost identical to the ones in our other ViewModels
     fun playTrack(word: VocabWord, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing) return
@@ -100,11 +109,31 @@ class ConjugationsViewModel @Inject constructor(
             Log.i("ConjugationsViewModel","playTrack() User is NOT a isPremiumUser")
         }
 
+        if (!isPremiumUser.value) { //if premium user don't check credits
+            if (rateLimiter.doIForbidCall()){
+                val failType = rateLimiter.canMakeCallWithResult()
+                println(failType.canICallAPI)
+                println(failType.failReason)
+                println(failType.timeLeftToWait)
+                if (!failType.canICallAPI){
+                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
+                        _showRateDailyLimitSheet.value = true
+                    }else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
+                } else {
+                    _showRateLimitSheet.value = true
+                }
+
+                return
+            }
+        }
 
     viewModelScope.launch {
-//            val googleVoice = "en-GB-Neural2-C"
 
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+
+
+        val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
 
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
@@ -119,32 +148,17 @@ class ConjugationsViewModel @Inject constructor(
                     voiceName = currentVoiceName,
                     languageCode = currentLanguageCode
             )
-//            result.onSuccess {
-//                //TODO: Could be many "I have..." do I need this?
-//                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence.sentence))
-//            }
-//            result.onFailure { error ->
-//                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
-//            }
+
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    ttsStatsRepository.updateGlobalTTSStats( sentence.sentence,currentVoiceName)
-                    ttsStatsRepository.updateUserPlayedSentenceCount()
-                    // A new file was cached! Increment the count.
-//                    _uiState.update {
-//                        it.copy(
-//                            playbackState = PlaybackState.Idle,
-                            // Increment the count
-//                            cachedAudioCount = it.cachedAudioCount + 1,
-//                            // Also add the word to the set of cached keys for the red dot
-//                            wordsOnDisk = it.wordsOnDisk + word.word
-//                        )
-//                    }
+                    rateLimiter.recordCall()
+                    Log.v("CategoryTabViewModel",rateLimiter.printCurrentStatus)
+                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
+                    //TODO: not inc but update!
+                    ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
                 is PlaybackResult.PlayedFromCache -> {
-                    ttsStatsRepository.updateUserPlayedSentenceCount()
-                    // The file was already cached, just reset the playback state.
-                  //  _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                    ttsStatsRepository.updateTTSStatsWithoutCosts()
                 }
                 is PlaybackResult.Failure -> {
                     // Handle the error
@@ -152,7 +166,6 @@ class ConjugationsViewModel @Inject constructor(
                     // Optionally reset to Idle after a delay
 //                    _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
-//                    _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }
                 }
             }
 
@@ -169,5 +182,14 @@ class ConjugationsViewModel @Inject constructor(
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
         }
+    }
+    fun hideDailyRateLimitSheet(){
+        _showRateDailyLimitSheet.value = false
+    }
+    fun hideHourlyRateLimitSheet(){
+        _showRateHourlyLimitSheet.value = false
+    }
+    fun hideRateOKLimitSheet(){
+        _showRateLimitSheet.value = false
     }
 }

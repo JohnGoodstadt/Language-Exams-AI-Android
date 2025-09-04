@@ -23,7 +23,10 @@ import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.managers.RateLimiterManager
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.LlmModelInfo
+import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -31,12 +34,8 @@ import com.google.ai.client.generativeai.type.GenerateContentResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -101,7 +100,8 @@ class ParagraphViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
 
-    //private val generativeModel: GenerativeModel
+    //NOTE: rate Limiting
+    private val rateLimiter = RateLimiterManager.getInstance()
 
     init{
         loadLlmModels()
@@ -486,6 +486,25 @@ class ParagraphViewModel @Inject constructor(
             return // Prevent multiple clicks or playing placeholder text
         }
 
+        //For Paragraph screen don't deny rateLimiting - credits will do that
+        if (!isPremiumUser.value) { //if premium user don't check credits
+            if (rateLimiter.doIForbidCall()){
+                val failType = rateLimiter.canMakeCallWithResult()
+                println(failType.canICallAPI)
+                println(failType.failReason)
+                println(failType.timeLeftToWait)
+                if (!failType.canICallAPI){
+                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
+                        Log.v("ParagraphViewModel","User would fail DAILY rate limiting")
+                    }else {
+                        Log.v("ParagraphViewModel","User would fail HOURLY rate limiting")
+                    }
+                }
+
+                return
+            }
+        }
+
         viewModelScope.launch {
             try {
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
@@ -512,13 +531,14 @@ class ParagraphViewModel @Inject constructor(
 
                 when (result) {
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
-                        ttsStatsRepository.updateGlobalTTSStats( sentenceToSpeak,currentVoiceName)
-                        ttsStatsRepository.updateUserPlayedSentenceCount()
-                        ttsStatsRepository.updateUserTTSCounts(sentenceToSpeak.count())
+                        //NOTE: record call but don't disallow on Paragraph screen
+                        rateLimiter.recordCall()
+                        Log.v("CategoryTabViewModel",rateLimiter.printCurrentStatus)
+                        ttsStatsRepository.updateTTSStatsWithCosts(Sentence(sentenceToSpeak,""), currentVoiceName)
                         Log.d("ParagraphViewModel","updateUserTTSTokenCount ${sentenceToSpeak.count()}")
                     }
                     is PlaybackResult.PlayedFromCache -> {
-                        ttsStatsRepository.updateUserPlayedSentenceCount()
+                        ttsStatsRepository.updateTTSStatsWithoutCosts()
                     }
                     is PlaybackResult.Failure -> {
                         _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }

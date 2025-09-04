@@ -213,10 +213,13 @@ class SettingsViewModel @Inject constructor(
 
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    ttsStatsRepository.updateGlobalTTSStats( sentence,googleVoice)
-                    ttsStatsRepository.updateUserTTSCounts(sentence.count())
+//                    ttsStatsRepository.updateGlobalTTSStats( sentence,googleVoice)
+//                    ttsStatsRepository.updateUserTTSCounts(sentence.count())
+                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, googleVoice)
                 }
-                is PlaybackResult.PlayedFromCache -> {}
+                is PlaybackResult.PlayedFromCache -> {
+                    ttsStatsRepository.updateTTSStatsWithoutCosts()
+                }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }

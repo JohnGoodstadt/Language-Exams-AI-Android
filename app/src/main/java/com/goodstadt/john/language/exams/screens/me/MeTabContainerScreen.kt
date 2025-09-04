@@ -145,7 +145,7 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
             composable(MeScreen.Prepositions.route) { PrepositionsScreen() }
            composable(MeScreen.Paragraph.route) { ParagraphScreen() }
 //            composable(MeScreen.Paragraph.route) { GeminiExampleScreen() }
-            composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
+//            composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
         }
     } //:Column
 

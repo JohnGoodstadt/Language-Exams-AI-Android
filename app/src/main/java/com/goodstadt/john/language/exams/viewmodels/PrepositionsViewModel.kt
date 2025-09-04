@@ -11,6 +11,8 @@ import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.managers.RateLimiterManager
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
@@ -51,6 +53,17 @@ class PrepositionsViewModel @Inject constructor(
 
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
     val playbackState = _playbackState.asStateFlow()
+
+    //NOTE: rate Limiting
+    private val rateLimiter = RateLimiterManager.getInstance()
+    private val _showRateLimitSheet = MutableStateFlow(false)
+    val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
+
+    private val _showRateDailyLimitSheet = MutableStateFlow(false)
+    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
+
+    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
+    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     init {
         loadPrepositionsData()
@@ -97,12 +110,30 @@ class PrepositionsViewModel @Inject constructor(
             Log.i("PrepositionsViewModel","playTrack() User is NOT a isPremiumUser")
         }
 
+        if (!isPremiumUser.value) { //if premium user don't check credits
+            if (rateLimiter.doIForbidCall()){
+                val failType = rateLimiter.canMakeCallWithResult()
+                println(failType.canICallAPI)
+                println(failType.failReason)
+                println(failType.timeLeftToWait)
+                if (!failType.canICallAPI){
+                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
+                        _showRateDailyLimitSheet.value = true
+                    }else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
+                } else {
+                    _showRateLimitSheet.value = true
+                }
+
+                return
+            }
+        }
 
         viewModelScope.launch {
-            // val googleVoice = "en-GB-Neural2-C"
 
 
-            // Use .first() to get the most recent value from the Flow
+
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val currentLanguageCode = LanguageConfig.languageCode
 
@@ -119,12 +150,14 @@ class PrepositionsViewModel @Inject constructor(
             )
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    ttsStatsRepository.updateGlobalTTSStats( sentence.sentence,currentVoiceName)
-                    ttsStatsRepository.updateUserPlayedSentenceCount()
-                    ttsStatsRepository.updateUserTTSCounts(sentence.sentence.count())
+                    rateLimiter.recordCall()
+                    Log.v("PrepositionsViewModel",rateLimiter.printCurrentStatus)
+                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
+                    //TODO: not inc but update!
+                    ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
                 is PlaybackResult.PlayedFromCache -> {
-                    ttsStatsRepository.updateUserPlayedSentenceCount()
+                    ttsStatsRepository.updateTTSStatsWithoutCosts()
                 }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
@@ -143,5 +176,14 @@ class PrepositionsViewModel @Inject constructor(
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
         }
+    }
+    fun hideDailyRateLimitSheet(){
+        _showRateDailyLimitSheet.value = false
+    }
+    fun hideHourlyRateLimitSheet(){
+        _showRateHourlyLimitSheet.value = false
+    }
+    fun hideRateOKLimitSheet(){
+        _showRateLimitSheet.value = false
     }
 }

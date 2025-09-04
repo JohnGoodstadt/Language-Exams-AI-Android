@@ -16,25 +16,18 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import android.content.Context
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.TtsCreditsRepository
 import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 // This data class represents everything the UI needs to draw itself.
@@ -211,7 +204,6 @@ class CategoryTabViewModel @Inject constructor(
 
             _uiState.update { it.copy(playbackState = PlaybackState.Playing(uniqueSentenceId)) }
 
-
             // Call your repository to play the audio
             val result = vocabRepository.playTextToSpeech(
                 text = sentence.sentence,
@@ -240,7 +232,7 @@ class CategoryTabViewModel @Inject constructor(
 
                     rateLimiter.recordCall()
                     Log.v("CategoryTabViewModel",rateLimiter.printCurrentStatus)
-                    ttsStatsRepository.updateTTSStats(sentence, currentVoiceName)
+                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
 
                     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
@@ -249,7 +241,7 @@ class CategoryTabViewModel @Inject constructor(
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
-                    ttsStatsRepository.updateUserPlayedSentenceCount()
+                    ttsStatsRepository.updateTTSStatsWithoutCosts()
                 }
                 is PlaybackResult.Failure -> {
                     // Handle the error

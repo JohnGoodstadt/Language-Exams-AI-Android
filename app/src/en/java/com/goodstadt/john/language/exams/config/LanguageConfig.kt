@@ -14,8 +14,8 @@ object LanguageConfig {
         "Quiz",
         "Conjugations",
         "Prepositions",
-        "Paragraph",
-        "Conversation"
+        "Paragraph"//,
+//        "Conversation"
     )
     val conjugationsFileName: String? = "conjugations_en"
     val prepositionsFileName: String? = "prepositions_en"

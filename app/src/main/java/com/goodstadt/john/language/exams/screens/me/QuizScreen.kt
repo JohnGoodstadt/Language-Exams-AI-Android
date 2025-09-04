@@ -43,6 +43,8 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
+import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
@@ -52,6 +54,7 @@ import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.ui.theme.selectedBackground
 import com.goodstadt.john.language.exams.viewmodels.QuizLevels
 import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
 @Composable
@@ -369,7 +372,6 @@ fun QuizScreen(
             }
         }
     }
-    /*
     if (isRateLimitingSheetVisible){
         RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
     }
@@ -379,6 +381,8 @@ fun QuizScreen(
     if (isHourlyRateLimitingSheetVisible){
         RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
     }
+    /*
+
     if (isUpgradeAppSheetVisible){
         UpdateAppPromptSheet(onCloseSheet = { viewModel.hideAppUpgradeSheet() })
     }
@@ -394,30 +398,6 @@ fun QuizScreen(
         QuizInfoBottomSheetView(
                 questions[currentQuestionIndex].summary,questions[currentQuestionIndex].explain, onCloseSheet = { showInfoBottomSheet = false }
         )
-
-    //        GiveFeedbackSheet (
-//                onSend = { text ->
-//                    if (text.isNotBlank()){
-//                        Toast.makeText(context, "Thank you for your feedback!", Toast.LENGTH_SHORT).show()
-//                        fsCreateUserFeedbackDoc(text)
-//                    }else{
-//                        Toast.makeText(context, "No text entered", Toast.LENGTH_SHORT).show()
-//                    }
-//                },
-//                onCloseSheet = { showInfoBottomSheet = false }
-//        )
-    }
-    fun openAppStore(context: Context) {
-        //TODO: update url when known
-        val appPackageName = context.packageName // getPackageName() from Context or Activity object
-        try {
-            context.startActivity(Intent(Intent.ACTION_VIEW,
-                    Uri.parse("market://details?id=$appPackageName")))
-        } catch (e: ActivityNotFoundException) {
-            context.startActivity(Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://play.google.com/store/apps/details?id=$appPackageName")))
-        }
-//    fsUpdateStatsPropertyCount(fb.appStoreViewCount)
     }
 }
 

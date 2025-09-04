@@ -1,7 +1,6 @@
 // In a new file, e.g., viewmodels/RecallViewModel.kt
 package com.goodstadt.john.language.exams.viewmodels
 
-import android.app.Application
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -204,11 +203,15 @@ class RecallViewModel @Inject constructor(
 
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    ttsStatsRepository.updateGlobalTTSStats( word,currentVoiceName)
-                    ttsStatsRepository.updateUserTTSCounts(word.count())
+//                    ttsStatsRepository.updateGlobalTTSStats( word,currentVoiceName)
+//                    ttsStatsRepository.updateUserTTSCounts(word.count())
+                    ttsStatsRepository.updateTTSStatsWithCosts(word, currentVoiceName)
+
                 }
 
-                is PlaybackResult.PlayedFromCache -> {}
+                is PlaybackResult.PlayedFromCache -> {
+                    ttsStatsRepository.updateTTSStatsWithoutCosts()
+                }
                 is PlaybackResult.Failure -> {}
             }
             // TODO: update word counts
@@ -241,7 +244,9 @@ class RecallViewModel @Inject constructor(
                     ttsStatsRepository.updateGlobalTTSStats( sentence,currentVoiceName)
                     ttsStatsRepository.updateUserTTSCounts(sentence.count())
                 }
-                is PlaybackResult.PlayedFromCache -> {}
+                is PlaybackResult.PlayedFromCache -> {
+                    ttsStatsRepository.updateTTSStatsWithoutCosts()
+                }
                 is PlaybackResult.Failure -> {}
             }
            // _playbackState.value = PlaybackState.Idle

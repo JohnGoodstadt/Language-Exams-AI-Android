@@ -15,13 +15,19 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.viewmodels.PrepositionsUiState
 import com.goodstadt.john.language.exams.viewmodels.PrepositionsViewModel
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 @Composable
 fun PrepositionsScreen(viewModel: PrepositionsViewModel = hiltViewModel()) {
     val uiState by viewModel.uiState.collectAsState()
     val playbackState by viewModel.playbackState.collectAsState()
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
     // The when statement handles all the different states from the ViewModel
     when (val state = uiState) {
@@ -52,6 +58,16 @@ fun PrepositionsScreen(viewModel: PrepositionsViewModel = hiltViewModel()) {
             )
         }
     }
+    if (isRateLimitingSheetVisible){
+        RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+    }
+    if (isDailyRateLimitingSheetVisible){
+        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+    }
+    if (isHourlyRateLimitingSheetVisible){
+        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+    }
+
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->

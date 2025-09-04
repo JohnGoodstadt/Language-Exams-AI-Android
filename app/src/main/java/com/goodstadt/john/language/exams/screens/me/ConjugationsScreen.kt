@@ -26,18 +26,26 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.screens.CategoryHeader
+import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.VocabRow
 import com.goodstadt.john.language.exams.screens.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsUiState
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsViewModel
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+
 //import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 
 @Composable
 fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
     val uiState by viewModel.uiState.collectAsState()
     val playbackState by viewModel.playbackState.collectAsState()
+
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
     when (val state = uiState) {
         is ConjugationsUiState.Loading -> {
@@ -66,6 +74,16 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
             )
         }
     }
+    if (isRateLimitingSheetVisible){
+        RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+    }
+    if (isDailyRateLimitingSheetVisible){
+        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
+    }
+    if (isHourlyRateLimitingSheetVisible){
+        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+    }
+
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
@@ -142,4 +160,5 @@ fun SectionedVocabList(
             }
         }
     }
+
 }

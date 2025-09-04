@@ -14,6 +14,8 @@ import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.managers.RateLimiterManager
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -105,7 +107,6 @@ class QuizViewModel @Inject constructor(
     private val billingRepository: BillingRepository
 ) : ViewModel() {
     private val appContext: Context = application.applicationContext
-   // private val rateLimiter = RateLimiterManager.getInstance()
 
     private val _uiState99 = MutableStateFlow<QuizUiState>(QuizUiState.Loading)
     val uiState99 = _uiState99.asStateFlow()
@@ -118,16 +119,7 @@ class QuizViewModel @Inject constructor(
     // region State FLow
     private val _questions = MutableStateFlow<List<QuizQuestion>>(emptyList())
     val questions: StateFlow<List<QuizQuestion>> get() = _questions
-//    private val _playbackState = MutableStateFlow(false)
-//    val playbackState: StateFlow<Boolean> = _playbackState
-    private val _showRateLimitSheet = MutableStateFlow(false)
-    val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
 
-    private val _showRateDailyLimitSheet = MutableStateFlow(false)
-    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
-
-    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
-    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     private val _showUpgradeAppSheet = MutableStateFlow(false)
     val showUpgradeAppSheet = _showUpgradeAppSheet.asStateFlow()
@@ -137,6 +129,17 @@ class QuizViewModel @Inject constructor(
 
     private val _uiEvent = MutableSharedFlow<UiEvent>()
     val uiEvent = _uiEvent.asSharedFlow()
+
+    //NOTE: rate Limiting
+    private val rateLimiter = RateLimiterManager.getInstance()
+    private val _showRateLimitSheet = MutableStateFlow(false)
+    val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
+
+    private val _showRateDailyLimitSheet = MutableStateFlow(false)
+    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
+
+    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
+    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     private val jsonParser = Json {
         ignoreUnknownKeys = true
@@ -212,6 +215,25 @@ class QuizViewModel @Inject constructor(
         }else{
             Log.i("QuizViewModel","playTrack() User is NOT a isPremiumUser")
         }
+        if (!isPremiumUser.value) { //if premium user don't check credits
+            if (rateLimiter.doIForbidCall()){
+                val failType = rateLimiter.canMakeCallWithResult()
+                println(failType.canICallAPI)
+                println(failType.failReason)
+                println(failType.timeLeftToWait)
+                if (!failType.canICallAPI){
+                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
+                        _showRateDailyLimitSheet.value = true
+                    }else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
+                } else {
+                    _showRateLimitSheet.value = true
+                }
+
+                return
+            }
+        }
 
         viewModelScope.launch {
 
@@ -239,12 +261,12 @@ class QuizViewModel @Inject constructor(
 //            }
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    ttsStatsRepository.updateGlobalTTSStats( sentence,currentVoiceName)
-                    ttsStatsRepository.updateUserPlayedSentenceCount()
-                    ttsStatsRepository.updateUserTTSCounts(sentence.count())
+                    rateLimiter.recordCall()
+                    Log.v("CategoryTabViewModel",rateLimiter.printCurrentStatus)
+                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
                 }
                 is PlaybackResult.PlayedFromCache -> {
-                    ttsStatsRepository.updateUserPlayedSentenceCount()
+                    ttsStatsRepository.updateTTSStatsWithoutCosts()
                 }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")

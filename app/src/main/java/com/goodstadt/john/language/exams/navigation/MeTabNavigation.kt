@@ -13,7 +13,7 @@ sealed class MeScreen(val route: String, val title: String) {
     object Conjugations : MeScreen("me_conjugations", "Conjugations")
     object Prepositions : MeScreen("me_prepositions", "Prepositions")
     object Paragraph : MeScreen("me_paragraph", "Paragraph")
-    object Conversation : MeScreen("me_conversation", "Conversation")
+//    object Conversation : MeScreen("me_conversation", "Conversation")
 }
 
 // A helper function to map a menu item title string to its corresponding screen route
@@ -26,7 +26,7 @@ fun getMeScreenRouteFromTitle(title: String): String? {
         MeScreen.Conjugations.title -> MeScreen.Conjugations.route
         MeScreen.Prepositions.title -> MeScreen.Prepositions.route
         MeScreen.Paragraph.title -> MeScreen.Paragraph.route
-        MeScreen.Conversation.title -> MeScreen.Conversation.route
+//        MeScreen.Conversation.title -> MeScreen.Conversation.route
         else -> null
     }
 }

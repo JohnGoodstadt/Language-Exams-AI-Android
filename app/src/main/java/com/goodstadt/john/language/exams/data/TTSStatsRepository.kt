@@ -378,7 +378,8 @@ class TTSStatsRepository @Inject constructor(
         }
 
     }
-    fun updateTTSStats(
+    //Main grouping of updates to different stats
+    fun updateTTSStatsWithCosts(
         sentence: Sentence,
         currentVoiceName: String
     ) {
@@ -391,6 +392,24 @@ class TTSStatsRepository @Inject constructor(
         println("Cost: $${"%.8f".format(cost)}")
 
         updateUserStatDouble(TTSAPIEstCostUSD, cost)
+    }
+    //Main grouping of updates to different stats - Convenient String only
+    fun updateTTSStatsWithCosts(
+        sentence: String,
+        currentVoiceName: String
+    ) {
+        updateGlobalTTSStats(sentence, currentVoiceName)
+        updateUserPlayedSentenceCount() //count how many mp3s user has played
+        updateUserTTSCounts(sentence.count())
+
+
+        val cost = calculateTTSCallCost(sentence.count(), currentVoiceName)
+        println("Cost: $${"%.8f".format(cost)}")
+
+        updateUserStatDouble(TTSAPIEstCostUSD, cost)
+    }
+    fun updateTTSStatsWithoutCosts() {
+        updateUserPlayedSentenceCount() //count how many mp3s user has played
     }
     fun updateGlobalTTSStatsObsolete(words: String) {
         if (words.isEmpty()) {
@@ -789,6 +808,8 @@ class TTSStatsRepository @Inject constructor(
             val fieldNameTotal= statProgressTotal.replace("__", skillLevel)
 
             updateUserStatField(fieldNameCompleted,progressStats.completed)
+            //BUG: inc on size but should be a save
+            //TODO:inc on size but should be a save
             updateUserStatField(fieldNameTotal,progressStats.size)
 
 
