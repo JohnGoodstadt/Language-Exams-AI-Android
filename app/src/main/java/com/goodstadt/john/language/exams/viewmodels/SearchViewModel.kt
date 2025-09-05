@@ -12,7 +12,7 @@ import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.managers.RateLimiterManager
+//import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.models.WordAndSentence
@@ -42,7 +42,8 @@ class SearchViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository : TTSStatsRepository,
-    private val billingRepository: BillingRepository
+    private val billingRepository: BillingRepository,
+    private val rateLimiter: SimpleRateLimiter,
 
     ) : ViewModel() {
 
@@ -65,7 +66,7 @@ class SearchViewModel @Inject constructor(
     val playbackState = _playbackState.asStateFlow()
 
     //NOTE: rate Limiting
-    private val rateLimiter = RateLimiterManager.getInstance()
+//    private val rateLimiter = RateLimiterManager.getInstance()
     private val _showRateLimitSheet = MutableStateFlow(false)
     val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
 

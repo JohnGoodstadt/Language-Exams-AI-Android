@@ -13,6 +13,8 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -22,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.managers.RateLimiterManager
+//import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
 import kotlinx.coroutines.launch
@@ -30,17 +32,19 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RateLimitOKReasonsBottomSheet(
+    viewModel: RateLimitSheetViewModel = hiltViewModel(),
     onCloseSheet: () -> Unit
 ) {
 
-    val rateLimiter = RateLimiterManager.getInstance()
+//    val rateLimiter = RateLimiterManager.getInstance()
+    val uiState by viewModel.uiState.collectAsState()
 
     var limitMessage = ""
     val coroutineScope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true) // Prevent half-open states
 
     LaunchedEffect(true) {
-        limitMessage = "So far -- Hourly calls:${rateLimiter.currentHourlyCount}, Daily calls:$rateLimiter.currentDailyCount "
+        limitMessage = "So far -- Hourly calls:${uiState.hourlyLimit}, Daily calls:${uiState.dailyLimit} "
     }
     // ModalBottomSheet in Material 3
     @OptIn(ExperimentalMaterial3Api::class) //
@@ -76,13 +80,13 @@ fun RateLimitOKReasonsBottomSheet(
 
             // Body
             Text(
-                    text = "Firstly: ${rateLimiter.currentHourlyLimit} interactions per hour.",
+                    text = "Firstly: ${uiState.hourlyLimit} interactions per hour.",
                     fontSize = 14.sp,
                     textAlign = TextAlign.Start,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
             )
             Text(
-                    text = "Then up to ${rateLimiter.currentDailyLimit} interactions per day.",
+                    text = "Then up to ${uiState.dailyLimit} interactions per day.",
                     fontSize = 14.sp,
                     textAlign = TextAlign.Start,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)

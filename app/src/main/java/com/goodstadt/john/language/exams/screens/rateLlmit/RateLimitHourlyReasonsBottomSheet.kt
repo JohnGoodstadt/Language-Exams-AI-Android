@@ -12,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -24,7 +25,6 @@ import kotlinx.coroutines.launch
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.formatTimeInterval
 import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
@@ -37,7 +37,8 @@ fun RateLimitHourlyReasonsBottomSheet(
     onCloseSheet: () -> Unit
 ) {
 
-    val rateLimiter = RateLimiterManager.getInstance()
+//    val rateLimiter = RateLimiterManager.getInstance()
+    val uiState by viewModel.uiState.collectAsState()
 
     var limitMessage by remember { mutableStateOf("Call limits exceeded for this hour. Please wait till later for your next hearing.") }
 
@@ -47,8 +48,8 @@ fun RateLimitHourlyReasonsBottomSheet(
     LaunchedEffect(true) {
       //  limitMessage = "So far -- Hourly calls:${currentHourlyCount}, Daily calls:$currentDailyCount "
         limitMessage = "Call limits exceeded for this hour. Please wait for your next hearing."
-        rateLimiter.currentHourlyTimeLeftToWait?.let { hours ->
-            val TIME = formatTimeInterval(hours.toDouble())
+        viewModel.currentHourlyTimeLeftToWait().let { hours ->
+            val TIME = hours?.let { formatTimeInterval(it.toDouble()) }
             limitMessage = "Call limits exceeded for this hour. Please wait $TIME for your next hearing."
 
             viewModel.incStatForHourly()
@@ -91,13 +92,13 @@ fun RateLimitHourlyReasonsBottomSheet(
 
             // Body
             Text(
-                    text = "1. Up to ${rateLimiter.currentHourlyLimit} interactions per hour.",
+                    text = "1. Up to ${uiState.hourlyLimit} interactions per hour.",
                     fontSize = 14.sp,
                     textAlign = TextAlign.Start,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
             )
             Text(
-                    text = "2. Up to ${rateLimiter.currentDailyLimit} interactions per day.",
+                    text = "2. Up to ${uiState.dailyLimit} interactions per day.",
                     fontSize = 14.sp,
                     textAlign = TextAlign.Start,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)

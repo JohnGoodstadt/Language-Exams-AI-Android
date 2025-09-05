@@ -22,7 +22,7 @@ import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.managers.RateLimiterManager
+//import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.Sentence
@@ -90,7 +90,8 @@ class ParagraphViewModel @Inject constructor(
     private val geminiRepository: GeminiRepository,
     private val providerManager: LLMProviderManager,
     private val appScope: CoroutineScope,
-    private val billingRepository: BillingRepository
+    private val billingRepository: BillingRepository,
+    private val rateLimiter: SimpleRateLimiter,
 
     ) : ViewModel() {
 
@@ -101,7 +102,7 @@ class ParagraphViewModel @Inject constructor(
     val uiState = _uiState.asStateFlow()
 
     //NOTE: rate Limiting
-    private val rateLimiter = RateLimiterManager.getInstance()
+//    private val rateLimiter = RateLimiterManager.getInstance()
 
     init{
         loadLlmModels()

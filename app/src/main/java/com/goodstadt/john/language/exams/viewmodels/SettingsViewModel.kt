@@ -20,6 +20,7 @@ import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -48,10 +49,15 @@ data class SettingsUiState(
     val availableExams: List<ExamDetails> = emptyList(),
     val availableVoices: List<VoiceOption> = emptyList(),
     val currentFriendlyVoiceName: String = "",
-        // Add nullable fields to hold the user's selection inside the bottom sheet
+    // Add nullable fields to hold the user's selection inside the bottom sheet
     val pendingSelectedExam: ExamDetails? = null,
     val pendingSelectedVoice: VoiceOption? = null,
+    val showBottomSheet: Boolean = false, //IAP Info sheet
+
+    val hourlyLimit: Int = 0,
+    val dailyLimit: Int = 0,
 )
+
 // Sealed class to represent which bottom sheet should be shown
 sealed interface SheetContent {
     object Hidden : SheetContent
@@ -72,12 +78,13 @@ class SettingsViewModel @Inject constructor(
     private val controlRepository: ControlRepository,
     private val voiceRepository: VoiceRepository,
     private val vocabRepository: VocabRepository,
-    private val ttsStatsRepository : TTSStatsRepository,
+    private val ttsStatsRepository: TTSStatsRepository,
     private val recallingItemsManager: RecallingItems,
     private val googleTtsInfoRepository: GoogleTTSInfoRepository,
-    private val firestoreRepository:FirestoreRepository,
+    private val firestoreRepository: FirestoreRepository,
     private val billingRepository: BillingRepository,
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    private val rateLimiter: SimpleRateLimiter,
 ) : ViewModel() {
 
     val isPurchased = billingRepository.isPurchased
@@ -104,7 +111,12 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch {
             userPreferencesRepository.selectedVoiceNameFlow.collect { voiceId ->
                 val friendlyName = voiceRepository.getFriendlyNameForVoice(voiceId)
-                _uiState.update { it.copy(currentFriendlyVoiceName = friendlyName, currentVoiceName = voiceId) }
+                _uiState.update {
+                    it.copy(
+                        currentFriendlyVoiceName = friendlyName,
+                        currentVoiceName = voiceId
+                    )
+                }
             }
         }
         viewModelScope.launch {
@@ -115,6 +127,8 @@ class SettingsViewModel @Inject constructor(
         loadInitialData()
 
         initializeBilling()
+
+        updateRateLimiterState()
 
     }
 
@@ -132,11 +146,20 @@ class SettingsViewModel @Inject constructor(
         }
     }
 
+    private fun updateRateLimiterState() {
+        _uiState.update {
+            it.copy(
+                hourlyLimit = rateLimiter.hourlyLimit,
+                dailyLimit = rateLimiter.dailyLimit
+            )
+        }
+    }
     fun isGooglePlayServicesAvailable(context: Context): Boolean {
         val googleApiAvailability = GoogleApiAvailability.getInstance()
         val resultCode = googleApiAvailability.isGooglePlayServicesAvailable(context)
         return resultCode == ConnectionResult.SUCCESS
     }
+
     private fun loadInitialData() {
         viewModelScope.launch {
             val languageDetailsResult = controlRepository.getActiveLanguageDetails()
@@ -145,10 +168,10 @@ class SettingsViewModel @Inject constructor(
                 availableVoicesResult.onSuccess { voices ->
                     _uiState.update {
                         it.copy(
-                                appVersion = BuildConfig.VERSION_NAME,
-                                appVersionCode = BuildConfig.VERSION_CODE,
-                                availableVoices = voices,
-                                availableExams = details.exams
+                            appVersion = BuildConfig.VERSION_NAME,
+                            appVersionCode = BuildConfig.VERSION_CODE,
+                            availableVoices = voices,
+                            availableExams = details.exams
                         )
                     }
                 }
@@ -163,18 +186,33 @@ class SettingsViewModel @Inject constructor(
             // Pre-populate the pending state with the currently active selection
             val updatedUiState = when (type) {
                 SheetContent.ExamSelection -> {
-                    val currentExam = currentState.availableExams.find { it.json == currentState.currentExamName }
+                    val currentExam =
+                        currentState.availableExams.find { it.json == currentState.currentExamName }
                     currentState.copy(pendingSelectedExam = currentExam)
                 }
+
                 SheetContent.SpeakerSelection -> {
-                    val currentVoice = currentState.availableVoices.find { it.id == currentState.currentVoiceName }
+                    val currentVoice =
+                        currentState.availableVoices.find { it.id == currentState.currentVoiceName }
                     currentState.copy(pendingSelectedVoice = currentVoice)
                 }
+
                 SheetContent.Hidden -> currentState
             }
             _uiState.value = updatedUiState
             _sheetState.value = type
         }
+    }
+
+    fun onShowBottomSheetClicked() {
+        _uiState.update { it.copy(showBottomSheet = true) }
+    }
+
+    // --- Action to HIDE the sheet ---
+    // This is called when the user dismisses the sheet (e.g., by swiping down).
+    fun onBottomSheetDismissed() {
+        _uiState.update { it.copy(showBottomSheet = false) }
+
     }
 
     // --- MODIFICATION 3: Create functions to handle PENDING selections ---
@@ -196,24 +234,24 @@ class SettingsViewModel @Inject constructor(
             else -> "Hello, I'm ${voice.friendlyName}. Welcome to 'English Exam Words'."
         }
 
-        playTrack(sentence,voice.id)
+        playTrack(sentence, voice.id)
     }
 
-    private fun playTrack(sentence: String,googleVoice:String) {
+    private fun playTrack(sentence: String, googleVoice: String) {
         if (_playbackState.value is PlaybackState.Playing) return
 
         viewModelScope.launch {
 //            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val uniqueSentenceId = generateUniqueSentenceId(sentence,googleVoice)
+            val uniqueSentenceId = generateUniqueSentenceId(sentence, googleVoice)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
             val currentLanguageCode = LanguageConfig.languageCode
 
             val result = vocabRepository.playTextToSpeech(
-                    text = sentence,
-                    uniqueSentenceId = uniqueSentenceId,
-                    voiceName = googleVoice,
-                    languageCode = currentLanguageCode
+                text = sentence,
+                uniqueSentenceId = uniqueSentenceId,
+                voiceName = googleVoice,
+                languageCode = currentLanguageCode
             )
 
             when (result) {
@@ -223,18 +261,20 @@ class SettingsViewModel @Inject constructor(
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, googleVoice)
                     ttsStatsRepository.incWordStats(sentence)
                 }
+
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(sentence)
                 }
+
                 is PlaybackResult.Failure -> {
-                    _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
+                    _playbackState.value =
+                        PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
             }
             _playbackState.value = PlaybackState.Idle
         }
     }
-
 
 
     // --- MODIFICATION 4: Create a SAVE function for the new button ---
@@ -259,19 +299,22 @@ class SettingsViewModel @Inject constructor(
                     }
 
 
-                   // pendingExam?.let { userPreferencesRepository.saveSelectedFileName(it.json) }
+                    // pendingExam?.let { userPreferencesRepository.saveSelectedFileName(it.json) }
                 }
+
                 SheetContent.SpeakerSelection -> {
                     pendingVoice?.let {
                         val voiceName = it.id
                         userPreferencesRepository.saveSelectedVoiceName(voiceName)
-                        ttsStatsRepository.updateUserStatField(currentGoogleVoiceName,voiceName)
+                        ttsStatsRepository.updateUserStatField(currentGoogleVoiceName, voiceName)
 
                         firestoreRepository.fsUpdateUserGoogleVoices(voiceName)
                     }
 
                 }
-                SheetContent.Hidden -> { /* Do nothing */ }
+
+                SheetContent.Hidden -> { /* Do nothing */
+                }
             }
             // After saving, hide the sheet, which will also clear the pending state.
             hideBottomSheet()
@@ -285,11 +328,12 @@ class SettingsViewModel @Inject constructor(
         // Reset the pending states so they are fresh the next time the sheet opens
         _uiState.update {
             it.copy(
-                    pendingSelectedExam = null,
-                    pendingSelectedVoice = null
+                pendingSelectedExam = null,
+                pendingSelectedVoice = null
             )
         }
     }
+
     fun downloadAndSaveVoiceList() {
         viewModelScope.launch {
             _uiEvent.emit(SettingsUiEvent.ShowSnackbar("Fetching voice list..."))
@@ -302,7 +346,8 @@ class SettingsViewModel @Inject constructor(
                 val jsonString = jsonParser.encodeToString(voicesResponse)
 
                 // Save the pretty-printed string to a file
-                val saveResult = googleTtsInfoRepository.saveContentToFile(jsonString, "google_tts_voices.json")
+                val saveResult =
+                    googleTtsInfoRepository.saveContentToFile(jsonString, "google_tts_voices.json")
 
                 saveResult.onSuccess { path ->
                     _uiEvent.emit(SettingsUiEvent.ShowSnackbar(path))
@@ -317,9 +362,11 @@ class SettingsViewModel @Inject constructor(
             }
         }
     }
-    fun firebaseUid() : String {
-       return  firestoreRepository.firebaseUid()?.substring(0,4) ?: "unknown uid"
+
+    fun firebaseUid(): String {
+        return firestoreRepository.firebaseUid()?.substring(0, 4) ?: "unknown uid"
     }
+
     fun onDebugPrintBillingStatus(activity: Activity) {
         billingRepository.logCurrentStatus()
         Timber.i("and now logGmsState")
@@ -339,4 +386,18 @@ class SettingsViewModel @Inject constructor(
         Timber.i("onDebugResetPurchases()")
         billingRepository.debugResetAllPurchases()
     }
+
+    fun buyPremiumButtonPressed(activity: Activity) {
+        Timber.i("purchasePremium()")
+        viewModelScope.launch {
+            billingRepository.launchPurchase(activity)
+        }
+    }
+
+    fun billingPrice() : Double {
+        Timber.i("billingPrice()")
+       //billingRepository.productDetails.value.
+        return 0.0
+    }
+
 }

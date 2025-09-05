@@ -19,8 +19,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 49
-val VERSION_NAME = "1.49"
+val VERSION_CODE = 50
+val VERSION_NAME = "1.50"
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
@@ -117,12 +117,6 @@ android {
             keyPassword = secretsProperties.getProperty("MYAPP_UPLOAD_KEY_PASSWORD")
         }
 
-        create("releaseNew") {
-            storeFile = file(secretsProperties.getProperty("UPLOAD_STORE_FILE"))
-            storePassword = secretsProperties.getProperty("UPLOAD_STORE_PASSWORD")
-            keyAlias = secretsProperties.getProperty("UPLOAD_KEY_ALIAS")
-            keyPassword = secretsProperties.getProperty("UPLOAD_KEY_PASSWORD")
-        }
     }
 
     buildTypes {
@@ -140,7 +134,7 @@ android {
                 "proguard-rules.pro"
             )
             buildConfigField("Boolean", "IS_DEBUG", "false")
-            buildConfigField("Boolean", "TEST_RATE_LIMITING", "true")
+            buildConfigField("Boolean", "TEST_RATE_LIMITING", "false")
             signingConfig = signingConfigs.getByName("release")
         }
     }

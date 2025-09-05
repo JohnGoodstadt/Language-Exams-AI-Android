@@ -11,7 +11,7 @@ import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.managers.RateLimiterManager
+//import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
@@ -45,6 +45,8 @@ class ConjugationsViewModel @Inject constructor(
     private val ttsStatsRepository: TTSStatsRepository,
     private val appScope: CoroutineScope,
     private val billingRepository: BillingRepository,
+    private val rateLimiter: SimpleRateLimiter,
+
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
@@ -58,7 +60,7 @@ class ConjugationsViewModel @Inject constructor(
     val playbackState = _playbackState.asStateFlow()
 
     //NOTE: rate Limiting
-    private val rateLimiter = RateLimiterManager.getInstance()
+//    private val rateLimiter = RateLimiterManager.getInstance()
     private val _showRateLimitSheet = MutableStateFlow(false)
     val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
 
