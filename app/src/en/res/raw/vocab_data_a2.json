@@ -2397,7 +2397,7 @@
 			],
 			"sortOrder": 1,
 			"tabnumber": 2,
-			"title": "Trave (A2)"
+			"title": "Travel"
 		},
 		{
 			"sortOrder": 1,
@@ -3435,7 +3435,7 @@
 		},
 		{
 			"tabnumber": 2,
-			"title": "Technology (A2)",
+			"title": "Technology",
 			"sortOrder": 1,
 			"words" : [
 				{
@@ -4295,7 +4295,7 @@
 				}],
 			"sortOrder": 1,
 			"tabnumber": 3,
-			"title": "Past Tense (A2)"
+			"title": "Past Tense"
 		},
 		{
 			"words":

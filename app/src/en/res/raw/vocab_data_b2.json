@@ -410,7 +410,7 @@
 			"sortOrder" : 1
 		},
 		{
-			"title" : "Travel (B2)",
+			"title" : "Travel",
 			"words" : [
 				{
 					"word" : "accommodation",
@@ -883,7 +883,7 @@
 		{
 			"tabnumber" : 3,
 			"sortOrder" : 1,
-			"title" : "Technology (B2)",
+			"title" : "Technology",
 			"words" : [
 				{
 					"id" : 0,
@@ -2133,7 +2133,7 @@
 				}
 			],
 			"tabnumber" : 3,
-			"title" : "Adverbs (B2)",
+			"title" : "Adverbs",
 			"sortOrder" : 1
 		}
 	]

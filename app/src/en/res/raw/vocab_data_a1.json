@@ -1037,7 +1037,7 @@
 					]
 				}
 			],
-			"title": "Dates (A1)"
+			"title": "Dates"
 		},
 		{
 			"tabnumber": 2,
@@ -2786,7 +2786,7 @@
 			"tabnumber": 1
 		},
 		{
-			"title": "Colors (A1)",
+			"title": "Colors",
 			"tabnumber": 3,
 			"sortOrder": 10,
 			"words": [
