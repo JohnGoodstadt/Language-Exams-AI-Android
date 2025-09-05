@@ -38,7 +38,8 @@ import kotlin.coroutines.resumeWithException
 
 @Singleton
 class BillingRepository @Inject constructor(
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    private val firestoreRepository: FirestoreRepository,
 ) {
 
     private val PRODUCT_ID = "unlock_premium_features_v1"
@@ -64,8 +65,10 @@ class BillingRepository @Inject constructor(
             CoroutineScope(Dispatchers.IO).launch {
                 purchases.forEach { handlePurchase(it) }
             }
+            firestoreRepository.fbUpdateUsePurchasedProperty()
         } else {
             _billingError.value = billingResult.debugMessage
+            firestoreRepository.fbUpdateUserProperty("premiumBuyFailError", billingResult.debugMessage)
         }
     }
 

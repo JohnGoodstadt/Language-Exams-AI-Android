@@ -1,6 +1,5 @@
 package com.goodstadt.john.language.exams.data
 
-import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
@@ -14,7 +13,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class FirestoreRepository  @Inject constructor(
+class FirestoreRepository @Inject constructor(
     private val firestore: FirebaseFirestore
 ) {
 
@@ -39,6 +38,9 @@ class FirestoreRepository  @Inject constructor(
         const val regionCode = "regionCode"
         const val version = "version"
         const val lastActivityDate = "lastActivityDate"
+        const val premiumUser = "premiumUser"
+        const val premiumDate = "premiumDate"
+
         const val activityDays = "activityDays"
         const val updatedDate = "updatedDate"
         const val uploadDate = "uploadDate"
@@ -148,26 +150,31 @@ class FirestoreRepository  @Inject constructor(
     fun isUserFullyLoggedIn(): Boolean {
         return isUserLoggedIn() && isUserAnonymous() == false
     }
+
     fun isUserLoggedIn(): Boolean {
         val auth = FirebaseAuth.getInstance()
         return auth.currentUser != null
     }
+
     fun isUserNotLoggedIn(): Boolean {
         return !isUserLoggedIn()
     }
+
     fun isUserAnonymous(): Boolean {
         return FirebaseAuth.getInstance().currentUser?.isAnonymous ?: true
     }
+
     fun firebaseUid(): String? {
         return FirebaseAuth.getInstance().currentUser?.uid
     }
+
     fun firebaseSignOutOfGoogle() {
         FirebaseAuth.getInstance().signOut()
     }
 
 //endregion
 
-    fun fsUpdateUserGoogleVoices(voice:String) {
+    fun fsUpdateUserGoogleVoices(voice: String) {
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 
         val date = Date()
@@ -184,6 +191,7 @@ class FirestoreRepository  @Inject constructor(
                 Timber.e("Error updating field ${fb.lastActivityDate}: $e")
             }
     }
+
     fun fsUpdateUserStatsCounts(statToUpload: kotlin.collections.Map<String, Any>) {
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 
@@ -201,6 +209,62 @@ class FirestoreRepository  @Inject constructor(
             Timber.e(e.localizedMessage, e)
         }
     }
+
+    fun fsIncUserProperty(property: String, value: Int = 1) {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+       // val formattedDate = SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date())
+
+        val itemRef = FirebaseFirestore.getInstance()
+            .collection(fb.users)
+            .document(currentUser.uid)
+
+        try {
+            itemRef.update(property, FieldValue.increment(1))
+        } catch (e: Exception) {
+            Timber.e(e.localizedMessage)
+        }
+    }
+
+    fun fbUpdateUserProperty(property: String, value: String) {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+        val date = Date()
+
+        val itemRef = FirebaseFirestore.getInstance()
+            .collection(fb.users)
+            .document(currentUser.uid)
+        val updates = mapOf(
+            fb.lastActivityDate to date,
+            property to value
+        )
+
+        itemRef.update(updates)
+            .addOnFailureListener { e ->
+                println("Error updating field ${property}: $e")
+            }
+    }
+
+    fun fbUpdateUsePurchasedProperty() {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+        val date = Date()
+
+        val itemRef = FirebaseFirestore.getInstance()
+            .collection(fb.users)
+            .document(currentUser.uid)
+        val updates = mapOf(
+            fb.lastActivityDate to date,
+            fb.premiumUser to true,
+            fb.premiumDate to date,
+        )
+
+        itemRef.update(updates)
+            .addOnFailureListener { e ->
+                println("Error updating fbUpdateUsePurchasedProperty(): $e")
+            }
+    }
+
     private fun transformToIncrements(originalMap: Map<String, Any>): Map<String, Any> {
         val transformedMap = mutableMapOf<String, Any>()
 
@@ -218,7 +282,8 @@ class FirestoreRepository  @Inject constructor(
     fun fsUpdateGlobalStats(stats: Map<String, Int>) {
         FirebaseAuth.getInstance().currentUser ?: return
 
-        val formattedDate = SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date()) // e.g., 2024-04
+        val formattedDate =
+            SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date()) // e.g., 2024-04
 
         val firestoreUpdateFields = mutableMapOf<String, FieldValue>()
         for ((key, value) in stats) {
@@ -234,8 +299,8 @@ class FirestoreRepository  @Inject constructor(
             }
 
         // 2. Individual user stats area for month (TODO: Implement this part if needed)
-    //TODO: implement
-    // fbUpdateUserGlobalStats(stats)
+        //TODO: implement
+        // fbUpdateUserGlobalStats(stats)
     }
 
     fun fsUpdateWordHistoryIncCounts(
@@ -260,12 +325,15 @@ class FirestoreRepository  @Inject constructor(
                 is Int -> {
                     updates[key] = FieldValue.increment(rawValue.toLong())
                 }
+
                 is Long -> {
                     updates[key] = FieldValue.increment(rawValue)
                 }
+
                 is Double -> {
                     updates[key] = FieldValue.increment(rawValue)
                 }
+
                 is Float -> {
                     updates[key] = FieldValue.increment(rawValue.toDouble())
                 }
@@ -284,11 +352,12 @@ class FirestoreRepository  @Inject constructor(
                     // No doc yet — create it with initial values
                     fsCreateUserWordStatsDoc(currentExamName, stats)
                 } else {
-                    Timber.e( "Error updating inc fields for '$currentExamName': ${e.message}", e)
+                    Timber.e("Error updating inc fields for '$currentExamName': ${e.message}", e)
                 }
             }
 
     }
+
     /**
      * Creates or overwrites a document containing word statistics for a specific user and exam.
      * It takes a map of stats, sanitizes the keys to be Firestore-safe, and converts all
@@ -304,7 +373,7 @@ class FirestoreRepository  @Inject constructor(
     ): Result<Unit> {
 
         // 1. Get the current user's ID. Fail early if not logged in.
-        val currentUser = FirebaseAuth.getInstance().currentUser ?:  return Result.success(Unit)
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return Result.success(Unit)
 
         // 2. Guard clause: If there's nothing to write, succeed immediately.
         if (stats.isEmpty()) {
@@ -336,7 +405,7 @@ class FirestoreRepository  @Inject constructor(
             Result.success(Unit)
 
         } catch (e: Exception) {
-            Timber.e( "Failed to create word stats for '$currentExamName'", e)
+            Timber.e("Failed to create word stats for '$currentExamName'", e)
             Result.failure(e)
         }
     }

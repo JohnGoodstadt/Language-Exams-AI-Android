@@ -221,7 +221,7 @@ fun SettingsScreen(
         }
     }
 
-    if (uiState.showBottomSheet) {
+    if (uiState.showIAPBottomSheet) {
         ModalBottomSheet(
             // 5. This callback is triggered when the user dismisses the sheet.
             onDismissRequest = { viewModel.onBottomSheetDismissed() },
@@ -448,7 +448,7 @@ fun SettingsScreen(
                     value = viewModel.firebaseUid()
                 )
             }
-            item { SectionHeader("Debug") }
+//            item { SectionHeader("Debug") }
 //            item {
 //                SettingsInfoItem(
 //                    icon = Icons.Default.Info,

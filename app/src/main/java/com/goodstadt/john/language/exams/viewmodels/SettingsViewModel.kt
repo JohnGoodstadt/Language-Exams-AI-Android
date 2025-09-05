@@ -2,7 +2,6 @@ package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Activity
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
@@ -52,7 +51,7 @@ data class SettingsUiState(
     // Add nullable fields to hold the user's selection inside the bottom sheet
     val pendingSelectedExam: ExamDetails? = null,
     val pendingSelectedVoice: VoiceOption? = null,
-    val showBottomSheet: Boolean = false, //IAP Info sheet
+    val showIAPBottomSheet: Boolean = false, //IAP Info sheet
 
     val hourlyLimit: Int = 0,
     val dailyLimit: Int = 0,
@@ -205,14 +204,15 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun onShowBottomSheetClicked() {
-        _uiState.update { it.copy(showBottomSheet = true) }
+        _uiState.update { it.copy(showIAPBottomSheet = true) }
+        firestoreRepository.fsIncUserProperty("premiumShownInfoSheet")
     }
 
     // --- Action to HIDE the sheet ---
     // This is called when the user dismisses the sheet (e.g., by swiping down).
     fun onBottomSheetDismissed() {
-        _uiState.update { it.copy(showBottomSheet = false) }
-
+        _uiState.update { it.copy(showIAPBottomSheet = false) }
+        firestoreRepository.fsIncUserProperty("premiumShownInfoSheetNotYet")
     }
 
     // --- MODIFICATION 3: Create functions to handle PENDING selections ---
@@ -375,12 +375,12 @@ class SettingsViewModel @Inject constructor(
         billingRepository.initializeGoogleServices(activity)
     }
 
-    fun purchasePremium(activity: Activity) {
-        Timber.i("purchasePremium()")
-        viewModelScope.launch {
-            billingRepository.launchPurchase(activity)
-        }
-    }
+//    fun purchasePremium(activity: Activity) {
+//        Timber.i("purchasePremium()")
+//        viewModelScope.launch {
+//            billingRepository.launchPurchase(activity)
+//        }
+//    }
 
     fun onDebugResetPurchases() {
         Timber.i("onDebugResetPurchases()")
@@ -389,15 +389,18 @@ class SettingsViewModel @Inject constructor(
 
     fun buyPremiumButtonPressed(activity: Activity) {
         Timber.i("purchasePremium()")
+
         viewModelScope.launch {
             billingRepository.launchPurchase(activity)
         }
+
+        firestoreRepository.fsIncUserProperty("premiumShownBuyScreen")
     }
 
-    fun billingPrice() : Double {
-        Timber.i("billingPrice()")
-       //billingRepository.productDetails.value.
-        return 0.0
-    }
+//    fun billingPrice() : Double {
+//        Timber.i("billingPrice()")
+//       //billingRepository.productDetails.value.
+//        return 0.0
+//    }
 
 }
