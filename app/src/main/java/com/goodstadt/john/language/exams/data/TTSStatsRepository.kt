@@ -845,7 +845,7 @@ class TTSStatsRepository @Inject constructor(
         }
 
         progressStats = ProgressStats(size = total, completed = completed)
-        Timber.d("recalcProgress $progressStats")
+       // Timber.d("recalcProgress $progressStats")
     }
     /**
      * Increment the *total* count by 1 (e.g., when user clicks-to-play).
@@ -855,7 +855,7 @@ class TTSStatsRepository @Inject constructor(
         synchronized(this) {
             val s = progressStats
             progressStats = s.copy(size = s.size + by)
-            Timber.d("incProgressStats $progressStats skill $skillLevel")
+           // Timber.d("incProgressStats $progressStats skill $skillLevel")
 
            // val d = statProgressCompleted.replace("_", skillLevel)
 

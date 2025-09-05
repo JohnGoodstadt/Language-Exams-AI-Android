@@ -82,6 +82,7 @@ class VocabRepository @Inject constructor(
             vocabCache[fileName] = vocabFile
             Result.success(vocabFile)
         } catch (e: Exception) {
+            Timber.e(e.localizedMessage)
             e.printStackTrace()
             Result.failure(e)
         }

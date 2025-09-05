@@ -37,6 +37,7 @@ import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import removeContentInBracketsAndTrim
+import timber.log.Timber
 
 /**
  * A self-contained screen that displays vocabulary for a specific tab.
@@ -58,12 +59,15 @@ fun CategoryTabScreen(
     val snackbarHostState = remember { SnackbarHostState() }
 
     LaunchedEffect(key1 = tabIdentifier, key2 = categoryTitle, key3 = selectedVoiceName) {
+        Timber.e("CategoryTabScreen.LaunchEffect $tabIdentifier $categoryTitle $selectedVoiceName")
         if (selectedVoiceName.isNotEmpty()) {
             if (tabIdentifier != null) {
                 viewModel.loadContentForTab(tabIdentifier, selectedVoiceName)
             } else if (categoryTitle != null) {
                 viewModel.loadContentForCategory(categoryTitle, selectedVoiceName)
             }
+        }else{
+            Timber.e("CategoryTabScreen.LaunchEffect selectedVoiceName IS NULL !")
         }
     }
 // 2) When data is ready, kick off the background recalculation (no UI updates)

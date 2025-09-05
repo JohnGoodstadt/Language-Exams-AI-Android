@@ -36,6 +36,7 @@ import javax.inject.Inject
 data class CategoryTabUiState(
     val isLoading: Boolean = true,
     val categories: List<Category> = emptyList(),
+    val loadedForIdentifier: String? = null, //fix guard bug - track which json is loaded
     val recalledWordKeys: Set<String> = emptySet(),
     val playbackState: PlaybackState = PlaybackState.Idle,
     val cachedAudioWordKeys: Set<String> = emptySet(),
@@ -130,14 +131,29 @@ class CategoryTabViewModel @Inject constructor(
     }
 
     fun loadContentForTab(tabIdentifier: String, voiceName: String) {
-        if (!_uiState.value.isLoading && _uiState.value.categories.isNotEmpty()) return
+
+        //if (!_uiState.value.isLoading && _uiState.value.categories.isNotEmpty()) return
+       // if (_uiState.value.loadedForIdentifier == tabIdentifier && !_uiState.value.isLoading) {
+//        if (uiState.value.categories.isNotEmpty()) {
+//            Timber.e("BUG NOT EMPTY")
+//            return
+//        }
 
         _uiState.update { it.copy(isLoading = true) }
+
+
 
         viewModelScope.launch {
             val categories = vocabRepository.getCategoriesForTab(tabIdentifier)
 
             if (categories.isNotEmpty()) {
+                //Fix A — Always hand Compose fresh, immutable instances
+                // Deep copy to ensure new identities (and avoid future in-place mutation):
+                // Assuming Category & VocabWord are data classes.
+                val freshCategories: List<Category> = categories.map { c ->
+                    c.copy(words = c.words.toList()) // words List cloned too
+                }.toList() // clone outer list
+
                 // --- THIS IS THE NEW LOGIC ---
                 // After getting the categories, ask the repository to check the disk cache for them.
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
@@ -147,9 +163,9 @@ class CategoryTabViewModel @Inject constructor(
                 _uiState.update {
                     it.copy(
                         isLoading = false,
-                        categories = categories,
+                        categories = freshCategories, //deep copy
                         // Update the newly named state with the result of the disk check.
-                        cachedAudioWordKeys = cachedKeys,
+                        cachedAudioWordKeys = cachedKeys.toSet(),       //New set
                         cachedAudioCount = cachedKeys.size,
                         totalWordsInTab = totalWords
                     )
@@ -354,7 +370,7 @@ class CategoryTabViewModel @Inject constructor(
 
 
         ttsStatsRepository.recalcProgress(categories, voiceName)
-        Timber.d("progressStats: ${ttsStatsRepository.progressStats}")
+//        Timber.d("progressStats: ${ttsStatsRepository.progressStats}")
         // Optionally: trigger your Firebase repo here to upload using statsRepo.progressStats
         // firebaseRepo.uploadA1Progress(statsRepo.progressStats)
     }
