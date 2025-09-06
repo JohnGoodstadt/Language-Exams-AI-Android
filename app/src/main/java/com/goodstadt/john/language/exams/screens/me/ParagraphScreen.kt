@@ -41,6 +41,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.CreditSystemConfig.FREE_TIER_CREDITS
 
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replace with your actual theme
@@ -246,7 +247,9 @@ fun ParagraphScreen(
                 Text("Next refill at:${viewModel.getFormattedCreditRepositoryDate()}")
             }
         } else {
-            Text("Credits left: ${uiState.userCredits.current}")
+            if (DEBUG){
+                Text("Credits left: ${uiState.userCredits.current}")
+            }
         }
 
         Spacer(modifier = Modifier.weight(1f)) //push to bottom

@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -58,16 +59,32 @@ class ProgressMapViewModel @Inject constructor(
                     )
                 }
 
-                val totalSize = progressData.sumOf { it.totalWords }
-                val totalCompleted = progressData.sumOf { it.completedWords }
 
-                _uiState.update {
-                    it.copy(
-                        isLoading = false,
-                        progressItems = progressData,
-                        totalWords = totalSize,
-                        completedWords = totalCompleted
-                    )
+
+                if (DEBUG){//for screen shot marketing
+                    val totalSize = 150
+                    val totalCompleted = 205
+
+                    _uiState.update {
+                        it.copy(
+                            isLoading = false,
+                            progressItems = progressData,
+                            totalWords = totalSize,
+                            completedWords = totalCompleted
+                        )
+                    }
+                }else{
+                    val totalSize = progressData.sumOf { it.totalWords }
+                    val totalCompleted = progressData.sumOf { it.completedWords }
+
+                    _uiState.update {
+                        it.copy(
+                            isLoading = false,
+                            progressItems = progressData,
+                            totalWords = totalSize,
+                            completedWords = totalCompleted
+                        )
+                    }
                 }
             }
             vocabDataResult.onFailure {

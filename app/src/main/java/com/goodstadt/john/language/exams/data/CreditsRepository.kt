@@ -26,7 +26,7 @@ import javax.inject.Singleton
 object CreditSystemConfig {
     const val FREE_TIER_CREDITS = 20
     const val BOUGHT_TIER_CREDITS = 4 //10
-    const val WAIT_PERIOD_MINUTES = 1L
+    const val WAIT_PERIOD_MINUTES = 20L
 }
 
 data class UserCredits(
@@ -179,9 +179,6 @@ class CreditsRepository @Inject constructor(
             // On success, manually update our in-memory state
             Timber.v("decrementCredit current credits A: ${newCredit}")
             _userCredits.update { it?.copy(current = newCredit) }
-            Timber.v("decrementCredit current credits B: ${newCredit}")
-
-           // val current = (_userCredits.value?.current ?: 0)
 
             if (newCredit == 0) {
                 startWaitPeriod()

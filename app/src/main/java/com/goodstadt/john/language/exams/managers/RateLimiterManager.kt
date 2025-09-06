@@ -11,7 +11,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Singleton
 import dagger.hilt.components.SingletonComponent
-import java.lang.Boolean.FALSE
 
 
 @Module

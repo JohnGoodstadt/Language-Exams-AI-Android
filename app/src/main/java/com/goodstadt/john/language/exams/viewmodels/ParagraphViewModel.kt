@@ -182,14 +182,6 @@ class ParagraphViewModel @Inject constructor(
         viewModelScope.launch {
             val currentState = _uiState.value
 
-            if (isPremiumUser.value) {
-                Timber.i("generateNewParagraph() User is a paid user !")
-            }else{
-                Timber.i("generateNewParagraph() User is a FREE user")
-            }
-
-
-
             val providerToUse = providerManager.getNextProviderAndIncrement()
             Timber.w("$providerToUse")
 
@@ -258,7 +250,7 @@ class ParagraphViewModel @Inject constructor(
                         val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
                         val totalCostUSD = result.totalCostUSD
 
-                        if (BuildConfig.DEBUG) {
+                        if (DEBUG) {
                             Timber.d(llmResponse.content)
                             Timber.v("Total tokens: ${result.totalTokens}")
                             Timber.v("Estimated characters (for TTS): ${result.estimatedCharacters}")
@@ -268,7 +260,7 @@ class ParagraphViewModel @Inject constructor(
                             Timber.v("Total cost: $${"%.6f".format(totalCostUSD)}")
                         }
 
-                        //TODO: update gpt call costs
+
                         val totalTokensUsed = llmResponse.totalTokensUsed
                         ttsStatsRepository.uncUserOpenAITotalTokenCount(totalTokensUsed)
                         ttsStatsRepository.incUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
@@ -284,8 +276,7 @@ class ParagraphViewModel @Inject constructor(
 
                         Timber.v("current credits B: ${_uiState.value.userCredits.current}")
                         if (_uiState.value.userCredits.current <= 0){
-                            val FRED = secondsRemaining()
-                            Timber.v("seconds to go: $FRED")
+                            Timber.v("seconds to go: ${secondsRemaining()}")
 
                         }
 
@@ -338,7 +329,7 @@ class ParagraphViewModel @Inject constructor(
                                         outputPricePerMillion = uiState.value.currentGeminiModel?.outputPrice ?: 0.0F
                                     )
 
-                                    if (BuildConfig.DEBUG) {
+                                    if (DEBUG) {
                                         Timber.v("Total tokens: ${cost.totalTokens}")
                                         Timber.v("Input tokens: ${cost.inputTokens}")
                                         Timber.v("Output tokens: ${cost.outputTokens}")
@@ -349,8 +340,7 @@ class ParagraphViewModel @Inject constructor(
 
                                     Timber.v("current credits A: ${_uiState.value.userCredits.current}")
                                     if (_uiState.value.userCredits.current <= 0){
-                                        val FRED = secondsRemaining()
-                                        Timber.v("seconds to go: $FRED")
+                                        Timber.v("seconds to go: ${secondsRemaining()}")
 
                                     }
 

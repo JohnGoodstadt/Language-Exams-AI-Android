@@ -14,7 +14,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
@@ -46,6 +48,13 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
 //            colors = MaterialTheme {  }
+        )
+
+        Text(
+            text = "All your exam words.",
+            fontSize = 12.sp,
+            textAlign = TextAlign.Start,
+            modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
         )
 
         // List of results

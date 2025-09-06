@@ -123,7 +123,7 @@ android {
         debug {
             isMinifyEnabled = false
             buildConfigField("Boolean", "IS_DEBUG", "true")
-            buildConfigField("Boolean", "TEST_RATE_LIMITING", "true")
+            buildConfigField("Boolean", "TEST_RATE_LIMITING", "false")
             signingConfig = signingConfigs.getByName("debug")
 
         }
@@ -183,6 +183,7 @@ dependencies {
 
     implementation(libs.hilt.android)
     implementation(libs.androidx.lifecycle.runtime.compose.android)
+    implementation(libs.androidx.foundation.android)
 //    implementation(libs.billing.ktx)
 
     ksp(libs.hilt.compiler)

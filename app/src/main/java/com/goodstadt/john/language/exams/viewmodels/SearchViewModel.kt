@@ -94,17 +94,24 @@ class SearchViewModel @Inject constructor(
             val fileName = userPreferencesRepository.selectedFileNameFlow.first()
             vocabRepository.getVocabData(fileName).onSuccess { vocabFile ->
                 // Flatten the entire structure into a single list of words
-                allWords = vocabFile.categories.flatMap { it.words }
+                allWords = vocabFile.categories.flatMap { it.words } .sortedBy { it.word.lowercase() }
+
+                _searchResults.value = allWords.mapNotNull { word ->
+                    word.sentences.firstOrNull()?.let { sentence ->
+                        SearchResult(word, sentence.sentence)
+                    }
+                }
             }
         }
     }
-
-    private fun observeSearchQuery() {
+    private fun observeSearchQueryObsolete() {
         viewModelScope.launch {
             searchQuery
                 .debounce(300L) // Wait for 300ms of no new input
                 .distinctUntilChanged() // Only search if the text has actually changed
                 .map { query ->
+
+
                     if (query.length < 2) {
                         emptyList() // Return empty list if query is too short
                     } else {
@@ -116,6 +123,38 @@ class SearchViewModel @Inject constructor(
                             word.sentences.firstOrNull()?.let { sentence ->
                                 SearchResult(word, sentence.sentence)
                             }
+                        }
+                    }
+                }
+                .collect { results ->
+                    _searchResults.value = results
+                }
+        }
+    }
+    private fun observeSearchQuery() {
+        viewModelScope.launch {
+            searchQuery
+                .debounce(300L)
+                .distinctUntilChanged()
+                .map { query ->
+                    // --- THIS IS THE MAIN LOGIC FIX ---
+                    if (query.isBlank()) { // Use isBlank() to handle empty strings and whitespace
+                        // If the query is empty, return the full list.
+                        allWords
+                    } else {
+                        // If the query has text, filter the master list.
+                        allWords.filter {
+                            it.word.contains(query, ignoreCase = true) ||
+                                    it.translation.contains(query, ignoreCase = true) // Bonus: search translation too
+                        }
+                    }
+                }
+                .map { words ->
+                    // This second map converts the filtered VocabWord list to the SearchResult list.
+                    // This ensures the logic isn't duplicated.
+                    words.mapNotNull { word ->
+                        word.sentences.firstOrNull()?.let { sentence ->
+                            SearchResult(word, sentence.sentence)
                         }
                     }
                 }
