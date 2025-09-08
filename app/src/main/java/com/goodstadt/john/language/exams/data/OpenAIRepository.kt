@@ -26,6 +26,7 @@ import io.ktor.serialization.kotlinx.json.*
 import io.ktor.client.request.*
 // The specific JSON serializer
 import kotlinx.serialization.json.Json
+import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -134,7 +135,7 @@ class OpenAIRepository @Inject constructor() {
             // b) Set the request body. Ktor will automatically serialize it to JSON.
             setBody(requestBody)
         }.body()
-//        Timber.e("$response")
+        Timber.w("$response")
 
         // Extract the content and the token count
         val content = response.choices.firstOrNull()?.message?.content ?: ""

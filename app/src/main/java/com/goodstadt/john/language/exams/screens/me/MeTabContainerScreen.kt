@@ -124,9 +124,6 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
             // All the screen destinations remain the same
             composable(MeScreen.Settings.route) { SettingsScreen() }
             composable(MeScreen.Search.route) { SearchScreen() }
-            //composable(MeScreen.Quiz.route) { MeTabPlaceholderScreen("Quiz") }
-
-            composable(MeScreen.Quiz.route) { QuizScreen() }
 
             composable(MeScreen.Progress.route) {
                 ProgressMapScreen(
@@ -140,10 +137,11 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
                     }
                 )
             }
-
+            composable(MeScreen.Paragraph.route) { ParagraphScreen() }
+            composable(MeScreen.Quiz.route) { QuizScreen() }
             composable(MeScreen.Conjugations.route) { ConjugationsScreen() }
             composable(MeScreen.Prepositions.route) { PrepositionsScreen() }
-           composable(MeScreen.Paragraph.route) { ParagraphScreen() }
+
 //            composable(MeScreen.Paragraph.route) { GeminiExampleScreen() }
 //            composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
         }

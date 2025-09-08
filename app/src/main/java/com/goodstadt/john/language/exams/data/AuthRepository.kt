@@ -156,30 +156,28 @@ class AuthRepository @Inject constructor(
                 val newUser = auth.signInAnonymously().await().user
                     ?: throw IllegalStateException("Firebase returned a null user after anonymous sign-in.")
 
-                Timber.d("uid is ${newUser.uid}")
-//                createUserRecord(newUser)
+                Timber.w("uid is ${newUser.uid}")
                 fsCreateUserDoc()
                 Result.success(newUser)
-            } else {
-                Timber.d("uid is ${user.uid}")
+            } else { //we have a UID
+                Timber.w("uid is ${user.uid}")
                 // CASE 2: RETURNING USER - Just update the timestamp
-                if (false && BuildConfig.DEBUG) { //Just for JG 10 July 2025
-                    val exists = fsDoesUserExist()
-                    if (exists == false){
-                        fsCreateUserDoc()
-                    }
-                }else {
-//                    updateLastLoginTimestamp(user.uid)
-                    fsUpdateUserActivityProperty()
-                    fsUpdateUserMainStats(
-                        property1 = fb.languageCode,
-                        value1 =  Locale.getDefault().language,
-                        property2 = fb.regionCode,
-                        value2 = Locale.getDefault().country,
-                        property3 = fb.version,
-                        value3 = BuildConfig.VERSION_NAME
-                    )
-                }
+//                if (false && BuildConfig.DEBUG) { //Just for JG 10 July 2025
+//                    val exists = fsDoesUserExist()
+//                    if (exists == false){
+//                        fsCreateUserDoc()
+//                    }
+//                }else {
+                fsUpdateUserActivityProperty()
+                fsUpdateUserMainStats(
+                    property1 = fb.languageCode,
+                    value1 =  Locale.getDefault().language,
+                    property2 = fb.regionCode,
+                    value2 = Locale.getDefault().country,
+                    property3 = fb.version,
+                    value3 = BuildConfig.VERSION_NAME
+                )
+
 
                 Result.success(user)
             }
@@ -188,45 +186,7 @@ class AuthRepository @Inject constructor(
             Result.failure(e)
         }
     }
-    /**
-     * Creates the initial user document in Firestore.
-     * Called only once when a new anonymous user is created.
-     */
-    private suspend fun createUserRecordObsolete(user: FirebaseUser) {
-        val userRecord = mapOf(
-            "uid" to user.uid,
-            "isAnonymous" to true,
-            "createdAt" to FieldValue.serverTimestamp(), // Use server time for consistency
-            "lastLoginAt" to FieldValue.serverTimestamp()
-        )
-        firestore.collection("users").document(user.uid).set(userRecord).await()
-    }
-    /**
-     * Updates the 'lastLoginAt' field for an existing user.
-     * Called every time a returning user opens the app.
-     */
-    private suspend fun updateLastLoginTimestampObsolete(uid: String) {
-        val timestampUpdate = mapOf(
-            "lastLoginAt" to FieldValue.serverTimestamp() // Best practice: use server time
-        )
-        firestore.collection("users").document(uid).update(timestampUpdate).await()
-    }
-    suspend fun fsDoesUserExist(): Boolean {
-        val uid = FirebaseAuth.getInstance().currentUser?.uid ?: return false
 
-        return try {
-            val snapshot = FirebaseFirestore.getInstance()
-                .collection(fb.users) // Replace with your actual collection name
-                .document(uid)
-                .get()
-                .await()
-            snapshot.exists()
-        } catch (e: Exception) {
-            // Handle the exception, e.g., log it
-            Timber.e(e)
-            false
-        }
-    }
     private fun fsUpdateUserActivityProperty() {
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 

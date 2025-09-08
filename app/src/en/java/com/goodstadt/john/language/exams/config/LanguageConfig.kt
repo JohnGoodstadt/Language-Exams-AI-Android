@@ -11,11 +11,11 @@ object LanguageConfig {
         "Settings",
         "Search",
         "Progress",
+        "Paragraph",
         "Quiz",
         "Conjugations",
-        "Prepositions",
-        "Paragraph"//,
-//        "Conversation"
+        "Prepositions"
+
     )
     val conjugationsFileName: String? = "conjugations_en"
     val prepositionsFileName: String? = "prepositions_en"

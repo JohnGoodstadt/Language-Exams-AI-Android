@@ -24,9 +24,9 @@ import javax.inject.Singleton
 
 
 object CreditSystemConfig {
-    const val FREE_TIER_CREDITS = 20
+    const val FREE_TIER_CREDITS = 4//20
     const val BOUGHT_TIER_CREDITS = 4 //10
-    const val WAIT_PERIOD_MINUTES = 20L
+    const val WAIT_PERIOD_MINUTES = 3L //20
 }
 
 data class UserCredits(

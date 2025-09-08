@@ -376,7 +376,7 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.WorkspacePremium,
                     title = "Some restrictions are in place",
-                    currentValue = "AI has charges so we to limit some tasks. Tap to unlock all exams.",
+                    currentValue = "AI has charges so we limit some tasks. Tap to unlock all exams.",
                     onClick = {
                         viewModel.onShowBottomSheetClicked()
                     }
@@ -384,25 +384,7 @@ fun SettingsScreen(
             }
 
         }
-//        else {
-//            productDetails?.let { details ->
-//                details.oneTimePurchaseOfferDetails?.let { offerDetails ->
-//                    item {
-//                        SettingsActionItem(
-//                            icon = Icons.Default.WorkspacePremium, // Use a premium icon
-//                            title = "Tap to become a Premium user",
-//                            currentValue = offerDetails.formattedPrice, // Display the price
-//
-//                            onClick = {
-//                                if (context is androidx.activity.ComponentActivity) {
-//                                    viewModel.purchasePremium(context)
-//                                }
-//                            }
-//                        )
-//                    }
-//                }
-//            }
-//        }
+
         item { Divider(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)) }
         item { SectionHeader("About") }
         item {
@@ -419,13 +401,13 @@ fun SettingsScreen(
 //                value = "1.45"
 //            )
 //        }
-        item {
-            SettingsInfoItem(
-                icon = Icons.Default.Info,
-                title = "Version Code",
-                value = " ${uiState.appVersionCode}"
-            )
-        }
+//        item {
+//            SettingsInfoItem(
+//                icon = Icons.Default.Info,
+//                title = "Version Code",
+//                value = " ${uiState.appVersionCode}"
+//            )
+//        }
         if (DEBUG) {
             item {
                 SettingsActionItem(

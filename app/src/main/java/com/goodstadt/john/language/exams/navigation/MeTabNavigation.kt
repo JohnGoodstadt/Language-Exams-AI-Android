@@ -8,11 +8,13 @@ sealed class MeScreen(val route: String, val title: String) {
     // Routes for each of the possible menu items
     object Settings : MeScreen("me_settings", "Settings")
     object Search : MeScreen("me_search", "Search")
-    object Quiz : MeScreen("me_quiz", "Quiz")
     object Progress : MeScreen("me_progress", "Progress")
+    object Paragraph : MeScreen("me_paragraph", "Paragraph")
+    object Quiz : MeScreen("me_quiz", "Quiz")
+
     object Conjugations : MeScreen("me_conjugations", "Conjugations")
     object Prepositions : MeScreen("me_prepositions", "Prepositions")
-    object Paragraph : MeScreen("me_paragraph", "Paragraph")
+
 //    object Conversation : MeScreen("me_conversation", "Conversation")
 }
 
@@ -21,11 +23,12 @@ fun getMeScreenRouteFromTitle(title: String): String? {
     return when (title) {
         MeScreen.Settings.title -> MeScreen.Settings.route
         MeScreen.Search.title -> MeScreen.Search.route
-        MeScreen.Quiz.title -> MeScreen.Quiz.route
         MeScreen.Progress.title -> MeScreen.Progress.route
+        MeScreen.Paragraph.title -> MeScreen.Paragraph.route
+        MeScreen.Quiz.title -> MeScreen.Quiz.route
         MeScreen.Conjugations.title -> MeScreen.Conjugations.route
         MeScreen.Prepositions.title -> MeScreen.Prepositions.route
-        MeScreen.Paragraph.title -> MeScreen.Paragraph.route
+
 //        MeScreen.Conversation.title -> MeScreen.Conversation.route
         else -> null
     }

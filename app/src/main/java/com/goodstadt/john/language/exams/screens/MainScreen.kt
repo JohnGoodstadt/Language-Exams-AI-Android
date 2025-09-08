@@ -46,7 +46,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CloudOff
 import androidx.compose.material3.*
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import timber.log.Timber
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -57,6 +61,8 @@ fun MainScreen() {
     val globalUiState by mainViewModel.uiState.collectAsState()
     val authState = globalUiState.authState
     val updateState by mainViewModel.updateState.collectAsState()
+
+
 
     ChangeStatusBarColor(color = Color.Transparent, darkIcons = false)
 

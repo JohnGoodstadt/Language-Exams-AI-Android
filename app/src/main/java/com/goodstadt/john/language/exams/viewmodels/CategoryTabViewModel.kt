@@ -133,6 +133,9 @@ class CategoryTabViewModel @Inject constructor(
             }
         }
     }
+    fun connectToBilling() { //if was offline and comes online this can get called - ON_RESUME
+        billingRepository.connect()
+    }
 
     fun loadContentForTab(tabIdentifier: String, voiceName: String) {
 

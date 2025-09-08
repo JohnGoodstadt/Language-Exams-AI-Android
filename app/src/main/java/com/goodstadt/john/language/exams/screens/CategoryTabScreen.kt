@@ -33,7 +33,6 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.categories
 import com.goodstadt.john.language.exams.ui.theme.accentColor
-import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import removeContentInBracketsAndTrim
@@ -58,8 +57,9 @@ fun CategoryTabScreen(
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
 
+
     LaunchedEffect(key1 = tabIdentifier, key2 = categoryTitle, key3 = selectedVoiceName) {
-        Timber.e("CategoryTabScreen.LaunchEffect $tabIdentifier $categoryTitle $selectedVoiceName")
+        //Timber.e("CategoryTabScreen.LaunchEffect $tabIdentifier $categoryTitle $selectedVoiceName")
         if (selectedVoiceName.isNotEmpty()) {
             if (tabIdentifier != null) {
                 viewModel.loadContentForTab(tabIdentifier, selectedVoiceName)
@@ -67,7 +67,7 @@ fun CategoryTabScreen(
                 viewModel.loadContentForCategory(categoryTitle, selectedVoiceName)
             }
         }else{
-            Timber.e("CategoryTabScreen.LaunchEffect selectedVoiceName IS NULL !")
+            Timber.i("CategoryTabScreen.LaunchEffect selectedVoiceName IS NULL !")
         }
     }
 // 2) When data is ready, kick off the background recalculation (no UI updates)
@@ -83,6 +83,7 @@ fun CategoryTabScreen(
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) {// We refresh the cache state every time the screen enters the RESUMED state. to get accurate stats
                 viewModel.refreshCacheState(selectedVoiceName)
+                viewModel.connectToBilling()
             }else if (event == Lifecycle.Event.ON_PAUSE) {//reliable signal that the user is leaving the screen.
                 viewModel.saveDataOnExit()
             }

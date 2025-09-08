@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
@@ -7,8 +8,10 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.BillingRepository
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
 import com.goodstadt.john.language.exams.data.CreditsRepository
+import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.GeminiRepository
 import com.goodstadt.john.language.exams.data.LLMProvider
 import com.goodstadt.john.language.exams.data.LLMProviderManager
@@ -32,6 +35,7 @@ import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.google.ai.client.generativeai.type.GenerateContentResponse
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
@@ -73,11 +77,19 @@ data class ParagraphUiState(
 
     val areCreditsInitialized: Boolean = false,
     val waitingForCredits: Boolean = false, // To control the bottom sheet
-    val userCredits: UserCredits = UserCredits() // To display current credits
+    val userCredits: UserCredits = UserCredits(), // To display current credits
+
+    val showIAPBottomSheet: Boolean = false, //IAP Info sheet
+    val hourlyLimit: Int = 0,
+    val dailyLimit: Int = 0,
 )
 
 private const val TOKEN_LIMIT = 2000
 
+//sealed interface UiEvent {
+//    data class ShowSnackbar(val message: String, val actionLabel: String? = null) : UiEvent
+//    // You can add other one-off events here later
+//}
 @HiltViewModel
 class ParagraphViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
@@ -91,15 +103,22 @@ class ParagraphViewModel @Inject constructor(
     private val providerManager: LLMProviderManager,
     private val appScope: CoroutineScope,
     private val billingRepository: BillingRepository,
+    private val firestoreRepository: FirestoreRepository,
     private val rateLimiter: SimpleRateLimiter,
+    private val connectivityRepository: ConnectivityRepository,
 
     ) : ViewModel() {
+
+    val isPurchased = billingRepository.isPurchased
+    val productDetails = billingRepository.productDetails
+    val billingError = billingRepository.billingError
 
     private val _isPremiumUser = MutableStateFlow(false)
     val isPremiumUser = _isPremiumUser.asStateFlow()
 
     private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
+
 
     //NOTE: rate Limiting
 //    private val rateLimiter = RateLimiterManager.getInstance()
@@ -122,7 +141,7 @@ class ParagraphViewModel @Inject constructor(
         // --- THIS IS THE UPDATED LOGIC ---
         // Call the new one-time fetch function to populate the repository's state.
         viewModelScope.launch {
-            Timber.d("calling initialFetchAndSetupCredits()",)
+
             val result = creditsRepository.initialFetchAndSetupCredits()
             result.onFailure { error ->
                 _uiState.update { it.copy(
@@ -174,16 +193,21 @@ class ParagraphViewModel @Inject constructor(
             }
         }
 
+        viewModelScope.launch {
+            delay(3000) //  wait until page has loaded
+            if (!connectivityRepository.isCurrentlyOnline()) {
+                _uiState.update { it.copy(error = "No internet connection. Please check your network and try again." ) }
+                return@launch
+            }
+        }
     }
-    //private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
-    //val uiState = _uiState.asStateFlow()
 
     fun generateNewParagraph() {
         viewModelScope.launch {
             val currentState = _uiState.value
 
             val providerToUse = providerManager.getNextProviderAndIncrement()
-            Timber.w("$providerToUse")
+            Timber.w("providerToUse:$providerToUse")
 
             // --- THE NEW, ROBUST CHECK ---
             // 1. Wait until credits are initialized.
@@ -209,6 +233,8 @@ class ParagraphViewModel @Inject constructor(
                 return@launch
             }
 
+            val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+
             _uiState.update { it.copy(isLoading = true, error = null) }
 
             try {
@@ -218,28 +244,31 @@ class ParagraphViewModel @Inject constructor(
                     ?: throw Exception("Could not load vocabulary file.")
 
 
-                val wordsToHighlight = getLanguageSpecificWords(vocabFile)
-                val wordsForPrompt = wordsToHighlight.joinToString(", ")
 
-                // Phase 2: Call the OpenAI API via the repository
-//                val systemMessage = "You are a helpful language teacher..." // Define your system message
-                val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
+                _uiState.update { it.copy(isLoading = true, error = null) }
 
-                val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-                val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
-
-
-                val openAIModel = _uiState.value.currentOpenAIModel
-                val llmEngine =  _uiState.value.currentOpenAIModel?.id ?: DEFAULT_GPT
-                Timber.d("$llmEngine skill:$currentSkillLevel")
-                Timber.d("$systemMessage")
-                Timber.d("$userQuestion")
-
-                _uiState.update { it.copy(isLoading = true, error = null,lastUsedLLMModel = openAIModel?.title ?: "Unknown Open AI Model") }
-
-               // val p = providerManager.getCurrentProviderInfo()
                 when(providerToUse) {
                     LLMProvider.OpenAI -> { /* ... */
+
+                        Timber.e("Using OpenAi")
+
+                        val wordsToHighlight = getLanguageSpecificWords(vocabFile,currentSkillLevel)
+                        val wordsForPrompt = wordsToHighlight.joinToString(", ")
+                        Timber.w("wordsToHighlight:$wordsToHighlight")
+                        // Phase 2: Call the OpenAI API via the repository
+//                val systemMessage = "You are a helpful language teacher..." // Define your system message
+                        val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
+                        val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
+
+
+
+                        Timber.w(systemMessage)
+                        Timber.w(userQuestion)
+
+                        val openAIModel = _uiState.value.currentOpenAIModel
+                        val llmEngine =  _uiState.value.currentOpenAIModel?.id ?: DEFAULT_GPT
+                        Timber.w("$llmEngine skill:$currentSkillLevel")
+                        _uiState.update { it.copy(lastUsedLLMModel = openAIModel?.title ?: "Unknown Open AI Model") }
 
                         val llmResponse = openAIRepository.fetchOpenAIData(
                             llmEngine = llmEngine,
@@ -247,6 +276,7 @@ class ParagraphViewModel @Inject constructor(
                             userQuestion = userQuestion
                         )
 
+                        Timber.w(llmResponse.content)
                         val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
                         val totalCostUSD = result.totalCostUSD
 
@@ -282,7 +312,8 @@ class ParagraphViewModel @Inject constructor(
 
                         // Phase 3: Update the UI with the response
                         // Simple parsing, you can make this more robust
-                        val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
+                        // Sometimes LLM returns words surrounded by **
+                        val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("**", "")
 
                         if (DEBUG){
                             Timber.i("${sentence}")
@@ -303,11 +334,20 @@ class ParagraphViewModel @Inject constructor(
 
                         try {
 
+                            Timber.e("Using Gemini")
                             val selectedModel = _uiState.value.currentGeminiModel ?: return@launch
+
+                            Timber.w("$selectedModel skill:$currentSkillLevel")
 
                             _uiState.update { it.copy(isLoading = true,lastUsedLLMModel = selectedModel.title) }
 
-                            val prompt = promptForLLM(vocabFile,currentSkillLevel)
+                            //val prompt = promptForLLM(vocabFile,currentSkillLevel)
+                            val wordsToHighlight = getLanguageSpecificWords(vocabFile,currentSkillLevel)
+                            val wordsForPrompt = wordsToHighlight.joinToString(", ")
+                            Timber.w("wordsToHighlight:$wordsToHighlight")
+                            val userQuestion =  "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
+                            val systemMessage =  LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
+                            val prompt = "$systemMessage$userQuestion"
 
                             val result = geminiRepository.generateContent(prompt, selectedModel.id)
 
@@ -356,7 +396,7 @@ class ParagraphViewModel @Inject constructor(
                                         totalTokenCount
                                     )
 
-                                    val sentence = generatedText.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "")
+                                    val sentence = generatedText.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("**", "")
 
                                     _uiState.update {
                                         it.copy(
@@ -382,6 +422,7 @@ class ParagraphViewModel @Inject constructor(
 
                             }
                             result.onFailure { e ->
+                                Timber.e("Error onFailure 1")
                                 Timber.e(e.localizedMessage)
                                 _uiState.update {
                                     it.copy(
@@ -396,6 +437,7 @@ class ParagraphViewModel @Inject constructor(
 
                         } catch (e: Exception) {
                             // Update the state with the error message
+                            Timber.e("Error catch 2")
                             _uiState.update {
                                 it.copy(
                                     isLoading = false,
@@ -410,18 +452,22 @@ class ParagraphViewModel @Inject constructor(
 
 
             } catch (e: Exception) {
+                Timber.e("Error catch 3")
                 e.printStackTrace()
 //                _uiState.update { it.copy(isLoading = false, error = e.message) }
+                Timber.e("Error in call to openAI")
+                Timber.e(e.localizedMessage)
                 _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
+//                _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.${e.localizedMessage}") }
             }
         }
     }
     // --- Functions to be called from the Bottom Sheet ---
 
-    fun promptForLLM(vocabFile:VocabFile,skillLevel:String) : String {
+    private fun promptForLLM(vocabFile:VocabFile, skillLevel:String) : String {
 
 //        try {
-        val wordsToHighlight = getLanguageSpecificWords(vocabFile)
+        val wordsToHighlight = getLanguageSpecificWords(vocabFile,skillLevel)
         val wordsForPrompt = wordsToHighlight.joinToString(", ")
 
         // Phase 2: Call the OpenAI API via the repository
@@ -453,16 +499,18 @@ class ParagraphViewModel @Inject constructor(
      * @param vocabFile The fully parsed vocabulary data.
      * @return A list of word strings.
      */
-    private fun getLanguageSpecificWords(vocabFile: VocabFile): List<String> {
+    private fun getLanguageSpecificWords(vocabFile: VocabFile, skillLevel:String): List<String> {
         // If there are no categories, return the default list immediately.
         if (vocabFile.categories.isEmpty()) {
             return listOf("hello", "I", "Father", "red", "breakfast", "how")
         }
 
+        val wordCount = if (skillLevel.startsWith("B")) 6 else 8 //B1 or B2 smaller word list - paragraph too long
+
         // This is the entire logic in a single, expressive chain:
         return vocabFile.categories
             .shuffled() // 1. Shuffle the list of Category objects randomly.
-            .take(8)      // 2. Take the first 8 random categories from the shuffled list.
+            .take(wordCount)      // 2. Take the first 8 random categories from the shuffled list.
             .mapNotNull { category -> // 3. Transform each category into a word, discarding any that are empty.
                 category.words.randomOrNull()?.word
             }
@@ -612,10 +660,13 @@ class ParagraphViewModel @Inject constructor(
             val hours = seconds / 3600
             val minutes = (seconds % 3600) / 60
             "%02dh %02dm".format(hours, minutes)
+        }else if(seconds > 60){
+            val minutes = seconds / 60
+            "%2dm".format(minutes)
         } else {
             val minutes = seconds / 60
             val secs = seconds % 60
-            "%02dm %02ds".format(minutes, secs)
+            "%2dm %2ds".format(minutes, secs)
         }
     }
     fun formatDateSmart(date: Date): String {
@@ -659,6 +710,22 @@ class ParagraphViewModel @Inject constructor(
 //    fun getCreditRepositoryDate() : Date {
 //        return creditsRepository.nextCreditRefillDate.value ?: Date()
 //    }
+    fun buyButtonClicked() {
+        _uiState.update { it.copy(showIAPBottomSheet = true) }
+        firestoreRepository.fsIncUserProperty("premiumShownInfoSheet")
+    }
+    fun onBottomSheetDismissed() {
+        _uiState.update { it.copy(showIAPBottomSheet = false) }
+        firestoreRepository.fsIncUserProperty("premiumShownInfoSheetNotYet")
+    }
+    fun buyPremiumButtonPressed(activity: Activity) {
+        Timber.i("purchasePremium()")
 
+        viewModelScope.launch {
+            billingRepository.launchPurchase(activity)
+        }
+
+        firestoreRepository.fsIncUserProperty("premiumShownBuyScreen")
+    }
 
 }

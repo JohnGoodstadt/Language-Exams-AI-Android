@@ -34,7 +34,7 @@ class LLMProviderManager @Inject constructor(
         if (currentCount >= CALL_THRESHOLD) {
             currentProviderString = if (currentProviderString == "openai") "gemini" else "openai"
             currentCount = 0
-            Timber.d("Call threshold reached. Switching to $currentProviderString.")
+            Timber.w("Call threshold reached. Switching to $currentProviderString.")
         }
 
         val nextCount = currentCount + 1
