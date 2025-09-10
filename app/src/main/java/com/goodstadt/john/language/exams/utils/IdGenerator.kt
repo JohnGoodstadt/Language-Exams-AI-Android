@@ -17,7 +17,7 @@ fun generateUniqueSentenceId(word: VocabWord, sentence: Sentence, googleVoice:St
 
     // Sanitize the string to make it safe for use as a filename.
     // This replaces any character that is NOT a letter, number, or period with an underscore.
-    return rawId.replace(Regex("[^a-zA-Z0-9.]"), "_")
+    return rawId.replace(Regex("[^a-zA-Z0-9.]"), "_").take(255) //max filename
 }
 fun generateUniqueSentenceId(word: String, sentence: String, googleVoice:String): String {
     // Combine the word and sentence
@@ -25,7 +25,7 @@ fun generateUniqueSentenceId(word: String, sentence: String, googleVoice:String)
 
     // Sanitize the string to make it safe for use as a filename.
     // This replaces any character that is NOT a letter, number, or period with an underscore.
-    return rawId.replace(Regex("[^a-zA-Z0-9.]"), "_")
+    return rawId.replace(Regex("[^a-zA-Z0-9.]"), "_").take(255)//max filename
 }
 fun generateUniqueSentenceId(sentence: String, googleVoice:String): String {
 
@@ -33,5 +33,5 @@ fun generateUniqueSentenceId(sentence: String, googleVoice:String): String {
 
     // Sanitize the string to make it safe for use as a filename.
     // This replaces any character that is NOT a letter, number, or period with an underscore.
-    return rawId.replace(Regex("[^a-zA-Z0-9.]"), "_")
+    return rawId.replace(Regex("[^a-zA-Z0-9.]"), "_").take(255)//max filename
 }

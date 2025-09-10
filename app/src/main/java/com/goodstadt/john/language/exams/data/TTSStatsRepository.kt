@@ -430,7 +430,7 @@ class TTSStatsRepository @Inject constructor(
 
 
         val cost = calculateTTSCallCost(sentence.sentence.count(), currentVoiceName)
-        Timber.d("Cost: $${"%.8f".format(cost)}")
+        Timber.w("Cost: $${"%.8f".format(cost)} for char count ${sentence.sentence.count()}")
 
         incUserStatDouble(TTSAPIEstCostUSD, cost)
     }

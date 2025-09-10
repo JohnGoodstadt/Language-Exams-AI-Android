@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.AuthRepository
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UpdateState
@@ -45,6 +46,7 @@ class MainViewModel @Inject constructor(
     private val recallingItemsManager: RecallingItems,
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
+    private val connectivityRepository: ConnectivityRepository,
 //    private val billingRepository: BillingRepository,
 ) : ViewModel() {
 
@@ -190,6 +192,10 @@ class MainViewModel @Inject constructor(
     // They are no longer the responsibility of this ViewModel.
     // They have been moved to CategoryTabViewModel.
     private fun checkForAppUpdate() {
+        if (!connectivityRepository.isCurrentlyOnline()) {
+            return
+        }
+
         viewModelScope.launch {
             _updateState.value = appConfigRepository.checkAppUpdateStatus()
         }

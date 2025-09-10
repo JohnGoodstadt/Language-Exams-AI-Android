@@ -335,7 +335,7 @@ fun CacheProgressBar(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
-            if (displayLowNumber) {
+            if (displayLowNumber && cachedCount > 0) {
                 Text(
                     text = "$cachedCount",
                     style = MaterialTheme.typography.labelSmall

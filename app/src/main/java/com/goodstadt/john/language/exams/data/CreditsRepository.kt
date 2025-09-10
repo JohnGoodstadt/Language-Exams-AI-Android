@@ -39,7 +39,6 @@ object CreditSystemConfig {
 data class UserCredits(
     val current: Int = 0,
     val total: Int = 0,
-//    val lastRefillTimestamp: Long = 0L,
     val llmNextCreditRefill: Timestamp = Timestamp(0,0)
 )
 

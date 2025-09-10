@@ -602,6 +602,7 @@ class ParagraphViewModel @Inject constructor(
 
                 val uniqueSentenceId = generateUniqueSentenceId(sentenceToSpeak,currentVoiceName)
 
+                //TODO: not likely to find new sentence in cache - but user might hear it twice
                 val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
                 if (played){//short cut so user cna play cached sentences with no Internet connection
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
