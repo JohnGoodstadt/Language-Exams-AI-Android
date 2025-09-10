@@ -222,15 +222,18 @@ class RecallViewModel @Inject constructor(
 
     fun onPlaySentence(word: String, sentence: String) {
 
-        if (isPremiumUser.value) {
-            Timber.i("onPlaySentence() User is a paid user !")
-        }else{
-            Timber.i("onPlaySentence() User is a FREE user")
-        }
-
         viewModelScope.launch {
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(sentence,currentVoiceName)
+
+            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
+            if (played){//short cut so user cna play cached sentences with no Internet connection
+                ttsStatsRepository.updateTTSStatsWithoutCosts()
+                ttsStatsRepository.incWordStats(word)
+                return@launch
+            }
+
+
 
             val currentLanguageCode = LanguageConfig.languageCode
 

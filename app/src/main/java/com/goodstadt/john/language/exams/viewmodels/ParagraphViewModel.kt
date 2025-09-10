@@ -217,6 +217,11 @@ class ParagraphViewModel @Inject constructor(
     }
 
     fun generateNewParagraph() {
+        if (!connectivityRepository.isCurrentlyOnline()) {
+            _uiState.update { it.copy(error = "No internet connection. Please check your network and try again." ) }
+            return
+        }
+
         viewModelScope.launch {
             val currentState = _uiState.value
 
@@ -596,6 +601,17 @@ class ParagraphViewModel @Inject constructor(
                 val currentLanguageCode = LanguageConfig.languageCode
 
                 val uniqueSentenceId = generateUniqueSentenceId(sentenceToSpeak,currentVoiceName)
+
+                val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
+                if (played){//short cut so user cna play cached sentences with no Internet connection
+                    ttsStatsRepository.updateTTSStatsWithoutCosts()
+                    return@launch
+                }
+
+                if (!connectivityRepository.isCurrentlyOnline()) {
+                    _uiState.update { it.copy(error = "No internet connection. Please check your network and try again." ) }
+                    return@launch
+                }
 
                 // --- CHANGE 2: The logic is now a single, clean call ---
                 _uiState.update { it.copy(isLoading = false) }

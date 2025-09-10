@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.BillingRepository
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -22,6 +23,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
@@ -33,6 +35,7 @@ sealed interface ConjugationsUiState {
         val categories: List<Category>,
         val selectedVoiceName: String = "" // Add a default empty value
     ) : ConjugationsUiState
+
     data class Error(val message: String) : ConjugationsUiState
     object NotAvailable : ConjugationsUiState // For flavors like 'zh'
 }
@@ -46,8 +49,9 @@ class ConjugationsViewModel @Inject constructor(
     private val appScope: CoroutineScope,
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
+    private val connectivityRepository: ConnectivityRepository,
 
-) : ViewModel() {
+    ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
     val uiState = _uiState.asStateFlow()
@@ -93,12 +97,13 @@ class ConjugationsViewModel @Inject constructor(
 
             _uiState.value = ConjugationsUiState.Loading
             val result = vocabRepository.getVocabData(fileName)
-           // val selectedVoice = userPreferencesRepository.selectedVoiceNameFlow.first()
+            // val selectedVoice = userPreferencesRepository.selectedVoiceNameFlow.first()
 
             result.onSuccess { vocabFile ->
                 _uiState.value = ConjugationsUiState.Success(vocabFile.categories)
             }.onFailure { error ->
-                _uiState.value = ConjugationsUiState.Error(error.localizedMessage ?: "Failed to load file")
+                _uiState.value =
+                    ConjugationsUiState.Error(error.localizedMessage ?: "Failed to load file")
             }
         }
     }
@@ -107,22 +112,21 @@ class ConjugationsViewModel @Inject constructor(
     fun playTrack(word: VocabWord, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing) return
 
-        if (isPremiumUser.value) {
-            Timber.i("playTrack() User is a paid user !")
-        }else{
-            Timber.i("playTrack() User is a FREE user")
+        if (!connectivityRepository.isCurrentlyOnline()) {
+            _playbackState.value = PlaybackState.Idle
+            return
         }
 
         if (!isPremiumUser.value) { //if premium user don't check credits
-            if (rateLimiter.doIForbidCall()){
+            if (rateLimiter.doIForbidCall()) {
                 val failType = rateLimiter.canMakeCallWithResult()
                 Timber.v("${failType.canICallAPI}")
                 Timber.v("${failType.failReason}")
                 Timber.v("${failType.timeLeftToWait}")
-                if (!failType.canICallAPI){
-                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
+                if (!failType.canICallAPI) {
+                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
                         _showRateDailyLimitSheet.value = true
-                    }else {
+                    } else {
                         _showRateHourlyLimitSheet.value = true
                     }
                 } else {
@@ -133,24 +137,29 @@ class ConjugationsViewModel @Inject constructor(
             }
         }
 
-    viewModelScope.launch {
+        viewModelScope.launch {
 
 
-
-        val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
+            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+            val uniqueSentenceId = generateUniqueSentenceId(word, sentence, currentVoiceName)
 
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
-            // Use .first() to get the most recent value from the Flow
+            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
+            if (played) {//short cut so user cna play cached sentences with no Internet connection
+                ttsStatsRepository.updateTTSStatsWithoutCosts()
+                ttsStatsRepository.incWordStats(word.word)
+                return@launch
+            }
+
 
             val currentLanguageCode = LanguageConfig.languageCode
 
             val result = vocabRepository.playTextToSpeech(
-                    text = sentence.sentence,
-                    uniqueSentenceId = uniqueSentenceId,
-                    voiceName = currentVoiceName,
-                    languageCode = currentLanguageCode
+                text = sentence.sentence,
+                uniqueSentenceId = uniqueSentenceId,
+                voiceName = currentVoiceName,
+                languageCode = currentLanguageCode
             )
 
             when (result) {
@@ -162,23 +171,28 @@ class ConjugationsViewModel @Inject constructor(
                     //TODO: not inc but update!
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
+
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(word.word)
                 }
+
                 is PlaybackResult.Failure -> {
                     // Handle the error
 //                    _uiState.update { it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed")) }
                     // Optionally reset to Idle after a delay
 //                    _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
-                    _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
+                    _playbackState.value =
+                        PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
+
                 PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
             }
 
             _playbackState.value = PlaybackState.Idle
         }
     }
+
     fun saveDataOnExit() {
         // We use appScope to ensure this save operation completes even if the
         // viewModelScope is paused or cancelled as the user navigates away.
@@ -192,13 +206,16 @@ class ConjugationsViewModel @Inject constructor(
             }
         }
     }
-    fun hideDailyRateLimitSheet(){
+
+    fun hideDailyRateLimitSheet() {
         _showRateDailyLimitSheet.value = false
     }
-    fun hideHourlyRateLimitSheet(){
+
+    fun hideHourlyRateLimitSheet() {
         _showRateHourlyLimitSheet.value = false
     }
-    fun hideRateOKLimitSheet(){
+
+    fun hideRateOKLimitSheet() {
         _showRateLimitSheet.value = false
     }
 

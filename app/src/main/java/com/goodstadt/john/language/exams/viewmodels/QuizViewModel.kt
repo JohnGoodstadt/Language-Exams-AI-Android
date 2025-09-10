@@ -10,6 +10,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.BillingRepository
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
@@ -29,6 +30,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import timber.log.Timber
@@ -108,6 +110,7 @@ class QuizViewModel @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
+    private val connectivityRepository: ConnectivityRepository,
 ) : ViewModel() {
     private val appContext: Context = application.applicationContext
 
@@ -213,11 +216,11 @@ class QuizViewModel @Inject constructor(
 
         if (_playbackState.value is PlaybackState.Playing) return
 
-        if (isPremiumUser.value) {
-            Timber.i("playTrack() User is a paid user !")
-        }else{
-            Timber.i("playTrack() User is a FREE user")
+        if (!connectivityRepository.isCurrentlyOnline()) {
+            _playbackState.value = PlaybackState.Idle
+            return
         }
+
         if (!isPremiumUser.value) { //if premium user don't check credits
             if (rateLimiter.doIForbidCall()){
                 val failType = rateLimiter.canMakeCallWithResult()
@@ -245,7 +248,13 @@ class QuizViewModel @Inject constructor(
 
           //  _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
-            // Use .first() to get the most recent value from the Flow
+            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
+            if (played){//short cut so user cna play cached sentences with no Internet connection
+                ttsStatsRepository.updateTTSStatsWithoutCosts()
+                return@launch
+            }
+
+
 
             val currentLanguageCode = LanguageConfig.languageCode
 
@@ -267,11 +276,11 @@ class QuizViewModel @Inject constructor(
                     rateLimiter.recordCall()
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-                    ttsStatsRepository.incWordStats(sentence)
+//                    ttsStatsRepository.incWordStats(sentence)
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
-                    ttsStatsRepository.incWordStats(sentence)
+//                    ttsStatsRepository.incWordStats(sentence)
                 }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")

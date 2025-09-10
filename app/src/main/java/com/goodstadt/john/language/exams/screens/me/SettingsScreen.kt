@@ -376,7 +376,7 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.WorkspacePremium,
                     title = "Some restrictions are in place",
-                    currentValue = "AI has charges so we limit some tasks. Tap to unlock all exams.",
+                    currentValue = "AI has charges so we limit some tasks. Tap to unlock all exam words.",
                     onClick = {
                         viewModel.onShowBottomSheetClicked()
                     }

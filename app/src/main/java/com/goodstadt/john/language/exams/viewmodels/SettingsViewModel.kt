@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.BillingRepository
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.GoogleTTSInfoRepository
@@ -84,6 +85,7 @@ class SettingsViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     @ApplicationContext private val context: Context,
     private val rateLimiter: SimpleRateLimiter,
+    private val connectivityRepository: ConnectivityRepository,
 ) : ViewModel() {
 
     val isPurchased = billingRepository.isPurchased
@@ -204,6 +206,16 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun onShowBottomSheetClicked() {
+
+        if (!connectivityRepository.isCurrentlyOnline()) {
+            viewModelScope.launch {
+                _uiEvent.emit(SettingsUiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
+                Timber.e("No Internet")
+
+            }
+            return
+        }
+
         _uiState.update { it.copy(showIAPBottomSheet = true) }
         firestoreRepository.fsIncUserProperty("premiumShownInfoSheet")
     }

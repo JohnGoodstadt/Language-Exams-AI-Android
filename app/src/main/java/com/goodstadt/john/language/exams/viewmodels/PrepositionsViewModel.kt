@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.BillingRepository
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
@@ -23,6 +24,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
@@ -46,6 +48,7 @@ class PrepositionsViewModel @Inject constructor(
     private val appScope: CoroutineScope,
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
+    private val connectivityRepository: ConnectivityRepository,
 ) : ViewModel() {
 
     private val _isPremiumUser = MutableStateFlow(false)
@@ -107,10 +110,9 @@ class PrepositionsViewModel @Inject constructor(
     fun playTrack(word: VocabWord, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing) return
 
-        if (isPremiumUser.value) {
-            Timber.i("playTrack() User is a paid user !")
-        }else{
-            Timber.i("playTrack() User is a FREE user")
+        if (!connectivityRepository.isCurrentlyOnline()) {
+            _playbackState.value = PlaybackState.Idle
+            return
         }
 
         if (!isPremiumUser.value) { //if premium user don't check credits
@@ -144,6 +146,14 @@ class PrepositionsViewModel @Inject constructor(
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 //maybe just de. remove any (zu dem)
             val cleanedSentence = sentence.sentence.replace("\\s*\\([^)]*\\)\\s*".toRegex(), " ")
+
+            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
+            if (played){//short cut so user cna play cached sentences with no Internet connection
+                ttsStatsRepository.updateTTSStatsWithoutCosts()
+                ttsStatsRepository.incWordStats(word.word)
+                return@launch
+            }
+
 
             val result = vocabRepository.playTextToSpeech(
                 text = cleanedSentence,

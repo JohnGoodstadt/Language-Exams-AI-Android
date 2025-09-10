@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.BillingRepository
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
@@ -19,12 +20,15 @@ import com.goodstadt.john.language.exams.models.WordAndSentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
@@ -35,6 +39,10 @@ data class SearchResult(
     val firstSentence: String
 )
 
+sealed interface SearchUiEvent {
+    data class ShowSnackbar(val message: String, val actionLabel: String? = null) : SearchUiEvent
+}
+
 @OptIn(FlowPreview::class) // Needed for the debounce operator
 @HiltViewModel
 class SearchViewModel @Inject constructor(
@@ -44,6 +52,7 @@ class SearchViewModel @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
+    private val connectivityRepository: ConnectivityRepository,
 
     ) : ViewModel() {
 
@@ -64,6 +73,9 @@ class SearchViewModel @Inject constructor(
     // Re-use the playback state from the TabsViewModel
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
     val playbackState = _playbackState.asStateFlow()
+
+    private val _uiEvent = MutableSharedFlow<SearchUiEvent>()
+//    val uiEvent = _uiEvent.asSharedFlow()
 
     //NOTE: rate Limiting
 //    private val rateLimiter = RateLimiterManager.getInstance()
@@ -196,6 +208,19 @@ class SearchViewModel @Inject constructor(
             val uniqueSentenceId = generateUniqueSentenceId(searchResult.word, searchResult.word.sentences.first(),currentVoiceName)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
+            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
+            if (played){//short cut so user cna play cached sentences with no Internet connection
+                _playbackState.value = PlaybackState.Idle
+                ttsStatsRepository.updateTTSStatsWithoutCosts()
+                ttsStatsRepository.incWordStats(searchResult.word.word)
+                return@launch
+            }
+
+            if (!connectivityRepository.isCurrentlyOnline()) {
+                _uiEvent.emit(SearchUiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
+                return@launch
+            }
+
             // Use .first() to get the most recent value from the Flow
             val currentLanguageCode = LanguageConfig.languageCode
 
@@ -209,17 +234,16 @@ class SearchViewModel @Inject constructor(
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     rateLimiter.recordCall()
-                    Timber.v(rateLimiter.printCurrentStatus)
-//                    userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
+                    _playbackState.value = PlaybackState.Idle
                     ttsStatsRepository.updateTTSStatsWithCosts(searchResult.firstSentence, currentVoiceName)
                     ttsStatsRepository.incWordStats(searchResult.word.word)
                 }
                 is PlaybackResult.PlayedFromCache -> {
+                    _playbackState.value = PlaybackState.Idle
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(searchResult.word.word)
                 }
                 is PlaybackResult.Failure -> {
-//                    _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
                 PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
