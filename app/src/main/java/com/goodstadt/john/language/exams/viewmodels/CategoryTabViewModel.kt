@@ -201,10 +201,7 @@ class CategoryTabViewModel @Inject constructor(
 
         viewModelScope.launch {
 
-            if (!connectivityRepository.isCurrentlyOnline()) {
-                _uiEvent.emit(UiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
-                return@launch
-            }
+
 
 //            if (isPremiumUser.value) {
 //                Timber.i("User is a paid user!")
@@ -238,9 +235,22 @@ class CategoryTabViewModel @Inject constructor(
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence,currentVoiceName)
-
             _uiState.update { it.copy(playbackState = PlaybackState.Playing(uniqueSentenceId)) }
 
+
+            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
+            if (played){//short cut so user cna play cached sentences with no Internet connection
+                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                ttsStatsRepository.updateTTSStatsWithoutCosts()
+                ttsStatsRepository.incWordStats(word.word)
+                return@launch
+            }
+
+            if (!connectivityRepository.isCurrentlyOnline()) {
+                _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
+                _uiEvent.emit(UiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
+                return@launch
+            }
 
             val result = vocabRepository.playTextToSpeech(
                 text = sentence.sentence,
@@ -291,6 +301,8 @@ class CategoryTabViewModel @Inject constructor(
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
                     Timber.e("Playback failed", result.exception)
                 }
+
+                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
             }
         }
     }

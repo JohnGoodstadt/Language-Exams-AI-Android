@@ -214,6 +214,7 @@ class RecallViewModel @Inject constructor(
                     ttsStatsRepository.incWordStats(word)
                 }
                 is PlaybackResult.Failure -> {}
+                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
             }
             // TODO: update word counts
         }
@@ -251,6 +252,7 @@ class RecallViewModel @Inject constructor(
                     ttsStatsRepository.incWordStats(word)
                 }
                 is PlaybackResult.Failure -> {}
+                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
             }
            // _playbackState.value = PlaybackState.Idle
         }

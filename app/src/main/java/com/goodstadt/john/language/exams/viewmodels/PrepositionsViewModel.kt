@@ -156,17 +156,19 @@ class PrepositionsViewModel @Inject constructor(
                     rateLimiter.recordCall()
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-                    ttsStatsRepository.incWordStats(cleanedSentence)
+                    ttsStatsRepository.incWordStats(word.word)
                     //TODO: not inc but update!
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
-                    ttsStatsRepository.incWordStats(cleanedSentence)
+//                    ttsStatsRepository.incWordStats(cleanedSentence)
+                    ttsStatsRepository.incWordStats(word.word)
                 }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
+                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
             }
             _playbackState.value = PlaybackState.Idle
         }

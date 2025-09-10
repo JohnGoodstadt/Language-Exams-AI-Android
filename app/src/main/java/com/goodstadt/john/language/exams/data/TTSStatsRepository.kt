@@ -862,5 +862,9 @@ class TTSStatsRepository @Inject constructor(
 
         }
     }
+
+    fun updateParagraph(sentence: String,model:String,skilllevel:String = "") {
+        firestoreRepository.fsUpdateUserParagraph(sentence,model,skilllevel)
+    }
     //endregion
 }

@@ -381,18 +381,24 @@ fun ParagraphScreen(
                             .fillMaxWidth()
                     )
 
-                    Icon(
-                        imageVector = Icons.Filled.ShoppingCart,
-                        contentDescription = "Shopping Cart",
-                        tint = orangeLight,
-                        modifier = Modifier.clickable { viewModel.buyButtonClicked() }
-                            .padding(horizontal = 12.dp, vertical = 4.dp)
+                    Box(
+                        modifier = Modifier
                             .fillMaxWidth()
-                    )
-
+                    ) {
+                        Icon(
+                            imageVector = Icons.Filled.ShoppingCart,
+                            contentDescription = "Contribute to costs",
+                            tint = orangeLight,
+                            modifier = Modifier
+                                .size(64.dp)
+                                .clickable { viewModel.buyButtonClicked() }
+                                .padding(horizontal = 12.dp, vertical = 4.dp)
+                                .align(Alignment.Center) // Center within the Box
+                        )
+                    }
                     Text(
                         text = "Delay: ${viewModel.formattedCountdown(now)}",
-                        fontSize = 12.sp,
+                        fontSize = 16.sp,
                         color = orangeLight,
                         textAlign = TextAlign.Center,
                         modifier = Modifier
@@ -401,7 +407,7 @@ fun ParagraphScreen(
                     )
                     Text(
                         text = "Next refill at:${viewModel.getFormattedCreditRepositoryDate()}",
-                        fontSize = 12.sp,
+                        fontSize = 16.sp,
                         color = orangeLight,
                         textAlign = TextAlign.Center,
                         modifier = Modifier

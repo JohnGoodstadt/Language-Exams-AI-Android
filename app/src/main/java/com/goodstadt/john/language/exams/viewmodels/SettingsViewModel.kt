@@ -271,6 +271,7 @@ class SettingsViewModel @Inject constructor(
                     _playbackState.value =
                         PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
+                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
             }
             _playbackState.value = PlaybackState.Idle
         }

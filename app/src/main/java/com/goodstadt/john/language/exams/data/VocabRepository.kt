@@ -25,6 +25,7 @@ enum class PlaybackSource {
 // In data/VocabRepository.kt
 sealed class PlaybackResult {
     data object PlayedFromCache : PlaybackResult()
+    data object CacheNotFound : PlaybackResult()
     data object PlayedFromNetworkAndCached : PlaybackResult()
     data class Failure(val exception: Exception) : PlaybackResult()
 }
@@ -167,6 +168,33 @@ class VocabRepository @Inject constructor(
             )
         }
         finally { }
+
+    }
+    /**
+     * Fetches audio data for the given text from the TTS service and plays it.
+     * This version includes a file-based caching mechanism.
+     */
+    suspend fun playFromCacheIfFound(
+        uniqueSentenceId: String,
+    ): Boolean {
+        // 1. Define the cache file based on the unique ID.
+        // We use the app's private cache directory, which is the correct place for this.
+        val cacheDir = context.filesDir
+        val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
+
+        // 2. Check if the cached file exists.
+        if (audioCacheFile.exists()) {
+            Timber.v("Playing from cache: Yippee!") // For debugging
+            // If it exists, play the audio data from the file.
+            val playResult = audioPlayerService.playAudio(audioCacheFile.readBytes())
+
+            return if (playResult.isSuccess) {
+               true
+            } else {
+              false //found but error
+            }
+        }
+       return false
 
     }
     // --- THIS IS THE NEW, SIMPLIFIED FUNCTION ---

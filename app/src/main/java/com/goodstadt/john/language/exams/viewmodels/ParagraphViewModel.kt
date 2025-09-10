@@ -343,6 +343,9 @@ class ParagraphViewModel @Inject constructor(
                         if (DEBUG){
                             Timber.i(sentence)
                         }
+                        if(DEBUG) {
+                            ttsStatsRepository.updateParagraph(sentence, openAIModel?.title ?: "Unknown Open AI Model", currentSkillLevel )
+                        }
 
                         // --- CHANGE 2: Pass the highlightedWords to the state ---
                         _uiState.update {
@@ -439,6 +442,10 @@ class ParagraphViewModel @Inject constructor(
                                             highlightedWords = wordsToHighlight.toSet(),
                                             waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
                                         )
+                                    }
+
+                                    if(DEBUG) {
+                                        ttsStatsRepository.updateParagraph(sentence,modelFieldName,currentSkillLevel)
                                     }
 
                                 }
@@ -613,16 +620,21 @@ class ParagraphViewModel @Inject constructor(
                         rateLimiter.recordCall()
                         Timber.v(rateLimiter.printCurrentStatus)
                         ttsStatsRepository.updateTTSStatsWithCosts(Sentence(sentenceToSpeak,""), currentVoiceName)
-                        ttsStatsRepository.incWordStats(sentenceToSpeak)
+                        //wrong place to save word stats
+                        //TODO: if we save paragraphs -- then do it here.
+//                        ttsStatsRepository.incWordStats(sentenceToSpeak)
                         Timber.d("updateUserTTSTokenCount ${sentenceToSpeak.count()}")
                     }
                     is PlaybackResult.PlayedFromCache -> {
                         ttsStatsRepository.updateTTSStatsWithoutCosts()
-                        ttsStatsRepository.incWordStats(sentenceToSpeak)
+                        //wrong place to save word stats
+                        //TODO: if we save paragraphs -- then do it here.
+//                        ttsStatsRepository.incWordStats(sentenceToSpeak)
                     }
                     is PlaybackResult.Failure -> {
                         _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }
                     }
+                    PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
                 }
             } finally {
                 _uiState.update { it.copy(isLoading = false) }

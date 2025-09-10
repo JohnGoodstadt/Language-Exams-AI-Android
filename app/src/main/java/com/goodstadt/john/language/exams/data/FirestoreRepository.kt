@@ -4,6 +4,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
+import kotlinx.coroutines.tasks.await
 import sanitizedForFirestore
 import timber.log.Timber
 import java.text.SimpleDateFormat
@@ -410,6 +411,29 @@ class FirestoreRepository @Inject constructor(
         }
     }
 
+    fun fsUpdateUserParagraph(paragraph: String,model:String,skilllevel:String = "") {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+        val finalParagraph = paragraph.take(900) //fs limit 1000
+
+        data class ParagraphStat(
+            val UID: String,
+            val paragraph: String,
+            val model: String,
+            val skill: String,
+            val createdAt: Date
+        )
+
+        val paragraphStat = ParagraphStat(currentUser.uid,finalParagraph,model,skilllevel,Date())
+
+
+        try {
+            FirebaseFirestore.getInstance().collection(fb.users).document(currentUser.uid).collection("paragraphs").document() //uniqueID
+                .set(paragraphStat)
+        } catch (e: Exception) {
+            Timber.e(e.localizedMessage, e)
+        }
+    }
 
 //    fun fbUpdateUserGlobalStats(stats: Map<String, Int>) {
 //        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
