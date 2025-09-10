@@ -19,7 +19,10 @@ import com.goodstadt.john.language.exams.data.OpenAIRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.GeminiEstCostUSD
+import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.GeminiPremiumCallCount
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.OpenAIEstCostUSD
+import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.OpenAIPremiumCallCount
+import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.currentGoogleVoiceName
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.llmModel_
 import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
@@ -51,11 +54,11 @@ import javax.inject.Inject
 
 
 // Data class to hold the parsed response, matching the Swift LLMResponse
-data class LLMResponseObsolete(
-    val content: String,
-    val totalTokens: Int,
-    val model: String
-)
+//data class LLMResponseObsolete(
+//    val content: String,
+//    val totalTokens: Int,
+//    val model: String
+//)
 
 val DEFAULT_GPT = "GPT-4.1-nano"
 // This data class will hold all the dynamic state for our screen later.
@@ -151,12 +154,12 @@ class ParagraphViewModel @Inject constructor(
                 Timber.e("Failed to setup free tier", error)
             }
             result.onSuccess {
-                Timber.e("initialFetchAndSetupCredits OK",)
+                Timber.d("initialFetchAndSetupCredits OK")
                 Timber.d("see if still in countdown?",)
-                Timber.e("freeTierCredits:${creditsRepository.freeTierCredits.value}",)
-                Timber.e("nextCreditRefillDate:${creditsRepository.nextCreditRefillDate.value}",)
-                Timber.e("llmCurrentCredit:${uiState.value.userCredits.current}")
-                Timber.e("llmNextCreditRefill:${uiState.value.userCredits.llmNextCreditRefill.toDate()}")
+                Timber.d("freeTierCredits:${creditsRepository.freeTierCredits.value}",)
+                Timber.d("nextCreditRefillDate:${creditsRepository.nextCreditRefillDate.value}",)
+                Timber.d("llmCurrentCredit:${uiState.value.userCredits.current}")
+                Timber.d("llmNextCreditRefill:${uiState.value.userCredits.llmNextCreditRefill.toDate()}")
                 Timber.e("waitingForCredits:${uiState.value.waitingForCredits}")
 
                 if (uiState.value.userCredits.current <= 0){
@@ -200,6 +203,17 @@ class ParagraphViewModel @Inject constructor(
                 return@launch
             }
         }
+
+        updateRateLimiterState()
+    }
+
+    private fun updateRateLimiterState() {
+        _uiState.update {
+            it.copy(
+                hourlyLimit = rateLimiter.hourlyLimit,
+                dailyLimit = rateLimiter.dailyLimit
+            )
+        }
     }
 
     fun generateNewParagraph() {
@@ -209,29 +223,35 @@ class ParagraphViewModel @Inject constructor(
             val providerToUse = providerManager.getNextProviderAndIncrement()
             Timber.w("providerToUse:$providerToUse")
 
-            // --- THE NEW, ROBUST CHECK ---
-            // 1. Wait until credits are initialized.
-            // 2. Then check if the count is zero or less.
-            if (currentState.areCreditsInitialized && currentState.userCredits.current <= 0) {
-                Timber.w("User is out of credits. Showing sheet.")
-                _uiState.update { it.copy(waitingForCredits = true) }
-                return@launch
+
+            if (!isPurchased.value){
+                // --- THE NEW, ROBUST CHECK ---
+                // 1. Wait until credits are initialized.
+                // 2. Then check if the count is zero or less.
+                if (currentState.areCreditsInitialized && currentState.userCredits.current <= 0) {
+                    Timber.w("User is out of credits. Showing sheet.")
+                    _uiState.update { it.copy(waitingForCredits = true,generatedSentence = "") }
+                    return@launch
+                }
+
+                // Optionally, you can prevent generation if credits aren't initialized yet,
+                // though the user would have to be incredibly fast to tap the button.
+                if (!currentState.areCreditsInitialized) {
+                    _uiState.update { it.copy(error = "Initializing credits, please wait...") }
+                    return@launch
+                }
+
+                val currentCredits = _uiState.value.userCredits.current
+
+                if (currentCredits <= 0) {
+                    Timber.w("User is out of credits. Showing sheet.")
+                    _uiState.update { it.copy(waitingForCredits = true,generatedSentence = "") }
+                    return@launch
+                }
+            }else{
+                Timber.w("User is a Premium user")
             }
 
-            // Optionally, you can prevent generation if credits aren't initialized yet,
-            // though the user would have to be incredibly fast to tap the button.
-            if (!currentState.areCreditsInitialized) {
-                _uiState.update { it.copy(error = "Initializing credits, please wait...") }
-                return@launch
-            }
-
-            val currentCredits = _uiState.value.userCredits.current
-
-            if (currentCredits <= 0) {
-                Timber.w("User is out of credits. Showing sheet.")
-                _uiState.update { it.copy(waitingForCredits = true) }
-                return@launch
-            }
 
             val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
@@ -259,8 +279,6 @@ class ParagraphViewModel @Inject constructor(
 //                val systemMessage = "You are a helpful language teacher..." // Define your system message
                         val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
                         val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
-
-
 
                         Timber.w(systemMessage)
                         Timber.w(userQuestion)
@@ -298,25 +316,32 @@ class ParagraphViewModel @Inject constructor(
                         ttsStatsRepository.updateUserStatField(modelFieldName)
 
 
-                        creditsRepository.decrementCredit(
-                            llmResponse.promptTokens,
-                            llmResponse.completionTokens,
-                            totalTokensUsed
-                        )
+                        if (!isPurchased.value) {
+                            creditsRepository.decrementCredit(
+                                llmResponse.promptTokens,
+                                llmResponse.completionTokens,
+                                totalTokensUsed
+                            )
 
-                        Timber.v("current credits B: ${_uiState.value.userCredits.current}")
-                        if (_uiState.value.userCredits.current <= 0){
-                            Timber.v("seconds to go: ${secondsRemaining()}")
+                            Timber.w("current credits: ${_uiState.value.userCredits.current} out of ${_uiState.value.userCredits.total}")
+                            if (_uiState.value.userCredits.current <= 0){
+                                _uiState.update { it.copy(generatedSentence = "") } //spare space ty show messages
+                                Timber.w("seconds to go: ${secondsRemaining()}")
+                            }
 
+                        }else{
+                            ttsStatsRepository.updateUserStatField(OpenAIPremiumCallCount)
                         }
+
+
 
                         // Phase 3: Update the UI with the response
                         // Simple parsing, you can make this more robust
                         // Sometimes LLM returns words surrounded by **
-                        val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("**", "")
+                        val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("*", "")
 
                         if (DEBUG){
-                            Timber.i("${sentence}")
+                            Timber.i(sentence)
                         }
 
                         // --- CHANGE 2: Pass the highlightedWords to the state ---
@@ -378,25 +403,33 @@ class ParagraphViewModel @Inject constructor(
                                         Timber.v("Total cost: $${"%.6f".format(cost.totalCostUSD)}")
                                     }
 
-                                    Timber.v("current credits A: ${_uiState.value.userCredits.current}")
-                                    if (_uiState.value.userCredits.current <= 0){
-                                        Timber.v("seconds to go: ${secondsRemaining()}")
-
-                                    }
+//                                    Timber.w("current credits: ${_uiState.value.userCredits.current} out of ${_uiState.value.userCredits.total}")
+//                                    if (_uiState.value.userCredits.current <= 0){
+//                                        Timber.v("seconds to go: ${secondsRemaining()}")
+//                                    }
 
                                     val modelFieldName = "${llmModel_}${selectedModel.title}" //e.g. llmModel_gemini-2.5-flash
                                     ttsStatsRepository.updateUserStatField(modelFieldName)
                                     ttsStatsRepository.incUserGeminiTotalTokenCount(totalTokenCount)
                                     ttsStatsRepository.incUserStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
 
+                                    if (!isPurchased.value) {
+                                        creditsRepository.decrementCredit(
+                                            inputTokens,
+                                            outputTokens,
+                                            totalTokenCount
+                                        )
 
-                                    creditsRepository.decrementCredit(
-                                        inputTokens,
-                                        outputTokens,
-                                        totalTokenCount
-                                    )
+                                        Timber.w("current credits: ${_uiState.value.userCredits.current} out of ${_uiState.value.userCredits.total}")
+                                        if (_uiState.value.userCredits.current <= 0){
+                                            _uiState.update { it.copy(generatedSentence = "") }
+                                            Timber.w("seconds to go: ${secondsRemaining()}")
+                                        }
+                                    }else{
+                                        ttsStatsRepository.updateUserStatField(GeminiPremiumCallCount)
+                                    }
 
-                                    val sentence = generatedText.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("**", "")
+                                    val sentence = generatedText.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("*", "")
 
                                     _uiState.update {
                                         it.copy(
@@ -424,10 +457,16 @@ class ParagraphViewModel @Inject constructor(
                             result.onFailure { e ->
                                 Timber.e("Error onFailure 1")
                                 Timber.e(e.localizedMessage)
+                                val rawMessage = e.localizedMessage ?: ""
+                                val gptMessage : String = if (rawMessage.contains("The model is overloaded"))
+                                    "The model is overloaded. Please try again later"
+                                else
+                                    rawMessage
+
                                 _uiState.update {
                                     it.copy(
                                         isLoading = false,
-                                        error = e.localizedMessage ?: "An unknown error occurred."
+                                        error = gptMessage ?: "An unknown error occurred."
                                     )
                                 }
                                 e.printStackTrace()
@@ -505,7 +544,7 @@ class ParagraphViewModel @Inject constructor(
             return listOf("hello", "I", "Father", "red", "breakfast", "how")
         }
 
-        val wordCount = if (skillLevel.startsWith("B")) 6 else 8 //B1 or B2 smaller word list - paragraph too long
+        val wordCount = if (skillLevel.startsWith("B")) 5 else 8 //B1 or B2 smaller word list - paragraph too long
 
         // This is the entire logic in a single, expressive chain:
         return vocabFile.categories
@@ -666,7 +705,7 @@ class ParagraphViewModel @Inject constructor(
         } else {
             val minutes = seconds / 60
             val secs = seconds % 60
-            "%2dm %2ds".format(minutes, secs)
+            "%2ds".format( secs)
         }
     }
     fun formatDateSmart(date: Date): String {

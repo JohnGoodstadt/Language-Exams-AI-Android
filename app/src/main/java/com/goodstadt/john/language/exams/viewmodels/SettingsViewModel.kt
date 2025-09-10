@@ -140,7 +140,7 @@ class SettingsViewModel @Inject constructor(
             } catch (e: Exception) {
                 Timber.e("${e.message}")
                 // Handle connection or query failure
-                billingRepository._billingError.value = e.message
+//                billingRepository._billingError.value = e.message
             }
         }
     }

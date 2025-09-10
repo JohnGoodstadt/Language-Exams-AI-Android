@@ -82,6 +82,7 @@ class AudioPlayerService @Inject constructor() {
             if (it.isPlaying) {
                 it.stop()
             }
+            it.reset() //stop warning n log
             it.release()
         }
         mediaPlayer = null

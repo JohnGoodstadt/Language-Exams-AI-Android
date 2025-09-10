@@ -3023,7 +3023,7 @@
 			]
 		},
 		{
-			"tabnumber": 3,
+			"tabnumber": 2,
 			"title": "Occupations",
 			"sortOrder": 10,
 			"words": [
@@ -3747,7 +3747,7 @@
 			}
 		  ],
 		  "title": "Places",
-		  "tabnumber": 3
+		  "tabnumber": 1
 		},
 		{
 		  "tabnumber": 3,

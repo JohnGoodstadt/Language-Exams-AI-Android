@@ -111,6 +111,8 @@ class TTSStatsRepository @Inject constructor(
         const val GeminiCallCount = "geminiCallCount"
         const val GeminiEstCostUSD = "geminiEstCostUSD"
 
+        const val GeminiPremiumCallCount = "geminiPremiumCallCount"
+        const val OpenAIPremiumCallCount = "openAIPremiumCallCount"
 
         const val TTSAPIEstCostUSD = "ttsAPIEstCostUSD"
         const val TTSTotalCharCount = "ttsTotalCharCount"
@@ -337,6 +339,7 @@ class TTSStatsRepository @Inject constructor(
 //        val statsPlus1: Map<String, Any> = stats.plus(fb.lastActivityDate to Date()).toMap()
 
         if (stats.isNotEmpty()) {
+            Timber.w("Flushing user stats. count:${stats.size}")
             firestoreRepository.fsUpdateUserStatsCounts(stats)
             clearStats(fsDOC.USER)
         }
@@ -368,19 +371,7 @@ class TTSStatsRepository @Inject constructor(
             statsDictionary[FirestoreRepository.fb.B1WordList_en] = stats[FirestoreRepository.fb.B1WordList_en] as? Int ?: 0
             statsDictionary[FirestoreRepository.fb.B2WordList_en] = stats[FirestoreRepository.fb.B2WordList_en] as? Int ?: 0
             statsDictionary[FirestoreRepository.fb.USvsBritishWordList_en] = stats[FirestoreRepository.fb.USvsBritishWordList_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.DontWordList_en] = stats[FirestoreRepository.fb.DontWordList_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.January_en] = stats[FirestoreRepository.fb.January_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.February_en] = stats[FirestoreRepository.fb.February_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.March_en] = stats[FirestoreRepository.fb.March_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.April_en] = stats[FirestoreRepository.fb.April_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.May_en] = stats[FirestoreRepository.fb.May_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.June_en] = stats[FirestoreRepository.fb.June_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.July_en] = stats[FirestoreRepository.fb.July_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.August_en] = stats[FirestoreRepository.fb.August_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.September_en] = stats[FirestoreRepository.fb.September_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.October_en] = stats[FirestoreRepository.fb.October_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.November_en] = stats[FirestoreRepository.fb.November_en] as? Int ?: 0
-//            statsDictionary[FirestoreRepository.fb.December_en] = stats[FirestoreRepository.fb.December_en] as? Int ?: 0
+
 
             statsDictionary[viewSentencesCount] = stats[viewSentencesCount] as? Int ?: 0
             statsDictionary[viewWordsCount] = stats[viewWordsCount] as? Int ?: 0
@@ -403,6 +394,7 @@ class TTSStatsRepository @Inject constructor(
 
 
             Timber.d("Updating Firebase with stats: $stats for uid: ${firestoreRepository.firebaseUid()}")
+            Timber.w("Flushing global TTS stats. count:${stats.size}")
             firestoreRepository.fsUpdateGlobalStats(stats = statsDictionary)
 
             clearStats(fsDOC.TTSStats)
@@ -592,7 +584,7 @@ class TTSStatsRepository @Inject constructor(
 
         val lastFlushDate = getLastFlushDate()
 
-        Timber.d("lastFlushDateString:$lastFlushDate")
+        Timber.w("lastFlushDateString:$lastFlushDate")
 
         return if (lastFlushDate != null) {
 
@@ -607,7 +599,7 @@ class TTSStatsRepository @Inject constructor(
             if (lastFlushDateStartOfDay < today) {
                 // Last flush was not today, so flush now
                 updateLastFlushDate(today)
-                Timber.d("Stats flushed and lastFlushDate updated.")
+                Timber.w("Stats flushed and lastFlushDate updated.")
                 true
             } else {
                 false
@@ -683,38 +675,38 @@ class TTSStatsRepository @Inject constructor(
     // end region
 
     // region Login
-    fun checkIfLoginDue(): Boolean {
-        val today = Calendar.getInstance().apply {
-            set(Calendar.HOUR_OF_DAY, 0)
-            set(Calendar.MINUTE, 0)
-            set(Calendar.SECOND, 0)
-            set(Calendar.MILLISECOND, 0)
-        }.time // today's date at 00:00:00
-
-        val lastDueDate = getLastLoginCheckDate()
-
-        return if (lastDueDate != null) {
-
-            val lastFlushDateStartOfDay = Calendar.getInstance().apply {
-                time = lastDueDate
-                set(Calendar.HOUR_OF_DAY, 0)
-                set(Calendar.MINUTE, 0)
-                set(Calendar.SECOND, 0)
-                set(Calendar.MILLISECOND, 0)
-            }.time
-
-            if (lastFlushDateStartOfDay < today) {
-                putLastLoginCheckDate(today)
-                true
-            } else {
-                false
-            }
-        } else { //first run
-            // No last date found, so write now
-            putLastLoginCheckDate(today)
-            true
-        }
-    }
+//    fun checkIfLoginDue(): Boolean {
+//        val today = Calendar.getInstance().apply {
+//            set(Calendar.HOUR_OF_DAY, 0)
+//            set(Calendar.MINUTE, 0)
+//            set(Calendar.SECOND, 0)
+//            set(Calendar.MILLISECOND, 0)
+//        }.time // today's date at 00:00:00
+//
+//        val lastDueDate = getLastLoginCheckDate()
+//
+//        return if (lastDueDate != null) {
+//
+//            val lastFlushDateStartOfDay = Calendar.getInstance().apply {
+//                time = lastDueDate
+//                set(Calendar.HOUR_OF_DAY, 0)
+//                set(Calendar.MINUTE, 0)
+//                set(Calendar.SECOND, 0)
+//                set(Calendar.MILLISECOND, 0)
+//            }.time
+//
+//            if (lastFlushDateStartOfDay < today) {
+//                putLastLoginCheckDate(today)
+//                true
+//            } else {
+//                false
+//            }
+//        } else { //first run
+//            // No last date found, so write now
+//            putLastLoginCheckDate(today)
+//            true
+//        }
+//    }
 
     fun putLastLoginCheckDate(date: Date): Boolean {
         return try {

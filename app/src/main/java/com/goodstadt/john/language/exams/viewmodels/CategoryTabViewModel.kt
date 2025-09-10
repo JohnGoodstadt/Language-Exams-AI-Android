@@ -120,7 +120,7 @@ class CategoryTabViewModel @Inject constructor(
                 billingRepository.logCurrentStatus()  // Debug log on init
             } catch (e: Exception) {
                 Timber.e("${e.message}")
-                billingRepository._billingError.value = e.message
+               // billingRepository._billingError.value = e.message
             }
 
             billingRepository.isPurchased.collect { purchasedStatus ->
@@ -206,18 +206,18 @@ class CategoryTabViewModel @Inject constructor(
                 return@launch
             }
 
-            if (isPremiumUser.value) {
-                Timber.i("User is a paid user!")
-            }else{
-                Timber.i("User is a FREE user")
-            }
+//            if (isPremiumUser.value) {
+//                Timber.i("User is a paid user!")
+//            }else{
+//                Timber.i("User is a FREE user")
+//            }
 
             if (!isPremiumUser.value) { //if premium user don't check credits
                 if (rateLimiter.doIForbidCall()){
                     val failType = rateLimiter.canMakeCallWithResult()
-                    Timber.d("canICallAPI = %s", failType.canICallAPI)
-                    Timber.d("failReason = %s", (failType.failReason))
-                    Timber.d("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w("canICallAPI = %s", failType.canICallAPI)
+                    Timber.w("failReason = %s", (failType.failReason))
+                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
 
                     if (!failType.canICallAPI){
                         if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){

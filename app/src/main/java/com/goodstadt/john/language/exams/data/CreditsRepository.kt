@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.data
 
 import android.util.Log
+import com.goodstadt.john.language.exams.BuildConfig
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
@@ -23,10 +24,16 @@ import javax.inject.Singleton
 // --- The data classes and config object remain the same ---
 
 
+//object CreditSystemConfig {
+//    const val FREE_TIER_CREDITS = 4//20
+//    const val BOUGHT_TIER_CREDITS = 4 //10
+//    const val WAIT_PERIOD_MINUTES = 3L //20
+//}
+
 object CreditSystemConfig {
-    const val FREE_TIER_CREDITS = 4//20
-    const val BOUGHT_TIER_CREDITS = 4 //10
-    const val WAIT_PERIOD_MINUTES = 3L //20
+    val FREE_TIER_CREDITS = if (BuildConfig.DEBUG) 4 else 20
+    val BOUGHT_TIER_CREDITS = if (BuildConfig.DEBUG) 4 else 10
+    val WAIT_PERIOD_MINUTES = if (BuildConfig.DEBUG) 3L else 20L
 }
 
 data class UserCredits(

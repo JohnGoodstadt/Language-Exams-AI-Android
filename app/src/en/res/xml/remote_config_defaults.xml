@@ -19,7 +19,7 @@
     <entry>
         <key>update_url_android</key>
         <!-- Replace with your actual package name -->
-        <value>https://play.google.com/store/apps/details?id=com.goodstadt.john.language.exams</value>
+        <value>https://play.google.com/store/apps/details?id=com.goodstadt.john.language.exams.en</value>
     </entry>
     <entry>
         <key>llm_models_config</key>

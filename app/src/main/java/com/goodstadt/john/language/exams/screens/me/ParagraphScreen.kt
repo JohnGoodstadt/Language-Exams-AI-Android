@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens
 
+import android.content.Context
 import android.util.Log
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -82,16 +83,27 @@ fun ParagraphScreen(
 //    val tokenCount by viewModel.totalTokenCount.collectAsState()
 
     val lifecycleOwner = LocalLifecycleOwner.current
+    val isPurchased by viewModel.isPurchased.collectAsState(initial = false)
     val productDetails by viewModel.productDetails.collectAsState(initial = null)
     val context = LocalContext.current
-   // val waitTimeText = viewModel.getFormattedWaitTimeLeft()
+
+    val PREFS_NAME = "AppPrefs"
+    val PREFS_KEY = "hasGenerated"
+
+
 
 //    LaunchedEffect(Unit) {
 //        viewModel.loadCredits()
 //    }
     LaunchedEffect(Unit) {
+
         delay(600) // GPT model might not have been initialised yet
-        viewModel.generateNewParagraph()
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        if (!prefs.getBoolean(PREFS_KEY, false)){ //only auto generate once
+            viewModel.generateNewParagraph()
+            prefs.edit().putBoolean(PREFS_KEY, true).apply()
+        }
+
         Timber.d("waitTimeText:$viewModel.getFormattedWaitTimeLeft()")
     }
     // Use DisposableEffect to tie logic to the composable's lifecycle.
@@ -101,7 +113,7 @@ fun ParagraphScreen(
             // presses home, or a dialog appears over it), stop the audio.
             if (event == Lifecycle.Event.ON_PAUSE) {
                 viewModel.stopPlayback()
-                viewModel.saveDataOnExit()
+//                viewModel.saveDataOnExit()
             }
         }
 
@@ -231,189 +243,179 @@ fun ParagraphScreen(
         }
         // This Spacer pushes the "Play" button towards the bottom
        // Spacer(modifier = Modifier.weight(1f))
+        if (!isPurchased) {
+            if (uiState.waitingForCredits) {
+                var now by remember { mutableStateOf(Date()) }
 
-        if (uiState.waitingForCredits) {
-            var now by remember { mutableStateOf(Date()) }
+                LaunchedEffect(uiState.waitingForCredits) { // runs once when waiting starts
+                    while (true) { // keep looping while in wait mode
+                        now = Date() // triggers recomposition immediately
+                        val remaining = viewModel.secondsRemaining(now)
 
-            LaunchedEffect(uiState.waitingForCredits) { // runs once when waiting starts
-                while (true) { // keep looping while in wait mode
-                    now = Date() // triggers recomposition immediately
-                    val remaining = viewModel.secondsRemaining(now)
+                        Timber.v("Compose tick: $remaining seconds remaining")
 
-                    Timber.v("Compose tick: $remaining seconds remaining")
+                        if (remaining == 0) {
+                            Timber.v("Resetting credits automatically...")
+                            viewModel.clearWaitPeriod()
+                            break // stop this loop
+                        }
 
-                    if (remaining == 0) {
-                        Timber.v("Resetting credits automatically...")
-                        viewModel.clearWaitPeriod()
-                        break // stop this loop
+                        delay(2000) // wait 2s before next tick
                     }
-
-                    delay(2000) // wait 2s before next tick
                 }
-            }
 
-            if (uiState.showIAPBottomSheet) {
-                ModalBottomSheet(
-                    // 5. This callback is triggered when the user dismisses the sheet.
-                    onDismissRequest = { viewModel.onBottomSheetDismissed() },
-                    sheetState = sheetStateIAP
-                ) {
-                    // 6. This is the content that appears INSIDE the sheet.
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(16.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally
+                if (uiState.showIAPBottomSheet) {
+                    ModalBottomSheet(
+                        // 5. This callback is triggered when the user dismisses the sheet.
+                        onDismissRequest = { viewModel.onBottomSheetDismissed() },
+                        sheetState = sheetStateIAP
                     ) {
-
-                        Text(
-                            text = "Using AI has charges",
-                            fontSize = 20.sp,
-                            textAlign = TextAlign.Center,
+                        // 6. This is the content that appears INSIDE the sheet.
+                        Column(
                             modifier = Modifier
-                                .padding(horizontal = 16.dp, vertical = 4.dp)
                                 .fillMaxWidth()
-                        )
-                        Spacer(modifier = Modifier.height(8.dp))
-                        // Sub-title
-                        Text(
-                            text = "Therefore we have to limit how many AI calls are made:",
-                            fontSize = 16.sp,
-                            textAlign = TextAlign.Start,
-                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
-                        )
-                        // Body
-                        Text(
-                            text = "1. Up to ${uiState.hourlyLimit} interactions per hour.",
-                            fontSize = 14.sp,
-                            textAlign = TextAlign.Start,
-                            modifier = Modifier
-                                .padding(horizontal = 16.dp, vertical = 4.dp)
-                                .fillMaxWidth()
-                                .align(Alignment.Start)
-                        )
-                        Text(
-                            text = "2. Up to ${uiState.dailyLimit}  interactions per day.",
-                            fontSize = 14.sp,
-                            textAlign = TextAlign.Start,
-                            modifier = Modifier
-                                .padding(horizontal = 16.dp, vertical = 4.dp)
-                                .fillMaxWidth()
-                                .align(Alignment.Start)
-                        )
-                        Text(
-                            text = "3. Delay after ${FREE_TIER_CREDITS} paragraphs.",
-                            fontSize = 14.sp,
-                            textAlign = TextAlign.Start,
-                            modifier = Modifier
-                                .padding(horizontal = 16.dp, vertical = 4.dp)
-                                .fillMaxWidth()
-                                .align(Alignment.Start)
-                        )
-
-                        Text(
-                            text = "All previously heard words are still playable.",
-                            fontSize = 14.sp,
-                            textAlign = TextAlign.Start,
-                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
-                        )
-
-                        Spacer(modifier = Modifier.height(8.dp))
-
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            // This arrangement places equal space around each button, pushing them apart.
-                            horizontalArrangement = Arrangement.SpaceEvenly,
-                            verticalAlignment = Alignment.CenterVertically
+                                .padding(16.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally
                         ) {
 
-                            Button(onClick = {
-                                if (context is androidx.activity.ComponentActivity) {
-                                    viewModel.buyPremiumButtonPressed(context)
-                                    viewModel.onBottomSheetDismissed()
-                                }
-                            })
-                            {
-                                productDetails?.let { details ->
-                                    details.oneTimePurchaseOfferDetails?.let { offerDetails ->
-                                        Text("Go for it: ${offerDetails.formattedPrice}")
+                            Text(
+                                text = "Using AI has charges",
+                                fontSize = 20.sp,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier
+                                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                                    .fillMaxWidth()
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                            // Sub-title
+                            Text(
+                                text = "Therefore we have to limit how many AI calls are made:",
+                                fontSize = 16.sp,
+                                textAlign = TextAlign.Start,
+                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
+                            )
+                            // Body
+                            Text(
+                                text = "1. Up to ${uiState.hourlyLimit} interactions per hour.",
+                                fontSize = 14.sp,
+                                textAlign = TextAlign.Start,
+                                modifier = Modifier
+                                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                                    .fillMaxWidth()
+                                    .align(Alignment.Start)
+                            )
+                            Text(
+                                text = "2. Up to ${uiState.dailyLimit}  interactions per day.",
+                                fontSize = 14.sp,
+                                textAlign = TextAlign.Start,
+                                modifier = Modifier
+                                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                                    .fillMaxWidth()
+                                    .align(Alignment.Start)
+                            )
+                            Text(
+                                text = "3. Delay after ${FREE_TIER_CREDITS} paragraphs calls.",
+                                fontSize = 14.sp,
+                                textAlign = TextAlign.Start,
+                                modifier = Modifier
+                                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                                    .fillMaxWidth()
+                                    .align(Alignment.Start)
+                            )
+
+                            Text(
+                                text = "All previously heard words are still playable.",
+                                fontSize = 14.sp,
+                                textAlign = TextAlign.Start,
+                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
+                            )
+
+                            Spacer(modifier = Modifier.height(8.dp))
+
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                // This arrangement places equal space around each button, pushing them apart.
+                                horizontalArrangement = Arrangement.SpaceEvenly,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+
+                                Button(onClick = {
+                                    if (context is androidx.activity.ComponentActivity) {
+                                        viewModel.buyPremiumButtonPressed(context)
+                                        viewModel.onBottomSheetDismissed()
+                                    }
+                                })
+                                {
+                                    productDetails?.let { details ->
+                                        details.oneTimePurchaseOfferDetails?.let { offerDetails ->
+                                            Text("Go for it: ${offerDetails.formattedPrice}")
+                                        }
                                     }
                                 }
-                            }
 
-                            Button(onClick = {
-                                viewModel.onBottomSheetDismissed()
-                            }) {
-                                Text("Maybe Later")
+                                Button(onClick = {
+                                    viewModel.onBottomSheetDismissed()
+                                }) {
+                                    Text("Maybe Later")
+                                }
                             }
+                            Text(
+                                text = "All exam lists A1,A2,B1,B2 for all time",
+                                fontSize = 12.sp,
+                                color = Color.White,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier
+                                    .padding(horizontal = 16.dp, vertical = 4.dp)
+                                    .fillMaxWidth()
+                            )
                         }
-                        Text(
-                            text = "All exam lists A1,A2,B1,B2 for all time",
-                            fontSize = 12.sp,
-                            color = Color.White,
-                            textAlign = TextAlign.Center,
-                            modifier = Modifier
-                                .padding(horizontal = 16.dp, vertical = 4.dp)
-                                .fillMaxWidth()
-                        )
                     }
                 }
-            }
-            Column {
-                Text(
-                    text = "Calling an AI to write the paragraph, just for you, has a cost. So we have to limit it./nYou can avoid all restrictions, with a contribution, by clicking here:",
-                    fontSize = 12.sp,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .padding(horizontal = 12.dp, vertical = 4.dp)
-                        .fillMaxWidth()
-                )
-//                Text(
-//                    text = "You can avoid all restrictions, with a contribution, by clicking here:",
-//                    fontSize = 12.sp,
-//                    textAlign = TextAlign.Center,
-//                    modifier = Modifier
-//                        .padding(horizontal = 12.dp, vertical = 4.dp)
-//                        .fillMaxWidth()
-//                )
+                Column {
+                    Text(
+                        text = "Calling an AI to write the paragraph, just for you, has a cost. So we have to limit it.\nYou can avoid all restrictions, with a contribution, by clicking here:",
+                        fontSize = 12.sp,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .padding(horizontal = 12.dp, vertical = 4.dp)
+                            .fillMaxWidth()
+                    )
 
-                Icon(
-                    imageVector = Icons.Filled.ShoppingCart,
-                    contentDescription = "Shopping Cart",
-                    tint = orangeLight,
-                    modifier = Modifier.clickable { viewModel.buyButtonClicked() }
-                        .padding(horizontal = 12.dp, vertical = 4.dp)
-                        .fillMaxWidth()
-                )
+                    Icon(
+                        imageVector = Icons.Filled.ShoppingCart,
+                        contentDescription = "Shopping Cart",
+                        tint = orangeLight,
+                        modifier = Modifier.clickable { viewModel.buyButtonClicked() }
+                            .padding(horizontal = 12.dp, vertical = 4.dp)
+                            .fillMaxWidth()
+                    )
 
-                Text(
-                    text = "Delay: ${viewModel.formattedCountdown(now)}",
-                    fontSize = 12.sp,
-                    color = orangeLight,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .padding(horizontal = 12.dp, vertical = 4.dp)
-                        .fillMaxWidth()
-                )
-                Text(
-                    text = "Next refill at:${viewModel.getFormattedCreditRepositoryDate()}",
-                    fontSize = 12.sp,
-                    color = orangeLight,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier
-                        .padding(horizontal = 12.dp, vertical = 4.dp)
-                        .fillMaxWidth()
-                )
-
-//                Text("Delay: ${viewModel.formattedCountdown(now)}")
-//                Text("Next refill at:${uiState.userCredits.llmNextCreditRefill.toDate()}")
-               //Text("Next refill at:${viewModel.getFormattedCreditRepositoryDate()}")
-            }
-        } else {
-            if (DEBUG){
-                Text("Credits left: ${uiState.userCredits.current} (D)")
+                    Text(
+                        text = "Delay: ${viewModel.formattedCountdown(now)}",
+                        fontSize = 12.sp,
+                        color = orangeLight,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .padding(horizontal = 12.dp, vertical = 4.dp)
+                            .fillMaxWidth()
+                    )
+                    Text(
+                        text = "Next refill at:${viewModel.getFormattedCreditRepositoryDate()}",
+                        fontSize = 12.sp,
+                        color = orangeLight,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier
+                            .padding(horizontal = 12.dp, vertical = 4.dp)
+                            .fillMaxWidth()
+                    )
+                }
+            } else {
+                if (DEBUG) {
+                    Text("Credits left: ${uiState.userCredits.current} (D)")
+                }
             }
         }
+
 
         Spacer(modifier = Modifier.weight(1f)) //push to bottom
 

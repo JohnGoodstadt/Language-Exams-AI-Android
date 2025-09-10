@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.data
 
+import android.app.Activity
 import android.content.Context
 import android.util.Log
 import androidx.annotation.RequiresApi
@@ -13,6 +14,7 @@ import com.android.billingclient.api.ConsumeParams
 import com.android.billingclient.api.PendingPurchasesParams
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.Purchase
+import com.android.billingclient.api.PurchasesResult
 import com.android.billingclient.api.PurchasesUpdatedListener
 import com.android.billingclient.api.QueryProductDetailsParams
 import com.android.billingclient.api.QueryPurchasesParams
@@ -49,8 +51,9 @@ class BillingRepository @Inject constructor(
 ) {
 
     private val PRODUCT_ID = "unlock_premium_features_v1"
-    private val tag = "BillingRepository" // Timber will use the class name, but this is fine
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
 
+    // --- State Flows Exposed to the App ---
     private val _connectionState = MutableStateFlow(ConnectionState.DISCONNECTED)
     val connectionState: StateFlow<Int> = _connectionState.asStateFlow()
 
@@ -60,17 +63,22 @@ class BillingRepository @Inject constructor(
     private val _isPurchased = MutableStateFlow(false)
     val isPurchased: StateFlow<Boolean> = _isPurchased.asStateFlow()
 
-    val _billingError = MutableStateFlow<String?>(null)
+    private val _billingError = MutableStateFlow<String?>(null)
     val billingError: StateFlow<String?> = _billingError.asStateFlow()
 
-    // A dedicated scope for billing operations that won't be cancelled with a ViewModel.
-    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
-
+    // --- Core Billing Client Setup ---
     private val purchasesUpdatedListener = PurchasesUpdatedListener { billingResult, purchases ->
-        // ... (Your existing listener logic is fine)
+        if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && purchases != null) {
+            Timber.d("New purchase event received. Processing ${purchases.size} purchase(s).")
+            scope.launch {
+                processPurchases(purchases)
+            }
+        } else {
+            _billingError.value = "Purchase failed with code: ${billingResult.responseCode}"
+            Timber.e("Purchase update error: ${billingResult.debugMessage}")
+        }
     }
 
-    // Modern builder for Billing Library v7.0.0+
     private val billingClient: BillingClient = BillingClient.newBuilder(context)
         .setListener(purchasesUpdatedListener)
         .enablePendingPurchases(
@@ -81,192 +89,196 @@ class BillingRepository @Inject constructor(
         .build()
 
     /**
-     * A robust wrapper that ensures the billing client is connected before executing
-     * a suspending action. If not connected, it will attempt to reconnect.
-     *
-     * @param action A suspend lambda block containing the billing operation to perform.
-     */
-    private suspend fun executeSuspendingBillingAction(action: suspend () -> Unit) {
-        if (billingClient.isReady) {
-            action()
-        } else {
-            Timber.w(tag, "BillingClient not ready. Attempting to reconnect before action.")
-            // Attempt to connect first
-            connect()
-
-            // After attempting to connect, check again if it's ready.
-            if (billingClient.isReady) {
-                action()
-            } else {
-                Timber.e(tag, "Billing action aborted. Could not connect to the billing service.")
-                _billingError.value = "Could not connect to the billing service."
-            }
-        }
-    }
-    // Your regular, non-suspending actions can use a simpler version
-    private fun executeBillingAction(action: () -> Unit) {
-        if (billingClient.isReady) {
-            action()
-        } else {
-            Timber.e(tag, "Billing action aborted. Client is not ready.")
-            _billingError.value = "Billing service is not connected."
-            connect() // Attempt to reconnect for the next time
-        }
-    }
-    /**
      * Public connect function to be called from a ViewModel.
-     * This replaces the need for an init block to handle connections.
+     * Starts the connection to the Google Play Billing service.
      */
     fun connect() {
-        // --- THIS IS THE START OF THE REFACTORED LOGIC ---
-        // We no longer use suspendCancellableCoroutine for the connection.
-
         if (billingClient.isReady) {
             Timber.d("BillingClient is already connected.")
-            scope.launch { checkPurchases() } // If already connected, it's a good time to refresh purchases.
+            scope.launch { checkPurchases() } // Refresh purchases on reconnect
             return
         }
 
         if (!connectivityRepository.isCurrentlyOnline()) {
-            Timber.e("⚠️ No internet connection. Billing service connection aborted.")
             _connectionState.value = ConnectionState.DISCONNECTED
             _billingError.value = "No internet connection."
+            Timber.w("Billing connection aborted: No internet.")
             return
         }
 
         billingClient.startConnection(object : BillingClientStateListener {
             override fun onBillingSetupFinished(billingResult: BillingResult) {
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                    Timber.d("Setup finished: Response code=${billingResult.responseCode}")
                     _connectionState.value = ConnectionState.CONNECTED
-                    // Launch queries in the background after connecting
+                    Timber.i("✅ Billing service connected successfully.")
                     scope.launch {
                         queryProductDetails()
                         checkPurchases()
                     }
                 } else {
-                    _billingError.value = billingResult.debugMessage
                     _connectionState.value = ConnectionState.DISCONNECTED
+                    _billingError.value = "Billing setup failed: ${billingResult.debugMessage}"
+                    Timber.e("Billing setup failed. Code: ${billingResult.responseCode}")
                 }
             }
-
             override fun onBillingServiceDisconnected() {
-                Timber.d("Service disconnected")
                 _connectionState.value = ConnectionState.DISCONNECTED
+                Timber.w("Billing service disconnected.")
             }
         })
     }
 
-    // --- THIS FUNCTION IS NOW ROBUST AGAINST CRASHES ---
+    /**
+     * Queries the details of the premium product from the Play Store.
+     */
     private suspend fun queryProductDetails() {
-        executeSuspendingBillingAction {
-            val params = QueryProductDetailsParams.newBuilder().setProductList(
-                listOf(QueryProductDetailsParams.Product.newBuilder()
-                    .setProductId(PRODUCT_ID)
-                    .setProductType(BillingClient.ProductType.INAPP).build()
-                )
-            ).build()
-
-            try {
-                // Use the modern suspend function directly
-                val result = billingClient.queryProductDetails(params)
-                val billingResult = result.billingResult
-                val detailsList = result.productDetailsList ?: emptyList()
-
-                Timber.d("Product details query: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
-
-                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK && detailsList.isNotEmpty()) {
-                    _productDetails.value = detailsList.firstOrNull()
-                } else {
-                    _billingError.value = billingResult.debugMessage ?: "No product details returned for $PRODUCT_ID"
-                }
-            } catch (e: Exception) {
-                // THIS CATCH BLOCK PREVENTS THE CRASH
-                Timber.e(e, "An exception occurred during queryProductDetails. This is expected without internet.")
-                _billingError.value = "Failed to query products. Please check your connection."
-            }
+        if (!billingClient.isReady) {
+            Timber.e("queryProductDetails failed: BillingClient not ready.")
+            return
         }
+        val productList = listOf(
+            QueryProductDetailsParams.Product.newBuilder()
+                .setProductId(PRODUCT_ID)
+                .setProductType(BillingClient.ProductType.INAPP).build()
+        )
+        val params = QueryProductDetailsParams.newBuilder().setProductList(productList).build()
 
+        try {
+            val result = billingClient.queryProductDetails(params)
+            val detailsList = result.productDetailsList ?: emptyList()
+            if (result.billingResult.responseCode == BillingClient.BillingResponseCode.OK && detailsList.isNotEmpty()) {
+                _productDetails.value = detailsList.firstOrNull()
+                Timber.i("✅ Product details found for $PRODUCT_ID")
+            } else {
+                _billingError.value = "Product details not found for $PRODUCT_ID"
+                Timber.w("Product details query failed or returned empty. Code: ${result.billingResult.responseCode}")
+            }
+        } catch (e: Exception) {
+            _billingError.value = "Failed to query products: ${e.message}"
+            Timber.e(e, "Exception during queryProductDetails.")
+        }
     }
 
-    // --- THIS FUNCTION IS ALSO NOW ROBUST AGAINST CRASHES ---
+    /**
+     * Checks for any existing purchases the user has made to restore their premium status.
+     */
     suspend fun checkPurchases() {
-        executeSuspendingBillingAction {
-            val params = QueryPurchasesParams.newBuilder()
-                .setProductType(BillingClient.ProductType.INAPP).build()
+        if (!billingClient.isReady) {
+            Timber.e("checkPurchases failed: BillingClient not ready.")
+            return
+        }
 
-            try {
-                // We must wrap the callback-based API in a coroutine
-                val purchases = suspendCancellableCoroutine<List<Purchase>> { continuation ->
-                    billingClient.queryPurchasesAsync(params) { billingResult, purchasesList ->
-                        if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                            continuation.resume(purchasesList) // Success: return the list
-                        } else {
-                            // Failure: throw an exception
-                            continuation.resumeWithException(Exception(billingResult.debugMessage))
+        val params = QueryPurchasesParams.newBuilder()
+            .setProductType(BillingClient.ProductType.INAPP).build()
+
+        try {
+            // --- THIS IS THE CORRECTED LOGIC ---
+            // We must wrap the callback-based API in a coroutine to "await" its result.
+            val purchasesResult = suspendCancellableCoroutine<PurchasesResult> { continuation ->
+                // The queryPurchasesAsync function takes the params and a listener.
+                billingClient.queryPurchasesAsync(params) { billingResult, purchasesList ->
+                    // This listener block is called when the query is complete.
+                    // We wrap both results in our own PurchasesResult object.
+                    if (continuation.isActive) {
+                        continuation.resume(PurchasesResult(billingResult, purchasesList))
+                    }
+                }
+            }
+            // --- END OF CORRECTION ---
+
+            // Now we can process the result that the coroutine returned.
+            val billingResult = purchasesResult.billingResult
+            val purchases = purchasesResult.purchasesList
+
+            if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                Timber.d("Purchases query successful. Found ${purchases.size} items.")
+                // Pass the list to the central processor.
+                processPurchases(purchases)
+            } else {
+                _billingError.value = "Failed to query purchases: ${billingResult.debugMessage}"
+                Timber.w("checkPurchases query failed. Code: ${billingResult.responseCode}")
+            }
+        } catch (e: Exception) {
+            // This will catch any exceptions from the coroutine bridge.
+            _billingError.value = "Failed to check purchases: ${e.message}"
+            Timber.e(e, "Exception during checkPurchases.")
+        }
+    }
+
+    /**
+     * Launches the Google Play purchase flow for the premium product.
+     */
+    fun launchPurchase(activity: Activity) {
+        if (!billingClient.isReady) {
+            _billingError.value = "Cannot make purchase. Billing service not connected."
+            Timber.e("launchPurchase failed: BillingClient not ready.")
+            return
+        }
+        val productDetails = _productDetails.value ?: run {
+            _billingError.value = "Product details not available to launch purchase."
+            Timber.e("launchPurchase failed: Product details are null.")
+            return
+        }
+
+        val productDetailsParams = BillingFlowParams.ProductDetailsParams.newBuilder()
+            .setProductDetails(productDetails).build()
+        val billingFlowParams = BillingFlowParams.newBuilder()
+            .setProductDetailsParamsList(listOf(productDetailsParams)).build()
+
+        billingClient.launchBillingFlow(activity, billingFlowParams)
+    }
+
+    /**
+     * Central function to process a list of purchases, either from a new transaction
+     * or from a query of existing purchases. It handles acknowledgment and updates the app state.
+     */
+    private suspend fun processPurchases(purchases: List<Purchase>) {
+        val premiumPurchase = purchases.firstOrNull { it.products.contains(PRODUCT_ID) }
+
+        if (premiumPurchase != null && premiumPurchase.purchaseState == Purchase.PurchaseState.PURCHASED) {
+            if (!premiumPurchase.isAcknowledged) {
+                // New purchase that needs to be acknowledged.
+                Log.d("tag", "Purchase is new. Acknowledging...")
+                val acknowledgeParams = AcknowledgePurchaseParams.newBuilder()
+                    .setPurchaseToken(premiumPurchase.purchaseToken).build()
+
+                // --- THIS IS THE CORRECTED LOGIC ---
+                // We must wrap the callback-based acknowledgePurchase API in a coroutine.
+                try {
+                    val ackResult = suspendCancellableCoroutine<BillingResult> { continuation ->
+                        // The acknowledgePurchase function takes the params and a listener.
+                        billingClient.acknowledgePurchase(acknowledgeParams) { billingResult ->
+                            // This listener block is called when the acknowledgment is complete.
+                            if (continuation.isActive) {
+                                continuation.resume(billingResult)
+                            }
                         }
                     }
-                }
-                // If the coroutine completes successfully, 'purchases' will have the list
-                val purchased = purchases.any { it.products.contains(PRODUCT_ID) && it.isAcknowledged }
-                _isPurchased.value = purchased
 
-            } catch (e: Exception) {
-                // This will catch the exception from the coroutine or any other error
-                Timber.e(e, "An exception occurred during checkPurchases.")
-                _billingError.value = "Failed to check purchases: ${e.message}"
-            }
-        }
-    }
-    /**
-     * Launch the purchase flow. Call from UI with an Activity context.
-     */
-    fun launchPurchase(activity: android.app.Activity) {
-        executeBillingAction {
-            val productDetails = _productDetails.value ?: run {
-                Timber.e("No product details available")
-                return@executeBillingAction
-            }
-
-            val productDetailsParams = BillingFlowParams.ProductDetailsParams.newBuilder()
-                .setProductDetails(productDetails)
-                .build()
-
-            val billingFlowParams = BillingFlowParams.newBuilder()
-                .setProductDetailsParamsList(listOf(productDetailsParams))
-                .build()
-
-            val billingResult = billingClient.launchBillingFlow(activity, billingFlowParams)
-            Timber.d("Launch billing flow: Response code=${billingResult.responseCode}, Debug=${billingResult.debugMessage}")
-        }
-
-    }
-    // --- This function can also be made safer ---
-    private suspend fun handlePurchase(purchase: Purchase) {
-        if (purchase.products.contains(PRODUCT_ID) &&
-            purchase.purchaseState == Purchase.PurchaseState.PURCHASED &&
-            !purchase.isAcknowledged
-        ) {
-            val acknowledgeParams = AcknowledgePurchaseParams.newBuilder()
-                .setPurchaseToken(purchase.purchaseToken).build()
-
-            try {
-                // Wrap the callback-based acknowledge API
-                val billingResult = suspendCancellableCoroutine<BillingResult> { continuation ->
-                    billingClient.acknowledgePurchase(acknowledgeParams) { result ->
-                        continuation.resume(result)
+                    // Now we can check the result that the coroutine returned.
+                    if (ackResult.responseCode == BillingClient.BillingResponseCode.OK) {
+                        _isPurchased.value = true
+                        firestoreRepository.fbUpdateUsePurchasedProperty()
+                        Timber.i("✅ Purchase acknowledged and user status set to premium.")
+                    } else {
+                        _billingError.value = "Failed to acknowledge purchase: ${ackResult.debugMessage}"
+                        Timber.e("Acknowledgment failed. Code: ${ackResult.responseCode}")
                     }
+                } catch (e: Exception) {
+                    // Catch any exceptions from the coroutine bridge itself
+                    _billingError.value = "An error occurred during purchase acknowledgment: ${e.message}"
+                    Timber.e(e, "Exception during acknowledgePurchase.")
                 }
+                // --- END OF CORRECTION ---
 
-                // Now check the result from the coroutine
-                if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                    _isPurchased.value = true
-                } else {
-                    _billingError.value = billingResult.debugMessage
-                }
-            } catch (e: Exception) {
-                _billingError.value = "Failed to acknowledge purchase: ${e.message}"
+            } else {
+                // Existing, already acknowledged purchase. User is premium.
+                _isPurchased.value = true
+                Timber.d("Existing premium purchase found.")
             }
+        } else {
+            // No valid, purchased premium item found. User is not premium.
+            _isPurchased.value = false
         }
     }
 

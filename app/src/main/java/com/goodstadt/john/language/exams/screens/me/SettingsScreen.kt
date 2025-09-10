@@ -394,26 +394,13 @@ fun SettingsScreen(
                 value = uiState.appVersion
             )
         }
-//        item {
-//            SettingsInfoItem(
-//                icon = Icons.Default.Info,
-//                title = "Hard Coded Version",
-//                value = "1.45"
-//            )
-//        }
-//        item {
-//            SettingsInfoItem(
-//                icon = Icons.Default.Info,
-//                title = "Version Code",
-//                value = " ${uiState.appVersionCode}"
-//            )
-//        }
+
         if (DEBUG) {
             item {
                 SettingsActionItem(
                     icon = Icons.Default.CloudSync,
                     title = "Debug IAP",
-                    currentValue = "Tap to Log IAP Status",
+                    currentValue = "Tap to Log IAP Status (D)",
                     onClick = {
                         if (context is androidx.activity.ComponentActivity) {
                             viewModel.onDebugPrintBillingStatus(context)
@@ -421,8 +408,6 @@ fun SettingsScreen(
                     }
                 )
             }
-        }
-        if (DEBUG) {
             item {
                 SettingsInfoItem(
                     icon = Icons.Default.Info,
@@ -430,28 +415,11 @@ fun SettingsScreen(
                     value = viewModel.firebaseUid()
                 )
             }
-//            item { SectionHeader("Debug") }
-//            item {
-//                SettingsInfoItem(
-//                    icon = Icons.Default.Info,
-//                    title = "Hard coded version",
-//                    value = "V1.45"
-//                )
-//            }
         }
-//        item {
-//            SettingsActionItem(
-//                icon = Icons.Default.Info,
-//                title = "TTS Voices",
-//                currentValue = "",
-//                onClick = { viewModel.downloadAndSaveVoiceList() }
-//            )
-//        }
-
     }
 }
 
-// Helper Composables (unchanged)
+// Helper Composable (unchanged)
 @Composable
 private fun SectionHeader(title: String) {
     Text(

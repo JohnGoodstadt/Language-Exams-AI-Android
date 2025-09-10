@@ -37,79 +37,79 @@ class UserStatsRepository @Inject constructor(
      * @param uid The ID of the currently logged-in user.
      * @param wordId The ID of the word that was played.
      */
-    suspend fun incrementWordPlayCount(uid: String, wordId: String): Result<Unit> {
-        return try {
-            // A good data model would be a subcollection under the user
-            val docRef = firestore.collection(fb.users).document(uid)
-                .collection("wordStats").document(wordId)
-
-            // Using FieldValue.increment is efficient and handles offline cases well
-            val updates = mapOf("playCount" to FieldValue.increment(1))
-
-            docRef.set(updates, SetOptions.merge()).await() // .set with merge will create or update
-            Result.success(Unit)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Result.failure(e)
-        }
-    }
-    fun fsUpdateSentenceHistoryIncCount(
-        wordAndSentence: WordAndSentence,
-        count: Int = 1
-    ) {
-        val auth = FirebaseAuth.getInstance()
-        val firestore = FirebaseFirestore.getInstance()
-
-        val currentUser = auth.currentUser
-            ?: return // User is not authenticated
-
-        val itemRef = firestore.collection(fb.users)
-            .document(currentUser.uid)
-            .collection(fb.words)
-            .document(wordAndSentence.word)
-
-        // Update the Firestore document
-        itemRef.update(
-            mapOf(
-                sentenceCount to FieldValue.increment(count.toLong()),
-                wordCount to FieldValue.increment(count.toLong()),
-                timestamp to Date()
-            )
-        ).addOnFailureListener { exception ->
-            Timber.e("Error updating field: ${exception.message}")
-
-            // Check if the error is due to a missing document (Firestore error code 5)
-            if ((exception as? FirebaseFirestoreException)?.code == FirebaseFirestoreException.Code.NOT_FOUND) {
-                fsCreateWordHistoryDoc(wordAndSentence)
-            }
-        }
-    }
-    fun fsCreateWordHistoryDoc(words: WordAndSentence) {
-        val auth = FirebaseAuth.getInstance()
-        val firestore = FirebaseFirestore.getInstance()
-
-        val uid = auth.currentUser?.uid
-        if (uid == null) {
-            return // User is not authenticated
-        }
-
-        // Create the WordHistory object
-        val wordHistoryDoc = WordHistory(
-            word = words.word,
-            sentence = words.sentence,
-            wordCount = 1,
-            sentenceCount = 1,
-            timestamp = Date()
-        )
-
-        // Save the data to Firestore
-        firestore.collection(fb.users)
-            .document(uid)
-            .collection(fb.words)
-            .document(words.word)
-            .set(wordHistoryDoc)
-            .addOnFailureListener { exception ->
-                Timber.e("Error writing document: ${exception.message}")
-            }
-    }
+//    suspend fun incrementWordPlayCountObsolete(uid: String, wordId: String): Result<Unit> {
+//        return try {
+//            // A good data model would be a subcollection under the user
+//            val docRef = firestore.collection(fb.users).document(uid)
+//                .collection("wordStats").document(wordId)
+//
+//            // Using FieldValue.increment is efficient and handles offline cases well
+//            val updates = mapOf("playCount" to FieldValue.increment(1))
+//
+//            docRef.set(updates, SetOptions.merge()).await() // .set with merge will create or update
+//            Result.success(Unit)
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//            Result.failure(e)
+//        }
+//    }
+//    fun fsUpdateSentenceHistoryIncCount(
+//        wordAndSentence: WordAndSentence,
+//        count: Int = 1
+//    ) {
+//        val auth = FirebaseAuth.getInstance()
+//        val firestore = FirebaseFirestore.getInstance()
+//
+//        val currentUser = auth.currentUser
+//            ?: return // User is not authenticated
+//
+//        val itemRef = firestore.collection(fb.users)
+//            .document(currentUser.uid)
+//            .collection(fb.words)
+//            .document(wordAndSentence.word)
+//
+//        // Update the Firestore document
+//        itemRef.update(
+//            mapOf(
+//                sentenceCount to FieldValue.increment(count.toLong()),
+//                wordCount to FieldValue.increment(count.toLong()),
+//                timestamp to Date()
+//            )
+//        ).addOnFailureListener { exception ->
+//            Timber.e("Error updating field: ${exception.message}")
+//
+//            // Check if the error is due to a missing document (Firestore error code 5)
+//            if ((exception as? FirebaseFirestoreException)?.code == FirebaseFirestoreException.Code.NOT_FOUND) {
+//                fsCreateWordHistoryDoObsolete(wordAndSentence)
+//            }
+//        }
+//    }
+//    fun fsCreateWordHistoryDoObsolete(words: WordAndSentence) {
+//        val auth = FirebaseAuth.getInstance()
+//        val firestore = FirebaseFirestore.getInstance()
+//
+//        val uid = auth.currentUser?.uid
+//        if (uid == null) {
+//            return // User is not authenticated
+//        }
+//
+//        // Create the WordHistory object
+//        val wordHistoryDoc = WordHistory(
+//            word = words.word,
+//            sentence = words.sentence,
+//            wordCount = 1,
+//            sentenceCount = 1,
+//            timestamp = Date()
+//        )
+//
+//        // Save the data to Firestore
+//        firestore.collection(fb.users)
+//            .document(uid)
+//            .collection(fb.words)
+//            .document(words.word)
+//            .set(wordHistoryDoc)
+//            .addOnFailureListener { exception ->
+//                Timber.e("Error writing document: ${exception.message}")
+//            }
+//    }
 }

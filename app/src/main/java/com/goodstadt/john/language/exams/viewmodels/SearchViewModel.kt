@@ -171,11 +171,6 @@ class SearchViewModel @Inject constructor(
     fun playTrack(searchResult: SearchResult) {
         if (_playbackState.value is PlaybackState.Playing) return
 
-        if (isPremiumUser.value) {
-            Timber.i("playTrack() User is a paid user !")
-        }else{
-            Timber.i("playTrack() User is a FREE user")
-        }
         if (!isPremiumUser.value) { //if premium user don't check credits
             if (rateLimiter.doIForbidCall()){
                 val failType = rateLimiter.canMakeCallWithResult()
@@ -217,11 +212,11 @@ class SearchViewModel @Inject constructor(
                     Timber.v(rateLimiter.printCurrentStatus)
 //                    userStatsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(searchResult.word.word, searchResult.firstSentence))
                     ttsStatsRepository.updateTTSStatsWithCosts(searchResult.firstSentence, currentVoiceName)
-                    ttsStatsRepository.incWordStats(searchResult.firstSentence,)
+                    ttsStatsRepository.incWordStats(searchResult.word.word)
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
-                    ttsStatsRepository.incWordStats(searchResult.firstSentence,)
+                    ttsStatsRepository.incWordStats(searchResult.word.word)
                 }
                 is PlaybackResult.Failure -> {
 //                    _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
