@@ -42,6 +42,17 @@ class SimpleRateLimiter @Inject constructor(
             +++++++++++++++++++++
         """.trimIndent()
 
+    fun printableStatus():String {
+        return  """
+            +name: $name
+            +$description
+            +rateLimitingOn: $rateLimitingOn
+            +hourly Limit: $hourlyLimit
+            +daily Limit: $dailyLimit
+            +hourly Counts: ${hourlyCount}
+            +daily Counts: ${dailyCount}
+        """.trimIndent()
+    }
     val currentSchemeName: String
         get() = name
 

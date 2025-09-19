@@ -104,6 +104,9 @@ class AuthRepository @Inject constructor(
 
         }
     }
+    fun fsCurrentUID() : String{
+        return FirebaseAuth.getInstance().currentUser?.uid ?: "uid is unknown"
+    }
     suspend fun fsCreateUserDoc() {
 
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return

@@ -395,11 +395,47 @@ fun SettingsScreen(
             )
         }
 
+        if (viewModel.isItMe()) { //JG onSamsung phone
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.CloudSync,
+                    title = "Debug Release",
+                    currentValue = "Tap to Log (DR)",
+                    onClick = {
+                        if (viewModel.isItMe()) { //JG onSamsung phone
+                            viewModel.debugAppValues()
+                        }
+                    }
+                )
+            }
+            item {
+                SettingsInfoItem(
+                    icon = Icons.Default.Info,
+                    title = "Debug Rate Limiting",
+                    value =  viewModel.debugAppRateLimiting()
+                )
+            }
+            item {
+                SettingsInfoItem(
+                    icon = Icons.Default.Info,
+                    title = "LLM Credits",
+                    value =  viewModel.debugAppLLMCredits()
+                )
+            }
+            item {
+                SettingsInfoItem(
+                    icon = Icons.Default.Info,
+                    title = "Billing",
+                    value =  viewModel.debugAppBilling()
+                )
+            }
+        }
+
         if (DEBUG) {
             item {
                 SettingsActionItem(
                     icon = Icons.Default.CloudSync,
-                    title = "Debug IAP",
+                    title = "IAP",
                     currentValue = "Tap to Log IAP Status (D)",
                     onClick = {
                         if (context is androidx.activity.ComponentActivity) {

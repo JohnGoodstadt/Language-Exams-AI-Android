@@ -2,6 +2,8 @@ package com.goodstadt.john.language.exams.data
 
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.GoogleApiAvailability
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
@@ -13,10 +15,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.tasks.await
 import timber.log.Timber
+import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
+import java.util.Locale
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -367,5 +373,38 @@ class CreditsRepository @Inject constructor(
         firestore.collection(usersCollection).document(userId)
             .update(llmNextCreditRefillField, FieldValue.delete())
             .await()
+    }
+
+    fun printableCredits(): String {
+
+//        val a = formatDateSmart(_userCredits.value?.llmNextCreditRefill.toDate()) ?: Date())/
+
+//        val uc = _userCredits.value
+//        Timber.w(_userCredits.value?.current.toString())
+//        Timber.w(_userCredits.value?.total.toString())
+        return  """
+            +Current:${_userCredits.value?.current.toString()}
+            +Total:${_userCredits.value?.total.toString()}
+            +isInWaitPeriod: ${isInWaitPeriod.value}
+            +RefillDate?:${formatDateSmart(_userCredits.value?.llmNextCreditRefill?.toDate() ?: Date())}
+        """.trimIndent()
+
+    }
+   private  fun formatDateSmart(date: Date): String {
+        Timber.v("formatDateSmart: $date")
+        val now = Calendar.getInstance()
+        val cal = Calendar.getInstance().apply { time = date }
+
+        val isToday = now.get(Calendar.YEAR) == cal.get(Calendar.YEAR) &&
+                now.get(Calendar.DAY_OF_YEAR) == cal.get(Calendar.DAY_OF_YEAR)
+
+        return if (isToday) {
+            // Show only hour and minute
+            SimpleDateFormat("HH:mm", Locale.getDefault()).format(date)
+            // Or for 12-hour with AM/PM: SimpleDateFormat("h:mm a", Locale.getDefault()).format(date)
+        } else {
+            // Show day and month
+            SimpleDateFormat("dd MMM", Locale.getDefault()).format(date)
+        }
     }
 }

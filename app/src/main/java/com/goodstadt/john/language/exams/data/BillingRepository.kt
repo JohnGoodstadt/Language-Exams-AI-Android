@@ -300,6 +300,35 @@ class BillingRepository @Inject constructor(
         Timber.w("Is Purchased: ${_isPurchased.value}")
         Timber.w("Last Error: ${_billingError.value ?: "None"}")
     }
+    fun printableCurrentStatus()  : String{
+
+        val apiAvailability = GoogleApiAvailability.getInstance()
+        val resultCode = apiAvailability.isGooglePlayServicesAvailable(context)
+        var playService = "is available"
+        if (resultCode != ConnectionResult.SUCCESS) {
+            playService = "is NOT available:${resultCode}"
+        }
+
+        var conState = "Unknowe"
+        when (connectionState.value) {
+            ConnectionState.DISCONNECTED -> { conState = "Disconnected" }
+            ConnectionState.CONNECTED ->  { conState = "Connected" }
+            ConnectionState.CONNECTING ->  { conState = "Connecting" }
+            ConnectionState.CLOSED ->  { conState = "Closed" }
+        }
+
+
+
+        val report =  """
+            +conn:${conState}
+            +${_productDetails.value?.let { "${it.name} - ${it.oneTimePurchaseOfferDetails?.formattedPrice}" } ?: "None"}
+            +Is Purchased?: ${_isPurchased.value}
+            +Play Service: ${playService}
+            +Last Error:  ${_billingError.value ?: "None"}
+        """.trimIndent()
+
+        return report
+    }
     fun logGmsState(ctx: Context) {
         val gmsAvail = GoogleApiAvailability.getInstance()
             .isGooglePlayServicesAvailable(ctx)

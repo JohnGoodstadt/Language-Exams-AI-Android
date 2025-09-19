@@ -2,13 +2,16 @@ package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Activity
 import android.content.Context
+import androidx.compose.material3.Text
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
+import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.GoogleTTSInfoRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
@@ -36,7 +39,12 @@ import javax.inject.Inject
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.first
 import timber.log.Timber
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Date
+import java.util.Locale
 
 // --- MODIFICATION 1: Add pending state to UiState ---
 data class SettingsUiState(
@@ -86,6 +94,8 @@ class SettingsViewModel @Inject constructor(
     @ApplicationContext private val context: Context,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
+    private val authRepository: AuthRepository,
+    private val creditsRepository: CreditsRepository,
 ) : ViewModel() {
 
     val isPurchased = billingRepository.isPurchased
@@ -410,10 +420,45 @@ class SettingsViewModel @Inject constructor(
         firestoreRepository.fsIncUserProperty("premiumShownBuyScreen")
     }
 
-//    fun billingPrice() : Double {
-//        Timber.i("billingPrice()")
-//       //billingRepository.productDetails.value.
-//        return 0.0
-//    }
+    fun debugAppValues(){
+
+        if ( authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" ){ //JG onSamsung phone
+            val productDetails = billingRepository.printableCurrentStatus()
+            Timber.w(productDetails)
+            Timber.w(rateLimiter.printCurrentStatus)
+
+           Timber.w(creditsRepository.printableCredits())
+        }
+    }
+    fun debugAppRateLimiting() : String {
+
+        if ( authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" ){ //JG onSamsung phone
+            return rateLimiter.printableStatus()
+        }
+
+        return ""
+    }
+    fun debugAppBilling() : String {
+
+        if ( authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" ){ //JG onSamsung phone
+            val productDetails = billingRepository.printableCurrentStatus()
+           return productDetails
+        }
+
+        return ""
+    }
+    fun debugAppLLMCredits() : String {
+
+        if ( authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" ){ //JG onSamsung phone
+            return creditsRepository.printableCredits()
+        }
+
+        return ""
+    }
+
+    fun isItMe(): Boolean {
+        return authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1"
+    }
+
 
 }

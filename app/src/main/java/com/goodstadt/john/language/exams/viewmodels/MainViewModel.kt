@@ -166,14 +166,13 @@ class MainViewModel @Inject constructor(
             val result = authRepository.signInOrUpdateUser()
 
             result.onSuccess { user ->
-                Timber.d("Session success. UID: ${user.uid}")
+                Timber.w("Session success. UID is ${user.uid}")
                 _uiState.update { it.copy(authState = AuthUiState.Success(user.uid)) }
             }
 
             result.onFailure { exception ->
                 Timber.e("Session failed ${exception.localizedMessage}")
                 Timber.e("Session failed", exception)
-//                _uiState.update { it.copy(authState = AuthUiState.Error(exception.message ?: "Unknown error")) }
                 val errorMessage = when (exception) {
                     is java.net.UnknownHostException -> "Could not connect. Please check your internet connection."
                     else -> exception.message ?: "An unknown error occurred."

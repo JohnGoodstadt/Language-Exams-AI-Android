@@ -4,6 +4,7 @@ import android.app.Application
 import com.goodstadt.john.language.exams.MainCoroutineRule
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.AuthRepository
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
@@ -39,6 +40,7 @@ class MainViewModelTest {
     private lateinit var mockUserStatsRepository: UserStatsRepository
     private lateinit var mockTTSStatsRepository: TTSStatsRepository
     private lateinit var mockAppConfigRepository: AppConfigRepository
+    private lateinit var mockConnectivityRepositoryy: ConnectivityRepository
 //    private lateinit var mockBillingRepository: IAPBillingRepository
     private lateinit var viewModel: MainViewModel
     private lateinit var mockApplication: Application
@@ -72,7 +74,7 @@ class MainViewModelTest {
         // Initialize the ViewModel with ALL THREE mocks. This solves the "too many arguments" error.
 //        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository, mockControlRepository)
        // viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockAuthRepository,mockStatsRepository,mockApplication)
-        viewModel = MainViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockTTSStatsRepository,mockAppConfigRepository)
+        viewModel = MainViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockTTSStatsRepository,mockAppConfigRepository, mockConnectivityRepositoryy )
         // Allow the coroutines launched in the init block to complete
         advanceUntilIdle()
 
@@ -92,7 +94,7 @@ class MainViewModelTest {
 
         // 2. Act
 //        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository, mockControlRepository)
-        viewModel = MainViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockTTSStatsRepository,mockAppConfigRepository)
+        viewModel = MainViewModel(mockAuthRepository, mockUserPreferencesRepository,mockRecallingItemsManager,mockTTSStatsRepository,mockAppConfigRepository,mockConnectivityRepositoryy)
         advanceUntilIdle()
 
         // 3. Assert
