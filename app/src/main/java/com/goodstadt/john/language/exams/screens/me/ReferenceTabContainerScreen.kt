@@ -24,12 +24,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.goodstadt.john.language.exams.config.LanguageConfig
-import com.goodstadt.john.language.exams.navigation.MeScreen
+import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
+import com.goodstadt.john.language.exams.navigation.getRefScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
-import com.goodstadt.john.language.exams.screens.GeminiExampleScreen
-import com.goodstadt.john.language.exams.screens.ParagraphScreen
-import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.MeTabViewModel
@@ -42,7 +40,7 @@ import kotlinx.coroutines.launch
  */
 @OptIn(ExperimentalMaterialNavigationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
+fun ReferenceTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
 
     // --- THIS IS THE CORRECTED LOGIC ---
     // 1. Get an instance of the main TabsViewModel. Hilt will correctly scope this
@@ -54,7 +52,7 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
 //    val bottomSheetNavigator = rememberBottomSheetNavigator()
 
 
-    val meTabNavController = rememberNavController()
+    val refTabNavController = rememberNavController()
     val uiState by viewModel.uiState.collectAsState()
     val sheetState = rememberModalBottomSheetState(
         skipPartiallyExpanded = true // This is the correct M3 parameter
@@ -71,10 +69,10 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
     }
 
     // val menuItems by tabsViewModel.meTabMenuItems.collectAsState()
-    val menuItems = LanguageConfig.meTabMenuItems
+    val menuItems = LanguageConfig.refTabMenuItems
     // --- THIS IS THE KEY ---
     // 1. Observe the back stack of the NESTED NavController.
-    val navBackStackEntry by meTabNavController.currentBackStackEntryAsState()
+    val navBackStackEntry by refTabNavController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
 
 //    ModalBottomSheetLayout(bottomSheetNavigator = bottomSheetNavigator) {
@@ -95,8 +93,8 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
                     isSelected =  (title == selectedChipTitle),
                     onClick = {
                         selectedChipTitle = title
-                        getMeScreenRouteFromTitle(title)?.let { route ->
-                            meTabNavController.navigate(route) {
+                        getRefScreenRouteFromTitle(title)?.let { route ->
+                            refTabNavController.navigate(route) {
                                 launchSingleTop = true
                             }
                         }
@@ -107,11 +105,12 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
 
         // Part B: The NavHost that displays the content
         NavHost(
-            navController = meTabNavController,
-            startDestination = MeScreen.Focusing.route,
+            navController = refTabNavController,
+            startDestination = RefScreen.Quiz.route,
+//                    startDestination = "progress_detail/Initial",
             modifier = Modifier.weight(1f)
         ) {
-            composable(MeScreen.MeRoot.route) {
+            composable(RefScreen.RefRoot.route) {
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
@@ -122,29 +121,28 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
                 }
             }
             // All the screen destinations remain the same
-            composable(MeScreen.Focusing.route) { RecallScreen() }
-            composable(MeScreen.Settings.route) { SettingsScreen() }
-            composable(MeScreen.Search.route) { SearchScreen() }
+//            composable(RefScreen.Settings.route) { SettingsScreen() }
+//            composable(RefScreen.Search.route) { SearchScreen() }
+//
+//            composable(RefScreen.Progress.route) {
+//                ProgressMapScreen(
+//                    //activeRoute = currentRoute,
+//                    // --- Add a callback for when a tile is tapped ---
+//                    onTileTapped = { categoryTitle ->
+//                        viewModel.onTileTapped(categoryTitle)
+////                            val encodedTitle = categoryTitle.urlEncode()
+////                          meTabNavController.navigate("progress_detail/$encodedTitle")
+////                            Timber.d("Attempting to navigate to: progress_detail/Test")
+//                    }
+//                )
+//            }
+//            composable(RefScreen.Paragraph.route) { ParagraphScreen() }
+            composable(RefScreen.Quiz.route) { QuizScreen() }
+            composable(RefScreen.Conjugations.route) { ConjugationsScreen() }
+            composable(RefScreen.Prepositions.route) { PrepositionsScreen() }
 
-            composable(MeScreen.Progress.route) {
-                ProgressMapScreen(
-                    //activeRoute = currentRoute,
-                    // --- Add a callback for when a tile is tapped ---
-                    onTileTapped = { categoryTitle ->
-                        viewModel.onTileTapped(categoryTitle)
-//                            val encodedTitle = categoryTitle.urlEncode()
-//                          meTabNavController.navigate("progress_detail/$encodedTitle")
-//                            Timber.d("Attempting to navigate to: progress_detail/Test")
-                    }
-                )
-            }
-            composable(MeScreen.Paragraph.route) { ParagraphScreen() }
-//            composable(MeScreen.Quiz.route) { QuizScreen() }
-//            composable(MeScreen.Conjugations.route) { ConjugationsScreen() }
-//            composable(MeScreen.Prepositions.route) { PrepositionsScreen() }
-
-//            composable(MeScreen.Paragraph.route) { GeminiExampleScreen() }
-//            composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
+//            composable(RefScreen.Paragraph.route) { GeminiExampleScreen() }
+//            composable(RefScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
         }
     } //:Column
 
@@ -155,7 +153,7 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
             onDismissRequest = { viewModel.onSheetDismissed() },
             sheetState = sheetState
         ) {
-            ProgressDetailView(
+            RefProgressDetailView(
                 title = uiState.selectedCategoryTitle!!, // The title from the parent screen
                 selectedVoiceName =  uiState.currentVoiceName
             )
@@ -169,7 +167,7 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
  * THIS IS THE FUNCTION THAT WAS MISSING.
  */
 @Composable
-fun MeTabPlaceholderScreen(title: String) {
+fun ReferenceTabPlaceholderScreen(title: String) {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -178,7 +176,7 @@ fun MeTabPlaceholderScreen(title: String) {
     }
 }
 @Composable
-fun ProgressDetailView(title: String, selectedVoiceName: String) {
+fun RefProgressDetailView(title: String, selectedVoiceName: String) {
     // It's just a wrapper around your super-flexible CategoryTabScreen!
     val viewModel: CategoryTabViewModel = hiltViewModel(key = title)
 

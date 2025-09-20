@@ -51,6 +51,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.goodstadt.john.language.exams.screens.me.ReferenceTabContainerScreen
 import timber.log.Timber
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -219,12 +220,15 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             }
 
             composable(Screen.Tab4.route) {
-                RecallScreen() // This was already correct
+                MeTabContainerScreen()
             }
 
             composable(Screen.Tab5.route) {
-                MeTabContainerScreen()
+//                RecallScreen() // This was already correct
+                ReferenceTabContainerScreen()
             }
+
+
         }
     }
 

@@ -26,8 +26,8 @@ sealed class Screen(
     object Tab2 : Screen("tab2", "", IconResource.DrawableIcon(R.drawable.counter_2_24px))
     object Tab3 : Screen("tab3", "", IconResource.DrawableIcon(R.drawable.counter_3_24px))
     // Using a standard icon as a placeholder for the brain
-    object Tab4 : Screen("tab4", "Focusing",IconResource.DrawableIcon(R.drawable.mindfulness_24px))
-    object Tab5 : Screen("tab5", "Me",IconResource.DrawableIcon(R.drawable.person_24px))
+    object Tab4 : Screen("tab4", "Me",IconResource.DrawableIcon(R.drawable.person_24px))
+    object Tab5 : Screen("tab5", "Reference",IconResource.DrawableIcon(R.drawable.books))
 }
 
 
