@@ -24,8 +24,8 @@ object RateLimiterModule {
     ): SimpleRateLimiter {
         return SimpleRateLimiter( //called from app Injection using Hilt
                 context = context,
-                hourlyLimit = 60,
-                dailyLimit = 200,
+                hourlyLimit = 40,
+                dailyLimit = 100,
                 schemeID = "scheme1",
                 name = "scheme1", //same as main prod scheme. so no download is done on app start
                 description = "Built in Limiter"

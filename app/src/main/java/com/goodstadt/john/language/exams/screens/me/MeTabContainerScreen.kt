@@ -132,19 +132,10 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
                     // --- Add a callback for when a tile is tapped ---
                     onTileTapped = { categoryTitle ->
                         viewModel.onTileTapped(categoryTitle)
-//                            val encodedTitle = categoryTitle.urlEncode()
-//                          meTabNavController.navigate("progress_detail/$encodedTitle")
-//                            Timber.d("Attempting to navigate to: progress_detail/Test")
                     }
                 )
             }
             composable(MeScreen.Paragraph.route) { ParagraphScreen() }
-//            composable(MeScreen.Quiz.route) { QuizScreen() }
-//            composable(MeScreen.Conjugations.route) { ConjugationsScreen() }
-//            composable(MeScreen.Prepositions.route) { PrepositionsScreen() }
-
-//            composable(MeScreen.Paragraph.route) { GeminiExampleScreen() }
-//            composable(MeScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
         }
     } //:Column
 
