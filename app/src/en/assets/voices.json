@@ -1,75 +1,292 @@
 [
-	{
-		"id": "en-GB-Neural2-A",
-		"friendlyName": "Olivia", "gender": 0
-	},
-	{
-		"id": "en-GB-Neural2-C",
-		"friendlyName": "Amelia", "gender": 0
-	},
-	{
-		"id": "en-GB-Neural2-F",
-		"friendlyName": "Isla", "gender": 0
-	},
-	{
-		"id": "en-GB-Neural2-B",
-		"friendlyName": "Oliver", "gender": 1
-	},
-	{
-		"id": "en-GB-Neural2-D",
-		"friendlyName": "George", "gender": 1
-	},
-	{
-		"id": "en-GB-News-G",
-		"friendlyName": "Ava", "gender": 0
-	},
-	{
-		"id": "en-GB-News-I",
-		"friendlyName": "Maria", "gender": 0
-	},
-	{
-		"id": "en-GB-Standard-A",
-		"friendlyName": "Sophia", "gender": 0
-	},
-	{
-		"id": "en-GB-Standard-C",
-		"friendlyName": "Grace", "gender": 0
-	},
-	{
-		"id": "en-GB-Standard-F",
-		"friendlyName": "Lily", "gender": 0
-	},
-	{
-		"id": "en-GB-Wavenet-A",
-		"friendlyName": "Julia", "gender": 0
-	},
-	{
-		"id": "en-GB-Chirp3-HD-Autonoe",
-		"friendlyName": "Poppy", "gender": 0
-	},
-
-	{
-		"id": "en-GB-News-K",
-		"friendlyName": "Noah", "gender": 1
-	},
-	{
-		"id": "en-GB-News-L",
-		"friendlyName": "Jack", "gender": 1
-	},
-	{
-		"id": "en-GB-Standard-B",
-		"friendlyName": "Arthur", "gender": 1
-	},
-	{
-		"id": "en-GB-Standard-D",
-		"friendlyName": "Muhammad", "gender": 1
-	},
-	{
-		"id": "en-GB-Wavenet-B",
-		"friendlyName": "Charlie", "gender": 1
-	},
-	{
-		"id": "en-GB-Chirp3-HD-Achird",
-		"friendlyName": "John", "gender": 1
-	}
+  {
+    "id": "en-GB-Neural2-A",
+    "friendlyName": "Olivia",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-Neural2-C",
+    "friendlyName": "Amelia",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-Neural2-F",
+    "friendlyName": "Isla",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-Neural2-B",
+    "friendlyName": "Oliver",
+    "gender": 1
+  },
+  {
+    "id": "en-GB-Neural2-D",
+    "friendlyName": "George",
+    "gender": 1
+  },
+  {
+    "id": "en-GB-News-G",
+    "friendlyName": "Ava",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-News-I",
+    "friendlyName": "Maria",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-Standard-A",
+    "friendlyName": "Sophia",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-Standard-C",
+    "friendlyName": "Grace",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-Standard-F",
+    "friendlyName": "Lily",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-Wavenet-A",
+    "friendlyName": "Julia",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-Chirp3-HD-Autonoe",
+    "friendlyName": "Poppy",
+    "gender": 0
+  },
+  {
+    "id": "en-GB-News-K",
+    "friendlyName": "Noah",
+    "gender": 1
+  },
+  {
+    "id": "en-GB-News-L",
+    "friendlyName": "Jack",
+    "gender": 1
+  },
+  {
+    "id": "en-GB-Standard-B",
+    "friendlyName": "Arthur",
+    "gender": 1
+  },
+  {
+    "id": "en-GB-Standard-D",
+    "friendlyName": "Muhammad",
+    "gender": 1
+  },
+  {
+    "id": "en-GB-Wavenet-B",
+    "friendlyName": "Charlie",
+    "gender": 1
+  },
+  {
+    "id": "en-GB-Chirp3-HD-Achird",
+    "friendlyName": "John",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Neural2-C",
+    "friendlyName": "Ava",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Neural2-F",
+    "friendlyName": "Natalie",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Neural2-G",
+    "friendlyName": "Victoria",
+    "gender": 0
+  },
+  {
+    "id": "en-US-News-K",
+    "friendlyName": "Maria",
+    "gender": 0
+  },
+  {
+    "id": "en-US-News-L",
+    "friendlyName": "Rosie",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Standard-C",
+    "friendlyName": "Harper",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Standard-E",
+    "friendlyName": "Evelyn",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Standard-F",
+    "friendlyName": "Madison",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Standard-G",
+    "friendlyName": "Olive",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Standard-H",
+    "friendlyName": "Ella",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Wavenet-C",
+    "friendlyName": "Grace",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Wavenet-F",
+    "friendlyName": "Nancy",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Wavenet-G",
+    "friendlyName": "Daisy",
+    "gender": 0
+  },
+  {
+    "id": "en-US-Neural2-A",
+    "friendlyName": "Oliver",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Neural2-D",
+    "friendlyName": "Elijah",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Neural2-J",
+    "friendlyName": "Ames",
+    "gender": 1
+  },
+  {
+    "id": "en-US-News-N",
+    "friendlyName": "Benjamin",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Standard-A",
+    "friendlyName": "Henry",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Standard-B",
+    "friendlyName": "Alexander",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Standard-D",
+    "friendlyName": "Liam",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Standard-I",
+    "friendlyName": "Mason",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Standard-J",
+    "friendlyName": "Logan",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Wavenet-A",
+    "friendlyName": "Samuel",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Wavenet-B",
+    "friendlyName": "Carter",
+    "gender": 1
+  },
+  {
+    "id": "en-US-Wavenet-I",
+    "friendlyName": "Lucas",
+    "gender": 1
+  },
+  {
+    "id": "en-AU-Neural2-A",
+    "friendlyName": "Charlotte",
+    "gender": 0
+  },
+  {
+    "id": "en-AU-Neural2-C",
+    "friendlyName": "Olivia",
+    "gender": 0
+  },
+  {
+    "id": "en-AU-News-E",
+    "friendlyName": "Maria",
+    "gender": 0
+  },
+  {
+    "id": "en-AU-News-F",
+    "friendlyName": "Ava",
+    "gender": 0
+  },
+  {
+    "id": "en-AU-Standard-A",
+    "friendlyName": "Amelia",
+    "gender": 0
+  },
+  {
+    "id": "en-AU-Standard-C",
+    "friendlyName": "Grace",
+    "gender": 0
+  },
+  {
+    "id": "en-AU-Wavenet-A",
+    "friendlyName": "Matilda",
+    "gender": 0
+  },
+  {
+    "id": "en-AU-Wavenet-C",
+    "friendlyName": "Isabella",
+    "gender": 0
+  },
+  {
+    "id": "en-AU-Neural2-B",
+    "friendlyName": "Oliver",
+    "gender": 1
+  },
+  {
+    "id": "en-AU-Neural2-D",
+    "friendlyName": "Noah",
+    "gender": 1
+  },
+  {
+    "id": "en-AU-News-G",
+    "friendlyName": "Jack",
+    "gender": 1
+  },
+  {
+    "id": "en-AU-Standard-B",
+    "friendlyName": "Leo",
+    "gender": 1
+  },
+  {
+    "id": "en-AU-Standard-D",
+    "friendlyName": "Thomas",
+    "gender": 1
+  },
+  {
+    "id": "en-AU-Wavenet-B",
+    "friendlyName": "Henry",
+    "gender": 1
+  },
+  {
+    "id": "en-AU-Wavenet-D",
+    "friendlyName": "Lucas",
+    "gender": 1
+  }
 ]

@@ -46,6 +46,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
+import kotlinx.coroutines.flow.combine
 
 // --- MODIFICATION 1: Add pending state to UiState ---
 data class SettingsUiState(
@@ -53,7 +54,7 @@ data class SettingsUiState(
     val appVersion: String = BuildConfig.VERSION_NAME,
     val appVersionCode: Int = BuildConfig.VERSION_CODE,
 
-    val currentLanguage: String = "British (D)",
+    val currentLanguage: String = "",
     val currentVoiceName: String = "",
     val currentExamName: String = "",
     val availableExams: List<ExamDetails> = emptyList(),
@@ -140,6 +141,47 @@ class SettingsViewModel @Inject constructor(
                 _uiState.update { it.copy(currentExamName = fileName) }
             }
         }
+
+        viewModelScope.launch {
+            val languageDetailsResult = controlRepository.getActiveLanguageDetails()
+
+            languageDetailsResult.onSuccess { details ->
+                Timber.e(details.name)
+                _uiState.update { it.copy(currentLanguage = details.name) }
+            }
+        }
+
+//        viewModelScope.launch {
+//            // 1. Fetch the one-time, non-flow data first.
+//            val activeLanguageDetails = controlRepository.getActiveLanguageDetails().getOrNull()
+//
+//            // 2. Define the flows you want to listen to.
+//            val voiceFlow = userPreferencesRepository.selectedVoiceNameFlow
+//            val fileFlow = userPreferencesRepository.selectedFileNameFlow
+//
+//            // 3. Use 'combine' to create a NEW Flow<YourUiState>.
+//            //    This is the core of the fix.
+//            combine(voiceFlow, fileFlow) { voiceId, fileName ->
+//                // This lambda's only job is to TRANSFORM the inputs into a new state object.
+//                // It runs whenever voiceId or fileName changes.
+//                val friendlyName = voiceRepository.getFriendlyNameForVoice(voiceId)
+//
+//                // Create and return the complete state object.
+//                SettingsUiState(
+//                    currentFriendlyVoiceName = friendlyName,
+//                    currentVoiceName = voiceId,
+//                    currentExamName = fileName,
+//                    currentLanguage = activeLanguageDetails?.name ?: "",
+//                    // We can also merge in other existing state values
+//                   // isLoading = _uiState.value.isLoading // Preserve other state if needed
+//                )
+//            }.collect { newUiState ->
+//                // 4. The 'collect' block now receives the fully-formed state object.
+//                //    Its only job is to update the ViewModel's state.
+//                _uiState.value = newUiState
+//            }
+//        }
+
         loadInitialData()
 
         initializeBilling()
@@ -178,12 +220,15 @@ class SettingsViewModel @Inject constructor(
 
     private fun loadInitialData() {
         viewModelScope.launch {
+            controlRepository
             val languageDetailsResult = controlRepository.getActiveLanguageDetails()
             val languageListResult = controlRepository.getAllEnglishLanguageList()
             val availableVoicesResult = voiceRepository.getAvailableVoices()
 
             languageDetailsResult.onSuccess { details ->
                 languageListResult.onSuccess { languages ->
+
+                    Timber.e("${languages}")
                     availableVoicesResult.onSuccess { voices ->
                         _uiState.update {
                             it.copy(
@@ -377,6 +422,7 @@ class SettingsViewModel @Inject constructor(
                         val voiceName = selectedLanguage.defaultFemaleVoice
                         userPreferencesRepository.saveSelectedVoiceName(voiceName)
                         userPreferencesRepository.saveSelectedLanguageCode(selectedLanguage.code)
+                        _uiState.update { it.copy(currentLanguage = selectedLanguage.name) } //update UI
 
                         // 1. Save the user's preference (already here)
                       //  userPreferencesRepository.saveSelectedFileName(selectedLanguage.code)

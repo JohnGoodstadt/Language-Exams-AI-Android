@@ -347,8 +347,7 @@ fun SettingsScreen(
             SettingsActionItem(
                 icon = Icons.Default.RecordVoiceOver,
                 title = "Change English",
-                currentValue =  uiState.availableLanguages.find { it.code == uiState.currentLanguage }?.name
-                    ?: uiState.currentLanguage,
+                currentValue = uiState.currentLanguage,
                 onClick = { viewModel.onSettingClicked(SheetContent.LanguageSelection) }
             )
         }
