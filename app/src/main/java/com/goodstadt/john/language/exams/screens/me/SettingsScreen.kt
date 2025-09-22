@@ -201,6 +201,50 @@ fun SettingsScreen(
                             }
                         }
                     }
+                    SheetContent.BothSelection -> {
+                        Text(
+                            "Choose an English",
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            "You can choose your accent here or on the 'Me/Settings' Tab",
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Light
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
+                            items(uiState.availableLanguages, key = { it.code }) { language ->
+                                LanguageSelectionRow(
+                                    language = language,
+                                    isSelected = uiState.pendingSelectedLanguage?.code == language.code,
+                                    onClick = { viewModel.onPendingLanguageSelect(language) }
+                                )
+                            }
+                        }
+                        Spacer(modifier = Modifier.height(24.dp))
+                        Text(
+                            "Choose an Exam Level",
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            "From A1 to B2",
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Light
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
+                            items(uiState.availableExams, key = { it.json }) { exam ->
+                                ExamSelectionRow(
+                                    exam = exam,
+                                    isSelected = uiState.pendingSelectedExam?.json == exam.json,
+                                    onClick = { viewModel.onPendingExamSelect(exam) }
+                                )
+                            }
+                        }
+
+                    }
                     SheetContent.Hidden -> {}
 
                 }
@@ -366,6 +410,14 @@ fun SettingsScreen(
                 currentValue = uiState.availableExams.find { it.json == uiState.currentExamName }?.displayName
                     ?: uiState.currentExamName,
                 onClick = { viewModel.onSettingClicked(SheetContent.ExamSelection) }
+            )
+        }
+        item {
+            SettingsActionItem(
+                icon = Icons.Default.School,
+                title = "Change Both",
+                currentValue = "",
+                onClick = { viewModel.onSettingClicked(SheetContent.BothSelection) }
             )
         }
 

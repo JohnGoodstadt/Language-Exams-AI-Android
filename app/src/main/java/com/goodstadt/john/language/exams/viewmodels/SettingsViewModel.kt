@@ -2,11 +2,9 @@ package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Activity
 import android.content.Context
-import androidx.compose.material3.Text
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
-import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
@@ -42,11 +40,6 @@ import com.google.android.gms.common.GoogleApiAvailability
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.first
 import timber.log.Timber
-import java.text.SimpleDateFormat
-import java.util.Calendar
-import java.util.Date
-import java.util.Locale
-import kotlinx.coroutines.flow.combine
 
 // --- MODIFICATION 1: Add pending state to UiState ---
 data class SettingsUiState(
@@ -77,6 +70,7 @@ sealed interface SheetContent {
     object SpeakerSelection : SheetContent
     object ExamSelection : SheetContent
     object LanguageSelection : SheetContent
+    object BothSelection : SheetContent
 }
 
 sealed interface SettingsUiEvent {
@@ -260,27 +254,27 @@ class SettingsViewModel @Inject constructor(
             // Pre-populate the pending state with the currently active selection
             val updatedUiState = when (type) {
                 SheetContent.ExamSelection -> {
-                    val currentExam =
-                        currentState.availableExams.find { it.json == currentState.currentExamName }
+                    val currentExam = currentState.availableExams.find { it.json == currentState.currentExamName }
                     currentState.copy(pendingSelectedExam = currentExam)
                 }
 
                 SheetContent.SpeakerSelection -> {
-                    val currentVoice =
-                        currentState.availableVoices.find { it.id == currentState.currentVoiceName }
+                    val currentVoice = currentState.availableVoices.find { it.id == currentState.currentVoiceName }
                     currentState.copy(pendingSelectedVoice = currentVoice)
                 }
-//                SheetContent.LanguageSelection -> {
-//                    Timber.e("selected what?")
-//                    val currentLanguage = currentState.currentLanguage }
-//                }
+
                 SheetContent.Hidden -> currentState
+
                 SheetContent.LanguageSelection -> {
-//                    val currentLanguage = currentState.currentLanguage
-                    Timber.e("selected what?")
-                    val currentVoice =
-                        currentState.availableLanguages.find { it.code == currentState.currentLanguage }
-                    currentState.copy(pendingSelectedLanguage = currentVoice)
+                    val currentLanguage = currentState.availableLanguages.find { it.code == currentState.currentLanguage }
+                    currentState.copy(pendingSelectedLanguage = currentLanguage)
+
+                }
+                SheetContent.BothSelection -> {
+                    val currentExam = currentState.availableExams.find { it.json == currentState.currentExamName }
+                    val currentVoice = currentState.availableLanguages.find { it.code == currentState.currentLanguage }
+
+                    currentState.copy(pendingSelectedLanguage = currentVoice,pendingSelectedExam = currentExam)
 
                 }
             }
@@ -422,7 +416,6 @@ class SettingsViewModel @Inject constructor(
                 }
 
                 SheetContent.LanguageSelection -> {
-                    Timber.e("save selection")
                     pendingLanguage?.let { selectedLanguage ->
                         voiceRepository.clearCache() //all voice will change
                         controlRepository.clearCache() //stpred language details will change
@@ -445,7 +438,42 @@ class SettingsViewModel @Inject constructor(
 
                     }
                 }
+                SheetContent.BothSelection -> {
+                    Timber.e("BothSelection")
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)//so that old exam has correct stat
+                    pendingExam?.let { selectedExam ->
+                        // 1. Save the user's preference (already here)
+                        userPreferencesRepository.saveSelectedFileName(selectedExam.json)
+                        userPreferencesRepository.saveSelectedSkillLevel(selectedExam.skillLevel)
+                        // --- THIS IS THE NEW, CRITICAL PART ---
+                        // 2. Tell the shared manager to load the recalled items for the NEW exam
+                        Timber.d("New exam selected. Reloading recalled items for key: ${selectedExam.json}")
+                        recallingItemsManager.load(selectedExam.json)
 
+                    }
+
+                    pendingLanguage?.let { selectedLanguage ->
+                        voiceRepository.clearCache() //all voice will change
+                        controlRepository.clearCache() //stpred language details will change
+
+                        Timber.d(selectedLanguage.name)
+                        //1. default voice
+                        val voiceName = selectedLanguage.defaultFemaleVoice
+                        userPreferencesRepository.saveSelectedVoiceName(voiceName)
+                        userPreferencesRepository.saveSelectedLanguageCode(selectedLanguage.code)
+
+                        _uiState.update { it.copy(currentLanguage = selectedLanguage.name) } //update UI
+
+                        // 1. Save the user's preference (already here)
+                        //  userPreferencesRepository.saveSelectedFileName(selectedLanguage.code)
+//                        userPreferencesRepository.saveSelectedSkillLevel(selectedLanguage.skillLevel)
+                        // --- THIS IS THE NEW, CRITICAL PART ---
+                        // 2. Tell the shared manager to load the recalled items for the NEW exam
+                        Timber.d("New exam selected. Reloading recalled items for key: ${selectedLanguage.code}")
+
+
+                    }
+                }
                 SheetContent.Hidden -> { /* Do nothing */
                 }
 
