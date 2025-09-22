@@ -51,6 +51,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.goodstadt.john.language.exams.screens.me.ChooseEnglishSheet
 import com.goodstadt.john.language.exams.screens.me.EnglishChoiceSheet
 import com.goodstadt.john.language.exams.screens.me.ReferenceTabContainerScreen
 import timber.log.Timber
@@ -89,7 +90,6 @@ fun MainScreen() {
         is AuthUiState.Success -> {
             // Once successful, show the main app content
             // The entire Scaffold and NavHost goes inside here
-            Timber.d("MainScreen.Success - Load app data")
             MainAppContent(
                 navController = navController,
                 selectedVoiceName = globalUiState.selectedVoiceName
@@ -240,11 +240,13 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             onDismissRequest = { },
             sheetState = sheetState
         ) {
-            EnglishChoiceSheet(
+
+            ChooseEnglishSheet(
                 onConfirmSelection = { selectedVariant ->
                     mainViewModel.onEnglishVariantSelected(selectedVariant)
                 }
             )
+
         }
     }
 
@@ -315,7 +317,9 @@ fun NoConnectionScreen(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.fillMaxSize().padding(32.dp),
+        modifier = modifier
+            .fillMaxSize()
+            .padding(32.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {

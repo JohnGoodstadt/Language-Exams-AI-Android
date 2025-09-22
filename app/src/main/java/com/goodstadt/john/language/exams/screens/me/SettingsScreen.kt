@@ -613,7 +613,7 @@ private fun SettingsInfoItem(icon: ImageVector, title: String, value: String) {
 }
 
 @Composable
-private fun ExamSelectionRow(
+fun ExamSelectionRow(
     exam: ExamDetails,
     isSelected: Boolean,
     onClick: () -> Unit
@@ -639,9 +639,10 @@ private fun ExamSelectionRow(
             )
         }
     }
+
 }
 @Composable
-private fun LanguageSelectionRow(
+fun LanguageSelectionRow(
     language: LanguageCodeDetails,
     isSelected: Boolean,
     onClick: () -> Unit

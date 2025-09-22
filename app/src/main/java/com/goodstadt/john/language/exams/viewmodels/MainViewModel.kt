@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
@@ -108,14 +109,18 @@ class MainViewModel @Inject constructor(
         checkForEnglishHasBeenChosen()
     }
     private fun checkForEnglishHasBeenChosen(){
+
         viewModelScope.launch {
             // .first() gets the current value of the flag
-            val hasChosen = userPreferencesRepository.userHasChosenEnglishFlow.first()
+            var hasChosen = userPreferencesRepository.userHasChosenEnglishFlow.first()
 
+            if (DEBUG){
+                hasChosen = false
+            }
             if (!hasChosen) {
                 // If the user has NOT chosen, update the state to show the sheet.
 //                _uiState.update { it.copy(showEnglishChoiceSheet = true) }
-                _uiState.update { it.copy(showEnglishChoiceSheet = false)}
+                _uiState.update { it.copy(showEnglishChoiceSheet = true)}
             }
         }
     }

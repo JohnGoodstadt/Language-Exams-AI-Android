@@ -38,10 +38,6 @@ class LanguageExamsApp : Application() {
 
         setupAppDependencies()
 
-      //  initializeRateLimiter()
-
-
-
     }
     private fun setupAppDependencies() {
         // 2. Configure the injected rateLimiter instance.
