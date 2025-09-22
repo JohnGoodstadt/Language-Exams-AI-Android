@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.screens.me
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
@@ -120,6 +121,9 @@ class ChooseEnglishViewModel  @Inject constructor(
 
 
             }
+
+
+
         }
 
     }

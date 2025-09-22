@@ -412,14 +412,14 @@ fun SettingsScreen(
                 onClick = { viewModel.onSettingClicked(SheetContent.ExamSelection) }
             )
         }
-        item {
-            SettingsActionItem(
-                icon = Icons.Default.School,
-                title = "Change Both",
-                currentValue = "",
-                onClick = { viewModel.onSettingClicked(SheetContent.BothSelection) }
-            )
-        }
+//        item {
+//            SettingsActionItem(
+//                icon = Icons.Default.School,
+//                title = "Change Both",
+//                currentValue = "",
+//                onClick = { viewModel.onSettingClicked(SheetContent.BothSelection) }
+//            )
+//        }
 
 
         if (isPurchased) {

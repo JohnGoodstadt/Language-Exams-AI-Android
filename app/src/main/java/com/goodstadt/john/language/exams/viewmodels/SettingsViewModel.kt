@@ -70,7 +70,7 @@ sealed interface SheetContent {
     object SpeakerSelection : SheetContent
     object ExamSelection : SheetContent
     object LanguageSelection : SheetContent
-    object BothSelection : SheetContent
+    object BothSelection : SheetContent //TODO: remove
 }
 
 sealed interface SettingsUiEvent {

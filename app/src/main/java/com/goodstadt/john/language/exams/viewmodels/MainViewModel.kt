@@ -114,7 +114,7 @@ class MainViewModel @Inject constructor(
             // .first() gets the current value of the flag
             var hasChosen = userPreferencesRepository.userHasChosenEnglishFlow.first()
 
-            if (DEBUG){
+            if (false){
                 hasChosen = false
             }
             if (!hasChosen) {
@@ -239,5 +239,13 @@ class MainViewModel @Inject constructor(
             // You can now perform any other logic that depends on this choice,
             // for example, updating the default voice name.
         }
+    }
+
+//    fun onEnglishChoiceConfirmed() {
+//        TODO("Not yet implemented")
+//    }
+
+    fun onEnglishChoiceDismissed() {
+        _uiState.update { it.copy(showEnglishChoiceSheet = false) }
     }
 }

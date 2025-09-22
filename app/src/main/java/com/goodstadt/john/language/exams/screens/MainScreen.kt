@@ -3,7 +3,6 @@ package com.goodstadt.john.language.exams.screens
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -29,7 +28,6 @@ import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
-import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.viewmodels.AuthUiState
@@ -45,14 +43,7 @@ import com.goodstadt.john.language.exams.data.UpdateState
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CloudOff
-import androidx.compose.material3.*
-import androidx.compose.runtime.DisposableEffect
-import androidx.compose.ui.unit.dp
-import androidx.lifecycle.Lifecycle
-import androidx.lifecycle.LifecycleEventObserver
-import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.screens.me.ChooseEnglishSheet
-import com.goodstadt.john.language.exams.screens.me.EnglishChoiceSheet
 import com.goodstadt.john.language.exams.screens.me.ReferenceTabContainerScreen
 import timber.log.Timber
 
@@ -238,12 +229,19 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             // An empty lambda makes the sheet non-dismissible by dragging or tapping outside.
             // The user MUST make a choice.
             onDismissRequest = { },
-            sheetState = sheetState
+            sheetState = sheetState,
+            modifier = Modifier.fillMaxHeight(0.70f)
         ) {
 
             ChooseEnglishSheet(
-                onConfirmSelection = { selectedVariant ->
-                    mainViewModel.onEnglishVariantSelected(selectedVariant)
+//                onSave = {
+//                    // When save is clicked in the sheet, tell the MainViewModel.
+//
+//                    mainViewModel.onEnglishChoiceDismissed()
+//                },
+                onClose = {
+                    // When cancel is clicked, also tell the MainViewModel.
+                    mainViewModel.onEnglishChoiceDismissed()
                 }
             )
 
