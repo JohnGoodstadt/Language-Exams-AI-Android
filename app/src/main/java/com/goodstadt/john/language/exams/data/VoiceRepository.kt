@@ -39,7 +39,7 @@ class VoiceRepository @Inject constructor(
      * Loads the available voices from the flavor-specific 'voices.json' file.
      * The build system ensures the correct file is present in the assets.
      */
-    suspend fun getAvailableVoices(): Result<List<VoiceOption>> = withContext(Dispatchers.IO) {
+    suspend fun getAvailableVoices(languageCode:String): Result<List<VoiceOption>> = withContext(Dispatchers.IO) {
         cachedVoices?.let {
             return@withContext Result.success(it)
         }
@@ -59,7 +59,8 @@ class VoiceRepository @Inject constructor(
                     VoiceOption(voiceInfo.id, voiceInfo.friendlyName, voiceInfo.gender)
                 }
 
-            cachedVoices = voices
+            //compare "en-us" to "en-us"
+            cachedVoices = voices.filter { it.id.take(5).lowercase() == languageCode.take(5).lowercase()}
             Result.success(voices)
         } catch (e: Exception) {
             // This might happen if a flavor is missing its voices.json file
@@ -67,13 +68,18 @@ class VoiceRepository @Inject constructor(
             Result.failure(e)
         }
     }
+    suspend fun clearCache(){
+        //when swapping languages
+        cachedVoices = null
+    }
 
     /**
      * Gets the friendly display name for a given voice ID.
      * This now requires loading the list first.
      */
-    suspend fun getFriendlyNameForVoice(voiceId: String): String {
-        val voicesResult = getAvailableVoices()
+    suspend fun getFriendlyNameForVoice(voiceId: String,languageCode:String): String {
+
+        val voicesResult = getAvailableVoices(languageCode)
         return voicesResult.getOrNull()
             ?.find { it.id == voiceId }
             ?.friendlyName

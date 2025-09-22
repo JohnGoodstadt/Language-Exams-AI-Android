@@ -127,13 +127,19 @@ class SettingsViewModel @Inject constructor(
         // It keeps the "current" state in sync with saved preferences.
         viewModelScope.launch {
             userPreferencesRepository.selectedVoiceNameFlow.collect { voiceId ->
-                val friendlyName = voiceRepository.getFriendlyNameForVoice(voiceId)
-                _uiState.update {
-                    it.copy(
-                        currentFriendlyVoiceName = friendlyName,
-                        currentVoiceName = voiceId
-                    )
+
+                val languageDetailsResult = controlRepository.getActiveLanguageDetails()
+
+                languageDetailsResult.onSuccess { details ->
+                    val friendlyName = voiceRepository.getFriendlyNameForVoice(voiceId,details.code)
+                    _uiState.update {
+                        it.copy(
+                            currentFriendlyVoiceName = friendlyName,
+                            currentVoiceName = voiceId
+                        )
+                    }
                 }
+
             }
         }
         viewModelScope.launch {
@@ -220,28 +226,29 @@ class SettingsViewModel @Inject constructor(
 
     private fun loadInitialData() {
         viewModelScope.launch {
-            controlRepository
-            val languageDetailsResult = controlRepository.getActiveLanguageDetails()
-            val languageListResult = controlRepository.getAllEnglishLanguageList()
-            val availableVoicesResult = voiceRepository.getAvailableVoices()
+            val currentLanguageCode = controlRepository.getCurrentLanguageCode()
+            currentLanguageCode.onSuccess { languageCode ->
+                val languageDetailsResult = controlRepository.getActiveLanguageDetails()
+                val languageListResult = controlRepository.getAllEnglishLanguageList()
+                val availableVoicesResult = voiceRepository.getAvailableVoices(languageCode)
 
-            languageDetailsResult.onSuccess { details ->
-                languageListResult.onSuccess { languages ->
+                languageDetailsResult.onSuccess { details ->
+                    languageListResult.onSuccess { languages ->
 
-                    Timber.e("${languages}")
-                    availableVoicesResult.onSuccess { voices ->
-                        _uiState.update {
-                            it.copy(
-                                appVersion = BuildConfig.VERSION_NAME,
-                                appVersionCode = BuildConfig.VERSION_CODE,
-                                availableVoices = voices,
-                                availableExams = details.exams,
-                                availableLanguages = languages
-                            )
+                        Timber.e("${languages}")
+                        availableVoicesResult.onSuccess { voices ->
+                            _uiState.update {
+                                it.copy(
+                                    appVersion = BuildConfig.VERSION_NAME,
+                                    appVersionCode = BuildConfig.VERSION_CODE,
+                                    availableVoices = voices,
+                                    availableExams = details.exams,
+                                    availableLanguages = languages
+                                )
+                            }
                         }
                     }
                 }
-
             }
         }
     }
@@ -417,11 +424,15 @@ class SettingsViewModel @Inject constructor(
                 SheetContent.LanguageSelection -> {
                     Timber.e("save selection")
                     pendingLanguage?.let { selectedLanguage ->
+                        voiceRepository.clearCache() //all voice will change
+                        controlRepository.clearCache() //stpred language details will change
+
                         Timber.d(selectedLanguage.name)
                         //1. default voice
                         val voiceName = selectedLanguage.defaultFemaleVoice
                         userPreferencesRepository.saveSelectedVoiceName(voiceName)
                         userPreferencesRepository.saveSelectedLanguageCode(selectedLanguage.code)
+
                         _uiState.update { it.copy(currentLanguage = selectedLanguage.name) } //update UI
 
                         // 1. Save the user's preference (already here)

@@ -31,6 +31,14 @@ class ControlRepository @Inject constructor(
      * Loads control data and returns only the LanguageCodeDetails object
      * that matches the current app flavor's language code.
      */
+    suspend fun getCurrentLanguageCode(): Result<String> = withContext(Dispatchers.IO) {
+        val currentLanguage = userPreferencesRepository.selectedLanguageCodeFlow.first()
+        return@withContext Result.success(currentLanguage)
+    }
+    suspend fun clearCache(){
+        //when swapping languages
+        cachedActiveLanguageDetails = null
+    }
     suspend fun getActiveLanguageDetails(): Result<LanguageCodeDetails> = withContext(Dispatchers.IO) {
 
         val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
