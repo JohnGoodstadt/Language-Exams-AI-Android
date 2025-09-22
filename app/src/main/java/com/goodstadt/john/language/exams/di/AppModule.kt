@@ -52,9 +52,10 @@ object AppModule {
     @Provides
     @Singleton
     fun provideControlRepository(
-        @ApplicationContext context: Context
+        @ApplicationContext context: Context,
+        userPreferencesRepository: UserPreferencesRepository
     ): ControlRepository {
-        return ControlRepository(context)
+        return ControlRepository(context,userPreferencesRepository)
     }
     @Module
     @InstallIn(SingletonComponent::class)

@@ -301,7 +301,7 @@ class VocabRepository @Inject constructor(
 
         // Get the current exam file name from user preferences.
         val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
-
+//        val currentExamFile999 =  "` vocab_data_a1"
         // Use your existing getVocabData function to load from cache or file.
         val vocabDataResult = getVocabData(currentExamFile)
 
@@ -321,6 +321,7 @@ class VocabRepository @Inject constructor(
         // Get the current exam file name from user preferences.
         val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
         val vocabDataResult = getVocabData(currentExamFile)
+//        val vocabDataResult = getVocabData("vocab_data_a1")
 
         return vocabDataResult.fold(
             onSuccess = { vocabFile ->

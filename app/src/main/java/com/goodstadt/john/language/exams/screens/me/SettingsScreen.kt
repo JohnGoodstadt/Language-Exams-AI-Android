@@ -33,6 +33,7 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.models.ExamDetails
+import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
@@ -183,8 +184,25 @@ fun SettingsScreen(
                             }
                         }
                     }
-
+                    SheetContent.LanguageSelection -> {
+                        Text(
+                            "Choose an English",
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.height(16.dp))
+                        LazyColumn(modifier = Modifier.weight(1f, fill = false)) {
+                            items(uiState.availableLanguages, key = { it.code }) { language ->
+                                LanguageSelectionRow(
+                                    language = language,
+                                    isSelected = uiState.pendingSelectedLanguage?.code == language.code,
+                                    onClick = { viewModel.onPendingLanguageSelect(language) }
+                                )
+                            }
+                        }
+                    }
                     SheetContent.Hidden -> {}
+
                 }
 
                 Spacer(modifier = Modifier.height(24.dp))
@@ -328,6 +346,15 @@ fun SettingsScreen(
         item {
             SettingsActionItem(
                 icon = Icons.Default.RecordVoiceOver,
+                title = "Change English",
+                currentValue =  uiState.availableLanguages.find { it.code == uiState.currentLanguage }?.name
+                    ?: uiState.currentLanguage,
+                onClick = { viewModel.onSettingClicked(SheetContent.LanguageSelection) }
+            )
+        }
+        item {
+            SettingsActionItem(
+                icon = Icons.Default.RecordVoiceOver,
                 title = "Change Speaker",
                 currentValue = uiState.currentFriendlyVoiceName,
                 onClick = { viewModel.onSettingClicked(SheetContent.SpeakerSelection) }
@@ -445,6 +472,18 @@ fun SettingsScreen(
                 )
             }
             item {
+                SettingsActionItem(
+                    icon = Icons.Default.Info,
+                    title = "Debug Something",
+                    currentValue = "Show Choose Exam and Language (D)",
+                    onClick = {
+                        if (context is androidx.activity.ComponentActivity) {
+                            viewModel.onDebugPrintBillingStatus(context)
+                        }
+                    }
+                )
+            }
+            item {
                 SettingsInfoItem(
                     icon = Icons.Default.Info,
                     title = "UID",
@@ -550,7 +589,34 @@ private fun ExamSelectionRow(
         }
     }
 }
-
+@Composable
+private fun LanguageSelectionRow(
+    language: LanguageCodeDetails,
+    isSelected: Boolean,
+    onClick: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            text = language.name,
+            modifier = Modifier.weight(1f),
+            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+            textAlign = TextAlign.Center // <-- ADD THIS LINE TO CENTER THE TEXT
+        )
+        if (isSelected) {
+            Icon(
+                imageVector = Icons.Default.Check,
+                contentDescription = "Selected",
+                tint = MaterialTheme.colorScheme.primary
+            )
+        }
+    }
+}
 @Composable
 private fun VoiceSelectionRow(
     voice: VoiceOption,

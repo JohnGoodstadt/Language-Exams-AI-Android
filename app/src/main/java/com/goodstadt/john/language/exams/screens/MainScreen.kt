@@ -51,6 +51,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.goodstadt.john.language.exams.screens.me.EnglishChoiceSheet
 import com.goodstadt.john.language.exams.screens.me.ReferenceTabContainerScreen
 import timber.log.Timber
 
@@ -62,8 +63,6 @@ fun MainScreen() {
     val globalUiState by mainViewModel.uiState.collectAsState()
     val authState = globalUiState.authState
     val updateState by mainViewModel.updateState.collectAsState()
-
-
 
     ChangeStatusBarColor(color = Color.Transparent, darkIcons = false)
 
@@ -121,12 +120,14 @@ fun MainScreen() {
         }
     }
 }
+@OptIn(ExperimentalMaterial3Api::class)
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun MainAppContent(navController: NavHostController, selectedVoiceName: String) {
 
     val mainViewModel: MainViewModel = hiltViewModel()
     val globalUiState by mainViewModel.uiState.collectAsState()
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true) // Make it non-dismissible by swiping
 
     Scaffold(
         bottomBar = {
@@ -229,6 +230,21 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             }
 
 
+        }
+    }
+
+    if (globalUiState.showEnglishChoiceSheet) {
+        ModalBottomSheet(
+            // An empty lambda makes the sheet non-dismissible by dragging or tapping outside.
+            // The user MUST make a choice.
+            onDismissRequest = { },
+            sheetState = sheetState
+        ) {
+            EnglishChoiceSheet(
+                onConfirmSelection = { selectedVariant ->
+                    mainViewModel.onEnglishVariantSelected(selectedVariant)
+                }
+            )
         }
     }
 

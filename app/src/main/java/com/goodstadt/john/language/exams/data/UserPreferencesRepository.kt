@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.intPreferencesKey
@@ -38,7 +39,8 @@ class UserPreferencesRepository @Inject constructor(
         val LLM_CURRENT_PROVIDER = stringPreferencesKey("llm_current_provider")
         val TTS_CURRENT_CREDITS = intPreferencesKey("tts_current_credits")
         val TTS_TOTAL_CREDITS = intPreferencesKey("tts_total_credits")
-
+        val USER_HAS_CHOSEN_ENGLISH = booleanPreferencesKey("user_has_chosen_english")
+        val SELECTED_LANGUAGE_CODE = stringPreferencesKey("selected_language_code")
     }
 
     /**
@@ -50,6 +52,12 @@ class UserPreferencesRepository @Inject constructor(
             preferences[PreferenceKeys.SELECTED_FILE_NAME] ?: LanguageConfig.defaultFileName
         }
 
+    val selectedLanguageCodeFlow: Flow<String> = context.dataStore.data
+        .map { preferences ->
+            // 1. Try to get the user's saved choice.
+            // 2. If it's not set, fall back to the default from the build flavor's LanguageConfig.
+            preferences[PreferenceKeys.SELECTED_LANGUAGE_CODE] ?: LanguageConfig.languageCode
+        }
     /**
      * A Flow that emits the currently selected voice name whenever it changes.
      * It provides the flavor-specific default if no value is set.
@@ -168,6 +176,27 @@ class UserPreferencesRepository @Inject constructor(
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.TTS_CURRENT_CREDITS] = current
             preferences[PreferenceKeys.TTS_TOTAL_CREDITS] = total
+        }
+    }
+
+    val userHasChosenEnglishFlow: Flow<Boolean> = context.dataStore.data
+        .map { preferences ->
+            // Default to 'false' if the key doesn't exist
+            preferences[PreferenceKeys.USER_HAS_CHOSEN_ENGLISH] ?: false
+        }
+
+    // --- ADD A NEW SAVE FUNCTION ---
+    suspend fun saveEnglishVariantChoice(variant: String) {
+        context.dataStore.edit { preferences ->
+           // preferences[PreferenceKeys.SELECTED_ENGLISH_VARIANT] = variant
+            preferences[PreferenceKeys.USER_HAS_CHOSEN_ENGLISH] = true // Set the flag to true
+        }
+    }
+    suspend fun saveSelectedLanguageCode(languageCode: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.SELECTED_LANGUAGE_CODE] = languageCode
+            // We can also mark that the initial choice has been made.
+            preferences[PreferenceKeys.USER_HAS_CHOSEN_ENGLISH] = true
         }
     }
  }

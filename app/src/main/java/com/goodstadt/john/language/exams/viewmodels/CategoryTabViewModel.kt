@@ -252,11 +252,14 @@ class CategoryTabViewModel @Inject constructor(
                 return@launch
             }
 
+            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
+            Timber.e(currentLanguageCode)
+
             val result = vocabRepository.playTextToSpeech(
                 text = sentence.sentence,
                 uniqueSentenceId = uniqueSentenceId,
                 voiceName = currentVoiceName,
-                languageCode = LanguageConfig.languageCode,
+                languageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first(),
                 onTTSApiCallStart = {
                     _uiState.update { it.copy(downloadingSentenceId = uniqueSentenceId) }
                 },

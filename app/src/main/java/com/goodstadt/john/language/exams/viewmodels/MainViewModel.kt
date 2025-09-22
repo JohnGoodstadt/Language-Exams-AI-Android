@@ -29,7 +29,8 @@ data class GlobalUiState(
     val authState: AuthUiState = AuthUiState.Loading,
     val selectedVoiceName: String = "",
     val badgeCounts: Map<String, Int> = emptyMap(),
-    val isPremiumUser: Boolean = false
+    val isPremiumUser: Boolean = false,
+    val showEnglishChoiceSheet: Boolean = false
 )
 
 // The AuthUiState can remain as it was.
@@ -103,6 +104,20 @@ class MainViewModel @Inject constructor(
         calcBadgeNumber()
 
         checkForAppUpdate()
+
+        checkForEnglishHasBeenChosen()
+    }
+    private fun checkForEnglishHasBeenChosen(){
+        viewModelScope.launch {
+            // .first() gets the current value of the flag
+            val hasChosen = userPreferencesRepository.userHasChosenEnglishFlow.first()
+
+            if (!hasChosen) {
+                // If the user has NOT chosen, update the state to show the sheet.
+//                _uiState.update { it.copy(showEnglishChoiceSheet = true) }
+                _uiState.update { it.copy(showEnglishChoiceSheet = false)}
+            }
+        }
     }
     fun registerLifecycleObserver(lifecycle: Lifecycle) {
         lifecycle.addObserver(lifecycleObserver)
@@ -203,5 +218,21 @@ class MainViewModel @Inject constructor(
     // A function the UI can call to dismiss the optional dialog
     fun dismissOptionalUpdate() {
         _updateState.value = UpdateState.NoUpdateNeeded
+    }
+
+    /**
+     * Called by the UI when the user confirms their English variant selection.
+     * It saves the choice and hides the bottom sheet.
+     */
+    fun onEnglishVariantSelected(variant: String) {
+        Timber.i("Chosen Language is ${variant}")
+        viewModelScope.launch {
+            userPreferencesRepository.saveSelectedLanguageCode(variant)
+            // The user has now chosen, so we hide the sheet.
+            _uiState.update { it.copy(showEnglishChoiceSheet = false) }
+
+            // You can now perform any other logic that depends on this choice,
+            // for example, updating the default voice name.
+        }
     }
 }

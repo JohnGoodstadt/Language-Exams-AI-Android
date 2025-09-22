@@ -25,6 +25,7 @@ import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.ExamDetails
+import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -52,13 +53,16 @@ data class SettingsUiState(
     val appVersion: String = BuildConfig.VERSION_NAME,
     val appVersionCode: Int = BuildConfig.VERSION_CODE,
 
+    val currentLanguage: String = "British (D)",
     val currentVoiceName: String = "",
     val currentExamName: String = "",
     val availableExams: List<ExamDetails> = emptyList(),
     val availableVoices: List<VoiceOption> = emptyList(),
+    val availableLanguages: List<LanguageCodeDetails> = emptyList(),
     val currentFriendlyVoiceName: String = "",
     // Add nullable fields to hold the user's selection inside the bottom sheet
     val pendingSelectedExam: ExamDetails? = null,
+    val pendingSelectedLanguage: LanguageCodeDetails? = null,
     val pendingSelectedVoice: VoiceOption? = null,
     val showIAPBottomSheet: Boolean = false, //IAP Info sheet
 
@@ -71,6 +75,7 @@ sealed interface SheetContent {
     object Hidden : SheetContent
     object SpeakerSelection : SheetContent
     object ExamSelection : SheetContent
+    object LanguageSelection : SheetContent
 }
 
 sealed interface SettingsUiEvent {
@@ -174,18 +179,24 @@ class SettingsViewModel @Inject constructor(
     private fun loadInitialData() {
         viewModelScope.launch {
             val languageDetailsResult = controlRepository.getActiveLanguageDetails()
+            val languageListResult = controlRepository.getAllEnglishLanguageList()
             val availableVoicesResult = voiceRepository.getAvailableVoices()
+
             languageDetailsResult.onSuccess { details ->
-                availableVoicesResult.onSuccess { voices ->
-                    _uiState.update {
-                        it.copy(
-                            appVersion = BuildConfig.VERSION_NAME,
-                            appVersionCode = BuildConfig.VERSION_CODE,
-                            availableVoices = voices,
-                            availableExams = details.exams
-                        )
+                languageListResult.onSuccess { languages ->
+                    availableVoicesResult.onSuccess { voices ->
+                        _uiState.update {
+                            it.copy(
+                                appVersion = BuildConfig.VERSION_NAME,
+                                appVersionCode = BuildConfig.VERSION_CODE,
+                                availableVoices = voices,
+                                availableExams = details.exams,
+                                availableLanguages = languages
+                            )
+                        }
                     }
                 }
+
             }
         }
     }
@@ -207,8 +218,19 @@ class SettingsViewModel @Inject constructor(
                         currentState.availableVoices.find { it.id == currentState.currentVoiceName }
                     currentState.copy(pendingSelectedVoice = currentVoice)
                 }
-
+//                SheetContent.LanguageSelection -> {
+//                    Timber.e("selected what?")
+//                    val currentLanguage = currentState.currentLanguage }
+//                }
                 SheetContent.Hidden -> currentState
+                SheetContent.LanguageSelection -> {
+//                    val currentLanguage = currentState.currentLanguage
+                    Timber.e("selected what?")
+                    val currentVoice =
+                        currentState.availableLanguages.find { it.code == currentState.currentLanguage }
+                    currentState.copy(pendingSelectedLanguage = currentVoice)
+
+                }
             }
             _uiState.value = updatedUiState
             _sheetState.value = type
@@ -243,20 +265,30 @@ class SettingsViewModel @Inject constructor(
         _uiState.update { it.copy(pendingSelectedExam = exam) }
 
     }
+    fun onPendingLanguageSelect(language: LanguageCodeDetails) {
+        // This only updates the state for the UI inside the sheet. Does NOT save.
+        _uiState.update { it.copy(pendingSelectedLanguage = language) }
+
+    }
 
     fun onPendingVoiceSelect(voice: VoiceOption) {
         // This only updates the state for the UI inside the sheet. Does NOT save.
         _uiState.update { it.copy(pendingSelectedVoice = voice) }
         Timber.d("Voice selected: ${voice.friendlyName} google: ${voice.id}")
 
-        // Use val for an immutable variable, as it's only assigned once.
-        val sentence = when (LanguageConfig.languageCode.substring(0, 2).lowercase()) {
-            "de" -> "Hallo, ich bin ${voice.friendlyName}. Willkommen zu 'English Exam Words'"
-            // The `else` branch is required for a 'when' expression, and it handles the default case.
-            else -> "Hello, I'm ${voice.friendlyName}. Welcome to 'English Exam Words'."
+        viewModelScope.launch {
+            val selectedLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
+            // Use val for an immutable variable, as it's only assigned once.
+            val sentence = when (selectedLanguageCode.substring(0, 2).lowercase()) {
+                "de" -> "Hallo, ich bin ${voice.friendlyName}. Willkommen zu 'English Exam Words'"
+                // The `else` branch is required for a 'when' expression, and it handles the default case.
+                else -> "Hello, I'm ${voice.friendlyName}. Welcome to 'English Exam Words'."
+            }
+
+            playTrack(sentence, voice.id)
         }
 
-        playTrack(sentence, voice.id)
+
     }
 
     private fun playTrack(sentence: String, googleVoice: String) {
@@ -267,7 +299,7 @@ class SettingsViewModel @Inject constructor(
             val uniqueSentenceId = generateUniqueSentenceId(sentence, googleVoice)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
-            val currentLanguageCode = LanguageConfig.languageCode
+            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = vocabRepository.playTextToSpeech(
                 text = sentence,
@@ -305,11 +337,12 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch {
             val pendingExam = _uiState.value.pendingSelectedExam
             val pendingVoice = _uiState.value.pendingSelectedVoice
+            val pendingLanguage = _uiState.value.pendingSelectedLanguage
 
             when (_sheetState.value) {
                 SheetContent.ExamSelection -> {
 
-                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)//so that old exeam has correct stat
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)//so that old exam has correct stat
                     pendingExam?.let { selectedExam ->
                         // 1. Save the user's preference (already here)
                         userPreferencesRepository.saveSelectedFileName(selectedExam.json)
@@ -336,8 +369,29 @@ class SettingsViewModel @Inject constructor(
 
                 }
 
+                SheetContent.LanguageSelection -> {
+                    Timber.e("save selection")
+                    pendingLanguage?.let { selectedLanguage ->
+                        Timber.d(selectedLanguage.name)
+                        //1. default voice
+                        val voiceName = selectedLanguage.defaultFemaleVoice
+                        userPreferencesRepository.saveSelectedVoiceName(voiceName)
+                        userPreferencesRepository.saveSelectedLanguageCode(selectedLanguage.code)
+
+                        // 1. Save the user's preference (already here)
+                      //  userPreferencesRepository.saveSelectedFileName(selectedLanguage.code)
+//                        userPreferencesRepository.saveSelectedSkillLevel(selectedLanguage.skillLevel)
+                        // --- THIS IS THE NEW, CRITICAL PART ---
+                        // 2. Tell the shared manager to load the recalled items for the NEW exam
+                        Timber.d("New exam selected. Reloading recalled items for key: ${selectedLanguage.code}")
+
+
+                    }
+                }
+
                 SheetContent.Hidden -> { /* Do nothing */
                 }
+
             }
             // After saving, hide the sheet, which will also clear the pending state.
             hideBottomSheet()

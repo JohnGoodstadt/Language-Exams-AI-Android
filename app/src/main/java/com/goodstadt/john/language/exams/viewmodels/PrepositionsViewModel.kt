@@ -140,7 +140,7 @@ class PrepositionsViewModel @Inject constructor(
 
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val currentLanguageCode = LanguageConfig.languageCode
+            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence, currentVoiceName)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)

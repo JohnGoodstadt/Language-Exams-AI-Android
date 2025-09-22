@@ -192,7 +192,7 @@ class RecallViewModel @Inject constructor(
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(word, currentVoiceName)
 
-            val currentLanguageCode = LanguageConfig.languageCode
+            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = vocabRepository.playTextToSpeech(
                 text = word,
@@ -235,7 +235,7 @@ class RecallViewModel @Inject constructor(
 
 
 
-            val currentLanguageCode = LanguageConfig.languageCode
+            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = vocabRepository.playTextToSpeech(
                 text = sentence,

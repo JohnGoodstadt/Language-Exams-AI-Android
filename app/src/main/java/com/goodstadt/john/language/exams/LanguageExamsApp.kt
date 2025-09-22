@@ -62,16 +62,4 @@ class LanguageExamsApp : Application() {
             Timber.plant(ReleaseTree())
         }
     }
-
-//    private fun initializeRateLimiter() {
-//        RateLimiterManager.initialize(this)
-//        if (BuildConfig.TEST_RATE_LIMITING) {
-//            RateLimiterManager.updateToMinimalScheme()
-//        }
-//        if (BuildConfig.DEBUG) {
-//            Timber.plant(Timber.DebugTree())
-//        }else{
-//            Timber.plant(ReleaseTree())
-//        }
-//    }
 }

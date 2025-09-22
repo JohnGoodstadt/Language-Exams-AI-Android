@@ -153,7 +153,7 @@ class ConjugationsViewModel @Inject constructor(
             }
 
 
-            val currentLanguageCode = LanguageConfig.languageCode
+            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = vocabRepository.playTextToSpeech(
                 text = sentence.sentence,

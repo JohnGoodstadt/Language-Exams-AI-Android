@@ -222,7 +222,7 @@ class SearchViewModel @Inject constructor(
             }
 
             // Use .first() to get the most recent value from the Flow
-            val currentLanguageCode = LanguageConfig.languageCode
+            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = vocabRepository.playTextToSpeech(
                     text = searchResult.firstSentence,

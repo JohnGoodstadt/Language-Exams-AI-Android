@@ -598,7 +598,7 @@ class ParagraphViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-                val currentLanguageCode = LanguageConfig.languageCode
+                val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 
                 val uniqueSentenceId = generateUniqueSentenceId(sentenceToSpeak,currentVoiceName)
 
