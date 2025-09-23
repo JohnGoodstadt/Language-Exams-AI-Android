@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.me
+package com.goodstadt.john.language.exams.screens.reference
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
@@ -25,7 +25,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.RefScreen
-import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.navigation.getRefScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip

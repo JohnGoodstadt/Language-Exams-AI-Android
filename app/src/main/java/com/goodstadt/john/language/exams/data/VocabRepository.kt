@@ -250,7 +250,7 @@ class VocabRepository @Inject constructor(
             // This is efficient because it stops checking as soon as it finds one.
             word.sentences.any { sentence ->
                 val uniqueSentenceId = generateUniqueSentenceId(word, sentence, voiceName)
-//                Timber.e("Looking for $uniqueSentenceId")
+                Timber.e("Looking for $uniqueSentenceId")
                 val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
                 audioCacheFile.exists()
             }
@@ -258,6 +258,68 @@ class VocabRepository @Inject constructor(
 
         // 3. Map the filtered list of VocabWord objects to just their keys and return as a Set.
         return wordsWithCache.map { it.word }.toSet()
+    }
+    fun getSentenceKeysWithCachedAudioWorse(categories: List<Category>, voiceName: String): Set<String> {
+        val cacheDir = context.filesDir
+
+        // 1. Flatten all words from all categories into a single list.
+        val allWords = categories.flatMap { it.words }
+
+        var allSentencesWithCache = emptyList<String>()
+
+        allWords.forEach() { word ->
+            val allSentences = allWords.flatMap { it.sentences.map { it.sentence } }
+
+           allSentences.filter { sentence ->
+                val uniqueSentenceId = generateUniqueSentenceId(word.word, sentence, voiceName)
+                Timber.e("Looking for $uniqueSentenceId")
+                val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
+                audioCacheFile.exists()
+            }
+
+            allSentencesWithCache = allSentencesWithCache
+        }
+
+
+
+        // 3. Map the filtered list of VocabWord objects to just their keys and return as a Set.
+        return allSentencesWithCache.toSet()
+    }
+    /**
+     * Checks a list of categories and returns a Set of sentence strings that have
+     * a corresponding audio file cached on disk for the given voice.
+     *
+     * @param categories The list of categories to check.
+     * @param voiceName The specific voice name used to generate the cache filename.
+     * @return A Set of sentence strings that have cached audio.
+     */
+    fun getSentenceKeysWithCachedAudio(categories: List<Category>, voiceName: String): Set<String> {
+        val cacheDir = context.filesDir
+
+        // This entire operation is now a single, efficient expression.
+        return categories
+            // 1. Flatten the structure from List<Category> to a flat List<VocabWord>.
+            .flatMap { category -> category.words }
+            // 2. Flatten it further from List<VocabWord> to a flat List of pairs,
+            //    where each pair holds a word and one of its sentences.
+            .flatMap { word ->
+                word.sentences.map { sentence ->
+                    word to sentence // Create a Pair(VocabWord, Sentence)
+                }
+            }
+            // 3. Filter this list of pairs. Keep only the pairs where the
+            //    corresponding audio file exists on disk.
+            .filter { (word, sentence) -> // Destructure the pair for easy access
+                val uniqueSentenceId = generateUniqueSentenceId(word, sentence, voiceName)
+                val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
+                audioCacheFile.exists()
+            }
+            // 4. Map the filtered list of pairs to just the sentence string.
+            .map { (word, sentence) ->
+                generateUniqueSentenceId(word, sentence, voiceName)//sentence.sentence // We only care about the sentence string now
+            }
+            // 5. Convert the final List<String> into a Set<String> to get unique values.
+            .toSet()
     }
     /**
      * Finds the title and tab number for the first category that contains the target word.

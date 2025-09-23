@@ -1527,29 +1527,6 @@
 					"group": "1 to 20"
 				},
 				{
-					"romanisation": "",
-					"sortOrder": 1,
-					"translation": "",
-					"id": 0,
-					"group": "to 1000",
-					"sentences": [
-						{
-							"sentence": "20 books",
-							"translation": ""
-						},
-						{
-							"sentence": "I need 20 dollars.",
-							"translation": ""
-						},
-						{
-							"sentence": "There are 20 chairs.",
-							"translation": ""
-						}
-					],
-					"partOfSpeech": "",
-					"word": "20"
-				},
-				{
 					"id": 1,
 					"group": "to 1000",
 					"sentences": [
@@ -2218,7 +2195,7 @@
 					"sentences": [
 						{
 							"translation": "",
-							"sentence": "Her mobile in in her pocket."
+							"sentence": "Her mobile is in her pocket."
 						},
 						{
 							"sentence": "I use my mobile every day.",

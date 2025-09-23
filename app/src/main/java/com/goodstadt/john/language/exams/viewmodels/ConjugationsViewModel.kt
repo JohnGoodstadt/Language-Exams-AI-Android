@@ -31,9 +31,13 @@ import javax.inject.Inject
 // A UI state for this specific screen
 sealed interface ConjugationsUiState {
     object Loading : ConjugationsUiState
+//    val cachedAudioWordKeys: Set<String>
+//        get() = emptySet()
+
     data class Success(
         val categories: List<Category>,
-        val selectedVoiceName: String = "" // Add a default empty value
+        val cachedAudioWordKeys: Set<String>,
+        val selectedVoiceName: String = "" // TODO: do I need this?
     ) : ConjugationsUiState
 
     data class Error(val message: String) : ConjugationsUiState
@@ -76,6 +80,9 @@ class ConjugationsViewModel @Inject constructor(
 
     init {
         loadConjugationsData()
+//        viewModelScope.launch {
+//            loadCachedSentencesForDot()
+//        }
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
                 _isPremiumUser.value = purchasedStatus
@@ -85,6 +92,12 @@ class ConjugationsViewModel @Inject constructor(
             }
         }
     }
+
+//    private fun loadCachedSentencesForDot() {
+//
+//
+//
+//    }
 
     private fun loadConjugationsData() {
         viewModelScope.launch {
@@ -97,10 +110,13 @@ class ConjugationsViewModel @Inject constructor(
 
             _uiState.value = ConjugationsUiState.Loading
             val result = vocabRepository.getVocabData(fileName)
-            // val selectedVoice = userPreferencesRepository.selectedVoiceNameFlow.first()
 
             result.onSuccess { vocabFile ->
-                _uiState.value = ConjugationsUiState.Success(vocabFile.categories)
+
+                val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+                val cachedKeys = vocabRepository.getSentenceKeysWithCachedAudio(vocabFile.categories, currentVoiceName)
+
+                _uiState.value = ConjugationsUiState.Success(vocabFile.categories,cachedKeys, selectedVoiceName = currentVoiceName)
             }.onFailure { error ->
                 _uiState.value =
                     ConjugationsUiState.Error(error.localizedMessage ?: "Failed to load file")
@@ -110,7 +126,9 @@ class ConjugationsViewModel @Inject constructor(
 
     // This function is almost identical to the ones in our other ViewModels
     fun playTrack(word: VocabWord, sentence: Sentence) {
-        if (_playbackState.value is PlaybackState.Playing) return
+        if (_playbackState.value is PlaybackState.Playing) {
+            return
+        }
 
         if (!connectivityRepository.isCurrentlyOnline()) {
             _playbackState.value = PlaybackState.Idle
@@ -139,19 +157,30 @@ class ConjugationsViewModel @Inject constructor(
 
         viewModelScope.launch {
 
-
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+//            val currentVoiceName = _uiState.value.selectedVoiceName
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence, currentVoiceName)
 
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
             val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
             if (played) {//short cut so user cna play cached sentences with no Internet connection
+                _playbackState.value = PlaybackState.Idle
                 ttsStatsRepository.updateTTSStatsWithoutCosts()
                 ttsStatsRepository.incWordStats(word.word)
                 return@launch
             }
 
+
+
+            _uiState.update { currentState ->
+                if (currentState is ConjugationsUiState.Success) {
+                    val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId(word, sentence, currentVoiceName)//word.word
+                    currentState.copy(cachedAudioWordKeys = updatedKeys)
+                } else {
+                    currentState
+                }
+            }
 
             val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 
@@ -164,6 +193,8 @@ class ConjugationsViewModel @Inject constructor(
 
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    _playbackState.value = PlaybackState.Idle
+
                     rateLimiter.recordCall()
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
@@ -173,11 +204,13 @@ class ConjugationsViewModel @Inject constructor(
                 }
 
                 is PlaybackResult.PlayedFromCache -> {
+                    _playbackState.value = PlaybackState.Idle
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(word.word)
                 }
 
                 is PlaybackResult.Failure -> {
+                    _playbackState.value = PlaybackState.Idle
                     // Handle the error
 //                    _uiState.update { it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed")) }
                     // Optionally reset to Idle after a delay
@@ -186,7 +219,10 @@ class ConjugationsViewModel @Inject constructor(
                         PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
 
-                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
+                PlaybackResult.CacheNotFound -> {
+                    _playbackState.value = PlaybackState.Idle
+                    Timber.e("Cache found to exist but not played")
+                }
             }
 
             _playbackState.value = PlaybackState.Idle

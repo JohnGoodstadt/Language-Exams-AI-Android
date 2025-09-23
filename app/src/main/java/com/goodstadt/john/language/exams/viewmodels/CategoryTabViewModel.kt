@@ -252,8 +252,14 @@ class CategoryTabViewModel @Inject constructor(
                 return@launch
             }
 
-            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
-            Timber.e(currentLanguageCode)
+            _uiState.update {
+                it.copy(
+                    cachedAudioCount = it.cachedAudioCount + 1,
+                    cachedAudioWordKeys = it.cachedAudioWordKeys + word.word
+                )
+            }
+
+           // val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = vocabRepository.playTextToSpeech(
                 text = sentence.sentence,
@@ -272,13 +278,7 @@ class CategoryTabViewModel @Inject constructor(
 
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    _uiState.update {
-                        it.copy(
-                            playbackState = PlaybackState.Idle,
-                            cachedAudioCount = it.cachedAudioCount + 1,
-                            cachedAudioWordKeys = it.cachedAudioWordKeys + word.word
-                        )
-                    }
+                    _uiState.update { it.copy( playbackState = PlaybackState.Idle) }
 
                     rateLimiter.recordCall()
                     Timber.w(rateLimiter.printCurrentStatus)

@@ -33,6 +33,7 @@ import javax.inject.Inject
 sealed interface PrepositionsUiState {
     object Loading : PrepositionsUiState
     data class Success(val categories: List<Category>,
+                       val cachedAudioWordKeys: Set<String>,
                        val selectedVoiceName: String = "" )
         : PrepositionsUiState
     data class Error(val message: String) : PrepositionsUiState
@@ -100,7 +101,11 @@ class PrepositionsViewModel @Inject constructor(
             val result = vocabRepository.getVocabData(fileName)
 
             result.onSuccess { vocabFile ->
-                _uiState.value = PrepositionsUiState.Success(vocabFile.categories)
+
+                val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+                val cachedKeys = vocabRepository.getSentenceKeysWithCachedAudio(vocabFile.categories, currentVoiceName)
+
+                _uiState.value = PrepositionsUiState.Success(vocabFile.categories,cachedKeys,selectedVoiceName = currentVoiceName)
             }.onFailure { error ->
                 _uiState.value = PrepositionsUiState.Error(error.localizedMessage ?: "Failed to load file")
             }
@@ -108,7 +113,10 @@ class PrepositionsViewModel @Inject constructor(
     }
 
     fun playTrack(word: VocabWord, sentence: Sentence) {
-        if (_playbackState.value is PlaybackState.Playing) return
+        if (_playbackState.value is PlaybackState.Playing)
+        {
+            return
+        }
 
         if (!connectivityRepository.isCurrentlyOnline()) {
             _playbackState.value = PlaybackState.Idle
@@ -149,11 +157,21 @@ class PrepositionsViewModel @Inject constructor(
 
             val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
             if (played){//short cut so user cna play cached sentences with no Internet connection
+                _playbackState.value = PlaybackState.Idle
                 ttsStatsRepository.updateTTSStatsWithoutCosts()
                 ttsStatsRepository.incWordStats(word.word)
                 return@launch
             }
 
+            //Dot shows before sound (lightening before thunder)
+            _uiState.update { currentState ->
+                if (currentState is PrepositionsUiState.Success) {
+                    val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId(word, sentence, currentVoiceName)
+                    currentState.copy(cachedAudioWordKeys = updatedKeys)
+                } else {
+                    currentState
+                }
+            }
 
             val result = vocabRepository.playTextToSpeech(
                 text = cleanedSentence,
@@ -163,6 +181,8 @@ class PrepositionsViewModel @Inject constructor(
             )
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
+                    _playbackState.value = PlaybackState.Idle
+
                     rateLimiter.recordCall()
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
@@ -170,15 +190,19 @@ class PrepositionsViewModel @Inject constructor(
                     //TODO: not inc but update!
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
-                is PlaybackResult.PlayedFromCache -> {
+                is PlaybackResult.PlayedFromCache -> { //probably does not get executed as playFromCacheIfFound() already run
+                    _playbackState.value = PlaybackState.Idle
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
-//                    ttsStatsRepository.incWordStats(cleanedSentence)
                     ttsStatsRepository.incWordStats(word.word)
                 }
                 is PlaybackResult.Failure -> {
+                    _playbackState.value = PlaybackState.Idle
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
-                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
+                PlaybackResult.CacheNotFound -> {
+                    _playbackState.value = PlaybackState.Idle
+                    Timber.e("Cache found to exist but not played")
+                }
             }
             _playbackState.value = PlaybackState.Idle
         }

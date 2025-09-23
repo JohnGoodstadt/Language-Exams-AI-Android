@@ -131,7 +131,7 @@ fun SwipeableVocabRow(
                 sentence = displayData.sentence,
                 isRecalling = isRecalling,
                 displayDot = displayDot,
-                cachedAudioWordKeys ,
+//                cachedAudioWordKeys ,
                 //wordCount = 0,
                 isDownloading = isDownloading
             )
@@ -170,7 +170,7 @@ fun VocabRow(
     sentence: String,
     isRecalling: Boolean,
     displayDot: Boolean,
-    cachedAudioWordKeys: Set<String>,
+//    cachedAudioWordKeys: Set<String>,
     isDownloading:Boolean
 ) {
     // This logic builds the styled text with underlined words.
@@ -191,7 +191,8 @@ fun VocabRow(
             CircularProgressIndicator(modifier = Modifier.size(24.dp))
         } else {
             // Check if the red dot should be displayed
-            val displayRedDot = cachedAudioWordKeys.contains(entry.word)
+//            val displayRedDot = cachedAudioWordKeys.contains(entry.word)
+            val displayRedDot = displayDot
 
             if (displayRedDot) {
                 Text(text = "🔴", fontSize = 12.sp)

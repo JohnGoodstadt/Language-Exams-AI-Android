@@ -1,10 +1,5 @@
-package com.goodstadt.john.language.exams.screens.me
+package com.goodstadt.john.language.exams.screens.reference
 
-import android.content.ActivityNotFoundException
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
-import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -13,7 +8,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.outlined.Info
 
 import androidx.compose.material3.*
@@ -33,7 +27,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.viewmodel.compose.viewModel
 
 import kotlin.text.replace
 
@@ -42,7 +35,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
-import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor

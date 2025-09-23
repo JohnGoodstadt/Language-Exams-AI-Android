@@ -250,6 +250,7 @@ class QuizViewModel @Inject constructor(
 
             val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
             if (played){//short cut so user cna play cached sentences with no Internet connection
+                _playbackState.value = PlaybackState.Idle
                 ttsStatsRepository.updateTTSStatsWithoutCosts()
                 return@launch
             }
