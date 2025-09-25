@@ -3,14 +3,17 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.data.RefreshTrigger
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 // Data class for a single tile (replaces Swift 'ProgressMap' struct)
@@ -32,11 +35,27 @@ data class ProgressMapUiState(
 @HiltViewModel
 class ProgressMapViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
-    private val userPreferencesRepository: UserPreferencesRepository
+    private val userPreferencesRepository: UserPreferencesRepository,
+    private val refreshTrigger: RefreshTrigger
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(ProgressMapUiState())
     val uiState = _uiState.asStateFlow()
+
+    init {
+        // The initial load when the ViewModel is first created.
+//        loadInitialProgress()
+
+        // --- 2. SUBSCRIBE TO THE TRIGGER ---
+        viewModelScope.launch {
+            // We collect the trigger flow. The 'drop(1)' is important to avoid
+            // an unnecessary second refresh on initial startup.
+            refreshTrigger.progressMapRefreshTrigger.drop(1).collect {
+                Timber.d("Refresh trigger received. Refreshing stats.")
+                loadProgressData()
+            }
+        }
+    }
 
     fun loadProgressData() {
        //if (!_uiState.value.isLoading && _uiState.value.progressItems.isNotEmpty()) return

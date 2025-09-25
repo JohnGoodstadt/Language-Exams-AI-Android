@@ -63,7 +63,6 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
     val isSheetVisible = uiState.selectedCategoryTitle != null
 
 
-
     LaunchedEffect(isSheetVisible) {
         if (!isSheetVisible) {
             scope.launch { sheetState.hide() }.join()
@@ -72,12 +71,7 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
 
     // val menuItems by tabsViewModel.meTabMenuItems.collectAsState()
     val menuItems = LanguageConfig.meTabMenuItems
-    // --- THIS IS THE KEY ---
-    // 1. Observe the back stack of the NESTED NavController.
-    val navBackStackEntry by meTabNavController.currentBackStackEntryAsState()
-    val currentRoute = navBackStackEntry?.destination?.route
-
-//    ModalBottomSheetLayout(bottomSheetNavigator = bottomSheetNavigator) {
+//    val navBackStackEntry by meTabNavController.currentBackStackEntryAsState()
 
     var selectedChipTitle by remember(menuItems) {
         mutableStateOf(menuItems.firstOrNull() ?: "")
@@ -128,8 +122,6 @@ fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
 
             composable(MeScreen.Progress.route) {
                 ProgressMapScreen(
-                    //activeRoute = currentRoute,
-                    // --- Add a callback for when a tile is tapped ---
                     onTileTapped = { categoryTitle ->
                         viewModel.onTileTapped(categoryTitle)
                     }

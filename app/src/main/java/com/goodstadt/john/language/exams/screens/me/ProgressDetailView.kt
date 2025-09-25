@@ -19,7 +19,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 
 @Composable
-fun ProgressDetailView(title: String) {
+fun ProgressDetailViewObsolete(title: String) {
     // We'll apply the new modifiers to this root Column.
     Column(
         // --- THIS IS THE FIX ---

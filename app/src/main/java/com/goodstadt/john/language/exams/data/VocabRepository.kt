@@ -33,7 +33,7 @@ sealed class PlaybackResult {
 @Singleton
 class VocabRepository @Inject constructor(
     @ApplicationContext private val context: Context,
-        // --- NEW: Inject the new services ---
+        
     private val googleCloudTts: GoogleCloudTTS,
     private val audioPlayerService: AudioPlayerService,
     private val userPreferencesRepository: UserPreferencesRepository
@@ -250,7 +250,7 @@ class VocabRepository @Inject constructor(
             // This is efficient because it stops checking as soon as it finds one.
             word.sentences.any { sentence ->
                 val uniqueSentenceId = generateUniqueSentenceId(word, sentence, voiceName)
-                Timber.e("Looking for $uniqueSentenceId")
+               //Timber.e("Looking for $uniqueSentenceId")
                 val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
                 audioCacheFile.exists()
             }
@@ -272,7 +272,7 @@ class VocabRepository @Inject constructor(
 
            allSentences.filter { sentence ->
                 val uniqueSentenceId = generateUniqueSentenceId(word.word, sentence, voiceName)
-                Timber.e("Looking for $uniqueSentenceId")
+                //Timber.e("Looking for $uniqueSentenceId")
                 val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
                 audioCacheFile.exists()
             }

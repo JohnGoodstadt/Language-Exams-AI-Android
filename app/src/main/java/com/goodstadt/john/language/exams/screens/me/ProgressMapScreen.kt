@@ -71,11 +71,8 @@ private fun getColorForCompletion(item: ProgressMapItem): Color {
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun ProgressMapScreen(
-//    activeRoute: String?,
     onTileTapped: (categoryTitle: String) -> Unit,
     viewModel: ProgressMapViewModel = hiltViewModel()
-    // We get the lifecycle owner to observe lifecycle events
-//    lifecycleOwner: LifecycleOwner = LocalLifecycleOwner.current
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
@@ -83,12 +80,8 @@ fun ProgressMapScreen(
     // 2. The LaunchedEffect now uses the current route as its key.
     //    It will re-run whenever the 'activeRoute' changes to "progress".
     LaunchedEffect(Unit) {
-        // Only load data if this screen is the currently active one.
-//        if (activeRoute == MeScreen.Progress.route) {
-            viewModel.loadProgressData()
-//        }
+        viewModel.loadProgressData()
     }
-    // --- END FIX ---
 
     Column(
         modifier = Modifier
