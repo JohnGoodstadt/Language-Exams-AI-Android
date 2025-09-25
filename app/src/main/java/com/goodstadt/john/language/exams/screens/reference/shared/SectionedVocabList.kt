@@ -40,7 +40,6 @@ fun SectionedVocabList(
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(horizontal = 16.dp)
     ) {
-// ... inside your LazyColumn scope ...
 
         categories.forEach { category ->
             stickyHeader {
@@ -63,11 +62,7 @@ fun SectionedVocabList(
 
                 // Your existing logic now works perfectly here
                 val displayData = buildSentenceParts(entry = word, sentence = sentence)
-//                val googleVoice = viewModel.getCurrentGoogleVoice()
                 val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
-
-//                val isPlaying = playbackState is PlaybackState.Playing &&
-//                        playbackState.sentenceId == uniqueSentenceId
 
                 Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
                     VocabRow(

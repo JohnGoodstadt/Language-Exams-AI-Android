@@ -487,7 +487,7 @@ fun HorizontalLevelPicker(
                         text = option,
                         color =  if (isSelected) accentColor else Color.LightGray,
                         maxLines = 1,
-                        fontSize = 16.sp,
+                        fontSize = 12.sp,
                         textAlign = TextAlign.Center
                 )
             }

@@ -15,7 +15,7 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ChooseEnglishSheet(
+fun ChooseEnglishAndExamSheet(
     viewModel: ChooseEnglishViewModel = hiltViewModel(),
     onClose: () -> Unit
 ) {
@@ -25,7 +25,6 @@ fun ChooseEnglishSheet(
     Column(
         modifier = Modifier
             .fillMaxWidth()
-//            .fillMaxHeight(0.9f)
             .padding(
                 start = 8.dp,
                 end = 8.dp,

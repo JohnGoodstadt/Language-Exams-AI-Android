@@ -43,7 +43,7 @@ import com.goodstadt.john.language.exams.data.UpdateState
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CloudOff
-import com.goodstadt.john.language.exams.screens.me.ChooseEnglishSheet
+import com.goodstadt.john.language.exams.screens.me.ChooseEnglishAndExamSheet
 import com.goodstadt.john.language.exams.screens.reference.ReferenceTabContainerScreen
 import timber.log.Timber
 
@@ -230,17 +230,11 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             // The user MUST make a choice.
             onDismissRequest = { },
             sheetState = sheetState,
-            modifier = Modifier.fillMaxHeight(0.70f)
+            modifier = Modifier.fillMaxHeight(0.80f) //NOTE: if too low then button off screen
         ) {
 
-            ChooseEnglishSheet(
-//                onSave = {
-//                    // When save is clicked in the sheet, tell the MainViewModel.
-//
-//                    mainViewModel.onEnglishChoiceDismissed()
-//                },
+            ChooseEnglishAndExamSheet(
                 onClose = {
-                    // When cancel is clicked, also tell the MainViewModel.
                     mainViewModel.onEnglishChoiceDismissed()
                 }
             )

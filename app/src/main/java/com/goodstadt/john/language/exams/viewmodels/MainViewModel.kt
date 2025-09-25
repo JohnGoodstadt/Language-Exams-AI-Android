@@ -112,11 +112,11 @@ class MainViewModel @Inject constructor(
 
         viewModelScope.launch {
             // .first() gets the current value of the flag
-            var hasChosen = userPreferencesRepository.userHasChosenEnglishFlow.first()
+            val hasChosen = userPreferencesRepository.userHasChosenEnglishFlow.first()
 
-            if (false){
-                hasChosen = false
-            }
+//            if (false){
+//                hasChosen = false
+//            }
             if (!hasChosen) {
                 // If the user has NOT chosen, update the state to show the sheet.
 //                _uiState.update { it.copy(showEnglishChoiceSheet = true) }
