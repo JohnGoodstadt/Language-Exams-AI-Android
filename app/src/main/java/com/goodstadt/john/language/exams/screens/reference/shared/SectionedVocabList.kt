@@ -1,20 +1,36 @@
 package com.goodstadt.john.language.exams.screens.reference.shared
 
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.ArrowDropUp
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.screens.CategoryHeader
 import com.goodstadt.john.language.exams.screens.VocabRow
+import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
@@ -34,7 +50,9 @@ fun SectionedVocabList(
     onRowTapped: (VocabWord, Sentence) -> Unit
 ) {
 
-
+    val expandedCategories = remember {
+        mutableStateOf(setOf(categories.firstOrNull()?.title).filterNotNull().toSet())
+    }
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -43,38 +61,74 @@ fun SectionedVocabList(
 
         categories.forEach { category ->
             stickyHeader {
-                CategoryHeader(title = category.title)
-            }
+                val isExpanded = expandedCategories.value.contains(category.title)
+//                CategoryHeader(title = category.title)
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(MaterialTheme.colorScheme.surface) // Important for sticky headers
+                        .clickable {
+                            // The toggle logic is the same
+                            val currentSet = expandedCategories.value.toMutableSet()
+                            if (isExpanded) {
+                                currentSet.remove(category.title)
+                            } else {
+                                currentSet.add(category.title)
+                            }
+                            expandedCategories.value = currentSet
+                        }
+                        .padding(vertical = 16.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    // This is your original, simple CategoryHeader content
+                    Text(
+                        text = category.title,
+                        fontSize = 20.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = accentColor,
+                        modifier = Modifier.weight(1f) // Text takes up most of the space
+                    )
 
-            // 1. Create a new, flat list where each element is a pairing of a word and one of its sentences.
-            val wordSentencePairs = category.words.flatMap { word ->
-                // For each word, create a list of pairs, then flatMap will merge all these lists together.
-                word.sentences.map { sentence ->
-                    Pair(word, sentence)
-                }
-            }
-
-            // 2. Now use the standard `items` call on this new flat list.
-            items(
-                items = wordSentencePairs,
-                key = { (word, sentence) -> "${word.id}-${sentence.sentence}" } // Destructure the pair for the key
-            ) { (word, sentence) -> // Destructure the pair for use in the body
-
-                // Your existing logic now works perfectly here
-                val displayData = buildSentenceParts(entry = word, sentence = sentence)
-                val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
-
-                Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
-                    VocabRow(
-                        entry = word,
-                        parts = displayData.parts,
-                        sentence = displayData.sentence,
-                        isRecalling = false,
-                        displayDot = cachedAudioWordKeys.contains(uniqueSentenceId),
-                        isDownloading = false//, //TODO: maybe dynamic?
+                    // Add the expand/collapse icon
+                    Icon(
+                        imageVector = if (isExpanded) Icons.Default.ArrowDropUp else Icons.Default.ArrowDropDown,
+                        contentDescription = if (isExpanded) "Collapse" else "Expand"
                     )
                 }
+            } //: StickyHeader
+
+            if (expandedCategories.value.contains(category.title)) {
+                // 1. Create a new, flat list where each element is a pairing of a word and one of its sentences.
+                val wordSentencePairs = category.words.flatMap { word ->
+                    // For each word, create a list of pairs, then flatMap will merge all these lists together.
+                    word.sentences.map { sentence ->
+                        Pair(word, sentence)
+                    }
+                }
+
+                // 2. Now use the standard `items` call on this new flat list.
+                items(
+                    items = wordSentencePairs,
+                    key = { (word, sentence) -> "${word.id}-${sentence.sentence}" } // Destructure the pair for the key
+                ) { (word, sentence) -> // Destructure the pair for use in the body
+
+                    // Your existing logic now works perfectly here
+                    val displayData = buildSentenceParts(entry = word, sentence = sentence)
+                    val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
+
+                    Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
+                        VocabRow(
+                            entry = word,
+                            parts = displayData.parts,
+                            sentence = displayData.sentence,
+                            isRecalling = false,
+                            displayDot = cachedAudioWordKeys.contains(uniqueSentenceId),
+                            isDownloading = false//, //TODO: maybe dynamic?
+                        )
+                    }
+                }
             }
+
         }
     }
 
