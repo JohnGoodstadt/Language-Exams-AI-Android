@@ -42,6 +42,9 @@ class FirestoreRepository @Inject constructor(
         const val premiumUser = "premiumUser"
         const val premiumDate = "premiumDate"
         const val premiumToken = "premiumToken"
+        const val premiumOrderId = "premiumOrderId"
+        const val premiumProductId = "premiumProductId"
+
         const val premiumError = "premiumError"
 
 
@@ -262,6 +265,8 @@ class FirestoreRepository @Inject constructor(
             fb.premiumUser to true,
             fb.premiumDate to date,
             fb.premiumToken to purchaseToken,
+            fb.premiumOrderId to orderId,
+            fb.premiumProductId to productId,
         )
 
         itemRef.update(updates)

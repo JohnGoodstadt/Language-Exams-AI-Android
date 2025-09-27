@@ -217,6 +217,9 @@ class ParagraphViewModel @Inject constructor(
     }
 
     fun generateNewParagraph() {
+
+        vocabRepository.stopPlayback()
+
         if (!connectivityRepository.isCurrentlyOnline()) {
             _uiState.update { it.copy(error = "No internet connection. Please check your network and try again." ) }
             return
@@ -570,6 +573,9 @@ class ParagraphViewModel @Inject constructor(
      * Plays the audio for the current sentence by delegating to the VocabRepository.
      */
     fun speakSentence() {
+
+        vocabRepository.stopPlayback()
+
         val sentenceToSpeak = _uiState.value.generatedSentence
 
         if (sentenceToSpeak.isBlank() || sentenceToSpeak == "Tap 'Generate' to begin." || _uiState.value.isSpeaking) {

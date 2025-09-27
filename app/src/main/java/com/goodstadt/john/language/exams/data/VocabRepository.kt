@@ -88,26 +88,7 @@ class VocabRepository @Inject constructor(
             Result.failure(e)
         }
     }
-    fun getWordKeysWithCachedAudioObsolete(categories: List<Category>, voiceName: String): Set<String> {
-        val cacheDir = context.filesDir
 
-        // 1. Flatten all words from all categories into a single list.
-        val allWords = categories.flatMap { it.words }
-
-        // 2. Filter this list to keep only the words that have a cached file.
-        val wordsWithCache = allWords.filter { word ->
-            // Use 'any' to check if at least ONE sentence's audio exists.
-            // This is efficient because it stops checking as soon as it finds one.
-            word.sentences.any { sentence ->
-                val uniqueSentenceId = generateUniqueSentenceId(word, sentence, voiceName)
-                val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
-                audioCacheFile.exists()
-            }
-        }
-
-        // 3. Map the filtered list of VocabWord objects to just their keys and return as a Set.
-        return wordsWithCache.map { it.word }.toSet()
-    }
     /**
      * Fetches audio data for the given text from the TTS service and plays it.
      * This version includes a file-based caching mechanism.

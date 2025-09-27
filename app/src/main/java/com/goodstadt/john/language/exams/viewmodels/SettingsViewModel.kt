@@ -531,26 +531,19 @@ class SettingsViewModel @Inject constructor(
 
     fun onDebugPrintBillingStatus(activity: Activity) {
         billingRepository.logCurrentStatus()
-        Timber.i("and now logGmsState")
+        Timber.w("and now logGmsState")
         billingRepository.logGmsState(activity)
-        Timber.i("and now initializeGoogleServices")
+        Timber.w("and now initializeGoogleServices")
         billingRepository.initializeGoogleServices(activity)
     }
 
-//    fun purchasePremium(activity: Activity) {
-//        Timber.i("purchasePremium()")
-//        viewModelScope.launch {
-//            billingRepository.launchPurchase(activity)
-//        }
-//    }
-
     fun onDebugResetPurchases() {
-        Timber.i("onDebugResetPurchases()")
+        Timber.w("onDebugResetPurchases()")
         billingRepository.debugResetAllPurchases()
     }
 
     fun buyPremiumButtonPressed(activity: Activity) {
-        Timber.i("purchasePremium()")
+        Timber.w("purchasePremium()")
 
         viewModelScope.launch {
             billingRepository.launchPurchase(activity)
@@ -561,7 +554,7 @@ class SettingsViewModel @Inject constructor(
 
     fun debugAppValues(){
 
-        if ( authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" ){ //JG onSamsung phone
+        if ( isItMe() ){ //JG onSamsung phone
             val productDetails = billingRepository.printableCurrentStatus()
             Timber.w(productDetails)
             Timber.w(rateLimiter.printCurrentStatus)
@@ -571,7 +564,7 @@ class SettingsViewModel @Inject constructor(
     }
     fun debugAppRateLimiting() : String {
 
-        if ( authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" ){ //JG onSamsung phone
+        if ( isItMe() ){ //JG onSamsung phone
             return rateLimiter.printableStatus()
         }
 
@@ -579,7 +572,7 @@ class SettingsViewModel @Inject constructor(
     }
     fun debugAppBilling() : String {
 
-        if ( authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" ){ //JG onSamsung phone
+        if ( isItMe() ){ //JG onSamsung phone
             val productDetails = billingRepository.printableCurrentStatus()
            return productDetails
         }
@@ -588,7 +581,7 @@ class SettingsViewModel @Inject constructor(
     }
     fun debugAppLLMCredits() : String {
 
-        if ( authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" ){ //JG onSamsung phone
+        if ( isItMe() ){ //JG onSamsung phone
             return creditsRepository.printableCredits()
         }
 

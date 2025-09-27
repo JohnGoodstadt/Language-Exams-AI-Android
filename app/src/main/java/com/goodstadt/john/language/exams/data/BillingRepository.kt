@@ -220,6 +220,7 @@ class BillingRepository @Inject constructor(
      * Launches the Google Play purchase flow for the premium product.
      */
     fun launchPurchase(activity: Activity) {
+        Timber.w("BillingRepository.launchPurchase()")
         if (!billingClient.isReady) {
             _billingError.value = "Cannot make purchase. Billing service not connected."
             Timber.e("launchPurchase failed: BillingClient not ready.")
@@ -381,17 +382,17 @@ class BillingRepository @Inject constructor(
     fun debugResetAllPurchases() {
        // if (!BuildConfig.DEBUG) return // Safety check
 
-        Timber.i("Debug reset triggered. Querying all owned items...")
+        Timber.w("Debug reset triggered. Querying all owned items...")
         val params = QueryPurchasesParams.newBuilder()
             .setProductType(BillingClient.ProductType.INAPP).build()
 
         billingClient.queryPurchasesAsync(params) { billingResult, purchases ->
             if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
-                Timber.i("Found ${purchases.size} items to reset.")
+                Timber.w("Found ${purchases.size} items to reset.")
                 for (purchase in purchases) {
                     // We only care about our specific product
                     if (purchase.products.contains(PRODUCT_ID)) {
-                        Timber.i("Found ${PRODUCT_ID} consuming.")
+                        Timber.w("Found ${PRODUCT_ID} consuming.")
                         consumeTestPurchase(purchase)
                     }
                 }

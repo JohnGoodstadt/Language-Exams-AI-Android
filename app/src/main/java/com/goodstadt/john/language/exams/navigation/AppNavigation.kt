@@ -22,14 +22,13 @@ sealed class Screen(
     val title: String,
     val icon: IconResource
 ) {
-    object Tab1 : Screen("tab1", "",IconResource.DrawableIcon(R.drawable.counter_1_24px))
+    object Tab1 : Screen("tab1", "", IconResource.DrawableIcon(R.drawable.counter_1_24px))
     object Tab2 : Screen("tab2", "", IconResource.DrawableIcon(R.drawable.counter_2_24px))
     object Tab3 : Screen("tab3", "", IconResource.DrawableIcon(R.drawable.counter_3_24px))
-    // Using a standard icon as a placeholder for the brain
-    object Tab4 : Screen("tab4", "Me",IconResource.DrawableIcon(R.drawable.person_24px))
-    object Tab5 : Screen("tab5", "Reference",IconResource.DrawableIcon(R.drawable.books))
-}
+    object Tab4 : Screen("tab4", "Reference", IconResource.DrawableIcon(R.drawable.books))
+    object Tab5 : Screen("tab5", "Me", IconResource.DrawableIcon(R.drawable.person_24px))
 
+}
 
 
 val bottomNavItems = listOf(

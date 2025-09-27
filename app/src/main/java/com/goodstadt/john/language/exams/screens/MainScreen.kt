@@ -212,12 +212,11 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             }
 
             composable(Screen.Tab4.route) {
-                MeTabContainerScreen()
+                ReferenceTabContainerScreen()
             }
 
             composable(Screen.Tab5.route) {
-//                RecallScreen() // This was already correct
-                ReferenceTabContainerScreen()
+                MeTabContainerScreen()
             }
 
 

@@ -197,21 +197,17 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
     fun onRowTapped(word: VocabWord, sentence: Sentence) {
-        if (_uiState.value.playbackState is PlaybackState.Playing) return
+//        if (_uiState.value.playbackState is PlaybackState.Playing) return
+
+        vocabRepository.stopPlayback()
+        _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
 
         viewModelScope.launch {
-
-
-
-//            if (isPremiumUser.value) {
-//                Timber.i("User is a paid user!")
-//            }else{
-//                Timber.i("User is a FREE user")
-//            }
 
             if (!isPremiumUser.value) { //if premium user don't check credits
                 if (rateLimiter.doIForbidCall()){
                     val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.w("Rate Limiter Triggered")
                     Timber.w("canICallAPI = %s", failType.canICallAPI)
                     Timber.w("failReason = %s", (failType.failReason))
                     Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
@@ -229,8 +225,6 @@ class CategoryTabViewModel @Inject constructor(
                     return@launch
                 }
             }
-
-
 
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
