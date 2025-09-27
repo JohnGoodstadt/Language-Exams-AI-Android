@@ -596,7 +596,7 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun isItMe(): Boolean {
-        return authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1"
+        return authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" || authRepository.fsCurrentUID() =="TECvYwk9i7RJcyLhFver15Ywbp93"
     }
 
 

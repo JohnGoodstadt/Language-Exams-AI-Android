@@ -41,6 +41,9 @@ class FirestoreRepository @Inject constructor(
         const val lastActivityDate = "lastActivityDate"
         const val premiumUser = "premiumUser"
         const val premiumDate = "premiumDate"
+        const val premiumToken = "premiumToken"
+        const val premiumError = "premiumError"
+
 
         const val activityDays = "activityDays"
         const val updatedDate = "updatedDate"
@@ -246,7 +249,7 @@ class FirestoreRepository @Inject constructor(
             }
     }
 
-    fun fbUpdateUsePurchasedProperty() {
+    fun fbUpdateUsePurchasedProperty(purchaseToken:String,orderId:String,productId:String) {
         val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 
         val date = Date()
@@ -258,6 +261,26 @@ class FirestoreRepository @Inject constructor(
             fb.lastActivityDate to date,
             fb.premiumUser to true,
             fb.premiumDate to date,
+            fb.premiumToken to purchaseToken,
+        )
+
+        itemRef.update(updates)
+            .addOnFailureListener { e ->
+                println("Error updating fbUpdateUsePurchasedProperty(): $e")
+            }
+    }
+    fun fbUpdateUseFailedPurchasedProperty(erormMssage:String) {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+        val date = Date()
+
+        val itemRef = FirebaseFirestore.getInstance()
+            .collection(fb.users)
+            .document(currentUser.uid)
+        val updates = mapOf(
+            fb.lastActivityDate to date,
+            fb.premiumDate to date,
+            fb.premiumError to erormMssage,
         )
 
         itemRef.update(updates)

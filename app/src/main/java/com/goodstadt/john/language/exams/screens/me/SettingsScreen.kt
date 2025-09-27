@@ -473,12 +473,25 @@ fun SettingsScreen(
             )
         }
 
+
         if (viewModel.isItMe()) { //JG onSamsung phone
+
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.WorkspacePremium,
+                    title = "Tap to UNDO a Premium user (It's me)",
+                    currentValue = "", // Display the price
+                    onClick = {
+                        viewModel.onDebugResetPurchases()
+                    }
+                )
+            }
+
             item {
                 SettingsActionItem(
                     icon = Icons.Default.CloudSync,
                     title = "Debug Release",
-                    currentValue = "Tap to Log (DR)",
+                    currentValue = "Tap to Log (It's me)",
                     onClick = {
                         if (viewModel.isItMe()) { //JG onSamsung phone
                             viewModel.debugAppValues()
@@ -489,21 +502,21 @@ fun SettingsScreen(
             item {
                 SettingsInfoItem(
                     icon = Icons.Default.Info,
-                    title = "Debug Rate Limiting",
+                    title = "Debug Rate Limiting (It's me)",
                     value =  viewModel.debugAppRateLimiting()
                 )
             }
             item {
                 SettingsInfoItem(
                     icon = Icons.Default.Info,
-                    title = "LLM Credits",
+                    title = "LLM Credits (It's me)",
                     value =  viewModel.debugAppLLMCredits()
                 )
             }
             item {
                 SettingsInfoItem(
                     icon = Icons.Default.Info,
-                    title = "Billing",
+                    title = "Billing (It's me)",
                     value =  viewModel.debugAppBilling()
                 )
             }

@@ -159,18 +159,13 @@ class AuthRepository @Inject constructor(
                 val newUser = auth.signInAnonymously().await().user
                     ?: throw IllegalStateException("Firebase returned a null user after anonymous sign-in.")
 
+                Timber.w("New User. First Login")
                 Timber.w("uid is ${newUser.uid}")
                 fsCreateUserDoc()
                 Result.success(newUser)
             } else { //we have a UID
+                Timber.w("Existing User")
                 Timber.w("uid is ${user.uid}")
-                // CASE 2: RETURNING USER - Just update the timestamp
-//                if (false && BuildConfig.DEBUG) { //Just for JG 10 July 2025
-//                    val exists = fsDoesUserExist()
-//                    if (exists == false){
-//                        fsCreateUserDoc()
-//                    }
-//                }else {
                 fsUpdateUserActivityProperty()
                 fsUpdateUserMainStats(
                     property1 = fb.languageCode,
@@ -180,7 +175,6 @@ class AuthRepository @Inject constructor(
                     property3 = fb.version,
                     value3 = BuildConfig.VERSION_NAME
                 )
-
 
                 Result.success(user)
             }

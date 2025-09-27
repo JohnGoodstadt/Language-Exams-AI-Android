@@ -281,7 +281,12 @@ class CategoryTabViewModel @Inject constructor(
                     _uiState.update { it.copy( playbackState = PlaybackState.Idle) }
 
                     rateLimiter.recordCall()
-                    Timber.w(rateLimiter.printCurrentStatus)
+                    if (isPremiumUser.value){
+                        Timber.w("+ User has paid. No credit check +")
+                    }else{
+                        Timber.w(rateLimiter.printCurrentStatus)
+                    }
+
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
                     ttsStatsRepository.incWordStats(word.word)
                     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()

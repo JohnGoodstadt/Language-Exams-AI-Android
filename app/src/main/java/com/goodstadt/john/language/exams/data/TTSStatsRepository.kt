@@ -584,8 +584,6 @@ class TTSStatsRepository @Inject constructor(
 
         val lastFlushDate = getLastFlushDate()
 
-        Timber.w("lastFlushDateString:$lastFlushDate")
-
         return if (lastFlushDate != null) {
 
             val lastFlushDateStartOfDay = Calendar.getInstance().apply {

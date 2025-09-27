@@ -26,8 +26,10 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
@@ -65,6 +67,10 @@ class BillingRepository @Inject constructor(
 
     private val _billingError = MutableStateFlow<String?>(null)
     val billingError: StateFlow<String?> = _billingError.asStateFlow()
+
+    // A SharedFlow is perfect for sending one-off events like a new purchase token.
+//    private val _newPurchaseToken = MutableSharedFlow<String>()
+//    val newPurchaseToken = _newPurchaseToken.asSharedFlow()
 
     // --- Core Billing Client Setup ---
     private val purchasesUpdatedListener = PurchasesUpdatedListener { billingResult, purchases ->
@@ -110,7 +116,7 @@ class BillingRepository @Inject constructor(
             override fun onBillingSetupFinished(billingResult: BillingResult) {
                 if (billingResult.responseCode == BillingClient.BillingResponseCode.OK) {
                     _connectionState.value = ConnectionState.CONNECTED
-                    Timber.i("✅ Billing service connected successfully.")
+                    Timber.w("✅ Billing service connected successfully.")
                     scope.launch {
                         queryProductDetails()
                         checkPurchases()
@@ -148,7 +154,12 @@ class BillingRepository @Inject constructor(
             val detailsList = result.productDetailsList ?: emptyList()
             if (result.billingResult.responseCode == BillingClient.BillingResponseCode.OK && detailsList.isNotEmpty()) {
                 _productDetails.value = detailsList.firstOrNull()
-                Timber.i("✅ Product details found for $PRODUCT_ID")
+                Timber.w("Product details:$PRODUCT_ID")
+                if(_isPurchased.value) {
+                    Timber.w("✅ User is a Paid user")
+                }else{
+                    Timber.w("User is a Free user")
+                }
             } else {
                 _billingError.value = "Product details not found for $PRODUCT_ID"
                 Timber.w("Product details query failed or returned empty. Code: ${result.billingResult.responseCode}")
@@ -164,7 +175,7 @@ class BillingRepository @Inject constructor(
      */
     suspend fun checkPurchases() {
         if (!billingClient.isReady) {
-            Timber.e("checkPurchases failed: BillingClient not ready.")
+            Timber.e("checkPurchases. BillingClient not yet ready.")
             return
         }
 
@@ -258,15 +269,19 @@ class BillingRepository @Inject constructor(
                     // Now we can check the result that the coroutine returned.
                     if (ackResult.responseCode == BillingClient.BillingResponseCode.OK) {
                         _isPurchased.value = true
-                        firestoreRepository.fbUpdateUsePurchasedProperty()
+                        val orderId:String = premiumPurchase.orderId ?: "null orderId"
+                        val product:String = premiumPurchase.products.first()
+                        firestoreRepository.fbUpdateUsePurchasedProperty(premiumPurchase.purchaseToken,orderId, product)
                         Timber.i("✅ Purchase acknowledged and user status set to premium.")
                     } else {
                         _billingError.value = "Failed to acknowledge purchase: ${ackResult.debugMessage}"
+                        firestoreRepository.fbUpdateUseFailedPurchasedProperty(ackResult.debugMessage)
                         Timber.e("Acknowledgment failed. Code: ${ackResult.responseCode}")
                     }
                 } catch (e: Exception) {
                     // Catch any exceptions from the coroutine bridge itself
                     _billingError.value = "An error occurred during purchase acknowledgment: ${e.message}"
+                    firestoreRepository.fbUpdateUseFailedPurchasedProperty(e.message.toString())
                     Timber.e(e, "Exception during acknowledgePurchase.")
                 }
                 // --- END OF CORRECTION ---
