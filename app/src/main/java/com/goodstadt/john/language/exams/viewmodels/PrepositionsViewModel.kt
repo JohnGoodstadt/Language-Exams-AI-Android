@@ -13,6 +13,7 @@ import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Category
@@ -50,6 +51,7 @@ class PrepositionsViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
+    private val examSheetRepository: ExamSheetRepository
 ) : ViewModel() {
 
     private val _isPremiumUser = MutableStateFlow(false)
