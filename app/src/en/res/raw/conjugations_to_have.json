@@ -1,0 +1,3267 @@
+{
+  "romanized": false,
+  "native": "",
+  "name": "",
+  "sheetname": "EnglishIrregularVerb_Have_MainTenses",
+  "id": "",
+  "location": 0,
+  "googlevoiceprefix": "",
+  "uploaddate": 1747213019.492379,
+  "voicename": "",
+  "nativename": "",
+  "updatedDate": 978307200,
+  "fileformat": 1,
+  "tabtitles": [
+    "Not Used"
+  ],
+  "categories": [
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Present Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I have",
+          "partOfSpeech": "Verb (Present)",
+          "id": 100,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I have a car.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have two brothers.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have a meeting today.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "He has",
+          "partOfSpeech": "Verb (Present)",
+          "id": 101,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He has a dog.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has many friends.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has a new phone.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "She has",
+          "partOfSpeech": "Verb (Present)",
+          "id": 102,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She has a nice house.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has long hair.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has a bike.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "It has",
+          "partOfSpeech": "Verb (Present)",
+          "id": 103,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It has a red cover.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has a big screen.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has many features.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "You have",
+          "partOfSpeech": "Verb (Present)",
+          "id": 104,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have a nice smile.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have good ideas.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have a lot of books.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We have",
+          "partOfSpeech": "Verb (Present)",
+          "id": 105,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We have a big family.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have many friends.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have a nice garden.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You have (plural)",
+          "partOfSpeech": "Verb (Present)",
+          "id": 106,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have good manners.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have many fans.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have a great team.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They have",
+          "partOfSpeech": "Verb (Present)",
+          "id": 107,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They have a new car.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have three children.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have a house in the city.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Simple Past Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I had",
+          "partOfSpeech": "Verb (Past)",
+          "id": 108,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I had a dog when I was a child.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had lunch at noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had a lot of homework yesterday.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "He had",
+          "partOfSpeech": "Verb (Past)",
+          "id": 109,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He had a cold last week.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had a new job.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had many books.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "She had",
+          "partOfSpeech": "Verb (Past)",
+          "id": 110,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She had a nice dress.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had a headache.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had lunch at one o'clock.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "It had",
+          "partOfSpeech": "Verb (Past)",
+          "id": 111,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It had a dent on the side.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had a scratch on the screen.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had a flat tire.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "You had",
+          "partOfSpeech": "Verb (Past)",
+          "id": 112,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had a good idea.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had a lot of fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had a great day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We had",
+          "partOfSpeech": "Verb (Past)",
+          "id": 113,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We had a picnic.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had a good time.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had lunch together.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You had (plural)",
+          "partOfSpeech": "Verb (Past)",
+          "id": 114,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had many visitors.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had a busy day.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had lots of work.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They had",
+          "partOfSpeech": "Verb (Past)",
+          "id": 115,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They had a party last night.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had a flat tire.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had new shoes.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Conditional Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I would have",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 116,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would have more time if I finished early.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have a dog if I lived in the country.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have a car if I could afford it.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "He would have",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 117,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would have a job if he applied.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have a bike if he saved up.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have more friends if he were kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "She would have",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 118,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would have a cat if she liked animals.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have more time if she finished early.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have a new dress if she bought one.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "It would have",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 119,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would have four wheels if complete.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have a cover if new.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have more features if upgraded.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "You would have",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 120,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have fun if you came.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have a great time at the party.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have more energy if you rested.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We would have",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 121,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would have more time if we started earlier.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have a picnic if it were sunny.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have a good day together.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You would have (plural)",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 122,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have fun at the festival.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have a chance to win.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have a great view.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They would have",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 123,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would have a car if they saved up.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have a dog if they liked animals.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have more time if they worked faster.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabnumber": 1,
+      "title": "Conditional Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I would have had",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 124,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would have had time if I left earlier.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have had lunch if I wasn't busy.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have had a chance to win.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "He would have had",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 125,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would have had a car if he saved money.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have had lunch if he wasn't late.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have had more friends.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "She would have had",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 126,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would have had a cat if she liked pets.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have had time to help.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have had lunch with us.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "It would have had",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 127,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would have had new tires.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have had a cover.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have had a better battery.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "You would have had",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 128,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have had fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have had time to see it.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have had more energy.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We would have had",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 129,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would have had a picnic.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have had time to talk.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have had a good day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You would have had (plural)",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 130,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have had a great time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have had the chance to win.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have had a better view.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They would have had",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 131,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would have had a car.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have had a dog.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have had more time.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Conditional Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 200,
+          "word": "I would be having",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 200,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would be having lunch now if I weren't busy.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be having a break.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be having fun at the party.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 201,
+          "word": "He would be having",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 201,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would be having a meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be having dinner now.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be having fun with friends.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 202,
+          "word": "She would be having",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 202,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would be having a rest.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would be having a snack now.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would be having a good time.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 203,
+          "word": "It would be having",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 203,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would be having updates installed.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would be having repairs done.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would be having maintenance soon.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 204,
+          "word": "You would be having",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 204,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would be having fun right now.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 205,
+          "word": "We would be having",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 205,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would be having a meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would be having fun at the festival.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would be having dinner together.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 206,
+          "word": "You would be having (plural)",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 206,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would be having a great time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be having a meal.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be having a rest.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 207,
+          "word": "They would be having",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 207,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would be having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would be having lunch now.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would be having a party.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Conditional Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 200,
+          "word": "I would have been having",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 208,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would have been having lunch if I had time.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have been having fun at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have been having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 201,
+          "word": "He would have been having",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 209,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would have been having dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have been having a meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have been having fun.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 202,
+          "word": "She would have been having",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 210,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would have been having a snack.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have been having a good time.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have been having tea.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 203,
+          "word": "It would have been having",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 211,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would have been having repairs.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have been having updates installed.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have been having maintenance.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 204,
+          "word": "You would have been having",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 212,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have been having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 205,
+          "word": "We would have been having",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 213,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would have been having dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have been having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have been having a meeting.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 206,
+          "word": "You would have been having (plural)",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 214,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have been having a good time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been having a meal.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been having tea.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 207,
+          "word": "They would have been having",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 215,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would have been having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have been having a party.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have been having lunch.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Future",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 200,
+          "word": "I will have",
+          "partOfSpeech": "Verb (Future)",
+          "id": 216,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will have a car one day.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have time tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have lunch soon.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 201,
+          "word": "He will have",
+          "partOfSpeech": "Verb (Future)",
+          "id": 217,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will have a new job.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have a bike soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have a meeting tomorrow.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 202,
+          "word": "She will have",
+          "partOfSpeech": "Verb (Future)",
+          "id": 218,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will have a cat.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have time later.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have a break soon.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 203,
+          "word": "It will have",
+          "partOfSpeech": "Verb (Future)",
+          "id": 219,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will have new tires.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have an update.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have a new battery.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 204,
+          "word": "You will have",
+          "partOfSpeech": "Verb (Future)",
+          "id": 220,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have fun at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have time tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have a chance to win.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 205,
+          "word": "We will have",
+          "partOfSpeech": "Verb (Future)",
+          "id": 221,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will have a picnic.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have a good time.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have a meeting.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 206,
+          "word": "You will have (plural)",
+          "partOfSpeech": "Verb (Future)",
+          "id": 222,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have a great view.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have a meal.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 207,
+          "word": "They will have",
+          "partOfSpeech": "Verb (Future)",
+          "id": 223,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will have a party.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have fun tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have lunch soon.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabnumber": 1,
+      "title": "Present Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 200,
+          "word": "I am having",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 224,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I am having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 201,
+          "word": "He is having",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 225,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He is having dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is having a meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is having fun.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 202,
+          "word": "She is having",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 226,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She is having a snack.",
+              "translation": ""
+            },
+            {
+              "sentence": "She is having a good time.",
+              "translation": ""
+            },
+            {
+              "sentence": "She is having tea.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 203,
+          "word": "It is having",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 227,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is having updates installed.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is having repairs done.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is having maintenance.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 204,
+          "word": "You are having",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 228,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You are having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are having a rest.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 205,
+          "word": "We are having",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 229,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We are having a meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "We are having fun together.",
+              "translation": ""
+            },
+            {
+              "sentence": "We are having dinner.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 206,
+          "word": "You are having (plural)",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 230,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You are having a great time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are having tea.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 207,
+          "word": "They are having",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 231,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They are having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "They are having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "They are having a party.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Present Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I have had",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 300,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I have had breakfast.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have had enough rest.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have had a good day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "He has had",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 301,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He has had a cold recently.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has had two jobs.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has had a busy day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 302,
+          "word": "She has had",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 302,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She has had lunch already.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has had a baby.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has had a nap.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 303,
+          "word": "It has had",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 303,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It has had a software update.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has had some problems.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has had repairs done.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 304,
+          "word": "You have had",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 304,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have had a good day.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have had enough practice.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have had a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 305,
+          "word": "We have had",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 305,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We have had dinner already.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have had a meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have had a lot of fun.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 306,
+          "word": "You have had (plural)",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 306,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have had a great trip.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have had many visitors.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have had enough time.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 307,
+          "word": "They have had",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 307,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They have had a busy week.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have had fun today.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have had several meetings.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Present Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I have been having",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 308,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I have been having headaches.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been having meetings all day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "He has been having",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 309,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He has been having problems.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been having a good time.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 302,
+          "word": "She has been having",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 310,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She has been having meetings.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has been having coffee.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has been having fun.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 303,
+          "word": "It has been having",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 311,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It has been having updates.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has been having errors.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has been having issues all day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 304,
+          "word": "You have been having",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 312,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have been having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 305,
+          "word": "We have been having",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 313,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We have been having meetings.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have been having problems.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have been having fun today.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 306,
+          "word": "You have been having (plural)",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 314,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have been having tea.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been having a good time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 307,
+          "word": "They have been having",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 315,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They have been having fun today.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have been having meetings.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have been having discussions.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Past Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I was having",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 316,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I was having lunch when you called.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was having a break.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was having fun at the party.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "He was having",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 317,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He was having dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was having a meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was having fun.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 302,
+          "word": "She was having",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 318,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She was having tea.",
+              "translation": ""
+            },
+            {
+              "sentence": "She was having a good time.",
+              "translation": ""
+            },
+            {
+              "sentence": "She was having lunch.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 303,
+          "word": "It was having",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 319,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It was having repairs done.",
+              "translation": ""
+            },
+            {
+              "sentence": "It was having updates installed.",
+              "translation": ""
+            },
+            {
+              "sentence": "It was having problems.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 304,
+          "word": "You were having",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 320,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You were having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 305,
+          "word": "We were having",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 321,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We were having dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "We were having fun at the party.",
+              "translation": ""
+            },
+            {
+              "sentence": "We were having a meeting.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 306,
+          "word": "You were having (plural)",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 322,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You were having a good time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were having tea.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 307,
+          "word": "They were having",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 323,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They were having fun at the festival.",
+              "translation": ""
+            },
+            {
+              "sentence": "They were having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "They were having a party.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Past Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I had had",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 400,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I had had breakfast before the meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had had enough by then.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had had a good time before you arrived.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "He had had",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 401,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He had had a cold before the trip.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had had dinner earlier.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had had a busy day before the call.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 402,
+          "word": "She had had",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 402,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She had had coffee before work.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had had a nap before we arrived.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had had lunch already.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 403,
+          "word": "It had had",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 403,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It had had issues before the update.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had had repairs last year.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had had problems before.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 404,
+          "word": "You had had",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 404,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had had lunch before we came.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had had a break.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had had enough by then.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 405,
+          "word": "We had had",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 405,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We had had dinner before the show.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had had a meeting before you called.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had had fun before it rained.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 406,
+          "word": "You had had (plural)",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 406,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had had a good time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had had tea before we arrived.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had had fun at the party.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 407,
+          "word": "They had had",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 407,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They had had lunch before the meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had had fun before we arrived.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had had a party last week.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Past Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I had been having",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 408,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I had been having headaches all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been having fun before the rain.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been having meetings all morning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "He had been having",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 409,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He had been having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been having problems at work.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been having a good time.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 402,
+          "word": "She had been having",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 410,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She had been having coffee.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had been having meetings.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had been having fun.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 403,
+          "word": "It had been having",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 411,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It had been having problems.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had been having updates installed.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had been having errors.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 404,
+          "word": "You had been having",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 412,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had been having lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 405,
+          "word": "We had been having",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 413,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We had been having fun.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had been having meetings.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had been having dinner.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 406,
+          "word": "You had been having (plural)",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 414,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had been having tea.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been having fun at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 407,
+          "word": "They had been having",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 415,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They had been having fun at the festival.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had been having meetings.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had been having a party.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Future Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I will have had",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 416,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will have had lunch by 2 pm.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have had enough by then.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have had a break before the meeting.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "He will have had",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 417,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will have had dinner by 7 pm.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have had a meeting by then.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have had enough time.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 402,
+          "word": "She will have had",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 418,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will have had tea by noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have had a rest.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have had a chance to talk.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 403,
+          "word": "It will have had",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 419,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will have had updates by then.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have had repairs.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have had maintenance.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 404,
+          "word": "You will have had",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 420,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have had fun by the end of the day.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have had lunch by then.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have had a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 405,
+          "word": "We will have had",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 421,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will have had dinner by 8 pm.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have had a meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have had a good time.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 406,
+          "word": "You will have had (plural)",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 422,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have had a great time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have had tea.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have had enough rest.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 407,
+          "word": "They will have had",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 423,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will have had lunch.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have had a break.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have had fun by then.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Future Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 500,
+          "word": "I will have been having",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 500,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will have been having meetings all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been having fun by the evening.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been having lunch for an hour by then.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 501,
+          "word": "He will have been having",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 501,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will have been having problems at work.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been having a break by 3 pm.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been having meetings since morning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 502,
+          "word": "She will have been having",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 502,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will have been having tea for an hour.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have been having fun all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have been having meetings.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 503,
+          "word": "It will have been having",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 503,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will have been having updates installed.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have been having repairs all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have been having issues since morning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 504,
+          "word": "You will have been having",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 504,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have been having fun all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been having lunch for an hour.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been having meetings all morning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 505,
+          "word": "We will have been having",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 505,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will have been having dinner for an hour.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have been having fun at the party.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have been having discussions since morning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 506,
+          "word": "You will have been having (plural)",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 506,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have been having tea for an hour.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been having fun since morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been having a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 507,
+          "word": "They will have been having",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 507,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will have been having fun all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have been having a party.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have been having meetings since 9 am.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Subjunctive (Present)",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 500,
+          "word": "I have",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 508,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is important that I have enough time.",
+              "translation": ""
+            },
+            {
+              "sentence": "They ask that I have support.",
+              "translation": ""
+            },
+            {
+              "sentence": "I suggest that I have a chance to speak.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 501,
+          "word": "He have",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 509,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is vital that he have help.",
+              "translation": ""
+            },
+            {
+              "sentence": "They insist that he have support.",
+              "translation": ""
+            },
+            {
+              "sentence": "I demand that he have a fair chance.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 502,
+          "word": "She have",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 510,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They require that she have permission.",
+              "translation": ""
+            },
+            {
+              "sentence": "I suggest that she have time off.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is important that she have help.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 503,
+          "word": "It have",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 511,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I suggest that it have a cover.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is necessary that it have support.",
+              "translation": ""
+            },
+            {
+              "sentence": "They require that it have protection.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 504,
+          "word": "You have",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 512,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is essential that you have a chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "They ask that you have help.",
+              "translation": ""
+            },
+            {
+              "sentence": "I suggest that you have support.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 505,
+          "word": "We have",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 513,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They demand that we have resources.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is important that we have a plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "I suggest that we have a break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 506,
+          "word": "You have (plural)",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 514,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is necessary that you have help.",
+              "translation": ""
+            },
+            {
+              "sentence": "They insist that you have time.",
+              "translation": ""
+            },
+            {
+              "sentence": "I suggest that you have a guide.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 507,
+          "word": "They have",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 515,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is vital that they have food.",
+              "translation": ""
+            },
+            {
+              "sentence": "They demand that they have fair treatment.",
+              "translation": ""
+            },
+            {
+              "sentence": "I insist that they have help.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Subjunctive (Past)",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 500,
+          "word": "If I had",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 516,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If I had more time, I would help.",
+              "translation": ""
+            },
+            {
+              "sentence": "If I had a car, I would visit.",
+              "translation": ""
+            },
+            {
+              "sentence": "If I had money, I would travel.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 501,
+          "word": "If he had",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 517,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If he had a chance, he would join.",
+              "translation": ""
+            },
+            {
+              "sentence": "If he had time, he would help.",
+              "translation": ""
+            },
+            {
+              "sentence": "If he had a car, he would drive us.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 502,
+          "word": "If she had",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 518,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If she had a ticket, she would come.",
+              "translation": ""
+            },
+            {
+              "sentence": "If she had time, she would visit.",
+              "translation": ""
+            },
+            {
+              "sentence": "If she had help, she would finish faster.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 503,
+          "word": "If it had",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 519,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If it had wheels, it would move.",
+              "translation": ""
+            },
+            {
+              "sentence": "If it had power, it would work.",
+              "translation": ""
+            },
+            {
+              "sentence": "If it had support, it would stand.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 504,
+          "word": "If you had",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 520,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If you had time, you would help.",
+              "translation": ""
+            },
+            {
+              "sentence": "If you had a guide, you would find it.",
+              "translation": ""
+            },
+            {
+              "sentence": "If you had help, you would succeed.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 505,
+          "word": "If we had",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 521,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If we had more money, we would travel.",
+              "translation": ""
+            },
+            {
+              "sentence": "If we had time, we would visit.",
+              "translation": ""
+            },
+            {
+              "sentence": "If we had help, we would finish.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 506,
+          "word": "If you had (plural)",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 522,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If you had tickets, you would join us.",
+              "translation": ""
+            },
+            {
+              "sentence": "If you had time, you would visit.",
+              "translation": ""
+            },
+            {
+              "sentence": "If you had help, you would finish faster.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 507,
+          "word": "If they had",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 523,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If they had a car, they would drive.",
+              "translation": ""
+            },
+            {
+              "sentence": "If they had time, they would help.",
+              "translation": ""
+            },
+            {
+              "sentence": "If they had tickets, they would come.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,1525 @@
+{
+  "romanized": false,
+  "native": "",
+  "name": "",
+  "sheetname": "EnglishIrregularToDo",
+  "id": "",
+  "location": 0,
+  "googlevoiceprefix": "",
+  "uploaddate": 1747213019.492379,
+  "voicename": "",
+  "nativename": "",
+  "updatedDate": 978307200,
+  "fileformat": 1,
+  "tabtitles": [
+    "Not Used"
+  ],
+  "categories": [
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Present Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I do",
+          "partOfSpeech": "Verb (Present)",
+          "id": 100,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I do my homework every day.",
+              "translation": ""
+            },
+            {
+              "sentence": "I do the dishes after dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "I do exercise in the morning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "He does",
+          "partOfSpeech": "Verb (Present)",
+          "id": 101,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He does his job well.",
+              "translation": ""
+            },
+            {
+              "sentence": "He does the shopping on Sundays.",
+              "translation": ""
+            },
+            {
+              "sentence": "He does the cleaning at home.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "She does",
+          "partOfSpeech": "Verb (Present)",
+          "id": 102,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She does yoga every morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "She does the laundry on weekends.",
+              "translation": ""
+            },
+            {
+              "sentence": "She does her work carefully.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "It does",
+          "partOfSpeech": "Verb (Present)",
+          "id": 103,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It does what it is supposed to do.",
+              "translation": ""
+            },
+            {
+              "sentence": "It does the job well.",
+              "translation": ""
+            },
+            {
+              "sentence": "It does not work anymore.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "You do",
+          "partOfSpeech": "Verb (Present)",
+          "id": 104,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You do great work.",
+              "translation": ""
+            },
+            {
+              "sentence": "You do your homework on time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You do the dishes every evening.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We do",
+          "partOfSpeech": "Verb (Present)",
+          "id": 105,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We do our best at school.",
+              "translation": ""
+            },
+            {
+              "sentence": "We do the cleaning together.",
+              "translation": ""
+            },
+            {
+              "sentence": "We do the shopping every Saturday.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You do (plural)",
+          "partOfSpeech": "Verb (Present)",
+          "id": 106,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You do good work.",
+              "translation": ""
+            },
+            {
+              "sentence": "You do the cooking.",
+              "translation": ""
+            },
+            {
+              "sentence": "You do the gardening.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They do",
+          "partOfSpeech": "Verb (Present)",
+          "id": 107,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They do their homework together.",
+              "translation": ""
+            },
+            {
+              "sentence": "They do the housework on weekends.",
+              "translation": ""
+            },
+            {
+              "sentence": "They do a lot of sports.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Past Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I did",
+          "partOfSpeech": "Verb (Past)",
+          "id": 108,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I did my homework yesterday.",
+              "translation": ""
+            },
+            {
+              "sentence": "I did the dishes last night.",
+              "translation": ""
+            },
+            {
+              "sentence": "I did my best in the exam.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "He did",
+          "partOfSpeech": "Verb (Past)",
+          "id": 109,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He did the shopping.",
+              "translation": ""
+            },
+            {
+              "sentence": "He did his homework early.",
+              "translation": ""
+            },
+            {
+              "sentence": "He did a great job.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "She did",
+          "partOfSpeech": "Verb (Past)",
+          "id": 110,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She did yoga yesterday.",
+              "translation": ""
+            },
+            {
+              "sentence": "She did her work well.",
+              "translation": ""
+            },
+            {
+              "sentence": "She did the laundry.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "It did",
+          "partOfSpeech": "Verb (Past)",
+          "id": 111,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It did what we expected.",
+              "translation": ""
+            },
+            {
+              "sentence": "It did not work as planned.",
+              "translation": ""
+            },
+            {
+              "sentence": "It did the task quickly.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "You did",
+          "partOfSpeech": "Verb (Past)",
+          "id": 112,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You did a great job.",
+              "translation": ""
+            },
+            {
+              "sentence": "You did the dishes.",
+              "translation": ""
+            },
+            {
+              "sentence": "You did your homework early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We did",
+          "partOfSpeech": "Verb (Past)",
+          "id": 113,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We did the shopping together.",
+              "translation": ""
+            },
+            {
+              "sentence": "We did our best.",
+              "translation": ""
+            },
+            {
+              "sentence": "We did the cleaning yesterday.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You did (plural)",
+          "partOfSpeech": "Verb (Past)",
+          "id": 114,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You did a lot of work.",
+              "translation": ""
+            },
+            {
+              "sentence": "You did the gardening.",
+              "translation": ""
+            },
+            {
+              "sentence": "You did the cooking.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They did",
+          "partOfSpeech": "Verb (Past)",
+          "id": 115,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They did the housework.",
+              "translation": ""
+            },
+            {
+              "sentence": "They did the cleaning together.",
+              "translation": ""
+            },
+            {
+              "sentence": "They did well in the competition.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Conditional Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I would do",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 116,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would do it if I had time.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would do the work for you.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would do anything to help.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "He would do",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 117,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would do the job if asked.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would do it for you.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would do his best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "She would do",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 118,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would do it if she could.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would do the work.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would do her best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "It would do",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 119,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would do the job.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would do what we need.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would do fine.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "You would do",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 120,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would do well.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would do it for them.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would do your best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We would do",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 121,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would do anything to help.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would do the work together.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would do our best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You would do (plural)",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 122,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would do a good job.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would do well together.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would do the cleaning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They would do",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 123,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would do the work.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would do what is needed.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would do a great job.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabnumber": 1,
+      "title": "Conditional Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I would have done",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 124,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would have done it if I had known.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have done the work.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have done anything for you.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "He would have done",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 125,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would have done it if asked.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have done the job.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have done his best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "She would have done",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 126,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would have done the work.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have done better with help.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have done it yesterday.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "It would have done",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 127,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would have done the job.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have done fine.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have done what was needed.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "You would have done",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 128,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have done well.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have done it already.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have done your best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We would have done",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 129,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would have done anything to help.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have done it together.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have done the work on time.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You would have done (plural)",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 130,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have done a great job.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have done the cooking.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have done the cleaning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They would have done",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 131,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would have done the work.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have done a great job.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have done what was needed.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Conditional Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I would be doing",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 300,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would be doing my homework if I were at home.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be doing the dishes now.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be doing the job if asked.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "He would be doing",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 301,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would be doing the shopping.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be doing his homework.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be doing the work.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Conditional Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I would have been doing",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 302,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would have been doing my homework if I had stayed home.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have been doing the dishes.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have been doing the job.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "He would have been doing",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 303,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would have been doing the shopping.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have been doing his work.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have been doing his best.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Future Simple",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I will do",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 304,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will do my homework tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will do the dishes later.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will do my best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "He will do",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 305,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will do the shopping.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will do his homework tonight.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will do the job.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabnumber": 1,
+      "title": "Present Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I am doing",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 306,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I am doing my homework.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am doing the dishes.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am doing my best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "He is doing",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 307,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He is doing the shopping.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is doing his homework.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is doing well.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Present Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I have done",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 400,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I have done my homework.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have done the dishes.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have done my best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "He has done",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 401,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He has done the shopping.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has done his work.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has done his best.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Present Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I have been doing",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 402,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I have been doing my homework all morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been doing the dishes.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been doing my best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "He has been doing",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 403,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He has been doing the shopping.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been doing his homework.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been doing well.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Past Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I was doing",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 404,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I was doing my homework when you called.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was doing the dishes at that time.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was doing my best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "He was doing",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 405,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He was doing the shopping yesterday.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was doing his homework all evening.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was doing a great job.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabnumber": 1,
+      "title": "Past Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I had done",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 406,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I had done my homework before dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had done the dishes already.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had done my best.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "He had done",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 407,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He had done the shopping before noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had done his work.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had done his best.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Past Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 500,
+          "word": "I had been doing",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 500,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I had been doing my homework for an hour before you arrived.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been doing the dishes all morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been doing my best before the break.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 501,
+          "word": "He had been doing",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 501,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He had been doing the shopping when it started to rain.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been doing his homework before dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been doing his best all day.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Future Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 500,
+          "word": "I will be doing",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 502,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will be doing my homework at 8 pm.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will be doing the dishes after dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will be doing my best during the competition.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 501,
+          "word": "He will be doing",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 503,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will be doing the shopping at noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will be doing his work tomorrow morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will be doing his best during the event.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Future Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 500,
+          "word": "I will have done",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 504,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will have done my homework by 6 pm.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have done the dishes before you return.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have done my best by the end of the day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 501,
+          "word": "He will have done",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 505,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will have done the shopping by noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have done his work by tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have done his best by then.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Future Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 600,
+          "word": "I will have been doing",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 600,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will have been doing my homework for an hour by 7 pm.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been doing the dishes all afternoon.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been doing my best during the project.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 601,
+          "word": "He will have been doing",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 601,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will have been doing the shopping since morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been doing his work for hours.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been doing his best all day.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Subjunctive (Present)",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 600,
+          "word": "I do",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 602,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is important that I do my duty.",
+              "translation": ""
+            },
+            {
+              "sentence": "They suggest that I do the work now.",
+              "translation": ""
+            },
+            {
+              "sentence": "I ask that I do what is right.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 601,
+          "word": "He do",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 603,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is vital that he do his homework.",
+              "translation": ""
+            },
+            {
+              "sentence": "I suggest that he do the job quickly.",
+              "translation": ""
+            },
+            {
+              "sentence": "They demand that he do his part.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Subjunctive (Past)",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 600,
+          "word": "If I did",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 604,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If I did that, I would regret it.",
+              "translation": ""
+            },
+            {
+              "sentence": "If I did my best, I would succeed.",
+              "translation": ""
+            },
+            {
+              "sentence": "If I did it, I would tell you.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 601,
+          "word": "If he did",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 605,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If he did the work, he would finish on time.",
+              "translation": ""
+            },
+            {
+              "sentence": "If he did it, he would admit it.",
+              "translation": ""
+            },
+            {
+              "sentence": "If he did his best, he would succeed.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

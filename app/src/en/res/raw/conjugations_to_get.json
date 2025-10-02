@@ -1,0 +1,2884 @@
+{
+  "romanized": false,
+  "native": "",
+  "name": "",
+  "sheetname": "To Get",
+  "id": "",
+  "location": 0,
+  "googlevoiceprefix": "",
+  "uploaddate": 1747213019.492379,
+  "voicename": "",
+  "nativename": "",
+  "updatedDate": 978307200,
+  "fileformat": 1,
+  "tabtitles": [
+    "Not Used"
+  ],
+  "categories": [
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Present Simple",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I get",
+          "partOfSpeech": "Verb (Present Simple)",
+          "id": 100,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I get up early.",
+              "translation": ""
+            },
+            {
+              "sentence": "I get emails every day.",
+              "translation": ""
+            },
+            {
+              "sentence": "I get home at 6.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "You get",
+          "partOfSpeech": "Verb (Present Simple)",
+          "id": 101,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You get tired in the evening.",
+              "translation": ""
+            },
+            {
+              "sentence": "You get many messages.",
+              "translation": ""
+            },
+            {
+              "sentence": "You get up late on Sundays.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "He gets",
+          "partOfSpeech": "Verb (Present Simple)",
+          "id": 102,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He gets to work on time.",
+              "translation": ""
+            },
+            {
+              "sentence": "He gets cold easily.",
+              "translation": ""
+            },
+            {
+              "sentence": "He gets good grades.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "She gets",
+          "partOfSpeech": "Verb (Present Simple)",
+          "id": 103,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She gets home at five.",
+              "translation": ""
+            },
+            {
+              "sentence": "She gets upset quickly.",
+              "translation": ""
+            },
+            {
+              "sentence": "She gets lots of calls.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "It gets",
+          "partOfSpeech": "Verb (Present Simple)",
+          "id": 104,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It gets dark early in winter.",
+              "translation": ""
+            },
+            {
+              "sentence": "It gets cold at night.",
+              "translation": ""
+            },
+            {
+              "sentence": "It gets loud during storms.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We get",
+          "partOfSpeech": "Verb (Present Simple)",
+          "id": 105,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We get together every Friday.",
+              "translation": ""
+            },
+            {
+              "sentence": "We get along well.",
+              "translation": ""
+            },
+            {
+              "sentence": "We get food from the market.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You get (plural)",
+          "partOfSpeech": "Verb (Present Simple)",
+          "id": 106,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You get many questions.",
+              "translation": ""
+            },
+            {
+              "sentence": "You get tired after work.",
+              "translation": ""
+            },
+            {
+              "sentence": "You get mail every day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They get",
+          "partOfSpeech": "Verb (Present Simple)",
+          "id": 107,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They get ready for school.",
+              "translation": ""
+            },
+            {
+              "sentence": "They get paid weekly.",
+              "translation": ""
+            },
+            {
+              "sentence": "They get cold in the winter.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Present Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I am getting",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 108,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I am getting ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am getting better.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am getting my bag packed.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "You are getting",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 109,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You are getting stronger.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are getting dressed.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are getting ready for work.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "He is getting",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 110,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He is getting a haircut.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is getting breakfast.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is getting cold.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "She is getting",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 111,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She is getting dressed.",
+              "translation": ""
+            },
+            {
+              "sentence": "She is getting angry.",
+              "translation": ""
+            },
+            {
+              "sentence": "She is getting ready to go out.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "It is getting",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 112,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is getting late.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is getting colder.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is getting noisy outside.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We are getting",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 113,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We are getting ready to leave.",
+              "translation": ""
+            },
+            {
+              "sentence": "We are getting used to the cold.",
+              "translation": ""
+            },
+            {
+              "sentence": "We are getting lunch soon.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You are getting (plural)",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 114,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You are getting better every day.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are getting close to the station.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are getting ready for the trip.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They are getting",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 115,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They are getting their tickets.",
+              "translation": ""
+            },
+            {
+              "sentence": "They are getting excited.",
+              "translation": ""
+            },
+            {
+              "sentence": "They are getting dressed for school.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Present Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 100,
+          "word": "I have got",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 116,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I have got a new phone.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have got everything I need.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have got some good news.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 101,
+          "word": "You have got",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 117,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have got a new jacket.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have got your ticket.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have got time today.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 102,
+          "word": "He has got",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 118,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He has got a cold.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has got a new bike.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has got your message.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 103,
+          "word": "She has got",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 119,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She has got a lot of homework.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has got her exam results.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has got a new haircut.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 104,
+          "word": "It has got",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 120,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It has got colder recently.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has got more difficult.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has got a new update.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 105,
+          "word": "We have got",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 121,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We have got our tickets.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have got some great ideas.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have got everything ready.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 106,
+          "word": "You have got (plural)",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 122,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have got a great view.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have got what you need.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have got the information.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 107,
+          "word": "They have got",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 123,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They have got a new house.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have got the results.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have got many books.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Present Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 200,
+          "word": "I have been getting",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 200,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I have been getting stronger.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been getting ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been getting up early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 201,
+          "word": "You have been getting",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 201,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have been getting better.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been getting help.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been getting prepared.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 202,
+          "word": "He has been getting",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 202,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He has been getting stronger.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been getting dressed.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been getting ready for work.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 203,
+          "word": "She has been getting",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 203,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She has been getting better at tennis.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has been getting ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has been getting stronger.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 204,
+          "word": "It has been getting",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 204,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It has been getting colder.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has been getting darker.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has been getting louder outside.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 205,
+          "word": "We have been getting",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 205,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We have been getting ready for the trip.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have been getting stronger.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have been getting help from friends.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 206,
+          "word": "You have been getting (plural)",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 206,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have been getting prepared.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been getting better.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been getting everything ready.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 207,
+          "word": "They have been getting",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 207,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They have been getting ready for school.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have been getting fit.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have been getting stronger.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Past Simple",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 200,
+          "word": "I got",
+          "partOfSpeech": "Verb (Past Simple)",
+          "id": 208,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I got a new job.",
+              "translation": ""
+            },
+            {
+              "sentence": "I got home late.",
+              "translation": ""
+            },
+            {
+              "sentence": "I got your message.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 201,
+          "word": "You got",
+          "partOfSpeech": "Verb (Past Simple)",
+          "id": 209,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You got a promotion.",
+              "translation": ""
+            },
+            {
+              "sentence": "You got a new phone.",
+              "translation": ""
+            },
+            {
+              "sentence": "You got my email.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 202,
+          "word": "He got",
+          "partOfSpeech": "Verb (Past Simple)",
+          "id": 210,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He got a new bike.",
+              "translation": ""
+            },
+            {
+              "sentence": "He got sick last week.",
+              "translation": ""
+            },
+            {
+              "sentence": "He got home early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 203,
+          "word": "She got",
+          "partOfSpeech": "Verb (Past Simple)",
+          "id": 211,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She got a ticket.",
+              "translation": ""
+            },
+            {
+              "sentence": "She got tired.",
+              "translation": ""
+            },
+            {
+              "sentence": "She got a surprise gift.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 204,
+          "word": "It got",
+          "partOfSpeech": "Verb (Past Simple)",
+          "id": 212,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It got cold last night.",
+              "translation": ""
+            },
+            {
+              "sentence": "It got very windy.",
+              "translation": ""
+            },
+            {
+              "sentence": "It got dark early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 205,
+          "word": "We got",
+          "partOfSpeech": "Verb (Past Simple)",
+          "id": 213,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We got lost.",
+              "translation": ""
+            },
+            {
+              "sentence": "We got home safely.",
+              "translation": ""
+            },
+            {
+              "sentence": "We got tickets for the show.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 206,
+          "word": "You got (plural)",
+          "partOfSpeech": "Verb (Past Simple)",
+          "id": 214,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You got the package.",
+              "translation": ""
+            },
+            {
+              "sentence": "You got the job.",
+              "translation": ""
+            },
+            {
+              "sentence": "You got new shoes.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 207,
+          "word": "They got",
+          "partOfSpeech": "Verb (Past Simple)",
+          "id": 215,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They got home late.",
+              "translation": ""
+            },
+            {
+              "sentence": "They got a dog.",
+              "translation": ""
+            },
+            {
+              "sentence": "They got into trouble.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Past Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 200,
+          "word": "I was getting",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 216,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I was getting ready when you called.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was getting dressed at that time.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was getting tired.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 201,
+          "word": "You were getting",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 217,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You were getting ready for work.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were getting angry.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were getting your things.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 202,
+          "word": "He was getting",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 218,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He was getting dressed.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was getting his bag ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was getting tired.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 203,
+          "word": "She was getting",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 219,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She was getting upset.",
+              "translation": ""
+            },
+            {
+              "sentence": "She was getting her coat.",
+              "translation": ""
+            },
+            {
+              "sentence": "She was getting ready to leave.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 204,
+          "word": "It was getting",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 220,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It was getting dark.",
+              "translation": ""
+            },
+            {
+              "sentence": "It was getting cold.",
+              "translation": ""
+            },
+            {
+              "sentence": "It was getting windy.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 205,
+          "word": "We were getting",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 221,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We were getting ready to go.",
+              "translation": ""
+            },
+            {
+              "sentence": "We were getting the house cleaned.",
+              "translation": ""
+            },
+            {
+              "sentence": "We were getting tired.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 206,
+          "word": "You were getting (plural)",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 222,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You were getting ready for school.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were getting noisy.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were getting your bags packed.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 207,
+          "word": "They were getting",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 223,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They were getting ready for bed.",
+              "translation": ""
+            },
+            {
+              "sentence": "They were getting their things.",
+              "translation": ""
+            },
+            {
+              "sentence": "They were getting angry.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Past Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I had got",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 300,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I had got home before it rained.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had got your message by then.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had got everything ready.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "You had got",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 301,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had got there first.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had got a reply.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had got up early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 302,
+          "word": "He had got",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 302,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He had got a job offer.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had got ready before sunrise.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had got lost.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 303,
+          "word": "She had got",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 303,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She had got a new phone.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had got tired by the evening.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had got everything done.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 304,
+          "word": "It had got",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 304,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It had got colder by nightfall.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had got darker quickly.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had got noisy outside.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 305,
+          "word": "We had got",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 305,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We had got everything ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had got tickets in advance.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had got home safely.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 306,
+          "word": "You had got (plural)",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 306,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had got the invitation.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had got your bags packed.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had got ready to leave.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 307,
+          "word": "They had got",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 307,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They had got lost in the city.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had got what they needed.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had got home before dark.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Past Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I had been getting",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 308,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I had been getting stronger before the accident.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been getting ready all morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been getting up early for weeks.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "You had been getting",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 309,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had been getting better at tennis.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been getting ready for the test.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been getting up early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 302,
+          "word": "He had been getting",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 310,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He had been getting fit before the holidays.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been getting prepared for the exam.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been getting stronger every day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 303,
+          "word": "She had been getting",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 311,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She had been getting ready for the party.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had been getting more confident.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had been getting tired.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 304,
+          "word": "It had been getting",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 312,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It had been getting colder all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had been getting darker quickly.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had been getting noisy outside.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 305,
+          "word": "We had been getting",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 313,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We had been getting ready for hours.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had been getting used to the new place.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had been getting help from friends.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 306,
+          "word": "You had been getting (plural)",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 314,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had been getting ready for the trip.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been getting better at cooking.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been getting stronger.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 307,
+          "word": "They had been getting",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 315,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They had been getting ready for the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had been getting fit.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had been getting more confident.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Future Simple",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 300,
+          "word": "I will get",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 316,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will get a new phone.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will get home by six.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will get everything ready.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 301,
+          "word": "You will get",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 317,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will get a promotion.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will get help soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will get a new car.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 302,
+          "word": "He will get",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 318,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will get a job.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will get better.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will get home early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 303,
+          "word": "She will get",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 319,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will get a ticket.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will get a raise.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will get home soon.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 304,
+          "word": "It will get",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 320,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will get colder tonight.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will get dark early.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will get windy.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 305,
+          "word": "We will get",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 321,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will get tickets tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will get home safely.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will get ready soon.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 306,
+          "word": "You will get (plural)",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 322,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will get the chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will get a reward.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will get home early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 307,
+          "word": "They will get",
+          "partOfSpeech": "Verb (Future Simple)",
+          "id": 323,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will get a dog.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will get home late.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will get new books.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Future Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I will be getting",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 400,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will be getting ready at 7.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will be getting dressed when you arrive.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will be getting the tickets tomorrow.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "You will be getting",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 401,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will be getting home soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be getting ready for dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be getting your bag packed.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 402,
+          "word": "He will be getting",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 402,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will be getting the groceries.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will be getting changed.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will be getting ready for work.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 403,
+          "word": "She will be getting",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 403,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will be getting her hair done.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will be getting dressed at that time.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will be getting everything ready.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 404,
+          "word": "It will be getting",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 404,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will be getting dark soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will be getting cold tonight.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will be getting windy later.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 405,
+          "word": "We will be getting",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 405,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will be getting dinner ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will be getting ready to leave.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will be getting packed tonight.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 406,
+          "word": "You will be getting (plural)",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 406,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will be getting the room ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be getting prepared for the trip.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be getting ready to go.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 407,
+          "word": "They will be getting",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 407,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will be getting home late.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will be getting their bags packed.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will be getting ready for bed.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Future Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I will have got",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 408,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will have got home by six.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have got the job done.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have got ready by then.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "You will have got",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 409,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have got your work finished.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have got the tickets.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have got ready by eight.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 402,
+          "word": "He will have got",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 410,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will have got the car by Friday.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have got everything done.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have got home before dark.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 403,
+          "word": "She will have got",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 411,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will have got the results by tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have got everything ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have got a promotion.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 404,
+          "word": "It will have got",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 412,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will have got dark by 7 pm.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have got colder by night.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have got quieter later.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 405,
+          "word": "We will have got",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 413,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will have got tickets by noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have got everything packed.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have got ready for the trip.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 406,
+          "word": "You will have got (plural)",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 414,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have got the documents by Monday.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have got ready by then.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have got the room cleaned.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 407,
+          "word": "They will have got",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 415,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will have got everything ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have got home by midnight.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have got tickets by then.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Future Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 400,
+          "word": "I will have been getting",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 416,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will have been getting ready for an hour.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been getting stronger for months.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been getting fit by summer.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 401,
+          "word": "You will have been getting",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 417,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have been getting ready all morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been getting more confident.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been getting help for weeks.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 402,
+          "word": "He will have been getting",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 418,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will have been getting stronger for a year.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been getting ready since dawn.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been getting fit by summer.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 403,
+          "word": "She will have been getting",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 419,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will have been getting prepared for hours.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have been getting more confident.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have been getting stronger.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 404,
+          "word": "It will have been getting",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 420,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will have been getting colder all evening.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have been getting darker.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have been getting windy.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 405,
+          "word": "We will have been getting",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 421,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will have been getting ready since morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have been getting stronger.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have been getting help from friends.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 406,
+          "word": "You will have been getting (plural)",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 422,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have been getting ready for the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been getting more confident.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been getting stronger.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 407,
+          "word": "They will have been getting",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 423,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will have been getting fit for months.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have been getting ready since noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have been getting help for the project.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Conditional Simple",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 500,
+          "word": "I would get",
+          "partOfSpeech": "Verb (Conditional Simple)",
+          "id": 500,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would get a coffee if I had time.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would get help if I needed it.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would get a taxi if it rained.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 501,
+          "word": "You would get",
+          "partOfSpeech": "Verb (Conditional Simple)",
+          "id": 501,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would get a prize if you won.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would get help if you asked.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would get a seat if you arrived early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 502,
+          "word": "He would get",
+          "partOfSpeech": "Verb (Conditional Simple)",
+          "id": 502,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would get a job if he applied.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would get home early if he left now.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would get tired if he worked all day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 503,
+          "word": "She would get",
+          "partOfSpeech": "Verb (Conditional Simple)",
+          "id": 503,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would get a ticket if she booked early.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would get upset if you were late.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would get the job if she tried.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 504,
+          "word": "It would get",
+          "partOfSpeech": "Verb (Conditional Simple)",
+          "id": 504,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would get cold if it snowed.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would get dark soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would get noisy during the storm.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 505,
+          "word": "We would get",
+          "partOfSpeech": "Verb (Conditional Simple)",
+          "id": 505,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would get tickets if we booked early.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would get home faster by taxi.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would get food if the shop was open.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 506,
+          "word": "You would get (plural)",
+          "partOfSpeech": "Verb (Conditional Simple)",
+          "id": 506,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would get seats at the front.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would get a discount if you asked.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would get tired walking that far.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 507,
+          "word": "They would get",
+          "partOfSpeech": "Verb (Conditional Simple)",
+          "id": 507,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would get help from friends.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would get home late.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would get the job done.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Conditional Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 500,
+          "word": "I would have got",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 508,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would have got a ticket if I had booked early.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have got help if I had asked.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have got home sooner.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 501,
+          "word": "You would have got",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 509,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have got a better seat.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have got a discount.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have got the job.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 502,
+          "word": "He would have got",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 510,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would have got a promotion.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have got a new car.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have got home earlier.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 503,
+          "word": "She would have got",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 511,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would have got the job.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have got tickets.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have got home faster.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 504,
+          "word": "It would have got",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 512,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would have got cold by night.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have got dark earlier.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have got windy.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 505,
+          "word": "We would have got",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 513,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would have got tickets.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have got home sooner.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have got help.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 506,
+          "word": "You would have got (plural)",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 514,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have got seats together.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have got a better view.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have got help earlier.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 507,
+          "word": "They would have got",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 515,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would have got home earlier.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have got the job done.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have got a dog.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Conditional Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 500,
+          "word": "I would be getting",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 516,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would be getting ready if I were going out.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be getting dressed if I had plans.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be getting help if I needed it.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 501,
+          "word": "You would be getting",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 517,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would be getting ready now.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be getting help from friends.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be getting dressed.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 502,
+          "word": "He would be getting",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 518,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would be getting ready for work.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be getting a taxi if it rained.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be getting dinner ready.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 503,
+          "word": "She would be getting",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 519,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would be getting dressed.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would be getting ready to leave.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would be getting help now.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 504,
+          "word": "It would be getting",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 520,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would be getting colder by now.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would be getting dark soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would be getting windy.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 505,
+          "word": "We would be getting",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 521,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would be getting ready to go.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would be getting packed for the trip.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would be getting dinner ready.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 506,
+          "word": "You would be getting (plural)",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 522,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would be getting ready for the meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be getting dressed now.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be getting everything set up.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 507,
+          "word": "They would be getting",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 523,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would be getting ready for school.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would be getting their bags packed.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would be getting dinner ready.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

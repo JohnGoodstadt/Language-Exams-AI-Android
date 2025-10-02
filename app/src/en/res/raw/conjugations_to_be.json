@@ -1,0 +1,3434 @@
+{
+  "romanized": false,
+  "native": "",
+  "name": "",
+  "sheetname": "EnglishConjugationsToBe",
+  "id": "",
+  "location": 0,
+  "googlevoiceprefix": "",
+  "uploaddate": 1747213019.492379,
+  "voicename": "",
+  "nativename": "",
+  "updatedDate": 978307200,
+  "fileformat": 1,
+  "tabtitles": [
+    "Not Used"
+  ],
+  "categories": [
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Present Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I am",
+          "partOfSpeech": "Verb",
+          "id": 1,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I am happy.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am a student.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am ready.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "You are",
+          "partOfSpeech": "Verb",
+          "id": 2,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You are kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are at home.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are my friend.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "He is",
+          "partOfSpeech": "Verb",
+          "id": 3,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He is tall.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is my brother.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is very smart.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "She is",
+          "partOfSpeech": "Verb",
+          "id": 4,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She is a teacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "She is my sister.",
+              "translation": ""
+            },
+            {
+              "sentence": "She is busy.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "It is",
+          "partOfSpeech": "Verb",
+          "id": 5,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is sunny today.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is a cat.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is cold outside.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We are",
+          "partOfSpeech": "Verb",
+          "id": 6,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We are ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "We are friends.",
+              "translation": ""
+            },
+            {
+              "sentence": "We are at school.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "They are",
+          "partOfSpeech": "Verb",
+          "id": 7,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They are at work.",
+              "translation": ""
+            },
+            {
+              "sentence": "They are students.",
+              "translation": ""
+            },
+            {
+              "sentence": "They are my neighbors.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 17,
+          "word": "It is done",
+          "partOfSpeech": "Verb (Passive)",
+          "id": 17,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is done every day.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is done by the team.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is done carefully.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Past Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "I was",
+          "partOfSpeech": "Verb",
+          "id": 8,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I was late.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was tired.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was hungry.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 9,
+          "word": "You were",
+          "partOfSpeech": "Verb",
+          "id": 9,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You were at the party.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were very kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were here yesterday.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 10,
+          "word": "He was",
+          "partOfSpeech": "Verb",
+          "id": 10,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He was sad.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was in the room.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was early.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 11,
+          "word": "She was",
+          "partOfSpeech": "Verb",
+          "id": 11,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She was happy.",
+              "translation": ""
+            },
+            {
+              "sentence": "She was at home.",
+              "translation": ""
+            },
+            {
+              "sentence": "She was tired.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 12,
+          "word": "It was",
+          "partOfSpeech": "Verb",
+          "id": 12,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It was cold.",
+              "translation": ""
+            },
+            {
+              "sentence": "It was raining.",
+              "translation": ""
+            },
+            {
+              "sentence": "It was a good day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 13,
+          "word": "We were",
+          "partOfSpeech": "Verb",
+          "id": 13,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We were tired.",
+              "translation": ""
+            },
+            {
+              "sentence": "We were at the cinema.",
+              "translation": ""
+            },
+            {
+              "sentence": "We were friends.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 14,
+          "word": "They were",
+          "partOfSpeech": "Verb",
+          "id": 14,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They were late.",
+              "translation": ""
+            },
+            {
+              "sentence": "They were happy.",
+              "translation": ""
+            },
+            {
+              "sentence": "They were at school.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Conditional Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I would be",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 200,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would be happy to help.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be ready if you called.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be glad to join you.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He would be",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 201,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would be a good leader.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be here if he could.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be proud of you.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She would be",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 202,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would be happy to see you.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would be finished by now.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would be the best choice.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It would be",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 203,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would be easier with help.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would be done by now.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would be a good idea.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You would be",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 204,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would be a great teammate",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be ready in time.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be a great help.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We would be",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 205,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would be happy to join.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would be there if we could.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would be ready to start.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You would be",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 206,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would be great teammates.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be welcome to stay.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be ready by then.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They would be",
+          "partOfSpeech": "Verb (Conditional)",
+          "id": 207,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would be here if they could.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would be perfect for the job.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would be finished by now.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Conditional Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I would have been",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 700,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would have been ready on time.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have been patient.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have been happy to help.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He would have been",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 701,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would have been kind to them.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have been at the meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have been helpful.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She would have been",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 702,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would have been patient with the children.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have been ready early.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have been a good leader.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It would have been",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 703,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would have been easy.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have been ready by now.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have been finished earlier.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You would have been",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 704,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been kind to them.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We would have been",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 705,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would have been patient.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have been ready earlier.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have been happy to join.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You would have been",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 706,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have been good hosts.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been helpful to us.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been ready on time.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They would have been",
+          "partOfSpeech": "Verb (Conditional Perfect)",
+          "id": 707,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would have been here earlier.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have been ready for the trip.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Conditional Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I would be",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 708,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would be careful if I were you.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be polite in that situation.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would be patient if they asked me.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He would be",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 709,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would be kind if he were here.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be helpful if he could.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would be quiet during the talk.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She would be",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 710,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would be patient in that case.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would be polite at dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would be friendly to them.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It would be",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 711,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would be repaired if it were here.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would be cleaned if we had time.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would be used for the test.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You would be",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 712,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would be polite at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be helpful if needed.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be patient with them.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We would be",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 713,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would be careful in that case.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would be quiet during the test.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would be kind to them.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You would be",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 714,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would be good guests.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be helpful at the party.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would be kind to everyone.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They would be",
+          "partOfSpeech": "Verb (Conditional Continuous)",
+          "id": 715,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would be helpful if asked.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would be friendly to guests.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would be quiet during the speech.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Conditional Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I would have been",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 716,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I would have been careful all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have been patient during the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "I would have been polite if I had come.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He would have been",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 717,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He would have been helpful all morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have been kind at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "He would have been quiet during the talk.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She would have been",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 718,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She would have been polite at dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have been patient with them.",
+              "translation": ""
+            },
+            {
+              "sentence": "She would have been friendly all day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It would have been",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 719,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It would have been repaired all week.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have been cleaned yesterday.",
+              "translation": ""
+            },
+            {
+              "sentence": "It would have been used for hours.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You would have been",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 720,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have been helpful all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been patient at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been kind to them.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We would have been",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 721,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We would have been careful all morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have been patient since the start.",
+              "translation": ""
+            },
+            {
+              "sentence": "We would have been polite during the meeting.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You would have been",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 722,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You would have been good hosts.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been helpful at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "You would have been kind all day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They would have been",
+          "partOfSpeech": "Verb (Conditional Perfect Continuous)",
+          "id": 723,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They would have been helpful if asked.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have been friendly all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "They would have been quiet during the speech.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Future Tense",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I will be",
+          "partOfSpeech": "Verb",
+          "id": 100,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will be ready soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will be there at noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will be happy to help.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He will be",
+          "partOfSpeech": "Verb",
+          "id": 101,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will be late.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will be a doctor one day.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will be here soon.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She will be",
+          "partOfSpeech": "Verb",
+          "id": 102,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will be fine.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will be at the meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will be a great leader.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It will be",
+          "partOfSpeech": "Verb",
+          "id": 103,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will be cold tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will be easy to fix.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will be ready by Friday.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You will be",
+          "partOfSpeech": "Verb",
+          "id": 104,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will be fine.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be welcome there.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be surprised.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We will be",
+          "partOfSpeech": "Verb",
+          "id": 105,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will be on time.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will be ready soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will be happy to join.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You will be",
+          "partOfSpeech": "Verb",
+          "id": 106,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will be great hosts.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be welcome at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be ready by then.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They will be",
+          "partOfSpeech": "Verb",
+          "id": 107,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will be here soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will be late.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will be ready for the trip.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Present Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I am being",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 300,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I am being careful.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am being honest.",
+              "translation": ""
+            },
+            {
+              "sentence": "I am being polite.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He is being",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 301,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He is being kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is being helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "He is being quiet.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She is being",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 302,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She is being friendly.",
+              "translation": ""
+            },
+            {
+              "sentence": "She is being patient.",
+              "translation": ""
+            },
+            {
+              "sentence": "She is being honest.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It is being",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 303,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is being repaired.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is being cleaned.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is being used.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You are being",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 304,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You are being silly.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are being helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are being polite.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We are being",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 305,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We are being careful.",
+              "translation": ""
+            },
+            {
+              "sentence": "We are being quiet.",
+              "translation": ""
+            },
+            {
+              "sentence": "We are being honest.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You are being",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 306,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You are being good guests.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are being kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "You are being respectful.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They are being",
+          "partOfSpeech": "Verb (Present Continuous)",
+          "id": 307,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They are being noisy.",
+              "translation": ""
+            },
+            {
+              "sentence": "They are being helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "They are being friendly.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Present Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I have been",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 400,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I have been busy today.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been ready for hours.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been patient.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He has been",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 401,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He has been sick all week.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been very kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been helpful.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She has been",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 402,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She has been quiet today.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has been strong.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has been busy with work.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It has been",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 403,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It has been cold lately.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has been easy so far.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has been a good day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You have been",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 404,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been a great friend.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We have been",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 405,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We have been busy today.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have been ready for hours.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have been patient.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You have been",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 406,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have been good hosts.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been kind to us.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been a big help.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They have been",
+          "partOfSpeech": "Verb (Present Perfect)",
+          "id": 407,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They have been here since noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have been great teammates.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have been quiet today.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Present Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I have been",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 408,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I have been careful.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been patient.",
+              "translation": ""
+            },
+            {
+              "sentence": "I have been polite.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He has been",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 409,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He has been kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "He has been quiet.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She has been",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 410,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She has been friendly.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has been patient.",
+              "translation": ""
+            },
+            {
+              "sentence": "She has been honest.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It has been",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 411,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It has been repaired.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has been cleaned.",
+              "translation": ""
+            },
+            {
+              "sentence": "It has been painted.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You have been",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 412,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been polite.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been kind.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We have been",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 413,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We have been careful.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have been quiet.",
+              "translation": ""
+            },
+            {
+              "sentence": "We have been honest.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You have been",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 414,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You have been good guests.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been respectful.",
+              "translation": ""
+            },
+            {
+              "sentence": "You have been kind.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They have been",
+          "partOfSpeech": "Verb (Present Perfect Continuous)",
+          "id": 415,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They have been noisy.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "They have been friendly.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Past Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I was being",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 500,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I was being honest.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was being careful.",
+              "translation": ""
+            },
+            {
+              "sentence": "I was being quiet.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He was being",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 501,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He was being kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was being helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "He was being silly.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She was being",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 502,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She was being patient.",
+              "translation": ""
+            },
+            {
+              "sentence": "She was being friendly.",
+              "translation": ""
+            },
+            {
+              "sentence": "She was being polite.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It was being",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 503,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It was being repaired.",
+              "translation": ""
+            },
+            {
+              "sentence": "It was being cleaned.",
+              "translation": ""
+            },
+            {
+              "sentence": "It was being used.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You were being",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 504,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You were being kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were being helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were being noisy.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We were being",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 505,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We were being quiet.",
+              "translation": ""
+            },
+            {
+              "sentence": "We were being careful.",
+              "translation": ""
+            },
+            {
+              "sentence": "We were being polite.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You were being",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 506,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You were being good guests.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were being kind to us.",
+              "translation": ""
+            },
+            {
+              "sentence": "You were being helpful.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They were being",
+          "partOfSpeech": "Verb (Past Continuous)",
+          "id": 507,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They were being noisy.",
+              "translation": ""
+            },
+            {
+              "sentence": "They were being friendly.",
+              "translation": ""
+            },
+            {
+              "sentence": "They were being careful.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Past Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I had been",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 508,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I had been ready for hours.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been patient all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been tired before the meeting.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He had been",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 509,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He had been sick all week.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been kind to everyone.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been helpful before the event.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She had been",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 510,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She had been quiet all morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had been busy all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had been patient with the kids.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It had been",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 511,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It had been cold all night.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had been easy until now.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had been a long day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You had been",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 512,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had been kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been a great help.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been quiet all day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We had been",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 513,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We had been ready for hours.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had been tired after work.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had been patient all morning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You had been",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 514,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had been good hosts.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been friendly to us.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been helpful.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They had been",
+          "partOfSpeech": "Verb (Past Perfect)",
+          "id": 515,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They had been ready for the trip.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had been tired after the game.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had been friendly to us.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Past Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I had been",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 516,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I had been careful.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been patient.",
+              "translation": ""
+            },
+            {
+              "sentence": "I had been polite.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He had been",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 517,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He had been kind.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "He had been quiet.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She had been",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 518,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She had been friendly.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had been patient.",
+              "translation": ""
+            },
+            {
+              "sentence": "She had been honest.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It had been",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 519,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It had been repaired.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had been cleaned.",
+              "translation": ""
+            },
+            {
+              "sentence": "It had been used.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You had been",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 520,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been polite.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been kind.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We had been",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 521,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We had been careful.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had been quiet.",
+              "translation": ""
+            },
+            {
+              "sentence": "We had been patient.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You had been",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 522,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You had been good guests.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been respectful.",
+              "translation": ""
+            },
+            {
+              "sentence": "You had been kind.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They had been",
+          "partOfSpeech": "Verb (Past Perfect Continuous)",
+          "id": 523,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They had been noisy.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "They had been friendly.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Future Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I will be",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 600,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will be careful tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will be polite at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will be patient during the meeting.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He will be",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 601,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will be helpful later.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will be kind at school.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will be quiet during the talk.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She will be",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 602,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will be polite at dinner.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will be patient tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will be helpful at work.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It will be",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 603,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will be repaired next week.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will be cleaned tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will be painted on Friday.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You will be",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 604,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will be kind at the party.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be polite at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be patient during the test.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We will be",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 605,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will be helpful tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will be polite at the meeting.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will be quiet during the lecture.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You will be",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 606,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will be good guests.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be respectful at the event.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will be kind tomorrow.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They will be",
+          "partOfSpeech": "Verb (Future Continuous)",
+          "id": 607,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will be helpful later.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will be friendly tomorrow.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will be quiet during the show.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Future Perfect",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I will have been",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 608,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will have been ready by noon.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been patient long enough.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been at work for eight hours.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He will have been",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 609,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will have been kind to everyone.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been at school all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been helpful during the event.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She will have been",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 610,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will have been busy all morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have been patient with the kids.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have been ready for hours.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It will have been",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 611,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will have been cold all night.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have been easy so far.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have been a long day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You will have been",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 612,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have been helpful.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been kind to them.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been at work all day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We will have been",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 613,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will have been ready for the trip.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have been patient all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have been at the office since morning.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You will have been",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 614,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have been good hosts.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been helpful to us.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been at the event all day.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They will have been",
+          "partOfSpeech": "Verb (Future Perfect)",
+          "id": 615,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will have been ready since morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have been helpful all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have been at school all week.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabnumber": 1,
+      "title": "Future Perfect Continuous",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I will have been",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 616,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I will have been careful all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been patient for hours.",
+              "translation": ""
+            },
+            {
+              "sentence": "I will have been polite at the event.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He will have been",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 617,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "He will have been kind all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been helpful since morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "He will have been quiet during the meeting.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She will have been",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 618,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "She will have been polite all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have been patient for hours.",
+              "translation": ""
+            },
+            {
+              "sentence": "She will have been helpful at work.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It will have been",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 619,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It will have been repaired all week.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have been cleaned since morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "It will have been used for hours.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You will have been",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 620,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have been helpful all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been kind since morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been patient during the task.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We will have been",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 621,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "We will have been quiet all morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have been patient since the start.",
+              "translation": ""
+            },
+            {
+              "sentence": "We will have been polite during the meeting.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You will have been",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 622,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "You will have been good hosts all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been kind since the morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "You will have been respectful during the event.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They will have been",
+          "partOfSpeech": "Verb (Future Perfect Continuous)",
+          "id": 623,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They will have been helpful since morning.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have been quiet all day.",
+              "translation": ""
+            },
+            {
+              "sentence": "They will have been friendly during the event.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabnumber": 1,
+      "title": "Subjunctive (Present)",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "I be",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 800,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is important that I be ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "They suggested that I be patient.",
+              "translation": ""
+            },
+            {
+              "sentence": "I ask that I be allowed to speak.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "He be",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 801,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is vital that he be on time.",
+              "translation": ""
+            },
+            {
+              "sentence": "I insist that he be respectful.",
+              "translation": ""
+            },
+            {
+              "sentence": "They demanded that he be quiet.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "She be",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 802,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is crucial that she be present.",
+              "translation": ""
+            },
+            {
+              "sentence": "They ask that she be ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "I propose that she be included.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "It be",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 803,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I suggest that it be fixed soon.",
+              "translation": ""
+            },
+            {
+              "sentence": "They require that it be done today.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is necessary that it be checked.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "You be",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 804,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "I request that you be quiet.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is essential that you be honest.",
+              "translation": ""
+            },
+            {
+              "sentence": "They ask that you be careful.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "We be",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 805,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is important that we be ready.",
+              "translation": ""
+            },
+            {
+              "sentence": "They requested that we be quiet.",
+              "translation": ""
+            },
+            {
+              "sentence": "I ask that we be patient.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "You be",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 806,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "They suggested that you be respectful.",
+              "translation": ""
+            },
+            {
+              "sentence": "It is necessary that you be polite.",
+              "translation": ""
+            },
+            {
+              "sentence": "I ask that you be quiet during the talk.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "They be",
+          "partOfSpeech": "Verb (Subjunctive Present)",
+          "id": 807,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "It is vital that they be here on time.",
+              "translation": ""
+            },
+            {
+              "sentence": "They ask that they be included.",
+              "translation": ""
+            },
+            {
+              "sentence": "I insist that they be ready.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabnumber": 1,
+      "title": "Subjunctive (Past)",
+      "words": [
+        {
+          "group": "Conjugation",
+          "sortOrder": 1,
+          "word": "If I were",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 808,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If I were taller, I would play basketball.",
+              "translation": ""
+            },
+            {
+              "sentence": "If I were rich, I would travel the world.",
+              "translation": ""
+            },
+            {
+              "sentence": "If I were you, I would go now.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 2,
+          "word": "If he were",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 809,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If he were here, he would help.",
+              "translation": ""
+            },
+            {
+              "sentence": "If he were ready, we could start.",
+              "translation": ""
+            },
+            {
+              "sentence": "If he were stronger, he could lift it.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 3,
+          "word": "If she were",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 810,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If she were here, we would begin.",
+              "translation": ""
+            },
+            {
+              "sentence": "If she were taller, she could reach it.",
+              "translation": ""
+            },
+            {
+              "sentence": "If she were ready, we could leave.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 4,
+          "word": "If it were",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 811,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If it were sunny, we would go out.",
+              "translation": ""
+            },
+            {
+              "sentence": "If it were easy, anyone could do it.",
+              "translation": ""
+            },
+            {
+              "sentence": "If it were open, we could visit.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 5,
+          "word": "If you were",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 812,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If you were ready, we could start.",
+              "translation": ""
+            },
+            {
+              "sentence": "If you were here, we would begin.",
+              "translation": ""
+            },
+            {
+              "sentence": "If you were taller, you could see better.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 6,
+          "word": "If we were",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 813,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If we were stronger, we could move it.",
+              "translation": ""
+            },
+            {
+              "sentence": "If we were ready, we would start.",
+              "translation": ""
+            },
+            {
+              "sentence": "If we were there, we would help.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 7,
+          "word": "If you were",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 814,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If you were here, we would begin.",
+              "translation": ""
+            },
+            {
+              "sentence": "If you were ready, we could leave.",
+              "translation": ""
+            },
+            {
+              "sentence": "If you were taller, you could see the stage.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Conjugation",
+          "sortOrder": 8,
+          "word": "If they were",
+          "partOfSpeech": "Verb (Subjunctive Past)",
+          "id": 815,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "If they were here, we would start.",
+              "translation": ""
+            },
+            {
+              "sentence": "If they were stronger, they could lift it.",
+              "translation": ""
+            },
+            {
+              "sentence": "If they were ready, we could go.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

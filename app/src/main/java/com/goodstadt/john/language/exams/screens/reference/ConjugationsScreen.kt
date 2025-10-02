@@ -23,6 +23,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
@@ -45,6 +46,7 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
     val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
     val playbackState by viewModel.playbackState.collectAsState()
+    val selectedConjugation by viewModel.selectedConjugation.collectAsState()
 
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
@@ -67,7 +69,18 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
             }
         }
         is ConjugationsUiState.Success -> {
-            SectionedVocabList(
+
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally) {
+
+                HorizontalLevelPicker(
+                    options = LanguageConfig.conjugationOptions,
+                    selectedOption = selectedConjugation,
+                    onOptionSelected = viewModel::onConjugationSelected
+                )
+
+                SectionedVocabList(
                     categories = state.categories,
                     playbackState = playbackState,
                     googleVoice = state.selectedVoiceName,
@@ -75,7 +88,8 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
                     onRowTapped = { word, sentence ->
                         viewModel.playTrack(word, sentence)
                     }
-            )
+                )
+            }
         }
     }
     if (isRateLimitingSheetVisible){

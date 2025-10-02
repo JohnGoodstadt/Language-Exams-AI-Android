@@ -20,7 +20,18 @@ object LanguageConfig {
         "Conjugations",
         "Prepositions"
     )
-    val conjugationsFileName: String? = "conjugations_en"
+    //val conjugationsFileName: String? = "conjugations_en"
+    val conjugationOptions = listOf("To Have", "To Be", "To Do", "To Get")
+    fun getConjugationFileName(title: String): String {
+        val jsonFileName = when (title) {
+            "To Have" -> "conjugations_to_have"
+            "To Be" -> "conjugations_to_be"
+            "To Do" -> "conjugations_to_do"
+            "To Get" -> "conjugations_to_get"
+            else -> "conjugationsToHave" // Default option
+        }
+        return jsonFileName
+    }
     val prepositionsBundleFileName: String = "prepositions_en"
     val prepositionsFirestoreName: String = "prepositions"
     val LLMSystemText: String =

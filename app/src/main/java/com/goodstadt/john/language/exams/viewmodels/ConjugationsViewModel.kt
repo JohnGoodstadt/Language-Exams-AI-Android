@@ -60,6 +60,9 @@ class ConjugationsViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<ConjugationsUiState>(ConjugationsUiState.Loading)
     val uiState = _uiState.asStateFlow()
 
+    private val _selectedConjugation = MutableStateFlow(LanguageConfig.conjugationOptions.first())
+    val selectedConjugation = _selectedConjugation.asStateFlow()
+
     private val _isPremiumUser = MutableStateFlow(false)
     val isPremiumUser = _isPremiumUser.asStateFlow()
 
@@ -79,10 +82,8 @@ class ConjugationsViewModel @Inject constructor(
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     init {
-        loadConjugationsData()
-//        viewModelScope.launch {
-//            loadCachedSentencesForDot()
-//        }
+        loadConjugationsData(LanguageConfig.getConjugationFileName(_selectedConjugation.value))
+
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
                 _isPremiumUser.value = purchasedStatus
@@ -99,9 +100,9 @@ class ConjugationsViewModel @Inject constructor(
 //
 //    }
 
-    private fun loadConjugationsData() {
+    private fun loadConjugationsData(fileName: String?) {
         viewModelScope.launch {
-            val fileName = LanguageConfig.conjugationsFileName
+       //     val fileName = LanguageConfig.conjugationsFileName
 
             if (fileName == null) {
                 _uiState.value = ConjugationsUiState.NotAvailable
@@ -123,7 +124,13 @@ class ConjugationsViewModel @Inject constructor(
             }
         }
     }
-
+    fun onConjugationSelected(option: String) {
+        if (_selectedConjugation.value != option) {
+            _selectedConjugation.value = option
+            val fileName = LanguageConfig.getConjugationFileName(option)
+            loadConjugationsData(fileName)
+        }
+    }
     // This function is almost identical to the ones in our other ViewModels
     fun playTrack(word: VocabWord, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing) {
