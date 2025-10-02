@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.data
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.LlmModelInfo
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import kotlinx.coroutines.tasks.await
 import kotlinx.serialization.json.Json
@@ -89,7 +90,13 @@ class AppConfigRepository @Inject constructor(
                 return Json.decodeFromString<List<LlmModelInfo>>(jsonString)
             } catch (e: Exception) {
                 // If parsing fails (e.g., malformed JSON in the console), return the safe default
-                Timber.e("Failed to parse open AI LLM models JSON", e)
+//                Timber.e("Failed to parse open AI LLM models JSON", e)
+                TimberFault.f(
+                    message = "Failed to parse open AI LLM models JSON",
+                    localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                    secondaryText = jsonString,
+                    area = "AppConfigRepository.getAvailableOpenAIModels()"
+                )
                 defaultModels
             }
         } else {
@@ -114,11 +121,21 @@ class AppConfigRepository @Inject constructor(
             } catch (e: Exception) {
                 // If parsing fails (e.g., malformed JSON in the console), return the safe default
                 Timber.e("Failed to parse LLM Gemini models JSON", e)
+                TimberFault.f(
+                    message = "Failed to parse LLM Gemini models JSON",
+                    localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                    secondaryText = jsonString,
+                    area = "AppConfigRepository.getAvailableGeminiModels()"
+                )
                 defaultModels
             }
         } else {
             // If the remote value is empty, return the safe default
             defaultModels
         }
+    }
+    fun getPrepositionsDataVersion(): Int {
+        // Use getLong and convert to Int. This is safer than getDouble.
+        return remoteConfig.getLong("prepositions_data_version").toInt()
     }
 }

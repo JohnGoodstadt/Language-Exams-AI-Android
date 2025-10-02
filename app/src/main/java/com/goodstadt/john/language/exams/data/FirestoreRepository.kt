@@ -1,9 +1,11 @@
 package com.goodstadt.john.language.exams.data
 
+import com.goodstadt.john.language.exams.di.FirebaseModule.provideFirebaseAuth
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
+import com.google.firebase.firestore.ServerTimestamp
 import kotlinx.coroutines.tasks.await
 import sanitizedForFirestore
 import timber.log.Timber
@@ -152,6 +154,14 @@ class FirestoreRepository @Inject constructor(
         const val B2WordList = "B2WordList"
         const val freeWordList = "freeWordList"
     }
+
+    private data class UserError(
+        val uid: String = "",
+        val text: String = "",
+        val secondaryText: String = "",
+        val area: String = "",
+        @ServerTimestamp val timestamp: Date? = null // Use Date? and @ServerTimestamp
+    )
 
     //region Non Async Functions
     fun isUserFullyLoggedIn(): Boolean {
@@ -462,33 +472,53 @@ class FirestoreRepository @Inject constructor(
             Timber.e(e.localizedMessage, e)
         }
     }
+    /**
+     * Creates a new document in the 'user_errors' collection with the provided details.
+     *
+     * @param text The primary error message.
+     * @param secondaryText Optional additional details or context.
+     * @param area A string identifying where in the app the error occurred (e.g., "IAP_Flow").
+     * @return A [Result] indicating the success or failure of the Firestore write.
+     */
+     fun CreateProgramFaultToFirestore(
+        text: String,
+        secondaryText: String = "",
+        area: String = ""
+    ){
 
-//    fun fbUpdateUserGlobalStats(stats: Map<String, Int>) {
-//        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
-//
-//        val formattedDate = SimpleDateFormat("yyyy-MM", Locale.getDefault()).format(Date()) // e.g., 2024-04
-//
-//        val firestoreUpdateFields = mutableMapOf<String, FieldValue>()
-//        for ((key, value) in stats) {
-//            val count: Long = value.toLong() // Convert Int to Long
-//            firestoreUpdateFields[key] = FieldValue.increment(count)
+        val currentUser = FirebaseAuth.getInstance().currentUser ?:  return
+
+
+        // 1. Get the current user's ID. Fail if the user is not logged in.
+        val currentUid = currentUser.uid
+//        if (currentUid == null) {
+//            val noUserError = Exception("Cannot log error: User is not authenticated.")
+//            Timber.e(noUserError)
+//            return Result.failure(noUserError)
 //        }
-//
-//        // totals for this user for month
-//        val docRef = FirebaseFirestore.getInstance().collection(fb.stats).document(formattedDate).collection(fb.usersPronounce).document(currentUser.uid)
-//        docRef.update(firestoreUpdateFields as Map<String, Any>)
-//            .addOnFailureListener { e ->
-//                //TODO: could plus in real figures. here we miss the first creation
-//                if (e is FirebaseFirestoreException && e.code == FirebaseFirestoreException.Code.NOT_FOUND) {
-//                    fsCreateUserTTSStatsDoc(
-//                        0, 0, 0, 0, 0,
-//                        0, 0, 0, 0, 0
-//                    )
-//                    // NOTE: can be loop fbUpdateUserStatsPropertyCount(property)
-//                } else {
-//                    Timber.e("Error updating inc field: fbUpdateUserGlobalStats: ${e.localizedMessage}", e)
-//                }
-//            }
-//    }
-// endregion
+
+        try {
+            // 2. Create an instance of the UserError data class.
+            //    We only need to provide the properties we have. 'timestamp' will be null.
+            val errorLog = UserError(
+                uid = currentUid,
+                text = text,
+                secondaryText = secondaryText,
+                area = area
+            )
+
+            // 3. Point to the 'user_errors' collection and create a new document.
+            //    Calling .document() with no path generates a unique, random document ID.
+            val docId = SimpleDateFormat("yyyy-MM-dd-HH:mm:ss.SSS", Locale.ROOT).format(Date())
+            firestore.collection("faults").document(docId)
+                .set(errorLog)
+//                .await() // Wait for the operation to complete
+
+            Timber.d("Successfully logged user error to Firestore.")
+
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to log user error to Firestore.")
+        }
+    }
+
 }

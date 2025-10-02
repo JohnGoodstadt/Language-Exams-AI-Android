@@ -135,11 +135,13 @@ class ExamSheetRepository @Inject constructor(
     }
 
     private fun loadFromCache(file: File): VocabFile {
+        Timber.i("loadFromCache")
         val jsonString = file.readText()
         return json.decodeFromString(jsonString)
     }
 
     private fun getCacheFile(for_examName: String): File {
+        Timber.i("getting getCacheFile")
         val fileName = "${for_examName}_cache.json"
         return File(cacheDir, fileName)
     }

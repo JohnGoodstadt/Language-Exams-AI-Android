@@ -1,11 +1,11 @@
 package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Activity
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
@@ -20,6 +20,7 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -28,6 +29,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.io.IOException
 import javax.inject.Inject
 
 // This UI State can be reused, but let's give it a specific name for clarity
@@ -51,7 +53,8 @@ class PrepositionsViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
-    private val examSheetRepository: ExamSheetRepository
+    private val examSheetRepository: ExamSheetRepository,
+    private val appConfigRepository: AppConfigRepository,
 ) : ViewModel() {
 
     private val _isPremiumUser = MutableStateFlow(false)
@@ -74,13 +77,13 @@ class PrepositionsViewModel @Inject constructor(
     private val _showRateHourlyLimitSheet = MutableStateFlow(false)
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
+
     init {
-        loadPrepositionsData()
+//        loadPrepositionsData()
+        loadPrepositions() //new cache locally originally from firestore
 
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
-                // This block runs AUTOMATICALLY whenever the value in the
-                // BillingRepository's 'isPurchased' flow changes.
                 _isPremiumUser.value = purchasedStatus
                 if (DEBUG) {
                     billingRepository.logCurrentStatus()
@@ -92,7 +95,7 @@ class PrepositionsViewModel @Inject constructor(
     private fun loadPrepositionsData() {
         viewModelScope.launch {
             // *** THE ONLY LOGICAL CHANGE IS HERE ***
-            val fileName = LanguageConfig.prepositionsFileName
+            val fileName = LanguageConfig.prepositionsBundleFileName
 
             if (fileName == null) {
                 _uiState.value = PrepositionsUiState.NotAvailable
@@ -114,6 +117,85 @@ class PrepositionsViewModel @Inject constructor(
         }
     }
 
+    private fun loadPrepositions() {
+
+//        try {
+//            // Simulate a dangerous operation that can fail.
+//            // Throwing a common exception like IOException is a good example.
+//            throw IOException("Simulated critical failure: Could not read a required file.")
+//
+//        } catch (e: Exception) {
+//            val errorMessage = "A test fault was triggered from the debug menu."
+//
+//            // --- THIS IS THE TEST ---
+//            // Call your TimberFault logger with the exception and a message.
+//           // TimberFault.f(e.localizedMessage ?: "localizedMessage is null", errorMessage)
+//
+//            TimberFault.f(
+//                t = e,
+//                message = "Failed to save user progress after level completion.",
+//                secondaryText = "User ID: 12345, Level ID: 7B",
+//                area = "LevelCompleteViewModel"
+//            )
+//        }
+
+
+        viewModelScope.launch {
+            _uiState.value = PrepositionsUiState.Loading
+
+            val remoteVersion = appConfigRepository.getPrepositionsDataVersion()
+            val localVersion = userPreferencesRepository.prepositionsLocalVersionFlow.first()
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("Prepositions load: Remote version=$remoteVersion, Local version=$localVersion, Force refresh=$forceRefresh")
+
+            val bundleFallbackFileName = LanguageConfig.prepositionsBundleFileName
+            val firestoreName = LanguageConfig.prepositionsFirestoreName
+            // This assumes the exam name is stored in your user preferences
+           // val examName = userPreferencesRepository.selectedPrepositionsExamNameFlow.first() // You'll need to create this flow
+
+            try {
+                // --- THIS IS THE CORE ORCHESTRATION LOGIC ---
+                // 1. First, try to get data from the repository (which handles cache/network).
+                Timber.i("ViewModel: Attempting to fetch prepositions from repository for '$firestoreName'...")
+                val result = examSheetRepository.getExamSheetBy(firestoreName,forceRefresh)
+
+                result.onSuccess { vocabFile ->
+                    // 2. If it succeeds, update the UI with the fresh data.
+                    Timber.i("ViewModel: Successfully loaded ${vocabFile.categories.size} categories from repository.")
+                    if (forceRefresh) {
+                        userPreferencesRepository.updatePrepositionsLocalVersion(remoteVersion)
+                    }
+                    // We can also fetch the cached audio keys here to update the red dots
+                    val voiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+                    val cachedAudioKeys = vocabRepository.getSentenceKeysWithCachedAudio(vocabFile.categories, voiceName)
+                    _uiState.value = PrepositionsUiState.Success(vocabFile.categories, cachedAudioKeys, voiceName)
+                }
+
+                result.onFailure { error ->
+                    // 3. If the repository fails, fall back to the local bundle.
+//                    Timber.f(error as Throwable, "ViewModel: ERROR fetching from repository. Falling back to local JSON.")
+//                    Timber.fault("")
+//                    Timber.f("")
+
+                    val fallbackCategories = loadFromLocalBundle(bundleFallbackFileName)
+                    _uiState.value = PrepositionsUiState.Success(fallbackCategories, emptySet(), "")
+                }
+
+            } catch (e: Exception) {
+                TimberFault.f(
+                    message = "CRITICAL ERROR in loadPrepositions. Falling back to local JSON",
+                    localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                    secondaryText = "getExamSheetBy($firestoreName)",
+                    area = "PrepositionsViewModel.loadPrepositions()"
+                )
+
+                // Catch any unexpected exceptions from the flow itself
+//                TimberFault.f(e, "ViewModel: CRITICAL ERROR in loadPrepositions. Falling back to local JSON.")
+                val fallbackCategories = loadFromLocalBundle(bundleFallbackFileName)
+                _uiState.value = PrepositionsUiState.Success(fallbackCategories, emptySet(), "")
+            }
+        }
+    }
     fun playTrack(word: VocabWord, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing)
         {
@@ -146,8 +228,6 @@ class PrepositionsViewModel @Inject constructor(
         }
 
         viewModelScope.launch {
-
-
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
@@ -238,4 +318,27 @@ class PrepositionsViewModel @Inject constructor(
             billingRepository.launchPurchase(activity)
         }
     }
+    /**
+     * A private helper function to load and parse the local JSON file as a fallback.
+     */
+    private suspend fun loadFromLocalBundle(fileName: String): List<Category> {
+        return try {
+            // Because this is now a suspend function, we can safely call another suspend function.
+            val result = vocabRepository.getVocabData(fileName)
+
+            // Return the categories on success, or an empty list on failure.
+            result.getOrNull()?.categories ?: emptyList()
+        } catch (e: Exception) {
+            Timber.e(e, "ViewModel: CRITICAL - Failed to load local fallback JSON.")
+            _uiState.value = PrepositionsUiState.Error("Failed to load data.")
+            emptyList()
+        }
+    }
 }
+
+//private fun Timber.Forest.fault(s: String) {
+//    Timber.i("")
+//}
+//private fun Timber.Forest.f(s: String) {
+//    Timber.i("")
+//}

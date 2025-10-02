@@ -8,7 +8,7 @@
         <key>android_recommended_version_code</key>
         <value>2</value> <!-- A safe, low default -->
     </entry>
-    <entry>
+    <entry>x
         <key>update_message_optional</key>
         <value>Ein neues Update ist verfügbar!</value>
     </entry>
@@ -20,6 +20,10 @@
         <key>update_url_android</key>
         <!-- Replace with your actual package name -->
         <value>https://play.google.com/store/apps/details?id=com.goodstadt.john.language.exams</value>
+    </entry>
+    <entry>
+        <key>prepositions_data_version</key>
+        <value>1</value> <!-- The initial version of your data -->
     </entry>
     <entry>
         <key>llm_models_config</key>

@@ -1,7 +1,6 @@
 package com.goodstadt.john.language.exams.data
 
 import android.content.Context
-import android.util.Log
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -41,6 +40,9 @@ class UserPreferencesRepository @Inject constructor(
         val TTS_TOTAL_CREDITS = intPreferencesKey("tts_total_credits")
         val USER_HAS_CHOSEN_ENGLISH = booleanPreferencesKey("user_has_chosen_english")
         val SELECTED_LANGUAGE_CODE = stringPreferencesKey("selected_language_code")
+        val SELECTED_PREPOSITIONS_EXAM_NAME = stringPreferencesKey("selected_prepositions_exam_name")
+        val PREPOSITIONS_LOCAL_VERSION = intPreferencesKey("prepositions_local_version")
+
     }
 
     /**
@@ -197,6 +199,30 @@ class UserPreferencesRepository @Inject constructor(
             preferences[PreferenceKeys.SELECTED_LANGUAGE_CODE] = languageCode
             // We can also mark that the initial choice has been made.
             preferences[PreferenceKeys.USER_HAS_CHOSEN_ENGLISH] = true
+        }
+    }
+    val selectedPrepositionsExamNameFlow: Flow<String> = context.dataStore.data
+        .map { preferences ->
+            // 1. Try to get the value the user has saved.
+            // 2. If it's null (the user has never chosen), provide a default.
+            //    A good default is to get it from your flavor-specific LanguageConfig.
+            preferences[PreferenceKeys.SELECTED_PREPOSITIONS_EXAM_NAME] ?: LanguageConfig.prepositionsBundleFileName
+        }
+    suspend fun saveSelectedPrepositionsExamName(examName: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.SELECTED_PREPOSITIONS_EXAM_NAME] = examName
+        }
+    }
+    val prepositionsLocalVersionFlow: Flow<Int> = context.dataStore.data
+        .map { preferences ->
+            preferences[PreferenceKeys.PREPOSITIONS_LOCAL_VERSION] ?: 0 // Default to 0 if never set
+        }
+
+    // --- ADD a function to save the new version ---
+    suspend fun updatePrepositionsLocalVersion(newVersion: Int) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.PREPOSITIONS_LOCAL_VERSION] = newVersion
+            Timber.d("Prepositions local version updated to: $newVersion")
         }
     }
  }

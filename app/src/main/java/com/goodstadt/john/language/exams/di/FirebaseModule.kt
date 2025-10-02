@@ -57,4 +57,5 @@ object FirebaseModule {
 
         return remoteConfig
     }
+
 }

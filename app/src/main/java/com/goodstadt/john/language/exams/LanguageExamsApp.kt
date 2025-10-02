@@ -9,6 +9,8 @@ import timber.log.Timber
 
 import android.util.Log
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.utils.logging.FaultTree
+import com.google.firebase.firestore.FirebaseFirestore
 import javax.inject.Inject
 
 private class ReleaseTree : Timber.Tree() {
@@ -28,6 +30,9 @@ class LanguageExamsApp : Application() {
 
     @Inject
     lateinit var rateLimiter: SimpleRateLimiter
+
+    @Inject
+    lateinit var firestore: FirebaseFirestore
 
     // 2. Add the onCreate method
     override fun onCreate() {
@@ -52,10 +57,11 @@ class LanguageExamsApp : Application() {
         }
 
         // 3. Timber setup is still correct here.
-        if (BuildConfig.DEBUG) {
-            Timber.plant(Timber.DebugTree())
-        } else {
-            Timber.plant(ReleaseTree())
-        }
+//        if (BuildConfig.DEBUG) {
+//            Timber.plant(Timber.DebugTree())
+//        } else {
+//            Timber.plant(ReleaseTree())
+            Timber.plant(FaultTree(firestore))
+//        }
     }
 }
