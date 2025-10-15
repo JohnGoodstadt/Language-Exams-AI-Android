@@ -469,7 +469,8 @@ fun HorizontalLevelPicker(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(vertical = 1.dp),
-            horizontalArrangement = Arrangement.spacedBy(1.dp),
+            //horizontalArrangement = Arrangement.spacedBy(1.dp),
+            horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically
     ) {
         options.forEach { option ->
