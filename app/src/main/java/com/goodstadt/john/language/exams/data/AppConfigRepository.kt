@@ -3,6 +3,8 @@ package com.goodstadt.john.language.exams.data
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.LlmModelInfo
+import com.goodstadt.john.language.exams.models.TabDefinition
+import com.goodstadt.john.language.exams.models.TabsManifest
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import kotlinx.coroutines.tasks.await
@@ -31,6 +33,13 @@ class AppConfigRepository @Inject constructor(
         )
     )
 
+    //Reference Tab dynamic sheets
+    private val defaultTabs = listOf(
+        TabDefinition(id = "quiz", title = "Quiz", type = "fixed_view"),
+        TabDefinition(id = "conjugations", title = "Conjugations", type = "fixed_view"),
+        TabDefinition(id = "prepositions", title = "Prepositions", type = "fixed_view")
+    )
+
    // val TAG = "AppConfigRepository"
     suspend fun checkAppUpdateStatus(): UpdateState {
         // Fetch the latest values from the server. This is fast because of caching.
@@ -54,6 +63,8 @@ class AppConfigRepository @Inject constructor(
         val updateUrl = remoteConfig.getString("update_url_android")
 
         Timber.w("AppConfigRepository comparing min:$minRequiredVersion and rec:$recommendedVersion and $currentVersionCode")
+
+
 
         return when {
            //
@@ -137,5 +148,36 @@ class AppConfigRepository @Inject constructor(
     fun getPrepositionsDataVersion(): Int {
         // Use getLong and convert to Int. This is safer than getDouble.
         return remoteConfig.getLong("prepositions_data_version").toInt()
+    }
+    /**
+     * Fetches the configuration for the reference tabs from Remote Config.
+     * Returns a default list of fixed tabs if the fetch fails, the config is empty,
+     * or the JSON is malformed.
+     */
+    suspend fun getReferenceTabs(): List<TabDefinition> {
+        // Ensure the latest values are fetched and activated, consistent with other functions
+        try {
+            remoteConfig.fetchAndActivate().await()
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to fetch remote config for tabs, will use cached/default values.")
+        }
+
+        val jsonString = remoteConfig.getString("reference_view_tabs")
+
+        return if (jsonString.isNotBlank()) {
+            try {
+                // Try to parse the JSON string from Remote Config
+                val manifest = Json.decodeFromString<TabsManifest>(jsonString)
+                manifest.tabs
+            } catch (e: Exception) {
+                // If parsing fails, log the error and return the safe default
+                Timber.e(e, "Failed to parse reference_view_tabs JSON")
+                // You could add TimberFault here if desired
+                defaultTabs
+            }
+        } else {
+            // If the remote value is empty, return the safe default
+            defaultTabs
+        }
     }
 }

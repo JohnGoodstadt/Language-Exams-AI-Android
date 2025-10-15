@@ -21,18 +21,16 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.MeScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
-import com.goodstadt.john.language.exams.screens.GeminiExampleScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
-import com.goodstadt.john.language.exams.viewmodels.MeTabViewModel
+import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
 import kotlinx.coroutines.launch
 
@@ -42,7 +40,7 @@ import kotlinx.coroutines.launch
  */
 @OptIn(ExperimentalMaterialNavigationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun MeTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
+fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
 
     // --- THIS IS THE CORRECTED LOGIC ---
     // 1. Get an instance of the main TabsViewModel. Hilt will correctly scope this

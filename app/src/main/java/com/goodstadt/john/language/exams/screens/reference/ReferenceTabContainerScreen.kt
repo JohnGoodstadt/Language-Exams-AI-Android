@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -19,17 +20,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.navigation.getRefScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
-import com.goodstadt.john.language.exams.viewmodels.MeTabViewModel
+import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
+import com.goodstadt.john.language.exams.viewmodels.ReferenceViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
 import kotlinx.coroutines.launch
 
@@ -39,139 +42,122 @@ import kotlinx.coroutines.launch
  */
 @OptIn(ExperimentalMaterialNavigationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun ReferenceTabContainerScreen(viewModel: MeTabViewModel = hiltViewModel()) {
-
-    // --- THIS IS THE CORRECTED LOGIC ---
-    // 1. Get an instance of the main TabsViewModel. Hilt will correctly scope this
-    //    to the parent navigation graph (the main NavHost) automatically.
-    //    The complex 'findActivity' logic is not needed here.
-    //val tabsViewModel: TabsViewModel = hiltViewModel()
-    // --- END OF CORRECTION ---
-
-//    val bottomSheetNavigator = rememberBottomSheetNavigator()
-
+fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
+{
 
     val refTabNavController = rememberNavController()
+    // MODIFIED: We only have ONE uiState to collect now
     val uiState by viewModel.uiState.collectAsState()
-    val sheetState = rememberModalBottomSheetState(
-        skipPartiallyExpanded = true // This is the correct M3 parameter
-    )
+
+    // --- Bottom Sheet Logic ---
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    // MODIFIED: Use the merged state to determine if the sheet is visible
+    val isSheetVisible = uiState.selectedCategoryTitleForSheet != null
+    // This LaunchedEffect for hiding the sheet remains the same
     val scope = rememberCoroutineScope()
-    val isSheetVisible = uiState.selectedCategoryTitle != null
-
-
-
     LaunchedEffect(isSheetVisible) {
         if (!isSheetVisible) {
             scope.launch { sheetState.hide() }.join()
         }
     }
+        // Perform the navigation
 
-    // val menuItems by tabsViewModel.meTabMenuItems.collectAsState()
-    val menuItems = LanguageConfig.refTabMenuItems
-    // --- THIS IS THE KEY ---
-    // 1. Observe the back stack of the NESTED NavController.
-    val navBackStackEntry by refTabNavController.currentBackStackEntryAsState()
-    val currentRoute = navBackStackEntry?.destination?.route
+    // --- Navigation Logic ---
+    // This LaunchedEffect now uses the merged uiState
+    LaunchedEffect(uiState.selectedTabId) {
+        val selectedTab = uiState.tabs.firstOrNull { it.id == uiState.selectedTabId }
+            ?: return@LaunchedEffect
 
-//    ModalBottomSheetLayout(bottomSheetNavigator = bottomSheetNavigator) {
+        val route = when (selectedTab.type) {
+            "fixed_view" -> getRefScreenRouteFromTitle(selectedTab.title)
+            "dynamic_sheet" -> selectedTab.firestoreDocumentId?.let { docId ->
+                RefScreen.DynamicSheet.createRoute(docId)
+            }
+            else -> null
+        }
 
-    var selectedChipTitle by remember(menuItems) {
-        mutableStateOf(menuItems.firstOrNull() ?: "")
+        route?.let {
+            refTabNavController.navigate(it) {
+                popUpTo(refTabNavController.graph.startDestinationId) { saveState = true }
+                launchSingleTop = true
+                restoreState = true
+            }
+        }
     }
+
     Column(modifier = Modifier.fillMaxSize()) {
-        // Part A: The Persistent Horizontal Menu
-        LazyRow(
-            modifier = Modifier.fillMaxWidth(),
-            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            items(menuItems) { title ->
-                MenuItemChip(
-                    text = title,
-                    isSelected =  (title == selectedChipTitle),
-                    onClick = {
-                        selectedChipTitle = title
-                        getRefScreenRouteFromTitle(title)?.let { route ->
-                            refTabNavController.navigate(route) {
-                                launchSingleTop = true
-                            }
-                        }
-                    }
-                )
+        // Part A: The Dynamic Horizontal Menu (now uses the single uiState)
+        if (uiState.tabs.isNotEmpty()) {
+            LazyRow(/*...*/) {
+                items(uiState.tabs, key = { it.id }) { tab ->
+                    MenuItemChip(
+                        text = tab.title,
+                        isSelected = (tab.id == uiState.selectedTabId),
+                        onClick = { viewModel.onTabSelected(tab.id) }
+                    )
+                }
             }
         }
 
-        // Part B: The NavHost that displays the content
+        // Part B: The Dynamic NavHost (now uses the single uiState)
         NavHost(
             navController = refTabNavController,
-            startDestination = RefScreen.Quiz.route,
-//                    startDestination = "progress_detail/Initial",
+            startDestination = getRefScreenRouteFromTitle(uiState.tabs.firstOrNull()?.title ?: "") ?: RefScreen.Quiz.route,
             modifier = Modifier.weight(1f)
         ) {
-            composable(RefScreen.RefRoot.route) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(16.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text("Select an option from the menu above.")
-                }
-            }
-            // All the screen destinations remain the same
-//            composable(RefScreen.Settings.route) { SettingsScreen() }
-//            composable(RefScreen.Search.route) { SearchScreen() }
-//
-//            composable(RefScreen.Progress.route) {
-//                ProgressMapScreen(
-//                    //activeRoute = currentRoute,
-//                    // --- Add a callback for when a tile is tapped ---
-//                    onTileTapped = { categoryTitle ->
-//                        viewModel.onTileTapped(categoryTitle)
-////                            val encodedTitle = categoryTitle.urlEncode()
-////                          meTabNavController.navigate("progress_detail/$encodedTitle")
-////                            Timber.d("Attempting to navigate to: progress_detail/Test")
-//                    }
-//                )
-//            }
-//            composable(RefScreen.Paragraph.route) { ParagraphScreen() }
+
             composable(RefScreen.Quiz.route) { QuizScreen() }
             composable(RefScreen.Conjugations.route) { ConjugationsScreen() }
             composable(RefScreen.Prepositions.route) { PrepositionsScreen() }
 
-//            composable(RefScreen.Paragraph.route) { GeminiExampleScreen() }
-//            composable(RefScreen.Conversation.route) { MeTabPlaceholderScreen("Conversation") }
+            composable(
+                // 1. The route definition from your RefScreen sealed class
+                route = RefScreen.DynamicSheet.route,
+
+                // 2. Define the arguments this route expects. This MUST match the route string.
+                arguments = listOf(
+                    navArgument("documentId") {
+                        type = NavType.StringType
+                        // You could add nullable = false if it's always required
+                    }
+                )
+            ) { backStackEntry ->
+                // 3. Extract the documentId safely from the navigation arguments
+                val documentId = backStackEntry.arguments?.getString("documentId")
+
+                // 4. Call your generic screen, handling the case where the ID might be null
+                if (documentId != null) {
+                    // This is the new, reusable screen that will display the content
+                    GenericVocabScreen(firestoreDocumentId = documentId)
+                } else {
+                    // Display an error if for some reason the ID is missing
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        Text(
+                            text = "Error: Document ID was not provided.",
+                            color = MaterialTheme.colorScheme.error,
+                            style = MaterialTheme.typography.bodyLarge
+                        )
+                    }
+                }
+            }
+
         }
     } //:Column
 
-    // --- The M3 ModalBottomSheet ---
-    // This is placed at the end so it draws on top of everything else.
+
+
     if (isSheetVisible) {
         ModalBottomSheet(
+            // MODIFIED: Use the merged viewModel for the dismiss callback
             onDismissRequest = { viewModel.onSheetDismissed() },
             sheetState = sheetState
         ) {
             RefProgressDetailView(
-                title = uiState.selectedCategoryTitle!!, // The title from the parent screen
-                selectedVoiceName =  uiState.currentVoiceName
+                // MODIFIED: Use the merged uiState for the title and voice name
+                title = uiState.selectedCategoryTitleForSheet!!,
+                selectedVoiceName = uiState.currentVoiceName
             )
         }
-    }
-//    }
-}
-
-/**
- * A reusable placeholder screen for any destination within the "Me" tab.
- * THIS IS THE FUNCTION THAT WAS MISSING.
- */
-@Composable
-fun ReferenceTabPlaceholderScreen(title: String) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text("Hello, World! from $title Screen")
     }
 }
 @Composable
@@ -184,4 +170,15 @@ fun RefProgressDetailView(title: String, selectedVoiceName: String) {
         selectedVoiceName = selectedVoiceName,
         viewModel = viewModel
     )
+}
+@Composable
+fun GenericVocabScreen(firestoreDocumentId: String) {
+    // TODO: Create a ViewModel for this screen that takes the documentId,
+    // fetches the data from Firestore, and displays it.
+    Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+        Text(
+            text = "This is the generic screen.\nIt should now load data from Firestore for document:\n\n'$firestoreDocumentId'",
+            style = MaterialTheme.typography.bodyLarge
+        )
+    }
 }

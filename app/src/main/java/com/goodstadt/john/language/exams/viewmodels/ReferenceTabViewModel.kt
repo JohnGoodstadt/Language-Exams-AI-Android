@@ -7,26 +7,25 @@ import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 
 // This will hold the title of the category selected for the detail view
-data class MeTabUiState(
+data class ReferenceTabUiState(
     val selectedCategoryTitle: String? = null,
-    val currentVoiceName:String = ""
-
+    val currentVoiceName:String = "",
+    val selectedCategoryTitleForSheet: String? = null, // Renamed for clarity
 )
 
 @HiltViewModel
-class MeTabViewModel @Inject constructor(
+class ReferenceTabViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val refreshTrigger: RefreshTrigger
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(MeTabUiState())
+    private val _uiState = MutableStateFlow(ReferenceTabUiState())
     val uiState = _uiState.asStateFlow()
 
 

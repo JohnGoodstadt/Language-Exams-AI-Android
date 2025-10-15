@@ -11,12 +11,7 @@ sealed class MeScreen(val route: String, val title: String) {
     object Search : MeScreen("me_search", "Search")
     object Progress : MeScreen("me_progress", "Progress")
     object Paragraph : MeScreen("me_paragraph", "Paragraph")
-//    object Quiz : MeScreen("me_quiz", "Quiz")
 
-//    object Conjugations : MeScreen("me_conjugations", "Conjugations")
-//    object Prepositions : MeScreen("me_prepositions", "Prepositions")
-
-//    object Conversation : MeScreen("me_conversation", "Conversation")
 }
 
 // A helper function to map a menu item title string to its corresponding screen route
@@ -27,11 +22,6 @@ fun getMeScreenRouteFromTitle(title: String): String? {
         MeScreen.Search.title -> MeScreen.Search.route
         MeScreen.Progress.title -> MeScreen.Progress.route
         MeScreen.Paragraph.title -> MeScreen.Paragraph.route
-//        MeScreen.Quiz.title -> MeScreen.Quiz.route
-//        MeScreen.Conjugations.title -> MeScreen.Conjugations.route
-//        MeScreen.Prepositions.title -> MeScreen.Prepositions.route
-
-//        MeScreen.Conversation.title -> MeScreen.Conversation.route
         else -> null
     }
 }
