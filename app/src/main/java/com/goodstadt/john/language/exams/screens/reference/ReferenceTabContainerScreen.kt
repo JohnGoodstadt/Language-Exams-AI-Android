@@ -128,7 +128,8 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                 // 4. Call your generic screen, handling the case where the ID might be null
                 if (documentId != null) {
                     // This is the new, reusable screen that will display the content
-                    GenericVocabScreen(firestoreDocumentId = documentId)
+                    //GenericVocabScreen(firestoreDocumentId = documentId)
+                    ReferenceGenericScreen()
                 } else {
                     // Display an error if for some reason the ID is missing
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
