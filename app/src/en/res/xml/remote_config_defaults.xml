@@ -31,4 +31,8 @@
         <value>[{"id": "gemini-2.5-flash","title": "Gemini 2_5 Flash","pricePerMillionInputTokens": 0.55,"inputPrice": 0.15,
             "outputPrice": 0.4,"isDefault": true }]</value>
     </entry>
+    <entry>
+        <key>reference_view_tabs</key>
+        <value>{	"tabs": 	[ 		{"id": "quiz","title": "Quiz","type": "fixed_view"}, 		{"id": "conjugations","title": "Conjugations","type": "fixed_view"}, 		{"id": "prepositions","title": "Prepositions","type": "fixed_view"}, 		{"id": "GermanPrepositions","title": "German","type": "dynamic_sheet","firestoreDocumentId": "GermanPrepositions"} 	] }</value>
+    </entry>
 </defaultsMap>
