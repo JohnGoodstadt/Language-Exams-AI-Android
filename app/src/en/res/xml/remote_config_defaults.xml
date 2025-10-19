@@ -19,20 +19,43 @@
     <entry>
         <key>update_url_android</key>
         <!-- Replace with your actual package name -->
-        <value>https://play.google.com/store/apps/details?id=com.goodstadt.john.language.exams.en</value>
+        <value>https://play.google.com/store/apps/details?id=com.goodstadt.john.language.exams.en
+        </value>
     </entry>
     <entry>
         <key>llm_models_config</key>
-        <value>[{"id": "gpt-5-nano","title": "GPT-5_Nano","pricePerMillionInputTokens": 0.40,"inputPrice": 0.15,
-            "outputPrice": 0.4,"isDefault": true} ]</value>
+        <value>[{"id": "gpt-5-nano","title": "GPT-5_Nano","pricePerMillionInputTokens":
+            0.40,"inputPrice": 0.15,
+            "outputPrice": 0.4,"isDefault": true} ]
+        </value>
     </entry>
     <entry>
         <key>gemini_models_config</key>
-        <value>[{"id": "gemini-2.5-flash","title": "Gemini 2_5 Flash","pricePerMillionInputTokens": 0.55,"inputPrice": 0.15,
-            "outputPrice": 0.4,"isDefault": true }]</value>
+        <value>[{"id": "gemini-2.5-flash","title": "Gemini 2_5 Flash","pricePerMillionInputTokens":
+            0.55,"inputPrice": 0.15,
+            "outputPrice": 0.4,"isDefault": true }]
+        </value>
     </entry>
     <entry>
         <key>reference_view_tabs</key>
-        <value>{	"tabs": 	[ 		{"id": "quiz","title": "Quiz","type": "fixed_view"}, 		{"id": "conjugations","title": "Conjugations","type": "fixed_view"}, 		{"id": "prepositions","title": "Prepositions","type": "fixed_view"}, 		{"id": "GermanPrepositions","title": "German","type": "dynamic_sheet","firestoreDocumentId": "GermanPrepositions"} 	] }</value>
+        <value>{
+            "tabs": [
+            { "id": "quiz", "title": "Quiz", "type": "fixed_view" },
+            { "id": "conjugations", "title": "Conjugations", "type": "fixed_view" },
+            { "id": "prepositions", "title": "Prepositions", "type": "fixed_view" },
+            {
+            "id": "adjectives_group",
+            "title": "Adjectives",
+            "type": "grouped_sheet",
+            "subTabs": [
+            { "title": "Basic", "firestoreDocumentId": "EnglishA1Adjectives" },
+            { "title": "Intermediate", "firestoreDocumentId": "EnglishA2Adjectives" },
+            { "title": "Upper", "firestoreDocumentId": "EnglishB1Adjectives" },
+            { "title": "Advanced", "firestoreDocumentId": "EnglishB2Adjectives" }
+            ]
+            }
+            ]
+            }
+        </value>
     </entry>
 </defaultsMap>

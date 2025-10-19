@@ -12,6 +12,11 @@ sealed class RefScreen(val route: String, val title: String) {
         // This is the function your screen is trying to call.
         fun createRoute(documentId: String) = "dynamic_sheet/$documentId"
     }
+    object GroupedSheet : RefScreen("grouped_sheet/{tabId}", "Grouped Content") {
+        // This helper function builds the full route with the specific ID
+        // of the parent tab (e.g., "adjectives_group").
+        fun createRoute(tabId: String) = "grouped_sheet/$tabId"
+    }
 }
 
 // A helper function to map a menu item title string to its corresponding screen route

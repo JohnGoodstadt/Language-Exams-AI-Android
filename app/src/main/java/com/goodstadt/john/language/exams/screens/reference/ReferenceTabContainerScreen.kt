@@ -73,6 +73,12 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
             "dynamic_sheet" -> selectedTab.firestoreDocumentId?.let { docId ->
                 RefScreen.DynamicSheet.createRoute(docId)
             }
+            "grouped_sheet" -> {
+                // We don't pass the whole list. We just pass the ID of the
+                // parent tab (e.g., "adjectives_group"). The next screen's
+                // ViewModel will use this ID to find the correct subTabs list.
+                RefScreen.GroupedSheet.createRoute(selectedTab.id)
+            }
             else -> null
         }
 
@@ -140,6 +146,17 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                         )
                     }
                 }
+            }
+            composable(
+                route = RefScreen.GroupedSheet.route,
+                arguments = listOf(navArgument("tabId") { type = NavType.StringType })
+            ) { backStackEntry ->
+                // Note: We don't need to extract the 'tabId' here, because Hilt's
+                // SavedStateHandle will pass it to the ViewModel automatically,
+                // just like it does for your ReferenceGenericScreen.
+
+                // This is where you will place your new grouped sheet screen.
+                GroupedSheetScreen()
             }
 
         }
