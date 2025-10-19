@@ -28,8 +28,7 @@ import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabWord
-import com.goodstadt.john.language.exams.screens.CategoryHeader
-import com.goodstadt.john.language.exams.screens.VocabRow
+import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -117,7 +116,7 @@ fun SectionedVocabList(
                     val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
 
                     Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
-                        VocabRow(
+                        HighlightedWordInSentenceRow(
                             entry = word,
                             parts = displayData.parts,
                             sentence = displayData.sentence,

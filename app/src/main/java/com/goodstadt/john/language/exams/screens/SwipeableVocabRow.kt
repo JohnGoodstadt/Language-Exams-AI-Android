@@ -28,7 +28,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material3.Divider
+import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material3.SwipeToDismissBoxValue
 
 // --- Other necessary UI imports ---
@@ -68,6 +68,7 @@ fun SwipeableVocabRow(
     onRowTapped: (VocabWord, Sentence) -> Unit,
     onFocus: () -> Unit,
     onCancel: () -> Unit,
+    onMore: () -> Unit,
     modifier: Modifier = Modifier
 ) {
 
@@ -76,14 +77,18 @@ fun SwipeableVocabRow(
 
     // --- CHANGE 1: Use the new state remember function ---
     val dismissState = rememberSwipeToDismissBoxState(
-        confirmValueChange = {
-            // --- CHANGE 2: Use the new enum value ---
-            if (it == SwipeToDismissBoxValue.EndToStart) { // Swiped from right-to-left
-                if (isRecalling) {
-                    onCancel()
-                } else {
-                    onFocus()
+        confirmValueChange = { dismissValue ->
+            when (dismissValue) {
+                // Swiped from right-to-left
+                SwipeToDismissBoxValue.EndToStart -> {
+                    if (isRecalling) onCancel() else onFocus()
                 }
+                // ADDED: Swiped from left-to-right
+                SwipeToDismissBoxValue.StartToEnd -> {
+                    onMore()
+                }
+                // Default case for settled state
+                SwipeToDismissBoxValue.Settled -> {}
             }
             // Return false to prevent the item from being dismissed and to snap it back.
             return@rememberSwipeToDismissBoxState false
@@ -94,8 +99,6 @@ fun SwipeableVocabRow(
 
     // This effect remains the same, but now operates on the new state object
     LaunchedEffect(dismissState.currentValue) {
-
-
         if (dismissState.currentValue != SwipeToDismissBoxValue.Settled) {
             dismissState.reset()
         }
@@ -107,12 +110,18 @@ fun SwipeableVocabRow(
         modifier = modifier,
         // The directions logic is now part of the component itself
         enableDismissFromEndToStart = true,
-        enableDismissFromStartToEnd = false,
+        enableDismissFromStartToEnd = true,
         // --- CHANGE 4: 'background' is renamed to 'backgroundContent' ---
         backgroundContent = {
-            // This is the view that is revealed behind the row.
-            // The SwipeBackground composable you created earlier works here perfectly.
-            SwipeBackground(isRecalling = isRecalling)
+            val direction = dismissState.dismissDirection
+
+            if (direction == SwipeToDismissBoxValue.StartToEnd) {
+                // This is the new background for the "More" action (swipe right)
+                MoreSwipeBackground()
+            } else if (direction == SwipeToDismissBoxValue.EndToStart) {
+                // This is your existing background for "Focus/Cancel" (swipe left)
+                FocusCancelSwipeBackground(isRecalling = isRecalling)
+            }
         }
     ) { // --- CHANGE 5: 'dismissContent' is now the main content lambda ---
         // This is your actual row content
@@ -125,7 +134,7 @@ fun SwipeableVocabRow(
                 .background(MaterialTheme.colorScheme.surface)
                 .clickable { onRowTapped(word, sentence) }
         ) {
-            VocabRow(
+            HighlightedWordInSentenceRow(
                 entry = word,
                 parts = displayData.parts,
                 sentence = displayData.sentence,
@@ -138,73 +147,10 @@ fun SwipeableVocabRow(
         }
     }
 }
-@Composable
-fun SwipeBackground(isRecalling: Boolean, modifier: Modifier = Modifier) {
-    // Determine the color, text, and icon based on whether the item is already being recalled
-    val color = if (isRecalling) Color(0xFFD32F2F) else Color(0xFF388E3C) // Red and Green
-    val text = if (isRecalling) "Cancel" else "Focus"
-    val icon = if (isRecalling) Icons.Default.Cancel else Icons.Default.CheckCircle
-
-    Box(
-        modifier = modifier
-            .fillMaxSize()
-            .background(color)
-            .padding(horizontal = 24.dp),
-        contentAlignment = Alignment.CenterEnd // Align content to the right (the end)
-    ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            Text(text, color = Color.White, fontWeight = FontWeight.Bold)
-            Icon(imageVector = icon, contentDescription = text, tint = Color.White)
-        }
-    }
-}
 
 
-@Composable
-fun VocabRow(
-    entry: VocabWord,
-    parts: List<String>,
-    sentence: String,
-    isRecalling: Boolean,
-    displayDot: Boolean,
-//    cachedAudioWordKeys: Set<String>,
-    isDownloading:Boolean
-) {
-    // This logic builds the styled text with underlined words.
-    val annotatedString = annotatedSentence(parts, entry.word, sentence)
 
-    // This Row lays out the text and the status indicators.
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        // The main text content
-        Text(text = annotatedString, modifier = Modifier.weight(1f))
 
-        // Status indicators on the right
-        if (isDownloading) {
-            CircularProgressIndicator(modifier = Modifier.size(24.dp))
-        } else {
-            // Check if the red dot should be displayed
-//            val displayRedDot = cachedAudioWordKeys.contains(entry.word)
-            val displayRedDot = displayDot
-
-            if (displayRedDot) {
-                Text(text = "🔴", fontSize = 12.sp)
-            }
-            // Check if the green dot should be displayed
-            if (isRecalling) {
-                Text(text = "🟢", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
-            }
-        }
-    }
-    HorizontalDivider()
-}
 
 @Composable
 fun annotatedSentence(
@@ -260,4 +206,49 @@ fun annotatedSentence(
         }
     }
     return annotatedString
+}
+@Composable
+fun FocusCancelSwipeBackground(isRecalling: Boolean, modifier: Modifier = Modifier) {
+    // Determine the color, text, and icon based on whether the item is already being recalled
+    val color = if (isRecalling) Color(0xFFD32F2F) else Color(0xFF388E3C) // Red and Green
+    val text = if (isRecalling) "Cancel" else "Focus"
+    val icon = if (isRecalling) Icons.Default.Cancel else Icons.Default.CheckCircle
+
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(color)
+            .padding(horizontal = 24.dp),
+        contentAlignment = Alignment.CenterEnd // Align content to the right (the end)
+    ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            Text(text, color = Color.White, fontWeight = FontWeight.Bold)
+            Icon(imageVector = icon, contentDescription = text, tint = Color.White)
+        }
+    }
+}
+@Composable
+fun MoreSwipeBackground(modifier: Modifier = Modifier) {
+    Box(
+        modifier = modifier
+            .fillMaxSize()
+            .background(Color(0xFF388E3C) ) // A neutral color for "More"
+            .padding(horizontal = 24.dp),
+        contentAlignment = Alignment.CenterStart // Aligned to the LEFT
+    ) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
+            Icon(
+                imageVector = Icons.Default.MoreHoriz, // "More" icon
+                contentDescription = "More",
+                tint = Color.White
+            )
+            Text("More", color = Color.White, fontWeight = FontWeight.Bold)
+        }
+    }
 }

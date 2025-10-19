@@ -4,12 +4,15 @@ package com.goodstadt.john.language.exams.screens // Or your correct package
 //import android.media.session.PlaybackState
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -32,7 +35,10 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.categories
+import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.models.VocabWord
 import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import removeContentInBracketsAndTrim
@@ -56,7 +62,10 @@ fun CategoryTabScreen(
 //    val isPremium = globalUiState.isPremiumUser
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
-
+//bottom sheet
+    var selectedWordForSheet by remember { mutableStateOf<VocabWord?>(null) }
+    var showBottomSheet by remember { mutableStateOf(false) }
+    val bottomSheetState = rememberModalBottomSheetState()
 
     LaunchedEffect(key1 = tabIdentifier, key2 = categoryTitle, key3 = selectedVoiceName) {
         //Timber.e("CategoryTabScreen.LaunchEffect $tabIdentifier $categoryTitle $selectedVoiceName")
@@ -235,12 +244,20 @@ fun CategoryTabScreen(
                                         sentence = sentenceToShow,
                                         selectedVoiceName = selectedVoiceName,
                                         isDownloading = isDownloading,
-//                                isPlaying = (uiState.playbackState as? PlaybackState.Playing)?.sentenceId == generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName),
                                         recalledWordKeys = uiState.recalledWordKeys,
                                         cachedAudioWordKeys = uiState.cachedAudioWordKeys, // Pass the new state
                                         onRowTapped = { w, s -> viewModel.onRowTapped(w, s) }, // Call ViewModel's function
                                         onFocus = { viewModel.onFocusClicked(word) },
-                                        onCancel = { viewModel.onCancelClicked(word) }
+                                        onCancel = { viewModel.onCancelClicked(word) },
+                                        onMore = {
+                                            // This is where you will execute your logic, like showing a bottom sheet.
+                                            // For now, it can be a log or a call to a new ViewModel function.
+                                            println("More button swiped for word: ${word.word}")
+                                            // Example: viewModel.onMoreClicked(word)
+
+                                            selectedWordForSheet = word
+                                            showBottomSheet = true
+                                        }
                                     )
                                 } else {
                                     Text(
@@ -271,6 +288,28 @@ fun CategoryTabScreen(
                             onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                             onCloseSheet = { viewModel.hideHourlyRateLimitSheet() }
                         )
+                    }
+                }
+                if (showBottomSheet) {
+                    ModalBottomSheet(
+                        onDismissRequest = {
+                            // This is called when the user swipes the sheet down or taps the scrim
+                            showBottomSheet = false
+                        },
+                        sheetState = bottomSheetState
+                    ) {
+                        // The content of the sheet. We only compose it if we have a word.
+                        selectedWordForSheet?.let { word ->
+                            SentencesBottomSheetContent(
+                                word = word,
+                                onBottomSheetRowTapped = { word, sentence ->
+                                    Timber.i("${word.word}")
+                                    viewModel.onRowTapped(word, sentence) //redirect
+                                }
+                            )
+
+
+                        }
                     }
                 }
             }
@@ -357,5 +396,55 @@ fun CacheProgressBar(
                 style = MaterialTheme.typography.labelSmall
             )
         }
+    }
+}
+
+
+@Composable
+fun SentencesBottomSheetContent(
+    // 1. The composable takes the selected word as its input
+    word: VocabWord,
+    onBottomSheetRowTapped: (VocabWord, Sentence) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    // Use a Column with vertical scroll in case sentences are long
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        // 2. Display the main word prominently
+        Text(
+            text = word.word,
+            style = MaterialTheme.typography.headlineLarge
+        )
+
+        HorizontalDivider()
+
+        // 3. Loop through and display each sentence
+        word.sentences.forEach { sentence ->
+            Column(
+                verticalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+
+                val displayData = buildSentenceParts(entry = word, sentence = sentence)
+               // val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
+                Column(modifier = Modifier.clickable { onBottomSheetRowTapped(word, sentence) }) {
+                    HighlightedWordInSentenceRow(
+                        entry = word,
+                        parts = displayData.parts,
+                        sentence = displayData.sentence,
+                        isRecalling = false,
+                        displayDot = false,//achedAudioWordKeys.contains(uniqueSentenceId),
+                        isDownloading = false//, //TODO: maybe dynamic?
+                    )
+                }
+            }
+        }
+
+        // Add some space at the bottom for better scrolling
+        Spacer(Modifier.height(32.dp))
     }
 }
