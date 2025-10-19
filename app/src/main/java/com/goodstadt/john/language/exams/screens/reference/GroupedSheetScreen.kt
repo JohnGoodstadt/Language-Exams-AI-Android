@@ -25,19 +25,23 @@ fun GroupedSheetScreen(
         // 2. The Sub-Tab Picker (the sub-menu)
         // This only shows if there are sub-tabs to display
         if (uiState.subTabs.isNotEmpty()) {
-            TabRow(
-                // The selectedTabIndex is calculated from the state
-                selectedTabIndex = uiState.subTabs.indexOf(uiState.selectedSubTab)
-            ) {
-                // Loop through the sub-tabs from the state to create each tab
-                uiState.subTabs.forEach { subTab ->
-                    Tab(
-                        selected = uiState.selectedSubTab == subTab,
-                        onClick = { viewModel.onSubTabSelected(subTab) },
-                        text = { Text(subTab.title) }
-                    )
-                }
+            val options: List<String> = remember(uiState.subTabs) {
+                uiState.subTabs.map { it.title }
             }
+            val selectedOption: String = uiState.selectedSubTab?.title ?: ""
+
+            // b) Call your reusable composable
+            HorizontalLevelPicker(
+                options = options,
+                selectedOption = selectedOption,
+                onOptionSelected = { selectedTitle ->
+                    // c) Find the corresponding SubTabDefinition and notify the ViewModel
+                    val newSelectedSubTab = uiState.subTabs.firstOrNull { it.title == selectedTitle }
+                    if (newSelectedSubTab != null) {
+                        viewModel.onSubTabSelected(newSelectedSubTab)
+                    }
+                }
+            )
         }
 
         // 3. The Content Area, which changes based on the 'contentState'
@@ -65,7 +69,7 @@ fun GroupedSheetScreen(
                     googleVoice = "", // Placeholder
                     cachedAudioWordKeys = emptySet(), // Placeholder
                     onRowTapped = { word, sentence ->
-                        // viewModel.playTrack(word, sentence)
+                         viewModel.playTrack(word, sentence)
                     }
                 )
             }
