@@ -1,28 +1,33 @@
 {
-	"romanized" : false,
-	"native" : "",
-	"name" : "",
-	"sheetname" : "vocab_data_a1",
-	"id" : "",
-	"location" : 0,
-	"googlevoiceprefix" : "",
-	"uploaddate" : 1747213019.492379,
-	"voicename" : "",
-	"nativename" : "",
-	"updatedDate" : 978307200,
-	"fileformat" : 0,
-	"tabtitles" : ["Personal","Time","More"],
-	"categories" : [
+	"romanized": false,
+	"native": "",
+	"name": "",
+	"sheetname": "A1WordList-en",
+	"id": "",
+	"location": 0,
+	"googlevoiceprefix": "",
+	"uploaddate": 1747213019.492379,
+	"voicename": "",
+	"nativename": "",
+	"updatedDate": 978307200,
+	"fileformat": 0,
+	"tabtitles": [
+		"Personal",
+		"Time",
+		"More"
+	],
+	"categories": [
 		{
-			"tabnumber" : 1,
-			"title" : "Hello (A1)",
-			"sortOrder" : 0,"words" :
-			[
+			"tabNumber": 1,
+			"title": "Hello",
+			"sortOrder": 0,
+			"words": [
 				{
 					"sortOrder": 1,
 					"partOfSpeech": "",
 					"romanisation": "",
 					"word": "name",
+					"definition": "A word you use for a person or thing.",
 					"translation": "",
 					"group": "Names",
 					"sentences": [
@@ -35,7 +40,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Her name is Maria.",
+							"sentence": "Is her name Maria?",
 							"translation": ""
 						}
 					],
@@ -44,6 +49,7 @@
 				{
 					"romanisation": "",
 					"id": 1,
+					"definition": "The person who is speaking or writing.",
 					"translation": "",
 					"word": "I",
 					"group": "Names",
@@ -57,7 +63,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I have a book.",
+							"sentence": "Do I have a book?",
 							"translation": ""
 						}
 					],
@@ -67,6 +73,7 @@
 				{
 					"romanisation": "",
 					"word": "last",
+					"definition": "Coming after all the others.",
 					"sortOrder": 1,
 					"sentences": [
 						{
@@ -90,6 +97,7 @@
 				{
 					"romanisation": "",
 					"translation": "",
+					"definition": "Pleasant or good.",
 					"sentences": [
 						{
 							"sentence": "It's nice to meet you.",
@@ -100,7 +108,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "You are nice.",
+							"sentence": "Am I nice?",
 							"translation": ""
 						}
 					],
@@ -121,7 +129,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I will call my friend.",
+							"sentence": "Will I call my friend?",
 							"translation": ""
 						}
 					],
@@ -129,12 +137,14 @@
 					"translation": "",
 					"partOfSpeech": "",
 					"word": "call",
+					"definition": "To speak loudly or to phone someone.",
 					"id": 4,
 					"romanisation": "",
 					"group": "Names"
 				},
 				{
 					"partOfSpeech": "",
+					"definition": "To say hello when you see someone.",
 					"sentences": [
 						{
 							"translation": "",
@@ -145,7 +155,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "They greet each other.",
+							"sentence": "Do they greet each other?",
 							"translation": ""
 						}
 					],
@@ -160,6 +170,7 @@
 					"translation": "",
 					"group": "Names",
 					"sortOrder": 1,
+					"definition": "A word to say when you meet someone.",
 					"sentences": [
 						{
 							"sentence": "Hello, I am a new student.",
@@ -170,7 +181,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She says hello.",
+							"sentence": "Does she say hello?",
 							"translation": ""
 						}
 					],
@@ -185,6 +196,7 @@
 					"romanisation": "",
 					"partOfSpeech": "",
 					"sortOrder": 1,
+					"definition": "Feeling happy and satisfied.",
 					"sentences": [
 						{
 							"sentence": "I am pleased to meet you.",
@@ -195,7 +207,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We are pleased.",
+							"sentence": "Are we pleased?",
 							"translation": ""
 						}
 					],
@@ -205,6 +217,7 @@
 				{
 					"translation": "",
 					"word": "we",
+					"definition": "The speaker and one or more other people.",
 					"group": "Names",
 					"partOfSpeech": "",
 					"romanisation": "",
@@ -220,7 +233,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We live here.",
+							"sentence": "Do we live here?",
 							"translation": ""
 						}
 					]
@@ -228,6 +241,7 @@
 				{
 					"word": "they",
 					"id": 9,
+					"definition": "Other people or things that are being talked about.",
 					"group": "Names",
 					"translation": "",
 					"sortOrder": 1,
@@ -242,7 +256,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "They like music.",
+							"sentence": "Do they like music?",
 							"translation": ""
 						}
 					],
@@ -259,13 +273,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This is Mr. Jones.",
+							"sentence": "Is this Mr. Jones?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"translation": "",
 					"word": "Mr.",
+					"definition": "A title used before the name of a man.",
 					"romanisation": "",
 					"sortOrder": 1,
 					"group": "Mr, Mrs...",
@@ -276,6 +291,7 @@
 					"sortOrder": 1,
 					"translation": "",
 					"word": "Mrs.",
+					"definition": "A title used before the name of a married woman.",
 					"group": "Mr, Mrs...",
 					"sentences": [
 						{
@@ -298,6 +314,7 @@
 					"romanisation": "",
 					"partOfSpeech": "",
 					"id": 2,
+					"definition": "A title used before the name of an unmarried woman.",
 					"sentences": [
 						{
 							"translation": "",
@@ -321,6 +338,7 @@
 					"group": "Mr, Mrs...",
 					"translation": "",
 					"id": 3,
+					"definition": "A title used before the name of a woman (married or unmarried).",
 					"sentences": [
 						{
 							"sentence": "Ms. Brown is the manager.",
@@ -331,7 +349,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This is Ms. Lopez.",
+							"sentence": "Is this Ms. Lopez?",
 							"translation": ""
 						}
 					],
@@ -345,6 +363,7 @@
 					"partOfSpeech": "",
 					"translation": "",
 					"sortOrder": 1,
+					"definition": "A title for someone with a high university degree or a medical professional.",
 					"sentences": [
 						{
 							"translation": "",
@@ -355,7 +374,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "See Dr. Adams.",
+							"sentence": "Should I see Dr. Adams?",
 							"translation": ""
 						}
 					],
@@ -367,6 +386,7 @@
 					"group": "Mr, Mrs...",
 					"word": "Madam",
 					"id": 5,
+					"definition": "A formal and polite way to address a woman.",
 					"sentences": [
 						{
 							"translation": "",
@@ -391,6 +411,7 @@
 					"translation": "",
 					"id": 6,
 					"sortOrder": 1,
+					"definition": "A word like Mr., Mrs., or Dr. used before a name.",
 					"group": "Mr, Mrs...",
 					"sentences": [
 						{
@@ -402,7 +423,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "His title is Professor.",
+							"sentence": "Is his title Professor?",
 							"translation": ""
 						}
 					],
@@ -412,14 +433,16 @@
 			]
 		},
 		{
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"sortOrder": 5,
+			"title": "Dates",
 			"words": [
 				{
 					"romanisation": "",
 					"partOfSpeech": "",
 					"translation": "",
 					"word": "morning",
+					"definition": "The time from when the sun rises until noon.",
 					"id": 0,
 					"sentences": [
 						{
@@ -431,7 +454,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The morning sun is bright.",
+							"sentence": "Is the morning sun bright?",
 							"translation": ""
 						}
 					],
@@ -449,11 +472,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She takes a nap in the afternoon.",
+							"sentence": "Does she take a nap in the afternoon?",
 							"translation": ""
 						}
 					],
 					"word": "afternoon",
+					"definition": "The time from noon until the sun goes down.",
 					"translation": "",
 					"romanisation": "",
 					"sortOrder": 1,
@@ -468,6 +492,7 @@
 					"translation": "",
 					"id": 2,
 					"partOfSpeech": "",
+					"definition": "The time from the end of the day to the start of the night.",
 					"sentences": [
 						{
 							"sentence": "Good evening, it is 7 PM.",
@@ -478,7 +503,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The evening sky is beautiful.",
+							"sentence": "Is the evening sky beautiful?",
 							"translation": ""
 						}
 					],
@@ -496,7 +521,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The stars shine at night.",
+							"sentence": "Do the stars shine at night?",
 							"translation": ""
 						}
 					],
@@ -505,11 +530,13 @@
 					"partOfSpeech": "",
 					"translation": "",
 					"word": "night",
+					"definition": "The time when it is dark, from evening to morning.",
 					"sortOrder": 1
 				},
 				{
 					"partOfSpeech": "",
 					"word": "today",
+					"definition": "This day.",
 					"translation": "",
 					"sortOrder": 1,
 					"id": 4,
@@ -524,7 +551,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "What are you doing today?",
+							"sentence": "What am I doing today?",
 							"translation": ""
 						}
 					],
@@ -534,6 +561,7 @@
 					"partOfSpeech": "",
 					"translation": "",
 					"word": "tomorrow",
+					"definition": "The day after today.",
 					"sortOrder": 1,
 					"id": 5,
 					"group": "Days - Times",
@@ -548,7 +576,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I will call you tomorrow.",
+							"sentence": "Will I call you tomorrow?",
 							"translation": ""
 						}
 					]
@@ -557,6 +585,7 @@
 					"romanisation": "",
 					"partOfSpeech": "",
 					"group": "Days - Times",
+					"definition": "The day before today.",
 					"sentences": [
 						{
 							"translation": "",
@@ -567,7 +596,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She visited me yesterday.",
+							"sentence": "Did she visit me yesterday?",
 							"translation": ""
 						}
 					],
@@ -579,6 +608,7 @@
 				{
 					"romanisation": "",
 					"word": "Monday",
+					"definition": "The first day of the week, after Sunday.",
 					"translation": "",
 					"id": 7,
 					"sortOrder": 1,
@@ -594,7 +624,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We have a meeting on Monday.",
+							"sentence": "Do we have a meeting on Monday?",
 							"translation": ""
 						}
 					]
@@ -611,12 +641,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She comes every Tuesday.",
+							"sentence": "Does she come every Tuesday?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"id": 8,
+					"definition": "The day after Monday.",
 					"translation": "",
 					"sortOrder": 1,
 					"group": "Days - Times",
@@ -626,6 +657,7 @@
 					"partOfSpeech": "",
 					"group": "Days - Times",
 					"word": "Wednesday",
+					"definition": "The day after Tuesday.",
 					"romanisation": "",
 					"sentences": [
 						{
@@ -637,7 +669,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We have class on Wednesday.",
+							"sentence": "Do we have class on Wednesday?",
 							"translation": ""
 						}
 					],
@@ -652,6 +684,7 @@
 					"romanisation": "",
 					"group": "Days - Times",
 					"partOfSpeech": "",
+					"definition": "The day after Wednesday.",
 					"sentences": [
 						{
 							"translation": "",
@@ -662,7 +695,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He works late on Thursday.",
+							"sentence": "Does he work late on Thursday?",
 							"translation": ""
 						}
 					],
@@ -680,12 +713,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I love Friday evenings.",
+							"sentence": "Do I love Friday evenings?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"word": "Friday",
+					"definition": "The day after Thursday.",
 					"sortOrder": 1,
 					"id": 11,
 					"translation": "",
@@ -695,6 +729,7 @@
 					"group": "Days - Times",
 					"translation": "",
 					"sortOrder": 1,
+					"definition": "The day after Friday, part of the weekend.",
 					"sentences": [
 						{
 							"translation": "",
@@ -705,7 +740,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Saturday is for relaxing.",
+							"sentence": "Is Saturday for relaxing?",
 							"translation": ""
 						}
 					],
@@ -717,6 +752,7 @@
 				{
 					"partOfSpeech": "",
 					"group": "Days - Times",
+					"definition": "The day after Saturday, part of the weekend.",
 					"sentences": [
 						{
 							"sentence": "Sunday is a day off.",
@@ -727,7 +763,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Sunday breakfast is special.",
+							"sentence": "Is Sunday breakfast special?",
 							"translation": ""
 						}
 					],
@@ -740,6 +776,7 @@
 				{
 					"translation": "",
 					"word": "date",
+					"definition": "The day, month, and year.",
 					"group": "Days - Times",
 					"sentences": [
 						{
@@ -751,7 +788,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Write the date on the paper.",
+							"sentence": "Should I write the date on the paper?",
 							"translation": ""
 						}
 					],
@@ -764,6 +801,7 @@
 					"romanisation": "",
 					"partOfSpeech": "",
 					"sortOrder": 1,
+					"definition": "The first month of the year.",
 					"sentences": [
 						{
 							"translation": "",
@@ -774,7 +812,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "January is very cold.",
+							"sentence": "Is January very cold?",
 							"translation": ""
 						}
 					],
@@ -794,12 +832,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Valentine's Day is in February.",
+							"sentence": "Is Valentine's Day in February?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"word": "February",
+					"definition": "The second month of the year.",
 					"partOfSpeech": "",
 					"romanisation": "",
 					"translation": "",
@@ -810,6 +849,7 @@
 					"translation": "",
 					"group": "Months",
 					"word": "March",
+					"definition": "The third month of the year.",
 					"sortOrder": 1,
 					"sentences": [
 						{
@@ -821,7 +861,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We plant flowers in March.",
+							"sentence": "Do we plant flowers in March?",
 							"translation": ""
 						}
 					],
@@ -840,7 +880,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "It's warm in April.",
+							"sentence": "Is it warm in April?",
 							"translation": ""
 						}
 					],
@@ -850,11 +890,13 @@
 					"partOfSpeech": "",
 					"group": "Months",
 					"word": "April",
+					"definition": "The fourth month of the year.",
 					"id": 3
 				},
 				{
 					"romanisation": "",
 					"translation": "",
+					"definition": "The fifth month of the year.",
 					"sentences": [
 						{
 							"sentence": "We have holidays in May.",
@@ -865,7 +907,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The trees are green in May.",
+							"sentence": "Are the trees green in May?",
 							"translation": ""
 						}
 					],
@@ -886,11 +928,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "June days are long.",
+							"sentence": "Are June days long?",
 							"translation": ""
 						}
 					],
 					"word": "June",
+					"definition": "The sixth month of the year.",
 					"partOfSpeech": "",
 					"group": "Months",
 					"translation": "",
@@ -903,6 +946,7 @@
 					"translation": "",
 					"id": 6,
 					"partOfSpeech": "",
+					"definition": "The seventh month of the year.",
 					"sentences": [
 						{
 							"sentence": "It's very hot in July.",
@@ -913,7 +957,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We go swimming in July.",
+							"sentence": "Do we go swimming in July?",
 							"translation": ""
 						}
 					],
@@ -933,7 +977,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Many people travel in August.",
+							"sentence": "Do many people travel in August?",
 							"translation": ""
 						}
 					],
@@ -941,6 +985,7 @@
 					"translation": "",
 					"id": 7,
 					"word": "August",
+					"definition": "The eighth month of the year.",
 					"group": "Months",
 					"romanisation": ""
 				},
@@ -952,6 +997,7 @@
 					"partOfSpeech": "",
 					"translation": "",
 					"sortOrder": 1,
+					"definition": "The ninth month of the year.",
 					"sentences": [
 						{
 							"translation": "",
@@ -962,7 +1008,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The weather cools in September.",
+							"sentence": "Does the weather cool in September?",
 							"translation": ""
 						}
 					]
@@ -971,6 +1017,7 @@
 					"word": "October",
 					"partOfSpeech": "",
 					"id": 9,
+					"definition": "The tenth month of the year.",
 					"sentences": [
 						{
 							"sentence": "Halloween is in October.",
@@ -981,7 +1028,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Leaves fall in October.",
+							"sentence": "Do leaves fall in October?",
 							"translation": ""
 						}
 					],
@@ -996,6 +1043,7 @@
 					"romanisation": "",
 					"sortOrder": 1,
 					"id": 10,
+					"definition": "The eleventh month of the year.",
 					"sentences": [
 						{
 							"sentence": "The leaves fall in November.",
@@ -1006,7 +1054,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Thanksgiving is in November.",
+							"sentence": "Is Thanksgiving in November?",
 							"translation": ""
 						}
 					],
@@ -1020,6 +1068,7 @@
 					"id": 11,
 					"group": "Months",
 					"word": "December",
+					"definition": "The last month of the year.",
 					"sortOrder": 1,
 					"sentences": [
 						{
@@ -1031,22 +1080,23 @@
 							"translation": ""
 						},
 						{
-							"sentence": "It snows in December.",
+							"sentence": "Does it snow in December?",
 							"translation": ""
 						}
 					]
 				}
-			],
-			"title": "Dates"
+			]
 		},
 		{
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"sortOrder": 20,
+			"title": "Numbers",
 			"words": [
 				{
 					"sortOrder": 2,
 					"id": 0,
 					"word": "0",
+					"definition": "None or nothing.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1057,7 +1107,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The room has 0 chairs.",
+							"sentence": "Does the room have 0 chairs?",
 							"translation": ""
 						}
 					],
@@ -1073,6 +1123,7 @@
 					"romanisation": "",
 					"sortOrder": 2,
 					"word": "1",
+					"definition": "The number before 2; a single unit.",
 					"group": "1 to 20",
 					"sentences": [
 						{
@@ -1084,7 +1135,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "There is 1 pen on the table.",
+							"sentence": "Is there 1 pen on the table?",
 							"translation": ""
 						}
 					]
@@ -1101,13 +1152,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She has 2 cats.",
+							"sentence": "Does she have 2 cats?",
 							"translation": ""
 						}
 					],
 					"translation": "",
 					"romanisation": "",
 					"word": "2",
+					"definition": "The number after 1; one plus one.",
 					"id": 2,
 					"group": "1 to 20",
 					"partOfSpeech": ""
@@ -1120,6 +1172,7 @@
 					"group": "1 to 20",
 					"sortOrder": 1,
 					"word": "3",
+					"definition": "The number after 2.",
 					"sentences": [
 						{
 							"sentence": "3 books",
@@ -1130,7 +1183,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He has 3 brothers.",
+							"sentence": "Does he have 3 brothers?",
 							"translation": ""
 						}
 					]
@@ -1146,12 +1199,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She bought 4 oranges.",
+							"sentence": "Did she buy 4 oranges?",
 							"translation": ""
 						}
 					],
 					"group": "1 to 20",
 					"word": "4",
+					"definition": "The number after 3.",
 					"translation": "",
 					"partOfSpeech": "",
 					"sortOrder": 1,
@@ -1163,6 +1217,7 @@
 					"sortOrder": 1,
 					"id": 5,
 					"group": "1 to 20",
+					"definition": "The number after 4.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1173,7 +1228,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The meeting is at 5 o'clock.",
+							"sentence": "Is the meeting at 5 o'clock?",
 							"translation": ""
 						}
 					],
@@ -1186,6 +1241,7 @@
 					"word": "6",
 					"sortOrder": 1,
 					"group": "1 to 20",
+					"definition": "The number after 5.",
 					"translation": "",
 					"id": 6,
 					"sentences": [
@@ -1198,7 +1254,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is 6 years old.",
+							"sentence": "Is she 6 years old?",
 							"translation": ""
 						}
 					],
@@ -1208,6 +1264,7 @@
 					"group": "1 to 20",
 					"word": "7",
 					"translation": "",
+					"definition": "The number after 6.",
 					"sentences": [
 						{
 							"sentence": "7 books",
@@ -1218,7 +1275,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I wake up at 7 AM.",
+							"sentence": "Do I wake up at 7 AM?",
 							"translation": ""
 						}
 					],
@@ -1232,6 +1289,7 @@
 					"group": "1 to 20",
 					"romanisation": "",
 					"word": "8",
+					"definition": "The number after 7.",
 					"translation": "",
 					"id": 8,
 					"sentences": [
@@ -1244,7 +1302,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My house number is 8.",
+							"sentence": "Is my house number 8?",
 							"translation": ""
 						}
 					],
@@ -1262,7 +1320,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I go to bed at 9 PM.",
+							"sentence": "Do I go to bed at 9 PM?",
 							"translation": ""
 						}
 					],
@@ -1271,7 +1329,8 @@
 					"sortOrder": 1,
 					"group": "1 to 20",
 					"partOfSpeech": "",
-					"word": "9"
+					"word": "9",
+					"definition": "The number after 8."
 				},
 				{
 					"group": "1 to 20",
@@ -1285,7 +1344,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Count to 10.",
+							"sentence": "Should I count to 10?",
 							"translation": ""
 						}
 					],
@@ -1294,6 +1353,7 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"translation": "",
+					"definition": "The number after 9; a whole group of ten.",
 					"id": 10
 				},
 				{
@@ -1302,6 +1362,7 @@
 					"sortOrder": 1,
 					"group": "1 to 20",
 					"word": "11",
+					"definition": "The number after 10.",
 					"sentences": [
 						{
 							"sentence": "11 books",
@@ -1312,7 +1373,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is 11 years old.",
+							"sentence": "Is she 11 years old?",
 							"translation": ""
 						}
 					],
@@ -1324,6 +1385,7 @@
 					"id": 12,
 					"partOfSpeech": "",
 					"translation": "",
+					"definition": "The number after 11.",
 					"sentences": [
 						{
 							"sentence": "12 books",
@@ -1334,7 +1396,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "It's 12 o'clock.",
+							"sentence": "Is it 12 o'clock?",
 							"translation": ""
 						}
 					],
@@ -1346,6 +1408,7 @@
 					"translation": "",
 					"id": 13,
 					"partOfSpeech": "",
+					"definition": "The number after 12.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1356,7 +1419,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I live at number 13.",
+							"sentence": "Do I live at number 13?",
 							"translation": ""
 						}
 					],
@@ -1370,6 +1433,7 @@
 					"sortOrder": 1,
 					"translation": "",
 					"group": "1 to 20",
+					"definition": "The number after 13.",
 					"sentences": [
 						{
 							"sentence": "14 books",
@@ -1380,7 +1444,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "There are 14 students.",
+							"sentence": "Are there 14 students?",
 							"translation": ""
 						}
 					],
@@ -1399,7 +1463,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is 15 years old.",
+							"sentence": "Is she 15 years old?",
 							"translation": ""
 						}
 					],
@@ -1409,7 +1473,8 @@
 					"translation": "",
 					"id": 15,
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "The number after 14."
 				},
 				{
 					"sentences": [
@@ -1422,7 +1487,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "There are 16 chairs.",
+							"sentence": "Are there 16 chairs?",
 							"translation": ""
 						}
 					],
@@ -1432,6 +1497,7 @@
 					"group": "1 to 20",
 					"romanisation": "",
 					"word": "16",
+					"definition": "The number after 15.",
 					"partOfSpeech": ""
 				},
 				{
@@ -1446,7 +1512,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is 17 years old.",
+							"sentence": "Is she 17 years old?",
 							"translation": ""
 						}
 					],
@@ -1455,12 +1521,14 @@
 					"translation": "",
 					"romanisation": "",
 					"sortOrder": 1,
+					"definition": "The number after 16.",
 					"partOfSpeech": ""
 				},
 				{
 					"translation": "",
 					"id": 18,
 					"sortOrder": 1,
+					"definition": "The number after 17.",
 					"sentences": [
 						{
 							"sentence": "18 books",
@@ -1471,7 +1539,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The bus leaves at 18:00.",
+							"sentence": "Does the bus leave at 18:00?",
 							"translation": ""
 						}
 					],
@@ -1484,6 +1552,7 @@
 					"id": 19,
 					"sortOrder": 1,
 					"translation": "",
+					"definition": "The number after 18.",
 					"sentences": [
 						{
 							"sentence": "19 books",
@@ -1494,7 +1563,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "There are 19 students.",
+							"sentence": "Are there 19 students?",
 							"translation": ""
 						}
 					],
@@ -1517,13 +1586,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The class has 20 students.",
+							"sentence": "Does the class have 20 students?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"word": "20",
+					"definition": "The number after 19; two tens.",
 					"group": "1 to 20"
 				},
 				{
@@ -1539,13 +1609,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "There are 21 students.",
+							"sentence": "Are there 21 students?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"word": "21",
+					"definition": "The number after 20; twenty-one.",
 					"romanisation": "",
 					"translation": ""
 				},
@@ -1564,13 +1635,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is 30 years old.",
+							"sentence": "Is she 30 years old?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"translation": "",
-					"word": "30"
+					"word": "30",
+					"definition": "The number after 29; three tens."
 				},
 				{
 					"sortOrder": 1,
@@ -1587,12 +1659,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He is 40 years old.",
+							"sentence": "Is he 40 years old?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"word": "40",
+					"definition": "The number after 39; four tens.",
 					"translation": ""
 				},
 				{
@@ -1610,13 +1683,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is 50 years old.",
+							"sentence": "Is she 50 years old?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"translation": "",
-					"word": "50"
+					"word": "50",
+					"definition": "The number after 49; five tens."
 				},
 				{
 					"group": "to 1000",
@@ -1626,6 +1700,7 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"id": 5,
+					"definition": "The number after 59; six tens.",
 					"sentences": [
 						{
 							"sentence": "60 books",
@@ -1636,7 +1711,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He is 60 years old.",
+							"sentence": "Is he 60 years old?",
 							"translation": ""
 						}
 					]
@@ -1649,6 +1724,7 @@
 					"partOfSpeech": "",
 					"group": "to 1000",
 					"romanisation": "",
+					"definition": "The number after 69; seven tens.",
 					"sentences": [
 						{
 							"sentence": "70 books",
@@ -1659,7 +1735,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is 70 years old.",
+							"sentence": "Is she 70 years old?",
 							"translation": ""
 						}
 					]
@@ -1670,6 +1746,7 @@
 					"partOfSpeech": "",
 					"group": "to 1000",
 					"id": 7,
+					"definition": "The number after 79; eight tens.",
 					"sentences": [
 						{
 							"sentence": "80 books",
@@ -1680,7 +1757,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He is 80 years old.",
+							"sentence": "Is he 80 years old?",
 							"translation": ""
 						}
 					],
@@ -1693,6 +1770,7 @@
 					"partOfSpeech": "",
 					"group": "to 1000",
 					"romanisation": "",
+					"definition": "The number after 89; nine tens.",
 					"sentences": [
 						{
 							"sentence": "90 books",
@@ -1703,7 +1781,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is 90 years old.",
+							"sentence": "Is she 90 years old?",
 							"translation": ""
 						}
 					],
@@ -1714,6 +1792,7 @@
 					"romanisation": "",
 					"word": "100",
 					"partOfSpeech": "",
+					"definition": "The number after 99; ten tens.",
 					"sentences": [
 						{
 							"sentence": "100 books",
@@ -1724,7 +1803,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "There are 100 people.",
+							"sentence": "Are there 100 people?",
 							"translation": ""
 						}
 					],
@@ -1744,7 +1823,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The race is 100 meters.",
+							"sentence": "Is the race 100 meters?",
 							"translation": ""
 						}
 					],
@@ -1754,7 +1833,8 @@
 					"id": 10,
 					"romanisation": "",
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "The number after 99; ten tens."
 				},
 				{
 					"id": 11,
@@ -1768,7 +1848,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The temperature is 101.",
+							"sentence": "Is the temperature 101?",
 							"translation": ""
 						}
 					],
@@ -1777,7 +1857,8 @@
 					"romanisation": "",
 					"translation": "",
 					"group": "to 1000",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The number after 100; one hundred and one."
 				},
 				{
 					"translation": "",
@@ -1785,6 +1866,7 @@
 					"sortOrder": 1,
 					"id": 12,
 					"partOfSpeech": "",
+					"definition": "The number after 499; five hundreds.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1795,7 +1877,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The bill is 500 dollars.",
+							"sentence": "Is the bill 500 dollars?",
 							"translation": ""
 						}
 					],
@@ -1810,6 +1892,7 @@
 					"word": "501",
 					"translation": "",
 					"group": "to 1000",
+					"definition": "The number after 500; five hundred and one.",
 					"sentences": [
 						{
 							"sentence": "501 books",
@@ -1820,7 +1903,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The room number is 501.",
+							"sentence": "Is the room number 501?",
 							"translation": ""
 						}
 					]
@@ -1831,6 +1914,7 @@
 					"word": "999",
 					"translation": "",
 					"id": 14,
+					"definition": "The number before 1000; nine hundred and ninety-nine.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1841,7 +1925,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The price is 999 dollars.",
+							"sentence": "Is the price 999 dollars?",
 							"translation": ""
 						}
 					],
@@ -1856,6 +1940,7 @@
 					"sortOrder": 1,
 					"translation": "",
 					"group": "to 1000",
+					"definition": "The number after 999; ten hundreds.",
 					"sentences": [
 						{
 							"sentence": "1000 books",
@@ -1866,17 +1951,16 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The year 1000 was long ago.",
+							"sentence": "Was the year 1000 long ago?",
 							"translation": ""
 						}
 					]
 				}
-			],
-			"title": "Time & Numbers"
+			]
 		},
 		{
 			"title": "Family",
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"sortOrder": 10,
 			"words": [
 				{
@@ -1885,6 +1969,7 @@
 					"translation": "",
 					"sortOrder": 1,
 					"group": "Close Family",
+					"definition": "A group of people related to each other, like parents, children, etc.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1895,7 +1980,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Family is very important.",
+							"sentence": "Is family very important?",
 							"translation": ""
 						}
 					],
@@ -1906,6 +1991,7 @@
 					"id": 1,
 					"partOfSpeech": "",
 					"translation": "",
+					"definition": "A female parent.",
 					"sentences": [
 						{
 							"sentence": "My mother's name is Jane.",
@@ -1916,7 +2002,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I love my mother very much.",
+							"sentence": "Do I love my mother very much?",
 							"translation": ""
 						}
 					],
@@ -1933,6 +2019,7 @@
 					"id": 2,
 					"group": "Close Family",
 					"partOfSpeech": "",
+					"definition": "A male parent.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1943,7 +2030,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My father is very tall.",
+							"sentence": "Is my father very tall?",
 							"translation": ""
 						}
 					]
@@ -1952,6 +2039,7 @@
 					"partOfSpeech": "",
 					"romanisation": "",
 					"word": "son",
+					"definition": "A male child of a parent.",
 					"translation": "",
 					"sortOrder": 1,
 					"group": "Close Family",
@@ -1966,7 +2054,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Their son is very smart.",
+							"sentence": "Is their son very smart?",
 							"translation": ""
 						}
 					]
@@ -1983,7 +2071,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Her daughter goes to kindergarten.",
+							"sentence": "Does her daughter go to kindergarten?",
 							"translation": ""
 						}
 					],
@@ -1991,6 +2079,7 @@
 					"translation": "",
 					"romanisation": "",
 					"word": "daughter",
+					"definition": "A female child of a parent.",
 					"id": 4,
 					"partOfSpeech": ""
 				},
@@ -1999,6 +2088,7 @@
 					"group": "Close Family",
 					"romanisation": "",
 					"translation": "",
+					"definition": "A male sibling.",
 					"sentences": [
 						{
 							"sentence": "I have one older brother.",
@@ -2009,7 +2099,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The brother is very kind.",
+							"sentence": "Is the brother very kind?",
 							"translation": ""
 						}
 					],
@@ -2028,7 +2118,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Their sister is a doctor.",
+							"sentence": "Is their sister a doctor?",
 							"translation": ""
 						}
 					],
@@ -2038,12 +2128,14 @@
 					"translation": "",
 					"sortOrder": 1,
 					"romanisation": "",
-					"word": "sister"
+					"word": "sister",
+					"definition": "A female sibling."
 				},
 				{
 					"romanisation": "",
 					"id": 7,
 					"group": "Close Family",
+					"definition": "The brother of one's mother or father.",
 					"sentences": [
 						{
 							"sentence": "My uncle is visiting us next week.",
@@ -2054,7 +2146,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Her uncle lives in Canada.",
+							"sentence": "Does her uncle live in Canada?",
 							"translation": ""
 						}
 					],
@@ -2074,7 +2166,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My aunt is a teacher.",
+							"sentence": "Is my aunt a teacher?",
 							"translation": ""
 						}
 					],
@@ -2084,6 +2176,7 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"word": "aunt",
+					"definition": "The sister of one's mother or father.",
 					"partOfSpeech": ""
 				},
 				{
@@ -2093,6 +2186,7 @@
 					"group": "Close Family",
 					"sortOrder": 1,
 					"id": 9,
+					"definition": "The mother of one's mother or father.",
 					"sentences": [
 						{
 							"sentence": "My grandmother lives with us.",
@@ -2103,7 +2197,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Her grandmother is 80 years old.",
+							"sentence": "Is her grandmother 80 years old?",
 							"translation": ""
 						}
 					],
@@ -2115,6 +2209,7 @@
 					"romanisation": "",
 					"id": 10,
 					"sortOrder": 1,
+					"definition": "The father of one's mother or father.",
 					"sentences": [
 						{
 							"sentence": "My grandfather is retired.",
@@ -2125,7 +2220,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "His grandfather was a soldier.",
+							"sentence": "Was his grandfather a soldier?",
 							"translation": ""
 						}
 					],
@@ -2143,6 +2238,7 @@
 					"sortOrder": 1,
 					"group": "Everyday Items",
 					"word": "book",
+					"definition": "A set of papers with words and pictures that you read.",
 					"partOfSpeech": "",
 					"sentences": [
 						{
@@ -2154,7 +2250,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This book is very interesting.",
+							"sentence": "Is this book very interesting?",
 							"translation": ""
 						}
 					],
@@ -2169,6 +2265,7 @@
 					"romanisation": "",
 					"group": "Everyday Items",
 					"sortOrder": 1,
+					"definition": "A container made of paper, plastic, or cloth to hold things.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2179,7 +2276,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The red bag is mine.",
+							"sentence": "Is the red bag mine?",
 							"translation": ""
 						}
 					]
@@ -2192,6 +2289,7 @@
 					"sortOrder": 1,
 					"group": "Everyday Items",
 					"translation": "",
+					"definition": "A small phone you can carry with you everywhere.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2202,7 +2300,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "His mobile has a big screen.",
+							"sentence": "Does his mobile have a big screen?",
 							"translation": ""
 						}
 					]
@@ -2213,6 +2311,7 @@
 					"word": "phone",
 					"sortOrder": 1,
 					"translation": "",
+					"definition": "A device used for talking to someone far away.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2223,7 +2322,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Her phone has a blue case.",
+							"sentence": "Does her phone have a blue case?",
 							"translation": ""
 						}
 					],
@@ -2238,6 +2337,7 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"group": "Everyday Items",
+					"definition": "A device worn over the ears to listen to music or sounds.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2248,7 +2348,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He wears black headphones.",
+							"sentence": "Does he wear black headphones?",
 							"translation": ""
 						}
 					]
@@ -2260,6 +2360,7 @@
 					"id": 5,
 					"partOfSpeech": "",
 					"sortOrder": 1,
+					"definition": "An electronic machine that stores information and does calculations.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2270,7 +2371,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The computer screen is bright.",
+							"sentence": "Is the computer screen bright?",
 							"translation": ""
 						}
 					],
@@ -2287,7 +2388,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I turn off the television at night.",
+							"sentence": "Do I turn off the television at night?",
 							"translation": ""
 						}
 					],
@@ -2297,7 +2398,8 @@
 					"group": "Everyday Items",
 					"partOfSpeech": "",
 					"romanisation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A machine with a screen for watching shows."
 				},
 				{
 					"sentences": [
@@ -2310,7 +2412,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We have six chairs at the table.",
+							"sentence": "Do we have six chairs at the table?",
 							"translation": ""
 						}
 					],
@@ -2320,7 +2422,8 @@
 					"word": "chair",
 					"translation": "",
 					"id": 7,
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A piece of furniture for one person to sit on."
 				},
 				{
 					"partOfSpeech": "",
@@ -2336,14 +2439,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The wooden table is strong.",
+							"sentence": "Is the wooden table strong?",
 							"translation": ""
 						}
 					],
 					"romanisation": "",
 					"id": 8,
 					"group": "Everyday Items",
-					"translation": ""
+					"translation": "",
+					"definition": "A piece of furniture with a flat top and legs."
 				},
 				{
 					"romanisation": "",
@@ -2353,6 +2457,7 @@
 					"group": "Everyday Items",
 					"partOfSpeech": "",
 					"sortOrder": 1,
+					"definition": "A piece of furniture where you sleep.",
 					"sentences": [
 						{
 							"sentence": "I sleep on the bed at night.",
@@ -2363,7 +2468,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Make your bed in the morning.",
+							"sentence": "Should I make my bed in the morning?",
 							"translation": ""
 						}
 					]
@@ -2380,7 +2485,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This cup holds hot drinks.",
+							"sentence": "Does this cup hold hot drinks?",
 							"translation": ""
 						}
 					],
@@ -2389,6 +2494,7 @@
 					"romanisation": "",
 					"translation": "",
 					"word": "cup",
+					"definition": "A small open container used for drinking.",
 					"id": 10
 				},
 				{
@@ -2398,6 +2504,7 @@
 					"group": "Everyday Items",
 					"romanisation": "",
 					"translation": "",
+					"definition": "A flat dish used for holding food.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2408,7 +2515,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Wash the plate after eating.",
+							"sentence": "Should I wash the plate after eating?",
 							"translation": ""
 						}
 					],
@@ -2422,6 +2529,7 @@
 					"id": 12,
 					"partOfSpeech": "",
 					"word": "spoon",
+					"definition": "A utensil with a small bowl used for eating or stirring.",
 					"sentences": [
 						{
 							"sentence": "He eats cereal with a spoon.",
@@ -2453,12 +2561,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This fork has four prongs.",
+							"sentence": "Does this fork have four prongs?",
 							"translation": ""
 						}
 					],
 					"word": "fork",
-					"translation": ""
+					"translation": "",
+					"definition": "A utensil with points used for picking up food."
 				},
 				{
 					"sentences": [
@@ -2471,7 +2580,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Be careful with the knife.",
+							"sentence": "Should I be careful with the knife?",
 							"translation": ""
 						}
 					],
@@ -2481,7 +2590,8 @@
 					"group": "Everyday Items",
 					"romanisation": "",
 					"word": "knife",
-					"translation": ""
+					"translation": "",
+					"definition": "A tool with a blade used for cutting food."
 				},
 				{
 					"sortOrder": 1,
@@ -2489,6 +2599,7 @@
 					"word": "pen",
 					"partOfSpeech": "",
 					"romanisation": "",
+					"definition": "A tool with ink used for writing.",
 					"sentences": [
 						{
 							"sentence": "I write with a pen.",
@@ -2499,7 +2610,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My favorite pen is black.",
+							"sentence": "Is my favorite pen black?",
 							"translation": ""
 						}
 					],
@@ -2514,6 +2625,7 @@
 					"group": "Everyday Items",
 					"partOfSpeech": "",
 					"romanisation": "",
+					"definition": "A container made of paper, plastic, or cloth to hold things.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2524,7 +2636,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Her bag matches her shoes.",
+							"sentence": "Does her bag match her shoes?",
 							"translation": ""
 						}
 					]
@@ -2537,6 +2649,7 @@
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"id": 17,
+					"definition": "A device that shows the time.",
 					"sentences": [
 						{
 							"sentence": "The clock shows the time.",
@@ -2547,7 +2660,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I check the clock often.",
+							"sentence": "Do I check the clock often?",
 							"translation": ""
 						}
 					]
@@ -2560,6 +2673,7 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"word": "wallet",
+					"definition": "A small folded case for carrying money and cards.",
 					"sentences": [
 						{
 							"sentence": "I keep my money in my wallet.",
@@ -2570,7 +2684,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Don't lose your wallet.",
+							"sentence": "Shouldn't I lose my wallet?",
 							"translation": ""
 						}
 					]
@@ -2581,6 +2695,7 @@
 					"word": "key",
 					"group": "Everyday Items",
 					"romanisation": "",
+					"definition": "A metal object used to open a lock.",
 					"sentences": [
 						{
 							"sentence": "This key opens my front door.",
@@ -2591,7 +2706,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The small key is for the mailbox.",
+							"sentence": "Is the small key for the mailbox?",
 							"translation": ""
 						}
 					],
@@ -2609,7 +2724,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I park my bike outside.",
+							"sentence": "Do I park my bike outside?",
 							"translation": ""
 						}
 					],
@@ -2619,7 +2734,8 @@
 					"partOfSpeech": "",
 					"id": 20,
 					"translation": "",
-					"word": "bike"
+					"word": "bike",
+					"definition": "A short word for bicycle; a vehicle with two wheels you ride."
 				},
 				{
 					"sentences": [
@@ -2632,7 +2748,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Leave the umbrella to dry.",
+							"sentence": "Should I leave the umbrella to dry?",
 							"translation": ""
 						}
 					],
@@ -2642,7 +2758,8 @@
 					"word": "umbrella",
 					"id": 21,
 					"group": "Everyday Items",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A thing you hold over your head to keep the rain off."
 				},
 				{
 					"word": "passport",
@@ -2656,7 +2773,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My passport has my photo.",
+							"sentence": "Does my passport have my photo?",
 							"translation": ""
 						}
 					],
@@ -2665,7 +2782,8 @@
 					"romanisation": "",
 					"partOfSpeech": "",
 					"group": "Everyday Items",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "An official book you need to travel to other countries."
 				},
 				{
 					"sentences": [
@@ -2678,7 +2796,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Her hat has a blue ribbon.",
+							"sentence": "Does her hat have a blue ribbon?",
 							"translation": ""
 						}
 					],
@@ -2688,7 +2806,8 @@
 					"word": "hat",
 					"romanisation": "",
 					"translation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "Something you wear on your head."
 				},
 				{
 					"id": 24,
@@ -2705,13 +2824,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Recycle the empty bottle.",
+							"sentence": "Should I recycle the empty bottle?",
 							"translation": ""
 						}
 					],
 					"translation": "",
 					"romanisation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A container with a narrow neck for holding liquids."
 				},
 				{
 					"romanisation": "",
@@ -2729,12 +2849,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The backpack has two straps.",
+							"sentence": "Does the backpack have two straps?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
-					"translation": ""
+					"translation": "",
+					"definition": "A bag carried on your back."
 				},
 				{
 					"sentences": [
@@ -2747,7 +2868,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This watch was a gift.",
+							"sentence": "Was this watch a gift?",
 							"translation": ""
 						}
 					],
@@ -2757,14 +2878,15 @@
 					"romanisation": "",
 					"id": 26,
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A small clock worn on your wrist."
 				}
 			],
-			"tabnumber": 1
+			"tabNumber": 1
 		},
 		{
 			"title": "Colors",
-			"tabnumber": 3,
+			"tabNumber": 2,
 			"sortOrder": 10,
 			"words": [
 				{
@@ -2775,6 +2897,7 @@
 					"word": "red",
 					"romanisation": "",
 					"group": "Colors - Shapes",
+					"definition": "The color of blood or ripe apples.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2785,7 +2908,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I see a red car.",
+							"sentence": "Do I see a red car?",
 							"translation": ""
 						}
 					]
@@ -2797,6 +2920,7 @@
 					"translation": "",
 					"group": "Colors - Shapes",
 					"word": "blue",
+					"definition": "The color of the sky on a clear day.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2807,7 +2931,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The ball is blue.",
+							"sentence": "Is the ball blue?",
 							"translation": ""
 						}
 					],
@@ -2819,6 +2943,7 @@
 					"romanisation": "",
 					"word": "green",
 					"group": "Colors - Shapes",
+					"definition": "The color of grass and leaves.",
 					"sentences": [
 						{
 							"sentence": "The grass is green.",
@@ -2829,7 +2954,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like green apples.",
+							"sentence": "Do I like green apples?",
 							"translation": ""
 						}
 					],
@@ -2847,7 +2972,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I have a yellow pencil.",
+							"sentence": "Do I have a yellow pencil?",
 							"translation": ""
 						}
 					],
@@ -2857,13 +2982,15 @@
 					"id": 3,
 					"partOfSpeech": "",
 					"group": "Colors - Shapes",
-					"word": "yellow"
+					"word": "yellow",
+					"definition": "The color of the sun or a lemon."
 				},
 				{
 					"word": "black",
 					"sortOrder": 1,
 					"group": "Colors - Shapes",
 					"translation": "",
+					"definition": "The darkest color, like the night sky.",
 					"sentences": [
 						{
 							"sentence": "My shoes are black.",
@@ -2874,7 +3001,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I have a black pen.",
+							"sentence": "Do I have a black pen?",
 							"translation": ""
 						}
 					],
@@ -2888,6 +3015,7 @@
 					"group": "Colors - Shapes",
 					"word": "white",
 					"romanisation": "",
+					"definition": "The lightest color, like snow or milk.",
 					"sentences": [
 						{
 							"sentence": "The clouds are white.",
@@ -2898,7 +3026,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I have a white dog.",
+							"sentence": "Do I have a white dog?",
 							"translation": ""
 						}
 					],
@@ -2921,12 +3049,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The ball is a circle.",
+							"sentence": "Is the ball a circle?",
 							"translation": ""
 						}
 					],
 					"id": 6,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A round shape with no corners."
 				},
 				{
 					"group": "Colors - Shapes",
@@ -2941,7 +3070,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The box is a square.",
+							"sentence": "Is the box a square?",
 							"translation": ""
 						}
 					],
@@ -2949,7 +3078,8 @@
 					"word": "square",
 					"sortOrder": 1,
 					"romanisation": "",
-					"id": 7
+					"id": 7,
+					"definition": "A shape with four equal sides and four right angles."
 				},
 				{
 					"sortOrder": 1,
@@ -2963,7 +3093,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The sign is a triangle.",
+							"sentence": "Is the sign a triangle?",
 							"translation": ""
 						}
 					],
@@ -2972,7 +3102,8 @@
 					"word": "triangle",
 					"translation": "",
 					"id": 8,
-					"group": "Colors - Shapes"
+					"group": "Colors - Shapes",
+					"definition": "A shape with three straight sides and three angles."
 				},
 				{
 					"translation": "",
@@ -2991,22 +3122,24 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The door is a rectangle.",
+							"sentence": "Is the door a rectangle?",
 							"translation": ""
 						}
 					],
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A shape with four sides and four right angles, where opposite sides are equal."
 				}
 			]
 		},
 		{
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Occupations",
 			"sortOrder": 10,
 			"words": [
 				{
 					"word": "teacher",
 					"sortOrder": 1,
+					"definition": "A person who helps students learn in a school.",
 					"sentences": [
 						{
 							"sentence": "The teacher helps students learn.",
@@ -3017,7 +3150,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The teacher is in the classroom.",
+							"sentence": "Is the teacher in the classroom?",
 							"translation": ""
 						}
 					],
@@ -3034,6 +3167,7 @@
 					"group": "Roles",
 					"id": 1,
 					"word": "doctor",
+					"definition": "A person trained to help people who are sick or hurt.",
 					"sentences": [
 						{
 							"sentence": "A doctor treats sick people.",
@@ -3044,7 +3178,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I see the doctor.",
+							"sentence": "Do I see the doctor?",
 							"translation": ""
 						}
 					],
@@ -3062,7 +3196,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I talk to the nurse.",
+							"sentence": "Do I talk to the nurse?",
 							"translation": ""
 						}
 					],
@@ -3071,7 +3205,8 @@
 					"romanisation": "",
 					"partOfSpeech": "",
 					"translation": "",
-					"id": 2
+					"id": 2,
+					"definition": "A person who helps doctors and takes care of sick people."
 				},
 				{
 					"sentences": [
@@ -3084,7 +3219,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The firefighter wears a helmet.",
+							"sentence": "Does the firefighter wear a helmet?",
 							"translation": ""
 						}
 					],
@@ -3094,12 +3229,14 @@
 					"sortOrder": 1,
 					"translation": "",
 					"group": "Roles",
-					"id": 3
+					"id": 3,
+					"definition": "A person whose job is to put out fires."
 				},
 				{
 					"id": 4,
 					"translation": "",
 					"group": "Roles",
+					"definition": "A professional cook in a restaurant or hotel.",
 					"sentences": [
 						{
 							"sentence": "The chef cooks delicious food.",
@@ -3110,7 +3247,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I see the chef in the kitchen.",
+							"sentence": "Do I see the chef in the kitchen?",
 							"translation": ""
 						}
 					],
@@ -3125,6 +3262,7 @@
 					"translation": "",
 					"partOfSpeech": "",
 					"id": 5,
+					"definition": "A person who creates art, like paintings or sculptures.",
 					"sentences": [
 						{
 							"sentence": "An artist creates beautiful paintings.",
@@ -3135,7 +3273,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like the artist's work.",
+							"sentence": "Do I like the artist's work?",
 							"translation": ""
 						}
 					],
@@ -3157,13 +3295,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The engineer works on the bridge.",
+							"sentence": "Does the engineer work on the bridge?",
 							"translation": ""
 						}
 					],
 					"group": "Roles",
 					"translation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A person who designs and builds things like machines or roads."
 				},
 				{
 					"id": 7,
@@ -3177,7 +3316,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I want to be a scientist.",
+							"sentence": "Do I want to be a scientist?",
 							"translation": ""
 						}
 					],
@@ -3186,7 +3325,8 @@
 					"partOfSpeech": "",
 					"translation": "",
 					"sortOrder": 1,
-					"word": "scientist"
+					"word": "scientist",
+					"definition": "A person who studies nature and does experiments."
 				},
 				{
 					"sentences": [
@@ -3199,7 +3339,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I see the farmer with cows.",
+							"sentence": "Do I see the farmer with cows?",
 							"translation": ""
 						}
 					],
@@ -3209,997 +3349,1043 @@
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"translation": "",
-					"id": 8
+					"id": 8,
+					"definition": "A person who owns or works on a farm."
 				}
 			]
 		},
 		{
-		  "sortOrder": 10,
-		  "words": [
-			{
-			  "group": "Places in the City",
-			  "partOfSpeech": "",
-			  "translation": "",
-			  "romanisation": "",
-			  "sortOrder": 1,
-			  "word": "home",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "My home is a small house."
-				},
-				{
-				  "sentence": "I go home after school.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We eat dinner at home.",
-				  "translation": ""
-				}
-			  ],
-			  "id": 0
-			},
-			{
-			  "romanisation": "",
-			  "translation": "",
-			  "partOfSpeech": "",
-			  "word": "school",
-			  "id": 1,
-			  "group": "Places in the City",
-			  "sortOrder": 1,
-			  "sentences": [
-				{
-				  "sentence": "Children go to school to learn.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "My school is near my house.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I like my school.",
-				  "translation": ""
-				}
-			  ]
-			},
-			{
-			  "translation": "",
-			  "word": "park",
-			  "id": 2,
-			  "sortOrder": 1,
-			  "romanisation": "",
-			  "partOfSpeech": "",
-			  "group": "Places in the City",
-			  "sentences": [
-				{
-				  "sentence": "We play in the park.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The park is very big.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I walk in the park.",
-				  "translation": ""
-				}
-			  ]
-			},
-			{
-			  "word": "store",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "The store sells many things."
-				},
-				{
-				  "sentence": "I buy food at the store.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The store is open.",
-				  "translation": ""
-				}
-			  ],
-			  "partOfSpeech": "",
-			  "translation": "",
-			  "id": 3,
-			  "group": "Places in the City",
-			  "romanisation": "",
-			  "sortOrder": 1
-			},
-			{
-			  "romanisation": "",
-			  "group": "Places in the City",
-			  "sortOrder": 1,
-			  "translation": "",
-			  "partOfSpeech": "",
-			  "word": "restaurant",
-			  "id": 4,
-			  "sentences": [
-				{
-				  "sentence": "We ate lunch at the restaurant.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The restaurant is busy.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We sit in the restaurant.",
-				  "translation": ""
-				}
-			  ]
-			},
-			{
-			  "group": "Places in the City",
-			  "word": "hospital",
-			  "id": 5,
-			  "romanisation": "",
-			  "translation": "",
-			  "partOfSpeech": "",
-			  "sortOrder": 1,
-			  "sentences": [
-				{
-				  "sentence": "The hospital helps sick people.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "My mother works at the hospital.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The hospital is very clean.",
-				  "translation": ""
-				}
-			  ]
-			},
-			{
-			  "sortOrder": 1,
-			  "translation": "",
-			  "id": 6,
-			  "partOfSpeech": "",
-			  "sentences": [
-				{
-				  "sentence": "The library has many books.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I read at the library.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The library is quiet.",
-				  "translation": ""
-				}
-			  ],
-			  "word": "library",
-			  "romanisation": "",
-			  "group": "Places in the City"
-			},
-			{
-			  "partOfSpeech": "",
-			  "id": 7,
-			  "group": "Places in the City",
-			  "romanisation": "",
-			  "translation": "",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "I go to the bank to deposit money."
-				},
-				{
-				  "sentence": "The bank is closed.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "My father works at the bank.",
-				  "translation": ""
-				}
-			  ],
-			  "word": "bank",
-			  "sortOrder": 1
-			},
-			{
-			  "word": "office",
-			  "partOfSpeech": "",
-			  "sentences": [
-				{
-				  "sentence": "My father works in an office.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The office is on the second floor.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "She goes to the office every day.",
-				  "translation": ""
-				}
-			  ],
-			  "translation": "",
-			  "id": 8,
-			  "romanisation": "",
-			  "sortOrder": 1,
-			  "group": "Places in the City"
-			},
-			{
-			  "id": 9,
-			  "sortOrder": 1,
-			  "sentences": [
-				{
-				  "sentence": "We live in a big city.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The city is very busy.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I like the city.",
-				  "translation": ""
-				}
-			  ],
-			  "romanisation": "",
-			  "partOfSpeech": "",
-			  "word": "city",
-			  "group": "Places in the City",
-			  "translation": ""
-			},
-			{
-			  "group": "Places in the City",
-			  "partOfSpeech": "",
-			  "sentences": [
-				{
-				  "sentence": "We watch movies at the cinema.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The cinema is full.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We go to the cinema on Saturday.",
-				  "translation": ""
-				}
-			  ],
-			  "sortOrder": 1,
-			  "id": 10,
-			  "word": "cinema",
-			  "romanisation": "",
-			  "translation": ""
-			},
-			{
-			  "word": "zoo",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "I saw elephants at the zoo."
-				},
-				{
-				  "sentence": "The zoo has many animals.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We visit the zoo every year.",
-				  "translation": ""
-				}
-			  ],
-			  "romanisation": "",
-			  "group": "Places in the City",
-			  "id": 11,
-			  "translation": "",
-			  "sortOrder": 1,
-			  "partOfSpeech": ""
-			},
-			{
-			  "group": "Nature",
-			  "id": 0,
-			  "romanisation": "",
-			  "translation": "",
-			  "partOfSpeech": "",
-			  "sentences": [
-				{
-				  "sentence": "The mountain is very tall.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We climb the mountain.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "Snow is on the mountain.",
-				  "translation": ""
-				}
-			  ],
-			  "word": "mountain",
-			  "sortOrder": 1
-			},
-			{
-			  "sortOrder": 1,
-			  "partOfSpeech": "",
-			  "sentences": [
-				{
-				  "sentence": "The river flows through the city.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The river is long.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We swim in the river.",
-				  "translation": ""
-				}
-			  ],
-			  "group": "Nature",
-			  "romanisation": "",
-			  "word": "river",
-			  "translation": "",
-			  "id": 1
-			},
-			{
-			  "word": "lake",
-			  "id": 2,
-			  "translation": "",
-			  "sortOrder": 1,
-			  "group": "Nature",
-			  "partOfSpeech": "",
-			  "romanisation": "",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "We went swimming in the lake."
-				},
-				{
-				  "sentence": "The lake is very deep.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "Fish live in the lake.",
-				  "translation": ""
-				}
-			  ]
-			},
-			{
-			  "word": "forest",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "The forest is home to many animals."
-				},
-				{
-				  "sentence": "The forest is very green.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We walk in the forest.",
-				  "translation": ""
-				}
-			  ],
-			  "partOfSpeech": "",
-			  "translation": "",
-			  "sortOrder": 1,
-			  "romanisation": "",
-			  "id": 3,
-			  "group": "Nature"
-			},
-			{
-			  "word": "beach",
-			  "group": "Nature",
-			  "partOfSpeech": "",
-			  "translation": "",
-			  "sortOrder": 1,
-			  "id": 4,
-			  "romanisation": "",
-			  "sentences": [
-				{
-				  "sentence": "People like to relax on the beach.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The beach has white sand.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We swim at the beach.",
-				  "translation": ""
-				}
-			  ]
-			},
-			{
-			  "sentences": [
-				{
-				  "sentence": "The ocean is vast and deep.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The ocean is blue.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "Fish swim in the ocean.",
-				  "translation": ""
-				}
-			  ],
-			  "partOfSpeech": "",
-			  "sortOrder": 1,
-			  "id": 5,
-			  "romanisation": "",
-			  "group": "Nature",
-			  "translation": "",
-			  "word": "ocean"
-			},
-			{
-			  "word": "island",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "They visited a beautiful island."
-				},
-				{
-				  "sentence": "The island is small.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We travel to the island by boat.",
-				  "translation": ""
-				}
-			  ],
-			  "translation": "",
-			  "partOfSpeech": "",
-			  "romanisation": "",
-			  "group": "Nature",
-			  "sortOrder": 1,
-			  "id": 6
-			},
-			{
-			  "partOfSpeech": "",
-			  "translation": "",
-			  "sentences": [
-				{
-				  "sentence": "The desert is hot and dry.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "Camels live in the desert.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The desert has little water.",
-				  "translation": ""
-				}
-			  ],
-			  "sortOrder": 1,
-			  "romanisation": "",
-			  "word": "desert",
-			  "id": 7,
-			  "group": "Nature"
-			},
-			{
-			  "group": "Nature",
-			  "partOfSpeech": "",
-			  "word": "hill",
-			  "id": 8,
-			  "sortOrder": 1,
-			  "translation": "",
-			  "sentences": [
-				{
-				  "sentence": "We picnic on the hill.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The hill is green.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "The house is on a hill.",
-				  "translation": ""
-				}
-			  ],
-			  "romanisation": ""
-			},
-			{
-			  "partOfSpeech": "",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "Flowers are growing in the garden."
-				},
-				{
-				  "sentence": "The garden has many flowers.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We play in the garden.",
-				  "translation": ""
-				}
-			  ],
-			  "word": "garden",
-			  "sortOrder": 1,
-			  "translation": "",
-			  "id": 9,
-			  "romanisation": "",
-			  "group": "Nature"
-			}
-		  ],
-		  "title": "Places",
-		  "tabnumber": 1
-		},
-		{
-		  "tabnumber": 3,
-		  "title": "Verbs",
-		  "sortOrder": 10,
-		  "words": [
-			{
-			  "translation": "",
-			  "id": 0,
-			  "sortOrder": 1,
-			  "sentences": [
-				{
-				  "sentence": "I eat breakfast every morning.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We eat together.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I eat an apple.",
-				  "translation": ""
-				}
-			  ],
-			  "group": "Verbs",
-			  "partOfSpeech": "",
-			  "word": "eat",
-			  "romanisation": ""
-			},
-			{
-			  "group": "Verbs",
-			  "id": 1,
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "drink! mum said."
-				},
-				{
-				  "sentence": "I drink water.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "Please drink your milk.",
-				  "translation": ""
-				}
-			  ],
-			  "romanisation": "",
-			  "partOfSpeech": "",
-			  "word": "drink",
-			  "sortOrder": 1,
-			  "translation": ""
-			},
-			{
-			  "romanisation": "",
-			  "translation": "",
-			  "group": "Verbs",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "I need to sleep early tonight."
-				},
-				{
-				  "sentence": "The baby will sleep now.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I sleep in my bed.",
-				  "translation": ""
-				}
-			  ],
-			  "partOfSpeech": "",
-			  "word": "sleep",
-			  "sortOrder": 1,
-			  "id": 2
-			},
-			{
-			  "sortOrder": 1,
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "We like to walk in the park."
-				},
-				{
-				  "sentence": "I walk to school.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "Let's walk together.",
-				  "translation": ""
-				}
-			  ],
-			  "partOfSpeech": "",
-			  "word": "walk",
-			  "id": 3,
-			  "romanisation": "",
-			  "translation": "",
-			  "group": "Verbs"
-			},
-			{
-			  "partOfSpeech": "",
-			  "id": 4,
-			  "group": "Verbs",
-			  "sortOrder": 1,
-			  "romanisation": "",
-			  "word": "run",
-			  "translation": "",
-			  "sentences": [
-				{
-				  "sentence": "The children run outside.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I run very fast.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We run every morning.",
-				  "translation": ""
-				}
-			  ]
-			},
-			{
-			  "word": "sit",
-			  "translation": "",
-			  "romanisation": "",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "They sit in the cafe."
-				},
-				{
-				  "sentence": "Please sit down.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I sit on the chair.",
-				  "translation": ""
-				}
-			  ],
-			  "group": "Verbs",
-			  "sortOrder": 1,
-			  "id": 5,
-			  "partOfSpeech": ""
-			},
-			{
-			  "sortOrder": 1,
-			  "id": 6,
-			  "group": "Verbs",
-			  "word": "stand",
-			  "translation": "",
-			  "partOfSpeech": "",
-			  "romanisation": "",
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "I stand in line at the store."
-				},
-				{
-				  "sentence": "Please stand here.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "We stand in the classroom.",
-				  "translation": ""
-				}
-			  ]
-			},
-			{
-			  "translation": "",
-			  "group": "Verbs",
-			  "romanisation": "",
-			  "partOfSpeech": "",
-			  "id": 7,
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "Look over there!"
-				},
-				{
-				  "sentence": "Look at the picture.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I look out the window.",
-				  "translation": ""
-				}
-			  ],
-			  "sortOrder": 1,
-			  "word": "look"
-			},
-			{
-			  "sortOrder": 1,
-			  "sentences": [
-				{
-				  "translation": "",
-				  "sentence": "I listen to music."
-				},
-				{
-				  "sentence": "Listen to your teacher.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I listen to the birds.",
-				  "translation": ""
-				}
-			  ],
-			  "partOfSpeech": "",
-			  "translation": "",
-			  "romanisation": "",
-			  "word": "listen",
-			  "id": 8,
-			  "group": "Verbs"
-			},
-			{
-			  "word": "talk",
-			  "partOfSpeech": "",
-			  "id": 9,
-			  "romanisation": "",
-			  "sortOrder": 1,
-			  "group": "Verbs",
-			  "sentences": [
-				{
-				  "sentence": "They talk for hours.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "I talk to my friend.",
-				  "translation": ""
-				},
-				{
-				  "sentence": "Let's talk after class.",
-				  "translation": ""
-				}
-			  ],
-			  "translation": ""
-			}
-		  ]
-		},
-
-		
-		{
-			"tabnumber" : 3,
-			"title" : "Adjectives",
-			"sortOrder" : 10,"words" :
-			[
-				{
-					"id" : 0,
-					"group" : "Adjectives",
-					"word" : "big",
-					"romanisation" : "",
-					"sentences" : [
+			"sortOrder": 10,
+			"words": [
+				{
+					"group": "Places in the City",
+					"partOfSpeech": "",
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"word": "home",
+					"definition": "The house or flat where you live.",
+					"sentences": [
 						{
-							"sentence" : "The house is very big.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "My home is a small house."
+						},
+						{
+							"sentence": "I go home after school.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we eat dinner at home?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"translation" : ""
+					"id": 0
 				},
 				{
-					"sentences" : [
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "school",
+					"id": 1,
+					"group": "Places in the City",
+					"sortOrder": 1,
+					"definition": "A place where children go to learn.",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The dog is small and cute."
-						}
-					],
-					"word" : "small",
-					"translation" : "",
-					"romanisation" : "",
-					"id" : 1,
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"group" : "Adjectives"
-				},
-				{
-					"word" : "hot",
-					"sortOrder" : 1,
-					"translation" : "",
-					"group" : "Adjectives",
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"id" : 2,
-					"sentences" : [
+							"sentence": "Children go to school to learn.",
+							"translation": ""
+						},
 						{
-							"sentence" : "The weather is hot today.",
-							"translation" : ""
+							"sentence": "My school is near my house.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do I like my school?",
+							"translation": ""
 						}
 					]
 				},
 				{
-					"partOfSpeech" : "",
-					"word" : "cold",
-					"sortOrder" : 1,
-					"translation" : "",
-					"id" : 3,
-					"sentences" : [
+					"translation": "",
+					"word": "park",
+					"id": 2,
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"group": "Places in the City",
+					"definition": "A large public garden for walking, playing, and relaxing.",
+					"sentences": [
 						{
-							"sentence" : "The water in the pool is cold.",
-							"translation" : ""
-						}
-					],
-					"group" : "Adjectives",
-					"romanisation" : ""
-				},
-				{
-					"sortOrder" : 1,
-					"sentences" : [
+							"sentence": "We play in the park.",
+							"translation": ""
+						},
 						{
-							"translation" : "",
-							"sentence" : "I bought a new shirt."
-						}
-					],
-					"id" : 4,
-					"partOfSpeech" : "",
-					"group" : "Adjectives",
-					"romanisation" : "",
-					"word" : "new",
-					"translation" : ""
-				},
-				{
-					"word" : "old",
-					"sentences" : [
+							"sentence": "The park is very big.",
+							"translation": ""
+						},
 						{
-							"sentence" : "My grandparents are very old.",
-							"translation" : ""
-						}
-					],
-					"romanisation" : "",
-					"group" : "Adjectives",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"translation" : "",
-					"id" : 5
-				},
-				{
-					"sortOrder" : 1,
-					"group" : "Adjectives",
-					"id" : 6,
-					"romanisation" : "",
-					"word" : "young",
-					"translation" : "",
-					"partOfSpeech" : "",
-					"sentences" : [
-						{
-							"sentence" : "My baby brother is young.",
-							"translation" : ""
+							"sentence": "Do I walk in the park?",
+							"translation": ""
 						}
 					]
 				},
 				{
-					"id" : 7,
-					"romanisation" : "",
-					"sentences" : [
+					"word": "store",
+					"sentences": [
 						{
-							"sentence" : "The food at the restaurant was good.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "The store sells many things."
+						},
+						{
+							"sentence": "I buy food at the store.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the store open?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"group" : "Adjectives",
-					"word" : "good",
-					"translation" : "",
-					"sortOrder" : 1
+					"partOfSpeech": "",
+					"translation": "",
+					"id": 3,
+					"group": "Places in the City",
+					"romanisation": "",
+					"sortOrder": 1,
+					"definition": "A place where you buy things."
 				},
 				{
-					"group" : "Adjectives",
-					"word" : "bad",
-					"sentences" : [
+					"romanisation": "",
+					"group": "Places in the City",
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "",
+					"word": "restaurant",
+					"id": 4,
+					"definition": "A place where you buy and eat meals.",
+					"sentences": [
 						{
-							"sentence" : "The weather was bad, so we stayed inside.",
-							"translation" : ""
+							"sentence": "We ate lunch at the restaurant.",
+							"translation": ""
+						},
+						{
+							"sentence": "The restaurant is busy.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we sit in the restaurant?",
+							"translation": ""
 						}
-					],
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"id" : 8,
-					"translation" : ""
+					]
 				},
 				{
-					"translation" : "",
-					"id" : 9,
-					"romanisation" : "",
-					"group" : "Adjectives",
-					"sortOrder" : 1,
-					"sentences" : [
+					"group": "Places in the City",
+					"word": "hospital",
+					"id": 5,
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"definition": "A place where sick or injured people are treated.",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "My room is always clean and tidy."
+							"sentence": "The hospital helps sick people.",
+							"translation": ""
+						},
+						{
+							"sentence": "My mother works at the hospital.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the hospital very clean?",
+							"translation": ""
 						}
-					],
-					"partOfSpeech" : "",
-					"word" : "clean"
+					]
 				},
 				{
-					"partOfSpeech" : "",
-					"word" : "dirty",
-					"id" : 10,
-					"translation" : "",
-					"group" : "Adjectives",
-					"romanisation" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"translation": "",
+					"id": 6,
+					"partOfSpeech": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The car is dirty."
+							"sentence": "The library has many books.",
+							"translation": ""
+						},
+						{
+							"sentence": "I read at the library.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the library quiet?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1
+					"word": "library",
+					"romanisation": "",
+					"group": "Places in the City",
+					"definition": "A place where you can borrow books for free."
 				},
 				{
-					"group" : "Adjectives",
-					"word" : "tall",
-					"id" : 11,
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"translation" : "",
-					"sentences" : [
+					"partOfSpeech": "",
+					"id": 7,
+					"group": "Places in the City",
+					"romanisation": "",
+					"translation": "",
+					"definition": "A place where people keep and borrow money.",
+					"sentences": [
 						{
-							"sentence" : "The giraffe is a tall animal.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "I go to the bank to deposit money."
+						},
+						{
+							"sentence": "The bank is closed.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does my father work at the bank?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : ""
+					"word": "bank",
+					"sortOrder": 1
 				},
 				{
-					"group" : "Adjectives",
-					"sentences" : [
+					"word": "office",
+					"partOfSpeech": "",
+					"sentences": [
 						{
-							"sentence" : "He is a short person.",
-							"translation" : ""
+							"sentence": "My father works in an office.",
+							"translation": ""
+						},
+						{
+							"sentence": "The office is on the second floor.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does she go to the office every day?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"word" : "short",
-					"id" : 12,
-					"partOfSpeech" : ""
+					"translation": "",
+					"id": 8,
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Places in the City",
+					"definition": "A room or building where people work at desks."
 				},
 				{
-					"sentences" : [
+					"id": 9,
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"sentence" : "The cheetah is a fast runner.",
-							"translation" : ""
+							"sentence": "We live in a big city.",
+							"translation": ""
+						},
+						{
+							"sentence": "The city is very busy.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do I like the city?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"word" : "fast",
-					"id" : 13,
-					"translation" : "",
-					"group" : "Adjectives",
-					"romanisation" : ""
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "city",
+					"group": "Places in the City",
+					"translation": "",
+					"definition": "A large town where many people live and work."
 				},
 				{
-					"id" : 14,
-					"romanisation" : "",
-					"word" : "slow",
-					"partOfSpeech" : "",
-					"group" : "Adjectives",
-					"sentences" : [
+					"group": "Places in the City",
+					"partOfSpeech": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The turtle moves very slowly."
+							"sentence": "We watch movies at the cinema.",
+							"translation": ""
+						},
+						{
+							"sentence": "The cinema is full.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we go to the cinema on Saturday?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"translation" : ""
+					"sortOrder": 1,
+					"id": 10,
+					"word": "cinema",
+					"romanisation": "",
+					"translation": "",
+					"definition": "A place where you watch films on a big screen."
+				},
+				{
+					"word": "zoo",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I saw elephants at the zoo."
+						},
+						{
+							"sentence": "The zoo has many animals.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we visit the zoo every year?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"group": "Places in the City",
+					"id": 11,
+					"translation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"definition": "A place where animals are kept for people to look at."
+				},
+				{
+					"group": "Nature",
+					"id": 0,
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "The mountain is very tall.",
+							"translation": ""
+						},
+						{
+							"sentence": "We climb the mountain.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is snow on the mountain?",
+							"translation": ""
+						}
+					],
+					"word": "mountain",
+					"sortOrder": 1,
+					"definition": "A very large hill, much bigger and higher."
+				},
+				{
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "The river flows through the city.",
+							"translation": ""
+						},
+						{
+							"sentence": "The river is long.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we swim in the river?",
+							"translation": ""
+						}
+					],
+					"group": "Nature",
+					"romanisation": "",
+					"word": "river",
+					"translation": "",
+					"id": 1,
+					"definition": "A large natural flow of water that goes to the sea or a lake."
+				},
+				{
+					"word": "lake",
+					"id": 2,
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Nature",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"definition": "A large area of water surrounded by land.",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We went swimming in the lake."
+						},
+						{
+							"sentence": "The lake is very deep.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do fish live in the lake?",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"word": "forest",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The forest is home to many animals."
+						},
+						{
+							"sentence": "The forest is very green.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we walk in the forest?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 3,
+					"group": "Nature",
+					"definition": "A large area of land covered mainly with trees."
+				},
+				{
+					"word": "beach",
+					"group": "Nature",
+					"partOfSpeech": "",
+					"translation": "",
+					"sortOrder": 1,
+					"id": 4,
+					"romanisation": "",
+					"definition": "An area of sand or stones next to the sea or a lake.",
+					"sentences": [
+						{
+							"sentence": "People like to relax on the beach.",
+							"translation": ""
+						},
+						{
+							"sentence": "The beach has white sand.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we swim at the beach?",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "The ocean is vast and deep.",
+							"translation": ""
+						},
+						{
+							"sentence": "The ocean is blue.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do fish swim in the ocean?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"id": 5,
+					"romanisation": "",
+					"group": "Nature",
+					"translation": "",
+					"word": "ocean",
+					"definition": "The large area of salt water that covers most of the earth."
+				},
+				{
+					"word": "island",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They visited a beautiful island."
+						},
+						{
+							"sentence": "The island is small.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we travel to the island by boat?",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"group": "Nature",
+					"sortOrder": 1,
+					"id": 6,
+					"definition": "A piece of land completely surrounded by water."
+				},
+				{
+					"partOfSpeech": "",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "The desert is hot and dry.",
+							"translation": ""
+						},
+						{
+							"sentence": "Camels live in the desert.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does the desert have little water?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "desert",
+					"id": 7,
+					"group": "Nature",
+					"definition": "A large, very hot, dry area of land with little water."
+				},
+				{
+					"group": "Nature",
+					"partOfSpeech": "",
+					"word": "hill",
+					"id": 8,
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "We picnic on the hill.",
+							"translation": ""
+						},
+						{
+							"sentence": "The hill is green.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the house on a hill?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"definition": "An area of land that is higher than the land around it."
+				},
+				{
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Flowers are growing in the garden."
+						},
+						{
+							"sentence": "The garden has many flowers.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we play in the garden?",
+							"translation": ""
+						}
+					],
+					"word": "garden",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 9,
+					"romanisation": "",
+					"group": "Nature",
+					"definition": "An area of ground where plants and flowers are grown."
+				}
+			],
+			"title": "Places",
+			"tabNumber": 1
+		},
+		{
+			"tabNumber": 3,
+			"title": "Verbs",
+			"sortOrder": 10,
+			"words": [
+				{
+					"translation": "",
+					"id": 0,
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "I eat breakfast every morning.",
+							"translation": ""
+						},
+						{
+							"sentence": "We eat together.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do I eat an apple?",
+							"translation": ""
+						}
+					],
+					"group": "Verbs",
+					"partOfSpeech": "",
+					"word": "eat",
+					"romanisation": "",
+					"definition": "To put food in your mouth and swallow it."
+				},
+				{
+					"group": "Verbs",
+					"id": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "drink! mum said."
+						},
+						{
+							"sentence": "I drink water.",
+							"translation": ""
+						},
+						{
+							"sentence": "Should I drink your milk?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "drink",
+					"sortOrder": 1,
+					"translation": "",
+					"definition": "To take liquid into your mouth and swallow it."
+				},
+				{
+					"romanisation": "",
+					"translation": "",
+					"group": "Verbs",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I need to sleep early tonight."
+						},
+						{
+							"sentence": "The baby will sleep now.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do I sleep in my bed?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"word": "sleep",
+					"sortOrder": 1,
+					"id": 2,
+					"definition": "To rest your body and mind with your eyes closed."
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We like to walk in the park."
+						},
+						{
+							"sentence": "I walk to school.",
+							"translation": ""
+						},
+						{
+							"sentence": "Shall we walk together?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"word": "walk",
+					"id": 3,
+					"romanisation": "",
+					"translation": "",
+					"group": "Verbs",
+					"definition": "To move forward by putting one foot in front of the other."
+				},
+				{
+					"partOfSpeech": "",
+					"id": 4,
+					"group": "Verbs",
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "run",
+					"translation": "",
+					"definition": "To move quickly with your legs, faster than walking.",
+					"sentences": [
+						{
+							"sentence": "The children run outside.",
+							"translation": ""
+						},
+						{
+							"sentence": "I run very fast.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we run every morning?",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"word": "sit",
+					"translation": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They sit in the cafe."
+						},
+						{
+							"sentence": "Please sit down.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do I sit on the chair?",
+							"translation": ""
+						}
+					],
+					"group": "Verbs",
+					"sortOrder": 1,
+					"id": 5,
+					"partOfSpeech": "",
+					"definition": "To rest your body on a chair or the ground."
+				},
+				{
+					"sortOrder": 1,
+					"id": 6,
+					"group": "Verbs",
+					"word": "stand",
+					"translation": "",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"definition": "To be upright on your feet.",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I stand in line at the store."
+						},
+						{
+							"sentence": "Please stand here.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we stand in the classroom?",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"translation": "",
+					"group": "Verbs",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"id": 7,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Look over there!"
+						},
+						{
+							"sentence": "Look at the picture.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do I look out the window?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"word": "look",
+					"definition": "To turn your eyes toward something so you can see it."
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I listen to music."
+						},
+						{
+							"sentence": "Listen to your teacher.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do I listen to the birds?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"translation": "",
+					"romanisation": "",
+					"word": "listen",
+					"id": 8,
+					"group": "Verbs",
+					"definition": "To pay attention to a sound with your ears."
+				},
+				{
+					"word": "talk",
+					"partOfSpeech": "",
+					"id": 9,
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Verbs",
+					"sentences": [
+						{
+							"sentence": "They talk for hours.",
+							"translation": ""
+						},
+						{
+							"sentence": "I talk to my friend.",
+							"translation": ""
+						},
+						{
+							"sentence": "Let's talk after class.",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"definition": "To speak to someone."
+				}
+			]
+		},
+		{
+			"tabNumber": 3,
+			"title": "Adjectives",
+			"sortOrder": 10,
+			"words": [
+				{
+					"id": 0,
+					"group": "Adjectives",
+					"word": "big",
+					"romanisation": "",
+					"definition": "Large in size.",
+					"sentences": [
+						{
+							"sentence": "The house is very big.",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"translation": ""
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The dog is small and cute."
+						}
+					],
+					"word": "small",
+					"translation": "",
+					"romanisation": "",
+					"id": 1,
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "Adjectives",
+					"definition": "Not large in size."
+				},
+				{
+					"word": "hot",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Adjectives",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"id": 2,
+					"definition": "Having a high temperature.",
+					"sentences": [
+						{
+							"sentence": "Is the weather hot today?",
+							"translation": ""
+						}
+					]
+				},
+				{
+					"partOfSpeech": "",
+					"word": "cold",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 3,
+					"sentences": [
+						{
+							"sentence": "Is the water in the pool cold?",
+							"translation": ""
+						}
+					],
+					"group": "Adjectives",
+					"romanisation": "",
+					"definition": "Having a low temperature."
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "I bought a new shirt."
+						}
+					],
+					"id": 4,
+					"partOfSpeech": "",
+					"group": "Adjectives",
+					"romanisation": "",
+					"word": "new",
+					"translation": "",
+					"definition": "Recently made or bought; not old."
+				},
+				{
+					"word": "old",
+					"sentences": [
+						{
+							"sentence": "Are my grandparents very old?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"group": "Adjectives",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 5,
+					"definition": "Having lived for many years; not new."
+				},
+				{
+					"sortOrder": 1,
+					"group": "Adjectives",
+					"id": 6,
+					"romanisation": "",
+					"word": "young",
+					"translation": "",
+					"partOfSpeech": "",
+					"sentences": [
+						{
+							"sentence": "Is my baby brother young?",
+							"translation": ""
+						}
+					],
+					"definition": "In the early part of life; not old."
+				},
+				{
+					"id": 7,
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "Was the food at the restaurant good?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"group": "Adjectives",
+					"word": "good",
+					"translation": "",
+					"sortOrder": 1,
+					"definition": "Of high quality; pleasant or enjoyable."
+				},
+				{
+					"group": "Adjectives",
+					"word": "bad",
+					"sentences": [
+						{
+							"sentence": "Was the weather bad, so we stayed inside?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 8,
+					"translation": "",
+					"definition": "Of poor quality; unpleasant or not nice."
+				},
+				{
+					"translation": "",
+					"id": 9,
+					"romanisation": "",
+					"group": "Adjectives",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Is my room always clean and tidy?"
+						}
+					],
+					"partOfSpeech": "",
+					"word": "clean",
+					"definition": "Free from dirt or marks."
+				},
+				{
+					"partOfSpeech": "",
+					"word": "dirty",
+					"id": 10,
+					"translation": "",
+					"group": "Adjectives",
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Is the car dirty?"
+						}
+					],
+					"sortOrder": 1,
+					"definition": "Not clean; covered in dirt."
+				},
+				{
+					"group": "Adjectives",
+					"word": "tall",
+					"id": 11,
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "Is the giraffe a tall animal?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"definition": "Of greater than average height."
+				},
+				{
+					"group": "Adjectives",
+					"sentences": [
+						{
+							"sentence": "Is he a short person?",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "short",
+					"id": 12,
+					"partOfSpeech": "",
+					"definition": "Of less than average height."
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "Is the cheetah a fast runner?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"word": "fast",
+					"id": 13,
+					"translation": "",
+					"group": "Adjectives",
+					"romanisation": "",
+					"definition": "Moving or happening at high speed."
+				},
+				{
+					"id": 14,
+					"romanisation": "",
+					"word": "slow",
+					"partOfSpeech": "",
+					"group": "Adjectives",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Does the turtle move very slowly?"
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"definition": "Moving or happening at low speed."
 				}
 			]
 		},
 		{
 			"title": "up,in,on,at,by",
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"sortOrder": 10,
 			"words": [
 				{
@@ -4218,12 +4404,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I wake up early.",
+							"sentence": "Do I wake up early?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
-					"id": 0
+					"id": 0,
+					"definition": "Toward a higher place or position."
 				},
 				{
 					"partOfSpeech": "",
@@ -4243,10 +4430,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The ball rolls down the hill.",
+							"sentence": "Does the ball roll down the hill?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "Toward a lower place or position."
 				},
 				{
 					"id": 2,
@@ -4263,13 +4451,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We are in the car.",
+							"sentence": "Are we in the car?",
 							"translation": ""
 						}
 					],
 					"word": "in",
 					"sortOrder": 1,
-					"translation": ""
+					"translation": "",
+					"definition": "To be inside something."
 				},
 				{
 					"id": 3,
@@ -4284,7 +4473,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The cat is out.",
+							"sentence": "Is the cat out?",
 							"translation": ""
 						}
 					],
@@ -4292,7 +4481,8 @@
 					"word": "out",
 					"romanisation": "",
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "Away from or outside a place."
 				},
 				{
 					"translation": "",
@@ -4315,7 +4505,8 @@
 					"sortOrder": 1,
 					"id": 4,
 					"word": "on",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Supported by or fixed to the top of something."
 				},
 				{
 					"sentences": [
@@ -4328,7 +4519,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The radio is off.",
+							"sentence": "Is the radio off?",
 							"translation": ""
 						}
 					],
@@ -4338,7 +4529,8 @@
 					"id": 5,
 					"word": "off",
 					"translation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "Away from a place or position."
 				},
 				{
 					"translation": "",
@@ -4358,10 +4550,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Jump over the rope.",
+							"sentence": "Should I jump over the rope?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "Above or across from one side to the other."
 				},
 				{
 					"group": "Particles",
@@ -4384,7 +4577,8 @@
 					"word": "under",
 					"id": 7,
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "Directly below something."
 				},
 				{
 					"sortOrder": 1,
@@ -4400,14 +4594,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I go to school every day.",
+							"sentence": "Do I go to school every day?",
 							"translation": ""
 						}
 					],
 					"word": "to",
 					"translation": "",
 					"id": 8,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A preposition indicating movement toward a destination."
 				},
 				{
 					"sentences": [
@@ -4420,7 +4615,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is from Spain.",
+							"sentence": "Is she from Spain?",
 							"translation": ""
 						}
 					],
@@ -4430,7 +4625,8 @@
 					"group": "Particles",
 					"word": "from",
 					"id": 9,
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A preposition indicating the starting point or origin."
 				},
 				{
 					"translation": "",
@@ -4447,13 +4643,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She is at school.",
+							"sentence": "Is she at school?",
 							"translation": ""
 						}
 					],
 					"romanisation": "",
 					"word": "at",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A preposition indicating a specific place or time."
 				},
 				{
 					"partOfSpeech": "",
@@ -4468,7 +4665,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The dog is by the door.",
+							"sentence": "Is the dog by the door?",
 							"translation": ""
 						}
 					],
@@ -4476,7 +4673,8 @@
 					"id": 11,
 					"group": "Particles",
 					"romanisation": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A preposition meaning near or next to something."
 				},
 				{
 					"id": 12,
@@ -4490,7 +4688,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He plays with his brother.",
+							"sentence": "Does he play with his brother?",
 							"translation": ""
 						}
 					],
@@ -4499,7 +4697,8 @@
 					"partOfSpeech": "",
 					"word": "with",
 					"romanisation": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A preposition meaning accompanied by or using something."
 				},
 				{
 					"group": "Particles",
@@ -4514,7 +4713,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This book is about animals.",
+							"sentence": "Is this book about animals?",
 							"translation": ""
 						}
 					],
@@ -4522,7 +4721,8 @@
 					"id": 13,
 					"romanisation": "",
 					"word": "about",
-					"translation": ""
+					"translation": "",
+					"definition": "A preposition meaning on the subject of something."
 				},
 				{
 					"sortOrder": 1,
@@ -4541,11 +4741,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He jumped into the pool.",
+							"sentence": "Did he jump into the pool?",
 							"translation": ""
 						}
 					],
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A preposition indicating movement to the inside of something."
 				},
 				{
 					"group": "Particles",
@@ -4563,12 +4764,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This is for my mother.",
+							"sentence": "Is this for my mother?",
 							"translation": ""
 						}
 					],
 					"id": 15,
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A preposition indicating the purpose or recipient of something."
 				},
 				{
 					"sortOrder": 1,
@@ -4585,13 +4787,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Wash your hands after playing.",
+							"sentence": "Should I wash my hands after playing?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"romanisation": "",
-					"group": "Particles"
+					"group": "Particles",
+					"definition": "A preposition meaning following or later than."
 				},
 				{
 					"id": 17,
@@ -4609,15 +4812,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Wash your hands before eating.",
+							"sentence": "Should I wash my hands before eating?",
 							"translation": ""
 						}
 					],
 					"group": "Particles",
-					"word": "before"
+					"word": "before",
+					"definition": "A preposition meaning earlier than or in front of."
 				}
 			]
 		}
-		
 	]
 }

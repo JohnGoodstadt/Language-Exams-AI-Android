@@ -542,7 +542,8 @@ fun SettingsScreen(
                     currentValue = "Show Choose Exam and Language (D)",
                     onClick = {
                         if (context is androidx.activity.ComponentActivity) {
-                            viewModel.onDebugPrintBillingStatus(context)
+//                            viewModel.onDebugPrintBillingStatus(context)
+                            viewModel.onDebugTestReadJSON()
                         }
                     }
                 )

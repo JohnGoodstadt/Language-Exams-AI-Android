@@ -34,7 +34,7 @@ data class VocabFile(
 @Serializable
 data class Category(
     val title: String,
-    @SerialName("tabnumber")
+//    @SerialName("tabnumber") //can crash on decode
     val tabNumber: Int,
     val sortOrder: Int,
     val words: List<VocabWord>

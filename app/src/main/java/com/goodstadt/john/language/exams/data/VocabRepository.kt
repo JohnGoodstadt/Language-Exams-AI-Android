@@ -46,7 +46,7 @@ class VocabRepository @Inject constructor(
     private val jsonParser = Json {
         ignoreUnknownKeys = true    // Be robust against future changes in the JSON
         coerceInputValues = true    // Use default values if a field is null
-        //allowTrailingCommas = true  // Allow trailing commas, common in hand-edited JSON
+        //allowTrailingCommas = true  // NOT ALLOWED in standard json parser. allow trailing commas, common in hand-edited JSON
     }
 
     /**
@@ -81,6 +81,35 @@ class VocabRepository @Inject constructor(
 
             // Cache the result using the filename as the key
             vocabCache[fileName] = vocabFile
+            Result.success(vocabFile)
+        } catch (e: Exception) {
+            Timber.e(e.localizedMessage)
+            e.printStackTrace()
+            Result.failure(e)
+        }
+    }
+    suspend fun debugDecodeVocabData(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
+
+        try {
+            // Dynamically get the resource ID from the filename string
+            val resourceId = context.resources.getIdentifier(
+                fileName,
+                "raw",
+                context.packageName
+            )
+
+            // Check if the resource was found
+            if (resourceId == 0) {
+                return@withContext Result.failure(Exception("Resource file not found: $fileName.json"))
+            }
+
+            Timber.v("Loading '$fileName' from resources.") // For debugging
+            val inputStream = context.resources.openRawResource(resourceId)
+            val jsonString = inputStream.bufferedReader().use { it.readText() }
+            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
+
+            // Cache the result using the filename as the key
+            //vocabCache[fileName] = vocabFile
             Result.success(vocabFile)
         } catch (e: Exception) {
             Timber.e(e.localizedMessage)

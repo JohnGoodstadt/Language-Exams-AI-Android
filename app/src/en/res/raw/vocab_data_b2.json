@@ -1,2140 +1,3359 @@
 {
-	"name" : "",
-	"location" : 0,
-	"fileformat" : 0,
-	"id" : "",
-	"nativename" : "",
-	"uploaddate" : 1748295473.130368,
-	"voicename" : "",
-	"updatedDate" : 978307200,
-	"native" : "",
-	"googlevoiceprefix" : "",
-	"sheetname" : "vocab_data_b2",
-	"romanized" : false,
-	"tabtitles" : ["Personal","Travel etc","More"],
-	"categories" : [
+	"name": "",
+	"location": 0,
+	"fileformat": 0,
+	"id": "",
+	"nativename": "",
+	"uploaddate": 1748295473.130368,
+	"voicename": "",
+	"updatedDate": 978307200,
+	"native": "",
+	"googlevoiceprefix": "",
+	"sheetname": "EnglishB2Vocab",
+	"romanized": false,
+	"tabtitles": [
+		"Personal",
+		"Travel etc",
+		"More"
+	],
+	"categories": [
 		{
-			"words" : [
+			"words": [
 				{
-					"sortOrder" : 1,
-					"translation" : "",
-					"partOfSpeech" : "",
-					"group" : "Personal and Professional Development",
-					"sentences" : [
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "noun",
+					"group": "Personal and Professional Development",
+					"sentences": [
 						{
-							"sentence" : "His greatest achievement was completing the marathon.",
-							"translation" : ""
+							"sentence": "His greatest achievement was completing the marathon.",
+							"translation": ""
+						},
+						{
+							"sentence": "Receiving the award was a great achievement.",
+							"translation": ""
+						},
+						{
+							"sentence": "Was winning the competition his only achievement?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"id" : 0,
-					"word" : "achievement"
+					"romanisation": "",
+					"id": 0,
+					"word": "achievement",
+					"definition": "A thing done successfully, typically by effort, courage, or skill."
 				},
 				{
-					"translation" : "",
-					"romanisation" : "",
-					"word" : "commitment",
-					"id" : 1,
-					"partOfSpeech" : "",
-					"sentences" : [
+					"translation": "",
+					"romanisation": "",
+					"word": "commitment",
+					"id": 1,
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "She has shown great commitment to her studies.",
-							"translation" : ""
+							"sentence": "She has shown great commitment to her studies.",
+							"translation": ""
+						},
+						{
+							"sentence": "The company made a commitment to reduce waste.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do you question his commitment to the project?",
+							"translation": ""
 						}
 					],
-					"group" : "Personal and Professional Development",
-					"sortOrder" : 1
+					"group": "Personal and Professional Development",
+					"sortOrder": 1,
+					"definition": "A promise or strong loyalty to someone or something."
 				},
 				{
-					"translation" : "",
-					"group" : "Personal and Professional Development",
-					"sentences" : [
+					"translation": "",
+					"group": "Personal and Professional Development",
+					"sentences": [
 						{
-							"sentence" : "His dedication to his job earned him a promotion.",
-							"translation" : ""
+							"sentence": "His dedication to his job earned him a promotion.",
+							"translation": ""
+						},
+						{
+							"sentence": "She shows true dedication in helping others.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is their dedication to the cause admirable?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"id" : 2,
-					"romanisation" : "",
-					"word" : "dedication",
-					"partOfSpeech" : ""
+					"sortOrder": 1,
+					"id": 2,
+					"romanisation": "",
+					"word": "dedication",
+					"partOfSpeech": "noun",
+					"definition": "The quality of being committed to a task or purpose."
 				},
 				{
-					"sortOrder" : 1,
-					"word" : "leadership",
-					"id" : 3,
-					"partOfSpeech" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"word": "leadership",
+					"id": 3,
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "Effective leadership is essential for a successful team.",
-							"translation" : ""
+							"sentence": "Effective leadership is essential for a successful team.",
+							"translation": ""
+						},
+						{
+							"sentence": "She demonstrated strong leadership skills during the crisis.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can leadership be taught in a classroom?",
+							"translation": ""
 						}
 					],
-					"group" : "Personal and Professional Development",
-					"translation" : "",
-					"romanisation" : ""
+					"group": "Personal and Professional Development",
+					"translation": "",
+					"romanisation": "",
+					"definition": "The ability to lead a group of people or an organization."
 				},
 				{
-					"partOfSpeech" : "",
-					"group" : "Personal and Professional Development",
-					"sortOrder" : 1,
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"group": "Personal and Professional Development",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"sentence" : "Her motivation to succeed is evident in her hard work.",
-							"translation" : ""
+							"sentence": "Her motivation to succeed is evident in her hard work.",
+							"translation": ""
+						},
+						{
+							"sentence": "Lack of motivation is a major problem for many students.",
+							"translation": ""
+						},
+						{
+							"sentence": "What is the key to maintaining high motivation?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"id" : 4,
-					"word" : "motivation",
-					"romanisation" : ""
+					"translation": "",
+					"id": 4,
+					"word": "motivation",
+					"romanisation": "",
+					"definition": "The reason why someone does something; the desire to act or achieve."
 				}
 			],
-			"sortOrder" : 1,
-			"tabnumber" : 1,
-			"title" : "Personal Development (B2)"
+			"sortOrder": 1,
+			"tabNumber": 1,
+			"title": "Personal Development (B2)"
 		},
 		{
-			"tabnumber" : 1,
-			"title" : "Education",
-			"sortOrder" : 1,
-			"words" : [
+			"tabNumber": 1,
+			"title": "Education",
+			"sortOrder": 1,
+			"words": [
 				{
-					"id" : 0,
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"word" : "academic",
-					"group" : "Education and Learning",
-					"sentences" : [
+					"id": 0,
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "adjective",
+					"word": "academic",
+					"group": "Education and Learning",
+					"sentences": [
 						{
-							"sentence" : "She received an award for her academic excellence.",
-							"translation" : ""
+							"sentence": "She received an award for her academic excellence.",
+							"translation": ""
+						},
+						{
+							"sentence": "His future seems certain because of his academic success.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the professor focused mainly on academic research?",
+							"translation": ""
 						}
 					],
-					"translation" : ""
+					"translation": "",
+					"definition": "Relating to education and scholarship."
 				},
 				{
-					"group" : "Education and Learning",
-					"sentences" : [
+					"group": "Education and Learning",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The school offers a diverse curriculum."
+							"translation": "",
+							"sentence": "The school offers a diverse curriculum."
+						},
+						{
+							"sentence": "The new curriculum focuses on technology and science.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the curriculum the same in all schools?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"id" : 1,
-					"word" : "curriculum"
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "noun",
+					"id": 1,
+					"word": "curriculum",
+					"definition": "The subjects taught in a school or college course."
 				},
 				{
-					"id" : 2,
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"id": 2,
+					"romanisation": "",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "He earned his diploma after four years of hard work."
+							"translation": "",
+							"sentence": "He earned his diploma after four years of hard work."
+						},
+						{
+							"sentence": "She hung her diploma proudly on the wall.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is a diploma the same as a degree?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"group" : "Education and Learning",
-					"word" : "diploma",
-					"partOfSpeech" : ""
+					"translation": "",
+					"group": "Education and Learning",
+					"word": "diploma",
+					"partOfSpeech": "noun",
+					"definition": "A document showing that you have successfully finished a course of study."
 				},
 				{
-					"romanisation" : "",
-					"word" : "elective",
-					"id" : 3,
-					"partOfSpeech" : "",
-					"translation" : "",
-					"sortOrder" : 1,
-					"group" : "Education and Learning",
-					"sentences" : [
+					"romanisation": "",
+					"word": "elective",
+					"id": 3,
+					"partOfSpeech": "noun",
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Education and Learning",
+					"sentences": [
 						{
-							"sentence" : "She chose French as her elective subject.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"word" : "enrollment",
-					"sentences" : [
+							"sentence": "She chose French as her elective subject.",
+							"translation": ""
+						},
 						{
-							"translation" : "",
-							"sentence" : "Enrollment for the new semester starts next week."
+							"sentence": "I decided to take an elective course in photography.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did he choose music as an elective?",
+							"translation": ""
 						}
 					],
-					"group" : "Education and Learning",
-					"sortOrder" : 1,
-					"id" : 4,
-					"translation" : ""
+					"definition": "A course or subject that a student can choose, not compulsory."
 				},
 				{
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"group" : "Education and Learning",
-					"translation" : "",
-					"id" : 5,
-					"word" : "faculty",
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"word": "enrollment",
+					"sentences": [
 						{
-							"sentence" : "The faculty at the university is highly qualified.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"id" : 6,
-					"sortOrder" : 1,
-					"group" : "Education and Learning",
-					"partOfSpeech" : "",
-					"sentences" : [
+							"translation": "",
+							"sentence": "Enrollment for the new semester starts next week."
+						},
 						{
-							"translation" : "",
-							"sentence" : "We attended a fascinating lecture on ancient history."
+							"sentence": "The university saw a large increase in student enrollment.",
+							"translation": ""
+						},
+						{
+							"sentence": "Have you completed your enrollment yet?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"translation" : "",
-					"word" : "lecture"
+					"group": "Education and Learning",
+					"sortOrder": 1,
+					"id": 4,
+					"translation": "",
+					"definition": "The process of joining or being officially added to a course or institution."
 				},
 				{
-					"romanisation" : "",
-					"id" : 7,
-					"word" : "prerequisite",
-					"group" : "Education and Learning",
-					"sentences" : [
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"group": "Education and Learning",
+					"translation": "",
+					"id": 5,
+					"word": "faculty",
+					"sentences": [
 						{
-							"sentence" : "Biology is a prerequisite for taking the advanced course.",
-							"translation" : ""
+							"sentence": "The faculty at the university is highly qualified.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is part of the Arts and Humanities faculty.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do they hire new faculty members every year?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"sortOrder" : 1,
-					"partOfSpeech" : ""
+					"definition": "The teaching staff of a university or college."
 				},
 				{
-					"sentences" : [
+					"id": 6,
+					"sortOrder": 1,
+					"group": "Education and Learning",
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "She applied for a scholarship to study abroad.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "We attended a fascinating lecture on ancient history."
+						},
+						{
+							"sentence": "The lecture was very long but interesting.",
+							"translation": ""
+						},
+						{
+							"sentence": "Will the professor give another lecture next week?",
+							"translation": ""
 						}
 					],
-					"id" : 8,
-					"sortOrder" : 1,
-					"word" : "scholarship",
-					"translation" : "",
-					"romanisation" : "",
-					"group" : "Education and Learning",
-					"partOfSpeech" : ""
+					"romanisation": "",
+					"translation": "",
+					"word": "lecture",
+					"definition": "A formal talk on a serious subject given to a group, often in a university."
 				},
 				{
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"id" : 9,
-					"group" : "Education and Learning",
-					"translation" : "",
-					"word" : "thesis",
-					"sentences" : [
+					"romanisation": "",
+					"id": 7,
+					"word": "prerequisite",
+					"group": "Education and Learning",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "He is writing his thesis on renewable energy sources."
+							"sentence": "Biology is a prerequisite for taking the advanced course.",
+							"translation": ""
+						},
+						{
+							"sentence": "You must have the basic qualification as a prerequisite for this job.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is this specific class a prerequisite for the next level?",
+							"translation": ""
 						}
 					],
-					"romanisation" : ""
+					"translation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "noun",
+					"definition": "Something that must exist or happen before something else can happen or be done."
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "She applied for a scholarship to study abroad.",
+							"translation": ""
+						},
+						{
+							"sentence": "He received a scholarship to cover his university fees.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did he win the scholarship for high grades?",
+							"translation": ""
+						}
+					],
+					"id": 8,
+					"sortOrder": 1,
+					"word": "scholarship",
+					"translation": "",
+					"romanisation": "",
+					"group": "Education and Learning",
+					"partOfSpeech": "noun",
+					"definition": "An amount of money given to a student to help pay for their education."
+				},
+				{
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"id": 9,
+					"group": "Education and Learning",
+					"translation": "",
+					"word": "thesis",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He is writing his thesis on renewable energy sources."
+						},
+						{
+							"sentence": "Her master's thesis was over 100 pages long.",
+							"translation": ""
+						},
+						{
+							"sentence": "When is the final date for submitting your thesis?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"definition": "A long piece of writing on a particular subject, usually for a university degree."
 				}
 			]
 		},
 		{
-			"tabnumber" : 1,
-			"words" : [
+			"tabNumber": 1,
+			"words": [
 				{
-					"sortOrder" : 1,
-					"id" : 0,
-					"partOfSpeech" : "",
-					"word" : "application",
-					"sentences" : [
+					"sortOrder": 1,
+					"id": 0,
+					"partOfSpeech": "noun",
+					"word": "application",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "He filled out a job application online."
+							"translation": "",
+							"sentence": "He filled out a job application online."
+						},
+						{
+							"sentence": "Your visa application will take three weeks to process.",
+							"translation": ""
+						},
+						{
+							"sentence": "Have you submitted your application for the grant?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"romanisation" : "",
-					"group" : "Work and Employment"
+					"translation": "",
+					"romanisation": "",
+					"group": "Work and Employment",
+					"definition": "A formal request for something, such as a job or permission."
 				},
 				{
-					"romanisation" : "",
-					"group" : "Work and Employment",
-					"word" : "benefits",
-					"translation" : "",
-					"sentences" : [
+					"romanisation": "",
+					"group": "Work and Employment",
+					"word": "benefits",
+					"translation": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The job comes with excellent benefits, including health insurance."
+							"translation": "",
+							"sentence": "The job comes with excellent benefits, including health insurance."
+						},
+						{
+							"sentence": "Retirement benefits are an important consideration when changing jobs.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does the company offer paid vacation benefits?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"id" : 1
+					"sortOrder": 1,
+					"partOfSpeech": "noun",
+					"id": 1,
+					"definition": "Things provided by an employer besides money, such as healthcare or vacation time."
 				},
 				{
-					"translation" : "",
-					"partOfSpeech" : "",
-					"group" : "Work and Employment",
-					"romanisation" : "",
-					"word" : "contract",
-					"id" : 2,
-					"sortOrder" : 1,
-					"sentences" : [
+					"translation": "",
+					"partOfSpeech": "noun",
+					"group": "Work and Employment",
+					"romanisation": "",
+					"word": "contract",
+					"id": 2,
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "She signed a two-year contract with the company."
-						}
-					]
-				},
-				{
-					"word" : "entrepreneur",
-					"romanisation" : "",
-					"id" : 3,
-					"partOfSpeech" : "",
-					"translation" : "",
-					"sortOrder" : 1,
-					"group" : "Work and Employment",
-					"sentences" : [
+							"translation": "",
+							"sentence": "She signed a two-year contract with the company."
+						},
 						{
-							"translation" : "",
-							"sentence" : "As an entrepreneur, he started his own tech company."
-						}
-					]
-				},
-				{
-					"group" : "Work and Employment",
-					"sentences" : [
+							"sentence": "Read the contract carefully before you sign it.",
+							"translation": ""
+						},
 						{
-							"translation" : "",
-							"sentence" : "She is completing an internship at a law firm this summer."
+							"sentence": "Is the contract legally binding?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"word" : "internship",
-					"translation" : "",
-					"id" : 4,
-					"partOfSpeech" : ""
+					"definition": "A written legal agreement between two or more parties."
 				},
 				{
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"word" : "job description",
-					"group" : "Work and Employment",
-					"sortOrder" : 1,
-					"id" : 5,
-					"sentences" : [
+					"word": "entrepreneur",
+					"romanisation": "",
+					"id": 3,
+					"partOfSpeech": "noun",
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Work and Employment",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The job description includes managing a team of five people."
+							"translation": "",
+							"sentence": "As an entrepreneur, he started his own tech company."
+						},
+						{
+							"sentence": "She is a successful young entrepreneur.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do most entrepreneurs face high levels of risk?",
+							"translation": ""
 						}
 					],
-					"translation" : ""
+					"definition": "A person who organizes and operates a business, taking on greater than normal financial risks."
 				},
 				{
-					"sentences" : [
+					"group": "Work and Employment",
+					"sentences": [
 						{
-							"sentence" : "Salary negotiation is a crucial part of the hiring process.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "She is completing an internship at a law firm this summer."
+						},
+						{
+							"sentence": "My internship provided me with valuable work experience.",
+							"translation": ""
+						},
+						{
+							"sentence": "Are you enjoying your internship?",
+							"translation": ""
 						}
 					],
-					"word" : "negotiation",
-					"translation" : "",
-					"id" : 6,
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"group" : "Work and Employment",
-					"romanisation" : ""
+					"romanisation": "",
+					"sortOrder": 1,
+					"word": "internship",
+					"translation": "",
+					"id": 4,
+					"partOfSpeech": "noun",
+					"definition": "A period of time spent training in a job to gain experience."
 				},
 				{
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"word": "job description",
+					"group": "Work and Employment",
+					"sortOrder": 1,
+					"id": 5,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Teaching is a highly respected profession."
+							"translation": "",
+							"sentence": "The job description includes managing a team of five people."
+						},
+						{
+							"sentence": "Make sure your qualifications match the job description.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the job description accurate?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"id" : 7,
-					"group" : "Work and Employment",
-					"word" : "profession",
-					"sortOrder" : 1,
-					"translation" : ""
+					"translation": "",
+					"definition": "A formal account of an employee's responsibilities and tasks."
 				},
 				{
-					"id" : 8,
-					"group" : "Work and Employment",
-					"sortOrder" : 1,
-					"sentences" : [
+					"sentences": [
 						{
-							"sentence" : "The company has a recruitment drive every spring.",
-							"translation" : ""
+							"sentence": "Salary negotiation is a crucial part of the hiring process.",
+							"translation": ""
+						},
+						{
+							"sentence": "The negotiation for the contract took several weeks.",
+							"translation": ""
+						},
+						{
+							"sentence": "Are negotiation skills taught in business school?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"translation" : "",
-					"partOfSpeech" : "",
-					"word" : "recruitment"
+					"word": "negotiation",
+					"translation": "",
+					"id": 6,
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"group": "Work and Employment",
+					"romanisation": "",
+					"definition": "Discussion aimed at reaching an agreement."
 				},
 				{
-					"romanisation" : "",
-					"group" : "Work and Employment",
-					"word" : "resignation",
-					"translation" : "",
-					"id" : 9,
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"sentences": [
 						{
-							"sentence" : "He submitted his resignation letter yesterday.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "Teaching is a highly respected profession."
+						},
+						{
+							"sentence": "He chose engineering as his profession.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is medicine a difficult profession?",
+							"translation": ""
 						}
-					]
+					],
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"id": 7,
+					"group": "Work and Employment",
+					"word": "profession",
+					"sortOrder": 1,
+					"translation": "",
+					"definition": "A paid occupation, especially one that requires special education or training."
+				},
+				{
+					"id": 8,
+					"group": "Work and Employment",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "The company has a recruitment drive every spring.",
+							"translation": ""
+						},
+						{
+							"sentence": "Recruitment of new staff has slowed down this year.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does the recruitment team check references carefully?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "noun",
+					"word": "recruitment",
+					"definition": "The process of finding and hiring new employees."
+				},
+				{
+					"romanisation": "",
+					"group": "Work and Employment",
+					"word": "resignation",
+					"translation": "",
+					"id": 9,
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "He submitted his resignation letter yesterday.",
+							"translation": ""
+						},
+						{
+							"sentence": "Her sudden resignation surprised the whole office.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the manager accept his resignation?",
+							"translation": ""
+						}
+					],
+					"definition": "The act of formally giving up one's job or position."
 				}
 			],
-			"title" : "Work",
-			"sortOrder" : 1
+			"title": "Work",
+			"sortOrder": 1
 		},
 		{
-			"title" : "Travel",
-			"words" : [
+			"title": "Travel",
+			"words": [
 				{
-					"word" : "accommodation",
-					"translation" : "",
-					"group" : "Travel and Tourism",
-					"id" : 0,
-					"partOfSpeech" : "",
-					"sentences" : [
+					"word": "accommodation",
+					"translation": "",
+					"group": "Travel and Tourism",
+					"id": 0,
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "We need to find suitable accommodation for our trip.",
-							"translation" : ""
+							"sentence": "We need to find suitable accommodation for our trip.",
+							"translation": ""
+						},
+						{
+							"sentence": "Hotel accommodation can be expensive during the high season.",
+							"translation": ""
+						},
+						{
+							"sentence": "Have you already booked your accommodation?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"romanisation" : ""
+					"sortOrder": 1,
+					"romanisation": "",
+					"definition": "A place for someone to live or stay."
 				},
 				{
-					"romanisation" : "",
-					"translation" : "",
-					"sortOrder" : 1,
-					"id" : 1,
-					"word" : "itinerary",
-					"group" : "Travel and Tourism",
-					"sentences" : [
+					"romanisation": "",
+					"translation": "",
+					"sortOrder": 1,
+					"id": 1,
+					"word": "itinerary",
+					"group": "Travel and Tourism",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The travel agent provided us with a detailed itinerary."
+							"translation": "",
+							"sentence": "The travel agent provided us with a detailed itinerary."
+						},
+						{
+							"sentence": "We followed the itinerary closely to ensure we saw everything.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we need to finalize the itinerary by Friday?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : ""
+					"partOfSpeech": "noun",
+					"definition": "A detailed plan for a journey, showing places to visit and times."
 				},
 				{
-					"romanisation" : "",
-					"word" : "landmark",
-					"group" : "Travel and Tourism",
-					"sortOrder" : 1,
-					"id" : 2,
-					"sentences" : [
+					"romanisation": "",
+					"word": "landmark",
+					"group": "Travel and Tourism",
+					"sortOrder": 1,
+					"id": 2,
+					"sentences": [
 						{
-							"sentence" : "The Eiffel Tower is a famous landmark in Paris.",
-							"translation" : ""
+							"sentence": "The Eiffel Tower is a famous landmark in Paris.",
+							"translation": ""
+						},
+						{
+							"sentence": "The old church serves as a recognizable landmark in the area.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the guide point out all the local landmarks?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"translation" : ""
+					"partOfSpeech": "noun",
+					"translation": "",
+					"definition": "A recognizable object or feature that marks a location or is famous."
 				},
 				{
-					"translation" : "",
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"translation": "",
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "We made a reservation at a nice restaurant for dinner."
+							"translation": "",
+							"sentence": "We made a reservation at a nice restaurant for dinner."
+						},
+						{
+							"sentence": "Check-in requires a reservation, even for prepaid rooms.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do you have a reservation under your name?",
+							"translation": ""
 						}
 					],
-					"id" : 3,
-					"group" : "Travel and Tourism",
-					"word" : "reservation"
+					"id": 3,
+					"group": "Travel and Tourism",
+					"word": "reservation",
+					"definition": "An arrangement to have something, like a seat or hotel room, kept for you."
 				},
 				{
-					"sentences" : [
+					"sentences": [
 						{
-							"sentence" : "We spent the afternoon sightseeing in the old town.",
-							"translation" : ""
+							"sentence": "We spent the afternoon sightseeing in the old town.",
+							"translation": ""
+						},
+						{
+							"sentence": "Sightseeing is a great way to learn about a new place.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is sightseeing included in the tour package?",
+							"translation": ""
 						}
 					],
-					"group" : "Travel and Tourism",
-					"word" : "sightseeing",
-					"partOfSpeech" : "",
-					"translation" : "",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"id" : 4
+					"group": "Travel and Tourism",
+					"word": "sightseeing",
+					"partOfSpeech": "noun",
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 4,
+					"definition": "The activity of visiting famous or interesting places."
 				},
 				{
-					"romanisation" : "",
-					"word" : "tourist attraction",
-					"id" : 5,
-					"sortOrder" : 1,
-					"group" : "Travel and Tourism",
-					"partOfSpeech" : "",
-					"sentences" : [
+					"romanisation": "",
+					"word": "tourist attraction",
+					"id": 5,
+					"sortOrder": 1,
+					"group": "Travel and Tourism",
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "The Colosseum is a major tourist attraction in Rome.",
-							"translation" : ""
+							"sentence": "The Colosseum is a major tourist attraction in Rome.",
+							"translation": ""
+						},
+						{
+							"sentence": "The city has many popular tourist attractions.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the new museum a major tourist attraction?",
+							"translation": ""
 						}
 					],
-					"translation" : ""
+					"translation": "",
+					"definition": "A place that many tourists visit."
 				},
 				{
-					"sentences" : [
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "We booked our holiday through a travel agency."
+							"translation": "",
+							"sentence": "We booked our holiday through a travel agency."
+						},
+						{
+							"sentence": "A travel agency helps organize flights and accommodation.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do most people still use a travel agency to book trips?",
+							"translation": ""
 						}
 					],
-					"word" : "travel agency",
-					"id" : 6,
-					"group" : "Travel and Tourism",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"translation" : ""
+					"word": "travel agency",
+					"id": 6,
+					"group": "Travel and Tourism",
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"romanisation": "",
+					"translation": "",
+					"definition": "A business that makes arrangements for people planning trips."
 				},
 				{
-					"word" : "traveler",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"translation" : "",
-					"id" : 7,
-					"partOfSpeech" : "",
-					"group" : "Travel and Tourism",
-					"sentences" : [
+					"word": "traveler",
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 7,
+					"partOfSpeech": "noun",
+					"group": "Travel and Tourism",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "She is an experienced traveler who has visited many countries."
-						}
-					]
-				},
-				{
-					"id" : 8,
-					"romanisation" : "",
-					"sentences" : [
+							"translation": "",
+							"sentence": "She is an experienced traveler who has visited many countries."
+						},
 						{
-							"sentence" : "They are planning a two-week vacation to Hawaii.",
-							"translation" : ""
-						}
-					],
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"word" : "vacation",
-					"group" : "Travel and Tourism",
-					"translation" : ""
-				},
-				{
-					"translation" : "",
-					"sortOrder" : 1,
-					"id" : 9,
-					"group" : "Travel and Tourism",
-					"sentences" : [
+							"sentence": "The solo traveler relies on public transport.",
+							"translation": ""
+						},
 						{
-							"translation" : "",
-							"sentence" : "You need a visa to enter the United States."
+							"sentence": "Is he a frequent international traveler?",
+							"translation": ""
 						}
 					],
-					"word" : "visa",
-					"romanisation" : "",
-					"partOfSpeech" : ""
+					"definition": "A person who is traveling or often travels."
+				},
+				{
+					"id": 8,
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "They are planning a two-week vacation to Hawaii.",
+							"translation": ""
+						},
+						{
+							"sentence": "I'm going on vacation next month.",
+							"translation": ""
+						},
+						{
+							"sentence": "Are you taking a vacation soon?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"word": "vacation",
+					"group": "Travel and Tourism",
+					"translation": "",
+					"definition": "A period of time spent away from home or business for rest and pleasure."
+				},
+				{
+					"translation": "",
+					"sortOrder": 1,
+					"id": 9,
+					"group": "Travel and Tourism",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "You need a visa to enter the United States."
+						},
+						{
+							"sentence": "My visa application was approved quickly.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do I need a tourist visa for that country?",
+							"translation": ""
+						}
+					],
+					"word": "visa",
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"definition": "An official document allowing someone to enter, leave, or stay in a country."
 				}
 			],
-			"sortOrder" : 1,
-			"tabnumber" : 2
+			"sortOrder": 1,
+			"tabNumber": 2
 		},
 		{
-			"title" : "Health",
-			"words" : [
+			"title": "Health",
+			"words": [
 				{
-					"sentences" : [
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "He has an allergy to peanuts."
+							"translation": "",
+							"sentence": "He has an allergy to peanuts."
+						},
+						{
+							"sentence": "Severe allergies can require emergency treatment.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do you have an allergy to bee stings?",
+							"translation": ""
 						}
 					],
-					"group" : "Health and Medicine",
-					"romanisation" : "",
-					"id" : 0,
-					"partOfSpeech" : "",
-					"word" : "allergy",
-					"translation" : "",
-					"sortOrder" : 1
+					"group": "Health and Medicine",
+					"romanisation": "",
+					"id": 0,
+					"partOfSpeech": "noun",
+					"word": "allergy",
+					"translation": "",
+					"sortOrder": 1,
+					"definition": "A medical condition where the body has a bad reaction to certain substances."
 				},
 				{
-					"translation" : "",
-					"romanisation" : "",
-					"id" : 1,
-					"sentences" : [
+					"translation": "",
+					"romanisation": "",
+					"id": 1,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The doctor made a quick diagnosis."
+							"translation": "",
+							"sentence": "The doctor made a quick diagnosis."
+						},
+						{
+							"sentence": "Getting a correct diagnosis is the first step toward treatment.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the blood test confirm the diagnosis?",
+							"translation": ""
 						}
 					],
-					"group" : "Health and Medicine",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"word" : "diagnosis"
+					"group": "Health and Medicine",
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"word": "diagnosis",
+					"definition": "The identification of the nature of an illness or other problem."
 				},
 				{
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "She went for a medical examination yesterday.",
-							"translation" : ""
+							"sentence": "She went for a medical examination yesterday.",
+							"translation": ""
+						},
+						{
+							"sentence": "The entrance exam determines who gets into the course.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the doctor complete the examination?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"word" : "examination",
-					"romanisation" : "",
-					"id" : 2,
-					"group" : "Health and Medicine"
+					"translation": "",
+					"word": "examination",
+					"romanisation": "",
+					"id": 2,
+					"group": "Health and Medicine",
+					"definition": "A detailed inspection or check of something, especially a medical one."
 				},
 				{
-					"romanisation" : "",
-					"group" : "Health and Medicine",
-					"sentences" : [
+					"romanisation": "",
+					"group": "Health and Medicine",
+					"sentences": [
 						{
-							"sentence" : "Access to affordable healthcare is essential.",
-							"translation" : ""
+							"sentence": "Access to affordable healthcare is essential.",
+							"translation": ""
+						},
+						{
+							"sentence": "Many countries offer free public healthcare.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is private healthcare always better than public?",
+							"translation": ""
 						}
 					],
-					"word" : "healthcare",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"id" : 3,
-					"translation" : ""
+					"word": "healthcare",
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"id": 3,
+					"translation": "",
+					"definition": "The organizing and providing of medical care."
 				},
 				{
-					"word" : "immune system",
-					"translation" : "",
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"id" : 4,
-					"group" : "Health and Medicine",
-					"sentences" : [
+					"word": "immune system",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"id": 4,
+					"group": "Health and Medicine",
+					"sentences": [
 						{
-							"sentence" : "A strong immune system helps fight off illnesses.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"word" : "medication",
-					"sortOrder" : 1,
-					"id" : 5,
-					"translation" : "",
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"group" : "Health and Medicine",
-					"sentences" : [
+							"sentence": "A strong immune system helps fight off illnesses.",
+							"translation": ""
+						},
 						{
-							"sentence" : "She needs to take her medication twice a day.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"sortOrder" : 1,
-					"word" : "nutrition",
-					"id" : 6,
-					"sentences" : [
+							"sentence": "Eating well is crucial for supporting your immune system.",
+							"translation": ""
+						},
 						{
-							"translation" : "",
-							"sentence" : "Good nutrition is vital for maintaining health."
+							"sentence": "Can stress weaken the immune system?",
+							"translation": ""
 						}
 					],
-					"group" : "Health and Medicine",
-					"partOfSpeech" : "",
-					"translation" : "",
-					"romanisation" : ""
+					"definition": "The body's system that defends against diseases and infections."
 				},
 				{
-					"sortOrder" : 1,
-					"group" : "Health and Medicine",
-					"translation" : "",
-					"word" : "prescription",
-					"partOfSpeech" : "",
-					"id" : 7,
-					"sentences" : [
+					"word": "medication",
+					"sortOrder": 1,
+					"id": 5,
+					"translation": "",
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"group": "Health and Medicine",
+					"sentences": [
 						{
-							"sentence" : "The doctor gave me a prescription for antibiotics.",
-							"translation" : ""
+							"sentence": "She needs to take her medication twice a day.",
+							"translation": ""
+						},
+						{
+							"sentence": "The doctor adjusted the dosage of the medication.",
+							"translation": ""
+						},
+						{
+							"sentence": "Should you take this medication with food?",
+							"translation": ""
 						}
 					],
-					"romanisation" : ""
+					"definition": "A medicine or drug taken to treat an illness."
 				},
 				{
-					"sortOrder" : 1,
-					"sentences" : [
+					"sortOrder": 1,
+					"word": "nutrition",
+					"id": 6,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "He is making a speedy recovery after the surgery."
+							"translation": "",
+							"sentence": "Good nutrition is vital for maintaining health."
+						},
+						{
+							"sentence": "Learning about nutrition helps you make healthier food choices.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is proper nutrition important for recovery from illness?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"word" : "recovery",
-					"romanisation" : "",
-					"translation" : "",
-					"group" : "Health and Medicine",
-					"id" : 8
+					"group": "Health and Medicine",
+					"partOfSpeech": "noun",
+					"translation": "",
+					"romanisation": "",
+					"definition": "The process of getting the food necessary for health and growth."
 				},
 				{
-					"romanisation" : "",
-					"id" : 9,
-					"partOfSpeech" : "",
-					"group" : "Health and Medicine",
-					"translation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"sortOrder": 1,
+					"group": "Health and Medicine",
+					"translation": "",
+					"word": "prescription",
+					"partOfSpeech": "noun",
+					"id": 7,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Children should receive their vaccinations on time."
+							"sentence": "The doctor gave me a prescription for antibiotics.",
+							"translation": ""
+						},
+						{
+							"sentence": "You need a valid prescription to buy this strong painkiller.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did you remember to pick up your prescription?",
+							"translation": ""
 						}
 					],
-					"word" : "vaccination"
+					"romanisation": "",
+					"definition": "A written note from a doctor allowing you to get a certain medicine."
+				},
+				{
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He is making a speedy recovery after the surgery."
+						},
+						{
+							"sentence": "Her recovery from the flu was slow but steady.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does his full recovery depend on rest and therapy?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "noun",
+					"word": "recovery",
+					"romanisation": "",
+					"translation": "",
+					"group": "Health and Medicine",
+					"id": 8,
+					"definition": "The process of getting better after an illness or injury."
+				},
+				{
+					"romanisation": "",
+					"id": 9,
+					"partOfSpeech": "noun",
+					"group": "Health and Medicine",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Children should receive their vaccinations on time."
+						},
+						{
+							"sentence": "The clinic is offering free flu vaccinations.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did you get your vaccination before traveling?",
+							"translation": ""
+						}
+					],
+					"word": "vaccination",
+					"definition": "An injection of a substance to protect against a disease."
 				}
 			],
-			"sortOrder" : 1,
-			"tabnumber" : 1
+			"sortOrder": 1,
+			"tabNumber": 1
 		},
 		{
-			"tabnumber" : 2,
-			"sortOrder" : 1,
-			"words" : [
+			"tabNumber": 2,
+			"sortOrder": 1,
+			"title": "Entertainment",
+			"words": [
 				{
-					"id" : 0,
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"sentences" : [
+					"id": 0,
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Hiking is a popular outdoor activity."
+							"translation": "",
+							"sentence": "Hiking is a popular outdoor activity."
+						},
+						{
+							"sentence": "We planned a fun activity for the children's party.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is physical activity good for mental health?",
+							"translation": ""
 						}
 					],
-					"word" : "activity",
-					"translation" : "",
-					"sortOrder" : 1,
-					"group" : "Leisure and Entertainment"
+					"word": "activity",
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Leisure and Entertainment",
+					"definition": "Something that you do, often for enjoyment or recreation."
 				},
 				{
-					"word" : "concert",
-					"group" : "Leisure and Entertainment",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"translation" : "",
-					"sentences" : [
+					"word": "concert",
+					"group": "Leisure and Entertainment",
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "They went to a rock concert last weekend."
+							"translation": "",
+							"sentence": "They went to a rock concert last weekend."
+						},
+						{
+							"sentence": "The orchestra gave a wonderful concert in the park.",
+							"translation": ""
+						},
+						{
+							"sentence": "Are tickets for the concert still available?",
+							"translation": ""
 						}
 					],
-					"id" : 1,
-					"romanisation" : ""
+					"id": 1,
+					"romanisation": "",
+					"definition": "A public performance of music."
 				},
 				{
-					"group" : "Leisure and Entertainment",
-					"translation" : "",
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"word" : "entertainment",
-					"id" : 2,
-					"partOfSpeech" : "",
-					"sentences" : [
+					"group": "Leisure and Entertainment",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "entertainment",
+					"id": 2,
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Movies provide great entertainment for everyone."
-						}
-					]
-				},
-				{
-					"sortOrder" : 1,
-					"translation" : "",
-					"partOfSpeech" : "",
-					"id" : 3,
-					"word" : "hobby",
-					"romanisation" : "",
-					"group" : "Leisure and Entertainment",
-					"sentences" : [
+							"translation": "",
+							"sentence": "Movies provide great entertainment for everyone."
+						},
 						{
-							"sentence" : "Her favorite hobby is painting.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"sentences" : [
+							"sentence": "They offer various forms of entertainment at the resort.",
+							"translation": ""
+						},
 						{
-							"sentence" : "Reading is one of her favorite leisure activities.",
-							"translation" : ""
+							"sentence": "Is live music considered good family entertainment?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"group" : "Leisure and Entertainment",
-					"translation" : "",
-					"word" : "leisure",
-					"id" : 4
+					"definition": "Anything that provides amusement or enjoyment."
 				},
 				{
-					"partOfSpeech" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "noun",
+					"id": 3,
+					"word": "hobby",
+					"romanisation": "",
+					"group": "Leisure and Entertainment",
+					"sentences": [
 						{
-							"sentence" : "They visited the art museum on their vacation.",
-							"translation" : ""
+							"sentence": "Her favorite hobby is painting.",
+							"translation": ""
+						},
+						{
+							"sentence": "He picked up gardening as a new hobby.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do you have any hobbies that involve being outdoors?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"word" : "museum",
-					"translation" : "",
-					"romanisation" : "",
-					"id" : 5,
-					"group" : "Leisure and Entertainment"
+					"definition": "An activity done regularly in one's free time for pleasure."
 				},
 				{
-					"id" : 6,
-					"translation" : "",
-					"word" : "performance",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"sortOrder": 1,
+					"romanisation": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The performance was outstanding and received a standing ovation."
+							"sentence": "Reading is one of her favorite leisure activities.",
+							"translation": ""
+						},
+						{
+							"sentence": "He enjoys his leisure time by the beach.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does the hotel have many leisure facilities?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"group" : "Leisure and Entertainment"
+					"partOfSpeech": "noun",
+					"group": "Leisure and Entertainment",
+					"translation": "",
+					"word": "leisure",
+					"id": 4,
+					"definition": "Time when you are not working or doing duties; free time."
 				},
 				{
-					"id" : 7,
-					"partOfSpeech" : "",
-					"translation" : "",
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "The park is a great place for recreation.",
-							"translation" : ""
+							"sentence": "They visited the art museum on their vacation.",
+							"translation": ""
+						},
+						{
+							"sentence": "The museum has a vast collection of ancient artifacts.",
+							"translation": ""
+						},
+						{
+							"sentence": "Are there any interactive exhibits at the museum?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"word" : "recreation",
-					"romanisation" : "",
-					"group" : "Leisure and Entertainment"
+					"sortOrder": 1,
+					"word": "museum",
+					"translation": "",
+					"romanisation": "",
+					"id": 5,
+					"group": "Leisure and Entertainment",
+					"definition": "A building where objects of historical, artistic, or scientific interest are stored and displayed."
 				},
 				{
-					"word" : "theatre",
-					"translation" : "",
-					"sentences" : [
+					"id": 6,
+					"translation": "",
+					"word": "performance",
+					"romanisation": "",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "They went to the theatre to watch a play."
+							"translation": "",
+							"sentence": "The performance was outstanding and received a standing ovation."
+						},
+						{
+							"sentence": "Her dance performance was the highlight of the evening.",
+							"translation": ""
+						},
+						{
+							"sentence": "Will the performance start on time?",
+							"translation": ""
 						}
 					],
-					"id" : 8,
-					"group" : "Leisure and Entertainment",
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"partOfSpeech" : ""
+					"partOfSpeech": "noun",
+					"group": "Leisure and Entertainment",
+					"definition": "The act of performing a play, piece of music, or other work of entertainment."
 				},
 				{
-					"id" : 9,
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"group" : "Leisure and Entertainment",
-					"sortOrder" : 1,
-					"sentences" : [
+					"id": 7,
+					"partOfSpeech": "noun",
+					"translation": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Tourism is an important industry in many countries."
+							"sentence": "The park is a great place for recreation.",
+							"translation": ""
+						},
+						{
+							"sentence": "Recreation centers offer various sports activities.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is outdoor recreation a popular pastime here?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"word" : "tourism"
-				}
-			],
-			"title" : "Entertainment"
-		},
-		{
-			"tabnumber" : 3,
-			"sortOrder" : 1,
-			"title" : "Technology",
-			"words" : [
+					"sortOrder": 1,
+					"word": "recreation",
+					"romanisation": "",
+					"group": "Leisure and Entertainment",
+					"definition": "Activity done for enjoyment when one is not working."
+				},
 				{
-					"id" : 0,
-					"translation" : "",
-					"word" : "application",
-					"group" : "Technology and Innovation",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"word": "theatre",
+					"translation": "",
+					"sentences": [
 						{
-							"sentence" : "There is a new application for managing tasks.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "They went to the theatre to watch a play."
+						},
+						{
+							"sentence": "The old theatre has been beautifully restored.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do they perform musicals at this theatre?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : ""
+					"id": 8,
+					"group": "Leisure and Entertainment",
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"definition": "A building where plays and other performances are held."
 				},
 				{
-					"sortOrder" : 1,
-					"word" : "artificial intelligence",
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"group" : "Technology and Innovation",
-					"id" : 1,
-					"translation" : "",
-					"sentences" : [
+					"id": 9,
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"group": "Leisure and Entertainment",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Artificial intelligence is transforming many industries."
-						}
-					]
-				},
-				{
-					"sentences" : [
+							"translation": "",
+							"sentence": "Tourism is an important industry in many countries."
+						},
 						{
-							"sentence" : "Digital marketing is essential for modern businesses.",
-							"translation" : ""
-						}
-					],
-					"romanisation" : "",
-					"translation" : "",
-					"group" : "Technology and Innovation",
-					"word" : "digital",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"id" : 2
-				},
-				{
-					"partOfSpeech" : "",
-					"translation" : "",
-					"group" : "Technology and Innovation",
-					"romanisation" : "",
-					"id" : 3,
-					"word" : "innovation",
-					"sentences" : [
+							"sentence": "The city's economy relies heavily on tourism.",
+							"translation": ""
+						},
 						{
-							"sentence" : "Innovation drives progress in technology.",
-							"translation" : ""
+							"sentence": "Is sustainable tourism a growing concern?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1
-				},
-				{
-					"partOfSpeech" : "",
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "The invention of the smartphone changed how we communicate."
-						}
-					],
-					"group" : "Technology and Innovation",
-					"sortOrder" : 1,
-					"translation" : "",
-					"word" : "invention",
-					"romanisation" : "",
-					"id" : 4
-				},
-				{
-					"translation" : "",
-					"sentences" : [
-						{
-							"sentence" : "She is learning programming to develop her own software.",
-							"translation" : ""
-						}
-					],
-					"group" : "Technology and Innovation",
-					"word" : "programming",
-					"partOfSpeech" : "",
-					"id" : 5,
-					"sortOrder" : 1,
-					"romanisation" : ""
-				},
-				{
-					"partOfSpeech" : "",
-					"group" : "Technology and Innovation",
-					"sortOrder" : 1,
-					"id" : 6,
-					"romanisation" : "",
-					"word" : "software",
-					"sentences" : [
-						{
-							"sentence" : "This software helps to manage your tasks efficiently.",
-							"translation" : ""
-						}
-					],
-					"translation" : ""
-				},
-				{
-					"translation" : "",
-					"partOfSpeech" : "",
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "Advancements in technology have made our lives easier."
-						}
-					],
-					"sortOrder" : 1,
-					"id" : 7,
-					"group" : "Technology and Innovation",
-					"romanisation" : "",
-					"word" : "technology"
-				},
-				{
-					"sortOrder" : 1,
-					"translation" : "",
-					"romanisation" : "",
-					"group" : "Technology and Innovation",
-					"partOfSpeech" : "",
-					"word" : "user interface",
-					"id" : 8,
-					"sentences" : [
-						{
-							"sentence" : "A good user interface improves the user experience.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"group" : "Technology and Innovation",
-					"word" : "virtual reality",
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"id" : 9,
-					"translation" : "",
-					"sentences" : [
-						{
-							"sentence" : "Virtual reality games are becoming more popular.",
-							"translation" : ""
-						}
-					],
-					"romanisation" : ""
+					"translation": "",
+					"word": "tourism",
+					"definition": "The business of providing services for people traveling for pleasure."
 				}
 			]
 		},
 		{
-			"tabnumber" : 3,
-			"title" : "Nature",
-			"sortOrder" : 1,
-			"words" : [
+			"tabNumber": 3,
+			"sortOrder": 1,
+			"title": "Technology",
+			"words": [
 				{
-					"group" : "Environment and Nature",
-					"sentences" : [
+					"id": 0,
+					"translation": "",
+					"word": "application",
+					"group": "Technology and Innovation",
+					"romanisation": "",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"sentence" : "Climate change is a global concern that affects everyone.",
-							"translation" : ""
+							"sentence": "There is a new application for managing tasks.",
+							"translation": ""
+						},
+						{
+							"sentence": "She submitted her application for a university course.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does this application work on all mobile devices?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"id" : 0,
-					"sortOrder" : 1,
-					"word" : "climate change",
-					"partOfSpeech" : "",
-					"romanisation" : ""
+					"partOfSpeech": "noun",
+					"definition": "A computer program designed for a specific task; or a formal request for something."
 				},
 				{
-					"partOfSpeech" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"word": "artificial intelligence",
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"group": "Technology and Innovation",
+					"id": 1,
+					"translation": "",
+					"sentences": [
 						{
-							"sentence" : "Conservation efforts are crucial for protecting wildlife.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "Artificial intelligence is transforming many industries."
+						},
+						{
+							"sentence": "Many new tools rely on artificial intelligence.",
+							"translation": ""
+						},
+						{
+							"sentence": "Will artificial intelligence change human communication?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"group" : "Environment and Nature",
-					"word" : "conservation",
-					"sortOrder" : 1,
-					"id" : 1,
-					"translation" : ""
+					"definition": "The development of computer systems able to perform tasks normally requiring human intelligence."
 				},
 				{
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"word" : "deforestation",
-					"sentences" : [
+					"sentences": [
 						{
-							"sentence" : "Deforestation has a major impact on the environment.",
-							"translation" : ""
+							"sentence": "Digital marketing is essential for modern businesses.",
+							"translation": ""
+						},
+						{
+							"sentence": "The move toward a digital society is accelerating.",
+							"translation": ""
+						},
+						{
+							"sentence": "Are all books now available in a digital format?",
+							"translation": ""
 						}
 					],
-					"group" : "Environment and Nature",
-					"sortOrder" : 1,
-					"translation" : "",
-					"id" : 2
+					"romanisation": "",
+					"translation": "",
+					"group": "Technology and Innovation",
+					"word": "digital",
+					"partOfSpeech": "adjective",
+					"sortOrder": 1,
+					"id": 2,
+					"definition": "Relating to electronic technology, especially the internet and computer systems."
 				},
 				{
-					"partOfSpeech" : "",
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"translation": "",
+					"group": "Technology and Innovation",
+					"romanisation": "",
+					"id": 3,
+					"word": "innovation",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The rainforest is a rich and diverse ecosystem."
+							"sentence": "Innovation drives progress in technology.",
+							"translation": ""
+						},
+						{
+							"sentence": "The company is known for its product innovation.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is scientific innovation important for society?",
+							"translation": ""
 						}
 					],
-					"word" : "ecosystem",
-					"romanisation" : "",
-					"translation" : "",
-					"group" : "Environment and Nature",
-					"sortOrder" : 1,
-					"id" : 3
+					"sortOrder": 1,
+					"definition": "A new idea, method, or product."
 				},
 				{
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Pandas are considered an endangered species."
+							"translation": "",
+							"sentence": "The invention of the smartphone changed how we communicate."
+						},
+						{
+							"sentence": "The steam engine was a major invention of the 18th century.",
+							"translation": ""
+						},
+						{
+							"sentence": "Was the telephone a revolutionary invention?",
+							"translation": ""
 						}
 					],
-					"word" : "endangered species",
-					"translation" : "",
-					"group" : "Environment and Nature",
-					"sortOrder" : 1,
-					"id" : 4,
-					"romanisation" : "",
-					"partOfSpeech" : ""
+					"group": "Technology and Innovation",
+					"sortOrder": 1,
+					"translation": "",
+					"word": "invention",
+					"romanisation": "",
+					"id": 4,
+					"definition": "A new device, method, or idea developed for the first time."
 				},
 				{
-					"word" : "environmental protection",
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"group" : "Environment and Nature",
-					"sentences" : [
+					"translation": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Environmental protection laws help reduce pollution."
+							"sentence": "She is learning programming to develop her own software.",
+							"translation": ""
+						},
+						{
+							"sentence": "Programming skills are highly valued in the tech industry.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is computer programming a challenging subject to learn?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"id" : 5,
-					"sortOrder" : 1
+					"group": "Technology and Innovation",
+					"word": "programming",
+					"partOfSpeech": "noun",
+					"id": 5,
+					"sortOrder": 1,
+					"romanisation": "",
+					"definition": "The process of writing computer programs."
 				},
 				{
-					"group" : "Environment and Nature",
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"id" : 6,
-					"romanisation" : "",
-					"translation" : "",
-					"word" : "pollution",
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"group": "Technology and Innovation",
+					"sortOrder": 1,
+					"id": 6,
+					"romanisation": "",
+					"word": "software",
+					"sentences": [
 						{
-							"sentence" : "Air pollution is a major problem in many cities.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"sentences" : [
+							"sentence": "This software helps to manage your tasks efficiently.",
+							"translation": ""
+						},
 						{
-							"translation" : "",
-							"sentence" : "Recycling helps to reduce waste and conserve resources."
-						}
-					],
-					"id" : 7,
-					"group" : "Environment and Nature",
-					"translation" : "",
-					"sortOrder" : 1,
-					"word" : "recycling",
-					"romanisation" : "",
-					"partOfSpeech" : ""
-				},
-				{
-					"id" : 8,
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"translation" : "",
-					"group" : "Environment and Nature",
-					"partOfSpeech" : "",
-					"sentences" : [
+							"sentence": "He installed the new operating system software yesterday.",
+							"translation": ""
+						},
 						{
-							"sentence" : "Solar and wind power are forms of renewable energy.",
-							"translation" : ""
+							"sentence": "Is this a free software package?",
+							"translation": ""
 						}
 					],
-					"word" : "renewable energy"
+					"translation": "",
+					"definition": "The programs and operating information used by a computer."
 				},
 				{
-					"partOfSpeech" : "",
-					"group" : "Environment and Nature",
-					"romanisation" : "",
-					"sentences" : [
+					"translation": "",
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "Sustainability is key to preserving the planet for future generations.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "Advancements in technology have made our lives easier."
+						},
+						{
+							"sentence": "She works in the field of information technology.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is new technology always better than old technology?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"id" : 9,
-					"word" : "sustainability",
-					"translation" : ""
+					"sortOrder": 1,
+					"id": 7,
+					"group": "Technology and Innovation",
+					"romanisation": "",
+					"word": "technology",
+					"definition": "The application of scientific knowledge for practical purposes."
+				},
+				{
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": "",
+					"group": "Technology and Innovation",
+					"partOfSpeech": "noun",
+					"word": "user interface",
+					"id": 8,
+					"sentences": [
+						{
+							"sentence": "A good user interface improves the user experience.",
+							"translation": ""
+						},
+						{
+							"sentence": "The new software has a clean and intuitive user interface.",
+							"translation": ""
+						},
+						{
+							"sentence": "Should the user interface be easy to navigate?",
+							"translation": ""
+						}
+					],
+					"definition": "The means by which a user interacts with a computer or device."
+				},
+				{
+					"group": "Technology and Innovation",
+					"word": "virtual reality",
+					"sortOrder": 1,
+					"partOfSpeech": "noun",
+					"id": 9,
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "Virtual reality games are becoming more popular.",
+							"translation": ""
+						},
+						{
+							"sentence": "Virtual reality is used for training in some professions.",
+							"translation": ""
+						},
+						{
+							"sentence": "Will virtual reality fully replace physical travel one day?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"definition": "Computer-generated environments that look and feel real to the user."
 				}
 			]
 		},
 		{
-			"tabnumber" : 3,
-			"words" : [
+			"tabNumber": 3,
+			"title": "Nature",
+			"sortOrder": 1,
+			"words": [
 				{
-					"translation" : "",
-					"romanisation" : "",
-					"word" : "community service",
-					"sortOrder" : 1,
-					"sentences" : [
+					"group": "Environment and Nature",
+					"sentences": [
 						{
-							"sentence" : "He participates in community service every weekend.",
-							"translation" : ""
+							"sentence": "Climate change is a global concern that affects everyone.",
+							"translation": ""
+						},
+						{
+							"sentence": "We must adapt our policies to combat climate change.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can we reverse the effects of climate change?",
+							"translation": ""
 						}
 					],
-					"id" : 0,
-					"partOfSpeech" : "",
-					"group" : "Social Issues and Justice"
+					"translation": "",
+					"id": 0,
+					"sortOrder": 1,
+					"word": "climate change",
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"definition": "Long-term shifts in temperatures and weather patterns."
 				},
 				{
-					"partOfSpeech" : "",
-					"id" : 1,
-					"romanisation" : "",
-					"word" : "equality",
-					"translation" : "",
-					"sortOrder" : 1,
-					"group" : "Social Issues and Justice",
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "They are fighting for gender equality in the workplace.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"sortOrder" : 1,
-					"group" : "Social Issues and Justice",
-					"word" : "human rights",
-					"romanisation" : "",
-					"sentences" : [
+							"sentence": "Conservation efforts are crucial for protecting wildlife.",
+							"translation": ""
+						},
 						{
-							"sentence" : "Human rights should be protected by all governments.",
-							"translation" : ""
+							"sentence": "Water conservation is vital in dry climates.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does the local conservation group need more volunteers?",
+							"translation": ""
 						}
 					],
-					"id" : 2,
-					"translation" : "",
-					"partOfSpeech" : ""
+					"romanisation": "",
+					"group": "Environment and Nature",
+					"word": "conservation",
+					"sortOrder": 1,
+					"id": 1,
+					"translation": "",
+					"definition": "The protection of animals, plants, and natural resources."
 				},
 				{
-					"romanisation" : "",
-					"word" : "justice",
-					"sortOrder" : 1,
-					"id" : 3,
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"word": "deforestation",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "They demand justice for the victims of the crime."
+							"sentence": "Deforestation has a major impact on the environment.",
+							"translation": ""
+						},
+						{
+							"sentence": "Illegal deforestation is a significant threat to rainforests.",
+							"translation": ""
+						},
+						{
+							"sentence": "What can be done to stop deforestation in the Amazon?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"partOfSpeech" : "",
-					"group" : "Social Issues and Justice"
+					"group": "Environment and Nature",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 2,
+					"definition": "The action of clearing a wide area of trees."
 				},
 				{
-					"id" : 4,
-					"word" : "legislation",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"translation" : "",
-					"partOfSpeech" : "",
-					"group" : "Social Issues and Justice",
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "New legislation was introduced to improve environmental standards.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"romanisation" : "",
-					"word" : "protest",
-					"group" : "Social Issues and Justice",
-					"id" : 5,
-					"translation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+							"translation": "",
+							"sentence": "The rainforest is a rich and diverse ecosystem."
+						},
 						{
-							"translation" : "",
-							"sentence" : "The citizens organized a protest against the new law."
+							"sentence": "Maintaining a healthy ecosystem is essential for all life.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can pollution damage the local river ecosystem?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : ""
+					"word": "ecosystem",
+					"romanisation": "",
+					"translation": "",
+					"group": "Environment and Nature",
+					"sortOrder": 1,
+					"id": 3,
+					"definition": "A biological community of interacting organisms and their physical environment."
 				},
 				{
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"word" : "reform",
-					"translation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Education reform is necessary to improve school systems."
+							"translation": "",
+							"sentence": "Pandas are considered an endangered species."
+						},
+						{
+							"sentence": "Many conservation groups work to protect endangered species.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the blue whale still an endangered species?",
+							"translation": ""
 						}
 					],
-					"id" : 6,
-					"group" : "Social Issues and Justice"
+					"word": "endangered species",
+					"translation": "",
+					"group": "Environment and Nature",
+					"sortOrder": 1,
+					"id": 4,
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"definition": "A type of plant or animal that is at risk of becoming extinct."
 				},
 				{
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"translation" : "",
-					"id" : 7,
-					"word" : "social justice",
-					"group" : "Social Issues and Justice",
-					"partOfSpeech" : "",
-					"sentences" : [
+					"word": "environmental protection",
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"group": "Environment and Nature",
+					"sentences": [
 						{
-							"sentence" : "They work towards achieving social justice for all.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"translation" : "",
-					"sentences" : [
+							"translation": "",
+							"sentence": "Environmental protection laws help reduce pollution."
+						},
 						{
-							"translation" : "",
-							"sentence" : "She volunteers at a local shelter every month."
+							"sentence": "Funding for environmental protection has increased recently.",
+							"translation": ""
+						},
+						{
+							"sentence": "Should environmental protection be a priority for businesses?",
+							"translation": ""
 						}
 					],
-					"word" : "volunteer",
-					"sortOrder" : 1,
-					"id" : 8,
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"group" : "Social Issues and Justice"
+					"translation": "",
+					"id": 5,
+					"sortOrder": 1,
+					"definition": "Activities designed to preserve and maintain the quality of the natural world."
 				},
 				{
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"translation" : "",
-					"romanisation" : "",
-					"id" : 9,
-					"sentences" : [
+					"group": "Environment and Nature",
+					"sortOrder": 1,
+					"partOfSpeech": "noun",
+					"id": 6,
+					"romanisation": "",
+					"translation": "",
+					"word": "pollution",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Welfare programs provide support for those in need."
+							"sentence": "Air pollution is a major problem in many cities.",
+							"translation": ""
+						},
+						{
+							"sentence": "They are working to reduce water pollution in the river.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does noise pollution affect sleep quality?",
+							"translation": ""
 						}
 					],
-					"group" : "Social Issues and Justice",
-					"word" : "welfare"
-				}
-			],
-			"title" : "Social Issues",
-			"sortOrder" : 1
-		},
-		{
-			"title" : "Relationships",
-			"words" : [
+					"definition": "The presence of harmful substances in the environment."
+				},
 				{
-					"id" : 0,
-					"sentences" : [
+					"sentences": [
 						{
-							"sentence" : "She met him at a party and they became acquaintances.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "Recycling helps to reduce waste and conserve resources."
+						},
+						{
+							"sentence": "The city has a new recycling program.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is recycling mandatory in your town?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"translation" : "",
-					"romanisation" : "",
-					"group" : "Relationships and Communication",
-					"partOfSpeech" : "",
-					"word" : "acquaintance"
+					"id": 7,
+					"group": "Environment and Nature",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "recycling",
+					"romanisation": "",
+					"partOfSpeech": "noun",
+					"definition": "The process of converting waste into reusable materials."
 				},
 				{
-					"id" : 1,
-					"group" : "Relationships and Communication",
-					"partOfSpeech" : "",
-					"sentences" : [
+					"id": 8,
+					"sortOrder": 1,
+					"romanisation": "",
+					"translation": "",
+					"group": "Environment and Nature",
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "There is a strong bond between the two sisters."
+							"sentence": "Solar and wind power are forms of renewable energy.",
+							"translation": ""
+						},
+						{
+							"sentence": "Investing in renewable energy is crucial for the planet.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the government promoting renewable energy sources?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"word" : "bond",
-					"sortOrder" : 1,
-					"translation" : ""
+					"word": "renewable energy",
+					"definition": "Energy from sources that are naturally replenished (like solar or wind power)."
 				},
 				{
-					"group" : "Relationships and Communication",
-					"word" : "communication",
-					"partOfSpeech" : "",
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"group": "Environment and Nature",
+					"romanisation": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Effective communication is essential for a healthy relationship."
+							"sentence": "Sustainability is key to preserving the planet for future generations.",
+							"translation": ""
+						},
+						{
+							"sentence": "The company adopted a focus on environmental sustainability.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can technology improve sustainability practices?",
+							"translation": ""
 						}
 					],
-					"id" : 2,
-					"translation" : "",
-					"sortOrder" : 1,
-					"romanisation" : ""
-				},
-				{
-					"group" : "Relationships and Communication",
-					"translation" : "",
-					"sentences" : [
-						{
-							"sentence" : "Empathy is important for understanding others' feelings.",
-							"translation" : ""
-						}
-					],
-					"partOfSpeech" : "",
-					"word" : "empathy",
-					"id" : 3,
-					"romanisation" : "",
-					"sortOrder" : 1
-				},
-				{
-					"id" : 4,
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "Social interaction is crucial for mental health."
-						}
-					],
-					"word" : "interaction",
-					"translation" : "",
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"group" : "Relationships and Communication"
-				},
-				{
-					"partOfSpeech" : "",
-					"word" : "negotiation",
-					"id" : 5,
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "Negotiation skills are important in business."
-						}
-					],
-					"translation" : "",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"group" : "Relationships and Communication"
-				},
-				{
-					"id" : 6,
-					"romanisation" : "",
-					"translation" : "",
-					"group" : "Relationships and Communication",
-					"word" : "networking",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "Networking can help you find new job opportunities."
-						}
-					]
-				},
-				{
-					"word" : "relationship",
-					"partOfSpeech" : "",
-					"translation" : "",
-					"sentences" : [
-						{
-							"sentence" : "They have a close and trusting relationship.",
-							"translation" : ""
-						}
-					],
-					"group" : "Relationships and Communication",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"id" : 7
-				},
-				{
-					"sortOrder" : 1,
-					"word" : "social media",
-					"romanisation" : "",
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "She uses social media to keep in touch with friends."
-						}
-					],
-					"group" : "Relationships and Communication",
-					"id" : 8,
-					"translation" : "",
-					"partOfSpeech" : ""
-				},
-				{
-					"romanisation" : "",
-					"id" : 9,
-					"partOfSpeech" : "",
-					"word" : "trust",
-					"sortOrder" : 1,
-					"translation" : "",
-					"group" : "Relationships and Communication",
-					"sentences" : [
-						{
-							"sentence" : "Trust is the foundation of any strong relationship.",
-							"translation" : ""
-						}
-					]
-				}
-			],
-			"sortOrder" : 1,
-			"tabnumber" : 2
-		},
-		{
-			"words" : [
-				{
-					"sentences" : [
-						{
-							"sentence" : "Her adaptability makes her an excellent team player.",
-							"translation" : ""
-						}
-					],
-					"sortOrder" : 1,
-					"id" : 0,
-					"group" : "Personal Qualities and Emotions",
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"word" : "adaptability",
-					"translation" : ""
-				},
-				{
-					"translation" : "",
-					"sortOrder" : 1,
-					"id" : 1,
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"sentences" : [
-						{
-							"sentence" : "His ambition drives him to achieve his goals.",
-							"translation" : ""
-						}
-					],
-					"group" : "Personal Qualities and Emotions",
-					"word" : "ambition"
-				},
-				{
-					"group" : "Personal Qualities and Emotions",
-					"translation" : "",
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"id" : 2,
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "She feels anxiety before important exams."
-						}
-					],
-					"word" : "anxiety",
-					"sortOrder" : 1
-				},
-				{
-					"sortOrder" : 1,
-					"translation" : "",
-					"group" : "Personal Qualities and Emotions",
-					"word" : "confidence",
-					"id" : 3,
-					"romanisation" : "",
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "He spoke with confidence during the presentation."
-						}
-					],
-					"partOfSpeech" : ""
-				},
-				{
-					"sentences" : [
-						{
-							"sentence" : "Her curiosity led her to explore new cultures.",
-							"translation" : ""
-						}
-					],
-					"translation" : "",
-					"partOfSpeech" : "",
-					"id" : 4,
-					"romanisation" : "",
-					"word" : "curiosity",
-					"sortOrder" : 1,
-					"group" : "Personal Qualities and Emotions"
-				},
-				{
-					"word" : "enthusiasm",
-					"romanisation" : "",
-					"group" : "Personal Qualities and Emotions",
-					"translation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "They showed great enthusiasm for the new project."
-						}
-					],
-					"id" : 5,
-					"partOfSpeech" : ""
-				},
-				{
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"id" : 6,
-					"translation" : "",
-					"word" : "gratitude",
-					"group" : "Personal Qualities and Emotions",
-					"sentences" : [
-						{
-							"sentence" : "She expressed her gratitude for the help she received.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"translation" : "",
-					"romanisation" : "",
-					"group" : "Personal Qualities and Emotions",
-					"sentences" : [
-						{
-							"sentence" : "He values his independence and prefers to work alone.",
-							"translation" : ""
-						}
-					],
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"word" : "independence",
-					"id" : 7
-				},
-				{
-					"sortOrder" : 1,
-					"id" : 8,
-					"romanisation" : "",
-					"group" : "Personal Qualities and Emotions",
-					"translation" : "",
-					"word" : "patience",
-					"partOfSpeech" : "",
-					"sentences" : [
-						{
-							"sentence" : "Patience is essential when dealing with difficult situations.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "Her resilience helped her overcome many challenges."
-						}
-					],
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"word" : "resilience",
-					"group" : "Personal Qualities and Emotions",
-					"translation" : "",
-					"id" : 9,
-					"partOfSpeech" : ""
-				}
-			],
-			"sortOrder" : 1,
-			"title" : "Emotions",
-			"tabnumber" : 2
-		},
-		{
-			"tabnumber" : 3,
-			"sortOrder" : 1,
-			"words" : [
-				{
-					"sentences" : [
-						{
-							"sentence" : "They need to analyze the data before making a decision.",
-							"translation" : ""
-						}
-					],
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"id" : 0,
-					"word" : "analyze",
-					"translation" : "",
-					"partOfSpeech" : "",
-					"group" : "Common Verbs"
-				},
-				{
-					"word" : "communicate",
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"group" : "Common Verbs",
-					"translation" : "",
-					"id" : 1,
-					"sortOrder" : 1,
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "Effective leaders communicate clearly with their team."
-						}
-					]
-				},
-				{
-					"partOfSpeech" : "",
-					"id" : 2,
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "We should consider all options before choosing one."
-						}
-					],
-					"word" : "consider",
-					"group" : "Common Verbs",
-					"translation" : "",
-					"romanisation" : "",
-					"sortOrder" : 1
-				},
-				{
-					"translation" : "",
-					"romanisation" : "",
-					"sentences" : [
-						{
-							"sentence" : "The teacher will demonstrate the experiment in class.",
-							"translation" : ""
-						}
-					],
-					"word" : "demonstrate",
-					"sortOrder" : 1,
-					"group" : "Common Verbs",
-					"partOfSpeech" : "",
-					"id" : 3
-				},
-				{
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"translation" : "",
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "Let's discuss the plan in our next meeting."
-						}
-					],
-					"word" : "discuss",
-					"id" : 4,
-					"sortOrder" : 1,
-					"group" : "Common Verbs"
-				},
-				{
-					"romanisation" : "",
-					"sentences" : [
-						{
-							"sentence" : "The committee will evaluate the proposals next week.",
-							"translation" : ""
-						}
-					],
-					"translation" : "",
-					"word" : "evaluate",
-					"id" : 5,
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"group" : "Common Verbs"
-				},
-				{
-					"romanisation" : "",
-					"translation" : "",
-					"sortOrder" : 1,
-					"word" : "implement",
-					"id" : 6,
-					"partOfSpeech" : "",
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "They will implement the new system starting next month."
-						}
-					],
-					"group" : "Common Verbs"
-				},
-				{
-					"id" : 7,
-					"romanisation" : "",
-					"word" : "negotiate",
-					"sentences" : [
-						{
-							"sentence" : "We need to negotiate the terms of the contract.",
-							"translation" : ""
-						}
-					],
-					"group" : "Common Verbs",
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"translation" : ""
-				},
-				{
-					"translation" : "",
-					"sentences" : [
-						{
-							"sentence" : "Everyone is encouraged to participate in the discussion.",
-							"translation" : ""
-						}
-					],
-					"sortOrder" : 1,
-					"id" : 8,
-					"word" : "participate",
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"group" : "Common Verbs"
-				},
-				{
-					"word" : "resolve",
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "They worked together to resolve the conflict."
-						}
-					],
-					"romanisation" : "",
-					"translation" : "",
-					"partOfSpeech" : "",
-					"group" : "Common Verbs",
-					"sortOrder" : 1,
-					"id" : 9
-				}
-			],
-			"title" : "Verbs"
-		},
-		{
-			"tabnumber" : 3,
-			"sortOrder" : 1,
-			"title" : "Adjectives",
-			"words" : [
-				{
-					"romanisation" : "",
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "She is very ambitious and always aims high."
-						}
-					],
-					"sortOrder" : 1,
-					"group" : "Common Adjectives",
-					"word" : "ambitious",
-					"partOfSpeech" : "",
-					"id" : 0,
-					"translation" : ""
-				},
-				{
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
-						{
-							"sentence" : "He feels confident about his presentation.",
-							"translation" : ""
-						}
-					],
-					"translation" : "",
-					"partOfSpeech" : "",
-					"id" : 1,
-					"group" : "Common Adjectives",
-					"word" : "confident"
-				},
-				{
-					"partOfSpeech" : "",
-					"translation" : "",
-					"word" : "curious",
-					"sortOrder" : 1,
-					"group" : "Common Adjectives",
-					"romanisation" : "",
-					"sentences" : [
-						{
-							"sentence" : "Children are naturally curious about the world around them.",
-							"translation" : ""
-						}
-					],
-					"id" : 2
-				},
-				{
-					"id" : 3,
-					"partOfSpeech" : "",
-					"group" : "Common Adjectives",
-					"sortOrder" : 1,
-					"sentences" : [
-						{
-							"sentence" : "The new system is more efficient and saves time.",
-							"translation" : ""
-						}
-					],
-					"translation" : "",
-					"romanisation" : "",
-					"word" : "efficient"
-				},
-				{
-					"group" : "Common Adjectives",
-					"word" : "enthusiastic",
-					"partOfSpeech" : "",
-					"id" : 4,
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
-						{
-							"sentence" : "They were enthusiastic about the new project.",
-							"translation" : ""
-						}
-					],
-					"translation" : ""
-				},
-				{
-					"id" : 5,
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"sentences" : [
-						{
-							"sentence" : "She is very independent and likes to do things on her own.",
-							"translation" : ""
-						}
-					],
-					"word" : "independent",
-					"sortOrder" : 1,
-					"translation" : "",
-					"group" : "Common Adjectives"
-				},
-				{
-					"partOfSpeech" : "",
-					"word" : "patient",
-					"sortOrder" : 1,
-					"id" : 6,
-					"romanisation" : "",
-					"sentences" : [
-						{
-							"sentence" : "He is patient and always takes time to explain things.",
-							"translation" : ""
-						}
-					],
-					"translation" : "",
-					"group" : "Common Adjectives"
-				},
-				{
-					"romanisation" : "",
-					"translation" : "",
-					"id" : 7,
-					"word" : "resilient",
-					"partOfSpeech" : "",
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "She is resilient and quickly recovers from setbacks."
-						}
-					],
-					"sortOrder" : 1,
-					"group" : "Common Adjectives"
-				},
-				{
-					"translation" : "",
-					"id" : 8,
-					"romanisation" : "",
-					"group" : "Common Adjectives",
-					"sentences" : [
-						{
-							"sentence" : "He is a successful businessman with several companies.",
-							"translation" : ""
-						}
-					],
-					"word" : "successful",
-					"partOfSpeech" : "",
-					"sortOrder" : 1
-				},
-				{
-					"sentences" : [
-						{
-							"translation" : "",
-							"sentence" : "Her family is very supportive of her career."
-						}
-					],
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"word" : "supportive",
-					"translation" : "",
-					"group" : "Common Adjectives",
-					"id" : 9
+					"sortOrder": 1,
+					"id": 9,
+					"word": "sustainability",
+					"translation": "",
+					"definition": "The ability to be maintained at a certain rate or level without damaging the environment."
 				}
 			]
 		},
 		{
-			"words" : [
+			"tabNumber": 3,
+			"sortOrder": 1,
+			"title": "Social Issues",
+			"words": [
 				{
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"translation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"translation": "",
+					"romanisation": "",
+					"word": "community service",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "We have new information, so we need to adjust our plans accordingly."
+							"sentence": "He participates in community service every weekend.",
+							"translation": ""
+						},
+						{
+							"sentence": "The court ordered him to complete 100 hours of community service.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is community service compulsory in some schools?",
+							"translation": ""
 						}
 					],
-					"group" : "Common Adverbs",
-					"id" : 0,
-					"word" : "accordingly"
+					"id": 0,
+					"partOfSpeech": "noun",
+					"group": "Social Issues and Justice",
+					"definition": "Voluntary work intended to help people in a local area."
 				},
 				{
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"id": 1,
+					"romanisation": "",
+					"word": "equality",
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Social Issues and Justice",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The journey takes approximately two hours by car."
+							"sentence": "They are fighting for gender equality in the workplace.",
+							"translation": ""
+						},
+						{
+							"sentence": "Equality under the law is a fundamental principle.",
+							"translation": ""
+						},
+						{
+							"sentence": "Has true social equality been achieved anywhere?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"translation" : "",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"group" : "Common Adverbs",
-					"id" : 1,
-					"word" : "approximately"
+					"definition": "The state of being equal, especially in status, rights, and opportunities."
 				},
 				{
-					"group" : "Common Adverbs",
-					"romanisation" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"group": "Social Issues and Justice",
+					"word": "human rights",
+					"romanisation": "",
+					"sentences": [
 						{
-							"sentence" : "He did not study for the exam; consequently, he failed.",
-							"translation" : ""
+							"sentence": "Human rights should be protected by all governments.",
+							"translation": ""
+						},
+						{
+							"sentence": "The organization campaigns for human rights worldwide.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do human rights include freedom of speech?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"translation" : "",
-					"id" : 2,
-					"partOfSpeech" : "",
-					"word" : "consequently"
+					"id": 2,
+					"translation": "",
+					"partOfSpeech": "noun",
+					"definition": "Basic rights and freedoms that all people are entitled to."
 				},
 				{
-					"partOfSpeech" : "",
-					"id" : 3,
-					"translation" : "",
-					"group" : "Common Adverbs",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"romanisation": "",
+					"word": "justice",
+					"sortOrder": 1,
+					"id": 3,
+					"sentences": [
 						{
-							"sentence" : "She deliberately chose the more challenging project.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "They demand justice for the victims of the crime."
+						},
+						{
+							"sentence": "Social justice aims for a fairer distribution of wealth and opportunities.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does the legal system always deliver justice?",
+							"translation": ""
 						}
 					],
-					"word" : "deliberately"
+					"translation": "",
+					"partOfSpeech": "noun",
+					"group": "Social Issues and Justice",
+					"definition": "Fair behavior or treatment; the process of using laws to judge people."
 				},
 				{
-					"id" : 4,
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"word" : "efficiently",
-					"group" : "Common Adverbs",
-					"translation" : "",
-					"sortOrder" : 1,
-					"sentences" : [
+					"id": 4,
+					"word": "legislation",
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "noun",
+					"group": "Social Issues and Justice",
+					"sentences": [
 						{
-							"sentence" : "The new software helps us work more efficiently.",
-							"translation" : ""
-						}
-					]
-				},
-				{
-					"sentences" : [
+							"sentence": "New legislation was introduced to improve environmental standards.",
+							"translation": ""
+						},
 						{
-							"sentence" : "After several attempts, he eventually succeeded.",
-							"translation" : ""
-						}
-					],
-					"id" : 5,
-					"sortOrder" : 1,
-					"translation" : "",
-					"group" : "Common Adverbs",
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"word" : "eventually"
-				},
-				{
-					"sentences" : [
+							"sentence": "The government is debating new anti-discrimination legislation.",
+							"translation": ""
+						},
 						{
-							"sentence" : "Fortunately, no one was hurt in the accident.",
-							"translation" : ""
+							"sentence": "Will the parliament approve the new financial legislation?",
+							"translation": ""
 						}
 					],
-					"word" : "fortunately",
-					"partOfSpeech" : "",
-					"translation" : "",
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"group" : "Common Adverbs",
-					"id" : 6
+					"definition": "A law or set of laws suggested by a government."
 				},
 				{
-					"translation" : "",
-					"id" : 7,
-					"group" : "Common Adverbs",
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"sentences" : [
+					"romanisation": "",
+					"word": "protest",
+					"group": "Social Issues and Justice",
+					"id": 5,
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "He travels frequently for business."
+							"translation": "",
+							"sentence": "The citizens organized a protest against the new law."
+						},
+						{
+							"sentence": "The students held a peaceful protest outside the school.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is organizing a protest a form of free speech?",
+							"translation": ""
 						}
 					],
-					"word" : "frequently"
+					"partOfSpeech": "noun",
+					"definition": "A public expression of objection or disapproval."
 				},
 				{
-					"group" : "Common Adverbs",
-					"translation" : "",
-					"word" : "significantly",
-					"sentences" : [
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"word": "reform",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"sentence" : "The new policy will significantly improve the working conditions.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "Education reform is necessary to improve school systems."
+						},
+						{
+							"sentence": "The new manager plans to introduce major organizational reform.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is tax reform currently being discussed by the government?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"id" : 8,
-					"romanisation" : "",
-					"sortOrder" : 1
+					"id": 6,
+					"group": "Social Issues and Justice",
+					"definition": "The improvement or amendment of what is wrong, corrupt, or unsatisfactory."
 				},
 				{
-					"romanisation" : "",
-					"word" : "typically",
-					"group" : "Common Adverbs",
-					"sentences" : [
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 7,
+					"word": "social justice",
+					"group": "Social Issues and Justice",
+					"partOfSpeech": "noun",
+					"sentences": [
 						{
-							"sentence" : "She typically goes for a run in the morning.",
-							"translation" : ""
+							"sentence": "They work towards achieving social justice for all.",
+							"translation": ""
+						},
+						{
+							"sentence": "Social justice ensures fairness in the distribution of wealth and opportunities.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is social justice a core value of the organization?",
+							"translation": ""
 						}
 					],
-					"id" : 9,
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"translation" : ""
+					"definition": "Justice in terms of wealth, opportunities, and privileges within a society."
+				},
+				{
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She volunteers at a local shelter every month."
+						},
+						{
+							"sentence": "He decided to volunteer his time to help the elderly.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did she volunteer to organize the next event?",
+							"translation": ""
+						}
+					],
+					"word": "volunteer",
+					"sortOrder": 1,
+					"id": 8,
+					"partOfSpeech": "verb",
+					"romanisation": "",
+					"group": "Social Issues and Justice",
+					"definition": "To offer your time or services for a task without expecting payment."
+				},
+				{
+					"sortOrder": 1,
+					"partOfSpeech": "noun",
+					"translation": "",
+					"romanisation": "",
+					"id": 9,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Welfare programs provide support for those in need."
+						},
+						{
+							"sentence": "The nation needs a strong welfare system.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is welfare designed to help people who are unemployed?",
+							"translation": ""
+						}
+					],
+					"group": "Social Issues and Justice",
+					"word": "welfare",
+					"definition": "The health, happiness, and fortunes of a person or group; or financial support given to people in need."
+				}
+			]
+		},
+		{
+			"title": "Relationships",
+			"words": [
+				{
+					"id": 0,
+					"sentences": [
+						{
+							"sentence": "She met him at a party and they became acquaintances.",
+							"translation": ""
+						},
+						{
+							"sentence": "He is merely an acquaintance, not a close friend.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do you consider him an important acquaintance?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": "",
+					"group": "Relationships and Communication",
+					"partOfSpeech": "noun",
+					"word": "acquaintance",
+					"definition": "A person one knows slightly, but not well."
+				},
+				{
+					"id": 1,
+					"group": "Relationships and Communication",
+					"partOfSpeech": "noun",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "There is a strong bond between the two sisters."
+						},
+						{
+							"sentence": "The experience created a strong emotional bond among the travelers.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did their shared struggle strengthen their bond?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"word": "bond",
+					"sortOrder": 1,
+					"translation": "",
+					"definition": "A strong connection or feeling of shared purpose."
+				},
+				{
+					"group": "Relationships and Communication",
+					"word": "communication",
+					"partOfSpeech": "noun",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Effective communication is essential for a healthy relationship."
+						},
+						{
+							"sentence": "The team needs to improve its internal communication.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is non-verbal communication more important than spoken words?",
+							"translation": ""
+						}
+					],
+					"id": 2,
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"definition": "The act of sharing or exchanging information, ideas, or feelings."
+				},
+				{
+					"group": "Relationships and Communication",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "Empathy is important for understanding others' feelings.",
+							"translation": ""
+						},
+						{
+							"sentence": "She showed great empathy toward the victims of the disaster.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can empathy be learned or is it innate?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "noun",
+					"word": "empathy",
+					"id": 3,
+					"romanisation": "",
+					"sortOrder": 1,
+					"definition": "The ability to understand and share the feelings of another person."
+				},
+				{
+					"id": 4,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Social interaction is crucial for mental health."
+						},
+						{
+							"sentence": "There was very little interaction between the two groups.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does the new system support better team interaction?",
+							"translation": ""
+						}
+					],
+					"word": "interaction",
+					"translation": "",
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Relationships and Communication",
+					"definition": "The process of communicating or dealing with someone or something."
+				},
+				{
+					"partOfSpeech": "noun",
+					"word": "negotiation",
+					"id": 5,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Negotiation skills are important in business."
+						},
+						{
+							"sentence": "The contract negotiation reached a successful conclusion.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is further negotiation with the client possible?",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Relationships and Communication",
+					"definition": "Discussion aimed at reaching an agreement."
+				},
+				{
+					"id": 6,
+					"romanisation": "",
+					"translation": "",
+					"group": "Relationships and Communication",
+					"word": "networking",
+					"partOfSpeech": "noun",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Networking can help you find new job opportunities."
+						},
+						{
+							"sentence": "Professional networking events are held monthly.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is digital networking easier than face-to-face?",
+							"translation": ""
+						}
+					],
+					"definition": "The act of interacting with others to exchange information and develop contacts."
+				},
+				{
+					"word": "relationship",
+					"partOfSpeech": "noun",
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "They have a close and trusting relationship.",
+							"translation": ""
+						},
+						{
+							"sentence": "Maintaining a good working relationship is vital.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did they end their personal relationship amicably?",
+							"translation": ""
+						}
+					],
+					"group": "Relationships and Communication",
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 7,
+					"definition": "The way in which two or more people are connected or behave toward each other."
+				},
+				{
+					"sortOrder": 1,
+					"word": "social media",
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She uses social media to keep in touch with friends."
+						},
+						{
+							"sentence": "Social media has revolutionized public communication.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is social media a major source of news for young people?",
+							"translation": ""
+						}
+					],
+					"group": "Relationships and Communication",
+					"id": 8,
+					"translation": "",
+					"partOfSpeech": "noun",
+					"definition": "Websites and apps that allow users to share content and interact with others."
+				},
+				{
+					"romanisation": "",
+					"id": 9,
+					"partOfSpeech": "noun",
+					"word": "trust",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Relationships and Communication",
+					"sentences": [
+						{
+							"sentence": "Trust is the foundation of any strong relationship.",
+							"translation": ""
+						},
+						{
+							"sentence": "He earned their trust by always being honest.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is trust easily broken?",
+							"translation": ""
+						}
+					],
+					"definition": "Firm belief in the reliability, truth, or ability of someone or something."
 				}
 			],
-			"tabnumber" : 3,
-			"title" : "Adverbs",
-			"sortOrder" : 1
+			"sortOrder": 1,
+			"tabNumber": 2
+		},
+		{
+			"words": [
+				{
+					"sentences": [
+						{
+							"sentence": "Her adaptability makes her an excellent team player.",
+							"translation": ""
+						},
+						{
+							"sentence": "Adaptability is a valuable skill in a changing world.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does the job require high adaptability?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"id": 0,
+					"group": "Personal Qualities and Emotions",
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"word": "adaptability",
+					"translation": "",
+					"definition": "The quality of being able to adjust to new conditions."
+				},
+				{
+					"translation": "",
+					"sortOrder": 1,
+					"id": 1,
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "His ambition drives him to achieve his goals.",
+							"translation": ""
+						},
+						{
+							"sentence": "She has great ambition to become a CEO.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is ambition always a positive trait?",
+							"translation": ""
+						}
+					],
+					"group": "Personal Qualities and Emotions",
+					"word": "ambition",
+					"definition": "A strong desire to do or achieve something."
+				},
+				{
+					"group": "Personal Qualities and Emotions",
+					"translation": "",
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"id": 2,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She feels anxiety before important exams."
+						},
+						{
+							"sentence": "His anxiety was evident in his nervous behavior.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can exercise help reduce anxiety?",
+							"translation": ""
+						}
+					],
+					"word": "anxiety",
+					"sortOrder": 1,
+					"definition": "A feeling of worry, nervousness, or unease about an uncertain outcome."
+				},
+				{
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Personal Qualities and Emotions",
+					"word": "confidence",
+					"id": 3,
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He spoke with confidence during the presentation."
+						},
+						{
+							"sentence": "Her confidence grew after the positive feedback.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is self-confidence the key to success?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "noun",
+					"definition": "A feeling of certainty in your own ability or judgment."
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "Her curiosity led her to explore new cultures.",
+							"translation": ""
+						},
+						{
+							"sentence": "The child's curiosity drove him to ask many questions.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is intellectual curiosity a necessary trait for a scientist?",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"partOfSpeech": "noun",
+					"id": 4,
+					"romanisation": "",
+					"word": "curiosity",
+					"sortOrder": 1,
+					"group": "Personal Qualities and Emotions",
+					"definition": "A strong desire to know or learn something."
+				},
+				{
+					"word": "enthusiasm",
+					"romanisation": "",
+					"group": "Personal Qualities and Emotions",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They showed great enthusiasm for the new project."
+						},
+						{
+							"sentence": "His enthusiasm for the sport is contagious.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can you share your enthusiasm with the team?",
+							"translation": ""
+						}
+					],
+					"id": 5,
+					"partOfSpeech": "noun",
+					"definition": "Intense and eager enjoyment, interest, or approval."
+				},
+				{
+					"partOfSpeech": "noun",
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 6,
+					"translation": "",
+					"word": "gratitude",
+					"group": "Personal Qualities and Emotions",
+					"sentences": [
+						{
+							"sentence": "She expressed her gratitude for the help she received.",
+							"translation": ""
+						},
+						{
+							"sentence": "He showed deep gratitude toward his mentors.",
+							"translation": ""
+						},
+						{
+							"sentence": "Should we express gratitude daily?",
+							"translation": ""
+						}
+					],
+					"definition": "The quality of being thankful; readiness to show appreciation."
+				},
+				{
+					"translation": "",
+					"romanisation": "",
+					"group": "Personal Qualities and Emotions",
+					"sentences": [
+						{
+							"sentence": "He values his independence and prefers to work alone.",
+							"translation": ""
+						},
+						{
+							"sentence": "Financial independence is a major goal for many people.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is a country's independence always celebrated?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"partOfSpeech": "noun",
+					"word": "independence",
+					"id": 7,
+					"definition": "The state of being free from the control or support of others."
+				},
+				{
+					"sortOrder": 1,
+					"id": 8,
+					"romanisation": "",
+					"group": "Personal Qualities and Emotions",
+					"translation": "",
+					"word": "patience",
+					"partOfSpeech": "noun",
+					"sentences": [
+						{
+							"sentence": "Patience is essential when dealing with difficult situations.",
+							"translation": ""
+						},
+						{
+							"sentence": "He waited with patience for his turn.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did she show great patience with the young children?",
+							"translation": ""
+						}
+					],
+					"definition": "The capacity to accept or tolerate delay, trouble, or suffering without getting angry or upset."
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Her resilience helped her overcome many challenges."
+						},
+						{
+							"sentence": "Resilience is key to bouncing back from failure.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can personal resilience be taught?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "resilience",
+					"group": "Personal Qualities and Emotions",
+					"translation": "",
+					"id": 9,
+					"partOfSpeech": "noun",
+					"definition": "The ability to recover quickly from difficult conditions."
+				}
+			],
+			"sortOrder": 1,
+			"title": "Emotions",
+			"tabNumber": 2
+		},
+		{
+			"tabNumber": 3,
+			"sortOrder": 1,
+			"title": "Verbs",
+			"words": [
+				{
+					"sentences": [
+						{
+							"sentence": "They need to analyze the data before making a decision.",
+							"translation": ""
+						},
+						{
+							"sentence": "The lab results need to be analyzed carefully.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the team analyze the root cause of the problem?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 0,
+					"word": "analyze",
+					"translation": "",
+					"partOfSpeech": "verb",
+					"group": "Common Verbs",
+					"definition": "To examine something methodically and in detail, typically for purposes of explanation and interpretation."
+				},
+				{
+					"word": "communicate",
+					"romanisation": "",
+					"partOfSpeech": "verb",
+					"group": "Common Verbs",
+					"translation": "",
+					"id": 1,
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Effective leaders communicate clearly with their team."
+						},
+						{
+							"sentence": "She communicates with her family abroad every day.",
+							"translation": ""
+						},
+						{
+							"sentence": "How often do you communicate with your manager?",
+							"translation": ""
+						}
+					],
+					"definition": "To share or exchange information, ideas, or feelings."
+				},
+				{
+					"partOfSpeech": "verb",
+					"id": 2,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We should consider all options before choosing one."
+						},
+						{
+							"sentence": "Please consider my suggestion for the marketing campaign.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did you consider the long-term effects of the change?",
+							"translation": ""
+						}
+					],
+					"word": "consider",
+					"group": "Common Verbs",
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"definition": "To think carefully about something, typically before making a decision."
+				},
+				{
+					"translation": "",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "The teacher will demonstrate the experiment in class.",
+							"translation": ""
+						},
+						{
+							"sentence": "He demonstrated excellent knowledge of the subject matter.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can you demonstrate how to use this new software?",
+							"translation": ""
+						}
+					],
+					"word": "demonstrate",
+					"sortOrder": 1,
+					"group": "Common Verbs",
+					"partOfSpeech": "verb",
+					"id": 3,
+					"definition": "To clearly show the existence or truth of something by giving proof or evidence."
+				},
+				{
+					"romanisation": "",
+					"partOfSpeech": "verb",
+					"translation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Let's discuss the plan in our next meeting."
+						},
+						{
+							"sentence": "They spent hours discussing the possible solutions.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the team discuss the budget limitations?",
+							"translation": ""
+						}
+					],
+					"word": "discuss",
+					"id": 4,
+					"sortOrder": 1,
+					"group": "Common Verbs",
+					"definition": "To talk about something with another person or group."
+				},
+				{
+					"romanisation": "",
+					"translation": "",
+					"word": "evaluate",
+					"id": 5,
+					"sortOrder": 1,
+					"partOfSpeech": "verb",
+					"group": "Common Verbs",
+					"sentences": [
+						{
+							"sentence": "The committee will evaluate the proposals next week.",
+							"translation": ""
+						},
+						{
+							"sentence": "We need to evaluate the risks before starting the project.",
+							"translation": ""
+						},
+						{
+							"sentence": "Will the manager evaluate the team's performance monthly?",
+							"translation": ""
+						}
+					],
+					"definition": "To form an idea of the amount, number, or value of something."
+				},
+				{
+					"romanisation": "",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "implement",
+					"id": 6,
+					"partOfSpeech": "verb",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They will implement the new system starting next month."
+						},
+						{
+							"sentence": "The project plan details how to implement the changes.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the company prepared to implement the new regulations?",
+							"translation": ""
+						}
+					],
+					"group": "Common Verbs",
+					"definition": "To put a decision or plan into effect."
+				},
+				{
+					"id": 7,
+					"romanisation": "",
+					"word": "negotiate",
+					"sentences": [
+						{
+							"sentence": "We need to negotiate the terms of the contract.",
+							"translation": ""
+						},
+						{
+							"sentence": "The two parties agreed to negotiate the price of the property.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can he negotiate a better deal for the company?",
+							"translation": ""
+						}
+					],
+					"group": "Common Verbs",
+					"sortOrder": 1,
+					"partOfSpeech": "verb",
+					"translation": "",
+					"definition": "To discuss something formally to reach an agreement."
+				},
+				{
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "Everyone is encouraged to participate in the discussion.",
+							"translation": ""
+						},
+						{
+							"sentence": "She participates in all voluntary activities at school.",
+							"translation": ""
+						},
+						{
+							"sentence": "Will the local community participate in the clean-up effort?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"id": 8,
+					"word": "participate",
+					"romanisation": "",
+					"partOfSpeech": "verb",
+					"group": "Common Verbs",
+					"definition": "To take part in an activity or event."
+				},
+				{
+					"word": "resolve",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "They worked together to resolve the conflict."
+						},
+						{
+							"sentence": "The company aims to resolve customer complaints quickly.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did they manage to resolve the issue before the deadline?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"translation": "",
+					"partOfSpeech": "verb",
+					"group": "Common Verbs",
+					"sortOrder": 1,
+					"id": 9,
+					"definition": "To settle or find a solution to a problem or difficulty."
+				}
+			]
+		},
+		{
+			"tabNumber": 3,
+			"sortOrder": 1,
+			"title": "Adjectives",
+			"words": [
+				{
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She is very ambitious and always aims high."
+						},
+						{
+							"sentence": "He has ambitious plans for his future career.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is running a large company an ambitious goal?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"group": "Common Adjectives",
+					"word": "ambitious",
+					"partOfSpeech": "adjective",
+					"id": 0,
+					"translation": "",
+					"definition": "Having or showing a strong desire and determination to succeed."
+				},
+				{
+					"romanisation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "He feels confident about his presentation.",
+							"translation": ""
+						},
+						{
+							"sentence": "She gave a confident answer to the difficult question.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is he confident in his ability to pass the exam?",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"partOfSpeech": "adjective",
+					"id": 1,
+					"group": "Common Adjectives",
+					"word": "confident",
+					"definition": "Feeling or showing certainty and belief in one's own abilities."
+				},
+				{
+					"partOfSpeech": "adjective",
+					"translation": "",
+					"word": "curious",
+					"sortOrder": 1,
+					"group": "Common Adjectives",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "Children are naturally curious about the world around them.",
+							"translation": ""
+						},
+						{
+							"sentence": "I was curious to know the reason for his sudden departure.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is it good to be curious in your job?",
+							"translation": ""
+						}
+					],
+					"id": 2,
+					"definition": "Having a strong desire to know or learn something."
+				},
+				{
+					"id": 3,
+					"partOfSpeech": "adjective",
+					"group": "Common Adjectives",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "The new system is more efficient and saves time.",
+							"translation": ""
+						},
+						{
+							"sentence": "She is an efficient worker who finishes tasks quickly.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is it possible to be both fast and efficient?",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"romanisation": "",
+					"word": "efficient",
+					"definition": "Working in a well-organized and competent way without wasting time or resources."
+				},
+				{
+					"group": "Common Adjectives",
+					"word": "enthusiastic",
+					"partOfSpeech": "adjective",
+					"id": 4,
+					"romanisation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "They were enthusiastic about the new project.",
+							"translation": ""
+						},
+						{
+							"sentence": "He is an enthusiastic supporter of the local team.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is she always so enthusiastic about her work?",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"definition": "Having or showing intense and eager enjoyment, interest, or approval."
+				},
+				{
+					"id": 5,
+					"partOfSpeech": "adjective",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "She is very independent and likes to do things on her own.",
+							"translation": ""
+						},
+						{
+							"sentence": "The teenager is becoming more independent from her parents.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is financial independence a common life goal?",
+							"translation": ""
+						}
+					],
+					"word": "independent",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Common Adjectives",
+					"definition": "Not depending on another person or thing for support or direction."
+				},
+				{
+					"partOfSpeech": "adjective",
+					"word": "patient",
+					"sortOrder": 1,
+					"id": 6,
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "He is patient and always takes time to explain things.",
+							"translation": ""
+						},
+						{
+							"sentence": "Be patient; the results will be ready soon.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can you be patient in long queues?",
+							"translation": ""
+						}
+					],
+					"translation": "",
+					"group": "Common Adjectives",
+					"definition": "Able to accept or tolerate delays or problems without becoming annoyed."
+				},
+				{
+					"romanisation": "",
+					"translation": "",
+					"id": 7,
+					"word": "resilient",
+					"partOfSpeech": "adjective",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "She is resilient and quickly recovers from setbacks."
+						},
+						{
+							"sentence": "The community proved resilient after the flood damage.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the material resilient to high temperatures?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"group": "Common Adjectives",
+					"definition": "Able to quickly return to a former good condition after being damaged or suffering difficulties."
+				},
+				{
+					"translation": "",
+					"id": 8,
+					"romanisation": "",
+					"group": "Common Adjectives",
+					"sentences": [
+						{
+							"sentence": "He is a successful businessman with several companies.",
+							"translation": ""
+						},
+						{
+							"sentence": "The project was a successful collaboration between two teams.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is she a successful young lawyer?",
+							"translation": ""
+						}
+					],
+					"word": "successful",
+					"partOfSpeech": "adjective",
+					"sortOrder": 1,
+					"definition": "Having achieved fame, wealth, or a desired result."
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "Her family is very supportive of her career."
+						},
+						{
+							"sentence": "He has a supportive network of friends.",
+							"translation": ""
+						},
+						{
+							"sentence": "Was the manager supportive of your training request?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "adjective",
+					"sortOrder": 1,
+					"romanisation": "",
+					"word": "supportive",
+					"translation": "",
+					"group": "Common Adjectives",
+					"id": 9,
+					"definition": "Providing encouragement or emotional help."
+				}
+			]
+		},
+		{
+			"words": [
+				{
+					"romanisation": "",
+					"partOfSpeech": "adverb",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "We have new information, so we need to adjust our plans accordingly."
+						},
+						{
+							"sentence": "The children were tired and acted accordingly.",
+							"translation": ""
+						},
+						{
+							"sentence": "Will the security team respond accordingly to the threat?",
+							"translation": ""
+						}
+					],
+					"group": "Common Adverbs",
+					"id": 0,
+					"word": "accordingly",
+					"definition": "In a way that is appropriate or corresponding to what has just been mentioned."
+				},
+				{
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "The journey takes approximately two hours by car."
+						},
+						{
+							"sentence": "The bridge is approximately 1.5 miles long.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the total cost reach approximately five hundred pounds?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "adverb",
+					"translation": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Common Adverbs",
+					"id": 1,
+					"word": "approximately",
+					"definition": "Used to show that something is close to the correct number or time; roughly."
+				},
+				{
+					"group": "Common Adverbs",
+					"romanisation": "",
+					"sentences": [
+						{
+							"sentence": "He did not study for the exam; consequently, he failed.",
+							"translation": ""
+						},
+						{
+							"sentence": "The storm was severe; consequently, all flights were delayed.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did they lose the match and consequently lose the championship?",
+							"translation": ""
+						}
+					],
+					"sortOrder": 1,
+					"translation": "",
+					"id": 2,
+					"partOfSpeech": "adverb",
+					"word": "consequently",
+					"definition": "As a result, or following as a consequence."
+				},
+				{
+					"partOfSpeech": "adverb",
+					"id": 3,
+					"translation": "",
+					"group": "Common Adverbs",
+					"romanisation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "She deliberately chose the more challenging project.",
+							"translation": ""
+						},
+						{
+							"sentence": "He deliberately avoided eye contact with his boss.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did she deliberately ignore my advice?",
+							"translation": ""
+						}
+					],
+					"word": "deliberately",
+					"definition": "On purpose, intentionally, or slowly and carefully."
+				},
+				{
+					"id": 4,
+					"partOfSpeech": "adverb",
+					"romanisation": "",
+					"word": "efficiently",
+					"group": "Common Adverbs",
+					"translation": "",
+					"sortOrder": 1,
+					"sentences": [
+						{
+							"sentence": "The new software helps us work more efficiently.",
+							"translation": ""
+						},
+						{
+							"sentence": "She manages her time efficiently.",
+							"translation": ""
+						},
+						{
+							"sentence": "Can the production line operate more efficiently?",
+							"translation": ""
+						}
+					],
+					"definition": "In a way that achieves maximum productivity with minimum wasted time or effort."
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "After several attempts, he eventually succeeded.",
+							"translation": ""
+						},
+						{
+							"sentence": "We waited for hours, but the flight eventually departed.",
+							"translation": ""
+						},
+						{
+							"sentence": "Will the team eventually meet the project deadline?",
+							"translation": ""
+						}
+					],
+					"id": 5,
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Common Adverbs",
+					"romanisation": "",
+					"partOfSpeech": "adverb",
+					"word": "eventually",
+					"definition": "In the end, especially after a long delay or series of problems."
+				},
+				{
+					"sentences": [
+						{
+							"sentence": "Fortunately, no one was hurt in the accident.",
+							"translation": ""
+						},
+						{
+							"sentence": "Fortunately, we had packed an umbrella before the storm.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the driver fortunately avoid a major collision?",
+							"translation": ""
+						}
+					],
+					"word": "fortunately",
+					"partOfSpeech": "adverb",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "Common Adverbs",
+					"id": 6,
+					"definition": "Happening because of good luck."
+				},
+				{
+					"translation": "",
+					"id": 7,
+					"group": "Common Adverbs",
+					"sortOrder": 1,
+					"partOfSpeech": "adverb",
+					"romanisation": "",
+					"sentences": [
+						{
+							"translation": "",
+							"sentence": "He travels frequently for business."
+						},
+						{
+							"sentence": "She frequently visits her family on weekends.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do you frequently use this software program?",
+							"translation": ""
+						}
+					],
+					"word": "frequently",
+					"definition": "Often; many times at short intervals."
+				},
+				{
+					"group": "Common Adverbs",
+					"translation": "",
+					"word": "significantly",
+					"sentences": [
+						{
+							"sentence": "The new policy will significantly improve the working conditions.",
+							"translation": ""
+						},
+						{
+							"sentence": "Sales figures increased significantly last quarter.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the change in diet significantly affect his energy levels?",
+							"translation": ""
+						}
+					],
+					"partOfSpeech": "adverb",
+					"id": 8,
+					"romanisation": "",
+					"sortOrder": 1,
+					"definition": "In a noticeably important or large way."
+				},
+				{
+					"romanisation": "",
+					"word": "typically",
+					"group": "Common Adverbs",
+					"sentences": [
+						{
+							"sentence": "She typically goes for a run in the morning.",
+							"translation": ""
+						},
+						{
+							"sentence": "The weather is typically mild here in the spring.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do you typically eat lunch at the same time each day?",
+							"translation": ""
+						}
+					],
+					"id": 9,
+					"partOfSpeech": "adverb",
+					"sortOrder": 1,
+					"translation": "",
+					"definition": "In most cases; usually."
+				}
+			],
+			"tabNumber": 3,
+			"title": "Adverbs",
+			"sortOrder": 1
 		}
 	]
 }

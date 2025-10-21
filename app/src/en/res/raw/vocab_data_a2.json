@@ -1,7 +1,7 @@
 {
 	"name" : "",
 	"location" : 0,
-	"sheetname" : "vocab_data_a2",
+	"sheetname" : "A2WordList-en",
 	"romanized" : false,
 	"fileformat" : 0,
 	"tabtitles" : ["Personal","Time","More"],
@@ -14,8 +14,8 @@
 	"uploaddate" : 1748294737.597204,
 	"categories" : [
 		{
-			"tabnumber": 1,
-			"title": "Personal (A2)",
+			"tabNumber": 1,
+			"title": "Personal",
 			"sortOrder": 1,
 			"words": [
 				{
@@ -38,6 +38,7 @@
 					],
 					"romanisation": "",
 					"word": "name",
+					"definition": "The word or words that a person is known by.",
 					"id": 0,
 					"sortOrder": 1
 				},
@@ -47,7 +48,7 @@
 					"sentences": [
 						{
 							"translation": "",
-							"sentence": "She is 25 years of age."
+							"sentence": "She is 25 years old."
 						},
 						{
 							"translation": "",
@@ -62,7 +63,8 @@
 					"translation": "",
 					"group": "Personal",
 					"partOfSpeech": "",
-					"word": "age"
+					"word": "age",
+					"definition": "The number of years a person has lived."
 				},
 				{
 					"word": "address",
@@ -81,11 +83,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Her address is 45 Oak Road."
+							"sentence": "Is her address 45 Oak Road?"
 						}
 					],
 					"id": 2,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "The number and street name of where you live."
 				},
 				{
 					"translation": "",
@@ -108,7 +111,8 @@
 							"translation": "",
 							"sentence": "What is her phone number?"
 						}
-					]
+					],
+					"definition": "A set of digits used to call a specific phone."
 				},
 				{
 					"translation": "",
@@ -131,7 +135,8 @@
 						}
 					],
 					"partOfSpeech": "",
-					"word": "nationality"
+					"word": "nationality",
+					"definition": "The country you legally belong to."
 				},
 
 				{
@@ -155,7 +160,8 @@
 						}
 					],
 					"partOfSpeech": "",
-					"word": "occupation"
+					"word": "occupation",
+					"definition": "Your job or profession."
 				},
 				{
 					"id": 6,
@@ -165,22 +171,23 @@
 					"group": "Personal",
 					"sentences": [
 						{
+							"translation": "My birthday is on June 15th.",
+							"sentence": ""
+						},
+						{
 							"translation": "",
-							"sentence": "My birthday is on June 15th"
+							"sentence": "Her birthday is in May."
 						},
 						{
-							"translation": "Her birthday is in May",
-							"sentence": ""
-						},
-						{
-							"translation": "When is your birthday?",
-							"sentence": ""
+							"translation": "",
+							"sentence": "When is your birthday?"
 						}
 					],
 					"romanisation": "",
 					"translation": "",
 					"partOfSpeech": "",
-					"word": "birthday"
+					"word": "birthday",
+					"definition": "The day of the year when you were born."
 				},
 				{
 					"sortOrder": 1,
@@ -203,7 +210,8 @@
 					"group": "Personal",
 					"translation": "",
 					"romanisation": "",
-					"word": "email"
+					"word": "email",
+					"definition": "A way to send messages using the internet."
 				},
 				{
 					"partOfSpeech": "",
@@ -226,7 +234,8 @@
 					"romanisation": "",
 					"sortOrder": 1,
 					"translation": "",
-					"group": "Personal"
+					"group": "Personal",
+					"definition": "The state of being male or female."
 				},
 				{
 					"sentences": [
@@ -249,7 +258,8 @@
 					"romanisation": "",
 					"group": "Personal",
 					"translation": "",
-					"word": "passport"
+					"word": "passport",
+					"definition": "An official travel document with your identity."
 				},
 				{
 					"translation": "",
@@ -272,7 +282,8 @@
 						}
 					],
 					"id": 10,
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "Whether a person is married, single, or divorced."
 				},
 				{
 					"partOfSpeech": "",
@@ -295,7 +306,8 @@
 					"id": 11,
 					"romanisation": "",
 					"translation": "",
-					"group": "Personal"
+					"group": "Personal",
+					"definition": "A system of communication used by people."
 				},
 				{
 					"sortOrder": 1,
@@ -318,7 +330,8 @@
 					"romanisation": "",
 					"translation": "",
 					"word": "wake up",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "To stop sleeping and become conscious."
 				},
 				{
 					"sentences": [
@@ -341,7 +354,8 @@
 					"romanisation": "",
 					"id": 1,
 					"translation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "To clean your teeth with a brush and toothpaste."
 				},
 				{
 					"partOfSpeech": "",
@@ -364,7 +378,8 @@
 							"sentence": "Do you have breakfast?"
 						}
 					],
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "To eat the first meal of the day."
 				},
 				{
 					"romanisation": "",
@@ -387,7 +402,8 @@
 							"translation": "",
 							"sentence": "When do you go to work?"
 						}
-					]
+					],
+					"definition": "To travel to your place of employment."
 				},
 				{
 					"id": 4,
@@ -410,9 +426,9 @@
 					"group": "Everyday Life",
 					"translation": "",
 					"partOfSpeech": "",
-					"word": "take a shower"
+					"word": "take a shower",
+					"definition": "To wash your whole body while standing up."
 				}
-
 			]
 		},
 		{
@@ -437,10 +453,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I like my kitchen."
+							"sentence": "Do I like my kitchen?"
 						}
 					],
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A room where food is cooked."
 				},
 				{
 					"partOfSpeech": "",
@@ -463,7 +480,8 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"group": "House and Home",
-					"word": "bathroom"
+					"word": "bathroom",
+					"definition": "A room with a toilet, sink, and bath/shower."
 				},
 				{
 					"sortOrder": 1,
@@ -482,11 +500,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I sleep in my bedroom."
+							"sentence": "Do I sleep in my bedroom?"
 						}
 					],
 					"id": 2,
-					"word": "bedroom"
+					"word": "bedroom",
+					"definition": "A room where people sleep."
 				},
 				{
 					"word": "living room",
@@ -506,10 +525,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I sit in the living room."
+							"sentence": "Do I sit in the living room?"
 						}
 					],
-					"id": 3
+					"id": 3,
+					"definition": "A main room for relaxing and watching TV."
 				},
 				{
 					"sentences": [
@@ -523,7 +543,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We eat in the dining room."
+							"sentence": "Do we eat in the dining room?"
 						}
 					],
 					"translation": "",
@@ -532,7 +552,8 @@
 					"romanisation": "",
 					"id": 4,
 					"word": "dining room",
-					"group": "House and Home"
+					"group": "House and Home",
+					"definition": "A room where meals are eaten."
 				},
 				{
 					"word": "garden",
@@ -551,11 +572,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I work in the garden."
+							"sentence": "Do I work in the garden?"
 						}
 					],
 					"group": "House and Home",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "An area outside for growing plants or for relaxing."
 				},
 				{
 					"id": 6,
@@ -578,7 +600,8 @@
 						}
 					],
 					"word": "garage",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A building for keeping a car."
 				},
 				{
 					"partOfSpeech": "",
@@ -595,13 +618,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I like my apartment."
+							"sentence": "Do I like my apartment?"
 						}
 					],
 					"sortOrder": 1,
 					"id": 7,
 					"translation": "",
-					"group": "House and Home"
+					"group": "House and Home",
+					"definition": "A set of rooms for living in, usually on one floor."
 				},
 				{
 					"id": 8,
@@ -620,11 +644,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I live in a house."
+							"sentence": "Do I live in a house?"
 						}
 					],
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A building that someone lives in."
 				},
 				{
 					"group": "House and Home",
@@ -647,7 +672,8 @@
 					],
 					"romanisation": "",
 					"word": "door",
-					"id": 9
+					"id": 9,
+					"definition": "A barrier that opens and closes to enter a room."
 				},
 				{
 					"sortOrder": 1,
@@ -666,11 +692,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Open the window, please."
+							"sentence": "Should I open the window, please?"
 						}
 					],
 					"group": "House and Home",
-					"word": "window"
+					"word": "window",
+					"definition": "A glass opening in a wall to let in light or air."
 				},
 				{
 					"id": 11,
@@ -693,8 +720,10 @@
 					"sortOrder": 1,
 					"word": "roof",
 					"partOfSpeech": "",
-					"group": "House and Home"
+					"group": "House and Home",
+					"definition": "The top covering of a building."
 				},
+
 				{
 					"sortOrder": 1,
 					"romanisation": "",
@@ -711,21 +740,21 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I go to the store."
+							"sentence": "Do I go to the store?"
 						}
 					],
 					"partOfSpeech": "",
 					"id": 0,
-					"group": "Shopping"
+					"group": "Shopping",
+					"definition": "A place where goods are sold."
 				}
-
 			],
-			"tabnumber": 1
+			"tabNumber": 1
 		},
 		{
 			"sortOrder": 1,
 			"title": "Shopping",
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"words":
 			[
 				{
@@ -747,9 +776,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I shop at the supermarket."
+							"sentence": "Do I shop at the supermarket?"
 						}
-					]
+					],
+					"definition": "A large shop that sells food and other goods."
 				},
 				{
 					"sortOrder": 1,
@@ -768,11 +798,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I go to the mall."
+							"sentence": "Do I go to the mall?"
 						}
 					],
 					"group": "Shopping",
-					"id": 2
+					"id": 2,
+					"definition": "A large building with many different stores inside."
 				},
 				{
 					"sortOrder": 1,
@@ -795,7 +826,8 @@
 							"translation": "",
 							"sentence": "Who is the cashier?"
 						}
-					]
+					],
+					"definition": "A person who takes money at a store or bank."
 				},
 				{
 					"sentences": [
@@ -818,7 +850,8 @@
 					"partOfSpeech": "",
 					"id": 4,
 					"translation": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "The amount of money you pay for something."
 				},
 				{
 					"group": "Shopping",
@@ -841,7 +874,8 @@
 					"sortOrder": 1,
 					"translation": "",
 					"word": "discount",
-					"id": 5
+					"id": 5,
+					"definition": "A reduction in the usual price of something."
 				},
 				{
 					"romanisation": "",
@@ -864,7 +898,8 @@
 					"group": "Shopping",
 					"sortOrder": 1,
 					"id": 6,
-					"translation": ""
+					"translation": "",
+					"definition": "A time when a store sells things for less money."
 				},
 				{
 					"id": 7,
@@ -887,7 +922,8 @@
 					"partOfSpeech": "",
 					"translation": "",
 					"group": "Shopping",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "To get something by paying money for it."
 				},
 				{
 					"sentences": [
@@ -910,7 +946,8 @@
 					"sortOrder": 1,
 					"translation": "",
 					"partOfSpeech": "",
-					"group": "Shopping"
+					"group": "Shopping",
+					"definition": "To give something to someone in exchange for money."
 				},
 				{
 					"romanisation": "",
@@ -933,7 +970,8 @@
 					"id": 9,
 					"translation": "",
 					"group": "Shopping",
-					"word": "money"
+					"word": "money",
+					"definition": "Coins or paper notes used to buy things."
 				},
 				{
 					"romanisation": "",
@@ -956,7 +994,8 @@
 						}
 					],
 					"group": "Shopping",
-					"id": 10
+					"id": 10,
+					"definition": "A small plastic card used to buy things now and pay later."
 				},
 				{
 					"translation": "",
@@ -979,14 +1018,15 @@
 							"sentence": "Where is my receipt?"
 						}
 					],
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A piece of paper showing what you paid for."
 				}
 			]
 		},
 		{
 			"sortOrder": 1,
 			"title": "Food and Drink",
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"words":
 			[
 				{
@@ -1003,14 +1043,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I like breakfast."
+							"sentence": "Do I like breakfast?"
 						}
 					],
 					"word": "breakfast",
 					"group": "Food and Drink",
 					"partOfSpeech": "",
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "The first meal of the day, usually eaten in the morning."
 				},
 				{
 					"partOfSpeech": "",
@@ -1028,12 +1069,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I eat lunch every day."
+							"sentence": "Do I eat lunch every day?"
 						}
 					],
 					"group": "Food and Drink",
 					"sortOrder": 1,
-					"translation": ""
+					"translation": "",
+					"definition": "A meal eaten in the middle of the day."
 				},
 				{
 					"translation": "",
@@ -1049,14 +1091,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I like dinner."
+							"sentence": "Do I like dinner?"
 						}
 					],
 					"group": "Food and Drink",
 					"id": 2,
 					"partOfSpeech": "",
 					"romanisation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The main meal of the day, usually eaten in the evening."
 				},
 				{
 					"partOfSpeech": "",
@@ -1079,7 +1122,8 @@
 					"word": "fruit",
 					"group": "Food and Drink",
 					"translation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The sweet part of a plant or tree that you can eat."
 				},
 				{
 					"partOfSpeech": "",
@@ -1102,7 +1146,8 @@
 					"word": "vegetables",
 					"id": 4,
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A plant or part of a plant that is eaten for food."
 				},
 				{
 					"id": 5,
@@ -1125,7 +1170,8 @@
 					],
 					"partOfSpeech": "",
 					"romanisation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A food made from flour, water, and yeast."
 				},
 				{
 					"word": "milk",
@@ -1148,7 +1194,8 @@
 					],
 					"translation": "",
 					"sortOrder": 1,
-					"group": "Food and Drink"
+					"group": "Food and Drink",
+					"definition": "A white liquid from cows used for drinking or cooking."
 				},
 				{
 					"partOfSpeech": "",
@@ -1171,7 +1218,8 @@
 					"romanisation": "",
 					"word": "coffee",
 					"sortOrder": 1,
-					"translation": ""
+					"translation": "",
+					"definition": "A hot drink made from roasted coffee beans."
 				},
 				{
 					"sortOrder": 1,
@@ -1194,7 +1242,8 @@
 					"partOfSpeech": "",
 					"romanisation": "",
 					"word": "water",
-					"translation": ""
+					"translation": "",
+					"definition": "A clear liquid essential for life."
 				},
 				{
 					"romanisation": "",
@@ -1217,7 +1266,8 @@
 						}
 					],
 					"translation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The liquid from fruit or vegetables."
 				},
 				{
 					"sentences": [
@@ -1240,7 +1290,8 @@
 					"romanisation": "",
 					"partOfSpeech": "",
 					"group": "Food and Drink",
-					"translation": ""
+					"translation": "",
+					"definition": "The flesh of an animal eaten as food."
 				},
 				{
 					"romanisation": "",
@@ -1263,14 +1314,15 @@
 					"translation": "",
 					"group": "Food and Drink",
 					"partOfSpeech": "",
-					"word": "fish"
+					"word": "fish",
+					"definition": "An animal that lives in water and is often eaten as food."
 				}
 			]
 		},
 		{
 			"sortOrder": 1,
 			"title": "Health",
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"words": [
 				{
 					"sentences": [
@@ -1283,7 +1335,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I see the doctor at the hospital.",
+							"sentence": "Do I see the doctor at the hospital?",
 							"translation": ""
 						}
 					],
@@ -1293,7 +1345,8 @@
 					"group": "Health and Body",
 					"word": "doctor",
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A person trained to treat sick or injured people."
 				},
 				{
 					"group": "Health and Body",
@@ -1312,11 +1365,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I talk to the nurse.",
+							"sentence": "Do I talk to the nurse?",
 							"translation": ""
 						}
 					],
-					"translation": ""
+					"translation": "",
+					"definition": "A person trained to care for the sick or injured."
 				},
 				{
 					"word": "hospital",
@@ -1335,11 +1389,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Many doctors are in the hospital.",
+							"sentence": "Are many doctors in the hospital?",
 							"translation": ""
 						}
 					],
-					"id": 2
+					"id": 2,
+					"definition": "A place where sick or injured people get medical treatment."
 				},
 				{
 					"id": 3,
@@ -1359,10 +1414,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I wait at the clinic.",
+							"sentence": "Do I wait at the clinic?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "A place where people can go for minor medical help."
 				},
 				{
 					"partOfSpeech": "",
@@ -1381,11 +1437,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I drink my medicine.",
+							"sentence": "Do I drink my medicine?",
 							"translation": ""
 						}
 					],
-					"id": 4
+					"id": 4,
+					"definition": "A substance used to treat an illness."
 				},
 				{
 					"sortOrder": 1,
@@ -1405,10 +1462,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I need to rest because of my headache.",
+							"sentence": "Do I need to rest because of my headache?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "A pain in the head."
 				},
 				{
 					"translation": "",
@@ -1425,13 +1483,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The child has a fever.",
+							"sentence": "Does the child have a fever?",
 							"translation": ""
 						}
 					],
 					"id": 6,
 					"partOfSpeech": "",
-					"group": "Health and Body"
+					"group": "Health and Body",
+					"definition": "A high body temperature, often a sign of illness."
 				},
 				{
 					"word": "cough",
@@ -1449,12 +1508,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I have a cough and a cold.",
+							"sentence": "Do I have a cough and a cold?",
 							"translation": ""
 						}
 					],
 					"id": 7,
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "To force air out of your lungs suddenly, usually to clear your throat."
 				},
 				{
 					"sentences": [
@@ -1467,7 +1527,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My lunch is healthy.",
+							"sentence": "Is my lunch healthy?",
 							"translation": ""
 						}
 					],
@@ -1477,7 +1537,8 @@
 					"id": 8,
 					"word": "healthy",
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Good for your body; well and not ill."
 				},
 				{
 					"id": 9,
@@ -1497,10 +1558,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He is sick in bed.",
+							"sentence": "Is he sick in bed?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "Ill; having a disease or problem with your health."
 				},
 				{
 					"sortOrder": 1,
@@ -1515,7 +1577,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Wash your body every day.",
+							"sentence": "Should I wash your body every day?",
 							"translation": ""
 						}
 					],
@@ -1523,7 +1585,8 @@
 					"word": "body",
 					"partOfSpeech": "",
 					"romanisation": "",
-					"translation": ""
+					"translation": "",
+					"definition": "The whole physical structure of a person or animal."
 				},
 				{
 					"word": "exercise",
@@ -1540,20 +1603,21 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We exercise at the park.",
+							"sentence": "Do we exercise at the park?",
 							"translation": ""
 						}
 					],
 					"translation": "",
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Physical activity to make your body strong and healthy."
 				}
 			]
 		},
 		{
 			"sortOrder": 1,
 			"title": "Education",
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"words": [
 				{
 					"group": "Education",
@@ -1568,7 +1632,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like my school.",
+							"sentence": "Do I like my school?",
 							"translation": ""
 						}
 					],
@@ -1576,7 +1640,8 @@
 					"word": "school",
 					"romanisation": "",
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A place where children go to learn."
 				},
 				{
 					"word": "teacher",
@@ -1590,7 +1655,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I talk to the teacher.",
+							"sentence": "Do I talk to the teacher?",
 							"translation": ""
 						}
 					],
@@ -1599,7 +1664,8 @@
 					"group": "Education",
 					"sortOrder": 1,
 					"id": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A person who teaches students."
 				},
 				{
 					"romanisation": "",
@@ -1615,14 +1681,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I am a student.",
+							"sentence": "Am I a student?",
 							"translation": ""
 						}
 					],
 					"word": "student",
 					"sortOrder": 1,
 					"translation": "",
-					"group": "Education"
+					"group": "Education",
+					"definition": "A person who is studying at a school or university."
 				},
 				{
 					"sortOrder": 1,
@@ -1642,10 +1709,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Our classroom has many chairs.",
+							"sentence": "Does our classroom have many chairs?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "A room where a class of students is taught."
 				},
 				{
 					"sentences": [
@@ -1658,7 +1726,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I do my homework after school.",
+							"sentence": "Do I do my homework after school?",
 							"translation": ""
 						}
 					],
@@ -1668,7 +1736,8 @@
 					"romanisation": "",
 					"id": 4,
 					"partOfSpeech": "",
-					"group": "Education"
+					"group": "Education",
+					"definition": "Work that a student does at home for school."
 				},
 				{
 					"sentences": [
@@ -1681,7 +1750,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I study for the exam.",
+							"sentence": "Do I study for the exam?",
 							"translation": ""
 						}
 					],
@@ -1691,7 +1760,8 @@
 					"romanisation": "",
 					"id": 5,
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A formal test of a person's knowledge or ability."
 				},
 				{
 					"translation": "",
@@ -1710,11 +1780,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We have a lesson every day.",
+							"sentence": "Do we have a lesson every day?",
 							"translation": ""
 						}
 					],
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A period of time when something is taught."
 				},
 				{
 					"romanisation": "",
@@ -1728,7 +1799,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We have many subjects at school.",
+							"sentence": "Do we have many subjects at school?",
 							"translation": ""
 						}
 					],
@@ -1737,7 +1808,8 @@
 					"id": 7,
 					"group": "Education",
 					"translation": "",
-					"word": "subject"
+					"word": "subject",
+					"definition": "An area of knowledge that is studied at school or university."
 				},
 				{
 					"translation": "",
@@ -1757,10 +1829,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I read in the library.",
+							"sentence": "Do I read in the library?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "A place where books are kept for people to read or borrow."
 				},
 				{
 					"sentences": [
@@ -1773,7 +1846,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He goes to university.",
+							"sentence": "Does he go to university?",
 							"translation": ""
 						}
 					],
@@ -1783,7 +1856,8 @@
 					"partOfSpeech": "",
 					"word": "university",
 					"romanisation": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A high-level educational institution where you can study for a degree."
 				},
 				{
 					"sortOrder": 1,
@@ -1803,10 +1877,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I read my textbook every day.",
+							"sentence": "Do I read my textbook every day?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "A book used by students for a certain subject."
 				},
 				{
 					"id": 11,
@@ -1823,20 +1898,21 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I draw in my notebook.",
+							"sentence": "Do I draw in my notebook?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"word": "notebook",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A book of blank paper for writing notes."
 				}
 			]
 		},
 		{
 			"sortOrder": 1,
 			"title": "Jobs",
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"words": [
 				{
 					"romanisation": "",
@@ -1855,11 +1931,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My mother works at an office.",
+							"sentence": "Does my mother work at an office?",
 							"translation": ""
 						}
 					],
-					"id": 0
+					"id": 0,
+					"definition": "A place, usually a room, where people work at desks."
 				},
 				{
 					"sentences": [
@@ -1872,7 +1949,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I spoke to the manager.",
+							"sentence": "Did I speak to the manager?",
 							"translation": ""
 						}
 					],
@@ -1882,7 +1959,8 @@
 					"group": "Work and Jobs",
 					"romanisation": "",
 					"sortOrder": 1,
-					"word": "manager"
+					"word": "manager",
+					"definition": "A person responsible for controlling a company or part of it."
 				},
 				{
 					"word": "colleague",
@@ -1899,13 +1977,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I work with my colleague.",
+							"sentence": "Do I work with my colleague?",
 							"translation": ""
 						}
 					],
 					"id": 2,
 					"romanisation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A person who works with you in the same organization."
 				},
 				{
 					"sortOrder": 1,
@@ -1921,14 +2000,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I am late for the meeting.",
+							"sentence": "Am I late for the meeting?",
 							"translation": ""
 						}
 					],
 					"id": 3,
 					"romanisation": "",
 					"partOfSpeech": "",
-					"group": "Work and Jobs"
+					"group": "Work and Jobs",
+					"definition": "A planned event where people discuss things."
 				},
 				{
 					"sortOrder": 1,
@@ -1945,13 +2025,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "His job is interesting.",
+							"sentence": "Is his job interesting?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"id": 4,
-					"translation": ""
+					"translation": "",
+					"definition": "The work you do to earn money."
 				},
 				{
 					"id": 5,
@@ -1968,13 +2049,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "His career is in medicine.",
+							"sentence": "Is his career in medicine?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"translation": "",
-					"word": "career"
+					"word": "career",
+					"definition": "The series of jobs or positions a person has over a period of time."
 				},
 				{
 					"romanisation": "",
@@ -1992,12 +2074,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My profession is teaching.",
+							"sentence": "Is my profession teaching?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A type of job that needs special education or training."
 				},
 				{
 					"sortOrder": 1,
@@ -2016,11 +2099,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Employment is important for everyone.",
+							"sentence": "Is employment important for everyone?",
 							"translation": ""
 						}
 					],
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The state of having a job."
 				},
 				{
 					"sortOrder": 1,
@@ -2037,13 +2121,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She gets her salary every month.",
+							"sentence": "Does she get her salary every month?",
 							"translation": ""
 						}
 					],
 					"id": 8,
 					"partOfSpeech": "",
-					"word": "salary"
+					"word": "salary",
+					"definition": "The money you are paid regularly for your work."
 				},
 				{
 					"sentences": [
@@ -2056,7 +2141,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He is nervous for the interview.",
+							"sentence": "Is he nervous for the interview?",
 							"translation": ""
 						}
 					],
@@ -2066,7 +2151,8 @@
 					"id": 9,
 					"word": "interview",
 					"romanisation": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A formal meeting where someone asks you questions about a job."
 				},
 				{
 					"translation": "",
@@ -2080,7 +2166,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She wrote her resume last night.",
+							"sentence": "Did she write her resume last night?",
 							"translation": ""
 						}
 					],
@@ -2089,7 +2175,8 @@
 					"partOfSpeech": "",
 					"group": "Work and Jobs",
 					"id": 10,
-					"word": "resume"
+					"word": "resume",
+					"definition": "A short document about your education and previous jobs."
 				},
 				{
 					"group": "Work and Jobs",
@@ -2105,14 +2192,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The company has many employees.",
+							"sentence": "Does the company have many employees?",
 							"translation": ""
 						}
 					],
 					"translation": "",
 					"word": "company",
 					"id": 11,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "An organization that sells goods or services."
 				}
 			]
 		},
@@ -2136,10 +2224,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I wash my car.",
+							"sentence": "Do I wash my car?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "A motor vehicle with four wheels used for transport."
 				},
 				{
 					"translation": "",
@@ -2156,13 +2245,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We wait for the bus.",
+							"sentence": "Do we wait for the bus?",
 							"translation": ""
 						}
 					],
 					"romanisation": "",
 					"id": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A large vehicle that carries many people on a fixed route."
 				},
 				{
 					"id": 2,
@@ -2181,11 +2271,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The train is fast.",
+							"sentence": "Is the train fast?",
 							"translation": ""
 						}
 					],
-					"word": "train"
+					"word": "train",
+					"definition": "A series of connected carriages that runs on rails."
 				},
 				{
 					"sortOrder": 1,
@@ -2203,12 +2294,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I see an airplane in the sky.",
+							"sentence": "Do I see an airplane in the sky?",
 							"translation": ""
 						}
 					],
 					"romanisation": "",
-					"id": 3
+					"id": 3,
+					"definition": "A machine with wings that flies in the air, carrying people."
 				},
 				{
 					"romanisation": "",
@@ -2226,12 +2318,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I go to school by bicycle.",
+							"sentence": "Do I go to school by bicycle?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
-					"group": "Travel and Transportation"
+					"group": "Travel and Transportation",
+					"definition": "A vehicle with two wheels that you sit on and pedal."
 				},
 				{
 					"id": 5,
@@ -2247,14 +2340,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I called a taxi.",
+							"sentence": "Did I call a taxi?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"romanisation": "",
 					"group": "Travel and Transportation",
-					"translation": ""
+					"translation": "",
+					"definition": "A car with a driver that you pay to take you somewhere."
 				},
 				{
 					"sortOrder": 1,
@@ -2269,7 +2363,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The ticket is in my pocket.",
+							"sentence": "Is the ticket in my pocket?",
 							"translation": ""
 						}
 					],
@@ -2277,7 +2371,8 @@
 					"partOfSpeech": "",
 					"word": "ticket",
 					"translation": "",
-					"id": 6
+					"id": 6,
+					"definition": "A small piece of paper that allows you to use a service or enter a place."
 				},
 				{
 					"partOfSpeech": "",
@@ -2297,10 +2392,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We meet at the station.",
+							"sentence": "Do we meet at the station?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "A building where buses or trains stop for people to get on or off."
 				},
 				{
 					"partOfSpeech": "",
@@ -2319,11 +2415,12 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I go to the airport by taxi.",
+							"sentence": "Do I go to the airport by taxi?",
 							"translation": ""
 						}
 					],
-					"id": 8
+					"id": 8,
+					"definition": "A place where airplanes land and take off."
 				},
 				{
 					"sentences": [
@@ -2336,7 +2433,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The luggage is on the floor.",
+							"sentence": "Is the luggage on the floor?",
 							"translation": ""
 						}
 					],
@@ -2346,7 +2443,8 @@
 					"word": "luggage",
 					"id": 9,
 					"translation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The bags and suitcases that you carry when traveling."
 				},
 				{
 					"sentences": [
@@ -2359,7 +2457,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I look at the map.",
+							"sentence": "Do I look at the map?",
 							"translation": ""
 						}
 					],
@@ -2369,7 +2467,8 @@
 					"romanisation": "",
 					"sortOrder": 1,
 					"translation": "",
-					"group": "Travel and Transportation"
+					"group": "Travel and Transportation",
+					"definition": "A drawing that shows the features of an area."
 				},
 				{
 					"sentences": [
@@ -2382,7 +2481,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The journey starts today.",
+							"sentence": "Does the journey start today?",
 							"translation": ""
 						}
 					],
@@ -2392,16 +2491,17 @@
 					"translation": "",
 					"romanisation": "",
 					"word": "journey",
-					"group": "Travel and Transportation"
+					"group": "Travel and Transportation",
+					"definition": "The act of traveling from one place to another."
 				}
 			],
 			"sortOrder": 1,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Travel"
 		},
 		{
 			"sortOrder": 1,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Leisure",
 			"words": [
 				{
@@ -2415,7 +2515,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Reading is fun.",
+							"sentence": "Is reading fun?",
 							"translation": ""
 						}
 					],
@@ -2425,7 +2525,8 @@
 					"word": "reading",
 					"romanisation": "",
 					"group": "Leisure and Hobbies",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The activity of looking at written words and understanding them."
 				},
 				{
 					"translation": "",
@@ -2442,13 +2543,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My brother likes sports.",
+							"sentence": "Does my brother like sports?",
 							"translation": ""
 						}
 					],
 					"id": 1,
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "Games or physical activities that people do for enjoyment or competition."
 				},
 				{
 					"romanisation": "",
@@ -2468,10 +2570,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Music makes me happy.",
+							"sentence": "Does music make me happy?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "Sounds arranged in a way that is pleasant to listen to."
 				},
 				{
 					"romanisation": "",
@@ -2491,10 +2594,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like painting pictures.",
+							"sentence": "Do I like painting pictures?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "The activity of creating pictures using colored paint."
 				},
 				{
 					"word": "dancing",
@@ -2511,13 +2615,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like dancing with my friends.",
+							"sentence": "Do I like dancing with my friends?",
 							"translation": ""
 						}
 					],
 					"group": "Leisure and Hobbies",
 					"translation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "Moving your body rhythmically to music."
 				},
 				{
 					"translation": "",
@@ -2535,12 +2640,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I go hiking on weekends.",
+							"sentence": "Do I go hiking on weekends?",
 							"translation": ""
 						}
 					],
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The activity of going for a long walk in the countryside."
 				},
 				{
 					"id": 6,
@@ -2560,10 +2666,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I take photos as photography.",
+							"sentence": "Do I take photos as photography?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "The job or hobby of taking photographs."
 				},
 				{
 					"group": "Leisure and Hobbies",
@@ -2581,12 +2688,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like gardening with my dad.",
+							"sentence": "Do I like gardening with my dad?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
-					"id": 7
+					"id": 7,
+					"definition": "The hobby of growing plants in a garden."
 				},
 				{
 					"romanisation": "",
@@ -2600,7 +2708,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I help my mom with cooking.",
+							"sentence": "Do I help my mom with cooking?",
 							"translation": ""
 						}
 					],
@@ -2609,7 +2717,8 @@
 					"group": "Leisure and Hobbies",
 					"translation": "",
 					"partOfSpeech": "",
-					"id": 8
+					"id": 8,
+					"definition": "The skill or activity of preparing food."
 				},
 				{
 					"word": "fishing",
@@ -2624,7 +2733,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like fishing with my grandpa.",
+							"sentence": "Do I like fishing with my grandpa?",
 							"translation": ""
 						}
 					],
@@ -2632,7 +2741,8 @@
 					"partOfSpeech": "",
 					"romanisation": "",
 					"id": 9,
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The sport of catching fish."
 				},
 				{
 					"id": 10,
@@ -2650,12 +2760,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Traveling is exciting.",
+							"sentence": "Is traveling exciting?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The activity of going from one place to another, usually over a long distance."
 				},
 				{
 					"sortOrder": 1,
@@ -2675,16 +2786,17 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I watch movies every weekend.",
+							"sentence": "Do I watch movies every weekend?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "The activity of seeing a film or motion picture."
 				}
 			]
 		},
 		{
 			"sortOrder": 1,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Weather",
 			"words": [
 				{
@@ -2702,13 +2814,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The weather is sunny and warm.",
+							"sentence": "Is the weather sunny and warm?",
 							"translation": ""
 						}
 					],
 					"id": 0,
 					"partOfSpeech": "",
-					"group": "Weather and Seasons"
+					"group": "Weather and Seasons",
+					"definition": "With a lot of bright light from the sun."
 				},
 				{
 					"word": "rainy",
@@ -2725,13 +2838,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "It is rainy this morning.",
+							"sentence": "Is it rainy this morning?",
 							"translation": ""
 						}
 					],
 					"id": 1,
 					"group": "Weather and Seasons",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "With a lot of rain."
 				},
 				{
 					"group": "Weather and Seasons",
@@ -2748,13 +2862,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Cloudy weather is cool.",
+							"sentence": "Is cloudy weather cool?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "With many clouds in the sky."
 				},
 				{
 					"sortOrder": 1,
@@ -2774,10 +2889,11 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I wear a jacket when it is windy.",
+							"sentence": "Do I wear a jacket when it is windy?",
 							"translation": ""
 						}
-					]
+					],
+					"definition": "With a lot of wind."
 				},
 				{
 					"word": "snowy",
@@ -2791,7 +2907,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We play outside when it is snowy.",
+							"sentence": "Do we play outside when it is snowy?",
 							"translation": ""
 						}
 					],
@@ -2800,7 +2916,8 @@
 					"id": 4,
 					"partOfSpeech": "",
 					"translation": "",
-					"group": "Weather and Seasons"
+					"group": "Weather and Seasons",
+					"definition": "With falling snow."
 				},
 				{
 					"sentences": [
@@ -2813,7 +2930,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I wear shorts when it is hot.",
+							"sentence": "Do I wear shorts when it is hot?",
 							"translation": ""
 						}
 					],
@@ -2823,7 +2940,8 @@
 					"partOfSpeech": "",
 					"word": "hot",
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Having a high temperature."
 				},
 				{
 					"word": "cold",
@@ -2839,14 +2957,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I wear a coat when it is cold.",
+							"sentence": "Do I wear a coat when it is cold?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"translation": "",
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "Having a low temperature."
 				},
 				{
 					"translation": "",
@@ -2862,14 +2981,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Spring is warm and nice.",
+							"sentence": "Is spring warm and nice?",
 							"translation": ""
 						}
 					],
 					"romanisation": "",
 					"id": 7,
 					"partOfSpeech": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The season between winter and summer."
 				},
 				{
 					"sortOrder": 1,
@@ -2886,13 +3006,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like summer holidays.",
+							"sentence": "Do I like summer holidays?",
 							"translation": ""
 						}
 					],
 					"group": "Weather and Seasons",
 					"translation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The warmest season of the year."
 				},
 				{
 					"partOfSpeech": "",
@@ -2910,12 +3031,13 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like autumn colors.",
+							"sentence": "Do I like autumn colors?",
 							"translation": ""
 						}
 					],
 					"translation": "",
-					"id": 9
+					"id": 9,
+					"definition": "The season between summer and winter, when leaves change color and fall."
 				},
 				{
 					"id": 10,
@@ -2931,14 +3053,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I wear gloves in winter.",
+							"sentence": "Do I wear gloves in winter?",
 							"translation": ""
 						}
 					],
 					"group": "Weather and Seasons",
 					"sortOrder": 1,
 					"word": "winter",
-					"translation": ""
+					"translation": "",
+					"definition": "The coldest season of the year."
 				},
 				{
 					"translation": "",
@@ -2953,7 +3076,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Check the temperature before you go out.",
+							"sentence": "Should I check the temperature before I go out?",
 							"translation": ""
 						}
 					],
@@ -2961,7 +3084,8 @@
 					"sortOrder": 1,
 					"word": "temperature",
 					"id": 11,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "How hot or cold something is."
 				}
 			]
 		},
@@ -2980,12 +3104,13 @@
 						"sentence": "Social media is popular."
 					}, {
 						"translation": "",
-						"sentence": "I use social media often."
+						"sentence": "Do I use social media often?"
 					}],
 					"partOfSpeech": "",
 					"romanisation": "",
 					"translation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "Websites and apps that let people communicate and share information."
 				}, {
 				"word": "forest",
 				"sortOrder": 1,
@@ -2999,11 +3124,12 @@
 					"sentence": "The forest is green."
 				}, {
 					"translation": "",
-					"sentence": "Many animals live in the forest."
+					"sentence": "Do many animals live in the forest?"
 				}],
 				"translation": "",
 				"partOfSpeech": "",
-				"group": "Environment and Nature"
+				"group": "Environment and Nature",
+				"definition": "A large area covered mainly with trees."
 			}, {
 				"word": "river",
 				"partOfSpeech": "",
@@ -3018,10 +3144,11 @@
 					"sentence": "I like to swim in the river."
 				}, {
 					"translation": "",
-					"sentence": "The river is long."
+					"sentence": "Is the river long?"
 				}],
 				"romanisation": "",
-				"group": "Environment and Nature"
+				"group": "Environment and Nature",
+				"definition": "A large natural stream of water flowing to the sea or a lake."
 			}, {
 				"sortOrder": 1,
 				"group": "Environment and Nature",
@@ -3033,13 +3160,14 @@
 					"sentence": "The mountain is very high."
 				}, {
 					"translation": "",
-					"sentence": "We saw snow on the mountain."
+					"sentence": "Did we see snow on the mountain?"
 				}],
 				"word": "mountain",
 				"translation": "",
 				"partOfSpeech": "",
 				"id": 2,
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "A very large, high hill."
 			}, {
 				"romanisation": "",
 				"translation": "",
@@ -3053,11 +3181,12 @@
 					"sentence": "I like to go to the beach."
 				}, {
 					"translation": "",
-					"sentence": "We played on the beach."
+					"sentence": "Did we play on the beach?"
 				}],
 				"id": 3,
 				"group": "Environment and Nature",
-				"word": "beach"
+				"word": "beach",
+				"definition": "An area of sand or stones next to the sea or a lake."
 			}, {
 				"id": 4,
 				"romanisation": "",
@@ -3069,13 +3198,14 @@
 					"sentence": "The tree has green leaves."
 				}, {
 					"translation": "",
-					"sentence": "Birds live in the tree."
+					"sentence": "Do birds live in the tree?"
 				}],
 				"word": "tree",
 				"translation": "",
 				"sortOrder": 1,
 				"group": "Environment and Nature",
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "A tall plant with a trunk and branches."
 			}, {
 				"translation": "",
 				"id": 5,
@@ -3088,12 +3218,13 @@
 					"sentence": "The flower smells nice."
 				}, {
 					"translation": "",
-					"sentence": "I picked a red flower."
+					"sentence": "Did I pick a red flower?"
 				}],
 				"romanisation": "",
 				"group": "Environment and Nature",
 				"partOfSpeech": "",
-				"word": "flower"
+				"word": "flower",
+				"definition": "The colorful part of a plant that blooms."
 			}, {
 				"translation": "",
 				"partOfSpeech": "",
@@ -3109,9 +3240,10 @@
 					"sentence": "A dog is a friendly animal."
 				}, {
 					"translation": "",
-					"sentence": "Wild animals live in the forest."
+					"sentence": "Do wild animals live in the forest?"
 				}],
-				"id": 6
+				"id": 6,
+				"definition": "A living creature that is not a human or a plant."
 			}, {
 				"id": 7,
 				"word": "bird",
@@ -3127,9 +3259,11 @@
 					"sentence": "The bird has blue feathers."
 				}, {
 					"translation": "",
-					"sentence": "I saw a small bird."
+					"sentence": "Did I see a small bird?",
+					"translation": ""
 				}],
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "An animal with wings that flies and has feathers."
 			}, {
 				"group": "Environment and Nature",
 				"sortOrder": 1,
@@ -3145,9 +3279,10 @@
 					"sentence": "Pollution is bad for the earth."
 				}, {
 					"translation": "",
-					"sentence": "We need to reduce pollution."
+					"sentence": "Do we need to reduce pollution?"
 				}],
-				"word": "pollution"
+				"word": "pollution",
+				"definition": "Harmful substances in the air, water, or land."
 			}, {
 				"word": "recycling",
 				"translation": "",
@@ -3161,11 +3296,12 @@
 					"sentence": "Recycling is good for our planet."
 				}, {
 					"translation": "",
-					"sentence": "We do recycling at home."
+					"sentence": "Do we do recycling at home?"
 				}],
 				"partOfSpeech": "",
 				"romanisation": "",
-				"group": "Environment and Nature"
+				"group": "Environment and Nature",
+				"definition": "The process of turning waste into reusable material."
 			}, {
 				"translation": "",
 				"romanisation": "",
@@ -3181,9 +3317,10 @@
 					"sentence": "The climate is warm here."
 				}, {
 					"translation": "",
-					"sentence": "Climate change is a big issue."
+					"sentence": "Is climate change a big issue?"
 				}],
-				"id": 10
+				"id": 10,
+				"definition": "The general weather conditions of a region over a long period."
 			}, {
 				"id": 11,
 				"sortOrder": 1,
@@ -3197,19 +3334,20 @@
 					"sentence": "I love spending time in nature."
 				}, {
 					"translation": "",
-					"sentence": "Nature is beautiful."
+					"sentence": "Is nature beautiful?"
 				}],
 				"translation": "",
 				"partOfSpeech": "",
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "The world outside, including plants, animals, and landscapes."
 			}
 			],
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Nature",
 			"sortOrder": 1
 		},
 		{
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Social",
 			"sortOrder": 1 ,
 			"words" :
@@ -3224,14 +3362,15 @@
 						"sentence": "I greet my teacher."
 					}, {
 						"translation": "",
-						"sentence": "He greeted me loudly."
+						"sentence": "Did he greet me loudly?"
 					}],
 					"translation": "",
 					"partOfSpeech": "",
 					"word": "greet",
 					"romanisation": "",
 					"id": 0,
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "To say hello to someone politely."
 				}, {
 				"sentences": [{
 					"translation": "",
@@ -3249,7 +3388,8 @@
 				"word": "introduce",
 				"romanisation": "",
 				"id": 1,
-				"group": "Social Interactions"
+				"group": "Social Interactions",
+				"definition": "To tell people someone's name when they meet for the first time."
 			}, {
 				"sentences": [{
 					"translation": "",
@@ -3267,7 +3407,8 @@
 				"partOfSpeech": "",
 				"translation": "",
 				"sortOrder": 1,
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "To ask someone to come to an event or visit a place."
 			}, {
 				"word": "apologize",
 				"id": 3,
@@ -3283,9 +3424,10 @@
 					"sentence": "I apologize for the mistake."
 				}, {
 					"translation": "",
-					"sentence": "You should apologize to her."
+					"sentence": "Should you apologize to her?"
 				}],
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "To say sorry for something you have done wrong."
 			}, {
 				"romanisation": "",
 				"word": "thank",
@@ -3297,13 +3439,15 @@
 					"sentence": "I thank you for coming."
 				}, {
 					"translation": "",
-					"sentence": "She thanked me."
+					"sentence": "Did she thank me?",
+					"translation": ""
 				}],
 				"id": 4,
 				"translation": "",
 				"sortOrder": 1,
 				"group": "Social Interactions",
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "To express gratitude to someone."
 			}, {
 				"id": 5,
 				"word": "congratulate",
@@ -3316,12 +3460,14 @@
 					"sentence": "I congratulate you!"
 				}, {
 					"translation": "",
-					"sentence": "He congratulated the winner."
+					"sentence": "Did he congratulate the winner?",
+					"translation": ""
 				}],
 				"partOfSpeech": "",
 				"group": "Social Interactions",
 				"sortOrder": 1,
-				"translation": ""
+				"translation": "",
+				"definition": "To tell someone you are pleased about their success or happiness."
 			}, {
 				"romanisation": "",
 				"id": 6,
@@ -3337,9 +3483,11 @@
 					"sentence": "He complimented her dress."
 				}, {
 					"translation": "",
-					"sentence": "I complimented his cooking."
+					"sentence": "Did I compliment his cooking?",
+					"translation": ""
 				}],
-				"word": "compliment"
+				"word": "compliment",
+				"definition": "To say something nice to someone about them or their work."
 			}, {
 				"word": "ask",
 				"group": "Social Interactions",
@@ -3355,9 +3503,11 @@
 					"sentence": "I ask a question."
 				}, {
 					"translation": "",
-					"sentence": "She asked for help."
+					"sentence": "Did she ask for help?",
+					"translation": ""
 				}],
-				"translation": ""
+				"translation": "",
+				"definition": "To put a question to someone."
 			}, {
 				"sentences": [{
 					"sentence": "They agreed to meet at the coffee shop.",
@@ -3367,7 +3517,8 @@
 					"sentence": "I agree with you."
 				}, {
 					"translation": "",
-					"sentence": "We agreed on the price."
+					"sentence": "Did we agree on the price?",
+					"translation": ""
 				}],
 				"sortOrder": 1,
 				"word": "agree",
@@ -3375,7 +3526,8 @@
 				"id": 8,
 				"partOfSpeech": "",
 				"translation": "",
-				"group": "Social Interactions"
+				"group": "Social Interactions",
+				"definition": "To have the same opinion as someone else."
 			}, {
 				"group": "Social Interactions",
 				"id": 9,
@@ -3387,13 +3539,15 @@
 					"sentence": "She disagrees with him."
 				}, {
 					"translation": "",
-					"sentence": "I disagree completely."
+					"sentence": "Do I disagree completely?",
+					"translation": ""
 				}],
 				"romanisation": "",
 				"sortOrder": 1,
 				"word": "disagree",
 				"translation": "",
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "To have a different opinion from someone else."
 			}, {
 				"sentences": [{
 					"sentence": "She suggested a new restaurant for dinner.",
@@ -3403,7 +3557,8 @@
 					"sentence": "I suggest a walk."
 				}, {
 					"translation": "",
-					"sentence": "He suggested a good idea."
+					"sentence": "Did he suggest a good idea?",
+					"translation": ""
 				}],
 				"translation": "",
 				"partOfSpeech": "",
@@ -3411,7 +3566,8 @@
 				"group": "Social Interactions",
 				"word": "suggest",
 				"romanisation": "",
-				"id": 10
+				"id": 10,
+				"definition": "To put forward an idea or plan for someone to consider."
 			}, {
 				"translation": "",
 				"romanisation": "",
@@ -3428,13 +3584,15 @@
 					"sentence": "I advise you to rest."
 				}, {
 					"translation": "",
-					"sentence": "She advised him wisely."
-				}]
+					"sentence": "Did she advise him wisely?",
+					"translation": ""
+				}],
+				"definition": "To give someone an opinion about what they should do."
 			}
 			]
 		},
 		{
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Technology",
 			"sortOrder": 1,
 			"words" : [
@@ -3449,13 +3607,15 @@
 						"sentence": "My computer is new."
 					}, {
 						"translation": "",
-						"sentence": "I play games on my computer."
+						"sentence": "Do I play games on my computer?",
+						"translation": ""
 					}],
 					"word": "computer",
 					"id": 0,
 					"sortOrder": 1,
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "An electronic machine for storing and processing data."
 				}, {
 					"partOfSpeech": "",
 					"sortOrder": 1,
@@ -3471,9 +3631,11 @@
 						"sentence": "I use the internet every day."
 					}, {
 						"translation": "",
-						"sentence": "The internet helps me learn."
+						"sentence": "Does the internet help me learn?",
+						"translation": ""
 					}],
-					"word": "internet"
+					"word": "internet",
+					"definition": "The global network that connects computers and allows for communication."
 				}, {
 					"word": "smartphone",
 					"romanisation": "",
@@ -3489,9 +3651,11 @@
 						"sentence": "I use my smartphone to call."
 					}, {
 						"translation": "",
-						"sentence": "My smartphone has many apps."
+						"sentence": "Does my smartphone have many apps?",
+						"translation": ""
 					}],
-					"translation": ""
+					"translation": "",
+					"definition": "A mobile phone that can do many things like accessing the internet and running apps."
 				}, {
 					"sortOrder": 1,
 					"romanisation": "",
@@ -3508,8 +3672,10 @@
 						"sentence": "I have a small tablet."
 					}, {
 						"translation": "",
-						"sentence": "She watches movies on her tablet."
-					}]
+						"sentence": "Does she watch movies on her tablet?",
+						"translation": ""
+					}],
+					"definition": "A thin, flat computer without a physical keyboard."
 				}, {
 					"id": 4,
 					"sentences": [{
@@ -3520,14 +3686,16 @@
 						"sentence": "I send emails for work."
 					}, {
 						"translation": "",
-						"sentence": "Did you get my email?"
+						"sentence": "Did you get my email?",
+						"translation": ""
 					}],
 					"translation": "",
 					"group": "Technology",
 					"romanisation": "",
 					"partOfSpeech": "",
 					"word": "email",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A system for sending and receiving messages electronically."
 				}, {
 					"word": "software",
 					"romanisation": "",
@@ -3542,11 +3710,14 @@
 						"sentence": "I use new software."
 					}, {
 						"translation": "",
-						"sentence": "The software is easy to use."
+						"sentence": "Is the software easy to use?",
+						"translation": ""
 					}],
 					"group": "Technology",
-					"sortOrder": 1
-				}, {
+					"sortOrder": 1,
+					"definition": "The programs and other operating information used by a computer."
+				},
+				{
 					"group": "Technology",
 					"sentences": [{
 						"translation": "",
@@ -3556,15 +3727,18 @@
 						"sentence": "This website is useful."
 					}, {
 						"translation": "",
-						"sentence": "I visit many websites."
+						"sentence": "Do I visit many websites?",
+						"translation": ""
 					}],
 					"id": 6,
 					"translation": "",
 					"partOfSpeech": "",
 					"word": "website",
 					"sortOrder": 1,
-					"romanisation": ""
-				}, {
+					"romanisation": "",
+					"definition": "A location connected to the Internet that maintains one or more pages."
+				},
+				{
 					"translation": "",
 					"sentences": [{
 						"translation": "",
@@ -3574,15 +3748,18 @@
 						"sentence": "My keyboard is black."
 					}, {
 						"translation": "",
-						"sentence": "I type fast on the keyboard."
+						"sentence": "Do I type fast on the keyboard?",
+						"translation": ""
 					}],
 					"group": "Technology",
 					"romanisation": "",
 					"id": 7,
 					"word": "keyboard",
 					"partOfSpeech": "",
-					"sortOrder": 1
-				}, {
+					"sortOrder": 1,
+					"definition": "A set of keys used to type information into a computer."
+				},
+				{
 					"id": 8,
 					"sentences": [{
 						"translation": "",
@@ -3592,15 +3769,18 @@
 						"sentence": "My mouse is wireless."
 					}, {
 						"translation": "",
-						"sentence": "The cat chased the mouse."
+						"sentence": "Did the cat chase the mouse?",
+						"translation": ""
 					}],
 					"group": "Technology",
 					"romanisation": "",
 					"partOfSpeech": "",
 					"word": "mouse",
 					"translation": "",
-					"sortOrder": 1
-				}, {
+					"sortOrder": 1,
+					"definition": "A small device moved by hand to control a cursor on a computer screen."
+				},
+				{
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"group": "Technology",
@@ -3614,11 +3794,14 @@
 						"sentence": "I lost my charger."
 					}, {
 						"translation": "",
-						"sentence": "My phone needs a charger."
+						"sentence": "Does my phone need a charger?",
+						"translation": ""
 					}],
 					"romanisation": "",
-					"id": 9
-				}, {
+					"id": 9,
+					"definition": "A device used to put electricity into a battery."
+				},
+				{
 					"sentences": [{
 						"sentence": "She takes photos with her digital camera.",
 						"translation": ""
@@ -3627,7 +3810,8 @@
 						"sentence": "I have a new camera."
 					}, {
 						"translation": "",
-						"sentence": "He bought a video camera."
+						"sentence": "Did he buy a video camera?",
+						"translation": ""
 					}],
 					"id": 10,
 					"word": "camera",
@@ -3635,7 +3819,8 @@
 					"romanisation": "",
 					"partOfSpeech": "",
 					"group": "Technology",
-					"translation": ""
+					"translation": "",
+					"definition": "A device for taking photographs or videos."
 				}
 			]
 		},
@@ -3660,7 +3845,8 @@
 					"sortOrder": 1,
 					"partOfSpeech": "",
 					"word": "was",
-					"translation": ""
+					"translation": "",
+					"definition": "The past tense of 'am' and 'is'."
 				}, {
 					"sentences": [{
 						"sentence": "She went to the park last Saturday.",
@@ -3670,7 +3856,7 @@
 						"sentence": "I went to the store."
 					}, {
 						"translation": "",
-						"sentence": "They went home early."
+						"sentence": "Did they go home early?"
 					}],
 					"romanisation": "",
 					"word": "went",
@@ -3678,7 +3864,8 @@
 					"sortOrder": 1,
 					"group": "Basic Grammar and Structures: Simple Past Tense",
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "The past tense of the verb 'go'."
 				}, {
 					"translation": "",
 					"word": "saw",
@@ -3696,8 +3883,9 @@
 						"sentence": "She saw a bird."
 					}, {
 						"translation": "",
-						"sentence": "We saw them yesterday?"
-					}]
+						"sentence": "Did we see them yesterday?"
+					}],
+					"definition": "The past tense of the verb 'see'."
 				}, {
 					"translation": "",
 					"word": "had",
@@ -3713,9 +3901,10 @@
 						"sentence": "I had breakfast."
 					}, {
 						"translation": "",
-						"sentence": "She had a red car."
+						"sentence": "Did she have a red car?"
 					}],
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The past tense of the verb 'have'."
 				}, {
 					"id": 4,
 					"romanisation": "",
@@ -3728,12 +3917,13 @@
 						"sentence": "I ate an apple."
 					}, {
 						"translation": "",
-						"sentence": "He ate quickly."
+						"sentence": "Did he eat quickly?"
 					}],
 					"translation": "",
 					"group": "Basic Grammar and Structures: Simple Past Tense",
 					"word": "ate",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The past tense of the verb 'eat'."
 				}, {
 					"sentences": [{
 						"translation": "",
@@ -3743,7 +3933,7 @@
 						"sentence": "I bought milk."
 					}, {
 						"translation": "",
-						"sentence": "She bought a present."
+						"sentence": "Did she buy a present?"
 					}],
 					"sortOrder": 1,
 					"partOfSpeech": "",
@@ -3751,7 +3941,8 @@
 					"id": 5,
 					"romanisation": "",
 					"group": "Basic Grammar and Structures: Simple Past Tense",
-					"word": "bought"
+					"word": "bought",
+					"definition": "The past tense of the verb 'buy'."
 				}, {
 					"id": 6,
 					"translation": "",
@@ -3766,10 +3957,11 @@
 						"sentence": "I took a bus."
 					}, {
 						"translation": "",
-						"sentence": "He took my hand."
+						"sentence": "Did he take my hand?"
 					}],
 					"group": "Basic Grammar and Structures: Simple Past Tense",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "The past tense of the verb 'take'."
 				}, {
 					"group": "Basic Grammar and Structures: Simple Past Tense",
 					"word": "made",
@@ -3782,12 +3974,13 @@
 						"sentence": "She made dinner."
 					}, {
 						"translation": "",
-						"sentence": "He made a mistake."
+						"sentence": "Did he make a mistake?"
 					}],
 					"partOfSpeech": "",
 					"id": 7,
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "The past tense of the verb 'make'."
 				}, {
 					"group": "Basic Grammar and Structures: Simple Past Tense",
 					"romanisation": "",
@@ -3799,13 +3992,14 @@
 						"sentence": "She said hello."
 					}, {
 						"translation": "",
-						"sentence": "I said thank you."
+						"sentence": "Did I say thank you?"
 					}],
 					"id": 8,
 					"sortOrder": 1,
 					"translation": "",
 					"word": "said",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The past tense of the verb 'say'."
 				}, {
 					"group": "Basic Grammar and Structures: Simple Past Tense",
 					"sortOrder": 1,
@@ -3818,12 +4012,13 @@
 						"sentence": "I wrote a poem."
 					}, {
 						"translation": "",
-						"sentence": "He wrote a message."
+						"sentence": "Did he write a message?"
 					}],
 					"word": "wrote",
 					"partOfSpeech": "",
 					"translation": "",
-					"id": 9
+					"id": 9,
+					"definition": "The past tense of the verb 'write'."
 				}, {
 					"id": 10,
 					"partOfSpeech": "",
@@ -3839,9 +4034,10 @@
 						"sentence": "She drove the car."
 					}, {
 						"translation": "",
-						"sentence": "He drove fast."
+						"sentence": "Did he drive fast?"
 					}],
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "The past tense of the verb 'drive'."
 				}, {
 					"id": 11,
 					"word": "gave",
@@ -3853,13 +4049,14 @@
 						"sentence": "I gave him a book."
 					}, {
 						"translation": "",
-						"sentence": "She gave me a smile."
+						"sentence": "Did she give me a smile?"
 					}],
 					"sortOrder": 1,
 					"partOfSpeech": "",
 					"group": "Basic Grammar and Structures: Simple Past Tense",
 					"romanisation": "",
-					"translation": ""
+					"translation": "",
+					"definition": "The past tense of the verb 'give'."
 				}, {
 					"translation": "",
 					"sentences": [{
@@ -3870,14 +4067,15 @@
 						"sentence": "I am happy."
 					}, {
 						"translation": "",
-						"sentence": "I am tired."
+						"sentence": "Am I tired?"
 					}],
 					"id": 0,
 					"word": "am",
 					"romanisation": "",
 					"sortOrder": 1,
 					"partOfSpeech": "",
-					"group": "Basic Grammar and Structures: Present Tense"
+					"group": "Basic Grammar and Structures: Present Tense",
+					"definition": "The present tense form of 'be' used with 'I'."
 				}, {
 					"sentences": [{
 						"translation": "",
@@ -3887,7 +4085,7 @@
 						"sentence": "He is tall."
 					}, {
 						"translation": "",
-						"sentence": "It is cold."
+						"sentence": "Is it cold?"
 					}],
 					"sortOrder": 1,
 					"romanisation": "",
@@ -3895,7 +4093,8 @@
 					"translation": "",
 					"partOfSpeech": "",
 					"word": "is",
-					"group": "Basic Grammar and Structures: Present Tense"
+					"group": "Basic Grammar and Structures: Present Tense",
+					"definition": "The present tense form of 'be' used with singular subjects."
 				}, {
 					"word": "are",
 					"group": "Basic Grammar and Structures: Present Tense",
@@ -3907,13 +4106,14 @@
 						"sentence": "We are here."
 					}, {
 						"translation": "",
-						"sentence": "You are good."
+						"sentence": "Are you good?"
 					}],
 					"translation": "",
 					"id": 2,
 					"sortOrder": 1,
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The present tense form of 'be' used with plural subjects or 'you'."
 				}, {
 					"romanisation": "",
 					"translation": "",
@@ -3929,9 +4129,10 @@
 						"sentence": "They have a house."
 					}, {
 						"translation": "",
-						"sentence": "We have time."
+						"sentence": "Do we have time?"
 					}],
-					"id": 3
+					"id": 3,
+					"definition": "To own or possess something."
 				}, {
 					"sentences": [{
 						"translation": "",
@@ -3941,7 +4142,7 @@
 						"sentence": "I like ice cream."
 					}, {
 						"translation": "",
-						"sentence": "She likes to read."
+						"sentence": "Does she like to read?"
 					}],
 					"romanisation": "",
 					"sortOrder": 1,
@@ -3949,7 +4150,8 @@
 					"word": "like",
 					"id": 4,
 					"translation": "",
-					"group": "Basic Grammar and Structures: Present Tense"
+					"group": "Basic Grammar and Structures: Present Tense",
+					"definition": "To find something pleasant or enjoyable."
 				}, {
 					"group": "Basic Grammar and Structures: Present Tense",
 					"word": "go",
@@ -3964,10 +4166,11 @@
 						"sentence": "I go to school."
 					}, {
 						"translation": "",
-						"sentence": "She goes to work."
+						"sentence": "Does she go to work?"
 					}],
 					"translation": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "To move from one place to another."
 				}, {
 					"partOfSpeech": "",
 					"id": 6,
@@ -3981,11 +4184,12 @@
 						"sentence": "I eat healthy food."
 					}, {
 						"translation": "",
-						"sentence": "They eat dinner together."
+						"sentence": "Do they eat dinner together?"
 					}],
 					"sortOrder": 1,
 					"translation": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "To put food into your mouth and swallow it."
 				}, {
 					"id": 7,
 					"sortOrder": 1,
@@ -3999,11 +4203,12 @@
 						"sentence": "I read news online."
 					}, {
 						"translation": "",
-						"sentence": "She reads fast."
+						"sentence": "Does she read fast?"
 					}],
 					"word": "read",
 					"romanisation": "",
-					"group": "Basic Grammar and Structures: Present Tense"
+					"group": "Basic Grammar and Structures: Present Tense",
+					"definition": "To look at and understand the meaning of written words."
 				}, {
 					"word": "write",
 					"sentences": [{
@@ -4014,14 +4219,15 @@
 						"sentence": "I write in my notebook."
 					}, {
 						"translation": "",
-						"sentence": "He writes stories."
+						"sentence": "Does he write stories?"
 					}],
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"translation": "",
 					"id": 8,
 					"group": "Basic Grammar and Structures: Present Tense",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "To form letters or words on a surface with a pen or pencil."
 				}, {
 					"sortOrder": 1,
 					"romanisation": "",
@@ -4037,9 +4243,10 @@
 						"sentence": "She runs fast."
 					}, {
 						"translation": "",
-						"sentence": "Dogs run in the park."
+						"sentence": "Do dogs run in the park?"
 					}],
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "To move quickly using your legs."
 				}, {
 					"group": "Basic Grammar and Structures: Present Tense",
 					"sentences": [{
@@ -4050,14 +4257,15 @@
 						"sentence": "I work hard."
 					}, {
 						"translation": "",
-						"sentence": "He works from home."
+						"sentence": "Does he work from home?"
 					}],
 					"partOfSpeech": "",
 					"word": "work",
 					"sortOrder": 1,
 					"id": 10,
 					"translation": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "To do a job that you get paid for."
 				}, {
 					"translation": "",
 					"sentences": [{
@@ -4068,14 +4276,15 @@
 						"sentence": "I study at university."
 					}, {
 						"translation": "",
-						"sentence": "She studies hard."
+						"sentence": "Does she study hard?"
 					}],
 					"word": "study",
 					"sortOrder": 1,
 					"romanisation": "",
 					"group": "Basic Grammar and Structures: Present Tense",
 					"partOfSpeech": "",
-					"id": 11
+					"id": 11,
+					"definition": "To spend time learning about a subject."
 				}, {
 					"sortOrder": 1,
 					"group": "Basic Grammar and Structures: Future Tense",
@@ -4092,8 +4301,9 @@
 						"sentence": "She will come soon."
 					}, {
 						"translation": "",
-						"sentence": "We will eat dinner."
-					}]
+						"sentence": "Will we eat dinner?"
+					}],
+					"definition": "Used to talk about future actions or intentions."
 				}, {
 					"partOfSpeech": "",
 					"sortOrder": 1,
@@ -4105,13 +4315,14 @@
 						"sentence": "I am going to eat."
 					}, {
 						"translation": "",
-						"sentence": "They are going to play."
+						"sentence": "Are they going to play?"
 					}],
 					"translation": "",
 					"id": 1,
 					"romanisation": "",
 					"word": "going to",
-					"group": "Basic Grammar and Structures: Future Tense"
+					"group": "Basic Grammar and Structures: Future Tense",
+					"definition": "Used to talk about future plans or intentions."
 				}, {
 					"sortOrder": 1,
 					"sentences": [{
@@ -4122,14 +4333,16 @@
 						"sentence": "I shall help you."
 					}, {
 						"translation": "",
-						"sentence": "They shall overcome."
+						"sentence": "Shall they overcome?",
+						"translation": ""
 					}],
 					"partOfSpeech": "",
 					"romanisation": "",
 					"group": "Basic Grammar and Structures: Future Tense",
 					"word": "shall",
 					"id": 2,
-					"translation": ""
+					"translation": "",
+					"definition": "Used to express the future (mostly with 'I' and 'we')."
 				}, {
 					"partOfSpeech": "",
 					"sortOrder": 1,
@@ -4145,9 +4358,10 @@
 						"sentence": "I intend to study more."
 					}, {
 						"translation": "",
-						"sentence": "She intends to finish early."
+						"sentence": "Does she intend to finish early?"
 					}],
-					"id": 3
+					"id": 3,
+					"definition": "To plan or mean to do something."
 				}, {
 					"id": 4,
 					"sortOrder": 1,
@@ -4164,8 +4378,9 @@
 						"sentence": "I plan to visit you."
 					}, {
 						"translation": "",
-						"sentence": "She has a plan."
-					}]
+						"sentence": "Does she have a plan?"
+					}],
+					"definition": "To decide how you will do something before you start."
 				}, {
 					"id": 5,
 					"translation": "",
@@ -4182,8 +4397,9 @@
 						"sentence": "I expect good news."
 					}, {
 						"translation": "",
-						"sentence": "He expects to win."
-					}]
+						"sentence": "Does he expect to win?"
+					}],
+					"definition": "To think that something will happen."
 				}, {
 					"word": "aim",
 					"sortOrder": 1,
@@ -4199,9 +4415,10 @@
 						"sentence": "My aim is to pass the test."
 					}, {
 						"translation": "",
-						"sentence": "He aims for success."
+						"sentence": "Does he aim for success?"
 					}],
-					"group": "Basic Grammar and Structures: Future Tense"
+					"group": "Basic Grammar and Structures: Future Tense",
+					"definition": "To plan or intend to achieve something."
 				}, {
 					"sentences": [{
 						"translation": "",
@@ -4211,7 +4428,7 @@
 						"sentence": "I hope you are well."
 					}, {
 						"translation": "",
-						"sentence": "She hopes for good weather."
+						"sentence": "Does she hope for good weather?"
 					}],
 					"word": "hope",
 					"translation": "",
@@ -4219,7 +4436,8 @@
 					"sortOrder": 1,
 					"partOfSpeech": "",
 					"id": 7,
-					"group": "Basic Grammar and Structures: Future Tense"
+					"group": "Basic Grammar and Structures: Future Tense",
+					"definition": "To want something to happen and think it is possible."
 				}, {
 					"translation": "",
 					"partOfSpeech": "",
@@ -4231,14 +4449,16 @@
 						"sentence": "I decided to go."
 					}, {
 						"translation": "",
-						"sentence": "She decided quickly."
+						"sentence": "Did she decide quickly?"
 					}],
 					"sortOrder": 1,
 					"group": "Basic Grammar and Structures: Future Tense",
 					"romanisation": "",
 					"word": "decide",
-					"id": 8
-				}, {
+					"id": 8,
+					"definition": "To make a choice or judgment."
+				},
+				{
 					"id": 9,
 					"sortOrder": 1,
 					"word": "promise",
@@ -4252,11 +4472,13 @@
 						"sentence": "She made a promise."
 					}, {
 						"translation": "",
-						"sentence": "He promised to call."
+						"sentence": "Did he promise to call?"
 					}],
 					"translation": "",
-					"partOfSpeech": ""
-				}, {
+					"partOfSpeech": "",
+					"definition": "To tell someone that you will certainly do something."
+				},
+				{
 					"sortOrder": 1,
 					"word": "wish",
 					"sentences": [{
@@ -4267,13 +4489,14 @@
 						"sentence": "I wish you good luck."
 					}, {
 						"translation": "",
-						"sentence": "He made a wish."
+						"sentence": "Did he make a wish?"
 					}],
 					"romanisation": "",
 					"group": "Basic Grammar and Structures: Future Tense",
 					"partOfSpeech": "",
 					"id": 10,
-					"translation": ""
+					"translation": "",
+					"definition": "To express a desire for something to happen."
 				}, {
 					"translation": "",
 					"partOfSpeech": "",
@@ -4288,15 +4511,17 @@
 						"sentence": "I had a strange dream."
 					}, {
 						"translation": "",
-						"sentence": "She dreams big."
+						"sentence": "Does she dream big?"
 					}],
 					"sortOrder": 1,
-					"group": "Basic Grammar and Structures: Future Tense"
+					"group": "Basic Grammar and Structures: Future Tense",
+					"definition": "To imagine or hope for something strongly."
 				}],
 			"sortOrder": 1,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Past Tense"
 		},
+
 		{
 			"words":
 			[
@@ -4311,13 +4536,14 @@
 						"sentence": "I am in the house."
 					}, {
 						"translation": "",
-						"sentence": "She is in the car."
+						"sentence": "Is she in the car?"
 					}],
 					"sortOrder": 1,
 					"partOfSpeech": "",
 					"word": "in",
 					"id": 0,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A preposition meaning to be inside a container, space, or large area."
 				},
 				{
 					"partOfSpeech": "",
@@ -4333,10 +4559,11 @@
 						"sentence": "The cat is on the roof."
 					}, {
 						"translation": "",
-						"sentence": "Put the book on the shelf."
+						"sentence": "Should I put the book on the shelf?"
 					}],
 					"word": "on",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A preposition meaning to be resting upon the surface of something."
 				}, {
 				"id": 2,
 				"word": "at",
@@ -4351,10 +4578,11 @@
 					"sentence": "I am at home."
 				}, {
 					"translation": "",
-					"sentence": "We meet at 3 PM."
+					"sentence": "Do we meet at 3 PM?"
 				}],
 				"translation": "",
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "A preposition used for specific points in space or time."
 			}, {
 				"translation": "",
 				"partOfSpeech": "",
@@ -4370,9 +4598,10 @@
 					"sentence": "The ball is under the bed."
 				}, {
 					"translation": "",
-					"sentence": "The treasure is under the tree."
+					"sentence": "Is the treasure under the tree?"
 				}],
-				"id": 3
+				"id": 3,
+				"definition": "A preposition meaning to be directly below something."
 			}, {
 				"word": "between",
 				"group": "Common Prepositions",
@@ -4384,13 +4613,14 @@
 					"sentence": "The shop is between the bank and the post office."
 				}, {
 					"translation": "",
-					"sentence": "I sit between my friends."
+					"sentence": "Do I sit between my friends?"
 				}],
 				"romanisation": "",
 				"partOfSpeech": "",
 				"translation": "",
 				"sortOrder": 1,
-				"id": 4
+				"id": 4,
+				"definition": "A preposition meaning in the space separating two things or people."
 			}, {
 				"partOfSpeech": "",
 				"word": "next to",
@@ -4407,8 +4637,9 @@
 					"sentence": "The dog is next to the boy."
 				}, {
 					"translation": "",
-					"sentence": "My car is next to the red one."
-				}]
+					"sentence": "Is my car next to the red one?"
+				}],
+				"definition": "A preposition meaning very close to someone or something."
 			}, {
 				"sortOrder": 1,
 				"sentences": [{
@@ -4419,14 +4650,15 @@
 					"sentence": "The sun sets behind the mountains."
 				}, {
 					"translation": "",
-					"sentence": "My bag is behind the door."
+					"sentence": "Is my bag behind the door?"
 				}],
 				"word": "behind",
 				"romanisation": "",
 				"id": 6,
 				"group": "Common Prepositions",
 				"partOfSpeech": "",
-				"translation": ""
+				"translation": "",
+				"definition": "A preposition meaning at the back of someone or something."
 			}, {
 				"romanisation": "",
 				"partOfSpeech": "",
@@ -4442,9 +4674,10 @@
 					"sentence": "He stood in front of the line."
 				}, {
 					"translation": "",
-					"sentence": "The car is in front of the house."
+					"sentence": "Is the car in front of the house?"
 				}],
-				"word": "in front of"
+				"word": "in front of",
+				"definition": "A preposition meaning positioned directly before someone or something."
 			}, {
 				"partOfSpeech": "",
 				"translation": "",
@@ -4458,11 +4691,12 @@
 					"sentence": "The bird flew over the tree."
 				}, {
 					"translation": "",
-					"sentence": "Put a blanket over the baby."
+					"sentence": "Should I put a blanket over the baby?"
 				}],
 				"sortOrder": 1,
 				"group": "Common Prepositions",
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "A preposition meaning vertically above someone or something."
 			}, {
 				"translation": "",
 				"sortOrder": 1,
@@ -4475,12 +4709,13 @@
 					"sentence": "He jumped into the water."
 				}, {
 					"translation": "",
-					"sentence": "Put the milk into the glass."
+					"sentence": "Should I put the milk into the glass?"
 				}],
 				"romanisation": "",
 				"id": 9,
 				"partOfSpeech": "",
-				"group": "Common Prepositions"
+				"group": "Common Prepositions",
+				"definition": "A preposition meaning movement to an enclosed space or liquid."
 			}, {
 				"romanisation": "",
 				"translation": "",
@@ -4497,8 +4732,9 @@
 					"sentence": "She walked out of the store."
 				}, {
 					"translation": "",
-					"sentence": "Get out of here!"
-				}]
+					"sentence": "Should I get out of here?"
+				}],
+				"definition": "A preposition meaning movement from an enclosed space."
 			}, {
 				"romanisation": "",
 				"sortOrder": 1,
@@ -4511,12 +4747,13 @@
 					"sentence": "The earth goes around the sun."
 				}, {
 					"translation": "",
-					"sentence": "We drove around the city."
+					"sentence": "Did we drive around the city?"
 				}],
 				"word": "around",
 				"translation": "",
 				"partOfSpeech": "",
-				"id": 11
+				"id": 11,
+				"definition": "A preposition meaning surrounding or circling something."
 			}, {
 				"partOfSpeech": "",
 				"sortOrder": 1,
@@ -4533,8 +4770,9 @@
 					"sentence": "I have a cat and a dog."
 				}, {
 					"translation": "",
-					"sentence": "He is tall and strong."
-				}]
+					"sentence": "Is he tall and strong?"
+				}],
+				"definition": "A conjunction used to join two words, phrases, or clauses."
 			}, {
 				"romanisation": "",
 				"sentences": [{
@@ -4545,14 +4783,15 @@
 					"sentence": "It is cold but sunny."
 				}, {
 					"translation": "",
-					"sentence": "She wants to go, but she is busy."
+					"sentence": "Does she want to go, but she is busy?"
 				}],
 				"translation": "",
 				"word": "but",
 				"sortOrder": 1,
 				"id": 1,
 				"group": "Common Conjunctions",
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "A conjunction used to introduce a contrasting idea."
 			}, {
 				"sortOrder": 1,
 				"romanisation": "",
@@ -4570,7 +4809,8 @@
 					"translation": "",
 					"sentence": "Is it red or blue?"
 				}],
-				"word": "or"
+				"word": "or",
+				"definition": "A conjunction used to introduce an alternative choice."
 			}, {
 				"word": "because",
 				"sentences": [{
@@ -4581,14 +4821,15 @@
 					"sentence": "I am happy because it is sunny."
 				}, {
 					"translation": "",
-					"sentence": "He ran fast because he was late."
+					"sentence": "Did he run fast because he was late?"
 				}],
 				"romanisation": "",
 				"translation": "",
 				"partOfSpeech": "",
 				"sortOrder": 1,
 				"group": "Common Conjunctions",
-				"id": 3
+				"id": 3,
+				"definition": "A conjunction used to give a reason for something."
 			}, {
 				"sortOrder": 1,
 				"group": "Common Conjunctions",
@@ -4605,8 +4846,9 @@
 					"sentence": "I am hungry, so I will eat."
 				}, {
 					"translation": "",
-					"sentence": "He studied hard, so he passed the test."
-				}]
+					"sentence": "Did he study hard, so he passed the test?"
+				}],
+				"definition": "A conjunction used to show the result or consequence of something."
 			}, {
 				"translation": "",
 				"partOfSpeech": "",
@@ -4622,9 +4864,10 @@
 					"sentence": "Although she is small, she is strong."
 				}, {
 					"translation": "",
-					"sentence": "He went to work, although he was sick."
+					"sentence": "Did he go to work, although he was sick?"
 				}],
-				"word": "although"
+				"word": "although",
+				"definition": "A conjunction meaning 'in spite of the fact that'."
 			}, {
 				"word": "if",
 				"id": 6,
@@ -4641,8 +4884,9 @@
 					"sentence": "If you are ready, we can go."
 				}, {
 					"translation": "",
-					"sentence": "Call me if you need help."
-				}]
+					"sentence": "Should I call you if you need help?"
+				}],
+				"definition": "A conjunction used to introduce a condition."
 			}, {
 				"group": "Common Conjunctions",
 				"sentences": [{
@@ -4653,14 +4897,15 @@
 					"sentence": "I was sleeping when the phone rang."
 				}, {
 					"translation": "",
-					"sentence": "He smiles when he is happy."
+					"sentence": "Does he smile when he is happy?"
 				}],
 				"sortOrder": 1,
 				"id": 7,
 				"partOfSpeech": "",
 				"translation": "",
 				"romanisation": "",
-				"word": "when"
+				"word": "when",
+				"definition": "A conjunction used to mean 'at the time that'."
 			}, {
 				"id": 8,
 				"translation": "",
@@ -4672,13 +4917,14 @@
 					"sentence": "I listened to music while I worked."
 				}, {
 					"translation": "",
-					"sentence": "He slept while she drove."
+					"sentence": "Did he sleep while she drove?"
 				}],
 				"group": "Common Conjunctions",
 				"romanisation": "",
 				"partOfSpeech": "",
 				"word": "while",
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "A conjunction meaning 'during the time that'."
 			}, {
 				"romanisation": "",
 				"sentences": [{
@@ -4689,14 +4935,15 @@
 					"sentence": "Don't open the door until I say so."
 				}, {
 					"translation": "",
-					"sentence": "He worked until late at night."
+					"sentence": "Did he work until late at night?"
 				}],
 				"word": "until",
 				"partOfSpeech": "",
 				"sortOrder": 1,
 				"translation": "",
 				"group": "Common Conjunctions",
-				"id": 9
+				"id": 9,
+				"definition": "A conjunction meaning 'up to the time that'."
 			}, {
 				"sentences": [{
 					"translation": "",
@@ -4706,7 +4953,7 @@
 					"sentence": "She has been here since morning."
 				}, {
 					"translation": "",
-					"sentence": "He has lived here since 2010."
+					"sentence": "Has he lived here since 2010?"
 				}],
 				"id": 10,
 				"partOfSpeech": "",
@@ -4714,7 +4961,8 @@
 				"sortOrder": 1,
 				"romanisation": "",
 				"word": "since",
-				"group": "Common Conjunctions"
+				"group": "Common Conjunctions",
+				"definition": "A conjunction meaning 'from a particular time in the past'."
 			}, {
 				"sortOrder": 1,
 				"romanisation": "",
@@ -4729,10 +4977,11 @@
 					"sentence": "Though it was raining, we went outside."
 				}, {
 					"translation": "",
-					"sentence": "I like him, though he is sometimes rude."
+					"sentence": "Do I like him, though he is sometimes rude?"
 				}],
 				"word": "though",
-				"translation": ""
+				"translation": "",
+				"definition": "A conjunction meaning 'in spite of the fact that'."
 			}, {
 				"sortOrder": 1,
 				"id": 0,
@@ -4748,9 +4997,10 @@
 					"sentence": "He has a big car."
 				}, {
 					"translation": "",
-					"sentence": "The elephant is big."
+					"sentence": "Is the elephant big?"
 				}],
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "Large in size."
 			}, {
 				"word": "small",
 				"group": "Common Adjectives",
@@ -4766,9 +5016,10 @@
 					"sentence": "The mouse is small."
 				}, {
 					"translation": "",
-					"sentence": "I live in a small town."
+					"sentence": "Do I live in a small town?"
 				}],
-				"translation": ""
+				"translation": "",
+				"definition": "Little in size or amount."
 			}, {
 				"word": "happy",
 				"translation": "",
@@ -4783,10 +5034,11 @@
 					"sentence": "She has a happy smile."
 				}, {
 					"translation": "",
-					"sentence": "I feel happy now."
+					"sentence": "Do I feel happy now?"
 				}],
 				"id": 2,
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "Feeling or showing pleasure and satisfaction."
 			}, {
 				"romanisation": "",
 				"partOfSpeech": "",
@@ -4798,13 +5050,14 @@
 					"sentence": "He looks sad."
 				}, {
 					"translation": "",
-					"sentence": "Don't be sad."
+					"sentence": "Shouldn't I be sad?"
 				}],
 				"group": "Common Adjectives",
 				"sortOrder": 1,
 				"word": "sad",
 				"id": 3,
-				"translation": ""
+				"translation": "",
+				"definition": "Feeling or showing unhappiness."
 			}, {
 				"id": 4,
 				"word": "beautiful",
@@ -4819,10 +5072,11 @@
 					"sentence": "She is a beautiful girl."
 				}, {
 					"translation": "",
-					"sentence": "The flowers are beautiful."
+					"sentence": "Are the flowers beautiful?"
 				}],
 				"translation": "",
-				"group": "Common Adjectives"
+				"group": "Common Adjectives",
+				"definition": "Pleasing to the senses or mind; very attractive."
 			}, {
 				"romanisation": "",
 				"id": 5,
@@ -4838,9 +5092,10 @@
 					"sentence": "The tree is tall."
 				}, {
 					"translation": "",
-					"sentence": "She is a tall woman."
+					"sentence": "Is she a tall woman?"
 				}],
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "Having a greater height than average."
 			}, {
 				"sentences": [{
 					"translation": "",
@@ -4850,7 +5105,7 @@
 					"sentence": "He has short hair."
 				}, {
 					"translation": "",
-					"sentence": "The street is short."
+					"sentence": "Is the street short?"
 				}],
 				"translation": "",
 				"id": 6,
@@ -4858,7 +5113,8 @@
 				"word": "short",
 				"sortOrder": 1,
 				"romanisation": "",
-				"group": "Common Adjectives"
+				"group": "Common Adjectives",
+				"definition": "Having a lesser height or length than average."
 			}, {
 				"id": 7,
 				"sentences": [{
@@ -4869,14 +5125,15 @@
 					"sentence": "She is a young student."
 				}, {
 					"translation": "",
-					"sentence": "The puppy is young."
+					"sentence": "Is the puppy young?"
 				}],
 				"group": "Common Adjectives",
 				"word": "young",
 				"translation": "",
 				"romanisation": "",
 				"partOfSpeech": "",
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "In the early stage of life; not old."
 			}, {
 				"group": "Common Adjectives",
 				"translation": "",
@@ -4893,8 +5150,9 @@
 					"sentence": "He is an old man."
 				}, {
 					"translation": "",
-					"sentence": "This car is old."
-				}]
+					"sentence": "Is this car old?"
+				}],
+				"definition": "Having existed for a long time; not new."
 			}, {
 				"word": "new",
 				"id": 9,
@@ -4906,13 +5164,14 @@
 					"sentence": "This is a new book."
 				}, {
 					"translation": "",
-					"sentence": "I have new shoes."
+					"sentence": "Do I have new shoes?"
 				}],
 				"partOfSpeech": "",
 				"group": "Common Adjectives",
 				"romanisation": "",
 				"sortOrder": 1,
-				"translation": ""
+				"translation": "",
+				"definition": "Recently made, invented, or acquired; not old."
 			}, {
 				"group": "Common Adjectives",
 				"romanisation": "",
@@ -4928,9 +5187,10 @@
 					"sentence": "The sun is hot today."
 				}, {
 					"translation": "",
-					"sentence": "Be careful, the plate is hot."
+					"sentence": "Is the plate hot?"
 				}],
-				"translation": ""
+				"translation": "",
+				"definition": "Having a high temperature."
 			}, {
 				"romanisation": "",
 				"id": 11,
@@ -4944,11 +5204,12 @@
 					"sentence": "I feel cold."
 				}, {
 					"translation": "",
-					"sentence": "The water is cold."
+					"sentence": "Is the water cold?"
 				}],
 				"group": "Common Adjectives",
 				"sortOrder": 1,
-				"word": "cold"
+				"word": "cold",
+				"definition": "Having a low temperature."
 			}, {
 				"romanisation": "",
 				"translation": "",
@@ -4962,11 +5223,12 @@
 					"sentence": "He ran quickly."
 				}, {
 					"translation": "",
-					"sentence": "Do it quickly."
+					"sentence": "Should I do it quickly?"
 				}],
 				"sortOrder": 1,
 				"id": 0,
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "At a fast speed; rapidly."
 			}, {
 				"group": "Common Adverbs",
 				"id": 1,
@@ -4978,13 +5240,14 @@
 					"sentence": "The snail moves slowly."
 				}, {
 					"translation": "",
-					"sentence": "Speak slowly, please."
+					"sentence": "Can you speak slowly, please?"
 				}],
 				"translation": "",
 				"partOfSpeech": "",
 				"word": "slowly",
 				"sortOrder": 1,
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "At a low speed; not quickly."
 			}, {
 				"sortOrder": 1,
 				"id": 2,
@@ -4997,12 +5260,13 @@
 					"sentence": "She smiled happily."
 				}, {
 					"translation": "",
-					"sentence": "He sang happily."
+					"sentence": "Did he sing happily?"
 				}],
 				"partOfSpeech": "",
 				"word": "happily",
 				"romanisation": "",
-				"group": "Common Adverbs"
+				"group": "Common Adverbs",
+				"definition": "In a happy or joyful manner."
 			}, {
 				"partOfSpeech": "",
 				"group": "Common Adverbs",
@@ -5019,8 +5283,9 @@
 					"sentence": "He looked sadly at the empty plate."
 				}, {
 					"translation": "",
-					"sentence": "The dog barked sadly."
-				}]
+					"sentence": "Did the dog bark sadly?"
+				}],
+				"definition": "In a sad or unhappy manner."
 			}, {
 				"romanisation": "",
 				"sentences": [{
@@ -5031,14 +5296,15 @@
 					"sentence": "Please speak quietly."
 				}, {
 					"translation": "",
-					"sentence": "She closed the door quietly."
+					"sentence": "Did she close the door quietly?"
 				}],
 				"translation": "",
 				"partOfSpeech": "",
 				"id": 4,
 				"sortOrder": 1,
 				"word": "quietly",
-				"group": "Common Adverbs"
+				"group": "Common Adverbs",
+				"definition": "Making little or no noise."
 			}, {
 				"sentences": [{
 					"translation": "",
@@ -5048,7 +5314,7 @@
 					"sentence": "Please do not talk loudly."
 				}, {
 					"translation": "",
-					"sentence": "She sang loudly."
+					"sentence": "Did she sing loudly?"
 				}],
 				"group": "Common Adverbs",
 				"translation": "",
@@ -5056,7 +5322,8 @@
 				"partOfSpeech": "",
 				"sortOrder": 1,
 				"romanisation": "",
-				"id": 5
+				"id": 5,
+				"definition": "Making a lot of noise; at a high volume."
 			}, {
 				"translation": "",
 				"romanisation": "",
@@ -5070,11 +5337,12 @@
 					"sentence": "He plays football well."
 				}, {
 					"translation": "",
-					"sentence": "You did well on the test."
+					"sentence": "Did you do well on the test?"
 				}],
 				"word": "well",
 				"id": 6,
-				"group": "Common Adverbs"
+				"group": "Common Adverbs",
+				"definition": "In a good or satisfactory way."
 			}, {
 				"translation": "",
 				"partOfSpeech": "",
@@ -5087,12 +5355,13 @@
 					"sentence": "He played badly in the match."
 				}, {
 					"translation": "",
-					"sentence": "I sing badly."
+					"sentence": "Do I sing badly?"
 				}, {
 					"translation": "",
-					"sentence": "The car was damaged badly."
+					"sentence": "Was the car damaged badly?"
 				}],
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "In a poor or unsuccessful way."
 			}, {
 				"word": "often",
 				"group": "Common Adverbs",
@@ -5105,12 +5374,13 @@
 					"sentence": "I often drink tea."
 				}, {
 					"translation": "",
-					"sentence": "She often reads books."
+					"sentence": "Does she often read books?"
 				}],
 				"sortOrder": 1,
 				"partOfSpeech": "",
 				"id": 8,
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "Frequently; many times."
 			}, {
 				"word": "rarely",
 				"sentences": [{
@@ -5121,14 +5391,15 @@
 					"sentence": "She rarely watches TV."
 				}, {
 					"translation": "",
-					"sentence": "I rarely go to the cinema."
+					"sentence": "Do I rarely go to the cinema?"
 				}],
 				"partOfSpeech": "",
 				"translation": "",
 				"id": 9,
 				"sortOrder": 1,
 				"romanisation": "",
-				"group": "Common Adverbs"
+				"group": "Common Adverbs",
+				"definition": "Not often; seldom."
 			}, {
 				"id": 10,
 				"partOfSpeech": "",
@@ -5141,12 +5412,13 @@
 					"sentence": "He always smiles."
 				}, {
 					"translation": "",
-					"sentence": "I always do my homework."
+					"sentence": "Do I always do my homework?"
 				}],
 				"romanisation": "",
 				"word": "always",
 				"translation": "",
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "At all times; on every occasion."
 			}, {
 				"romanisation": "",
 				"partOfSpeech": "",
@@ -5159,16 +5431,17 @@
 					"sentence": "I never eat meat."
 				}, {
 					"translation": "",
-					"sentence": "She never comes late."
+					"sentence": "Does she never come late?"
 				}],
 				"word": "never",
 				"group": "Common Adverbs",
 				"translation": "",
-				"id": 11
+				"id": 11,
+				"definition": "At no time; not ever."
 			}],
 			"sortOrder": 1,
 			"title": "in, and, big, quickly",
-			"tabnumber": 3
+			"tabNumber": 3
 		},
 		{
 			"words":
@@ -5186,11 +5459,12 @@
 						"sentence": "She eats an apple."
 					}, {
 						"translation": "",
-						"sentence": "We eat dinner at 7 PM."
+						"sentence": "Do we eat dinner at 7 PM?"
 					}],
 					"translation": "",
 					"partOfSpeech": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "To take and swallow food."
 				}, {
 				"romanisation": "",
 				"sortOrder": 1,
@@ -5202,13 +5476,14 @@
 					"sentence": "I study English every day."
 				}, {
 					"translation": "",
-					"sentence": "They are studying in the library."
+					"sentence": "Are they studying in the library?"
 				}],
 				"id": 1,
 				"translation": "",
 				"group": "Present Simple and Present Continuous Tenses",
 				"word": "study",
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "To learn a subject, usually at school or university."
 			}, {
 				"sentences": [{
 					"sentence": "They play soccer every weekend.",
@@ -5218,7 +5493,7 @@
 					"sentence": "I play games with friends."
 				}, {
 					"translation": "",
-					"sentence": "She is playing the piano."
+					"sentence": "Is she playing the piano?"
 				}],
 				"sortOrder": 1,
 				"translation": "",
@@ -5226,7 +5501,8 @@
 				"romanisation": "",
 				"word": "play",
 				"id": 2,
-				"group": "Present Simple and Present Continuous Tenses"
+				"group": "Present Simple and Present Continuous Tenses",
+				"definition": "To take part in a game or sport."
 			}, {
 				"id": 3,
 				"word": "watch",
@@ -5241,10 +5517,11 @@
 					"sentence": "I watch TV in the evening."
 				}, {
 					"translation": "",
-					"sentence": "We watch birds in the park."
+					"sentence": "Do we watch birds in the park?"
 				}],
 				"sortOrder": 1,
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "To look at someone or something for a period of time."
 			}, {
 				"sortOrder": 1,
 				"id": 4,
@@ -5259,10 +5536,11 @@
 					"sentence": "I work from home."
 				}, {
 					"translation": "",
-					"sentence": "She is working now."
+					"sentence": "Is she working now?"
 				}],
 				"group": "Present Simple and Present Continuous Tenses",
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "To do a job to earn money."
 			}, {
 				"romanisation": "",
 				"id": 5,
@@ -5275,12 +5553,13 @@
 					"sentence": "I read newspapers online."
 				}, {
 					"translation": "",
-					"sentence": "He is reading a story."
+					"sentence": "Is he reading a story?"
 				}],
 				"translation": "",
 				"partOfSpeech": "",
 				"word": "read",
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "To look at written words and understand them."
 			}, {
 				"romanisation": "",
 				"partOfSpeech": "",
@@ -5292,13 +5571,14 @@
 					"sentence": "She writes letters to her grandma."
 				}, {
 					"translation": "",
-					"sentence": "He is writing a book."
+					"sentence": "Is he writing a book?"
 				}],
 				"sortOrder": 1,
 				"translation": "",
 				"group": "Present Simple and Present Continuous Tenses",
 				"id": 6,
-				"word": "write"
+				"word": "write",
+				"definition": "To use a pen or keyboard to produce words on a surface."
 			}, {
 				"romanisation": "",
 				"word": "drink",
@@ -5312,11 +5592,12 @@
 					"sentence": "I drink water."
 				}, {
 					"translation": "",
-					"sentence": "She is drinking juice."
+					"sentence": "Is she drinking juice?"
 				}],
 				"partOfSpeech": "",
 				"id": 7,
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "To take liquid into your mouth and swallow it."
 			}, {
 				"id": 8,
 				"partOfSpeech": "",
@@ -5329,12 +5610,13 @@
 					"sentence": "I run every day."
 				}, {
 					"translation": "",
-					"sentence": "He is running fast."
+					"sentence": "Is he running fast?"
 				}],
 				"word": "run",
 				"translation": "",
 				"romanisation": "",
-				"group": "Present Simple and Present Continuous Tenses"
+				"group": "Present Simple and Present Continuous Tenses",
+				"definition": "To move quickly, faster than walking."
 			}, {
 				"group": "Present Simple and Present Continuous Tenses",
 				"sortOrder": 1,
@@ -5350,9 +5632,10 @@
 					"sentence": "I teach math."
 				}, {
 					"translation": "",
-					"sentence": "He is teaching online."
+					"sentence": "Is he teaching online?"
 				}],
-				"translation": ""
+				"translation": "",
+				"definition": "To give lessons to students."
 			}, {
 				"word": "visit",
 				"sentences": [{
@@ -5363,14 +5646,15 @@
 					"sentence": "She will visit her friends."
 				}, {
 					"translation": "",
-					"sentence": "They visit museums."
+					"sentence": "Do they visit museums?"
 				}],
 				"translation": "",
 				"romanisation": "",
 				"group": "Past Simple and Past Continuous Tenses",
 				"id": 0,
 				"sortOrder": 1,
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "To go to see a person or place for a short time."
 			}, {
 				"id": 1,
 				"romanisation": "",
@@ -5387,8 +5671,9 @@
 					"sentence": "I watched a movie yesterday."
 				}, {
 					"translation": "",
-					"sentence": "She was watching the children."
-				}]
+					"sentence": "Was she watching the children?"
+				}],
+				"definition": "To look at someone or something for a period of time."
 			}, {
 				"id": 2,
 				"romanisation": "",
@@ -5400,13 +5685,14 @@
 					"sentence": "They played cards last night."
 				}, {
 					"translation": "",
-					"sentence": "She was playing piano."
+					"sentence": "Was she playing piano?"
 				}],
 				"word": "play",
 				"group": "Past Simple and Past Continuous Tenses",
 				"partOfSpeech": "",
 				"sortOrder": 1,
-				"translation": ""
+				"translation": "",
+				"definition": "To take part in a game or sport."
 			}, {
 				"word": "read",
 				"partOfSpeech": "",
@@ -5422,9 +5708,10 @@
 					"sentence": "I read a book last week."
 				}, {
 					"translation": "",
-					"sentence": "He was reading the news."
+					"sentence": "Was he reading the news?"
 				}],
-				"id": 3
+				"id": 3,
+				"definition": "To look at written words and understand them."
 			}, {
 				"partOfSpeech": "",
 				"word": "walk",
@@ -5441,8 +5728,9 @@
 					"sentence": "She was walking her dog."
 				}, {
 					"translation": "",
-					"sentence": "They walked home together."
-				}]
+					"sentence": "Did they walk home together?"
+				}],
+				"definition": "To move forward by putting one foot in front of the other."
 			}, {
 				"romanisation": "",
 				"word": "eat",
@@ -5456,11 +5744,12 @@
 					"sentence": "I ate pizza yesterday."
 				}, {
 					"translation": "",
-					"sentence": "He was eating an apple."
+					"sentence": "Was he eating an apple?"
 				}],
 				"group": "Past Simple and Past Continuous Tenses",
 				"partOfSpeech": "",
-				"translation": ""
+				"translation": "",
+				"definition": "To take and swallow food."
 			}, {
 				"word": "study",
 				"partOfSpeech": "",
@@ -5476,9 +5765,10 @@
 					"sentence": "I was studying when you called."
 				}, {
 					"translation": "",
-					"sentence": "He studied hard for the test."
+					"sentence": "Did he study hard for the test?"
 				}],
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "To learn a subject, usually at school or university."
 			}, {
 				"word": "drive",
 				"id": 7,
@@ -5492,11 +5782,12 @@
 					"sentence": "I drove to the beach last weekend."
 				}, {
 					"translation": "",
-					"sentence": "She is learning to drive."
+					"sentence": "Is she learning to drive?"
 				}],
 				"partOfSpeech": "",
 				"translation": "",
-				"group": "Past Simple and Past Continuous Tenses"
+				"group": "Past Simple and Past Continuous Tenses",
+				"definition": "To control a car or other vehicle."
 			}, {
 				"sentences": [{
 					"sentence": "She listened to music all afternoon.",
@@ -5506,7 +5797,7 @@
 					"sentence": "I listened to the radio."
 				}, {
 					"translation": "",
-					"sentence": "He was listening carefully."
+					"sentence": "Was he listening carefully?"
 				}],
 				"word": "listen",
 				"translation": "",
@@ -5514,7 +5805,8 @@
 				"sortOrder": 1,
 				"romanisation": "",
 				"partOfSpeech": "",
-				"group": "Past Simple and Past Continuous Tenses"
+				"group": "Past Simple and Past Continuous Tenses",
+				"definition": "To pay attention to sounds with your ears."
 			}, {
 				"group": "Past Simple and Past Continuous Tenses",
 				"id": 9,
@@ -5530,9 +5822,10 @@
 					"sentence": "I worked all day."
 				}, {
 					"translation": "",
-					"sentence": "She was working from home."
+					"sentence": "Was she working from home?"
 				}],
-				"partOfSpeech": ""
+				"partOfSpeech": "",
+				"definition": "To do a job to earn money."
 			}, {
 				"sortOrder": 1,
 				"group": "Future Simple",
@@ -5548,9 +5841,10 @@
 					"sentence": "I will go home now."
 				}, {
 					"translation": "",
-					"sentence": "She will go to the party."
+					"sentence": "Will she go to the party?"
 				}],
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "To move from one place to another."
 			}, {
 				"id": 1,
 				"partOfSpeech": "",
@@ -5567,8 +5861,9 @@
 					"sentence": "I will visit you soon."
 				}, {
 					"translation": "",
-					"sentence": "They will visit the museum."
-				}]
+					"sentence": "Will they visit the museum?"
+				}],
+				"definition": "To go to see a person or place for a short time."
 			}, {
 				"sortOrder": 1,
 				"id": 2,
@@ -5582,11 +5877,12 @@
 					"sentence": "I will buy some food."
 				}, {
 					"translation": "",
-					"sentence": "She will buy a dress."
+					"sentence": "Will she buy a dress?"
 				}],
 				"translation": "",
 				"romanisation": "",
-				"group": "Future Simple"
+				"group": "Future Simple",
+				"definition": "To get something by paying money for it."
 			}, {
 				"word": "start",
 				"sentences": [{
@@ -5597,14 +5893,15 @@
 					"sentence": "I will start work at 9 AM."
 				}, {
 					"translation": "",
-					"sentence": "Let's start the game."
+					"sentence": "Shall we start the game?"
 				}],
 				"partOfSpeech": "",
 				"romanisation": "",
 				"group": "Future Simple",
 				"sortOrder": 1,
 				"id": 3,
-				"translation": ""
+				"translation": "",
+				"definition": "To begin doing something."
 			}, {
 				"word": "travel",
 				"group": "Future Simple",
@@ -5616,13 +5913,14 @@
 					"sentence": "She will travel by train."
 				}, {
 					"translation": "",
-					"sentence": "They will travel the world."
+					"sentence": "Will they travel the world?"
 				}],
 				"id": 4,
 				"partOfSpeech": "",
 				"translation": "",
 				"romanisation": "",
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "To go from one place to another, often far away."
 			}, {
 				"sentences": [{
 					"sentence": "She stayed home because she was sick.",
@@ -5632,7 +5930,7 @@
 					"sentence": "I am happy because you are here."
 				}, {
 					"translation": "",
-					"sentence": "He ate because he was hungry."
+					"sentence": "Did he eat because he was hungry?"
 				}],
 				"romanisation": "",
 				"partOfSpeech": "",
@@ -5640,7 +5938,8 @@
 				"id": 0,
 				"sortOrder": 1,
 				"translation": "",
-				"group": "Subordinate Clauses"
+				"group": "Subordinate Clauses",
+				"definition": "A conjunction used to introduce the reason for something."
 			}, {
 				"translation": "",
 				"sentences": [{
@@ -5651,14 +5950,15 @@
 					"sentence": "Although he is old, he is strong."
 				}, {
 					"translation": "",
-					"sentence": "She smiled, although she was sad."
+					"sentence": "Did she smile, although she was sad?"
 				}],
 				"romanisation": "",
 				"partOfSpeech": "",
 				"word": "although",
 				"id": 1,
 				"sortOrder": 1,
-				"group": "Subordinate Clauses"
+				"group": "Subordinate Clauses",
+				"definition": "A conjunction meaning 'in spite of the fact that'."
 			}, {
 				"sentences": [{
 					"sentence": "I will call you when I arrive.",
@@ -5668,7 +5968,7 @@
 					"sentence": "She sings when she is happy."
 				}, {
 					"translation": "",
-					"sentence": "We left when it was dark."
+					"sentence": "Did we leave when it was dark?"
 				}],
 				"translation": "",
 				"word": "when",
@@ -5676,7 +5976,8 @@
 				"group": "Subordinate Clauses",
 				"romanisation": "",
 				"partOfSpeech": "",
-				"sortOrder": 1
+				"sortOrder": 1,
+				"definition": "A conjunction used to mean 'at the time that'."
 			}, {
 				"sortOrder": 1,
 				"id": 3,
@@ -5690,11 +5991,12 @@
 					"sentence": "If you study, you will pass."
 				}, {
 					"translation": "",
-					"sentence": "Call me if you need help."
+					"sentence": "Should you call me if you need help?"
 				}],
 				"partOfSpeech": "",
 				"translation": "",
-				"group": "Subordinate Clauses"
+				"group": "Subordinate Clauses",
+				"definition": "A conjunction used to introduce a condition."
 			}, {
 				"sentences": [{
 					"sentence": "They went out to eat after they finished their work.",
@@ -5704,7 +6006,7 @@
 					"sentence": "I will go after dinner."
 				}, {
 					"translation": "",
-					"sentence": "She arrived after me."
+					"sentence": "Did she arrive after me?"
 				}],
 				"group": "Subordinate Clauses",
 				"partOfSpeech": "",
@@ -5712,7 +6014,8 @@
 				"id": 4,
 				"sortOrder": 1,
 				"translation": "",
-				"word": "after"
+				"word": "after",
+				"definition": "A word used to mean 'following' or 'later than'."
 			}, {
 				"group": "Subjunctive Mood",
 				"word": "suggest",
@@ -5728,9 +6031,10 @@
 					"sentence": "I suggest you take a break."
 				}, {
 					"translation": "",
-					"sentence": "She suggests that we leave early."
+					"sentence": "Does she suggest that we leave early?"
 				}],
-				"romanisation": ""
+				"romanisation": "",
+				"definition": "To propose an idea or plan."
 			}, {
 				"word": "recommend",
 				"romanisation": "",
@@ -5743,12 +6047,13 @@
 					"sentence": "I recommend this book."
 				}, {
 					"translation": "",
-					"sentence": "They recommend visiting the museum."
+					"sentence": "Do they recommend visiting the museum?"
 				}],
 				"translation": "",
 				"partOfSpeech": "",
 				"id": 1,
-				"group": "Subjunctive Mood"
+				"group": "Subjunctive Mood",
+				"definition": "To advise or suggest something as being good."
 			}, {
 				"sentences": [{
 					"sentence": "It is important that she be present at the meeting.",
@@ -5758,7 +6063,7 @@
 					"sentence": "It is important to learn English."
 				}, {
 					"translation": "",
-					"sentence": "Your health is important."
+					"sentence": "Is your health important?"
 				}],
 				"group": "Subjunctive Mood",
 				"romanisation": "",
@@ -5766,7 +6071,8 @@
 				"sortOrder": 1,
 				"translation": "",
 				"partOfSpeech": "",
-				"id": 2
+				"id": 2,
+				"definition": "Having great value or significance."
 			}, {
 				"sortOrder": 1,
 				"partOfSpeech": "",
@@ -5784,7 +6090,8 @@
 				}, {
 					"translation": "",
 					"sentence": "Is it necessary to go?"
-				}]
+				}],
+				"definition": "Needed to be done or achieved."
 			}, {
 				"word": "insist",
 				"id": 4,
@@ -5801,15 +6108,15 @@
 					"sentence": "I insist on paying."
 				}, {
 					"translation": "",
-					"sentence": "She insisted that he listen."
-				}]
+					"sentence": "Did she insist that he listen?"
+				}],
+				"definition": "To demand something strongly."
 			}],
 			"sortOrder": 1,
 			"title": "Patterns",
-			"tabnumber": 3
+			"tabNumber": 3
+
 		}
 
 	]
-
-
 }

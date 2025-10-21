@@ -5,6 +5,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
@@ -530,16 +531,31 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun onDebugPrintBillingStatus(activity: Activity) {
-        billingRepository.logCurrentStatus()
-        Timber.w("and now logGmsState")
-        billingRepository.logGmsState(activity)
-        Timber.w("and now initializeGoogleServices")
-        billingRepository.initializeGoogleServices(activity)
+        if (DEBUG) {
+            billingRepository.logCurrentStatus()
+            Timber.w("and now logGmsState")
+            billingRepository.logGmsState(activity)
+            Timber.w("and now initializeGoogleServices")
+            billingRepository.initializeGoogleServices(activity)
+        }
     }
 
     fun onDebugResetPurchases() {
-        Timber.w("onDebugResetPurchases()")
-        billingRepository.debugResetAllPurchases()
+        if (DEBUG) {
+            Timber.w("onDebugResetPurchases()")
+            billingRepository.debugResetAllPurchases()
+        }
+    }
+    fun onDebugTestReadJSON() {
+        if (DEBUG) {
+            Timber.w("onDebugTestReadJSON()")
+            viewModelScope.launch {
+                vocabRepository.debugDecodeVocabData("vocab_data_a1")
+                vocabRepository.debugDecodeVocabData("vocab_data_a2")
+                vocabRepository.debugDecodeVocabData("vocab_data_b1")
+                vocabRepository.debugDecodeVocabData("vocab_data_b2")
+            }
+        }
     }
 
     fun buyPremiumButtonPressed(activity: Activity) {

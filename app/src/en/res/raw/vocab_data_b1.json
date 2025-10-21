@@ -1,18 +1,22 @@
 {
-	"googlevoiceprefix" : "",
-	"id" : "",
-	"sheetname" : "vocab_data_b1",
-	"native" : "",
-	"location" : 0,
-	"nativename" : "",
-	"fileformat" : 0,
-	"name" : "",
-	"romanized" : false,
-	"tabtitles" : ["Personal","Actions","More"],
-	"updatedDate" : 978307200,
-	"voicename" : "",
-	"uploaddate" : 1748295348.316018,
-	"categories" : [
+	"googlevoiceprefix": "",
+	"id": "",
+	"sheetname": "B1WordList-en",
+	"native": "",
+	"location": 0,
+	"nativename": "",
+	"fileformat": 0,
+	"name": "",
+	"romanized": false,
+	"tabtitles": [
+		"Personal",
+		"Actions",
+		"More"
+	],
+	"updatedDate": 978307200,
+	"voicename": "",
+	"uploaddate": 1748295348.316018,
+	"categories": [
 		{
 			"words": [
 				{
@@ -23,6 +27,7 @@
 					"id": 0,
 					"romanisation": "",
 					"translation": "",
+					"definition": "A book about someone else's life.",
 					"sentences": [
 						{
 							"translation": "",
@@ -34,7 +39,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I read a biography at school."
+							"sentence": "Did I read a biography at school?"
 						}
 					]
 				},
@@ -50,7 +55,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She wrote her autobiography last year.",
+							"sentence": "Did she write her autobiography last year?",
 							"translation": ""
 						}
 					],
@@ -59,7 +64,8 @@
 					"group": "Names",
 					"sortOrder": 1,
 					"translation": "",
-					"id": 1
+					"id": 1,
+					"definition": "A book written about your own life."
 				},
 				{
 					"partOfSpeech": "",
@@ -67,6 +73,7 @@
 					"id": 2,
 					"romanisation": "",
 					"translation": "",
+					"definition": "A book written about one part or time in your life.",
 					"sentences": [
 						{
 							"translation": "",
@@ -78,7 +85,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He is writing a memoir of his travels."
+							"sentence": "Is he writing a memoir of his travels?"
 						}
 					],
 					"word": "memoir",
@@ -96,7 +103,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This document is very long.",
+							"sentence": "Is this document very long?",
 							"translation": ""
 						}
 					],
@@ -105,7 +112,8 @@
 					"group": "Names",
 					"sortOrder": 1,
 					"word": "document",
-					"translation": ""
+					"translation": "",
+					"definition": "An official paper or file that gives information."
 				},
 				{
 					"partOfSpeech": "",
@@ -115,6 +123,7 @@
 					"translation": "",
 					"sortOrder": 1,
 					"word": "form",
+					"definition": "A paper with spaces for writing information about yourself.",
 					"sentences": [
 						{
 							"translation": "",
@@ -126,7 +135,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "This form is easy to complete."
+							"sentence": "Is this form easy to complete?"
 						}
 					]
 				},
@@ -143,7 +152,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She got a certificate from her school.",
+							"sentence": "Did she get a certificate from her school?",
 							"translation": ""
 						}
 					],
@@ -151,7 +160,8 @@
 					"word": "certificate",
 					"romanisation": "",
 					"partOfSpeech": "",
-					"group": "Names"
+					"group": "Names",
+					"definition": "An official document proving you have completed a course or passed a test."
 				},
 				{
 					"group": "Names",
@@ -161,6 +171,7 @@
 					"id": 6,
 					"partOfSpeech": "",
 					"word": "identification",
+					"definition": "An official document (like a passport) that shows who you are.",
 					"sentences": [
 						{
 							"sentence": "You need identification to enter the building.",
@@ -171,7 +182,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My identification is in my wallet.",
+							"sentence": "Is my identification in my wallet?",
 							"translation": ""
 						}
 					]
@@ -181,6 +192,7 @@
 					"sortOrder": 1,
 					"group": "Names",
 					"word": "passport",
+					"definition": "A small book you need to travel to other countries.",
 					"sentences": [
 						{
 							"sentence": "Her passport was checked at the border.",
@@ -191,7 +203,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My passport is blue.",
+							"sentence": "Is my passport blue?",
 							"translation": ""
 						}
 					],
@@ -205,6 +217,7 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"group": "Names",
+					"definition": "An official card that allows you to drive a car.",
 					"sentences": [
 						{
 							"sentence": "He showed his driver's license to the officer.",
@@ -215,7 +228,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My driver's license is new.",
+							"sentence": "Is my driver's license new?",
 							"translation": ""
 						}
 					],
@@ -235,7 +248,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I have an interview at 10 o'clock."
+							"sentence": "Do I have an interview at 10 o'clock?"
 						}
 					],
 					"translation": "",
@@ -243,7 +256,8 @@
 					"id": 9,
 					"romanisation": "",
 					"group": "Names",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A formal meeting where you are asked questions for a job or school place."
 				},
 				{
 					"sortOrder": 1,
@@ -258,7 +272,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I met the interviewer in the office.",
+							"sentence": "Did I meet the interviewer in the office?",
 							"translation": ""
 						}
 					],
@@ -266,7 +280,8 @@
 					"partOfSpeech": "",
 					"id": 10,
 					"translation": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "The person who asks the questions in an interview."
 				},
 				{
 					"word": "candidate",
@@ -281,7 +296,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The candidate is waiting outside."
+							"sentence": "Is the candidate waiting outside?"
 						}
 					],
 					"romanisation": "",
@@ -289,13 +304,15 @@
 					"sortOrder": 1,
 					"translation": "",
 					"id": 11,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A person applying for a job or being considered for something."
 				},
 				{
 					"translation": "",
 					"sortOrder": 1,
 					"word": "registration",
 					"group": "Names",
+					"definition": "The act of recording your name on an official list.",
 					"sentences": [
 						{
 							"sentence": "The registration process was quick and easy.",
@@ -306,7 +323,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Registration is open now.",
+							"sentence": "Is registration open now?",
 							"translation": ""
 						}
 					],
@@ -320,6 +337,7 @@
 					"romanisation": "",
 					"group": "Names",
 					"id": 13,
+					"definition": "To put your name on an official list.",
 					"sentences": [
 						{
 							"translation": "",
@@ -331,7 +349,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I will register for the class."
+							"sentence": "Will I register for the class?"
 						}
 					],
 					"translation": "",
@@ -351,14 +369,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The application is on the table.",
+							"sentence": "Is the application on the table?",
 							"translation": ""
 						}
 					],
 					"translation": "",
 					"sortOrder": 1,
 					"id": 14,
-					"word": "application"
+					"word": "application",
+					"definition": "A formal request for something, often a job or a course."
 				},
 				{
 					"group": "Names",
@@ -372,7 +391,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He wrote his signature on the paper.",
+							"sentence": "Did he write his signature on the paper?",
 							"translation": ""
 						}
 					],
@@ -381,7 +400,8 @@
 					"translation": "",
 					"word": "signature",
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Your name written in your own special way."
 				},
 				{
 					"romanisation": "",
@@ -391,6 +411,7 @@
 					"sortOrder": 1,
 					"word": "sign",
 					"partOfSpeech": "",
+					"definition": "To write your signature on a document.",
 					"sentences": [
 						{
 							"translation": "",
@@ -402,7 +423,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I will sign the letter."
+							"sentence": "Will I sign the letter?"
 						}
 					]
 				},
@@ -419,7 +440,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Write your initial here."
+							"sentence": "Should I write your initial here?"
 						}
 					],
 					"translation": "",
@@ -427,7 +448,8 @@
 					"id": 17,
 					"romanisation": "",
 					"partOfSpeech": "",
-					"group": "Names"
+					"group": "Names",
+					"definition": "To sign with the first letter of your first name and last name."
 				},
 				{
 					"romanisation": "",
@@ -437,6 +459,7 @@
 					"word": "survey",
 					"partOfSpeech": "",
 					"sortOrder": 1,
+					"definition": "A set of questions asked to many people to get information.",
 					"sentences": [
 						{
 							"translation": "",
@@ -448,7 +471,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I answered the survey."
+							"sentence": "Did I answer the survey?"
 						}
 					]
 				},
@@ -465,7 +488,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This questionnaire is very long.",
+							"sentence": "Is this questionnaire very long?",
 							"translation": ""
 						}
 					],
@@ -473,7 +496,8 @@
 					"sortOrder": 1,
 					"id": 19,
 					"group": "Names",
-					"translation": ""
+					"translation": "",
+					"definition": "A list of questions you answer to give information."
 				},
 				{
 					"translation": "",
@@ -490,13 +514,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The poll is about the new park.",
+							"sentence": "Is the poll about the new park?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"word": "poll",
-					"group": "Names"
+					"group": "Names",
+					"definition": "A short survey about a small number of questions, usually to get a general opinion."
 				},
 				{
 					"sentences": [
@@ -509,7 +534,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My title is 'Teacher'.",
+							"sentence": "Is my title 'Teacher'?",
 							"translation": ""
 						}
 					],
@@ -519,12 +544,15 @@
 					"id": 21,
 					"translation": "",
 					"group": "Names",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A word that describes a person's job or rank."
 				},
 				{
 					"translation": "",
 					"sortOrder": 1,
-					"partOfSpeech": "",
+					"word": "position",
+					"group": "Names",
+					"definition": "A particular job or place in a company.",
 					"sentences": [
 						{
 							"translation": "",
@@ -536,13 +564,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "This is a good position for me."
+							"sentence": "Is this a good position for me?"
 						}
 					],
 					"id": 22,
 					"romanisation": "",
-					"word": "position",
-					"group": "Names"
+					"partOfSpeech": ""
 				},
 				{
 					"romanisation": "",
@@ -556,7 +583,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My rank is low.",
+							"sentence": "Is my rank low?",
 							"translation": ""
 						}
 					],
@@ -565,12 +592,13 @@
 					"word": "rank",
 					"group": "Names",
 					"translation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The level or position a person has in an organization."
 				}
 			],
 			"sortOrder": 1,
-			"tabnumber": 1,
-			"title": "Personal (B1)"
+			"tabNumber": 1,
+			"title": "Personal"
 		},
 		{
 			"sortOrder": 1,
@@ -586,7 +614,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I finished my assignment last night.",
+							"sentence": "Did I finish my assignment last night?",
 							"translation": ""
 						}
 					],
@@ -596,7 +624,8 @@
 					"partOfSpeech": "",
 					"translation": "",
 					"romanisation": "",
-					"word": "assignment"
+					"word": "assignment",
+					"definition": "A piece of work given to someone, often a student, to do."
 				},
 				{
 					"word": "homework",
@@ -610,7 +639,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My homework is easy.",
+							"sentence": "Is my homework easy?",
 							"translation": ""
 						}
 					],
@@ -619,7 +648,8 @@
 					"translation": "",
 					"group": "Days - Times",
 					"partOfSpeech": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Work given to a student to do outside of class."
 				},
 				{
 					"word": "project",
@@ -628,6 +658,7 @@
 					"group": "Days - Times",
 					"partOfSpeech": "",
 					"id": 2,
+					"definition": "A planned piece of work that takes time and effort to finish.",
 					"sentences": [
 						{
 							"sentence": "She is working on a science project.",
@@ -638,7 +669,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We finished our project together.",
+							"sentence": "Did we finish our project together?",
 							"translation": ""
 						}
 					],
@@ -649,6 +680,7 @@
 					"word": "course",
 					"group": "Days - Times",
 					"id": 3,
+					"definition": "A series of lessons or lectures in a subject.",
 					"sentences": [
 						{
 							"sentence": "He is taking a course in computer science.",
@@ -659,7 +691,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I start my course next week.",
+							"sentence": "Do I start my course next week?",
 							"translation": ""
 						}
 					],
@@ -681,14 +713,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "We have class every day.",
+							"sentence": "Do we have class every day?",
 							"translation": ""
 						}
 					],
 					"romanisation": "",
 					"word": "class",
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A period of time when students are taught a subject."
 				},
 				{
 					"partOfSpeech": "",
@@ -696,6 +729,7 @@
 					"word": "lecture",
 					"translation": "",
 					"id": 5,
+					"definition": "A long talk on a subject given to a group of people, usually at a university.",
 					"sentences": [
 						{
 							"sentence": "We attended a lecture on modern art.",
@@ -706,7 +740,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I listened to the lecture.",
+							"sentence": "Did I listen to the lecture?",
 							"translation": ""
 						}
 					],
@@ -719,6 +753,7 @@
 					"partOfSpeech": "",
 					"group": "Days - Times",
 					"sortOrder": 1,
+					"definition": "A document showing that you have completed a course of study.",
 					"sentences": [
 						{
 							"translation": "",
@@ -729,7 +764,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He got his diploma after school.",
+							"sentence": "Did he get his diploma after school?",
 							"translation": ""
 						}
 					],
@@ -749,7 +784,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I want to get a certificate.",
+							"sentence": "Do I want to get a certificate?",
 							"translation": ""
 						}
 					],
@@ -757,7 +792,8 @@
 					"word": "certificate",
 					"romanisation": "",
 					"translation": "",
-					"id": 7
+					"id": 7,
+					"definition": "An official document proving you have completed a course or passed a test."
 				},
 				{
 					"sentences": [
@@ -770,7 +806,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My degree is in science.",
+							"sentence": "Is my degree in science?",
 							"translation": ""
 						}
 					],
@@ -780,7 +816,8 @@
 					"id": 8,
 					"word": "degree",
 					"sortOrder": 1,
-					"group": "Days - Times"
+					"group": "Days - Times",
+					"definition": "A qualification you get after finishing university studies."
 				},
 				{
 					"word": "employee",
@@ -795,7 +832,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Every employee has an ID card.",
+							"sentence": "Does every employee have an ID card?",
 							"translation": ""
 						}
 					],
@@ -803,7 +840,8 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"translation": "",
-					"id": 9
+					"id": 9,
+					"definition": "A person who is paid to work for another person or company."
 				},
 				{
 					"partOfSpeech": "",
@@ -819,14 +857,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I talked to the staff.",
+							"sentence": "Did I talk to the staff?",
 							"translation": ""
 						}
 					],
 					"word": "staff",
 					"sortOrder": 1,
 					"translation": "",
-					"id": 10
+					"id": 10,
+					"definition": "The group of people who work for an organization."
 				},
 				{
 					"word": "worker",
@@ -840,7 +879,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My uncle is a worker.",
+							"sentence": "Is my uncle a worker?",
 							"translation": ""
 						}
 					],
@@ -849,13 +888,13 @@
 					"romanisation": "",
 					"id": 11,
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A person who works, especially doing manual or physical labor."
 				},
 				{
 					"partOfSpeech": "",
-					"group": "Days - Times",
-					"sortOrder": 1,
 					"romanisation": "",
+					"group": "Days - Times",
 					"sentences": [
 						{
 							"translation": "",
@@ -866,13 +905,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "She spoke to her employer.",
+							"sentence": "Did she speak to her employer?",
 							"translation": ""
 						}
 					],
 					"translation": "",
+					"sortOrder": 1,
 					"id": 12,
-					"word": "employer"
+					"word": "employer",
+					"definition": "A person or company that pays people to work for them."
 				},
 				{
 					"group": "Days - Times",
@@ -887,7 +928,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I like my boss.",
+							"sentence": "Do I like my boss?",
 							"translation": ""
 						}
 					],
@@ -895,7 +936,8 @@
 					"partOfSpeech": "",
 					"id": 13,
 					"word": "boss",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The person in charge of you at work."
 				},
 				{
 					"partOfSpeech": "",
@@ -912,13 +954,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I spoke to the manager.",
+							"sentence": "Did I speak to the manager?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"romanisation": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A person who is responsible for controlling a company or part of it."
 				},
 				{
 					"partOfSpeech": "",
@@ -935,13 +978,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "An internship helps you learn.",
+							"sentence": "Does an internship help you learn?",
 							"translation": ""
 						}
 					],
 					"sortOrder": 1,
 					"romanisation": "",
-					"id": 15
+					"id": 15,
+					"definition": "A period of work experience, often for a short time, to learn a job."
 				},
 				{
 					"translation": "",
@@ -951,6 +995,7 @@
 					"id": 16,
 					"sortOrder": 1,
 					"group": "Days - Times",
+					"definition": "A person who is being taught how to do a particular job.",
 					"sentences": [
 						{
 							"translation": "",
@@ -961,7 +1006,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He is a trainee at the factory.",
+							"sentence": "Is he a trainee at the factory?",
 							"translation": ""
 						}
 					]
@@ -974,6 +1019,7 @@
 					"partOfSpeech": "",
 					"romanisation": "",
 					"id": 17,
+					"definition": "A long period of training for a skilled job while working.",
 					"sentences": [
 						{
 							"translation": "",
@@ -984,7 +1030,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My brother started an apprenticeship.",
+							"sentence": "Did my brother start an apprenticeship?",
 							"translation": ""
 						}
 					]
@@ -994,6 +1040,7 @@
 					"partOfSpeech": "",
 					"id": 18,
 					"translation": "",
+					"definition": "A teacher at a university or college.",
 					"sentences": [
 						{
 							"sentence": "The lecturer explained the topic clearly.",
@@ -1004,7 +1051,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I listened to the lecturer.",
+							"sentence": "Did I listen to the lecturer?",
 							"translation": ""
 						}
 					],
@@ -1019,6 +1066,7 @@
 					"romanisation": "",
 					"word": "professor",
 					"id": 19,
+					"definition": "A very senior or high-ranking teacher at a university.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1029,7 +1077,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I ask the professor for help.",
+							"sentence": "Do I ask the professor for help?",
 							"translation": ""
 						}
 					],
@@ -1051,17 +1099,19 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I see my teacher every day.",
+							"sentence": "Do I see my teacher every day?",
 							"translation": ""
 						}
 					],
 					"translation": "",
-					"word": "teacher"
+					"word": "teacher",
+					"definition": "A person who teaches in a school."
 				},
 				{
 					"word": "profession",
 					"partOfSpeech": "",
 					"translation": "",
+					"definition": "A job that requires special education or training.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1072,7 +1122,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My profession is teaching.",
+							"sentence": "Is my profession teaching?",
 							"translation": ""
 						}
 					],
@@ -1088,6 +1138,7 @@
 					"group": "Days - Times",
 					"translation": "",
 					"romanisation": "",
+					"definition": "The series of jobs a person has in a particular field.",
 					"sentences": [
 						{
 							"sentence": "He is planning his career path.",
@@ -1098,7 +1149,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "My career is in business.",
+							"sentence": "Is my career in business?",
 							"translation": ""
 						}
 					],
@@ -1118,20 +1169,22 @@
 							"translation": ""
 						},
 						{
-							"sentence": "He wrote his occupation on the form.",
+							"sentence": "Did he write his occupation on the form?",
 							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"word": "occupation",
 					"group": "Days - Times",
-					"id": 23
+					"id": 23,
+					"definition": "A job or profession."
 				},
 				{
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"word": "qualification",
 					"group": "Days - Times",
+					"definition": "A passing of an exam or course that makes you suitable for a job.",
 					"sentences": [
 						{
 							"sentence": "He has the necessary qualifications for the job.",
@@ -1142,7 +1195,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "This qualification is very useful.",
+							"sentence": "Is this qualification very useful?",
 							"translation": ""
 						}
 					],
@@ -1165,13 +1218,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "Experience is important for this job.",
+							"sentence": "Is experience important for this job?",
 							"translation": ""
 						}
 					],
 					"id": 25,
 					"word": "experience",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "Knowledge or skill gained from doing a job or activity for a period of time."
 				},
 				{
 					"sortOrder": 1,
@@ -1188,13 +1242,14 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I want to learn a new skill.",
+							"sentence": "Do I want to learn a new skill?",
 							"translation": ""
 						}
 					],
 					"translation": "",
 					"partOfSpeech": "",
-					"id": 26
+					"id": 26,
+					"definition": "An ability to do something well, usually learned through practice."
 				},
 				{
 					"translation": "",
@@ -1202,6 +1257,7 @@
 					"word": "seminar",
 					"group": "Days - Times",
 					"id": 27,
+					"definition": "A meeting for discussion or training on a specific topic.",
 					"sentences": [
 						{
 							"sentence": "We attended a seminar on business management.",
@@ -1212,7 +1268,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I learned a lot at the seminar.",
+							"sentence": "Did I learn a lot at the seminar?",
 							"translation": ""
 						}
 					],
@@ -1233,14 +1289,15 @@
 							"translation": ""
 						},
 						{
-							"sentence": "The workshop starts at 10 o'clock.",
+							"sentence": "Does the workshop start at 10 o'clock?",
 							"translation": ""
 						}
 					],
 					"romanisation": "",
 					"sortOrder": 1,
 					"translation": "",
-					"group": "Days - Times"
+					"group": "Days - Times",
+					"definition": "A short, intensive course of study or training in a particular subject."
 				},
 				{
 					"partOfSpeech": "",
@@ -1255,7 +1312,7 @@
 							"translation": ""
 						},
 						{
-							"sentence": "I will go to the conference.",
+							"sentence": "Will I go to the conference?",
 							"translation": ""
 						}
 					],
@@ -1263,468 +1320,739 @@
 					"id": 29,
 					"word": "conference",
 					"translation": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A large meeting, often lasting several days, for discussion of a particular topic."
 				}
 			],
 			"title": "Education",
-			"tabnumber": 1
+			"tabNumber": 1
 		},
 		{
-			"title" : "Travel",
-			"words" : [
+			"title": "Travel",
+			"words": [
 				{
-					"sortOrder" : 1,
-					"translation" : "",
-					"romanisation" : "",
-					"id" : 0,
-					"group" : "Travel",
-					"sentences" : [
+					"sortOrder": 1,
+					"translation": "",
+					"romanisation": "",
+					"id": 0,
+					"group": "Travel",
+					"definition": "A place where you live or stay, especially for a short time.",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "We need to book our accommodation for the trip."
+							"translation": "",
+							"sentence": "We need to book our accommodation for the trip."
+						},
+						{
+							"sentence": "Accommodation near the beach is expensive.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the accommodation clean?",
+							"translation": ""
 						}
 					],
-					"word" : "accommodation",
-					"partOfSpeech" : ""
+					"word": "accommodation",
+					"partOfSpeech": ""
 				},
 				{
-					"sentences" : [
+					"sentences": [
 						{
-							"sentence" : "The hotel has a swimming pool.",
-							"translation" : ""
+							"sentence": "The hotel has a swimming pool.",
+							"translation": ""
+						},
+						{
+							"sentence": "We stayed at a luxury hotel.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the hotel near the airport?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"word" : "hotel",
-					"translation" : "",
-					"group" : "Travel",
-					"id" : 1
+					"sortOrder": 1,
+					"romanisation": "",
+					"partOfSpeech": "",
+					"word": "hotel",
+					"translation": "",
+					"group": "Travel",
+					"id": 1,
+					"definition": "A place that provides rooms and meals for visitors."
 				},
 				{
-					"partOfSpeech" : "",
-					"word" : "hostel",
-					"translation" : "",
-					"id" : 2,
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"group" : "Travel",
-					"sentences" : [
+					"partOfSpeech": "",
+					"word": "hostel",
+					"translation": "",
+					"id": 2,
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "Travel",
+					"definition": "A cheap place to stay, usually with shared rooms.",
+					"sentences": [
 						{
-							"sentence" : "They stayed at a hostel during their vacation.",
-							"translation" : ""
+							"sentence": "They stayed at a hostel during their vacation.",
+							"translation": ""
+						},
+						{
+							"sentence": "The hostel has shared bedrooms.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the hostel safe?",
+							"translation": ""
 						}
 					]
 				},
 				{
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"translation" : "",
-					"group" : "Travel",
-					"word" : "arrival",
-					"id" : 3,
-					"sentences" : [
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"translation": "",
+					"group": "Travel",
+					"word": "arrival",
+					"id": 3,
+					"definition": "The act of reaching a place.",
+					"sentences": [
 						{
-							"sentence" : "Our arrival time is scheduled for 3 PM.",
-							"translation" : ""
+							"sentence": "Our arrival time is scheduled for 3 PM.",
+							"translation": ""
+						},
+						{
+							"sentence": "The arrival of the train was delayed.",
+							"translation": ""
+						},
+						{
+							"sentence": "What is your arrival date?",
+							"translation": ""
 						}
 					]
 				},
 				{
-					"romanisation" : "",
-					"sentences" : [
+					"romanisation": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "We checked in at the airport two hours before our flight."
+							"translation": "",
+							"sentence": "We checked in at the airport two hours before our flight."
+						},
+						{
+							"sentence": "Check-in is required before boarding.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did we check-in online?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"group" : "Travel",
-					"word" : "check-in",
-					"translation" : "",
-					"id" : 4
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"group": "Travel",
+					"word": "check-in",
+					"translation": "",
+					"id": 4,
+					"definition": "The act of registering your arrival at a hotel or airport."
 				},
 				{
-					"id" : 5,
-					"word" : "landing",
-					"sentences" : [
+					"id": 5,
+					"word": "landing",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "The plane made a smooth landing."
+							"translation": "",
+							"sentence": "The plane made a smooth landing."
+						},
+						{
+							"sentence": "The landing was bumpy due to the wind.",
+							"translation": ""
+						},
+						{
+							"sentence": "Was the landing on time?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"group" : "Travel",
-					"sortOrder" : 1,
-					"translation" : "",
-					"partOfSpeech" : ""
+					"romanisation": "",
+					"group": "Travel",
+					"sortOrder": 1,
+					"translation": "",
+					"partOfSpeech": "",
+					"definition": "An occasion when an aircraft comes down to the ground."
 				},
 				{
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"id" : 6,
-					"group" : "Travel",
-					"word" : "baggage",
-					"translation" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"romanisation": "",
+					"id": 6,
+					"group": "Travel",
+					"word": "baggage",
+					"translation": "",
+					"definition": "The bags, suitcases, etc. that you take when traveling.",
+					"sentences": [
 						{
-							"sentence" : "She lost her baggage at the airport.",
-							"translation" : ""
+							"sentence": "She lost her baggage at the airport.",
+							"translation": ""
+						},
+						{
+							"sentence": "My baggage is too heavy.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did she check her baggage?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : ""
+					"partOfSpeech": ""
 				},
 				{
-					"group" : "Travel",
-					"partOfSpeech" : "",
-					"translation" : "",
-					"sentences" : [
+					"group": "Travel",
+					"partOfSpeech": "",
+					"translation": "",
+					"sentences": [
 						{
-							"sentence" : "His luggage is very heavy.",
-							"translation" : ""
+							"sentence": "His luggage is very heavy.",
+							"translation": ""
+						},
+						{
+							"sentence": "I carried my own luggage.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the luggage ready?",
+							"translation": ""
 						}
 					],
-					"id" : 7,
-					"romanisation" : "",
-					"word" : "luggage",
-					"sortOrder" : 1
+					"id": 7,
+					"romanisation": "",
+					"word": "luggage",
+					"sortOrder": 1,
+					"definition": "The bags, suitcases, etc. that you take when traveling."
 				},
 				{
-					"sentences" : [
+					"sentences": [
 						{
-							"sentence" : "I packed my clothes in a suitcase.",
-							"translation" : ""
+							"sentence": "I packed my clothes in a suitcase.",
+							"translation": ""
+						},
+						{
+							"sentence": "The suitcase is too small.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the suitcase locked?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"romanisation" : "",
-					"group" : "Travel",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"word" : "suitcase",
-					"id" : 8
+					"translation": "",
+					"romanisation": "",
+					"group": "Travel",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"word": "suitcase",
+					"id": 8,
+					"definition": "A large, rectangular bag for carrying clothes when traveling."
 				},
 				{
-					"id" : 9,
-					"group" : "Travel",
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"translation" : "",
-					"word" : "booking",
-					"sentences" : [
+					"id": 9,
+					"group": "Travel",
+					"sortOrder": 1,
+					"romanisation": "",
+					"translation": "",
+					"word": "booking",
+					"definition": "An arrangement to have a hotel room, ticket, etc. at a particular time.",
+					"sentences": [
 						{
-							"sentence" : "She made a booking for a double room.",
-							"translation" : ""
+							"sentence": "She made a booking for a double room.",
+							"translation": ""
+						},
+						{
+							"sentence": "I need to confirm my booking.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do we have a booking?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : ""
+					"partOfSpeech": ""
 				},
 				{
-					"word" : "reservation",
-					"sentences" : [
+					"word": "reservation",
+					"sentences": [
 						{
-							"sentence" : "Do you have a reservation for tonight?",
-							"translation" : ""
+							"sentence": "Do you have a reservation for tonight?",
+							"translation": ""
+						},
+						{
+							"sentence": "I called to make a dinner reservation.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did she cancel her reservation?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"translation" : "",
-					"id" : 10,
-					"sortOrder" : 1,
-					"group" : "Travel",
-					"romanisation" : ""
+					"partOfSpeech": "",
+					"translation": "",
+					"id": 10,
+					"sortOrder": 1,
+					"group": "Travel",
+					"romanisation": "",
+					"definition": "An arrangement to have a seat, room, etc. kept for you."
 				},
 				{
-					"id" : 11,
-					"sentences" : [
+					"id": 11,
+					"sentences": [
 						{
-							"sentence" : "I need to buy a ticket for the train.",
-							"translation" : ""
+							"sentence": "I need to buy a ticket for the train.",
+							"translation": ""
+						},
+						{
+							"sentence": "The ticket cost fifty pounds.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the ticket for today?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"partOfSpeech" : "",
-					"translation" : "",
-					"word" : "ticket",
-					"group" : "Travel"
+					"romanisation": "",
+					"sortOrder": 1,
+					"partOfSpeech": "",
+					"translation": "",
+					"word": "ticket",
+					"group": "Travel",
+					"definition": "A piece of paper or card that shows you have paid to enter a place or travel."
 				},
 				{
-					"word" : "cruise",
-					"translation" : "",
-					"group" : "Travel",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"id" : 12,
-					"sentences" : [
+					"word": "cruise",
+					"translation": "",
+					"group": "Travel",
+					"romanisation": "",
+					"sortOrder": 1,
+					"id": 12,
+					"definition": "A holiday on a ship, sailing from place to place.",
+					"sentences": [
 						{
-							"sentence" : "They went on a Caribbean cruise for their honeymoon.",
-							"translation" : ""
+							"sentence": "They went on a Caribbean cruise for their honeymoon.",
+							"translation": ""
+						},
+						{
+							"sentence": "The cruise lasted ten days.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did they enjoy the cruise?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : ""
+					"partOfSpeech": ""
 				},
 				{
-					"word" : "ship",
-					"translation" : "",
-					"romanisation" : "",
-					"id" : 13,
-					"group" : "Travel",
-					"sentences" : [
+					"word": "ship",
+					"translation": "",
+					"romanisation": "",
+					"id": 13,
+					"group": "Travel",
+					"definition": "A large boat for traveling or carrying things by sea.",
+					"sentences": [
 						{
-							"sentence" : "The ship will dock at the port tomorrow.",
-							"translation" : ""
+							"sentence": "The ship will dock at the port tomorrow.",
+							"translation": ""
+						},
+						{
+							"sentence": "The ship is very large.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the ship leaving soon?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"partOfSpeech" : ""
+					"sortOrder": 1,
+					"partOfSpeech": ""
 				},
 				{
-					"sortOrder" : 1,
-					"id" : 14,
-					"group" : "Travel",
-					"translation" : "",
-					"word" : "voyage",
-					"partOfSpeech" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"id": 14,
+					"group": "Travel",
+					"translation": "",
+					"word": "voyage",
+					"partOfSpeech": "",
+					"definition": "A long journey by sea or in space.",
+					"sentences": [
 						{
-							"sentence" : "The voyage across the Atlantic took six days.",
-							"translation" : ""
+							"sentence": "The voyage across the Atlantic took six days.",
+							"translation": ""
+						},
+						{
+							"sentence": "It was a dangerous voyage.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did they enjoy the voyage?",
+							"translation": ""
 						}
 					],
-					"romanisation" : ""
+					"romanisation": ""
 				},
 				{
-					"partOfSpeech" : "",
-					"id" : 15,
-					"sentences" : [
+					"partOfSpeech": "",
+					"id": 15,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "We had to go through customs at the airport."
+							"translation": "",
+							"sentence": "We had to go through customs at the airport."
+						},
+						{
+							"sentence": "Customs checked my bag.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did they check your customs form?",
+							"translation": ""
 						}
 					],
-					"word" : "customs",
-					"group" : "Travel",
-					"translation" : "",
-					"sortOrder" : 1,
-					"romanisation" : ""
+					"word": "customs",
+					"group": "Travel",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"definition": "The place at an airport where officials check goods coming into a country."
 				},
 				{
-					"sortOrder" : 1,
-					"translation" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
 						{
-							"sentence" : "Passport control took longer than expected.",
-							"translation" : ""
+							"sentence": "Passport control took longer than expected.",
+							"translation": ""
+						},
+						{
+							"sentence": "I waited at passport control for an hour.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is passport control open now?",
+							"translation": ""
 						}
 					],
-					"id" : 16,
-					"group" : "Travel",
-					"romanisation" : "",
-					"word" : "passport control",
-					"partOfSpeech" : ""
+					"id": 16,
+					"group": "Travel",
+					"romanisation": "",
+					"word": "passport control",
+					"partOfSpeech": "",
+					"definition": "The place where your passport is checked when you enter or leave a country."
 				},
 				{
-					"word" : "immigration",
-					"group" : "Travel",
-					"translation" : "",
-					"sentences" : [
+					"word": "immigration",
+					"group": "Travel",
+					"translation": "",
+					"sentences": [
 						{
-							"sentence" : "He went through immigration without any problems.",
-							"translation" : ""
+							"sentence": "He went through immigration without any problems.",
+							"translation": ""
+						},
+						{
+							"sentence": "Immigration checked his documents.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did she wait long at immigration?",
+							"translation": ""
 						}
 					],
-					"id" : 17,
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"romanisation" : ""
+					"id": 17,
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"definition": "The process of officially entering a country."
 				},
 				{
-					"partOfSpeech" : "",
-					"translation" : "",
-					"sortOrder" : 1,
-					"romanisation" : "",
-					"group" : "Travel",
-					"word" : "departure",
-					"sentences" : [
+					"partOfSpeech": "",
+					"translation": "",
+					"sortOrder": 1,
+					"romanisation": "",
+					"group": "Travel",
+					"word": "departure",
+					"sentences": [
 						{
-							"sentence" : "Our departure is scheduled for 10 AM.",
-							"translation" : ""
+							"sentence": "Our departure is scheduled for 10 AM.",
+							"translation": ""
+						},
+						{
+							"sentence": "The train departure was delayed.",
+							"translation": ""
+						},
+						{
+							"sentence": "What is your departure time?",
+							"translation": ""
 						}
 					],
-					"id" : 18
+					"id": 18,
+					"definition": "The act of leaving a place."
 				},
 				{
-					"word" : "takeoff",
-					"partOfSpeech" : "",
-					"sentences" : [
+					"word": "takeoff",
+					"partOfSpeech": "",
+					"sentences": [
 						{
-							"sentence" : "The takeoff was smooth and on time.",
-							"translation" : ""
+							"sentence": "The takeoff was smooth and on time.",
+							"translation": ""
+						},
+						{
+							"sentence": "The plane is ready for takeoff.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the takeoff happen quickly?",
+							"translation": ""
 						}
 					],
-					"group" : "Travel",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"translation" : "",
-					"id" : 19
+					"group": "Travel",
+					"romanisation": "",
+					"sortOrder": 1,
+					"translation": "",
+					"id": 19,
+					"definition": "An occasion when an aircraft leaves the ground."
 				},
 				{
-					"group" : "Travel",
-					"sortOrder" : 1,
-					"sentences" : [
+					"group": "Travel",
+					"sortOrder": 1,
+					"sentences": [
 						{
-							"sentence" : "Please proceed to gate 5 for boarding.",
-							"translation" : ""
+							"sentence": "Please proceed to gate 5 for boarding.",
+							"translation": ""
+						},
+						{
+							"sentence": "The gate is at the end of the corridor.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the gate open now?",
+							"translation": ""
 						}
 					],
-					"id" : 20,
-					"romanisation" : "",
-					"word" : "gate",
-					"translation" : "",
-					"partOfSpeech" : ""
+					"id": 20,
+					"romanisation": "",
+					"word": "gate",
+					"translation": "",
+					"partOfSpeech": "",
+					"definition": "A place at an airport where passengers get on or off a plane."
 				},
 				{
-					"word" : "destination",
-					"id" : 21,
-					"translation" : "",
-					"sentences" : [
+					"word": "destination",
+					"id": 21,
+					"translation": "",
+					"sentences": [
 						{
-							"sentence" : "Paris is their final destination.",
-							"translation" : ""
+							"sentence": "Paris is their final destination.",
+							"translation": ""
+						},
+						{
+							"sentence": "We arrived at our destination safely.",
+							"translation": ""
+						},
+						{
+							"sentence": "What is your destination?",
+							"translation": ""
 						}
 					],
-					"group" : "Travel",
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"sortOrder" : 1
+					"group": "Travel",
+					"romanisation": "",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"definition": "The place to which someone or something is going or being sent."
 				},
 				{
-					"sortOrder" : 1,
-					"id" : 22,
-					"word" : "arrival",
-					"translation" : "",
-					"group" : "Travel",
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"sentences" : [
+					"sortOrder": 1,
+					"id": 22,
+					"word": "arrival",
+					"translation": "",
+					"group": "Travel",
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "We were excited to reach our destination."
-						}
-					]
-				},
-				{
-					"translation" : "",
-					"partOfSpeech" : "",
-					"id" : 23,
-					"group" : "Travel",
-					"sentences" : [
+							"translation": "",
+							"sentence": "We were excited to reach our destination."
+						},
 						{
-							"sentence" : "The journey took three hours.",
-							"translation" : ""
+							"sentence": "The arrival of the new shipment was delayed.",
+							"translation": ""
+						},
+						{
+							"sentence": "What is the arrival time?",
+							"translation": ""
 						}
 					],
-					"sortOrder" : 1,
-					"word" : "journey",
-					"romanisation" : ""
+					"definition": "The act of reaching a place."
 				},
 				{
-					"romanisation" : "",
-					"word" : "itinerary",
-					"sortOrder" : 1,
-					"translation" : "",
-					"sentences" : [
+					"translation": "",
+					"partOfSpeech": "",
+					"id": 23,
+					"group": "Travel",
+					"sentences": [
 						{
-							"sentence" : "The tour guide gave us the itinerary for the week.",
-							"translation" : ""
+							"sentence": "The journey took three hours.",
+							"translation": ""
+						},
+						{
+							"sentence": "Our journey was long but fun.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did the journey start well?",
+							"translation": ""
 						}
 					],
-					"group" : "Travel",
-					"partOfSpeech" : "",
-					"id" : 24
+					"sortOrder": 1,
+					"word": "journey",
+					"romanisation": "",
+					"definition": "An act of traveling from one place to another."
 				},
 				{
-					"word" : "schedule",
-					"sentences" : [
+					"romanisation": "",
+					"word": "itinerary",
+					"sortOrder": 1,
+					"translation": "",
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "Our schedule includes visits to several museums."
+							"sentence": "The tour guide gave us the itinerary for the week.",
+							"translation": ""
+						},
+						{
+							"sentence": "I checked the itinerary for the trip.",
+							"translation": ""
+						},
+						{
+							"sentence": "Does the itinerary include a visit to the museum?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"sortOrder" : 1,
-					"group" : "Travel",
-					"id" : 25,
-					"partOfSpeech" : "",
-					"romanisation" : ""
+					"group": "Travel",
+					"partOfSpeech": "",
+					"id": 24,
+					"definition": "A detailed plan of a trip, showing places to visit and times."
 				},
 				{
-					"romanisation" : "",
-					"partOfSpeech" : "",
-					"id" : 26,
-					"sentences" : [
+					"word": "schedule",
+					"sentences": [
 						{
-							"sentence" : "We need to plan our itinerary carefully.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "Our schedule includes visits to several museums."
+						},
+						{
+							"sentence": "I checked my work schedule.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the class schedule available?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"word" : "plan",
-					"group" : "Travel",
-					"sortOrder" : 1
+					"translation": "",
+					"sortOrder": 1,
+					"group": "Travel",
+					"id": 25,
+					"partOfSpeech": "",
+					"romanisation": "",
+					"definition": "A plan of activities or events with their times."
 				},
 				{
-					"romanisation" : "",
-					"id" : 27,
-					"sentences" : [
+					"romanisation": "",
+					"id": 26,
+					"sentences": [
 						{
-							"translation" : "",
-							"sentence" : "They spent the day sightseeing in Rome."
+							"sentence": "We need to plan our itinerary carefully.",
+							"translation": ""
+						},
+						{
+							"sentence": "I plan to travel next year.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did you plan the party?",
+							"translation": ""
 						}
 					],
-					"partOfSpeech" : "",
-					"group" : "Travel",
-					"translation" : "",
-					"sortOrder" : 1,
-					"word" : "sightseeing"
+					"translation": "",
+					"word": "plan",
+					"partOfSpeech": "",
+					"group": "Travel",
+					"sortOrder": 1,
+					"definition": "To decide what you are going to do and how."
 				},
 				{
-					"partOfSpeech" : "",
-					"romanisation" : "",
-					"sortOrder" : 1,
-					"group" : "Travel",
-					"sentences" : [
+					"romanisation": "",
+					"id": 27,
+					"sentences": [
 						{
-							"sentence" : "We went on a guided tour of the city.",
-							"translation" : ""
+							"translation": "",
+							"sentence": "They spent the day sightseeing in Rome."
+						},
+						{
+							"sentence": "Sightseeing is their favorite holiday activity.",
+							"translation": ""
+						},
+						{
+							"sentence": "Do they enjoy sightseeing?",
+							"translation": ""
 						}
 					],
-					"translation" : "",
-					"word" : "tour",
-					"id" : 28
+					"partOfSpeech": "",
+					"group": "Travel",
+					"translation": "",
+					"sortOrder": 1,
+					"word": "sightseeing",
+					"definition": "The activity of visiting famous or interesting places as a tourist."
 				},
 				{
-					"word" : "attraction",
-					"partOfSpeech" : "",
-					"sortOrder" : 1,
-					"id" : 29,
-					"translation" : "",
-					"sentences" : [
+					"partOfSpeech": "",
+					"romanisation": "",
+					"sortOrder": 1,
+					"group": "Travel",
+					"sentences": [
 						{
-							"sentence" : "The Eiffel Tower is a famous tourist attraction.",
-							"translation" : ""
+							"sentence": "We went on a guided tour of the city.",
+							"translation": ""
+						},
+						{
+							"sentence": "The tour lasts two hours.",
+							"translation": ""
+						},
+						{
+							"sentence": "Did you book a tour?",
+							"translation": ""
 						}
 					],
-					"romanisation" : "",
-					"group" : "Travel"
+					"translation": "",
+					"word": "tour",
+					"id": 28,
+					"definition": "A journey to visit several places of interest in an area."
+				},
+				{
+					"word": "attraction",
+					"partOfSpeech": "",
+					"sortOrder": 1,
+					"id": 29,
+					"translation": "",
+					"sentences": [
+						{
+							"sentence": "The Eiffel Tower is a famous tourist attraction.",
+							"translation": ""
+						},
+						{
+							"sentence": "The city has many attractions.",
+							"translation": ""
+						},
+						{
+							"sentence": "Is the museum a new attraction?",
+							"translation": ""
+						}
+					],
+					"romanisation": "",
+					"group": "Travel",
+					"definition": "A place that draws visitors or tourists."
 				}
 			],
-			"sortOrder" : 1,
-			"tabnumber" : 2
+			"sortOrder": 1,
+			"tabNumber": 2
 		},
 		{
 			"words": [
@@ -1734,6 +2062,7 @@
 					"group": "Health and Fitness",
 					"id": 0,
 					"partOfSpeech": "",
+					"definition": "A medical problem caused by certain foods or substances.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1745,7 +2074,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "My sister has a severe allergy to pollen."
+							"sentence": "Does my sister have a severe allergy to pollen?"
 						}
 					],
 					"translation": "",
@@ -1763,7 +2092,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The crowd's reaction to the announcement was mixed."
+							"sentence": "Was the crowd's reaction to the announcement mixed?"
 						}
 					],
 					"group": "Health and Fitness",
@@ -1772,7 +2101,8 @@
 					"translation": "",
 					"word": "reaction",
 					"partOfSpeech": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A change in a person's body or feeling after contact with something."
 				},
 				{
 					"word": "symptoms",
@@ -1787,7 +2117,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She described her symptoms to the doctor in detail."
+							"sentence": "Did she describe her symptoms to the doctor in detail?"
 						}
 					],
 					"translation": "",
@@ -1795,7 +2125,8 @@
 					"romanisation": "",
 					"id": 2,
 					"sortOrder": 1,
-					"group": "Health and Fitness"
+					"group": "Health and Fitness",
+					"definition": "Physical signs of an illness or disease."
 				},
 				{
 					"romanisation": "",
@@ -1804,6 +2135,7 @@
 					"word": "appointment",
 					"id": 3,
 					"partOfSpeech": "",
+					"definition": "A formal arrangement to meet or see someone at a fixed time.",
 					"sentences": [
 						{
 							"sentence": "I have an appointment with the doctor tomorrow.",
@@ -1815,7 +2147,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She arrived late for her dental appointment."
+							"sentence": "Did she arrive late for her dental appointment?"
 						}
 					],
 					"sortOrder": 1
@@ -1841,7 +2173,8 @@
 						}
 					],
 					"group": "Health and Fitness",
-					"translation": ""
+					"translation": "",
+					"definition": "To arrange a time for something to happen."
 				},
 				{
 					"translation": "",
@@ -1850,6 +2183,7 @@
 					"id": 5,
 					"word": "consultation",
 					"sortOrder": 1,
+					"definition": "A meeting with an expert or professional, like a doctor, to get advice.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1861,7 +2195,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The architect provided a detailed consultation for the renovation."
+							"sentence": "Did the architect provide a detailed consultation for the renovation?"
 						}
 					],
 					"romanisation": ""
@@ -1874,6 +2208,7 @@
 					"romanisation": "",
 					"word": "diet",
 					"partOfSpeech": "",
+					"definition": "The food and drink a person usually eats.",
 					"sentences": [
 						{
 							"translation": "",
@@ -1885,7 +2220,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She decided to go on a strict diet before the wedding."
+							"sentence": "Did she decide to go on a strict diet before the wedding?"
 						}
 					]
 				},
@@ -1905,12 +2240,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The school offers classes on healthy eating and nutrition."
+							"sentence": "Do the school offer classes on healthy eating and nutrition?"
 						}
 					],
 					"id": 7,
 					"word": "nutrition",
-					"translation": ""
+					"translation": "",
+					"definition": "The process of getting the food necessary for health and growth."
 				},
 				{
 					"group": "Health and Fitness",
@@ -1930,10 +2266,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The balanced budget was approved by the council."
+							"sentence": "Was the balanced budget approved by the council?"
 						}
 					],
-					"word": "balanced"
+					"word": "balanced",
+					"definition": "Having equal amounts of all necessary parts."
 				},
 				{
 					"id": 9,
@@ -1949,14 +2286,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "They had to make an emergency landing."
+							"sentence": "Did they have to make an emergency landing?"
 						}
 					],
 					"group": "Health and Fitness",
 					"partOfSpeech": "",
 					"translation": "",
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A serious situation that happens suddenly and requires immediate action."
 				},
 				{
 					"word": "hospital",
@@ -1972,14 +2310,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She works as a nurse at the local hospital."
+							"sentence": "Does she work as a nurse at the local hospital?"
 						}
 					],
 					"sortOrder": 1,
 					"id": 10,
 					"romanisation": "",
 					"group": "Health and Fitness",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A place where sick or injured people are treated."
 				},
 				{
 					"partOfSpeech": "",
@@ -1996,13 +2335,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He received an urgent message from his family."
+							"sentence": "Did he receive an urgent message from his family?"
 						}
 					],
 					"group": "Health and Fitness",
 					"id": 11,
 					"sortOrder": 1,
-					"translation": ""
+					"translation": "",
+					"definition": "Needing immediate attention or action."
 				},
 				{
 					"group": "Health and Fitness",
@@ -2019,13 +2359,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Lack of exercise can lead to health problems."
+							"sentence": "Can lack of exercise lead to health problems?"
 						}
 					],
 					"id": 12,
 					"romanisation": "",
 					"sortOrder": 1,
-					"word": "exercise"
+					"word": "exercise",
+					"definition": "Physical activity that keeps your body healthy."
 				},
 				{
 					"translation": "",
@@ -2033,6 +2374,7 @@
 					"group": "Health and Fitness",
 					"word": "workout",
 					"sortOrder": 1,
+					"definition": "A period of physical exercise.",
 					"sentences": [
 						{
 							"sentence": "He goes to the gym for his workout.",
@@ -2044,7 +2386,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "A good workout can help relieve stress."
+							"sentence": "Can a good workout help relieve stress?"
 						}
 					],
 					"romanisation": "",
@@ -2058,6 +2400,7 @@
 					"word": "routine",
 					"sortOrder": 1,
 					"romanisation": "",
+					"definition": "A regular and repeated series of activities.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2069,7 +2412,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "It's good to have a consistent routine for children."
+							"sentence": "Is it good to have a consistent routine for children?"
 						}
 					]
 				},
@@ -2080,6 +2423,7 @@
 					"id": 15,
 					"translation": "",
 					"partOfSpeech": "",
+					"definition": "The state of a person's body and mind.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2091,7 +2435,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Public health initiatives aim to improve community well-being."
+							"sentence": "Do public health initiatives aim to improve community well-being?"
 						}
 					],
 					"romanisation": ""
@@ -2104,6 +2448,7 @@
 					"word": "well-being",
 					"sortOrder": 1,
 					"romanisation": "",
+					"definition": "A state of being comfortable, healthy, and happy.",
 					"sentences": [
 						{
 							"sentence": "Mental well-being is just as important as physical health.",
@@ -2114,8 +2459,8 @@
 							"sentence": "The company prioritizes the well-being of its employees."
 						},
 						{
-							"translation": "",
-							"sentence": "Spending time in nature contributes to overall well-being."
+							"sentence": "Does spending time in nature contribute to overall well-being?",
+							"translation": ""
 						}
 					]
 				},
@@ -2126,6 +2471,7 @@
 					"translation": "",
 					"partOfSpeech": "",
 					"romanisation": "",
+					"definition": "A physical exam by a doctor to see if you are healthy.",
 					"sentences": [
 						{
 							"sentence": "I have a health checkup every year.",
@@ -2136,8 +2482,8 @@
 							"sentence": "The doctor recommended a full checkup."
 						},
 						{
-							"translation": "",
-							"sentence": "It's time for your car's annual checkup."
+							"sentence": "Is it time for your car's annual checkup?",
+							"translation": ""
 						}
 					],
 					"word": "checkup"
@@ -2156,14 +2502,15 @@
 							"sentence": "The injury forced her to withdraw from the competition."
 						},
 						{
-							"translation": "",
-							"sentence": "Always wear protective gear to prevent injury."
+							"sentence": "Should you always wear protective gear to prevent injury?",
+							"translation": ""
 						}
 					],
 					"romanisation": "",
 					"id": 18,
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "Physical harm or damage to someone's body."
 				},
 				{
 					"id": 19,
@@ -2180,13 +2527,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Time helps to heal the deepest wounds."
+							"sentence": "Does time help to heal the deepest wounds?"
 						}
 					],
 					"sortOrder": 1,
 					"partOfSpeech": "",
 					"word": "wound",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "An injury, especially a deep cut or break in the skin."
 				},
 				{
 					"id": 20,
@@ -2201,7 +2549,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The economy is showing signs of recovery."
+							"sentence": "Is the economy showing signs of recovery?"
 						}
 					],
 					"group": "Health and Fitness",
@@ -2209,7 +2557,8 @@
 					"partOfSpeech": "",
 					"romanisation": "",
 					"sortOrder": 1,
-					"translation": ""
+					"translation": "",
+					"definition": "The process of getting better after an illness or injury."
 				},
 				{
 					"word": "insurance",
@@ -2217,6 +2566,7 @@
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"group": "Health and Fitness",
+					"definition": "An arrangement where you pay money regularly to a company and they pay you if something bad happens.",
 					"sentences": [
 						{
 							"sentence": "Health insurance covers the cost of medical treatments.",
@@ -2228,7 +2578,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Travel insurance is recommended for international trips."
+							"sentence": "Is travel insurance recommended for international trips?"
 						}
 					],
 					"translation": "",
@@ -2250,12 +2600,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Government policy can significantly impact the economy."
+							"sentence": "Can government policy significantly impact the economy?"
 						}
 					],
 					"translation": "",
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A document showing the contract details for your insurance."
 				},
 				{
 					"sortOrder": 1,
@@ -2273,12 +2624,13 @@
 							"sentence": "Check your cell phone coverage before traveling."
 						},
 						{
-							"translation": "",
-							"sentence": "The news report offered extensive coverage of the event."
+							"sentence": "Did the news report offer extensive coverage of the event?",
+							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "The protection or scope provided by an insurance policy."
 				},
 				{
 					"partOfSpeech": "",
@@ -2296,12 +2648,13 @@
 							"sentence": "Take this medication with food."
 						},
 						{
-							"translation": "",
-							"sentence": "She forgot to take her daily medication."
+							"sentence": "Did she forget to take her daily medication?",
+							"translation": ""
 						}
 					],
 					"sortOrder": 1,
-					"id": 24
+					"id": 24,
+					"definition": "A medicine or drug used to treat an illness."
 				},
 				{
 					"group": "Health and Fitness",
@@ -2318,13 +2671,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "My prescription eyeglasses need to be updated."
+							"sentence": "Do my prescription eyeglasses need to be updated?"
 						}
 					],
 					"word": "prescription",
 					"sortOrder": 1,
 					"romanisation": "",
-					"id": 25
+					"id": 25,
+					"definition": "A written note from a doctor allowing you to get a certain medicine."
 				},
 				{
 					"sortOrder": 1,
@@ -2340,14 +2694,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He needs a high dose of courage to face his fears."
+							"sentence": "Does he need a high dose of courage to face his fears?"
 						}
 					],
 					"partOfSpeech": "",
 					"translation": "",
 					"romanisation": "",
 					"group": "Health and Fitness",
-					"id": 26
+					"id": 26,
+					"definition": "A measured amount of a medicine or drug."
 				},
 				{
 					"sentences": [
@@ -2361,7 +2716,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He underwent a series of treatments for his back pain."
+							"sentence": "Did he undergo a series of treatments for his back pain?"
 						}
 					],
 					"id": 27,
@@ -2370,7 +2725,8 @@
 					"group": "Health and Fitness",
 					"translation": "",
 					"word": "treatment",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The way a doctor tries to cure an illness or injury."
 				},
 				{
 					"sentences": [
@@ -2384,7 +2740,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Art therapy can be very beneficial for children."
+							"sentence": "Can art therapy be very beneficial for children?"
 						}
 					],
 					"group": "Health and Fitness",
@@ -2393,7 +2749,8 @@
 					"word": "therapy",
 					"id": 28,
 					"partOfSpeech": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A treatment to help cure an illness or mental problem without drugs."
 				},
 				{
 					"id": 29,
@@ -2412,15 +2769,16 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Sometimes, time is the best cure for a broken heart."
+							"sentence": "Is time the best cure for a broken heart?"
 						}
 					],
 					"romanisation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A medicine or treatment that makes an illness go away."
 				}
 			],
 			"title": "Health",
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"sortOrder": 1
 		},
 		{
@@ -2433,6 +2791,7 @@
 					"romanisation": "",
 					"id": 0,
 					"group": "Leisure and Entertainment",
+					"definition": "Something that you do, often for enjoyment.",
 					"sentences": [
 						{
 							"sentence": "Hiking is a popular outdoor activity.",
@@ -2444,7 +2803,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Daily physical activity is good for your health."
+							"sentence": "Is daily physical activity good for your health?"
 						}
 					]
 				},
@@ -2456,6 +2815,7 @@
 					"partOfSpeech": "",
 					"id": 1,
 					"group": "Leisure and Entertainment",
+					"definition": "A form of play or sport with rules, played for fun or competition.",
 					"sentences": [
 						{
 							"sentence": "We played a fun game at the party.",
@@ -2467,7 +2827,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She won the board game by a narrow margin."
+							"sentence": "Did she win the board game by a narrow margin?"
 						}
 					]
 				},
@@ -2484,7 +2844,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The charity event raised a lot of money."
+							"sentence": "Did the charity event raise a lot of money?"
 						}
 					],
 					"romanisation": "",
@@ -2492,7 +2852,8 @@
 					"partOfSpeech": "",
 					"group": "Leisure and Entertainment",
 					"translation": "",
-					"word": "event"
+					"word": "event",
+					"definition": "A planned public or social occasion."
 				},
 				{
 					"word": "concert",
@@ -2507,7 +2868,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Tickets for the concert sold out quickly."
+							"sentence": "Did tickets for the concert sell out quickly?"
 						}
 					],
 					"sortOrder": 1,
@@ -2515,7 +2876,8 @@
 					"id": 3,
 					"romanisation": "",
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A public performance of music."
 				},
 				{
 					"sortOrder": 1,
@@ -2534,17 +2896,19 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The marching band performed during halftime."
+							"sentence": "Did the marching band perform during halftime?"
 						}
 					],
 					"translation": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A small group of musicians who play popular music."
 				},
 				{
 					"romanisation": "",
 					"group": "Leisure and Entertainment",
 					"id": 5,
 					"translation": "",
+					"definition": "The people watching or listening to a performance.",
 					"sentences": [
 						{
 							"translation": "",
@@ -2556,7 +2920,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The film attracted a large audience."
+							"sentence": "Did the film attract a large audience?"
 						}
 					],
 					"word": "audience",
@@ -2580,11 +2944,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Live music is a popular form of entertainment."
+							"sentence": "Is live music a popular form of entertainment?"
 						}
 					],
 					"translation": "",
-					"word": "entertainment"
+					"word": "entertainment",
+					"definition": "Anything that gives pleasure or enjoyment."
 				},
 				{
 					"id": 7,
@@ -2604,10 +2969,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He likes to show off his new car."
+							"sentence": "Does he like to show off his new car?"
 						}
 					],
-					"group": "Leisure and Entertainment"
+					"group": "Leisure and Entertainment",
+					"definition": "A play, concert, or public performance."
 				},
 				{
 					"id": 8,
@@ -2626,11 +2992,12 @@
 							"sentence": "She wants to work in the film industry."
 						},
 						{
-							"translation": "",
-							"sentence": "They are shooting a new film in the city."
+							"sentence": "Are they shooting a new film in the city?",
+							"translation": ""
 						}
 					],
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A movie or motion picture."
 				},
 				{
 					"translation": "",
@@ -2640,6 +3007,7 @@
 					"sortOrder": 1,
 					"word": "hobby",
 					"group": "Leisure and Entertainment",
+					"definition": "An activity done regularly in one's free time for pleasure.",
 					"sentences": [
 						{
 							"sentence": "Her hobby is painting landscapes.",
@@ -2650,8 +3018,8 @@
 							"sentence": "Collecting stamps is a common hobby."
 						},
 						{
-							"translation": "",
-							"sentence": "What are your hobbies?"
+							"sentence": "What are your hobbies?",
+							"translation": ""
 						}
 					]
 				},
@@ -2661,6 +3029,7 @@
 					"id": 10,
 					"partOfSpeech": "",
 					"sortOrder": 1,
+					"definition": "A group of similar things gathered together.",
 					"sentences": [
 						{
 							"sentence": "He has a collection of rare stamps.",
@@ -2672,7 +3041,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "This fashion designer just released her new spring collection."
+							"sentence": "Did this fashion designer just release her new spring collection?"
 						}
 					],
 					"translation": "",
@@ -2685,6 +3054,7 @@
 					"word": "craft",
 					"sortOrder": 1,
 					"partOfSpeech": "",
+					"definition": "A skill or activity involving making things by hand.",
 					"sentences": [
 						{
 							"sentence": "She enjoys doing various craft projects.",
@@ -2695,8 +3065,8 @@
 							"sentence": "The handcrafted pottery showed great skill and craft."
 						},
 						{
-							"translation": "",
-							"sentence": "Learning a new craft can be very rewarding."
+							"sentence": "Can learning a new craft be very rewarding?",
+							"translation": ""
 						}
 					],
 					"id": 11
@@ -2713,16 +3083,17 @@
 							"translation": ""
 						},
 						{
-							"translation": "",
-							"sentence": "He enjoys his leisure time by the beach."
+							"sentence": "He enjoys his leisure time by the beach.",
+							"translation": ""
 						},
 						{
-							"translation": "",
-							"sentence": "The town offers many leisure facilities."
+							"sentence": "Does the town offer many leisure facilities?",
+							"translation": ""
 						}
 					],
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Time that is free from work or duties."
 				},
 				{
 					"partOfSpeech": "",
@@ -2738,14 +3109,16 @@
 						},
 						{
 							"translation": "",
-							"sentence": "A warm bath can promote relaxation."
+							"sentence": "Can a warm bath promote relaxation?",
+							"translation": ""
 						}
 					],
 					"translation": "",
 					"id": 13,
 					"group": "Leisure and Entertainment",
 					"sortOrder": 1,
-					"word": "relaxation"
+					"word": "relaxation",
+					"definition": "The state of resting and feeling calm."
 				},
 				{
 					"partOfSpeech": "",
@@ -2764,11 +3137,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I usually read books in my free time."
+							"sentence": "Do I usually read books in my free time?"
 						}
 					],
 					"word": "free time",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Time when you are not working or studying."
 				},
 				{
 					"group": "Leisure and Entertainment",
@@ -2783,7 +3157,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We spent the afternoon exploring the natural history museum."
+							"sentence": "Did we spend the afternoon exploring the natural history museum?"
 						}
 					],
 					"partOfSpeech": "",
@@ -2791,7 +3165,8 @@
 					"translation": "",
 					"romanisation": "",
 					"word": "museum",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A building where objects of historical or artistic interest are kept and shown to the public."
 				},
 				{
 					"romanisation": "",
@@ -2811,10 +3186,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The exhibition attracted many visitors."
+							"sentence": "Did the exhibition attract many visitors?"
 						}
 					],
-					"translation": ""
+					"translation": "",
+					"definition": "A public display of works of art or other interesting things."
 				},
 				{
 					"sentences": [
@@ -2828,7 +3204,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The photography gallery showcases stunning landscapes."
+							"sentence": "Does the photography gallery showcase stunning landscapes?"
 						}
 					],
 					"translation": "",
@@ -2837,7 +3213,8 @@
 					"id": 17,
 					"partOfSpeech": "",
 					"word": "gallery",
-					"group": "Leisure and Entertainment"
+					"group": "Leisure and Entertainment",
+					"definition": "A room or building for showing works of art."
 				},
 				{
 					"group": "Leisure and Entertainment",
@@ -2852,7 +3229,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The performance of the new engine is impressive."
+							"sentence": "Is the performance of the new engine impressive?"
 						}
 					],
 					"id": 18,
@@ -2860,7 +3237,8 @@
 					"romanisation": "",
 					"translation": "",
 					"partOfSpeech": "",
-					"word": "performance"
+					"word": "performance",
+					"definition": "The act of entertaining an audience by playing music, acting a play, etc."
 				},
 				{
 					"group": "Leisure and Entertainment",
@@ -2881,9 +3259,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The lead actor delivered a powerful monologue."
+							"sentence": "Did the lead actor deliver a powerful monologue?"
 						}
-					]
+					],
+					"definition": "A person who plays a role in a play, movie, or show."
 				},
 				{
 					"sentences": [
@@ -2897,7 +3276,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The next stage of the project involves testing."
+							"sentence": "Does the next stage of the project involve testing?"
 						}
 					],
 					"word": "stage",
@@ -2906,7 +3285,8 @@
 					"group": "Leisure and Entertainment",
 					"romanisation": "",
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A raised area where performances take place."
 				},
 				{
 					"romanisation": "",
@@ -2925,11 +3305,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Outdoor recreation activities are very popular here."
+							"sentence": "Are outdoor recreation activities very popular here?"
 						}
 					],
 					"sortOrder": 1,
-					"id": 21
+					"id": 21,
+					"definition": "Activities that you do for enjoyment when you are not working."
 				},
 				{
 					"partOfSpeech": "",
@@ -2950,9 +3331,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Winter sports are very popular in this region."
+							"sentence": "Are winter sports very popular in this region?"
 						}
-					]
+					],
+					"definition": "Games or activities that involve physical effort and skill, often competitive."
 				},
 				{
 					"translation": "",
@@ -2970,12 +3352,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She studies drama at the local theatre school."
+							"sentence": "Does she study drama at the local theatre school?"
 						}
 					],
 					"sortOrder": 1,
 					"group": "Leisure and Entertainment",
-					"word": "theatre"
+					"word": "theatre",
+					"definition": "A building where plays, operas, or shows are performed."
 				},
 				{
 					"sentences": [
@@ -2989,7 +3372,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The children love to play hide-and-seek."
+							"sentence": "Do the children love to play hide-and-seek?"
 						}
 					],
 					"translation": "",
@@ -2998,7 +3381,8 @@
 					"sortOrder": 1,
 					"group": "Leisure and Entertainment",
 					"partOfSpeech": "",
-					"id": 24
+					"id": 24,
+					"definition": "A dramatic performance on stage."
 				},
 				{
 					"sortOrder": 1,
@@ -3018,10 +3402,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "There was a lot of drama in her personal life."
+							"sentence": "Was there a lot of drama in her personal life?"
 						}
 					],
-					"group": "Leisure and Entertainment"
+					"group": "Leisure and Entertainment",
+					"definition": "A play or movie that is serious and emotional."
 				},
 				{
 					"group": "Leisure and Entertainment",
@@ -3038,13 +3423,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Sustainable tourism aims to minimize environmental impact."
+							"sentence": "Does sustainable tourism aim to minimize environmental impact?"
 						}
 					],
 					"sortOrder": 1,
 					"translation": "",
 					"id": 26,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "The business of providing services for people who travel for pleasure."
 				},
 				{
 					"translation": "",
@@ -3060,14 +3446,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She works as a tour guide for foreign tourists."
+							"sentence": "Does she work as a tour guide for foreign tourists?"
 						}
 					],
 					"id": 27,
 					"word": "tourist",
 					"group": "Leisure and Entertainment",
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A person who travels to visit interesting places for pleasure."
 				},
 				{
 					"word": "sightseeing",
@@ -3086,18 +3473,18 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Sightseeing tours are available for tourists."
+							"sentence": "Are sightseeing tours available for tourists?"
 						}
 					],
 					"group": "Leisure and Entertainment",
-					"id": 28
+					"id": 28,
+					"definition": "The activity of visiting famous or interesting places."
 				}
 			],
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Leisure",
 			"sortOrder": 1
 		},
-
 		{
 			"sortOrder": 1,
 			"words": [
@@ -3113,7 +3500,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The restaurant offers a variety of appetizers."
+							"sentence": "Does the restaurant offer a variety of appetizers?"
 						}
 					],
 					"partOfSpeech": "",
@@ -3122,7 +3509,8 @@
 					"group": "Food and Drink",
 					"romanisation": "",
 					"sortOrder": 1,
-					"id": 0
+					"id": 0,
+					"definition": "A small dish eaten before the main course."
 				},
 				{
 					"partOfSpeech": "",
@@ -3145,7 +3533,8 @@
 						}
 					],
 					"id": 1,
-					"group": "Food and Drink"
+					"group": "Food and Drink",
+					"definition": "A small dish eaten at the beginning of a meal."
 				},
 				{
 					"romanisation": "",
@@ -3163,12 +3552,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "These mini quiches make excellent hors d'oeuvres."
+							"sentence": "Do these mini quiches make excellent hors d'oeuvres?"
 						}
 					],
 					"translation": "",
 					"sortOrder": 1,
-					"id": 2
+					"id": 2,
+					"definition": "A small savory dish served at the beginning of a meal."
 				},
 				{
 					"sentences": [
@@ -3182,7 +3572,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The machine dispenses various cold beverages."
+							"sentence": "Does the machine dispense various cold beverages?"
 						}
 					],
 					"group": "Food and Drink",
@@ -3191,7 +3581,8 @@
 					"sortOrder": 1,
 					"id": 3,
 					"partOfSpeech": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Any type of liquid for drinking."
 				},
 				{
 					"word": "drink",
@@ -3211,10 +3602,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I need a drink of water."
+							"sentence": "Do I need a drink of water?"
 						}
 					],
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A liquid that you can drink."
 				},
 				{
 					"group": "Food and Drink",
@@ -3233,11 +3625,12 @@
 							"sentence": "We paused for some much-needed refreshment."
 						},
 						{
-							"translation": "",
-							"sentence": "The hotel provides complimentary refreshments."
+							"sentence": "Does the hotel provide complimentary refreshments?",
+							"translation": ""
 						}
 					],
-					"id": 5
+					"id": 5,
+					"definition": "Small amounts of food and drink."
 				},
 				{
 					"partOfSpeech": "",
@@ -3247,6 +3640,7 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"translation": "",
+					"definition": "A style of cooking, especially from a specific country or region.",
 					"sentences": [
 						{
 							"translation": "",
@@ -3258,7 +3652,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She enjoys experimenting with different types of international cuisine."
+							"sentence": "Does she enjoy experimenting with different types of international cuisine?"
 						}
 					]
 				},
@@ -3274,7 +3668,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Please wash the dishes after dinner."
+							"sentence": "Should you please wash the dishes after dinner?"
 						}
 					],
 					"id": 7,
@@ -3283,7 +3677,8 @@
 					"group": "Food and Drink",
 					"word": "dish",
 					"translation": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Food prepared in a particular way (also means a plate)."
 				},
 				{
 					"group": "Food and Drink",
@@ -3306,7 +3701,8 @@
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"word": "specialty",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A food that a person or restaurant is known for making very well."
 				},
 				{
 					"group": "Food and Drink",
@@ -3325,11 +3721,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I'd like a fruit salad for dessert."
+							"sentence": "Should I have a fruit salad for dessert?"
 						}
 					],
 					"romanisation": "",
-					"word": "dessert"
+					"word": "dessert",
+					"definition": "A sweet course eaten at the end of a meal."
 				},
 				{
 					"sentences": [
@@ -3343,7 +3740,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He has a sweet tooth and loves chocolate."
+							"sentence": "Does he have a sweet tooth and loves chocolate?"
 						}
 					],
 					"group": "Food and Drink",
@@ -3352,7 +3749,8 @@
 					"romanisation": "",
 					"translation": "",
 					"sortOrder": 1,
-					"id": 10
+					"id": 10,
+					"definition": "Having the pleasant taste of sugar."
 				},
 				{
 					"word": "pudding",
@@ -3375,7 +3773,8 @@
 						}
 					],
 					"id": 11,
-					"translation": ""
+					"translation": "",
+					"definition": "A sweet dish eaten at the end of a meal."
 				},
 				{
 					"translation": "",
@@ -3385,6 +3784,7 @@
 					"romanisation": "",
 					"id": 12,
 					"sortOrder": 1,
+					"definition": "The action of eating dinner, usually in a formal way.",
 					"sentences": [
 						{
 							"sentence": "We enjoy fine dining on special occasions.",
@@ -3396,7 +3796,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Dining out can be a pleasant experience."
+							"sentence": "Can dining out be a pleasant experience?"
 						}
 					]
 				},
@@ -3415,13 +3815,14 @@
 							"sentence": "We plan to dine out tonight."
 						},
 						{
-							"translation": "",
-							"sentence": "He prefers to dine at home."
+							"sentence": "Does he prefer to dine at home?",
+							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"romanisation": "",
-					"group": "Food and Drink"
+					"group": "Food and Drink",
+					"definition": "To eat dinner."
 				},
 				{
 					"id": 14,
@@ -3439,12 +3840,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She invited us over for dinner."
+							"sentence": "Did she invite us over for dinner?"
 						}
 					],
 					"sortOrder": 1,
 					"group": "Food and Drink",
-					"translation": ""
+					"translation": "",
+					"definition": "The main meal of the day, eaten in the evening."
 				},
 				{
 					"id": 15,
@@ -3459,7 +3861,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The recipe calls for fresh ingredients."
+							"sentence": "Does the recipe call for fresh ingredients?"
 						}
 					],
 					"word": "ingredient",
@@ -3467,7 +3869,8 @@
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"romanisation": "",
-					"group": "Food and Drink"
+					"group": "Food and Drink",
+					"definition": "Any of the foods used to make a dish or meal."
 				},
 				{
 					"romanisation": "",
@@ -3485,12 +3888,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The assembly requires several small components."
+							"sentence": "Does the assembly require several small components?"
 						}
 					],
 					"sortOrder": 1,
 					"translation": "",
-					"group": "Food and Drink"
+					"group": "Food and Drink",
+					"definition": "One of the parts that something is made of."
 				},
 				{
 					"sentences": [
@@ -3504,7 +3908,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "There was an element of surprise in his voice."
+							"sentence": "Was there an element of surprise in his voice?"
 						}
 					],
 					"translation": "",
@@ -3513,7 +3917,8 @@
 					"group": "Food and Drink",
 					"word": "element",
 					"partOfSpeech": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A necessary or typical part of something."
 				},
 				{
 					"translation": "",
@@ -3531,12 +3936,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "You can select your options from the drop-down menu."
+							"sentence": "Can you select your options from the drop-down menu?"
 						}
 					],
 					"group": "Food and Drink",
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A list of food and drinks you can order in a restaurant."
 				},
 				{
 					"sortOrder": 1,
@@ -3555,11 +3961,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The music selection at the party was excellent."
+							"sentence": "Was the music selection at the party excellent?"
 						}
 					],
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A range of things from which a choice can be made."
 				},
 				{
 					"sortOrder": 1,
@@ -3576,13 +3983,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The book contains a list of important dates."
+							"sentence": "Does the book contain a list of important dates?"
 						}
 					],
 					"group": "Food and Drink",
 					"partOfSpeech": "",
 					"word": "list",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A numbered series of names, words, or items."
 				},
 				{
 					"sentences": [
@@ -3596,7 +4004,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "This recipe is easy to follow."
+							"sentence": "Is this recipe easy to follow?"
 						}
 					],
 					"romanisation": "",
@@ -3605,7 +4013,8 @@
 					"word": "recipe",
 					"partOfSpeech": "",
 					"group": "Food and Drink",
-					"id": 21
+					"id": 21,
+					"definition": "A set of instructions for preparing a dish or meal."
 				},
 				{
 					"word": "instructions",
@@ -3615,6 +4024,7 @@
 					"sortOrder": 1,
 					"group": "Food and Drink",
 					"partOfSpeech": "",
+					"definition": "Detailed directions telling you how to do or use something.",
 					"sentences": [
 						{
 							"sentence": "The recipe includes detailed instructions.",
@@ -3625,8 +4035,8 @@
 							"sentence": "Please read the instructions carefully before starting."
 						},
 						{
-							"translation": "",
-							"sentence": "He gave clear instructions for completing the task."
+							"sentence": "Did he give clear instructions for completing the task?",
+							"translation": ""
 						}
 					]
 				},
@@ -3638,6 +4048,7 @@
 					"word": "method",
 					"sortOrder": 1,
 					"group": "Food and Drink",
+					"definition": "A particular way of doing something.",
 					"sentences": [
 						{
 							"translation": "",
@@ -3649,7 +4060,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "They are developing a new method for waste disposal."
+							"sentence": "Are they developing a new method for waste disposal?"
 						}
 					]
 				},
@@ -3661,6 +4072,7 @@
 					"partOfSpeech": "",
 					"romanisation": "",
 					"id": 24,
+					"definition": "A small amount of food eaten between meals.",
 					"sentences": [
 						{
 							"sentence": "She had a healthy snack in the afternoon.",
@@ -3688,7 +4100,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "It was a real treat to see them again."
+							"sentence": "Was it a real treat to see them again?"
 						}
 					],
 					"id": 25,
@@ -3697,7 +4109,8 @@
 					"translation": "",
 					"sortOrder": 1,
 					"romanisation": "",
-					"group": "Food and Drink"
+					"group": "Food and Drink",
+					"definition": "Something special that gives pleasure."
 				},
 				{
 					"partOfSpeech": "",
@@ -3715,12 +4128,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The baby started to nibble on the biscuit."
+							"sentence": "Did the baby start to nibble on the biscuit?"
 						}
 					],
 					"id": 26,
 					"word": "nibble",
-					"group": "Food and Drink"
+					"group": "Food and Drink",
+					"definition": "To eat small amounts of food by taking small bites."
 				},
 				{
 					"id": 27,
@@ -3736,14 +4150,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He decided to become a vegetarian for health reasons."
+							"sentence": "Did he decide to become a vegetarian for health reasons?"
 						}
 					],
 					"translation": "",
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"group": "Food and Drink",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A person who does not eat meat or fish."
 				},
 				{
 					"translation": "",
@@ -3760,13 +4175,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "More people are choosing a vegan lifestyle."
+							"sentence": "Are more people choosing a vegan lifestyle?"
 						}
 					],
 					"romanisation": "",
 					"word": "vegan",
 					"partOfSpeech": "",
-					"id": 28
+					"id": 28,
+					"definition": "A person who does not eat any animal products, including dairy or eggs."
 				},
 				{
 					"group": "Food and Drink",
@@ -3784,16 +4200,17 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We're trying to incorporate more meat-free meals into our diet."
+							"sentence": "Are we trying to incorporate more meat-free meals into our diet?"
 						}
 					],
 					"sortOrder": 1,
 					"word": "meat-free",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Food that does not contain any animal meat."
 				}
 			],
 			"title": "Food",
-			"tabnumber": 1
+			"tabNumber": 1
 		},
 		{
 			"title": "Shopping",
@@ -3810,7 +4227,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She always looks for a bargain when shopping."
+							"sentence": "Does she always look for a bargain when shopping?"
 						}
 					],
 					"romanisation": "",
@@ -3819,7 +4236,8 @@
 					"word": "bargain",
 					"id": 0,
 					"group": "Places in the City",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "Something bought cheaply for less than its usual price."
 				},
 				{
 					"id": 1,
@@ -3839,10 +4257,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "They usually give a discount for bulk purchases."
+							"sentence": "Do they usually give a discount for bulk purchases?"
 						}
 					],
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A reduction in the price of something."
 				},
 				{
 					"sentences": [
@@ -3865,7 +4284,8 @@
 					"word": "deal",
 					"translation": "",
 					"group": "Places in the City",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "An agreement, or a low price when buying something."
 				},
 				{
 					"sortOrder": 1,
@@ -3885,10 +4305,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She works as a cashier at the supermarket."
+							"sentence": "Does she work as a cashier at the supermarket?"
 						}
 					],
-					"word": "cashier"
+					"word": "cashier",
+					"definition": "A person whose job is to take payments from customers in a shop."
 				},
 				{
 					"word": "clerk",
@@ -3904,14 +4325,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "A friendly clerk greeted us at the front desk."
+							"sentence": "Did a friendly clerk greet us at the front desk?"
 						}
 					],
 					"translation": "",
 					"partOfSpeech": "",
 					"group": "Places in the City",
 					"romanisation": "",
-					"id": 4
+					"id": 4,
+					"definition": "A person who works in an office or shop, helping customers."
 				},
 				{
 					"partOfSpeech": "",
@@ -3929,12 +4351,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Please proceed to checkout when you are ready to pay."
+							"sentence": "Should you proceed to checkout when you are ready to pay?"
 						}
 					],
 					"id": 5,
 					"romanisation": "",
-					"word": "checkout"
+					"word": "checkout",
+					"definition": "The place in a shop where you pay for your goods."
 				},
 				{
 					"translation": "",
@@ -3954,10 +4377,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The satisfied customer left a positive review."
+							"sentence": "Did the satisfied customer leave a positive review?"
 						}
 					],
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A person who buys goods or services from a shop or company."
 				},
 				{
 					"partOfSpeech": "",
@@ -3978,9 +4402,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We aim to provide the best service to our clients."
+							"sentence": "Do we aim to provide the best service to our clients?"
 						}
-					]
+					],
+					"definition": "A person who receives professional services from a company or expert (like a lawyer)."
 				},
 				{
 					"group": "Places in the City",
@@ -3996,14 +4421,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The online shopper enjoyed the convenience of home delivery."
+							"sentence": "Did the online shopper enjoy the convenience of home delivery?"
 						}
 					],
 					"translation": "",
 					"partOfSpeech": "",
 					"sortOrder": 1,
 					"word": "shopper",
-					"id": 8
+					"id": 8,
+					"definition": "A person who is buying things in a shop."
 				},
 				{
 					"sentences": [
@@ -4017,7 +4443,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The pizza delivery arrived quickly."
+							"sentence": "Did the pizza delivery arrive quickly?"
 						}
 					],
 					"partOfSpeech": "",
@@ -4026,7 +4452,8 @@
 					"id": 9,
 					"word": "delivery",
 					"group": "Places in the City",
-					"translation": ""
+					"translation": "",
+					"definition": "The process of taking goods to customers."
 				},
 				{
 					"sortOrder": 1,
@@ -4036,6 +4463,7 @@
 					"partOfSpeech": "",
 					"id": 10,
 					"word": "shipping",
+					"definition": "The movement of goods from one place to another (especially by sea or air).",
 					"sentences": [
 						{
 							"sentence": "The shipping cost is included in the price.",
@@ -4047,7 +4475,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The company guarantees fast shipping for all orders."
+							"sentence": "Does the company guarantee fast shipping for all orders?"
 						}
 					]
 				},
@@ -4066,13 +4494,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The courier service is reliable and efficient."
+							"sentence": "Is the courier service reliable and efficient?"
 						}
 					],
 					"translation": "",
 					"romanisation": "",
 					"partOfSpeech": "",
-					"group": "Places in the City"
+					"group": "Places in the City",
+					"definition": "A person or company that takes messages, packages, or mail."
 				},
 				{
 					"romanisation": "",
@@ -4087,7 +4516,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We exchanged gifts at Christmas."
+							"sentence": "Did we exchange gifts at Christmas?"
 						}
 					],
 					"id": 12,
@@ -4095,7 +4524,8 @@
 					"translation": "",
 					"group": "Places in the City",
 					"word": "exchange",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "To give something to someone and receive something else in return."
 				},
 				{
 					"partOfSpeech": "",
@@ -4114,11 +4544,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He hopes to return to his hometown soon."
+							"sentence": "Does he hope to return to his hometown soon?"
 						}
 					],
 					"word": "return",
-					"translation": ""
+					"translation": "",
+					"definition": "To go or come back to a place, or to give an item back to a shop."
 				},
 				{
 					"group": "Places in the City",
@@ -4134,14 +4565,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "They made a quick swap of places."
+							"sentence": "Did they make a quick swap of places?"
 						}
 					],
 					"id": 14,
 					"sortOrder": 1,
 					"partOfSpeech": "",
 					"translation": "",
-					"word": "swap"
+					"word": "swap",
+					"definition": "To give something to someone and get something else in return."
 				},
 				{
 					"sortOrder": 1,
@@ -4151,6 +4583,7 @@
 					"id": 15,
 					"group": "Places in the City",
 					"word": "purchase",
+					"definition": "To buy something.",
 					"sentences": [
 						{
 							"sentence": "He made a large purchase at the electronics store.",
@@ -4161,8 +4594,8 @@
 							"sentence": "She decided to purchase the new software."
 						},
 						{
-							"translation": "",
-							"sentence": "Online purchase has become very convenient."
+							"sentence": "Has online purchase become very convenient?",
+							"translation": ""
 						}
 					]
 				},
@@ -4187,7 +4620,8 @@
 					"partOfSpeech": "",
 					"word": "buy",
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "To get something by paying money for it."
 				},
 				{
 					"id": 17,
@@ -4204,13 +4638,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The library acquired a rare first edition."
+							"sentence": "Did the library acquire a rare first edition?"
 						}
 					],
 					"group": "Places in the City",
 					"translation": "",
 					"word": "acquire",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "To get or obtain something."
 				},
 				{
 					"partOfSpeech": "",
@@ -4227,13 +4662,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "You'll need the receipt to return the item."
+							"sentence": "Will you need the receipt to return the item?"
 						}
 					],
 					"romanisation": "",
 					"id": 18,
 					"word": "receipt",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A paper showing that you have paid for something."
 				},
 				{
 					"romanisation": "",
@@ -4252,11 +4688,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Always keep your proof of purchase in case of issues."
+							"sentence": "Should you always keep your proof of purchase in case of issues?"
 						}
 					],
 					"partOfSpeech": "",
-					"id": 19
+					"id": 19,
+					"definition": "A document (like a receipt) that proves you bought an item."
 				},
 				{
 					"id": 20,
@@ -4277,9 +4714,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Don't forget to pay your electricity bill."
+							"sentence": "Shouldn't I forget to pay your electricity bill?"
 						}
-					]
+					],
+					"definition": "A written statement of money owed for goods or services."
 				},
 				{
 					"romanisation": "",
@@ -4298,11 +4736,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The store offers a money-back refund guarantee."
+							"sentence": "Does the store offer a money-back refund guarantee?"
 						}
 					],
 					"partOfSpeech": "",
-					"group": "Places in the City"
+					"group": "Places in the City",
+					"definition": "A sum of money paid back to you."
 				},
 				{
 					"group": "Places in the City",
@@ -4318,14 +4757,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The company provides full reimbursement for approved business trips."
+							"sentence": "Does the company provide full reimbursement for approved business trips?"
 						}
 					],
 					"sortOrder": 1,
 					"romanisation": "",
 					"translation": "",
 					"id": 22,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The act of paying money back to someone who has spent it."
 				},
 				{
 					"id": 23,
@@ -4345,10 +4785,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The airline provided compensation for the delayed flight."
+							"sentence": "Did the airline provide compensation for the delayed flight?"
 						}
 					],
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Money paid to someone because they have suffered a loss or injury."
 				},
 				{
 					"partOfSpeech": "",
@@ -4368,10 +4809,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The annual book sale attracts many readers."
+							"sentence": "Does the annual book sale attract many readers?"
 						}
 					],
-					"group": "Places in the City"
+					"group": "Places in the City",
+					"definition": "A period when things are sold at lower prices."
 				},
 				{
 					"id": 25,
@@ -4391,10 +4833,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We got great deals at the end-of-season clearance."
+							"sentence": "Did we get great deals at the end-of-season clearance?"
 						}
 					],
-					"group": "Places in the City"
+					"group": "Places in the City",
+					"definition": "A sale in a shop to get rid of old goods cheaply."
 				},
 				{
 					"partOfSpeech": "",
@@ -4414,10 +4857,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I received a discount code for my next purchase."
+							"sentence": "Did I receive a discount code for my next purchase?"
 						}
 					],
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A reduction in the price of something."
 				},
 				{
 					"romanisation": "",
@@ -4434,13 +4878,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Let's meet at the shopping mall entrance."
+							"sentence": "Should we meet at the shopping mall entrance?"
 						}
 					],
 					"partOfSpeech": "",
 					"word": "shopping mall",
 					"sortOrder": 1,
-					"group": "Places in the City"
+					"group": "Places in the City",
+					"definition": "A large indoor area with many shops."
 				},
 				{
 					"partOfSpeech": "",
@@ -4456,14 +4901,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The mall offers plenty of parking spaces."
+							"sentence": "Does the mall offer plenty of parking spaces?"
 						}
 					],
 					"translation": "",
 					"id": 28,
 					"group": "Places in the City",
 					"romanisation": "",
-					"word": "mall"
+					"word": "mall",
+					"definition": "A large indoor area with many shops."
 				},
 				{
 					"sortOrder": 1,
@@ -4479,23 +4925,24 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We went to the shopping center to buy new clothes."
+							"sentence": "Did we go to the shopping center to buy new clothes?"
 						}
 					],
 					"romanisation": "",
 					"group": "Places in the City",
 					"id": 29,
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "A group of shops built together in one large area."
 				}
 			],
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"sortOrder": 1
 		},
 		{
 			"title": "Technology",
 			"sortOrder": 2,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"words": [
 				{
 					"partOfSpeech": "",
@@ -4510,7 +4957,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Please fill out the application form completely."
+							"sentence": "Should you please fill out the application form completely?"
 						}
 					],
 					"word": "application",
@@ -4518,7 +4965,8 @@
 					"translation": "",
 					"id": 0,
 					"sortOrder": 1,
-					"group": "Technology and Communication"
+					"group": "Technology and Communication",
+					"definition": "A computer program designed for a specific purpose (like editing photos)."
 				},
 				{
 					"word": "app",
@@ -4535,13 +4983,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "This navigation app is very accurate."
+							"sentence": "Is this navigation app very accurate?"
 						}
 					],
 					"group": "Technology and Communication",
 					"partOfSpeech": "",
 					"translation": "",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A common abbreviation for 'application' or software program."
 				},
 				{
 					"word": "program",
@@ -4551,6 +5000,7 @@
 					"id": 2,
 					"partOfSpeech": "",
 					"group": "Technology and Communication",
+					"definition": "A set of instructions that a computer follows; or a show on TV.",
 					"sentences": [
 						{
 							"sentence": "The computer program needs to be updated.",
@@ -4562,7 +5012,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The television program starts at 8 PM."
+							"sentence": "Does the television program start at 8 PM?"
 						}
 					]
 				},
@@ -4571,6 +5021,7 @@
 					"group": "Technology and Communication",
 					"romanisation": "",
 					"id": 3,
+					"definition": "A software tool that lets you view web pages.",
 					"sentences": [
 						{
 							"translation": "",
@@ -4582,7 +5033,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The browser crashed unexpectedly."
+							"sentence": "Did the browser crash unexpectedly?"
 						}
 					],
 					"word": "browser",
@@ -4594,6 +5045,7 @@
 					"translation": "",
 					"sortOrder": 1,
 					"romanisation": "",
+					"definition": "A program used to find information on the internet.",
 					"sentences": [
 						{
 							"sentence": "Google is a popular search engine.",
@@ -4605,7 +5057,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Bing is another well-known search engine."
+							"sentence": "Is Bing another well-known search engine?"
 						}
 					],
 					"partOfSpeech": "",
@@ -4624,7 +5076,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He pulled the tab to open the soda can."
+							"sentence": "Did he pull the tab to open the soda can?"
 						}
 					],
 					"partOfSpeech": "",
@@ -4633,7 +5085,8 @@
 					"group": "Technology and Communication",
 					"word": "tab",
 					"id": 5,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A section of a web browser that lets you look at more than one web page."
 				},
 				{
 					"romanisation": "",
@@ -4652,11 +5105,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "A smartphone is a versatile device."
+							"sentence": "Is a smartphone a versatile device?"
 						}
 					],
 					"group": "Technology and Communication",
-					"id": 6
+					"id": 6,
+					"definition": "A small machine used for a specific purpose (like a phone or tablet)."
 				},
 				{
 					"partOfSpeech": "",
@@ -4666,6 +5120,7 @@
 					"sortOrder": 1,
 					"romanisation": "",
 					"id": 7,
+					"definition": "A small, clever tool or electronic device.",
 					"sentences": [
 						{
 							"translation": "",
@@ -4677,7 +5132,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The new drone is an impressive gadget."
+							"sentence": "Is the new drone an impressive gadget?"
 						}
 					]
 				},
@@ -4698,11 +5153,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "You can do almost anything on a smartphone now."
+							"sentence": "Can you do almost anything on a smartphone now?"
 						}
 					],
 					"id": 8,
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A mobile phone that can do many things like accessing the internet and running apps."
 				},
 				{
 					"translation": "",
@@ -4721,11 +5177,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The clock has a digital display."
+							"sentence": "Does the clock have a digital display?"
 						}
 					],
 					"id": 9,
-					"group": "Technology and Communication"
+					"group": "Technology and Communication",
+					"definition": "Relating to electronic technology, especially the internet."
 				},
 				{
 					"sentences": [
@@ -4739,7 +5196,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She's studying electronic engineering."
+							"sentence": "Is she studying electronic engineering?"
 						}
 					],
 					"partOfSpeech": "",
@@ -4748,7 +5205,8 @@
 					"group": "Technology and Communication",
 					"translation": "",
 					"id": 10,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "Working by means of computer chips and current."
 				},
 				{
 					"translation": "",
@@ -4764,14 +5222,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Many events are now held in a virtual format."
+							"sentence": "Are many events now held in a virtual format?"
 						}
 					],
 					"word": "virtual",
 					"group": "Technology and Communication",
 					"sortOrder": 1,
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "Existing only on a computer or the internet, not in the real world."
 				},
 				{
 					"sortOrder": 1,
@@ -4789,12 +5248,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I check my email several times a day."
+							"sentence": "Do I check my email several times a day?"
 						}
 					],
 					"id": 12,
 					"translation": "",
-					"group": "Technology and Communication"
+					"group": "Technology and Communication",
+					"definition": "A system for sending and receiving messages electronically."
 				},
 				{
 					"translation": "",
@@ -4809,7 +5269,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The message was clear and concise."
+							"sentence": "Was the message clear and concise?"
 						}
 					],
 					"group": "Technology and Communication",
@@ -4817,7 +5277,8 @@
 					"id": 13,
 					"partOfSpeech": "",
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A piece of written or spoken information that you send to someone."
 				},
 				{
 					"romanisation": "",
@@ -4836,11 +5297,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Check your spam inbox if you don't see the email."
+							"sentence": "Should I check your spam inbox if you don't see the email?"
 						}
 					],
 					"id": 14,
-					"translation": ""
+					"translation": "",
+					"definition": "The place in an email program where new emails are stored."
 				},
 				{
 					"id": 15,
@@ -4859,11 +5321,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She organized her documents in a neat file."
+							"sentence": "Did she organize her documents in a neat file?"
 						}
 					],
 					"group": "Technology and Communication",
-					"translation": ""
+					"translation": "",
+					"definition": "A collection of information stored on a computer, or a folder for papers."
 				},
 				{
 					"romanisation": "",
@@ -4878,7 +5341,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The ancient document was preserved in the museum."
+							"sentence": "Was the ancient document preserved in the museum?"
 						}
 					],
 					"id": 16,
@@ -4886,7 +5349,8 @@
 					"translation": "",
 					"partOfSpeech": "",
 					"group": "Technology and Communication",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A paper or electronic file that provides information."
 				},
 				{
 					"id": 17,
@@ -4903,13 +5367,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Don't open attachments from unknown senders."
+							"sentence": "Should you not open attachments from unknown senders?"
 						}
 					],
 					"translation": "",
 					"partOfSpeech": "",
 					"group": "Technology and Communication",
-					"word": "attachment"
+					"word": "attachment",
+					"definition": "A computer file sent with an email message."
 				},
 				{
 					"sortOrder": 1,
@@ -4930,9 +5395,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The internet connects people all over the world."
+							"sentence": "Does the internet connect people all over the world?"
 						}
-					]
+					],
+					"definition": "The global system of connected computers."
 				},
 				{
 					"romanisation": "",
@@ -4950,12 +5416,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The World Wide Web changed how we access information."
+							"sentence": "Did the World Wide Web change how we access information?"
 						}
 					],
 					"translation": "",
 					"group": "Technology and Communication",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A global information system of documents and websites, or a net made by a spider."
 				},
 				{
 					"translation": "",
@@ -4975,10 +5442,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Many courses are now available online."
+							"sentence": "Are many courses now available online?"
 						}
 					],
-					"id": 20
+					"id": 20,
+					"definition": "Connected to or available on the internet."
 				},
 				{
 					"partOfSpeech": "",
@@ -4998,10 +5466,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The train network covers the entire country."
+							"sentence": "Does the train network cover the entire country?"
 						}
 					],
-					"translation": ""
+					"translation": "",
+					"definition": "A system of connected computers, roads, or people."
 				},
 				{
 					"sortOrder": 1,
@@ -5018,13 +5487,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "There's a strong connection between exercise and health."
+							"sentence": "Is there a strong connection between exercise and health?"
 						}
 					],
 					"word": "connection",
 					"partOfSpeech": "",
 					"group": "Technology and Communication",
-					"id": 22
+					"id": 22,
+					"definition": "A link or relationship between two or more things."
 				},
 				{
 					"sortOrder": 1,
@@ -5047,7 +5517,8 @@
 							"translation": "",
 							"sentence": "Do you have the Wi-Fi password?"
 						}
-					]
+					],
+					"definition": "A system that allows phones and computers to connect to the internet wirelessly."
 				},
 				{
 					"word": "software",
@@ -5068,9 +5539,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Make sure your computer's software is up to date."
+							"sentence": "Should you make sure your computer's software is up to date?"
 						}
-					]
+					],
+					"definition": "Computer programs and other operating information."
 				},
 				{
 					"sentences": [
@@ -5084,7 +5556,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The program for the event is printed in the brochure."
+							"sentence": "Is the program for the event printed in the brochure?"
 						}
 					],
 					"id": 25,
@@ -5093,7 +5565,8 @@
 					"word": "program",
 					"romanisation": "",
 					"partOfSpeech": "",
-					"group": "Technology and Communication"
+					"group": "Technology and Communication",
+					"definition": "A set of instructions that a computer follows; or a show on TV."
 				},
 				{
 					"word": "application",
@@ -5113,10 +5586,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "This paint has many applications, both indoors and outdoors."
+							"sentence": "Does this paint have many applications, both indoors and outdoors?"
 						}
 					],
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A computer program designed for a specific purpose (like editing photos)."
 				},
 				{
 					"word": "website",
@@ -5132,14 +5606,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "You can order directly from our website."
+							"sentence": "Can you order directly from our website?"
 						}
 					],
 					"translation": "",
 					"romanisation": "",
 					"id": 27,
 					"partOfSpeech": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "A set of related web pages on the internet."
 				},
 				{
 					"id": 28,
@@ -5157,12 +5632,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The company's homepage features their new products."
+							"sentence": "Does the company's homepage feature their new products?"
 						}
 					],
 					"translation": "",
 					"romanisation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The main starting page of a website."
 				},
 				{
 					"word": "URL",
@@ -5183,16 +5659,17 @@
 						},
 						{
 							"translation": "",
-							"sentence": "I copied the URL and pasted it into the chat."
+							"sentence": "Did I copy the URL and paste it into the chat?"
 						}
-					]
+					],
+					"definition": "The address of a webpage or other resource on the internet."
 				}
 			]
-		}
-	,
+		},
 		{
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Nature",
+			"sortOrder": 1,
 			"words": [
 				{
 					"id": 0,
@@ -5208,14 +5685,15 @@
 							"sentence": "We need to address climate change urgently."
 						},
 						{
-							"translation": "",
-							"sentence": "The Mediterranean climate is known for its warm, dry summers."
+							"sentence": "Is the Mediterranean climate known for its warm, dry summers?",
+							"translation": ""
 						}
 					],
 					"romanisation": "",
 					"word": "climate",
 					"partOfSpeech": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The general weather conditions of a region over a long period."
 				},
 				{
 					"id": 1,
@@ -5231,14 +5709,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Bad weather delayed our flight."
+							"sentence": "Did bad weather delay our flight?"
 						}
 					],
 					"translation": "",
 					"group": "Environment and Nature",
 					"partOfSpeech": "",
 					"word": "weather",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The state of the atmosphere, like temperature, rain, or sun."
 				},
 				{
 					"sentences": [
@@ -5251,8 +5730,8 @@
 							"sentence": "Check the oven temperature before baking."
 						},
 						{
-							"translation": "",
-							"sentence": "The ideal room temperature is around 20 degrees Celsius."
+							"sentence": "Is the ideal room temperature around 20 degrees Celsius?",
+							"translation": ""
 						}
 					],
 					"sortOrder": 1,
@@ -5261,7 +5740,8 @@
 					"romanisation": "",
 					"id": 2,
 					"translation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "How hot or cold something is."
 				},
 				{
 					"id": 3,
@@ -5279,12 +5759,13 @@
 							"sentence": "Water conservation is crucial in arid regions."
 						},
 						{
-							"translation": "",
-							"sentence": "The conservation group works to preserve natural habitats."
+							"sentence": "Does the conservation group work to preserve natural habitats?",
+							"translation": ""
 						}
 					],
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The protection of animals, plants, and natural resources."
 				},
 				{
 					"word": "preservation",
@@ -5300,14 +5781,15 @@
 							"sentence": "Food preservation techniques have evolved over centuries."
 						},
 						{
-							"translation": "",
-							"sentence": "The organization is dedicated to the preservation of cultural heritage."
+							"sentence": "Is the organization dedicated to the preservation of cultural heritage?",
+							"translation": ""
 						}
 					],
 					"partOfSpeech": "",
 					"romanisation": "",
 					"group": "Environment and Nature",
-					"translation": ""
+					"translation": "",
+					"definition": "The act of keeping something in its original state."
 				},
 				{
 					"group": "Environment and Nature",
@@ -5325,12 +5807,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The police provide protection for witnesses."
+							"sentence": "Do the police provide protection for witnesses?"
 						}
 					],
 					"id": 5,
 					"sortOrder": 1,
-					"word": "protection"
+					"word": "protection",
+					"definition": "The action of keeping someone or something safe from harm."
 				},
 				{
 					"translation": "",
@@ -5346,14 +5829,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Pollution can severely damage an aquatic ecosystem."
+							"sentence": "Can pollution severely damage an aquatic ecosystem?"
 						}
 					],
 					"group": "Environment and Nature",
 					"id": 6,
 					"word": "ecosystem",
 					"sortOrder": 1,
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "All the living things and non-living things in a specific area."
 				},
 				{
 					"sortOrder": 1,
@@ -5373,10 +5857,11 @@
 							"sentence": "Protecting biodiversity is crucial for future generations."
 						},
 						{
-							"translation": "",
-							"sentence": "The region is rich in biodiversity, with many unique species."
+							"sentence": "Is the region rich in biodiversity, with many unique species?",
+							"translation": ""
 						}
-					]
+					],
+					"definition": "The variety of all life forms (plants and animals) in a place."
 				},
 				{
 					"group": "Environment and Nature",
@@ -5391,7 +5876,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We need to preserve the natural habitat of these rare birds."
+							"sentence": "Do we need to preserve the natural habitat of these rare birds?"
 						}
 					],
 					"partOfSpeech": "",
@@ -5399,7 +5884,8 @@
 					"romanisation": "",
 					"word": "habitat",
 					"id": 8,
-					"translation": ""
+					"translation": "",
+					"definition": "The natural home or environment of an animal or plant."
 				},
 				{
 					"sortOrder": 1,
@@ -5415,14 +5901,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "A clean environment contributes to a better quality of life."
+							"sentence": "Does a clean environment contribute to a better quality of life?"
 						}
 					],
 					"word": "environment",
 					"id": 9,
 					"romanisation": "",
 					"group": "Environment and Nature",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The natural world, including the land, water, air, and all living things."
 				},
 				{
 					"sentences": [
@@ -5436,7 +5923,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "It's in human nature to seek happiness."
+							"sentence": "Is it in human nature to seek happiness?"
 						}
 					],
 					"word": "nature",
@@ -5445,7 +5932,8 @@
 					"id": 10,
 					"sortOrder": 1,
 					"romanisation": "",
-					"group": "Environment and Nature"
+					"group": "Environment and Nature",
+					"definition": "The physical world, including plants, animals, and landscapes, not made by people."
 				},
 				{
 					"sentences": [
@@ -5459,7 +5947,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The hotel has lovely surroundings, perfect for a relaxing holiday."
+							"sentence": "Does the hotel have lovely surroundings, perfect for a relaxing holiday?"
 						}
 					],
 					"partOfSpeech": "",
@@ -5468,7 +5956,8 @@
 					"sortOrder": 1,
 					"word": "surroundings",
 					"romanisation": "",
-					"id": 11
+					"id": 11,
+					"definition": "The area or environment around a person or thing."
 				},
 				{
 					"word": "habitat",
@@ -5488,10 +5977,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Conservation efforts are focused on protecting the natural habitat of these rare birds."
+							"sentence": "Are conservation efforts focused on protecting the natural habitat of these rare birds?"
 						}
 					],
-					"translation": ""
+					"translation": "",
+					"definition": "The natural home or environment of an animal or plant."
 				},
 				{
 					"partOfSpeech": "",
@@ -5512,9 +6002,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Welcome home!"
+							"sentence": "Is this your home?"
 						}
-					]
+					],
+					"definition": "The place where a person or animal usually lives."
 				},
 				{
 					"sortOrder": 1,
@@ -5531,18 +6022,21 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The homeless shelter provides food and beds for those in need."
+							"sentence": "Does the homeless shelter provide food and beds for those in need?"
 						}
 					],
 					"partOfSpeech": "",
 					"translation": "",
 					"id": 14,
-					"word": "shelter"
+					"word": "shelter",
+					"definition": "A place that provides protection from bad weather or danger."
 				},
 				{
 					"partOfSpeech": "",
 					"sortOrder": 1,
+					"word": "pollution",
 					"group": "Environment and Nature",
+					"translation": "",
 					"romanisation": "",
 					"sentences": [
 						{
@@ -5555,12 +6049,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Noise pollution can have negative effects on health."
+							"sentence": "Can noise pollution have negative effects on health?"
 						}
 					],
 					"id": 15,
-					"word": "pollution",
-					"translation": ""
+					"definition": "Substances added to the air, water, or land that are harmful."
 				},
 				{
 					"partOfSpeech": "",
@@ -5578,12 +6071,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The contamination of the soil made it unsuitable for farming."
+							"sentence": "Did the contamination of the soil make it unsuitable for farming?"
 						}
 					],
 					"romanisation": "",
 					"id": 16,
-					"group": "Environment and Nature"
+					"group": "Environment and Nature",
+					"definition": "The process of making something dirty or poisonous."
 				},
 				{
 					"group": "Environment and Nature",
@@ -5601,12 +6095,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The factory produces a lot of industrial waste."
+							"sentence": "Does the factory produce a lot of industrial waste?"
 						}
 					],
 					"romanisation": "",
 					"word": "waste",
-					"translation": ""
+					"translation": "",
+					"definition": "Material that is no longer needed and is thrown away."
 				},
 				{
 					"id": 18,
@@ -5626,10 +6121,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Put your plastic bottles in the recycling bin."
+							"sentence": "Should you put your plastic bottles in the recycling bin?"
 						}
 					],
-					"translation": ""
+					"translation": "",
+					"definition": "The process of treating used waste materials so they can be reused."
 				},
 				{
 					"sortOrder": 1,
@@ -5650,9 +6146,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The company encourages the reuse of packaging."
+							"sentence": "Does the company encourage the reuse of packaging?"
 						}
-					]
+					],
+					"definition": "To use something again instead of throwing it away."
 				},
 				{
 					"partOfSpeech": "",
@@ -5667,7 +6164,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The company aims to reduce its carbon footprint."
+							"sentence": "Does the company aim to reduce its carbon footprint?"
 						}
 					],
 					"word": "reduce",
@@ -5675,7 +6172,8 @@
 					"romanisation": "",
 					"group": "Environment and Nature",
 					"translation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "To make something smaller or less in amount or degree."
 				},
 				{
 					"word": "renewable",
@@ -5695,10 +6193,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Wind power is a clean and renewable form of energy."
+							"sentence": "Is wind power a clean and renewable form of energy?"
 						}
 					],
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A natural resource that is replaced quickly (like sunlight or wind)."
 				},
 				{
 					"word": "sustainable",
@@ -5715,13 +6214,14 @@
 							"sentence": "The company is committed to sustainable development."
 						},
 						{
-							"translation": "",
-							"sentence": "We need to find sustainable solutions for energy production."
+							"sentence": "Do we need to find sustainable solutions for energy production?",
+							"translation": ""
 						}
 					],
 					"romanisation": "",
 					"id": 22,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "Able to be maintained or continue over a long period."
 				},
 				{
 					"group": "Environment and Nature",
@@ -5741,10 +6241,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The leaves on the trees are green in spring."
+							"sentence": "Are the leaves on the trees green in spring?"
 						}
 					],
-					"id": 23
+					"id": 23,
+					"definition": "Relating to the protection of the environment."
 				},
 				{
 					"word": "wildlife",
@@ -5760,14 +6261,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Many documentaries focus on African wildlife."
+							"sentence": "Do many documentaries focus on African wildlife?"
 						}
 					],
 					"group": "Environment and Nature",
 					"id": 24,
 					"partOfSpeech": "",
 					"translation": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "Animals and plants growing in their natural environment."
 				},
 				{
 					"word": "fauna",
@@ -5786,11 +6288,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The diversity of flora and fauna in the rainforest is astounding."
+							"sentence": "Is the diversity of flora and fauna in the rainforest astounding?"
 						}
 					],
 					"group": "Environment and Nature",
-					"id": 25
+					"id": 25,
+					"definition": "The animals of a particular region or time."
 				},
 				{
 					"word": "flora",
@@ -5810,10 +6313,11 @@
 							"sentence": "The garden features a wide variety of native flora."
 						},
 						{
-							"translation": "",
-							"sentence": "Botanists are documenting the unique flora of the mountain."
+							"sentence": "Are botanists documenting the unique flora of the mountain?",
+							"translation": ""
 						}
-					]
+					],
+					"definition": "The plants of a particular region or time."
 				},
 				{
 					"group": "Environment and Nature",
@@ -5833,10 +6337,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Reducing carbon emissions is key to combating global warming."
+							"sentence": "Is reducing carbon emissions key to combating global warming?"
 						}
 					],
-					"translation": ""
+					"translation": "",
+					"definition": "A gradual increase in the world's average temperature."
 				},
 				{
 					"partOfSpeech": "",
@@ -5854,12 +6359,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Many initiatives aim to mitigate the impacts of climate change."
+							"sentence": "Do many initiatives aim to mitigate the impacts of climate change?"
 						}
 					],
 					"romanisation": "",
 					"sortOrder": 1,
-					"word": "climate change"
+					"word": "climate change",
+					"definition": "A long-term shift in global or regional climate patterns."
 				},
 				{
 					"word": "greenhouse effect",
@@ -5879,19 +6385,18 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The enhanced greenhouse effect is a major environmental concern."
+							"sentence": "Is the enhanced greenhouse effect a major environmental concern?"
 						}
 					],
-					"id": 29
+					"id": 29,
+					"definition": "The warming of the Earth's atmosphere caused by gases trapping heat."
 				}
-			],
-			"sortOrder": 1
-		}
-	,
+			]
+		},
 		{
 			"sortOrder": 1,
 			"title": "Social",
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"words": [
 				{
 					"id": 0,
@@ -5910,11 +6415,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The online community shares common interests."
+							"sentence": "Does the online community share common interests?"
 						}
 					],
 					"group": "Particles",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A group of people living in the same place or having a shared interest."
 				},
 				{
 					"sortOrder": 1,
@@ -5931,13 +6437,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "They organized a clean-up event in the neighborhood park."
+							"sentence": "Did they organize a clean-up event in the neighborhood park?"
 						}
 					],
 					"translation": "",
 					"partOfSpeech": "",
 					"id": 1,
-					"word": "neighborhood"
+					"word": "neighborhood",
+					"definition": "A district or area where people live."
 				},
 				{
 					"word": "society",
@@ -5955,12 +6462,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The scientific society holds regular meetings."
+							"sentence": "Does the scientific society hold regular meetings?"
 						}
 					],
 					"translation": "",
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "People in general, living together in communities."
 				},
 				{
 					"romanisation": "",
@@ -5978,12 +6486,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The company promotes a culture of innovation."
+							"sentence": "Does the company promote a culture of innovation?"
 						}
 					],
 					"id": 3,
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The ideas, customs, and social behavior of a particular people or society."
 				},
 				{
 					"group": "Particles",
@@ -6001,12 +6510,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The tradition of gift-giving dates back centuries."
+							"sentence": "Does the tradition of gift-giving date back centuries?"
 						}
 					],
 					"word": "tradition",
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A belief, custom, or way of doing something that has existed for a long time."
 				},
 				{
 					"romanisation": "",
@@ -6023,13 +6533,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Preserving historical heritage is important for future generations."
+							"sentence": "Is preserving historical heritage important for future generations?"
 						}
 					],
 					"sortOrder": 1,
 					"partOfSpeech": "",
 					"word": "heritage",
-					"group": "Particles"
+					"group": "Particles",
+					"definition": "Features of a culture, land, or building that have been passed down from the past."
 				},
 				{
 					"word": "diversity",
@@ -6045,14 +6556,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We celebrate the diversity of backgrounds in our team."
+							"sentence": "Do we celebrate the diversity of backgrounds in our team?"
 						}
 					],
 					"sortOrder": 1,
 					"id": 6,
 					"romanisation": "",
 					"translation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The state of having people or things that are different from each other."
 				},
 				{
 					"translation": "",
@@ -6070,12 +6582,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "We discussed a variety of topics during the meeting."
+							"sentence": "Did we discuss a variety of topics during the meeting?"
 						}
 					],
 					"word": "variety",
 					"sortOrder": 1,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A number of different kinds of things."
 				},
 				{
 					"partOfSpeech": "",
@@ -6090,7 +6603,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "They prioritize inclusiveness in their hiring practices."
+							"sentence": "Do they prioritize inclusiveness in their hiring practices?"
 						}
 					],
 					"translation": "",
@@ -6098,7 +6611,8 @@
 					"word": "inclusiveness",
 					"id": 8,
 					"group": "Particles",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The practice of including all types of people."
 				},
 				{
 					"group": "Particles",
@@ -6117,11 +6631,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The law aims to ensure equality for all citizens."
+							"sentence": "Does the law aim to ensure equality for all citizens?"
 						}
 					],
 					"partOfSpeech": "",
-					"word": "equality"
+					"word": "equality",
+					"definition": "The state of being equal, especially in status, rights, and opportunities."
 				},
 				{
 					"translation": "",
@@ -6137,14 +6652,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The judge is known for her fairness in court."
+							"sentence": "Is the judge known for her fairness in court?"
 						}
 					],
 					"word": "fairness",
 					"sortOrder": 1,
 					"partOfSpeech": "",
 					"romanisation": "",
-					"group": "Particles"
+					"group": "Particles",
+					"definition": "The quality of treating people equally or reasonably."
 				},
 				{
 					"group": "Particles",
@@ -6162,12 +6678,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He dedicated his life to fighting for justice."
+							"sentence": "Did he dedicate his life to fighting for justice?"
 						}
 					],
 					"sortOrder": 1,
 					"id": 11,
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "The quality of being fair and reasonable."
 				},
 				{
 					"sortOrder": 1,
@@ -6183,14 +6700,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Immigration plays a significant role in shaping societies."
+							"sentence": "Does immigration play a significant role in shaping societies?"
 						}
 					],
 					"romanisation": "",
 					"partOfSpeech": "",
 					"word": "immigration",
 					"group": "Particles",
-					"id": 12
+					"id": 12,
+					"definition": "The process of coming to live permanently in a foreign country."
 				},
 				{
 					"translation": "",
@@ -6208,12 +6726,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The challenges faced by migrant families are immense."
+							"sentence": "Are the challenges faced by migrant families immense?"
 						}
 					],
 					"word": "migrant",
 					"partOfSpeech": "",
-					"id": 13
+					"id": 13,
+					"definition": "A person who moves from one place to another, especially to find work."
 				},
 				{
 					"word": "asylum",
@@ -6223,6 +6742,7 @@
 					"sortOrder": 1,
 					"group": "Particles",
 					"partOfSpeech": "",
+					"definition": "The protection a country gives to someone who has left their own country for safety.",
 					"sentences": [
 						{
 							"sentence": "They sought asylum in another country.",
@@ -6234,7 +6754,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The old building was once an asylum for the mentally ill."
+							"sentence": "Was the old building once an asylum for the mentally ill?"
 						}
 					]
 				},
@@ -6256,10 +6776,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "They are reviewing their current privacy policy."
+							"sentence": "Are they reviewing their current privacy policy?"
 						}
 					],
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "A course of action adopted by a government or organization."
 				},
 				{
 					"romanisation": "",
@@ -6274,7 +6795,7 @@
 						},
 						{
 							"translation": "",
-							"sentence": "They are updating the building regulations."
+							"sentence": "Are they updating the building regulations?"
 						}
 					],
 					"translation": "",
@@ -6282,7 +6803,8 @@
 					"partOfSpeech": "",
 					"id": 16,
 					"word": "regulation",
-					"group": "Particles"
+					"group": "Particles",
+					"definition": "An official rule or law that controls how something is done."
 				},
 				{
 					"word": "legislation",
@@ -6298,14 +6820,15 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Environmental legislation has become stricter."
+							"sentence": "Has environmental legislation become stricter?"
 						}
 					],
 					"sortOrder": 1,
 					"translation": "",
 					"id": 17,
 					"romanisation": "",
-					"partOfSpeech": ""
+					"partOfSpeech": "",
+					"definition": "A law or set of laws suggested by a government."
 				},
 				{
 					"word": "poverty",
@@ -6325,10 +6848,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Many organizations are fighting against extreme poverty."
+							"sentence": "Are many organizations fighting against extreme poverty?"
 						}
 					],
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "The state of being extremely poor."
 				},
 				{
 					"id": 19,
@@ -6347,11 +6871,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Youth unemployment is a growing concern."
+							"sentence": "Is youth unemployment a growing concern?"
 						}
 					],
 					"partOfSpeech": "",
-					"translation": ""
+					"translation": "",
+					"definition": "The state of being without a job."
 				},
 				{
 					"word": "homelessness",
@@ -6372,9 +6897,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Organizations are working to provide solutions for homelessness."
+							"sentence": "Are organizations working to provide solutions for homelessness?"
 						}
-					]
+					],
+					"definition": "The state of having no home."
 				},
 				{
 					"group": "Particles",
@@ -6392,12 +6918,13 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Education is key to combating racism."
+							"sentence": "Is education key to combating racism?"
 						}
 					],
 					"word": "racism",
 					"partOfSpeech": "",
-					"id": 21
+					"id": 21,
+					"definition": "Prejudice or discrimination directed against someone of a different race."
 				},
 				{
 					"sortOrder": 1,
@@ -6416,11 +6943,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Education can help reduce prejudice against different groups."
+							"sentence": "Can education help reduce prejudice against different groups?"
 						}
 					],
 					"group": "Particles",
-					"romanisation": ""
+					"romanisation": "",
+					"definition": "An unfair and unreasonable opinion or feeling, especially when formed without enough thought or knowledge."
 				},
 				{
 					"translation": "",
@@ -6439,11 +6967,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "They are working to end discrimination in the workplace."
+							"sentence": "Are they working to end discrimination in the workplace?"
 						}
 					],
 					"romanisation": "",
-					"id": 23
+					"id": 23,
+					"definition": "The practice of unfairly treating a person or group differently from other people or groups."
 				},
 				{
 					"sortOrder": 1,
@@ -6460,13 +6989,14 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The human rights organization advocates for prisoners."
+							"sentence": "Does the human rights organization advocate for prisoners?"
 						}
 					],
 					"romanisation": "",
 					"word": "rights",
 					"partOfSpeech": "",
-					"group": "Particles"
+					"group": "Particles",
+					"definition": "A legal claim or entitlement to something."
 				},
 				{
 					"translation": "",
@@ -6486,10 +7016,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "She enjoys the freedom of working from home."
+							"sentence": "Does she enjoy the freedom of working from home?"
 						}
 					],
-					"word": "freedom"
+					"word": "freedom",
+					"definition": "The state of being able to act, speak, or think without restraint."
 				},
 				{
 					"word": "liberty",
@@ -6510,9 +7041,10 @@
 						},
 						{
 							"translation": "",
-							"sentence": "He fought for the liberty of his people."
+							"sentence": "Did he fight for the liberty of his people?"
 						}
-					]
+					],
+					"definition": "The state of being free within society from unfair restrictions."
 				},
 				{
 					"translation": "",
@@ -6531,11 +7063,12 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The film contained scenes of extreme violence."
+							"sentence": "Did the film contain scenes of extreme violence?"
 						}
 					],
 					"partOfSpeech": "",
-					"sortOrder": 1
+					"sortOrder": 1,
+					"definition": "Behavior involving physical force intended to hurt or damage someone or something."
 				},
 				{
 					"id": 28,
@@ -6555,10 +7088,11 @@
 						},
 						{
 							"translation": "",
-							"sentence": "The program aims to prevent drug abuse."
+							"sentence": "Does the program aim to prevent drug abuse?"
 						}
 					],
-					"word": "abuse"
+					"word": "abuse",
+					"definition": "Cruel or violent treatment of a person or animal."
 				},
 				{
 					"sortOrder": 1,
@@ -6579,16 +7113,16 @@
 						},
 						{
 							"translation": "",
-							"sentence": "Preventing crime is a priority for the police."
+							"sentence": "Is preventing crime a priority for the police?"
 						}
-					]
+					],
+					"definition": "An action or omission that constitutes an offense that may be prosecuted by the state."
 				}
 			]
-		}
-	,
+		},
 		{
 			"title": "Relationships",
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"words": [
 				{
 					"translation": "",
@@ -7008,7 +7542,7 @@
 		}
 	,
 		{
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"words": [
 				{
 					"translation": "",
@@ -7706,7 +8240,7 @@
 		}
 	,
 		{
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"sortOrder": 1,
 			"title": "Verbs",
 			"words": [
@@ -9098,11 +9632,11 @@
 				}
 			],
 			"title": "Adjectives",
-			"tabnumber": 1
+			"tabNumber": 1
 		}
 	,
 		{
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"sortOrder": 1,
 			"words": [
 				{
@@ -10080,8 +10614,9 @@
 			],
 			"sortOrder": 1,
 			"title": "Complex Sentences",
-			"tabnumber": 3
+			"tabNumber": 3
 		}
 	]
 
 }
+

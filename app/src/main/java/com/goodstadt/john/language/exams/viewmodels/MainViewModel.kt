@@ -158,11 +158,11 @@ class MainViewModel @Inject constructor(
                                     today.get(Calendar.YEAR) == nextEventCal.get(Calendar.YEAR))
                 }
 
-                // Update the badge count for the "Focusing" tab (Tab 4).
+                // Update the badge count for the "Focusing" tab (Tab 5)
                 _uiState.update {
                     it.copy(
                         badgeCounts = it.badgeCounts.toMutableMap().apply {
-                            this[Screen.Tab4.route] = todayItemsCount
+                            this[Screen.Tab5.route] = todayItemsCount
                         }
                     )
                 }
