@@ -420,6 +420,12 @@ fun SentencesBottomSheetContent(
             text = word.word,
             style = MaterialTheme.typography.headlineLarge
         )
+        if (word.definition.isNotEmpty()) {
+            Text(
+                text = word.definition,
+                style = MaterialTheme.typography.titleSmall
+            )
+        }
 
         HorizontalDivider()
 

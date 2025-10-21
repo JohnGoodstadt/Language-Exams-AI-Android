@@ -54,6 +54,7 @@ data class VocabWord(
     @SerialName("partOfSpeech")
     val partOfSpeech: String,
     val word: String,
+    val definition: String = "",
     val group: String,
     val sentences: List<Sentence>
 )

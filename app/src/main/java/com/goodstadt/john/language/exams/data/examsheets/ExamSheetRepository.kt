@@ -107,7 +107,8 @@ class ExamSheetRepository @Inject constructor(
                             id = firestoreWord.id, sortOrder = firestoreWord.sortOrder,
                             translation = firestoreWord.translation, romanisation = firestoreWord.romanisation,
                             partOfSpeech = firestoreWord.partOfSpeech, word = firestoreWord.word,
-                            group = firestoreWord.group, sentences = sentences
+                            group = firestoreWord.group, sentences = sentences,
+                            definition = ""//TODO: need to add this
                         )
                     } catch (e: Exception) {
                         Timber.e(e, "Codable ERROR: Failed to decode VocabWord in category '${firestoreCategory.title}'.")
