@@ -22,6 +22,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -98,32 +99,48 @@ fun SectionedVocabList(
 
             if (expandedCategories.value.contains(category.title)) {
                 // 1. Create a new, flat list where each element is a pairing of a word and one of its sentences.
-                val wordSentencePairs = category.words.flatMap { word ->
-                    // For each word, create a list of pairs, then flatMap will merge all these lists together.
-                    word.sentences.map { sentence ->
-                        Pair(word, sentence)
+//                val wordSentencePairs = category.words.flatMap { word ->
+//                    // For each word, create a list of pairs, then flatMap will merge all these lists together.
+//                    word.sentences.map { sentence ->
+//                        Pair(word, sentence)
+//                    }
+//                }
+                category.words.forEach { word ->
+
+                    if (word.definition.isNotBlank()) {
+                    item(key = "def-${word.id}") { // A unique key for this item
+                        Text(
+                            text = word.definition,
+                            style = MaterialTheme.typography.bodyMedium,
+                            fontStyle = FontStyle.Italic,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant, // A less prominent color
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 8.dp, bottom = 4.dp)
+                        )
                     }
                 }
 
+
                 // 2. Now use the standard `items` call on this new flat list.
-                items(
-                    items = wordSentencePairs,
-                    key = { (word, sentence) -> "${word.id}-${sentence.sentence}" } // Destructure the pair for the key
-                ) { (word, sentence) -> // Destructure the pair for use in the body
+                    items(
+                        items = word.sentences,
+                        key = { sentence -> "sent-${word.id}-${sentence.sentence}" } // A unique key for each sentence
+                    ) { sentence ->
+                        // Your existing sentence row logic can be placed here.
+                        val displayData = buildSentenceParts(entry = word, sentence = sentence)
+                        val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
 
-                    // Your existing logic now works perfectly here
-                    val displayData = buildSentenceParts(entry = word, sentence = sentence)
-                    val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
-
-                    Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
-                        HighlightedWordInSentenceRow(
-                            entry = word,
-                            parts = displayData.parts,
-                            sentence = displayData.sentence,
-                            isRecalling = false,
-                            displayDot = cachedAudioWordKeys.contains(uniqueSentenceId),
-                            isDownloading = false//, //TODO: maybe dynamic?
-                        )
+                        Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
+                            HighlightedWordInSentenceRow(
+                                entry = word,
+                                parts = displayData.parts,
+                                sentence = displayData.sentence,
+                                isRecalling = false,
+                                displayDot = cachedAudioWordKeys.contains(uniqueSentenceId),
+                                isDownloading = false
+                            )
+                        }
                     }
                 }
             }

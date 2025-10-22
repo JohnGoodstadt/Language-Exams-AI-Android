@@ -59,7 +59,8 @@ fun GroupedSheetScreen(
             is ContentState.Success -> {
                 // Data has loaded successfully, so display the reusable vocab list.
                 // Your existing SectionedVocabList is perfect for this.
-                SectionedVocabList(
+//                SectionedVocabList(
+                SimpleSectionedVocabList(
                     categories = contentState.categories,
                     // TODO: To enable audio playback, you will need to add PlaybackState
                     // to your GroupedSheetUiState and a playTrack() function to your

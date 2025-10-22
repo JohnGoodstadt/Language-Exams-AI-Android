@@ -42,6 +42,7 @@ internal data class FirestoreWordDTO(
     val romanisation: String = "",
     val partOfSpeech: String = "",
     val word: String = "",
+    val definition: String = "",
     val group: String = "",
     val sentences: List<String> = emptyList(),
     val translations: List<String> = emptyList()
