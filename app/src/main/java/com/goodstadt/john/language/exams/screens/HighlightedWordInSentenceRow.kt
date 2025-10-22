@@ -21,14 +21,15 @@ fun HighlightedWordInSentenceRow(
     sentence: String,
     isRecalling: Boolean,
     displayDot: Boolean,
-    isDownloading:Boolean
+    isDownloading:Boolean,
+    modifier: Modifier = Modifier
 ) {
     // This logic builds the styled text with underlined words.
     val annotatedString = annotatedSentence(parts, entry.word, sentence)
 
     // This Row lays out the text and the status indicators.
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -53,5 +54,5 @@ fun HighlightedWordInSentenceRow(
             }
         }
     }
-    HorizontalDivider()
+    //HorizontalDivider()
 }
