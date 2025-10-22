@@ -127,7 +127,7 @@ class GroupedSheetViewModel @Inject constructor(
     /**
      * Loads the vocab data for a given sub-tab, utilizing an in-memory cache.
      */
-    private fun loadContentForSubTab(subTab: SubTabDefinition) {
+    private fun loadContentForSubTabObsolete(subTab: SubTabDefinition) {
         viewModelScope.launch {
             // Check the cache first
             val cachedCategories = contentCache[subTab.firestoreDocumentId]
@@ -254,6 +254,55 @@ class GroupedSheetViewModel @Inject constructor(
                 }
             }
             _playbackState.value = PlaybackState.Idle
+        }
+    }
+    private fun loadContentForSubTab(subTab: SubTabDefinition) {
+        viewModelScope.launch {
+            val sheetName = subTab.firestoreDocumentId
+
+
+            val cachedCategories = contentCache[subTab.firestoreDocumentId]
+            if (cachedCategories != null) {
+                _uiState.update { it.copy(contentState = ContentState.Success(cachedCategories)) }
+                return@launch
+            }
+
+            _uiState.update { it.copy(contentState = ContentState.Loading) }
+
+            try {
+                // --- VERSION CHECK LOGIC ---
+                // 1. Get all remote versions.
+                val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+
+                // 2. Look up the version for THIS specific sheet. Default to 1.
+                val remoteVersion = remoteVersions[sheetName] ?: 1
+
+                // 3. Get the local version for THIS sheet.
+                val localVersion = appConfigRepository.getLocalVersion(sheetName)
+
+                // 4. Determine if a force refresh is needed.
+                val forceRefresh = remoteVersion > localVersion
+                Timber.d("GroupedVM: Sheet '$sheetName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+
+                // 5. Fetch from the repository with the forceRefresh flag.
+                val result = examSheetRepository.getExamSheetBy(sheetName, forceRefresh = forceRefresh)
+
+                result.onSuccess { vocabFile ->
+                    val categories = vocabFile.categories
+                    contentCache[sheetName] = categories
+                    _uiState.update { it.copy(contentState = ContentState.Success(categories)) }
+
+                    // 6. If we refreshed, update the local version.
+                    if (forceRefresh) {
+                        appConfigRepository.updateLocalVersion(sheetName,remoteVersion)
+                    }
+                }
+                result.onFailure { error ->
+                    _uiState.update { it.copy(contentState = ContentState.Error(error.localizedMessage ?: "Failed to load content.")) }
+                }
+            } catch (e: Exception) {
+                _uiState.update { it.copy(contentState = ContentState.Error(e.localizedMessage ?: "An unexpected error occurred.")) }
+            }
         }
     }
 }

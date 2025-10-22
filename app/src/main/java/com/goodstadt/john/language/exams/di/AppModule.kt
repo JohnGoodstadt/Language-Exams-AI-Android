@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.di
 
 import android.content.Context
+import android.content.SharedPreferences
 import com.goodstadt.john.language.exams.data.AudioPlayerService
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -57,6 +58,15 @@ object AppModule {
     ): ControlRepository {
         return ControlRepository(context,userPreferencesRepository)
     }
+
+    @Singleton // We want a single instance of SharedPreferences for the whole app
+    @Provides
+    fun provideSharedPreferences(@ApplicationContext context: Context): SharedPreferences {
+        // Hilt already knows how to provide the @ApplicationContext,
+        // so we can use it here to create the SharedPreferences.
+        return context.getSharedPreferences("app_main_prefs", Context.MODE_PRIVATE)
+    }
+
     @Module
     @InstallIn(SingletonComponent::class)
     object AppModule {

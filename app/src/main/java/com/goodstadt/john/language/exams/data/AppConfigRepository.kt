@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.data
 
+import android.content.SharedPreferences
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.LlmModelInfo
@@ -8,7 +9,12 @@ import com.goodstadt.john.language.exams.models.TabsManifest
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import kotlinx.coroutines.tasks.await
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.encodeToJsonElement
+import kotlinx.serialization.json.int
+import kotlinx.serialization.json.jsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -22,8 +28,12 @@ sealed class UpdateState {
 
 @Singleton
 class AppConfigRepository @Inject constructor(
-    private val remoteConfig: FirebaseRemoteConfig
+    private val remoteConfig: FirebaseRemoteConfig,
+    private val prefs: SharedPreferences
 ) {
+
+    //A key for storing our local versions map
+    private val KEY_LOCAL_SHEET_VERSIONS = "local_sheet_versions_cache"
 
     private val defaultModels = listOf(
         LlmModelInfo(
@@ -149,6 +159,64 @@ class AppConfigRepository @Inject constructor(
         // Use getLong and convert to Int. This is safer than getDouble.
         return remoteConfig.getLong("prepositions_data_version").toInt()
     }
+    /**
+     * Gets the locally stored version for a specific sheet.
+     * @param sheetName The unique identifier for the sheet (e.g., "EnglishPrepositions").
+     * @return The stored version number, or 0 if none is found.
+     */
+    fun getLocalVersion(sheetName: String): Int {
+        val versionsJson = prefs.getString(KEY_LOCAL_SHEET_VERSIONS, "{}") ?: "{}"
+        return try {
+            val versionsMap = Json.parseToJsonElement(versionsJson).jsonObject
+            versionsMap[sheetName]?.jsonPrimitive?.int ?: 0
+        } catch (e: Exception) {
+            Timber.e(e, "Could not parse local sheet versions JSON")
+            0
+        }
+    }
+
+    /**
+     * Updates the locally stored version for a specific sheet.
+     * @param sheetName The unique identifier for the sheet.
+     * @param newVersion The new version number to store.
+     */
+    fun updateLocalVersion(sheetName: String, newVersion: Int) {
+        val versionsJson = prefs.getString(KEY_LOCAL_SHEET_VERSIONS, "{}") ?: "{}"
+        val versionsMap = try {
+            Json.parseToJsonElement(versionsJson).jsonObject.toMutableMap()
+        } catch (e: Exception) {
+            mutableMapOf()
+        }
+
+        versionsMap[sheetName] = Json.encodeToJsonElement(newVersion)
+
+        prefs.edit().putString(KEY_LOCAL_SHEET_VERSIONS, Json.encodeToString(versionsMap)).apply()
+        Timber.d("Repo: Local version for '$sheetName' updated to v$newVersion.")
+    }
+    /**
+     * Fetches the map of all sheet versions from Remote Config.
+     * This function should be suspend to ensure latest values are fetched.
+     */
+    suspend fun getRemoteSheetVersions(): Map<String, Int> {
+        try {
+            remoteConfig.fetchAndActivate().await()
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to fetch remote config for sheet versions")
+        }
+
+        val versionsJson = remoteConfig.getString("sheet_versions")
+        return if (versionsJson.isNotBlank()) {
+            try {
+                Json.decodeFromString<Map<String, Int>>(versionsJson)
+            } catch (e: Exception) {
+                Timber.e(e, "Could not parse remote sheet versions JSON")
+                emptyMap()
+            }
+        } else {
+            emptyMap()
+        }
+    }
+
     /**
      * Fetches the configuration for the reference tabs from Remote Config.
      * Returns a default list of fixed tabs if the fetch fails, the config is empty,
