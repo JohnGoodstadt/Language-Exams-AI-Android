@@ -55,7 +55,8 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
         }
         is ReferenceGenericUiState.Success -> {
             // The existing SectionedVocabList works perfectly, as it just needs a list of categories
-            SectionedVocabList(
+//            SectionedVocabList(
+            SimpleSectionedVocabList(
                 categories = state.categories,
                 playbackState = playbackState,
                 googleVoice = state.selectedVoiceName,
