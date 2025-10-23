@@ -72,7 +72,11 @@
             "EnglishA1Adjectives": 1,
             "EnglishA2Adjectives": 1,
             "EnglishB1Adjectives": 1,
-            "EnglishB2Adjectives": 1
+            "EnglishB2Adjectives": 1,
+            "EnglishA1Vocab": 1,
+            "EnglishA2Vocab": 1,
+            "EnglishB1Vocab": 1,
+            "EnglishB2Vocab": 1
             }
         </value>
     </entry>

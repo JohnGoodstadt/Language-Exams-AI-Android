@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.data
 import android.content.Context
 import android.util.Log
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
+import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.VocabFile
@@ -33,7 +34,8 @@ sealed class PlaybackResult {
 @Singleton
 class VocabRepository @Inject constructor(
     @ApplicationContext private val context: Context,
-        
+    private val appConfigRepository: AppConfigRepository,
+    private val examSheetRepository: ExamSheetRepository,
     private val googleCloudTts: GoogleCloudTTS,
     private val audioPlayerService: AudioPlayerService,
     private val userPreferencesRepository: UserPreferencesRepository
@@ -54,40 +56,73 @@ class VocabRepository @Inject constructor(
      * This version is dynamic and includes a more robust cache.
      * @param fileName The name of the resource file to load (without the .json extension).
      */
-    suspend fun getVocabData(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
-        // Return from cache if available for this specific file
-        vocabCache[fileName]?.let {
-            Timber.v("Returning '$fileName' from cache.") // For debugging
-            return@withContext Result.success(it)
-        }
+    suspend fun getVocabData(name: String): Result<VocabFile> = withContext(Dispatchers.IO) {
+
+        val logicalName = normalizeToLogicalName(name)
 
         try {
-            // Dynamically get the resource ID from the filename string
-            val resourceId = context.resources.getIdentifier(
-                    fileName,
-                    "raw",
-                    context.packageName
-            )
+            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+            val remoteVersion = remoteVersions[logicalName] ?: 1
+            val localVersion = appConfigRepository.getLocalVersion(logicalName)
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("VocabRepo: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
-            // Check if the resource was found
-            if (resourceId == 0) {
-                return@withContext Result.failure(Exception("Resource file not found: $fileName.json"))
+            val result = examSheetRepository.getExamSheetBy(logicalName, forceRefresh = forceRefresh)
+
+            if (result.isSuccess) {
+                if (forceRefresh) {
+                    appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
+                }
+                return@withContext result
+            } else {
+                val error = result.exceptionOrNull()
+                Timber.w(error, "VocabRepo: ExamSheetRepository failed for '$logicalName'. Falling back to bundle.")
+                val resourceName = mapLogicalToResourceName(logicalName)
+                return@withContext loadFromBundle(resourceName)
             }
-
-            Timber.v("Loading '$fileName' from resources.") // For debugging
-            val inputStream = context.resources.openRawResource(resourceId)
-            val jsonString = inputStream.bufferedReader().use { it.readText() }
-            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
-
-            // Cache the result using the filename as the key
-            vocabCache[fileName] = vocabFile
-            Result.success(vocabFile)
         } catch (e: Exception) {
-            Timber.e(e.localizedMessage)
-            e.printStackTrace()
-            Result.failure(e)
+            Timber.e(e, "VocabRepo: CRITICAL error in getVocabData orchestrator for '$logicalName'. Falling back to bundle.")
+            val resourceName = mapLogicalToResourceName(logicalName)
+            return@withContext loadFromBundle(resourceName)
         }
+
+
     }
+//    suspend fun getVocabDataReplaced(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
+//
+//        // Return from cache if available for this specific file
+//        vocabCache[fileName]?.let {
+//            Timber.v("Returning '$fileName' from cache.") // For debugging
+//            return@withContext Result.success(it)
+//        }
+//
+//        try {
+//            // Dynamically get the resource ID from the filename string
+//            val resourceId = context.resources.getIdentifier(
+//                fileName,
+//                "raw",
+//                context.packageName
+//            )
+//
+//            // Check if the resource was found
+//            if (resourceId == 0) {
+//                return@withContext Result.failure(Exception("Resource file not found: $fileName.json"))
+//            }
+//
+//            Timber.v("Loading '$fileName' from resources.") // For debugging
+//            val inputStream = context.resources.openRawResource(resourceId)
+//            val jsonString = inputStream.bufferedReader().use { it.readText() }
+//            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
+//
+//            // Cache the result using the filename as the key
+//            vocabCache[fileName] = vocabFile
+//            Result.success(vocabFile)
+//        } catch (e: Exception) {
+//            Timber.e(e.localizedMessage)
+//            e.printStackTrace()
+//            Result.failure(e)
+//        }
+//    }
     suspend fun debugDecodeVocabData(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
 
         try {
@@ -443,4 +478,61 @@ class VocabRepository @Inject constructor(
     fun stopPlayback() {
         audioPlayerService.stopPlayback()
     }
+
+    // --- HELPER FUNCTIONS ---
+    /**
+     * ✅ ADDED: This is the "Anti-Corruption Layer".
+     * It ensures that any legacy resource names are immediately converted to the
+     * canonical logical name used throughout the new system.
+     */
+    private fun normalizeToLogicalName(name: String): String {
+        return when (name) {
+            "vocab_data_a1" -> "EnglishA1Vocab"
+            "vocab_data_a2" -> "EnglishA2Vocab"
+            "vocab_data_b1" -> "EnglishB1Vocab"
+            "vocab_data_b2" -> "EnglishB2Vocab"
+            // Add any other legacy mappings here
+
+            // If the name is already in the correct format, just return it.
+            else -> name
+        }
+    }
+    /**
+     * Maps the logical Firestore name to the Android-specific resource name.
+     */
+    private fun mapLogicalToResourceName(logicalName: String): String {
+        return when (logicalName) {
+            "EnglishA1Vocab" -> "vocab_data_a1"
+            "EnglishA2Vocab" -> "vocab_data_a2"
+            "EnglishB1Vocab" -> "vocab_data_b1"
+            "EnglishB2Vocab" -> "vocab_data_b2"
+            // Add other mappings here as needed
+            else -> logicalName // Fallback for other files
+        }
+    }
+    /**
+     * The original function, now renamed to be a private fallback for loading from res/raw.
+     */
+    private fun loadFromBundle(resourceName: String): Result<VocabFile> {
+        try {
+            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
+            if (resourceId == 0) {
+                return Result.failure(Exception("Resource file not found: $resourceName.json"))
+            }
+
+            Timber.v("Loading '$resourceName' from local bundle.")
+            val inputStream = context.resources.openRawResource(resourceId)
+            val jsonString = inputStream.bufferedReader().use { it.readText() }
+            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
+
+            // Cache the result from the bundle so we don't read the file again this session
+            vocabCache[resourceName] = vocabFile
+            return Result.success(vocabFile)
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to load from bundle: $resourceName")
+            return Result.failure(e)
+        }
+    }
+
+
 }

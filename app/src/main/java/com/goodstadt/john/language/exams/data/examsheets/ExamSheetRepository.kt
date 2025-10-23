@@ -24,7 +24,8 @@ import javax.inject.Singleton
 @Singleton
 class ExamSheetRepository @Inject constructor(
     private val firestore: FirebaseFirestore,
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    private val jsonParser: Json
 ) {
 
     private val json = Json { ignoreUnknownKeys = true }
@@ -34,7 +35,7 @@ class ExamSheetRepository @Inject constructor(
      * Main public function. Follows a "cache-first" strategy.
      * @return A [Result] containing the `VocabFile` on success.
      */
-    suspend fun getExamSheetBy(examName: String, forceRefresh: Boolean = false): Result<VocabFile> {
+    suspend fun getExamSheetByOriginal(examName: String, forceRefresh: Boolean = false): Result<VocabFile> {
         return withContext(Dispatchers.IO) { // Move the entire operation to a background thread
             val cacheFile = getCacheFile(examName)
 
@@ -50,6 +51,45 @@ class ExamSheetRepository @Inject constructor(
 
             // If no cache or forced refresh, download and update the cache.
             forceExamSheetRefresh(examName)
+        }
+    }
+    suspend fun getExamSheetBy(name: String, forceRefresh: Boolean = false): Result<VocabFile> = withContext(Dispatchers.IO) {
+        if (!forceRefresh) {
+            readFromDiskCache(name)?.let { cachedFile ->
+                Timber.d("ExamSheetRepo: Returning '$name' from disk cache.")
+                return@withContext Result.success(cachedFile)
+            }
+        }
+
+        // 2. If no cache or force refresh, call our unified network fetcher.
+        //    The logic for fetching, parsing, and caching is now all in one place.
+        return@withContext fetchFromNetworkAndCache(name)
+    }
+    /**
+     * MODIFIED: Renamed and generalized from `forceExamSheetRefresh`.
+     * This is now the single function responsible for fetching a sheet from Firestore
+     * and saving it to the disk cache.
+     */
+    private suspend fun fetchFromNetworkAndCache(examName: String): Result<VocabFile> {
+        Timber.d("ExamSheetRepo: Fetching '$examName' from network...")
+        return try {
+            // This is your existing function that talks to Firestore.
+            // Let's assume it returns a VocabFile on success.
+            val vocabFile = downloadFromFirestoreCollections(examName)
+
+            // Get the cache file location.
+            val cacheFile = getCacheFile(examName)
+
+            // Save the newly fetched data to the disk cache.
+            // This replaces the old `saveToDiskCache` function's logic.
+            val jsonString = jsonParser.encodeToString(VocabFile.serializer(), vocabFile)
+            cacheFile.writeText(jsonString)
+
+            Timber.i("ExamSheetRepo: Successfully fetched and cached '$examName'.")
+            Result.success(vocabFile)
+        } catch (e: Exception) {
+            Timber.e(e, "ExamSheetRepo: ERROR - Failed to fetch or cache '$examName'.")
+            Result.failure(e)
         }
     }
 
@@ -145,5 +185,41 @@ class ExamSheetRepository @Inject constructor(
         Timber.i("getting getCacheFile")
         val fileName = "${for_examName}_cache.json"
         return File(cacheDir, fileName)
+    }
+    // --- DISK CACHE HELPERS ---
+
+    private fun getCacheFileNew(logicalName: String): File {
+        val cacheDir = File(context.filesDir, "vocab_cache")
+        if (!cacheDir.exists()) {
+            cacheDir.mkdirs()
+        }
+        return File(cacheDir, "$logicalName.json")
+    }
+
+    private suspend fun readFromDiskCache(logicalName: String): VocabFile? = withContext(Dispatchers.IO) {
+        val file = getCacheFile(logicalName)
+        if (!file.exists()) return@withContext null
+
+        try {
+            val jsonString = file.readText()
+            jsonParser.decodeFromString<VocabFile>(jsonString)
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to read disk cache for $logicalName")
+            null // If cache is corrupt, treat it as a miss
+        }
+    }
+
+    private suspend fun saveToDiskCache(logicalName: String, vocabFile: VocabFile) = withContext(Dispatchers.IO) {
+        try {
+            val file = getCacheFile(logicalName)
+
+            // ✅ THE FIX: Call encodeToString with the object's serializer.
+            val jsonString = jsonParser.encodeToString(VocabFile.serializer(), vocabFile)
+
+            file.writeText(jsonString)
+            Timber.d("Saved '$logicalName' to disk cache.")
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to save to disk cache for $logicalName")
+        }
     }
 }

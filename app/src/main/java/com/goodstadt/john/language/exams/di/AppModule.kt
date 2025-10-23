@@ -15,6 +15,7 @@ import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.serialization.json.Json
 import javax.inject.Singleton
 
 @Module
@@ -39,6 +40,7 @@ object AppModule {
     }
 
     // Since VocabRepository now has dependencies, we need to explicitly provide it.
+    /*
     @Provides
     @Singleton
     fun provideVocabRepository(
@@ -48,6 +50,15 @@ object AppModule {
         userPreferencesRepository: UserPreferencesRepository
     ): VocabRepository {
         return VocabRepository(context, googleCloudTts, audioPlayerService, userPreferencesRepository)
+    }
+*/
+    @Singleton
+    @Provides
+    fun provideJsonParser(): Json {
+        // We create a single, reusable instance of the Json parser for the whole app.
+        // `ignoreUnknownKeys = true` is a robust setting that prevents crashes if
+        // your remote JSON ever has extra fields that your data class doesn't.
+        return Json { ignoreUnknownKeys = true }
     }
 
     @Provides
