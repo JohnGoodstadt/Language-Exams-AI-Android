@@ -4,6 +4,7 @@ package com.goodstadt.john.language.exams.screens.recall
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -31,6 +32,7 @@ import com.goodstadt.john.language.exams.data.RecallingItem
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.screens.annotatedSentence
+import com.goodstadt.john.language.exams.ui.theme.DarkSurfaceVariant
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
@@ -164,9 +166,25 @@ fun RecallingListItem(
         }
     }
 
+    val cardContainerColor = if (isSystemInDarkTheme()) {
+        // Use the specific dark gray you want for the card's background.
+        // Color(28, 28, 30) is a great choice.
+        DarkSurfaceVariant
+//        Color(28, 28, 30)
+    } else {
+        // For light mode, use a standard, theme-appropriate color.
+        // `surface` is often the default, but you could use `surfaceVariant`
+        // if you want a slightly off-white card.
+        MaterialTheme.colorScheme.surface
+    }
+
     Card(
         modifier = Modifier.fillMaxWidth(),
-        elevation = CardDefaults.cardElevation(2.dp)
+        elevation = CardDefaults.cardElevation(2.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = cardContainerColor,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        )
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             RecallingItemContent(
@@ -262,7 +280,8 @@ fun RecallingItemContent(
 
             Text(
                 text = annotatedString,
-                color = Color.White,
+//                color = Color.White,
+                color = MaterialTheme.colorScheme.onSurface,
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable { onPlaySentence(item.key, sentence) }
@@ -272,7 +291,7 @@ fun RecallingItemContent(
 
         // Additional Text
         if (item.additionalText.isNotEmpty()) {
-            Text(item.additionalText, color = Color.Red, fontWeight = FontWeight.Bold)
+            Text(item.additionalText, color = MaterialTheme.colorScheme.error, fontWeight = FontWeight.Bold)
         }
 
         // TODO: Implement translation logic for 'showTranslation'
