@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.data
 import android.content.SharedPreferences
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.TabDefinition
 import com.goodstadt.john.language.exams.models.TabsManifest
@@ -29,7 +30,8 @@ sealed class UpdateState {
 @Singleton
 class AppConfigRepository @Inject constructor(
     private val remoteConfig: FirebaseRemoteConfig,
-    private val prefs: SharedPreferences
+    private val prefs: SharedPreferences,
+    private val jsonParser: Json
 ) {
 
     //A key for storing our local versions map
@@ -58,6 +60,7 @@ class AppConfigRepository @Inject constructor(
         } catch (e: Exception) {
             // If fetch fails, we proceed with the last known cached values.
             e.printStackTrace()
+            Timber.wtf(e.localizedMessage)
         }
 
         // Get the current version code of the installed app
@@ -216,12 +219,65 @@ class AppConfigRepository @Inject constructor(
             emptyMap()
         }
     }
+    /**
+     * Fetches and parses the entire UI manifest from Remote Config.
+     * This function is the single source of truth for UI structure.
+     * It handles fetching, caching (via Remote Config SDK), and fallback to defaults.
+     *
+     * @return The parsed AppUIManifest, or a default/empty manifest on failure.
+     */
+    suspend fun getAppUiManifest(): AppUIManifest {
+        try {
+            remoteConfig.fetchAndActivate().await()
+            Timber.d("Remote Config fetched and activated.")
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to fetch remote config; will use cached or default values.")
+        }
 
+        // Get the single manifest JSON string from Remote Config
+        val manifestJsonString = remoteConfig.getString("app_ui_manifest")
+
+        return if (manifestJsonString.isNotBlank()) {
+            try {
+                // Attempt to parse the JSON string from the server or cache
+                jsonParser.decodeFromString<AppUIManifest>(manifestJsonString)
+            } catch (e: Exception) {
+                // If parsing the remote/cached JSON fails, log it and fall back to the bundled default.
+                Timber.e(e, "CRITICAL: Failed to parse 'app_ui_manifest' from remote. Falling back to default.")
+                parseDefaultManifest()
+            }
+        } else {
+            // If the remote string is empty, fall back to the default immediately.
+            Timber.w("Remote 'app_ui_manifest' is blank. Falling back to default.")
+            parseDefaultManifest()
+        }
+    }
+    /**
+     * A private helper to parse the default manifest from the defaults map.
+     * This is the ultimate safety net.
+     */
+    private fun parseDefaultManifest(): AppUIManifest {
+        val defaultJsonString = remoteConfig.getString("app_ui_manifest") // Gets the default value
+        return if (defaultJsonString.isNotBlank()) {
+            try {
+                jsonParser.decodeFromString<AppUIManifest>(defaultJsonString)
+            } catch (e: Exception) {
+                Timber.e(e, "FATAL: Could not parse BUNDLED default 'app_ui_manifest'. Check your defaults file.")
+                AppUIManifest() // Return a completely empty manifest as a last resort
+            }
+        } else {
+            Timber.e("FATAL: BUNDLED default 'app_ui_manifest' is missing or blank.")
+            AppUIManifest()
+        }
+    }
     /**
      * Fetches the configuration for the reference tabs from Remote Config.
      * Returns a default list of fixed tabs if the fetch fails, the config is empty,
      * or the JSON is malformed.
      */
+    /*
+    Not now needed
+
     suspend fun getReferenceTabs(): List<TabDefinition> {
         // Ensure the latest values are fetched and activated, consistent with other functions
         try {
@@ -248,4 +304,6 @@ class AppConfigRepository @Inject constructor(
             defaultTabs
         }
     }
+       */
+
 }

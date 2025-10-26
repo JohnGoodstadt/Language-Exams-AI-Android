@@ -4,11 +4,11 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class TabsManifest(
-    val tabs: List<TabDefinition>
+    val tabs: List<SubTabDefinitionObsolete>
 )
 
 @Serializable
-data class SubTabDefinition(
+data class SubTabDefinitionObsolete(
     val title: String,
     val firestoreDocumentId: String
 )

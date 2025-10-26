@@ -68,9 +68,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
         val selectedTab = uiState.tabs.firstOrNull { it.id == uiState.selectedTabId }
             ?: return@LaunchedEffect
 
-        val route = when (selectedTab.type) {
-            "fixed_view" -> getRefScreenRouteFromTitle(selectedTab.title)
-            "dynamic_sheet" -> selectedTab.firestoreDocumentId?.let { docId ->
+        val route = when (selectedTab?.definition?.screenType) {
+            "fixed_view" -> getRefScreenRouteFromTitle(selectedTab.definition.title)
+            "dynamic_sheet" -> selectedTab.definition.firestoreDocumentId?.let { docId ->
                 RefScreen.DynamicSheet.createRoute(docId)
             }
             "grouped_sheet" -> {
@@ -97,7 +97,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
             LazyRow(/*...*/) {
                 items(uiState.tabs, key = { it.id }) { tab ->
                     MenuItemChip(
-                        text = tab.title,
+                        text = tab.definition.title,
                         isSelected = (tab.id == uiState.selectedTabId),
                         onClick = { viewModel.onTabSelected(tab.id) }
                     )
@@ -108,7 +108,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
         // Part B: The Dynamic NavHost (now uses the single uiState)
         NavHost(
             navController = refTabNavController,
-            startDestination = getRefScreenRouteFromTitle(uiState.tabs.firstOrNull()?.title ?: "") ?: RefScreen.Quiz.route,
+            startDestination = getRefScreenRouteFromTitle(uiState.tabs.firstOrNull()?.definition?.title ?: "") ?: RefScreen.Quiz.route,
             modifier = Modifier.weight(1f)
         ) {
 

@@ -21,6 +21,19 @@ private class ReleaseTree : Timber.Tree() {
             // If there’s an attached exception, log it too
             t?.let { Log.println(priority, tag, Log.getStackTraceString(it)) }
         }
+
+//        if (priority == Log.WARN || priority == Log.ERROR) {
+//
+//            val crashlytics = FirebaseCrashlytics.getInstance()
+//
+//            // Add the log message as a breadcrumb to the crash report
+//            crashlytics.log("$tag: $message")
+//
+//            // If an exception (Throwable 't') was also logged, report it as a non-fatal crash.
+//            if (t != null) {
+//                crashlytics.recordException(t)
+//            }
+//        }
     }
 }
 
@@ -56,12 +69,12 @@ class LanguageExamsApp : Application() {
             rateLimiter.description = "Test Rate Limiter using smallest values"
         }
 
-        // 3. Timber setup is still correct here.
-//        if (BuildConfig.DEBUG) {
-//            Timber.plant(Timber.DebugTree())
-//        } else {
+
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        } else {
 //            Timber.plant(ReleaseTree())
             Timber.plant(FaultTree(firestore))
-//        }
+        }
     }
 }

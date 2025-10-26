@@ -19,8 +19,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 65
-val VERSION_NAME = "2.65"
+val VERSION_CODE = 66
+val VERSION_NAME = "2.66"
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace

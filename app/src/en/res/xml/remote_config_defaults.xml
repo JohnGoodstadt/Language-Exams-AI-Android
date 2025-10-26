@@ -37,30 +37,61 @@
         </value>
     </entry>
     <entry>
-        <key>reference_view_tabs</key>
+        <key>app_ui_manifest</key>
         <value>
             {
-            "tabs": [
-            { "id": "quiz", "title": "Quiz", "type": "fixed_view" },
-            { "id": "conjugations", "title": "Conjugations", "type": "fixed_view" },
-            {
-            "id": "prepositions",
+            "sheetRegistry": {
+            "quiz": {
+            "title": "Quiz",
+            "dataType": "fixed",
+            "screenType": "FixedScreen"
+            },
+            "conjugations": {
+            "title": "Conjugations",
+            "dataType": "fixed",
+            "screenType": "FixedScreen"
+            },
+            "EnglishPrepositions": {
             "title": "Prepositions",
-            "type": "dynamic_sheet",
+            "dataType": "VocabFile",
+            "screenType": "VocabScreen",
             "firestoreDocumentId": "EnglishPrepositions"
             },
-            {
-            "id": "adjectives_group",
+            "AdjectivesGroup": {
             "title": "Adjectives",
-            "type": "grouped_sheet",
+            "screenType": "GroupedVocabScreen",
+            "dataType": "VocabFile",
             "subTabs": [
-            { "title": "Basic", "firestoreDocumentId": "EnglishA1Adjectives" },
-            { "title": "Intermediate", "firestoreDocumentId": "EnglishA2Adjectives" },
-            { "title": "Upper", "firestoreDocumentId": "EnglishB1Adjectives" },
-            { "title": "Advanced", "firestoreDocumentId": "EnglishB2Adjectives" }
+            { "title": "Basic", "firestoreDocumentId": "EnglishA1Adjectives", "dataType":
+            "VocabFile" },
+            { "title": "Intermediate", "firestoreDocumentId": "EnglishA2Adjectives", "dataType":
+            "VocabFile" },
+            { "title": "Upper", "firestoreDocumentId": "EnglishB1Adjectives", "dataType":
+            "VocabFile" },
+            { "title": "Advanced", "firestoreDocumentId": "EnglishB2Adjectives", "dataType":
+            "VocabFile" }
             ]
             }
+            },
+            "layouts": {
+            "referenceTab": {
+            "order": [
+            "quiz",
+            "conjugations",
+            "EnglishPrepositions",
+            "AdjectivesGroup"
             ]
+            },
+            "meTab": {
+            "order": [
+            "focusing",
+            "settings",
+            "vocabulary",
+            "progress",
+            "paragraph"
+            ]
+            }
+            }
             }
         </value>
     </entry>

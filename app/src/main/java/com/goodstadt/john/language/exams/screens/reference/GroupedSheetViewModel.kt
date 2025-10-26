@@ -13,6 +13,7 @@ import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.SubTabDefinition
@@ -84,34 +85,34 @@ class GroupedSheetViewModel @Inject constructor(
         // Get the parent tab's ID from the navigation arguments
         val tabId: String? = savedStateHandle.get("tabId")
         if (tabId != null) {
-            initializeState(tabId)
+            //initializeState(tabId)
         } else {
             _uiState.update { it.copy(contentState = ContentState.Error("Parent Tab ID was not provided.")) }
         }
     }
 
-    private fun initializeState(tabId: String) {
-        viewModelScope.launch {
-            // Get all tabs from the config to find our specific tab
-            val allTabs = appConfigRepository.getReferenceTabs()
-            val myTab = allTabs.find { it.id == tabId }
-
-            if (myTab != null && !myTab.subTabs.isNullOrEmpty()) {
-                val initialSubTab = myTab.subTabs.first()
-                _uiState.update {
-                    it.copy(
-                        title = myTab.title,
-                        subTabs = myTab.subTabs,
-                        selectedSubTab = initialSubTab
-                    )
-                }
-                // Load the content for the initially selected sub-tab
-                loadContentForSubTab(initialSubTab)
-            } else {
-                _uiState.update { it.copy(contentState = ContentState.Error("Configuration for tab '$tabId' not found or is empty.")) }
-            }
-        }
-    }
+//    private fun initializeState(tabId: String) {
+//        viewModelScope.launch {
+//            // Get all tabs from the config to find our specific tab
+//            val allTabs = appConfigRepository.getReferenceTabs()
+//            val myTab = allTabs.find { it.id == tabId }
+//
+//            if (myTab != null && !myTab.subTabs.isNullOrEmpty()) {
+//                val initialSubTab = myTab.subTabs.first()
+//                _uiState.update {
+//                    it.copy(
+//                        title = myTab.title,
+//                        subTabs = myTab.subTabs,
+//                        selectedSubTab = initialSubTab
+//                    )
+//                }
+//                // Load the content for the initially selected sub-tab
+//                loadContentForSubTab(initialSubTab)
+//            } else {
+//                _uiState.update { it.copy(contentState = ContentState.Error("Configuration for tab '$tabId' not found or is empty.")) }
+//            }
+//        }
+//    }
 
     /**
      * Called by the UI when the user selects a different sub-tab from the picker.
