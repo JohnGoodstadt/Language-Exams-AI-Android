@@ -6,6 +6,7 @@ import android.app.Activity
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
@@ -45,6 +46,40 @@ sealed interface ReferenceGenericUiState {
     object NotAvailable : ReferenceGenericUiState
 }
 
+// ✅ ADD THIS SEALED INTERFACE
+/**
+ * Represents the different states for the ReferenceGenericScreen UI.
+ * A sealed interface is perfect for this, as it forces the `when` block in the
+ * Composable to handle all possible states.
+ */
+sealed interface GenericVocabUiState {
+    /**
+     * The initial state, while data is being fetched from the repository.
+     */
+    object Loading : GenericVocabUiState
+
+    /**
+     * The state representing a successful data load.
+     * It holds all the data the UI needs to render the list.
+     *
+     * Note: In your old PrepositionsUiState, you had other properties like
+     * cachedAudioWordKeys and selectedVoiceName. We will add those here as well
+     * for consistency, as your SectionedVocabList composable will likely need them.
+     */
+    data class Success(
+        val categories: List<Category>,
+        val cachedAudioWordKeys: Set<String> = emptySet(),
+        val selectedVoiceName: String = ""
+    ) : GenericVocabUiState
+
+    /**
+     * The state representing a failure to load data.
+     * It holds an error message to display to the user.
+     */
+    data class Error(val message: String) : GenericVocabUiState
+    object NotAvailable : GenericVocabUiState
+}
+
 @HiltViewModel
 class ReferenceGenericViewModel @Inject constructor(
     // 2. MODIFIED: Injected SavedStateHandle to get navigation arguments
@@ -57,10 +92,14 @@ class ReferenceGenericViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
-    private val examSheetRepository: ExamSheetRepository
+    private val examSheetRepository: ExamSheetRepository,
+    private val appConfigRepository: AppConfigRepository
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow<ReferenceGenericUiState>(ReferenceGenericUiState.Loading)
+    //private val _uiState = MutableStateFlow<ReferenceGenericUiState>(ReferenceGenericUiState.Loading)
+    //val uiState = _uiState.asStateFlow()
+
+    private val _uiState = MutableStateFlow<GenericVocabUiState>(GenericVocabUiState.Loading)
     val uiState = _uiState.asStateFlow()
 
     // --- All other state flows can remain the same ---
@@ -80,9 +119,10 @@ class ReferenceGenericViewModel @Inject constructor(
         val firestoreDocumentId: String? = savedStateHandle.get("documentId")
 
         if (firestoreDocumentId != null) {
-            loadVocabData(firestoreDocumentId)
+//            loadVocabData(firestoreDocumentId)
+            loadData()
         } else {
-            _uiState.value = ReferenceGenericUiState.Error("Document ID not provided.")
+            _uiState.value = GenericVocabUiState.Error("Document ID not provided.")
         }
 
         viewModelScope.launch {
@@ -92,10 +132,43 @@ class ReferenceGenericViewModel @Inject constructor(
         }
     }
 
+    private fun loadData() {
+        viewModelScope.launch {
+            _uiState.value = GenericVocabUiState.Loading
+
+            val logicalName: String = savedStateHandle.get<String?>("documentId").toString() ?: ""
+
+
+            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+            val remoteVersion = remoteVersions[logicalName] ?: 1
+            val localVersion = appConfigRepository.getLocalVersion(logicalName.toString())
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("VocabRepo: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+
+
+
+            // ✅ THE FIX: Call the specific, type-safe function.
+            // The return type of this function is `Result<VocabFile>`, NOT `Result<Any>`.
+            val result = examSheetRepository.getVocabSheet(logicalName, forceRefresh     )
+
+            // ✅ NO CASTING NEEDED! The result is already the correct type.
+            result.onSuccess { vocabFile ->
+                _uiState.value = GenericVocabUiState.Success(vocabFile.categories, /*...other params...*/)
+                if (forceRefresh) {
+                    appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
+                }
+            }
+            result.onFailure { error ->
+                _uiState.value = GenericVocabUiState.Error(error.localizedMessage ?: "Failed to load data")
+            }
+        }
+
+    }
+
     // 4. MODIFIED: Replaced loadPrepositions() with a generic function
     private fun loadVocabData(firestoreDocumentId: String) {
         viewModelScope.launch {
-            _uiState.value = ReferenceGenericUiState.Loading
+            _uiState.value = GenericVocabUiState.Loading
 
             try {
                 // Use the passed-in documentId to fetch data.
@@ -109,17 +182,17 @@ class ReferenceGenericViewModel @Inject constructor(
                     Timber.i("ViewModel: Successfully loaded ${vocabFile.categories.size} categories.")
                     val voiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
                     val cachedAudioKeys = vocabRepository.getSentenceKeysWithCachedAudio(vocabFile.categories, voiceName)
-                    _uiState.value = ReferenceGenericUiState.Success(vocabFile.categories, cachedAudioKeys, voiceName)
+                    _uiState.value = GenericVocabUiState.Success(vocabFile.categories, cachedAudioKeys, voiceName)
                 }
 
                 result.onFailure { error ->
                     Timber.e(error, "ViewModel: ERROR fetching from repository for '$firestoreDocumentId'.")
-                    _uiState.value = ReferenceGenericUiState.Error(error.localizedMessage ?: "Failed to load data")
+                    _uiState.value = GenericVocabUiState.Error(error.localizedMessage ?: "Failed to load data")
                 }
 
             } catch (e: Exception) {
                 Timber.e(e, "ViewModel: CRITICAL ERROR in loadVocabData.")
-                _uiState.value = ReferenceGenericUiState.Error("A critical error occurred.")
+                _uiState.value = GenericVocabUiState.Error("A critical error occurred.")
             }
         }
     }
@@ -179,7 +252,7 @@ class ReferenceGenericViewModel @Inject constructor(
 
             //Dot shows before sound (lightening before thunder)
             _uiState.update { currentState ->
-                if (currentState is ReferenceGenericUiState.Success) {
+                if (currentState is GenericVocabUiState.Success) {
                     val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId(word, sentence, currentVoiceName)
                     currentState.copy(cachedAudioWordKeys = updatedKeys)
                 } else {

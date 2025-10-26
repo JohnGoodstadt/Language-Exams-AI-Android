@@ -38,22 +38,22 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
 
     // 3. MODIFIED: The when statement now checks for ReferenceGenericUiState types
     when (val state = uiState) {
-        is ReferenceGenericUiState.Loading -> {
+        is GenericVocabUiState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
             }
         }
-        is ReferenceGenericUiState.Error -> {
+        is GenericVocabUiState.Error -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text("Error: ${state.message}", color = Color.Red)
             }
         }
-        is ReferenceGenericUiState.NotAvailable -> {
+        is GenericVocabUiState.NotAvailable -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 Text("This feature is not available for the current language.")
             }
         }
-        is ReferenceGenericUiState.Success -> {
+        is GenericVocabUiState.Success -> {
             // The existing SectionedVocabList works perfectly, as it just needs a list of categories
 //            SectionedVocabList(
             SimpleSectionedVocabList(

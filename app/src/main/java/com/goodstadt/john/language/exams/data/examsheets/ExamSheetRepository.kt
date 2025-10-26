@@ -113,6 +113,52 @@ class ExamSheetRepository @Inject constructor(
         }
     }
     /**
+     * ✅ ADD THIS FUNCTION
+     * Fetches a document from Firestore, serializes its data to a JSON string,
+     * saves that string to the disk cache, and returns the string.
+     *
+     * @param examName The unique document ID to fetch from Firestore.
+     * @return The raw JSON string of the document's data.
+     * @throws Exception if the document is not found or if serialization fails.
+     */
+    private suspend fun fetchAndCacheJsonString(examName: String): String = withContext(Dispatchers.IO) {
+        Timber.d("ExamSheetRepo: Fetching '$examName' from Firestore network...")
+
+        // 1. Fetch the document from Firestore.
+        //    'await()' is from the kotlinx-coroutines-play-services library.
+        val document = firestore.collection("vocab_sheets").document(examName).get().await()
+
+        // 2. Check if the document actually exists.
+        if (!document.exists()) {
+            // If not, throw an exception to signal failure.
+            throw Exception("Document '$examName' not found in Firestore.")
+        }
+
+        // 3. Get the raw data from the document.
+        //    document.data returns a Map<String, Any>.
+        val dataMap = document.data
+        if (dataMap == null) {
+            throw Exception("Document '$examName' exists but contains no data.")
+        }
+
+        // 4. Serialize the Map into a JSON String.
+        //    This is a crucial step to convert Firestore's native format into a standard JSON string.
+        val jsonString = jsonParser.encodeToString(dataMap)
+
+        // 5. Save the newly fetched JSON string to the disk cache.
+        try {
+            val cacheFile = getCacheFile(examName)
+            cacheFile.writeText(jsonString)
+            Timber.i("ExamSheetRepo: Successfully fetched and cached '$examName'.")
+        } catch (e: Exception) {
+            // Log the caching error, but don't crash. The fetch was still successful.
+            Timber.e(e, "ExamSheetRepo: Failed to save '$examName' to cache after fetching.")
+        }
+
+        // 6. Return the JSON string.
+        return@withContext jsonString
+    }
+    /**
      * Main public function. Follows a "cache-first" strategy.
      * @return A [Result] containing the `VocabFile` on success.
      */
