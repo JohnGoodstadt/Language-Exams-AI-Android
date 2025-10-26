@@ -4,6 +4,7 @@ import android.content.Context
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.toObject
 import com.goodstadt.john.language.exams.models.Category
+import com.goodstadt.john.language.exams.models.DummySheetDefinition
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.models.VocabWord
@@ -31,6 +32,86 @@ class ExamSheetRepository @Inject constructor(
     private val json = Json { ignoreUnknownKeys = true }
     private val cacheDir = context.filesDir
 
+    // --- 1. PUBLIC, TYPE-SAFE API ---
+
+    /**
+     * Public function to get a VocabFile. This is what your ViewModels will call.
+     * It guarantees a `VocabFile` return type.
+     */
+    suspend fun getVocabSheet(name: String, forceRefresh: Boolean): Result<VocabFile> {
+        // It calls the private generic function and then casts the result.
+        // The casting logic is now centralized inside the repository.
+        val result = getGenericSheet(name = name, dataType = "VocabFile", forceRefresh = forceRefresh)
+        return result.map { it as VocabFile } // Use .map to safely cast the success value
+    }
+
+    /**
+     * Public function for your future DummySheetDefinition.
+     */
+    suspend fun getDummySheet(name: String, forceRefresh: Boolean): Result<DummySheetDefinition> {
+        val result = getGenericSheet(name = name, dataType = "DummySheetDefinition", forceRefresh = forceRefresh)
+        return result.map { it as DummySheetDefinition }
+    }
+    /**
+     * ✅ RENAMED: This is the private "dispatcher" that returns a generic `Any`.
+     * It is now an implementation detail of the repository.
+     */
+    private suspend fun getGenericSheet(name: String, dataType: String, forceRefresh: Boolean): Result<Any> = withContext(Dispatchers.IO) {
+        try {
+            var jsonString: String? = null
+
+            if (!forceRefresh) {
+                jsonString = readJsonStringFromCache(name)
+//                readFromDiskCache(name)?.let { cachedFile ->
+//                    Timber.d("ExamSheetRepo: Returning '$name' from disk cache.")
+//                    return@withContext Result.success(cachedFile)
+//                }
+            }
+            if (jsonString == null) {
+                jsonString = fetchAndCacheJsonString(name)
+            }
+
+            if (jsonString.isNotBlank()) {
+                val decodedObject = when (dataType) {
+                    "VocabFile" -> jsonParser.decodeFromString<VocabFile>(jsonString)
+                    "DummySheetDefinition" -> jsonParser.decodeFromString<DummySheetDefinition>(jsonString)
+                    else -> throw Exception("Unknown dataType '$dataType'")
+                }
+                return@withContext Result.success(decodedObject)
+            } else {
+                return@withContext Result.failure(Exception("JSON data for '$name' is blank."))
+            }
+
+        } catch (e: Exception) {
+            return@withContext Result.failure(e)
+        }
+    }
+    /**
+     * ✅ ADD THIS FUNCTION
+     * Reads the raw JSON string from a cached file on disk.
+     *
+     * @param logicalName The unique identifier for the sheet (e.g., "EnglishA1Vocab").
+     * @return The JSON string if the file is found and readable, otherwise `null`.
+     */
+    private suspend fun readJsonStringFromCache(logicalName: String): String? = withContext(Dispatchers.IO) {
+        val file = getCacheFile(logicalName)
+
+        // If the file doesn't exist, there's nothing to read.
+        if (!file.exists()) {
+            return@withContext null
+        }
+
+        // Use a try-catch block to handle potential file reading errors.
+        return@withContext try {
+            // Read the entire content of the file as a string.
+            file.readText()
+        } catch (e: Exception) {
+            // If there's any error reading the file (e.g., corrupt file, permissions issue),
+            // log the error and return null to treat it as a cache miss.
+            Timber.e(e, "Failed to read disk cache for '$logicalName'")
+            null
+        }
+    }
     /**
      * Main public function. Follows a "cache-first" strategy.
      * @return A [Result] containing the `VocabFile` on success.
