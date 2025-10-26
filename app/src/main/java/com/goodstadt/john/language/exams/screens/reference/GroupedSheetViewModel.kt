@@ -85,34 +85,72 @@ class GroupedSheetViewModel @Inject constructor(
         // Get the parent tab's ID from the navigation arguments
         val tabId: String? = savedStateHandle.get("tabId")
         if (tabId != null) {
-            //initializeState(tabId)
+            initializeState(tabId)
         } else {
             _uiState.update { it.copy(contentState = ContentState.Error("Parent Tab ID was not provided.")) }
         }
     }
 
-//    private fun initializeState(tabId: String) {
-//        viewModelScope.launch {
-//            // Get all tabs from the config to find our specific tab
-//            val allTabs = appConfigRepository.getReferenceTabs()
-//            val myTab = allTabs.find { it.id == tabId }
-//
-//            if (myTab != null && !myTab.subTabs.isNullOrEmpty()) {
-//                val initialSubTab = myTab.subTabs.first()
-//                _uiState.update {
-//                    it.copy(
-//                        title = myTab.title,
-//                        subTabs = myTab.subTabs,
-//                        selectedSubTab = initialSubTab
-//                    )
-//                }
-//                // Load the content for the initially selected sub-tab
-//                loadContentForSubTab(initialSubTab)
-//            } else {
-//                _uiState.update { it.copy(contentState = ContentState.Error("Configuration for tab '$tabId' not found or is empty.")) }
-//            }
-//        }
-//    }
+    private fun initializeState(tabId: String) {
+        viewModelScope.launch {
+            _uiState.update { it.copy(contentState = ContentState.Loading) }
+            Timber.d("GroupedVM: Initializing for tabId: '$tabId'")
+
+            try {
+                // 1. Get the entire, up-to-date manifest from the repository.
+                //    This single call gets all the configuration data we need.
+                val manifest = appConfigRepository.getAppUiManifest()
+
+                Timber.d("GroupedVM: Manifest fetched. Registry contains ${manifest.sheetRegistry.size} items.")
+
+                // 2. Look up our specific tab's definition in the registry using the tabId.
+                val myTabDefinition = manifest.sheetRegistry[tabId]
+
+                // 3. Get the list of sub-tabs from that definition.
+                val mySubTabs = myTabDefinition?.subTabs
+
+                // 4. Check if we found everything we need.
+                if (myTabDefinition != null && !mySubTabs.isNullOrEmpty()) {
+
+                    // --- SUCCESS PATH ---
+
+                    val initialSubTab = mySubTabs.first()
+                    Timber.d("GroupedVM: Success! Found ${mySubTabs.size} sub-tabs. Initial selection is '${initialSubTab.title}'.")
+
+                    // Update the UI state with the list of sub-tabs and the initial selection.
+                    _uiState.update {
+                        it.copy(
+                            title = myTabDefinition.title,
+                            subTabs = mySubTabs,
+                            selectedSubTab = initialSubTab
+                        )
+                    }
+
+                    // Now that the state is initialized, load the actual content for the first sub-tab.
+                    loadContentForSubTab(initialSubTab)
+
+                } else {
+
+                    // --- FAILURE PATH ---
+
+                    // Log detailed errors to help with debugging.
+                    if (myTabDefinition == null) {
+                        Timber.e("GroupedVM: FATAL! Could not find definition for '$tabId' in the sheetRegistry.")
+                        Timber.e("GroupedVM: Available keys in registry are: ${manifest.sheetRegistry.keys}")
+                    }
+                    if (mySubTabs.isNullOrEmpty()) {
+                        Timber.e("GroupedVM: FATAL! Found definition for '$tabId', but its 'subTabs' array is null or empty.")
+                    }
+
+                    _uiState.update { it.copy(contentState = ContentState.Error("Configuration for tab '$tabId' is invalid or missing.")) }
+                }
+            } catch (e: Exception) {
+                // Catch any other unexpected errors during the process.
+                Timber.e(e, "Group_VM: A critical exception occurred during initialization.")
+                _uiState.update { it.copy(contentState = ContentState.Error(e.localizedMessage ?: "An unknown error occurred.")) }
+            }
+        }
+    }
 
     /**
      * Called by the UI when the user selects a different sub-tab from the picker.

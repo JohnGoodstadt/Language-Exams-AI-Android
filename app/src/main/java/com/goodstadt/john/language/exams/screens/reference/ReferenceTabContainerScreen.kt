@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.screens.reference
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
@@ -35,6 +36,7 @@ import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.ReferenceViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 /**
  * This is the main container for the entire "Me" tab. It sets up the persistent
@@ -64,24 +66,33 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 
     // --- Navigation Logic ---
     // This LaunchedEffect now uses the merged uiState
+    // ✅ MODIFIED: The LaunchedEffect now performs the routing based on screenType
     LaunchedEffect(uiState.selectedTabId) {
         val selectedTab = uiState.tabs.firstOrNull { it.id == uiState.selectedTabId }
             ?: return@LaunchedEffect
 
-        val route = when (selectedTab?.definition?.screenType) {
-            "fixed_view" -> getRefScreenRouteFromTitle(selectedTab.definition.title)
-            "dynamic_sheet" -> selectedTab.definition.firestoreDocumentId?.let { docId ->
+        val definition = selectedTab.definition
+
+        // This is the new routing logic
+        val route = when (definition.screenType) {
+            "FixedScreen" -> {
+                // For fixed screens, we can use the tab's ID as the route
+                selectedTab.id
+            }
+            "VocabScreen" -> definition.firestoreDocumentId?.let { docId ->
                 RefScreen.DynamicSheet.createRoute(docId)
             }
-            "grouped_sheet" -> {
-                // We don't pass the whole list. We just pass the ID of the
-                // parent tab (e.g., "adjectives_group"). The next screen's
-                // ViewModel will use this ID to find the correct subTabs list.
+            "GroupedVocabScreen" -> {
+                // For grouped screens, we pass the parent tab's ID
                 RefScreen.GroupedSheet.createRoute(selectedTab.id)
             }
-            else -> null
+            else -> {
+                Timber.w("Unknown screenType '${definition.screenType}' for tab '${selectedTab.id}'. Cannot navigate.")
+                null // For any unknown screen types, do nothing
+            }
         }
 
+        // The navigation call remains the same
         route?.let {
             refTabNavController.navigate(it) {
                 popUpTo(refTabNavController.graph.startDestinationId) { saveState = true }
@@ -105,61 +116,49 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
             }
         }
 
-        // Part B: The Dynamic NavHost (now uses the single uiState)
-        NavHost(
-            navController = refTabNavController,
-            startDestination = getRefScreenRouteFromTitle(uiState.tabs.firstOrNull()?.definition?.title ?: "") ?: RefScreen.Quiz.route,
-            modifier = Modifier.weight(1f)
-        ) {
+        if (uiState.tabs.isNotEmpty()) {
+            // Part B: The Dynamic NavHost (now uses the single uiState)
+            NavHost(
+//                navController = refTabNavController,
+//                startDestination = getRefScreenRouteFromTitle(uiState.tabs.firstOrNull()?.definition?.title ?: "") ?: RefScreen.Quiz.route,
+//                modifier = Modifier.weight(1f)
+                navController = refTabNavController,
+                // The startDestination is now derived from the first tab's ID
+                startDestination = uiState.tabs.first().id,
+                modifier = Modifier.weight(1f)
 
-            composable(RefScreen.Quiz.route) { QuizScreen() }
-            composable(RefScreen.Conjugations.route) { ConjugationsScreen() }
-            composable(RefScreen.Prepositions.route) { PrepositionsScreen() }
+            ) {
 
-            composable(
-                // 1. The route definition from your RefScreen sealed class
-                route = RefScreen.DynamicSheet.route,
+                composable(RefScreen.Quiz.route) { QuizScreen() }
+                composable(RefScreen.Conjugations.route) { ConjugationsScreen() }
+                composable(RefScreen.Prepositions.route) { PrepositionsScreen() }
 
-                // 2. Define the arguments this route expects. This MUST match the route string.
-                arguments = listOf(
-                    navArgument("documentId") {
-                        type = NavType.StringType
-                        // You could add nullable = false if it's always required
-                    }
-                )
-            ) { backStackEntry ->
-                // 3. Extract the documentId safely from the navigation arguments
-                val documentId = backStackEntry.arguments?.getString("documentId")
-
-                // 4. Call your generic screen, handling the case where the ID might be null
-                if (documentId != null) {
-                    // This is the new, reusable screen that will display the content
-                    //GenericVocabScreen(firestoreDocumentId = documentId)
+                // 2. Dynamic VocabScreen
+                composable(
+                    route = RefScreen.DynamicSheet.route,
+                    arguments = listOf(navArgument("documentId") { type = NavType.StringType })
+                ) {
+                    // This is correct: Hilt's SavedStateHandle will pass the documentId
                     ReferenceGenericScreen()
-                } else {
-                    // Display an error if for some reason the ID is missing
-                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        Text(
-                            text = "Error: Document ID was not provided.",
-                            color = MaterialTheme.colorScheme.error,
-                            style = MaterialTheme.typography.bodyLarge
-                        )
-                    }
                 }
-            }
-            composable(
-                route = RefScreen.GroupedSheet.route,
-                arguments = listOf(navArgument("tabId") { type = NavType.StringType })
-            ) { backStackEntry ->
-                // Note: We don't need to extract the 'tabId' here, because Hilt's
-                // SavedStateHandle will pass it to the ViewModel automatically,
-                // just like it does for your ReferenceGenericScreen.
 
-                // This is where you will place your new grouped sheet screen.
-                GroupedSheetScreen()
-            }
+                // 3. Dynamic GroupedScreen
+                composable(
+                    route = RefScreen.GroupedSheet.route,
+                    arguments = listOf(navArgument("tabId") { type = NavType.StringType })
+                ) {
+                    // This is also correct: Hilt will pass the tabId
+                    GroupedSheetScreen()
+                }
 
+            }
+        }//: is Not Empty
+        else{
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                CircularProgressIndicator()
+            }
         }
+
     } //:Column
 
 
