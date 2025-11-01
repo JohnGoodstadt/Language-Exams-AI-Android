@@ -51,7 +51,7 @@ data class GroupedSheetUiState(
 class GroupedSheetViewModel @Inject constructor(
     private val vocabRepository: VocabRepository,
     private val appConfigRepository: AppConfigRepository,
-    private val examSheetRepository: ExamSheetRepository,
+//    private val examSheetRepository: ExamSheetRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val connectivityRepository: ConnectivityRepository,
     private val ttsStatsRepository : TTSStatsRepository,
@@ -179,7 +179,8 @@ class GroupedSheetViewModel @Inject constructor(
             _uiState.update { it.copy(contentState = ContentState.Loading) }
 
             try {
-                val result = examSheetRepository.getVocabSheet(subTab.firestoreDocumentId, forceRefresh = false)
+                Timber.i("GroupedSheetViewModelObsolete: Attempting to fetch generic vocab for ''...")
+                val result = vocabRepository.getVocabData(subTab.firestoreDocumentId)
                 result.onSuccess { vocabFile ->
                     val categories = vocabFile.categories
                     // Add to cache for next time
@@ -312,20 +313,16 @@ class GroupedSheetViewModel @Inject constructor(
                 // --- VERSION CHECK LOGIC ---
                 // 1. Get all remote versions.
                 val remoteVersions = appConfigRepository.getRemoteSheetVersions()
-
-                // 2. Look up the version for THIS specific sheet. Default to 1.
                 val remoteVersion = remoteVersions[sheetName] ?: 1
-
-                // 3. Get the local version for THIS sheet.
                 val localVersion = appConfigRepository.getLocalVersion(sheetName)
-
-                // 4. Determine if a force refresh is needed.
                 val forceRefresh = remoteVersion > localVersion
                 Timber.d("GroupedVM: Sheet '$sheetName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
                 // 5. Fetch from the repository with the forceRefresh flag.
-                val result = examSheetRepository.getVocabSheet(sheetName, forceRefresh = forceRefresh)
 
+                Timber.i("GroupedSheetViewModel: Attempting to fetch generic vocab for '$sheetName'...")
+//                val result = examSheetRepository.getVocabSheet(sheetName, forceRefresh = forceRefresh)
+                val result = vocabRepository.getVocabData(sheetName)
                 result.onSuccess { vocabFile ->
                     val categories = vocabFile.categories
                     contentCache[sheetName] = categories

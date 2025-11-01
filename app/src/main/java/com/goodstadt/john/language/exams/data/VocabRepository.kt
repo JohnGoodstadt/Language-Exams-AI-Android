@@ -9,7 +9,10 @@ import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
@@ -23,6 +26,11 @@ enum class PlaybackSource {
     NETWORK
 }
 
+/*
+Layer 3 (UI Logic)	ViewModels (GroupedVM, GenericVM, etc.)	To prepare UI state for a specific screen.	(No one below it)
+Layer 2 (Orchestration & Business Logic)	VocabRepository	To be the single entry point for all VocabFile data. It orchestrates caching, versioning, and data source selection.	Only ViewModels.
+Layer 1 (Data Source Implementation)	ExamSheetRepository	To be a low-level worker. Its only job is to manage the disk cache and network fetching for VocabFiles from Firestore.	Only VocabRepository.
+ */
 // In data/VocabRepository.kt
 sealed class PlaybackResult {
     data object PlayedFromCache : PlaybackResult()
@@ -44,6 +52,10 @@ class VocabRepository @Inject constructor(
     private val vocabCache = mutableMapOf<String, VocabFile>()
 
 
+    //Problem was getVocabData() called twice sub millisecond
+    // ✅ ADDED: A map to store ongoing fetch operations.
+    // The key is the logicalName, the value is the Deferred result.
+    private val ongoingFetches = mutableMapOf<String, Deferred<Result<VocabFile>>>()
     // A lazy json parser instance with lenient configuration
     private val jsonParser = Json {
         ignoreUnknownKeys = true    // Be robust against future changes in the JSON
@@ -52,51 +64,195 @@ class VocabRepository @Inject constructor(
     }
 
     /**
-     * Loads the vocabulary data from the specified JSON file.
-     * This version is dynamic and includes a more robust cache.
-     * @param fileName The name of the resource file to load (without the .json extension).
+     * The primary data orchestrator. It follows the strategy:
+     * 1. Check in-memory cache (if not forcing a refresh).
+     * 2. Delegate to ExamSheetRepository (for disk cache / network).
+     * 3. Fallback to the app bundle.
+     * It is the ONLY function that writes to the in-memory cache.
      */
-    suspend fun getVocabData(name: String): Result<VocabFile> = withContext(Dispatchers.IO) {
+    suspend fun getVocabData(name: String): Result<VocabFile>  {
+//        val parentCaller = getParentCaller()
+//        val parentFunctionName = parentCaller?.methodName ?: "Unknown"
+//        Timber.d("This log is from getVocabData, but it was called by: $parentFunctionName")
 
-        val logicalName = normalizeToLogicalName(name)
+        // Use CoroutineScope to manage the lifecycle of our fetches
+        return coroutineScope {
+            val logicalName = normalizeToLogicalName(name)
 
-        try {
-            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
-            val remoteVersion = remoteVersions[logicalName] ?: 1
-            val localVersion = appConfigRepository.getLocalVersion(logicalName)
-            val forceRefresh = remoteVersion > localVersion
-            Timber.d("VocabRepository.getVocabData():: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
-
-            vocabCache[logicalName]?.let { cachedVocabFile ->
-                Timber.d("VocabRepository.getVocabData(): Returning '$logicalName' from MEMORY CACHE. Yippee!")
-                return@withContext Result.success(cachedVocabFile)
+            // --- 1. Check for an ONGOING fetch for this exact name ---
+            ongoingFetches[logicalName]?.let { activeJob ->
+                Timber.d("VocabRepo: Found an IN-PROGRESS fetch for '$logicalName'. Awaiting its result.")
+                // If a job is already running, don't start a new one.
+                // Just wait for the existing one to finish and return its result.
+                return@coroutineScope activeJob.await()
             }
+            // --- If no ongoing fetch, start a new one ---
+            val newJob = async(Dispatchers.IO) {
+                try {
+                    // --- 1. Version Check ---
+                    val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+                    val remoteVersion = remoteVersions[logicalName] ?: 1
+                    val localVersion = appConfigRepository.getLocalVersion(logicalName)
+                    val forceRefresh = remoteVersion > localVersion
+                    Timber.d("VocabRepo: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
-            Timber.d("VocabRepo: Delegating fetch for '$logicalName' to ExamSheetRepository...")
-            val result = examSheetRepository.getVocabSheet(logicalName, forceRefresh = forceRefresh)
+                    // --- 2. In-Memory Cache Check ---
+                    if (!forceRefresh) {
+                        vocabCache[logicalName]?.let { cachedFile ->
+                            Timber.d("VocabRepo: Returning '$logicalName' from MEMORY CACHE.")
+                            return@async Result.success(cachedFile)
+                        }
+                    }
 
-            if (result.isSuccess) {
-                val vocabFile = result.getOrThrow()
-                vocabCache[logicalName] = vocabFile
-                Timber.d("VocabRepository.getVocabData():: Saved '$logicalName' to memory cache.")
+                    // --- 3. Delegate to ExamSheetRepository (Disk/Network) ---
+                    Timber.d("VocabRepository.getVocabData: Delegating to ExamSheetRepository for '$logicalName'...")
+                    val result = examSheetRepository.getVocabSheet(
+                        name = logicalName,
+                        forceRefresh = forceRefresh
+                    )
 
-                if (forceRefresh) {
-                    appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
+                    if (result.isSuccess) {
+                        val vocabFile = result.getOrThrow()
+                        // ✅ CENTRALIZED CACHING: Save the successful result to the memory cache.
+                        vocabCache[logicalName] = vocabFile
+                        Timber.d("VocabRepo: Warmed up memory cache for '$logicalName' from repository.")
+
+                        if (forceRefresh) {
+                            appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
+                        }
+                        return@async result
+                    }
+
+                    // --- 4. Bundle Fallback ---
+                    Timber.w(
+                        result.exceptionOrNull(),
+                        "VocabRepo: ExamSheetRepository failed. Falling back to bundle for '$logicalName'."
+                    )
+                    val resourceName = mapLogicalToResourceName(logicalName)
+                    val bundleResult = loadBundledVocabData(resourceName)
+
+                    // ✅ CENTRALIZED CACHING: Also cache the result from the bundle.
+                    bundleResult.getOrNull()?.let { vocabCache[logicalName] = it }
+
+                    return@async bundleResult
+
+                } catch (e: Exception) {
+                    Timber.e(
+                        e,
+                        "VocabRepo: CRITICAL error in orchestrator. Falling back to bundle for '$logicalName'."
+                    )
+                    val resourceName = mapLogicalToResourceName(logicalName)
+                    val bundleResult = loadBundledVocabData(resourceName)
+                    bundleResult.getOrNull()?.let { vocabCache[logicalName] = it }
+                    return@async bundleResult
+                } finally {
+                    // ✅ CRUCIAL: Remove the job from the map when it's done.
+                    // This allows for a fresh fetch the next time it's requested.
+                    ongoingFetches.remove(logicalName)
+                    Timber.d("VocabRepo: Fetch job for '$logicalName' has completed and been removed from ongoingFetches.")
                 }
-                return@withContext result
-            } else {
-                val error = result.exceptionOrNull()
-                Timber.w(error, "VocabRepository.getVocabData():: ExamSheetRepository failed for '$logicalName'. Falling back to bundle.")
-                val resourceName = mapLogicalToResourceName(logicalName)
-                return@withContext loadFromBundle(resourceName)
-            }
-        } catch (e: Exception) {
-            Timber.e(e, "VocabRepository.getVocabData():: CRITICAL error in getVocabData orchestrator for '$logicalName'. Falling back to bundle.")
-            val resourceName = mapLogicalToResourceName(logicalName)
-            return@withContext loadFromBundle(resourceName)
+            } //: End Try
+
+            ongoingFetches[logicalName] = newJob
+            // The result of the `coroutineScope` is the result of the last expression,
+            // which is the awaited result of our new job.
+            newJob.await()
+        }//: End Return
+
+    } //end getVocabData()
+
+
+
+    /**
+     * ✅ THE FIX: A public function specifically for STATIC, bundled data.
+     * It provides a simple API for fixed screens like Conjugations.
+     * It uses the centralized in-memory cache for session-level performance.
+     */
+    fun loadBundledVocabData(resourceName: String): Result<VocabFile> {
+        // 1. Check the in-memory cache first.
+        vocabCache[resourceName]?.let { cachedFile ->
+            Timber.d("VocabRepo: Returning '$resourceName' from MEMORY CACHE.")
+            return Result.success(cachedFile)
         }
 
+        // 2. If not in cache, call the private loader.
+        val result = _loadFromBundle(resourceName)
 
+        // 3. On success, save the result to the in-memory cache for next time.
+        result.getOrNull()?.let {
+            vocabCache[resourceName] = it
+            Timber.d("VocabRepo: Warmed up memory cache for bundled file '$resourceName'.")
+        }
+
+        return result
+    }
+
+    // --- PRIVATE IMPLEMENTATION & HELPERS ---
+    private fun getParentCaller(): StackTraceElement? {
+        // The call stack is an array of stack trace elements.
+        val stackTrace = Thread.currentThread().stackTrace
+
+        // Let's analyze the stack from the point of view of this helper function:
+        // stackTrace[0] == Thread.getStackTrace()
+        // stackTrace[1] == getParentCaller() (this function)
+        // stackTrace[2] == functionB() (the function that called this helper)
+        // stackTrace[3] == functionA() (THE PARENT we are looking for!)
+
+        // We need to make sure the stack is deep enough before accessing the index.
+        return if (stackTrace.size > 3) {
+            stackTrace[3]
+        } else {
+            null
+        }
+    }
+    /**
+     * ✅ RENAMED: This is now the private, "dumb" implementation.
+     * Its only job is to read and parse a file from res/raw. It does no caching.
+     */
+    private fun _loadFromBundle(resourceName: String): Result<VocabFile> {
+        return try {
+            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
+            if (resourceId == 0) {
+                return Result.failure(Exception("Resource file not found in bundle: $resourceName.json"))
+            }
+            Timber.v("VocabRepo: Loading '$resourceName' from res/raw.")
+            val inputStream = context.resources.openRawResource(resourceId)
+            val jsonString = inputStream.bufferedReader().use { it.readText() }
+            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
+            Result.success(vocabFile)
+        } catch (e: Exception) {
+            Timber.e(e, "VocabRepo: Failed to load from bundle: $resourceName")
+            Result.failure(e)
+        }
+    }
+    /**
+     * The original function, now renamed to be a private fallback for loading from res/raw.
+     */
+    fun loadFromBundleOriginal(resourceName: String): Result<VocabFile> {
+        vocabCache[resourceName]?.let { cachedVocabFile ->
+            Timber.d("Repo: Returning '$resourceName' from MEMORY CACHE. Yippee!")
+            return Result.success(cachedVocabFile)
+        }
+
+        try {
+            Timber.d("loadFromBundle: Sheet '$resourceName'")
+            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
+            if (resourceId == 0) {
+                return Result.failure(Exception("Resource file not found: $resourceName.json"))
+            }
+
+            Timber.v("Loading '$resourceName' from local bundle.")
+            val inputStream = context.resources.openRawResource(resourceId)
+            val jsonString = inputStream.bufferedReader().use { it.readText() }
+            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
+
+            // Cache the result from the bundle so we don't read the file again this session
+            vocabCache[resourceName] = vocabFile
+            return Result.success(vocabFile)
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to load from bundle: $resourceName")
+            return Result.failure(e)
+        }
     }
 
     suspend fun debugDecodeVocabData(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
@@ -486,33 +642,5 @@ class VocabRepository @Inject constructor(
             else -> logicalName // Fallback for other files
         }
     }
-    /**
-     * The original function, now renamed to be a private fallback for loading from res/raw.
-     */
-    fun loadFromBundle(resourceName: String): Result<VocabFile> {
-        vocabCache[resourceName]?.let { cachedVocabFile ->
-            Timber.d("Repo: Returning '$resourceName' from MEMORY CACHE. Yippee!")
-            return Result.success(cachedVocabFile)
-        }
 
-        try {
-            Timber.d("loadFromBundle: Sheet '$resourceName'")
-            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
-            if (resourceId == 0) {
-                return Result.failure(Exception("Resource file not found: $resourceName.json"))
-            }
-
-            Timber.v("Loading '$resourceName' from local bundle.")
-            val inputStream = context.resources.openRawResource(resourceId)
-            val jsonString = inputStream.bufferedReader().use { it.readText() }
-            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
-
-            // Cache the result from the bundle so we don't read the file again this session
-            vocabCache[resourceName] = vocabFile
-            return Result.success(vocabFile)
-        } catch (e: Exception) {
-            Timber.e(e, "Failed to load from bundle: $resourceName")
-            return Result.failure(e)
-        }
-    }
 }

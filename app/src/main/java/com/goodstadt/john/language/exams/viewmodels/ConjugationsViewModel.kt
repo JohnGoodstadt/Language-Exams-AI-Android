@@ -111,7 +111,7 @@ class ConjugationsViewModel @Inject constructor(
 
             _uiState.value = ConjugationsUiState.Loading
 //            val result = vocabRepository.getVocabData(fileName)
-            val result = vocabRepository.loadFromBundle(fileName) //direct from bundle
+            val result = vocabRepository.loadBundledVocabData(fileName) //direct from bundle
 
             result.onSuccess { vocabFile ->
 

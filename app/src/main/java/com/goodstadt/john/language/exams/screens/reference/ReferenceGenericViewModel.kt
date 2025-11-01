@@ -92,7 +92,7 @@ class ReferenceGenericViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
-    private val examSheetRepository: ExamSheetRepository,
+//    private val examSheetRepository: ExamSheetRepository,
     private val appConfigRepository: AppConfigRepository
 ) : ViewModel() {
 
@@ -139,24 +139,22 @@ class ReferenceGenericViewModel @Inject constructor(
             val logicalName: String = savedStateHandle.get<String?>("documentId").toString() ?: ""
 
 
-            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
-            val remoteVersion = remoteVersions[logicalName] ?: 1
-            val localVersion = appConfigRepository.getLocalVersion(logicalName.toString())
-            val forceRefresh = remoteVersion > localVersion
-            Timber.d("VocabRepo: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+//            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+//            val remoteVersion = remoteVersions[logicalName] ?: 1
+//            val localVersion = appConfigRepository.getLocalVersion(logicalName.toString())
+//            val forceRefresh = remoteVersion > localVersion
+//            Timber.d("VocabRepo: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
 
 
             // ✅ THE FIX: Call the specific, type-safe function.
             // The return type of this function is `Result<VocabFile>`, NOT `Result<Any>`.
-            val result = examSheetRepository.getVocabSheet(logicalName, forceRefresh     )
+            Timber.i("ReferenceGenericViewModel: Attempting to fetch generic vocab for '$logicalName'...")
+            val result = vocabRepository.getVocabData(logicalName)
 
             // ✅ NO CASTING NEEDED! The result is already the correct type.
             result.onSuccess { vocabFile ->
                 _uiState.value = GenericVocabUiState.Success(vocabFile.categories, /*...other params...*/)
-                if (forceRefresh) {
-                    appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
-                }
             }
             result.onFailure { error ->
                 _uiState.value = GenericVocabUiState.Error(error.localizedMessage ?: "Failed to load data")
@@ -166,7 +164,7 @@ class ReferenceGenericViewModel @Inject constructor(
     }
 
     // 4. MODIFIED: Replaced loadPrepositions() with a generic function
-    private fun loadVocabData(firestoreDocumentId: String) {
+/*    private fun loadVocabData(firestoreDocumentId: String) {
         viewModelScope.launch {
             _uiState.value = GenericVocabUiState.Loading
 
@@ -174,7 +172,7 @@ class ReferenceGenericViewModel @Inject constructor(
                 // Use the passed-in documentId to fetch data.
                 // The versioning and local bundle fallback logic has been removed
                 // as it was specific to the Prepositions screen.
-                Timber.i("ViewModel: Attempting to fetch generic vocab for '$firestoreDocumentId'...")
+                Timber.i("ReferenceGenericViewModel: Attempting to fetch generic vocab for '$firestoreDocumentId'...")
                 val result = examSheetRepository.getVocabSheet(firestoreDocumentId,false) // Generic screens typically don't need forced refreshes
 
 
@@ -195,7 +193,7 @@ class ReferenceGenericViewModel @Inject constructor(
                 _uiState.value = GenericVocabUiState.Error("A critical error occurred.")
             }
         }
-    }
+    }*/
 
     // --- ALL OTHER FUNCTIONS (playTrack, saveDataOnExit, hide...Sheet, etc.) ---
     // can be copied directly from PrepositionsViewModel as they are already generic enough.

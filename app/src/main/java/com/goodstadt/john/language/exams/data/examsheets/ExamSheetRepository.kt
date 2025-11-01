@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.data.examsheets
 
 import android.content.Context
+import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.toObject
 import com.goodstadt.john.language.exams.models.Category
@@ -21,6 +22,12 @@ import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
+
+/*
+Layer 3 (UI Logic)	ViewModels (GroupedVM, GenericVM, etc.)	To prepare UI state for a specific screen.	(No one below it)
+Layer 2 (Orchestration & Business Logic)	VocabRepository	To be the single entry point for all VocabFile data. It orchestrates caching, versioning, and data source selection.	Only ViewModels.
+Layer 1 (Data Source Implementation)	ExamSheetRepository	To be a low-level worker. Its only job is to manage the disk cache and network fetching for VocabFiles from Firestore.	Only VocabRepository.
+ */
 
 @Singleton
 class ExamSheetRepository @Inject constructor(
@@ -162,7 +169,8 @@ class ExamSheetRepository @Inject constructor(
     }
 
     private fun getCacheFile(examName: String): File {
-        Timber.i("getting getCacheFile")
+        Timber.i("ExamSheetRepository.getCacheFile()")
+        Log.i("MyTestTag", "Native Log: getCacheFile was executed.")
         val fileName = "${examName}_cache.json"
         return File(cacheDir, fileName)
     }

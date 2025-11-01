@@ -53,7 +53,7 @@ class PrepositionsViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
-    private val examSheetRepository: ExamSheetRepository,
+//    private val examSheetRepository: ExamSheetRepository,
     private val appConfigRepository: AppConfigRepository,
 ) : ViewModel() {
 
@@ -96,10 +96,10 @@ class PrepositionsViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = PrepositionsUiState.Loading
 
-            val remoteVersion = appConfigRepository.getPrepositionsDataVersion()
-            val localVersion = userPreferencesRepository.prepositionsLocalVersionFlow.first()
-            val forceRefresh = remoteVersion > localVersion
-            Timber.d("Prepositions load: Remote version=$remoteVersion, Local version=$localVersion, Force refresh=$forceRefresh")
+//            val remoteVersion = appConfigRepository.getPrepositionsDataVersion()
+//            val localVersion = userPreferencesRepository.prepositionsLocalVersionFlow.first()
+//            val forceRefresh = remoteVersion > localVersion
+//            Timber.d("Prepositions load: Remote version=$remoteVersion, Local version=$localVersion, Force refresh=$forceRefresh")
 
             val bundleFallbackFileName = LanguageConfig.prepositionsBundleFileName
             val firestoreName = LanguageConfig.prepositionsFirestoreName
@@ -107,15 +107,12 @@ class PrepositionsViewModel @Inject constructor(
             try {
                 // --- THIS IS THE CORE ORCHESTRATION LOGIC ---
                 // 1. First, try to get data from the repository (which handles cache/network).
-                Timber.i("ViewModel: Attempting to fetch prepositions from repository for '$firestoreName'...")
-                val result = examSheetRepository.getVocabSheet(firestoreName,forceRefresh)
-
+                Timber.i("PrepositionsViewModel: Attempting to fetch prepositions from repository for '$firestoreName'...")
+//                val result = examSheetRepository.getVocabSheet(firestoreName,forceRefresh)
+                val result = vocabRepository.getVocabData(firestoreName)
                 result.onSuccess { vocabFile ->
                     // 2. If it succeeds, update the UI with the fresh data.
                     Timber.i("ViewModel: Successfully loaded ${vocabFile.categories.size} categories from repository.")
-                    if (forceRefresh) {
-                        userPreferencesRepository.updatePrepositionsLocalVersion(remoteVersion)
-                    }
                     // We can also fetch the cached audio keys here to update the red dots
                     val voiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
                     val cachedAudioKeys = vocabRepository.getSentenceKeysWithCachedAudio(vocabFile.categories, voiceName)
