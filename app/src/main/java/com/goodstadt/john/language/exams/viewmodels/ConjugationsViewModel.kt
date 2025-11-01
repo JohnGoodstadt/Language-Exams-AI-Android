@@ -110,7 +110,8 @@ class ConjugationsViewModel @Inject constructor(
             }
 
             _uiState.value = ConjugationsUiState.Loading
-            val result = vocabRepository.getVocabData(fileName)
+//            val result = vocabRepository.getVocabData(fileName)
+            val result = vocabRepository.loadFromBundle(fileName) //direct from bundle
 
             result.onSuccess { vocabFile ->
 
@@ -120,10 +121,11 @@ class ConjugationsViewModel @Inject constructor(
                 _uiState.value = ConjugationsUiState.Success(vocabFile.categories,cachedKeys, selectedVoiceName = currentVoiceName)
             }.onFailure { error ->
                 _uiState.value =
-                    ConjugationsUiState.Error(error.localizedMessage ?: "Failed to load file")
+                    ConjugationsUiState.Error(error.localizedMessage ?: "Failed to load file $fileName")
             }
         }
     }
+
     fun onConjugationSelected(option: String) {
         if (_selectedConjugation.value != option) {
             _selectedConjugation.value = option

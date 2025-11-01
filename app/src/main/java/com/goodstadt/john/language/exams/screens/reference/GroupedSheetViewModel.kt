@@ -179,7 +179,7 @@ class GroupedSheetViewModel @Inject constructor(
             _uiState.update { it.copy(contentState = ContentState.Loading) }
 
             try {
-                val result = examSheetRepository.getExamSheetBy(subTab.firestoreDocumentId, forceRefresh = false)
+                val result = examSheetRepository.getVocabSheet(subTab.firestoreDocumentId, forceRefresh = false)
                 result.onSuccess { vocabFile ->
                     val categories = vocabFile.categories
                     // Add to cache for next time
@@ -324,7 +324,7 @@ class GroupedSheetViewModel @Inject constructor(
                 Timber.d("GroupedVM: Sheet '$sheetName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
                 // 5. Fetch from the repository with the forceRefresh flag.
-                val result = examSheetRepository.getExamSheetBy(sheetName, forceRefresh = forceRefresh)
+                val result = examSheetRepository.getVocabSheet(sheetName, forceRefresh = forceRefresh)
 
                 result.onSuccess { vocabFile ->
                     val categories = vocabFile.categories

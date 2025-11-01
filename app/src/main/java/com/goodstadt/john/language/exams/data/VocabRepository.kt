@@ -65,64 +65,40 @@ class VocabRepository @Inject constructor(
             val remoteVersion = remoteVersions[logicalName] ?: 1
             val localVersion = appConfigRepository.getLocalVersion(logicalName)
             val forceRefresh = remoteVersion > localVersion
-            Timber.d("VocabRepo: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+            Timber.d("VocabRepository.getVocabData():: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
-            val result = examSheetRepository.getExamSheetBy(logicalName, forceRefresh = forceRefresh)
+            vocabCache[logicalName]?.let { cachedVocabFile ->
+                Timber.d("VocabRepository.getVocabData(): Returning '$logicalName' from MEMORY CACHE. Yippee!")
+                return@withContext Result.success(cachedVocabFile)
+            }
+
+            Timber.d("VocabRepo: Delegating fetch for '$logicalName' to ExamSheetRepository...")
+            val result = examSheetRepository.getVocabSheet(logicalName, forceRefresh = forceRefresh)
 
             if (result.isSuccess) {
+                val vocabFile = result.getOrThrow()
+                vocabCache[logicalName] = vocabFile
+                Timber.d("VocabRepository.getVocabData():: Saved '$logicalName' to memory cache.")
+
                 if (forceRefresh) {
                     appConfigRepository.updateLocalVersion(logicalName, remoteVersion)
                 }
                 return@withContext result
             } else {
                 val error = result.exceptionOrNull()
-                Timber.w(error, "VocabRepo: ExamSheetRepository failed for '$logicalName'. Falling back to bundle.")
+                Timber.w(error, "VocabRepository.getVocabData():: ExamSheetRepository failed for '$logicalName'. Falling back to bundle.")
                 val resourceName = mapLogicalToResourceName(logicalName)
                 return@withContext loadFromBundle(resourceName)
             }
         } catch (e: Exception) {
-            Timber.e(e, "VocabRepo: CRITICAL error in getVocabData orchestrator for '$logicalName'. Falling back to bundle.")
+            Timber.e(e, "VocabRepository.getVocabData():: CRITICAL error in getVocabData orchestrator for '$logicalName'. Falling back to bundle.")
             val resourceName = mapLogicalToResourceName(logicalName)
             return@withContext loadFromBundle(resourceName)
         }
 
 
     }
-//    suspend fun getVocabDataReplaced(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
-//
-//        // Return from cache if available for this specific file
-//        vocabCache[fileName]?.let {
-//            Timber.v("Returning '$fileName' from cache.") // For debugging
-//            return@withContext Result.success(it)
-//        }
-//
-//        try {
-//            // Dynamically get the resource ID from the filename string
-//            val resourceId = context.resources.getIdentifier(
-//                fileName,
-//                "raw",
-//                context.packageName
-//            )
-//
-//            // Check if the resource was found
-//            if (resourceId == 0) {
-//                return@withContext Result.failure(Exception("Resource file not found: $fileName.json"))
-//            }
-//
-//            Timber.v("Loading '$fileName' from resources.") // For debugging
-//            val inputStream = context.resources.openRawResource(resourceId)
-//            val jsonString = inputStream.bufferedReader().use { it.readText() }
-//            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
-//
-//            // Cache the result using the filename as the key
-//            vocabCache[fileName] = vocabFile
-//            Result.success(vocabFile)
-//        } catch (e: Exception) {
-//            Timber.e(e.localizedMessage)
-//            e.printStackTrace()
-//            Result.failure(e)
-//        }
-//    }
+
     suspend fun debugDecodeVocabData(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
 
         try {
@@ -513,8 +489,14 @@ class VocabRepository @Inject constructor(
     /**
      * The original function, now renamed to be a private fallback for loading from res/raw.
      */
-    private fun loadFromBundle(resourceName: String): Result<VocabFile> {
+    fun loadFromBundle(resourceName: String): Result<VocabFile> {
+        vocabCache[resourceName]?.let { cachedVocabFile ->
+            Timber.d("Repo: Returning '$resourceName' from MEMORY CACHE. Yippee!")
+            return Result.success(cachedVocabFile)
+        }
+
         try {
+            Timber.d("loadFromBundle: Sheet '$resourceName'")
             val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
             if (resourceId == 0) {
                 return Result.failure(Exception("Resource file not found: $resourceName.json"))
@@ -533,6 +515,4 @@ class VocabRepository @Inject constructor(
             return Result.failure(e)
         }
     }
-
-
 }

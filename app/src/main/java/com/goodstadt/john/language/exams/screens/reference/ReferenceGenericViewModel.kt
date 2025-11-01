@@ -175,7 +175,7 @@ class ReferenceGenericViewModel @Inject constructor(
                 // The versioning and local bundle fallback logic has been removed
                 // as it was specific to the Prepositions screen.
                 Timber.i("ViewModel: Attempting to fetch generic vocab for '$firestoreDocumentId'...")
-                val result = examSheetRepository.getExamSheetBy(firestoreDocumentId,false) // Generic screens typically don't need forced refreshes
+                val result = examSheetRepository.getVocabSheet(firestoreDocumentId,false) // Generic screens typically don't need forced refreshes
 
 
                 result.onSuccess { vocabFile ->

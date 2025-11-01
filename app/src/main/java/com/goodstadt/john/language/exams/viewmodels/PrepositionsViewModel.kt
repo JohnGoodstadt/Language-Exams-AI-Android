@@ -108,7 +108,7 @@ class PrepositionsViewModel @Inject constructor(
                 // --- THIS IS THE CORE ORCHESTRATION LOGIC ---
                 // 1. First, try to get data from the repository (which handles cache/network).
                 Timber.i("ViewModel: Attempting to fetch prepositions from repository for '$firestoreName'...")
-                val result = examSheetRepository.getExamSheetBy(firestoreName,forceRefresh)
+                val result = examSheetRepository.getVocabSheet(firestoreName,forceRefresh)
 
                 result.onSuccess { vocabFile ->
                     // 2. If it succeeds, update the UI with the fresh data.
