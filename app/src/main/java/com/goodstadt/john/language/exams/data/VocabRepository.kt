@@ -5,6 +5,7 @@ import android.util.Log
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 import com.goodstadt.john.language.exams.models.Category
+import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.VocabFile
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -56,6 +57,8 @@ class VocabRepository @Inject constructor(
     // ✅ ADDED: A map to store ongoing fetch operations.
     // The key is the logicalName, the value is the Deferred result.
     private val ongoingFetches = mutableMapOf<String, Deferred<Result<VocabFile>>>()
+    private val format1Cache = mutableMapOf<String, HeaderWordsSentencesListRoot>()
+
     // A lazy json parser instance with lenient configuration
     private val jsonParser = Json {
         ignoreUnknownKeys = true    // Be robust against future changes in the JSON
@@ -161,7 +164,44 @@ class VocabRepository @Inject constructor(
 
     } //end getVocabData()
 
+    suspend fun getFormat1Data(name: String): Result<HeaderWordsSentencesListRoot> = withContext(Dispatchers.IO) {
+        val logicalName = normalizeToLogicalName(name)
+        try {
+            // --- 1. VERSION CHECK ---
+            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+            val remoteVersion = remoteVersions[logicalName] ?: 1
+            val localVersion = appConfigRepository.getLocalVersion(logicalName)
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("Format 1: Sheet '$logicalName' (Format1) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
+            // --- 2. IN-MEMORY CACHE CHECK ---
+            if (!forceRefresh) {
+                format1Cache[logicalName]?.let { cachedFile ->
+                    Timber.d("Format 1: Returning '$logicalName' (Format1) from MEMORY CACHE.")
+                    return@withContext Result.success(cachedFile)
+                }
+            }
+
+            // --- 3. DELEGATE TO ExamSheetRepository ---
+            Timber.d("VocabRepo: Delegating fetch for '$logicalName' (Format1) to ExamSheetRepository...")
+            val result = examSheetRepository.getFormat1Sheet(name = logicalName, forceRefresh = forceRefresh)
+
+            // --- 4. WARM UP MEMORY CACHE & UPDATE VERSION ---
+            if (result.isSuccess) {
+                val format1File = result.getOrThrow()
+                format1Cache[logicalName] = format1File
+                Timber.d("VocabRepo: Warmed up memory cache for '$logicalName' (Format1).")
+
+                if (forceRefresh) {
+                    appConfigRepository.updateLocalVersion(logicalName,remoteVersion)
+                }
+            }
+            return@withContext result
+        } catch (e: Exception) {
+            Timber.e(e, "VocabRepo: CRITICAL error in getFormat1Data for '$logicalName'.")
+            return@withContext Result.failure(e) // We don't have a bundle fallback for this type
+        }
+    }
 
     /**
      * ✅ THE FIX: A public function specifically for STATIC, bundled data.
@@ -225,35 +265,7 @@ class VocabRepository @Inject constructor(
             Result.failure(e)
         }
     }
-    /**
-     * The original function, now renamed to be a private fallback for loading from res/raw.
-     */
-    fun loadFromBundleOriginal(resourceName: String): Result<VocabFile> {
-        vocabCache[resourceName]?.let { cachedVocabFile ->
-            Timber.d("Repo: Returning '$resourceName' from MEMORY CACHE. Yippee!")
-            return Result.success(cachedVocabFile)
-        }
 
-        try {
-            Timber.d("loadFromBundle: Sheet '$resourceName'")
-            val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
-            if (resourceId == 0) {
-                return Result.failure(Exception("Resource file not found: $resourceName.json"))
-            }
-
-            Timber.v("Loading '$resourceName' from local bundle.")
-            val inputStream = context.resources.openRawResource(resourceId)
-            val jsonString = inputStream.bufferedReader().use { it.readText() }
-            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
-
-            // Cache the result from the bundle so we don't read the file again this session
-            vocabCache[resourceName] = vocabFile
-            return Result.success(vocabFile)
-        } catch (e: Exception) {
-            Timber.e(e, "Failed to load from bundle: $resourceName")
-            return Result.failure(e)
-        }
-    }
 
     suspend fun debugDecodeVocabData(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
 
@@ -436,32 +448,7 @@ class VocabRepository @Inject constructor(
         // 3. Map the filtered list of VocabWord objects to just their keys and return as a Set.
         return wordsWithCache.map { it.word }.toSet()
     }
-    fun getSentenceKeysWithCachedAudioWorse(categories: List<Category>, voiceName: String): Set<String> {
-        val cacheDir = context.filesDir
 
-        // 1. Flatten all words from all categories into a single list.
-        val allWords = categories.flatMap { it.words }
-
-        var allSentencesWithCache = emptyList<String>()
-
-        allWords.forEach() { word ->
-            val allSentences = allWords.flatMap { it.sentences.map { it.sentence } }
-
-           allSentences.filter { sentence ->
-                val uniqueSentenceId = generateUniqueSentenceId(word.word, sentence, voiceName)
-                //Timber.e("Looking for $uniqueSentenceId")
-                val audioCacheFile = File(cacheDir, "$uniqueSentenceId.mp3")
-                audioCacheFile.exists()
-            }
-
-            allSentencesWithCache = allSentencesWithCache
-        }
-
-
-
-        // 3. Map the filtered list of VocabWord objects to just their keys and return as a Set.
-        return allSentencesWithCache.toSet()
-    }
     /**
      * Checks a list of categories and returns a Set of sentence strings that have
      * a corresponding audio file cached on disk for the given voice.

@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.RefreshTrigger
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 import com.goodstadt.john.language.exams.models.DataType
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
@@ -46,7 +47,8 @@ class ReferenceViewModel @Inject constructor(
     // Inject your existing repository
     private val appConfigRepository: AppConfigRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val examSheetRepository: ExamSheetRepository,
+    private val vocabRepository: VocabRepository,
+//    private val examSheetRepository: ExamSheetRepository,
     private val refreshTrigger: RefreshTrigger
 ) : ViewModel() {
 
@@ -117,14 +119,16 @@ class ReferenceViewModel @Inject constructor(
                 // Use a 'when' block on the safe enum to call the correct repository function
                 when (definition.dataType) {
                     DataType.VOCAB_FILE -> {
-                        val result = examSheetRepository.getVocabSheet(name = docId, forceRefresh = false) // Assuming versioning happens inside
+                        //val result = examSheetRepository.getVocabSheet(name = docId, forceRefresh = false) // Assuming versioning happens inside
+                        val result = vocabRepository.getVocabData(docId)
                         result.onSuccess { file ->
                             _uiState.update { it.copy(vocabFileCache = it.vocabFileCache + (docId to file)) }
                         }
                         result.onFailure { throw it }
                     }
                     DataType.FORMAT_1 -> {
-                        val result = examSheetRepository.getFormat1Sheet(name = docId, forceRefresh = false) // You will need to create this
+//                        val result = examSheetRepository.getFormat1Sheet(name = docId, forceRefresh = false) // You will need to create this
+                        val result = vocabRepository.getFormat1Data(docId)
                         result.onSuccess { file ->
                             _uiState.update { it.copy(format1Cache = it.format1Cache + (docId to file)) }
                         }
