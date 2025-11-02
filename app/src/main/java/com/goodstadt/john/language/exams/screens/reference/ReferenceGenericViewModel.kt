@@ -138,17 +138,6 @@ class ReferenceGenericViewModel @Inject constructor(
 
             val logicalName: String = savedStateHandle.get<String?>("documentId").toString() ?: ""
 
-
-//            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
-//            val remoteVersion = remoteVersions[logicalName] ?: 1
-//            val localVersion = appConfigRepository.getLocalVersion(logicalName.toString())
-//            val forceRefresh = remoteVersion > localVersion
-//            Timber.d("VocabRepo: Sheet '$logicalName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
-
-
-
-            // ✅ THE FIX: Call the specific, type-safe function.
-            // The return type of this function is `Result<VocabFile>`, NOT `Result<Any>`.
             Timber.i("ReferenceGenericViewModel: Attempting to fetch generic vocab for '$logicalName'...")
             val result = vocabRepository.getVocabData(logicalName)
 

@@ -15,8 +15,8 @@ data class AppUIManifest(
 @Serializable
 data class SheetDefinition(
     val title: String,
-    val screenType: String, // We'll use strings for now, can be an enum later
-    val dataType: String,   // We'll use strings for now, can be an enum later
+    val screenType: ScreenType, // We'll use strings for now, can be an enum later
+    val dataType: DataType,   // We'll use strings for now, can be an enum later
     val firestoreDocumentId: String? = null,
     val subTabs: List<SubTabDefinition>? = null
 )
@@ -26,7 +26,7 @@ data class SheetDefinition(
 data class SubTabDefinition(
     val title: String,
     val firestoreDocumentId: String,
-    val dataType: String
+    val dataType: DataType
 )
 
 // 4. A container for all the different UI layouts

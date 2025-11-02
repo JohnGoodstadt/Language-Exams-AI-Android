@@ -27,6 +27,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.navigation.getRefScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
@@ -42,10 +43,10 @@ import timber.log.Timber
  * This is the main container for the entire "Me" tab. It sets up the persistent
  * horizontal menu and a NavHost below it to display the content for the selected item.
  */
+
 @OptIn(ExperimentalMaterialNavigationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
-{
+fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel()) {
 
     val refTabNavController = rememberNavController()
     // MODIFIED: We only have ONE uiState to collect now
@@ -62,40 +63,62 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
             scope.launch { sheetState.hide() }.join()
         }
     }
-        // Perform the navigation
+    // Perform the navigation
 
     // --- Navigation Logic ---
     // This LaunchedEffect now uses the merged uiState
     // ✅ MODIFIED: The LaunchedEffect now performs the routing based on screenType
     LaunchedEffect(uiState.selectedTabId) {
-        val selectedTab = uiState.tabs.firstOrNull { it.id == uiState.selectedTabId }
-            ?: return@LaunchedEffect
 
+        // Find the full DisplayTab object for the currently selected ID.
+        val selectedTab = uiState.tabs.firstOrNull { it.id == uiState.selectedTabId }
+            ?: return@LaunchedEffect // If no tab is selected, do nothing.
+
+        // Get the detailed definition for the selected tab.
         val definition = selectedTab.definition
 
-        // This is the new routing logic
-        val route = when (definition.screenType) {
-            "FixedScreen" -> {
-                // For fixed screens, we can use the tab's ID as the route
+        // This `when` statement is the router. It builds the correct navigation route
+        // based on the `screenType` provided by your Remote Config.
+        val route: String? = when (definition.screenType) {
+
+            ScreenType.FIXED_SCREEN -> {
+                // For fixed screens (Quiz, Conjugations), the route is simply the tab's ID.
                 selectedTab.id
             }
-            "VocabScreen" -> definition.firestoreDocumentId?.let { docId ->
-                RefScreen.DynamicSheet.createRoute(docId)
+
+            ScreenType.VOCAB_SCREEN -> {
+                // For a generic vocab screen, create the route with its documentId.
+                definition.firestoreDocumentId?.let { docId ->
+                    RefScreen.DynamicSheet.createRoute(docId)
+                }
             }
-            "GroupedVocabScreen" -> {
-                // For grouped screens, we pass the parent tab's ID
+
+            ScreenType.GROUPED_VOCAB_SCREEN -> {
+                // For a grouped screen, create the route with its parent tabId.
                 RefScreen.GroupedSheet.createRoute(selectedTab.id)
             }
-            else -> {
-                Timber.w("Unknown screenType '${definition.screenType}' for tab '${selectedTab.id}'. Cannot navigate.")
-                null // For any unknown screen types, do nothing
+
+            ScreenType.FORMAT_1_SCREEN -> definition.firestoreDocumentId?.let { docId ->
+                RefScreen.Format1.createRoute(docId)
             }
+
+            ScreenType.GRAMMAR_SCREEN -> {
+                Timber.w("Dummy Data Type")
+                null
+            }
+
+            // The 'else' is not needed because 'when' on an enum is exhaustive.
+            // If you add a new ScreenType to the enum, the compiler will force you to handle it here.
         }
 
-        // The navigation call remains the same
+        // If a valid route was determined, perform the navigation.
         route?.let {
             refTabNavController.navigate(it) {
-                popUpTo(refTabNavController.graph.startDestinationId) { saveState = true }
+                // This standard navigation option block prevents a growing back stack
+                // when the user is tapping between the main tabs.
+                popUpTo(refTabNavController.graph.startDestinationId) {
+                    saveState = true
+                }
                 launchSingleTop = true
                 restoreState = true
             }
@@ -131,36 +154,81 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 
                 composable(RefScreen.Quiz.route) { QuizScreen() }
                 composable(RefScreen.Conjugations.route) { ConjugationsScreen() }
-                composable(RefScreen.Prepositions.route) { PrepositionsScreen() }
+//                composable(RefScreen.Prepositions.route) { PrepositionsScreen() }
 
-                // 2. Dynamic VocabScreen
+                // 2. Destination for `ScreenType.VOCAB_SCREEN`
                 composable(
                     route = RefScreen.DynamicSheet.route,
                     arguments = listOf(navArgument("documentId") { type = NavType.StringType })
-                ) {
-                    // This is correct: Hilt's SavedStateHandle will pass the documentId
+                ) { backStackEntry ->
+
                     ReferenceGenericScreen()
+
+//                    val documentId = backStackEntry.arguments?.getString("documentId")!!
+//
+//                    // The content now comes from the ViewModel's cache.
+//                    val vocabFile = uiState.vocabFileCache[documentId]
+//
+//                    when {
+//                        // If we have the data, show the screen.
+//                        vocabFile != null -> ReferenceGenericScreen()
+//                        // If data is loading, show a spinner.
+//                        uiState.isLoadingSheet -> Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+//                        // If there was an error, show it.
+//                        uiState.sheetError != null -> Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { Text(text = uiState.sheetError, color = MaterialTheme.colorScheme.error) }
+                    //}
                 }
 
-                // 3. Dynamic GroupedScreen
+                // 3. Destination for `ScreenType.GROUPED_VOCAB_SCREEN`
                 composable(
                     route = RefScreen.GroupedSheet.route,
                     arguments = listOf(navArgument("tabId") { type = NavType.StringType })
                 ) {
-                    // This is also correct: Hilt will pass the tabId
+                    // Hilt automatically passes the 'tabId' to the GroupedSheetViewModel.
                     GroupedSheetScreen()
                 }
 
-            }
+                composable(
+                    route = RefScreen.Format1.route,
+                    arguments = listOf(navArgument("documentId") { type = NavType.StringType })
+                ) {
+                    // 1. Create an instance of the specific ViewModel for this screen using Hilt.
+                    //    Hilt will automatically provide it with the `documentId` via SavedStateHandle.
+                    val viewModel: Format1ViewModel = hiltViewModel()
+
+                    // 2. Collect the UI state FROM THAT SPECIFIC VIEWMODEL.
+                    val uiState by viewModel.uiState.collectAsState()
+
+                    // 3. Use a 'when' block to display the correct UI based on the ViewModel's state.
+                    when (val state = uiState) {
+                        is Format1UiState.Loading -> {
+                            // Show a loading indicator while the Format1ViewModel is fetching data.
+                            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                                CircularProgressIndicator()
+                            }
+                        }
+                        is Format1UiState.Success -> {
+                            // When the data is successfully loaded, display your Format1Screen
+                            // and pass it the data from the Success state object.
+                            Format1Screen(data = state.data)
+                        }
+                        is Format1UiState.Error -> {
+                            // If there was an error, display the error message.
+                            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                                Text(text = state.message, color = MaterialTheme.colorScheme.error)
+                            }
+                        }
+                    }
+                }
+            } //: NavHost
         }//: is Not Empty
-        else{
+        else {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator()
             }
         }
 
     } //:Column
-
 
 
     if (isSheetVisible) {
@@ -177,6 +245,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
         }
     }
 }
+
 @Composable
 fun RefProgressDetailView(title: String, selectedVoiceName: String) {
     // It's just a wrapper around your super-flexible CategoryTabScreen!
@@ -188,11 +257,14 @@ fun RefProgressDetailView(title: String, selectedVoiceName: String) {
         viewModel = viewModel
     )
 }
+
 @Composable
 fun GenericVocabScreen(firestoreDocumentId: String) {
     // TODO: Create a ViewModel for this screen that takes the documentId,
     // fetches the data from Firestore, and displays it.
-    Box(modifier = Modifier.fillMaxSize().padding(16.dp)) {
+    Box(modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp)) {
         Text(
             text = "This is the generic screen.\nIt should now load data from Firestore for document:\n\n'$firestoreDocumentId'",
             style = MaterialTheme.typography.bodyLarge

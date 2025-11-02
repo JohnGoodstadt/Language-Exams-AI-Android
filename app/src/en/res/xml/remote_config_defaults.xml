@@ -62,15 +62,17 @@
             "screenType": "GroupedVocabScreen",
             "dataType": "VocabFile",
             "subTabs": [
-            { "title": "Basic", "firestoreDocumentId": "EnglishA1Adjectives", "dataType":
-            "VocabFile" },
-            { "title": "Intermediate", "firestoreDocumentId": "EnglishA2Adjectives", "dataType":
-            "VocabFile" },
-            { "title": "Upper", "firestoreDocumentId": "EnglishB1Adjectives", "dataType":
-            "VocabFile" },
-            { "title": "Advanced", "firestoreDocumentId": "EnglishB2Adjectives", "dataType":
-            "VocabFile" }
+            { "title": "Basic", "firestoreDocumentId": "EnglishA1Adjectives", "dataType": "VocabFile" },
+            { "title": "Intermediate", "firestoreDocumentId": "EnglishA2Adjectives", "dataType": "VocabFile" },
+            { "title": "Upper", "firestoreDocumentId": "EnglishB1Adjectives", "dataType": "VocabFile" },
+            { "title": "Advanced", "firestoreDocumentId": "EnglishB2Adjectives", "dataType": "VocabFile" }
             ]
+            },
+            "EnglishDefinitionsFormat1": {
+            "title": "Definitions",
+            "dataType": "Format1",
+            "screenType": "Format1Screen",
+            "firestoreDocumentId": "EnglishDefinitionsFormat1"
             }
             },
             "layouts": {
@@ -79,7 +81,8 @@
             "quiz",
             "conjugations",
             "EnglishPrepositions",
-            "AdjectivesGroup"
+            "AdjectivesGroup",
+            "EnglishDefinitionsFormat1"
             ]
             },
             "meTab": {
@@ -93,6 +96,8 @@
             }
             }
             }
+
+
         </value>
     </entry>
     <entry>
@@ -107,7 +112,8 @@
             "EnglishA1Vocab": 1,
             "EnglishA2Vocab": 1,
             "EnglishB1Vocab": 1,
-            "EnglishB2Vocab": 1
+            "EnglishB2Vocab": 1,
+            "EnglishDefinitionsFormat1": 1
             }
         </value>
     </entry>

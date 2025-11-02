@@ -71,7 +71,6 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
         RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
     }
     if (isDailyRateLimitingSheetVisible){
-//        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
         if (context is androidx.activity.ComponentActivity) {
             RateLimitDailyReasonsBottomSheet(
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
@@ -80,7 +79,6 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
         }
     }
     if (isHourlyRateLimitingSheetVisible){
-//        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
         if (context is androidx.activity.ComponentActivity) {
             RateLimitHourlyReasonsBottomSheet(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
