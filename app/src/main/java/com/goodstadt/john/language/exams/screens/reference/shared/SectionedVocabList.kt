@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
@@ -47,7 +47,7 @@ fun SectionedVocabList(
     playbackState: PlaybackState,
     googleVoice:String,
     cachedAudioWordKeys:Set<String>,
-    onRowTapped: (VocabWord, Sentence) -> Unit
+    onRowTapped: (Format0Word, Sentence) -> Unit
 ) {
 
     val expandedCategories = remember {

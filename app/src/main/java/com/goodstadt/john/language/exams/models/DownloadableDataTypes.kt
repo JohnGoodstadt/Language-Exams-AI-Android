@@ -8,7 +8,7 @@ import kotlinx.serialization.Serializable
  * The @SerialName annotation maps the JSON string to the enum case.
  */
 @Serializable
-enum class DataType {
+enum class SheetDataType {
     @SerialName("VocabFile")
     VOCAB_FILE,
 

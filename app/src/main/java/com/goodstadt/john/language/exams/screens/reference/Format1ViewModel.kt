@@ -4,9 +4,7 @@ package com.goodstadt.john.language.exams.screens.reference
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.data.AppConfigRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -26,7 +24,7 @@ sealed interface Format1UiState {
 class Format1ViewModel @Inject constructor(
 //    private val appConfigRepository: AppConfigRep ository,
 //    private val examSheetRepository: ExamSheetRepository,
-    private val vocabRepository: VocabRepository,
+    private val vocabRepository: ContentRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 

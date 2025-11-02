@@ -1,41 +1,36 @@
 package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Activity
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
-import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
-import com.goodstadt.john.language.exams.models.VocabWord
-import com.goodstadt.john.language.exams.models.WordAndSentence
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 
 // A simple data class to hold a word and its first sentence for the flat list
 data class SearchResult(
-    val word: VocabWord,
+    val word: Format0Word,
     val firstSentence: String
 )
 
@@ -46,7 +41,7 @@ sealed interface SearchUiEvent {
 @OptIn(FlowPreview::class) // Needed for the debounce operator
 @HiltViewModel
 class SearchViewModel @Inject constructor(
-    private val vocabRepository: VocabRepository,
+    private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository : TTSStatsRepository,
@@ -57,7 +52,7 @@ class SearchViewModel @Inject constructor(
     ) : ViewModel() {
 
     // Holds the complete list of all words from the current file
-    private var allWords: List<VocabWord> = emptyList()
+    private var allWords: List<Format0Word> = emptyList()
 
     private val _isPremiumUser = MutableStateFlow(false)
     val isPremiumUser = _isPremiumUser.asStateFlow()
@@ -104,7 +99,7 @@ class SearchViewModel @Inject constructor(
     private fun loadFullWordList() {
         viewModelScope.launch {
             val fileName = userPreferencesRepository.selectedFileNameFlow.first()
-            vocabRepository.getVocabData(fileName).onSuccess { vocabFile ->
+            vocabRepository.getFormat0Data(fileName).onSuccess { vocabFile ->
                 // Flatten the entire structure into a single list of words
                 allWords = vocabFile.categories.flatMap { it.words } .sortedBy { it.word.lowercase() }
 

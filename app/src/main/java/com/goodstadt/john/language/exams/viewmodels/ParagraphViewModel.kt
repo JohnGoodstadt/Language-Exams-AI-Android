@@ -3,7 +3,6 @@ package com.goodstadt.john.language.exams.viewmodels
 import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
@@ -22,17 +21,16 @@ import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.Gemin
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.GeminiPremiumCallCount
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.OpenAIEstCostUSD
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.OpenAIPremiumCallCount
-import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.currentGoogleVoiceName
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.llmModel_
 import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabFile
+import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.google.ai.client.generativeai.type.GenerateContentResponse
@@ -95,7 +93,7 @@ private const val TOKEN_LIMIT = 2000
 //}
 @HiltViewModel
 class ParagraphViewModel @Inject constructor(
-    private val vocabRepository: VocabRepository,
+    private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val openAIRepository: OpenAIRepository, // <-- INJECT THE REPOSITORY,
     private val userStatsRepository: UserStatsRepository,
@@ -268,7 +266,7 @@ class ParagraphViewModel @Inject constructor(
             try {
                 // Phase 1: Get words from local data
                 val fileName = userPreferencesRepository.selectedFileNameFlow.first()
-                val vocabFile = vocabRepository.getVocabData(fileName).getOrNull()
+                val vocabFile = vocabRepository.getFormat0Data(fileName).getOrNull()
                     ?: throw Exception("Could not load vocabulary file.")
 
 
@@ -518,7 +516,7 @@ class ParagraphViewModel @Inject constructor(
     }
     // --- Functions to be called from the Bottom Sheet ---
 
-    private fun promptForLLM(vocabFile:VocabFile, skillLevel:String) : String {
+    private fun promptForLLM(vocabFile:Format0File, skillLevel:String) : String {
 
 //        try {
         val wordsToHighlight = getLanguageSpecificWords(vocabFile,skillLevel)
@@ -553,7 +551,7 @@ class ParagraphViewModel @Inject constructor(
      * @param vocabFile The fully parsed vocabulary data.
      * @return A list of word strings.
      */
-    private fun getLanguageSpecificWords(vocabFile: VocabFile, skillLevel:String): List<String> {
+    private fun getLanguageSpecificWords(vocabFile: Format0File, skillLevel:String): List<String> {
         // If there are no categories, return the default list immediately.
         if (vocabFile.categories.isEmpty()) {
             return listOf("hello", "I", "Father", "red", "breakfast", "how")

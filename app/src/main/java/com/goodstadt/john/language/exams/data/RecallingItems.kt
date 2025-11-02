@@ -4,14 +4,12 @@ package com.goodstadt.john.language.exams.data
 
 import android.app.Application
 import android.content.Context
-import android.util.Log
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.timingToDurationMillis
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.util.UUID
-import java.util.concurrent.TimeUnit
 import com.goodstadt.john.language.exams.utils.STOPS
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -262,7 +260,7 @@ class RecallingItems @Inject constructor (
         }
     }
 
-    suspend fun focusOnWord(word: VocabWord) {
+    suspend fun focusOnWord(word: Format0Word) {
         val key = word.word
         if (amIRecalling(key)) return
 

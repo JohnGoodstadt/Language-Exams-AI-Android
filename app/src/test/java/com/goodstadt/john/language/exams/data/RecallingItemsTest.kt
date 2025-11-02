@@ -4,7 +4,7 @@ import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 //import junit.framework.TestCase.assertEquals
 //import junit.framework.TestCase.assertFalse
 //import junit.framework.TestCase.assertNotNull
@@ -58,8 +58,8 @@ class RecallingItemsTest {
     private val testDispatcher = StandardTestDispatcher()
     private val testScope = CoroutineScope(testDispatcher)
 
-    private val testVocabWord = VocabWord(id = 1, 1, translation = "hola", romanisation = "h-e-l-l-o",partOfSpeech= "",word = "hello", group = "", sentences = emptyList())
-    private val testVocabWord2 = VocabWord(id = 2, 1, translation = "hola 2", romanisation = "h-e-l-l-o 2",partOfSpeech= "",word = "hello 2", group = "", sentences = emptyList())
+    private val testFormat0Word = Format0Word(id = 1, 1, translation = "hola", romanisation = "h-e-l-l-o",partOfSpeech= "",word = "hello", group = "", sentences = emptyList())
+    private val testFormat0Word2 = Format0Word(id = 2, 1, translation = "hola 2", romanisation = "h-e-l-l-o 2",partOfSpeech= "",word = "hello 2", group = "", sentences = emptyList())
     private val testKey = "hello"
     private val testExamKey = "test_exam.json"
 
@@ -102,7 +102,7 @@ class RecallingItemsTest {
         assertTrue(recallingItemsManager.items.value.isEmpty())
 
         // ACT: Call the function to add and focus on a new word
-        recallingItemsManager.focusOnWord(testVocabWord)
+        recallingItemsManager.focusOnWord(testFormat0Word)
 
         // ASSERT: Check the results
         val items = recallingItemsManager.items.value
@@ -119,7 +119,7 @@ class RecallingItemsTest {
     @Test
     fun `remove - when removing an existing item - list becomes empty and save is called`() = runTest(testDispatcher) {
         // ARRANGE: Add an item first
-        recallingItemsManager.focusOnWord(testVocabWord)
+        recallingItemsManager.focusOnWord(testFormat0Word)
         assertEquals(1, recallingItemsManager.items.value.size)
 
         // ACT: Remove the item
@@ -135,7 +135,7 @@ class RecallingItemsTest {
     @Test
     fun `recalledOK - advances the stop number correctly`() = runTest(testDispatcher) {
         // ARRANGE: Add an item. It starts at stop number 1.
-        recallingItemsManager.focusOnWord(testVocabWord)
+        recallingItemsManager.focusOnWord(testFormat0Word)
         assertEquals(1, recallingItemsManager.items.value.first().currentStopNumber)
 
         // ACT: Mark the recall as OK
@@ -154,7 +154,7 @@ class RecallingItemsTest {
     @Test
     fun `recalledOK - called multiple times - continues to advance stops`() = runTest(testDispatcher) {
         // ARRANGE: Add an item
-        recallingItemsManager.focusOnWord(testVocabWord)
+        recallingItemsManager.focusOnWord(testFormat0Word)
         assertEquals(1, recallingItemsManager.items.value.first().currentStopNumber)
 
         // ACT 1: First recall
@@ -174,7 +174,7 @@ class RecallingItemsTest {
     @Test
     fun `amIRecalling - returns true for existing item and false for non-existing`() = runTest(testDispatcher) {
         // ARRANGE: Add an item
-        recallingItemsManager.focusOnWord(testVocabWord)
+        recallingItemsManager.focusOnWord(testFormat0Word)
 
         // ASSERT
         assertTrue(recallingItemsManager.amIRecalling(testKey))
@@ -184,8 +184,8 @@ class RecallingItemsTest {
     @Test
     fun `removeAll - clears all items from the list and saves`() = runTest(testDispatcher) {
         // ARRANGE: Add multiple items
-        recallingItemsManager.focusOnWord(testVocabWord)
-        recallingItemsManager.focusOnWord(testVocabWord2)
+        recallingItemsManager.focusOnWord(testFormat0Word)
+        recallingItemsManager.focusOnWord(testFormat0Word2)
         assertEquals(2, recallingItemsManager.items.value.size)
 
         // ACT: Call removeAll

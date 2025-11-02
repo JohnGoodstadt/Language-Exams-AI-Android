@@ -1,7 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Activity
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
@@ -11,12 +10,12 @@ import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -47,7 +46,7 @@ sealed interface ConjugationsUiState {
 
 @HiltViewModel
 class ConjugationsViewModel @Inject constructor(
-    private val vocabRepository: VocabRepository,
+    private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val ttsStatsRepository: TTSStatsRepository,
     private val appScope: CoroutineScope,
@@ -111,7 +110,7 @@ class ConjugationsViewModel @Inject constructor(
 
             _uiState.value = ConjugationsUiState.Loading
 //            val result = vocabRepository.getVocabData(fileName)
-            val result = vocabRepository.loadBundledVocabData(fileName) //direct from bundle
+            val result = vocabRepository.loadBundledFormat0Data(fileName) //direct from bundle
 
             result.onSuccess { vocabFile ->
 
@@ -134,7 +133,7 @@ class ConjugationsViewModel @Inject constructor(
         }
     }
     // This function is almost identical to the ones in our other ViewModels
-    fun playTrack(word: VocabWord, sentence: Sentence) {
+    fun playTrack(word: Format0Word, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing) {
             return
         }

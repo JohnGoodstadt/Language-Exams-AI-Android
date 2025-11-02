@@ -10,9 +10,9 @@ import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
-import com.goodstadt.john.language.exams.models.VocabFile
+import com.goodstadt.john.language.exams.models.Format0File
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
@@ -35,7 +35,7 @@ class MainViewModelTest {
     private lateinit var mockControlRepository: ControlRepository
     private lateinit var mockUserPreferencesRepository: UserPreferencesRepository
     private lateinit var mockRecallingItemsManager: RecallingItems
-    private lateinit var mockVocabRepository: VocabRepository
+    private lateinit var mockVocabRepository: ContentRepository
     private lateinit var mockAuthRepository: AuthRepository
     private lateinit var mockUserStatsRepository: UserStatsRepository
     private lateinit var mockTTSStatsRepository: TTSStatsRepository
@@ -66,9 +66,9 @@ class MainViewModelTest {
     @Test
     fun `when viewmodel initializes, it loads data for the file from preferences`() = runTest {
         // 1. Arrange
-        val fakeVocabData: VocabFile = mockk(relaxed = true)
+        val fakeVocabData: Format0File = mockk(relaxed = true)
         // Set up the vocab repository to return success when called with our test file name
-        coEvery { mockVocabRepository.getVocabData("test_file_name") } returns Result.success(fakeVocabData)
+        coEvery { mockVocabRepository.getFormat0Data("test_file_name") } returns Result.success(fakeVocabData)
 
         // 2. Act
         // Initialize the ViewModel with ALL THREE mocks. This solves the "too many arguments" error.
@@ -90,7 +90,7 @@ class MainViewModelTest {
         // 1. Arrange
         val fakeException = Exception("File not found")
         // Set up the vocab repository to return failure
-        coEvery { mockVocabRepository.getVocabData(any()) } returns Result.failure(fakeException)
+        coEvery { mockVocabRepository.getFormat0Data(any()) } returns Result.failure(fakeException)
 
         // 2. Act
 //        viewModel = TabsViewModel(mockVocabRepository, mockUserPreferencesRepository, mockControlRepository)

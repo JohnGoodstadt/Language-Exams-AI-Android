@@ -1,7 +1,7 @@
 package com.goodstadt.john.language.exams.utils
 
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 
 // A data class to hold the result, similar to the Swift tuple `(sentence, parts)`
 data class SentenceDisplayParts(val sentence: String, val parts: List<String>)
@@ -11,7 +11,7 @@ data class SentenceDisplayParts(val sentence: String, val parts: List<String>)
  * It finds the vocab word(s) within a sentence and splits the sentence
  * into parts, with the word(s) being the "holes".
  */
-fun buildSentenceParts(entry: VocabWord, sentence: Sentence): SentenceDisplayParts {
+fun buildSentenceParts(entry: Format0Word, sentence: Sentence): SentenceDisplayParts {
     return buildSentencePartsSimple(entry.word,sentence.sentence)
 }
 fun buildSentencePartsSimple(word: String, sentence: String): SentenceDisplayParts {

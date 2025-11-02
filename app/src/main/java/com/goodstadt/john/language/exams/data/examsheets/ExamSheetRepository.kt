@@ -1,19 +1,16 @@
 package com.goodstadt.john.language.exams.data.examsheets
 
 import android.content.Context
-import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.toObject
 import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.DummySheetDefinition
 import com.goodstadt.john.language.exams.models.HeaderWordAndSentence
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRootDTO
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.TabHeaderForFirestore
-import com.goodstadt.john.language.exams.models.VocabFile
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0File
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.WordAndSentenceForFirestore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -22,8 +19,6 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.io.File
@@ -52,13 +47,13 @@ class ExamSheetRepository @Inject constructor(
      * Public function to get a VocabFile. This is the main entry point.
      * It handles the cache-first, network-next logic correctly.
      */
-    suspend fun getVocabSheet(name: String, forceRefresh: Boolean): Result<VocabFile> =
+    suspend fun getFormat0Sheet(name: String, forceRefresh: Boolean): Result<Format0File> =
         withContext(Dispatchers.IO) {
             try {
                 // a. Check disk cache first (unless forcing a refresh)
                 if (!forceRefresh) {
                     Timber.d("ExamSheetRepo.getVocabSheet(): '$name' from cache, if exists ...")
-                    readVocabFileFromCache(name)?.let { cachedFile ->
+                    readFormat0FileFromCache(name)?.let { cachedFile ->
                         Timber.d("ExamSheetRepo.getVocabSheet(): Returning '$name' from disk cache. Yippee!")
                         return@withContext Result.success(cachedFile)
                     }
@@ -67,7 +62,7 @@ class ExamSheetRepository @Inject constructor(
                 // b. If no cache or force refresh, call your existing network fetcher.
                 //    This function already fetches, builds the object, and caches it.
                 Timber.d("ExamSheetRepo: getVocabSheet '$name' NOT in cache, download")
-                return@withContext fetchFromNetworkAndCache(name)
+                return@withContext fetchFromNetworkAndCacheFormat0File(name)
 
             } catch (e: Exception) {
                 Timber.e(
@@ -113,7 +108,7 @@ class ExamSheetRepository @Inject constructor(
             // This function calls the specific logic to download and assemble a Format1 object.
             val format1File = downloadAndAssembleFormat1(examName)
 
-            val cacheFile = getCacheFile(examName)
+            val cacheFile = getCacheFilePointer(examName)
             // Use the correct serializer for this type
             val jsonString = jsonParser.encodeToString(HeaderWordsSentencesListRoot.serializer(), format1File)
             cacheFile.writeText(jsonString)
@@ -125,18 +120,13 @@ class ExamSheetRepository @Inject constructor(
             Result.failure(e)
         }
     }
-//    private suspend fun downloadAndAssembleFormat1(examName: String): HeaderWordsSentencesListRoot? {
-//        // Your existing, proven logic for fetching this data type goes here.
-//        // For example, if it's stored as a single document:
-//        return null
-//    }
 
     /**
      * A type-safe function for reading a `HeaderWordsSentencesListRoot` from the disk cache.
      */
     private suspend fun readFormat1SheetFromCache(logicalName: String): HeaderWordsSentencesListRoot? =
         withContext(Dispatchers.IO) {
-            val file = getCacheFile(logicalName)
+            val file = getCacheFilePointer(logicalName)
             if (!file.exists()) return@withContext null
 
             return@withContext try {
@@ -149,104 +139,19 @@ class ExamSheetRepository @Inject constructor(
             }
         }
 
-    /**
-     * Fetches from Firestore, converts the native document to a JSON string,
-     * saves that string to the cache, and returns the string.
-     */
-//    private suspend fun fetchAndCacheJsonStringWrong(examName: String): Result<String> {
-//        Timber.d("ExamSheetRepo: Fetching '$examName' from network...")
-//        return try {
-//            val document = firestore.collection("vocab_sheets").document(examName).get().await()
-//            if (!document.exists()) throw Exception("Document '$examName' not found")
-//
-//            val dataMap = document.data ?: throw Exception("Document '$examName' has no data")
-//
-//            // Convert the Firestore Map<String, Any> to a standard JSON String
-//            val jsonString = jsonParser.encodeToString(dataMap)
-//
-//            // Save the raw string to the disk cache
-//            val cacheFile = getCacheFile(examName)
-//            cacheFile.writeText(jsonString)
-//            Timber.i("ExamSheetRepo: Successfully fetched and cached JSON for '$examName'.")
-//
-//            Result.success(jsonString)
-//        } catch (e: Exception) {
-//            Timber.e(e, "ExamSheetRepo: ERROR - Failed to fetch or cache '$examName'.")
-//            Result.failure(e)
-//        }
-//    }
 
-    /**
-     * ✅ REFACTORED: This is the new core function. Its ONLY job is to get a
-     * valid JSON string, either from the cache or by fetching it from the network.
-     * It does NO decoding itself.
-     */
-//    private suspend fun getSheetJson(name: String, forceRefresh: Boolean): Result<String> =
-//        withContext(Dispatchers.IO) {
-//            try {
-//                // a. Check disk cache for the raw JSON string first.
-//                if (!forceRefresh) {
-//                    readJsonStringFromCache(name)?.let { cachedJson ->
-//                        Timber.d("ExamSheetRepo: Returning JSON for '$name' from disk cache.")
-//                        return@withContext Result.success(cachedJson)
-//                    }
-//                }
-//
-//                // b. If no cache or force refresh, call the network fetcher.
-//                return fetchAndCacheJsonString(name)
-//
-//            } catch (e: Exception) {
-//                Timber.e(e, "ExamSheetRepo: Error getting JSON for '$name'.")
-//                return@withContext Result.failure(e)
-//            }
-//        }
-
-    /**
-     * A private, generic function that contains the core cache-first/network-next logic.
-     * It works for any `Serializable` type `T`.
-     */
-//    private suspend fun <T> getSheetImpl(
-//        name: String,
-//        forceRefresh: Boolean,
-//        fetcher: suspend (String) -> T, // A function that fetches the object `T` from network
-//        decoder: (String) -> T         // A function that decodes a JSON string into `T`
-//    ): Result<T> = withContext(Dispatchers.IO) {
-//        try {
-//            // a. Check disk cache first (unless forcing a refresh)
-//            if (!forceRefresh) {
-//                val cachedJson = getCacheFile(name)
-////                if (cachedJson != null) {
-//                    Timber.d("ExamSheetRepo: Decoding '$name' from disk cache.")
-//                return@withContext Result.success(decoder(cachedJson))
-////                }
-//            }
-//
-//            // b. If no cache or force refresh, call the provided network fetcher.
-//            Timber.d("ExamSheetRepo: Fetching '$name' from network via specific fetcher.")
-//            val freshObject = fetcher(name) // This call is now generic
-//
-//            // c. Save the newly fetched object to the cache.
-//            saveObjectToCache(name, freshObject)
-//
-//            return@with-Context Result.success(freshObject)
-//
-//        } catch (e: Exception) {
-//            Timber.e(e, "ExamSheetRepo: Error in getSheetImpl for '$name'.")
-//            return@withContext Result.failure(e)
-//        }
-//    }
     /**
      * A type-safe function for reading a `VocabFile` specifically from the disk cache.
      */
-    private suspend fun readVocabFileFromCache(logicalName: String): VocabFile? =
+    private suspend fun readFormat0FileFromCache(logicalName: String): Format0File? =
         withContext(Dispatchers.IO) {
 
-            val file = getCacheFile(logicalName)
+            val file = getCacheFilePointer(logicalName)
             if (!file.exists()) return@withContext null
 
             return@withContext try {
                 val jsonString = file.readText()
-                jsonParser.decodeFromString<VocabFile>(jsonString)
+                jsonParser.decodeFromString<Format0File>(jsonString)
             } catch (e: Exception) {
                 Timber.e(
                     e,
@@ -261,7 +166,7 @@ class ExamSheetRepository @Inject constructor(
      * This is now the single function responsible for fetching a sheet from Firestore
      * and saving it to the disk cache.
      */
-    private suspend fun fetchFromNetworkAndCache(examName: String): Result<VocabFile> {
+    private suspend fun fetchFromNetworkAndCacheFormat0File(examName: String): Result<Format0File> {
         Timber.d("ExamSheetRepo.fetchFromNetworkAndCache(): '$examName' from network...")
         return try {
             // This is your existing function that talks to Firestore.
@@ -269,11 +174,11 @@ class ExamSheetRepository @Inject constructor(
             val vocabFile = downloadFromFirestoreCollections(examName)
 
             // Get the cache file location.
-            val cacheFile = getCacheFile(examName)
+            val cacheFile = getCacheFilePointer(examName)
 
             // Save the newly fetched data to the disk cache.
             // This replaces the old `saveToDiskCache` function's logic.
-            val jsonString = jsonParser.encodeToString(VocabFile.serializer(), vocabFile)
+            val jsonString = jsonParser.encodeToString(Format0File.serializer(), vocabFile)
             cacheFile.writeText(jsonString)
 
             Timber.i("ExamSheetRepo.fetchFromNetworkAndCache(): Successfully fetched and cached '$examName'.")
@@ -287,7 +192,7 @@ class ExamSheetRepository @Inject constructor(
         }
     }
 
-    private suspend fun downloadFromFirestoreCollections(examName: String): VocabFile =
+    private suspend fun downloadFromFirestoreCollections(examName: String): Format0File =
         coroutineScope {
             Timber.i("ExamSheetRepo.downloadFromFirestoreCollections(): '$examName'.")
             val examDocRef = firestore.collection("global").document("exam_sheets")
@@ -319,7 +224,7 @@ class ExamSheetRepository @Inject constructor(
                                 ) // Assuming empty translation
                             }
 
-                            VocabWord(
+                            Format0Word(
                                 id = firestoreWord.id,
                                 sortOrder = firestoreWord.sortOrder,
                                 translation = firestoreWord.translation,
@@ -349,7 +254,7 @@ class ExamSheetRepository @Inject constructor(
             }.awaitAll().sortedBy { it.sortOrder }
 
             // 3. Assemble the final domain model
-            return@coroutineScope VocabFile(
+            return@coroutineScope Format0File(
                 fileformat = vocabFileDto.fileformat,
                 location = vocabFileDto.location,
                 sheetName = vocabFileDto.sheetName,
@@ -440,51 +345,13 @@ class ExamSheetRepository @Inject constructor(
     }
 
 
-    private fun getCacheFile(examName: String): File {
+    private fun getCacheFilePointer(examName: String): File {
         Timber.i("ExamSheetRepository.getCacheFile()")
         //Log.i("MyTestTag", "Native Log: getCacheFile was executed.")
         val fileName = "${examName}_cache.json"
         return File(cacheDir, fileName)
     }
 
-//    private fun getCacheFile(logicalName: String): File {
-//        Timber.i("ExamSheetRepository.getCacheFile()")
-//        Log.i("MyTestTag", "Native Log: getCacheFile was executed.")
-//        val fileName = "${logicalName}_cache.json"
-//        val cacheDir = File(context.filesDir, fileName)
-//        if (!cacheDir.exists()) {
-//            cacheDir.mkdirs()
-//        }
-//        return File(cacheDir, "$logicalName.json")
-//    }
 
-    /**
-     * ✅ ADD THIS FUNCTION
-     * Reads the raw JSON string from a cached file on disk.
-     *
-     * @param logicalName The unique identifier for the sheet (e.g., "EnglishA1Vocab").
-     * @return The JSON string if the file is found and readable, otherwise `null`.
-     */
-    private suspend fun readJsonStringFromCache(logicalName: String): String? =
-        withContext(Dispatchers.IO) {
-            // 1. Get the File object for the cache file.
-            val file = getCacheFile(logicalName)
-
-            // 2. If the file doesn't exist, it's a cache miss. Return null immediately.
-            if (!file.exists()) {
-                return@withContext null
-            }
-
-            // 3. Try to read the file's content.
-            return@withContext try {
-                // This is the core operation. It reads the entire file into a String.
-                file.readText()
-            } catch (e: Exception) {
-                // 4. If there's any error reading the file (e.g., it's corrupt),
-                //    log the error and return null to treat it as a cache miss.
-                Timber.e(e, "Failed to read disk cache for '$logicalName'")
-                null
-            }
-        }
 
 }

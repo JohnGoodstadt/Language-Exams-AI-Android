@@ -19,7 +19,7 @@ import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.currentGoogleVoiceName
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -86,7 +86,7 @@ class SettingsViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val controlRepository: ControlRepository,
     private val voiceRepository: VoiceRepository,
-    private val vocabRepository: VocabRepository,
+    private val vocabRepository: ContentRepository,
     private val ttsStatsRepository: TTSStatsRepository,
     private val recallingItemsManager: RecallingItems,
     private val googleTtsInfoRepository: GoogleTTSInfoRepository,
@@ -550,10 +550,10 @@ class SettingsViewModel @Inject constructor(
         if (DEBUG) {
             Timber.w("onDebugTestReadJSON()")
             viewModelScope.launch {
-                vocabRepository.debugDecodeVocabData("vocab_data_a1")
-                vocabRepository.debugDecodeVocabData("vocab_data_a2")
-                vocabRepository.debugDecodeVocabData("vocab_data_b1")
-                vocabRepository.debugDecodeVocabData("vocab_data_b2")
+                vocabRepository.debugDecodeFormat0Data("vocab_data_a1")
+                vocabRepository.debugDecodeFormat0Data("vocab_data_a2")
+                vocabRepository.debugDecodeFormat0Data("vocab_data_b1")
+                vocabRepository.debugDecodeFormat0Data("vocab_data_b2")
             }
         }
     }

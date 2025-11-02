@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 
@@ -41,16 +40,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 
 // --- Your project-specific classes ---
 // You will need to add the imports for your own models and utility functions, for example:
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 
 
-import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.ui.text.AnnotatedString
 import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
 
@@ -59,13 +55,13 @@ import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SwipeableVocabRow(
-    word: VocabWord,
+    word: Format0Word,
     sentence: Sentence,
     selectedVoiceName: String,
     isDownloading: Boolean,
     recalledWordKeys: Set<String>,
     cachedAudioWordKeys: Set<String>,
-    onRowTapped: (VocabWord, Sentence) -> Unit,
+    onRowTapped: (Format0Word, Sentence) -> Unit,
     onFocus: () -> Unit,
     onCancel: () -> Unit,
     onMore: () -> Unit,

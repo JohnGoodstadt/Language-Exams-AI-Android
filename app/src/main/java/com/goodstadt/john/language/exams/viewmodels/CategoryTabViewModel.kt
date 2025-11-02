@@ -3,13 +3,12 @@ package com.goodstadt.john.language.exams.viewmodels
 import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -17,9 +16,6 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import android.util.Log
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
@@ -54,7 +50,7 @@ sealed interface UiEvent {
 @HiltViewModel
 class CategoryTabViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val vocabRepository: VocabRepository, // For getting categories/words and playing audio
+    private val vocabRepository: ContentRepository, // For getting categories/words and playing audio
     private val connectivityRepository: ConnectivityRepository,
     private val recallingItemsManager: RecallingItems,
     private val ttsStatsRepository : TTSStatsRepository,
@@ -184,19 +180,19 @@ class CategoryTabViewModel @Inject constructor(
     }
 
 
-    fun onFocusClicked(word: VocabWord) {
+    fun onFocusClicked(word: Format0Word) {
         viewModelScope.launch {
             // We create a new, single function in RecallingItems for this
             recallingItemsManager.focusOnWord(word)
         }
     }
 
-    fun onCancelClicked(word: VocabWord) {
+    fun onCancelClicked(word: Format0Word) {
         viewModelScope.launch {
             recallingItemsManager.remove(word.word)
         }
     }
-    fun onRowTapped(word: VocabWord, sentence: Sentence) {
+    fun onRowTapped(word: Format0Word, sentence: Sentence) {
 //        if (_uiState.value.playbackState is PlaybackState.Playing) return
 
         vocabRepository.stopPlayback()

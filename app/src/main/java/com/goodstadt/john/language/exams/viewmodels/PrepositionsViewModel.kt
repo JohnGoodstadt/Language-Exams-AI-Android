@@ -12,13 +12,12 @@ import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -29,7 +28,6 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
-import java.io.IOException
 import javax.inject.Inject
 
 // This UI State can be reused, but let's give it a specific name for clarity
@@ -45,7 +43,7 @@ sealed interface PrepositionsUiState {
 
 @HiltViewModel
 class PrepositionsViewModel @Inject constructor(
-    private val vocabRepository: VocabRepository,
+    private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository : TTSStatsRepository,
@@ -109,7 +107,7 @@ class PrepositionsViewModel @Inject constructor(
                 // 1. First, try to get data from the repository (which handles cache/network).
                 Timber.i("PrepositionsViewModel: Attempting to fetch prepositions from repository for '$firestoreName'...")
 //                val result = examSheetRepository.getVocabSheet(firestoreName,forceRefresh)
-                val result = vocabRepository.getVocabData(firestoreName)
+                val result = vocabRepository.getFormat0Data(firestoreName)
                 result.onSuccess { vocabFile ->
                     // 2. If it succeeds, update the UI with the fresh data.
                     Timber.i("ViewModel: Successfully loaded ${vocabFile.categories.size} categories from repository.")
@@ -144,7 +142,7 @@ class PrepositionsViewModel @Inject constructor(
             }
         }
     }
-    fun playTrack(word: VocabWord, sentence: Sentence) {
+    fun playTrack(word: Format0Word, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing)
         {
             return
@@ -272,7 +270,7 @@ class PrepositionsViewModel @Inject constructor(
     private suspend fun loadFromLocalBundle(fileName: String): List<Category> {
         return try {
             // Because this is now a suspend function, we can safely call another suspend function.
-            val result = vocabRepository.getVocabData(fileName)
+            val result = vocabRepository.getFormat0Data(fileName)
 
             // Return the categories on success, or an empty list on failure.
             result.getOrNull()?.categories ?: emptyList()

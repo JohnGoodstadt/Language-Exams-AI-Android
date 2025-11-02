@@ -10,17 +10,14 @@ import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
-import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.SubTabDefinition
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
-import com.goodstadt.john.language.exams.viewmodels.PrepositionsUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -49,7 +46,7 @@ data class GroupedSheetUiState(
 
 @HiltViewModel
 class GroupedSheetViewModel @Inject constructor(
-    private val vocabRepository: VocabRepository,
+    private val vocabRepository: ContentRepository,
     private val appConfigRepository: AppConfigRepository,
 //    private val examSheetRepository: ExamSheetRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
@@ -180,7 +177,7 @@ class GroupedSheetViewModel @Inject constructor(
 
             try {
                 Timber.i("GroupedSheetViewModelObsolete: Attempting to fetch generic vocab for ''...")
-                val result = vocabRepository.getVocabData(subTab.firestoreDocumentId)
+                val result = vocabRepository.getFormat0Data(subTab.firestoreDocumentId)
                 result.onSuccess { vocabFile ->
                     val categories = vocabFile.categories
                     // Add to cache for next time
@@ -197,7 +194,7 @@ class GroupedSheetViewModel @Inject constructor(
         }
     }
 
-    fun playTrack(word: VocabWord, sentence: Sentence) {
+    fun playTrack(word: Format0Word, sentence: Sentence) {
         Timber.i("GroupedSheetViewModel.playTrack() ${word.word} ${sentence.sentence}")
         Log.i("GroupedSheetViewModel", "playTrack() ${word.word} ${sentence.sentence}")
         if (_playbackState.value is PlaybackState.Playing)
@@ -322,7 +319,7 @@ class GroupedSheetViewModel @Inject constructor(
 
                 Timber.i("GroupedSheetViewModel: Attempting to fetch generic vocab for '$sheetName'...")
 //                val result = examSheetRepository.getVocabSheet(sheetName, forceRefresh = forceRefresh)
-                val result = vocabRepository.getVocabData(sheetName)
+                val result = vocabRepository.getFormat0Data(sheetName)
                 result.onSuccess { vocabFile ->
                     val categories = vocabFile.categories
                     contentCache[sheetName] = categories

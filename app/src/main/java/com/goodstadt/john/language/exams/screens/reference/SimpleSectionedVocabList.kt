@@ -12,13 +12,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.text.font.FontStyle
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
@@ -36,7 +33,7 @@ fun SimpleSectionedVocabList(
     playbackState: PlaybackState,
     googleVoice: String,
     cachedAudioWordKeys: Set<String>,
-    onRowTapped: (VocabWord, Sentence) -> Unit
+    onRowTapped: (Format0Word, Sentence) -> Unit
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -180,7 +177,7 @@ val sampleCategories = listOf(
     Category(
         title = "Present Tense",
         words = listOf(
-            VocabWord(
+            Format0Word(
                 id = 1,
                 sortOrder = 1,
                 word = "run",

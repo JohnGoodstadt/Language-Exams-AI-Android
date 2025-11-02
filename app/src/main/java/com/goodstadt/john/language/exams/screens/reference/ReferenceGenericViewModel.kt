@@ -12,15 +12,13 @@ import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
-import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
-import com.goodstadt.john.language.exams.viewmodels.PrepositionsUiState
 // ... other necessary imports from your PrepositionsViewModel
 //import com.yourpackage.data.repository.ExamSheetRepository
 //import com.yourpackage.data.repository.VocabRepository
@@ -85,7 +83,7 @@ class ReferenceGenericViewModel @Inject constructor(
     // 2. MODIFIED: Injected SavedStateHandle to get navigation arguments
     private val savedStateHandle: SavedStateHandle,
     // Keep all other dependencies that are still needed
-    private val vocabRepository: VocabRepository,
+    private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val ttsStatsRepository: TTSStatsRepository,
     private val appScope: CoroutineScope,
@@ -139,7 +137,7 @@ class ReferenceGenericViewModel @Inject constructor(
             val logicalName: String = savedStateHandle.get<String?>("documentId").toString() ?: ""
 
             Timber.i("ReferenceGenericViewModel: Attempting to fetch generic vocab for '$logicalName'...")
-            val result = vocabRepository.getVocabData(logicalName)
+            val result = vocabRepository.getFormat0Data(logicalName)
 
             // ✅ NO CASTING NEEDED! The result is already the correct type.
             result.onSuccess { vocabFile ->
@@ -188,7 +186,7 @@ class ReferenceGenericViewModel @Inject constructor(
     // can be copied directly from PrepositionsViewModel as they are already generic enough.
     // They operate on VocabWord, Sentence, etc., and have no hardcoded logic.
     // (Omitted for brevity, but you should paste them here)
-    fun playTrack(word: VocabWord, sentence: Sentence) {
+    fun playTrack(word: Format0Word, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing)
         {
             return

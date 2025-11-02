@@ -5,7 +5,6 @@ import android.content.SharedPreferences
 import com.goodstadt.john.language.exams.data.AudioPlayerService
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import dagger.Module
 import dagger.Provides

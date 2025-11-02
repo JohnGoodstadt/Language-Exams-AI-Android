@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.RefreshTrigger
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -34,7 +34,7 @@ data class ProgressMapUiState(
 
 @HiltViewModel
 class ProgressMapViewModel @Inject constructor(
-    private val vocabRepository: VocabRepository,
+    private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val refreshTrigger: RefreshTrigger
 ) : ViewModel() {
@@ -65,7 +65,7 @@ class ProgressMapViewModel @Inject constructor(
 
             val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val vocabDataResult = vocabRepository.getVocabData(currentExamFile)
+            val vocabDataResult = vocabRepository.getFormat0Data(currentExamFile)
 
             vocabDataResult.onSuccess { vocabFile ->
                 val progressData = vocabFile.categories.map { category ->

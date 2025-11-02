@@ -9,7 +9,7 @@ import kotlinx.serialization.Serializable
  * @SerialName maps the JSON key string to the Kotlin property name if they are different.
  */
 @Serializable
-data class VocabFile(
+data class Format0File(
     val fileformat: Int,
     val location: Int,
     @SerialName("sheetname")
@@ -37,7 +37,7 @@ data class Category(
 //    @SerialName("tabnumber") //can crash on decode
     val tabNumber: Int,
     val sortOrder: Int,
-    val words: List<VocabWord>
+    val words: List<Format0Word>
 ) {
     // Note: A Kotlin data class's default equals() and hashCode() compare all properties.
     // This is different from your Swift version which only compared the title.
@@ -45,7 +45,7 @@ data class Category(
 }
 
 @Serializable
-data class VocabWord(
+data class Format0Word(
     val id: Int,
     @SerialName("sortOrder")
     val sortOrder: Int,

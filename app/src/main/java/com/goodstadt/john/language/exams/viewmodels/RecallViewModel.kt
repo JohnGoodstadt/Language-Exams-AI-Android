@@ -4,14 +4,13 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
-import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.RecallingItem
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.VocabRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -33,7 +32,7 @@ data class RecallUiState(
 
 @HiltViewModel
 class RecallViewModel @Inject constructor(
-    private val vocabRepository: VocabRepository, // For playing audio
+    private val vocabRepository: ContentRepository, // For playing audio
     private val recallingItemsManager: RecallingItems,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val ttsStatsRepository : TTSStatsRepository,

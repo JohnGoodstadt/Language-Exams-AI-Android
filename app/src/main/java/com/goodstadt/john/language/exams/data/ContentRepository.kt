@@ -1,13 +1,12 @@
 package com.goodstadt.john.language.exams.data
 
 import android.content.Context
-import android.util.Log
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.TabDetails
-import com.goodstadt.john.language.exams.models.VocabFile
+import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Deferred
@@ -41,7 +40,7 @@ sealed class PlaybackResult {
 }
 
 @Singleton
-class VocabRepository @Inject constructor(
+class ContentRepository @Inject constructor(
     @ApplicationContext private val context: Context,
     private val appConfigRepository: AppConfigRepository,
     private val examSheetRepository: ExamSheetRepository,
@@ -50,14 +49,14 @@ class VocabRepository @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository
 ) {
     // Cache the result in memory after the first successful load
-    private val vocabCache = mutableMapOf<String, VocabFile>()
-
+    private val vocabCache = mutableMapOf<String, Format0File>()
+    private val format1Cache = mutableMapOf<String, HeaderWordsSentencesListRoot>()
 
     //Problem was getVocabData() called twice sub millisecond
     // ✅ ADDED: A map to store ongoing fetch operations.
     // The key is the logicalName, the value is the Deferred result.
-    private val ongoingFetches = mutableMapOf<String, Deferred<Result<VocabFile>>>()
-    private val format1Cache = mutableMapOf<String, HeaderWordsSentencesListRoot>()
+    private val ongoingFetches = mutableMapOf<String, Deferred<Result<Format0File>>>()
+
 
     // A lazy json parser instance with lenient configuration
     private val jsonParser = Json {
@@ -73,7 +72,7 @@ class VocabRepository @Inject constructor(
      * 3. Fallback to the app bundle.
      * It is the ONLY function that writes to the in-memory cache.
      */
-    suspend fun getVocabData(name: String): Result<VocabFile>  {
+    suspend fun getFormat0Data(name: String): Result<Format0File>  {
 //        val parentCaller = getParentCaller()
 //        val parentFunctionName = parentCaller?.methodName ?: "Unknown"
 //        Timber.d("This log is from getVocabData, but it was called by: $parentFunctionName")
@@ -109,7 +108,7 @@ class VocabRepository @Inject constructor(
 
                     // --- 3. Delegate to ExamSheetRepository (Disk/Network) ---
                     Timber.d("VocabRepository.getVocabData: Delegating to ExamSheetRepository for '$logicalName'...")
-                    val result = examSheetRepository.getVocabSheet(
+                    val result = examSheetRepository.getFormat0Sheet(
                         name = logicalName,
                         forceRefresh = forceRefresh
                     )
@@ -132,7 +131,7 @@ class VocabRepository @Inject constructor(
                         "VocabRepo: ExamSheetRepository failed. Falling back to bundle for '$logicalName'."
                     )
                     val resourceName = mapLogicalToResourceName(logicalName)
-                    val bundleResult = loadBundledVocabData(resourceName)
+                    val bundleResult = loadBundledFormat0Data(resourceName)
 
                     // ✅ CENTRALIZED CACHING: Also cache the result from the bundle.
                     bundleResult.getOrNull()?.let { vocabCache[logicalName] = it }
@@ -145,7 +144,7 @@ class VocabRepository @Inject constructor(
                         "VocabRepo: CRITICAL error in orchestrator. Falling back to bundle for '$logicalName'."
                     )
                     val resourceName = mapLogicalToResourceName(logicalName)
-                    val bundleResult = loadBundledVocabData(resourceName)
+                    val bundleResult = loadBundledFormat0Data(resourceName)
                     bundleResult.getOrNull()?.let { vocabCache[logicalName] = it }
                     return@async bundleResult
                 } finally {
@@ -208,7 +207,7 @@ class VocabRepository @Inject constructor(
      * It provides a simple API for fixed screens like Conjugations.
      * It uses the centralized in-memory cache for session-level performance.
      */
-    fun loadBundledVocabData(resourceName: String): Result<VocabFile> {
+    fun loadBundledFormat0Data(resourceName: String): Result<Format0File> {
         // 1. Check the in-memory cache first.
         vocabCache[resourceName]?.let { cachedFile ->
             Timber.d("VocabRepo: Returning '$resourceName' from MEMORY CACHE.")
@@ -228,28 +227,12 @@ class VocabRepository @Inject constructor(
     }
 
     // --- PRIVATE IMPLEMENTATION & HELPERS ---
-    private fun getParentCaller(): StackTraceElement? {
-        // The call stack is an array of stack trace elements.
-        val stackTrace = Thread.currentThread().stackTrace
 
-        // Let's analyze the stack from the point of view of this helper function:
-        // stackTrace[0] == Thread.getStackTrace()
-        // stackTrace[1] == getParentCaller() (this function)
-        // stackTrace[2] == functionB() (the function that called this helper)
-        // stackTrace[3] == functionA() (THE PARENT we are looking for!)
-
-        // We need to make sure the stack is deep enough before accessing the index.
-        return if (stackTrace.size > 3) {
-            stackTrace[3]
-        } else {
-            null
-        }
-    }
     /**
      * ✅ RENAMED: This is now the private, "dumb" implementation.
      * Its only job is to read and parse a file from res/raw. It does no caching.
      */
-    private fun _loadFromBundle(resourceName: String): Result<VocabFile> {
+    private fun _loadFromBundle(resourceName: String): Result<Format0File> {
         return try {
             val resourceId = context.resources.getIdentifier(resourceName, "raw", context.packageName)
             if (resourceId == 0) {
@@ -258,7 +241,7 @@ class VocabRepository @Inject constructor(
             Timber.v("VocabRepo: Loading '$resourceName' from res/raw.")
             val inputStream = context.resources.openRawResource(resourceId)
             val jsonString = inputStream.bufferedReader().use { it.readText() }
-            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
+            val vocabFile = jsonParser.decodeFromString<Format0File>(jsonString)
             Result.success(vocabFile)
         } catch (e: Exception) {
             Timber.e(e, "VocabRepo: Failed to load from bundle: $resourceName")
@@ -267,7 +250,7 @@ class VocabRepository @Inject constructor(
     }
 
 
-    suspend fun debugDecodeVocabData(fileName: String): Result<VocabFile> = withContext(Dispatchers.IO) {
+    suspend fun debugDecodeFormat0Data(fileName: String): Result<Format0File> = withContext(Dispatchers.IO) {
 
         try {
             // Dynamically get the resource ID from the filename string
@@ -285,7 +268,7 @@ class VocabRepository @Inject constructor(
             Timber.v("Loading '$fileName' from resources.") // For debugging
             val inputStream = context.resources.openRawResource(resourceId)
             val jsonString = inputStream.bufferedReader().use { it.readText() }
-            val vocabFile = jsonParser.decodeFromString<VocabFile>(jsonString)
+            val vocabFile = jsonParser.decodeFromString<Format0File>(jsonString)
 
             // Cache the result using the filename as the key
             //vocabCache[fileName] = vocabFile
@@ -400,7 +383,7 @@ class VocabRepository @Inject constructor(
 
         // 2. Use your existing getVocabData function. This will automatically
         //    load from the file if needed, or return instantly from the cache.
-        val vocabDataResult = getVocabData(currentExamFile)
+        val vocabDataResult = getFormat0Data(currentExamFile)
 
         // 3. Process the result to find the word.
         return vocabDataResult.fold(
@@ -496,7 +479,7 @@ class VocabRepository @Inject constructor(
         val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
 
         // 2. Use your existing getVocabData function to load from cache or file.
-        val vocabDataResult = getVocabData(currentExamFile)
+        val vocabDataResult = getFormat0Data(currentExamFile)
 
         return vocabDataResult.fold(
             onSuccess = { vocabFile ->
@@ -529,7 +512,7 @@ class VocabRepository @Inject constructor(
         val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
 //        val currentExamFile999 =  "` vocab_data_a1"
         // Use your existing getVocabData function to load from cache or file.
-        val vocabDataResult = getVocabData(currentExamFile)
+        val vocabDataResult = getFormat0Data(currentExamFile)
 
         return vocabDataResult.fold(
             onSuccess = { vocabFile ->
@@ -546,7 +529,7 @@ class VocabRepository @Inject constructor(
 
         // Get the current exam file name from user preferences.
         val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
-        val vocabDataResult = getVocabData(currentExamFile)
+        val vocabDataResult = getFormat0Data(currentExamFile)
 //        val vocabDataResult = getVocabData("vocab_data_a1")
 
         return vocabDataResult.fold(
@@ -561,7 +544,7 @@ class VocabRepository @Inject constructor(
     }
     suspend fun getCategoryByTitle(categoryTitle: String): Category? {
         val currentExamFile = userPreferencesRepository.selectedFileNameFlow.first()
-        val vocabDataResult = getVocabData(currentExamFile)
+        val vocabDataResult = getFormat0Data(currentExamFile)
 
         return vocabDataResult.getOrNull()?.categories?.firstOrNull {
             it.title == categoryTitle

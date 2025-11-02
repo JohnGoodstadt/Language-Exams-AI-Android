@@ -1,7 +1,7 @@
 package com.goodstadt.john.language.exams.utils
 
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 
 /**
  * Creates a unique, human-readable, and file-system-safe ID for a given word and sentence combination.
@@ -11,7 +11,7 @@ import com.goodstadt.john.language.exams.models.VocabWord
  * @param sentence The sentence object associated with the word.
  * @return A filesystem-safe string, e.g., "hello_world_This_is_the_sentence".
  */
-fun generateUniqueSentenceId(word: VocabWord, sentence: Sentence, googleVoice:String): String {
+fun generateUniqueSentenceId(word: Format0Word, sentence: Sentence, googleVoice:String): String {
     // Combine the word and sentence
     val rawId = "${googleVoice}_${word.word}.${sentence.sentence}"
 

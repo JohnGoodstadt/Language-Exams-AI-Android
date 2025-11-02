@@ -36,7 +36,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.categories
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.VocabWord
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
@@ -63,7 +63,7 @@ fun CategoryTabScreen(
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
 //bottom sheet
-    var selectedWordForSheet by remember { mutableStateOf<VocabWord?>(null) }
+    var selectedWordForSheet by remember { mutableStateOf<Format0Word?>(null) }
     var showBottomSheet by remember { mutableStateOf(false) }
     val bottomSheetState = rememberModalBottomSheetState()
 
@@ -403,8 +403,8 @@ fun CacheProgressBar(
 @Composable
 fun SentencesBottomSheetContent(
     // 1. The composable takes the selected word as its input
-    word: VocabWord,
-    onBottomSheetRowTapped: (VocabWord, Sentence) -> Unit,
+    word: Format0Word,
+    onBottomSheetRowTapped: (Format0Word, Sentence) -> Unit,
     modifier: Modifier = Modifier
 ) {
     // Use a Column with vertical scroll in case sentences are long
