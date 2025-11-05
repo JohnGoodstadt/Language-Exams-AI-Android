@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -17,8 +18,16 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
+import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
+import com.goodstadt.john.language.exams.viewmodels.ConjugationsViewModel
 
 /**
  * A Composable screen that displays data in the "Format1" structure.
@@ -29,6 +38,7 @@ import androidx.compose.ui.unit.dp
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun Format1Screen(
+    viewModel: Format1ScreenViewModel = hiltViewModel(),
     data: List<HeaderWordsSentencesList>,
     modifier: Modifier = Modifier
 ) {
@@ -52,10 +62,24 @@ fun Format1Screen(
                     Text(
                         text = section.title,
                         style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.primary
+                        color = orangeLight
+                    )
+                }
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(MaterialTheme.colorScheme.surface) // Important for sticky headers
+                        .padding(horizontal = 16.dp, vertical = 8.dp)
+                ) {
+                    Text(
+                        text = section.description,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
+
+
 
             // 2. Add the items for the current section.
             items(
@@ -66,18 +90,39 @@ fun Format1Screen(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 8.dp),
-                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                        .padding(horizontal = 16.dp, vertical = 8.dp)
+                        .clickable {
+                            viewModel.playTrack(item.sentence)
+                            // This lambda will be executed when the user taps anywhere
+                            // inside the Column's bounds.
+                            println("Column was clicked!")
+                            // Example: onRowTapped(item.sentence)
+                        },
+                    verticalArrangement = Arrangement.spacedBy(4.dp),
+
                 ) {
                     Text(
                         text = item.word,
                         style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+                        color = Color.Cyan
+                        //modifier = Modifier.padding(vertical = 16.dp)
                     )
-                    Text(
-                        text = item.sentence,
-                        style = MaterialTheme.typography.bodyMedium
+                    val displayData = buildSentencePartsSimple(word = item.word, sentence = item.sentence)
+//                    Text(
+//                        text = item.sentence,
+//                        style = MaterialTheme.typography.bodyMedium
+//                    )
+                    HighlightedWordInSentenceRow(
+                        word = item.word,
+                        parts = displayData.parts,
+                        sentence = displayData.sentence,
+                        isRecalling = false,
+                        displayDot = false,//achedAudioWordKeys.contains(uniqueSentenceId),
+                        isDownloading = false//, //TODO: maybe dynamic?
                     )
+
+
                     if (item.definition.isNotBlank()) {
                         Text(
                             text = item.definition,

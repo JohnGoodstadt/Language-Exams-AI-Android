@@ -201,6 +201,7 @@ class SettingsViewModel @Inject constructor(
                 billingRepository.logCurrentStatus()  // Debug log on init
             } catch (e: Exception) {
                 Timber.e("${e.message}")
+                FirebaseCrashlytics.getInstance().recordException(Exception("SettingsViewModel.initializeBilling().catch. ${e.localizedMessage}"))
                 // Handle connection or query failure
 //                billingRepository._billingError.value = e.message
             }

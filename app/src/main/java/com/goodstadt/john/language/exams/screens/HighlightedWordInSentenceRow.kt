@@ -15,7 +15,7 @@ import com.goodstadt.john.language.exams.models.Format0Word
 
 @Composable
 fun HighlightedWordInSentenceRow(
-    entry: Format0Word,
+    word: String,
     parts: List<String>,
     sentence: String,
     isRecalling: Boolean,
@@ -24,7 +24,7 @@ fun HighlightedWordInSentenceRow(
     modifier: Modifier = Modifier
 ) {
     // This logic builds the styled text with underlined words.
-    val annotatedString = annotatedSentence(parts, entry.word, sentence)
+    val annotatedString = annotatedSentence(parts, word, sentence)
 
     // This Row lays out the text and the status indicators.
     Row(

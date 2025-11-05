@@ -439,7 +439,7 @@ fun SentencesBottomSheetContent(
                // val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
                 Column(modifier = Modifier.clickable { onBottomSheetRowTapped(word, sentence) }) {
                     HighlightedWordInSentenceRow(
-                        entry = word,
+                        word = word.word,
                         parts = displayData.parts,
                         sentence = displayData.sentence,
                         isRecalling = false,

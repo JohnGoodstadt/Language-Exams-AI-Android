@@ -23,6 +23,7 @@ import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -116,7 +117,8 @@ class CategoryTabViewModel @Inject constructor(
                 billingRepository.logCurrentStatus()  // Debug log on init
             } catch (e: Exception) {
                 Timber.e("${e.message}")
-               // billingRepository._billingError.value = e.message
+                FirebaseCrashlytics.getInstance().recordException(Exception("CategoryTabViewModel.initializeBilling().catch. ${e.localizedMessage}"))
+
             }
 
             billingRepository.isPurchased.collect { purchasedStatus ->

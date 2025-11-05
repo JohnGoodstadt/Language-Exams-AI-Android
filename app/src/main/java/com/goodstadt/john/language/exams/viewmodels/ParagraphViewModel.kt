@@ -484,6 +484,8 @@ class ParagraphViewModel @Inject constructor(
                                     )
                                 }
                                 e.printStackTrace()
+                                FirebaseCrashlytics.getInstance().recordException(e)
+                                FirebaseCrashlytics.getInstance().log("GoogleCloudTTS.GenerateParagraph().onFailure ${e.localizedMessage}")
                             }
 
 
@@ -512,6 +514,7 @@ class ParagraphViewModel @Inject constructor(
                 Timber.e("Error in call to openAI")
                 Timber.e(e.localizedMessage)
                 val fileName = userPreferencesRepository.selectedFileNameFlow.first()
+
                 FirebaseCrashlytics.getInstance().recordException(Exception("ParagraphViewModel.generateNewParagraph() getFormat0Data for ${fileName }}"))
                 _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
 //                _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.${e.localizedMessage}") }

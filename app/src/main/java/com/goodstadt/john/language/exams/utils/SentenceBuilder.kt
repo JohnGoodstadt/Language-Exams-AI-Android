@@ -14,6 +14,9 @@ data class SentenceDisplayParts(val sentence: String, val parts: List<String>)
 fun buildSentenceParts(entry: Format0Word, sentence: Sentence): SentenceDisplayParts {
     return buildSentencePartsSimple(entry.word,sentence.sentence)
 }
+//fun buildSentenceParts(entry: Format1Word, sentence: Sentence): SentenceDisplayParts {
+//    return buildSentencePartsSimple(entry.word,sentence.sentence)
+//}
 fun buildSentencePartsSimple(word: String, sentence: String): SentenceDisplayParts {
     val sentenceText = sentence
     val wordToFind = word

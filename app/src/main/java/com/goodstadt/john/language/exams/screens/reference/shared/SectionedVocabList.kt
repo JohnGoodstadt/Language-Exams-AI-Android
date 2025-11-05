@@ -133,7 +133,7 @@ fun SectionedVocabList(
 
                         Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
                             HighlightedWordInSentenceRow(
-                                entry = word,
+                                word = word.word,
                                 parts = displayData.parts,
                                 sentence = displayData.sentence,
                                 isRecalling = false,

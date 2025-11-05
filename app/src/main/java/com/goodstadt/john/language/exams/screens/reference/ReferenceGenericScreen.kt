@@ -21,6 +21,7 @@ import androidx.lifecycle.LifecycleEventObserver
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.SectionedVocabList
+import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 // ... other necessary imports
@@ -63,6 +64,9 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                 cachedAudioWordKeys = state.cachedAudioWordKeys,
                 onRowTapped = { word, sentence ->
                     viewModel.playTrack(word, sentence)
+
+                    val updatedKeys = state.cachedAudioWordKeys +  generateUniqueSentenceId(word, sentence, state.selectedVoiceName)//word.word
+                    state.copy(cachedAudioWordKeys = updatedKeys)
                 }
             )
         }

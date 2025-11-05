@@ -107,7 +107,7 @@ fun SimpleSectionedVocabList(
 
                             // Your existing row composable goes here
                             HighlightedWordInSentenceRow(
-                                entry = word,
+                                word = word.word,
                                 parts = displayData.parts,
                                 sentence = displayData.sentence,
                                 isRecalling = false,

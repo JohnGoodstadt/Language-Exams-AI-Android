@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.data.api
 import android.util.Base64
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.Serializable
@@ -89,11 +90,20 @@ class GoogleCloudTTS @Inject constructor() {
             } else {
                 val errorBody = connection.errorStream?.bufferedReader()?.use { it.readText() } ?: "Unknown error"
                 Timber.e("API Error: $responseCode - $errorBody")
+                FirebaseCrashlytics.getInstance().recordException(Exception("GoogleCloudTTS.getAudioData().error.API Error: $responseCode - $errorBody"))
                 Result.failure(RuntimeException("API Error: $responseCode - $errorBody"))
             }
 
         } catch (e: Exception) {
             e.printStackTrace()
+
+            val crashlytics = FirebaseCrashlytics.getInstance()
+            crashlytics.recordException(Exception("GoogleCloudTTS.getAudioData().exception: ${e.localizedMessage}}"))
+            FirebaseCrashlytics.getInstance().log("$text $voiceName")
+            crashlytics.setCustomKey("sentence", text)
+            crashlytics.setCustomKey("voiceName", voiceName)
+            crashlytics.setCustomKey("languageCode", languageCode)
+
             Result.failure(e)
         } finally {
             connection?.disconnect()

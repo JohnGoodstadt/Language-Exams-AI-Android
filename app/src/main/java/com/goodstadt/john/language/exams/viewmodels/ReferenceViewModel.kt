@@ -10,6 +10,8 @@ import com.goodstadt.john.language.exams.models.SheetDataType
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.SheetDefinition
 import com.goodstadt.john.language.exams.models.Format0File
+import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.models.Sentence
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -149,5 +151,8 @@ class ReferenceViewModel @Inject constructor(
         _uiState.update { it.copy(selectedCategoryTitleForSheet = null) }
         Timber.d("ReferenceViewModel", "Bottom sheet dismissed. Triggering a progress map refresh.")
         refreshTrigger.triggerProgressMapRefresh()
+    }
+    fun playTrack( sentence: String) {
+        Timber.v(sentence)
     }
 }

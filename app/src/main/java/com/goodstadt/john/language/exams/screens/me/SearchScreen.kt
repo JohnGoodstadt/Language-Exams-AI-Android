@@ -92,7 +92,7 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                     // We can reuse the VocabRow from the other screen
                     Column(modifier = Modifier.clickable { viewModel.playTrack(result) }) {
                         HighlightedWordInSentenceRow(
-                            entry = result.word,
+                            word = result.word.word,
                             parts = displayData.parts,
                             sentence = displayData.sentence,
                             isRecalling = false,

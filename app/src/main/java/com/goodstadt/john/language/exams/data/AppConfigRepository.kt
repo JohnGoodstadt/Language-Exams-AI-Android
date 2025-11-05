@@ -54,15 +54,15 @@ class AppConfigRepository @Inject constructor(
     )
 
    // val TAG = "AppConfigRepository"
-    suspend fun checkAppUpdateStatus(): UpdateState {
+     fun checkAppUpdateStatus(): UpdateState {
         // Fetch the latest values from the server. This is fast because of caching.
-        try {
-            remoteConfig.fetchAndActivate().await()
-        } catch (e: Exception) {
-            // If fetch fails, we proceed with the last known cached values.
-            e.printStackTrace()
-            Timber.wtf(e.localizedMessage)
-        }
+//        try {
+//            remoteConfig.fetchAndActivate().await()
+//        } catch (e: Exception) {
+//            // If fetch fails, we proceed with the last known cached values.
+//            e.printStackTrace()
+//            Timber.wtf(e.localizedMessage)
+//        }
 
         // Get the current version code of the installed app
         val currentVersionCode = BuildConfig.VERSION_CODE

@@ -131,7 +131,7 @@ fun SwipeableVocabRow(
                 .clickable { onRowTapped(word, sentence) }
         ) {
             HighlightedWordInSentenceRow(
-                entry = word,
+                word = word.word,
                 parts = displayData.parts,
                 sentence = displayData.sentence,
                 isRecalling = isRecalling,
