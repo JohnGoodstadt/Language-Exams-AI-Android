@@ -348,7 +348,7 @@ fun ParagraphScreen(
                                 {
                                     productDetails?.let { details ->
                                         details.oneTimePurchaseOfferDetails?.let { offerDetails ->
-                                            Text("Go for it: ${offerDetails.formattedPrice}")
+                                            Text("Unlimited: ${offerDetails.formattedPrice}")
                                         }
                                     }
                                 }

@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+//import com.goodstadt.john.language.exams.data.PremiumStatus
 import android.app.Activity
 import android.content.Context
 import androidx.lifecycle.ViewModel
@@ -9,38 +10,38 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
+import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.GoogleTTSInfoRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
-//import com.goodstadt.john.language.exams.data.PremiumStatus
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.currentGoogleVoiceName
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.google.android.gms.common.ConnectionResult
+import com.google.android.gms.common.GoogleApiAvailability
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import javax.inject.Inject
-import com.google.android.gms.common.ConnectionResult
-import com.google.android.gms.common.GoogleApiAvailability
-import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.flow.first
 import timber.log.Timber
+import javax.inject.Inject
 
 // --- MODIFICATION 1: Add pending state to UiState ---
 data class SettingsUiState(
@@ -126,7 +127,8 @@ class SettingsViewModel @Inject constructor(
                 val languageDetailsResult = controlRepository.getActiveLanguageDetails()
 
                 languageDetailsResult.onSuccess { details ->
-                    val friendlyName = voiceRepository.getFriendlyNameForVoice(voiceId,details.code)
+                    val friendlyName =
+                        voiceRepository.getFriendlyNameForVoice(voiceId, details.code)
                     _uiState.update {
                         it.copy(
                             currentFriendlyVoiceName = friendlyName,
@@ -213,6 +215,7 @@ class SettingsViewModel @Inject constructor(
             )
         }
     }
+
     fun isGooglePlayServicesAvailable(context: Context): Boolean {
         val googleApiAvailability = GoogleApiAvailability.getInstance()
         val resultCode = googleApiAvailability.isGooglePlayServicesAvailable(context)
@@ -255,27 +258,36 @@ class SettingsViewModel @Inject constructor(
             // Pre-populate the pending state with the currently active selection
             val updatedUiState = when (type) {
                 SheetContent.ExamSelection -> {
-                    val currentExam = currentState.availableExams.find { it.json == currentState.currentExamName }
+                    val currentExam =
+                        currentState.availableExams.find { it.json == currentState.currentExamName }
                     currentState.copy(pendingSelectedExam = currentExam)
                 }
 
                 SheetContent.SpeakerSelection -> {
-                    val currentVoice = currentState.availableVoices.find { it.id == currentState.currentVoiceName }
+                    val currentVoice =
+                        currentState.availableVoices.find { it.id == currentState.currentVoiceName }
                     currentState.copy(pendingSelectedVoice = currentVoice)
                 }
 
                 SheetContent.Hidden -> currentState
 
                 SheetContent.LanguageSelection -> {
-                    val currentLanguage = currentState.availableLanguages.find { it.code == currentState.currentLanguage }
+                    val currentLanguage =
+                        currentState.availableLanguages.find { it.code == currentState.currentLanguage }
                     currentState.copy(pendingSelectedLanguage = currentLanguage)
 
                 }
-                SheetContent.BothSelection -> {
-                    val currentExam = currentState.availableExams.find { it.json == currentState.currentExamName }
-                    val currentVoice = currentState.availableLanguages.find { it.code == currentState.currentLanguage }
 
-                    currentState.copy(pendingSelectedLanguage = currentVoice,pendingSelectedExam = currentExam)
+                SheetContent.BothSelection -> {
+                    val currentExam =
+                        currentState.availableExams.find { it.json == currentState.currentExamName }
+                    val currentVoice =
+                        currentState.availableLanguages.find { it.code == currentState.currentLanguage }
+
+                    currentState.copy(
+                        pendingSelectedLanguage = currentVoice,
+                        pendingSelectedExam = currentExam
+                    )
 
                 }
             }
@@ -288,7 +300,12 @@ class SettingsViewModel @Inject constructor(
 
         if (!connectivityRepository.isCurrentlyOnline()) {
             viewModelScope.launch {
-                _uiEvent.emit(SettingsUiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
+                _uiEvent.emit(
+                    SettingsUiEvent.ShowSnackbar(
+                        "No internet connection",
+                        actionLabel = "Retry"
+                    )
+                )
                 Timber.e("No Internet")
 
             }
@@ -312,6 +329,7 @@ class SettingsViewModel @Inject constructor(
         _uiState.update { it.copy(pendingSelectedExam = exam) }
 
     }
+
     fun onPendingLanguageSelect(language: LanguageCodeDetails) {
         // This only updates the state for the UI inside the sheet. Does NOT save.
         _uiState.update { it.copy(pendingSelectedLanguage = language) }
@@ -346,7 +364,7 @@ class SettingsViewModel @Inject constructor(
             val uniqueSentenceId = generateUniqueSentenceId(sentence, googleVoice)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
-            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
+            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = vocabRepository.playTextToSpeech(
                 text = sentence,
@@ -372,6 +390,7 @@ class SettingsViewModel @Inject constructor(
                     _playbackState.value =
                         PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
+
                 PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
             }
             _playbackState.value = PlaybackState.Idle
@@ -430,7 +449,7 @@ class SettingsViewModel @Inject constructor(
                         _uiState.update { it.copy(currentLanguage = selectedLanguage.name) } //update UI
 
                         // 1. Save the user's preference (already here)
-                      //  userPreferencesRepository.saveSelectedFileName(selectedLanguage.code)
+                        //  userPreferencesRepository.saveSelectedFileName(selectedLanguage.code)
 //                        userPreferencesRepository.saveSelectedSkillLevel(selectedLanguage.skillLevel)
                         // --- THIS IS THE NEW, CRITICAL PART ---
                         // 2. Tell the shared manager to load the recalled items for the NEW exam
@@ -439,6 +458,7 @@ class SettingsViewModel @Inject constructor(
 
                     }
                 }
+
                 SheetContent.BothSelection -> {
                     Timber.e("BothSelection")
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)//so that old exam has correct stat
@@ -475,6 +495,7 @@ class SettingsViewModel @Inject constructor(
 
                     }
                 }
+
                 SheetContent.Hidden -> { /* Do nothing */
                 }
 
@@ -546,6 +567,7 @@ class SettingsViewModel @Inject constructor(
             billingRepository.debugResetAllPurchases()
         }
     }
+
     fun onDebugTestReadJSON() {
         if (DEBUG) {
             Timber.w("onDebugTestReadJSON()")
@@ -568,36 +590,39 @@ class SettingsViewModel @Inject constructor(
         firestoreRepository.fsIncUserProperty("premiumShownBuyScreen")
     }
 
-    fun debugAppValues(){
+    fun debugAppValues() {
 
-        if ( isItMe() ){ //JG onSamsung phone
+        if (isItMe()) { //JG onSamsung phone
             val productDetails = billingRepository.printableCurrentStatus()
             Timber.w(productDetails)
             Timber.w(rateLimiter.printCurrentStatus)
 
-           Timber.w(creditsRepository.printableCredits())
+            Timber.w(creditsRepository.printableCredits())
         }
     }
-    fun debugAppRateLimiting() : String {
 
-        if ( isItMe() ){ //JG onSamsung phone
+    fun debugAppRateLimiting(): String {
+
+        if (isItMe()) { //JG onSamsung phone
             return rateLimiter.printableStatus()
         }
 
         return ""
     }
-    fun debugAppBilling() : String {
 
-        if ( isItMe() ){ //JG onSamsung phone
+    fun debugAppBilling(): String {
+
+        if (isItMe()) { //JG onSamsung phone
             val productDetails = billingRepository.printableCurrentStatus()
-           return productDetails
+            return productDetails
         }
 
         return ""
     }
-    fun debugAppLLMCredits() : String {
 
-        if ( isItMe() ){ //JG onSamsung phone
+    fun debugAppLLMCredits(): String {
+
+        if (isItMe()) { //JG onSamsung phone
             return creditsRepository.printableCredits()
         }
 
@@ -605,7 +630,30 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun isItMe(): Boolean {
-        return authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" || authRepository.fsCurrentUID() =="TECvYwk9i7RJcyLhFver15Ywbp93"
+        return authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" || authRepository.fsCurrentUID() == "TECvYwk9i7RJcyLhFver15Ywbp93"
+    }
+
+    fun onDebugCrashlyitcs() {
+
+        Timber.i("onDebugCrashlyitcs()")
+        val crashlytics = FirebaseCrashlytics.getInstance()
+        crashlytics.setUserId(authRepository.fsCurrentUID())
+
+
+        crashlytics.log("onDebugCrashlyitcs() First Test")
+
+        try {
+            Timber.i("onDebugCrashlyitcs() try")
+            throw RuntimeException("Test Crash")
+        } catch (e: Exception) {
+            Timber.i("Exception")
+            Timber.e(e, "A serious, handled error occurred while fetching data. DEBUG TEST")
+
+            // ✅ RECORD THE HANDLED EXCEPTION
+            // This sends a full report to the Firebase Crashlytics dashboard.
+            FirebaseCrashlytics.getInstance().recordException(e)
+        }
+
     }
 
 

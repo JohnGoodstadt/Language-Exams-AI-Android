@@ -357,7 +357,7 @@ fun SettingsScreen(
                     {
                         productDetails?.let { details ->
                             details.oneTimePurchaseOfferDetails?.let { offerDetails ->
-                                Text("Go for it: ${offerDetails.formattedPrice}")
+                                Text("Unlimited: ${offerDetails.formattedPrice}")
                             }
                         }
                     }
@@ -542,8 +542,7 @@ fun SettingsScreen(
                     currentValue = "Show Choose Exam and Language (D)",
                     onClick = {
                         if (context is androidx.activity.ComponentActivity) {
-//                            viewModel.onDebugPrintBillingStatus(context)
-                            viewModel.onDebugTestReadJSON()
+                            viewModel.onDebugCrashlyitcs()
                         }
                     }
                 )

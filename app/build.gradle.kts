@@ -11,6 +11,7 @@ plugins {
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.google.gms.google.services)
     id("com.google.devtools.ksp")
+    alias(libs.plugins.firebase.crashlytics)
 }
 
 val secretsProperties = Properties()
@@ -206,6 +207,7 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-config-ktx")
     implementation("com.google.firebase:firebase-analytics-ktx") // If you have it
+    implementation(libs.firebase.crashlyticsKtx)
 
     // This library is NOT part of the Firebase BOM, so it needs its own version.
     // Ensure this is defined correctly in your TOML file.

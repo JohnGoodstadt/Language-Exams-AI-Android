@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.models
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 // Using @Serializable on all of them allows for easy parsing with kotlinx.serialization
@@ -15,8 +16,8 @@ data class AppUIManifest(
 @Serializable
 data class SheetDefinition(
     val title: String,
-    val screenType: ScreenType, // We'll use strings for now, can be an enum later
-    val sheetDataType: SheetDataType,   // We'll use strings for now, can be an enum later
+    val screenType: ScreenType,
+    val sheetDataType: SheetDataType,
     val firestoreDocumentId: String? = null,
     val subTabs: List<SubTabDefinition>? = null
 )

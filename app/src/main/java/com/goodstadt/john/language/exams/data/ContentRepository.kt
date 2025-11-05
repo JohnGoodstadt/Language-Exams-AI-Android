@@ -8,6 +8,7 @@ import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
@@ -143,6 +144,8 @@ class ContentRepository @Inject constructor(
                         e,
                         "VocabRepo: CRITICAL error in orchestrator. Falling back to bundle for '$logicalName'."
                     )
+                    FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat0Data() Data load failed for $name"))
+
                     val resourceName = mapLogicalToResourceName(logicalName)
                     val bundleResult = loadBundledFormat0Data(resourceName)
                     bundleResult.getOrNull()?.let { vocabCache[logicalName] = it }
@@ -198,6 +201,7 @@ class ContentRepository @Inject constructor(
             return@withContext result
         } catch (e: Exception) {
             Timber.e(e, "VocabRepo: CRITICAL error in getFormat1Data for '$logicalName'.")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat1Data() Data load failed for $name"))
             return@withContext Result.failure(e) // We don't have a bundle fallback for this type
         }
     }
@@ -245,6 +249,7 @@ class ContentRepository @Inject constructor(
             Result.success(vocabFile)
         } catch (e: Exception) {
             Timber.e(e, "VocabRepo: Failed to load from bundle: $resourceName")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository._loadFromBundle() Data load failed for $resourceName"))
             Result.failure(e)
         }
     }

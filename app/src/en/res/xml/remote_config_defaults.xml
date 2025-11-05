@@ -43,34 +43,34 @@
             "sheetRegistry": {
             "quiz": {
             "title": "Quiz",
-            "dataType": "fixed",
+            "sheetDataType": "fixed",
             "screenType": "FixedScreen"
             },
             "conjugations": {
             "title": "Conjugations",
-            "dataType": "fixed",
+            "sheetDataType": "fixed",
             "screenType": "FixedScreen"
             },
             "EnglishPrepositions": {
             "title": "Prepositions",
-            "dataType": "VocabFile",
+            "sheetDataType": "VocabFile",
             "screenType": "VocabScreen",
             "firestoreDocumentId": "EnglishPrepositions"
             },
             "AdjectivesGroup": {
             "title": "Adjectives",
             "screenType": "GroupedVocabScreen",
-            "dataType": "VocabFile",
+            "sheetDataType": "VocabFile",
             "subTabs": [
-            { "title": "Basic", "firestoreDocumentId": "EnglishA1Adjectives", "dataType": "VocabFile" },
-            { "title": "Intermediate", "firestoreDocumentId": "EnglishA2Adjectives", "dataType": "VocabFile" },
-            { "title": "Upper", "firestoreDocumentId": "EnglishB1Adjectives", "dataType": "VocabFile" },
-            { "title": "Advanced", "firestoreDocumentId": "EnglishB2Adjectives", "dataType": "VocabFile" }
+            { "title": "Basic", "firestoreDocumentId": "EnglishA1Adjectives", "sheetDataType": "VocabFile" },
+            { "title": "Intermediate", "firestoreDocumentId": "EnglishA2Adjectives", "sheetDataType": "VocabFile" },
+            { "title": "Upper", "firestoreDocumentId": "EnglishB1Adjectives", "sheetDataType": "VocabFile" },
+            { "title": "Advanced", "firestoreDocumentId": "EnglishB2Adjectives", "sheetDataType": "VocabFile" }
             ]
             },
             "EnglishDefinitionsFormat1": {
             "title": "Definitions",
-            "dataType": "Format1",
+            "sheetDataType": "Format1",
             "screenType": "Format1Screen",
             "firestoreDocumentId": "EnglishDefinitionsFormat1"
             }

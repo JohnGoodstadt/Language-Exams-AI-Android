@@ -8,6 +8,7 @@ import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.TabDefinition
 import com.goodstadt.john.language.exams.models.TabsManifest
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import kotlinx.coroutines.tasks.await
 import kotlinx.serialization.encodeToString
@@ -226,27 +227,40 @@ class AppConfigRepository @Inject constructor(
      *
      * @return The parsed AppUIManifest, or a default/empty manifest on failure.
      */
-    suspend fun getAppUiManifest(): AppUIManifest {
-        try {
-            remoteConfig.fetchAndActivate().await()
-            Timber.d("Remote Config fetched and activated.")
-        } catch (e: Exception) {
-            Timber.e(e, "Failed to fetch remote config; will use cached or default values.")
-        }
+    fun getAppUiManifest(): AppUIManifest {
+        val crashlytics = FirebaseCrashlytics.getInstance()
+//        try {
+//            remoteConfig.fetchAndActivate().await()
+//            Timber.d("Remote Config fetched and activated.")
+//        } catch (e: Exception) {
+//            Timber.e(e, "Failed to fetch remote config; will use cached or default values.")
+//        }
 
         // Get the single manifest JSON string from Remote Config
         val manifestJsonString = remoteConfig.getString("app_ui_manifest")
+
 
         return if (manifestJsonString.isNotBlank()) {
             try {
                 // Attempt to parse the JSON string from the server or cache
                 jsonParser.decodeFromString<AppUIManifest>(manifestJsonString)
             } catch (e: Exception) {
+
                 // If parsing the remote/cached JSON fails, log it and fall back to the bundled default.
                 Timber.e(e, "CRITICAL: Failed to parse 'app_ui_manifest' from remote. Falling back to default.")
+
+                // 3. Record the non-fatal exception.
+                // This sends the full exception object, including its stack trace, to Firebase.
+                crashlytics.recordException(e)
+
                 parseDefaultManifest()
+
+
             }
         } else {
+            val error = Exception("Data load failed completely for app_ui_manifest")
+            crashlytics.recordException(error)
+
             // If the remote string is empty, fall back to the default immediately.
             Timber.w("Remote 'app_ui_manifest' is blank. Falling back to default.")
             parseDefaultManifest()

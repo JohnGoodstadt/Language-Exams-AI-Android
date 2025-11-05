@@ -34,6 +34,7 @@ import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.calculateCallCost
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.google.ai.client.generativeai.type.GenerateContentResponse
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
@@ -48,7 +49,7 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
-
+import kotlin.io.path.fileVisitor
 
 
 // Data class to hold the parsed response, matching the Swift LLMResponse
@@ -497,6 +498,7 @@ class ParagraphViewModel @Inject constructor(
                                 )
                             }
                             e.printStackTrace()
+                            FirebaseCrashlytics.getInstance().recordException(Exception("ParagraphViewModel.generateNewParagraph() Gemini generate call"))
                         }
                     }
                 }
@@ -509,6 +511,8 @@ class ParagraphViewModel @Inject constructor(
 //                _uiState.update { it.copy(isLoading = false, error = e.message) }
                 Timber.e("Error in call to openAI")
                 Timber.e(e.localizedMessage)
+                val fileName = userPreferencesRepository.selectedFileNameFlow.first()
+                FirebaseCrashlytics.getInstance().recordException(Exception("ParagraphViewModel.generateNewParagraph() getFormat0Data for ${fileName }}"))
                 _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
 //                _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.${e.localizedMessage}") }
             }
