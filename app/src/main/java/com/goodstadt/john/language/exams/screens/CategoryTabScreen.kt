@@ -65,7 +65,7 @@ fun CategoryTabScreen(
 //bottom sheet
     var selectedWordForSheet by remember { mutableStateOf<Format0Word?>(null) }
     var showBottomSheet by remember { mutableStateOf(false) }
-    val bottomSheetState = rememberModalBottomSheetState()
+    val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     LaunchedEffect(key1 = tabIdentifier, key2 = categoryTitle, key3 = selectedVoiceName) {
         //Timber.e("CategoryTabScreen.LaunchEffect $tabIdentifier $categoryTitle $selectedVoiceName")
@@ -413,7 +413,7 @@ fun SentencesBottomSheetContent(
             .fillMaxWidth()
             .padding(16.dp)
             .verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         // 2. Display the main word prominently
         Text(
@@ -426,17 +426,29 @@ fun SentencesBottomSheetContent(
                 style = MaterialTheme.typography.titleSmall
             )
         }
+        if (word.IPA.isNotEmpty()) {
+            Text(
+                text = word.IPA,
+                style = MaterialTheme.typography.titleSmall
+            )
+        }
+        if (word.pronounce.isNotEmpty()) {
+            Text(
+                text = word.pronounce,
+                style = MaterialTheme.typography.titleSmall
+            )
+        }
 
         HorizontalDivider()
 
         // 3. Loop through and display each sentence
         word.sentences.forEach { sentence ->
             Column(
-                verticalArrangement = Arrangement.spacedBy(4.dp)
+                verticalArrangement = Arrangement.spacedBy(2.dp)
             ) {
 
                 val displayData = buildSentenceParts(entry = word, sentence = sentence)
-               // val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
+
                 Column(modifier = Modifier.clickable { onBottomSheetRowTapped(word, sentence) }) {
                     HighlightedWordInSentenceRow(
                         word = word.word,

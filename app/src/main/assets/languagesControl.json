@@ -58,22 +58,22 @@
 			"currentSkillLevel":"A1",
 			"exams": [
 				{
-					"displayName":"English A1",
+					"displayName":"English A1 - Basic",
 					"json":"vocab_data_a1",
 					"skillLevel":"A1"
 				},
 				{
-					"displayName":"English A2",
+					"displayName":"English A2 - Inter",
 					"json":"vocab_data_a2",
 					"skillLevel":"A2"
 				},
 				{
-					"displayName":"English B1",
+					"displayName":"English B1 - Upper",
 					"json":"vocab_data_b1",
 					"skillLevel":"B1"
 				},
 				{
-					"displayName":"English B2",
+					"displayName":"English B2 - Advanced",
 					"json":"vocab_data_b2",
 					"skillLevel":"B2"
 				}
@@ -96,22 +96,22 @@
 			"currentSkillLevel":"A1",
 			"exams": [
 				{
-					"displayName":"English A1",
+					"displayName":"English A1 - Basic",
 					"json":"vocab_data_a1",
 					"skillLevel":"A1"
 				},
 				{
-					"displayName":"English A2",
+					"displayName":"English A2 - Inter",
 					"json":"vocab_data_a2",
 					"skillLevel":"A2"
 				},
 				{
-					"displayName":"English B1",
+					"displayName":"English B1- Upper",
 					"json":"vocab_data_b1",
 					"skillLevel":"B1"
 				},
 				{
-					"displayName":"English B2",
+					"displayName":"English B2 - Advanced",
 					"json":"vocab_data_b2",
 					"skillLevel":"B2"
 				}

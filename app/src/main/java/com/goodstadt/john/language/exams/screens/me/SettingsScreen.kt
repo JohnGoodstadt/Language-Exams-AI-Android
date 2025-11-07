@@ -550,7 +550,7 @@ fun SettingsScreen(
             item {
                 SettingsInfoItem(
                     icon = Icons.Default.Info,
-                    title = "UID",
+                    title = "UID (D)",
                     value = viewModel.firebaseUid()
                 )
             }

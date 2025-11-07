@@ -233,7 +233,9 @@ class ExamSheetRepository @Inject constructor(
                                 word = firestoreWord.word,
                                 group = firestoreWord.group,
                                 sentences = sentences,
-                                definition = firestoreWord.definition//TODO: need to add this
+                                definition = firestoreWord.definition,
+                                IPA = firestoreWord.IPA,
+                                pronounce = firestoreWord.pronounce
                             )
                         } catch (e: Exception) {
                             Timber.e(
