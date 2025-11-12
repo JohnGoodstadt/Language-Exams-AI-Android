@@ -46,6 +46,9 @@ sealed class RefScreen(val route: String) {
     object Format1 : RefScreen("format1_screen/{documentId}") {
         fun createRoute(documentId: String) = "format1_screen/$documentId"
     }
+    object Format2 : RefScreen("format2_screen/{documentId}") {
+        fun createRoute(documentId: String) = "format2_screen/$documentId"
+    }
 }
 
 // Helper function (can be simplified or removed later, but useful for startDestination)

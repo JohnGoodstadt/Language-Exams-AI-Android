@@ -7,6 +7,7 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.Format0File
+import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -52,6 +53,7 @@ class ContentRepository @Inject constructor(
     // Cache the result in memory after the first successful load
     private val vocabCache = mutableMapOf<String, Format0File>()
     private val format1Cache = mutableMapOf<String, HeaderWordsSentencesListRoot>()
+    private val format2Cache = mutableMapOf<String, Format2File>()
 
     //Problem was getVocabData() called twice sub millisecond
     // ✅ ADDED: A map to store ongoing fetch operations.
@@ -164,7 +166,7 @@ class ContentRepository @Inject constructor(
             newJob.await()
         }//: End Return
 
-    } //end getVocabData()
+    } //end
 
     suspend fun getFormat1Data(name: String): Result<HeaderWordsSentencesListRoot> = withContext(Dispatchers.IO) {
         val logicalName = normalizeToLogicalName(name)
@@ -205,7 +207,51 @@ class ContentRepository @Inject constructor(
             return@withContext Result.failure(e) // We don't have a bundle fallback for this type
         }
     }
+    suspend fun getFormat2Data(name: String): Result<Format2File> = withContext(Dispatchers.IO) {
+        val logicalName = normalizeToLogicalName(name)
+        try {
+            // --- 1. VERSION CHECK ---
+            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+            val remoteVersion = remoteVersions[logicalName] ?: 1
+            val localVersion = appConfigRepository.getLocalVersion(logicalName)
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("ContentRepo: Sheet '$logicalName' (Format2) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
 
+            // --- 2. IN-MEMORY CACHE CHECK ---
+            if (!forceRefresh) {
+                format2Cache[logicalName]?.let { cachedFile ->
+                    Timber.d("ContentRepo: Returning '$logicalName' (Format2) from MEMORY CACHE.")
+                    return@withContext Result.success(cachedFile)
+                }
+            }
+
+            // --- 3. DELEGATE TO ExamSheetRepository ---
+            Timber.d("ContentRepo: Delegating fetch for '$logicalName' (Format2) to ExamSheetRepository...")
+
+            // This is the line you will add in the next step.
+            // For now, let's create a placeholder that fails, so you can see the flow.
+             val result = examSheetRepository.getFormat2Sheet(logicalName, forceRefresh = forceRefresh)
+            //val result: Result<Format2File> = Result.failure(NotImplementedError("getFormat2Sheet is not yet implemented in ExamSheetRepository"))
+
+
+            // --- 4. WARM UP MEMORY CACHE & UPDATE VERSION ---
+            if (result.isSuccess) {
+                val format2File = result.getOrThrow()
+                format2Cache[logicalName] = format2File
+                Timber.d("ContentRepo: Warmed up memory cache for '$logicalName' (Format2).")
+
+                if (forceRefresh) {
+                    appConfigRepository.updateLocalVersion(logicalName,remoteVersion)
+                }
+            }
+            return@withContext result
+
+        } catch (e: Exception) {
+            Timber.e(e, "ContentRepo: CRITICAL error in getFormat2Data for '$logicalName'.")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat2Data() failed for $name", e))
+            return@withContext Result.failure(e) // Format2 does not have a bundle fallback
+        }
+    }
     /**
      * ✅ THE FIX: A public function specifically for STATIC, bundled data.
      * It provides a simple API for fixed screens like Conjugations.

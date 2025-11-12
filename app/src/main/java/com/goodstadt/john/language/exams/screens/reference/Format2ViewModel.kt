@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.models.Format2File
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -15,21 +14,23 @@ import javax.inject.Inject
 
 // 1. Define the UI State for this specific screen.
 // A sealed interface is the best practice for representing distinct states.
-sealed interface Format1UiState {
-    object Loading : Format1UiState
-    data class Success(val data: List<HeaderWordsSentencesList>) : Format1UiState
-    data class Error(val message: String) : Format1UiState
+
+sealed interface Format2UiState {
+    object Loading : Format2UiState
+    data class Success(val format2File: Format2File) : Format2UiState
+    data class Error(val message: String) : Format2UiState
 }
 
+
 @HiltViewModel
-class Format1ViewModel @Inject constructor(
+class Format2ViewModel @Inject constructor(
 //    private val appConfigRepository: AppConfigRep ository,
 //    private val examSheetRepository: ExamSheetRepository,
     private val vocabRepository: ContentRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow<Format1UiState>(Format1UiState.Loading)
+    private val _uiState = MutableStateFlow<Format2UiState>(Format2UiState.Loading)
     val uiState = _uiState.asStateFlow()
 
     // 3. Get the documentId from the navigation arguments via SavedStateHandle.
@@ -42,17 +43,17 @@ class Format1ViewModel @Inject constructor(
     }
     private fun loadData() {
         viewModelScope.launch {
-            _uiState.value = Format1UiState.Loading
+            _uiState.value = Format2UiState.Loading
 
             // ✅ SIMPLIFIED: All the complex logic is gone.
             // We just make one simple, type-safe call to our orchestrator.
-            val result = vocabRepository.getFormat1Data(documentId)
+            val result = vocabRepository.getFormat2Data(documentId)
 
-            result.onSuccess { format1File ->
-                _uiState.value = Format1UiState.Success(format1File.data)
+            result.onSuccess { format2File ->
+                _uiState.value = Format2UiState.Success(format2File)
             }
             result.onFailure { error ->
-                _uiState.value = Format1UiState.Error(error.localizedMessage ?: "Failed to load content")
+                _uiState.value = Format2UiState.Error(error.localizedMessage ?: "Failed to load content")
             }
         }
     }

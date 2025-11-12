@@ -11,6 +11,7 @@ import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.SheetDefinition
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Sentence
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -33,6 +34,7 @@ data class ReferenceUiState(
     // Data caches (add one for each data type)
     val vocabFileCache: Map<String, Format0File> = emptyMap(),
     val format1Cache: Map<String, HeaderWordsSentencesListRoot> = emptyMap(),
+    val format2Cache: Map<String, Format2File> = emptyMap(),
 
     // Loading/Error state for data fetching
     val isLoadingSheet: Boolean = false,
@@ -134,7 +136,15 @@ class ReferenceViewModel @Inject constructor(
                         }
                         result.onFailure { throw it }
                     }
+                    SheetDataType.FORMAT_2 -> {
+                        val result = vocabRepository.getFormat2Data(docId)
+                        result.onSuccess { file ->
+                            _uiState.update { it.copy(format2Cache = it.format2Cache + (docId to file)) }
+                        }
+                        result.onFailure { throw it }
+                    }
                     else -> Timber.w("No data fetching implemented for dataType: ${definition.sheetDataType}")
+
                 }
             } catch (e: Exception) {
                 _uiState.update { it.copy(sheetError = e.localizedMessage ?: "Failed to load content") }

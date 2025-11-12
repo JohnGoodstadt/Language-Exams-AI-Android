@@ -11,6 +11,12 @@ import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.TabHeaderForFirestore
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.models.Format2Entry
+import com.goodstadt.john.language.exams.models.Format2File
+import com.goodstadt.john.language.exams.models.Format2Level
+import com.goodstadt.john.language.exams.models.Format2Sentence
+import com.goodstadt.john.language.exams.models.Format2WordAndSentenceDTO
+import com.goodstadt.john.language.exams.models.SheetHeaderFormat2DTO
 import com.goodstadt.john.language.exams.models.WordAndSentenceForFirestore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -354,6 +360,110 @@ class ExamSheetRepository @Inject constructor(
         return File(cacheDir, fileName)
     }
 
+    suspend fun getFormat2Sheet(sheet_name: String, forceRefresh: Boolean): Result<Format2File> {
+        return try {
+            // a. Check disk cache first (unless forcing a refresh)
+            if (!forceRefresh) {
+                readFormat2SheetFromCache(sheet_name)?.let { cachedFile ->
+                    Timber.d("ExamSheetRepo: Returning '$sheet_name' (Format2) from disk cache. Yippee")
+                    return Result.success(cachedFile)
+                }
+            }
 
+            val format2File = downloadAndAssembleFormat2(sheet_name)
+            val cacheFile = getCacheFilePointer(sheet_name)
+            val jsonString = jsonParser.encodeToString(Format2File.serializer(), format2File)
+            cacheFile.writeText(jsonString)
+
+            Timber.i("ExamSheetRepo: Successfully fetched and cached '$sheet_name' (Format2).")
+
+            // 3. ✅ Wrap the successful result in Result.success()
+            Result.success(format2File)
+
+
+        } catch (e: Exception) {
+            Timber.e(e, "ExamSheetRepo: CRITICAL Error in getFormat2Sheet for '$sheet_name'.")
+            return Result.failure(e)
+        }
+    }
+    private suspend fun readFormat2SheetFromCache(logicalName: String): Format2File? = withContext(Dispatchers.IO) {
+        val file = getCacheFilePointer(logicalName)
+        if (!file.exists()) return@withContext null
+
+        return@withContext try {
+            val jsonString = file.readText()
+            jsonParser.decodeFromString<Format2File>(jsonString)
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to read Format2 from disk cache for '$logicalName'")
+            null
+        }
+    }
+// ... inside your ExamSheetRepository class ...
+
+    /**
+     * The specific function that knows how to download and assemble a Format2File object
+     * from your native Firestore documents. This is the direct Kotlin translation of your final Swift version.
+     */
+    private suspend fun downloadAndAssembleFormat2(examName: String): Format2File = coroutineScope {
+        Timber.d("ExamSheetRepo: Assembling Format2 sheet for '$examName' from sub-collections.")
+
+        val examDocRef = firestore.collection("global").document("exam_sheets")
+            .collection("sheets").document(examName)
+
+        // 1. --- LAUNCH CONCURRENT FETCHES for the root metadata and the flattened word list ---
+        val rootDtoDeferred = async(Dispatchers.IO) {
+            examDocRef.get().await().toObject(SheetHeaderFormat2DTO::class.java)
+                ?: throw Exception("Root document '$examName' (Format2) not found or failed to parse.")
+        }
+        val allEntriesDeferred = async(Dispatchers.IO) {
+            val snapshot = examDocRef.collection("wordsAndSentences").get().await()
+            snapshot.toObjects(Format2WordAndSentenceDTO::class.java)
+        }
+
+        // 2. --- AWAIT ALL RESULTS ---
+        val rootDto = rootDtoDeferred.await()
+        val allEntries = allEntriesDeferred.await()
+
+        Timber.d("ExamSheetRepo: Fetched metadata and ${allEntries.size} total entries for '$examName'.")
+
+        // 3. --- RE-ASSEMBLE THE HIERARCHY ---
+        // Group the flat list of DTOs by their 'sortorder'. This is the key to creating the 4 sections.
+        val groupedBySortOrder = allEntries.groupBy { it.sortorder }
+
+        // 4. --- TRANSFORM the grouped data into your final domain models ---
+        val finalLevels = groupedBySortOrder.entries
+            .mapNotNull { (sortOrder, dtosInGroup) ->
+                // Get metadata from the first DTO in the group
+                val firstDto = dtosInGroup.firstOrNull() ?: return@mapNotNull null
+
+                // Map the DTOs in this specific group to the `Format2Entry` domain model
+                val entries = dtosInGroup.map { dto ->
+                    val sentences = dto.sentences.map { Format2Sentence(sentence = it) }
+                    Format2Entry(word = dto.word, definition = dto.definition, sentences = sentences)
+                }
+
+                // The 'title' now comes from the DTO, not the dictionary key
+                Format2Level(
+                    title = firstDto.title,
+                    description = firstDto.description,
+                    sortorder = sortOrder, // The key of our groupBy map is the sort order
+                    explanation = firstDto.explanation,
+                    wordsAndSentences = entries
+                )
+            }
+            .sortedBy { it.sortorder } // Sort the final levels by their sort order
+
+        // 5. --- ASSEMBLE the final `Format2File` domain model ---
+        return@coroutineScope Format2File(
+            fileformat = rootDto.fileformat,
+            location = rootDto.location,
+            sheetname = rootDto.sheetname,
+            title = rootDto.title,
+            description = rootDto.description,
+            // Safely convert the nullable Date to a Long, then to an Int
+            updatedDate = (rootDto.updatedDate?.time ?: 0L).toInt(),
+            data = finalLevels
+        )
+    }
 
 }

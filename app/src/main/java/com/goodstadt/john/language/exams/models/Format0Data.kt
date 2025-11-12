@@ -34,7 +34,6 @@ data class Format0File(
 @Serializable
 data class Category(
     val title: String,
-//    @SerialName("tabnumber") //can crash on decode
     val tabNumber: Int,
     val sortOrder: Int,
     val words: List<Format0Word>
