@@ -37,7 +37,7 @@ sealed interface Format1ScreenUiState {
     object NotAvailable : Format1ScreenUiState // For flavors like 'zh'
 }
 @HiltViewModel
-class Format1ScreenViewModel @Inject constructor(
+class Format1ScreenViewModelObsolete @Inject constructor(
     private val connectivityRepository: ConnectivityRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val userPreferencesRepository: UserPreferencesRepository,

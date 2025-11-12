@@ -38,7 +38,7 @@ import com.goodstadt.john.language.exams.viewmodels.ConjugationsViewModel
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun Format1Screen(
-    viewModel: Format1ScreenViewModel = hiltViewModel(),
+    viewModel: Format1ViewModel = hiltViewModel(),
     data: List<HeaderWordsSentencesList>,
     modifier: Modifier = Modifier
 ) {
@@ -73,7 +73,7 @@ fun Format1Screen(
                 ) {
                     Text(
                         text = section.description,
-                        style = MaterialTheme.typography.bodySmall,
+                        style = MaterialTheme.typography.titleSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }

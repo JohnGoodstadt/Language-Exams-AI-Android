@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.models.Format2Level
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
 
@@ -29,10 +30,11 @@ import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun Format2Screen(
+    viewModel: Format2ViewModel = hiltViewModel(),
     title: String,
     description: String,
     levels: List<Format2Level>,
-    onRowTapped: (String) -> Unit,
+//    onRowTapped: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     // LazyColumn is the efficient Composable for displaying the main scrollable list.
@@ -52,7 +54,7 @@ fun Format2Screen(
                 if (description.isNotBlank()) {
                     Text(
                         text = description,
-                        style = MaterialTheme.typography.titleMedium,
+                        style = MaterialTheme.typography.titleSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
@@ -92,23 +94,21 @@ fun Format2Screen(
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 12.dp)
                         .clip(RoundedCornerShape(12.dp))
-                        // b) Set the background color. `surfaceVariant` is the theme-aware
-                        //    choice for a light gray background in both light and dark modes.
                         .background(MaterialTheme.colorScheme.surfaceContainerHigh),
 
                     verticalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
                     // Loop through the sentences for this entry
-                    entry.sentences.forEachIndexed { index, sentence ->
+                    entry.sentences.forEachIndexed { index, item ->
                         // Your Format2RowView or a similar composable would go here.
                         // For now, let's build it directly.
                         Format2Row(
                             word = entry.word,
-                            sentence = sentence.sentence,
+                            sentence = item.sentence,
 //                            onTapped = { onRowTapped(sentence.sentence) },
                             onTapped = { viewModel.playTrack(item.sentence)},
 
-                            modifier = Modifier.padding(start = 16.dp)
+                            modifier = Modifier.padding(start = 16 .dp)
                         )
                     }
                 }
@@ -140,7 +140,7 @@ private fun Format2Row(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onTapped)
-            .padding(vertical = 2.dp)
+            .padding(vertical = 4.dp, horizontal = 16.dp)
 
     ) {
         Text(text = styledSentence)
