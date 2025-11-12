@@ -22,13 +22,23 @@ object LanguageConfig {
     )
     //val conjugationsFileName: String? = "conjugations_en"
     val conjugationOptions = listOf("To Have", "To Be", "To Do", "To Get")
-    fun getConjugationFileName(title: String): String {
+    fun getConjugationBundleFileName(title: String): String {
         val jsonFileName = when (title) {
             "To Have" -> "conjugations_to_have"
             "To Be" -> "conjugations_to_be"
             "To Do" -> "conjugations_to_do"
             "To Get" -> "conjugations_to_get"
             else -> "conjugationsToHave" // Default option
+        }
+        return jsonFileName
+    }
+    fun getConjugationFirestoreSheetName(title: String): String {
+        val jsonFileName = when (title) {
+            "To Have" -> "EnglishConjugationsToHave"
+            "To Be" -> "EnglishConjugationsToBe"
+            "To Do" -> "EnglishConjugationsToDo"
+            "To Get" -> "EnglishConjugationsToGet"
+            else -> "EnglishConjugationsToHave" // Default option
         }
         return jsonFileName
     }

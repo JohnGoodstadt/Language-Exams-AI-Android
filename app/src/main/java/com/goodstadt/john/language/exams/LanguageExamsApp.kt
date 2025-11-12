@@ -10,8 +10,10 @@ import timber.log.Timber
 import android.util.Log
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.utils.logging.FaultTree
+import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import javax.inject.Inject
 
 private class ReleaseTree : Timber.Tree() {
@@ -75,15 +77,16 @@ class LanguageExamsApp : Application() {
             Timber.plant(Timber.DebugTree())
             Timber.d("Crashlytics collection is DISABLED for this debug build.")
         } else {
-//            Timber.plant(ReleaseTree())
-            Timber.plant(FaultTree(firestore))
+            Timber.plant(FaultTree(firestore)) //write to fs on Fatal Error
             Timber.d("Crashlytics collection is ENABLED for this release build.")
         }
 
         // ✅ BEST PRACTICE: Only enable automatic crash reporting for release builds.
         // This prevents your development crashes from polluting your Crashlytics dashboard.
-        //FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
 
-
+        if (BuildConfig.DEBUG) {
+            Firebase.analytics.setUserProperty("is_developer", "true")
+        }
     }
 }

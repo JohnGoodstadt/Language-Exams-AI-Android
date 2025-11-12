@@ -47,27 +47,27 @@ class ExamSheetRepository @Inject constructor(
      * Public function to get a VocabFile. This is the main entry point.
      * It handles the cache-first, network-next logic correctly.
      */
-    suspend fun getFormat0Sheet(name: String, forceRefresh: Boolean): Result<Format0File> =
+    suspend fun getFormat0Sheet(sheet_name: String, forceRefresh: Boolean): Result<Format0File> =
         withContext(Dispatchers.IO) {
             try {
                 // a. Check disk cache first (unless forcing a refresh)
                 if (!forceRefresh) {
-                    Timber.d("ExamSheetRepo.getVocabSheet(): '$name' from cache, if exists ...")
-                    readFormat0FileFromCache(name)?.let { cachedFile ->
-                        Timber.d("ExamSheetRepo.getVocabSheet(): Returning '$name' from disk cache. Yippee!")
+                    Timber.d("ExamSheetRepo.getVocabSheet(): '$sheet_name' from cache, if exists ...")
+                    readFormat0FileFromCache(sheet_name)?.let { cachedFile ->
+                        Timber.d("ExamSheetRepo.getVocabSheet(): Returning '$sheet_name' from disk cache. Yippee!")
                         return@withContext Result.success(cachedFile)
                     }
                 }
 
                 // b. If no cache or force refresh, call your existing network fetcher.
                 //    This function already fetches, builds the object, and caches it.
-                Timber.d("ExamSheetRepo: getVocabSheet '$name' NOT in cache, download")
-                return@withContext fetchFromNetworkAndCacheFormat0File(name)
+                Timber.d("ExamSheetRepo: getVocabSheet '$sheet_name' NOT in cache, download")
+                return@withContext fetchFromNetworkAndCacheFormat0File(sheet_name)
 
             } catch (e: Exception) {
                 Timber.e(
                     e,
-                    "ExamSheetRepo.getVocabSheet(): CRITICAL Error in getVocabSheet for '$name'."
+                    "ExamSheetRepo.getVocabSheet(): CRITICAL Error in getVocabSheet for '$sheet_name'."
                 )
                 return@withContext Result.failure(e)
             }
@@ -166,27 +166,27 @@ class ExamSheetRepository @Inject constructor(
      * This is now the single function responsible for fetching a sheet from Firestore
      * and saving it to the disk cache.
      */
-    private suspend fun fetchFromNetworkAndCacheFormat0File(examName: String): Result<Format0File> {
-        Timber.d("ExamSheetRepo.fetchFromNetworkAndCache(): '$examName' from network...")
+    private suspend fun fetchFromNetworkAndCacheFormat0File(sheet_name: String): Result<Format0File> {
+        Timber.d("ExamSheetRepo.fetchFromNetworkAndCache(): '$sheet_name' from network...")
         return try {
             // This is your existing function that talks to Firestore.
             // Let's assume it returns a VocabFile on success.
-            val vocabFile = downloadFromFirestoreCollections(examName)
+            val vocabFile = downloadFromFirestoreCollections(sheet_name)
 
-            // Get the cache file location.
-            val cacheFile = getCacheFilePointer(examName)
+            // Get the cache file location.d
+            val cacheFile = getCacheFilePointer(sheet_name)
 
             // Save the newly fetched data to the disk cache.
             // This replaces the old `saveToDiskCache` function's logic.
             val jsonString = jsonParser.encodeToString(Format0File.serializer(), vocabFile)
             cacheFile.writeText(jsonString)
 
-            Timber.i("ExamSheetRepo.fetchFromNetworkAndCache(): Successfully fetched and cached '$examName'.")
+            Timber.i("ExamSheetRepo.fetchFromNetworkAndCache(): Successfully fetched and cached '$sheet_name'.")
             Result.success(vocabFile)
         } catch (e: Exception) {
             Timber.e(
                 e,
-                "ExxamSheetRepo.fetchFromNetworkAndCache(): ERROR - Failed to fetch or cache '$examName'."
+                "ExxamSheetRepo.fetchFromNetworkAndCache(): ERROR - Failed to fetch or cache '$sheet_name'."
             )
             Result.failure(e)
         }

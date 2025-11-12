@@ -81,7 +81,11 @@ class ConjugationsViewModel @Inject constructor(
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     init {
-        loadConjugationsData(LanguageConfig.getConjugationFileName(_selectedConjugation.value))
+        val bundleName = LanguageConfig.getConjugationBundleFileName(_selectedConjugation.value)
+        val sheet_name = LanguageConfig.getConjugationFirestoreSheetName(_selectedConjugation.value)
+
+        loadConjugationsData(bundleName,sheet_name) //e.g. conjugations_to_be vs EnglishConjugationsToBe
+//        loadConjugationsData(LanguageConfig.getConjugationBundleFileName(_selectedConjugation.value))
 
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
@@ -99,18 +103,19 @@ class ConjugationsViewModel @Inject constructor(
 //
 //    }
 
-    private fun loadConjugationsData(fileName: String?) {
+    private fun loadConjugationsData(bundle_file_name: String?,firestore_sheet_name: String?,) {
         viewModelScope.launch {
        //     val fileName = LanguageConfig.conjugationsFileName
 
-            if (fileName == null) {
+            if (bundle_file_name == null || firestore_sheet_name == null ){
                 _uiState.value = ConjugationsUiState.NotAvailable
                 return@launch
             }
 
             _uiState.value = ConjugationsUiState.Loading
-//            val result = vocabRepository.getVocabData(fileName)
-            val result = vocabRepository.loadBundledFormat0Data(fileName) //direct from bundle
+            //NOTE: is this fun only bundle or firestore?
+            val result = vocabRepository.getFormat0Data(firestore_sheet_name)
+           // val result99= vocabRepository.loadBundledFormat0Data(bundle_file_name) //direct from bundle
 
             result.onSuccess { vocabFile ->
 
@@ -120,7 +125,7 @@ class ConjugationsViewModel @Inject constructor(
                 _uiState.value = ConjugationsUiState.Success(vocabFile.categories,cachedKeys, selectedVoiceName = currentVoiceName)
             }.onFailure { error ->
                 _uiState.value =
-                    ConjugationsUiState.Error(error.localizedMessage ?: "Failed to load file $fileName")
+                    ConjugationsUiState.Error(error.localizedMessage ?: "Failed to load file $bundle_file_name")
             }
         }
     }
@@ -128,8 +133,11 @@ class ConjugationsViewModel @Inject constructor(
     fun onConjugationSelected(option: String) {
         if (_selectedConjugation.value != option) {
             _selectedConjugation.value = option
-            val fileName = LanguageConfig.getConjugationFileName(option)
-            loadConjugationsData(fileName)
+//            val fileName = LanguageConfig.getConjugationBundleFileName(option)
+            val bundleName = LanguageConfig.getConjugationBundleFileName(option)
+            val sheet_name = LanguageConfig.getConjugationFirestoreSheetName(option)
+
+            loadConjugationsData(bundleName,sheet_name)
         }
     }
     // This function is almost identical to the ones in our other ViewModels

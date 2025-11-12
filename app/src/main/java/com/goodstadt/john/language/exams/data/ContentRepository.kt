@@ -73,14 +73,14 @@ class ContentRepository @Inject constructor(
      * 3. Fallback to the app bundle.
      * It is the ONLY function that writes to the in-memory cache.
      */
-    suspend fun getFormat0Data(name: String): Result<Format0File>  {
+    suspend fun getFormat0Data(sheet_name: String): Result<Format0File>  {
 //        val parentCaller = getParentCaller()
 //        val parentFunctionName = parentCaller?.methodName ?: "Unknown"
 //        Timber.d("This log is from getVocabData, but it was called by: $parentFunctionName")
 
         // Use CoroutineScope to manage the lifecycle of our fetches
         return coroutineScope {
-            val logicalName = normalizeToLogicalName(name)
+            val logicalName = normalizeToLogicalName(sheet_name)
 
             // --- 1. Check for an ONGOING fetch for this exact name ---
             ongoingFetches[logicalName]?.let { activeJob ->
@@ -110,7 +110,7 @@ class ContentRepository @Inject constructor(
                     // --- 3. Delegate to ExamSheetRepository (Disk/Network) ---
                     Timber.d("VocabRepository.getVocabData: Delegating to ExamSheetRepository for '$logicalName'...")
                     val result = examSheetRepository.getFormat0Sheet(
-                        name = logicalName,
+                        sheet_name = logicalName,
                         forceRefresh = forceRefresh
                     )
 
@@ -144,7 +144,7 @@ class ContentRepository @Inject constructor(
                         e,
                         "VocabRepo: CRITICAL error in orchestrator. Falling back to bundle for '$logicalName'."
                     )
-                    FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat0Data() Data load failed for $name"))
+                    FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat0Data() Data load failed for $sheet_name"))
 
                     val resourceName = mapLogicalToResourceName(logicalName)
                     val bundleResult = loadBundledFormat0Data(resourceName)
@@ -214,7 +214,7 @@ class ContentRepository @Inject constructor(
     fun loadBundledFormat0Data(resourceName: String): Result<Format0File> {
         // 1. Check the in-memory cache first.
         vocabCache[resourceName]?.let { cachedFile ->
-            Timber.d("VocabRepo: Returning '$resourceName' from MEMORY CACHE.")
+            Timber.d("VocabRepo: Returning '$resourceName' from MEMORY CACHE. Yippee!")
             return Result.success(cachedFile)
         }
 
@@ -592,29 +592,38 @@ class ContentRepository @Inject constructor(
      * It ensures that any legacy resource names are immediately converted to the
      * canonical logical name used throughout the new system.
      */
-    private fun normalizeToLogicalName(name: String): String {
-        return when (name) {
+    private fun normalizeToLogicalName(resourceName: String): String {
+        return when (resourceName) {
             "vocab_data_a1" -> "EnglishA1Vocab"
             "vocab_data_a2" -> "EnglishA2Vocab"
             "vocab_data_b1" -> "EnglishB1Vocab"
             "vocab_data_b2" -> "EnglishB2Vocab"
+            "conjugations_to_be" -> "EnglishBConjugationsToBe"
+            "conjugations_to_have" -> "EnglishBConjugationsToHave"
+            "conjugations_to_do" -> "EnglishBConjugationsToDo"
+            "conjugations_to_get" -> "EnglishBConjugationsToGet"
+
             // Add any other legacy mappings here
 
             // If the name is already in the correct format, just return it.
-            else -> name
+            else -> resourceName
         }
     }
     /**
      * Maps the logical Firestore name to the Android-specific resource name.
      */
-    private fun mapLogicalToResourceName(logicalName: String): String {
-        return when (logicalName) {
+    private fun mapLogicalToResourceName(sheet_name: String): String {
+        return when (sheet_name) {
             "EnglishA1Vocab" -> "vocab_data_a1"
             "EnglishA2Vocab" -> "vocab_data_a2"
             "EnglishB1Vocab" -> "vocab_data_b1"
             "EnglishB2Vocab" -> "vocab_data_b2"
+            "EnglishBConjugationsToBe" -> "conjugations_to_be"
+            "EnglishBConjugationsToHave" -> "conjugations_to_have"
+            "EnglishBConjugationsToDo" -> "conjugations_to_do"
+            "EnglishBConjugationsToGet" -> "conjugations_to_get"
             // Add other mappings here as needed
-            else -> logicalName // Fallback for other files
+            else -> sheet_name // Fallback for other files
         }
     }
 
