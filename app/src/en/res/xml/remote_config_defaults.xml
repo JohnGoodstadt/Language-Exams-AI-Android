@@ -2,11 +2,11 @@
 <defaultsMap>
     <entry>
         <key>android_minimum_version_code</key>
-        <value>55</value> <!-- A safe, low default that won't block anyone -->
+        <value>60</value> <!-- A safe, low default that won't block anyone -->
     </entry>
     <entry>
         <key>android_recommended_version_code</key>
-        <value>55</value> <!-- A safe, low default -->
+        <value>69</value> <!-- A safe, low default -->
     </entry>
     <entry>
         <key>update_message_optional</key>
@@ -69,10 +69,16 @@
             ]
             },
             "EnglishDefinitionsFormat1": {
-            "title": "Definitions",
+            "title": "Same Sounds",
             "sheetDataType": "Format1",
             "screenType": "Format1Screen",
             "firestoreDocumentId": "EnglishDefinitionsFormat1"
+            },
+            "EnglishGoodVsWell": {
+            "title": "Good vs Well",
+            "sheetDataType": "Format2",
+            "screenType": "Format2Screen",
+            "firestoreDocumentId": "EnglishGoodVsWell"
             }
             },
             "layouts": {
@@ -82,7 +88,8 @@
             "conjugations",
             "EnglishPrepositions",
             "AdjectivesGroup",
-            "EnglishDefinitionsFormat1"
+            "EnglishDefinitionsFormat1",
+            "EnglishGoodVsWell"
             ]
             },
             "meTab": {
@@ -96,8 +103,6 @@
             }
             }
             }
-
-
         </value>
     </entry>
     <entry>

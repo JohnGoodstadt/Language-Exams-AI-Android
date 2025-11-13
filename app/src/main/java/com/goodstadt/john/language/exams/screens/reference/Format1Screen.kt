@@ -93,10 +93,6 @@ fun Format1Screen(
                         .padding(horizontal = 16.dp, vertical = 8.dp)
                         .clickable {
                             viewModel.playTrack(item.sentence)
-                            // This lambda will be executed when the user taps anywhere
-                            // inside the Column's bounds.
-                            println("Column was clicked!")
-                            // Example: onRowTapped(item.sentence)
                         },
                     verticalArrangement = Arrangement.spacedBy(4.dp),
 
