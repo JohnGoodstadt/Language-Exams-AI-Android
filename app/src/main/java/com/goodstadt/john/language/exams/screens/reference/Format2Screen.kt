@@ -16,6 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.models.Format2Level
+import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
 
 /**
@@ -34,14 +35,13 @@ fun Format2Screen(
     title: String,
     description: String,
     levels: List<Format2Level>,
-//    onRowTapped: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     // LazyColumn is the efficient Composable for displaying the main scrollable list.
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(8.dp), // This adds space BETWEEN the main gray boxes
-        contentPadding = PaddingValues(vertical = 32.dp)
+        contentPadding = PaddingValues(vertical = 16.dp)
     ) {
         // --- 1. Top-Level Title and Description ---
         item {
@@ -49,7 +49,8 @@ fun Format2Screen(
                 Text(
                     text = title,
                     style = MaterialTheme.typography.headlineMedium,
-                    fontWeight = FontWeight.Bold
+//                    fontWeight = FontWeight.Bold,
+                    color = orangeLight
                 )
                 if (description.isNotBlank()) {
                     Text(
@@ -77,7 +78,8 @@ fun Format2Screen(
                     if (level.description.isNotBlank()) {
                         Text(
                             text = level.description,
-                            style = MaterialTheme.typography.titleMedium
+                            style = MaterialTheme.typography.titleMedium,
+                            color = orangeLight
                         )
                     }
                 }

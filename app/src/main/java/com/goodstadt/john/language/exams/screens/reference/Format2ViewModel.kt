@@ -139,15 +139,6 @@ class Format2ViewModel @Inject constructor(
                 } else it
             }
 
-//            _uiState.update { currentState ->
-//                if (currentState is ConjugationsUiState.Success) {
-//                    val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId( sentence, currentVoiceName)//word.word
-//                    currentState.copy(cachedAudioWordKeys = updatedKeys)
-//                } else {
-//                    currentState
-//                }
-//            }
-
             val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = vocabRepository.playTextToSpeech(
@@ -162,7 +153,6 @@ class Format2ViewModel @Inject constructor(
                     rateLimiter.recordCall()
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-//                    ttsStatsRepository.incWordStats(word)
                     //TODO: not inc but update!
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }

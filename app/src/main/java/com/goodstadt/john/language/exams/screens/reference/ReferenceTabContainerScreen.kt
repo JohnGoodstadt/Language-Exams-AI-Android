@@ -272,10 +272,6 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                                     title = state.format2File.title,
                                     description = state.format2File.description,
                                     levels = state.format2File.data,
-//                                    onRowTapped = { sentenceToSpeak ->
-//                                        // Handle the tap event, e.g., call a playback function
-//                                        Timber.d("Row tapped, speak: $sentenceToSpeak")
-//                                    }
                                 )
 
 
