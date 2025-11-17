@@ -638,10 +638,12 @@ class SettingsViewModel @Inject constructor(
 
         Timber.i("onDebugCrashlyitcs()")
         val crashlytics = FirebaseCrashlytics.getInstance()
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
+
         crashlytics.setUserId(authRepository.fsCurrentUID())
 
 
-        crashlytics.log("onDebugCrashlyitcs() First Test")
+        crashlytics.log("oSettingsViewModel.onDebugCrashlyitcs() First Test")
 
         try {
             Timber.i("onDebugCrashlyitcs() try")
@@ -649,6 +651,7 @@ class SettingsViewModel @Inject constructor(
         } catch (e: Exception) {
             Timber.i("Exception")
             Timber.e(e, "A serious, handled error occurred while fetching data. DEBUG TEST")
+            Timber.wtf(e, "A serious, handled error occurred. Should get an email. DEBUG TEST")
 
             // ✅ RECORD THE HANDLED EXCEPTION
             // This sends a full report to the Firebase Crashlytics dashboard.

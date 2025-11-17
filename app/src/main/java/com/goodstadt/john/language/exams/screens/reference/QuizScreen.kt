@@ -33,6 +33,10 @@ import kotlin.text.replace
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
@@ -46,6 +50,7 @@ import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.ui.theme.selectedBackground
 import com.goodstadt.john.language.exams.viewmodels.QuizLevels
 import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
+import com.google.common.io.Files.append
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
 
@@ -72,49 +77,23 @@ fun QuizScreen(
     var selectedOption by remember { mutableStateOf<String?>(null) }
     var isCurrentAnswerCorrect by remember { mutableStateOf<Boolean?>(null) } // Track answer correctness
 
-    val isUpgradeAppSheetVisible by viewModel.showUpgradeAppSheet.collectAsState()
-    val isForceUpgradeAppSheetVisible by viewModel.showForceUpgradeAppSheet.collectAsState()
+    //v2 - replace _ with cortrect word in displayed sentence
+    var displayedSentence by remember { mutableStateOf("") }
 
-    var currentQuizFormat = viewModel.quizFillInTheBlanks
-
-    LaunchedEffect(true) {
-       Timber.v("QuizScreen LaunchedEffect")
-    }
-
-    /* TODO: review
-    LaunchedEffect(true) {
-        viewModel.screenStatsInc()
-    }
-    LaunchedEffect(key1 = true) {
-        viewModel.uiEvent.collect { event ->
-            when (event) {
-                is UiEvent.ShowToast -> {
-                    Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
-                }
-            }
+    LaunchedEffect(currentQuestionIndex, questions) {
+        if (questions.isNotEmpty()) {
+            val question = questions[currentQuestionIndex]
+            displayedSentence = question.sentence.replace("_", "___")
+            // Reset the selection state for the new question
+            selectedOption = null
+            isCurrentAnswerCorrect = null
         }
     }
 
-     */
-    //try app upgrade here
-    /*
-    LaunchedEffect(key1 = true) {
-        if (viewModel.checkIfAppUpgradeCheckStillToDoToday()){
-            Timber.v("App Upgrade check not yet done for today")
+//    LaunchedEffect(true) {
+//       Timber.v("QuizScreen LaunchedEffect")
+//    }
 
-            if (viewModel.adviseUpgradeApp()){
-                if (viewModel.forceUpgradeApp()){
-                    viewModel.showForceAppUpgradeSheet()
-                }else{
-                    viewModel.showAppUpgradeSheet()
-                }
-
-            }
-
-
-        }
-    }
- */
     Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -160,15 +139,38 @@ fun QuizScreen(
         // Question Display
         if (questions.isNotEmpty()) {
             val question = questions[currentQuestionIndex]
+            val annotatedQuestionText = buildAnnotatedString {
+                if (isCurrentAnswerCorrect == true && selectedOption != null) {
+                    // --- SUCCESS STATE ---
+                    // The user has answered correctly.
+                    val parts = question.sentence.split("_")
+                    if (parts.size == 2) {
+                        append(parts[0]) // Append part before the blank
+                        withStyle(style = SpanStyle(color = Color.Green, fontWeight = FontWeight.Bold)) {
+                            append(selectedOption!!) // Append the correct word in green
+                        }
+                        append(parts[1]) // Append part after the blank
+                    } else {
+                        // Fallback for complex sentences
+                        append(displayedSentence)
+                    }
+                } else {
+                    // --- QUESTION STATE ---
+                    // Not answered yet, or answered incorrectly.
+                    append(displayedSentence)
+                }
+            }
+
             Text(
-                    text = question.sentence.replace("_", "___"),
+                    //text = question.sentence.replace("_", "___"),
+                    text = annotatedQuestionText,
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth(),
                     color = orangeLight,
             )
 
-            var selectedOption by remember { mutableStateOf<String?>(null) } // State for selected option
+          //  var selectedOption by remember { mutableStateOf<String?>(null) } // State for selected option
 
             question.words.forEach { option ->
                 val isOptionCorrect = option == question.correctOption // Determine if option is correct
@@ -238,6 +240,7 @@ fun QuizScreen(
                                     } else {
                                         option
                                     }
+                                    displayedSentence = fullSentence
                                     viewModel.playTrack(fullSentence)
                                 }
 

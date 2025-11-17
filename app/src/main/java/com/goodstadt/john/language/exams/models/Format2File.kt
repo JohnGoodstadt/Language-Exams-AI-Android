@@ -29,10 +29,8 @@ data class Format2File(
  */
 @Serializable
 data class Format2Level(
-    val title: String = "",
     val description: String = "",
     val sortorder: Int = 0,
-    val explanation: String = "",
     val wordsAndSentences: List<Format2Entry> = emptyList()
 )
 

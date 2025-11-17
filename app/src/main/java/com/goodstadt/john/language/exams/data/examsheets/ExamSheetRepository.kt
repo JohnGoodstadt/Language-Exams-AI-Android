@@ -444,10 +444,8 @@ class ExamSheetRepository @Inject constructor(
 
                 // The 'title' now comes from the DTO, not the dictionary key
                 Format2Level(
-                    title = firstDto.title,
                     description = firstDto.description,
                     sortorder = sortOrder, // The key of our groupBy map is the sort order
-                    explanation = firstDto.explanation,
                     wordsAndSentences = entries
                 )
             }
@@ -460,7 +458,6 @@ class ExamSheetRepository @Inject constructor(
             sheetname = rootDto.sheetname,
             title = rootDto.title,
             description = rootDto.description,
-            // Safely convert the nullable Date to a Long, then to an Int
             updatedDate = (rootDto.updatedDate?.time ?: 0L).toInt(),
             data = finalLevels
         )

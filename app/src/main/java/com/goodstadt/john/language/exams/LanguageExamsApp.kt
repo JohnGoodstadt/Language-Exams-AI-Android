@@ -83,7 +83,8 @@ class LanguageExamsApp : Application() {
 
         // ✅ BEST PRACTICE: Only enable automatic crash reporting for release builds.
         // This prevents your development crashes from polluting your Crashlytics dashboard.
-        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
+//        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(!BuildConfig.DEBUG)
+        FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
 
         if (BuildConfig.DEBUG) {
             Firebase.analytics.setUserProperty("is_developer", "true")

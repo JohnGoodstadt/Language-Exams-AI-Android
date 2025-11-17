@@ -262,23 +262,15 @@ class QuizViewModel @Inject constructor(
                     voiceName = currentVoiceName,
                     languageCode = currentLanguageCode
             )
-//            result.onSuccess {
-//                //TODO: Do I want to save the quiz?
-//                //statsRepository.fsUpdateSentenceHistoryIncCount(WordAndSentence(word.word, sentence.sentence))
-//            }
-//            result.onFailure { error ->
-//                _playbackState.value = PlaybackState.Error(error.localizedMessage ?: "Playback failed")
-//            }
+
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     rateLimiter.recordCall()
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-//                    ttsStatsRepository.incWordStats(sentence)
                 }
                 is PlaybackResult.PlayedFromCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
-//                    ttsStatsRepository.incWordStats(sentence)
                 }
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
@@ -290,51 +282,6 @@ class QuizViewModel @Inject constructor(
 
     }
 
-
-    /*
-    private fun playMP3File(googleVoiceName: String, sentence: String) {
-        val musicDir = application.getMusicDir()
-        val musicFile = File(musicDir, BusinessUtils.encodeMP3Filename(googleVoiceName, sentence))
-        musicPlayer.playMP3File(musicFile) {}
-    }
-
-     */
-
-    /**
-     * Called when the user taps the "play" icon on a SoundData item.
-     * 1) Mark that sound as "isPlayed = true" in the UI state.
-     * 2) Actually play the MP3.
-     */
-    /*
-    fun playMP3(mp3: File) {
-        _playbackState.value = true
-
-        musicPlayer.playMP3File(mp3) {
-            _playbackState.value = false
-        }
-    }
-
-     */
-    /*
-    fun getCachedAudioIfExists(textToSpeak: String) : File? {
-
-//        val currentGoogleVoice = pronounceSharedPreferences.googleVoiceName?.voice()
-//        val filename = BusinessUtils.replaceInvalidChars( "[$currentGoogleVoice]${textToSpeak}.mp3")
-        val filename = BusinessUtils.encodeMP3Filename(pronounceSharedPreferences.googleVoiceName?.noGender(),textToSpeak)
-
-        val musicDir = application.getMusicDir()
-        val musicFile = File(musicDir, filename )
-        if (musicFile.exists() && musicFile.length() > 0L) {
-            try {
-                return musicFile
-            } catch (e: Exception) {
-                return null
-            }
-        }
-        return null
-    }
-
-     */
     fun loadQuestions() {
         viewModelScope.launch {
 
@@ -353,10 +300,6 @@ class QuizViewModel @Inject constructor(
 
             resetQuiz()
 
-
-//            if (_questions.value[0] != null){
-//                Timber.v("First question: ${_questions.value[0]}")
-//            }
         }
     }
     private fun generateQuestionsFromJson(context: Context, fileName: String): List<QuizQuestion> {
@@ -367,7 +310,6 @@ class QuizViewModel @Inject constructor(
             return emptyList()
         }
 
-//        val fileFormat = testData.fileFormat
         if ( testData.fileFormat != quizFillInTheBlanks) {
             currentFileFormat.value = quizMultipleChoice
         }else{
@@ -411,7 +353,6 @@ class QuizViewModel @Inject constructor(
             if ( userAnswers.value.count() == _questions.value.count()) {
                 quizStatistics.value.state = QuizState.COMPLETED
             }
-            //fbUpdateUserQuizStatProperty( quizStatistics.value.readyForDB)
         }
     }
 
@@ -426,13 +367,6 @@ class QuizViewModel @Inject constructor(
             quizStatistics.value = quizStatistics.value.copy(state = QuizState.IN_PROGRESS)
         }
 
-//        when (isCorrect) {
-//            true -> statsManager.inc(StatsManager.fsDOC.USER, StatsManager.QUIZ_QUESTION_SUCCESS_COUNT, 1)
-//            false -> statsManager.inc(StatsManager.fsDOC.USER, StatsManager.QUIZ_QUESTION_FAIL_COUNT, 1)
-//        }
-
-//        Timber.v("${currentQuestionIndex.value} and ${_questions.value.count()}")
-//        Timber.v("selectedLevel: ${selectedLevel.value}")
 
         val currentQuestion = currentQuestionIndex.value + 1 // one based
         if (currentQuestion >= _questions.value.count() ) { //completed
@@ -445,8 +379,6 @@ class QuizViewModel @Inject constructor(
 
     }
 
-
-
     fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyselfListRoot? {
         return try {
             Timber.v("reading json: $fileName")
@@ -457,9 +389,6 @@ class QuizViewModel @Inject constructor(
 
             return jsonParser.decodeFromString<TestMyselfListRoot>(jsonString)
 
-//            val json = context.getJsonString("Quizzes/TestMyselfQuiz1Elementary-en.json")
-           // val json = context.getJsonString("Quizzes/$fileName")
-//            Gson().fromJson(json, TestMyselfListRoot::class.java)
         } catch (e: Exception) {
             e.printStackTrace()
             null
@@ -473,49 +402,6 @@ class QuizViewModel @Inject constructor(
             }
         }
     }
-    /*
- fun checkIfAppUpgradeCheckStillToDoToday(): Boolean {
-     return !checkIfAppUpgradeCheckAlreadyDoneToday()
- }
-
- private fun checkIfAppUpgradeCheckAlreadyDoneToday() : Boolean{
-     return statsManager.checkIfAppUpgradeCheckAlreadyDoneToday()
- }
- fun adviseUpgradeApp() : Boolean {
-
-     val currentAppVersion =  BuildConfig.VERSION_NAME
-     val latestVersion = remoteConfigRepository.getMinimumAppVersion()
-
-     return isUserVersionOlder(currentAppVersion,latestVersion)
-//
-//       if ( remoteConfigRepository.getAppUpdateNeeded()) {
-//        Timber.v("getAppUpdateNeeded")
-//        return true
-//       }else{
-//           Timber.v("getAppUpdateNeeded false")
-//           return false
-//       }
- }
- fun forceUpgradeApp()  : Boolean {
-     val currentAppVersion = BuildConfig.VERSION_NAME
-     val latestVersion = remoteConfigRepository.getMinimumAppVersion()
-
-     return isUserVersionVeryOld(currentAppVersion,latestVersion)
-//
-//        if ( remoteConfigRepository.getAppUpdateNeeded()) {
-//            Timber.v("getAppUpdateNeeded")
-//            return true
-//        }else{
-//            Timber.v("getAppUpdateNeeded false")
-//            return false
-//        }
- }
-
- fun screenStatsInc() {
-     statsManager.inc(StatsManager.fsDOC.TTSStats, StatsManager.viewQuizCount)
- }
-
-  */
 
     fun doIHaveCurrentQuestionInfo(): Boolean {
         return if (_questions.value[currentQuestionIndex.value].summary.isNotEmpty()){
@@ -531,5 +417,4 @@ class QuizViewModel @Inject constructor(
             billingRepository.launchPurchase(activity)
         }
     }
-
 }

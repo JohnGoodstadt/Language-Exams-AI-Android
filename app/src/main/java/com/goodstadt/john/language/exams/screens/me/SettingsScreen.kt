@@ -539,11 +539,11 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Debug Something",
-                    currentValue = "Show Choose Exam and Language (D)",
+                    currentValue = "Test Crashylytics (D)",
                     onClick = {
-                        if (context is androidx.activity.ComponentActivity) {
+//                        if (context is androidx.activity.ComponentActivity) {
                             viewModel.onDebugCrashlyitcs()
-                        }
+//                        }
                     }
                 )
             }
