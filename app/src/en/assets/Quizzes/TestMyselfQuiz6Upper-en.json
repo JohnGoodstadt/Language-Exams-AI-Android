@@ -1,0 +1,125 @@
+{
+	"fileformat": 11,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz6Upper-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct pronunciation of 'the'",
+			"description": "Deciding between /ðə/ (thuh) and /ði/ (thee)",
+			"sortorder": 1,"sortbypage":true,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "How do you pronounce 'the' before 'cat'?",
+					"summary": "Teaching Focus: 'the' before consonant sound.",
+					"explain": "'The' is pronounced /ðə/ (thuh) before consonant sounds.",
+					"words": [
+						{ "word": "The (thuh) cat", "ok": true },
+						{ "word": "The (thee) cat", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "How do you pronounce 'the' before 'apple'?",
+					"summary": "Teaching Focus: 'the' before vowel sound.",
+					"explain": "'The' is pronounced /ði/ (thee) before vowel sounds.",
+					"words": [
+						{ "word": "The (thuh) apple", "ok": false },
+						{ "word": "The (thee) apple", "ok": true }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "How do you pronounce 'the' before 'dog'?",
+					"summary": "Teaching Focus: 'the' before consonant sound.",
+					"explain": "'The' is pronounced /ðə/ (thuh) before consonant sounds.",
+					"words": [
+						{ "word": "The (thuh) dog", "ok": true },
+						{ "word": "The (thee) dog", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "How do you pronounce 'the' before 'orange'?",
+					"summary": "Teaching Focus: 'the' before vowel sound.",
+					"explain": "'The' is pronounced /ði/ (thee) before vowel sounds.",
+					"words": [
+						{ "word": "The (thuh) orange", "ok": false },
+						{ "word": "The (thee) orange", "ok": true }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "How do you pronounce 'the' before 'house'?",
+					"summary": "Teaching Focus: 'the' before consonant sound.",
+					"explain": "'The' is pronounced /ðə/ (thuh) before consonant sounds.",
+					"words": [
+						{ "word": "The (thuh) house", "ok": true },
+						{ "word": "The (thee) house", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "How do you pronounce 'the' before 'egg'?",
+					"summary": "Teaching Focus: 'the' before vowel sound.",
+					"explain": "'The' is pronounced /ði/ (thee) before vowel sounds.",
+					"words": [
+						{ "word": "The (thuh) egg", "ok": false },
+						{ "word": "The (thee) egg", "ok": true }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "How do you pronounce 'the' before 'book'?",
+					"summary": "Teaching Focus: 'the' before consonant sound.",
+					"explain": "'The' is pronounced /ðə/ (thuh) before consonant sounds.",
+					"words": [
+						{ "word": "The (thuh) book", "ok": true, "tts":"the book"  },
+						{ "word": "The (thee) book", "ok": false, "tts":"thee book" }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "How do you pronounce 'the' before 'umbrella'?",
+					"summary": "Teaching Focus: 'the' before vowel sound.",
+					"explain": "'The' is pronounced /ði/ (thee) before vowel sounds.",
+					"words": [
+						{ "word": "The (thuh) umbrella", "ok": false, "tts":"the umbrella" },
+						{ "word": "The /ði/ (thee) umbrella", "ok": true, "tts":"thee umbrella" }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "How do you pronounce 'the' before 'car'?",
+					"summary": "Teaching Focus: 'the' before consonant sound.",
+					"explain": "'The' is pronounced /ðə/ (thuh) before consonant sounds.",
+					"words": [
+						{ "word": "The (thuh) car", "ok": true, "tts":"the car" },
+						{ "word": "The (thee) car", "ok": false , "tts":"thee car"}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "How do you pronounce 'the' before 'elephant'?",
+					"summary": "Teaching Focus: 'the' before vowel sound.",
+					"explain": "'The' is pronounced /ði/ (thee) before vowel sounds.",
+					"words": [
+						{ "word": "The (thuh) elephant", "ok": false, "tts":"the elephant" },
+						{ "word": "The (thee) elephant", "ok": true, "tts":"the elephant" }
+					]
+				}
+			]
+		}
+	]
+}

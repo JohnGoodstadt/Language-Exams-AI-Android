@@ -1,0 +1,226 @@
+{
+	"fileformat": 12,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz6Advanced-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Definitions C1/C2",
+			"sortorder": 1,"sortbypage":false,
+			"sections": [
+				{
+					"title": "Candour",
+					"page": 1,
+					"sentence": "I was impressed by the candor of his statement",
+					"summary": "She spoke with candour about the challenges she faced",
+					"explain": "Candour means being open and honest",
+					"words": [
+						{
+							"word": "The quality of being open and honest; frankness",
+							"ok": true
+						},
+						{
+							"word": "The quality of being sweet and nice",
+							"ok": false
+						},
+						{
+							"word": "The quality of being intellectual",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "Ubiquitous",
+					"page": 2,
+					"sentence": "Their adverts are ubiquitous",
+					"summary": "Smartphones have become ubiquitous in modern society",
+					"explain": "Ubiquitous means present, appearing, or found everywhere",
+					"words": [
+						{
+							"word": "Present, appearing, or found everywhere",
+							"ok": true
+						},
+						{
+							"word": "Extremely rare or unusual",
+							"ok": false
+						},
+						{
+							"word": "Related to sound or hearing",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "Ephemeral",
+					"page": 3,
+					"sentence": "I find life ephemeral",
+					"summary": "The beauty of the sunset was ephemeral, lasting only a few minutes",
+					"explain": "Ephemeral means lasting for a very short time",
+					"words": [
+						{
+							"word": "Lasting for a very short time",
+							"ok": true
+						},
+						{
+							"word": "Extremely loud or noisy",
+							"ok": false
+						},
+						{
+							"word": "Related to memory or remembering",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "Obfuscate",
+					"page": 4,
+					"sentence": "She obfuscated the truth",
+					"summary": "The company tried to obfuscate the facts with complex language",
+					"explain": "Obfuscate means to make something unclear or difficult to understand",
+					"words": [
+						{
+							"word": "To make something unclear or difficult to understand",
+							"ok": true
+						},
+						{
+							"word": "To clarify or explain in detail",
+							"ok": false
+						},
+						{
+							"word": "To decorate or embellish",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "Equanimity",
+					"page": 5,
+					"sentence": "I think I have equanimity",
+					"summary": "She accepted the bad news with remarkable equanimity",
+					"explain": "Equanimity means mental calmness and composure, especially in a difficult situation",
+					"words": [
+						{
+							"word": "Mental calmness and composure, especially in a difficult situation",
+							"ok": true
+						},
+						{
+							"word": "A tendency to be easily excited",
+							"ok": false
+						},
+						{
+							"word": "A state of physical exhaustion",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "Magnanimous",
+					"page": 6,
+					"sentence": "She was very magnanimous in victory",
+					"summary": "Despite losing the match, he was magnanimous in defeat",
+					"explain": "Magnanimous means very generous or forgiving, especially toward a rival or someone less powerful",
+					"words": [
+						{
+							"word": "Very generous or forgiving, especially toward a rival or someone less powerful",
+							"ok": true
+						},
+						{
+							"word": "Extremely stubborn or unyielding",
+							"ok": false
+						},
+						{
+							"word": "Highly talkative or sociable",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "Inscrutable",
+					"page": 7,
+					"sentence": "I found him inscrutable",
+					"summary": "Her expression was inscrutable, giving nothing away",
+					"explain": "Inscrutable means impossible to understand or interpret",
+					"words": [
+						{
+							"word": "Impossible to understand or interpret",
+							"ok": true
+						},
+						{
+							"word": "Very clear and easy to read",
+							"ok": false
+						},
+						{
+							"word": "Related to writing or literature",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "Perfunctory",
+					"page": 8,
+					"sentence": "His work was perfunctory",
+					"summary": "He gave a perfunctory nod and continued on his way",
+					"explain": "Perfunctory means carried out with minimum effort or reflection",
+					"words": [
+						{
+							"word": "Carried out with minimum effort or reflection",
+							"ok": true
+						},
+						{
+							"word": "Extremely careful and thorough",
+							"ok": false
+						},
+						{
+							"word": "Related to performance or acting",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "Obsequious",
+					"page": 9,
+					"sentence": "He had obsequious behavior",
+					"summary": "His obsequious behavior annoyed his colleagues",
+					"explain": "Obsequious means excessively eager to please or obey someone",
+					"words": [
+						{
+							"word": "Excessively eager to please or obey someone",
+							"ok": true
+						},
+						{
+							"word": "Stubborn and unwilling to change",
+							"ok": false
+						},
+						{
+							"word": "Very generous or charitable",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "Quixotic",
+					"page": 10,
+					"sentence": "He was a quixotic guy",
+					"summary": "His quixotic quest for perfection often led to disappointment",
+					"explain": "Quixotic means exceedingly idealistic; unrealistic and impractical",
+					"words": [
+						{
+							"word": "Exceedingly idealistic; unrealistic and impractical",
+							"ok": true
+						},
+						{
+							"word": "Extremely logical and practical",
+							"ok": false
+						},
+						{
+							"word": "Related to quick thinking or intelligence",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
+

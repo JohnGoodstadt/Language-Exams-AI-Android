@@ -33,6 +33,7 @@ import kotlin.text.replace
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -48,11 +49,10 @@ import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.ui.theme.selectedBackground
-import com.goodstadt.john.language.exams.viewmodels.QuizLevels
+import com.goodstadt.john.language.exams.viewmodels.QuizLevelsNew
 import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
-import com.google.common.io.Files.append
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
-import timber.log.Timber
+import java.text.AttributedString
 
 
 @Composable
@@ -60,7 +60,7 @@ fun QuizScreen(
     viewModel: QuizViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
-    val options = listOf("Quiz 1", "Quiz 2 - Word Pairs","Quiz 3 - Word Order","Quiz 4 - Spelling 2","Quiz 5 - Spelling 3")
+    val options = listOf("Quiz 1", "Quiz 2 - Word Pairs","Quiz 3 - Word Order","Quiz 4 - Spelling 1","Quiz 5 - Spelling 2","Quiz 6 - Definitions")
     var infoDisabled by remember { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
 
@@ -77,13 +77,34 @@ fun QuizScreen(
     var selectedOption by remember { mutableStateOf<String?>(null) }
     var isCurrentAnswerCorrect by remember { mutableStateOf<Boolean?>(null) } // Track answer correctness
 
-    //v2 - replace _ with cortrect word in displayed sentence
-    var displayedSentence by remember { mutableStateOf("") }
+    //v2 - replace _ with correct word in displayed sentence
+    //var displayedSentence by remember { mutableStateOf("") }
+    var displayedSentence by remember { mutableStateOf(AnnotatedString("")) }
+
+    //val selectedLevel by viewModel.selectedLevel
+    val availableQuizzes by viewModel.availableQuizzes
+    val selectedQuiz by viewModel.selectedQuiz
+    val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+        "Hear, and then choose the correct answer"
+    } else {
+        "Choose the correct answer"
+    }
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
             val question = questions[currentQuestionIndex]
-            displayedSentence = question.sentence.replace("_", "___")
+//            if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+//                displayedSentence = question.sentence.replace("_", "___")
+//            }else{
+//                displayedSentence = ""
+//            }
+
+            val questionText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                question.sentence.replace("_", "___")
+            } else {
+                ""//question.sentence
+            }
+            displayedSentence = AnnotatedString(questionText)
             // Reset the selection state for the new question
             selectedOption = null
             isCurrentAnswerCorrect = null
@@ -103,11 +124,12 @@ fun QuizScreen(
     ) {
         // Level Picker
         HorizontalLevelPicker(
-                options = QuizLevels.entries.map { it.description },
+                options = QuizLevelsNew.entries.map { it.description },
                 selectedOption = selectedLevel.description,
                 onOptionSelected = { newLevel ->
-                    val level = QuizLevels.entries.first { it.description == newLevel }
-                    viewModel.selectedLevel.value = level
+                    val level = QuizLevelsNew.entries.first { it.description == newLevel }
+//                    viewModel.selectedLevel.value = level
+                    viewModel.onLevelSelected(level)
                     viewModel.loadQuestions()
 
                     if (viewModel.doIHaveCurrentQuestionInfo()){
@@ -121,11 +143,18 @@ fun QuizScreen(
 
         // Quiz Number Picker
         DropdownMenuBox(
-                options = options,
-                selectedOption = options.getOrNull(selectedQuizNumber - 1) ?: options[0],
-                onOptionSelected = { newQuiz ->
-                    viewModel.selectedQuizNumber.value = options.indexOf(newQuiz) + 1 //1 based index
-                    viewModel.loadQuestions()
+                options = availableQuizzes.map { it.title },
+//                selectedOption = options.getOrNull(selectedQuizNumber - 1) ?: options[0],∂
+                selectedOption = selectedQuiz?.title ?: "Select a Quiz",
+//                onOptionSelected = { newQuiz ->
+//                    viewModel.selectedQuizNumber.value = options.indexOf(newQuiz) + 1 //1 based index
+//                    viewModel.loadQuestions()
+//                }
+                   onOptionSelected = { newQuizTitle ->
+                    // Find the QuizDetail object that matches the selected title
+                    val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
+                    // Call the new ViewModel function
+                    viewModel.onQuizSelected(quizDetail)
                 }
         )
 
@@ -135,34 +164,86 @@ fun QuizScreen(
                 thickness = 1.dp,
                 color = greyLight2
         )
-        
+
+        if (currentQuestionIndex == 0) {
+            Text(
+                text = displayText,
+                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    // ✅ THE FIX: Add vertical padding.
+                    // This will add 16.dp of space on the top AND 16.dp on the bottom.
+                    .padding(vertical = 16.dp)
+            )
+        }else{
+            Text( //still keep the space
+                text = "",
+                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 16.dp)
+            )
+        }
         // Question Display
         if (questions.isNotEmpty()) {
             val question = questions[currentQuestionIndex]
-            val annotatedQuestionText = buildAnnotatedString {
-                if (isCurrentAnswerCorrect == true && selectedOption != null) {
-                    // --- SUCCESS STATE ---
-                    // The user has answered correctly.
-                    val parts = question.sentence.split("_")
-                    if (parts.size == 2) {
-                        append(parts[0]) // Append part before the blank
-                        withStyle(style = SpanStyle(color = Color.Green, fontWeight = FontWeight.Bold)) {
-                            append(selectedOption!!) // Append the correct word in green
+
+            val annotatedQuestionText = if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                AnnotatedString(question.title)
+            }else{
+                buildAnnotatedString {
+                    if (isCurrentAnswerCorrect == true && selectedOption != null) {
+                        // --- SUCCESS STATE ---
+                        // The user has answered correctly.
+                        val parts = question.sentence.split("_")
+                        if (parts.size == 2) {
+                            append(parts[0]) // Append part before the blank
+                            withStyle(
+                                style = SpanStyle(
+                                    color = Color.Green,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            ) {
+                                append(selectedOption!!) // Append the correct word in green
+                            }
+                            append(parts[1]) // Append part after the blank
+                        } else {
+                            // Fallback for complex sentences
+                            append(displayedSentence)
                         }
-                        append(parts[1]) // Append part after the blank
                     } else {
-                        // Fallback for complex sentences
+                        // --- QUESTION STATE ---
+                        // Not answered yet, or answered incorrectly.
                         append(displayedSentence)
                     }
-                } else {
-                    // --- QUESTION STATE ---
-                    // Not answered yet, or answered incorrectly.
-                    append(displayedSentence)
                 }
             }
+//            val annotatedQuestionText = buildAnnotatedString {
+//                if (isCurrentAnswerCorrect == true && selectedOption != null) {
+//                    // --- SUCCESS STATE ---
+//                    // The user has answered correctly.
+//                    val parts = question.sentence.split("_")
+//                    if (parts.size == 2) {
+//                        append(parts[0]) // Append part before the blank
+//                        withStyle(style = SpanStyle(color = Color.Green, fontWeight = FontWeight.Bold)) {
+//                            append(selectedOption!!) // Append the correct word in green
+//                        }
+//                        append(parts[1]) // Append part after the blank
+//                    } else {
+//                        // Fallback for complex sentences
+//                        append(displayedSentence)
+//                    }
+//                } else {
+//                    // --- QUESTION STATE ---
+//                    // Not answered yet, or answered incorrectly.
+//                    append(displayedSentence)
+//                }
+//            }
 
             Text(
-                    //text = question.sentence.replace("_", "___"),
+
                     text = annotatedQuestionText,
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
@@ -190,7 +271,13 @@ fun QuizScreen(
                                     val fullSentence = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                         question.sentence.replace("_", option)
                                     } else {
-                                        option
+                                        if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                                            option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()//remove ()
+                                        }else {
+                                            option
+                                        }
+//                                        val o = option
+//                                        ""//o ption
                                     }
 
                                     viewModel.playTrack(fullSentence)
@@ -212,7 +299,11 @@ fun QuizScreen(
                                         val fullSentence = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                             question.sentence.replace("_", option)
                                         } else {
-                                            option
+                                            if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                                option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()//remove ()
+                                            }else {
+                                                option
+                                            }
                                         }
 
                                         val isCorrect = option == question.correctOption
@@ -232,16 +323,52 @@ fun QuizScreen(
                                 isCurrentAnswerCorrect = isOptionCorrect
                                 viewModel.updateAnswer(isOptionCorrect)
                                 if (isOptionCorrect){
-//                                    googleCloudTTS.start(text = question.sentence.replace("_", option))
-//                                    val fullSentence = question.sentence.replace("_", option)
-//                                    Timber.v(fullSentence)
-                                    val fullSentence = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                        question.sentence.replace("_", option)
-                                    } else {
-                                        option
+
+                                   // val wordToHilight: String
+                                    //val sentenceToStyle: String
+
+                                    var sentenceToSpeak = ""
+                                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                                        val sentence = question.sentence.replace("_", option)
+//                                        val sentenceToStyle = option
+                                        displayedSentence = viewModel.highlightWordInSentence(
+                                            sentence = option,
+                                            wordToHighlight = sentence,
+                                            highlightColor = Color.Green
+                                        )
+                                        sentenceToSpeak = sentence
+                                    }else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+//                                        val wordToHilight = question.title
+//                                        val sentence = "${wordToHilight}:${question.sentence}"
+                                        displayedSentence = AnnotatedString(question.title)
+                                        sentenceToSpeak = "${question.title}:${option}:${question.sentence}"
+                                    }else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                        displayedSentence = AnnotatedString(option)
+                                        val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()//remove ()
+                                        sentenceToSpeak = cleaned
+                                    } else { // Multiple Choice
+                                       // val wordToHilight = question.sentence
+                                        //val sentenceToStyle = option
+                                        sentenceToSpeak = option
+                                        displayedSentence = viewModel.highlightWordInSentence(
+                                            sentence = option,
+                                            wordToHighlight = question.sentence,
+                                            highlightColor = Color.Green
+                                        )
                                     }
-                                    displayedSentence = fullSentence
-                                    viewModel.playTrack(fullSentence)
+
+                                    // Call your global helper function
+//                                    displayedSentence = viewModel.highlightWordInSentence(
+//                                        sentence = sentenceToStyle,
+//                                        wordToHighlight = wordToHilight,
+//                                        highlightColor = Color.Green
+//                                    )
+
+                                    // Play the audio
+                                  //  val toSpeak = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) wordToHilight else option
+
+
+                                    viewModel.playTrack(sentenceToSpeak)
                                 }
 
 
