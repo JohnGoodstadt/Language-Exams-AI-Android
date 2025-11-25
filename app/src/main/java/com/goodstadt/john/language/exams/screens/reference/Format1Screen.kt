@@ -17,17 +17,23 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
+import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsViewModel
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 /**
  * A Composable screen that displays data in the "Format1" structure.
@@ -42,6 +48,10 @@ fun Format1Screen(
     data: List<HeaderWordsSentencesList>,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
     // LazyColumn is the efficient Composable for displaying scrollable lists.
     LazyColumn(
         modifier = modifier.fillMaxSize(),
@@ -131,6 +141,26 @@ fun Format1Screen(
                 // Add a divider for visual separation, but not after the very last item in the list
                 HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
             }
+        }
+
+    }
+    if (isRateLimitingSheetVisible){
+        RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+    }
+    if (isDailyRateLimitingSheetVisible){
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitDailyReasonsBottomSheet(
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+            )
+        }
+    }
+    if (isHourlyRateLimitingSheetVisible){
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitHourlyReasonsBottomSheet(
+                onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+            )
         }
     }
 }

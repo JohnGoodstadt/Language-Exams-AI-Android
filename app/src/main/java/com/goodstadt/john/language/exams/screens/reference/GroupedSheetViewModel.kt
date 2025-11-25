@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.reference
 
+import android.app.Activity
 import android.util.Log
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -336,6 +337,21 @@ class GroupedSheetViewModel @Inject constructor(
             } catch (e: Exception) {
                 _uiState.update { it.copy(contentState = ContentState.Error(e.localizedMessage ?: "An unexpected error occurred.")) }
             }
+        }
+    }
+    fun hideDailyRateLimitSheet(){
+        _showRateDailyLimitSheet.value = false
+    }
+    fun hideHourlyRateLimitSheet(){
+        _showRateHourlyLimitSheet.value = false
+    }
+    fun hideRateOKLimitSheet(){
+        _showRateLimitSheet.value = false
+    }
+    fun buyPremiumButtonPressed(activity: Activity) {
+        Timber.i("purchasePremium()")
+        viewModelScope.launch {
+            billingRepository.launchPurchase(activity)
         }
     }
 }

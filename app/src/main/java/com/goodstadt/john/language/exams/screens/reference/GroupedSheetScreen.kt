@@ -8,9 +8,13 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.SectionedVocabList
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 @Composable
 fun GroupedSheetScreen(
@@ -18,6 +22,10 @@ fun GroupedSheetScreen(
 ) {
     // 1. Collect the single source of truth from the ViewModel
     val uiState by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
     // The main layout is a vertical column
     Column(modifier = Modifier.fillMaxSize()) {
@@ -82,6 +90,25 @@ fun GroupedSheetScreen(
                         color = MaterialTheme.colorScheme.error
                     )
                 }
+            }
+        }
+        if (isRateLimitingSheetVisible){
+            RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+        }
+        if (isDailyRateLimitingSheetVisible){
+            if (context is androidx.activity.ComponentActivity) {
+                RateLimitDailyReasonsBottomSheet(
+                    onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                    onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+                )
+            }
+        }
+        if (isHourlyRateLimitingSheetVisible){
+            if (context is androidx.activity.ComponentActivity) {
+                RateLimitHourlyReasonsBottomSheet(
+                    onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                    onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+                )
             }
         }
     }

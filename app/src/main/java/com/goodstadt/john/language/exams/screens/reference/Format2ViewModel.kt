@@ -1,9 +1,11 @@
 package com.goodstadt.john.language.exams.screens.reference
 
 
+import android.app.Activity
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.data.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.ContentRepository
 import com.goodstadt.john.language.exams.data.PlaybackResult
@@ -42,6 +44,7 @@ class Format2ViewModel @Inject constructor(
     private val connectivityRepository: ConnectivityRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
+    private val billingRepository: BillingRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -177,6 +180,21 @@ class Format2ViewModel @Inject constructor(
             _uiState.update {
                 if (it is Format2UiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
             }
+        }
+    }
+    fun hideDailyRateLimitSheet(){
+        _showRateDailyLimitSheet.value = false
+    }
+    fun hideHourlyRateLimitSheet(){
+        _showRateHourlyLimitSheet.value = false
+    }
+    fun hideRateOKLimitSheet(){
+        _showRateLimitSheet.value = false
+    }
+    fun buyPremiumButtonPressed(activity: Activity) {
+        Timber.i("purchasePremium()")
+        viewModelScope.launch {
+            billingRepository.launchPurchase(activity)
         }
     }
 }

@@ -22,14 +22,28 @@ object RateLimiterModule {
     fun provideSimpleRateLimiter(
         @ApplicationContext context: Context
     ): SimpleRateLimiter {
-        return SimpleRateLimiter( //called from app Injection using Hilt
+
+//        if (BuildConfig.DEBUG){
+        if (false){
+            return SimpleRateLimiter( //called from app Injection using Hilt
+                context = context,
+                hourlyLimit = 4,
+                dailyLimit = 10,
+                schemeID = "schemeDebug",
+                name = "schemeDebug", //same as main prod scheme. so no download is done on app start
+                description = "Built in DEBUG  Limiter"
+            )
+        }else {
+            return SimpleRateLimiter( //called from app Injection using Hilt
                 context = context,
                 hourlyLimit = 40,
                 dailyLimit = 100,
                 schemeID = "scheme1",
                 name = "scheme1", //same as main prod scheme. so no download is done on app start
                 description = "Built in Limiter"
-        )
+            )
+        }
+
     }
 }
 

@@ -210,6 +210,8 @@ class CategoryTabViewModel @Inject constructor(
                     Timber.w("failReason = %s", (failType.failReason))
                     Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
 
+                    Timber.w(rateLimiter.printCurrentStatus)
+
                     if (!failType.canICallAPI){
                         if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
                             _showRateDailyLimitSheet.value = true

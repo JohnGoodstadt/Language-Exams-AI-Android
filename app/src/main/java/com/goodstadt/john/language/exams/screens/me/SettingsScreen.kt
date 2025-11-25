@@ -541,9 +541,8 @@ fun SettingsScreen(
                     title = "Debug Something",
                     currentValue = "Test Crashylytics (D)",
                     onClick = {
-//                        if (context is androidx.activity.ComponentActivity) {
-                            viewModel.onDebugCrashlyitcs()
-//                        }
+                            //viewModel.onDebugCrashlyitcs()
+                            viewModel.debugAppLLMCredits()
                     }
                 )
             }

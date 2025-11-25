@@ -10,14 +10,20 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.models.Format2Level
+import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 /**
  * A "dumb" Composable screen that displays data in the "Format2" structure.
@@ -37,6 +43,10 @@ fun Format2Screen(
     levels: List<Format2Level>,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
     // LazyColumn is the efficient Composable for displaying the main scrollable list.
     LazyColumn(
         modifier = modifier.fillMaxSize(),
@@ -116,6 +126,25 @@ fun Format2Screen(
                 }
                 HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp))
             }
+        }
+    }
+    if (isRateLimitingSheetVisible){
+        RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+    }
+    if (isDailyRateLimitingSheetVisible){
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitDailyReasonsBottomSheet(
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+            )
+        }
+    }
+    if (isHourlyRateLimitingSheetVisible){
+        if (context is androidx.activity.ComponentActivity) {
+            RateLimitHourlyReasonsBottomSheet(
+                onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+            )
         }
     }
 }

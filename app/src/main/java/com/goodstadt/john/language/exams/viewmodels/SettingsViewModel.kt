@@ -623,9 +623,10 @@ class SettingsViewModel @Inject constructor(
 
     fun debugAppLLMCredits(): String {
 
-        if (isItMe()) { //JG onSamsung phone
-            return creditsRepository.printableCredits()
-        }
+        Timber.i(creditsRepository.printableCredits())
+       //if (isItMe()) { //JG onSamsung phone
+//            return creditsRepository.printableCredits()
+        //}
 
         return ""
     }
