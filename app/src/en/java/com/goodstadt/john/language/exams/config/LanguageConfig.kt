@@ -5,8 +5,8 @@ package com.goodstadt.john.language.exams.config
 object LanguageConfig {
     val voiceName: String = "en-GB-Neural2-C"
     val languageCode: String = "en-GB"
-    val defaultFileName: String = "vocab_data_a1"
-    val defaulSkillLevel: String = "A1"
+    val defaultFileName: String = "vocab_data_b1"
+    val defaulSkillLevel: String = "B1"
     val meTabMenuItems = listOf(
         "Focusing",
         "Settings",
