@@ -14,6 +14,7 @@ import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
+import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsUiState
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
@@ -95,27 +96,30 @@ class Format1ViewModel @Inject constructor(
         if (currentState.playbackState is PlaybackState.Playing) return
         if (!connectivityRepository.isCurrentlyOnline()) return
 
-        if (!isPremiumUser.value) { //if premium user don't check credits
-            if (rateLimiter.doIForbidCall()) {
-                val failType = rateLimiter.canMakeCallWithResult()
-                Timber.v("${failType.canICallAPI}")
-                Timber.v("${failType.failReason}")
-                Timber.v("${failType.timeLeftToWait}")
-                if (!failType.canICallAPI) {
-                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
-                        _showRateDailyLimitSheet.value = true
-                    } else {
-                        _showRateHourlyLimitSheet.value = true
-                    }
-                } else {
-                    _showRateLimitSheet.value = true
-                }
-
-                return
-            }
-        }
-
         viewModelScope.launch {
+
+            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
+                if (rateLimiter.doIForbidCall()) {
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.v("${failType.canICallAPI}")
+                    Timber.v("${failType.failReason}")
+                    Timber.v("${failType.timeLeftToWait}")
+                    if (!failType.canICallAPI) {
+                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                            _showRateDailyLimitSheet.value = true
+                        } else {
+                            _showRateHourlyLimitSheet.value = true
+                        }
+                    } else {
+                        _showRateLimitSheet.value = true
+                    }
+
+                    return@launch
+                }
+            }
+
+
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
 //            val currentVoiceName = _uiState.value.selectedVoiceName
@@ -144,15 +148,6 @@ class Format1ViewModel @Inject constructor(
                 } else it
             }
 
-//            _uiState.update { currentState ->
-//                if (currentState is ConjugationsUiState.Success) {
-//                    val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId( sentence, currentVoiceName)//word.word
-//                    currentState.copy(cachedAudioWordKeys = updatedKeys)
-//                } else {
-//                    currentState
-//                }
-//            }
-
             val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = contentRepository.playTextToSpeech(
@@ -164,7 +159,9 @@ class Format1ViewModel @Inject constructor(
 
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    rateLimiter.recordCall()
+                    if (todayIsNotAFreePassDay){
+                        rateLimiter.recordCall()
+                    }
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
 //                    ttsStatsRepository.incWordStats(word)

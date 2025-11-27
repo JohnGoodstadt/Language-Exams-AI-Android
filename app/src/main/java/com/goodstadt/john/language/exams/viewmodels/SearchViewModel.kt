@@ -14,6 +14,7 @@ import com.goodstadt.john.language.exams.data.ContentRepository
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.FlowPreview
@@ -178,33 +179,39 @@ class SearchViewModel @Inject constructor(
     fun playTrack(searchResult: SearchResult) {
         if (_playbackState.value is PlaybackState.Playing) return
 
-        if (!isPremiumUser.value) { //if premium user don't check credits
-            if (rateLimiter.doIForbidCall()){
-                val failType = rateLimiter.canMakeCallWithResult()
-                Timber.v("${failType.canICallAPI}")
-                Timber.v("${failType.failReason}")
-                Timber.v("${failType.timeLeftToWait}")
-                if (!failType.canICallAPI){
-                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
-                        _showRateDailyLimitSheet.value = true
-                    }else {
-                        _showRateHourlyLimitSheet.value = true
-                    }
-                } else {
-                    _showRateLimitSheet.value = true
-                }
-
-                return
-            }
-        }
-
         viewModelScope.launch {
+            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
+                if (rateLimiter.doIForbidCall()) {
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.v("${failType.canICallAPI}")
+                    Timber.v("${failType.failReason}")
+                    Timber.v("${failType.timeLeftToWait}")
+                    if (!failType.canICallAPI) {
+                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                            _showRateDailyLimitSheet.value = true
+                        } else {
+                            _showRateHourlyLimitSheet.value = true
+                        }
+                    } else {
+                        _showRateLimitSheet.value = true
+                    }
+
+                    return@launch
+                }
+            }
+
+
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val uniqueSentenceId = generateUniqueSentenceId(searchResult.word, searchResult.word.sentences.first(),currentVoiceName)
+            val uniqueSentenceId = generateUniqueSentenceId(
+                searchResult.word,
+                searchResult.word.sentences.first(),
+                currentVoiceName
+            )
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
             val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
-            if (played){//short cut so user cna play cached sentences with no Internet connection
+            if (played) {//short cut so user cna play cached sentences with no Internet connection
                 _playbackState.value = PlaybackState.Idle
                 ttsStatsRepository.updateTTSStatsWithoutCosts()
                 ttsStatsRepository.incWordStats(searchResult.word.word)
@@ -212,7 +219,12 @@ class SearchViewModel @Inject constructor(
             }
 
             if (!connectivityRepository.isCurrentlyOnline()) {
-                _uiEvent.emit(SearchUiEvent.ShowSnackbar("No internet connection", actionLabel = "Retry" ))
+                _uiEvent.emit(
+                    SearchUiEvent.ShowSnackbar(
+                        "No internet connection",
+                        actionLabel = "Retry"
+                    )
+                )
                 return@launch
             }
 
@@ -220,27 +232,36 @@ class SearchViewModel @Inject constructor(
             val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val result = vocabRepository.playTextToSpeech(
-                    text = searchResult.firstSentence,
-                    uniqueSentenceId = uniqueSentenceId,
-                    voiceName = currentVoiceName,
-                    languageCode = currentLanguageCode
+                text = searchResult.firstSentence,
+                uniqueSentenceId = uniqueSentenceId,
+                voiceName = currentVoiceName,
+                languageCode = currentLanguageCode
             )
 
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    rateLimiter.recordCall()
+                    if (todayIsNotAFreePassDay){
+                        rateLimiter.recordCall()
+                    }
                     _playbackState.value = PlaybackState.Idle
-                    ttsStatsRepository.updateTTSStatsWithCosts(searchResult.firstSentence, currentVoiceName)
+                    ttsStatsRepository.updateTTSStatsWithCosts(
+                        searchResult.firstSentence,
+                        currentVoiceName
+                    )
                     ttsStatsRepository.incWordStats(searchResult.word.word)
                 }
+
                 is PlaybackResult.PlayedFromCache -> {
                     _playbackState.value = PlaybackState.Idle
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(searchResult.word.word)
                 }
+
                 is PlaybackResult.Failure -> {
-                    _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
+                    _playbackState.value =
+                        PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
+
                 PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
             }
             _playbackState.value = PlaybackState.Idle

@@ -14,9 +14,11 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.map
 import timber.log.Timber
 import java.io.IOException
+import java.util.Date
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -42,7 +44,7 @@ class UserPreferencesRepository @Inject constructor(
         val SELECTED_LANGUAGE_CODE = stringPreferencesKey("selected_language_code")
         val SELECTED_PREPOSITIONS_EXAM_NAME = stringPreferencesKey("selected_prepositions_exam_name")
         val PREPOSITIONS_LOCAL_VERSION = intPreferencesKey("prepositions_local_version")
-
+        val APP_INSTALL_DATE = longPreferencesKey("app_install_date")
     }
 
     /**
@@ -200,6 +202,22 @@ class UserPreferencesRepository @Inject constructor(
             // We can also mark that the initial choice has been made.
             preferences[PreferenceKeys.USER_HAS_CHOSEN_ENGLISH] = true
         }
+    }
+    suspend fun saveInitialAppInstallDate(installDate: Date) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.APP_INSTALL_DATE] = installDate.time
+        }
+    }
+    suspend fun getInitialAppInstallDate(): Date? {
+        return context.dataStore.data
+            .map { preferences ->
+                // Retrieve the Long, providing a default value if not found
+                val timestamp = preferences[PreferenceKeys.APP_INSTALL_DATE] ?: return@map null
+
+                // Convert the Long timestamp back to a Date object
+                Date(timestamp)
+            }
+            .firstOrNull()
     }
     val selectedPrepositionsExamNameFlow: Flow<String> = context.dataStore.data
         .map { preferences ->

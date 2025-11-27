@@ -17,6 +17,7 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.SubTabDefinition
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -208,27 +209,30 @@ class GroupedSheetViewModel @Inject constructor(
             return
         }
 
-        if (!isPremiumUser.value) { //if premium user don't check credits
-            if (rateLimiter.doIForbidCall()){
-                val failType = rateLimiter.canMakeCallWithResult()
-                Timber.v("${failType.canICallAPI}")
-                Timber.v("${failType.failReason}")
-                Timber.v("${failType.timeLeftToWait}")
-                if (!failType.canICallAPI){
-                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
-                        _showRateDailyLimitSheet.value = true
-                    }else {
-                        _showRateHourlyLimitSheet.value = true
-                    }
-                } else {
-                    _showRateLimitSheet.value = true
-                }
-
-                return
-            }
-        }
-
         viewModelScope.launch {
+
+            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day
+                if (rateLimiter.doIForbidCall()) {
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.v("${failType.canICallAPI}")
+                    Timber.v("${failType.failReason}")
+                    Timber.v("${failType.timeLeftToWait}")
+                    if (!failType.canICallAPI) {
+                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                            _showRateDailyLimitSheet.value = true
+                        } else {
+                            _showRateHourlyLimitSheet.value = true
+                        }
+                    } else {
+                        _showRateLimitSheet.value = true
+                    }
+
+                    return@launch
+                }
+            }
+
+
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
@@ -246,19 +250,6 @@ class GroupedSheetViewModel @Inject constructor(
                 return@launch
             }
 
-            //Dot shows before sound (lightening before thunder)
-            /*
-            //TODO:
-            _uiState.update { currentState ->
-                if (currentState is PrepositionsUiState.Success) {
-                    val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId(word, sentence, currentVoiceName)
-                    currentState.copy(cachedAudioWordKeys = updatedKeys)
-                } else {
-                    currentState
-                }
-            }
-             */
-
 
             val result = vocabRepository.playTextToSpeech(
                 text = cleanedSentence,
@@ -270,7 +261,9 @@ class GroupedSheetViewModel @Inject constructor(
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     _playbackState.value = PlaybackState.Idle
 
-                    rateLimiter.recordCall()
+                    if (todayIsNotAFreePassDay){
+                        rateLimiter.recordCall()
+                    }
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
                     ttsStatsRepository.incWordStats(word.word)

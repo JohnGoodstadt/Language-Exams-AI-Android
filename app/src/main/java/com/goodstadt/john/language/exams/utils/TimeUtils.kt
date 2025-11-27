@@ -1,6 +1,9 @@
 package com.goodstadt.john.language.exams.utils // Or your preferred package
 
+import android.content.Context
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import java.util.Calendar
+import java.util.Date
 import java.util.concurrent.TimeUnit
 import java.util.regex.Pattern
 import kotlin.time.DurationUnit
@@ -99,4 +102,38 @@ fun formatTimeInterval(interval: Double): String {
     } else {
         String.format("%02d:%02d", hours, minutes)
     }
+}
+
+
+/**
+ * Calculates if the current day is the free pass day (i.e., within 24 hours of install).
+ * @param context The application context needed for DataStore access.
+ * @return True if the app was installed less than 24 hours ago, false otherwise.
+ */
+suspend fun calcIsTodayFreePassDay(userPreferencesRepository: UserPreferencesRepository): Boolean {
+    // Attempt to load the initial install date from DataStore
+    val initialAppInstallDate = userPreferencesRepository.getInitialAppInstallDate()
+
+    if (initialAppInstallDate != null) {
+        // Log the loaded date for debugging (equivalent to Logger.d)
+        println("Initial Install Date found: $initialAppInstallDate")
+
+        // Check the 24-hour condition using the new extension function
+        val isWithin24Hours = initialAppInstallDate.isWithin24Hours()
+
+        println("Is within 24 hours: $isWithin24Hours")
+        return isWithin24Hours
+    } else {
+        // Fallback logic: No install date found (equivalent to Logger.f)
+        println("FATAL: No install date found in DataStore. Setting Date.distantPast.")
+
+        // Save the earliest possible date (similar to Date.distantPast)
+        // In Kotlin/Java, Date(Long.MIN_VALUE) is the most equivalent earliest date.
+        userPreferencesRepository.saveInitialAppInstallDate(Date(Long.MIN_VALUE))
+
+        return false
+    }
+}
+suspend fun calcIsTodayNotAFreePassDay(userPreferencesRepository: UserPreferencesRepository) : Boolean {
+    return !calcIsTodayFreePassDay(userPreferencesRepository)
 }

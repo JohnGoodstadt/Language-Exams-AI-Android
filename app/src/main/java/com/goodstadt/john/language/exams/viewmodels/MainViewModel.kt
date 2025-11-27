@@ -22,6 +22,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import java.util.Calendar
+import java.util.Date
 import javax.inject.Inject
 
 // --- The UI State for this ViewModel is now much simpler ---
@@ -188,6 +189,7 @@ class MainViewModel @Inject constructor(
             result.onSuccess { user ->
                 Timber.w("Session success. UID is ${user.uid}")
                 _uiState.update { it.copy(authState = AuthUiState.Success(user.uid)) }
+                userPreferencesRepository.saveInitialAppInstallDate(Date())
             }
 
             result.onFailure { exception ->

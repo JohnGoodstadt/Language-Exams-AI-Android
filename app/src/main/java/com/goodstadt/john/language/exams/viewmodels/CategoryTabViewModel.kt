@@ -23,6 +23,7 @@ import com.goodstadt.john.language.exams.data.PlaybackResult
 import com.goodstadt.john.language.exams.data.TTSStatsRepository
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
@@ -202,7 +203,8 @@ class CategoryTabViewModel @Inject constructor(
 
         viewModelScope.launch {
 
-            if (!isPremiumUser.value) { //if premium user don't check credits
+            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
                 if (rateLimiter.doIForbidCall()){
                     val failType = rateLimiter.canMakeCallWithResult()
                     Timber.w("Rate Limiter Triggered")
@@ -274,7 +276,9 @@ class CategoryTabViewModel @Inject constructor(
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     _uiState.update { it.copy( playbackState = PlaybackState.Idle) }
 
-                    rateLimiter.recordCall()
+                    if (todayIsNotAFreePassDay){
+                        rateLimiter.recordCall()
+                    }
                     if (isPremiumUser.value){
                         Timber.w("+ User has paid. No credit check +")
                     }else{

@@ -32,6 +32,7 @@ import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.calculateCallCost
+import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.google.ai.client.generativeai.type.GenerateContentResponse
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -230,8 +231,12 @@ class ParagraphViewModel @Inject constructor(
             val providerToUse = providerManager.getNextProviderAndIncrement()
             Timber.w("providerToUse:$providerToUse")
 
-
-            if (!isPurchased.value){
+/*
+            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
+ */
+            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPurchased.value && todayIsNotAFreePassDay){ //if premium user don't check credits or is on day 1
                 // --- THE NEW, ROBUST CHECK ---
                 // 1. Wait until credits are initialized.
                 // 2. Then check if the count is zero or less.
@@ -274,6 +279,8 @@ class ParagraphViewModel @Inject constructor(
 
                 _uiState.update { it.copy(isLoading = true, error = null) }
 
+
+                //TODO: no
                 when(providerToUse) {
                     LLMProvider.OpenAI -> { /* ... */
 
@@ -587,26 +594,28 @@ class ParagraphViewModel @Inject constructor(
             return // Prevent multiple clicks or playing placeholder text
         }
 
-        //For Paragraph screen don't deny rateLimiting - credits will do that
-        if (!isPremiumUser.value) { //if premium user don't check credits
-            if (rateLimiter.doIForbidCall()){
-                val failType = rateLimiter.canMakeCallWithResult()
-                Timber.v("${failType.canICallAPI}")
-                Timber.v("${failType.failReason}")
-                Timber.v("${failType.timeLeftToWait}")
-                if (!failType.canICallAPI){
-                    if (failType.failReason == SimpleRateLimiter.FailReason.DAILY){
-                        Timber.v("User would fail DAILY rate limiting")
-                    }else {
-                        Timber.v("User would fail HOURLY rate limiting")
-                    }
-                }
-
-                return
-            }
-        }
 
         viewModelScope.launch {
+        //For Paragraph screen don't deny rateLimiting - credits will do that
+            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
+                if (rateLimiter.doIForbidCall()) {
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.v("${failType.canICallAPI}")
+                    Timber.v("${failType.failReason}")
+                    Timber.v("${failType.timeLeftToWait}")
+                    if (!failType.canICallAPI) {
+                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                            Timber.v("User would fail DAILY rate limiting")
+                        } else {
+                            Timber.v("User would fail HOURLY rate limiting")
+                        }
+                    }
+
+                    return@launch
+                }
+            }
+
             try {
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
                 val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
@@ -645,7 +654,9 @@ class ParagraphViewModel @Inject constructor(
                 when (result) {
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
                         //NOTE: record call but don't disallow on Paragraph screen
-                        rateLimiter.recordCall()
+                        if (todayIsNotAFreePassDay){
+                            rateLimiter.recordCall()
+                        }
                         Timber.v(rateLimiter.printCurrentStatus)
                         ttsStatsRepository.updateTTSStatsWithCosts(Sentence(sentenceToSpeak,""), currentVoiceName)
                         //wrong place to save word stats
