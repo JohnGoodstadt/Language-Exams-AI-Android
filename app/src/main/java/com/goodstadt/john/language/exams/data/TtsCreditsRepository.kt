@@ -1,6 +1,6 @@
 package com.goodstadt.john.language.exams.data
 
-import android.util.Log
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import timber.log.Timber

@@ -1,31 +1,20 @@
 package com.goodstadt.john.language.exams.screens.reference
 
-import android.app.Activity
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.data.AudioCacheManager
-import com.goodstadt.john.language.exams.data.BillingRepository
-import com.goodstadt.john.language.exams.data.ConnectivityRepository
-import com.goodstadt.john.language.exams.data.ContentRepository
-import com.goodstadt.john.language.exams.data.HistorySyncManager
-import com.goodstadt.john.language.exams.data.PlaybackResult
-import com.goodstadt.john.language.exams.data.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
-import com.goodstadt.john.language.exams.models.Format2File
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
+import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
-import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
-import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
-import com.goodstadt.john.language.exams.viewmodels.ConjugationsUiState
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import timber.log.Timber
 import javax.inject.Inject
 
 sealed interface Format1BUiState {
@@ -67,7 +56,7 @@ class Format1BViewModel @Inject constructor(
 
                 // Initialize Graph Stats logic (Totals)
                 val allSentences = format1File.data.flatMap { it.wordsAndSentences }.map { it.sentence }
-                recalculateReferenceStats(allSentences)
+                audioCacheManager.recalculateReferenceStats(sheetName,allSentences)
 
                 // Set Initial Success State
                 _uiState.value = Format1BUiState.Success(data = format1File.data)
@@ -87,6 +76,8 @@ class Format1BViewModel @Inject constructor(
             }
         }
     }
+
+
 
     // ✅ HELPER: View calls this directly during rendering
     fun isHeard(sentence: String): Boolean {

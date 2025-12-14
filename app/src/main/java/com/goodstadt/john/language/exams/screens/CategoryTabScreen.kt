@@ -1,137 +1,136 @@
-package com.goodstadt.john.language.exams.screens // Or your correct package
+package com.goodstadt.john.language.exams.screens
 
-// --- All Necessary Imports ---
-//import android.media.session.PlaybackState
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
-import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
-import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
-
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
-import androidx.lifecycle.compose.LocalLifecycleOwner
-import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.categories
-import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.data.QuizHistoryManager
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
+import com.goodstadt.john.language.exams.screens.shared.VocabGamificationStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
-import com.goodstadt.john.language.exams.utils.buildSentenceParts
+import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
+import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
-import removeContentInBracketsAndTrim
+import dagger.hilt.EntryPoint
+import dagger.hilt.InstallIn
+import dagger.hilt.android.EntryPointAccessors
+import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import timber.log.Timber
 
-/**
- * A self-contained screen that displays vocabulary for a specific tab.
- * It manages its own state and logic via the CategoryTabViewModel.
- */
+@EntryPoint
+@InstallIn(SingletonComponent::class)
+interface StatsSheetEntryPoint {
+    fun getXPManager(): XPManager
+    fun getQuizManager(): QuizHistoryManager
+}
+
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun CategoryTabScreen(
     tabIdentifier: String? = null,
     categoryTitle: String? = null,
     selectedVoiceName: String,
-    viewModel: CategoryTabViewModel = hiltViewModel()//,
-//    mainViewModel: MainViewModel = hiltViewModel()
+    viewModel: CategoryTabViewModel = hiltViewModel()
 ) {
-
-//    val globalUiState by mainViewModel.uiState.collectAsState()
-//    val isPremium = globalUiState.isPremiumUser
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
-//bottom sheet
+    val uiState by viewModel.uiState.collectAsState()
+
+    // --- Bottom Sheets ---
     var selectedWordForSheet by remember { mutableStateOf<Format0Word?>(null) }
+    var selectedCategoryForSheet by remember { mutableStateOf<Category?>(null) }
     var showBottomSheet by remember { mutableStateOf(false) }
     val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
+    var showGamificationSheet by remember { mutableStateOf(false) }
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    // --- Rate Limit Sheets ---
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+
+    // --- Lifecycle & Loading ---
+    LaunchedEffect(Unit) {
+        viewModel.setTestExamGoal()
+    }
+
     LaunchedEffect(key1 = tabIdentifier, key2 = categoryTitle, key3 = selectedVoiceName) {
-        //Timber.e("CategoryTabScreen.LaunchEffect $tabIdentifier $categoryTitle $selectedVoiceName")
         if (selectedVoiceName.isNotEmpty()) {
             if (tabIdentifier != null) {
-                viewModel.loadContentForTab(tabIdentifier, selectedVoiceName)
+                // Determine Int tab number from string identifier if needed
+                val tabNum = tabIdentifier.toIntOrNull() ?: 1
+                viewModel.loadContentForTab(tabNum)
             } else if (categoryTitle != null) {
-                viewModel.loadContentForCategory(categoryTitle, selectedVoiceName)
+                // viewModel.loadContentForCategory(categoryTitle) // If you have this
             }
-        }else{
-            Timber.i("CategoryTabScreen.LaunchEffect selectedVoiceName IS NULL !")
-        }
-    }
-// 2) When data is ready, kick off the background recalculation (no UI updates)
-    LaunchedEffect(categories, selectedVoiceName) {
-        if (selectedVoiceName.isNotEmpty() && categories.isNotEmpty()) {
-            viewModel.recalcProgress(selectedVoiceName) // suspend call
-            // If you also want to upload here, you can call another VM method after this.
+        } else {
+            Timber.i("CategoryTabScreen: selectedVoiceName IS NULL!")
         }
     }
 
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_RESUME) {// We refresh the cache state every time the screen enters the RESUMED state. to get accurate stats
+            if (event == Lifecycle.Event.ON_RESUME) {
                 viewModel.refreshCacheState(selectedVoiceName)
                 viewModel.connectToBilling()
-            }else if (event == Lifecycle.Event.ON_PAUSE) {//reliable signal that the user is leaving the screen.
+            } else if (event == Lifecycle.Event.ON_PAUSE) {
                 viewModel.saveDataOnExit()
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
-
-        // This is called when the composable leaves the screen
-        onDispose {
-            lifecycleOwner.lifecycle.removeObserver(observer)
-        }
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
+    // --- UI Events (Snackbar) ---
     LaunchedEffect(Unit) {
         viewModel.uiEvent.collect { event ->
             when (event) {
                 is UiEvent.ShowSnackbar -> {
-                    // a) Show the snackbar and wait for its result
-                    val result = snackbarHostState.showSnackbar(
+                    snackbarHostState.showSnackbar(
                         message = event.message,
                         actionLabel = event.actionLabel,
-                        // Optional: make it stay longer on screen since it has an action
                         duration = SnackbarDuration.Short
                     )
-
-                    // b) Check if the user tapped the action button
-                    if (result == SnackbarResult.ActionPerformed) {/*just close*/ }
                 }
             }
         }
     }
 
-
-    val uiState by viewModel.uiState.collectAsState()
+    // --- UI Setup ---
     val lazyListState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
 
-    // Derive UI-specific lists from the state. `remember` ensures this
-    // calculation only re-runs when the categories list changes.
-    val categories = uiState.categories
+    // Safely extract data from State
+    val categories = (uiState as? CategoryTabUiState.Success)?.categories ?: emptyList()
+
+    // Menu Logic
     val menuItems = remember(categories) { categories.map { it.title } }
     val categoryIndexMap = remember(categories) {
         var currentIndex = 0
@@ -143,15 +142,9 @@ fun CategoryTabScreen(
         map
     }
 
-    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
-    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
-    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
-
     Scaffold(
-
         snackbarHost = {
             SnackbarHost(hostState = snackbarHostState) { snackbarData ->
-                // Apply the error colors ONLY to the Snackbar component itself.
                 Snackbar(
                     snackbarData = snackbarData,
                     containerColor = MaterialTheme.colorScheme.inverseSurface,
@@ -161,67 +154,80 @@ fun CategoryTabScreen(
             }
         }
     ) { innerPadding ->
-        // This is the main content area of your screen.
-        // It will have the correct, non-red background.
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding) // IMPORTANT: Apply the padding from the Scaffold
+                .padding(innerPadding)
         ) {
-            //
-            // --- ALL OF YOUR SCREEN'S UI GOES HERE ---
-            // e.g., Your LazyRow with MenuItemChip,
-            // your LazyColumn with vocab words, etc.
-            //
-            if (uiState.isLoading) {
+
+            // --- Loading State ---
+            if (uiState is CategoryTabUiState.Loading) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                     CircularProgressIndicator(color = accentColor)
                 }
-            } else {
-                var selectedChipTitle by remember(menuItems) {
-                    mutableStateOf(menuItems.firstOrNull() ?: "")
-                }
+            }
+
+            // --- Success State ---
+            else if (uiState is CategoryTabUiState.Success) {
+                val state = uiState as CategoryTabUiState.Success
+                var selectedChipTitle by remember(menuItems) { mutableStateOf(menuItems.firstOrNull() ?: "") }
+
                 Column(modifier = Modifier.fillMaxSize()) {
 
-                    // Horizontal scrolling menu
-                    if (tabIdentifier != null){
+                    // 1. Horizontal Menu
+                    if (tabIdentifier != null) {
                         LazyRow(
                             modifier = Modifier.fillMaxWidth(),
                             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                             horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             items(menuItems, key = { it }) { title ->
-                                // --- 3. PASS THE `isSelected` STATE DOWN AND UPDATE IT ON CLICK ---
                                 MenuItemChip(
                                     text = title,
-
-                                    isSelected = (title == selectedChipTitle), // Calculate if this chip is selected
+                                    isSelected = (title == selectedChipTitle),
                                     onClick = {
-                                        // First, update our state to the newly clicked title
                                         selectedChipTitle = title
-
-                                        // Then, perform the original scroll action
                                         scrollToCategory(
                                             title = title,
                                             coroutineScope = coroutineScope,
                                             lazyListState = lazyListState,
                                             indexMap = categoryIndexMap
                                         )
+//                                        scrollToCategory(title, coroutineScope, lazyListState, categoryIndexMap)
                                     }
                                 )
                             }
                         }
                     }
 
-                    CacheProgressBar(
-                        cachedCount = uiState.cachedAudioCount,
-                        totalCount = uiState.totalWordsInTab,
+                    // 2. Stats Bar & Gamification Button
+                    Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 64.dp, vertical = 8.dp)
-                    )
+                            .padding(vertical = 8.dp)
+                    ) {
+                        CacheProgressBar(
+                            cachedCount = state.cachedAudioCount, // Or state.heardSentenceIDs.size
+                            totalCount = state.totalWordsInTab,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 64.dp, vertical = 8.dp)
+                        )
+                        IconButton(
+                            onClick = { showGamificationSheet = true },
+                            modifier = Modifier
+                                .align(Alignment.CenterEnd)
+                                .padding(end = 8.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Filled.WorkspacePremium,
+                                contentDescription = "Stats",
+                                tint = Color(0xFFFF9800)
+                            )
+                        }
+                    }
 
-                    // Vertically scrolling list with vocabulary
+                    // 3. Main Vocabulary List
                     LazyColumn(
                         modifier = Modifier.fillMaxSize(),
                         state = lazyListState,
@@ -232,83 +238,97 @@ fun CategoryTabScreen(
                                 CategoryHeader(title = category.title.removeContentInBracketsAndTrim())
                             }
 
-                            items(category.words, key = { "${it.id}-${it.word}" }) { word ->
-                                val sentenceToShow = word.sentences.firstOrNull()
+                            items(category.words, key = { "${it.id}-${it.word}" }) { wordEntry ->
+                                val sentenceToShow = wordEntry.sentences.firstOrNull()
 
                                 if (sentenceToShow != null) {
-                                    val uniqueSentenceId = generateUniqueSentenceId(word, sentenceToShow, selectedVoiceName)
-                                    val isDownloading = uiState.downloadingSentenceId == uniqueSentenceId
+
+                                    // ✅ RED DOT LOGIC (History Based)
+                                    // 1. Generate Voice-Agnostic ID
+                                    val contentID = FirebaseAudioService.generateContentID(sentenceToShow.sentence)
+                                    // 2. Check Set provided by ViewModel
+                                   // val isSentenceAlreadyHeard = state.heardSentenceIDs.contains(contentID)
+                                    val isSentenceAlreadyHeard = true
+                                    // Visual cue for download/playing
+                                    val unifiedFilename = FirebaseAudioService.generateUnifiedFilename(sentenceToShow.sentence, selectedVoiceName)
+                                    val isDownloading = state.downloadingSentenceId == unifiedFilename
 
                                     SwipeableVocabRow(
-                                        word = word,
+                                        word = wordEntry,
                                         sentence = sentenceToShow,
-                                        selectedVoiceName = selectedVoiceName,
+                                        isSentenceAlreadyHeard = true,//sSentenceAlreadyHeard, // Pass correct boolean
                                         isDownloading = isDownloading,
-                                        recalledWordKeys = uiState.recalledWordKeys,
-                                        cachedAudioWordKeys = uiState.cachedAudioWordKeys, // Pass the new state
-                                        onRowTapped = { w, s -> viewModel.onRowTapped(w, s) }, // Call ViewModel's function
-                                        onFocus = { viewModel.onFocusClicked(word) },
-                                        onCancel = { viewModel.onCancelClicked(word) },
-                                        onMore = {
-                                            // This is where you will execute your logic, like showing a bottom sheet.
-                                            // For now, it can be a log or a call to a new ViewModel function.
-                                            println("More button swiped for word: ${word.word}")
-                                            // Example: viewModel.onMoreClicked(word)
+                                        recalledWordKeys = state.recalledWordKeys,
 
-                                            selectedWordForSheet = word
+                                        // ✅ TAP HANDLER (Delegate to ViewModel)
+                                        onRowTapped = { w, s ->
+                                            // Extract sentence string
+                                            val text = s.sentence
+                                            viewModel.handleSentenceTap(text, category)
+                                        },
+
+                                        onFocus = { viewModel.onFocusClicked(wordEntry) },
+                                        onCancel = { viewModel.onCancelClicked(wordEntry) },
+                                        onMore = {
+                                            selectedWordForSheet = wordEntry
+                                            selectedCategoryForSheet = category
                                             showBottomSheet = true
                                         }
                                     )
                                 } else {
-                                    Text(
-                                        text = "Error: No sentence found for '${word.word}'",
-                                        color = Color.Red,
-                                        modifier = Modifier.padding(vertical = 12.dp)
-                                    )
+                                    Text("Error: No sentence found", color = Color.Red, modifier = Modifier.padding(12.dp))
                                     HorizontalDivider()
                                 }
                             }
                         }
                     }
                 }
-                if (isRateLimitingSheetVisible){
-                    RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+            } // End Success
+
+            // --- Error State ---
+            else if (uiState is CategoryTabUiState.Error) {
+                val errorMsg = (uiState as CategoryTabUiState.Error).message
+                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                    Text("Error: $errorMsg", color = MaterialTheme.colorScheme.error)
                 }
-                if (isDailyRateLimitingSheetVisible){
-                    if (context is androidx.activity.ComponentActivity) {
-                        RateLimitDailyReasonsBottomSheet(
-                            onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
-                            onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
-                        )
-                    }
+            }
+
+            // --- Sheets & Overlays ---
+            if (isRateLimitingSheetVisible) {
+                RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+            }
+            if (isDailyRateLimitingSheetVisible) {
+                if (context is ComponentActivity) {
+                    RateLimitDailyReasonsBottomSheet(
+                        onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                        onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+                    )
                 }
-                if (isHourlyRateLimitingSheetVisible){
-                    if (context is androidx.activity.ComponentActivity) {
-                        RateLimitHourlyReasonsBottomSheet(
-                            onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
-                            onCloseSheet = { viewModel.hideHourlyRateLimitSheet() }
-                        )
-                    }
+            }
+            if (isHourlyRateLimitingSheetVisible) {
+                if (context is ComponentActivity) {
+                    RateLimitHourlyReasonsBottomSheet(
+                        onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                        onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+                    )
                 }
-                if (showBottomSheet) {
-                    ModalBottomSheet(
-                        onDismissRequest = {
-                            // This is called when the user swipes the sheet down or taps the scrim
-                            showBottomSheet = false
-                        },
-                        sheetState = bottomSheetState
-                    ) {
-                        // The content of the sheet. We only compose it if we have a word.
-                        selectedWordForSheet?.let { word ->
+            }
+
+            // Sentence Detail Sheet
+            if (showBottomSheet) {
+                ModalBottomSheet(
+                    onDismissRequest = { showBottomSheet = false },
+                    sheetState = bottomSheetState
+                ) {
+                    selectedWordForSheet?.let { word ->
+                        selectedCategoryForSheet?.let { category ->
                             SentencesBottomSheetContent(
                                 word = word,
-                                onBottomSheetRowTapped = { word, sentence ->
-                                    Timber.i("${word.word}")
-                                    viewModel.onRowTapped(word, sentence) //redirect
+                                onBottomSheetRowTapped = { w, sentence ->
+                                    // Redirect tap from bottom sheet to main VM logic
+                                    viewModel.handleSentenceTap(sentence.sentence, category)
                                 }
                             )
-
-
                         }
                     }
                 }
@@ -316,28 +336,45 @@ fun CategoryTabScreen(
         }
     }
 
+    // --- Gamification Stats Sheet ---
+    if (showGamificationSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { showGamificationSheet = false },
+            sheetState = sheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            // Get data from AudioCacheManager (Totals) and ViewModel (Progress)
+//            val acm = AudioCacheManager.shared // Or via Hilt EntryPoint
 
+            // This ensures we get the latest numbers for the graph
+            val allProgress = viewModel.buildCategoryProgress()
+            // Filter for this tab if needed, or show all
 
+            // Note: You might need a helper in ViewModel to sum specific tab totals
+            val (heard, total) = viewModel.calculateGrandTotals()
 
+            val context = LocalContext.current
+            val entryPoint = remember(context) {
+                EntryPointAccessors.fromApplication(
+                    context.applicationContext,
+                    StatsSheetEntryPoint::class.java
+                )
+            }
+            Box(modifier = Modifier.fillMaxHeight(0.85f)) {
+                VocabGamificationStatsSheet(
+                    grandTotalWords = total,
+                    grandTotalMastered = heard,
+                    categoryProgress = allProgress,//, // Pass the list
+                    xpManager = entryPoint.getXPManager(),
+                    quizManager = entryPoint.getQuizManager(),
+                    onDismiss = { showGamificationSheet = false }
+
+                )
+            }
+        }
+    }
 }
-
-
-// --- Helper Composables for this Screen ---
-
-@Composable
-fun CategoryHeader(title: String) {
-    Text(
-        text = title,
-        fontSize = 20.sp,
-        fontWeight = FontWeight.Bold,
-        color = accentColor,
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(vertical = 16.dp)
-    )
-}
-
 private fun scrollToCategory(
     title: String,
     coroutineScope: CoroutineScope,
@@ -349,120 +386,7 @@ private fun scrollToCategory(
         lazyListState.animateScrollToItem(index = index)
     }
 }
+// --- Helpers ---
 
-
-@Composable
-fun CacheProgressBar(
-    cachedCount: Int,
-    totalCount: Int,
-    displayIfZero:Boolean = false,
-    displayLowNumber:Boolean = true,
-    modifier: Modifier = Modifier
-) {
-    // This 'if' check replaces SwiftUI's .opacity() modifier.
-    // The entire composable will not be part of the UI if the count is zero.
-    if (!displayIfZero || cachedCount > 0) {
-        // Calculate progress as a float between 0.0 and 1.0
-        val progress = if (totalCount > 0) {
-            cachedCount.toFloat() / totalCount.toFloat()
-        } else {
-            0f // Avoid division by zero
-        }
-
-        Row(
-            modifier = modifier.height(30.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center
-        ) {
-            if (displayLowNumber && cachedCount > 0) {
-                Text(
-                    text = "$cachedCount",
-                    style = MaterialTheme.typography.labelSmall
-                )
-            }
-            // Use a weight modifier to make the progress bar fill the available space
-            LinearProgressIndicator(
-                progress = { progress },
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(horizontal = 10.dp) ,
-                color = accentColor,
-                trackColor = MaterialTheme.colorScheme.surfaceVariant
-
-
-            )
-            Text(
-                text = "$totalCount",
-                style = MaterialTheme.typography.labelSmall
-            )
-        }
-    }
-}
-
-
-@Composable
-fun SentencesBottomSheetContent(
-    // 1. The composable takes the selected word as its input
-    word: Format0Word,
-    onBottomSheetRowTapped: (Format0Word, Sentence) -> Unit,
-    modifier: Modifier = Modifier
-) {
-    // Use a Column with vertical scroll in case sentences are long
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-            .verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        // 2. Display the main word prominently
-        Text(
-            text = word.word,
-            style = MaterialTheme.typography.headlineLarge
-        )
-        if (word.definition.isNotEmpty()) {
-            Text(
-                text = word.definition,
-                style = MaterialTheme.typography.titleSmall
-            )
-        }
-        if (word.IPA.isNotEmpty()) {
-            Text(
-                text = word.IPA,
-                style = MaterialTheme.typography.titleSmall
-            )
-        }
-        if (word.pronounce.isNotEmpty()) {
-            Text(
-                text = word.pronounce,
-                style = MaterialTheme.typography.titleSmall
-            )
-        }
-
-        HorizontalDivider()
-
-        // 3. Loop through and display each sentence
-        word.sentences.forEach { sentence ->
-            Column(
-                verticalArrangement = Arrangement.spacedBy(2.dp)
-            ) {
-
-                val displayData = buildSentenceParts(entry = word, sentence = sentence)
-
-                Column(modifier = Modifier.clickable { onBottomSheetRowTapped(word, sentence) }) {
-                    HighlightedWordInSentenceRow(
-                        word = word.word,
-                        parts = displayData.parts,
-                        sentence = displayData.sentence,
-                        isRecalling = false,
-                        displayDot = false,//achedAudioWordKeys.contains(uniqueSentenceId),
-                        isDownloading = false//, //TODO: maybe dynamic?
-                    )
-                }
-            }
-        }
-
-        // Add some space at the bottom for better scrolling
-        Spacer(Modifier.height(32.dp))
-    }
-}
+// Helper extension for strings (placeholder)
+fun String.removeContentInBracketsAndTrim(): String = this.replace(Regex("\\(.*?\\)"), "").trim()

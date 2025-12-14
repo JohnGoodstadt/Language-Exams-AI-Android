@@ -1,9 +1,8 @@
-package com.goodstadt.john.language.exams.data
+package com.goodstadt.john.language.exams.data.repository
 
 import android.app.Activity
 import android.content.Context
 import android.util.Log
-import androidx.annotation.RequiresApi
 import com.android.billingclient.api.AcknowledgePurchaseParams
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingClient.ConnectionState
@@ -19,17 +18,16 @@ import com.android.billingclient.api.PurchasesUpdatedListener
 import com.android.billingclient.api.QueryProductDetailsParams
 import com.android.billingclient.api.QueryPurchasesParams
 import com.android.billingclient.api.queryProductDetails
-import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.ConnectivityRepository
+import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
@@ -37,7 +35,6 @@ import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 import kotlin.coroutines.resume
-import kotlin.coroutines.resumeWithException
 
 
 object ConnectionState {
@@ -424,5 +421,10 @@ class BillingRepository @Inject constructor(
                 Timber.e("❌ Failed to consume test purchase. Code: ${billingResult.responseCode}")
             }
         }
+    }
+
+    fun startConnection() {
+        //TODO: is this correct?
+        connect()
     }
 }

@@ -1,14 +1,14 @@
-package com.goodstadt.john.language.exams.data
+package com.goodstadt.john.language.exams.managers
 
 
 import android.content.Context
-import android.util.Log
-import com.goodstadt.john.language.exams.BuildConfig
-import com.goodstadt.john.language.exams.data.repository.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.models.CategoryStats
 import com.goodstadt.john.language.exams.models.Format0File
+import com.goodstadt.john.language.exams.models.ReferenceStats
 import com.goodstadt.john.language.exams.models.TabNumberEnum
 import com.goodstadt.john.language.exams.utils.CategoryProgress
-import com.goodstadt.john.language.exams.utils.ReferenceStats
 import com.google.firebase.analytics.FirebaseAnalytics
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -23,7 +23,6 @@ import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
-import kotlin.math.max
 
 @Singleton
 class AudioCacheManager @Inject constructor(
@@ -288,7 +287,8 @@ class AudioCacheManager @Inject constructor(
                 val parts = parseComplexLegacyFilename(file.name) ?: continue
 
                 // 2. Generate New Name
-                val newUnifiedFilename = FirebaseAudioService.generateUnifiedFilename(parts.sentence, parts.voice)
+                val newUnifiedFilename =
+                    FirebaseAudioService.generateUnifiedFilename(parts.sentence, parts.voice)
                 val newFile = File(filesDir, newUnifiedFilename)
 
                 // 3. Rename
@@ -305,7 +305,7 @@ class AudioCacheManager @Inject constructor(
                 // 4. Update History
                 val contentID = FirebaseAudioService.generateContentID(parts.sentence)
                 if (historyManager.getPlayCount(currentLevel, contentID) == 0) {
-                    historyManager.markSentenceHeard(context, currentLevel, contentID)
+                    historyManager.markSentenceHeard(currentLevel, contentID)
                     historyUpdatedCount++
                 }
             }
@@ -396,4 +396,42 @@ class AudioCacheManager @Inject constructor(
 
     fun getAIParagraphCount(): Int = aiParagraphCount
     fun getAIParagraphHeardCount(): Int = aiParagraphHeardCount
+
+    // MARK: - Reference Stats Sync
+
+    /**
+     * Recalculates the Heard/Total counts for a specific reference sheet based on History.
+     * Call this from your ViewModel (e.g. Format1ViewModel) immediately after loading data.
+     */
+    fun recalculateReferenceStats(sheetTitle: String, sentences: List<String>) {
+        scope.launch {
+            // 1. Calculate Stats (Background)
+            var heardCount = 0
+            val totalCount = sentences.size
+
+            sentences.forEach { sentence ->
+                val contentID = FirebaseAudioService.generateContentID(sentence)
+                // Check the "Reference" bucket in History
+                if (historyManager.isHeard("Reference", contentID)) {
+                    heardCount++
+                }
+            }
+
+            // 2. Update Internal State (Thread Safe)
+            mutex.withLock {
+                // Update Total (Simple Map)
+                referenceTotalCounts[sheetTitle] = totalCount
+
+                // Update Heard (StateFlow - triggers UI update)
+                val newMap = _referenceHeardCounts.value.toMutableMap()
+                newMap[sheetTitle] = heardCount
+                _referenceHeardCounts.value = newMap
+
+                // Persist to SharedPreferences
+                saveReferenceStats()
+            }
+
+            Timber.tag("AudioCacheManager").d("📊 Refreshed Stats for '$sheetTitle': $heardCount/$totalCount")
+        }
+    }
 }

@@ -1,6 +1,9 @@
-package com.goodstadt.john.language.exams.data
+package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
+import com.goodstadt.john.language.exams.data.AppConfigRepository
+import com.goodstadt.john.language.exams.data.AudioPlayerService
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
 import com.goodstadt.john.language.exams.models.Category
@@ -357,7 +360,10 @@ class ContentRepository @Inject constructor(
             return if (playResult.isSuccess) {
                 PlaybackResult.PlayedFromCache
             } else {
-                PlaybackResult.Failure(playResult.exceptionOrNull() as? Exception ?: Exception("Unknown cache playback error"))
+                PlaybackResult.Failure(
+                    playResult.exceptionOrNull() as? Exception
+                        ?: Exception("Unknown cache playback error")
+                )
             }
         }
 
@@ -382,16 +388,121 @@ class ContentRepository @Inject constructor(
                         PlaybackResult.PlayedFromNetworkAndCached
 
                     }else{
-                        PlaybackResult.Failure(playResult.exceptionOrNull() as? Exception ?: Exception("Unknown network playback error"))
+                        PlaybackResult.Failure(
+                            playResult.exceptionOrNull() as? Exception
+                                ?: Exception("Unknown network playback error")
+                        )
                     }
                 },
                 onFailure = { exception ->
-                    PlaybackResult.Failure(exception as? Exception ?: Exception("Network error", exception))
+                    PlaybackResult.Failure(
+                        exception as? Exception ?: Exception(
+                            "Network error",
+                            exception
+                        )
+                    )
                 }
             )
         }
         finally { }
 
+    }
+    suspend fun playTextToSpeechAndSaveToCache(
+        text: String,
+        uniqueSentenceId: String, // This should be the Unified Filename (with .mp3)
+        voiceName: String,
+        languageCode: String
+    ): PlaybackResult {
+
+        // 1. Setup File Reference
+        // context.filesDir is the correct place for permanent audio storage
+        val localFile = File(context.filesDir, uniqueSentenceId)
+
+        // ---------------------------------------------------------
+        // STEP 1: LOCAL CACHE (Fastest, $0)
+        // ---------------------------------------------------------
+        if (localFile.exists()) {
+            Timber.v("🔊 Waterfall L1: Playing from Local Disk: $uniqueSentenceId")
+            return playFromLocalFile(localFile, isNetwork = false)
+        }
+
+        // ---------------------------------------------------------
+        // STEP 2: FIREBASE CLOUD STORAGE (Fast, Low/No Cost)
+        // ---------------------------------------------------------
+        try {
+            // Check/Download directly to the local file
+            // This throws an exception if the file doesn't exist in cloud
+            FirebaseAudioService.downloadAudio(uniqueSentenceId, localFile)
+
+            Timber.v("☁️ Waterfall L2: Downloaded from Firebase")
+
+            // If download succeeded, file is now on disk. Play it.
+            return playFromLocalFile(localFile, isNetwork = true)
+
+        } catch (e: Exception) {
+            // Not in cloud, or network failed. Fall through to TTS.
+            // Log.v("ContentRepository", "Not in Firebase, falling back to TTS")
+        }
+
+        // ---------------------------------------------------------
+        // STEP 3: GOOGLE TTS API (Slower, $$)
+        // ---------------------------------------------------------
+        Timber.v("🗣️ Waterfall L3: Calling Google TTS")
+
+        val ttsResult = googleCloudTts.getAudioData(text, voiceName, languageCode)
+
+        return ttsResult.fold(
+            onSuccess = { audioData ->
+                // A. Save to Local Disk (Critical for L1 next time)
+                try {
+                    localFile.writeBytes(audioData)
+                } catch (e: Exception) {
+                    Timber.e(e, "Failed to write TTS data to disk")
+                }
+
+                // B. Play Audio
+                val playResult = audioPlayerService.playAudio(audioData)
+
+                // C. Upload to Firebase (Background / Fire & Forget)
+                // We only upload if playback worked (valid audio)
+                if (playResult.isSuccess) {
+                    FirebaseAudioService.uploadAudio(localFile, uniqueSentenceId, text)
+                }
+
+                if (playResult.isSuccess) {
+                    PlaybackResult.PlayedFromNetworkAndCached
+                } else {
+                    PlaybackResult.Failure(
+                        playResult.exceptionOrNull() as? Exception
+                            ?: Exception("TTS Playback failed")
+                    )
+                }
+            },
+            onFailure = { exception ->
+                Timber.e(exception, "TTS API Call failed")
+                PlaybackResult.Failure(exception as? Exception ?: Exception("TTS API error"))
+            }
+        )
+    }
+
+    // MARK: - Helper
+
+    private suspend fun playFromLocalFile(file: File, isNetwork: Boolean): PlaybackResult {
+        return try {
+            val bytes = file.readBytes()
+            val result = audioPlayerService.playAudio(bytes)
+
+            if (result.isSuccess) {
+                if (isNetwork) PlaybackResult.PlayedFromNetworkAndCached
+                else PlaybackResult.PlayedFromCache
+            } else {
+                PlaybackResult.Failure(
+                    result.exceptionOrNull() as? Exception ?: Exception("Local playback failed")
+                )
+            }
+        } catch (e: Exception) {
+            PlaybackResult.Failure(e)
+        }
     }
     /**
      * Fetches audio data for the given text from the TTS service and plays it.

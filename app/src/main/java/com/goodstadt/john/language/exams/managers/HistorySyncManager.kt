@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.data
+package com.goodstadt.john.language.exams.managers
 
 import android.content.Context
 import android.util.Log

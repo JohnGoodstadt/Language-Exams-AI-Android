@@ -1,9 +1,10 @@
-package com.goodstadt.john.language.exams.data
+package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.icu.util.Calendar
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.FirestoreRepository
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -19,6 +20,7 @@ import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSQuality
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStandard
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStats
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStudio
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -32,7 +34,7 @@ import java.io.File
 class TTSStatsRepository @Inject constructor(
     @ApplicationContext private val context: Context,
 //    private val firestore: FirebaseFirestore, //if direct call
-    private val firestoreRepository:FirestoreRepository,
+    private val firestoreRepository: FirestoreRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
 ) {
     private val PREFS_NAME = "pronounceDates"
@@ -482,7 +484,7 @@ class TTSStatsRepository @Inject constructor(
         inc(fsDOC.USER, OpenAITotalTokenCount,count)
     }
     fun updateUserTTSCurrentTokenCount(value:Int) {
-        update(fsDOC.USER,TTSCurrentTokenCount,value)
+        update(fsDOC.USER, TTSCurrentTokenCount,value)
     }
     fun incUserTTSTotalTokenCount(value:Int = 1) {
         inc(fsDOC.USER, TTSTotalTokenCount, value)

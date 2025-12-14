@@ -1,12 +1,13 @@
-package com.goodstadt.john.language.exams.data
-
-import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
-
 package com.goodstadt.john.language.exams.data.repository
 
-import com.goodstadt.john.language.exams.managers.FirebaseAudioService
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.HistorySyncManager
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+
+
 import com.goodstadt.john.language.exams.managers.XPManager
-import com.goodstadt.john.language.exams.models.XpActionType
+import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import kotlinx.coroutines.flow.first
 import timber.log.Timber
@@ -59,7 +60,8 @@ class AudioPlaybackRepository @Inject constructor(
         // --- 2. Prepare Data ---
         val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
         val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
-        val uniqueSentenceId = FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
+        val uniqueSentenceId =
+            FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
 
         // --- 3. Execute Playback (The Waterfall) ---
         val result = contentRepository.playTextToSpeechAndSaveToCache(

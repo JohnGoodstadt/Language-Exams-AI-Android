@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
-import com.goodstadt.john.language.exams.data.BillingRepository
+import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.CreditSystemConfig
 import com.goodstadt.john.language.exams.data.CreditsRepository
@@ -15,17 +15,17 @@ import com.goodstadt.john.language.exams.data.GeminiRepository
 import com.goodstadt.john.language.exams.data.LLMProvider
 import com.goodstadt.john.language.exams.data.LLMProviderManager
 import com.goodstadt.john.language.exams.data.OpenAIRepository
-import com.goodstadt.john.language.exams.data.PlaybackResult
-import com.goodstadt.john.language.exams.data.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.GeminiEstCostUSD
-import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.GeminiPremiumCallCount
-import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.OpenAIEstCostUSD
-import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.OpenAIPremiumCallCount
-import com.goodstadt.john.language.exams.data.TTSStatsRepository.Companion.llmModel_
+import com.goodstadt.john.language.exams.data.repository.PlaybackResult
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.GeminiEstCostUSD
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.GeminiPremiumCallCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.OpenAIEstCostUSD
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.OpenAIPremiumCallCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.llmModel_
 import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.ContentRepository
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.LlmModelInfo
@@ -50,7 +50,6 @@ import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
-import kotlin.io.path.fileVisitor
 
 
 // Data class to hold the parsed response, matching the Swift LLMResponse

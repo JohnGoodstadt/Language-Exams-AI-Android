@@ -57,10 +57,9 @@ import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
 fun SwipeableVocabRow(
     word: Format0Word,
     sentence: Sentence,
-    selectedVoiceName: String,
+    isSentenceAlreadyHeard: Boolean, // ✅ Driven by HistorySyncManager
     isDownloading: Boolean,
     recalledWordKeys: Set<String>,
-    cachedAudioWordKeys: Set<String>,
     onRowTapped: (Format0Word, Sentence) -> Unit,
     onFocus: () -> Unit,
     onCancel: () -> Unit,
@@ -69,7 +68,7 @@ fun SwipeableVocabRow(
 ) {
 
     val isRecalling = recalledWordKeys.contains(word.word)
-    val displayDot = cachedAudioWordKeys.contains(word.word)
+   // val displayDot = cachedAudioWordKeys.contains(word.word)
 
     // --- CHANGE 1: Use the new state remember function ---
     val dismissState = rememberSwipeToDismissBoxState(
@@ -135,7 +134,7 @@ fun SwipeableVocabRow(
                 parts = displayData.parts,
                 sentence = displayData.sentence,
                 isRecalling = isRecalling,
-                displayDot = displayDot,
+                displayDot = isSentenceAlreadyHeard,
 //                cachedAudioWordKeys ,
                 //wordCount = 0,
                 isDownloading = isDownloading

@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.data
 
 import android.content.Context
+import android.util.Log
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -11,6 +12,7 @@ import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.models.dataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
@@ -23,7 +25,7 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 // Use DataStore instead of SharedPreferences for modern, Flow-based preference handling
-private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user_settings")
+//private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "user_settings")
 
 @Singleton
 class UserPreferencesRepository @Inject constructor(
@@ -45,6 +47,7 @@ class UserPreferencesRepository @Inject constructor(
         val SELECTED_PREPOSITIONS_EXAM_NAME = stringPreferencesKey("selected_prepositions_exam_name")
         val PREPOSITIONS_LOCAL_VERSION = intPreferencesKey("prepositions_local_version")
         val APP_INSTALL_DATE = longPreferencesKey("app_install_date")
+        val EXAM_NAME = stringPreferencesKey("currentExamJSONName")
     }
 
     /**
@@ -243,4 +246,22 @@ class UserPreferencesRepository @Inject constructor(
             Timber.d("Prepositions local version updated to: $newVersion")
         }
     }
+    suspend fun updateExamName(examName: String) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.EXAM_NAME] = examName
+        }
+    }
+    val selectedExamNameFlow: Flow<String> = context.dataStore.data
+        .catch { exception ->
+            if (exception is IOException) {
+                Timber.e(exception, "Error reading preferences")
+                emit(emptyPreferences())
+            } else {
+                throw exception
+            }
+        }
+        .map { preferences ->
+            // Default to B1 if nothing is set
+            preferences[PreferenceKeys.EXAM_NAME] ?: "EnglishB1Vocab"
+        }
  }

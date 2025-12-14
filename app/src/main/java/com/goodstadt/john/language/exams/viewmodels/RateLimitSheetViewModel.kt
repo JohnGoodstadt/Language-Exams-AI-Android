@@ -3,7 +3,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.rateLimitDailyViewCount
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.rateLimitHourlyViewCount
-import com.goodstadt.john.language.exams.data.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

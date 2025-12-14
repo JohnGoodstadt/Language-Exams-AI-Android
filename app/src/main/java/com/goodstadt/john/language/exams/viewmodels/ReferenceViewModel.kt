@@ -5,14 +5,12 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.RefreshTrigger
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.models.SheetDataType
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.SheetDefinition
 import com.goodstadt.john.language.exams.models.Format0File
-import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Format2File
-import com.goodstadt.john.language.exams.models.Sentence
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

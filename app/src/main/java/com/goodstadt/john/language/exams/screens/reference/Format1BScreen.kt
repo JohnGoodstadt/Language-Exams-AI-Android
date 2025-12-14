@@ -14,16 +14,18 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.managers.FirebaseAudioService
-import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
+import com.goodstadt.john.language.exams.data.QuizHistoryManager
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
+import com.goodstadt.john.language.exams.screens.shared.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.viewmodels.Format1BUiState
-import com.goodstadt.john.language.exams.viewmodels.Format1BViewModel
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
+import dagger.hilt.android.EntryPointAccessors
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -95,12 +97,11 @@ fun Format1Screen(
                     ) { item ->
 
                         // ✅ CHECK HISTORY FOR RED DOT
-                        val contentID = FirebaseAudioService.generateContentID(item.sentence)
-                        val isHeard = state.heardSentenceIDs.contains(contentID)
-
+//                        val contentID = FirebaseAudioService.generateContentID(item.sentence)
+                        val isHeard = viewModel.isHeard(item.sentence)
                         // Check Playback State (Optional visual cue)
-                        val isPlaying = (state.playbackState is PlaybackState.Playing) &&
-                                (state.playbackState.id.contains(FirebaseAudioService.generateUnifiedFilename(item.sentence, ""))) // simplified check
+                       // val isPlaying = (state.playbackState is PlaybackState.Playing) &&
+                         //       (state.playbackState.id.contains(FirebaseAudioService.generateUnifiedFilename(item.sentence, ""))) // simplified check
 
                         Column(
                             modifier = Modifier
@@ -119,7 +120,7 @@ fun Format1Screen(
                                     text = item.word,
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = if(isPlaying) Color.Green else Color.Cyan, // Visual feedback
+                                    color = Color.Cyan,//if(isPlaying) Color.Green else Color.Cyan, // Visual feedback
                                     modifier = Modifier.weight(1f)
                                 )
 
@@ -145,6 +146,14 @@ fun Format1Screen(
                 }
             }
 
+            val context = LocalContext.current
+            val entryPoint = remember(context) {
+                EntryPointAccessors.fromApplication(
+                    context.applicationContext,
+                    StatsSheetEntryPoint::class.java
+                )
+            }
+
             // 3. Side Quest Sheet
             if (showSideQuestSheet) {
                 ModalBottomSheet(
@@ -162,6 +171,7 @@ fun Format1Screen(
                             conjugations = null, // Adjust based on your Sheet params
                             adjectives = null,
                             quickRefs = emptyList(),
+                            quizManager = entryPoint.getQuizManager(),
                             onDismiss = { showSideQuestSheet = false }
                         )
                     }
