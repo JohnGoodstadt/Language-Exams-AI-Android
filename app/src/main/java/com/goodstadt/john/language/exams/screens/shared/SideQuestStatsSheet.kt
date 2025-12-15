@@ -1,5 +1,7 @@
 package com.goodstadt.john.language.exams.screens.shared
 
+import com.goodstadt.john.language.exams.data.QuizHistoryManager
+
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -20,9 +22,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.models.ReferenceCategory
-import com.goodstadt.john.language.exams.models.ReferenceSubItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -31,17 +31,23 @@ fun SideQuestStatsSheet(
     paragraphHeardCount: Int,
     conjugations: ReferenceCategory?,
     adjectives: ReferenceCategory?,
-    quickRefs: List<ReferenceCategory>,
-    quizManager: QuizHistoryManager, // Passed in from ViewModel
+    quickRefs: List<ReferenceCategory>, // Contains Prepositions, Sounds Same, Good vs Well
+    quizManager: QuizHistoryManager,
     onDismiss: () -> Unit
 ) {
     Scaffold(
+        containerColor = MaterialTheme.colorScheme.surface,
+        contentColor = MaterialTheme.colorScheme.onSurface,
         topBar = {
             CenterAlignedTopAppBar(
                 title = { Text("Side Quests", fontWeight = FontWeight.Bold) },
+                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    titleContentColor = MaterialTheme.colorScheme.onSurface
+                ),
                 actions = {
                     IconButton(onClick = onDismiss) {
-                        Icon(Icons.Default.Close, contentDescription = "Close", tint = Color.Gray)
+                        Icon(Icons.Default.Close, contentDescription = "Close", tint = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
             )
@@ -55,6 +61,7 @@ fun SideQuestStatsSheet(
                 .padding(horizontal = 16.dp),
             verticalArrangement = Arrangement.spacedBy(24.dp)
         ) {
+
             // 1. INTRO HEADER
             Row(
                 modifier = Modifier.padding(top = 8.dp),
@@ -63,52 +70,54 @@ fun SideQuestStatsSheet(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = "Reference Library",
-                        style = MaterialTheme.typography.titleLarge,
+                        style = MaterialTheme.typography.headlineSmall,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "Track your exploration of grammar and bonus materials.",
-                        style = MaterialTheme.typography.bodySmall,
+                        style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
                 Icon(
-                    imageVector = Icons.Filled.MenuBook, // Or similar book icon
+                    imageVector = Icons.Filled.MenuBook,
                     contentDescription = null,
                     modifier = Modifier.size(48.dp),
                     tint = Color(0xFF9C27B0).copy(alpha = 0.8f) // Purple
                 )
             }
 
-            // 2. ACTIVE SIDE QUESTS (AI + Quizzes)
+            // 2. ACTIVE STATS (Creator & Quiz)
             Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                // AI Paragraphs
+                // AI Paragraphs (Creation)
                 AIWriterCard(count = paragraphCount, heard = paragraphHeardCount)
 
-                // Quiz Stats
-                // Note: QuizMasteryCard needs to be self-contained or passed stats.
-                // Assuming we pass the manager or extract stats here.
+                // Quiz Mastery (Testing)
                 QuizMasteryCard(quizManager = quizManager)
             }
 
-            // 3. DEEP DIVES (Grouped Stats)
-            Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                Text(
-                    text = "Grammar Deep Dives",
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
-                )
+            // 3. GRAMMAR DEEP DIVES (Conjugations & Adjectives)
+            // Only render if data is provided
+            if (conjugations != null || adjectives != null) {
+                Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                    Text(
+                        text = "Grammar Deep Dives",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold
+                    )
 
-                if (conjugations != null) {
-                    ReferenceGroupCard(category = conjugations, color = Color(0xFF2196F3)) // Blue
-                }
+                    if (conjugations != null) {
+                        ReferenceGroupCard(category = conjugations, color = Color(0xFF2196F3)) // Blue
+                    }
 
-                if (adjectives != null) {
-                    ReferenceGroupCard(category = adjectives, color = Color(0xFF3F51B5)) // Indigo
+                    if (adjectives != null) {
+                        ReferenceGroupCard(category = adjectives, color = Color(0xFF3F51B5)) // Indigo
+                    }
                 }
             }
 
             // 4. QUICK REFERENCE (Single Items)
+            // Expects: Prepositions, Sounds Same, Good vs Well
             if (quickRefs.isNotEmpty()) {
                 Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     Text(
@@ -127,7 +136,7 @@ fun SideQuestStatsSheet(
             Text(
                 text = "Reference items grant Bonus XP but do not affect your Exam readiness calculations.",
                 style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.outline,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 32.dp),
@@ -137,7 +146,7 @@ fun SideQuestStatsSheet(
     }
 }
 
-// MARK: - Components
+// MARK: - COMPONENTS
 
 @Composable
 fun AIWriterCard(count: Int, heard: Int) {
@@ -196,6 +205,62 @@ fun AIWriterCard(count: Int, heard: Int) {
 }
 
 @Composable
+fun QuizMasteryCard(quizManager: QuizHistoryManager) {
+    val stats = quizManager.getGlobalStats() // Gets totals from HistoryManager
+
+    Card(
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+        shape = RoundedCornerShape(16.dp)
+    ) {
+        Row(
+            modifier = Modifier.padding(16.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            // Icon Badge
+            Box(
+                modifier = Modifier
+                    .size(60.dp)
+                    .clip(CircleShape)
+                    .background(
+                        Brush.linearGradient(
+                            colors = listOf(Color(0xFF4CAF50), Color(0xFF8BC34A)) // Green
+                        )
+                    ),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = Icons.Filled.VerifiedUser,
+                    contentDescription = null,
+                    tint = Color.White,
+                    modifier = Modifier.size(28.dp)
+                )
+            }
+
+            Column {
+                Text(
+                    text = "Quiz Mastery",
+                    style = MaterialTheme.typography.labelLarge,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+
+                Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                    Column {
+                        Text("${stats.perfectScores}", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                        Text("Perfects", style = MaterialTheme.typography.labelSmall)
+                    }
+                    Column {
+                        Text("${stats.totalAttempts}", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                        Text("Attempts", style = MaterialTheme.typography.labelSmall)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
 fun ReferenceGroupCard(category: ReferenceCategory, color: Color) {
     Card(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
@@ -242,18 +307,20 @@ fun ReferenceGroupCard(category: ReferenceCategory, color: Color) {
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
+                            // Track
                             Box(
                                 modifier = Modifier
                                     .width(80.dp)
                                     .height(6.dp)
                                     .clip(RoundedCornerShape(3.dp))
-                                    .background(color.copy(alpha = 0.1f))
+                                    .background(color.copy(alpha = 0.2f))
                             ) {
+                                // Fill
                                 Box(
                                     modifier = Modifier
                                         .fillMaxHeight()
                                         .fillMaxWidth(item.coverage)
-                                        .background(color.copy(alpha = 0.7f))
+                                        .background(color)
                                 )
                             }
 
@@ -261,7 +328,7 @@ fun ReferenceGroupCard(category: ReferenceCategory, color: Color) {
                                 text = "${(item.coverage * 100).toInt()}%",
                                 style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                modifier = Modifier.width(30.dp)
+                                modifier = Modifier.width(35.dp)
                             )
                         }
                     }
@@ -291,7 +358,7 @@ fun ReferenceGroupCard(category: ReferenceCategory, color: Color) {
 
 @Composable
 fun QuickReferenceRow(category: ReferenceCategory) {
-    // Aggregate data if multiple items exist (though logic assumes 1 for QuickRefs)
+    // Aggregate data if items are split, or just take the first one
     val totalViewed = category.items.sumOf { it.viewed }
     val totalItems = category.items.sumOf { it.total }
     val coverage = if (totalItems > 0) totalViewed.toFloat() / totalItems else 0f
@@ -306,6 +373,7 @@ fun QuickReferenceRow(category: ReferenceCategory) {
                 .padding(12.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
+            // Header Row
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(
                     imageVector = category.icon,
@@ -327,6 +395,7 @@ fun QuickReferenceRow(category: ReferenceCategory) {
                 )
             }
 
+            // Description
             Text(
                 text = category.description,
                 style = MaterialTheme.typography.bodySmall,
@@ -341,7 +410,7 @@ fun QuickReferenceRow(category: ReferenceCategory) {
                     .fillMaxWidth()
                     .height(4.dp)
                     .clip(RoundedCornerShape(2.dp))
-                    .background(Color(0xFF009688).copy(alpha = 0.1f))
+                    .background(Color(0xFF009688).copy(alpha = 0.2f))
             ) {
                 Box(
                     modifier = Modifier
@@ -349,60 +418,6 @@ fun QuickReferenceRow(category: ReferenceCategory) {
                         .fillMaxWidth(coverage)
                         .background(Color(0xFF009688))
                 )
-            }
-        }
-    }
-}
-
-// Minimal implementation of QuizMasteryCard for this sheet
-// (Ideally this should be in its own file if complex)
-@Composable
-fun QuizMasteryCard(quizManager: QuizHistoryManager) {
-    // Note: You would normally read stats from the manager here.
-    // For now, using placeholder or exposing a method in QuizManager to get GlobalStats.
-    val stats = quizManager.getGlobalStats() // Assuming this method exists in Kotlin manager
-
-    Card(
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-        shape = RoundedCornerShape(16.dp)
-    ) {
-        Row(
-            modifier = Modifier.padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            Box(
-                modifier = Modifier
-                    .size(60.dp)
-                    .clip(CircleShape)
-                    .background(
-                        Brush.linearGradient(
-                            colors = listOf(Color(0xFF4CAF50), Color(0xFF8BC34A)) // Green to Light Green
-                        )
-                    ),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = Icons.Filled.VerifiedUser,
-                    contentDescription = null,
-                    tint = Color.White,
-                    modifier = Modifier.size(28.dp)
-                )
-            }
-
-            Column {
-                Text("Quiz Mastery", style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurfaceVariant)
-
-                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Column {
-                        Text("${stats.perfectScores}", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                        Text("Perfects", style = MaterialTheme.typography.labelSmall)
-                    }
-                    Column {
-                        Text("${stats.totalAttempts}", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                        Text("Attempts", style = MaterialTheme.typography.labelSmall)
-                    }
-                }
             }
         }
     }

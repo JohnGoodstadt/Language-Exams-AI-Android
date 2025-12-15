@@ -8,6 +8,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Hearing
+import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.filled.SwapVert
+import androidx.compose.material.icons.filled.Transform
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -19,11 +24,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.models.ReferenceCategory
+import com.goodstadt.john.language.exams.models.ReferenceSubItem
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.EntryPointAccessors
 
@@ -162,15 +172,38 @@ fun Format1BScreen(
                     containerColor = MaterialTheme.colorScheme.surface,
                     contentColor = MaterialTheme.colorScheme.onSurface
                 ) {
+                    // 1. Get Managers
+                    val audioCache = viewModel.getAudioCacheManager()
+
+                    // 2. Collect Latest Stats (Reactive)
+                    // This ensures the sheet has data even if it wasn't pre-calculated
+                    val referenceCounts by audioCache.referenceHeardCounts.collectAsStateWithLifecycle()
+
+                    // 3. Build the Data Models using the Helper
+                    val refData = remember(referenceCounts) {
+                        getReferenceData(audioCache, referenceCounts)
+                    }
+
+                    // 4. Get Hilt Entry Point for QuizManager
+                    val entryPoint = remember(context) {
+                        EntryPointAccessors.fromApplication(context.applicationContext, StatsSheetEntryPoint::class.java)
+                    }
+
+                    // 3. Build the Data
+                    // We use 'remember(referenceCounts)' so it rebuilds whenever the counts change
+                    val sideQuestData = remember(referenceCounts) {
+                        buildSideQuestData(audioCache)
+                    }
+
                     Box(modifier = Modifier.fillMaxHeight(0.85f)) {
                         // Note: You might need to pass data in here if SideQuestStatsSheet 
                         // doesn't pull everything from Hilt automatically yet.
                         SideQuestStatsSheet(
                             paragraphCount = 0, // Mock or fetch from VM
                             paragraphHeardCount = 0, // Mock or fetch from VM
-                            conjugations = null, // Adjust based on your Sheet params
-                            adjectives = null,
-                            quickRefs = emptyList(),
+                            conjugations = sideQuestData.conjugations,
+                            adjectives = sideQuestData.adjectives,
+                            quickRefs = sideQuestData.quickRefs,
                             quizManager = entryPoint.getQuizManager(),
                             onDismiss = { showSideQuestSheet = false }
                         )
@@ -179,4 +212,73 @@ fun Format1BScreen(
             }
         }
     }
+}
+// MARK: - Data Builder Helper
+// This constructs the specific UI models needed by SideQuestStatsSheet
+// It maps your specific JSON filenames to readable categories.
+
+data class SideQuestData(
+    val conjugations: ReferenceCategory,
+    val adjectives: ReferenceCategory,
+    val quickRefs: List<ReferenceCategory>
+)
+
+fun getReferenceData(manager: AudioCacheManager, heardCounts: Map<String, Int>): SideQuestData {
+
+    // Helper to make sub-items
+    fun item(title: String, key: String): ReferenceSubItem {
+        val heard = heardCounts[key] ?: 0
+        val total = manager.getReferenceStats(key).total
+        return ReferenceSubItem(title, heard, maxOf(total, 1)) // Avoid div/0 visual issues
+    }
+
+    // 1. Conjugations
+    val conjugations = ReferenceCategory(
+        title = "Conjugations",
+        icon = Icons.Default.Transform, // or ArrowTriangleBranch
+        description = "Essential verb variations. Understanding these covers 40% of usage.",
+        items = listOf(
+            item("To Be", "EnglishConjugationsToBe"),
+            item("To Have", "EnglishConjugationsToHave"),
+            item("To Do", "EnglishConjugationsToDo"),
+            item("To Get", "EnglishConjugationsToGet")
+        )
+    )
+
+    // 2. Adjectives
+    val adjectives = ReferenceCategory(
+        title = "Adjectives",
+        icon = Icons.Default.Palette,
+        description = "Descriptive words ordered by complexity.",
+        items = listOf(
+            item("Basic", "EnglishA1Adjectives"),
+            item("Intermediate", "EnglishA2Adjectives"),
+            item("Upper", "EnglishB1Adjectives"),
+            item("Advanced", "EnglishB2Adjectives")
+        )
+    )
+
+    // 3. Quick Refs
+    val quickRefs = listOf(
+        ReferenceCategory(
+            title = "Prepositions",
+            icon = Icons.Default.SwapVert,
+            description = "Tricky connection words.",
+            items = listOf(item("Main", "EnglishPrepositions"))
+        ),
+        ReferenceCategory(
+            title = "Sounds the Same",
+            icon = Icons.Default.Hearing,
+            description = "Homophones (e.g. There, Their, They're).",
+            items = listOf(item("Main", "EnglishDefinitionsFormat1"))
+        ),
+        ReferenceCategory(
+            title = "Good vs Well",
+            icon = Icons.Default.CheckCircle,
+            description = "Common confusion between adjectives and adverbs.",
+            items = listOf(item("Main", "EnglishGoodVsWell"))
+        )
+    )
+
+    return SideQuestData(conjugations, adjectives, quickRefs)
 }

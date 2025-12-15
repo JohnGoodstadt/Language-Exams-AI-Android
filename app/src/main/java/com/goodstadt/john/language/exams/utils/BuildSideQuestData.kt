@@ -1,0 +1,76 @@
+package com.goodstadt.john.language.exams.uti
+
+import com.goodstadt.john.language.exams.screens.reference.SideQuestData
+
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.*
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.models.ReferenceCategory
+import com.goodstadt.john.language.exams.models.ReferenceSubItem
+
+fun buildSideQuestData(manager: AudioCacheManager): SideQuestData {
+
+    // Helper to fetch stats and create a SubItem
+    fun makeSubItem(uiTitle: String, documentKey: String): ReferenceSubItem {
+        val stats = manager.getReferenceStats(documentKey)
+
+        // Safety: If total is 0 (file not loaded yet), defaulting to 1 avoids div/0 errors in UI bars
+        val safeTotal = if (stats.total > 0) stats.total else 1
+
+        return ReferenceSubItem(
+            title = uiTitle,
+            viewed = stats.heard,
+            total = safeTotal
+        )
+    }
+
+    // 1. CONJUGATIONS
+    val conjugations = ReferenceCategory(
+        title = "Conjugations",
+        icon = Icons.Default.Transform, // Represents changing form
+        description = "Essential verb variations. Understanding 'To Be' and 'To Have' covers 40% of English usage.",
+        items = listOf(
+            makeSubItem("To Be",   "EnglishConjugationsToBe"),
+            makeSubItem("To Have", "EnglishConjugationsToHave"),
+            makeSubItem("To Do",   "EnglishConjugationsToDo"),
+            makeSubItem("To Get",  "EnglishConjugationsToGet")
+        )
+    )
+
+    // 2. ADJECTIVES
+    val adjectives = ReferenceCategory(
+        title = "Adjectives",
+        icon = Icons.Default.Palette, // Represents description/color
+        description = "Descriptive words ordered by complexity. Focus on Intermediate for daily conversation.",
+        items = listOf(
+            makeSubItem("Basic",        "EnglishA1Adjectives"),
+            makeSubItem("Intermediate", "EnglishA2Adjectives"),
+            makeSubItem("Upper",        "EnglishB1Adjectives"),
+            makeSubItem("Advanced",     "EnglishB2Adjectives")
+        )
+    )
+
+    // 3. QUICK REFERENCE (List of individual categories)
+    val quickRefs = listOf(
+        ReferenceCategory(
+            title = "Prepositions",
+            icon = Icons.Default.SwapVert,
+            description = "Words like 'in', 'on', 'at'. Tricky but essential for fluency.",
+            items = listOf(makeSubItem("Main", "EnglishPrepositions"))
+        ),
+        ReferenceCategory(
+            title = "Sounds the Same",
+            icon = Icons.Default.Hearing,
+            description = "Homophones (e.g. There, Their, They're).",
+            items = listOf(makeSubItem("Main", "EnglishDefinitionsFormat1"))
+        ),
+        ReferenceCategory(
+            title = "Good vs Well",
+            icon = Icons.Default.CheckCircle,
+            description = "Common confusion between adjectives and adverbs.",
+            items = listOf(makeSubItem("Main", "EnglishGoodVsWell"))
+        )
+    )
+
+    return SideQuestData(conjugations, adjectives, quickRefs)
+}
