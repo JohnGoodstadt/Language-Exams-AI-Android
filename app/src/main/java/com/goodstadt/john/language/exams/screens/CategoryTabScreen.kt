@@ -341,6 +341,8 @@ fun CategoryTabScreen(
         ModalBottomSheet(
             onDismissRequest = { showGamificationSheet = false },
             sheetState = sheetState,
+//            containerColor = MaterialTheme.colorScheme.surface,
+//            contentColor = MaterialTheme.colorScheme.onSurface
             containerColor = MaterialTheme.colorScheme.surface,
             contentColor = MaterialTheme.colorScheme.onSurface
         ) {
@@ -362,6 +364,7 @@ fun CategoryTabScreen(
                 )
             }
             Box(modifier = Modifier.fillMaxHeight(0.85f)) {
+//                com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme{
                 VocabGamificationStatsSheet(
                     grandTotalWords = total,
                     grandTotalMastered = heard,
@@ -372,6 +375,7 @@ fun CategoryTabScreen(
 
                 )
             }
+//            }
         }
     }
 }

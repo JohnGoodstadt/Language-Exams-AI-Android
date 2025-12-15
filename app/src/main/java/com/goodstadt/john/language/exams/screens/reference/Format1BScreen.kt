@@ -29,7 +29,7 @@ import dagger.hilt.android.EntryPointAccessors
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
-fun Format1Screen(
+fun Format1BScreen(
     viewModel: Format1BViewModel = hiltViewModel(),
     // Note: 'data' is removed from params because it comes from ViewModel state now
     modifier: Modifier = Modifier

@@ -41,90 +41,105 @@ fun VocabGamificationStatsSheet(
         grandTotalMastered.toFloat() / grandTotalWords.toFloat()
     else 0f
 
-    Scaffold(
-        topBar = {
-            CenterAlignedTopAppBar(
-                title = { Text("Exam Progress", fontWeight = FontWeight.Bold) },
-                actions = {
-                    IconButton(onClick = onDismiss) {
-                        Icon(Icons.Default.Close, contentDescription = "Close", tint = Color.Gray)
+//    com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme {
+
+
+        Scaffold(
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface,
+            topBar = {
+                CenterAlignedTopAppBar(
+                    title = { Text("Exam Progress", fontWeight = FontWeight.Bold) },
+                    actions = {
+                        IconButton(onClick = onDismiss) {
+                            Icon(
+                                Icons.Default.Close,
+                                contentDescription = "Close",
+                                tint = Color.Gray
+                            )
+                        }
                     }
-                }
-            )
-        }
-    ) { innerPadding ->
-        Column(
-            modifier = Modifier
-                .padding(innerPadding)
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(horizontal = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(24.dp)
-        ) {
+                )
+            }
+        ) { innerPadding ->
+            Column(
+                modifier = Modifier
+                    .padding(innerPadding)
+                    .fillMaxSize()
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 16.dp),
+                verticalArrangement = Arrangement.spacedBy(24.dp)
+            ) {
 
-            // 1. MISSION CONTROL (Exam Countdown)
-            // This Card handles the "Set Goal" vs "Active Countdown" logic
-            ExamCountdownCard(
-                xpManager = xpManager,
-                totalWords = grandTotalWords,
-                masteredWords = grandTotalMastered,
-                // Assuming 'currentLevel' is derived from the first category or passed in
-                currentLevelName = categoryProgress.firstOrNull()?.let { "Tab ${it.tabNumber}" } ?: "Exam"
-            )
+                // 1. MISSION CONTROL (Exam Countdown)
+                // This Card handles the "Set Goal" vs "Active Countdown" logic
+                ExamCountdownCard(
+                    xpManager = xpManager,
+                    totalWords = grandTotalWords,
+                    masteredWords = grandTotalMastered,
+                    // Assuming 'currentLevel' is derived from the first category or passed in
+                    currentLevelName = categoryProgress.firstOrNull()?.let { "Tab ${it.tabNumber}" }
+                        ?: "Exam"
+                )
 
-            // 2. THE SMART COACH (Dynamic Advice)
-            // Note: We need to calculate targetDailyRate from XPManager if available
-            val advice = generateNuancedAdvice(
-                categories = categoryProgress,
-                totalXP = xpState.levels[xpState.currentLevel]?.xp ?: 0,
-                streak = xpState.currentStreak,
-                quizManager = quizManager,
-                targetDailyRate = 10 // Placeholder: derive this from ExamCountdown logic if possible
-            )
+                // 2. THE SMART COACH (Dynamic Advice)
+                // Note: We need to calculate targetDailyRate from XPManager if available
+                val advice = generateNuancedAdvice(
+                    categories = categoryProgress,
+                    totalXP = xpState.levels[xpState.currentLevel]?.xp ?: 0,
+                    streak = xpState.currentStreak,
+                    quizManager = quizManager,
+                    targetDailyRate = 10 // Placeholder: derive this from ExamCountdown logic if possible
+                )
 
-            SmartCoachCard(
-                title = advice.title,
-                message = advice.message,
-                icon = advice.icon,
-                color = advice.color
-            )
+                SmartCoachCard(
+                    title = advice.title,
+                    message = advice.message,
+                    icon = advice.icon,
+                    color = advice.color
+                )
 
-            // 3. TOPIC MASTERY LIST
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Text("Topic Mastery", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                    Text(
-                        "${(globalProgress * 100).toInt()}% Complete",
-                        style = MaterialTheme.typography.labelMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-
-                Card(
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-                    shape = RoundedCornerShape(16.dp)
-                ) {
-                    Column(
-                        modifier = Modifier.padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(16.dp)
+                // 3. TOPIC MASTERY LIST
+                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween
                     ) {
-                        categoryProgress.forEach { category ->
-                            TopicProgressRow(category = category)
+                        Text(
+                            "Topic Mastery",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Text(
+                            "${(globalProgress * 100).toInt()}% Complete",
+                            style = MaterialTheme.typography.labelMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+
+                    Card(
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                        shape = RoundedCornerShape(16.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(16.dp),
+                            verticalArrangement = Arrangement.spacedBy(16.dp)
+                        ) {
+                            categoryProgress.forEach { category ->
+                                TopicProgressRow(category = category)
+                            }
                         }
                     }
                 }
+
+                // 4. BADGES (Compact Row)
+                CompactBadgeRow(xpManager = xpManager)
+
+                Spacer(modifier = Modifier.height(20.dp))
             }
-
-            // 4. BADGES (Compact Row)
-            CompactBadgeRow(xpManager = xpManager)
-
-            Spacer(modifier = Modifier.height(20.dp))
         }
-    }
+//    }//Theme wrapper for dark mode
 }
 
 // MARK: - Smart Advice Logic
@@ -311,7 +326,7 @@ fun CompactBadgeRow(xpManager: XPManager) {
 
 // Minimal placeholder for ExamCountdownCard (You likely have a fuller version)
 @Composable
-fun ExamCountdownCard(
+fun ExamCountdownCardObsolete(
     xpManager: XPManager,
     totalWords: Int,
     masteredWords: Int,

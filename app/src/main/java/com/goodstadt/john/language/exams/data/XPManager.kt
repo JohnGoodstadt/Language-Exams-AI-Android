@@ -306,5 +306,87 @@ class XPManager @Inject constructor(
         // Simple logic for example: Level = sqrt(xp/10)
         return kotlin.math.sqrt(xp / 10.0).toInt().coerceAtLeast(1)
     }
+// MARK: - Goal Setting API
+
+// MARK: - Goal Setting API
+
+    fun setExactGoal(timestamp: Long, level: String) {
+        val newState = _state.value.copy(
+            targetExamDate = timestamp,
+            targetExamLevel = level,
+            datePrecision = "exact"
+        )
+        updateAndSave(newState)
+    }
+
+    fun setDurationGoal(months: Int, level: String) {
+        // Calculate future date
+        val calendar = java.util.Calendar.getInstance()
+        calendar.add(java.util.Calendar.MONTH, months)
+
+        val newState = _state.value.copy(
+            targetExamDate = calendar.timeInMillis,
+            targetExamLevel = level,
+            datePrecision = "duration"
+        )
+        updateAndSave(newState)
+    }
+
+    fun clearExamGoal() {
+        val newState = _state.value.copy(
+            targetExamDate = null,
+            targetExamLevel = null,
+            datePrecision = "none"
+        )
+        updateAndSave(newState)
+    }
+
+    // MARK: - Goal Calculation Helpers
+
+    fun getFormattedCountdown(): String {
+        val target = _state.value.targetExamDate ?: return "No Date Set"
+        val now = System.currentTimeMillis()
+
+        // Calculate diff in days
+        val diff = target - now
+        val days = (diff / (1000 * 60 * 60 * 24)).toInt()
+
+        if (days < 0) return "Exam Passed"
+
+        return when (_state.value.datePrecision) {
+            "exact" -> "$days Days Left"
+            "month" -> "~ ${max(1, days / 30)} Months Left"
+            "duration" -> "Approx $days Days Left"
+            else -> "$days Days Left"
+        }
+    }
+
+    data class ExamPace(val remaining: Int, val dailyRate: Int)
+
+    fun getExamPace(totalWords: Int, currentWordsMastered: Int): ExamPace? {
+        val target = _state.value.targetExamDate ?: return null
+        val now = System.currentTimeMillis()
+
+        val diff = target - now
+        val daysLeft = (diff / (1000 * 60 * 60 * 24)).toInt()
+
+        if (daysLeft <= 0) return null // Date passed
+
+        val remainingWords = max(0, totalWords - currentWordsMastered)
+
+        // Calculate rate (rounding up)
+        val rate = kotlin.math.ceil(remainingWords.toDouble() / daysLeft.toDouble()).toInt()
+
+        return ExamPace(remainingWords, rate)
+    }
+
+    // MARK: - Internal Helper
+
+    private fun updateAndSave(newState: XpState) {
+        _state.value = newState
+        scope.launch {
+            saveToDisk(newState)
+        }
+    }
 }
 

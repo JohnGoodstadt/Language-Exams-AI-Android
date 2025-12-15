@@ -29,15 +29,16 @@ private val AppLightColorScheme = lightColorScheme(
 )
 
 private val AppDarkColorScheme = darkColorScheme(
-        primary = DarkPrimary,
-        onPrimary = DarkOnPrimary,
-        primaryContainer = DarkPrimaryContainer,
-        secondary = DarkSecondary,
-        background = DarkBackground,
-        onBackground = DarkOnBackground,
-        surface = DarkSurface,
-        onSurface = DarkOnSurface,
-        surfaceVariant = Color(0xFFF2F2F7) // A good light gray for containers
+    primary = DarkPrimary,
+    onPrimary = DarkOnPrimary,
+    primaryContainer = DarkPrimaryContainer,
+    secondary = DarkSecondary,
+    background = DarkBackground,
+    onBackground = DarkOnBackground,
+    surface = DarkSurface,
+    onSurface = DarkOnSurface,
+//        surfaceVariant = Color(0xFFF2F2F7) // A good light gray for containers
+    surfaceVariant = Color(0xFF303030)
 )
 
 @Composable
@@ -49,8 +50,8 @@ fun LanguageExamsAITheme(
         AppDarkColorScheme
     } else {
         // For now, we can fall back to the dark one if you haven't defined a light one
-//        AppDarkColorScheme
-        AppLightColorScheme
+        AppDarkColorScheme //else
+//        AppLightColorScheme
     }
 
     // Forcing dark theme
