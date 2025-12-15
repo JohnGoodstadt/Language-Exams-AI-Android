@@ -284,8 +284,8 @@ class HistorySyncManager @Inject constructor(
             Log.d(TAG, "   ▶️ Total Plays: $totalPlays")
 
             // Sample top 3
-            data.items.entries.sortedByDescending { it.value }.take(3).forEach {
-                Log.d(TAG, "      • ${it.key.take(20)}... : ${it.value} plays")
+            data.items.entries.sortedByDescending { it.value }.take(12).forEach {
+                Log.d(TAG, "      • ${it.key} : ${it.value} plays")
             }
         }
         Log.d(TAG, "   ======================================")

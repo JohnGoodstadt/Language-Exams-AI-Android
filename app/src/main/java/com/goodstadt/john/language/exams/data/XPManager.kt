@@ -13,6 +13,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import java.io.File
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -59,6 +60,13 @@ enum class XpActionType {
     GenerateParagraph
 }
 
+data class DailyStats(
+    val dateId: String, // "2025-12-15"
+    var xpGained: Int = 0,
+    var actionCount: Int = 0
+)
+
+
 @Singleton
 class XPManager @Inject constructor(
     @ApplicationContext private val context: Context,
@@ -85,6 +93,8 @@ class XPManager @Inject constructor(
     // Runtime flag for UI alerts (reset on app restart)
     var justConsumedFreeze: Boolean = false
 
+    private var dailyStats: MutableMap<String, DailyStats> = mutableMapOf()
+    private val DAILY_STATS_KEY = "xp_daily_stats_v1"
     // Config
     private val xpPerAction = mapOf(
         XpActionType.HearNewSentence to 3,
@@ -124,6 +134,11 @@ class XPManager @Inject constructor(
             // 5. Update Gems (10% of XP)
             val earnedGems = max(1, delta / 5)
             currentState.gems += earnedGems
+
+            val todayId = LocalDate.now().toString()
+            val stats = dailyStats.getOrPut(todayId) { DailyStats(todayId) }
+            stats.xpGained += delta
+            stats.actionCount += 1
 
             // 6. Save & Emit
             saveToDisk(currentState)
@@ -387,6 +402,70 @@ class XPManager @Inject constructor(
         scope.launch {
             saveToDisk(newState)
         }
+    }
+    fun getDailyStatsList(daysBack: Int): List<DailyStats> {
+        val list = mutableListOf<DailyStats>()
+        val today = LocalDate.now()
+
+        // Loop backwards (Today, Yesterday, ...)
+        for (i in (0 until daysBack).reversed()) {
+            val date = today.minusDays(i.toLong())
+            val id = date.toString() // "2025-12-15"
+
+            // Return actual stats or an empty object for that day
+            val stats = dailyStats[id] ?: DailyStats(id)
+            list.add(stats)
+        }
+        return list
+    }
+    // MARK: - Debugging
+
+    fun debugPrintAllStats() {
+        val s = _state.value
+        val tag = "XPManager"
+
+        Timber.tag(tag).d("\n===== 🕹️ XP MANAGER STATE REPORT =====")
+
+        // 1. General & Gamification
+        Timber.tag(tag).d("👤 Current Focus:   ${s.currentLevel}")
+        Timber.tag(tag).d("🏆 GAMIFICATION")
+        Timber.tag(tag).d("   🔥 Current Streak: ${s.currentStreak}")
+        Timber.tag(tag).d("   ⚡ Longest Streak: ${s.longestStreak}")
+        Timber.tag(tag).d("   💎 Gems:           ${s.gems}")
+        Timber.tag(tag).d("   ❄️ Freezes:        ${s.streakFreezeCount}")
+
+        // 2. Badges
+        if (s.earnedBadges.isEmpty()) {
+            Timber.tag(tag).d("🏅 Badges: None yet")
+        } else {
+            Timber.tag(tag).d("🏅 Badges Unlocked (${s.earnedBadges.size}):")
+            s.earnedBadges.forEach { badge ->
+                Timber.tag(tag).d("   • $badge")
+            }
+        }
+
+        // 3. Goal
+        if (s.targetExamLevel != null) {
+            Timber.tag(tag).d("🎯 Goal: ${s.targetExamLevel} (${getFormattedCountdown()})")
+        } else {
+            Timber.tag(tag).d("🎯 Goal: Not set")
+        }
+
+        // 4. Level Breakdown
+        Timber.tag(tag).d("📚 LEVEL DETAILS")
+        val sortedLevels = s.levels.toSortedMap()
+
+        if (sortedLevels.isEmpty()) {
+            Timber.tag(tag).d("   (No level data recorded)")
+        } else {
+            sortedLevels.forEach { (levelName, data) ->
+                val activeMarker = if (levelName == s.currentLevel) "👈" else ""
+                val xpStr = data.xp.toString().padEnd(5)
+                Timber.tag(tag).d("   [$levelName] XP: $xpStr | Lvl: ${data.learnerLevel} $activeMarker")
+            }
+        }
+
+        Timber.tag(tag).d("========================================\n")
     }
 }
 

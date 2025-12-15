@@ -20,6 +20,7 @@ fun HighlightedWordInSentenceRow(
     sentence: String,
     isRecalling: Boolean,
     displayDot: Boolean,
+    playCount: Int,
     isDownloading:Boolean,
     modifier: Modifier = Modifier
 ) {
@@ -46,6 +47,9 @@ fun HighlightedWordInSentenceRow(
 
             if (displayRedDot) {
                 Text(text = "🔴", fontSize = 12.sp)
+            }
+            if (playCount > 0) {
+                Text(text = "$playCount", fontSize = 12.sp)
             }
             // Check if the green dot should be displayed
             if (isRecalling) {

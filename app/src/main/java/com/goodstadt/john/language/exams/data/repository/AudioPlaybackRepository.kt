@@ -85,7 +85,8 @@ class AudioPlaybackRepository @Inject constructor(
 
                 // C. Update History (The Red Dot Source of Truth)
                 // This triggers the StateFlow that ViewModels observe
-                historyManager.markSentenceHeard(level, contentID)
+                //This can inc twice as later also does it
+                //historyManager.markSentenceHeard(level, contentID)
 
                 // D. Update XP & Graphs (Only on first listen)
                 if (isFirstTime) {

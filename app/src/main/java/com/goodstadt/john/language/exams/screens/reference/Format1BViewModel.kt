@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 sealed interface Format1BUiState {
@@ -82,7 +83,12 @@ class Format1BViewModel @Inject constructor(
     // ✅ HELPER: View calls this directly during rendering
     fun isHeard(sentence: String): Boolean {
         val contentID = FirebaseAudioService.generateContentID(sentence)
+        Timber.i("Play Count:${historyManager.getPlayCount("Reference", contentID) } $sentence")
         return historyManager.getPlayCount("Reference", contentID) > 0
+    }
+    fun getPlayCount(sentence:String): Int {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.getPlayCount("Reference", contentID)
     }
 
     // ✅ ACTION: View calls this on tap
@@ -100,6 +106,7 @@ class Format1BViewModel @Inject constructor(
                 didPlayReferenceSentence(sentence)
             }
         }
+        historyManager.debugPrintAllHistory()
     }
 
     private fun didPlayReferenceSentenceObsolete(sentence: String) {
@@ -139,7 +146,7 @@ class Format1BViewModel @Inject constructor(
         val isFirstTime = previousCount == 0
 
         // 2. Update History (Source of Truth)
-        // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes
+        // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes -- inc heard by 1
         historyManager.markSentenceHeard(levelName, contentID)
 
         // 3. Update Graph Stats (If new)

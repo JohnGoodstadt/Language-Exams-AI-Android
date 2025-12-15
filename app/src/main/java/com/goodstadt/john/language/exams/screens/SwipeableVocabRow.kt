@@ -135,6 +135,7 @@ fun SwipeableVocabRow(
                 sentence = displayData.sentence,
                 isRecalling = isRecalling,
                 displayDot = isSentenceAlreadyHeard,
+                playCount = 0,
 //                cachedAudioWordKeys ,
                 //wordCount = 0,
                 isDownloading = isDownloading

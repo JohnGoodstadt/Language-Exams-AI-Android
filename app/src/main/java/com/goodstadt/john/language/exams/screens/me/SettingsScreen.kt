@@ -547,6 +547,27 @@ fun SettingsScreen(
                 )
             }
             item {
+                SettingsActionItem(
+                    icon = Icons.Default.Info,
+                    title = "Print History Stats",
+                    currentValue = "(D)",
+                    onClick = {
+                        viewModel.debugHistory()
+                    }
+                )
+            }
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.Info,
+                    title = "Print XP stats",
+                    currentValue = "(D)",
+                    onClick = {
+                        viewModel.debugXPManager()
+                    }
+                )
+            }
+
+            item {
                 SettingsInfoItem(
                     icon = Icons.Default.Info,
                     title = "UID (D)",

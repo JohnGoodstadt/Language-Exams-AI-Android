@@ -109,6 +109,7 @@ fun Format1BScreen(
                         // ✅ CHECK HISTORY FOR RED DOT
 //                        val contentID = FirebaseAudioService.generateContentID(item.sentence)
                         val isHeard = viewModel.isHeard(item.sentence)
+                        val playCount = viewModel.getPlayCount(item.sentence)
                         // Check Playback State (Optional visual cue)
                        // val isPlaying = (state.playbackState is PlaybackState.Playing) &&
                          //       (state.playbackState.id.contains(FirebaseAudioService.generateUnifiedFilename(item.sentence, ""))) // simplified check
@@ -138,6 +139,10 @@ fun Format1BScreen(
                                 if (isHeard) {
                                     Text(text = "🔴", fontSize = 12.sp)
                                 }
+                                if (playCount > 0) {
+                                    Text(text = "$playCount", fontSize = 12.sp)
+                                }
+
                             }
 
                             // ... (Your Sentence Parts UI) ...

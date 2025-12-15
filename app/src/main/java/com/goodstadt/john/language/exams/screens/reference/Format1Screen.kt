@@ -125,6 +125,7 @@ fun Format1Screen(
                         sentence = displayData.sentence,
                         isRecalling = false,
                         displayDot = false,//achedAudioWordKeys.contains(uniqueSentenceId),
+                        playCount = 0,
                         isDownloading = false//, //TODO: maybe dynamic?
                     )
 

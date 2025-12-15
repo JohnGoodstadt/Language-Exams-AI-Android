@@ -119,11 +119,12 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
             composable(MeScreen.Search.route) { SearchScreen() }
 
             composable(MeScreen.Progress.route) {
-                ProgressMapScreen(
-                    onTileTapped = { categoryTitle ->
-                        viewModel.onTileTapped(categoryTitle)
-                    }
-                )
+                MyProgressScreen()
+//                ProgressMapScreen(
+//                    onTileTapped = { categoryTitle ->
+//                        viewModel.onTileTapped(categoryTitle)
+//                    }
+//                )
             }
             composable(MeScreen.Paragraph.route) { ParagraphScreen() }
         }

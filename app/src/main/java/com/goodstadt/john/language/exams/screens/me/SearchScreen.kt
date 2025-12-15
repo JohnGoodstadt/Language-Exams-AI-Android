@@ -97,6 +97,7 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                             sentence = displayData.sentence,
                             isRecalling = false,
                             displayDot = false,
+                            playCount = 0,
                             //cachedAudioWordKeys = setOf(),
                             isDownloading = false//isPlaying
                         )

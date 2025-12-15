@@ -22,7 +22,9 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
+import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -98,6 +100,8 @@ class SettingsViewModel @Inject constructor(
     private val connectivityRepository: ConnectivityRepository,
     private val authRepository: AuthRepository,
     private val creditsRepository: CreditsRepository,
+    private val history: HistorySyncManager,
+    private val xpManager: XPManager
 ) : ViewModel() {
 
     val isPurchased = billingRepository.isPurchased
@@ -661,5 +665,11 @@ class SettingsViewModel @Inject constructor(
 
     }
 
+    fun debugHistory() {
+        history.debugPrintAllHistory()
+    }
+    fun debugXPManager() {
+        xpManager.debugPrintAllStats()
+    }
 
 }

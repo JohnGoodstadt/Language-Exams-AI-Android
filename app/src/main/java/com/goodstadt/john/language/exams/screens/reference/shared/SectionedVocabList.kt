@@ -138,6 +138,7 @@ fun SectionedVocabList(
                                 sentence = displayData.sentence,
                                 isRecalling = false,
                                 displayDot = cachedAudioWordKeys.contains(uniqueSentenceId),
+                                playCount = 0,
                                 isDownloading = false
                             )
                         }

@@ -1,65 +1,139 @@
 package com.goodstadt.john.language.exams.screens.reference
 
-import android.content.res.Configuration
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
-import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.screens.SwipeableVocabRow
+import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
-import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
-import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme
+import removeContentInBracketsAndTrim
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SimpleSectionedVocabList(
-    categories: List<Category>,
+    data: List<Category>,
+    selectedVoiceName: String,
+
+    // ✅ CHANGED: Functional check instead of a Set
+    // The parent passes { viewModel.isHeard(it) }
+    isHeard: (String) -> Boolean,
+    playCount: (String) -> Int,
+    recalledWordKeys: Set<String>,
     playbackState: PlaybackState,
-    googleVoice: String,
-    cachedAudioWordKeys: Set<String>,
-    onRowTapped: (Format0Word, Sentence) -> Unit
+    downloadingSentenceId: String?,
+    listState: LazyListState = rememberLazyListState(),
+    contentPadding: PaddingValues = PaddingValues(0.dp),
+
+    // Actions
+    onRowTapped: (Format0Word, Sentence, Category) -> Unit,
+    onFocus: (Format0Word) -> Unit,
+    onCancel: (Format0Word) -> Unit,
+    onMore: (Format0Word, Category) -> Unit,
+    onSideQuestTapped: () -> Unit
 ) {
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
-        // Add some vertical padding between the main items
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+        state = listState,
+        contentPadding = contentPadding,
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        categories.forEach { category ->
+        data.forEach { category ->
 
+            // 1. STICKY HEADER
             stickyHeader {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(MaterialTheme.colorScheme.surface)
-                        .padding(vertical = 8.dp)
-                ) {
-                    Text(
-                        text = category.title,
-                        style = MaterialTheme.typography.titleLarge,
-                        color = accentColor,
-                        modifier = Modifier.weight(1f).padding( bottom = 0.dp, top = 32.dp) // Text takes up most of the space
-                    )
+                Column(modifier = Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surface)) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp, vertical = 8.dp)
+                    ) {
+                        Text(
+                            text = category.title.removeContentInBracketsAndTrim(),
+                            style = MaterialTheme.typography.titleLarge,
+                            color = orangeLight,
+                            modifier = Modifier.weight(1f)
+                        )
+
+                        // Stats / Side Quest Icon
+                        if (category == data[0]) {
+                            IconButton(onClick = onSideQuestTapped) {
+                                Icon(
+                                    imageVector = Icons.Filled.WorkspacePremium,
+                                    contentDescription = "Stats",
+                                    tint = Color(0xFFFF9800)
+                                )
+                            }
+                        }
+                    }
+                    HorizontalDivider()
                 }
             }
 
-            // MODIFIED: We now use `items` for the words, creating one block per word.
+            // 2. ITEMS
+//            items(
+//                items = category.words,
+//                key = { "${it.id}-${it.word}" }
+//            ) { wordEntry ->
+//                val sentenceToShow = wordEntry.sentences.firstOrNull()
+//
+//                if (sentenceToShow != null) {
+//
+//                    // ✅ A. Calculate Status using Function
+//                    val isSentenceAlreadyHeard = isHeard(sentenceToShow.sentence)
+//
+//                    // Playing/Downloading Logic
+//                    val unifiedFilename = FirebaseAudioService.generateUnifiedFilename(sentenceToShow.sentence, selectedVoiceName)
+//                    val isDownloading = downloadingSentenceId == unifiedFilename
+//
+//                    // B. Render Row
+//                    SwipeableVocabRow(
+//                        word = wordEntry,
+//                        sentence = sentenceToShow,
+//                        isSentenceAlreadyHeard = isSentenceAlreadyHeard,
+//                        isDownloading = isDownloading,
+//                        recalledWordKeys = recalledWordKeys,
+//                        onRowTapped = { w, s -> onRowTapped(w, s, category) },
+//                        onFocus = { onFocus(wordEntry) },
+//                        onCancel = { onCancel(wordEntry) },
+//                        onMore = { onMore(wordEntry, category) }
+//                    )
+//
+//                } else {
+//                    // Fallback
+//                    Text(
+//                        text = "Error: No sentence found for '${wordEntry.word}'",
+//                        color = MaterialTheme.colorScheme.error,
+//                        modifier = Modifier.padding(16.dp)
+//                    )
+//                    HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
+//                }
+//            } //: Items
+
             items(
                 items = category.words,
                 key = { word -> "word-block-${word.id}" }
@@ -103,95 +177,31 @@ fun SimpleSectionedVocabList(
                         // 3. Loop through the sentences INSIDE the styled Column
                         word.sentences.forEachIndexed { index, sentence ->
                             val displayData = buildSentenceParts(entry = word, sentence = sentence)
-                            val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
+                           // val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
 
+                            val isSentenceAlreadyHeard = isHeard(displayData.sentence)
+                            val playCount99 = playCount(displayData.sentence)
+
+//                            val playCount = viewModel.getPlayCount(item.sentence)
                             // Your existing row composable goes here
                             HighlightedWordInSentenceRow(
                                 word = word.word,
                                 parts = displayData.parts,
                                 sentence = displayData.sentence,
                                 isRecalling = false,
-                                displayDot = cachedAudioWordKeys.contains(uniqueSentenceId),
+                                displayDot = isSentenceAlreadyHeard,
+                                playCount = playCount99,
                                 isDownloading = false,
                                 modifier = Modifier
-                                    .clickable { onRowTapped(word, sentence) }
+                                    .clickable { onRowTapped(word, sentence,category) }
                                     // Add some padding inside the box
                                     .padding(horizontal = 16.dp)
                             )
 
-                            // 4. Add a divider between items, but not after the last one
-//                            if (index < word.sentences.lastIndex) {
-//                                HorizontalDivider(
-//                                    modifier = Modifier.padding(horizontal = 16.dp),
-//                                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)
-//                                )
-//                            }
                         }
                     }
                 }
-            }
+            }//: items
         }
     }
 }
-
-@Preview(name = "Light Mode", showBackground = true)
-@Composable
-fun SimpleSectionedVocabListPreviewLight() {
-    // ✅ WRAP your content with your custom theme
-    // We explicitly pass `darkTheme = false` for this preview
-    LanguageExamsAITheme(darkTheme = false) {
-        // It's good practice to also add a Surface to provide a background
-        Surface {
-            SimpleSectionedVocabList(
-                // Provide sample/dummy data for the preview
-                categories = sampleCategories,
-                playbackState = PlaybackState.Idle,
-                googleVoice = "",
-                cachedAudioWordKeys = setOf(),
-                onRowTapped = { _, _ -> }
-            )
-        }
-    }
-}
-
-@Preview(name = "Dark Mode", showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
-@Composable
-fun SimpleSectionedVocabListPreviewDark() {
-    // ✅ WRAP your content with your custom theme
-    // We explicitly pass `darkTheme = true` for this preview
-    LanguageExamsAITheme(darkTheme = true) {
-        Surface {
-            SimpleSectionedVocabList(
-                categories = sampleCategories,
-                playbackState = PlaybackState.Idle,
-                googleVoice = "",
-                cachedAudioWordKeys = setOf(),
-                onRowTapped = { _, _ -> }
-            )
-        }
-    }
-}
-
-// Helper with some sample data for your previews to use
-val sampleCategories = listOf(
-    Category(
-        title = "Present Tense",
-        words = listOf(
-            Format0Word(
-                id = 1,
-                sortOrder = 1,
-                word = "run",
-                definition = "To move at a speed faster than a walk.",
-                sentences = listOf(
-                    Sentence("I run every morning.", "...")
-                ),
-                translation = "",
-                romanisation = "",
-                partOfSpeech = "",
-                group = ""
-            )
-        ),
-        tabNumber = 1,
-        sortOrder = 1
-    )
-)

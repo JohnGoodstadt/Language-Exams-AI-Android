@@ -3,12 +3,14 @@ package com.goodstadt.john.language.exams.screens.reference
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
@@ -68,7 +70,7 @@ fun GroupedSheetScreen(
                 // Data has loaded successfully, so display the reusable vocab list.
                 // Your existing SectionedVocabList is perfect for this.
 //                SectionedVocabList(
-                SimpleSectionedVocabList(
+                SimpleSectionedVocabListOriginal(
                     categories = contentState.categories,
                     // TODO: To enable audio playback, you will need to add PlaybackState
                     // to your GroupedSheetUiState and a playTrack() function to your
@@ -81,6 +83,7 @@ fun GroupedSheetScreen(
                          viewModel.playTrack(word, sentence)
                     }
                 )
+
             }
             is ContentState.Error -> {
                 // An error occurred during the data fetch
