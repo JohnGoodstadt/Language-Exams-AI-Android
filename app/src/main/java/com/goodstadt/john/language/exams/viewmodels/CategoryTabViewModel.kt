@@ -237,19 +237,8 @@ class CategoryTabViewModel @Inject constructor(
                 }
             }
 
-//            if (!success) {
-//                // --- FAILURE: ROLLBACK ---
-//                // A. Revert History (Turn off Red Dot)
-//                // Only if it wasn't heard before (we don't want to remove a legit red dot)
-//
-//            }
-
             refreshUI()
-
         }
-
-
-
     }
 
     fun onResume() {
@@ -362,12 +351,8 @@ class CategoryTabViewModel @Inject constructor(
                     tabNumber = categoryTabNumber
                 )
             }
-
-
             refreshUI()
-
         }
-
     }
 
     // MARK: - Internal Stats Helper

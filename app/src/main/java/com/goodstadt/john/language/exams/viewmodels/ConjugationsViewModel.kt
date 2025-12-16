@@ -37,12 +37,8 @@ import javax.inject.Inject
 // A UI state for this specific screen
 sealed interface ConjugationsUiState {
     object Loading : ConjugationsUiState
-//    val cachedAudioWordKeys: Set<String>
-//        get() = emptySet()
-//    val currentSheetName:String
     data class Success(
         val categories: List<Category>,
-//        val cachedAudioWordKeys: Set<String>,
         val currentSheetName : String = "",
         val selectedVoiceName: String = "", // TODO: do I need this?
         val lastUpdate: Long = System.currentTimeMillis()

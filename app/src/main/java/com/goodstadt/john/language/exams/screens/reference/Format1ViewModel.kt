@@ -32,7 +32,6 @@ sealed interface Format1UiState {
     data class Success(
         val data: List<HeaderWordsSentencesList>,
         val playbackState: PlaybackState = PlaybackState.Idle,
-        val cachedAudioWordKeys: Set<String> = emptySet() // For the red dots
     ) : Format1UiState
     data class Error(val message: String) : Format1UiState
 }
@@ -139,12 +138,12 @@ class Format1ViewModel @Inject constructor(
             }
 
 
-            _uiState.update {
-                if (it is Format1UiState.Success) {
-                    val updatedKeys = it.cachedAudioWordKeys + uniqueSentenceId
-                    it.copy(cachedAudioWordKeys = updatedKeys)
-                } else it
-            }
+//            _uiState.update {
+//                if (it is Format1UiState.Success) {
+//                    val updatedKeys = it.cachedAudioWordKeys + uniqueSentenceId
+//                    it.copy(cachedAudioWordKeys = updatedKeys)
+//                } else it
+//            }
 
             val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 

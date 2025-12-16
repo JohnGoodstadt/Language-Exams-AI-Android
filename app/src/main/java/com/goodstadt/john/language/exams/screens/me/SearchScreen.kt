@@ -31,14 +31,17 @@ import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.SearchViewModel
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.goodstadt.john.language.exams.viewmodels.SearchUiState
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+import timber.log.Timber
 
 
 @Composable
 fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
     val context = LocalContext.current
     val searchQuery by viewModel.searchQuery.collectAsState()
-    val searchResults by viewModel.searchResults.collectAsState()
+    val uiState by viewModel.uiState.collectAsState()
+//    val searchResults by viewModel.searchResults.collectAsState()
     val playbackState by viewModel.playbackState.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -79,59 +82,86 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
             )
 
-            // List of results
-            LazyColumn(modifier = Modifier.fillMaxSize().padding(top = 8.dp)) {
-                items(searchResults, key = { "${it.word.id}-${it.word.word}" }) { result ->
-                    val displayData = buildSentenceParts(result.word, result.word.sentences.first())
-                    val googleVoice = "en-GB-Neural2-C"
-                    val uniqueSentenceId = generateUniqueSentenceId(result.word, result.word.sentences.first(),googleVoice)
+            when (val state = uiState) {
+                is SearchUiState.Loading -> {
+                    Timber.e("Loading")
+                }
 
-                    val isHeard = viewModel.isHeard(displayData.sentence)
-                    val playCount = viewModel.getPlayCount(displayData.sentence)
+                is SearchUiState.Success -> {
+                    // List of results
+                    LazyColumn(modifier = Modifier.fillMaxSize().padding(top = 8.dp)) {
+                        items(state.results, key = { "${it.word.id}-${it.word.word}" }) { result ->
+                            val displayData =
+                                buildSentenceParts(result.word, result.word.sentences.first())
+                            val categoryTitle = result.categoryTitle
+                            val categoryTabNumber = result.categoryTabNumber
+                            val googleVoice = "en-GB-Neural2-C"
+                            val uniqueSentenceId = generateUniqueSentenceId(
+                                result.word,
+                                result.word.sentences.first(),
+                                googleVoice
+                            )
 
-                    val isPlaying = playbackState is PlaybackState.Playing &&
-                            (playbackState as PlaybackState.Playing).sentenceId == uniqueSentenceId
+                            val isHeard = viewModel.isHeard(displayData.sentence)
+                            val playCount = viewModel.getPlayCount(displayData.sentence)
 
-                    // We can reuse the VocabRow from the other screen
-                    Column(modifier = Modifier.clickable {
-                        viewModel.playTrack(result) })
-                    {
-                        HighlightedWordInSentenceRow(
-                            word = result.word.word,
-                            parts = displayData.parts,
-                            sentence = displayData.sentence,
-                            isRecalling = false,
-                            displayDot = isHeard,
-                            playCount = playCount,
-                            isDownloading = false//isPlaying
-                        )
+                            val isPlaying = playbackState is PlaybackState.Playing &&
+                                    (playbackState as PlaybackState.Playing).sentenceId == uniqueSentenceId
+
+                            // We can reuse the VocabRow from the other screen
+                            Column(modifier = Modifier.clickable {
+//                        viewModel.playTrack(result) })
+                                viewModel.handleTap(
+                                    displayData.sentence,
+                                    categoryTitle,
+                                    categoryTabNumber
+                                )
+                            })
+                            {
+                                HighlightedWordInSentenceRow(
+                                    word = result.word.word,
+                                    parts = displayData.parts,
+                                    sentence = displayData.sentence,
+                                    isRecalling = false,
+                                    displayDot = isHeard,
+                                    playCount = playCount,
+                                    isDownloading = false//isPlaying
+                                )
+                            }
+                        }
                     }
                 }
+
+                is SearchUiState.Error -> {
+
+                    Timber.e("Error in search")
+                }
             }
-        }
-        if (isRateLimitingSheetVisible){
-            RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
-        }
-        if (isDailyRateLimitingSheetVisible){
+
+
+            if (isRateLimitingSheetVisible) {
+                RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+            }
+            if (isDailyRateLimitingSheetVisible) {
 //        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
-            if (context is androidx.activity.ComponentActivity) {
-                RateLimitDailyReasonsBottomSheet(
-                    onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
-                    onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
-                )
+                if (context is androidx.activity.ComponentActivity) {
+                    RateLimitDailyReasonsBottomSheet(
+                        onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                        onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+                    )
+                }
             }
-        }
-        if (isHourlyRateLimitingSheetVisible){
+            if (isHourlyRateLimitingSheetVisible) {
 //        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
-            if (context is androidx.activity.ComponentActivity) {
-                RateLimitHourlyReasonsBottomSheet(
-                    onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
-                    onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
-                )
+                if (context is androidx.activity.ComponentActivity) {
+                    RateLimitHourlyReasonsBottomSheet(
+                        onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                        onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+                    )
+                }
+
             }
-
         }
-    }
-
+    }//: Scaffold
 
 }

@@ -37,7 +37,6 @@ sealed interface Format2UiState {
     data class Success(
         val format2File: Format2File,
         val playbackState: PlaybackState = PlaybackState.Idle,
-//                       val cachedAudioWordKeys: Set<String> = emptySet()
         val lastUpdate: Long = System.currentTimeMillis()
     ) : Format2UiState
 

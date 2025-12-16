@@ -46,8 +46,6 @@ fun SectionedVocabList(
     categories: List<Category>,
     playbackState: PlaybackState,
     googleVoice:String,
-   // cachedAudioWordKeys:Set<String>,
-
     isHeard: (String) -> Boolean,
     playCount: (String) -> Int,
 
