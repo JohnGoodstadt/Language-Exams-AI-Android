@@ -19,16 +19,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
-import com.goodstadt.john.language.exams.screens.SwipeableVocabRow
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
-import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import removeContentInBracketsAndTrim
 
@@ -180,7 +176,7 @@ fun SimpleSectionedVocabList(
                            // val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
 
                             val isSentenceAlreadyHeard = isHeard(displayData.sentence)
-                            val playCount99 = playCount(displayData.sentence)
+                            val playCount = playCount(displayData.sentence)
 
 //                            val playCount = viewModel.getPlayCount(item.sentence)
                             // Your existing row composable goes here
@@ -190,10 +186,12 @@ fun SimpleSectionedVocabList(
                                 sentence = displayData.sentence,
                                 isRecalling = false,
                                 displayDot = isSentenceAlreadyHeard,
-                                playCount = playCount99,
+                                playCount = playCount,
                                 isDownloading = false,
                                 modifier = Modifier
-                                    .clickable { onRowTapped(word, sentence,category) }
+                                    .clickable {
+                                        onRowTapped(word, sentence,category)
+                                    }
                                     // Add some padding inside the box
                                     .padding(horizontal = 16.dp)
                             )

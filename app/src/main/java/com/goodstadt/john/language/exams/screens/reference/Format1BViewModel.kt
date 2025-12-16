@@ -43,10 +43,10 @@ class Format1BViewModel @Inject constructor(
     val uiState = _uiState.asStateFlow()
 
     init {
-        loadAndObserve()
+        loadData()
     }
 
-    private fun loadAndObserve() {
+    private fun loadData() {
         viewModelScope.launch {
             _uiState.value = Format1BUiState.Loading
 
@@ -65,13 +65,13 @@ class Format1BViewModel @Inject constructor(
                 // 2. ✅ LISTEN FOR HISTORY CHANGES
                 // When History updates (e.g. after a tap), we update 'lastUpdate'.
                 // This forces the Screen to recompose and call 'isHeard()' again.
-                historyManager.historyState.collect {
-                    _uiState.update { currentState ->
-                        if (currentState is Format1BUiState.Success) {
-                            currentState.copy(lastUpdate = System.currentTimeMillis())
-                        } else currentState
-                    }
-                }
+//                historyManager.historyState.collect {
+//                    _uiState.update { currentState ->
+//                        if (currentState is Format1BUiState.Success) {
+//                            currentState.copy(lastUpdate = System.currentTimeMillis())
+//                        } else currentState
+//                    }
+//                }
             }.onFailure { error ->
                 _uiState.value = Format1BUiState.Error(error.localizedMessage ?: "Failed to load")
             }
@@ -93,6 +93,13 @@ class Format1BViewModel @Inject constructor(
 
     // ✅ ACTION: View calls this on tap
     fun handleTap(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+
+        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+        // This turns the Red Dot ON immediately.
+        didPlayReferenceSentence(sentence)
+
         viewModelScope.launch {
             // 1. Play Audio (Waterfall)
             val success = audioPlaybackRepository.playTrackAndGetResult(
@@ -102,41 +109,20 @@ class Format1BViewModel @Inject constructor(
             )
 
             // 2. Update Graph Stats (If success)
-            if (success) {
-                didPlayReferenceSentence(sentence)
+            if (!success) {
+                Timber.w("Playback failed. Rolling back Red Dot.")
+
+                // Only undo if it wasn't there before this specific tap
+                if (!wasAlreadyHeard) {
+                    undoPlayReferenceSentence(sentence)
+                }
             }
+            historyManager.debugPrintAllHistory()
         }
-        historyManager.debugPrintAllHistory()
+
     }
 
-    private fun didPlayReferenceSentenceObsolete(sentence: String) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val playCount = historyManager.getPlayCount("Reference", contentID)
 
-        // Update AudioCacheManager if this is the first time hearing it
-        // (Note: Repository has already incremented History count to at least 1)
-        if (playCount == 1) {
-            val currentStats = audioCacheManager.getReferenceStats(sheetName)
-            audioCacheManager.updateReferenceStats(
-                key = sheetName,
-                heard = currentStats.heard + 1,
-                total = currentStats.total
-            )
-        }
-
-        // ✅ THE MISSING PIECE: Force the UI to Recompose
-        // We update 'lastUpdate' (or just copy the state) to generate a new State Object.
-        // This signals Compose that something changed, so it re-runs the screen
-        // and calls 'isHeard()' again for every row.
-        _uiState.update { currentState ->
-            if (currentState is Format1BUiState.Success) {
-                currentState.copy(lastUpdate = System.currentTimeMillis())
-            } else currentState
-        }
-
-        // We don't need to force update UI here manually because 
-        // historyManager.historyState.collect (in init) will catch the change and do it.
-    }
     private fun didPlayReferenceSentence(sentence: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val levelName = "Reference"
@@ -160,7 +146,43 @@ class Format1BViewModel @Inject constructor(
             )
         }
 
-        // No manual _uiState.update needed here!
+        refreshUI()
+    }
+    private fun refreshUI() {
+        _uiState.update { currentState ->
+            if (currentState is Format1BUiState.Success) {
+                currentState.copy(lastUpdate = System.currentTimeMillis())
+            } else currentState
+        }
+    }
+    fun onResume() {
+        // If data changed while app was backgrounded (e.g. sync), this ensures we see it
+        refreshUI()
+    }
+    private fun undoPlayReferenceSentence(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = "Reference"
+
+        // 1. Revert History (Decrements count)
+        // Ensure you added 'undoMarkSentenceHeard' to HistorySyncManager in the previous steps
+        historyManager.undoMarkSentenceHeard(levelName, contentID)
+
+        // 2. Revert Graph Stats
+        // Since we only call this if !wasAlreadyHeard, we know we definitely incremented the graph.
+        // So we must decrement it back.
+        val currentStats = audioCacheManager.getReferenceStats(sheetName)
+
+        // Safety check to ensure we don't go below 0
+        if (currentStats.heard > 0) {
+            audioCacheManager.updateReferenceStats(
+                key = sheetName,
+                heard = currentStats.heard - 1,
+                total = currentStats.total
+            )
+        }
+
+        // 3. Update UI (Dot disappears)
+        refreshUI()
     }
     // ... recalculateReferenceStats helper ...
     // MARK: - Internal Helpers
@@ -181,24 +203,5 @@ class Format1BViewModel @Inject constructor(
      * Loops through the loaded data, checks History for each sentence,
      * and updates the AudioCacheManager stats (Heard/Total) for this sheet.
      */
-    private fun recalculateReferenceStats(data: List<HeaderWordsSentencesList>) {
-        // 1. Flatten the data to get all sentences
-        val allSentences = data.flatMap { it.wordsAndSentences }.map { it.sentence }
 
-        // 2. Count how many are already marked as "Heard" in History
-        var heardCount = 0
-        for (sentence in allSentences) {
-            // Re-use our helper to check the "Reference" bucket
-            if (isHeard(sentence)) {
-                heardCount++
-            }
-        }
-
-        // 3. Update the Manager (which updates the StateFlow -> UI Graph)
-        audioCacheManager.updateReferenceStats(
-            key = sheetName,
-            heard = heardCount,
-            total = allSentences.size
-        )
-    }
 }

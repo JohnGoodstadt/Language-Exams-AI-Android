@@ -47,6 +47,10 @@ fun SectionedVocabList(
     playbackState: PlaybackState,
     googleVoice:String,
     cachedAudioWordKeys:Set<String>,
+
+    isHeard: (String) -> Boolean,
+    playCount: (String) -> Int,
+
     onRowTapped: (Format0Word, Sentence) -> Unit
 ) {
 
@@ -129,7 +133,9 @@ fun SectionedVocabList(
                     ) { sentence ->
                         // Your existing sentence row logic can be placed here.
                         val displayData = buildSentenceParts(entry = word, sentence = sentence)
-                        val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
+                        //val uniqueSentenceId = generateUniqueSentenceId(word, sentence, googleVoice)
+                        val isSentenceAlreadyHeard = isHeard(displayData.sentence)
+                        val playCount = playCount(displayData.sentence)
 
                         Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
                             HighlightedWordInSentenceRow(
@@ -137,7 +143,7 @@ fun SectionedVocabList(
                                 parts = displayData.parts,
                                 sentence = displayData.sentence,
                                 isRecalling = false,
-                                displayDot = cachedAudioWordKeys.contains(uniqueSentenceId),
+                                displayDot = isSentenceAlreadyHeard,
                                 playCount = 0,
                                 isDownloading = false
                             )

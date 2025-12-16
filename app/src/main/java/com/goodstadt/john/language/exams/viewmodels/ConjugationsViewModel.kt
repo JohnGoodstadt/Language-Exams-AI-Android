@@ -10,12 +10,18 @@ import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.HistorySyncManager
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.screens.reference.Format2UiState
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -33,11 +39,13 @@ sealed interface ConjugationsUiState {
     object Loading : ConjugationsUiState
 //    val cachedAudioWordKeys: Set<String>
 //        get() = emptySet()
-
+//    val currentSheetName:String
     data class Success(
         val categories: List<Category>,
         val cachedAudioWordKeys: Set<String>,
-        val selectedVoiceName: String = "" // TODO: do I need this?
+        val currentSheetName : String = "",
+        val selectedVoiceName: String = "", // TODO: do I need this?
+        val lastUpdate: Long = System.currentTimeMillis()
     ) : ConjugationsUiState
 
     data class Error(val message: String) : ConjugationsUiState
@@ -54,6 +62,9 @@ class ConjugationsViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
+    private val audioCacheManager: AudioCacheManager,
+    private val audioPlaybackRepository: AudioPlaybackRepository,
+    private val historyManager: HistorySyncManager,
 
     ) : ViewModel() {
 
@@ -114,6 +125,7 @@ class ConjugationsViewModel @Inject constructor(
             }
 
             _uiState.value = ConjugationsUiState.Loading
+
             //NOTE: is this fun only bundle or firestore?
             val result = vocabRepository.getFormat0Data(firestore_sheet_name)
            // val result99= vocabRepository.loadBundledFormat0Data(bundle_file_name) //direct from bundle
@@ -123,7 +135,7 @@ class ConjugationsViewModel @Inject constructor(
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
                 val cachedKeys = vocabRepository.getSentenceKeysWithCachedAudio(vocabFile.categories, currentVoiceName)
 
-                _uiState.value = ConjugationsUiState.Success(vocabFile.categories,cachedKeys, selectedVoiceName = currentVoiceName)
+                _uiState.value = ConjugationsUiState.Success(vocabFile.categories,cachedKeys, selectedVoiceName = currentVoiceName, currentSheetName = firestore_sheet_name)
             }.onFailure { error ->
                 _uiState.value =
                     ConjugationsUiState.Error(error.localizedMessage ?: "Failed to load file $bundle_file_name")
@@ -142,7 +154,7 @@ class ConjugationsViewModel @Inject constructor(
         }
     }
     // This function is almost identical to the ones in our other ViewModels
-    fun playTrack(word: Format0Word, sentence: Sentence) {
+    fun playTrackObsolete(word: Format0Word, sentence: Sentence) {
         if (_playbackState.value is PlaybackState.Playing) {
             return
         }
@@ -281,5 +293,126 @@ class ConjugationsViewModel @Inject constructor(
         viewModelScope.launch {
             billingRepository.launchPurchase(activity)
         }
+    }
+    private fun refreshUI() {
+        _uiState.update { currentState ->
+            if (currentState is ConjugationsUiState.Success) {
+                currentState.copy(lastUpdate = System.currentTimeMillis())
+            } else currentState
+        }
+    }
+    fun isHeard(sentence: String): Boolean {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.getPlayCount("Reference", contentID) > 0
+    }
+
+    fun playCount(sentence: String): Int {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.getPlayCount("Reference", contentID)
+    }
+    fun handleTap(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+
+        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+        // This turns the Red Dot ON immediately.
+        didPlayReferenceSentence(sentence)
+
+        viewModelScope.launch {
+            // 1. Play Audio (Waterfall)
+            when (val currentState = _uiState.value) {
+
+                is ConjugationsUiState.Success -> {
+                    val sheetName = currentState.currentSheetName
+                    val success = audioPlaybackRepository.playTrackAndGetResult(
+                        sentence = sentence,
+                        level = "Reference",
+                        sheetName = sheetName,
+                        isPremiumUser = false // Inject actual status
+                    )
+
+                    // 2. Update Stats on Success
+                    if (!success) {
+                        Timber.w("Playback failed. Rolling back Red Dot.")
+
+                        // Only undo if it wasn't there before this specific tap
+                        if (!wasAlreadyHeard) {
+                            undoPlayReferenceSentence(sentence)
+                        }
+                    }
+                    historyManager.debugPrintAllHistory()
+                }
+                else -> {
+                    println("State is not UiState, skipping audio playback.")
+                }
+            }
+        }
+    }
+
+    private fun didPlayReferenceSentence(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = "Reference"
+
+        // 1. Check Previous Count
+        val previousCount = historyManager.getPlayCount(levelName, contentID)
+        val isFirstTime = previousCount == 0
+
+        // 2. Update History (Source of Truth)
+        // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes -- inc heard by 1
+        historyManager.markSentenceHeard(levelName, contentID)
+
+
+        // 3. Update Graph Stats (If new)
+        if (isFirstTime) {
+            when (val currentState = _uiState.value) {
+                is ConjugationsUiState.Success -> {
+                    val sheetName = currentState.currentSheetName
+                    val currentStats = audioCacheManager.getReferenceStats(sheetName)
+                    audioCacheManager.updateReferenceStats(
+                        key = sheetName,
+                        heard = currentStats.heard + 1,
+                        total = currentStats.total
+                    )
+                }
+                else -> {
+                    println("State is not UiState, skipping audio playback.")
+                }
+            }
+        }
+        refreshUI()
+    }
+    fun onResume() {
+        refreshUI()
+    }
+    private fun undoPlayReferenceSentence(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = "Reference"
+
+        // 1. Revert History (Decrements count)
+        // Ensure you added 'undoMarkSentenceHeard' to HistorySyncManager in the previous steps
+        historyManager.undoMarkSentenceHeard(levelName, contentID)
+
+        // 2. Revert Graph Stats
+        // Since we only call this if !wasAlreadyHeard, we know we definitely incremented the graph.
+        // So we must decrement it back.
+        when (val currentState = _uiState.value) {
+            is ConjugationsUiState.Success -> {
+                val sheetName = currentState.currentSheetName
+                val currentStats = audioCacheManager.getReferenceStats(sheetName)
+                if (currentStats.heard > 0) {
+                    audioCacheManager.updateReferenceStats(
+                        key = sheetName,
+                        heard = currentStats.heard - 1,
+                        total = currentStats.total
+                    )
+                }
+            }
+            else -> {
+                println("State is not UiState, skipping audio playback.")
+            }
+        }
+
+        // 3. Update UI (Dot disappears)
+        refreshUI()
     }
 }

@@ -35,52 +35,6 @@ import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 
-// 1. RENAMED: The UI State is now generic
-sealed interface ReferenceGenericUiState {
-    object Loading : ReferenceGenericUiState
-    data class Success(
-        val categories: List<Category>,
-        val cachedAudioWordKeys: Set<String>,
-        val selectedVoiceName: String = ""
-    ) : ReferenceGenericUiState
-
-    data class Error(val message: String) : ReferenceGenericUiState
-    object NotAvailable : ReferenceGenericUiState
-}
-
-// ✅ ADD THIS SEALED INTERFACE
-/**
- * Represents the different states for the ReferenceGenericScreen UI.
- * A sealed interface is perfect for this, as it forces the `when` block in the
- * Composable to handle all possible states.
- */
-sealed interface GenericVocabUiState999 {
-    /**
-     * The initial state, while data is being fetched from the repository.
-     */
-    object Loading : GenericVocabUiState999
-
-    /**
-     * The state representing a successful data load.
-     * It holds all the data the UI needs to render the list.
-     *
-     * Note: In your old PrepositionsUiState, you had other properties like
-     * cachedAudioWordKeys and selectedVoiceName. We will add those here as well
-     * for consistency, as your SectionedVocabList composable will likely need them.
-     */
-    data class Success(
-        val categories: List<Category>,
-        val cachedAudioWordKeys: Set<String> = emptySet(),
-        val selectedVoiceName: String = ""
-    ) : GenericVocabUiState999
-
-    /**
-     * The state representing a failure to load data.
-     * It holds an error message to display to the user.
-     */
-    data class Error(val message: String) : GenericVocabUiState999
-    object NotAvailable : GenericVocabUiState999
-}
 
 sealed interface GenericVocabUiState {
     object Loading : GenericVocabUiState
@@ -139,7 +93,7 @@ class ReferenceGenericViewModel @Inject constructor(
             initialValue = ""
         )
 
-    private val documentId: String = savedStateHandle.get<String>("documentId")!!
+    private val sheetName: String = savedStateHandle.get<String>("documentId")!!
 
     init {
         // 3. MODIFIED: Get the documentId from the navigation arguments
@@ -154,34 +108,14 @@ class ReferenceGenericViewModel @Inject constructor(
         }
     }
 
-    //    private fun loadData() {
-//        viewModelScope.launch {
-//            _uiState.value = GenericVocabUiState.Loading
-//
-//            val logicalName: String = savedStateHandle.get<String?>("documentId").toString() ?: ""
-//
-//            Timber.i("ReferenceGenericViewModel: Attempting to fetch generic vocab for '$logicalName'...")
-//            val result = vocabRepository.getFormat0Data(logicalName)
-//
-//
-//
-//            // ✅ NO CASTING NEEDED! The result is already the correct type.
-//            result.onSuccess { vocabFile ->
-//                _uiState.value = GenericVocabUiState.Success(vocabFile.categories, /*...other params...*/)
-//            }
-//            result.onFailure { error ->
-//                _uiState.value = GenericVocabUiState.Error(error.localizedMessage ?: "Failed to load data")
-//            }
-//        }
-//
-//    }
+
     private fun loadAndObserve() {
         viewModelScope.launch {
             _uiState.value = GenericVocabUiState.Loading
 
 
             // 1. Fetch Data
-            val result = contentRepository.getFormat0Data(documentId)
+            val result = contentRepository.getFormat0Data(sheetName)
 
             result.onSuccess { vocabFile ->
                 // 2. Initialize Graph Stats
@@ -195,18 +129,18 @@ class ReferenceGenericViewModel @Inject constructor(
 
                 // 3. Set Initial State
                 _uiState.value = GenericVocabUiState.Success(
-                    title = documentId, // Or derive a pretty title if available
+                    title = sheetName, // Or derive a pretty title if available
                     categories = vocabFile.categories
                 )
 
                 // 4. Listen for History Changes (Red Dot updates)
-                historyManager.historyState.collect {
-                    _uiState.update { currentState ->
-                        if (currentState is GenericVocabUiState.Success) {
-                            currentState.copy(lastUpdate = System.currentTimeMillis())
-                        } else currentState
-                    }
-                }
+//                historyManager.historyState.collect {
+//                    _uiState.update { currentState ->
+//                        if (currentState is GenericVocabUiState.Success) {
+//                            currentState.copy(lastUpdate = System.currentTimeMillis())
+//                        } else currentState
+//                    }
+//                }
             }.onFailure { error ->
                 _uiState.value =
                     GenericVocabUiState.Error(error.localizedMessage ?: "Failed to load")
@@ -225,123 +159,39 @@ class ReferenceGenericViewModel @Inject constructor(
         val contentID = FirebaseAudioService.generateContentID(sentence)
         return historyManager.getPlayCount("Reference", contentID)
     }
-    /*
-       // --- ALL OTHER FUNCTIONS (playTrack, saveDataOnExit, hide...Sheet, etc.) ---
-        // can be copied directly from PrepositionsViewModel as they are already generic enough.
-        // They operate on VocabWord, Sentence, etc., and have no hardcoded logic.
-        // (Omitted for brevity, but you should paste them here)
-    //    fun playTrack(word: Format0Word, sentence: Sentence) {
-    //        if (_playbackState.value is PlaybackState.Playing)
-    //        {
-    //            return
-    //        }
-    //
-    //        if (!connectivityRepository.isCurrentlyOnline()) {
-    //            _playbackState.value = PlaybackState.Idle
-    //            return
-    //        }
-    //
-    //        viewModelScope.launch {
-    //            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-    //            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day
-    //                if (rateLimiter.doIForbidCall()) {
-    //                    val failType = rateLimiter.canMakeCallWithResult()
-    //                    Timber.v("${failType.canICallAPI}")
-    //                    Timber.v("${failType.failReason}")
-    //                    Timber.v("${failType.timeLeftToWait}")
-    //                    if (!failType.canICallAPI) {
-    //                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
-    //                            _showRateDailyLimitSheet.value = true
-    //                        } else {
-    //                            _showRateHourlyLimitSheet.value = true
-    //                        }
-    //                    } else {
-    //                        _showRateLimitSheet.value = true
-    //                    }
-    //
-    //                    return@launch
-    //                }
-    //            }
-    //
-    //
-    //
-    //            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-    //            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
-    //
-    //            val uniqueSentenceId = generateUniqueSentenceId(word, sentence, currentVoiceName)
-    //            _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
-    ////maybe just de. remove any (zu dem)
-    //            val cleanedSentence = sentence.sentence.replace("\\s*\\([^)]*\\)\\s*".toRegex(), " ")
-    //
-    //            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
-    //            if (played){//short cut so user cna play cached sentences with no Internet connection
-    //                _playbackState.value = PlaybackState.Idle
-    //                ttsStatsRepository.updateTTSStatsWithoutCosts()
-    //                ttsStatsRepository.incWordStats(word.word)
-    //                return@launch
-    //            }
-    //
-    //            //Dot shows before sound (lightening before thunder)
-    //            _uiState.update { currentState ->
-    //                if (currentState is GenericVocabUiState.Success) {
-    //                    val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId(word, sentence, currentVoiceName)
-    //                    currentState.copy(cachedAudioWordKeys = updatedKeys)
-    //                } else {
-    //                    currentState
-    //                }
-    //            }
-    //
-    //            val result = vocabRepository.playTextToSpeech(
-    //                text = cleanedSentence,
-    //                uniqueSentenceId = uniqueSentenceId,
-    //                voiceName = currentVoiceName,
-    //                languageCode = currentLanguageCode
-    //            )
-    //            when (result) {
-    //                is PlaybackResult.PlayedFromNetworkAndCached -> {
-    //                    _playbackState.value = PlaybackState.Idle
-    //
-    //                    if (todayIsNotAFreePassDay){
-    //                        rateLimiter.recordCall()
-    //                    }
-    //                    Timber.v(rateLimiter.printCurrentStatus)
-    //                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-    //                    ttsStatsRepository.incWordStats(word.word)
-    //                    //TODO: not inc but update!
-    //                    ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
-    //                }
-    //                is PlaybackResult.PlayedFromCache -> { //probably does not get executed as playFromCacheIfFound() already run
-    //                    _playbackState.value = PlaybackState.Idle
-    //                    ttsStatsRepository.updateTTSStatsWithoutCosts()
-    //                    ttsStatsRepository.incWordStats(word.word)
-    //                }
-    //                is PlaybackResult.Failure -> {
-    //                    _playbackState.value = PlaybackState.Idle
-    //                    _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
-    //                }
-    //                PlaybackResult.CacheNotFound -> {
-    //                    _playbackState.value = PlaybackState.Idle
-    //                    Timber.e("Cache found to exist but not played")
-    //                }
-    //            }
-    //            _playbackState.value = PlaybackState.Idle
-    //        }
-    //    }
-     */
 
+    private fun refreshUI() {
+        _uiState.update { currentState ->
+            if (currentState is GenericVocabUiState.Success) {
+                currentState.copy(lastUpdate = System.currentTimeMillis())
+            } else currentState
+        }
+    }
     fun handleTap(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+
+        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+        // This turns the Red Dot ON immediately.
+        didPlayReferenceSentence(sentence)
+
         viewModelScope.launch {
             // 1. Play Audio (Waterfall)
             val success = audioPlaybackRepository.playTrackAndGetResult(
                 sentence = sentence,
                 level = "Reference",
-                sheetName = documentId,
+                sheetName = sheetName,
                 isPremiumUser = false // Inject actual status
             )
 
             // 2. Update Stats on Success
-            if (success) {
-                didPlayReferenceSentence(sentence)
+            if (!success) {
+                Timber.w("Playback failed. Rolling back Red Dot.")
+
+                // Only undo if it wasn't there before this specific tap
+                if (!wasAlreadyHeard) {
+                    undoPlayReferenceSentence(sentence)
+                }
             }
             historyManager.debugPrintAllHistory()
         }
@@ -362,7 +212,7 @@ class ReferenceGenericViewModel @Inject constructor(
 
         // 3. Update Graph Stats (If new)
         if (isFirstTime) {
-            val sheetTitle = documentId
+            val sheetTitle = sheetName
             val currentStats = audioCacheManager.getReferenceStats(sheetTitle)
             audioCacheManager.updateReferenceStats(
                 key = sheetTitle,
@@ -372,8 +222,35 @@ class ReferenceGenericViewModel @Inject constructor(
 
         }
     }
+    private fun undoPlayReferenceSentence(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = "Reference"
 
-    // MARK: - Helpers
+        // 1. Revert History (Decrements count)
+        // Ensure you added 'undoMarkSentenceHeard' to HistorySyncManager in the previous steps
+        historyManager.undoMarkSentenceHeard(levelName, contentID)
+
+        // 2. Revert Graph Stats
+        // Since we only call this if !wasAlreadyHeard, we know we definitely incremented the graph.
+        // So we must decrement it back.
+        val currentStats = audioCacheManager.getReferenceStats(sheetName)
+
+        // Safety check to ensure we don't go below 0
+        if (currentStats.heard > 0) {
+            audioCacheManager.updateReferenceStats(
+                key = sheetName,
+                heard = currentStats.heard - 1,
+                total = currentStats.total
+            )
+        }
+
+        // 3. Update UI (Dot disappears)
+        refreshUI()
+    }
+
+        // 3. Update UI (Dot disappears)
+
+        // MARK: - Helpers
 
     private fun recalculateReferenceStats(sentences: List<String>) {
         var heardCount = 0
@@ -381,7 +258,7 @@ class ReferenceGenericViewModel @Inject constructor(
             if (isHeard(sentence)) heardCount++
         }
         audioCacheManager.updateReferenceStats(
-            key = documentId,
+            key = sheetName,
             heard = heardCount,
             total = sentences.size
         )

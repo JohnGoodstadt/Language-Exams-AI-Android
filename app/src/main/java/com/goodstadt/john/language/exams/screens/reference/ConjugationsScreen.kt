@@ -71,8 +71,10 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
                     playbackState = playbackState,
                     googleVoice = state.selectedVoiceName,
                     cachedAudioWordKeys = state.cachedAudioWordKeys,
+                    isHeard = { sentence -> viewModel.isHeard(sentence) },
+                    playCount = { sentence -> viewModel.playCount(sentence) },
                     onRowTapped = { word, sentence ->
-                        viewModel.playTrack(word, sentence)
+                        viewModel.handleTap(sentence.sentence)
                     }
                 )
             }
@@ -104,7 +106,8 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_PAUSE) {//reliable signal that the user is leaving the screen.
-                viewModel.saveDataOnExit()
+                viewModel.saveDataOnExit() //TODO: Do I need this?
+                viewModel.onResume()
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)

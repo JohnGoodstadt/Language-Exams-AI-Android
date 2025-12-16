@@ -11,7 +11,11 @@ import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
@@ -39,6 +43,7 @@ sealed interface ContentState {
 // 2. The main UI State data class for the entire screen
 data class GroupedSheetUiState(
     val title: String = "", // The main title for the screen (e.g., "Adjectives")
+    val currentSheetName:String = "",
     val subTabs: List<SubTabDefinition> = emptyList(),
     val selectedSubTab: SubTabDefinition? = null,
     val contentState: ContentState = ContentState.Idle
@@ -56,6 +61,9 @@ class GroupedSheetViewModel @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
+    private val historyManager: HistorySyncManager,
+    private val audioPlaybackRepository: AudioPlaybackRepository,
+    private val audioCacheManager: AudioCacheManager,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -80,6 +88,7 @@ class GroupedSheetViewModel @Inject constructor(
     // A simple in-memory cache to avoid re-fetching data when a user taps back and forth
     private val contentCache = mutableMapOf<String, List<Category>>()
 
+
     init {
         // Get the parent tab's ID from the navigation arguments
         val tabId: String? = savedStateHandle.get("tabId")
@@ -94,6 +103,7 @@ class GroupedSheetViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.update { it.copy(contentState = ContentState.Loading) }
             Timber.d("GroupedVM: Initializing for tabId: '$tabId'")
+
 
             try {
                 // 1. Get the entire, up-to-date manifest from the repository.
@@ -298,7 +308,7 @@ class GroupedSheetViewModel @Inject constructor(
                 return@launch
             }
 
-            _uiState.update { it.copy(contentState = ContentState.Loading) }
+            _uiState.update { it.copy(contentState = ContentState.Loading, currentSheetName = sheetName) }
 
             try {
                 // --- VERSION CHECK LOGIC ---
@@ -345,6 +355,54 @@ class GroupedSheetViewModel @Inject constructor(
         Timber.i("purchasePremium()")
         viewModelScope.launch {
             billingRepository.launchPurchase(activity)
+        }
+    }
+    fun isHeard(sentence: String): Boolean {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        Timber.i("Play Count:${historyManager.getPlayCount("Reference", contentID) } $sentence")
+        return historyManager.getPlayCount("Reference", contentID) > 0
+    }
+    fun getPlayCount(sentence:String): Int {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.getPlayCount("Reference", contentID)
+    }
+    // ✅ ACTION: View calls this on tap
+    fun handleTap(sentence: String) {
+        viewModelScope.launch {
+            // 1. Play Audio (Waterfall)
+            val success = audioPlaybackRepository.playTrackAndGetResult(
+                sentence = sentence,
+                level = "Reference",
+                sheetName = _uiState.value.currentSheetName
+            )
+            // 2. Update Graph Stats (If success)
+            if (success) {
+                didPlayReferenceSentence(sentence)
+            }
+        }
+        historyManager.debugPrintAllHistory()
+    }
+    private fun didPlayReferenceSentence(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = "Reference"
+
+        // 1. Check Previous Count
+        val previousCount = historyManager.getPlayCount(levelName, contentID)
+        val isFirstTime = previousCount == 0
+
+        // 2. Update History (Source of Truth)
+        // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes -- inc heard by 1
+        historyManager.markSentenceHeard(levelName, contentID)
+
+        // 3. Update Graph Stats (If new)
+        if (isFirstTime) {
+            val sheetTitle = _uiState.value.currentSheetName
+            val currentStats = audioCacheManager.getReferenceStats(sheetTitle)
+            audioCacheManager.updateReferenceStats(
+                key = sheetTitle,
+                heard = currentStats.heard + 1,
+                total = currentStats.total
+            )
         }
     }
 }

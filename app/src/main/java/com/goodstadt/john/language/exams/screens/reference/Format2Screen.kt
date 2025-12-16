@@ -10,14 +10,21 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.models.Format2Level
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
@@ -47,7 +54,19 @@ fun Format2Screen(
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
-    // LazyColumn is the efficient Composable for displaying the main scrollable list.
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                // ✅ Ensure red dots are correct when coming back to app
+                viewModel.onResume()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(8.dp), // This adds space BETWEEN the main gray boxes
@@ -114,11 +133,20 @@ fun Format2Screen(
                     entry.sentences.forEachIndexed { index, item ->
                         // Your Format2RowView or a similar composable would go here.
                         // For now, let's build it directly.
+                        val isHeard = viewModel.isHeard(item.sentence)
+                        val playCount = viewModel.getPlayCount(item.sentence)
+
+
+
                         Format2Row(
                             word = entry.word,
                             sentence = item.sentence,
+                            isHeard,
+                            playCount,
 //                            onTapped = { onRowTapped(sentence.sentence) },
-                            onTapped = { viewModel.playTrack(item.sentence)},
+                            onTapped = {
+                                viewModel.handleTap(item.sentence)
+                            },
 
                             modifier = Modifier.padding(start = 16 .dp)
                         )
@@ -156,6 +184,8 @@ fun Format2Screen(
 private fun Format2Row(
     word: String,
     sentence: String,
+    isHeard:Boolean,
+    playCount:Int,
     onTapped: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -174,6 +204,25 @@ private fun Format2Row(
             .padding(vertical = 4.dp, horizontal = 16.dp)
 
     ) {
-        Text(text = styledSentence)
+
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+
+
+            Text(text = styledSentence, modifier = Modifier.weight(1f))
+
+            // ✅ THE RED DOT
+            if (isHeard) {
+                Text(text = "🔴", fontSize = 12.sp)
+            }
+            if (playCount > 0) {
+                Text(text = "$playCount", fontSize = 12.sp)
+            }
+
+        }
     }
 }

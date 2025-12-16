@@ -97,7 +97,25 @@ class HistorySyncManager @Inject constructor(
             emitState()
         }
     }
+    fun undoMarkSentenceHeardLLMAllternative(level: String, sentenceHash: String) {
+        val data = history[level] ?: return
+        val currentCount = data.items[sentenceHash] ?: 0
 
+        if (currentCount > 0) {
+            val newCount = currentCount - 1
+            if (newCount == 0) {
+                data.items.remove(sentenceHash) // Remove completely if back to 0
+            } else {
+                data.items[sentenceHash] = newCount
+            }
+
+            isDirty = true
+            saveToLocalDisk()
+            // We don't necessarily need to emitState here if the ViewModel handles the UI refresh,
+            // but it's good practice.
+            // _historyState.value = history.toMap()
+        }
+    }
     fun getPlayCount(level: String, sentenceHash: String): Int {
         return history[level]?.items?.get(sentenceHash) ?: 0
     }

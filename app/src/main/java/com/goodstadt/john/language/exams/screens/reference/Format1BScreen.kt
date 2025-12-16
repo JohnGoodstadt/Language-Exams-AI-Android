@@ -7,6 +7,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Hearing
@@ -24,6 +25,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
@@ -46,6 +50,17 @@ fun Format1BScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                // ✅ Ensure red dots are correct when coming back to app
+                viewModel.onResume()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
     // Bottom Sheet Logic
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
@@ -100,11 +115,11 @@ fun Format1BScreen(
                         }
                     }
 
-                    // 2. Items
-                    items(
+                    // 2. itemsIndexed - else can have duplicate key
+                    itemsIndexed(
                         items = section.wordsAndSentences,
-                        key = { it.word + it.sentence }
-                    ) { item ->
+                        key = { index, item -> "${item.word}_${item.sentence}_$index" }
+                    ) { index, item ->
 
                         // ✅ CHECK HISTORY FOR RED DOT
 //                        val contentID = FirebaseAudioService.generateContentID(item.sentence)

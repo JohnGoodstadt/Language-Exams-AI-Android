@@ -434,4 +434,22 @@ class AudioCacheManager @Inject constructor(
             Timber.tag("AudioCacheManager").d("📊 Refreshed Stats for '$sheetTitle': $heardCount/$totalCount")
         }
     }
+    /**
+     * ⏪ ROLLBACK: Decrements the heard count for a specific sheet.
+     */
+    fun rollbackReferenceStats(key: String) {
+        scope.launch {
+            mutex.withLock {
+                val currentMap = _referenceHeardCounts.value
+                val currentCount = currentMap[key] ?: 0
+
+                if (currentCount > 0) {
+                    val newMap = currentMap.toMutableMap()
+                    newMap[key] = currentCount - 1
+                    _referenceHeardCounts.value = newMap
+                    saveReferenceStats()
+                }
+            }
+        }
+    }
 }

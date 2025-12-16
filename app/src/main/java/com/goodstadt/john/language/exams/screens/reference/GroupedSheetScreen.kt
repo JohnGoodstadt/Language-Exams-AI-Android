@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -18,6 +19,7 @@ import com.goodstadt.john.language.exams.screens.reference.shared.SectionedVocab
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GroupedSheetScreen(
     viewModel: GroupedSheetViewModel = hiltViewModel()
@@ -28,6 +30,9 @@ fun GroupedSheetScreen(
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+    val lazyListState = rememberLazyListState()
+    var showSideQuestSheet by remember { mutableStateOf(false) }
+    val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // The main layout is a vertical column
     Column(modifier = Modifier.fillMaxSize()) {
@@ -67,23 +72,37 @@ fun GroupedSheetScreen(
                 }
             }
             is ContentState.Success -> {
-                // Data has loaded successfully, so display the reusable vocab list.
-                // Your existing SectionedVocabList is perfect for this.
-//                SectionedVocabList(
-                SimpleSectionedVocabListOriginal(
-                    categories = contentState.categories,
-                    // TODO: To enable audio playback, you will need to add PlaybackState
-                    // to your GroupedSheetUiState and a playTrack() function to your
-                    // GroupedSheetViewModel, then pass them here.
-                    // For now, we can use placeholder values.
-                    playbackState = PlaybackState.Idle, // Placeholder
-                    googleVoice = "", // Placeholder
-                    cachedAudioWordKeys = emptySet(), // Placeholder
-                    onRowTapped = { word, sentence ->
-                         viewModel.playTrack(word, sentence)
+
+                SimpleSectionedVocabList(
+                    data = contentState.categories,
+                    selectedVoiceName = "selectedVoiceName",
+
+                    // The Direct Check (History)
+                    isHeard = { sentence -> viewModel.isHeard(sentence) },
+                    playCount = { sentence -> viewModel.getPlayCount(sentence) },
+                    // Reference screens usually don't use "Focus/Recalling", so empty
+                    recalledWordKeys = emptySet(),
+                    playbackState = PlaybackState.Idle,
+
+                    // Generic VM doesn't usually track specific download IDs, passed null
+                    downloadingSentenceId = null,
+
+                    listState = lazyListState,
+                    contentPadding = PaddingValues(bottom = 80.dp),
+
+                    // ACTIONS
+                    onRowTapped = { word, sentence, category ->
+                        viewModel.handleTap(sentence.sentence)
+                    },
+                    onFocus = { /* No-op for generic reference */ },
+                    onCancel = { /* No-op for generic reference */ },
+                    onMore = { word, category ->
+                        // Add bottom sheet logic here if you want word details
+                    },
+                    onSideQuestTapped = {
+                        showSideQuestSheet = true
                     }
                 )
-
             }
             is ContentState.Error -> {
                 // An error occurred during the data fetch

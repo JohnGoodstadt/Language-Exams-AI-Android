@@ -11,6 +11,10 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
@@ -30,9 +34,13 @@ import javax.inject.Inject
 
 sealed interface Format2UiState {
     object Loading : Format2UiState
-    data class Success(val format2File: Format2File,
-                       val playbackState: PlaybackState = PlaybackState.Idle,
-                       val cachedAudioWordKeys: Set<String> = emptySet()  ) : Format2UiState
+    data class Success(
+        val format2File: Format2File,
+        val playbackState: PlaybackState = PlaybackState.Idle,
+//                       val cachedAudioWordKeys: Set<String> = emptySet()
+        val lastUpdate: Long = System.currentTimeMillis()
+    ) : Format2UiState
+
     data class Error(val message: String) : Format2UiState
 }
 
@@ -46,6 +54,9 @@ class Format2ViewModel @Inject constructor(
     private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
     private val billingRepository: BillingRepository,
+    private val historyManager: HistorySyncManager,
+    private val audioPlaybackRepository: AudioPlaybackRepository,
+    private val audioCacheManager: AudioCacheManager,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -66,7 +77,7 @@ class Format2ViewModel @Inject constructor(
 
     // 3. Get the documentId from the navigation arguments via SavedStateHandle.
     //    The key "documentId" MUST match the argument name in your NavHost route.
-    private val documentId: String = savedStateHandle.get<String>("documentId")!!
+    private val sheetName: String = savedStateHandle.get<String>("documentId")!!
 
     init {
         // 4. Trigger the data loading process as soon as the ViewModel is created.
@@ -78,109 +89,13 @@ class Format2ViewModel @Inject constructor(
 
             // ✅ SIMPLIFIED: All the complex logic is gone.
             // We just make one simple, type-safe call to our orchestrator.
-            val result = vocabRepository.getFormat2Data(documentId)
+            val result = vocabRepository.getFormat2Data(sheetName)
 
             result.onSuccess { format2File ->
                 _uiState.value = Format2UiState.Success(format2File)
             }
             result.onFailure { error ->
                 _uiState.value = Format2UiState.Error(error.localizedMessage ?: "Failed to load content")
-            }
-        }
-    }
-    fun playTrack(sentence: String) {
-        val currentState = _uiState.value
-        if (currentState !is Format2UiState.Success) return
-        if (currentState.playbackState is PlaybackState.Playing) return
-        if (!connectivityRepository.isCurrentlyOnline()) return
-
-        viewModelScope.launch {
-            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
-                if (rateLimiter.doIForbidCall()) {
-                    val failType = rateLimiter.canMakeCallWithResult()
-                    Timber.v("${failType.canICallAPI}")
-                    Timber.v("${failType.failReason}")
-                    Timber.v("${failType.timeLeftToWait}")
-                    if (!failType.canICallAPI) {
-                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
-                            _showRateDailyLimitSheet.value = true
-                        } else {
-                            _showRateHourlyLimitSheet.value = true
-                        }
-                    } else {
-                        _showRateLimitSheet.value = true
-                    }
-
-                    return@launch
-                }
-            }
-
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val uniqueSentenceId = generateUniqueSentenceId(sentence, currentVoiceName)
-
-            _uiState.update {
-                if (it is Format2UiState.Success) {
-                    it.copy(playbackState = PlaybackState.Playing(uniqueSentenceId))
-                } else it
-            }
-
-            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
-            if (played) {//short cut so user cna play cached sentences with no Internet connection
-                _uiState.update {
-                    if (it is Format2UiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
-                }
-                ttsStatsRepository.updateTTSStatsWithoutCosts()
-                return@launch
-            }
-
-
-            _uiState.update {
-                if (it is Format2UiState.Success) {
-                    val updatedKeys = it.cachedAudioWordKeys + uniqueSentenceId
-                    it.copy(cachedAudioWordKeys = updatedKeys)
-                } else it
-            }
-
-            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
-
-            val result = vocabRepository.playTextToSpeech(
-                text = sentence,
-                uniqueSentenceId = uniqueSentenceId,
-                voiceName = currentVoiceName,
-                languageCode = currentLanguageCode
-            )
-
-            when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    if (todayIsNotAFreePassDay){
-                        rateLimiter.recordCall()
-                    }
-                    Timber.v(rateLimiter.printCurrentStatus)
-                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-                    //TODO: not inc but update!
-                    ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
-                }
-
-                is PlaybackResult.PlayedFromCache -> {
-                    ttsStatsRepository.updateTTSStatsWithoutCosts()
-                }
-
-                is PlaybackResult.Failure -> {
-                    _uiState.update {
-                        if (it is Format2UiState.Success) {
-                            it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed"))
-                        } else it
-                    }
-                }
-
-                PlaybackResult.CacheNotFound -> {
-                    Timber.e("Cache found to exist but not played")
-                }
-            }
-
-            _uiState.update {
-                if (it is Format2UiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
             }
         }
     }
@@ -198,5 +113,107 @@ class Format2ViewModel @Inject constructor(
         viewModelScope.launch {
             billingRepository.launchPurchase(activity)
         }
+    }
+
+    private fun refreshUI() {
+        _uiState.update { currentState ->
+            if (currentState is Format2UiState.Success) {
+                currentState.copy(lastUpdate = System.currentTimeMillis())
+            } else currentState
+        }
+    }
+    fun isHeard(sentence: String): Boolean {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        Timber.i("Play Count:${historyManager.getPlayCount("Reference", contentID) } $sentence")
+        return historyManager.getPlayCount("Reference", contentID) > 0
+    }
+    fun getPlayCount(sentence:String): Int {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.getPlayCount("Reference", contentID)
+    }
+    // ✅ ACTION: View calls this on tap
+    fun handleTap(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+
+        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+        // This turns the Red Dot ON immediately.
+        didPlayReferenceSentence(sentence)
+
+        viewModelScope.launch {
+            // 1. Play Audio (Waterfall)
+            val success = audioPlaybackRepository.playTrackAndGetResult(
+                sentence = sentence,
+                level = "Reference",
+                sheetName = sheetName
+            )
+            // 2. Update Graph Stats (If success)
+//            if (success) {
+//                didPlayReferenceSentence(sentence)
+//            }
+            if (!success) {
+                Timber.w("Playback failed. Rolling back Red Dot.")
+
+                // Only undo if it wasn't there before this specific tap
+                if (!wasAlreadyHeard) {
+                    undoPlayReferenceSentence(sentence)
+                }
+            }
+            historyManager.debugPrintAllHistory()
+        }
+    }
+    private fun didPlayReferenceSentence(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = "Reference"
+
+        // 1. Check Previous Count
+        val previousCount = historyManager.getPlayCount(levelName, contentID)
+        val isFirstTime = previousCount == 0
+
+        // 2. Update History (Source of Truth)
+        // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes -- inc heard by 1
+        historyManager.markSentenceHeard(levelName, contentID)
+
+        // 3. Update Graph Stats (If new)
+        if (isFirstTime) {
+            val sheetTitle = sheetName
+            val currentStats = audioCacheManager.getReferenceStats(sheetTitle)
+            audioCacheManager.updateReferenceStats(
+                key = sheetTitle,
+                heard = currentStats.heard + 1,
+                total = currentStats.total
+            )
+        }
+
+        refreshUI()
+    }
+    fun onResume() {
+        // If data changed while app was backgrounded (e.g. sync), this ensures we see it
+        refreshUI()
+    }
+    private fun undoPlayReferenceSentence(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = "Reference"
+
+        // 1. Revert History (Decrements count)
+        // Ensure you added 'undoMarkSentenceHeard' to HistorySyncManager in the previous steps
+        historyManager.undoMarkSentenceHeard(levelName, contentID)
+
+        // 2. Revert Graph Stats
+        // Since we only call this if !wasAlreadyHeard, we know we definitely incremented the graph.
+        // So we must decrement it back.
+        val currentStats = audioCacheManager.getReferenceStats(sheetName)
+
+        // Safety check to ensure we don't go below 0
+        if (currentStats.heard > 0) {
+            audioCacheManager.updateReferenceStats(
+                key = sheetName,
+                heard = currentStats.heard - 1,
+                total = currentStats.total
+            )
+        }
+
+        // 3. Update UI (Dot disappears)
+        refreshUI()
     }
 }
