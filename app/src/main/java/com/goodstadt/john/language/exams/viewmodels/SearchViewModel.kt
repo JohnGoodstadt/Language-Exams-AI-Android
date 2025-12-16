@@ -11,6 +11,9 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.HistorySyncManager
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Format0Word
@@ -49,7 +52,8 @@ class SearchViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
-
+    private val historyManager: HistorySyncManager,
+    private val audioCacheManager: AudioCacheManager,
     ) : ViewModel() {
 
     // Holds the complete list of all words from the current file
@@ -83,11 +87,13 @@ class SearchViewModel @Inject constructor(
 
     private val _showRateHourlyLimitSheet = MutableStateFlow(false)
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
+    private var currentLoadedLevel: String = "B1"
 
     init {
         loadFullWordList()
         observeSearchQuery()
         viewModelScope.launch {
+            currentLoadedLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
             billingRepository.isPurchased.collect { purchasedStatus ->
                 _isPremiumUser.value = purchasedStatus
                 if (DEBUG) {
@@ -282,5 +288,14 @@ class SearchViewModel @Inject constructor(
         viewModelScope.launch {
             billingRepository.launchPurchase(activity)
         }
+    }
+
+    fun isHeard(sentence: String): Boolean {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.isHeard(currentLoadedLevel, contentID)
+    }
+    fun getPlayCount(sentence:String): Int {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.getPlayCount(currentLoadedLevel, contentID)
     }
 }

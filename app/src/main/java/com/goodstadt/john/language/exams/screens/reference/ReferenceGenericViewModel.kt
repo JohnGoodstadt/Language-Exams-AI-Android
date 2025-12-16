@@ -219,8 +219,9 @@ class ReferenceGenericViewModel @Inject constructor(
                 heard = currentStats.heard + 1,
                 total = currentStats.total
             )
-
         }
+
+        refreshUI()
     }
     private fun undoPlayReferenceSentence(sentence: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
@@ -247,7 +248,10 @@ class ReferenceGenericViewModel @Inject constructor(
         // 3. Update UI (Dot disappears)
         refreshUI()
     }
-
+    fun onResume() {
+        // If data changed while app was backgrounded (e.g. sync), this ensures we see it
+        refreshUI()
+    }
         // 3. Update UI (Dot disappears)
 
         // MARK: - Helpers

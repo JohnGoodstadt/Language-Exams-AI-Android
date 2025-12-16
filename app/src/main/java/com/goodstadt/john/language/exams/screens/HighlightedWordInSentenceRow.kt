@@ -42,19 +42,20 @@ fun HighlightedWordInSentenceRow(
             CircularProgressIndicator(modifier = Modifier.size(24.dp))
         } else {
             // Check if the red dot should be displayed
-//            val displayRedDot = cachedAudioWordKeys.contains(entry.word)
             val displayRedDot = displayDot
 
+            if (isRecalling) {
+                Text(text = "🟢", fontSize = 12.sp)
+            }
+
             if (displayRedDot) {
-                Text(text = "🔴", fontSize = 12.sp)
+                Text(text = "🔴", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
             }
             if (playCount > 0) {
                 Text(text = "$playCount", fontSize = 12.sp)
             }
             // Check if the green dot should be displayed
-            if (isRecalling) {
-                Text(text = "🟢", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
-            }
+
         }
     }
     //HorizontalDivider()

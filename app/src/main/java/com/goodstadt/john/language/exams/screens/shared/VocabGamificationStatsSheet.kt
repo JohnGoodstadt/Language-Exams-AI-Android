@@ -2,15 +2,46 @@ package com.goodstadt.john.language.exams.screens.shared
 
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material.icons.filled.CenterFocusStrong
+import androidx.compose.material.icons.filled.CheckCircle
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.DirectionsWalk
+import androidx.compose.material.icons.filled.EmojiEvents
+import androidx.compose.material.icons.filled.Flag
+import androidx.compose.material.icons.filled.LocalFireDepartment
+import androidx.compose.material.icons.filled.Map
+import androidx.compose.material.icons.filled.TrendingUp
+import androidx.compose.material.icons.filled.WavingHand
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -18,7 +49,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.utils.CategoryProgress
@@ -44,101 +74,117 @@ fun VocabGamificationStatsSheet(
 //    com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme {
 
 
-        Scaffold(
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.onSurface,
-            topBar = {
-                CenterAlignedTopAppBar(
-                    title = { Text("Exam Progress", fontWeight = FontWeight.Bold) },
-                    actions = {
-                        IconButton(onClick = onDismiss) {
-                            Icon(
-                                Icons.Default.Close,
-                                contentDescription = "Close",
-                                tint = Color.Gray
-                            )
-                        }
-                    }
-                )
-            }
-        ) { innerPadding ->
-            Column(
-                modifier = Modifier
-                    .padding(innerPadding)
-                    .fillMaxSize()
-                    .verticalScroll(rememberScrollState())
-                    .padding(horizontal = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(24.dp)
-            ) {
-
-                // 1. MISSION CONTROL (Exam Countdown)
-                // This Card handles the "Set Goal" vs "Active Countdown" logic
-                ExamCountdownCard(
-                    xpManager = xpManager,
-                    totalWords = grandTotalWords,
-                    masteredWords = grandTotalMastered,
-                    // Assuming 'currentLevel' is derived from the first category or passed in
-                    currentLevelName = categoryProgress.firstOrNull()?.let { "Tab ${it.tabNumber}" }
-                        ?: "Exam"
-                )
-
-                // 2. THE SMART COACH (Dynamic Advice)
-                // Note: We need to calculate targetDailyRate from XPManager if available
-                val advice = generateNuancedAdvice(
-                    categories = categoryProgress,
-                    totalXP = xpState.levels[xpState.currentLevel]?.xp ?: 0,
-                    streak = xpState.currentStreak,
-                    quizManager = quizManager,
-                    targetDailyRate = 10 // Placeholder: derive this from ExamCountdown logic if possible
-                )
-
-                SmartCoachCard(
-                    title = advice.title,
-                    message = advice.message,
-                    icon = advice.icon,
-                    color = advice.color
-                )
-
-                // 3. TOPIC MASTERY LIST
-                Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Text(
-                            "Topic Mastery",
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Bold
-                        )
-                        Text(
-                            "${(globalProgress * 100).toInt()}% Complete",
-                            style = MaterialTheme.typography.labelMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
+    Scaffold(
+        containerColor = MaterialTheme.colorScheme.surface,
+        contentColor = MaterialTheme.colorScheme.onSurface,
+        topBar = {
+            CenterAlignedTopAppBar(
+                title = { Text("Exam Progress", fontWeight = FontWeight.Bold) },
+                actions = {
+                    IconButton(onClick = onDismiss) {
+                        Icon(
+                            Icons.Default.Close,
+                            contentDescription = "Close",
+                            tint = Color.Gray
                         )
                     }
+                }
+            )
+        }
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .padding(innerPadding)
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(24.dp)
+        ) {
 
-                    Card(
-                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-                        shape = RoundedCornerShape(16.dp)
+            // 1. MISSION CONTROL (Exam Countdown)
+            // This Card handles the "Set Goal" vs "Active Countdown" logic
+            ExamCountdownCard(
+                xpManager = xpManager,
+                totalWords = grandTotalWords,
+                masteredWords = grandTotalMastered,
+                // Assuming 'currentLevel' is derived from the first category or passed in
+                currentLevelName = categoryProgress.firstOrNull()?.let { "Tab ${it.tabNumber}" }
+                    ?: "Exam"
+            )
+
+            // 2. THE SMART COACH (Dynamic Advice)
+            // Note: We need to calculate targetDailyRate from XPManager if available
+            val advice = generateNuancedAdvice(
+                categories = categoryProgress,
+                totalXP = xpState.levels[xpState.currentLevel]?.xp ?: 0,
+                streak = xpState.currentStreak,
+                quizManager = quizManager,
+                targetDailyRate = 10 // Placeholder: derive this from ExamCountdown logic if possible
+            )
+
+            SmartCoachCard(
+                title = advice.title,
+                message = advice.message,
+                icon = advice.icon,
+                color = advice.color
+            )
+
+            // 3. TOPIC MASTERY LIST
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(
+                        "Topic Mastery",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold
+                    )
+                    Text(
+                        "${(globalProgress * 100).toInt()}% Complete",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+//                GlobalProgressRow(
+//                    heard = grandTotalMastered,
+//                    total = grandTotalWords
+//                )
+//
+//                // ✅ NEW: Separator line
+//                HorizontalDivider(
+//                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f)
+//                )
+
+                Card(
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                    shape = RoundedCornerShape(16.dp)
+                ) {
+                    Column(
+                        modifier = Modifier.padding(16.dp),
+                        verticalArrangement = Arrangement.spacedBy(16.dp)
                     ) {
-                        Column(
-                            modifier = Modifier.padding(16.dp),
-                            verticalArrangement = Arrangement.spacedBy(16.dp)
-                        ) {
-                            categoryProgress.forEach { category ->
-                                TopicProgressRow(category = category)
-                            }
+                        GlobalProgressRow(
+                            heard = grandTotalMastered,
+                            total = grandTotalWords
+                        )
+                        HorizontalDivider(
+                            color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f)
+                        )
+                        categoryProgress.forEach { category ->
+                            TopicProgressRow(category = category)
                         }
                     }
                 }
-
-                // 4. BADGES (Compact Row)
-                CompactBadgeRow(xpManager = xpManager)
-
-                Spacer(modifier = Modifier.height(20.dp))
             }
+
+            // 4. BADGES (Compact Row)
+            CompactBadgeRow(xpManager = xpManager)
+
+            Spacer(modifier = Modifier.height(20.dp))
         }
+    }
 //    }//Theme wrapper for dark mode
 }
 
@@ -162,17 +208,32 @@ fun generateNuancedAdvice(
 
     // 1. ONBOARDING
     if (totalXP < 10) {
-        return SmartAdvice("Welcome Aboard!", "Tap any sentence to listen. You get 3 XP for every new sentence.", Icons.Filled.WavingHand, Color(0xFF2196F3)) // Blue
+        return SmartAdvice(
+            "Welcome Aboard!",
+            "Tap any sentence to listen. You get 3 XP for every new sentence.",
+            Icons.Filled.WavingHand,
+            Color(0xFF2196F3)
+        ) // Blue
     }
     if (totalXP < 50) {
-        return SmartAdvice("First Steps", "You're off to a great start. Explore different topics to see what interests you.", Icons.Filled.DirectionsWalk, Color(0xFF2196F3))
+        return SmartAdvice(
+            "First Steps",
+            "You're off to a great start. Explore different topics to see what interests you.",
+            Icons.Filled.DirectionsWalk,
+            Color(0xFF2196F3)
+        )
     }
 
     // 2. THE FINISHER
     val almostDone = categories.find { it.percentage >= 0.85f && !it.isCompleted }
     if (almostDone != null) {
         val remaining = almostDone.total - almostDone.heard
-        return SmartAdvice("Finish Strong!", "You are so close to mastering '${almostDone.title}'. Just $remaining sentences left!", Icons.Filled.Flag, Color(0xFFFF9800)) // Orange
+        return SmartAdvice(
+            "Finish Strong!",
+            "You are so close to mastering '${almostDone.title}'. Just $remaining sentences left!",
+            Icons.Filled.Flag,
+            Color(0xFFFF9800)
+        ) // Orange
     }
 
     // 3. THE STRUGGLER (Weakness)
@@ -184,7 +245,12 @@ fun generateNuancedAdvice(
 
     // 4. THE STREAKER
     if (streak >= 7) {
-        return SmartAdvice("On Fire!", "A $streak-day streak is impressive. Consistency is the secret to fluency.", Icons.Filled.LocalFireDepartment, Color(0xFFFF9800))
+        return SmartAdvice(
+            "On Fire!",
+            "A $streak-day streak is impressive. Consistency is the secret to fluency.",
+            Icons.Filled.LocalFireDepartment,
+            Color(0xFFFF9800)
+        )
     }
 
     // 5. THE DABBLER
@@ -192,18 +258,33 @@ fun generateNuancedAdvice(
     if (activeTopics.size > 3) {
         val bestFocus = activeTopics.maxByOrNull { it.percentage }
         if (bestFocus != null) {
-            return SmartAdvice("Focus Your Efforts", "You have ${activeTopics.size} topics open. Focus on '${bestFocus.title}' to get your next badge.", Icons.Filled.CenterFocusStrong, Color(0xFF9C27B0)) // Purple
+            return SmartAdvice(
+                "Focus Your Efforts",
+                "You have ${activeTopics.size} topics open. Focus on '${bestFocus.title}' to get your next badge.",
+                Icons.Filled.CenterFocusStrong,
+                Color(0xFF9C27B0)
+            ) // Purple
         }
     }
 
     // 6. THE UNTOUCHED
     val untouched = categories.find { !it.isStarted }
     if (untouched != null) {
-        return SmartAdvice("Expand Horizons", "You haven't looked at '${untouched.title}' yet. Learn 5 words from it today.", Icons.Filled.Map, Color(0xFF009688)) // Teal
+        return SmartAdvice(
+            "Expand Horizons",
+            "You haven't looked at '${untouched.title}' yet. Learn 5 words from it today.",
+            Icons.Filled.Map,
+            Color(0xFF009688)
+        ) // Teal
     }
 
     // 7. DEFAULT
-    return SmartAdvice("Keep Going", "You are making steady progress. Daily practice is key to long-term memory.", Icons.Filled.TrendingUp, Color(0xFF4CAF50)) // Green
+    return SmartAdvice(
+        "Keep Going",
+        "You are making steady progress. Daily practice is key to long-term memory.",
+        Icons.Filled.TrendingUp,
+        Color(0xFF4CAF50)
+    ) // Green
 }
 
 // MARK: - Components
@@ -237,8 +318,16 @@ fun SmartCoachCard(title: String, message: String, icon: ImageVector, color: Col
             }
 
             Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text(title, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                Text(message, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(
+                    title,
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    message,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             }
         }
     }
@@ -263,7 +352,12 @@ fun TopicProgressRow(category: CategoryProgress) {
             Spacer(modifier = Modifier.weight(1f))
 
             if (category.isCompleted) {
-                Icon(Icons.Default.CheckCircle, contentDescription = "Done", tint = Color(0xFF4CAF50), modifier = Modifier.size(16.dp))
+                Icon(
+                    Icons.Default.CheckCircle,
+                    contentDescription = "Done",
+                    tint = Color(0xFF4CAF50),
+                    modifier = Modifier.size(16.dp)
+                )
             } else {
                 Text(
                     "${category.heard} / ${category.total}",
@@ -297,11 +391,19 @@ fun CompactBadgeRow(xpManager: XPManager) {
     val xpState by xpManager.state.collectAsState()
 
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Text("Latest Badges", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+        Text(
+            "Latest Badges",
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.Bold
+        )
 
         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
             if (xpState.earnedBadges.isEmpty()) {
-                Text("Start learning to earn badges!", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+                Text(
+                    "Start learning to earn badges!",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = Color.Gray
+                )
             } else {
                 // Show last 3 badges
                 xpState.earnedBadges.takeLast(3).forEach { badgeName ->
@@ -314,8 +416,18 @@ fun CompactBadgeRow(xpManager: XPManager) {
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(4.dp)
                         ) {
-                            Icon(Icons.Default.EmojiEvents, contentDescription = null, tint = Color(0xFFFF9800), modifier = Modifier.size(14.dp))
-                            Text(badgeName, style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
+                            Icon(
+                                Icons.Default.EmojiEvents,
+                                contentDescription = null,
+                                tint = Color(0xFFFF9800),
+                                modifier = Modifier.size(14.dp)
+                            )
+                            Text(
+                                badgeName,
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
                         }
                     }
                 }
@@ -340,17 +452,76 @@ fun ExamCountdownCardObsolete(
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text("Mission: $currentLevelName", style = MaterialTheme.typography.labelLarge, color = Color(0xFFFF9800))
+            Text(
+                "Mission: $currentLevelName",
+                style = MaterialTheme.typography.labelLarge,
+                color = Color(0xFFFF9800)
+            )
             Spacer(modifier = Modifier.height(4.dp))
 
             // Simplified Logic for placeholder
             val remaining = totalWords - masteredWords
             if (remaining <= 0) {
-                Text("Level Complete!", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+                Text(
+                    "Level Complete!",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold
+                )
             } else {
-                Text("$remaining words left", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-                Text("Keep up the pace to finish on time.", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(
+                    "$remaining words left",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    "Keep up the pace to finish on time.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             }
+        }
+    }
+}
+
+@Composable
+fun GlobalProgressRow(heard: Int, total: Int) {
+    val percentage = if (total > 0) heard.toFloat() / total.toFloat() else 0f
+
+    // Color logic: Green if done, Blue otherwise
+    val barColor = if (percentage >= 1f) Color(0xFF4CAF50) else Color(0xFF2196F3)
+
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                text = "Total Progress",
+                style = MaterialTheme.typography.titleMedium, // Slightly larger than Body
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary
+            )
+            Spacer(modifier = Modifier.weight(1f))
+
+            Text(
+                text = "$heard / $total",
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurface
+            )
+        }
+
+        // Thicker Progress Bar for emphasis
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(10.dp) // Thicker than the 6dp topic rows
+                .clip(RoundedCornerShape(5.dp))
+                .background(Color.LightGray.copy(alpha = 0.3f))
+        ) {
+            Box(
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .fillMaxWidth(percentage)
+                    .background(barColor)
+            )
         }
     }
 }

@@ -70,10 +70,10 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
                     categories = state.categories,
                     playbackState = playbackState,
                     googleVoice = state.selectedVoiceName,
-                    cachedAudioWordKeys = state.cachedAudioWordKeys,
+                    //cachedAudioWordKeys = setOf(),//,state.cachedAudioWordKeys,
                     isHeard = { sentence -> viewModel.isHeard(sentence) },
                     playCount = { sentence -> viewModel.playCount(sentence) },
-                    onRowTapped = { word, sentence ->
+                    onRowTapped = { _, sentence ->
                         viewModel.handleTap(sentence.sentence)
                     }
                 )

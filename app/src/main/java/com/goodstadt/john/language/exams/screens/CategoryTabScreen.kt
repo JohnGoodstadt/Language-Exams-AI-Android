@@ -22,8 +22,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
-import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
-import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
@@ -84,10 +82,12 @@ fun CategoryTabScreen(
         if (selectedVoiceName.isNotEmpty()) {
             if (tabIdentifier != null) {
                 // Determine Int tab number from string identifier if needed
-                val tabNum = tabIdentifier.toIntOrNull() ?: 1
-                viewModel.loadContentForTab(tabNum)
+//                val tabNum = tabIdentifier.toIntOrNull() ?: 99
+                val tabNumber = tabIdentifier.filter { it.isDigit() }.toIntOrNull() // from tab1 to 1
+                viewModel.loadContentForTab(tabNumber ?: 1)
             } else if (categoryTitle != null) {
                 // viewModel.loadContentForCategory(categoryTitle) // If you have this
+                //viewModel.loadContentForCategory(categoryTitle, selectedVoiceName)
             }
         } else {
             Timber.i("CategoryTabScreen: selectedVoiceName IS NULL!")
@@ -100,6 +100,7 @@ fun CategoryTabScreen(
             if (event == Lifecycle.Event.ON_RESUME) {
                 viewModel.refreshCacheState(selectedVoiceName)
                 viewModel.connectToBilling()
+                viewModel.onResume()
             } else if (event == Lifecycle.Event.ON_PAUSE) {
                 viewModel.saveDataOnExit()
             }
@@ -207,8 +208,8 @@ fun CategoryTabScreen(
                             .padding(vertical = 8.dp)
                     ) {
                         CacheProgressBar(
-                            cachedCount = state.cachedAudioCount, // Or state.heardSentenceIDs.size
-                            totalCount = state.totalWordsInTab,
+                            cachedCount = state.heardCountOnTab, // Or state.heardSentenceIDs.size
+                            totalCount = state.totalWordsOnTab,
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(horizontal = 64.dp, vertical = 8.dp)
@@ -239,32 +240,29 @@ fun CategoryTabScreen(
                             }
 
                             items(category.words, key = { "${it.id}-${it.word}" }) { wordEntry ->
-                                val sentenceToShow = wordEntry.sentences.firstOrNull()
+                                val sentenceEntry = wordEntry.sentences.firstOrNull()
 
-                                if (sentenceToShow != null) {
+                                if (sentenceEntry != null) {
 
-                                    // ✅ RED DOT LOGIC (History Based)
-                                    // 1. Generate Voice-Agnostic ID
-                                    val contentID = FirebaseAudioService.generateContentID(sentenceToShow.sentence)
-                                    // 2. Check Set provided by ViewModel
-                                   // val isSentenceAlreadyHeard = state.heardSentenceIDs.contains(contentID)
-                                    val isSentenceAlreadyHeard = true
-                                    // Visual cue for download/playing
-                                    val unifiedFilename = FirebaseAudioService.generateUnifiedFilename(sentenceToShow.sentence, selectedVoiceName)
-                                    val isDownloading = state.downloadingSentenceId == unifiedFilename
+//                                    val contentID = FirebaseAudioService.generateContentID(sentenceEntry.sentence)
+                                    //val unifiedFilename = FirebaseAudioService.generateUnifiedFilename(sentenceEntry.sentence, selectedVoiceName)
+                                    //val isDownloading = state.downloadingSentenceId == unifiedFilename
+                                    val isHeard = viewModel.isHeard(sentenceEntry.sentence)
+                                    val playCount = viewModel.getPlayCount(sentenceEntry.sentence)
 
                                     SwipeableVocabRow(
                                         word = wordEntry,
-                                        sentence = sentenceToShow,
-                                        isSentenceAlreadyHeard = true,//sSentenceAlreadyHeard, // Pass correct boolean
-                                        isDownloading = isDownloading,
+                                        sentence = sentenceEntry,
+                                        isSentenceAlreadyHeard = isHeard,
+                                        isDownloading = false,//isDownloading,
                                         recalledWordKeys = state.recalledWordKeys,
 
                                         // ✅ TAP HANDLER (Delegate to ViewModel)
                                         onRowTapped = { w, s ->
                                             // Extract sentence string
-                                            val text = s.sentence
-                                            viewModel.handleSentenceTap(text, category)
+                                            val sentence = s.sentence
+//                                            viewModel.handleSentenceTap(sentence, category)
+                                            viewModel.handleTap(sentence,category)
                                         },
 
                                         onFocus = { viewModel.onFocusClicked(wordEntry) },
@@ -326,7 +324,8 @@ fun CategoryTabScreen(
                                 word = word,
                                 onBottomSheetRowTapped = { w, sentence ->
                                     // Redirect tap from bottom sheet to main VM logic
-                                    viewModel.handleSentenceTap(sentence.sentence, category)
+//                                    viewModel.handleSentenceTap(sentence.sentence, category)
+                                    viewModel.handleTap(sentence.sentence,category)
                                 }
                             )
                         }

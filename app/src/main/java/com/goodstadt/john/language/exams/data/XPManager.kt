@@ -6,6 +6,7 @@ import android.util.Log
 //import com.goodstadt.john.language.exams.models.XpActionType
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -67,6 +68,7 @@ data class DailyStats(
 )
 
 
+
 @Singleton
 class XPManager @Inject constructor(
     @ApplicationContext private val context: Context,
@@ -76,6 +78,7 @@ class XPManager @Inject constructor(
     companion object {
         private const val TAG = "XPManager"
         private const val FILE_NAME = "xp_state_v1.json"
+        private const val DAILY_STATS_FILE = "xp_daily_stats_v1.json"
     }
 
     private val gson = Gson()
@@ -108,6 +111,7 @@ class XPManager @Inject constructor(
 
     init {
         loadFromDisk()
+        loadDailyStatsFromDisk()
     }
 
     // MARK: - Public API
@@ -140,8 +144,11 @@ class XPManager @Inject constructor(
             stats.xpGained += delta
             stats.actionCount += 1
 
+
             // 6. Save & Emit
+            saveDailyStatsToDisk()
             saveToDisk(currentState)
+
             _state.value = currentState
         }
     }
@@ -417,6 +424,33 @@ class XPManager @Inject constructor(
             list.add(stats)
         }
         return list
+    }
+    // MARK: - Daily Stats Persistence
+
+    private fun saveDailyStatsToDisk() {
+        scope.launch {
+            try {
+                val jsonString = gson.toJson(dailyStats)
+                val file = File(context.filesDir, DAILY_STATS_FILE)
+                file.writeText(jsonString)
+            } catch (e: Exception) {
+                Log.e(TAG, "Failed to save Daily Stats", e)
+            }
+        }
+    }
+
+    private fun loadDailyStatsFromDisk() {
+        try {
+            val file = File(context.filesDir, DAILY_STATS_FILE)
+            if (file.exists()) {
+                val jsonString = file.readText()
+                // Use TypeToken to deserialize a Map
+                val type = object : TypeToken<MutableMap<String, DailyStats>>() {}.type
+                dailyStats = gson.fromJson(jsonString, type)
+            }
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to load Daily Stats", e)
+        }
     }
     // MARK: - Debugging
 

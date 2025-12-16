@@ -4,12 +4,12 @@ package com.goodstadt.john.language.exams.viewmodels
 import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
-import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
@@ -21,7 +21,7 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.utils.CategoryProgress
-import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -31,15 +31,16 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import timber.log.Timber
 import javax.inject.Inject
 
 sealed interface CategoryTabUiState {
     object Loading : CategoryTabUiState
     data class Success(
         val categories: List<Category>,
-        val totalWordsInTab: Int,
-        val cachedAudioCount: Int, // Still needed for the Progress Bar
+        val currentTabNumber: Int = 1,
+        val totalWordsOnTab: Int,
+        val heardCountOnTab: Int, // Still needed for the Progress Bar
         // ❌ REMOVED: val heardSentenceIDs: Set<String>
         val downloadingSentenceId: String? = null,
         val playbackState: PlaybackState = PlaybackState.Idle,
@@ -75,6 +76,9 @@ class CategoryTabViewModel @Inject constructor(
     private val _uiEvent = MutableSharedFlow<UiEvent>()
     val uiEvent: SharedFlow<UiEvent> = _uiEvent.asSharedFlow()
 
+    private val _isPremiumUser = MutableStateFlow(false)
+    val isPremiumUser = _isPremiumUser.asStateFlow()
+    
     // Rate Limit State
     private val _showRateLimitSheet = MutableStateFlow(false)
     val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
@@ -87,8 +91,9 @@ class CategoryTabViewModel @Inject constructor(
     private var currentLoadedLevel: String = "B1"
 
     init {
-        observeHistoryChanges()
+        observeHistoryChanges() //do I need this now?
         observeRecallingChanges()
+        initializeBilling()
     }
 
     // MARK: - Reactive Listeners
@@ -96,7 +101,7 @@ class CategoryTabViewModel @Inject constructor(
     private fun observeHistoryChanges() {
         viewModelScope.launch {
             // ✅ Listen for History Changes
-            historyManager.historyState.collect { historyMap ->
+            historyManager.historyState.collect { _ ->
 
                 // When History updates, we update the timestamp to force the View to redraw.
                 // We also recalculate the 'cachedAudioCount' for the progress bar.
@@ -105,10 +110,13 @@ class CategoryTabViewModel @Inject constructor(
 
                         // Recalculate progress bar count on the fly
                         // (This is cheaper than building the whole Set<String>)
-                        val (heard, _) = calculateTabStats(currentState.categories, historyMap)
+//                        val (heard, _) = calculateTabStats(currentState.categories, historyMap)
+//                        val heardCount = calculateCurrentHeardCount(currentState.categories)
+//                        val (heard, total) = calculateTabSpecificStats(currentState.categories)
 
                         currentState.copy(
-                            cachedAudioCount = heard,
+//                            heardCountOnTab = heard,
+//                            totalWordsOnTab = total,
                             lastUpdate = System.currentTimeMillis() // ⚡ Forces Redraw
                         )
                     } else currentState
@@ -152,15 +160,21 @@ class CategoryTabViewModel @Inject constructor(
                 // Initialize Recalling Set
                 val recalledKeys = recallingRepository.getAllRecalledKeys()
 
+                // ✅ FIX: Calculate the initial Heard Count immediately
+//                val initialHeardCount = calculateCurrentHeardCount(tabCategories)
+                val (heardOnTab, total) = calculateTabSpecificStats(tabCategories)
+
+                Timber.i("loadContentForTab() tabNumber:$tabNumber heardOnTab:$heardOnTab total:$total")
+                Timber.i("")
                 // Initial Stats
                 // Note: We pass 'emptyMap()' initially; the observeHistoryChanges block will
                 // fire immediately after with real data to fill in the correct count.
-                val total = tabCategories.sumOf { it.words.size }
+//                val total = tabCategories.sumOf { it.words.size }
 
                 _uiState.value = CategoryTabUiState.Success(
                     categories = tabCategories,
-                    totalWordsInTab = total,
-                    cachedAudioCount = 0, // Will update via observer instantly
+                    totalWordsOnTab = total,
+                    heardCountOnTab = heardOnTab,
                     recalledWordKeys = recalledKeys
                 )
             }.onFailure { error ->
@@ -175,14 +189,101 @@ class CategoryTabViewModel @Inject constructor(
      * Called by the View during composition.
      * Uses the cached level and HistoryManager to return true/false instantly.
      */
+    private fun refreshUI() {
+        _uiState.update { currentState ->
+            if (currentState is CategoryTabUiState.Success) {
+                currentState.copy(lastUpdate = System.currentTimeMillis())
+            } else currentState
+        }
+    }
     fun isHeard(sentence: String): Boolean {
         val contentID = FirebaseAudioService.generateContentID(sentence)
-        // Uses the cached variable for O(1) access
         return historyManager.isHeard(currentLoadedLevel, contentID)
     }
-
+    fun getPlayCount(sentence:String): Int {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.getPlayCount(currentLoadedLevel, contentID)
+    }
     // MARK: - Playback Logic
+    fun handleTap(sentence: String, category: Category) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
 
+        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+        // This turns the Red Dot ON immediately.
+        didPlayVocabSentence(sentence, category.title, category.tabNumber)
+
+        viewModelScope.launch {
+            val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
+
+            val success = audioPlaybackRepository.playTrackAndGetResult(
+                sentence = sentence,
+                level = levelName,
+                sheetName = "", // Main tabs aggregate by Level, not SheetName
+                isPremiumUser = isPremiumUser.value // Replace with actual check if available
+            )
+
+            if (success) {
+                _uiState.update { currentState ->
+                    if (currentState is CategoryTabUiState.Success) {
+                        currentState.copy(
+                            heardCountOnTab = currentState.heardCountOnTab + 1
+                        )
+                    } else currentState
+                }
+            }else{
+                if (!wasAlreadyHeard) {
+                    historyManager.undoMarkSentenceHeard(levelName, contentID)
+                }
+            }
+
+//            if (!success) {
+//                // --- FAILURE: ROLLBACK ---
+//                // A. Revert History (Turn off Red Dot)
+//                // Only if it wasn't heard before (we don't want to remove a legit red dot)
+//
+//            }
+
+            refreshUI()
+
+        }
+
+
+
+    }
+
+    fun onResume() {
+        // If data changed while app was backgrounded (e.g. sync), this ensures we see it
+        refreshUI()
+    }
+    private fun undoPlayReferenceSentenceTODO(sentence: String) {
+        /*
+                val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = ""
+
+        // 1. Revert History (Decrements count)
+        // Ensure you added 'undoMarkSentenceHeard' to HistorySyncManager in the previous steps
+        historyManager.undoMarkSentenceHeard(levelName, contentID)
+
+        // 2. Revert Graph Stats
+        // Since we only call this if !wasAlreadyHeard, we know we definitely incremented the graph.
+        // So we must decrement it back.
+        val currentStats = audioCacheManager.getReferenceStats(sheetName)
+
+        // Safety check to ensure we don't go below 0
+        if (currentStats.heard > 0) {
+            audioCacheManager.updateReferenceStats(
+                key = sheetName,
+                heard = currentStats.heard - 1,
+                total = currentStats.total
+            )
+        }
+
+        // 3. Update UI (Dot disappears)
+        refreshUI()
+         */
+
+    }
     fun onRowTapped(word: Format0Word, sentence: Sentence, category: Category) {
         val sentenceText = sentence.sentence
 
@@ -207,8 +308,7 @@ class CategoryTabViewModel @Inject constructor(
             val wasAlreadyHeard = historyManager.isHeard(currentLoadedLevel, contentID)
 
             // 3. OPTIMISTIC UPDATE
-            // Updates History (Red Dot) and AudioCacheManager (Graph Stats) instantly
-            audioCacheManager.didPlaySentence(sentenceText, category.title, category.tabNumber)
+            didPlayVocabSentence(sentenceText, category.title, category.tabNumber)
 
             // 4. Play Audio (Background / Waterfall)
             val success = audioPlaybackRepository.playTrackAndGetResult(
@@ -240,6 +340,34 @@ class CategoryTabViewModel @Inject constructor(
                 }
             }
         }
+    }
+
+    private fun didPlayVocabSentence(sentence: String, categoryTitle: String, categoryTabNumber: Int) {
+
+        viewModelScope.launch {
+            val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
+            val contentID = FirebaseAudioService.generateContentID(sentence)
+
+            val previousCount = historyManager.getPlayCount(levelName, contentID)
+            val isFirstTime = previousCount == 0
+
+            // 2. Update History (Source of Truth)
+            // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes -- inc heard by 1
+            historyManager.markSentenceHeard(levelName, contentID)
+
+            // 3. Update Graph Stats (If new)
+            if (isFirstTime) {
+                audioCacheManager.updateVocabStats(
+                    categoryTitle = categoryTitle,
+                    tabNumber = categoryTabNumber
+                )
+            }
+
+
+            refreshUI()
+
+        }
+
     }
 
     // MARK: - Internal Stats Helper
@@ -289,18 +417,41 @@ class CategoryTabViewModel @Inject constructor(
     fun refreshCacheState(voiceName: String) {
         historyManager.fetchCloudUpdates()
     }
-
-    fun connectToBilling() {
-        viewModelScope.launch { billingRepository.startConnection() }
-    }
-
     fun saveDataOnExit() {
         historyManager.flushToFirebase()
         xpManager.logSessionDensity()
     }
+    
+    
+    // MARK: - Billing for IAP
+    fun connectToBilling() {
+        viewModelScope.launch { billingRepository.startConnection() }
+    }
 
     fun buyPremiumButtonPressed(activity: Activity) {
         viewModelScope.launch { billingRepository.launchPurchase(activity) }
+    }
+    private fun initializeBilling() {
+        viewModelScope.launch {
+            try {
+                billingRepository.connect()
+                billingRepository.checkPurchases()
+                billingRepository.logCurrentStatus()  // Debug log on init
+            } catch (e: Exception) {
+                Timber.e("${e.message}")
+                FirebaseCrashlytics.getInstance().recordException(Exception("CategoryTabViewModel.initializeBilling().catch. ${e.localizedMessage}"))
+
+            }
+
+            billingRepository.isPurchased.collect { purchasedStatus ->
+                // This block runs AUTOMATICALLY whenever the value in the
+                // BillingRepository's 'isPurchased' flow changes.
+                _isPremiumUser.value = purchasedStatus
+                if (DEBUG) {
+                    billingRepository.logCurrentStatus()
+                }
+            }
+        }
     }
 
     fun hideDailyRateLimitSheet() { _showRateDailyLimitSheet.value = false }
@@ -332,22 +483,23 @@ class CategoryTabViewModel @Inject constructor(
             val voiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
             val contentID = FirebaseAudioService.generateContentID(sentence)
+            val wasAlreadyHeard = historyManager.isHeard(levelName, contentID)
 
             // 3. UI Feedback: Show "Playing" spinner/icon on the row
-            val uiFilename = FirebaseAudioService.generateUnifiedFilename(sentence, voiceName)
-            _uiState.update {
-                if (it is CategoryTabUiState.Success) {
-                    it.copy(playbackState = PlaybackState.Playing(uiFilename))
-                } else it
-            }
+//            val uiFilename = FirebaseAudioService.generateUnifiedFilename(sentence, voiceName)
+//            _uiState.update {
+//                if (it is CategoryTabUiState.Success) {
+//                    it.copy(playbackState = PlaybackState.Playing(uiFilename))
+//                } else it
+//            }
 
             // 4. Capture "Before" State (For Rollback logic)
             // We need to know if the user HAD the red dot before they tapped.
-            val wasAlreadyHeard = historyManager.isHeard(levelName, contentID)
+
 
             // 5. OPTIMISTIC UPDATE (Instant Gratification)
             // This updates History (Red Dot) and AudioCacheManager (Progress Bar) immediately.
-            audioCacheManager.didPlaySentence(
+            audioCacheManager.didPlayVocabSentence(
                 text = sentence,
                 categoryTitle = category.title,
                 categoryTabNumber = category.tabNumber
@@ -396,5 +548,57 @@ class CategoryTabViewModel @Inject constructor(
                 }
             }
         }
+    }
+
+//    private fun calculateCurrentHeardCount(categories: List<Category>): Int {
+//        var count = 0
+//        val level = currentLoadedLevel // e.g. "B1"
+//
+//        for (cat in categories) {
+//            for (word in cat.words) {
+//                val sentence = word.sentences.firstOrNull()?.sentence ?: continue
+//                val contentID = FirebaseAudioService.generateContentID(sentence)
+//
+//                // Check History directly
+//                if (historyManager.isHeard(level, contentID)) {
+//                    count++
+//                }
+//            }
+//        }
+//        return count
+//    }
+    /**
+     * Calculates stats strictly for the provided list of categories.
+     * Since 'categories' in our State is already filtered by Tab, this gives Tab-specific numbers.
+     */
+    private fun calculateTabSpecificStats(categories: List<Category>): Pair<Int, Int> {
+        var heardCount = 0
+        var totalCount = 0
+
+
+
+        // We use the cached level (e.g. "B1")
+        val level = currentLoadedLevel
+
+        for (category in categories) {
+            // 1. Sum up Total words in this category
+            totalCount += category.words.size
+
+//            if (category.tabNumber != tabNumber) {
+//                continue
+//            }
+            // 2. Sum up Heard words in this category
+            for (word in category.words) {
+                val sentence = word.sentences.firstOrNull()?.sentence ?: continue
+                val contentID = FirebaseAudioService.generateContentID(sentence)
+
+                // Check History
+                if (historyManager.isHeard(level, contentID)) {
+                    heardCount++
+                }
+            }
+        }
+
+        return Pair(heardCount, totalCount)
     }
 }

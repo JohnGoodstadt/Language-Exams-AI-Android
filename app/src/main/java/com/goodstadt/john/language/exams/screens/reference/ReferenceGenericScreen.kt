@@ -53,6 +53,20 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
+    val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME) {
+                // ✅ Ensure red dots are correct when coming back to app
+                viewModel.saveDataOnExit()
+                viewModel.onResume()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
+
     val selectedVoiceName by viewModel.currentVoiceName.collectAsStateWithLifecycle()
     val lazyListState = rememberLazyListState()
     var showSideQuestSheet by remember { mutableStateOf(false) }
@@ -176,18 +190,5 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
         }
     }
 
-    val lifecycleOwner = LocalLifecycleOwner.current
-    DisposableEffect(lifecycleOwner) {
-        val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_PAUSE) {//reliable signal that the user is leaving the screen.
-                viewModel.saveDataOnExit()
-            }
-        }
-        lifecycleOwner.lifecycle.addObserver(observer)
 
-        // This is called when the composable leaves the screen
-        onDispose {
-            lifecycleOwner.lifecycle.removeObserver(observer)
-        }
-    }
 }

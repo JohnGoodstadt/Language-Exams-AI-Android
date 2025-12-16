@@ -86,19 +86,23 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                     val googleVoice = "en-GB-Neural2-C"
                     val uniqueSentenceId = generateUniqueSentenceId(result.word, result.word.sentences.first(),googleVoice)
 
+                    val isHeard = viewModel.isHeard(displayData.sentence)
+                    val playCount = viewModel.getPlayCount(displayData.sentence)
+
                     val isPlaying = playbackState is PlaybackState.Playing &&
                             (playbackState as PlaybackState.Playing).sentenceId == uniqueSentenceId
 
                     // We can reuse the VocabRow from the other screen
-                    Column(modifier = Modifier.clickable { viewModel.playTrack(result) }) {
+                    Column(modifier = Modifier.clickable {
+                        viewModel.playTrack(result) })
+                    {
                         HighlightedWordInSentenceRow(
                             word = result.word.word,
                             parts = displayData.parts,
                             sentence = displayData.sentence,
                             isRecalling = false,
-                            displayDot = false,
-                            playCount = 0,
-                            //cachedAudioWordKeys = setOf(),
+                            displayDot = isHeard,
+                            playCount = playCount,
                             isDownloading = false//isPlaying
                         )
                     }

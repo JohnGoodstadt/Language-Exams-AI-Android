@@ -75,4 +75,9 @@ class MyProgressViewModel @Inject constructor(
 
     fun getAudioCacheManager(): AudioCacheManager = audioCacheManager
     fun getXpManager(): XPManager = xpManager
+    fun calculateGrandTotals(): Pair<Int, Int> {
+        val heard = audioCacheManager.totalExamWordsHeardOverall.value
+        val total = audioCacheManager.totalExamWordCount.value
+        return Pair(heard, total)
+    }
 }

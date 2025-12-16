@@ -23,6 +23,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.screens.shared.AIWriterCard
 import com.goodstadt.john.language.exams.screens.shared.BadgeShowcaseSection
+import com.goodstadt.john.language.exams.screens.shared.GlobalProgressRow
 import com.goodstadt.john.language.exams.screens.shared.QuickReferenceRow
 import com.goodstadt.john.language.exams.screens.shared.QuizMasteryCard
 import com.goodstadt.john.language.exams.screens.shared.ReferenceGroupCard
@@ -88,7 +89,15 @@ fun MyProgressScreen(
 
                // ConsistencyHeatmap(xpManager = viewModel.getAudioCacheManager()) // *Need to pass XPManager or expose stats
 
-                LifetimeStatsGrid(xpState = state.xpState)
+                //LifetimeStatsGrid(xpState = state.xpState)
+                LifetimeStatsGrid(
+                    totalXP = state.xpState.levels.values.sumOf { it.xp },
+                    badges = state.xpState.earnedBadges.size,
+                    longestStreak = state.xpState.longestStreak,
+                    gems = state.xpState.gems,
+                    // Extract the simple status name (e.g. "Super User")
+                    userStatus = "Learner" // Or derive from logic: xpManager.userType().name
+                )
 //
 //                LifetimeStatsGrid(
 //                    totalXP = state.xpState.levels.values.sumOf { it.xp },
@@ -106,6 +115,11 @@ fun MyProgressScreen(
 
                 if (state.mainQuestProgress.isNotEmpty()) {
                     // Reusing the TopicMastery Row logic but inside a Card
+                    val (grandTotalMastered, grandTotalWords) = viewModel.calculateGrandTotals()
+                    GlobalProgressRow(
+                        heard = grandTotalMastered,
+                        total = grandTotalWords
+                    )
                     Card(
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                         shape = RoundedCornerShape(16.dp)

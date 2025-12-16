@@ -97,7 +97,7 @@ class AudioCacheManager @Inject constructor(
 
     // MARK: - Public API for Views
 
-    fun getStats(forCategoryTitle: String): CategoryStats {
+    fun getVocabStats(forCategoryTitle: String): CategoryStats {
         val h = categoryHeardCounts[forCategoryTitle] ?: 0
         val t = categoryTotalCounts[forCategoryTitle] ?: 0
         return CategoryStats(heard = h, total = t)
@@ -123,7 +123,7 @@ class AudioCacheManager @Inject constructor(
      * Call this when a sentence starts playing (Local or Cloud).
      * Updates Disk Cache List and triggers History update.
      */
-    fun didPlaySentence(text: String, categoryTitle: String, categoryTabNumber: Int) {
+    fun didPlayVocabSentence(text: String, categoryTitle: String, categoryTabNumber: Int) {
         scope.launch {
             // 1. Update Disk Cache List (Voice Specific)
             val voice = _currentVoicePrefix.value
@@ -247,7 +247,37 @@ class AudioCacheManager @Inject constructor(
             }
         }
     }
+// MARK: - Vocab Stats Sync (Tabs 1, 2, 3)
 
+    /**
+     * Updates the counters for Main Exam vocabulary.
+     * Call this ONLY if the sentence is "New" (First time hearing).
+     */
+    fun updateVocabStats(categoryTitle: String, tabNumber: Int) {
+        scope.launch {
+            mutex.withLock {
+                val title = categoryTitle.trim()
+
+                // 1. Increment Category Count
+                // (Used for the Topic Mastery list)
+                categoryHeardCounts[title] = (categoryHeardCounts[title] ?: 0) + 1
+
+                // 2. Increment Global Count
+                // (Used for the main progress bar and Lifetime stats)
+                _totalExamWordsHeardOverall.value += 1
+
+                // 3. Increment Tab Count
+                // (Used for the specific Tab 1/2/3 progress bar)
+                TabNumberEnum.fromInt(tabNumber)?.let { tab ->
+                    val newMap = _totalExamWordHeardCount.value.toMutableMap()
+                    newMap[tab] = (newMap[tab] ?: 0) + 1
+                    _totalExamWordHeardCount.value = newMap
+                }
+
+                Timber.tag("AudioCacheManager").d("📈 Vocab Stats Updated: $title (+1)")
+            }
+        }
+    }
     fun getReferenceStats(key: String): ReferenceStats {
         val h = _referenceHeardCounts.value[key] ?: 0
         val t = referenceTotalCounts[key] ?: 0

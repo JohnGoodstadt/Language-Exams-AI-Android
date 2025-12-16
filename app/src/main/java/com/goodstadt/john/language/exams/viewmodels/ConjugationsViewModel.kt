@@ -42,7 +42,7 @@ sealed interface ConjugationsUiState {
 //    val currentSheetName:String
     data class Success(
         val categories: List<Category>,
-        val cachedAudioWordKeys: Set<String>,
+//        val cachedAudioWordKeys: Set<String>,
         val currentSheetName : String = "",
         val selectedVoiceName: String = "", // TODO: do I need this?
         val lastUpdate: Long = System.currentTimeMillis()
@@ -135,7 +135,7 @@ class ConjugationsViewModel @Inject constructor(
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
                 val cachedKeys = vocabRepository.getSentenceKeysWithCachedAudio(vocabFile.categories, currentVoiceName)
 
-                _uiState.value = ConjugationsUiState.Success(vocabFile.categories,cachedKeys, selectedVoiceName = currentVoiceName, currentSheetName = firestore_sheet_name)
+                _uiState.value = ConjugationsUiState.Success(vocabFile.categories, selectedVoiceName = currentVoiceName, currentSheetName = firestore_sheet_name)
             }.onFailure { error ->
                 _uiState.value =
                     ConjugationsUiState.Error(error.localizedMessage ?: "Failed to load file $bundle_file_name")
@@ -204,14 +204,14 @@ class ConjugationsViewModel @Inject constructor(
 
 
 
-            _uiState.update { currentState ->
-                if (currentState is ConjugationsUiState.Success) {
-                    val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId(word, sentence, currentVoiceName)//word.word
-                    currentState.copy(cachedAudioWordKeys = updatedKeys)
-                } else {
-                    currentState
-                }
-            }
+//            _uiState.update { currentState ->
+//                if (currentState is ConjugationsUiState.Success) {
+//                    val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId(word, sentence, currentVoiceName)//word.word
+//                    currentState.copy(cachedAudioWordKeys = updatedKeys)
+//                } else {
+//                    currentState
+//                }
+//            }
 
             val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
 

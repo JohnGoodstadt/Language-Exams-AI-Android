@@ -58,7 +58,7 @@ fun SwipeableVocabRow(
     word: Format0Word,
     sentence: Sentence,
     isSentenceAlreadyHeard: Boolean, // ✅ Driven by HistorySyncManager
-    isDownloading: Boolean,
+    isDownloading: Boolean = false,
     recalledWordKeys: Set<String>,
     onRowTapped: (Format0Word, Sentence) -> Unit,
     onFocus: () -> Unit,
@@ -68,7 +68,6 @@ fun SwipeableVocabRow(
 ) {
 
     val isRecalling = recalledWordKeys.contains(word.word)
-   // val displayDot = cachedAudioWordKeys.contains(word.word)
 
     // --- CHANGE 1: Use the new state remember function ---
     val dismissState = rememberSwipeToDismissBoxState(
@@ -136,8 +135,6 @@ fun SwipeableVocabRow(
                 isRecalling = isRecalling,
                 displayDot = isSentenceAlreadyHeard,
                 playCount = 0,
-//                cachedAudioWordKeys ,
-                //wordCount = 0,
                 isDownloading = isDownloading
             )
         }
