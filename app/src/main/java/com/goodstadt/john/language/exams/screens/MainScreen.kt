@@ -3,6 +3,8 @@ package com.goodstadt.john.language.exams.screens
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -43,6 +45,8 @@ import com.goodstadt.john.language.exams.data.UpdateState
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CloudOff
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.screens.me.ChooseEnglishAndExamSheet
 import com.goodstadt.john.language.exams.screens.reference.ReferenceTabContainerScreen
 import timber.log.Timber
@@ -83,7 +87,8 @@ fun MainScreen() {
             // The entire Scaffold and NavHost goes inside here
             MainAppContent(
                 navController = navController,
-                selectedVoiceName = globalUiState.selectedVoiceName
+                selectedVoiceName = globalUiState.selectedVoiceName,
+                //loadingManager
             )
         }
     }
@@ -119,6 +124,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
     val mainViewModel: MainViewModel = hiltViewModel()
     val globalUiState by mainViewModel.uiState.collectAsState()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true) // Make it non-dismissible by swiping
+//    val isLoading by loadingManager.isShowingGlobalLoading.collectAsStateWithLifecycle()
 
     Scaffold(
         bottomBar = {
@@ -221,7 +227,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
 
 
         }
-    }
+    } //: Scaffold
 
     if (globalUiState.showEnglishChoiceSheet) {
         ModalBottomSheet(
@@ -238,6 +244,18 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
                 }
             )
 
+        }
+    }
+    if (false) {
+        // A semi-transparent black background that blocks clicks
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Black.copy(alpha = 0.4f))
+                .clickable(enabled = false) {}, // Block touch events
+            contentAlignment = Alignment.Center
+        ) {
+            CircularProgressIndicator(color = Color.White)
         }
     }
 

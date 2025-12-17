@@ -32,23 +32,13 @@ import removeContentInBracketsAndTrim
 @Composable
 fun SimpleSectionedVocabList(
     data: List<Category>,
-    selectedVoiceName: String,
-
-    // ✅ CHANGED: Functional check instead of a Set
-    // The parent passes { viewModel.isHeard(it) }
     isHeard: (String) -> Boolean,
     playCount: (String) -> Int,
-    recalledWordKeys: Set<String>,
-    playbackState: PlaybackState,
-    downloadingSentenceId: String?,
     listState: LazyListState = rememberLazyListState(),
     contentPadding: PaddingValues = PaddingValues(0.dp),
 
     // Actions
     onRowTapped: (Format0Word, Sentence, Category) -> Unit,
-    onFocus: (Format0Word) -> Unit,
-    onCancel: (Format0Word) -> Unit,
-    onMore: (Format0Word, Category) -> Unit,
     onSideQuestTapped: () -> Unit
 ) {
     LazyColumn(

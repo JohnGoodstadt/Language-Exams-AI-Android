@@ -13,6 +13,7 @@ import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
@@ -68,7 +69,8 @@ class CategoryTabViewModel @Inject constructor(
     private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
     private val xpManager: XPManager,
-    private val billingRepository: BillingRepository
+    private val billingRepository: BillingRepository,
+    private val loadingManager: GlobalLoadingManager
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<CategoryTabUiState>(CategoryTabUiState.Loading)
@@ -227,13 +229,20 @@ class CategoryTabViewModel @Inject constructor(
 
         viewModelScope.launch {
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
-
+            val loadingJob = launch {
+                delay(2000) // Wait 1 second
+                // If we haven't been cancelled yet, show the spinner
+                loadingManager.show()
+            }
             val success = audioPlaybackRepository.playTrackAndGetResult(
                 sentence = sentence,
                 level = levelName,
                 sheetName = "", // Main tabs aggregate by Level, not SheetName
                 isPremiumUser = isPremiumUser.value // Replace with actual check if available
             )
+
+            loadingJob.cancel() // ✅ Cancel the 1s timer if it's still running
+            loadingManager.hide() // ✅ Hide the spinner if it was showing
 
             if (success) {
                 _uiState.update { currentState ->
@@ -425,8 +434,6 @@ class CategoryTabViewModel @Inject constructor(
     fun onFocusClicked(word: Format0Word) {
         viewModelScope.launch {
             recallingRepository.addWord(word)
-            // Local update optional as we observe the flow
-            xpManager.registerAction(XpActionType.MasterWord)
         }
     }
 

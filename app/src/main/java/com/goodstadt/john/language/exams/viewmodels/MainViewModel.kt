@@ -10,6 +10,7 @@ import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UpdateState
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.utils.AppLifecycleObserver
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -48,8 +49,11 @@ class MainViewModel @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
     private val connectivityRepository: ConnectivityRepository,
+    private val loadingManager: GlobalLoadingManager
 //    private val billingRepository: BillingRepository,
 ) : ViewModel() {
+
+    val isGlobalLoading = loadingManager.isShowingGlobalLoading
 
     private val _uiState = MutableStateFlow(GlobalUiState())
     val uiState = _uiState.asStateFlow()

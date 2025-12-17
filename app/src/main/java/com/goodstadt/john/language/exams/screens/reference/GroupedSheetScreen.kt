@@ -75,29 +75,14 @@ fun GroupedSheetScreen(
 
                 SimpleSectionedVocabList(
                     data = contentState.categories,
-                    selectedVoiceName = "selectedVoiceName",
-
-                    // The Direct Check (History)
                     isHeard = { sentence -> viewModel.isHeard(sentence) },
                     playCount = { sentence -> viewModel.getPlayCount(sentence) },
-                    // Reference screens usually don't use "Focus/Recalling", so empty
-                    recalledWordKeys = emptySet(),
-                    playbackState = PlaybackState.Idle,
-
-                    // Generic VM doesn't usually track specific download IDs, passed null
-                    downloadingSentenceId = null,
-
                     listState = lazyListState,
                     contentPadding = PaddingValues(bottom = 80.dp),
 
                     // ACTIONS
                     onRowTapped = { word, sentence, category ->
                         viewModel.handleTap(sentence.sentence)
-                    },
-                    onFocus = { /* No-op for generic reference */ },
-                    onCancel = { /* No-op for generic reference */ },
-                    onMore = { word, category ->
-                        // Add bottom sheet logic here if you want word details
                     },
                     onSideQuestTapped = {
                         showSideQuestSheet = true

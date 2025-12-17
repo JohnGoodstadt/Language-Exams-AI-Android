@@ -90,34 +90,16 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
 //            }
 //        }
         is GenericVocabUiState.Success -> {
-            // The existing SectionedVocabList works perfectly, as it just needs a list of categories
-//            SectionedVocabList(
             SimpleSectionedVocabList(
                 data = state.categories,
-                selectedVoiceName = "selectedVoiceName",
-
-                // The Direct Check (History)
                 isHeard = { sentence -> viewModel.isHeard(sentence) },
                 playCount = { sentence -> viewModel.playCount(sentence) },
-                // Reference screens usually don't use "Focus/Recalling", so empty
-                recalledWordKeys = emptySet(),
-
-                playbackState = state.playbackState,
-
-                // Generic VM doesn't usually track specific download IDs, passed null
-                downloadingSentenceId = null,
-
                 listState = lazyListState,
                 contentPadding = PaddingValues(bottom = 80.dp),
 
                 // ACTIONS
-                onRowTapped = { word, sentence, category ->
+                onRowTapped = { _, sentence, _ ->
                     viewModel.handleTap(sentence.sentence)
-                },
-                onFocus = { /* No-op for generic reference */ },
-                onCancel = { /* No-op for generic reference */ },
-                onMore = { word, category ->
-                    // Add bottom sheet logic here if you want word details
                 },
                 onSideQuestTapped = {
                     showSideQuestSheet = true
