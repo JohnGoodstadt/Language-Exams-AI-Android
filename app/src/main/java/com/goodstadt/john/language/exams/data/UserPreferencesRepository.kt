@@ -48,12 +48,34 @@ class UserPreferencesRepository @Inject constructor(
         val PREPOSITIONS_LOCAL_VERSION = intPreferencesKey("prepositions_local_version")
         val APP_INSTALL_DATE = longPreferencesKey("app_install_date")
         val EXAM_NAME = stringPreferencesKey("currentExamJSONName")
+        val HAS_SEEN_HELP_SHEET = booleanPreferencesKey("has_seen_help_sheet_v1")
     }
 
     /**
      * A Flow that emits the currently selected file name whenever it changes.
      * It provides the flavor-specific default if no value is set.
      */
+
+// In UserPreferencesRepository.kt
+
+
+
+    // Read Flow
+    val hasSeenHelpSheetFlow: Flow<Boolean> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.HAS_SEEN_HELP_SHEET] ?: false
+        }
+
+    // Write Function
+    suspend fun setHasSeenHelpSheet(hasSeen: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.HAS_SEEN_HELP_SHEET] = hasSeen
+        }
+    }
+
+
+
     val selectedFileNameFlow: Flow<String> = context.dataStore.data
         .map { preferences ->
             preferences[PreferenceKeys.SELECTED_FILE_NAME] ?: LanguageConfig.defaultFileName

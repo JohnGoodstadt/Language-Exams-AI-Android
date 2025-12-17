@@ -29,10 +29,9 @@ import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0Word
-import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
+import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
-import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 
 /*

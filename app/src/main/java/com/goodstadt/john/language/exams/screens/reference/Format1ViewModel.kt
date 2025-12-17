@@ -1,206 +1,206 @@
 package com.goodstadt.john.language.exams.screens.reference
 
-
-import android.app.Activity
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.data.repository.BillingRepository
-import com.goodstadt.john.language.exams.data.ConnectivityRepository
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
-import com.goodstadt.john.language.exams.data.repository.PlaybackResult
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
-import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
-import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 
-// 1. Define the UI State for this specific screen.
-// A sealed interface is the best practice for representing distinct states.
 sealed interface Format1UiState {
     object Loading : Format1UiState
     data class Success(
         val data: List<HeaderWordsSentencesList>,
         val playbackState: PlaybackState = PlaybackState.Idle,
+        val lastUpdate: Long = System.currentTimeMillis()
     ) : Format1UiState
     data class Error(val message: String) : Format1UiState
 }
 
 @HiltViewModel
 class Format1ViewModel @Inject constructor(
-//    private val vocabRepository: ContentRepository,
     private val contentRepository: ContentRepository,
-    private val userPreferencesRepository: UserPreferencesRepository,
-    private val connectivityRepository: ConnectivityRepository,
-    private val rateLimiter: SimpleRateLimiter,
-    private val ttsStatsRepository: TTSStatsRepository,
-    private val billingRepository: BillingRepository,
+    private val audioPlaybackRepository: AudioPlaybackRepository,
+    private val historyManager: HistorySyncManager,
+    private val audioCacheManager: AudioCacheManager,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
+    private val sheetName: String = savedStateHandle.get<String>("documentId")!!
     private val _uiState = MutableStateFlow<Format1UiState>(Format1UiState.Loading)
     val uiState = _uiState.asStateFlow()
 
-    private val _isPremiumUser = MutableStateFlow(false)
-    val isPremiumUser = _isPremiumUser.asStateFlow()
-
-    private val _showRateLimitSheet = MutableStateFlow(false)
-    val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
-
-    private val _showRateDailyLimitSheet = MutableStateFlow(false)
-    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
-
-    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
-    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
-
-    // 3. Get the documentId from the navigation arguments via SavedStateHandle.
-    //    The key "documentId" MUST match the argument name in your NavHost route.
-    private val documentId: String = savedStateHandle.get<String>("documentId")!!
-
     init {
-        // 4. Trigger the data loading process as soon as the ViewModel is created.
         loadData()
     }
+
     private fun loadData() {
         viewModelScope.launch {
             _uiState.value = Format1UiState.Loading
 
-            // ✅ SIMPLIFIED: All the complex logic is gone.
-            // We just make one simple, type-safe call to our orchestrator.
-            val result = contentRepository.getFormat1Data(documentId)
+            // 1. Load Content
+            val result = contentRepository.getFormat1Data(sheetName)
 
             result.onSuccess { format1File ->
-                _uiState.value = Format1UiState.Success(format1File.data)
-            }
-            result.onFailure { error ->
-                _uiState.value = Format1UiState.Error(error.localizedMessage ?: "Failed to load content")
+
+                // Initialize Graph Stats logic (Totals)
+                val allSentences = format1File.data.flatMap { it.wordsAndSentences }.map { it.sentence }
+                audioCacheManager.recalculateReferenceStats(sheetName,allSentences)
+
+                // Set Initial Success State
+                _uiState.value = Format1UiState.Success(data = format1File.data)
+
+                // 2. ✅ LISTEN FOR HISTORY CHANGES
+                // When History updates (e.g. after a tap), we update 'lastUpdate'.
+                // This forces the Screen to recompose and call 'isHeard()' again.
+//                historyManager.historyState.collect {
+//                    _uiState.update { currentState ->
+//                        if (currentState is Format1BUiState.Success) {
+//                            currentState.copy(lastUpdate = System.currentTimeMillis())
+//                        } else currentState
+//                    }
+//                }
+            }.onFailure { error ->
+                _uiState.value = Format1UiState.Error(error.localizedMessage ?: "Failed to load")
             }
         }
     }
-    fun playTrack(sentence: String) {
-        val currentState = _uiState.value
-        if (currentState !is Format1UiState.Success) return
-        if (currentState.playbackState is PlaybackState.Playing) return
-        if (!connectivityRepository.isCurrentlyOnline()) return
+
+
+
+    // ✅ HELPER: View calls this directly during rendering
+    fun isHeard(sentence: String): Boolean {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        Timber.i("Play Count:${historyManager.getPlayCount("Reference", contentID) } $sentence")
+        return historyManager.getPlayCount("Reference", contentID) > 0
+    }
+    fun getPlayCount(sentence:String): Int {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        return historyManager.getPlayCount("Reference", contentID)
+    }
+
+    // ✅ ACTION: View calls this on tap
+    fun handleTap(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+
+        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+        // This turns the Red Dot ON immediately.
+        didPlayReferenceSentence(sentence)
 
         viewModelScope.launch {
-
-            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
-                if (rateLimiter.doIForbidCall()) {
-                    val failType = rateLimiter.canMakeCallWithResult()
-                    Timber.v("${failType.canICallAPI}")
-                    Timber.v("${failType.failReason}")
-                    Timber.v("${failType.timeLeftToWait}")
-                    if (!failType.canICallAPI) {
-                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
-                            _showRateDailyLimitSheet.value = true
-                        } else {
-                            _showRateHourlyLimitSheet.value = true
-                        }
-                    } else {
-                        _showRateLimitSheet.value = true
-                    }
-
-                    return@launch
-                }
-            }
-
-
-
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-//            val currentVoiceName = _uiState.value.selectedVoiceName
-            val uniqueSentenceId = generateUniqueSentenceId(sentence, currentVoiceName)
-
-            _uiState.update {
-                if (it is Format1UiState.Success) {
-                    it.copy(playbackState = PlaybackState.Playing(uniqueSentenceId))
-                } else it
-            }
-
-            val played = contentRepository.playFromCacheIfFound(uniqueSentenceId)
-            if (played) {//short cut so user cna play cached sentences with no Internet connection
-                _uiState.update {
-                    if (it is Format1UiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
-                }
-                ttsStatsRepository.updateTTSStatsWithoutCosts()
-                return@launch
-            }
-
-
-//            _uiState.update {
-//                if (it is Format1UiState.Success) {
-//                    val updatedKeys = it.cachedAudioWordKeys + uniqueSentenceId
-//                    it.copy(cachedAudioWordKeys = updatedKeys)
-//                } else it
-//            }
-
-            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
-
-            val result = contentRepository.playTextToSpeech(
-                text = sentence,
-                uniqueSentenceId = uniqueSentenceId,
-                voiceName = currentVoiceName,
-                languageCode = currentLanguageCode
+            // 1. Play Audio (Waterfall)
+            val success = audioPlaybackRepository.playTrackAndGetResult(
+                sentence = sentence,
+                level = "Reference",
+                sheetName = sheetName
             )
 
-            when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    if (todayIsNotAFreePassDay){
-                        rateLimiter.recordCall()
-                    }
-                    Timber.v(rateLimiter.printCurrentStatus)
-                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-//                    ttsStatsRepository.incWordStats(word)
-                    //TODO: not inc but update!
-                    ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
-                }
+            // 2. Update Graph Stats (If success)
+            if (!success) {
+                Timber.w("Playback failed. Rolling back Red Dot.")
 
-                is PlaybackResult.PlayedFromCache -> {
-                    ttsStatsRepository.updateTTSStatsWithoutCosts()
-                }
-
-                is PlaybackResult.Failure -> {
-                    _uiState.update {
-                        if (it is Format1UiState.Success) {
-                            it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed"))
-                        } else it
-                    }
-                }
-
-                PlaybackResult.CacheNotFound -> {
-                    Timber.e("Cache found to exist but not played")
+                // Only undo if it wasn't there before this specific tap
+                if (!wasAlreadyHeard) {
+                    undoPlayReferenceSentence(sentence)
                 }
             }
+            historyManager.debugPrintAllHistory()
+        }
 
-            _uiState.update {
-                if (it is Format1UiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
-            }
+    }
+
+
+    private fun didPlayReferenceSentence(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = "Reference"
+
+        // 1. Check Previous Count
+        val previousCount = historyManager.getPlayCount(levelName, contentID)
+        val isFirstTime = previousCount == 0
+
+        // 2. Update History (Source of Truth)
+        // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes -- inc heard by 1
+        historyManager.markSentenceHeard(levelName, contentID)
+
+        // 3. Update Graph Stats (If new)
+        if (isFirstTime) {
+            val sheetTitle = sheetName
+            val currentStats = audioCacheManager.getReferenceStats(sheetTitle)
+            audioCacheManager.updateReferenceStats(
+                key = sheetTitle,
+                heard = currentStats.heard + 1,
+                total = currentStats.total
+            )
+        }
+
+        refreshUI()
+    }
+    private fun refreshUI() {
+        _uiState.update { currentState ->
+            if (currentState is Format1UiState.Success) {
+                currentState.copy(lastUpdate = System.currentTimeMillis())
+            } else currentState
         }
     }
-    fun hideDailyRateLimitSheet(){
-        _showRateDailyLimitSheet.value = false
+    fun onResume() {
+        // If data changed while app was backgrounded (e.g. sync), this ensures we see it
+        refreshUI()
     }
-    fun hideHourlyRateLimitSheet(){
-        _showRateHourlyLimitSheet.value = false
-    }
-    fun hideRateOKLimitSheet(){
-        _showRateLimitSheet.value = false
-    }
-    fun buyPremiumButtonPressed(activity: Activity) {
-        Timber.i("purchasePremium()")
-        viewModelScope.launch {
-            billingRepository.launchPurchase(activity)
+    private fun undoPlayReferenceSentence(sentence: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val levelName = "Reference"
+
+        // 1. Revert History (Decrements count)
+        // Ensure you added 'undoMarkSentenceHeard' to HistorySyncManager in the previous steps
+        historyManager.undoMarkSentenceHeard(levelName, contentID)
+
+        // 2. Revert Graph Stats
+        // Since we only call this if !wasAlreadyHeard, we know we definitely incremented the graph.
+        // So we must decrement it back.
+        val currentStats = audioCacheManager.getReferenceStats(sheetName)
+
+        // Safety check to ensure we don't go below 0
+        if (currentStats.heard > 0) {
+            audioCacheManager.updateReferenceStats(
+                key = sheetName,
+                heard = currentStats.heard - 1,
+                total = currentStats.total
+            )
         }
+
+        // 3. Update UI (Dot disappears)
+        refreshUI()
     }
+    // ... recalculateReferenceStats helper ...
+    // MARK: - Internal Helpers
+// MARK: - Public Accessors for View
+
+    fun getAudioCacheManager(): AudioCacheManager {
+        return audioCacheManager
+    }
+
+    fun getAIParagraphCount(): Int {
+        return audioCacheManager.getAIParagraphCount()
+    }
+
+    fun getAIParagraphHeardCount(): Int {
+        return audioCacheManager.getAIParagraphHeardCount()
+    }
+    /**
+     * Loops through the loaded data, checks History for each sentence,
+     * and updates the AudioCacheManager stats (Heard/Total) for this sheet.
+     */
+
 }

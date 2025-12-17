@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens
+package com.goodstadt.john.language.exams.screens.shared
 
 
 // In the file containing your SwipeableVocabRow composable

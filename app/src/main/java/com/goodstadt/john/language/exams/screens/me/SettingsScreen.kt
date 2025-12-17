@@ -34,6 +34,7 @@ import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
+import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
@@ -59,6 +60,9 @@ fun SettingsScreen(
     val productDetails by viewModel.productDetails.collectAsState(initial = null)
     val billingError by viewModel.billingError.collectAsState(initial = null)
     val context = LocalContext.current
+
+    val showHelpSheet by viewModel.showHelpSheet.collectAsState()
+    val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
 //test
     LaunchedEffect(Unit) {
@@ -381,6 +385,21 @@ fun SettingsScreen(
         }
     }
 
+    if (showHelpSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { viewModel.dismissHelpSheet() },
+            sheetState = helpSheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            // 3. Set Height to 3/4
+            Box(modifier = Modifier.fillMaxHeight(0.85f)) {
+                HelpInfoSheet(
+                    onDismiss = { viewModel.dismissHelpSheet() }
+                )
+            }
+        }
+    }
     // Main Screen Content
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -520,6 +539,7 @@ fun SettingsScreen(
                     value =  viewModel.debugAppBilling()
                 )
             }
+
         }
 
         if (DEBUG) {
@@ -563,6 +583,16 @@ fun SettingsScreen(
                     currentValue = "(D)",
                     onClick = {
                         viewModel.debugXPManager()
+                    }
+                )
+            }
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.Info,
+                    title = "Show Help Screen (D)",
+                    currentValue = "(D)",
+                    onClick = {
+                        viewModel.debugShowHelpScreen()
                     }
                 )
             }

@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
-import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
+import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.goodstadt.john.language.exams.viewmodels.SearchViewModel
@@ -110,7 +110,6 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
 
                             // We can reuse the VocabRow from the other screen
                             Column(modifier = Modifier.clickable {
-//                        viewModel.playTrack(result) })
                                 viewModel.handleTap(
                                     displayData.sentence,
                                     categoryTitle,

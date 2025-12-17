@@ -228,7 +228,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                                 // When the data is successfully loaded, display your Format1Screen
                                 // and pass it the data from the Success state object.
 //                                Format1BScreen(data = state.data)
-                                Format1BScreen()
+                                Format1Screen()
                             }
 
                             is Format1UiState.Error -> {

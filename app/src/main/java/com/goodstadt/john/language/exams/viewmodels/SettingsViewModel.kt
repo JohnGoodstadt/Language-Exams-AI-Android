@@ -104,6 +104,7 @@ class SettingsViewModel @Inject constructor(
     private val xpManager: XPManager
 ) : ViewModel() {
 
+
     val isPurchased = billingRepository.isPurchased
     val productDetails = billingRepository.productDetails
     val billingError = billingRepository.billingError
@@ -120,6 +121,9 @@ class SettingsViewModel @Inject constructor(
 
     private val _uiEvent = MutableSharedFlow<SettingsUiEvent>()
     val uiEvent = _uiEvent.asSharedFlow()
+
+    private val _showHelpSheet = MutableStateFlow(false)
+    val showHelpSheet = _showHelpSheet.asStateFlow()
 
     init {
 
@@ -672,4 +676,10 @@ class SettingsViewModel @Inject constructor(
         xpManager.debugPrintAllStats()
     }
 
+    fun debugShowHelpScreen() {
+        _showHelpSheet.value = true
+    }
+    fun dismissHelpSheet() {
+        _showHelpSheet.value = false
+    }
 }

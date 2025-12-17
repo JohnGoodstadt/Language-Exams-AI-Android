@@ -23,6 +23,7 @@ import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -89,11 +90,22 @@ class CategoryTabViewModel @Inject constructor(
 
     // Cache the level name for fast synchronous access in isHeard()
     private var currentLoadedLevel: String = "B1"
+    private val _showHelpSheet = MutableStateFlow(false)
+
+    // MARK: - Show Help screen
+    val showHelpSheet = _showHelpSheet.asStateFlow()
+
+    // Internal session counter
+    private var sessionPlayCount = 0
+    private var hasSeenHelp = false
 
     init {
         observeHistoryChanges() //do I need this now?
         observeRecallingChanges()
         initializeBilling()
+        viewModelScope.launch {
+            hasSeenHelp = userPreferencesRepository.hasSeenHelpSheetFlow.first()
+        }
     }
 
     // MARK: - Reactive Listeners
@@ -231,6 +243,7 @@ class CategoryTabViewModel @Inject constructor(
                         )
                     } else currentState
                 }
+                checkHelpTrigger()
             }else{
                 if (!wasAlreadyHeard) {
                     historyManager.undoMarkSentenceHeard(levelName, contentID)
@@ -239,6 +252,30 @@ class CategoryTabViewModel @Inject constructor(
 
             refreshUI()
         }
+    }
+
+    private fun checkHelpTrigger() {
+        if (hasSeenHelp) return // Already seen it forever
+
+        sessionPlayCount++
+
+        if (sessionPlayCount >= 5) {
+            viewModelScope.launch {
+                // 1. Mark as seen in DB immediately so it doesn't trigger again
+                hasSeenHelp = true
+                userPreferencesRepository.setHasSeenHelpSheet(true)
+
+                // 2. Wait a moment so the user isn't overwhelmed instantly after tapping
+                delay(1500) // 1.5 seconds delay
+
+                // 3. Show Sheet
+                _showHelpSheet.value = true
+            }
+        }
+    }
+
+    fun dismissHelpSheet() {
+        _showHelpSheet.value = false
     }
 
     fun onResume() {

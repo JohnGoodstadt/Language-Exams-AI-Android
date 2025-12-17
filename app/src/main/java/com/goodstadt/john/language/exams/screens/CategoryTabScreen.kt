@@ -25,7 +25,9 @@ import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
+import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
+import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
 import com.goodstadt.john.language.exams.screens.shared.VocabGamificationStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
@@ -64,9 +66,12 @@ fun CategoryTabScreen(
     var selectedCategoryForSheet by remember { mutableStateOf<Category?>(null) }
     var showBottomSheet by remember { mutableStateOf(false) }
     val bottomSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    var showHelpBottomSheet by remember { mutableStateOf(false) }
 
     var showGamificationSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val showHelpSheet by viewModel.showHelpSheet.collectAsState()
+    val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // --- Rate Limit Sheets ---
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
@@ -355,7 +360,7 @@ fun CategoryTabScreen(
             // Note: You might need a helper in ViewModel to sum specific tab totals
             val (heard, total) = viewModel.calculateGrandTotals()
 
-            val context = LocalContext.current
+          //  val context = LocalContext.current
             val entryPoint = remember(context) {
                 EntryPointAccessors.fromApplication(
                     context.applicationContext,
@@ -375,6 +380,22 @@ fun CategoryTabScreen(
                 )
             }
 //            }
+        }
+    } //: Gamificatinon sheet
+
+    if (showHelpSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { viewModel.dismissHelpSheet() },
+            sheetState = helpSheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            // 3. Set Height to 3/4
+            Box(modifier = Modifier.fillMaxHeight(0.90f)) {
+                HelpInfoSheet(
+                    onDismiss = { viewModel.dismissHelpSheet() }
+                )
+            }
         }
     }
 }

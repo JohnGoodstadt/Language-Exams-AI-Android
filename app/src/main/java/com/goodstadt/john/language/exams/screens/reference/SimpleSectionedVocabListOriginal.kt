@@ -1,6 +1,5 @@
 package com.goodstadt.john.language.exams.screens.reference
 
-import android.content.res.Configuration
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -16,15 +15,13 @@ import androidx.compose.ui.unit.dp
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0Word
-import com.goodstadt.john.language.exams.screens.HighlightedWordInSentenceRow
+import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
-import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
