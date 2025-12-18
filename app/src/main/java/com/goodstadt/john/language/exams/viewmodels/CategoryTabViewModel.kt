@@ -24,6 +24,7 @@ import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -92,6 +93,7 @@ class CategoryTabViewModel @Inject constructor(
 
     // Cache the level name for fast synchronous access in isHeard()
     private var currentLoadedLevel: String = "B1"
+    private var playbackJob: Job? = null
     private val _showHelpSheet = MutableStateFlow(false)
 
     // MARK: - Show Help screen
@@ -220,14 +222,22 @@ class CategoryTabViewModel @Inject constructor(
     }
     // MARK: - Playback Logic
     fun handleTap(sentence: String, category: Category) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+//        val contentID = FirebaseAudioService.generateContentID(sentence)
+        //val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
 
-        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
-        // This turns the Red Dot ON immediately.
-        didPlayVocabSentence(sentence, category.title, category.tabNumber)
+        //if still playing handle it
+        playbackJob?.cancel()
+        contentRepository.stopPlayback()
+        _uiState.update {
+            if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
+        }
 
-        viewModelScope.launch {
+//        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+//        // This turns the Red Dot ON immediately.
+//        didPlayVocabSentence(sentence, category.title, category.tabNumber)
+
+        // 2. START NEW JOB
+        playbackJob = viewModelScope.launch {
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
             val loadingJob = launch {
                 delay(2000) // Wait 1 second
@@ -241,10 +251,15 @@ class CategoryTabViewModel @Inject constructor(
                 isPremiumUser = isPremiumUser.value // Replace with actual check if available
             )
 
+
             loadingJob.cancel() // ✅ Cancel the 1s timer if it's still running
             loadingManager.hide() // ✅ Hide the spinner if it was showing
 
             if (success) {
+                // 2. ⚡️ NON OPTIMISTIC UPDATE (Lightning). Now that playback is async
+                // This turns the Red Dot ON immediately.
+                didPlayVocabSentence(sentence, category.title, category.tabNumber)
+
                 _uiState.update { currentState ->
                     if (currentState is CategoryTabUiState.Success) {
                         currentState.copy(
@@ -252,12 +267,21 @@ class CategoryTabViewModel @Inject constructor(
                         )
                     } else currentState
                 }
+
+
                 checkHelpTrigger()
             }else{
-                if (!wasAlreadyHeard) {
-                    historyManager.undoMarkSentenceHeard(levelName, contentID)
+                // ❌ FAILURE
+                _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed"))
+                _uiState.update {
+                    if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Error("Failed")) else it
                 }
             }
+//            else{
+//                if (!wasAlreadyHeard) {
+//                    historyManager.undoMarkSentenceHeard(levelName, contentID)
+//                }
+//            }
 
             refreshUI()
         }

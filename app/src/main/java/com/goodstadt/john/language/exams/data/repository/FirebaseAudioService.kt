@@ -11,6 +11,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import timber.log.Timber
 import java.io.File
 import java.security.MessageDigest
 
@@ -97,13 +98,34 @@ object FirebaseAudioService {
      * Downloads the file from Cloud to the specified Local File.
      * Throws exception if not found or network fails.
      */
-    suspend fun downloadAudio(filename: String, destFile: File) {
+    suspend fun downloadAudioOriginal(filename: String, destFile: File) {
         val fileRef = storageRef.child(filename)
         // Download directly to the file destination
         fileRef.getFile(destFile).await()
-        Log.d(TAG, "☁️ Downloaded: $filename")
+        Timber.tag(TAG).d("☁️ Downloaded: $filename to ${destFile.name}")
     }
+    suspend fun downloadAudio(filename: String, destFile: File) : Boolean {
+        val fileRef = storageRef.child(filename)
 
+        return try {
+            // Attempt download
+            fileRef.getFile(destFile).await()
+            Timber.tag(TAG).d("☁️ Downloaded: $filename to ${destFile.name}")
+            true
+        } catch (e: Exception) {
+            // Check if it's a "Not Found" error (StorageException)
+            // We expect this to happen often (Cache Miss), so we don't crash.
+            val msg = e.message ?: ""
+            if (msg.contains("Object does not exist") || msg.contains("404")) {
+                // This is normal. It just means we need to use Google TTS.
+                Timber.tag(TAG).d("☁️ Cloud cache miss: $filename") // Verbose log only
+            } else {
+                // Real network error
+                Timber.tag(TAG).d("☁️ Cloud download failed: $filename")
+            }
+            false
+        }
+    }
     /**
      * Uploads a file to Cloud in the background (Fire & Forget).
      * Adds custom metadata so you can read the text in the Console.
@@ -124,9 +146,9 @@ object FirebaseAudioService {
                     .build()
 
                 fileRef.putFile(Uri.fromFile(localFile), metadata).await()
-                Log.d(TAG, "☁️ Uploaded: $filename")
+                Timber.tag(TAG).v("☁️ Uploaded to cloud storage:$filename")
             } catch (e: Exception) {
-                Log.e(TAG, "Failed to upload $filename", e)
+                Timber.tag(TAG).e(e, "Failed to upload to cloud storage:$filename")
             }
         }
     }

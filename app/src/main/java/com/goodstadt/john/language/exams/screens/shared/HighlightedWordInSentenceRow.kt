@@ -47,12 +47,14 @@ fun HighlightedWordInSentenceRow(
                 Text(text = "🟢", fontSize = 12.sp)
             }
 
+            if (playCount > 1) {
+                Text(text = "$playCount", fontSize = 12.sp)
+            }
+
             if (displayRedDot) {
                 Text(text = "🔴", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
             }
-            if (playCount > 0) {
-                Text(text = "$playCount", fontSize = 12.sp)
-            }
+
             // Check if the green dot should be displayed
 
         }

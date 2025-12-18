@@ -9,6 +9,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -16,9 +18,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.screens.MainScreen
+import com.goodstadt.john.language.exams.screens.shared.LoadingOverlay
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme
 import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.google.android.material.progressindicator.CircularProgressIndicator
@@ -48,19 +52,5 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-    }
-}
-@Composable
-fun LoadingOverlay() {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Black.copy(alpha = 0.5f)) // Dim the background
-            .clickable(enabled = false) {}, // ⛔️ Block all touch events to screens below
-        contentAlignment = Alignment.Center
-    ) {
-        androidx.compose.material3.CircularProgressIndicator(
-            color = Color.White
-        )
     }
 }

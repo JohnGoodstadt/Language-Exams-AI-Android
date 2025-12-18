@@ -14,11 +14,14 @@ import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import timber.log.Timber
@@ -44,6 +47,12 @@ sealed class PlaybackResult {
     data class Failure(val exception: Exception) : PlaybackResult()
 }
 
+private enum class AudioDataSource {
+    LOCAL_DISK,
+    FIREBASE_CLOUD,
+    GOOGLE_TTS
+}
+
 @Singleton
 class ContentRepository @Inject constructor(
     @ApplicationContext private val context: Context,
@@ -62,7 +71,8 @@ class ContentRepository @Inject constructor(
     // ✅ ADDED: A map to store ongoing fetch operations.
     // The key is the logicalName, the value is the Deferred result.
     private val ongoingFetches = mutableMapOf<String, Deferred<Result<Format0File>>>()
-
+    // Define a scope for playback (Main thread is usually best for MediaPlayer)
+    private val playbackScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
 
     // A lazy json parser instance with lenient configuration
     private val jsonParser = Json {
@@ -407,7 +417,7 @@ class ContentRepository @Inject constructor(
         finally { }
 
     }
-    suspend fun playTextToSpeechAndSaveToCache(
+    suspend fun playTextToSpeechAndSaveToCacheOriginal(
         text: String,
         uniqueSentenceId: String, // This should be the Unified Filename (with .mp3)
         voiceName: String,
@@ -485,8 +495,146 @@ class ContentRepository @Inject constructor(
         )
     }
 
-    // MARK: - Helper
+// In ContentRepository.kt
 
+
+
+    suspend fun playTextToSpeechAndSaveToCache(
+        text: String,
+        uniqueSentenceId: String,
+        voiceName: String,
+        languageCode: String
+    ): PlaybackResult {
+
+        val audioData: ByteArray
+        val source: AudioDataSource
+
+        // --- PHASE 1: ACQUIRE DATA ---
+        val localFile = File(context.filesDir, uniqueSentenceId)
+        if (localFile.exists()) {
+            Timber.v("🔊 Waterfall L1: Playing from Local Disk: $uniqueSentenceId. Yippee!!")
+            // 1. Try Local Disk
+            val bytes = try { localFile.readBytes() } catch (e: Exception) { null }
+            if (bytes != null && bytes.isNotEmpty()) {
+                audioData = bytes
+                source = AudioDataSource.LOCAL_DISK
+            } else {
+                Timber.v("🔊 Waterfall L1: Local file exists but has a problem: $uniqueSentenceId")
+                // File existed but was corrupt/empty, try network
+                val networkResult =
+                    acquireFromNetwork(text, uniqueSentenceId, voiceName, languageCode, localFile)
+                        ?: return PlaybackResult.Failure(Exception("Audio acquisition failed"))
+                audioData = networkResult.first
+                source = networkResult.second
+            }
+        } else {
+            // 2. Try Network (Firebase -> TTS)
+            Timber.v("☁️ Waterfall L2: Try downloading from Cloud Storage")
+            val networkResult =
+                acquireFromNetwork(text, uniqueSentenceId, voiceName, languageCode, localFile)
+                    ?: return PlaybackResult.Failure(Exception("Audio acquisition failed"))
+            audioData = networkResult.first
+            source = networkResult.second
+            if (source==AudioDataSource.GOOGLE_TTS) {
+                Timber.v("☁️ Waterfall L3: Downloaded from Google TTS API")
+            }else{
+                Timber.v("☁️ Waterfall L3: Downloaded from Cloud Storage Yippee!")
+            }
+
+        }
+
+        // --- PHASE 2: ACTIONS (Non-Blocking / Fire & Forget) ---
+        // We have the data. We consider this a "Success".
+        // We start playback and upload in parallel, but return immediately.
+
+        // A. Start Playback (Don't wait for it)
+        playbackScope.launch {
+            try {
+                audioPlayerService.playAudio(audioData)
+            } catch (e: Exception) {
+                Timber.e(e, "Playback failed (background)")
+            }
+        }
+
+        // B. Upload to Firebase (Background - Don't wait)
+        // ✅ LOGIC: Only upload if it came from Google TTS.
+        // If it came from Disk or Firebase, it's already in the cloud.
+        if (source == AudioDataSource.GOOGLE_TTS) {
+            FirebaseAudioService.uploadAudio(localFile, uniqueSentenceId, text)
+        }
+
+        // --- PHASE 3: RETURN INSTANTLY ---
+        // The UI gets the result immediately, stopping the spinner.
+        return if (source == AudioDataSource.LOCAL_DISK) {
+            PlaybackResult.PlayedFromCache
+        } else {
+            PlaybackResult.PlayedFromNetworkAndCached
+        }
+    }
+
+    // Helper to keep the main function clean
+    private suspend fun acquireAudioFromNetwork(
+        text: String,
+        uniqueSentenceId: String,
+        voiceName: String,
+        languageCode: String,
+        destFile: File
+    ): ByteArray? {
+        // 1. Try Firebase
+        try {
+            FirebaseAudioService.downloadAudio(uniqueSentenceId, destFile)
+            return destFile.readBytes()
+        } catch (e: Exception) { /* Continue to TTS */ }
+
+        // 2. Try Google TTS
+        val result = googleCloudTts.getAudioData(text, voiceName, languageCode)
+
+        return result.getOrNull()?.also { bytes ->
+            try { destFile.writeBytes(bytes) } catch (e: Exception) { }
+        }
+    }
+    // MARK: - Helper
+    /**
+     * Helper to try Firebase, then fallback to Google TTS.
+     * Returns the Bytes and the Source.
+     */
+    private suspend fun acquireFromNetwork(
+        text: String,
+        filename: String,
+        voiceName: String,
+        languageCode: String,
+        destFile: File
+    ): Pair<ByteArray, AudioDataSource>? {
+
+        // ✅ DEBUG: Simulate a slow network (3 seconds)
+        // This forces the ViewModel's 1-second timer to fire, showing the ProgressView.
+        // REMOVE THIS BEFORE RELEASE or wrap in BuildConfig.DEBUG
+        //if (com.goodstadt.john.language.exams.BuildConfig.DEBUG) {
+        if (false) {
+            kotlinx.coroutines.delay(3000)
+        }
+        // 1. Try Firebase Download
+        // ✅ No try/catch needed here anymore, the Service handles it safely.
+        val cloudSuccess = FirebaseAudioService.downloadAudio(filename, destFile)
+
+        if (cloudSuccess) {
+            val bytes = try { destFile.readBytes() } catch (e: Exception) { null }
+            if (bytes != null && bytes.isNotEmpty()) {
+                return Pair(bytes, AudioDataSource.FIREBASE_CLOUD)
+            }
+        }
+
+        // 2. Not in Cloud (or read failed) -> Try Google TTS
+        val ttsResult = googleCloudTts.getAudioData(text, voiceName, languageCode)
+
+        return ttsResult.getOrNull()?.let { bytes ->
+            if (bytes.isNotEmpty()) {
+                try { destFile.writeBytes(bytes) } catch (e: Exception) { Timber.e(e) }
+                return Pair(bytes, AudioDataSource.GOOGLE_TTS)
+            }
+            null
+        }
+    }
     private suspend fun playFromLocalFile(file: File, isNetwork: Boolean): PlaybackResult {
         return try {
             val bytes = file.readBytes()
