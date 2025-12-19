@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.shared
+package com.goodstadt.john.language.exams.screens.shared.gamification
 
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 
@@ -18,10 +18,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.models.ReferenceCategory
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -87,14 +85,7 @@ fun SideQuestStatsSheet(
                 )
             }
 
-            // 2. ACTIVE STATS (Creator & Quiz)
-            Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                // AI Paragraphs (Creation)
-                AIWriterCard(count = paragraphCount, heard = paragraphHeardCount)
 
-                // Quiz Mastery (Testing)
-                QuizMasteryCard(quizManager = quizManager)
-            }
 
             // 3. GRAMMAR DEEP DIVES (Conjugations & Adjectives)
             // Only render if data is provided
@@ -130,6 +121,22 @@ fun SideQuestStatsSheet(
                         QuickReferenceRow(category = category)
                     }
                 }
+            }
+
+            // 2. ACTIVE STATS (Creator & Quiz)
+            Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                // AI Paragraphs (Creation)
+                AIWriterCard(count = paragraphCount, heard = paragraphHeardCount)
+
+                // Quiz Mastery (Testing)
+                QuizMasteryCard(quizManager = quizManager)
+                // ✅ NEW: Detailed Breakdown with Memory Boosts
+                Text(
+                    text = "Quiz Details",
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                QuizLevelBreakdownList(quizManager = quizManager)
             }
 
             // 5. FOOTER

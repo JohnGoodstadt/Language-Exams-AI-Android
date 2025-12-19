@@ -10,6 +10,7 @@ import com.goodstadt.john.language.exams.models.ReferenceStats
 import com.goodstadt.john.language.exams.models.TabNumberEnum
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.gson.Gson
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -78,8 +79,12 @@ class AudioCacheManager @Inject constructor(
     // Keys
     private val REF_HEARD_KEY = "ref_heard_counts_v1"
     private val REF_TOTAL_KEY = "ref_total_counts_v1"
+
+    // Keys
     private val AI_PARA_COUNT_KEY = "ai_paragraph_count_v1"
     private val AI_PARA_HEARD_KEY = "ai_paragraph_heard_count_v1"
+
+    private val gson = Gson()
 
     init {
         loadReferenceStats()
@@ -411,12 +416,22 @@ class AudioCacheManager @Inject constructor(
     private fun saveReferenceStats() {
         try {
             val editor = prefs.edit()
-            // Save map...
+
+            // 1. Save Maps (Serialize to JSON)
+            // Note: We access .value for the StateFlow
+            editor.putString(REF_HEARD_KEY, gson.toJson(_referenceHeardCounts.value))
+            editor.putString(REF_TOTAL_KEY, gson.toJson(referenceTotalCounts))
+
+            // 2. Save Integers
             editor.putInt(AI_PARA_COUNT_KEY, aiParagraphCount)
             editor.putInt(AI_PARA_HEARD_KEY, aiParagraphHeardCount)
+
+            // 3. Commit
             editor.apply()
+
         } catch (e: Exception) {
-            Timber.tag("AudioCacheManager").e(e, "Error saving stats")
+            // Use Timber or Log depending on your setup
+            Timber.tag("AudioCacheManager").e(e, "Error saving reference stats")
         }
     }
 
@@ -426,7 +441,80 @@ class AudioCacheManager @Inject constructor(
 
     fun getAIParagraphCount(): Int = aiParagraphCount
     fun getAIParagraphHeardCount(): Int = aiParagraphHeardCount
+// In AudioCacheManager.kt
 
+    fun incrementAIParagraphCount() {
+        scope.launch {
+            mutex.withLock {
+                aiParagraphCount++
+                saveReferenceStats()
+
+                // ✅ Log to Cloud
+                logAIUsageToCloud()
+            }
+        }
+    }
+
+    fun incrementAIParagraphHeardCount() {
+        scope.launch {
+            mutex.withLock {
+                aiParagraphHeardCount++
+                saveReferenceStats()
+
+                // ✅ Log to Cloud
+                logAIHeardUsageToCloud()
+            }
+        }
+    }
+
+    private fun logAIUsageToCloud() {
+        // 1. Log the specific event
+        val params = android.os.Bundle().apply {
+            putInt("total_count", aiParagraphCount)
+        }
+        analytics.logEvent("ai_paragraph_generated", params)
+
+        // 2. Set User Property
+        val creatorLevel = getUsageLevel(aiParagraphCount)
+        analytics.setUserProperty("ai_creator_status", creatorLevel)
+    }
+
+    private fun logAIHeardUsageToCloud() {
+        // 1. Log the specific event
+        val params = android.os.Bundle().apply {
+            putInt("total_count", aiParagraphHeardCount)
+        }
+        analytics.logEvent("ai_paragraph_heard", params)
+
+        // 2. Set User Property
+        val learningLevel = getUsageLevel(aiParagraphHeardCount)
+        analytics.setUserProperty("ai_learning_status", learningLevel)
+    }
+
+    // Shared logic for determining level strings
+    private fun getUsageLevel(count: Int): String {
+        return when (count) {
+            0 -> "none"
+            in 1..5 -> "novice"
+            in 6..20 -> "regular"
+            else -> "power_user"
+        }
+    }
+
+
+
+    // Ensure saveReferenceStats writes these integers:
+//    private fun saveReferenceStats() {
+//        try {
+//            val editor = prefs.edit()
+//            // ... existing map saves ...
+//            editor.putInt(AI_PARA_COUNT_KEY, aiParagraphCount)
+//            editor.putInt(AI_PARA_HEARD_KEY, aiParagraphHeardCount)
+//            editor.apply()
+//        } catch (e: Exception) {
+//            Timber.e(e)
+//        }
+//    }
     // MARK: - Reference Stats Sync
 
     /**

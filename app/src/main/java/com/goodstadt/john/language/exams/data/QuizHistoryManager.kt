@@ -7,6 +7,8 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
@@ -20,6 +22,7 @@ data class QuizAttempt(
     val timestamp: Long = System.currentTimeMillis(),
     val skillLevel: String,   // "A1", "B1" etc
     val quizNumber: Int,      // 1, 2, 3...
+    val title: String,
     val correctAnswers: Int,  // e.g. 8
     val totalQuestions: Int,  // e.g. 10
     val duration: Long = 0    // Seconds
@@ -49,6 +52,8 @@ class QuizHistoryManager @Inject constructor(
 
     // Structure: [SkillLevel : [QuizNumber : [List of Attempts]]]
     private var history: MutableMap<String, MutableMap<Int, MutableList<QuizAttempt>>> = mutableMapOf()
+    private val _historyUpdates = MutableStateFlow<Long>(0)
+    val historyUpdates = _historyUpdates.asStateFlow()
 
     init {
         loadHistory()
@@ -59,6 +64,7 @@ class QuizHistoryManager @Inject constructor(
     fun saveAttempt(
         skillLevel: String,
         quizNumber: Int,
+        title:String,
         correct: Int,
         total: Int,
         duration: Long = 0
@@ -66,6 +72,7 @@ class QuizHistoryManager @Inject constructor(
         val attempt = QuizAttempt(
             skillLevel = skillLevel,
             quizNumber = quizNumber,
+            title = title,
             correctAnswers = correct,
             totalQuestions = total,
             duration = duration
@@ -81,8 +88,10 @@ class QuizHistoryManager @Inject constructor(
         // Persist
         saveHistory()
 
+        _historyUpdates.value = System.currentTimeMillis()
+
         // Analytics
-        logQuizResultToCloud(quizNumber, correct, skillLevel, total, isFirstAttempt = quizList.size == 1)
+        logQuizResultToCloud(quizNumber, title,correct, skillLevel, total, isFirstAttempt = quizList.size == 1)
 
         Timber.d("Quiz Saved: $skillLevel #$quizNumber ($correct/$total)")
     }
@@ -203,9 +212,9 @@ class QuizHistoryManager @Inject constructor(
 
     // MARK: - Analytics
 
-    private fun logQuizResultToCloud(quizID: Int, score: Int, level: String, totalQuestions: Int, isFirstAttempt: Boolean) {
+    private fun logQuizResultToCloud(quizID: Int, title:String, score: Int, level: String, totalQuestions: Int, isFirstAttempt: Boolean) {
         val params = Bundle().apply {
-            putInt("quiz_id", quizID)
+            putString("quiz_id", title)
             putString("skill_level", level)
             putInt("score", score)
             putDouble("score_percent", score.toDouble() / totalQuestions)
@@ -247,6 +256,49 @@ class QuizHistoryManager @Inject constructor(
         if (file.exists()) {
             file.delete()
         }
+        Timber.w("🚨 Quiz History Cleared")
+    }
+    // MARK: - Helper for Breakdown List
+
+    data class DetailedQuizStat(
+        val perfects: Int,
+        val attempts: Int,
+        val lastTimestamp: Long
+    )
+
+    fun getDetailedStatsForQuiz(level: String, quizID: Int): DetailedQuizStat {
+        val attempts = history[level]?.get(quizID) ?: return DetailedQuizStat(0, 0, 0)
+
+        val perfects = attempts.count { it.isPerfect }
+        // Get the timestamp of the very last attempt (assuming list is ordered or we find max)
+        val lastTime = attempts.maxOfOrNull { it.timestamp } ?: 0
+
+        return DetailedQuizStat(perfects, attempts.size, lastTime)
+    }
+    // In QuizHistoryManager.kt
+
+    /**
+     * 🚨 DEBUG: Wipes all local quiz history.
+     * Resets UI stats to 0.
+     */
+    fun clearAllHistory() {
+        // 1. Clear Memory
+        history.clear()
+
+        // 2. Clear Disk
+        try {
+            val file = File(context.filesDir, fileName)
+            if (file.exists()) {
+                file.delete()
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to delete quiz history file")
+        }
+
+        // 3. Trigger UI Update
+        // Emitting a new timestamp forces collectors to refresh
+        _historyUpdates.value = System.currentTimeMillis()
+
         Timber.w("🚨 Quiz History Cleared")
     }
 }

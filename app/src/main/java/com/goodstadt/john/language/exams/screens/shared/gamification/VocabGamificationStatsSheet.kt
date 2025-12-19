@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.shared
+package com.goodstadt.john.language.exams.screens.shared.gamification
 
 
 import androidx.compose.foundation.background
@@ -51,6 +51,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.screens.shared.ExamCountdownCard
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 
 @OptIn(ExperimentalMaterial3Api::class)

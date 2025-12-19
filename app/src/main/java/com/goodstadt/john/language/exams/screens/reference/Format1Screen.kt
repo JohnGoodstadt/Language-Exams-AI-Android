@@ -32,7 +32,7 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.models.ReferenceCategory
 import com.goodstadt.john.language.exams.models.ReferenceSubItem
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
-import com.goodstadt.john.language.exams.screens.shared.SideQuestStatsSheet
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import dagger.hilt.android.EntryPointAccessors
@@ -215,8 +215,8 @@ fun Format1Screen(
                         // Note: You might need to pass data in here if SideQuestStatsSheet 
                         // doesn't pull everything from Hilt automatically yet.
                         SideQuestStatsSheet(
-                            paragraphCount = 0, // Mock or fetch from VM
-                            paragraphHeardCount = 0, // Mock or fetch from VM
+                            paragraphCount = viewModel.getAIParagraphCount(),
+                            paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
                             conjugations = sideQuestData.conjugations,
                             adjectives = sideQuestData.adjectives,
                             quickRefs = sideQuestData.quickRefs,

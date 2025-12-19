@@ -1,10 +1,8 @@
 package com.goodstadt.john.language.exams.screens.me
 
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -13,21 +11,17 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.managers.XPManager
-import com.goodstadt.john.language.exams.screens.shared.AIWriterCard
+import com.goodstadt.john.language.exams.screens.shared.gamification.AIWriterCard
 import com.goodstadt.john.language.exams.screens.shared.BadgeShowcaseSection
-import com.goodstadt.john.language.exams.screens.shared.GlobalProgressRow
-import com.goodstadt.john.language.exams.screens.shared.QuickReferenceRow
-import com.goodstadt.john.language.exams.screens.shared.QuizMasteryCard
-import com.goodstadt.john.language.exams.screens.shared.ReferenceGroupCard
-import com.goodstadt.john.language.exams.screens.shared.TopicProgressRow
+import com.goodstadt.john.language.exams.screens.shared.gamification.GlobalProgressRow
+import com.goodstadt.john.language.exams.screens.shared.gamification.QuickReferenceRow
+import com.goodstadt.john.language.exams.screens.shared.gamification.QuizMasteryCard
+import com.goodstadt.john.language.exams.screens.shared.gamification.ReferenceGroupCard
+import com.goodstadt.john.language.exams.screens.shared.gamification.TopicProgressRow
 import com.goodstadt.john.language.exams.viewmodels.ActivityChartCard
 import com.goodstadt.john.language.exams.viewmodels.ConsistencyHeatmap
 import com.goodstadt.john.language.exams.viewmodels.LifetimeStatsGrid
@@ -36,9 +30,6 @@ import com.goodstadt.john.language.exams.viewmodels.MyProgressViewModel
 import com.goodstadt.john.language.exams.viewmodels.ProfileHeaderView
 import com.goodstadt.john.language.exams.viewmodels.SectionHeader
 import com.goodstadt.john.language.exams.viewmodels.SkillBreakdownView
-import java.time.LocalDate
-import java.time.format.TextStyle
-import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

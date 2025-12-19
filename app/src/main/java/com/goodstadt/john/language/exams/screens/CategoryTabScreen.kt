@@ -28,7 +28,7 @@ import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
-import com.goodstadt.john.language.exams.screens.shared.VocabGamificationStatsSheet
+import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamificationStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel

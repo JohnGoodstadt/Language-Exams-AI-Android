@@ -25,7 +25,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
@@ -34,7 +33,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
-import com.goodstadt.john.language.exams.screens.shared.SideQuestStatsSheet
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.android.EntryPointAccessors
@@ -139,8 +138,8 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                         // Note: You might need to pass data in here if SideQuestStatsSheet
                         // doesn't pull everything from Hilt automatically yet.
                         SideQuestStatsSheet(
-                            paragraphCount = 0, // Mock or fetch from VM
-                            paragraphHeardCount = 0, // Mock or fetch from VM
+                            paragraphCount = viewModel.getAIParagraphCount(),
+                            paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
                             conjugations = sideQuestData.conjugations,
                             adjectives = sideQuestData.adjectives,
                             quickRefs = sideQuestData.quickRefs,

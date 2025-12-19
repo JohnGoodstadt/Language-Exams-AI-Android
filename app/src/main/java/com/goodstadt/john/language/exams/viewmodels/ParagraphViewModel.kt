@@ -26,6 +26,7 @@ import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.LlmModelInfo
@@ -108,8 +109,9 @@ class ParagraphViewModel @Inject constructor(
     private val firestoreRepository: FirestoreRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
+    private val audioCacheManager: AudioCacheManager
 
-    ) : ViewModel() {
+) : ViewModel() {
 
     val isPurchased = billingRepository.isPurchased
     val productDetails = billingRepository.productDetails
@@ -327,7 +329,7 @@ class ParagraphViewModel @Inject constructor(
                         ttsStatsRepository.incUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
                         val modelFieldName = "${llmModel_}${openAIModel?.title}" //e.g. llmModel_gemini-2.5-flash
                         ttsStatsRepository.updateUserStatField(modelFieldName)
-
+                        audioCacheManager.incrementAIParagraphCount()
 
                         if (!isPurchased.value) {
                             creditsRepository.decrementCredit(
@@ -428,6 +430,7 @@ class ParagraphViewModel @Inject constructor(
                                     ttsStatsRepository.updateUserStatField(modelFieldName)
                                     ttsStatsRepository.incUserGeminiTotalTokenCount(totalTokenCount)
                                     ttsStatsRepository.incUserStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
+                                    audioCacheManager.incrementAIParagraphCount()
 
                                     if (!isPurchased.value) {
                                         creditsRepository.decrementCredit(
@@ -658,16 +661,14 @@ class ParagraphViewModel @Inject constructor(
                         }
                         Timber.v(rateLimiter.printCurrentStatus)
                         ttsStatsRepository.updateTTSStatsWithCosts(Sentence(sentenceToSpeak,""), currentVoiceName)
+                        audioCacheManager.incrementAIParagraphHeardCount()
                         //wrong place to save word stats
                         //TODO: if we save paragraphs -- then do it here.
-//                        ttsStatsRepository.incWordStats(sentenceToSpeak)
                         Timber.d("updateUserTTSTokenCount ${sentenceToSpeak.count()}")
                     }
                     is PlaybackResult.PlayedFromCache -> {
                         ttsStatsRepository.updateTTSStatsWithoutCosts()
-                        //wrong place to save word stats
-                        //TODO: if we save paragraphs -- then do it here.
-//                        ttsStatsRepository.incWordStats(sentenceToSpeak)
+                        audioCacheManager.incrementAIParagraphHeardCount()
                     }
                     is PlaybackResult.Failure -> {
                         _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }

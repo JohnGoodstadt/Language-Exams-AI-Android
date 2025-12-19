@@ -58,7 +58,8 @@ enum class XpActionType {
     CompleteDailyGoal,
     CompleteQuiz,
     PerfectQuiz,
-    GenerateParagraph
+    GenerateParagraph,
+    MemoryBoost
 }
 
 data class DailyStats(
@@ -66,7 +67,6 @@ data class DailyStats(
     var xpGained: Int = 0,
     var actionCount: Int = 0
 )
-
 
 
 @Singleton
@@ -98,13 +98,15 @@ class XPManager @Inject constructor(
 
     private var dailyStats: MutableMap<String, DailyStats> = mutableMapOf()
     private val DAILY_STATS_KEY = "xp_daily_stats_v1"
+
     // Config
     private val xpPerAction = mapOf(
         XpActionType.HearNewSentence to 3,
         XpActionType.ReplaySentence to 1,
         XpActionType.CompleteQuiz to 10,
         XpActionType.PerfectQuiz to 5,
-        XpActionType.GenerateParagraph to 3
+        XpActionType.GenerateParagraph to 3,
+        XpActionType.MemoryBoost to 35
     )
 
     private val streakFreezeCost = 200
@@ -410,6 +412,7 @@ class XPManager @Inject constructor(
             saveToDisk(newState)
         }
     }
+
     fun getDailyStatsList(daysBack: Int): List<DailyStats> {
         val list = mutableListOf<DailyStats>()
         val today = LocalDate.now()
@@ -495,7 +498,8 @@ class XPManager @Inject constructor(
             sortedLevels.forEach { (levelName, data) ->
                 val activeMarker = if (levelName == s.currentLevel) "👈" else ""
                 val xpStr = data.xp.toString().padEnd(5)
-                Timber.tag(tag).d("   [$levelName] XP: $xpStr | Lvl: ${data.learnerLevel} $activeMarker")
+                Timber.tag(tag)
+                    .d("   [$levelName] XP: $xpStr | Lvl: ${data.learnerLevel} $activeMarker")
             }
         }
 

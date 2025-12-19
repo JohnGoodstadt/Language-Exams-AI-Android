@@ -15,6 +15,7 @@ import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.CreditsRepository
 import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.GoogleTTSInfoRepository
+import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
@@ -101,7 +102,8 @@ class SettingsViewModel @Inject constructor(
     private val authRepository: AuthRepository,
     private val creditsRepository: CreditsRepository,
     private val history: HistorySyncManager,
-    private val xpManager: XPManager
+    private val xpManager: XPManager,
+    private val quizHistoryManager: QuizHistoryManager
 ) : ViewModel() {
 
 
@@ -637,6 +639,10 @@ class SettingsViewModel @Inject constructor(
         //}
 
         return ""
+    }
+    fun debugResetQuizStats()  {
+
+        quizHistoryManager.clearAllHistory()
     }
 
     fun isItMe(): Boolean {

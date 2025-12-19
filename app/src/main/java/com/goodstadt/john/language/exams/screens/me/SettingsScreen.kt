@@ -596,6 +596,16 @@ fun SettingsScreen(
                     }
                 )
             }
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.Info,
+                    title = "Reset Quiz Stats(D)",
+                    currentValue = "(D)",
+                    onClick = {
+                        viewModel.debugResetQuizStats()
+                    }
+                )
+            }
 
             item {
                 SettingsInfoItem(

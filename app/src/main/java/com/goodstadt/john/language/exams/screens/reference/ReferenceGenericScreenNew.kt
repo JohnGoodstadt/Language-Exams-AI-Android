@@ -1,8 +1,7 @@
 package com.goodstadt.john.language.exams.screens.reference
 
-import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
-import com.goodstadt.john.language.exams.screens.shared.SideQuestStatsSheet
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
@@ -26,7 +25,6 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.EntryPointAccessors
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)

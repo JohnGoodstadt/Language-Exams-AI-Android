@@ -20,12 +20,15 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
+import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
@@ -56,6 +59,7 @@ data class QuizStatistics(
     var state: QuizState = QuizState.NOT_STARTED,
     val skillLevel: String,
     val quizNumber: Int,
+    val title:String,
     var answered: Int = 0,
     var correct: Int = 0,
     var tries: Int = 0
@@ -76,49 +80,6 @@ data class QuizStatistics(
 
     fun update(answered: Int, correct: Int, tries: Int) =
         copy(answered = answered, correct = correct, tries = tries)
-}
-
-/*
-in this viewmodel can you change generateSampleQuestions() to read questions from a supplied JSON file called "TestMyselfQuiz1Elementary-en.json".
- */
-enum class QuizLevelsold(
-    val sheetNameQ1: String,
-    val sheetNameQ2: String,
-    val sheetNameQ3: String,
-    val sheetNameQ4: String,
-    val sheetNameQ5: String
-) {
-    ELEMENTARY(
-        "TestMyselfQuiz1Elementary-en",
-        "TestMyselfQuiz2Elementary-en",
-        "TestMyselfQuiz3Elementary-en",
-        "TestMyselfQuiz4Elementary-en",
-        "TestMyselfQuiz5Elementary-en"
-    ),
-    INTER(
-        "TestMyselfQuiz1Inter-en",
-        "TestMyselfQuiz2Inter-en",
-        "TestMyselfQuiz3Inter-en",
-        "TestMyselfQuiz4Inter-en",
-        "TestMyselfQuiz5Inter-en"
-    ),
-    UPPER(
-        "TestMyselfQuiz1Upper-en",
-        "TestMyselfQuiz2Upper-en",
-        "TestMyselfQuiz3Upper-en",
-        "TestMyselfQuiz4Upper-en",
-        "TestMyselfQuiz5Upper-en"
-    ),
-    ADVANCED(
-        "TestMyselfQuiz1Advanced-en",
-        "TestMyselfQuiz2Advanced-en",
-        "TestMyselfQuiz3Advanced-en",
-        "TestMyselfQuiz4Advanced-en",
-        "TestMyselfQuiz5Advanced-en"
-    );
-
-    val description: String
-        get() = name.lowercase().replaceFirstChar { it.uppercase() }
 }
 
 enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
@@ -256,6 +217,9 @@ class QuizViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
+    private val quizHistoryManager: QuizHistoryManager,
+    private val xpManager: XPManager
+
 ) : ViewModel() {
     private val appContext: Context = application.applicationContext
 
@@ -281,8 +245,6 @@ class QuizViewModel @Inject constructor(
     private val _uiEvent = MutableSharedFlow<UiEvent>()
     val uiEvent = _uiEvent.asSharedFlow()
 
-    //NOTE: rate Limiting
-//    private val rateLimiter = RateLimiterManager.getInstance()
     private val _showRateLimitSheet = MutableStateFlow(false)
     val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
 
@@ -299,7 +261,7 @@ class QuizViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        QuizStatistics(skillLevel = QuizLevelsNew.ELEMENTARY.description, quizNumber = 1)
+        QuizStatistics(skillLevel = QuizLevelsNew.ELEMENTARY.description, quizNumber = 1, title = "Quiz 1")
     )
     val selectedLevel = mutableStateOf(QuizLevelsNew.ELEMENTARY)
     val availableQuizzes = derivedStateOf { selectedLevel.value.quizzes }
@@ -371,20 +333,6 @@ class QuizViewModel @Inject constructor(
     fun hideForceAppUpgradeSheet() {
         _showForceUpgradeAppSheet.value = false
     }
-
-    /**
-     * Called when the user taps the "play" icon on a SoundData item.
-     * NOTE: Assumes mp3 exists on the local disk
-     * 1) Mark that sound as "isPlayed = true" in the UI state.
-     * 2) Actually play the MP3.
-     */
-//    fun isPlaying() {
-//        _playbackState.value = true
-//    }
-//    fun isNotPlaying() {
-//        _playbackState.value = true
-//    }
-
 
     fun playTrack(sentence: String) {
 
@@ -469,25 +417,16 @@ class QuizViewModel @Inject constructor(
     fun loadQuestions() {
         viewModelScope.launch {
 
-//            val fileName = when (selectedQuizNumber.value) {
-//                1 -> selectedLevel.value.sheetNameQ1
-//                2 -> selectedLevel.value.sheetNameQ2
-//                3 -> selectedLevel.value.sheetNameQ3
-//                4 -> selectedLevel.value.sheetNameQ4
-//                5 -> selectedLevel.value.sheetNameQ5
-//                else -> selectedLevel.value.sheetNameQ1
-//            } + ".json" // Append the JSON file extension
-
-            val fileName99 = when (selectedQuizNumber.value) {
-                1 -> selectedLevel.value
-                2 -> selectedLevel.value
-                3 -> selectedLevel.value
-                4 -> selectedLevel.value
-                5 -> selectedLevel.value
-                else -> selectedLevel.value
-            }// + ".json" // Append the JSON file extension
-
-            val fn = selectedQuizNumber.value //?: selectedLevel.value.quizzes.first()) + ".json"
+//            val fileName99 = when (selectedQuizNumber.value) {
+//                1 -> selectedLevel.value
+//                2 -> selectedLevel.value
+//                3 -> selectedLevel.value
+//                4 -> selectedLevel.value
+//                5 -> selectedLevel.value
+//                else -> selectedLevel.value
+//            }// + ".json" // Append the JSON file extension
+//
+//            val fn = selectedQuizNumber.value //?: selectedLevel.value.quizzes.first()) + ".json"
             // Fall back to the first quiz in the level if none is selected.
             val jsonName =
                 (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).sheetName + ".json"
@@ -558,16 +497,29 @@ class QuizViewModel @Inject constructor(
         }
     }
 
-    fun resetQuiz() {
+    private fun resetQuiz() {
 
         saveQuizState()
 
+        // Use the selectedLevel enum for the name (e.g. "Advanced")
+        val currentLevelName = selectedLevel.value.description
+        // Use the selectedQuiz for the ID (e.g. 6), fallback to 1 if null
+        val currentQuizId = selectedQuiz.value?.id ?: 1
+        val currentTitle = selectedQuiz.value?.title ?: "Quiz $currentQuizId"
+
         quizStatistics.value = quizStatistics.value.copy(
             state = QuizState.NOT_STARTED,
+
+            // ✅ FIX: Update Level and ID here
+            skillLevel = currentLevelName,
+            quizNumber = currentQuizId,
+            title = currentTitle,
+
             answered = 0,
             correct = 0,
             tries = 0
         )
+
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
 
@@ -580,7 +532,60 @@ class QuizViewModel @Inject constructor(
 
             if (userAnswers.value.count() == _questions.value.count()) {
                 quizStatistics.value.state = QuizState.COMPLETED
+
             }
+        }
+    }
+
+    private fun onQuizFinished() {
+
+        val qs = quizStatistics
+        val now = System.currentTimeMillis()
+
+        // 1. Check History BEFORE saving
+        val lastAttempt = quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)
+
+        viewModelScope.launch {
+            // 1. Save to Manager
+//            quizHistoryManager.saveAttempt(
+//                skillLevel = qs.value.skillLevel,
+//                quizNumber = qs.value.quizNumber,
+//                correct = qs.value.correct,
+//                total = qs.value.tries
+//            )
+
+            // 2. Award XP
+//            if (qs.value.tries == qs.value.correct) {
+//                xpManager.registerAction(XpActionType.PerfectQuiz)
+//            } else {
+//                xpManager.registerAction(XpActionType.CompleteQuiz)
+//            }
+            // 2. Save
+            quizHistoryManager.saveAttempt(qs.value.skillLevel, qs.value.quizNumber, qs.value.title, qs.value.correct, qs.value.tries)
+
+            // 3. Logic
+            if (qs.value.correct < qs.value.tries) {
+                xpManager.registerAction(XpActionType.CompleteQuiz)
+            } else {
+                // Perfect Score
+                if (lastAttempt != null) {
+                    val diff = now - lastAttempt.timestamp
+                    val oneDayMillis = 1000 * 60 * 60 * 24
+
+                    if (diff > oneDayMillis) {
+                        // ✅ Memory Boost
+                        xpManager.registerAction(XpActionType.MemoryBoost)
+                    } else {
+                        // ⚠️ Grinding
+                        // Maybe just give 5 XP?
+                        xpManager.registerAction(XpActionType.ReplaySentence) // Re-use low value or make new one
+                    }
+                } else {
+                    // First Time Perfect
+                    xpManager.registerAction(XpActionType.PerfectQuiz)
+                }
+            }
+
         }
     }
 
@@ -598,7 +603,9 @@ class QuizViewModel @Inject constructor(
 
         val currentQuestion = currentQuestionIndex.value + 1 // one based
         if (currentQuestion >= _questions.value.count()) { //completed
-            quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED)
+            quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED, title = quizStatistics.value.title)
+
+            onQuizFinished()
             val fieldValue =
                 "${quizStatistics.value.quizNumber}:${quizStatistics.value.answered}:${quizStatistics.value.correct}:${quizStatistics.value.tries}"
             // val fieldKEY = "${StatsManager.QUIZ_COMPLETE}${selectedLevel.value}" //combine both quiz number and level
