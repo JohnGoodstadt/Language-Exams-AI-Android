@@ -55,6 +55,7 @@ import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme // Replac
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
 import kotlinx.coroutines.delay
@@ -341,6 +342,7 @@ fun ParagraphScreen(
 
                                 Button(onClick = {
                                     if (context is androidx.activity.ComponentActivity) {
+                                        AnalyticsHelper.logPaywallResponse(context,"accepted", "limit_paragraph")
                                         viewModel.buyPremiumButtonPressed(context)
                                         viewModel.onBottomSheetDismissed()
                                     }
@@ -354,6 +356,7 @@ fun ParagraphScreen(
                                 }
 
                                 Button(onClick = {
+                                    AnalyticsHelper.logPaywallResponse(context,"rejected", "limit_paragraph")
                                     viewModel.onBottomSheetDismissed()
                                 }) {
                                     Text("Maybe Later")

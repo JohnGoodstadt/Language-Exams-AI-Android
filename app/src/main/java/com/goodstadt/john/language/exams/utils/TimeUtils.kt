@@ -137,3 +137,11 @@ suspend fun calcIsTodayFreePassDay(userPreferencesRepository: UserPreferencesRep
 suspend fun calcIsTodayNotAFreePassDay(userPreferencesRepository: UserPreferencesRepository) : Boolean {
     return !calcIsTodayFreePassDay(userPreferencesRepository)
 }
+// Helper to get Day Number
+fun getDaysSinceInstall(context: Context): Int {
+    val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
+    val installTime = packageInfo.firstInstallTime
+    val now = System.currentTimeMillis()
+    val diff = now - installTime
+    return (diff / (1000 * 60 * 60 * 24)).toInt() + 1 // Day 1, Day 2...
+}

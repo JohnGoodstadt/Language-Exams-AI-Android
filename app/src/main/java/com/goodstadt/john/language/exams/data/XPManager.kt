@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.managers
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 //import com.goodstadt.john.language.exams.models.XpActionType
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.gson.Gson
@@ -264,6 +265,17 @@ class XPManager @Inject constructor(
             analytics.logEvent("session_end_density", params)
             Log.d(TAG, "📊 Analytics: Session Density = $sessionActionCount")
             sessionActionCount = 0
+
+            // NEW: Log total daily usage to validate the "150" number
+            // We want to know: "Do Free users often stop at 140 naturally?"
+            val todayStats = getDailyStatsList(1).firstOrNull()
+//            val totalPlays = todayStats?.sentencesPlayed ?: 0
+
+//            AnalyticsHelper.logDailyUsageSnapshot(
+//                context = context,
+//                totalPlaysToday = totalPlays,
+//                isPremium = false // You can inject the real status here
+//            )
         }
     }
 
@@ -505,5 +517,6 @@ class XPManager @Inject constructor(
 
         Timber.tag(tag).d("========================================\n")
     }
+
 }
 

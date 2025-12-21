@@ -178,8 +178,15 @@ enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
     );
 
     // This description property remains the same and is correct.
+//    val description: String
+//        get() = name.lowercase().replaceFirstChar { it.uppercase() }
     val description: String
-        get() = name.lowercase().replaceFirstChar { it.uppercase() }
+        get() = when(this) {
+            ELEMENTARY -> "Elementary"
+            INTER -> "Intermediate" // Explicitly string match if needed
+            UPPER -> "Upper"
+            ADVANCED -> "Advanced"
+        }
 }
 
 data class WordOK(

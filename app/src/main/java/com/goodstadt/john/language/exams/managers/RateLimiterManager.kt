@@ -12,6 +12,8 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Singleton
 import dagger.hilt.components.SingletonComponent
 
+const val HOURLY_LIMIT = 40
+const val DAILY_LIMIT = 150
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -22,6 +24,8 @@ object RateLimiterModule {
     fun provideSimpleRateLimiter(
         @ApplicationContext context: Context
     ): SimpleRateLimiter {
+
+
 
 //        if (BuildConfig.DEBUG){
         if (false){
@@ -36,8 +40,8 @@ object RateLimiterModule {
         }else {
             return SimpleRateLimiter( //called from app Injection using Hilt
                 context = context,
-                hourlyLimit = 40,
-                dailyLimit = 100,
+                hourlyLimit = HOURLY_LIMIT,
+                dailyLimit = DAILY_LIMIT,
                 schemeID = "scheme1",
                 name = "scheme1", //same as main prod scheme. so no download is done on app start
                 description = "Built in Limiter"
@@ -47,52 +51,3 @@ object RateLimiterModule {
     }
 }
 
-/*
-object RateLimiterManager {
-    private lateinit var rateLimiter: SimpleRateLimiter
-
-    fun initialize(context: Context) {
-        val appContext = context.applicationContext
-
-        rateLimiter = SimpleRateLimiter( //called from ivar use
-                context = appContext,
-                hourlyLimit = 50, //Maybe 200ish words in A1 + reference + Paragraph
-                dailyLimit = 200,
-                schemeID = "scheme1",
-                name = "scheme1", //same as main prod scheme. so no download is done on app start
-                description = "Unit Test Rate Limiter"
-        )
-    }
-
-    fun updateScheme(hourlyLimit:Int,
-                     dailyLimit :Int,
-                     schemeID:String,
-                     name:String,
-                     description:String){
-
-        rateLimiter.hourlyLimit = hourlyLimit
-        rateLimiter.dailyLimit = dailyLimit
-        rateLimiter.schemeID = schemeID
-        rateLimiter.name = name
-        rateLimiter.description = description
-
-
-    }
-    fun updateToMinimalScheme() {
-        if (DEBUG && TEST_RATE_LIMITING) { //Never in prod
-            rateLimiter.hourlyLimit = 10
-            rateLimiter.dailyLimit = 20
-            rateLimiter.schemeID = "MinimalScheme"
-            rateLimiter.name = "Minimal Test Rate Limiter"
-            rateLimiter.description = "Test Rate Limiter using smallest values"
-        }
-    }
-    fun getInstance(): SimpleRateLimiter {
-        if (!this::rateLimiter.isInitialized) {
-            throw IllegalStateException("RateLimiterManager has not been initialized")
-        }
-        return rateLimiter
-    }
-}
-
- */

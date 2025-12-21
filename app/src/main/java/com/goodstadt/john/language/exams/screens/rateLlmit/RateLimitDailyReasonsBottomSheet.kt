@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens
 
+import android.content.Context
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,13 +19,16 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 //import com.johngoodstadt.memorize.language.storage.firebase.fb
 //import com.johngoodstadt.memorize.language.storage.firebase.fsUpdateStatsPropertyCount
 //import com.johngoodstadt.memorize.language.storage.firebase.fsUpdateUserPropertyCount
@@ -41,6 +45,7 @@ fun RateLimitDailyReasonsBottomSheet (
     onCloseSheet: () -> Unit
 ) {
 
+    val context = LocalContext.current
   //  val rateLimiter = RateLimiterManager.getInstance()
     val uiState by viewModel.uiState.collectAsState()
 
@@ -96,7 +101,7 @@ fun RateLimitDailyReasonsBottomSheet (
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
             )
             Text(
-                    text = "2. Up to ${uiState.hourlyLimit}  interactions per day.",
+                    text = "2. Up to ${uiState.dailyLimit}  interactions per day.",
                     fontSize = 14.sp,
                     textAlign = TextAlign.Start,
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
@@ -125,6 +130,7 @@ fun RateLimitDailyReasonsBottomSheet (
             Button(
                     onClick = {
                         coroutineScope.launch {
+                            AnalyticsHelper.logPaywallResponse(context,"accepted", "limit_daily")
                             sheetState.hide() // Slide out animation
                             onBuyPremiumButtonPressed()
                             onCloseSheet() // Remove after animation

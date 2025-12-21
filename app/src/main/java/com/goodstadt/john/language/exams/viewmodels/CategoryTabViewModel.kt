@@ -2,6 +2,9 @@ package com.goodstadt.john.language.exams.viewmodels
 
 
 import android.app.Activity
+import android.content.Context
+import android.os.Bundle
+import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
@@ -13,7 +16,9 @@ import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.DAILY_LIMIT
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
+import com.goodstadt.john.language.exams.managers.HOURLY_LIMIT
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
@@ -21,9 +26,14 @@ import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.utils.CategoryProgress
+import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
+import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -61,6 +71,7 @@ sealed class UiEvent {
 
 @HiltViewModel
 class CategoryTabViewModel @Inject constructor(
+    @ApplicationContext private val context: Context,
     private val contentRepository: ContentRepository,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val historyManager: HistorySyncManager,
@@ -232,12 +243,49 @@ class CategoryTabViewModel @Inject constructor(
             if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
         }
 
+
+        //Do rate limiting checks
+
+
+
 //        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
 //        // This turns the Red Dot ON immediately.
 //        didPlayVocabSentence(sentence, category.title, category.tabNumber)
 
         // 2. START NEW JOB
         playbackJob = viewModelScope.launch {
+            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
+                if (rateLimiter.doIForbidCall()) {
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.v("${failType.canICallAPI}")
+                    Timber.v("${failType.failReason}")
+                    Timber.v("${failType.timeLeftToWait}")
+                    if (!failType.canICallAPI) {
+                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                            _showRateDailyLimitSheet.value = true
+                        } else {
+                            _showRateHourlyLimitSheet.value = true
+                        }
+                    } else {
+                        _showRateLimitSheet.value = true
+                    }
+
+                    val dayNum = getDaysSinceInstall(context)
+                    val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
+                    // 2. Log the Hit
+                    // This answers: "Are 50/150 too strict?"
+                    AnalyticsHelper.logRateLimitHit(
+                        context = context,
+                        limitType = limitType,
+                        currentCount = if (limitType == "daily") DAILY_LIMIT else HOURLY_LIMIT
+                    )
+
+                    return@launch
+                }
+            }
+
+
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
             val loadingJob = launch {
                 delay(2000) // Wait 1 second

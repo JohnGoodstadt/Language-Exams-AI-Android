@@ -24,8 +24,10 @@ import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.utils.formatTimeInterval
 import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
 
@@ -37,7 +39,7 @@ fun RateLimitHourlyReasonsBottomSheet(
     onCloseSheet: () -> Unit
 ) {
 
-//    val rateLimiter = RateLimiterManager.getInstance()
+    val context = LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
 
     var limitMessage by remember { mutableStateOf("Call limits exceeded for this hour. Please wait till later for your next hearing.") }
@@ -129,6 +131,7 @@ fun RateLimitHourlyReasonsBottomSheet(
                         coroutineScope.launch {
                             sheetState.hide() // Slide out animation
 //                            onCloseSheet() // Remove after animation
+                            AnalyticsHelper.logPaywallResponse(context,"accepted", "limit_hourly")
                             onBuyPremiumButtonPressed()
                             onCloseSheet()
                         }

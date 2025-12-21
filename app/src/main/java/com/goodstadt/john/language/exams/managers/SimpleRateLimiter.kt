@@ -111,7 +111,7 @@ class SimpleRateLimiter @Inject constructor(
 //            else -> false
 //        }
 //    }
-    fun canMakeAPICall():Boolean {
+private fun canMakeAPICall():Boolean {
 
         return when {
             canMakeCallWithResult().canICallAPI -> true
