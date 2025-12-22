@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens.me
 
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -115,7 +116,13 @@ fun MyProgressScreen(
                     )
                     Card(
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-                        shape = RoundedCornerShape(16.dp)
+                        shape = RoundedCornerShape(16.dp),
+                        modifier = Modifier
+                            // ✅ MAKE THE WHOLE CARD CLICKABLE
+                            .clickable {
+                                // 0 represents the first tab (Screen.Tab1)
+                                onNavigate(SideQuestNavTarget.MainTab(0))
+                            }
                     ) {
                         Column(
                             modifier = Modifier.padding(16.dp),
@@ -150,17 +157,17 @@ fun MyProgressScreen(
                         SectionHeader(title = "Quick Reference", icon = Icons.Default.AutoAwesome, color = Color(0xFF9C27B0)) // Purple
                         // Quick Refs
                         refData.quickRefs.forEach {
-                            QuickReferenceRow(category = it)
+                            QuickReferenceRow(category = it,onNavigate = onNavigate)
                         }
                     }
                 }
 
                 SectionHeader(title = "Bonus", icon = Icons.Default.AutoAwesome, color = Color(0xFF9C27B0)) // Purple
                 // A. Quiz
-                QuizMasteryCard(quizManager = viewModel.quizManager)
+                QuizMasteryCard(quizManager = viewModel.quizManager,onNavigate = onNavigate )
 
                 // B. AI
-                AIWriterCard(count = state.aiCount, heard = state.aiHeard)
+                AIWriterCard(count = state.aiCount, heard = state.aiHeard,onNavigate = onNavigate )
 
                 BadgeShowcaseSection(xpState = state.xpState)
                 // ==========================================

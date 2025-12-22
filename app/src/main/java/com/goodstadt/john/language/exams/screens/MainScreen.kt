@@ -68,32 +68,57 @@ fun MainScreen() {
     val context = LocalContext.current
     val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
 
-    val navigationState by navViewModel.pendingNavigation.collectAsState()
+//    val navigationState by navViewModel.pendingNavigation.collectAsState()
     // ✅ 2. Listen for requests to switch tabs
-    LaunchedEffect(navigationState) {
-        val target = navigationState
-        if (target != null) {
-            // Check if we need to switch tabs
-           // if (target is SideQuestNavTarget.Reference || target is SideQuestNavTarget.Quiz) {
-            if (target is SideQuestNavTarget.Reference) {
+    LaunchedEffect(Unit) {
+        navViewModel.navigationEvent.collect { target ->
+            //val target = navigationState
+            if (target != null) {
+                // Check if we need to switch tabs
+                // if (target is SideQuestNavTarget.Reference || target is SideQuestNavTarget.Quiz) {
+                if (target is SideQuestNavTarget.Reference) {
 
-                // Assuming "Reference" is the second tab (index 1)
-                // Switch the Tab Router
-                //navController.navigate("reference_graph_route") {
-                navController.navigate(Screen.Tab4.route) {
-                    popUpTo(navController.graph.findStartDestination().id) {
-                        saveState = true
+                    // Assuming "Reference" is the second tab (index 1)
+                    // Switch the Tab Router
+                    //navController.navigate("reference_graph_route") {
+                    navController.navigate(Screen.Tab4.route) {
+                        popUpTo(navController.graph.findStartDestination().id) {
+                            saveState = true
+                        }
+                        launchSingleTop = true
+                        restoreState = true
                     }
-                    launchSingleTop = true
-                    restoreState = true
-                }
 
-                // Note: We do NOT consume the event here yet.
-                // We let the Reference screen consume it so it knows which sub-tab to pick.
-            }else{
-                Timber.i("target is not Reference")
+                    // Note: We do NOT consume the event here yet.
+                    // We let the Reference screen consume it so it knows which sub-tab to pick.
+
+                }
+                else if (target is SideQuestNavTarget.MainTab)  {
+
+                    // Logic to define which route corresponds to index 0, 1, 2
+                    val route = when(target.tabIndex) {
+                        0 -> Screen.Tab1.route
+                        1 -> Screen.Tab2.route
+                        2 -> Screen.Tab3.route
+                        else -> Screen.Tab1.route
+                    }
+
+                    navController.navigate(route) {
+                        // Standard Bottom Navigation cleanup
+                        popUpTo(navController.graph.findStartDestination().id) {
+                            saveState = true
+                        }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                }
+                else{
+                    Timber.i("target is not Reference")
+                }
             }
         }
+
+
     }
 
     ChangeStatusBarColor(color = Color.Transparent, darkIcons = false)

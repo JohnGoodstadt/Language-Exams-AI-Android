@@ -249,35 +249,37 @@ data class SideQuestData(
 fun getReferenceData(manager: AudioCacheManager, heardCounts: Map<String, Int>): SideQuestData {
 
     // Helper to make sub-items
-    fun item(title: String, key: String): ReferenceSubItem {
+    fun item(title: String, key: String, tabId: String): ReferenceSubItem {
         val heard = heardCounts[key] ?: 0
         val total = manager.getReferenceStats(key).total
-        return ReferenceSubItem(title, heard, maxOf(total, 1)) // Avoid div/0 visual issues
+        return ReferenceSubItem(title, heard, maxOf(total, 1), documentId = key, tabId = tabId) // Avoid div/0 visual issues
     }
 
     // 1. Conjugations
+    val conjugationsTabId = "conjugations"
     val conjugations = ReferenceCategory(
         title = "Conjugations",
         icon = Icons.Default.Transform, // or ArrowTriangleBranch
         description = "Essential verb variations. Understanding these covers 40% of usage.",
         items = listOf(
-            item("To Be", "EnglishConjugationsToBe"),
-            item("To Have", "EnglishConjugationsToHave"),
-            item("To Do", "EnglishConjugationsToDo"),
-            item("To Get", "EnglishConjugationsToGet")
+            item("To Be", "EnglishConjugationsToBe",conjugationsTabId),
+            item("To Have", "EnglishConjugationsToHave",conjugationsTabId),
+            item("To Do", "EnglishConjugationsToDo",conjugationsTabId),
+            item("To Get", "EnglishConjugationsToGet",conjugationsTabId)
         )
     )
 
     // 2. Adjectives
+    val adjectivesTabId = "AdjectivesGroup"
     val adjectives = ReferenceCategory(
         title = "Adjectives",
         icon = Icons.Default.Palette,
         description = "Descriptive words ordered by complexity.",
         items = listOf(
-            item("Basic", "EnglishA1Adjectives"),
-            item("Intermediate", "EnglishA2Adjectives"),
-            item("Upper", "EnglishB1Adjectives"),
-            item("Advanced", "EnglishB2Adjectives")
+            item("Basic", "EnglishA1Adjectives",adjectivesTabId),
+            item("Intermediate", "EnglishA2Adjectives",adjectivesTabId),
+            item("Upper", "EnglishB1Adjectives",adjectivesTabId),
+            item("Advanced", "EnglishB2Adjectives",adjectivesTabId)
         )
     )
 
@@ -287,19 +289,19 @@ fun getReferenceData(manager: AudioCacheManager, heardCounts: Map<String, Int>):
             title = "Prepositions",
             icon = Icons.Default.SwapVert,
             description = "Tricky connection words.",
-            items = listOf(item("Main", "EnglishPrepositions"))
+            items = listOf(item("Main", "EnglishPrepositions","EnglishPrepositions"))
         ),
         ReferenceCategory(
             title = "Sounds the Same",
             icon = Icons.Default.Hearing,
             description = "Homophones (e.g. There, Their, They're).",
-            items = listOf(item("Main", "EnglishDefinitionsFormat1"))
+            items = listOf(item("Main", "EnglishDefinitionsFormat1","EnglishDefinitionsFormat1"))
         ),
         ReferenceCategory(
             title = "Good vs Well",
             icon = Icons.Default.CheckCircle,
             description = "Common confusion between adjectives and adverbs.",
-            items = listOf(item("Main", "EnglishGoodVsWell"))
+            items = listOf(item("Main", "EnglishGoodVsWell","EnglishGoodVsWell"))
         )
     )
 

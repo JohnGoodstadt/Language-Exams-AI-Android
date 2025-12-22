@@ -66,18 +66,22 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 // ✅ 1. Get the Shared Navigation ViewModel
     val context = LocalContext.current
     val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
-    val pendingNav by navViewModel.pendingNavigation.collectAsState()
+//    val pendingNav by navViewModel.pendingNavigation.collectAsState()
 
     // ✅ 2. React to the pending navigation
-    LaunchedEffect(pendingNav) {
-        val target = pendingNav
-        if (target != null) {
-            // A. Tell the local ViewModel to update the UI
-            viewModel.checkDeepLink(target)
+    LaunchedEffect(Unit) {
+        navViewModel.navigationEvent.collect { target ->
 
-            // B. Mark the event as handled globally so we don't re-trigger it
-            navViewModel.consumeNavigation()
+//            val target = pendingNav
+//            if (target != null) {
+                // A. Tell the local ViewModel to update the UI
+                viewModel.checkDeepLink(target)
+
+                // B. Mark the event as handled globally so we don't re-trigger it
+//                navViewModel.consumeNavigation()
+//            }
         }
+
     }
 
     // --- Navigation Logic ---

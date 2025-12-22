@@ -4,6 +4,7 @@ import com.goodstadt.john.language.exams.data.QuizHistoryManager
 
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -26,7 +27,7 @@ import com.goodstadt.john.language.exams.models.ReferenceCategory
 sealed class SideQuestNavTarget {
     // We add 'tabId' to know which tab to switch to in the horizontal menu
     data class Reference(val tabId: String, val documentId: String) : SideQuestNavTarget()
-
+    data class MainTab(val tabIndex: Int) : SideQuestNavTarget()
     // ... other targets ...
 }
 
@@ -127,7 +128,7 @@ fun SideQuestStatsSheet(
                     )
 
                     quickRefs.forEach { category ->
-                        QuickReferenceRow(category = category)
+                        QuickReferenceRow(category = category,onNavigate)
                     }
                 }
             }
@@ -135,10 +136,11 @@ fun SideQuestStatsSheet(
             // 2. ACTIVE STATS (Creator & Quiz)
             Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 // AI Paragraphs (Creation)
-                AIWriterCard(count = paragraphCount, heard = paragraphHeardCount)
+                AIWriterCard(count = paragraphCount, heard = paragraphHeardCount,onNavigate)
 
                 // Quiz Mastery (Testing)
-                QuizMasteryCard(quizManager = quizManager)
+                QuizMasteryCard(quizManager = quizManager,onNavigate)
+
                 // ✅ NEW: Detailed Breakdown with Memory Boosts
                 Text(
                     text = "Quiz Details",
@@ -165,10 +167,13 @@ fun SideQuestStatsSheet(
 // MARK: - COMPONENTS
 
 @Composable
-fun AIWriterCard(count: Int, heard: Int) {
+fun AIWriterCard(count: Int, heard: Int,onNavigate: (SideQuestNavTarget) -> Unit) {
     Card(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-        shape = RoundedCornerShape(16.dp)
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.clickable {
+            onNavigate(SideQuestNavTarget.Reference("paragraph", "paragraph"))
+        }
     ) {
         Row(
             modifier = Modifier
@@ -198,12 +203,33 @@ fun AIWriterCard(count: Int, heard: Int) {
             }
 
             Column {
-                Text(
-                    text = "AI Paragraphs",
-                    style = MaterialTheme.typography.labelLarge,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = "AI Paragraphs",
+                        style = MaterialTheme.typography.labelLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.weight(1f))
+                    TextButton(
+                        onClick = {
+
+                            val tabId = "paragraph"
+                            val docId = "paragraph"
+
+                            // val c = category
+
+                            // Assuming the Tab ID is the same as Document ID for simple sheets,
+                            // or you have a way to map them.
+                            onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
+                        },
+                        colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFF009688))
+                    ) {
+                        Text("Do More", style = MaterialTheme.typography.labelMedium)
+                        Icon(Icons.Default.ArrowForward, contentDescription = null, modifier = Modifier.size(16.dp))
+                    }
+                }
+
                 Text(
                     text = "$count",
                     style = MaterialTheme.typography.displaySmall,
@@ -221,12 +247,15 @@ fun AIWriterCard(count: Int, heard: Int) {
 }
 
 @Composable
-fun QuizMasteryCard(quizManager: QuizHistoryManager) {
+fun QuizMasteryCard(quizManager: QuizHistoryManager,onNavigate: (SideQuestNavTarget) -> Unit) {
     val stats = quizManager.getGlobalStats() // Gets totals from HistoryManager
 
     Card(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-        shape = RoundedCornerShape(16.dp)
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.clickable {
+            onNavigate(SideQuestNavTarget.Reference("quiz", "quiz"))
+        }
     ) {
         Row(
             modifier = Modifier
@@ -256,12 +285,33 @@ fun QuizMasteryCard(quizManager: QuizHistoryManager) {
             }
 
             Column {
-                Text(
-                    text = "Quiz Mastery",
-                    style = MaterialTheme.typography.labelLarge,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(
+                        text = "Quiz Mastery",
+                        style = MaterialTheme.typography.labelLarge,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    Spacer(modifier = Modifier.weight(1f))
+                    TextButton(
+                        onClick = {
+
+                            val tabId = "quiz"
+                            val docId = "quiz"
+
+                            // val c = category
+
+                            // Assuming the Tab ID is the same as Document ID for simple sheets,
+                            // or you have a way to map them.
+                            onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
+                        },
+                        colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFF009688)),
+                    ) {
+                        Text("Do More", style = MaterialTheme.typography.labelMedium)
+                        Icon(Icons.Default.ArrowForward, contentDescription = null, modifier = Modifier.size(16.dp))
+                    }
+                }
+
 
                 Row(horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                     Column {
@@ -310,9 +360,14 @@ fun ReferenceGroupCard(category: ReferenceCategory, color: Color,onNavigate: (Si
                         // Assuming the category items map to a specific document/tab
                         // You need to know which Tab ID corresponds to this category.
                         // If 'category.items' holds the documentId, use the first one.
-                        val tabId = "AdjectivesGroup"//category.items.firstOrNull()?.documentId ?: return@TextButton
-                        val docId = "EnglishA1Adjectives"
-                        val c = category
+//                        val tabId = "AdjectivesGroup"//category.items.firstOrNull()?.documentId ?: return@TextButton
+//                        val docId = "EnglishA1Adjectives"
+                        val firstItem = category.items.firstOrNull()
+                        val tabId = category.items.firstOrNull()?.tabId ?: return@TextButton
+                        val docId = category.items.firstOrNull()?.documentId ?: return@TextButton
+
+                       // val c = category
+
                         // Assuming the Tab ID is the same as Document ID for simple sheets,
                         // or you have a way to map them.
                         onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
@@ -394,11 +449,12 @@ fun ReferenceGroupCard(category: ReferenceCategory, color: Color,onNavigate: (Si
 }
 
 @Composable
-fun QuickReferenceRow(category: ReferenceCategory) {
+fun QuickReferenceRow(category: ReferenceCategory,onNavigate: (SideQuestNavTarget) -> Unit){ // ✅ Add Callback)
     // Aggregate data if items are split, or just take the first one
     val totalViewed = category.items.sumOf { it.viewed }
     val totalItems = category.items.sumOf { it.total }
     val coverage = if (totalItems > 0) totalViewed.toFloat() / totalItems else 0f
+    val targetItem = category.items.firstOrNull()
 
     Card(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
@@ -432,14 +488,34 @@ fun QuickReferenceRow(category: ReferenceCategory) {
                 )
             }
 
-            // Description
-            Text(
-                text = category.description,
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                maxLines = 2,
-                modifier = Modifier.padding(start = 32.dp)
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    text = category.description,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 2,
+                    modifier = Modifier.padding(start = 32.dp)
+                )
+                Spacer(modifier = Modifier.weight(1f))
+                TextButton(
+                    onClick = {
+                        val firstItem = category.items.firstOrNull()
+                        val tabId = category.items.firstOrNull()?.tabId ?: return@TextButton
+                        val docId = category.items.firstOrNull()?.documentId ?: return@TextButton
+
+                        // val c = category
+
+                        // Assuming the Tab ID is the same as Document ID for simple sheets,
+                        // or you have a way to map them.
+                        onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
+                    },
+                    colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFF009688)),
+                ) {
+                    Text("Do More", style = MaterialTheme.typography.labelMedium)
+                    Icon(Icons.Default.ArrowForward, contentDescription = null, modifier = Modifier.size(16.dp))
+                }
+            }
+
 
             // Mini Bar
             Box(
