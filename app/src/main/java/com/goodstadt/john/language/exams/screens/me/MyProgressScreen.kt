@@ -21,6 +21,7 @@ import com.goodstadt.john.language.exams.screens.shared.gamification.GlobalProgr
 import com.goodstadt.john.language.exams.screens.shared.gamification.QuickReferenceRow
 import com.goodstadt.john.language.exams.screens.shared.gamification.QuizMasteryCard
 import com.goodstadt.john.language.exams.screens.shared.gamification.ReferenceGroupCard
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.screens.shared.gamification.TopicProgressRow
 import com.goodstadt.john.language.exams.viewmodels.ActivityChartCard
 import com.goodstadt.john.language.exams.viewmodels.ConsistencyHeatmap
@@ -34,7 +35,8 @@ import com.goodstadt.john.language.exams.viewmodels.SkillBreakdownView
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyProgressScreen(
-    viewModel: MyProgressViewModel = hiltViewModel()
+    viewModel: MyProgressViewModel = hiltViewModel(),
+    onNavigate: (SideQuestNavTarget) -> Unit,
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
@@ -142,8 +144,8 @@ fun MyProgressScreen(
 
                     // C. Reference
                     state.sideQuestData?.let { refData ->
-                        ReferenceGroupCard(category = refData.conjugations, color = Color(0xFF3F51B5))
-                        ReferenceGroupCard(category = refData.adjectives, color = Color(0xFF009688))
+                        ReferenceGroupCard(category = refData.conjugations, color = Color(0xFF3F51B5),onNavigate = onNavigate )
+                        ReferenceGroupCard(category = refData.adjectives, color = Color(0xFF009688),onNavigate = onNavigate )
 
                         SectionHeader(title = "Quick Reference", icon = Icons.Default.AutoAwesome, color = Color(0xFF9C27B0)) // Purple
                         // Quick Refs

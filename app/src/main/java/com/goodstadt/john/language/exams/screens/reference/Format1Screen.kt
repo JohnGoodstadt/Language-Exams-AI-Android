@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens.reference
 
 
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -42,8 +43,10 @@ import dagger.hilt.android.EntryPointAccessors
 fun Format1Screen(
     viewModel: Format1ViewModel = hiltViewModel(),
     // Note: 'data' is removed from params because it comes from ViewModel state now
+
     modifier: Modifier = Modifier
 ) {
+    val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
     val uiState by viewModel.uiState.collectAsState()
 
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -221,6 +224,10 @@ fun Format1Screen(
                             adjectives = sideQuestData.adjectives,
                             quickRefs = sideQuestData.quickRefs,
                             quizManager = entryPoint.getQuizManager(),
+                            onNavigate = { target ->
+                                showSideQuestSheet = false // Close sheet first
+                                navViewModel.requestNavigation(target) // Send signal to Parent
+                            },
                             onDismiss = { showSideQuestSheet = false }
                         )
                     }

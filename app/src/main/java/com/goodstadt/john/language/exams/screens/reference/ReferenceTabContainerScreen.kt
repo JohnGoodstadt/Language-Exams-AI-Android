@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.reference
 
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -18,6 +19,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavType
@@ -44,6 +46,7 @@ import timber.log.Timber
 @Composable
 fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel()) {
 
+//    val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
     val refTabNavController = rememberNavController()
     // MODIFIED: We only have ONE uiState to collect now
     val uiState by viewModel.uiState.collectAsState()
@@ -60,6 +63,22 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
         }
     }
     // Perform the navigation
+// ✅ 1. Get the Shared Navigation ViewModel
+    val context = LocalContext.current
+    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
+    val pendingNav by navViewModel.pendingNavigation.collectAsState()
+
+    // ✅ 2. React to the pending navigation
+    LaunchedEffect(pendingNav) {
+        val target = pendingNav
+        if (target != null) {
+            // A. Tell the local ViewModel to update the UI
+            viewModel.checkDeepLink(target)
+
+            // B. Mark the event as handled globally so we don't re-trigger it
+            navViewModel.consumeNavigation()
+        }
+    }
 
     // --- Navigation Logic ---
     // This LaunchedEffect now uses the merged uiState

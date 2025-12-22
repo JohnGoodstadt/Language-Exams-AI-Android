@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.me
 
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -17,6 +18,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
@@ -28,6 +30,7 @@ import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.recall.RecallScreen
+import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
@@ -42,15 +45,6 @@ import kotlinx.coroutines.launch
 @Composable
 fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
 
-    // --- THIS IS THE CORRECTED LOGIC ---
-    // 1. Get an instance of the main TabsViewModel. Hilt will correctly scope this
-    //    to the parent navigation graph (the main NavHost) automatically.
-    //    The complex 'findActivity' logic is not needed here.
-    //val tabsViewModel: TabsViewModel = hiltViewModel()
-    // --- END OF CORRECTION ---
-
-//    val bottomSheetNavigator = rememberBottomSheetNavigator()
-
 
     val meTabNavController = rememberNavController()
     val uiState by viewModel.uiState.collectAsState()
@@ -60,6 +54,8 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
     val scope = rememberCoroutineScope()
     val isSheetVisible = uiState.selectedCategoryTitle != null
 
+    val context = LocalContext.current
+    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
 
     LaunchedEffect(isSheetVisible) {
         if (!isSheetVisible) {
@@ -119,12 +115,10 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
             composable(MeScreen.Search.route) { SearchScreen() }
 
             composable(MeScreen.Progress.route) {
-                MyProgressScreen()
-//                ProgressMapScreen(
-//                    onTileTapped = { categoryTitle ->
-//                        viewModel.onTileTapped(categoryTitle)
-//                    }
-//                )
+                MyProgressScreen(onNavigate = { target ->
+                    // Send the signal to switch tabs/screens
+                    navViewModel.requestNavigation(target)
+                })
             }
             composable(MeScreen.Paragraph.route) { ParagraphScreen() }
         }

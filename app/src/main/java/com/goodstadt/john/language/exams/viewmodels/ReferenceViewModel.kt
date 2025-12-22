@@ -11,6 +11,7 @@ import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.SheetDefinition
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format2File
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -162,5 +163,20 @@ class ReferenceViewModel @Inject constructor(
     }
     fun playTrack( sentence: String) {
         Timber.v(sentence)
+    }
+    // ✅ 1. Function to handle the deep link
+    fun checkDeepLink(target: SideQuestNavTarget) {
+        when (target) {
+            is SideQuestNavTarget.Reference -> {
+                // Update the internal horizontal tab
+                // This will trigger the LaunchedEffect in ReferenceTabContainerScreen
+                onTabSelected(target.tabId)
+
+                // Optional: If you need to push a specific document on top,
+                // you might need to handle target.documentId here too.
+            }
+            // Add logic for Quiz if needed
+            else -> {}
+        }
     }
 }

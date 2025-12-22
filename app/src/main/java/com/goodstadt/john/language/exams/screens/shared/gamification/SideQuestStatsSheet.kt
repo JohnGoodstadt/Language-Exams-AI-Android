@@ -22,6 +22,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.goodstadt.john.language.exams.models.ReferenceCategory
 
+
+sealed class SideQuestNavTarget {
+    // We add 'tabId' to know which tab to switch to in the horizontal menu
+    data class Reference(val tabId: String, val documentId: String) : SideQuestNavTarget()
+
+    // ... other targets ...
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SideQuestStatsSheet(
@@ -31,6 +39,7 @@ fun SideQuestStatsSheet(
     adjectives: ReferenceCategory?,
     quickRefs: List<ReferenceCategory>, // Contains Prepositions, Sounds Same, Good vs Well
     quizManager: QuizHistoryManager,
+    onNavigate: (SideQuestNavTarget) -> Unit,
     onDismiss: () -> Unit
 ) {
     Scaffold(
@@ -98,11 +107,11 @@ fun SideQuestStatsSheet(
                     )
 
                     if (conjugations != null) {
-                        ReferenceGroupCard(category = conjugations, color = Color(0xFF2196F3)) // Blue
+                        ReferenceGroupCard(category = conjugations, color = Color(0xFF2196F3),onNavigate = onNavigate ) // Blue
                     }
 
                     if (adjectives != null) {
-                        ReferenceGroupCard(category = adjectives, color = Color(0xFF3F51B5)) // Indigo
+                        ReferenceGroupCard(category = adjectives, color = Color(0xFF3F51B5),onNavigate = onNavigate) // Indigo
                     }
                 }
             }
@@ -270,7 +279,7 @@ fun QuizMasteryCard(quizManager: QuizHistoryManager) {
 }
 
 @Composable
-fun ReferenceGroupCard(category: ReferenceCategory, color: Color) {
+fun ReferenceGroupCard(category: ReferenceCategory, color: Color,onNavigate: (SideQuestNavTarget) -> Unit ) {
     Card(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         shape = RoundedCornerShape(16.dp)
@@ -295,6 +304,25 @@ fun ReferenceGroupCard(category: ReferenceCategory, color: Color) {
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold
                 )
+                Spacer(modifier = Modifier.weight(1f))
+                TextButton(
+                    onClick = {
+                        // Assuming the category items map to a specific document/tab
+                        // You need to know which Tab ID corresponds to this category.
+                        // If 'category.items' holds the documentId, use the first one.
+                        val tabId = "AdjectivesGroup"//category.items.firstOrNull()?.documentId ?: return@TextButton
+                        val docId = "EnglishA1Adjectives"
+                        val c = category
+                        // Assuming the Tab ID is the same as Document ID for simple sheets,
+                        // or you have a way to map them.
+                        onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
+                    },
+                    colors = ButtonDefaults.textButtonColors(contentColor = color)
+                ) {
+                    Text("Do Another", style = MaterialTheme.typography.labelMedium)
+                    Icon(Icons.Default.ArrowForward, contentDescription = null, modifier = Modifier.size(16.dp))
+                }
+
             }
 
             // Sub-items List

@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.screens
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -45,10 +46,13 @@ import com.goodstadt.john.language.exams.data.UpdateState
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CloudOff
+import androidx.compose.runtime.LaunchedEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.screens.me.ChooseEnglishAndExamSheet
+import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.reference.ReferenceTabContainerScreen
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import timber.log.Timber
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -59,6 +63,38 @@ fun MainScreen() {
     val globalUiState by mainViewModel.uiState.collectAsState()
     val authState = globalUiState.authState
     val updateState by mainViewModel.updateState.collectAsState()
+
+    // ✅ 1. Get the Activity-Scoped Navigation ViewModel -- navigate auto on onClick
+    val context = LocalContext.current
+    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
+
+    val navigationState by navViewModel.pendingNavigation.collectAsState()
+    // ✅ 2. Listen for requests to switch tabs
+    LaunchedEffect(navigationState) {
+        val target = navigationState
+        if (target != null) {
+            // Check if we need to switch tabs
+           // if (target is SideQuestNavTarget.Reference || target is SideQuestNavTarget.Quiz) {
+            if (target is SideQuestNavTarget.Reference) {
+
+                // Assuming "Reference" is the second tab (index 1)
+                // Switch the Tab Router
+                //navController.navigate("reference_graph_route") {
+                navController.navigate(Screen.Tab4.route) {
+                    popUpTo(navController.graph.findStartDestination().id) {
+                        saveState = true
+                    }
+                    launchSingleTop = true
+                    restoreState = true
+                }
+
+                // Note: We do NOT consume the event here yet.
+                // We let the Reference screen consume it so it knows which sub-tab to pick.
+            }else{
+                Timber.i("target is not Reference")
+            }
+        }
+    }
 
     ChangeStatusBarColor(color = Color.Transparent, darkIcons = false)
 

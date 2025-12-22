@@ -51,6 +51,7 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+    val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
 
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -144,6 +145,10 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                             adjectives = sideQuestData.adjectives,
                             quickRefs = sideQuestData.quickRefs,
                             quizManager = entryPoint.getQuizManager(),
+                            onNavigate = { target ->
+                                showSideQuestSheet = false // Close sheet first
+                                navViewModel.requestNavigation(target) // Send signal to Parent
+                            },
                             onDismiss = { showSideQuestSheet = false }
                         )
                     }

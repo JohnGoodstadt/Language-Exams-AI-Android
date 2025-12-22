@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.reference
 
+import androidx.activity.ComponentActivity
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
@@ -40,6 +41,7 @@ fun ReferenceGenericScreenNew(
     // Bottom Sheet State
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
 
     when (val state = uiState) {
         is GenericVocabUiState.Loading -> {
@@ -182,6 +184,10 @@ fun ReferenceGenericScreenNew(
                                 adjectives = refData.adjectives,
                                 quickRefs = refData.quickRefs,
                                 quizManager = entryPoint.getQuizManager(),
+                                onNavigate = { target ->
+                                    showSideQuestSheet = false // Close sheet first
+                                    navViewModel.requestNavigation(target) // Send signal to Parent
+                                },
                                 onDismiss = { showSideQuestSheet = false }
                             )
                         }
