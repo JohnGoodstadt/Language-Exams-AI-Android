@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens.reference
 
 
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -8,11 +9,16 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -25,12 +31,17 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.models.Format2Level
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+import dagger.hilt.android.EntryPointAccessors
 
 /**
  * A "dumb" Composable screen that displays data in the "Format2" structure.
@@ -41,7 +52,7 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
  * @param levels The list of sections (`Format2Level`) to display.
  * @param onRowTapped A callback for when a sentence row is tapped.
  */
-@OptIn(ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun Format2Screen(
     viewModel: Format2ViewModel = hiltViewModel(),
@@ -54,6 +65,9 @@ fun Format2Screen(
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+    var showSideQuestSheet by remember { mutableStateOf(false) }
+    val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
 
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -75,12 +89,29 @@ fun Format2Screen(
         // --- 1. Top-Level Title and Description ---
         item {
             Column(modifier = Modifier.padding(16.dp)) {
-                Text(
-                    text = title,
-                    style = MaterialTheme.typography.headlineMedium,
-//                    fontWeight = FontWeight.Bold,
-                    color = orangeLight
-                )
+
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .background(MaterialTheme.colorScheme.surface)
+                        .padding(horizontal = 16.dp, vertical = 8.dp)
+                ) {
+                    Text(
+                        text = title,
+                        style = MaterialTheme.typography.headlineMedium,
+                        color = orangeLight
+                    )
+                    Spacer(modifier = Modifier.weight(1f))
+                    // Side Quest Icon
+                    IconButton(onClick = { showSideQuestSheet = true }) {
+                        Icon(
+                            imageVector = Icons.Filled.WorkspacePremium,
+                            contentDescription = "Stats",
+                            tint = Color(0xFFFF9800)
+                        )
+                    }
+                }
                 if (description.isNotBlank()) {
                     Text(
                         text = description,
@@ -108,7 +139,7 @@ fun Format2Screen(
                         Text(
                             text = level.description,
                             style = MaterialTheme.typography.titleMedium,
-                            color = orangeLight
+//                            color = orangeLight
                         )
                     }
                 }
@@ -175,6 +206,55 @@ fun Format2Screen(
             )
         }
     }
+    if (showSideQuestSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { showSideQuestSheet = false },
+            sheetState = sheetStateSideQuest,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            // 1. Get Managers
+            val audioCache = viewModel.getAudioCacheManager()
+
+            // 2. Collect Latest Stats (Reactive)
+            // This ensures the sheet has data even if it wasn't pre-calculated
+            val referenceCounts by audioCache.referenceHeardCounts.collectAsStateWithLifecycle()
+
+            // 3. Build the Data Models using the Helper
+            val refData = remember(referenceCounts) {
+                getReferenceData(audioCache, referenceCounts)
+            }
+
+            // 4. Get Hilt Entry Point for QuizManager
+            val entryPoint = remember(context) {
+                EntryPointAccessors.fromApplication(context.applicationContext, StatsSheetEntryPoint::class.java)
+            }
+
+            // 3. Build the Data
+            // We use 'remember(referenceCounts)' so it rebuilds whenever the counts change
+            val sideQuestData = remember(referenceCounts) {
+                buildSideQuestData(audioCache)
+            }
+
+            Box(modifier = Modifier.fillMaxHeight(0.85f)) {
+                // Note: You might need to pass data in here if SideQuestStatsSheet
+                // doesn't pull everything from Hilt automatically yet.
+                SideQuestStatsSheet(
+                    paragraphCount = viewModel.getAIParagraphCount(),
+                    paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
+                    conjugations = sideQuestData.conjugations,
+                    adjectives = sideQuestData.adjectives,
+                    quickRefs = sideQuestData.quickRefs,
+                    quizManager = entryPoint.getQuizManager(),
+                    onNavigate = { target ->
+                        showSideQuestSheet = false // Close sheet first
+                        navViewModel.requestNavigation(target) // Send signal to Parent
+                    },
+                    onDismiss = { showSideQuestSheet = false }
+                )
+            }
+        }
+    }
 }
 
 /**
@@ -215,14 +295,13 @@ private fun Format2Row(
 
             Text(text = styledSentence, modifier = Modifier.weight(1f))
 
+            if (playCount > 1) {
+                Text(text = "$playCount ", fontSize = 12.sp)
+            }
             // ✅ THE RED DOT
             if (isHeard) {
                 Text(text = "🔴", fontSize = 12.sp)
             }
-            if (playCount > 1) {
-                Text(text = "$playCount", fontSize = 12.sp)
-            }
-
         }
     }
 }

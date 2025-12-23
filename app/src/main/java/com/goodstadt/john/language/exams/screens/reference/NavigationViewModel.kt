@@ -16,9 +16,18 @@ class NavigationViewModel @Inject constructor() : ViewModel() {
 
     // Expose as a plain Flow
     val navigationEvent = _navigationEvent.receiveAsFlow()
+    var pendingReferenceTabId: String? = null
 
     fun requestNavigation(target: SideQuestNavTarget) {
         viewModelScope.launch {
+            // 1. If it's a Reference/Quiz target, save the ID
+            if (target is SideQuestNavTarget.Reference) {
+                pendingReferenceTabId = target.tabId
+            }
+            // If you use SideQuestNavTarget.Quiz explicitly:
+//            else if (target is SideQuestNavTarget.Quiz) {
+//                pendingReferenceTabId = "quiz"
+//            }
             _navigationEvent.send(target)
         }
     }

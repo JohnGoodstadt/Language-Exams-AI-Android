@@ -100,6 +100,8 @@ fun MainScreen() {
                         0 -> Screen.Tab1.route
                         1 -> Screen.Tab2.route
                         2 -> Screen.Tab3.route
+                        3 -> Screen.Tab4.route
+                        4 -> Screen.Tab5.route
                         else -> Screen.Tab1.route
                     }
 

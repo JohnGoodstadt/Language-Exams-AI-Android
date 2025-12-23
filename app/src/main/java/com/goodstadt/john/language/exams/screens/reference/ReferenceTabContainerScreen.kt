@@ -1,7 +1,13 @@
 package com.goodstadt.john.language.exams.screens.reference
 
 import androidx.activity.ComponentActivity
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -70,18 +76,19 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 
     // ✅ 2. React to the pending navigation
     LaunchedEffect(Unit) {
-        navViewModel.navigationEvent.collect { target ->
-
-//            val target = pendingNav
-//            if (target != null) {
-                // A. Tell the local ViewModel to update the UI
-                viewModel.checkDeepLink(target)
-
-                // B. Mark the event as handled globally so we don't re-trigger it
-//                navViewModel.consumeNavigation()
-//            }
+// 1. CHECK STICKY (Fixes "Me -> Quiz" / Cross-Tab)
+        // If we arrived here via a cross-tab jump, the ID is waiting in this variable.
+        val stickyTarget = navViewModel.pendingReferenceTabId
+        if (stickyTarget != null) {
+            viewModel.onTabSelected(stickyTarget)
+            navViewModel.pendingReferenceTabId = null // Clear it
         }
 
+        // 2. LISTEN LIVE (Fixes "Conjugations -> Prepositions" / Same-Tab)
+        // If we are already viewing this screen and click a button, this catches the event.
+        navViewModel.navigationEvent.collect { target ->
+            viewModel.checkDeepLink(target)
+        }
     }
 
     // --- Navigation Logic ---
@@ -329,8 +336,6 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 
 
 } //:Fun
-
-
 
 
 @Composable

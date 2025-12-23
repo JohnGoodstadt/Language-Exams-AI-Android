@@ -172,7 +172,8 @@ fun AIWriterCard(count: Int, heard: Int,onNavigate: (SideQuestNavTarget) -> Unit
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.clickable {
-            onNavigate(SideQuestNavTarget.Reference("paragraph", "paragraph"))
+            onNavigate(SideQuestNavTarget.MainTab(4))
+//            onNavigate(SideQuestNavTarget.Reference("paragraph", "paragraph"))
         }
     ) {
         Row(
@@ -221,7 +222,8 @@ fun AIWriterCard(count: Int, heard: Int,onNavigate: (SideQuestNavTarget) -> Unit
 
                             // Assuming the Tab ID is the same as Document ID for simple sheets,
                             // or you have a way to map them.
-                            onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
+//                            onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
+                            onNavigate(SideQuestNavTarget.MainTab(4))
                         },
                         colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFF009688))
                     ) {

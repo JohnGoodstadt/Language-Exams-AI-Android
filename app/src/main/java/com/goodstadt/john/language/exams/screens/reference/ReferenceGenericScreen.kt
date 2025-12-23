@@ -121,9 +121,9 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                     val referenceCounts by audioCache.referenceHeardCounts.collectAsStateWithLifecycle()
 
                     // 3. Build the Data Models using the Helper
-                    val refData = remember(referenceCounts) {
-                        getReferenceData(audioCache, referenceCounts)
-                    }
+//                    val refData = remember(referenceCounts) {
+//                        getReferenceData(audioCache, referenceCounts)
+//                    }
 
                     // 4. Get Hilt Entry Point for QuizManager
                     val entryPoint = remember(context) {

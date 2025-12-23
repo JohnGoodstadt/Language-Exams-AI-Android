@@ -223,4 +223,16 @@ class Format2ViewModel @Inject constructor(
         // 3. Update UI (Dot disappears)
         refreshUI()
     }
+
+    fun getAudioCacheManager(): AudioCacheManager {
+        return audioCacheManager
+    }
+
+    fun getAIParagraphCount(): Int {
+        return audioCacheManager.getAIParagraphCount()
+    }
+
+    fun getAIParagraphHeardCount(): Int {
+        return audioCacheManager.getAIParagraphHeardCount()
+    }
 }
