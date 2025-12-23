@@ -270,16 +270,17 @@ fun getReferenceData(manager: AudioCacheManager, heardCounts: Map<String, Int>):
     )
 
     // 2. Adjectives
-    val adjectivesTabId = "AdjectivesGroup"
+//    val adjectivesTabId = "AdjectivesGroup"
+//    val adjectivesTabId8 = "AdjectivesGroup"
     val adjectives = ReferenceCategory(
         title = "Adjectives",
         icon = Icons.Default.Palette,
         description = "Descriptive words ordered by complexity.",
         items = listOf(
-            item("Basic", "EnglishA1Adjectives",adjectivesTabId),
-            item("Intermediate", "EnglishA2Adjectives",adjectivesTabId),
-            item("Upper", "EnglishB1Adjectives",adjectivesTabId),
-            item("Advanced", "EnglishB2Adjectives",adjectivesTabId)
+            item("Basic", "AdjectivesGroup","EnglishA1Adjectives"),
+            item("Intermediate", "AdjectivesGroup","En2lishA1Adjectives"),
+            item("Upper", "AdjectivesGroup","EnglishB1Adjectives"),
+            item("Advanced", "AdjectivesGroup","EnglishB2Adjectives")
         )
     )
 

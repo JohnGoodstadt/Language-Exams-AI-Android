@@ -499,20 +499,24 @@ fun QuickReferenceRow(category: ReferenceCategory,onNavigate: (SideQuestNavTarge
                 Spacer(modifier = Modifier.weight(1f))
                 TextButton(
                     onClick = {
-                        val firstItem = category.items.firstOrNull()
-                        val tabId = category.items.firstOrNull()?.tabId ?: return@TextButton
-                        val docId = category.items.firstOrNull()?.documentId ?: return@TextButton
+                        category.items.firstOrNull()?.let { item ->
+                            val tabId = item.tabId
+                            val docId = item.documentId
 
-                        // val c = category
+                            onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
+                        }
 
-                        // Assuming the Tab ID is the same as Document ID for simple sheets,
-                        // or you have a way to map them.
-                        onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
                     },
                     colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFF009688)),
                 ) {
-                    Text("Do More", style = MaterialTheme.typography.labelMedium)
-                    Icon(Icons.Default.ArrowForward, contentDescription = null, modifier = Modifier.size(16.dp))
+                    targetItem?.let { item ->
+                        if (item.documentId != "EnglishGoodVsWell"){ //too long for words
+                            Text("Do More", style = MaterialTheme.typography.labelMedium)
+                        }
+                        Icon(Icons.Default.ArrowForward, contentDescription = null, modifier = Modifier.size(16.dp))
+                    }
+
+
                 }
             }
 

@@ -11,6 +11,7 @@ import com.goodstadt.john.language.exams.models.TabNumberEnum
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -22,6 +23,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import timber.log.Timber
 import java.io.File
+import java.lang.Integer.max
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -285,7 +287,7 @@ class AudioCacheManager @Inject constructor(
     }
     fun getReferenceStats(key: String): ReferenceStats {
         val h = _referenceHeardCounts.value[key] ?: 0
-        val t = referenceTotalCounts[key] ?: 0
+        val t = referenceTotalCounts[key] ?: max(h,0)
         return ReferenceStats(heard = h, total = t)
     }
 
@@ -397,14 +399,25 @@ class AudioCacheManager @Inject constructor(
 
     private fun loadReferenceStats() {
         try {
-            // Note: Update JSON handling to use your preferred library (Gson or Kotlinx.Serialization)
-            // Assuming simplified string loading here for brevity, match your actual implementation.
+            // 1. Load HEARD counts (StateFlow)
             val heardJson = prefs.getString(REF_HEARD_KEY, null)
             if (heardJson != null) {
-                // _referenceHeardCounts.value = ... load map ...
+                // Define the type: Map<String, Int>
+                val type = object : TypeToken<Map<String, Int>>() {}.type
+
+                // Parse and assign to StateFlow
+                val loadedMap: Map<String, Int> = gson.fromJson(heardJson, type)
+                _referenceHeardCounts.value = loadedMap
             }
 
-            // Load others...
+            // 2. Load TOTAL counts (MutableMap)
+            val totalJson = prefs.getString(REF_TOTAL_KEY, null)
+            if (totalJson != null) {
+                val type = object : TypeToken<MutableMap<String, Int>>() {}.type
+                referenceTotalCounts = gson.fromJson(totalJson, type)
+            }
+
+            // 3. Load AI Stats
             aiParagraphCount = prefs.getInt(AI_PARA_COUNT_KEY, 0)
             aiParagraphHeardCount = prefs.getInt(AI_PARA_HEARD_KEY, 0)
 

@@ -41,16 +41,16 @@ fun buildSideQuestData(manager: AudioCacheManager): SideQuestData {
     )
 
     // 2. ADJECTIVES
-    val adjectivesTabId = "AdjectivesGroup"
+    val adjectivesTabId = "EnglishA1Adjectives"//"AdjectivesGroup"
     val adjectives = ReferenceCategory(
         title = "Adjectives",
         icon = Icons.Default.Palette, // Represents description/color
         description = "Descriptive words ordered by complexity. Focus on Intermediate for daily conversation.",
         items = listOf(
-            makeSubItem("Basic",        "EnglishA1Adjectives", tabId = adjectivesTabId),
-            makeSubItem("Intermediate", "EnglishA2Adjectives", tabId = adjectivesTabId),
-            makeSubItem("Upper",        "EnglishB1Adjectives", tabId = adjectivesTabId),
-            makeSubItem("Advanced",     "EnglishB2Adjectives", tabId = adjectivesTabId),
+            makeSubItem("Basic",        "AdjectivesGroup", tabId = adjectivesTabId),
+            makeSubItem("Intermediate", "AdjectivesGroup", tabId = adjectivesTabId),
+            makeSubItem("Upper",        "AdjectivesGroup", tabId = adjectivesTabId),
+            makeSubItem("Advanced",     "AdjectivesGroup", tabId = adjectivesTabId),
         )
     )
 

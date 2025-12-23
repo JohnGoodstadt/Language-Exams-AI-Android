@@ -91,6 +91,14 @@ class Format2ViewModel @Inject constructor(
             val result = vocabRepository.getFormat2Data(sheetName)
 
             result.onSuccess { format2File ->
+
+                val allSentences = format2File.data
+                    .flatMap { it.wordsAndSentences } // Flatten Levels -> Entries
+                    .flatMap { it.sentences }         // Flatten Entries -> Sentence Objects (All of them)
+                    .map { it.sentence }
+
+                Timber.v("${allSentences.count()}")
+                audioCacheManager.recalculateReferenceStats(sheetName,allSentences)
                 _uiState.value = Format2UiState.Success(format2File)
             }
             result.onFailure { error ->

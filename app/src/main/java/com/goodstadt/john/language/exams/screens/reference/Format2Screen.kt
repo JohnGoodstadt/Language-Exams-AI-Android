@@ -219,7 +219,7 @@ private fun Format2Row(
             if (isHeard) {
                 Text(text = "🔴", fontSize = 12.sp)
             }
-            if (playCount > 0) {
+            if (playCount > 1) {
                 Text(text = "$playCount", fontSize = 12.sp)
             }
 
