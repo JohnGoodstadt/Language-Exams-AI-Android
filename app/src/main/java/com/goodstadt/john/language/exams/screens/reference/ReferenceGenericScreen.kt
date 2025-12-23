@@ -52,6 +52,11 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
     val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
+    val selectedVoiceName by viewModel.currentVoiceName.collectAsStateWithLifecycle()
+    val lazyListState = rememberLazyListState()
+    var showSideQuestSheet by remember { mutableStateOf(false) }
+    val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
 
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -67,10 +72,6 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     }
 
 
-    val selectedVoiceName by viewModel.currentVoiceName.collectAsStateWithLifecycle()
-    val lazyListState = rememberLazyListState()
-    var showSideQuestSheet by remember { mutableStateOf(false) }
-    val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // 3. MODIFIED: The when statement now checks for ReferenceGenericUiState types
     when (val state = uiState) {

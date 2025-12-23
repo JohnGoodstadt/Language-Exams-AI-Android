@@ -1,9 +1,11 @@
 package com.goodstadt.john.language.exams.screens.reference
 
 
+import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.*
@@ -13,11 +15,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.reference.shared.SectionedVocabList
+import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
+import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+import dagger.hilt.android.EntryPointAccessors
+import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -33,7 +41,7 @@ fun GroupedSheetScreen(
     val lazyListState = rememberLazyListState()
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-
+    val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
     // The main layout is a vertical column
     Column(modifier = Modifier.fillMaxSize()) {
 
@@ -116,6 +124,46 @@ fun GroupedSheetScreen(
                     onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                     onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
                 )
+            }
+        }
+        if (showSideQuestSheet) {
+            ModalBottomSheet(
+                onDismissRequest = { showSideQuestSheet = false },
+                sheetState = sheetStateSideQuest,
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                val acm = viewModel.getAudioCacheManager()
+
+                // Collect latest stats
+                val referenceCounts by acm.referenceHeardCounts.collectAsStateWithLifecycle()
+                val refData = remember(referenceCounts) { getReferenceData(acm, referenceCounts) }
+
+                val sideQuestData = remember(referenceCounts) {
+                    buildSideQuestData(acm)
+                }
+
+                Timber.i("$sideQuestData")
+
+                val entryPoint = remember(key1 = context) {
+                    EntryPointAccessors.fromApplication(context.applicationContext, StatsSheetEntryPoint::class.java)
+                }
+
+                Box(modifier = Modifier.fillMaxHeight(0.85f)) {
+                    SideQuestStatsSheet(
+                        paragraphCount = viewModel.getAIParagraphCount(),
+                        paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
+                        conjugations = sideQuestData.conjugations,
+                        adjectives = sideQuestData.adjectives,
+                        quickRefs = sideQuestData.quickRefs,
+                        quizManager = entryPoint.getQuizManager(),
+                        onNavigate = { target ->
+                            showSideQuestSheet = false // Close sheet first
+                            navViewModel.requestNavigation(target) // Send signal to Parent
+                        },
+                        onDismiss = { showSideQuestSheet = false }
+                    )
+                }
             }
         }
     }

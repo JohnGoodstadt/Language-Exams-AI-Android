@@ -128,8 +128,14 @@ class ConjugationsViewModel @Inject constructor(
 
             result.onSuccess { vocabFile ->
 
+                val allSentences = vocabFile.categories
+                    .flatMap { it.words }
+                    .flatMap { it.sentences }
+                    .map { it.sentence }
+                audioCacheManager.recalculateReferenceStats(firestore_sheet_name,allSentences)
+
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-                val cachedKeys = vocabRepository.getSentenceKeysWithCachedAudio(vocabFile.categories, currentVoiceName)
+               // val cachedKeys = vocabRepository.getSentenceKeysWithCachedAudio(vocabFile.categories, currentVoiceName)
 
                 _uiState.value = ConjugationsUiState.Success(vocabFile.categories, selectedVoiceName = currentVoiceName, currentSheetName = firestore_sheet_name)
             }.onFailure { error ->

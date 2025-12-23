@@ -6,21 +6,21 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AppConfigRepository
-import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
-import com.goodstadt.john.language.exams.data.repository.PlaybackResult
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
+import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.data.repository.PlaybackResult
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.Category
+import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.SubTabDefinition
-import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
@@ -43,7 +43,7 @@ sealed interface ContentState {
 // 2. The main UI State data class for the entire screen
 data class GroupedSheetUiState(
     val title: String = "", // The main title for the screen (e.g., "Adjectives")
-    val currentSheetName:String = "",
+    val currentSheetName: String = "",
     val subTabs: List<SubTabDefinition> = emptyList(),
     val selectedSubTab: SubTabDefinition? = null,
     val contentState: ContentState = ContentState.Idle
@@ -58,7 +58,7 @@ class GroupedSheetViewModel @Inject constructor(
 //    private val examSheetRepository: ExamSheetRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val connectivityRepository: ConnectivityRepository,
-    private val ttsStatsRepository : TTSStatsRepository,
+    private val ttsStatsRepository: TTSStatsRepository,
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val historyManager: HistorySyncManager,
@@ -156,7 +156,13 @@ class GroupedSheetViewModel @Inject constructor(
             } catch (e: Exception) {
                 // Catch any other unexpected errors during the process.
                 Timber.e(e, "Group_VM: A critical exception occurred during initialization.")
-                _uiState.update { it.copy(contentState = ContentState.Error(e.localizedMessage ?: "An unknown error occurred.")) }
+                _uiState.update {
+                    it.copy(
+                        contentState = ContentState.Error(
+                            e.localizedMessage ?: "An unknown error occurred."
+                        )
+                    )
+                }
             }
         }
     }
@@ -198,10 +204,22 @@ class GroupedSheetViewModel @Inject constructor(
                     _uiState.update { it.copy(contentState = ContentState.Success(categories)) }
                 }
                 result.onFailure { error ->
-                    _uiState.update { it.copy(contentState = ContentState.Error(error.localizedMessage ?: "Failed to load content.")) }
+                    _uiState.update {
+                        it.copy(
+                            contentState = ContentState.Error(
+                                error.localizedMessage ?: "Failed to load content."
+                            )
+                        )
+                    }
                 }
             } catch (e: Exception) {
-                _uiState.update { it.copy(contentState = ContentState.Error(e.localizedMessage ?: "An unexpected error occurred.")) }
+                _uiState.update {
+                    it.copy(
+                        contentState = ContentState.Error(
+                            e.localizedMessage ?: "An unexpected error occurred."
+                        )
+                    )
+                }
             }
         }
     }
@@ -209,8 +227,7 @@ class GroupedSheetViewModel @Inject constructor(
     fun playTrack(word: Format0Word, sentence: Sentence) {
         Timber.i("GroupedSheetViewModel.playTrack() ${word.word} ${sentence.sentence}")
         Log.i("GroupedSheetViewModel", "playTrack() ${word.word} ${sentence.sentence}")
-        if (_playbackState.value is PlaybackState.Playing)
-        {
+        if (_playbackState.value is PlaybackState.Playing) {
             return
         }
 
@@ -243,9 +260,8 @@ class GroupedSheetViewModel @Inject constructor(
             }
 
 
-
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
+            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
 
             val uniqueSentenceId = generateUniqueSentenceId(word, sentence, currentVoiceName)
             _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
@@ -253,7 +269,7 @@ class GroupedSheetViewModel @Inject constructor(
             val cleanedSentence = sentence.sentence.replace("\\s*\\([^)]*\\)\\s*".toRegex(), " ")
 
             val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
-            if (played){//short cut so user cna play cached sentences with no Internet connection
+            if (played) {//short cut so user cna play cached sentences with no Internet connection
                 _playbackState.value = PlaybackState.Idle
                 ttsStatsRepository.updateTTSStatsWithoutCosts()
                 ttsStatsRepository.incWordStats(word.word)
@@ -271,7 +287,7 @@ class GroupedSheetViewModel @Inject constructor(
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
                     _playbackState.value = PlaybackState.Idle
 
-                    if (todayIsNotAFreePassDay){
+                    if (todayIsNotAFreePassDay) {
                         rateLimiter.recordCall()
                     }
                     Timber.v(rateLimiter.printCurrentStatus)
@@ -280,15 +296,19 @@ class GroupedSheetViewModel @Inject constructor(
                     //TODO: not inc but update!
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
+
                 is PlaybackResult.PlayedFromCache -> { //probably does not get executed as playFromCacheIfFound() already run
                     _playbackState.value = PlaybackState.Idle
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(word.word)
                 }
+
                 is PlaybackResult.Failure -> {
                     _playbackState.value = PlaybackState.Idle
-                    _playbackState.value = PlaybackState.Error(result.exception.message ?: "Playback failed")
+                    _playbackState.value =
+                        PlaybackState.Error(result.exception.message ?: "Playback failed")
                 }
+
                 PlaybackResult.CacheNotFound -> {
                     _playbackState.value = PlaybackState.Idle
                     Timber.e("Cache found to exist but not played")
@@ -297,6 +317,7 @@ class GroupedSheetViewModel @Inject constructor(
             _playbackState.value = PlaybackState.Idle
         }
     }
+
     private fun loadContentForSubTab(subTab: SubTabDefinition) {
         viewModelScope.launch {
             val sheetName = subTab.firestoreDocumentId
@@ -308,7 +329,12 @@ class GroupedSheetViewModel @Inject constructor(
                 return@launch
             }
 
-            _uiState.update { it.copy(contentState = ContentState.Loading, currentSheetName = sheetName) }
+            _uiState.update {
+                it.copy(
+                    contentState = ContentState.Loading,
+                    currentSheetName = sheetName
+                )
+            }
 
             try {
                 // --- VERSION CHECK LOGIC ---
@@ -329,43 +355,70 @@ class GroupedSheetViewModel @Inject constructor(
                     contentCache[sheetName] = categories
                     _uiState.update { it.copy(contentState = ContentState.Success(categories)) }
 
+                    val allSentences = vocabFile.categories //sort out stats
+                        .flatMap { it.words }
+                        .flatMap { it.sentences }
+                        .map { it.sentence }
+
+                    audioCacheManager.recalculateReferenceStats(sheetName, allSentences)
+
+
                     // 6. If we refreshed, update the local version.
                     if (forceRefresh) {
-                        appConfigRepository.updateLocalVersion(sheetName,remoteVersion)
+                        appConfigRepository.updateLocalVersion(sheetName, remoteVersion)
                     }
                 }
                 result.onFailure { error ->
-                    _uiState.update { it.copy(contentState = ContentState.Error(error.localizedMessage ?: "Failed to load content.")) }
+                    _uiState.update {
+                        it.copy(
+                            contentState = ContentState.Error(
+                                error.localizedMessage ?: "Failed to load content."
+                            )
+                        )
+                    }
                 }
             } catch (e: Exception) {
-                _uiState.update { it.copy(contentState = ContentState.Error(e.localizedMessage ?: "An unexpected error occurred.")) }
+                _uiState.update {
+                    it.copy(
+                        contentState = ContentState.Error(
+                            e.localizedMessage ?: "An unexpected error occurred."
+                        )
+                    )
+                }
             }
         }
     }
-    fun hideDailyRateLimitSheet(){
+
+    fun hideDailyRateLimitSheet() {
         _showRateDailyLimitSheet.value = false
     }
-    fun hideHourlyRateLimitSheet(){
+
+    fun hideHourlyRateLimitSheet() {
         _showRateHourlyLimitSheet.value = false
     }
-    fun hideRateOKLimitSheet(){
+
+    fun hideRateOKLimitSheet() {
         _showRateLimitSheet.value = false
     }
+
     fun buyPremiumButtonPressed(activity: Activity) {
         Timber.i("purchasePremium()")
         viewModelScope.launch {
             billingRepository.launchPurchase(activity)
         }
     }
+
     fun isHeard(sentence: String): Boolean {
         val contentID = FirebaseAudioService.generateContentID(sentence)
-        Timber.i("Play Count:${historyManager.getPlayCount("Reference", contentID) } $sentence")
+        Timber.i("Play Count:${historyManager.getPlayCount("Reference", contentID)} $sentence")
         return historyManager.getPlayCount("Reference", contentID) > 0
     }
-    fun getPlayCount(sentence:String): Int {
+
+    fun getPlayCount(sentence: String): Int {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         return historyManager.getPlayCount("Reference", contentID)
     }
+
     // ✅ ACTION: View calls this on tap
     fun handleTap(sentence: String) {
         viewModelScope.launch {
@@ -382,6 +435,7 @@ class GroupedSheetViewModel @Inject constructor(
         }
         historyManager.debugPrintAllHistory()
     }
+
     private fun didPlayReferenceSentence(sentence: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val levelName = "Reference"
@@ -405,4 +459,8 @@ class GroupedSheetViewModel @Inject constructor(
             )
         }
     }
+    fun getAudioCacheManager(): AudioCacheManager = audioCacheManager
+    fun getAIParagraphCount(): Int = audioCacheManager.getAIParagraphCount()
+    fun getAIParagraphHeardCount(): Int = audioCacheManager.getAIParagraphHeardCount()
+
 }

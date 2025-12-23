@@ -47,11 +47,17 @@ fun buildSideQuestData(manager: AudioCacheManager): SideQuestData {
         icon = Icons.Default.Palette, // Represents description/color
         description = "Descriptive words ordered by complexity. Focus on Intermediate for daily conversation.",
         items = listOf(
-            makeSubItem("Basic",        "AdjectivesGroup", tabId = adjectivesTabId),
-            makeSubItem("Intermediate", "AdjectivesGroup", tabId = adjectivesTabId),
-            makeSubItem("Upper",        "AdjectivesGroup", tabId = adjectivesTabId),
-            makeSubItem("Advanced",     "AdjectivesGroup", tabId = adjectivesTabId),
+            makeSubItem("Basic",        "EnglishA1Adjectives", tabId = "AdjectivesGroup"),
+            makeSubItem("Intermediate", "EnglishA2Adjectives", tabId = "AdjectivesGroup"),
+            makeSubItem("Upper",        "EnglishB1Adjectives", tabId = "AdjectivesGroup"),
+            makeSubItem("Advanced",     "EnglishB2Adjectives", tabId = "AdjectivesGroup"),
         )
+//                items = listOf(
+//                makeSubItem("Basic",        "AdjectivesGroup", tabId = adjectivesTabId),
+//        makeSubItem("Intermediate", "AdjectivesGroup", tabId = adjectivesTabId),
+//        makeSubItem("Upper",        "AdjectivesGroup", tabId = adjectivesTabId),
+//        makeSubItem("Advanced",     "AdjectivesGroup", tabId = adjectivesTabId),
+//    )
     )
 
     // 3. QUICK REFERENCE (List of individual categories)
