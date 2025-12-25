@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.InlineTextContent
+import androidx.compose.foundation.text.appendInlineContent
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -19,8 +21,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.text.Placeholder
+import androidx.compose.ui.text.PlaceholderVerticalAlign
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.em
 import com.goodstadt.john.language.exams.models.ReferenceCategory
 
 
@@ -332,6 +342,14 @@ fun QuizMasteryCard(quizManager: QuizHistoryManager,onNavigate: (SideQuestNavTar
 
 @Composable
 fun ReferenceGroupCard(category: ReferenceCategory, color: Color,onNavigate: (SideQuestNavTarget) -> Unit ) {
+    // 1. Detect Screen Width
+    val configuration = LocalConfiguration.current
+    val screenWidth = configuration.screenWidthDp
+
+    // Define breakpoints (360dp is standard old Android, 320dp is iPhone SE/Old small phones)
+    val showFullText = screenWidth > 370
+    val showShortText = screenWidth > 320
+
     Card(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         shape = RoundedCornerShape(16.dp)
@@ -351,35 +369,51 @@ fun ReferenceGroupCard(category: ReferenceCategory, color: Color,onNavigate: (Si
                     modifier = Modifier.size(24.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
+                // 2. Give the Title Weight so it truncates if necessary, preserving button space
                 Text(
                     text = category.title,
                     style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.weight(1f) // ✅ Crucial: Lets title shrink
                 )
                 Spacer(modifier = Modifier.weight(1f))
-                TextButton(
-                    onClick = {
-                        // Assuming the category items map to a specific document/tab
-                        // You need to know which Tab ID corresponds to this category.
-                        // If 'category.items' holds the documentId, use the first one.
-//                        val tabId = "AdjectivesGroup"//category.items.firstOrNull()?.documentId ?: return@TextButton
-//                        val docId = "EnglishA1Adjectives"
-                        val firstItem = category.items.firstOrNull()
-                        val tabId = category.items.firstOrNull()?.tabId ?: return@TextButton
-                        val docId = category.items.firstOrNull()?.documentId ?: return@TextButton
+                val firstItem = category.items.firstOrNull()
 
-                       // val c = category
+                if (firstItem != null) {
 
-                        // Assuming the Tab ID is the same as Document ID for simple sheets,
-                        // or you have a way to map them.
-                        onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
-                    },
-                    colors = ButtonDefaults.textButtonColors(contentColor = color)
-                ) {
-                    Text("Do Another", style = MaterialTheme.typography.labelMedium)
-                    Icon(Icons.Default.ArrowForward, contentDescription = null, modifier = Modifier.size(16.dp))
+                    val onClickAction = {
+                        onNavigate(
+                            SideQuestNavTarget.Reference(
+                                tabId = firstItem.tabId,
+                                documentId = firstItem.documentId
+                            )
+                        )
+                    }
+                    TextButton(
+                        onClick = {
+                            val tabId = firstItem.tabId
+                            val docId = firstItem.documentId
+
+                            onNavigate(
+                                SideQuestNavTarget.Reference(
+                                    tabId = tabId,
+                                    documentId = docId
+                                )
+                            )
+                        },
+                        colors = ButtonDefaults.textButtonColors(contentColor = color)
+                    ) {
+                        Text("Do Another", style = MaterialTheme.typography.labelMedium)
+                        Icon(
+                            Icons.Default.ArrowForward,
+                            contentDescription = null,
+                            modifier = Modifier.size(16.dp)
+                        )
+                    }
+
                 }
-
             }
 
             // Sub-items List
@@ -437,7 +471,9 @@ fun ReferenceGroupCard(category: ReferenceCategory, color: Color,onNavigate: (Si
                     imageVector = Icons.Filled.Info,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                    modifier = Modifier.size(16.dp).padding(top = 2.dp)
+                    modifier = Modifier
+                        .size(16.dp)
+                        .padding(top = 2.dp)
                 )
                 Spacer(modifier = Modifier.width(6.dp))
                 Text(
@@ -456,12 +492,18 @@ fun QuickReferenceRow(category: ReferenceCategory,onNavigate: (SideQuestNavTarge
     val totalViewed = category.items.sumOf { it.viewed }
     val totalItems = category.items.sumOf { it.total }
     val coverage = if (totalItems > 0) totalViewed.toFloat() / totalItems else 0f
-    val targetItem = category.items.firstOrNull()
+//    val targetItem = category.items.firstOrNull()
 
     Card(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         shape = RoundedCornerShape(12.dp)
     ) {
+        // 1. Detect Screen Width
+        val configuration = LocalConfiguration.current
+        val screenWidth = configuration.screenWidthDp
+        val showFullText = screenWidth > 370
+        val showShortText = screenWidth > 320
+
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -490,37 +532,76 @@ fun QuickReferenceRow(category: ReferenceCategory,onNavigate: (SideQuestNavTarge
                 )
             }
 
-            Row(verticalAlignment = Alignment.CenterVertically) {
+            // ✅ THE MERGED DESCRIPTION + LINK
+            val firstItem = category.items.firstOrNull()
+
+            if (firstItem != null) {
+                // 1. Build the Text
+                val id = "arrowIcon"
+                val annotatedText = buildAnnotatedString {
+                    // The Description (Grey)
+                    withStyle(SpanStyle(color = MaterialTheme.colorScheme.onSurfaceVariant)) {
+                        append(category.description)
+                    }
+
+                    // Spacer
+                    append("  ")
+
+                    // The Link Text (Color + Bold)
+                    withStyle(SpanStyle(color = Color(0xFF2196F3), fontWeight = FontWeight.Bold)) {
+                        append("Do Another ")
+                    }
+
+                    // The Icon Placeholder
+                    appendInlineContent(id, "[icon]")
+                }
+
+                // 2. Define the Icon
+                val inlineContent = mapOf(
+                    id to InlineTextContent(
+                        Placeholder(
+                            width = 1.0.em,
+                            height = 1.0.em,
+                            placeholderVerticalAlign = PlaceholderVerticalAlign.TextCenter
+                        )
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.ArrowForward,
+                            contentDescription = null,
+                            tint = Color(0xFF2196F3)
+                        )
+                    }
+                )
+
+                // 3. Render
+                // We wrap it in a Row to keep your indentation padding
+                Row(modifier = Modifier.padding(start = 32.dp)) {
+                    Text(
+                        text = annotatedText,
+                        style = MaterialTheme.typography.bodySmall,
+                        inlineContent = inlineContent,
+                        modifier = Modifier
+                            .clickable {
+                                // Trigger navigation
+                                onNavigate(
+                                    SideQuestNavTarget.Reference(
+                                        tabId = firstItem.tabId,
+                                        documentId = firstItem.documentId
+                                    )
+                                )
+                            }
+                    )
+                }
+            } else {
+                // Fallback if no link target (Just description)
                 Text(
                     text = category.description,
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 2,
                     modifier = Modifier.padding(start = 32.dp)
                 )
-                Spacer(modifier = Modifier.weight(1f))
-                TextButton(
-                    onClick = {
-                        category.items.firstOrNull()?.let { item ->
-                            val tabId = item.tabId
-                            val docId = item.documentId
-
-                            onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
-                        }
-
-                    },
-                    colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFF009688)),
-                ) {
-                    targetItem?.let { item ->
-                        if (item.documentId != "EnglishGoodVsWell"){ //too long for words
-                            Text("Do More", style = MaterialTheme.typography.labelMedium)
-                        }
-                        Icon(Icons.Default.ArrowForward, contentDescription = null, modifier = Modifier.size(16.dp))
-                    }
-
-
-                }
             }
+
 
 
             // Mini Bar
