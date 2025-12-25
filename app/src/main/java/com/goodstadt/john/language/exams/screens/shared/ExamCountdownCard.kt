@@ -129,6 +129,14 @@ fun ExamCountdownCard(
                                 xpManager.setDurationGoal(6, currentLevelName)
                                 isEditing = false
                             }
+                            QuickGoalButton(
+                                label = "1 Year",
+                                icon = Icons.Default.Terrain, // Mountain icon
+                                modifier = Modifier.weight(1f)
+                            ) {
+                                xpManager.setDurationGoal(12, currentLevelName)
+                                isEditing = false
+                            }
                         }
 
                         // Custom Date Button
