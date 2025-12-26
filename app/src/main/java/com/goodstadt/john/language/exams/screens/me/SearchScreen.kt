@@ -105,8 +105,8 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                             val isHeard = viewModel.isHeard(displayData.sentence)
                             val playCount = viewModel.getPlayCount(displayData.sentence)
 
-                            val isPlaying = playbackState is PlaybackState.Playing &&
-                                    (playbackState as PlaybackState.Playing).sentenceId == uniqueSentenceId
+//                            val isPlaying = playbackState is PlaybackState.Playing &&
+//                                    (playbackState as PlaybackState.Playing).sentenceId == uniqueSentenceId
 
                             // We can reuse the VocabRow from the other screen
                             Column(modifier = Modifier.clickable {

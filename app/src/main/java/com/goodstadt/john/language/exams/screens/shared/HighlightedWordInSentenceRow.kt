@@ -47,7 +47,7 @@ fun HighlightedWordInSentenceRow(
                 Text(text = "🟢", fontSize = 12.sp)
             }
 
-            if (playCount > 1) {
+            if (false && playCount > 1) {
                 Text(text = "$playCount", fontSize = 12.sp)
             }
 

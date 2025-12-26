@@ -3,8 +3,6 @@ package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Activity
 import android.content.Context
-import android.os.Bundle
-import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
@@ -22,7 +20,6 @@ import com.goodstadt.john.language.exams.managers.HOURLY_LIMIT
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
-import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
@@ -30,7 +27,6 @@ import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
-import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -701,5 +697,11 @@ class CategoryTabViewModel @Inject constructor(
         }
 
         return Pair(heardCount, totalCount)
+    }
+    fun getPlayCount(word: Format0Word): Int {
+        word.sentences.firstOrNull()?.let { sentenceEntry ->
+            return getPlayCount(sentenceEntry.sentence)
+        }
+        return 0
     }
 }

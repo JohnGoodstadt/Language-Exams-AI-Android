@@ -314,6 +314,7 @@ fun CategoryTabScreenOriginal(
                         selectedWordForSheet?.let { word ->
                             SentencesBottomSheetContent(
                                 word = word,
+                                0,
                                 onBottomSheetRowTapped = { word, sentence ->
                                     Timber.i("${word.word}")
                                     viewModel.onRowTapped(word, sentence) //redirect
@@ -364,21 +365,6 @@ fun CategoryTabScreenOriginal(
 }
 
 
-// --- Helper Composables for this Screen ---
-
-@Composable
-fun CategoryHeader(title: String) {
-    Text(
-        text = title,
-        fontSize = 20.sp,
-        fontWeight = FontWeight.Bold,
-        color = accentColor,
-        modifier = Modifier
-            .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surface)
-            .padding(vertical = 16.dp)
-    )
-}
 
 private fun scrollToCategory(
     title: String,
@@ -441,71 +427,3 @@ fun CacheProgressBar(
     }
 }
 
-
-@Composable
-fun SentencesBottomSheetContent(
-    // 1. The composable takes the selected word as its input
-    word: Format0Word,
-    onBottomSheetRowTapped: (Format0Word, Sentence) -> Unit,
-    modifier: Modifier = Modifier
-) {
-    // Use a Column with vertical scroll in case sentences are long
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-            .verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        // 2. Display the main word prominently
-        Text(
-            text = word.word,
-            style = MaterialTheme.typography.headlineLarge
-        )
-        if (word.definition.isNotEmpty()) {
-            Text(
-                text = word.definition,
-                style = MaterialTheme.typography.titleSmall
-            )
-        }
-        if (word.IPA.isNotEmpty()) {
-            Text(
-                text = word.IPA,
-                style = MaterialTheme.typography.titleSmall
-            )
-        }
-        if (word.pronounce.isNotEmpty()) {
-            Text(
-                text = word.pronounce,
-                style = MaterialTheme.typography.titleSmall
-            )
-        }
-
-        HorizontalDivider()
-
-        // 3. Loop through and display each sentence
-        word.sentences.forEach { sentence ->
-            Column(
-                verticalArrangement = Arrangement.spacedBy(2.dp)
-            ) {
-
-                val displayData = buildSentenceParts(entry = word, sentence = sentence)
-
-                Column(modifier = Modifier.clickable { onBottomSheetRowTapped(word, sentence) }) {
-                    HighlightedWordInSentenceRow(
-                        word = word.word,
-                        parts = displayData.parts,
-                        sentence = displayData.sentence,
-                        isRecalling = false,
-                        displayDot = false,//achedAudioWordKeys.contains(uniqueSentenceId),
-                        playCount = 0,
-                        isDownloading = false//, //TODO: maybe dynamic?
-                    )
-                }
-            }
-        }
-
-        // Add some space at the bottom for better scrolling
-        Spacer(Modifier.height(32.dp))
-    }
-}

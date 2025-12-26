@@ -295,7 +295,7 @@ private fun Format2Row(
 
             Text(text = styledSentence, modifier = Modifier.weight(1f))
 
-            if (playCount > 1) {
+            if (false && playCount > 1) {
                 Text(text = "$playCount ", fontSize = 12.sp)
             }
             // ✅ THE RED DOT

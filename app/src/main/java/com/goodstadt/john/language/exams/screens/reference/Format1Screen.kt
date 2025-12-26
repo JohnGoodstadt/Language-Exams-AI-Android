@@ -153,7 +153,7 @@ fun Format1Screen(
                                 if (isHeard) {
                                     Text(text = "🔴", fontSize = 12.sp)
                                 }
-                                if (playCount > 0) {
+                                if (false && playCount > 0) {
                                     Text(text = "$playCount", fontSize = 12.sp)
                                 }
 
