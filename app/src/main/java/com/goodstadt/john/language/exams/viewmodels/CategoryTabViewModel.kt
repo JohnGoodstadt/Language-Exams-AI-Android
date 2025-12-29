@@ -37,9 +37,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -113,6 +115,15 @@ class CategoryTabViewModel @Inject constructor(
     private var sessionPlayCount = 0
     private var hasSeenHelp = false
 
+    // ✅ NEW: Expose the exam name to the UI
+    val currentExamName = userPreferencesRepository.selectedExamNameFlow
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000),
+            initialValue = "vocab_data_b1"
+        )
+
+
     init {
         observeHistoryChanges() //do I need this now?
         observeRecallingChanges()
@@ -169,13 +180,13 @@ class CategoryTabViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.value = CategoryTabUiState.Loading
 
-            val examName = userPreferencesRepository.selectedExamNameFlow.first()
+//            val examName = userPreferencesRepository.selectedExamNameFlow.first()
             val voiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
 
             // Cache the level for isHeard calls later
             currentLoadedLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
-            val result = contentRepository.getFormat0Data(examName)
+            val result = contentRepository.getFormat0Data(currentExamName.value)
 
             result.onSuccess { vocabFile ->
                 val tabCategories = vocabFile.categories.filter { it.tabNumber == tabNumber }

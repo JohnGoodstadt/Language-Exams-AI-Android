@@ -284,7 +284,12 @@ class UserPreferencesRepository @Inject constructor(
         }
         .map { preferences ->
             // Default to B1 if nothing is set
-            preferences[PreferenceKeys.EXAM_NAME] ?: "EnglishB1Vocab"
+            //preferences[PreferenceKeys.EXAM_NAME] ?: "EnglishB1Vocab"
+            if (preferences[PreferenceKeys.EXAM_NAME] == null){
+                "vocab_data_b1"
+            }else{
+                preferences[PreferenceKeys.EXAM_NAME] ?: "NotKnown"
+            }
         }
 // In UserPreferencesRepository.kt
 

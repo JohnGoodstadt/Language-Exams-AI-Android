@@ -57,6 +57,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
@@ -119,23 +120,21 @@ fun CategoryTabScreen(
 
     // ✅ Watch for celebration trigger
     val showCelebration by viewModel.showCelebration.collectAsState()
+    val currentExamName by viewModel.currentExamName.collectAsStateWithLifecycle()
 
     // --- Lifecycle & Loading ---
     LaunchedEffect(Unit) {
         viewModel.setTestExamGoal()
     }
 
-    LaunchedEffect(key1 = tabIdentifier, key2 = categoryTitle, key3 = selectedVoiceName) {
+    LaunchedEffect(key1 = tabIdentifier, key2 = selectedVoiceName, key3 = currentExamName) {
         if (selectedVoiceName.isNotEmpty()) {
-            if (tabIdentifier != null) {
-                // Determine Int tab number from string identifier if needed
-//                val tabNum = tabIdentifier.toIntOrNull() ?: 99
-                val tabNumber =
-                    tabIdentifier.filter { it.isDigit() }.toIntOrNull() // from tab1 to 1
-                viewModel.loadContentForTab(tabNumber ?: 1)
-            } else if (categoryTitle != null) {
-                // viewModel.loadContentForCategory(categoryTitle) // If you have this
-                //viewModel.loadContentForCategory(categoryTitle, selectedVoiceName)
+            if (selectedVoiceName.isNotEmpty() && currentExamName.isNotEmpty()) {
+                if (tabIdentifier != null) {
+                    // Determine Int tab number from string identifier if needed
+                    val tabNumber = tabIdentifier.filter { it.isDigit() }.toIntOrNull() ?: 1
+                    viewModel.loadContentForTab(tabNumber)
+                }
             }
         } else {
             Timber.i("CategoryTabScreen: selectedVoiceName IS NULL!")
