@@ -286,4 +286,25 @@ class UserPreferencesRepository @Inject constructor(
             // Default to B1 if nothing is set
             preferences[PreferenceKeys.EXAM_NAME] ?: "EnglishB1Vocab"
         }
+// In UserPreferencesRepository.kt
+
+    // Add this function to manage the Set of completed section keys
+    fun getCompletedSections(examName: String): MutableSet<String> {
+        val prefs = context.getSharedPreferences("completion_prefs", Context.MODE_PRIVATE)
+        // We return a MutableSet so we can modify it
+        return prefs.getStringSet("completed_$examName", emptySet())?.toMutableSet() ?: mutableSetOf()
+    }
+
+    fun addCompletedSection(examName: String, sectionKey: String) {
+        val prefs = context.getSharedPreferences("completion_prefs", Context.MODE_PRIVATE)
+        val currentSet = getCompletedSections(examName)
+        currentSet.add(sectionKey)
+
+        prefs.edit().putStringSet("completed_$examName", currentSet).apply()
+    }
+
+    fun isSectionCompleted(examName: String, sectionKey: String): Boolean {
+        val set = getCompletedSections(examName)
+        return set.contains(sectionKey)
+    }
  }

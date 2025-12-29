@@ -124,8 +124,6 @@ class AudioPlaybackRepository @Inject constructor(
                     // Replay Logic
                     xpManager.registerAction(XpActionType.ReplaySentence)
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
-
-
                 }
             }
 

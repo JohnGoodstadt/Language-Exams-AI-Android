@@ -117,6 +117,9 @@ fun CategoryTabScreen(
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
+    // ✅ Watch for celebration trigger
+    val showCelebration by viewModel.showCelebration.collectAsState()
+
     // --- Lifecycle & Loading ---
     LaunchedEffect(Unit) {
         viewModel.setTestExamGoal()
@@ -389,6 +392,13 @@ fun CategoryTabScreen(
                         }
                     }
                 }
+            } //: showMoreSheet
+
+            // ✅ Overlay on top
+            if (showCelebration) {
+//                CelebrationOverlay(
+//                    isVisible = .constant(true) // or use binding
+//                )
             }
         }
     }

@@ -21,6 +21,7 @@ import com.goodstadt.john.language.exams.managers.HOURLY_LIMIT
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
@@ -41,6 +42,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -290,6 +292,10 @@ class CategoryTabViewModel @Inject constructor(
                 // If we haven't been cancelled yet, show the spinner
                 loadingManager.show()
             }
+
+            val contentID = FirebaseAudioService.generateContentID(sentence)
+            val wasAlreadyHeard = historyManager.isHeard(currentLoadedLevel, contentID)
+
             val success = audioPlaybackRepository.playTrackAndGetResult(
                 sentence = sentence,
                 level = levelName,
@@ -305,6 +311,10 @@ class CategoryTabViewModel @Inject constructor(
                 // 2. ⚡️ NON OPTIMISTIC UPDATE (Lightning). Now that playback is async
                 // This turns the Red Dot ON immediately.
                 didPlayVocabSentence(sentence, category.title, category.tabNumber)
+
+                if (!wasAlreadyHeard) {
+                    checkSectionCompletionAfterNewSentence(category,sentence)
+                }
 
                 _uiState.update { currentState ->
                     if (currentState is CategoryTabUiState.Success) {
@@ -429,10 +439,6 @@ class CategoryTabViewModel @Inject constructor(
                 historyManager.undoMarkSentenceHeard(currentLoadedLevel, contentID)
 
                 // B. Revert Graph Stats (Only if it was new)
-                if (!wasAlreadyHeard) {
-                    // Optional: revert AudioCacheManager logic if strict accuracy needed
-                }
-
                 _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed"))
 
                 _uiState.update {
@@ -440,6 +446,10 @@ class CategoryTabViewModel @Inject constructor(
                 }
             } else {
                 // Success: Reset to Idle
+                if (!wasAlreadyHeard) {
+                    checkSectionCompletionAfterNewSentence(category,sentenceText)
+                }
+
                 _uiState.update {
                     if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
                 }
@@ -570,104 +580,9 @@ class CategoryTabViewModel @Inject constructor(
     }
 
     fun setTestExamGoal() {}
-// MARK: - Playback Logic
-
-    fun handleSentenceTap(sentence: String, category: Category) {
-
-        // 1. Reset UI Playback State (Stop any previous playing icon)
-        _uiState.update {
-            if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
-        }
-
-        viewModelScope.launch {
-            // 2. Setup Data
-            val voiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
-            val contentID = FirebaseAudioService.generateContentID(sentence)
-            val wasAlreadyHeard = historyManager.isHeard(levelName, contentID)
-
-            // 3. UI Feedback: Show "Playing" spinner/icon on the row
-//            val uiFilename = FirebaseAudioService.generateUnifiedFilename(sentence, voiceName)
-//            _uiState.update {
-//                if (it is CategoryTabUiState.Success) {
-//                    it.copy(playbackState = PlaybackState.Playing(uiFilename))
-//                } else it
-//            }
-
-            // 4. Capture "Before" State (For Rollback logic)
-            // We need to know if the user HAD the red dot before they tapped.
 
 
-            // 5. OPTIMISTIC UPDATE (Instant Gratification)
-            // This updates History (Red Dot) and AudioCacheManager (Progress Bar) immediately.
-            audioCacheManager.didPlayVocabSentence(
-                text = sentence,
-                categoryTitle = category.title,
-                categoryTabNumber = category.tabNumber
-            )
 
-            // 6. Play Audio (Background / Waterfall)
-            // We pass 'updateHistory = false' because we just did it manually in step 5.
-            val success = audioPlaybackRepository.playTrackAndGetResult(
-                sentence = sentence,
-                level = levelName,
-                sheetName = "", // Main tabs aggregate by Level, not SheetName
-                isPremiumUser = false // Replace with actual check if available
-                // updateHistory = false // Uncomment if your Repo supports this flag, otherwise redundant update is harmless
-            )
-
-            // 7. RESULT HANDLING
-            if (!success) {
-                // --- FAILURE: ROLLBACK ---
-
-                // A. Revert History (Turn off Red Dot)
-                // Only if it wasn't heard before (we don't want to remove a legit red dot)
-                if (!wasAlreadyHeard) {
-                    historyManager.undoMarkSentenceHeard(levelName, contentID)
-
-                    // Note: Reverting the AudioCacheManager progress bar is complex without a specific method.
-                    // Since it recalculates on next app load, we often accept this minor temporary inaccuracy
-                    // rather than writing complex rollback logic for the graph.
-                }
-
-                // B. Notify User
-                _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed. Check connection."))
-
-                // C. Set Error State
-                _uiState.update {
-                    if (it is CategoryTabUiState.Success) {
-                        it.copy(playbackState = PlaybackState.Error("Failed"))
-                    } else it
-                }
-            } else {
-                // --- SUCCESS ---
-                // Reset to Idle (removes spinner)
-                _uiState.update {
-                    if (it is CategoryTabUiState.Success) {
-                        it.copy(playbackState = PlaybackState.Idle)
-                    } else it
-                }
-            }
-        }
-    }
-
-//    private fun calculateCurrentHeardCount(categories: List<Category>): Int {
-//        var count = 0
-//        val level = currentLoadedLevel // e.g. "B1"
-//
-//        for (cat in categories) {
-//            for (word in cat.words) {
-//                val sentence = word.sentences.firstOrNull()?.sentence ?: continue
-//                val contentID = FirebaseAudioService.generateContentID(sentence)
-//
-//                // Check History directly
-//                if (historyManager.isHeard(level, contentID)) {
-//                    count++
-//                }
-//            }
-//        }
-//        return count
-//    }
     /**
      * Calculates stats strictly for the provided list of categories.
      * Since 'categories' in our State is already filtered by Tab, this gives Tab-specific numbers.
@@ -707,5 +622,149 @@ class CategoryTabViewModel @Inject constructor(
             return getPlayCount(sentenceEntry.sentence)
         }
         return 0
+    }
+    // UI State for Fireworks
+    private val _showCelebration = MutableStateFlow(false)
+    val showCelebration = _showCelebration.asStateFlow()
+
+    // ...
+
+    // MARK: - Completion Logic (Ported from iOS)
+
+    private fun checkSectionCompletionAfterNewSentenceObsolete(category: Category,justPlayedSentence: String ) {
+        val examName = runBlocking { userPreferencesRepository.selectedExamNameFlow.first() }
+        val sectionKey = "${examName}|${category.title}" // Unique Key
+
+        // 1. Check if already marked complete
+        if (userPreferencesRepository.isSectionCompleted(examName, sectionKey)) {
+            return
+        }
+
+        // 2. Check if all words in this category are heard
+        val level = currentLoadedLevel // e.g. "B1"
+        val justPlayedID = FirebaseAudioService.generateContentID(justPlayedSentence)
+
+        var wordsHeard = 0
+
+        for (wordEntry in category.words) {
+            val sentence = wordEntry.sentences.firstOrNull()?.sentence ?: continue
+            val contentID = FirebaseAudioService.generateContentID(sentence)
+
+            // ✅ 2. THE FIX:
+            // Check History OR Check if it is the sentence we just played.
+            // This guarantees we count the current one even if History is 1ms slow.
+            if (historyManager.isHeard(level, contentID)) {
+                wordsHeard++
+            }
+            if (contentID == justPlayedID) {
+                wordsHeard++
+            }
+        }
+
+        // 3. If Complete
+        if (wordsHeard == category.words.size) {
+            // A. Save to Disk
+            userPreferencesRepository.addCompletedSection(examName, sectionKey)
+
+            // B. Award XP
+            xpManager.registerAction(XpActionType.CompleteSection)
+
+            // C. Trigger Firework UI
+            triggerCelebration()
+
+            Timber.i("🏆 Section Completed: ${category.title}")
+
+            // D. Check Whole Sheet (Tab) Completion
+            checkSheetCompletionIfNeeded(examName)
+        }
+    }
+    private fun checkSectionCompletionAfterNewSentence(
+        category: Category,
+        justPlayedSentence: String
+    ) {
+        val examName = runBlocking { userPreferencesRepository.selectedExamNameFlow.first() }
+        val sectionKey = "${examName}|${category.title}"
+
+        // 1. Exit if already done
+        if (userPreferencesRepository.isSectionCompleted(examName, sectionKey)) {
+            return
+        }
+
+        val level = currentLoadedLevel // e.g. "B1"
+
+        // ID of the sentence we just successfully played
+        val justPlayedID = FirebaseAudioService.generateContentID(justPlayedSentence)
+
+        // 2. THE INVERSE CHECK
+        // We look for ANY item that is still "Unheard".
+        // An item is "Unheard" if:
+        // A. It is NOT in History
+        // AND
+        // B. It is NOT the item we just played
+
+        val anyUnheardItem = category.words.find { wordEntry ->
+            val sentence = wordEntry.sentences.firstOrNull()?.sentence
+
+            if (sentence.isNullOrEmpty()) {
+                false // Skip words with no sentences (they don't count against you)
+            } else {
+                val contentID = FirebaseAudioService.generateContentID(sentence)
+
+                // Is this specific word unheard?
+                // (It's unheard if History says 'No' AND it's not the one we just played)
+                val isHeardInHistory = historyManager.isHeard(level, contentID)
+                val isJustPlayed = (contentID == justPlayedID)
+
+                // Return TRUE if we found an "Unheard" item
+                !(isHeardInHistory || isJustPlayed)
+            }
+        }
+
+        // Debugging Log
+        if (anyUnheardItem != null) {
+            Timber.d("🧐 Section '${category.title}' incomplete. Found unheard word: '${anyUnheardItem.word}'")
+        }
+
+        // 3. IF NOTHING IS UNHEARD -> COMPLETE!
+        if (anyUnheardItem == null) {
+            Timber.i("🏆 Section Completed: ${category.title}")
+
+            // A. Save to Disk
+            userPreferencesRepository.addCompletedSection(examName, sectionKey)
+
+            // B. Award XP
+            xpManager.registerAction(XpActionType.CompleteSection)
+
+            // C. Trigger Firework UI
+            triggerCelebration()
+
+            // D. Check Whole Sheet
+            checkSheetCompletionIfNeeded(examName)
+        }
+    }
+    private fun checkSheetCompletionIfNeeded(examName: String) {
+        // Logic: Get all categories in this tab from UI State
+        val currentCategories = (uiState.value as? CategoryTabUiState.Success)?.categories ?: return
+
+        val allSectionsComplete = currentCategories.all { cat ->
+            val key = "${examName}|${cat.title}"
+            userPreferencesRepository.isSectionCompleted(examName, key)
+        }
+
+        if (allSectionsComplete) {
+            // Ideally, check if we already awarded the sheet badge to avoid duplicates
+            // For now, just register the action
+            xpManager.registerAction(XpActionType.CompletedSheet)
+            Timber.i("🏆🏆 WHOLE TAB COMPLETED!")
+        }
+    }
+
+    private fun triggerCelebration() {
+        viewModelScope.launch {
+            _showCelebration.value = true
+            // Auto-hide handled in UI or via delay here
+            kotlinx.coroutines.delay(4000)
+            _showCelebration.value = false
+        }
     }
 }
