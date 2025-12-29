@@ -38,6 +38,7 @@ sealed class SideQuestNavTarget {
     // We add 'tabId' to know which tab to switch to in the horizontal menu
     data class Reference(val tabId: String, val documentId: String) : SideQuestNavTarget()
     data class MainTab(val tabIndex: Int) : SideQuestNavTarget()
+    data class MainSubTab(val tabIndex: Int, val documentId: String) : SideQuestNavTarget()
     // ... other targets ...
 }
 
@@ -225,15 +226,15 @@ fun AIWriterCard(count: Int, heard: Int,onNavigate: (SideQuestNavTarget) -> Unit
                     TextButton(
                         onClick = {
 
-                            val tabId = "paragraph"
+                            val tabIndex= 4
                             val docId = "paragraph"
 
                             // val c = category
 
                             // Assuming the Tab ID is the same as Document ID for simple sheets,
                             // or you have a way to map them.
-//                            onNavigate(SideQuestNavTarget.Reference(tabId = tabId, documentId = docId))
-                            onNavigate(SideQuestNavTarget.MainTab(4))
+                            onNavigate(SideQuestNavTarget.MainSubTab(tabIndex = tabIndex, documentId = docId))
+//                            onNavigate(SideQuestNavTarget.MainTab(4))
                         },
                         colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFF009688))
                     ) {
@@ -539,7 +540,6 @@ fun QuickReferenceRow(category: ReferenceCategory,onNavigate: (SideQuestNavTarge
                 // 1. Build the Text
                 val id = "arrowIcon"
                 val annotatedText = buildAnnotatedString {
-                    // The Description (Grey)
                     withStyle(SpanStyle(color = MaterialTheme.colorScheme.onSurfaceVariant)) {
                         append(category.description)
                     }
@@ -548,9 +548,9 @@ fun QuickReferenceRow(category: ReferenceCategory,onNavigate: (SideQuestNavTarge
                     append("  ")
 
                     // The Link Text (Color + Bold)
-                    withStyle(SpanStyle(color = Color(0xFF2196F3), fontWeight = FontWeight.Bold)) {
-                        append("Do Another ")
-                    }
+//                    withStyle(SpanStyle(color = Color(0xFF2196F3), fontWeight = FontWeight.Bold)) {
+//                        append("Do Another ")
+//                    }
 
                     // The Icon Placeholder
                     appendInlineContent(id, "[icon]")

@@ -41,7 +41,7 @@ fun buildSideQuestData(manager: AudioCacheManager): SideQuestData {
     )
 
     // 2. ADJECTIVES
-    val adjectivesTabId = "EnglishA1Adjectives"//"AdjectivesGroup"
+    val adjectivesTabId = "AdjectivesGroup"//"AdjectivesGroup"
     val adjectives = ReferenceCategory(
         title = "Adjectives",
         icon = Icons.Default.Palette, // Represents description/color

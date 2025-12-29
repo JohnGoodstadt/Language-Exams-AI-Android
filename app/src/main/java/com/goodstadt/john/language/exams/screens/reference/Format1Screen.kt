@@ -277,10 +277,11 @@ fun getReferenceData(manager: AudioCacheManager, heardCounts: Map<String, Int>):
         icon = Icons.Default.Palette,
         description = "Descriptive words ordered by complexity.",
         items = listOf(
-            item("Basic", "AdjectivesGroup","EnglishA1Adjectives"),
-            item("Intermediate", "AdjectivesGroup","En2lishA1Adjectives"),
-            item("Upper", "AdjectivesGroup","EnglishB1Adjectives"),
-            item("Advanced", "AdjectivesGroup","EnglishB2Adjectives")
+            item("Basic",        "EnglishA1Adjectives", tabId = "AdjectivesGroup"),
+            item("Intermediate", "EnglishA2Adjectives", tabId = "AdjectivesGroup"),
+            item("Upper",        "EnglishB1Adjectives", tabId = "AdjectivesGroup"),
+            item("Advanced",     "EnglishB2Adjectives", tabId = "AdjectivesGroup"),
+
         )
     )
 

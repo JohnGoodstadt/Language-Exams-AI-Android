@@ -114,8 +114,29 @@ fun MainScreen() {
                         restoreState = true
                     }
                 }
+                else if (target is SideQuestNavTarget.MainSubTab)  {
+
+                    // Logic to define which route corresponds to index 0, 1, 2
+                    val route = when(target.tabIndex) {
+                        0 -> Screen.Tab1.route
+                        1 -> Screen.Tab2.route
+                        2 -> Screen.Tab3.route
+                        3 -> Screen.Tab4.route
+                        4 -> Screen.Tab5.route
+                        else -> Screen.Tab1.route
+                    }
+
+                    navController.navigate(route) {
+                        // Standard Bottom Navigation cleanup
+                        popUpTo(navController.graph.findStartDestination().id) {
+                            saveState = true
+                        }
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                }
                 else{
-                    Timber.i("target is not Reference")
+                    Timber.i("target is not Reference or Main")
                 }
             }
         }
