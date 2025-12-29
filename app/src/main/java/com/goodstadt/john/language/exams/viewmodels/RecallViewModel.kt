@@ -208,7 +208,7 @@ class RecallViewModel @Inject constructor(
                     ttsStatsRepository.incWordStats(word)
                 }
 
-                is PlaybackResult.PlayedFromCache -> {
+                is PlaybackResult.PlayedFromLocalCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(word)
                 }
@@ -249,7 +249,7 @@ class RecallViewModel @Inject constructor(
                     ttsStatsRepository.incUserTTSCounts(sentence.count())
                     ttsStatsRepository.incWordStats(word)
                 }
-                is PlaybackResult.PlayedFromCache -> {
+                is PlaybackResult.PlayedFromLocalCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(word)
                 }

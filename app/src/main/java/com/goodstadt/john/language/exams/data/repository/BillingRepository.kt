@@ -20,6 +20,10 @@ import com.android.billingclient.api.QueryPurchasesParams
 import com.android.billingclient.api.queryProductDetails
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.FirestoreRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBoughtCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPFailedCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPNotReadyCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPUnavailableCount
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -47,6 +51,7 @@ class BillingRepository @Inject constructor(
     @ApplicationContext private val context: Context,
     private val firestoreRepository: FirestoreRepository,
     private val connectivityRepository: ConnectivityRepository,
+    private val ttsStatsRepository: TTSStatsRepository
 ) {
 
     private val PRODUCT_ID = "unlock_premium_features_v1"
@@ -221,10 +226,12 @@ class BillingRepository @Inject constructor(
         if (!billingClient.isReady) {
             _billingError.value = "Cannot make purchase. Billing service not connected."
             Timber.e("launchPurchase failed: BillingClient not ready.")
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPNotReadyCount)
             return
         }
         val productDetails = _productDetails.value ?: run {
             _billingError.value = "Product details not available to launch purchase."
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPUnavailableCount)
             Timber.e("launchPurchase failed: Product details are null.")
             return
         }
@@ -247,7 +254,7 @@ class BillingRepository @Inject constructor(
         if (premiumPurchase != null && premiumPurchase.purchaseState == Purchase.PurchaseState.PURCHASED) {
             if (!premiumPurchase.isAcknowledged) {
                 // New purchase that needs to be acknowledged.
-                Log.d("tag", "Purchase is new. Acknowledging...")
+                Timber.d( "Purchase is new. Acknowledging...")
                 val acknowledgeParams = AcknowledgePurchaseParams.newBuilder()
                     .setPurchaseToken(premiumPurchase.purchaseToken).build()
 
@@ -270,16 +277,19 @@ class BillingRepository @Inject constructor(
                         val orderId:String = premiumPurchase.orderId ?: "null orderId"
                         val product:String = premiumPurchase.products.first()
                         firestoreRepository.fbUpdateUsePurchasedProperty(premiumPurchase.purchaseToken,orderId, product)
+                        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBoughtCount)
                         Timber.i("✅ Purchase acknowledged and user status set to premium.")
                     } else {
                         _billingError.value = "Failed to acknowledge purchase: ${ackResult.debugMessage}"
                         firestoreRepository.fbUpdateUseFailedPurchasedProperty(ackResult.debugMessage)
+                        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPFailedCount)
                         Timber.e("Acknowledgment failed. Code: ${ackResult.responseCode}")
                     }
                 } catch (e: Exception) {
                     // Catch any exceptions from the coroutine bridge itself
                     _billingError.value = "An error occurred during purchase acknowledgment: ${e.message}"
                     firestoreRepository.fbUpdateUseFailedPurchasedProperty(e.message.toString())
+                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPFailedCount)
                     Timber.e(e, "Exception during acknowledgePurchase.")
                 }
                 // --- END OF CORRECTION ---

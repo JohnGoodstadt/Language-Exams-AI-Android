@@ -295,7 +295,7 @@ class CategoryTabViewModelOriginal @Inject constructor(
                     ttsStatsRepository.incProgressSize(currentSkillLevel)
 
                 }
-                is PlaybackResult.PlayedFromCache -> {
+                is PlaybackResult.PlayedFromLocalCache -> {
                     _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
 //                    ttsStatsRepository.printStats(TTSStatsRepository.fsDOC.WORDSTATS)
@@ -386,7 +386,7 @@ class CategoryTabViewModelOriginal @Inject constructor(
         if (false) {
             appScope.launch {
                 if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
-                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                 }
             }

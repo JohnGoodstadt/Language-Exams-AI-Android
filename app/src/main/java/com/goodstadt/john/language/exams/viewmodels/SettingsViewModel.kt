@@ -23,6 +23,8 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPHourlyHitCount
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
@@ -333,7 +335,9 @@ class SettingsViewModel @Inject constructor(
         _uiState.update { it.copy(showIAPBottomSheet = false) }
         firestoreRepository.fsIncUserProperty("premiumShownInfoSheetNotYet")
     }
-
+    fun IAPCancelled(){
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBuyCancelledCount)
+    }
     // --- MODIFICATION 3: Create functions to handle PENDING selections ---
     fun onPendingExamSelect(exam: ExamDetails) {
         // This only updates the state for the UI inside the sheet. Does NOT save.
@@ -392,7 +396,7 @@ class SettingsViewModel @Inject constructor(
                     ttsStatsRepository.incWordStats(sentence)
                 }
 
-                is PlaybackResult.PlayedFromCache -> {
+                is PlaybackResult.PlayedFromLocalCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(sentence)
                 }

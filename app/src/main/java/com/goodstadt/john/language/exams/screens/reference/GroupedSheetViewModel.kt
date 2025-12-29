@@ -297,7 +297,7 @@ class GroupedSheetViewModel @Inject constructor(
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
 
-                is PlaybackResult.PlayedFromCache -> { //probably does not get executed as playFromCacheIfFound() already run
+                is PlaybackResult.PlayedFromLocalCache -> { //probably does not get executed as playFromCacheIfFound() already run
                     _playbackState.value = PlaybackState.Idle
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(word.word)

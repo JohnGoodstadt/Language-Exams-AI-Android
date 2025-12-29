@@ -54,10 +54,6 @@ fun RateLimitDailyReasonsBottomSheet (
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true) // Prevent half-open states
 
     LaunchedEffect(true) {
-       // fsUpdateStatsPropertyCount(fb.rateLimitDailyViewCount)
-
-
-
         viewModel.incStatForDaily()
     }
 
@@ -132,6 +128,7 @@ fun RateLimitDailyReasonsBottomSheet (
                         coroutineScope.launch {
                             AnalyticsHelper.logPaywallResponse(context,"accepted", "limit_daily")
                             sheetState.hide() // Slide out animation
+//                            viewModel.incStatIAPBought()
                             onBuyPremiumButtonPressed()
                             onCloseSheet() // Remove after animation
                         }

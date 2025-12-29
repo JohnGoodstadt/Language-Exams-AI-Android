@@ -405,7 +405,7 @@ class QuizViewModel @Inject constructor(
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
                 }
 
-                is PlaybackResult.PlayedFromCache -> {
+                is PlaybackResult.PlayedFromLocalCache -> {
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                 }
 

@@ -276,7 +276,7 @@ class ReferenceGenericViewModel @Inject constructor(
             appScope.launch {
                 Timber.d("Saving data because screen is no longer active.")
                 if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
-                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                 }
             }

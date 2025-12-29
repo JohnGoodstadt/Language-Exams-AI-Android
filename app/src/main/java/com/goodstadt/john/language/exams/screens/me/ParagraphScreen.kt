@@ -357,6 +357,7 @@ fun ParagraphScreen(
 
                                 Button(onClick = {
                                     AnalyticsHelper.logPaywallResponse(context,"rejected", "limit_paragraph")
+                                    viewModel.IAPCancelled()
                                     viewModel.onBottomSheetDismissed()
                                 }) {
                                     Text("Maybe Later")

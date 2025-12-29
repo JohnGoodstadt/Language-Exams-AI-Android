@@ -6,6 +6,11 @@ import com.goodstadt.john.language.exams.data.AudioPlayerService
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalMP3HitCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSFailureCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSSuccessCount
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.TabDetails
@@ -41,7 +46,7 @@ Layer 1 (Data Source Implementation)	ExamSheetRepository	To be a low-level worke
  */
 // In data/VocabRepository.kt
 sealed class PlaybackResult {
-    data object PlayedFromCache : PlaybackResult()
+    data object PlayedFromLocalCache : PlaybackResult()
     data object CacheNotFound : PlaybackResult()
     data object PlayedFromNetworkAndCached : PlaybackResult()
     data class Failure(val exception: Exception) : PlaybackResult()
@@ -60,7 +65,8 @@ class ContentRepository @Inject constructor(
     private val examSheetRepository: ExamSheetRepository,
     private val googleCloudTts: GoogleCloudTTS,
     private val audioPlayerService: AudioPlayerService,
-    private val userPreferencesRepository: UserPreferencesRepository
+    private val userPreferencesRepository: UserPreferencesRepository,
+    private val ttsStatsRepository: TTSStatsRepository
 ) {
     // Cache the result in memory after the first successful load
     private val vocabCache = mutableMapOf<String, Format0File>()
@@ -368,7 +374,7 @@ class ContentRepository @Inject constructor(
             val playResult = audioPlayerService.playAudio(audioCacheFile.readBytes())
 
             return if (playResult.isSuccess) {
-                PlaybackResult.PlayedFromCache
+                PlaybackResult.PlayedFromLocalCache
             } else {
                 PlaybackResult.Failure(
                     playResult.exceptionOrNull() as? Exception
@@ -518,6 +524,7 @@ class ContentRepository @Inject constructor(
             if (bytes != null && bytes.isNotEmpty()) {
                 audioData = bytes
                 source = AudioDataSource.LOCAL_DISK
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statLocalMP3HitCount)
             } else {
                 Timber.v("🔊 Waterfall L1: Local file exists but has a problem: $uniqueSentenceId")
                 // File existed but was corrupt/empty, try network
@@ -526,19 +533,27 @@ class ContentRepository @Inject constructor(
                         ?: return PlaybackResult.Failure(Exception("Audio acquisition failed"))
                 audioData = networkResult.first
                 source = networkResult.second
+
+
             }
         } else {
             // 2. Try Network (Firebase -> TTS)
             Timber.v("☁️ Waterfall L2: Try downloading from Cloud Storage")
-            val networkResult =
-                acquireFromNetwork(text, uniqueSentenceId, voiceName, languageCode, localFile)
-                    ?: return PlaybackResult.Failure(Exception("Audio acquisition failed"))
+            val networkResult = acquireFromNetwork(text, uniqueSentenceId, voiceName, languageCode, localFile)
+            if (networkResult == null){
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statTTSFailureCount)
+                return PlaybackResult.Failure(Exception("Audio acquisition failed"))
+            }
+
             audioData = networkResult.first
             source = networkResult.second
             if (source==AudioDataSource.GOOGLE_TTS) {
                 Timber.v("☁️ Waterfall L3: Downloaded from Google TTS API")
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statTTSSuccessCount)
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statFBCloudMissCount) //if gone to TTS API then cloud miss
             }else{
                 Timber.v("☁️ Waterfall L3: Downloaded from Cloud Storage Yippee!")
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statFBCloudHitCount)
             }
 
         }
@@ -566,7 +581,7 @@ class ContentRepository @Inject constructor(
         // --- PHASE 3: RETURN INSTANTLY ---
         // The UI gets the result immediately, stopping the spinner.
         return if (source == AudioDataSource.LOCAL_DISK) {
-            PlaybackResult.PlayedFromCache
+            PlaybackResult.PlayedFromLocalCache
         } else {
             PlaybackResult.PlayedFromNetworkAndCached
         }
@@ -642,7 +657,7 @@ class ContentRepository @Inject constructor(
 
             if (result.isSuccess) {
                 if (isNetwork) PlaybackResult.PlayedFromNetworkAndCached
-                else PlaybackResult.PlayedFromCache
+                else PlaybackResult.PlayedFromLocalCache
             } else {
                 PlaybackResult.Failure(
                     result.exceptionOrNull() as? Exception ?: Exception("Local playback failed")

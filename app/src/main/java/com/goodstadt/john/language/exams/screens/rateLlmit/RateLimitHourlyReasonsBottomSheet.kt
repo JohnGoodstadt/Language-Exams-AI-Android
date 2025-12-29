@@ -130,8 +130,8 @@ fun RateLimitHourlyReasonsBottomSheet(
                     onClick = {
                         coroutineScope.launch {
                             sheetState.hide() // Slide out animation
-//                            onCloseSheet() // Remove after animation
                             AnalyticsHelper.logPaywallResponse(context,"accepted", "limit_hourly")
+//                            viewModel.incStatIAPBought()
                             onBuyPremiumButtonPressed()
                             onCloseSheet()
                         }

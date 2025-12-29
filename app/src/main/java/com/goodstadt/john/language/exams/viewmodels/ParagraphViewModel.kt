@@ -26,6 +26,7 @@ import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -666,7 +667,7 @@ class ParagraphViewModel @Inject constructor(
                         //TODO: if we save paragraphs -- then do it here.
                         Timber.d("updateUserTTSTokenCount ${sentenceToSpeak.count()}")
                     }
-                    is PlaybackResult.PlayedFromCache -> {
+                    is PlaybackResult.PlayedFromLocalCache -> {
                         ttsStatsRepository.updateTTSStatsWithoutCosts()
                         audioCacheManager.incrementAIParagraphHeardCount()
                     }
@@ -726,7 +727,7 @@ class ParagraphViewModel @Inject constructor(
         if (false) {
             appScope.launch {
                 if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
-                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                 }
             }
@@ -807,6 +808,9 @@ class ParagraphViewModel @Inject constructor(
     fun onBottomSheetDismissed() {
         _uiState.update { it.copy(showIAPBottomSheet = false) }
         firestoreRepository.fsIncUserProperty("premiumShownInfoSheetNotYet")
+    }
+    fun IAPCancelled(){
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBuyCancelledCount)
     }
     fun buyPremiumButtonPressed(activity: Activity) {
         Timber.i("purchasePremium()")

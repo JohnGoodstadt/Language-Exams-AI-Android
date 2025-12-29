@@ -66,7 +66,7 @@ class MainViewModel @Inject constructor(
             // This lambda will be called when onStop() is triggered.
             if (ttsStatsRepository.checkIfStatsFlushNeeded()) {
                 viewModelScope.launch {
-                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)
                 }
@@ -75,7 +75,7 @@ class MainViewModel @Inject constructor(
         onAppForeground = {
             if (ttsStatsRepository.checkIfStatsFlushNeeded()) {
                 viewModelScope.launch {
-                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)
                 }

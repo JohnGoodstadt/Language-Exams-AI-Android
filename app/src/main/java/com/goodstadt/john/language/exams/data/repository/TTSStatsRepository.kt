@@ -97,9 +97,9 @@ class TTSStatsRepository @Inject constructor(
     // Enum for category separation
     enum class fsDOC(val docName: String) {
         TRANSLATION("stats_translation"), //Translate sentence stats
-        TTSStats("TTSStats"),  //Text to Speech usage
+        GlobalStats("GlobalStats"),  //Text to Speech usage
         USER("users"), //stats to go to User table/Doc
-        WORDSTATS("word_stats")
+        WORDSTATS("word_stats") //deprecated
     }
 
     //see also FirestoreRepository.kt
@@ -165,7 +165,23 @@ class TTSStatsRepository @Inject constructor(
         const val viewTryOutCount = "viewTryOutCount"
         const val viewPracticeCount = "viewPracticeCount"
 
-        //const val rateLimitDailyViewCount = "statProgress__Total"
+        //from iOS
+        const val statFBCloudHitCount = "statFBCloudHitCount"
+        const val statFBCloudMissCount = "statFBCloudMissCount"
+        const val statLocalMP3HitCount = "statLocalMP3HitCount"
+        const val statTTSFailureCount = "statTTSFailureCount"
+        const val statTTSSuccessCount = "statTTSSuccessCount"
+
+        //IAP
+        const val statIAPSheetDisplayedCount = "statIAPSheetDisplayedCount"
+        const val statIAPHourlyHitCount = "statIAPHourlyHitCount"
+        const val statIAPDailyHitCount = "statIAPDailyHitCount"
+        const val statIAPBuyCancelledCount = "statIAPBuyCancelledCount"
+        const val statIAPBoughtCount = "statIAPBoughtCount"
+        const val statIAPUnavailableCount = "statIAPUnavailableCount"
+        const val statIAPNotReadyCount = "statIAPNotReadyCount"
+        const val statIAPFailedCount = "statIAPFailedCount"
+
     }
 
 
@@ -309,8 +325,8 @@ class TTSStatsRepository @Inject constructor(
         when (doc) {
             fsDOC.USER -> flushUserStatsToFirebase()
             fsDOC.TRANSLATION -> Timber.d("TODO: flush translation stats")
-            fsDOC.TTSStats -> flushTTSStatsToFirebase()
-            fsDOC.WORDSTATS ->  flushWordStatsToFirebase()
+            fsDOC.GlobalStats -> flushTTSStatsToFirebase()
+            fsDOC.WORDSTATS ->  Timber.d("TODO: No word stats for English Exam AI")//lushWordStatsToFirebase()
 
 
         }
@@ -324,8 +340,8 @@ class TTSStatsRepository @Inject constructor(
             val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
             Timber.i(currentSkillLevel)
            //val currentSkillLevel = getSkillevel()
-            firestoreRepository.fsUpdateWordHistoryIncCounts(currentSkillLevel, stats)
-            clearStats(fsDOC.WORDSTATS)
+            //firestoreRepository.fsUpdateWordHistoryIncCounts(currentSkillLevel, stats)
+            //clearStats(fsDOC.WORDSTATS)
         }
     }
     fun printStats(doc: fsDOC)  {
@@ -350,56 +366,17 @@ class TTSStatsRepository @Inject constructor(
 
 
     fun flushTTSStatsToFirebase() {
-        val stats = getAllStats(fsDOC.TTSStats)
+        val stats = getAllStats(fsDOC.GlobalStats)
 
         if (!stats.isEmpty()) {
-            val statsDictionary = HashMap<String, Int>()
-
-            statsDictionary[TTSStats] = stats[TTSStats] as? Int ?: 0
-            statsDictionary[TTSChars] = stats[TTSChars] as? Int ?: 0
-            statsDictionary[TTSPremium] = stats[TTSPremium] as? Int ?: 0
-            statsDictionary[TTSStudio] = stats[TTSStudio] as? Int ?: 0
-            statsDictionary[TTSStandard] = stats[TTSStandard] as? Int ?: 0
-            statsDictionary[TTSQuality] = stats[TTSQuality] as? Int ?: 0
-            statsDictionary[TTSOther] = stats[TTSOther] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.TTSCacheHit] = stats[FirestoreRepository.fb.TTSCacheHit] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.TRCalls] = stats[FirestoreRepository.fb.TRCalls] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.TRChars] = stats[FirestoreRepository.fb.TRChars] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.FSDownloadCharCalls] = stats[FirestoreRepository.fb.FSDownloadCharCalls] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.FSDownloadCharCount] = stats[FirestoreRepository.fb.FSDownloadCharCount] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.freeWordList_en] = stats[FirestoreRepository.fb.freeWordList_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.A1WordList_en] = stats[FirestoreRepository.fb.A1WordList_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.A2WordList_en] = stats[FirestoreRepository.fb.A2WordList_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.B1WordList_en] = stats[FirestoreRepository.fb.B1WordList_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.B2WordList_en] = stats[FirestoreRepository.fb.B2WordList_en] as? Int ?: 0
-            statsDictionary[FirestoreRepository.fb.USvsBritishWordList_en] = stats[FirestoreRepository.fb.USvsBritishWordList_en] as? Int ?: 0
-
-
-            statsDictionary[viewSentencesCount] = stats[viewSentencesCount] as? Int ?: 0
-            statsDictionary[viewWordsCount] = stats[viewWordsCount] as? Int ?: 0
-            statsDictionary[viewSoundsCount] = stats[viewSoundsCount] as? Int ?: 0
-
-            statsDictionary[viewLOTMCount] = stats[viewLOTMCount] as? Int ?: 0
-            statsDictionary[viewQuizCount] = stats[viewQuizCount] as? Int ?: 0
-            statsDictionary[viewSpeakCount] = stats[viewSpeakCount] as? Int ?: 0
-            statsDictionary[viewShadowingCount] = stats[viewShadowingCount] as? Int ?: 0
-            statsDictionary[viewUSvsBRCount] = stats[viewUSvsBRCount] as? Int ?: 0
-            statsDictionary[viewDontCount] = stats[viewDontCount] as? Int ?: 0
-            statsDictionary[viewSettingsCount] = stats[viewSettingsCount] as? Int ?: 0
-            statsDictionary[viewFindCount] = stats[viewFindCount] as? Int ?: 0
-            statsDictionary[viewBookmarksCount] = stats[viewBookmarksCount] as? Int ?: 0
-            statsDictionary[viewMyWordsCount] = stats[viewMyWordsCount] as? Int ?: 0
-            statsDictionary[viewTheirWordsCount] = stats[viewTheirWordsCount] as? Int ?: 0
-            statsDictionary[viewTryOutCount] = stats[viewTryOutCount] as? Int ?: 0
-            statsDictionary[viewPracticeCount] = stats[viewPracticeCount] as? Int ?: 0
-
-
+//            val statsDictionary = HashMap<String, Int>()
 
             Timber.d("Updating Firebase with stats: $stats for uid: ${firestoreRepository.firebaseUid()}")
             Timber.w("Flushing global TTS stats. count:${stats.size}")
-            firestoreRepository.fsUpdateGlobalStats(stats = statsDictionary)
 
-            clearStats(fsDOC.TTSStats)
+            firestoreRepository.fsUpdateGlobalStats(stats = stats)
+
+            clearStats(fsDOC.GlobalStats)
         }
     }
 
@@ -408,16 +385,16 @@ class TTSStatsRepository @Inject constructor(
 
 
         val characters = words.count()
-        inc(fsDOC.TTSStats, TTSChars, characters)
-        inc(fsDOC.TTSStats, TTSStats)
+        inc(fsDOC.GlobalStats, TTSChars, characters)
+        inc(fsDOC.GlobalStats, TTSStats)
 
         val TTSLevel = googleVoiceToChargingLevel(googleVoiceName)
         when (TTSLevel) {
-            GoogleTTSChargingLevels.PREMIUM -> inc(fsDOC.TTSStats, TTSPremium, characters)
-            GoogleTTSChargingLevels.STUDIO -> inc(fsDOC.TTSStats, TTSStudio, characters)
-            GoogleTTSChargingLevels.STANDARD -> inc(fsDOC.TTSStats, TTSStandard, characters)
-            GoogleTTSChargingLevels.QUALITY -> inc(fsDOC.TTSStats, TTSQuality, characters)
-            GoogleTTSChargingLevels.OTHER -> inc(fsDOC.TTSStats, TTSOther, characters)
+            GoogleTTSChargingLevels.PREMIUM -> inc(fsDOC.GlobalStats, TTSPremium, characters)
+            GoogleTTSChargingLevels.STUDIO -> inc(fsDOC.GlobalStats, TTSStudio, characters)
+            GoogleTTSChargingLevels.STANDARD -> inc(fsDOC.GlobalStats, TTSStandard, characters)
+            GoogleTTSChargingLevels.QUALITY -> inc(fsDOC.GlobalStats, TTSQuality, characters)
+            GoogleTTSChargingLevels.OTHER -> inc(fsDOC.GlobalStats, TTSOther, characters)
         }
 
     }
@@ -461,8 +438,8 @@ class TTSStatsRepository @Inject constructor(
 
         val characters = words.count()
 
-        inc(fsDOC.TTSStats, TTSChars, characters)
-        inc(fsDOC.TTSStats, TTSStats)
+        inc(fsDOC.GlobalStats, TTSChars, characters)
+        inc(fsDOC.GlobalStats, TTSStats)
     }
     fun incUserStatDouble(fieldName:String, value:Double) {
         incDouble(fsDOC.USER,fieldName,value)
@@ -509,9 +486,9 @@ class TTSStatsRepository @Inject constructor(
             return
         }
 
-        inc(fsDOC.TTSStats, FSDownloadCharCount, charcount)
-        inc(fsDOC.TTSStats, FSDownloadCharCalls)
-        incSheet(fsDOC.TTSStats, sheetname)
+        inc(fsDOC.GlobalStats, FSDownloadCharCount, charcount)
+        inc(fsDOC.GlobalStats, FSDownloadCharCalls)
+        incSheet(fsDOC.GlobalStats, sheetname)
     }
 
     //TODO: No translations yet
@@ -521,12 +498,12 @@ class TTSStatsRepository @Inject constructor(
             return
         }
 
-        inc(fsDOC.TTSStats, TRCalls, count)
-        inc(fsDOC.TTSStats, TRChars, chars)
+        inc(fsDOC.GlobalStats, TRCalls, count)
+        inc(fsDOC.GlobalStats, TRChars, chars)
     }
 
     fun updateTTSCacheHit() {
-        inc(fsDOC.TTSStats, TTSCacheHit)
+        inc(fsDOC.GlobalStats, TTSCacheHit)
     }
 
     //endregion

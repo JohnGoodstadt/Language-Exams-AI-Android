@@ -32,11 +32,15 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.data.VoiceOption
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPUnavailableCount
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
+import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
 import timber.log.Timber
@@ -354,6 +358,7 @@ fun SettingsScreen(
 
                     Button(onClick = {
                         if (context is androidx.activity.ComponentActivity) {
+                            AnalyticsHelper.logPaywallResponse(context,"accepted", "limit_paragraph")
                             viewModel.buyPremiumButtonPressed(context)
                             viewModel.onBottomSheetDismissed()
                         }
@@ -367,6 +372,8 @@ fun SettingsScreen(
                     }
 
                     Button(onClick = {
+                        AnalyticsHelper.logPaywallResponse(context,"rejected", "limit_paragraph")
+                        viewModel.IAPCancelled()
                         viewModel.onBottomSheetDismissed()
                     }) {
                         Text("Maybe Later")
@@ -616,6 +623,11 @@ fun SettingsScreen(
             }
         }
     }
+}
+
+@Composable
+fun IAPCancelled() {
+    TODO("Not yet implemented")
 }
 
 // Helper Composable (unchanged)

@@ -13,6 +13,7 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPSheetDisplayedCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.DAILY_LIMIT
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
@@ -249,6 +250,7 @@ class CategoryTabViewModel @Inject constructor(
 //        didPlayVocabSentence(sentence, category.title, category.tabNumber)
 
         // 2. START NEW JOB
+        //TODO: Should I check for local cache first?
         playbackJob = viewModelScope.launch {
             val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
             if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
@@ -552,7 +554,9 @@ class CategoryTabViewModel @Inject constructor(
     }
 
     fun hideDailyRateLimitSheet() { _showRateDailyLimitSheet.value = false }
-    fun hideHourlyRateLimitSheet() { _showRateHourlyLimitSheet.value = false }
+    fun hideHourlyRateLimitSheet() {
+        _showRateHourlyLimitSheet.value = false
+    }
     fun hideRateOKLimitSheet() { _showRateLimitSheet.value = false }
 
     fun calculateGrandTotals(): Pair<Int, Int> {

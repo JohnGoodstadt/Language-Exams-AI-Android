@@ -4,6 +4,12 @@ import androidx.lifecycle.ViewModel
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.rateLimitDailyViewCount
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.rateLimitHourlyViewCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBoughtCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPDailyHitCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPHourlyHitCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPSheetDisplayedCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalMP3HitCount
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -32,14 +38,17 @@ class RateLimitSheetViewModel  @Inject constructor(
 
     init {
         updateRateLimiterState()
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statIAPSheetDisplayedCount)
+
     }
 
     fun incStatForDaily() {
         ttsStatsRepository.incUserStatCount(rateLimitDailyViewCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPDailyHitCount)
     }
     fun incStatForHourly() {
         ttsStatsRepository.incUserStatCount(rateLimitHourlyViewCount)
-
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPHourlyHitCount)
     }
     fun currentHourlyTimeLeftToWait() : Long? {
         return rateLimiter.currentHourlyTimeLeftToWait
@@ -54,7 +63,12 @@ class RateLimitSheetViewModel  @Inject constructor(
             )
         }
     }
-
+    fun incStatIAPBought() {
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBoughtCount)
+    }
+//    fun incStatIAPCancelled() {
+//        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBuyCancelledCount)
+//    }
 
 
 }

@@ -1,11 +1,13 @@
 package com.goodstadt.john.language.exams.data
 
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.di.FirebaseModule.provideFirebaseAuth
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.ServerTimestamp
+import com.google.firebase.firestore.SetOptions
 import kotlinx.coroutines.tasks.await
 import sanitizedForFirestore
 import timber.log.Timber
@@ -14,6 +16,7 @@ import java.util.Date
 import java.util.Locale
 import javax.inject.Inject
 import javax.inject.Singleton
+
 
 @Singleton
 class FirestoreRepository @Inject constructor(
@@ -318,7 +321,7 @@ class FirestoreRepository @Inject constructor(
         return transformedMap
     }
 
-    fun fsUpdateGlobalStats(stats: Map<String, Int>) {
+    fun fsUpdateGlobalStatsObsolete(stats: Map<String, Int>) {
         FirebaseAuth.getInstance().currentUser ?: return
 
         val formattedDate =
@@ -342,6 +345,93 @@ class FirestoreRepository @Inject constructor(
         // fbUpdateUserGlobalStats(stats)
     }
 
+
+    // Function needs to be 'suspend' to handle success/failure sequentially
+    fun fsUpdateGlobalStats(stats: Map<String, Any>) {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+        // Use Locale.US to ensure "yyyy-MM" formats correctly regardless of device language
+        val formattedDate = SimpleDateFormat("yyyy-MM", Locale.US).format(Date())
+
+        val firestoreUpdateFields = mutableMapOf<String, FieldValue>()
+
+        // 1. Filter and Map (Logic matches iOS)
+        for ((key, value) in stats) {
+            when (value) {
+                is Int -> {
+                    if (value > 0) {
+                        firestoreUpdateFields[key] = FieldValue.increment(value.toLong())
+                    }
+                }
+                is Long -> {
+                    if (value > 0) {
+                        firestoreUpdateFields[key] = FieldValue.increment(value)
+                    }
+                }
+                is Double -> {
+                    if (value > 0.0) {
+                        firestoreUpdateFields[key] = FieldValue.increment(value)
+                    }
+                }
+                is Float -> {
+                    // SharedPreferences often stores Floats, Firestore needs Double
+                    if (value > 0f) {
+                        firestoreUpdateFields[key] = FieldValue.increment(value.toDouble())
+                    }
+                }
+            }
+        }
+
+        // 2. Optimization: Return early if empty
+        if (firestoreUpdateFields.isEmpty()) {
+            Timber.d("Stats: No non-zero stats to flush.")
+            return
+        }
+
+        val docRef = FirebaseFirestore.getInstance().collection(fb.stats).document(formattedDate)
+
+        try {
+            // 3. Write to Firestore (Upsert)
+            // SetOptions.merge() handles "Create if missing, Update if exists"
+            docRef.set(firestoreUpdateFields, SetOptions.merge())
+                .addOnSuccessListener {
+                    Timber.d("Successfully flushed stats.")
+
+                    // ✅ CLEAR STATS HERE (Only runs on success)
+                    // Note: This runs on the main thread by default in Firebase callbacks
+                    //clearSpecificStats(fsDOC.TTSStats, firestoreUpdateFields.keys)
+                }
+                .addOnFailureListener { e ->
+                    Timber.e(e, "Error updating global stats")
+                    // Do NOT clear stats, so we retry next time
+                }
+
+
+            Timber.d("Successfully flushed ${firestoreUpdateFields.size} stat fields.")
+
+            // 4. ✅ CRITICAL: Only clear stats if await() succeeded
+            // Pass the keys we successfully uploaded to be cleared
+            //clearSpecificStats(fsDOC.TTSStats, firestoreUpdateFields.keys)
+
+        } catch (e: Exception) {
+            Timber.e(e, "Error updating global stats")
+            // Do NOT clear stats here, so we retry next time
+        }
+
+        // 5. Update User Stats (Optional)
+        // fbUpdateUserGlobalStats(firestoreUpdateFields)
+    }
+//    fun clearSpecificStats(filestoreDoc: TTSStatsRepository.fsDOC, keysToClear: Set<String>) {
+//        val prefs = getPrefs(filestoreDoc)
+//        val editor = prefs.edit()
+//
+//        for (key in keysToClear) {
+//            // Remove the specific key or set to 0
+//            editor.remove(key)
+//        }
+//
+//        editor.apply()
+//    }
     fun fsUpdateWordHistoryIncCounts(
         currentExamName: String,
         stats: Map<String, Any>

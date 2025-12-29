@@ -17,11 +17,9 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
-import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0Word
-import com.goodstadt.john.language.exams.screens.reference.Format2UiState
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -238,7 +236,7 @@ class ConjugationsViewModel @Inject constructor(
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }
 
-                is PlaybackResult.PlayedFromCache -> {
+                is PlaybackResult.PlayedFromLocalCache -> {
                     _playbackState.value = PlaybackState.Idle
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                     ttsStatsRepository.incWordStats(word.word)
@@ -271,7 +269,7 @@ class ConjugationsViewModel @Inject constructor(
             appScope.launch {
                 Timber.d("Saving data because screen is no longer active.")
                 if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
-                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.TTSStats)
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                 }
             }

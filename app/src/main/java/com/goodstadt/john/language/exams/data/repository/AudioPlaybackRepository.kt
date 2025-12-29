@@ -1,6 +1,9 @@
 package com.goodstadt.john.language.exams.data.repository
 
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalMP3HitCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSSuccessCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -74,7 +77,7 @@ class AudioPlaybackRepository @Inject constructor(
         // --- 4. Handle Side Effects (Stats & History) ---
         when (result) {
             is PlaybackResult.PlayedFromNetworkAndCached,
-            is PlaybackResult.PlayedFromCache -> {
+            is PlaybackResult.PlayedFromLocalCache -> {
 
                 // A. Generate ID
                 val contentID = FirebaseAudioService.generateContentID(sentence)
@@ -111,14 +114,18 @@ class AudioPlaybackRepository @Inject constructor(
                     if (result is PlaybackResult.PlayedFromNetworkAndCached) {
                         if (todayIsNotAFreePassDay) { rateLimiter.recordCall() }
                         ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
+
                     } else {
                         ttsStatsRepository.updateTTSStatsWithoutCosts()
+                        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statFBCloudHitCount)
                     }
 
                 } else {
                     // Replay Logic
                     xpManager.registerAction(XpActionType.ReplaySentence)
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
+
+
                 }
             }
 
@@ -134,7 +141,7 @@ class AudioPlaybackRepository @Inject constructor(
 
         // --- 5. Return Simple Boolean ---
         return when (result) {
-            is PlaybackResult.PlayedFromCache,
+            is PlaybackResult.PlayedFromLocalCache,
             is PlaybackResult.PlayedFromNetworkAndCached -> true
             else -> false
         }

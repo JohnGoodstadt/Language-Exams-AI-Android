@@ -4,7 +4,16 @@ import androidx.activity.ComponentActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
@@ -14,8 +23,29 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.WorkspacePremium
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Snackbar
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -97,7 +127,8 @@ fun CategoryTabScreen(
             if (tabIdentifier != null) {
                 // Determine Int tab number from string identifier if needed
 //                val tabNum = tabIdentifier.toIntOrNull() ?: 99
-                val tabNumber = tabIdentifier.filter { it.isDigit() }.toIntOrNull() // from tab1 to 1
+                val tabNumber =
+                    tabIdentifier.filter { it.isDigit() }.toIntOrNull() // from tab1 to 1
                 viewModel.loadContentForTab(tabNumber ?: 1)
             } else if (categoryTitle != null) {
                 // viewModel.loadContentForCategory(categoryTitle) // If you have this
@@ -185,7 +216,11 @@ fun CategoryTabScreen(
             // --- Success State ---
             else if (uiState is CategoryTabUiState.Success) {
                 val state = uiState as CategoryTabUiState.Success
-                var selectedChipTitle by remember(menuItems) { mutableStateOf(menuItems.firstOrNull() ?: "") }
+                var selectedChipTitle by remember(menuItems) {
+                    mutableStateOf(
+                        menuItems.firstOrNull() ?: ""
+                    )
+                }
 
                 Column(modifier = Modifier.fillMaxSize()) {
 
@@ -276,7 +311,7 @@ fun CategoryTabScreen(
                                             // Extract sentence string
                                             val sentence = s.sentence
 //                                            viewModel.handleSentenceTap(sentence, category)
-                                            viewModel.handleTap(sentence,category)
+                                            viewModel.handleTap(sentence, category)
                                         },
 
                                         onFocus = { viewModel.onFocusClicked(wordEntry) },
@@ -288,7 +323,11 @@ fun CategoryTabScreen(
                                         }
                                     )
                                 } else {
-                                    Text("Error: No sentence found", color = Color.Red, modifier = Modifier.padding(12.dp))
+                                    Text(
+                                        "Error: No sentence found",
+                                        color = Color.Red,
+                                        modifier = Modifier.padding(12.dp)
+                                    )
                                     HorizontalDivider()
                                 }
                             }
@@ -320,7 +359,10 @@ fun CategoryTabScreen(
             if (isHourlyRateLimitingSheetVisible) {
                 if (context is ComponentActivity) {
                     RateLimitHourlyReasonsBottomSheet(
-                        onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                        onCloseSheet = {
+
+                            viewModel.hideHourlyRateLimitSheet()
+                        },
                         onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
                     )
                 }
@@ -341,7 +383,7 @@ fun CategoryTabScreen(
                                 onBottomSheetRowTapped = { w, sentence ->
                                     // Redirect tap from bottom sheet to main VM logic
 //                                    viewModel.handleSentenceTap(sentence.sentence, category)
-                                    viewModel.handleTap(sentence.sentence,category)
+                                    viewModel.handleTap(sentence.sentence, category)
                                 }
                             )
                         }
@@ -371,7 +413,7 @@ fun CategoryTabScreen(
             // Note: You might need a helper in ViewModel to sum specific tab totals
             val (heard, total) = viewModel.calculateGrandTotals()
 
-          //  val context = LocalContext.current
+            //  val context = LocalContext.current
             val entryPoint = remember(context) {
                 EntryPointAccessors.fromApplication(
                     context.applicationContext,
@@ -410,6 +452,7 @@ fun CategoryTabScreen(
         }
     }
 }
+
 private fun scrollToCategory(
     title: String,
     coroutineScope: CoroutineScope,
@@ -426,7 +469,7 @@ private fun scrollToCategory(
 fun SentencesBottomSheetContent(
     // 1. The composable takes the selected word as its input
     word: Format0Word,
-    playCount:Int,
+    playCount: Int,
     onBottomSheetRowTapped: (Format0Word, Sentence) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -439,7 +482,7 @@ fun SentencesBottomSheetContent(
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
 
-        val playCountText = if (playCount == 0){
+        val playCountText = if (playCount == 0) {
             "Not heard"
         } else if (playCount == 1) {
             "1 play"
@@ -520,5 +563,6 @@ fun CategoryHeader(title: String) {
             .padding(vertical = 16.dp)
     )
 }
+
 // Helper extension for strings (placeholder)
 fun String.removeContentInBracketsAndTrim(): String = this.replace(Regex("\\(.*?\\)"), "").trim()
