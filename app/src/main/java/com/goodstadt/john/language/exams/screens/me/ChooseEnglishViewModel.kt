@@ -91,6 +91,7 @@ class ChooseEnglishViewModel  @Inject constructor(
                 // 1. Save the user's preference (already here)
                 userPreferencesRepository.saveSelectedFileName(selectedExam.json)
                 userPreferencesRepository.saveSelectedSkillLevel(selectedExam.skillLevel)
+                userPreferencesRepository.updateExamName(selectedExam.json) //this will be used on TAB1,2,3
                 // --- THIS IS THE NEW, CRITICAL PART ---
                 // 2. Tell the shared manager to load the recalled items for the NEW exam
                 Timber.d("New exam selected. Reloading recalled items for key: ${selectedExam.json}")

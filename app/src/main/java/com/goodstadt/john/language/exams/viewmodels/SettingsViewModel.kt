@@ -438,7 +438,7 @@ class SettingsViewModel @Inject constructor(
                     }
 
 
-                    // pendingExam?.let { userPreferencesRepository.saveSelectedFileName(it.json) }
+
                 }
 
                 SheetContent.SpeakerSelection -> {
@@ -466,7 +466,7 @@ class SettingsViewModel @Inject constructor(
                         _uiState.update { it.copy(currentLanguage = selectedLanguage.name) } //update UI
 
                         // 1. Save the user's preference (already here)
-                        //  userPreferencesRepository.saveSelectedFileName(selectedLanguage.code)
+
 //                        userPreferencesRepository.saveSelectedSkillLevel(selectedLanguage.skillLevel)
                         // --- THIS IS THE NEW, CRITICAL PART ---
                         // 2. Tell the shared manager to load the recalled items for the NEW exam
@@ -483,6 +483,7 @@ class SettingsViewModel @Inject constructor(
                         // 1. Save the user's preference (already here)
                         userPreferencesRepository.saveSelectedFileName(selectedExam.json)
                         userPreferencesRepository.saveSelectedSkillLevel(selectedExam.skillLevel)
+                        userPreferencesRepository.updateExamName(selectedExam.json) //this will be used on TAB1,2,3
                         // --- THIS IS THE NEW, CRITICAL PART ---
                         // 2. Tell the shared manager to load the recalled items for the NEW exam
                         Timber.d("New exam selected. Reloading recalled items for key: ${selectedExam.json}")
@@ -502,10 +503,6 @@ class SettingsViewModel @Inject constructor(
 
                         _uiState.update { it.copy(currentLanguage = selectedLanguage.name) } //update UI
 
-                        // 1. Save the user's preference (already here)
-                        //  userPreferencesRepository.saveSelectedFileName(selectedLanguage.code)
-//                        userPreferencesRepository.saveSelectedSkillLevel(selectedLanguage.skillLevel)
-                        // --- THIS IS THE NEW, CRITICAL PART ---
                         // 2. Tell the shared manager to load the recalled items for the NEW exam
                         Timber.d("New exam selected. Reloading recalled items for key: ${selectedLanguage.code}")
 
