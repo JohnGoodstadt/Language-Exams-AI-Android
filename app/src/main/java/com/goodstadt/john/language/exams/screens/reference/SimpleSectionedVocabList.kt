@@ -76,49 +76,9 @@ fun SimpleSectionedVocabList(
                             }
                         }
                     }
-                    HorizontalDivider()
+//                    HorizontalDivider()
                 }
             }
-
-            // 2. ITEMS
-//            items(
-//                items = category.words,
-//                key = { "${it.id}-${it.word}" }
-//            ) { wordEntry ->
-//                val sentenceToShow = wordEntry.sentences.firstOrNull()
-//
-//                if (sentenceToShow != null) {
-//
-//                    // ✅ A. Calculate Status using Function
-//                    val isSentenceAlreadyHeard = isHeard(sentenceToShow.sentence)
-//
-//                    // Playing/Downloading Logic
-//                    val unifiedFilename = FirebaseAudioService.generateUnifiedFilename(sentenceToShow.sentence, selectedVoiceName)
-//                    val isDownloading = downloadingSentenceId == unifiedFilename
-//
-//                    // B. Render Row
-//                    SwipeableVocabRow(
-//                        word = wordEntry,
-//                        sentence = sentenceToShow,
-//                        isSentenceAlreadyHeard = isSentenceAlreadyHeard,
-//                        isDownloading = isDownloading,
-//                        recalledWordKeys = recalledWordKeys,
-//                        onRowTapped = { w, s -> onRowTapped(w, s, category) },
-//                        onFocus = { onFocus(wordEntry) },
-//                        onCancel = { onCancel(wordEntry) },
-//                        onMore = { onMore(wordEntry, category) }
-//                    )
-//
-//                } else {
-//                    // Fallback
-//                    Text(
-//                        text = "Error: No sentence found for '${wordEntry.word}'",
-//                        color = MaterialTheme.colorScheme.error,
-//                        modifier = Modifier.padding(16.dp)
-//                    )
-//                    HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp))
-//                }
-//            } //: Items
 
             items(
                 items = category.words,
@@ -135,7 +95,7 @@ fun SimpleSectionedVocabList(
                             style = MaterialTheme.typography.bodyMedium,
 //                            fontStyle = FontStyle.no,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            modifier = Modifier.padding(top = 0.dp, bottom = 24.dp)
+                            modifier = Modifier.padding(top = 0.dp, bottom = 16.dp, start = 12.dp)
                         )
                     }
 
@@ -153,11 +113,7 @@ fun SimpleSectionedVocabList(
                     // This Column is the visual container for the sentences.
                     Column(
                         modifier = Modifier
-                            // a) Apply rounded corners
                             .clip(RoundedCornerShape(12.dp))
-                            // b) Set the background color. `surfaceVariant` is a perfect
-                            //    semantic color for "slightly lighter/darker than the background".
-//                            .background(MaterialTheme.colorScheme.surfaceVariant)
                             .background(backgroundColor)
                     ) {
                         // 3. Loop through the sentences INSIDE the styled Column
@@ -183,7 +139,7 @@ fun SimpleSectionedVocabList(
                                         onRowTapped(word, sentence,category)
                                     }
                                     // Add some padding inside the box
-                                    .padding(horizontal = 16.dp)
+                                    .padding(horizontal = 16.dp, vertical = 12.dp)
                             )
 
                         }

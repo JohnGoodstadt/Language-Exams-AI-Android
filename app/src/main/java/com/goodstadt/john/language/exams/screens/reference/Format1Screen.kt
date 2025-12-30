@@ -36,6 +36,7 @@ import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
+import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
 import dagger.hilt.android.EntryPointAccessors
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
@@ -127,11 +128,14 @@ fun Format1Screen(
                         // Check Playback State (Optional visual cue)
                        // val isPlaying = (state.playbackState is PlaybackState.Playing) &&
                          //       (state.playbackState.id.contains(FirebaseAudioService.generateUnifiedFilename(item.sentence, ""))) // simplified check
-
+                        val styledSentence = annotatedSentenceByWords(
+                            sentence = item.sentence,
+                            wordsToHighlight = item.word
+                        )
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(horizontal = 16.dp, vertical = 8.dp)
+                                .padding(horizontal = 16.dp, vertical = 12.dp)
                                 .clickable {
                                     // ✅ Simple Action
                                     viewModel.handleTap(item.sentence)
@@ -160,13 +164,14 @@ fun Format1Screen(
                             }
 
                             // ... (Your Sentence Parts UI) ...
-                            Text(text = item.sentence, style = MaterialTheme.typography.bodyLarge)
+                            Text(text = styledSentence, style = MaterialTheme.typography.bodyLarge)
 
                             if (item.definition.isNotBlank()) {
                                 Text(
                                     text = item.definition,
                                     style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                    modifier = Modifier.fillMaxWidth().padding(top = 4.dp),
                                 )
                             }
                         }

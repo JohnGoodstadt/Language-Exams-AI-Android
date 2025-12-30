@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -43,7 +44,7 @@ fun GroupedSheetScreen(
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
     // The main layout is a vertical column
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 4.dp)) {
 
         // 2. The Sub-Tab Picker (the sub-menu)
         // This only shows if there are sub-tabs to display

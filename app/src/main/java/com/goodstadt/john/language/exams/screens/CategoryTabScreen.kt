@@ -211,7 +211,8 @@ fun CategoryTabScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding)
+                .padding(top = innerPadding.calculateTopPadding())
+//                .padding(innerPadding)
         ) {
 
             Column(

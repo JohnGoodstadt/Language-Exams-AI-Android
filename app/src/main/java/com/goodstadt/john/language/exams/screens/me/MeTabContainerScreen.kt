@@ -77,7 +77,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
     var selectedChipTitle by remember(menuItems) {
         mutableStateOf(menuItems.firstOrNull() ?: "")
     }
-    Column(modifier = Modifier.fillMaxSize()) {
+    Column(modifier = Modifier.fillMaxSize().statusBarsPadding() ) {
         // Part A: The Persistent Horizontal Menu
         LazyRow(
             modifier = Modifier.fillMaxWidth(),

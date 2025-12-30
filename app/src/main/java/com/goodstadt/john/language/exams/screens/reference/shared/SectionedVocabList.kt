@@ -134,7 +134,7 @@ fun SectionedVocabList(
                         val isSentenceAlreadyHeard = isHeard(displayData.sentence)
                         val playCount = playCount(displayData.sentence)
 
-                        Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }) {
+                        Column(modifier = Modifier.clickable { onRowTapped(word, sentence) }.padding(vertical = 8.dp, horizontal = 8.dp) ) {
                             HighlightedWordInSentenceRow(
                                 word = word.word,
                                 parts = displayData.parts,

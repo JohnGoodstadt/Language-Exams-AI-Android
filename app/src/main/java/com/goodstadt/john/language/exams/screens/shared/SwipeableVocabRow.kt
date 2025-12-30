@@ -127,6 +127,7 @@ fun SwipeableVocabRow(
                 .fillMaxWidth()
                 .background(MaterialTheme.colorScheme.surface)
                 .clickable { onRowTapped(word, sentence) }
+                .padding(horizontal = 16.dp, vertical = 10.dp)
         ) {
             HighlightedWordInSentenceRow(
                 word = word.word,

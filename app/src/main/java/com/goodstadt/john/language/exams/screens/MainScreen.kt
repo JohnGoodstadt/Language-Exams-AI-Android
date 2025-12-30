@@ -279,7 +279,8 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
         NavHost(
             navController,
             startDestination = Screen.Tab1.route,
-            Modifier.padding(innerPadding)
+            Modifier.padding(bottom = innerPadding.calculateBottomPadding())
+            // Modifier.padding(innerPadding)
         ) {
 
             // --- THE NEW, SIMPLIFIED NAVIGATION ---

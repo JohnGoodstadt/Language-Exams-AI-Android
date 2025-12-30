@@ -57,17 +57,6 @@ enum class RecallState {
     }
 }
 
-@Serializable // Equivalent to Codable
-enum class TimingsState {
-    TimingsStateOverdue,
-    TimingsStateEarly,
-    TimingsStateInWindowEarly,
-    TimingsStateInWindowLate,
-    TimingsStateDue
-}
-
-// --- Data Class (equivalent to your Swift class) ---
-
 @Serializable // Allows this class to be converted to/from JSON
 @Keep
 data class RecallingItem(

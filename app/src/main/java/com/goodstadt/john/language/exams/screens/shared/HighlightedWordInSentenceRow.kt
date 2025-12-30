@@ -30,11 +30,11 @@ fun HighlightedWordInSentenceRow(
     Row(
         modifier = modifier
             .fillMaxWidth()
-            .padding(vertical = 12.dp),
+            .padding(vertical = 0.dp), //let parent handle this
         verticalAlignment = Alignment.CenterVertically
     ) {
         // The main text content
-        Text(text = annotatedString, modifier = Modifier.weight(1f))
+        Text(text = annotatedString, modifier = Modifier.weight(1f),lineHeight = 20.sp )
 
         // Status indicators on the right
         if (isDownloading) {
@@ -47,9 +47,9 @@ fun HighlightedWordInSentenceRow(
                 Text(text = "🟢", fontSize = 12.sp)
             }
 
-            if (false && playCount > 1) {
-                Text(text = "$playCount", fontSize = 12.sp)
-            }
+//            if (false && playCount > 1) {
+//                Text(text = "$playCount", fontSize = 12.sp)
+//            }
 
             if (displayRedDot) {
                 Text(text = "🔴", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
