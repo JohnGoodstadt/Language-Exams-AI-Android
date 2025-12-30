@@ -189,7 +189,7 @@ class CategoryTabViewModelOriginal @Inject constructor(
     fun onFocusClicked(word: Format0Word) {
         viewModelScope.launch {
             // We create a new, single function in RecallingItems for this
-            recallingItemsManager.focusOnWord(word)
+//            recallingItemsManager.focusOnWord(word)
         }
     }
 

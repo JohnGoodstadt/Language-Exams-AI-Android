@@ -11,6 +11,7 @@ import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -36,7 +37,8 @@ class RecallViewModel @Inject constructor(
     private val recallingItemsManager: RecallingItems,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val ttsStatsRepository : TTSStatsRepository,
-    private val billingRepository: BillingRepository
+    private val billingRepository: BillingRepository,
+    private val recallingRepository: RecallingRepository
 ) : ViewModel() {
 
   //  val recalledItemsFlow = recallingItemsManager.items
@@ -55,20 +57,25 @@ class RecallViewModel @Inject constructor(
                 // It replaces the old filterAndSortItems() function.
 
                 val today = Calendar.getInstance()
+                val now = System.currentTimeMillis()
 
                 // Partition the NEWLY received list
                 val (todayItems, laterItems) = allItemsList.partition { item ->
-                    val nextEventCal = Calendar.getInstance().apply { timeInMillis = item.nextEventTime }
-                    item.nextEventTime < today.timeInMillis ||
-                            (today.get(Calendar.DAY_OF_YEAR) == nextEventCal.get(Calendar.DAY_OF_YEAR) &&
-                                    today.get(Calendar.YEAR) == nextEventCal.get(Calendar.YEAR))
+                    item.nextEventTime <= now || isSameDay(item.nextEventTime, today)
                 }
+
+//                val (todayItems, laterItems) = allItemsList.partition { item ->
+//                    val nextEventCal = Calendar.getInstance().apply { timeInMillis = item.nextEventTime }
+//                    item.nextEventTime < today.timeInMillis ||
+//                            (today.get(Calendar.DAY_OF_YEAR) == nextEventCal.get(Calendar.DAY_OF_YEAR) &&
+//                                    today.get(Calendar.YEAR) == nextEventCal.get(Calendar.YEAR))
+//                }
 
                 // Update the UI state with the newly partitioned and sorted lists
                 _uiState.update {
                     it.copy(
-                        todayItems = todayItems.sortedBy { it.nextEventTime },
-                        laterItems = laterItems.sortedBy { it.nextEventTime }
+                        todayItems = todayItems.sortedBy { i -> i.nextEventTime },
+                        laterItems = laterItems.sortedBy { i -> i.nextEventTime }
                     )
                 }
             }
@@ -124,12 +131,12 @@ class RecallViewModel @Inject constructor(
         // Placeholder
         _uiState.update { it.copy(wordCounts = mapOf("Can you Answer this?" to 5)) }
     }
-    fun onClearAllClicked() {
-        // This is also correct.
-        viewModelScope.launch {
-            recallingItemsManager.removeAll()
-        }
-    }
+//    fun onClearAllClicked() {
+//        // This is also correct.
+//        viewModelScope.launch {
+//            recallingItemsManager.removeAll()
+//        }
+//    }
 //    fun onClearAllClickedObsolete() {
 //        recallingItemsManager.removeAll()
 //        // Save the now-empty list to storage to make the change permanent
@@ -162,23 +169,45 @@ class RecallViewModel @Inject constructor(
 //        filterAndSortItemsObsolete()
 //        // TODO: update app badge and manage notifications
 //    }
+//    fun onRemoveClicked(key: String) {
+//        viewModelScope.launch {
+//            recallingItemsManager.remove(key)
+//        }
+//    }
+//    fun onOkClicked(key: String) {
+//        viewModelScope.launch {
+//            recallingItemsManager.recalledOK(key)
+//        }
+//    }
+    // Actions delegate to Repository
     fun onRemoveClicked(key: String) {
         viewModelScope.launch {
-            recallingItemsManager.remove(key)
-        }
-    }
-    fun onOkClicked(key: String) {
-        viewModelScope.launch {
-            recallingItemsManager.recalledOK(key)
+            recallingRepository.remove(key)
         }
     }
 
+    fun onOkClicked(key: String) {
+        viewModelScope.launch {
+            recallingRepository.recalledOK(key)
+        }
+    }
+
+    fun onClearAllClicked() {
+        viewModelScope.launch {
+            recallingRepository.removeAll()
+        }
+    }
     // Your onClearAllClicked is also simpler now
 //    fun onClearAllClicked() {
 //        viewModelScope.launch {
 //            recallingItemsManager.removeAll()
 //        }
 //    }
+    private fun isSameDay(ms: Long, todayCal: java.util.Calendar): Boolean {
+        val itemCal = java.util.Calendar.getInstance().apply { timeInMillis = ms }
+        return todayCal.get(java.util.Calendar.YEAR) == itemCal.get(java.util.Calendar.YEAR) &&
+                todayCal.get(java.util.Calendar.DAY_OF_YEAR) == itemCal.get(java.util.Calendar.DAY_OF_YEAR)
+    }
     fun onPlayWord(word: String) {
 
         if (isPremiumUser.value) {
