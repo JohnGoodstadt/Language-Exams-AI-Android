@@ -32,6 +32,7 @@ import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
+import com.goodstadt.john.language.exams.utils.findActivity
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
@@ -55,8 +56,14 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
     val isSheetVisible = uiState.selectedCategoryTitle != null
 
     val context = LocalContext.current
-    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
+//    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
 
+    val activity = LocalContext.current.findActivity() as? androidx.activity.ComponentActivity
+    val navViewModel: NavigationViewModel = if (activity != null) {
+        hiltViewModel(activity)
+    } else {
+        hiltViewModel() // Fallback (though this branch shouldn't happen in valid UI)
+    }
     LaunchedEffect(isSheetVisible) {
         if (!isSheetVisible) {
             scope.launch { sheetState.hide() }.join()

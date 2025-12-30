@@ -4,6 +4,7 @@ package com.goodstadt.john.language.exams.data
 
 import android.app.Application
 import android.content.Context
+import androidx.annotation.Keep
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.timingToDurationMillis
 import kotlinx.serialization.Serializable
@@ -68,6 +69,7 @@ enum class TimingsState {
 // --- Data Class (equivalent to your Swift class) ---
 
 @Serializable // Allows this class to be converted to/from JSON
+@Keep
 data class RecallingItem(
     val id: String = UUID.randomUUID().toString(),
     val key: String, // unique identifier from client

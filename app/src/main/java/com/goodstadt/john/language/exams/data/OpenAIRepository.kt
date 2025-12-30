@@ -1,6 +1,7 @@
 // Create a new file in your .../data/ package
 package com.goodstadt.john.language.exams.data
 
+import androidx.annotation.Keep
 import com.goodstadt.john.language.exams.BuildConfig.OPENAI_API_KEY
 
 
@@ -50,17 +51,20 @@ data class OpenAILLMResponse(
 )
 
 @Serializable
+@Keep
 data class OpenAIResponse(
     val choices: List<Choice>,
     val usage: UsageData // <-- ADD THIS
 )
 
 @Serializable
+@Keep
 data class Choice(
     val message: Message
 )
 
 @Serializable
+@Keep
 data class Message(
     val role: String,
     val content: String
@@ -68,6 +72,7 @@ data class Message(
 
 // --- ADD THIS NEW DATA CLASS ---
 @Serializable
+@Keep
 data class UsageData(
     @SerialName("prompt_tokens") val promptTokens: Int,
     @SerialName("completion_tokens") val completionTokens: Int,
@@ -77,6 +82,7 @@ data class UsageData(
 
 
 @Serializable
+@Keep
 data class OpenAIRequest(
     val model: String,
     val messages: List<RequestMessage>
@@ -84,6 +90,7 @@ data class OpenAIRequest(
 )
 
 @Serializable
+@Keep
 data class RequestMessage(
     val role: String, // "system" or "user"
     val content: String

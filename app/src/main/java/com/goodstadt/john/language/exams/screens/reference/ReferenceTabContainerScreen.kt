@@ -37,6 +37,7 @@ import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
+import com.goodstadt.john.language.exams.utils.findActivity
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.ReferenceViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
@@ -71,8 +72,14 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
     // Perform the navigation
 // ✅ 1. Get the Shared Navigation ViewModel
     val context = LocalContext.current
-    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
+//    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
 //    val pendingNav by navViewModel.pendingNavigation.collectAsState()
+    val activity = LocalContext.current.findActivity() as? androidx.activity.ComponentActivity
+    val navViewModel: NavigationViewModel = if (activity != null) {
+        hiltViewModel(activity)
+    } else {
+        hiltViewModel() // Fallback (though this branch shouldn't happen in valid UI)
+    }
 
     // ✅ 2. React to the pending navigation
     LaunchedEffect(Unit) {

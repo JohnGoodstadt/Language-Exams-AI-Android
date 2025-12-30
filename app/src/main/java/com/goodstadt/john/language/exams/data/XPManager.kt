@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.managers
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import androidx.annotation.Keep
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 //import com.goodstadt.john.language.exams.models.XpActionType
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -24,9 +25,10 @@ import javax.inject.Singleton
 import kotlin.math.max
 
 // MARK: - Data Models
-
+@Keep
 data class XpState(
     var currentLevel: String = "A1",
+    //NOTE:Can crash here in release mode
     var levels: MutableMap<String, LevelXpState> = mutableMapOf(),
 
     // Gamification
@@ -42,14 +44,14 @@ data class XpState(
     var targetExamLevel: String? = null,
     var datePrecision: String = "none" // "exact", "month", "duration"
 )
-
+@Keep
 data class LevelXpState(
     var xp: Int = 0,
     var learnerLevel: Int = 1,
     var progressToNextLevel: Double = 0.0,
     var lastUpdatedAt: Long = 0
 )
-
+@Keep
 enum class XpActionType {
     HearNewSentence,
     ReplaySentence,
@@ -62,7 +64,7 @@ enum class XpActionType {
     GenerateParagraph,
     MemoryBoost
 }
-
+@Keep
 data class DailyStats(
     val dateId: String, // "2025-12-15"
     var xpGained: Int = 0,

@@ -53,6 +53,7 @@ import com.goodstadt.john.language.exams.screens.me.ChooseEnglishAndExamSheet
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.reference.ReferenceTabContainerScreen
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
+import com.goodstadt.john.language.exams.utils.findActivity
 import timber.log.Timber
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -66,8 +67,14 @@ fun MainScreen() {
 
     // ✅ 1. Get the Activity-Scoped Navigation ViewModel -- navigate auto on onClick
     val context = LocalContext.current
-    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
+//    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
 
+    val activity = LocalContext.current.findActivity() as? androidx.activity.ComponentActivity
+    val navViewModel: NavigationViewModel = if (activity != null) {
+        hiltViewModel(activity)
+    } else {
+        hiltViewModel() // Fallback (though this branch shouldn't happen in valid UI)
+    }
 //    val navigationState by navViewModel.pendingNavigation.collectAsState()
     // ✅ 2. Listen for requests to switch tabs
     LaunchedEffect(Unit) {

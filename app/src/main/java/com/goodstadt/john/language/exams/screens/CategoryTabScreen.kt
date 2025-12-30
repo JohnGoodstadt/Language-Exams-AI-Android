@@ -207,7 +207,6 @@ fun CategoryTabScreen(
         }
     ) { innerPadding ->
 
-
         // ✅ 1. ROOT CONTAINER MUST BE A BOX (To allow overlapping)
         Box(
             modifier = Modifier
@@ -215,11 +214,10 @@ fun CategoryTabScreen(
                 .padding(innerPadding)
         ) {
 
-
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(innerPadding)
+//                    .padding(innerPadding)
             ) {
 
                 // --- Loading State ---

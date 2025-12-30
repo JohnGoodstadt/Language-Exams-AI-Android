@@ -1,11 +1,13 @@
 package com.goodstadt.john.language.exams.models
 
+import androidx.annotation.Keep
 import kotlinx.serialization.Serializable
 
 // Note: The top-level object in your JSON should be an array of LanguagesControl,
 // so we will parse it as a List<LanguagesControl>.
 
 @Serializable
+@Keep
 data class LanguagesControlFile(
     val id: String, // The "languages" id from the JSON
     val date: String,
@@ -14,6 +16,7 @@ data class LanguagesControlFile(
 )
 
 @Serializable
+@Keep
 data class LanguageCodeDetails(
     val code: String,
     val appleLocaleCode: String,
@@ -31,6 +34,7 @@ data class LanguageCodeDetails(
 )
 
 @Serializable
+@Keep
 data class ExamDetails(
     val displayName: String,
     val json: String,

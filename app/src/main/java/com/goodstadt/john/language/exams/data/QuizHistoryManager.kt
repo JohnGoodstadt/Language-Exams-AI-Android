@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.data
 
 import android.content.Context
 import android.os.Bundle
+import androidx.annotation.Keep
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -16,7 +17,7 @@ import javax.inject.Singleton
 
 import java.util.UUID
 import java.util.Date
-
+@Keep
 data class QuizAttempt(
     val id: String = UUID.randomUUID().toString(),
     val timestamp: Long = System.currentTimeMillis(),

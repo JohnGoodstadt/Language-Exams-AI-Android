@@ -20,8 +20,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 74
-val VERSION_NAME = "2.74"
+val VERSION_CODE = 75
+val VERSION_NAME = "2.75"
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
@@ -137,6 +137,23 @@ android {
             buildConfigField("Boolean", "IS_DEBUG", "false")
             buildConfigField("Boolean", "TEST_RATE_LIMITING", "false")
             signingConfig = signingConfigs.getByName("release")
+        }
+        create("staging") {
+            // 1. Copy everything from Release (R8, Proguard rules, Minification)
+            initWith(getByName("release"))
+
+            // 2. Make it Debuggable (Allows Logcat & Debugger attachment)
+            isDebuggable = true
+
+            // 3. Install as separate app (e.g. com.goodstadt...en.staging)
+            applicationIdSuffix = ".staging"
+
+            // 4. Use Debug Keys (So you don't need the release password to build)
+            signingConfig = signingConfigs.getByName("debug")
+
+            // 5. Override Flags (Turn logs back on so you can see why it crashes)
+            buildConfigField("Boolean", "IS_DEBUG", "true")
+            buildConfigField("Boolean", "TEST_RATE_LIMITING", "false")
         }
     }
     compileOptions {

@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.data.examsheets
 
+import androidx.annotation.Keep
 import kotlinx.serialization.Serializable
 
 // Custom error for clear, specific failures
@@ -11,6 +12,7 @@ sealed class DataFetchError : Exception() {
 
 // --- DTOs that perfectly match the Firestore document structure ---
 @Serializable
+@Keep
 internal data class VocabFileDTO(
     val fileformat: Int = 0,
     val location: Int = 0,
@@ -28,6 +30,7 @@ internal data class VocabFileDTO(
 )
 
 @Serializable
+@Keep
 internal data class FirestoreCategoryDTO(
     val title: String = "",
     val tabNumber: Int = 0,
@@ -35,6 +38,7 @@ internal data class FirestoreCategoryDTO(
 )
 
 @Serializable
+@Keep
 internal data class FirestoreWordDTO(
     val id: Int = 0,
     val sortOrder: Int = 0,
