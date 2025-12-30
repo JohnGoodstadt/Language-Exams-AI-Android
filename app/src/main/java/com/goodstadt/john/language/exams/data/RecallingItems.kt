@@ -5,6 +5,7 @@ package com.goodstadt.john.language.exams.data
 import android.app.Application
 import android.content.Context
 import androidx.annotation.Keep
+import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.timingToDurationMillis
 import kotlinx.serialization.Serializable
@@ -13,24 +14,30 @@ import kotlinx.serialization.json.Json
 import java.util.UUID
 import com.goodstadt.john.language.exams.utils.STOPS
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
 
-// --- Top-level Constants ---
-const val RECALL_IT_SAVED_FILENAME = "RecallItSaved"
-//private const val timings = "10m,1h,1D,1W,1M,4M"
-//private val stops = timings.split(",")
 
-// --- Enums ---
 
-@Serializable // Equivalent to Codable for JSON serialization
+// --- Constants for Spaced Repetition ---
+// Used by RecallingItem to calculate labels
+private const val TIMINGS_STR = "10m,1h,1D,1W,1M,4M"
+val STOPS: List<String> = TIMINGS_STR.split(",")
+
+
+@Keep
+@Serializable
 enum class RecallState {
     NotStarted,
     Memorising,
@@ -50,37 +57,50 @@ enum class RecallState {
             AnsweredOK -> "Answered OK"
             AnsweredNotOK -> "Not Answered OK"
             Waiting -> "Waiting"
-            WaitingForAnswer -> "WaitingForAnswer"
+            WaitingForAnswer -> "Waiting For Answer"
             Done -> "Done"
             Unknown -> "Unknown"
         }
     }
 }
 
-@Serializable // Allows this class to be converted to/from JSON
+// --- Data Class ---
+
 @Keep
+@Serializable
 data class RecallingItem(
     val id: String = UUID.randomUUID().toString(),
-    val key: String, // unique identifier from client
-    val text: String,
+
+    // The unique identifier (usually the word itself, e.g., "Hello")
+    val key: String,
+
+    // The translation or main text to display
+    val text: String = "",
+
+    // Extra info (e.g. Romanisation/Pinyin)
     val additionalText: String = "",
+
     val imageId: String = "",
-    // Note: Storing dates as Long (milliseconds since epoch) is the standard,
-    // robust way to handle timestamps in Kotlin/Java for serialization.
+
+    // Timestamps (Milliseconds)
     val createdDate: Long = System.currentTimeMillis(),
-    var learntTime: Long = 0L, // 0L is a good equivalent for distantPast
+    var learntTime: Long = 0L,
     var prevEventTime: Long = 0L,
     var nextEventTime: Long = 0L,
+
+    // Spaced Repetition State
     var currentStopNumber: Int = 1,
     var recallState: RecallState = RecallState.NotStarted
 ) {
+    // MARK: - Logic Helpers
+
     fun currentStopCode(): String {
         val zeroBasedIndex = currentStopNumber - 1
-        return STOPS.getOrNull(zeroBasedIndex) ?:STOPS.first()
+        return STOPS.getOrNull(zeroBasedIndex) ?: STOPS.first()
     }
 
     fun nextStopTitle(): String {
-        // In Kotlin, we can use 'coerceIn' for safety
+        // Look ahead to the next stop index
         val nextIndex = (currentStopNumber).coerceIn(0, STOPS.size - 1)
         return STOPS.getOrNull(nextIndex) ?: STOPS.last()
     }
@@ -88,197 +108,164 @@ data class RecallingItem(
     fun isLastRecallItem(): Boolean {
         return currentStopNumber >= STOPS.size
     }
-
-    // Note: 'moveFirst' was moved into RecallingItems class as it modifies state
-    // based on other parameters. Keeping the data class immutable is preferred.
 }
 
-// --- Main Logic Class (equivalent to RecallingItems) ---
 
-// This class will be instantiated as a Singleton by Hilt later
+
 @Singleton
-class RecallingItems @Inject constructor (
-    private val application: Application,
-    private val userPreferencesRepository: UserPreferencesRepository,
-    private val appScope: CoroutineScope
+class RecallingItems @Inject constructor(
+    private val repository: RecallingRepository,
+    // We use a predefined IO scope for background logic if not called from a suspend function
+    private val appScope: CoroutineScope = CoroutineScope(Dispatchers.IO)
 ) {
 
-    // The list of items. In a ViewModel, this would be a StateFlow.
-    private val _items = MutableStateFlow<List<RecallingItem>>(emptyList())
-    val items: StateFlow<List<RecallingItem>> = _items.asStateFlow()
+    // ✅ READ: Expose the Repository flow directly, converted to a StateFlow for instant access
+    val items: StateFlow<List<RecallingItem>> = repository.allItems
+        .stateIn(
+            scope = appScope,
+            started = SharingStarted.Eagerly,
+            initialValue = emptyList()
+        )
 
-    private val context = application.applicationContext
-    // --- Public API ---
+    // MARK: - Checkers
 
     fun amIRecalling(key: String): Boolean {
-        return _items.value.any { it.key == key }
-    }
-
-    fun iHaveMemorisedIt(key: String) {
-        _items.value.firstOrNull { it.key == key }?.apply {
-            recallState = RecallState.Memorised
-            currentStopNumber = 1
-            learntTime = System.currentTimeMillis()
-            nextEventTime = System.currentTimeMillis()
-        }
-    }
-
-
-// ... inside RecallingItems class ...
-
-    suspend fun recalledOK(key: String) {
-        _items.update { currentList ->
-            currentList.map { item ->
-                // Find the item to update
-                if (item.key == key) {
-                    // Logic to move to the next stop
-                    val nextStopNumber = if (item.currentStopNumber < STOPS.size) {
-                        item.currentStopNumber + 1
-                    } else {
-                        item.currentStopNumber // Stay at the last stop
-                    }
-
-                    val nextStopCode = STOPS.getOrNull(nextStopNumber - 1) ?: STOPS.last()
-                    val eventTimeMillis = timingToDurationMillis(nextStopCode)
-
-                    // Return a modified copy of the item
-                    item.copy(
-                        recallState = RecallState.Waiting,
-                        currentStopNumber = nextStopNumber,
-                        prevEventTime = System.currentTimeMillis(),
-                        nextEventTime = System.currentTimeMillis() + eventTimeMillis
-                    )
-                } else {
-                    // Return all other items unchanged
-                    item
-                }
-            }
-        }
-
-        // After updating the state, save it.
-        appScope.launch { _save() }
-    }
-    // In data/RecallIt.kt, inside the RecallingItems class
-
-
-
-    fun recalledNotOK(key: String) {
-        _items.value.firstOrNull { it.key == key }?.apply {
-            recallState = RecallState.AnsweredNotOK
-        }
-    }
-
-    fun add(key: String, text: String, imageId: String, additionalText: String = "") {
-        if (!amIRecalling(key)) {
-           // val item = RecallingItem(key, text, imageId, additionalText)
-            val item = RecallingItem(
-                key = key,
-                text = text,
-                imageId = imageId,
-                additionalText = additionalText
-            )
-            _items.update { currentList -> currentList + item } // Add item to the list
-        }
+        // synchronous check against the latest cached value from StateFlow
+        return items.value.any { it.key == key }
     }
 
     fun getItem(key: String): RecallingItem? {
-        return _items.value.firstOrNull { it.key == key }
+        return items.value.firstOrNull { it.key == key }
     }
 
-    suspend fun remove(key: String) {
-        _items.update { currentList -> currentList.filterNot { it.key == key } }
-        // Launch the save in the app's scope so it's not cancelled with the ViewModel.
-        appScope.launch { _save() }
-    }
-    suspend fun removeAll() {
-        _items.update { emptyList() }
-        appScope.launch { _save() }
-    }
+    // MARK: - Actions
 
-
-    // --- Private Helper Methods ---
-
-    private fun moveFirst(item: RecallingItem) {
-        item.currentStopNumber = 1
-        val eventTimeMillis = timingToDurationMillis(item.currentStopCode())
-        item.nextEventTime = System.currentTimeMillis() + eventTimeMillis
-    }
-
-    private fun moveNext(item: RecallingItem) {
-        if (item.currentStopNumber < STOPS.size) {
-            item.currentStopNumber++
-        }
-        val eventTimeMillis = timingToDurationMillis(item.currentStopCode())
-        item.nextEventTime = System.currentTimeMillis() + eventTimeMillis
-    }
-
-    // --- Save/Load Logic (equivalent to UserDefaults) ---
-    private suspend fun _save() {
-        try {
-            val storageKey = userPreferencesRepository.selectedFileNameFlow.first()
-            val listToSave = _items.value
-            val jsonString = Json.encodeToString(listToSave)
-
-            val prefs = context.getSharedPreferences("RecallItPrefs", Context.MODE_PRIVATE)
-            prefs.edit().putString(storageKey, jsonString).apply()
-
-            // Add a log to confirm saving
-            Timber.d("Saved ${listToSave.size} items to key '$storageKey'")
-//            Timber.d("SUCCESS: Save to '$storageKey' completed.")
-        } catch (e: Exception) {
-            Timber.e("FAILED to save", e)
-        }
-    }
-
-
-    fun load(storageKey: String = RECALL_IT_SAVED_FILENAME) {
-        try {
-            val prefs = context.getSharedPreferences("RecallItPrefs", Context.MODE_PRIVATE)
-            val jsonString = prefs.getString(storageKey, null)
-
-            _items.value = if (jsonString != null) {
-                Json.decodeFromString<List<RecallingItem>>(jsonString)
-            } else {
-                emptyList()
-            }
-            // Add a log to confirm loading
-            Timber.d("Loaded ${_items.value.size} items from key '$storageKey'")
-
-        } catch (e: Exception) {
-            Timber.e("Failed to load items, starting fresh.", e)
-            _items.value = emptyList() // Use emptyList() for consistency
-            e.printStackTrace()
-        }
-    }
-
-    suspend fun focusOnWord(word: Format0Word) {
-        val key = word.word
+    /**
+     * Adds a new word to the focus list.
+     * Sets the initial state and next event time.
+     */
+    fun add(key: String, text: String, imageId: String, additionalText: String = "") {
+        // Prevent duplicates
         if (amIRecalling(key)) return
+
+        val eventTimeMillis = timingToDurationMillis("10m") // First stop
 
         val newItem = RecallingItem(
             key = key,
-            text = word.translation,
-            imageId = "",
-            additionalText = word.romanisation
+            text = text,
+            imageId = imageId,
+            additionalText = additionalText,
+            recallState = RecallState.Waiting,
+            createdDate = System.currentTimeMillis(),
+            prevEventTime = System.currentTimeMillis(),
+            nextEventTime = System.currentTimeMillis() + eventTimeMillis,
+            currentStopNumber = 1
         )
-        // Perform both state updates sequentially
-        _items.update { it + newItem }
-        _items.update { currentList ->
-            currentList.map { item ->
-                if (item.key == key) {
-                    val eventTimeMillis = timingToDurationMillis("10m")
-                    item.copy(
-                        recallState = RecallState.Waiting,
-                        prevEventTime = System.currentTimeMillis(),
-                        nextEventTime = System.currentTimeMillis() + eventTimeMillis
-                    )
-                } else {
-                    item
-                }
-            }
+
+        appScope.launch {
+            repository.addItem(newItem)
         }
-        // Launch the save operation in the background
-        appScope.launch { _save() }
+    }
+
+    fun remove(key: String) {
+        appScope.launch {
+            repository.remove(key)
+        }
+    }
+
+    fun removeAll() {
+        appScope.launch {
+            repository.removeAll()
+        }
+    }
+
+    // MARK: - Spaced Repetition Logic
+
+    /**
+     * User answered correctly. Move to next stop (10m -> 1h -> 1d...).
+     */
+    fun recalledOK(key: String) {
+        appScope.launch {
+            // 1. Get latest version from Repo to ensure thread safety
+            val item = repository.getItem(key) ?: return@launch
+
+            // 2. Calculate Next Stop
+            val nextStopNumber = if (item.currentStopNumber < STOPS.size) {
+                item.currentStopNumber + 1
+            } else {
+                item.currentStopNumber // Cap at max
+            }
+
+            // 3. Calculate Time
+            // (index is 0-based, stopNumber is 1-based)
+            val stopCode = STOPS.getOrNull(nextStopNumber - 1) ?: STOPS.last()
+            val delayMillis = timingToDurationMillis(stopCode)
+
+            // 4. Create Updated Object
+            val updatedItem = item.copy(
+                recallState = RecallState.Waiting,
+                currentStopNumber = nextStopNumber,
+                prevEventTime = System.currentTimeMillis(),
+                nextEventTime = System.currentTimeMillis() + delayMillis
+            )
+
+            // 5. Save
+            repository.updateItem(updatedItem)
+        }
+    }
+
+    /**
+     * User answered incorrectly.
+     * Logic: Stay at current level? Or reset to 1?
+     * Implementing "Mark as AnsweredNotOK" for now based on your enum.
+     */
+    fun recalledNotOK(key: String) {
+        appScope.launch {
+            val item = repository.getItem(key) ?: return@launch
+
+            // Logic: You might want to reset stop number to 1 here?
+            val updatedItem = item.copy(
+                recallState = RecallState.AnsweredNotOK,
+                // Optional: Reset timer?
+                // nextEventTime = System.currentTimeMillis() + timingToDurationMillis("10m")
+            )
+
+            repository.updateItem(updatedItem)
+        }
+    }
+
+    /**
+     * Instant Memorization (Skip all steps)
+     */
+    fun iHaveMemorisedIt(key: String) {
+        appScope.launch {
+            val item = repository.getItem(key) ?: return@launch
+
+            val updatedItem = item.copy(
+                recallState = RecallState.Memorised,
+                currentStopNumber = STOPS.size,
+                learntTime = System.currentTimeMillis(),
+                nextEventTime = Long.MAX_VALUE // Never show again
+            )
+
+            repository.updateItem(updatedItem)
+        }
+    }
+
+    // MARK: - Helpers
+
+    private fun timingToDurationMillis(code: String): Long {
+        val unit = code.last()
+        val value = code.dropLast(1).toLongOrNull() ?: 1L
+
+        return when (unit) {
+            'm' -> value * 60 * 1000L
+            'h' -> value * 60 * 60 * 1000L
+            'D' -> value * 24 * 60 * 60 * 1000L
+            'W' -> value * 7 * 24 * 60 * 60 * 1000L
+            'M' -> value * 30 * 24 * 60 * 60 * 1000L
+            else -> 10 * 60 * 1000L // Default 10m
+        }
     }
 
 }

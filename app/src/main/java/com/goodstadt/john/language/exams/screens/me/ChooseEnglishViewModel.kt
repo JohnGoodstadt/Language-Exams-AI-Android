@@ -95,7 +95,7 @@ class ChooseEnglishViewModel  @Inject constructor(
                 // --- THIS IS THE NEW, CRITICAL PART ---
                 // 2. Tell the shared manager to load the recalled items for the NEW exam
                 Timber.d("New exam selected. Reloading recalled items for key: ${selectedExam.json}")
-                recallingItemsManager.load(selectedExam.json)
+               // recallingItemsManager.load(selectedExam.json)
 
             }
 

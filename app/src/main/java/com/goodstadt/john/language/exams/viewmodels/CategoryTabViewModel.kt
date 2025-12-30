@@ -131,6 +131,9 @@ class CategoryTabViewModel @Inject constructor(
     private val _celebrationSubtitle = MutableStateFlow("")
     val celebrationSubtitle = _celebrationSubtitle.asStateFlow()
 
+    // ✅ 1. Local Cache for the keys
+    private var currentRecalledKeys: Set<String> = emptySet()
+
     init {
         observeHistoryChanges() //do I need this now?
         observeRecallingChanges()
@@ -164,6 +167,9 @@ class CategoryTabViewModel @Inject constructor(
     private fun observeRecallingChanges() {
         viewModelScope.launch {
             recallingRepository.recalledWordKeys.collect { keys ->
+                // ✅ 2. Always update the local cache
+                currentRecalledKeys = keys
+
                 _uiState.update { currentState ->
                     if (currentState is CategoryTabUiState.Success) {
                         currentState.copy(recalledWordKeys = keys)
@@ -201,17 +207,21 @@ class CategoryTabViewModel @Inject constructor(
                 val (heardOnTab, total) = calculateTabSpecificStats(tabCategories)
 
                 Timber.i("loadContentForTab() tabNumber:$tabNumber heardOnTab:$heardOnTab total:$total")
-                Timber.i("")
-                // Initial Stats
-                // Note: We pass 'emptyMap()' initially; the observeHistoryChanges block will
-                // fire immediately after with real data to fill in the correct count.
-//                val total = tabCategories.sumOf { it.words.size }
+
+                // ✅ 3. Use the cached keys (or fetch fresh if empty/paranoid)
+                // Since the collector in init started immediately, currentRecalledKeys
+                // is likely already populated.
+
+                // Fallback: If cache is empty, try a blocking fetch (optional safety)
+                if (currentRecalledKeys.isEmpty()) {
+                    currentRecalledKeys = recallingRepository.getAllRecalledKeys()
+                }
 
                 _uiState.value = CategoryTabUiState.Success(
                     categories = tabCategories,
                     totalWordsOnTab = total,
                     heardCountOnTab = heardOnTab,
-                    recalledWordKeys = recalledKeys
+                    recalledWordKeys = currentRecalledKeys //✅ USE THE CACHED VARIABLE
                 )
             }.onFailure { error ->
                 _uiState.value = CategoryTabUiState.Error(error.localizedMessage ?: "Failed to load")
@@ -812,4 +822,6 @@ class CategoryTabViewModel @Inject constructor(
     fun playSuccessSound() {
         globalLoadingManager.playSuccessSound(context)
     }
+
+
 }

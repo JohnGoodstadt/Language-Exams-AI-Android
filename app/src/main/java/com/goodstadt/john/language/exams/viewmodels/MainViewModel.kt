@@ -176,7 +176,7 @@ class MainViewModel @Inject constructor(
     private fun loadInitialRecalledItems() {
         viewModelScope.launch {
             val currentExamKey = userPreferencesRepository.selectedFileNameFlow.first()
-            recallingItemsManager.load(currentExamKey)
+//            recallingItemsManager.load(currentExamKey)
         }
     }
 

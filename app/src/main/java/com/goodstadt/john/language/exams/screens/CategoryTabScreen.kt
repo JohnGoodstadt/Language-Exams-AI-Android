@@ -314,13 +314,19 @@ fun CategoryTabScreen(
                                         //val unifiedFilename = FirebaseAudioService.generateUnifiedFilename(sentenceEntry.sentence, selectedVoiceName)
                                         //val isDownloading = state.downloadingSentenceId == unifiedFilename
                                         val isHeard = viewModel.isHeard(sentenceEntry.sentence)
-
+                                        //performmance enhancem,ent - 95% playCount is 0 so only check if isHeard == true
+//                                        var playCount = 0
+//                                        if (isHeard){
+//                                            playCount = viewModel.getPlayCount(sentenceEntry.sentence)
+//                                        }
+                                        val playCount = viewModel.getPlayCount(sentenceEntry.sentence)
 
                                         SwipeableVocabRow(
                                             word = wordEntry,
                                             sentence = sentenceEntry,
-                                            isSentenceAlreadyHeard = isHeard,
+                                            isSentenceAlreadyHeard = playCount > 0,
                                             isDownloading = false,//isDownloading,
+                                            playCount = playCount,
                                             recalledWordKeys = state.recalledWordKeys,
 
                                             // ✅ TAP HANDLER (Delegate to ViewModel)

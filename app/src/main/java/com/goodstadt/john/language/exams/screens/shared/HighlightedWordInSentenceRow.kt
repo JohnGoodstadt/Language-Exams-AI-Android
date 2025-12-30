@@ -41,21 +41,22 @@ fun HighlightedWordInSentenceRow(
             CircularProgressIndicator(modifier = Modifier.size(24.dp))
         } else {
             // Check if the red dot should be displayed
-            val displayRedDot = displayDot
+//            val displayRedDot = displayDot
 
             if (isRecalling) {
                 Text(text = "🟢", fontSize = 12.sp)
             }
 
-//            if (false && playCount > 1) {
-//                Text(text = "$playCount", fontSize = 12.sp)
-//            }
-
-            if (displayRedDot) {
+            if (playCount == 0) {
+                // do nothing  // 95% of cases exit here
+            } else if (playCount in 1..9) {
                 Text(text = "🔴", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
+//                Text(text = "$playCount", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
+            } else if (playCount >= 10) {
+                Text(text = "🟡", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
             }
 
-            // Check if the green dot should be displayed
+
 
         }
     }

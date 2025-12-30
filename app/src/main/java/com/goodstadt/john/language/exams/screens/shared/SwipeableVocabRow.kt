@@ -48,6 +48,7 @@ import com.goodstadt.john.language.exams.models.Format0Word
 
 
 import androidx.compose.ui.text.AnnotatedString
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
 
 //import com.google.android.material.progressindicator.CircularProgressIndicator
@@ -59,6 +60,7 @@ fun SwipeableVocabRow(
     sentence: Sentence,
     isSentenceAlreadyHeard: Boolean, // ✅ Driven by HistorySyncManager
     isDownloading: Boolean = false,
+    playCount:Int = 0,
     recalledWordKeys: Set<String>,
     onRowTapped: (Format0Word, Sentence) -> Unit,
     onFocus: () -> Unit,
@@ -129,13 +131,14 @@ fun SwipeableVocabRow(
                 .clickable { onRowTapped(word, sentence) }
                 .padding(horizontal = 16.dp, vertical = 10.dp)
         ) {
+
             HighlightedWordInSentenceRow(
                 word = word.word,
                 parts = displayData.parts,
                 sentence = displayData.sentence,
                 isRecalling = isRecalling,
                 displayDot = isSentenceAlreadyHeard,
-                playCount = 0,
+                playCount = playCount,
                 isDownloading = isDownloading
             )
         }
