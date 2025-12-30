@@ -101,11 +101,27 @@ class XPManager @Inject constructor(
     private val DAILY_STATS_KEY = "xp_daily_stats_v1"
 
     // Config
+//    private val xpPerAction = mapOf(
+//        XpActionType.HearNewSentence to 3,
+//        XpActionType.ReplaySentence to 1,
+//        XpActionType.CompleteQuiz to 10,
+//        XpActionType.PerfectQuiz to 5,
+//        XpActionType.GenerateParagraph to 3,
+//        XpActionType.MemoryBoost to 35
+//    )
     private val xpPerAction = mapOf(
         XpActionType.HearNewSentence to 3,
         XpActionType.ReplaySentence to 1,
+
+        // ✅ ADD THESE:
+        XpActionType.MasterWord to 5,          // When user swipes to "Focus"
+        XpActionType.CompleteSection to 20,    // The Section Banner reward
+        XpActionType.CompletedSheet to 100,    // The Level Up reward
+        XpActionType.CompleteDailyGoal to 15,  // If you use this
+
+        // Existing
         XpActionType.CompleteQuiz to 10,
-        XpActionType.PerfectQuiz to 5,
+        XpActionType.PerfectQuiz to 5,         // Bonus on top of Complete
         XpActionType.GenerateParagraph to 3,
         XpActionType.MemoryBoost to 35
     )

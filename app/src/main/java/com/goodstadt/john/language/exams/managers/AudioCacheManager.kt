@@ -180,7 +180,9 @@ class AudioCacheManager @Inject constructor(
         // Always refresh stats on load
         refreshStatsFromHistory()
     }
-
+    fun getCurrentVocabFile(): Format0File? {
+        return currentVocabFile
+    }
     /**
      * Recalculates UI counters by comparing Vocab List vs History
      */

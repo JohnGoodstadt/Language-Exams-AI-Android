@@ -124,6 +124,12 @@ class CategoryTabViewModel @Inject constructor(
             initialValue = "vocab_data_b1"
         )
 
+    // ✅ NEW: Dynamic Banner State
+    private val _celebrationTitle = MutableStateFlow("")
+    val celebrationTitle = _celebrationTitle.asStateFlow()
+
+    private val _celebrationSubtitle = MutableStateFlow("")
+    val celebrationSubtitle = _celebrationSubtitle.asStateFlow()
 
     init {
         observeHistoryChanges() //do I need this now?
@@ -732,6 +738,37 @@ class CategoryTabViewModel @Inject constructor(
         // 3. IF NOTHING IS UNHEARD -> COMPLETE!
         if (anyUnheardItem == null) {
             Timber.i("🏆 Section Completed: ${category.title}")
+
+            // 1. Mark Complete
+            userPreferencesRepository.addCompletedSection(examName, sectionKey)
+            xpManager.registerAction(XpActionType.CompleteSection)
+
+            // 2. ✅ CALCULATE LEVEL PROGRESS
+            // We need the full list of categories for this Exam to know the Total.
+            // AudioCacheManager holds the current full VocabFile.
+
+            val allCategories = audioCacheManager.getCurrentVocabFile()?.categories ?: emptyList()
+
+
+            val totalSections = allCategories.size
+
+            // Count how many are done
+            val completedCount = allCategories.count { cat ->
+                val key = "${examName}|${cat.title}"
+                userPreferencesRepository.isSectionCompleted(examName, key)
+            }
+
+            // 3. ✅ SET DYNAMIC BANNER TEXT
+            if (completedCount == totalSections) {
+                // LEVEL UP! (All sections done)
+                _celebrationTitle.value = "LEVEL COMPLETE!"
+                _celebrationSubtitle.value = "You mastered all $totalSections sections! +100 XP"
+                xpManager.registerAction(XpActionType.CompletedSheet) // Big Bonus
+            } else {
+                // Standard Section
+                _celebrationTitle.value = "Section Mastered!"
+                _celebrationSubtitle.value = "$completedCount/$totalSections Completed • +20 XP"
+            }
 
             // A. Save to Disk
             userPreferencesRepository.addCompletedSection(examName, sectionKey)

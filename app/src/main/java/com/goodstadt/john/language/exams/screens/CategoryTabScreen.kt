@@ -122,6 +122,8 @@ fun CategoryTabScreen(
 
     // ✅ Watch for celebration trigger
     val showCelebration by viewModel.showCelebration.collectAsState()
+    val bannerTitle by viewModel.celebrationTitle.collectAsState()
+    val bannerSubtitle by viewModel.celebrationSubtitle.collectAsState()
     val currentExamName by viewModel.currentExamName.collectAsStateWithLifecycle()
 
     // --- Lifecycle & Loading ---
@@ -372,7 +374,9 @@ fun CategoryTabScreen(
                 ) {
                     AchievementBanner(
                         isVisible = showCelebration,
-                        onDismiss = { /* handled by VM timing usually */ }
+                        title = bannerTitle,       // ✅ Pass Dynamic Title
+                        subtitle = bannerSubtitle, // ✅ Pass Dynamic Subtitle
+                        onDismiss = { }
                     )
                 }
             }
