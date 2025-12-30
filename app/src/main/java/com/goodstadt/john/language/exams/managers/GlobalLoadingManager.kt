@@ -1,5 +1,8 @@
 package com.goodstadt.john.language.exams.managers
 
+import android.content.Context
+import android.media.MediaPlayer
+import com.goodstadt.john.language.exams.R
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
@@ -16,5 +19,10 @@ class GlobalLoadingManager @Inject constructor() {
 
     fun hide() {
         _isShowingGlobalLoading.value = false
+    }
+    fun playSuccessSound(context: Context) {
+        val mp = MediaPlayer.create(context, R.raw.success_chime)
+        mp.start()
+        mp.setOnCompletionListener { it.release() }
     }
 }

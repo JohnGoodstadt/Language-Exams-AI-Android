@@ -310,4 +310,25 @@ class HistorySyncManager @Inject constructor(
         Log.d(TAG, "   Σ  GRAND TOTAL: $grandTotalUnique items / $grandTotalPlays plays")
         Log.d(TAG, "   ======================================\n")
     }
+    // MARK: - Debugging / Testing
+
+    /**
+     * 🚨 DEBUG: Removes a specific sentence from history to test completion triggers.
+     */
+    fun debugUnhearSentence(level: String, sentenceHash: String) {
+        val data = history[level] ?: return
+
+        if (data.items.containsKey(sentenceHash)) {
+            // Remove completely
+            data.items.remove(sentenceHash)
+
+            data.lastUpdated = System.currentTimeMillis() / 1000
+            isDirty = true
+
+            saveToLocalDisk()
+            emitState() // Updates UI
+
+            Log.d(TAG, "📉 Debug: Unheard item in level $level")
+        }
+    }
 }

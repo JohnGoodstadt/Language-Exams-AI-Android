@@ -23,11 +23,13 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
+import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPHourlyHitCount
+import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -105,7 +107,8 @@ class SettingsViewModel @Inject constructor(
     private val creditsRepository: CreditsRepository,
     private val history: HistorySyncManager,
     private val xpManager: XPManager,
-    private val quizHistoryManager: QuizHistoryManager
+    private val quizHistoryManager: QuizHistoryManager,
+    private val audioCacheManager: AudioCacheManager
 ) : ViewModel() {
 
 
@@ -691,4 +694,40 @@ class SettingsViewModel @Inject constructor(
     fun dismissHelpSheet() {
         _showHelpSheet.value = false
     }
+
+    // MARK: - Debugging
+    fun UnhearSentence(sentence: String, categoryTitle: String,tabNumber:Int) {
+        viewModelScope.launch {
+            val levelName = userPreferencesRepository.selectedSkillLevelFlow.first()
+            val contentID = FirebaseAudioService.generateContentID(sentence)
+
+            // 1. Remove from History (Red Dot disappears)
+            history.debugUnhearSentence(levelName, contentID)
+
+            // 2. Fix Stats (Progress Bar goes down)
+            audioCacheManager.decrementVocabStats(categoryTitle ,tabNumber)
+
+            // 3. Reset Section Completion (Allows Firework to trigger again)
+            val examName = userPreferencesRepository.selectedExamNameFlow.first()
+            val sectionKey = "${examName}|${categoryTitle}"
+
+            userPreferencesRepository.removeCompletedSection(examName, sectionKey)
+
+            // 4. Update Local UI State (Instant feedback)
+//            _uiState.update { currentState ->
+////                if (currentState is CategoryTabUiState.Success) {
+//                    val newHeardIDs = currentState.heardSentenceIDs.toMutableSet()
+//                    newHeardIDs.remove(contentID)
+//
+//                    currentState.copy(
+////                        heardSentenceIDs = newHeardIDs,
+////                        cachedAudioCount = max(0, currentState.cachedAudioCount - 1),
+//                        lastUpdate = System.currentTimeMillis()
+//                    )
+////                } else currentState
+//            }
+        }
+    }
+
+
 }

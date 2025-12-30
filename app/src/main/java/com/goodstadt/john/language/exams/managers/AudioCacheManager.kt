@@ -583,4 +583,34 @@ class AudioCacheManager @Inject constructor(
             }
         }
     }
+    // MARK: - Debugging / Rollback
+
+    fun decrementVocabStats(categoryTitle: String, categoryTabNumber: Int) {
+        scope.launch {
+            mutex.withLock {
+                val title = categoryTitle.trim()
+
+                // 1. Decrement Category Count
+                val catCount = categoryHeardCounts[title] ?: 0
+                if (catCount > 0) categoryHeardCounts[title] = catCount - 1
+
+                // 2. Decrement Global Count
+                if (_totalExamWordsHeardOverall.value > 0) {
+                    _totalExamWordsHeardOverall.value -= 1
+                }
+
+                // 3. Decrement Tab Count
+                TabNumberEnum.fromInt(categoryTabNumber)?.let { tab ->
+                    val newMap = _totalExamWordHeardCount.value.toMutableMap()
+                    val tabCount = newMap[tab] ?: 0
+                    if (tabCount > 0) {
+                        newMap[tab] = tabCount - 1
+                        _totalExamWordHeardCount.value = newMap
+                    }
+                }
+
+                Timber.tag("AudioCacheManager").d("📉 Debug: Decremented stats for $title")
+            }
+        }
+    }
 }

@@ -54,6 +54,7 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -63,6 +64,7 @@ import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
@@ -202,149 +204,179 @@ fun CategoryTabScreen(
             }
         }
     ) { innerPadding ->
-        Column(
+
+
+        // ✅ 1. ROOT CONTAINER MUST BE A BOX (To allow overlapping)
+        Box(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
         ) {
 
-            // --- Loading State ---
-            if (uiState is CategoryTabUiState.Loading) {
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    CircularProgressIndicator(color = accentColor)
-                }
-            }
 
-            // --- Success State ---
-            else if (uiState is CategoryTabUiState.Success) {
-                val state = uiState as CategoryTabUiState.Success
-                var selectedChipTitle by remember(menuItems) {
-                    mutableStateOf(
-                        menuItems.firstOrNull() ?: ""
-                    )
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding)
+            ) {
+
+                // --- Loading State ---
+                if (uiState is CategoryTabUiState.Loading) {
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        CircularProgressIndicator(color = accentColor)
+                    }
                 }
 
-                Column(modifier = Modifier.fillMaxSize()) {
+                // --- Success State ---
+                else if (uiState is CategoryTabUiState.Success) {
+                    val state = uiState as CategoryTabUiState.Success
+                    var selectedChipTitle by remember(menuItems) {
+                        mutableStateOf(
+                            menuItems.firstOrNull() ?: ""
+                        )
+                    }
 
-                    // 1. Horizontal Menu
-                    if (tabIdentifier != null) {
-                        LazyRow(
-                            modifier = Modifier.fillMaxWidth(),
-                            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            items(menuItems, key = { it }) { title ->
-                                MenuItemChip(
-                                    text = title,
-                                    isSelected = (title == selectedChipTitle),
-                                    onClick = {
-                                        selectedChipTitle = title
-                                        scrollToCategory(
-                                            title = title,
-                                            coroutineScope = coroutineScope,
-                                            lazyListState = lazyListState,
-                                            indexMap = categoryIndexMap
-                                        )
+                    Column(modifier = Modifier.fillMaxSize()) {
+
+                        // 1. Horizontal Menu
+                        if (tabIdentifier != null) {
+                            LazyRow(
+                                modifier = Modifier.fillMaxWidth(),
+                                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                items(menuItems, key = { it }) { title ->
+                                    MenuItemChip(
+                                        text = title,
+                                        isSelected = (title == selectedChipTitle),
+                                        onClick = {
+                                            selectedChipTitle = title
+                                            scrollToCategory(
+                                                title = title,
+                                                coroutineScope = coroutineScope,
+                                                lazyListState = lazyListState,
+                                                indexMap = categoryIndexMap
+                                            )
 //                                        scrollToCategory(title, coroutineScope, lazyListState, categoryIndexMap)
-                                    }
+                                        }
+                                    )
+                                }
+                            }
+                        }
+
+                        // 2. Stats Bar & Gamification Button
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(vertical = 8.dp)
+                        ) {
+                            CacheProgressBar(
+                                cachedCount = state.heardCountOnTab, // Or state.heardSentenceIDs.size
+                                totalCount = state.totalWordsOnTab,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 64.dp, vertical = 8.dp)
+                            )
+                            IconButton(
+                                onClick = { showGamificationSheet = true },
+                                modifier = Modifier
+                                    .align(Alignment.CenterEnd)
+                                    .padding(end = 8.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Filled.WorkspacePremium,
+                                    contentDescription = "Stats",
+                                    tint = Color(0xFFFF9800)
                                 )
                             }
                         }
-                    }
 
-                    // 2. Stats Bar & Gamification Button
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(vertical = 8.dp)
-                    ) {
-                        CacheProgressBar(
-                            cachedCount = state.heardCountOnTab, // Or state.heardSentenceIDs.size
-                            totalCount = state.totalWordsOnTab,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(horizontal = 64.dp, vertical = 8.dp)
-                        )
-                        IconButton(
-                            onClick = { showGamificationSheet = true },
-                            modifier = Modifier
-                                .align(Alignment.CenterEnd)
-                                .padding(end = 8.dp)
+                        // 3. Main Vocabulary List
+                        LazyColumn(
+                            modifier = Modifier.fillMaxSize(),
+                            state = lazyListState,
+                            contentPadding = PaddingValues(horizontal = 16.dp)
                         ) {
-                            Icon(
-                                imageVector = Icons.Filled.WorkspacePremium,
-                                contentDescription = "Stats",
-                                tint = Color(0xFFFF9800)
-                            )
-                        }
-                    }
+                            categories.forEach { category ->
+                                stickyHeader {
+                                    CategoryHeader(title = category.title.removeContentInBracketsAndTrim())
+                                }
 
-                    // 3. Main Vocabulary List
-                    LazyColumn(
-                        modifier = Modifier.fillMaxSize(),
-                        state = lazyListState,
-                        contentPadding = PaddingValues(horizontal = 16.dp)
-                    ) {
-                        categories.forEach { category ->
-                            stickyHeader {
-                                CategoryHeader(title = category.title.removeContentInBracketsAndTrim())
-                            }
+                                items(
+                                    category.words,
+                                    key = { "${it.id}-${it.word}" }) { wordEntry ->
+                                    val sentenceEntry = wordEntry.sentences.firstOrNull()
 
-                            items(category.words, key = { "${it.id}-${it.word}" }) { wordEntry ->
-                                val sentenceEntry = wordEntry.sentences.firstOrNull()
-
-                                if (sentenceEntry != null) {
+                                    if (sentenceEntry != null) {
 
 //                                    val contentID = FirebaseAudioService.generateContentID(sentenceEntry.sentence)
-                                    //val unifiedFilename = FirebaseAudioService.generateUnifiedFilename(sentenceEntry.sentence, selectedVoiceName)
-                                    //val isDownloading = state.downloadingSentenceId == unifiedFilename
-                                    val isHeard = viewModel.isHeard(sentenceEntry.sentence)
+                                        //val unifiedFilename = FirebaseAudioService.generateUnifiedFilename(sentenceEntry.sentence, selectedVoiceName)
+                                        //val isDownloading = state.downloadingSentenceId == unifiedFilename
+                                        val isHeard = viewModel.isHeard(sentenceEntry.sentence)
 
 
-                                    SwipeableVocabRow(
-                                        word = wordEntry,
-                                        sentence = sentenceEntry,
-                                        isSentenceAlreadyHeard = isHeard,
-                                        isDownloading = false,//isDownloading,
-                                        recalledWordKeys = state.recalledWordKeys,
+                                        SwipeableVocabRow(
+                                            word = wordEntry,
+                                            sentence = sentenceEntry,
+                                            isSentenceAlreadyHeard = isHeard,
+                                            isDownloading = false,//isDownloading,
+                                            recalledWordKeys = state.recalledWordKeys,
 
-                                        // ✅ TAP HANDLER (Delegate to ViewModel)
-                                        onRowTapped = { w, s ->
-                                            // Extract sentence string
-                                            val sentence = s.sentence
+                                            // ✅ TAP HANDLER (Delegate to ViewModel)
+                                            onRowTapped = { w, s ->
+                                                // Extract sentence string
+                                                val sentence = s.sentence
 //                                            viewModel.handleSentenceTap(sentence, category)
-                                            viewModel.handleTap(sentence, category)
-                                        },
+                                                viewModel.handleTap(sentence, category)
+                                            },
 
-                                        onFocus = { viewModel.onFocusClicked(wordEntry) },
-                                        onCancel = { viewModel.onCancelClicked(wordEntry) },
-                                        onMore = {
-                                            selectedWordForSheet = wordEntry
-                                            selectedCategoryForSheet = category
-                                            showMoreSheet = true
-                                        }
-                                    )
-                                } else {
-                                    Text(
-                                        "Error: No sentence found",
-                                        color = Color.Red,
-                                        modifier = Modifier.padding(12.dp)
-                                    )
-                                    HorizontalDivider()
+                                            onFocus = { viewModel.onFocusClicked(wordEntry) },
+                                            onCancel = { viewModel.onCancelClicked(wordEntry) },
+                                            onMore = {
+                                                selectedWordForSheet = wordEntry
+                                                selectedCategoryForSheet = category
+                                                showMoreSheet = true
+                                            }
+                                        )
+                                    } else {
+                                        Text(
+                                            "Error: No sentence found",
+                                            color = Color.Red,
+                                            modifier = Modifier.padding(12.dp)
+                                        )
+                                        HorizontalDivider()
+                                    }
                                 }
                             }
                         }
                     }
-                }
-            } // End Success
+                } // End Success
 
-            // --- Error State ---
-            else if (uiState is CategoryTabUiState.Error) {
-                val errorMsg = (uiState as CategoryTabUiState.Error).message
-                Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text("Error: $errorMsg", color = MaterialTheme.colorScheme.error)
+                // --- Error State ---
+                else if (uiState is CategoryTabUiState.Error) {
+                    val errorMsg = (uiState as CategoryTabUiState.Error).message
+                    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                        Text("Error: $errorMsg", color = MaterialTheme.colorScheme.error)
+                    }
+                }
+
+
+            } //: Column
+            // ✅ Overlay on top
+            if (showCelebration) {
+                viewModel.playSuccessSound()
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.TopCenter) // This is now valid!
+                        .zIndex(10f) // Ensures it floats above the list headers
+                ) {
+                    AchievementBanner(
+                        isVisible = showCelebration,
+                        onDismiss = { /* handled by VM timing usually */ }
+                    )
                 }
             }
+
 
             // --- Sheets & Overlays ---
             if (isRateLimitingSheetVisible) {
@@ -392,74 +424,67 @@ fun CategoryTabScreen(
                     }
                 }
             } //: showMoreSheet
-
-            // ✅ Overlay on top
-            if (showCelebration) {
-//                CelebrationOverlay(
-//                    isVisible = .constant(true) // or use binding
-//                )
-            }
         }
-    }
 
-    // --- Gamification Stats Sheet ---
-    if (showGamificationSheet) {
-        ModalBottomSheet(
-            onDismissRequest = { showGamificationSheet = false },
-            sheetState = sheetState,
+        // --- Gamification Stats Sheet ---
+        if (showGamificationSheet) {
+            ModalBottomSheet(
+                onDismissRequest = { showGamificationSheet = false },
+                sheetState = sheetState,
 //            containerColor = MaterialTheme.colorScheme.surface,
 //            contentColor = MaterialTheme.colorScheme.onSurface
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.onSurface
-        ) {
-            // Get data from AudioCacheManager (Totals) and ViewModel (Progress)
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                // Get data from AudioCacheManager (Totals) and ViewModel (Progress)
 //            val acm = AudioCacheManager.shared // Or via Hilt EntryPoint
 
-            // This ensures we get the latest numbers for the graph
-            val allProgress = viewModel.buildCategoryProgress()
-            // Filter for this tab if needed, or show all
+                // This ensures we get the latest numbers for the graph
+                val allProgress = viewModel.buildCategoryProgress()
+                // Filter for this tab if needed, or show all
 
-            // Note: You might need a helper in ViewModel to sum specific tab totals
-            val (heard, total) = viewModel.calculateGrandTotals()
+                // Note: You might need a helper in ViewModel to sum specific tab totals
+                val (heard, total) = viewModel.calculateGrandTotals()
 
-            //  val context = LocalContext.current
-            val entryPoint = remember(context) {
-                EntryPointAccessors.fromApplication(
-                    context.applicationContext,
-                    StatsSheetEntryPoint::class.java
-                )
-            }
-            Box(modifier = Modifier.fillMaxHeight(0.85f)) {
+                //  val context = LocalContext.current
+                val entryPoint = remember(context) {
+                    EntryPointAccessors.fromApplication(
+                        context.applicationContext,
+                        StatsSheetEntryPoint::class.java
+                    )
+                }
+                Box(modifier = Modifier.fillMaxHeight(0.85f)) {
 //                com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme{
-                VocabGamificationStatsSheet(
-                    grandTotalWords = total,
-                    grandTotalMastered = heard,
-                    categoryProgress = allProgress,//, // Pass the list
-                    xpManager = entryPoint.getXPManager(),
-                    quizManager = entryPoint.getQuizManager(),
-                    onDismiss = { showGamificationSheet = false }
+                    VocabGamificationStatsSheet(
+                        grandTotalWords = total,
+                        grandTotalMastered = heard,
+                        categoryProgress = allProgress,//, // Pass the list
+                        xpManager = entryPoint.getXPManager(),
+                        quizManager = entryPoint.getQuizManager(),
+                        onDismiss = { showGamificationSheet = false }
 
-                )
-            }
+                    )
+                }
 //            }
-        }
-    } //: Gamificatinon sheet
+            }
+        } //: Gamificatinon sheet
 
-    if (showHelpSheet) {
-        ModalBottomSheet(
-            onDismissRequest = { viewModel.dismissHelpSheet() },
-            sheetState = helpSheetState,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.onSurface
-        ) {
-            // 3. Set Height to 3/4
-            Box(modifier = Modifier.fillMaxHeight(0.90f)) {
-                HelpInfoSheet(
-                    onDismiss = { viewModel.dismissHelpSheet() }
-                )
+        if (showHelpSheet) {
+            ModalBottomSheet(
+                onDismissRequest = { viewModel.dismissHelpSheet() },
+                sheetState = helpSheetState,
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                // 3. Set Height to 3/4
+                Box(modifier = Modifier.fillMaxHeight(0.90f)) {
+                    HelpInfoSheet(
+                        onDismiss = { viewModel.dismissHelpSheet() }
+                    )
+                }
             }
         }
-    }
+    } //: Box
 }
 
 private fun scrollToCategory(

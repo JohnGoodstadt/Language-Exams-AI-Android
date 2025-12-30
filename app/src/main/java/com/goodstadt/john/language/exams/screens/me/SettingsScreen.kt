@@ -32,9 +32,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.data.VoiceOption
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPUnavailableCount
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
@@ -613,6 +610,16 @@ fun SettingsScreen(
                     }
                 )
             }
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.Info,
+                    title = "Unhear sentence (D)",
+                    currentValue = "(D). Test Section Completions",
+                    onClick = {
+                        viewModel.UnhearSentence("They worked together to resolve the conflict.","Verbs",3)
+                    }
+                )
+            }
 
             item {
                 SettingsInfoItem(
@@ -621,8 +628,9 @@ fun SettingsScreen(
                     value = viewModel.firebaseUid()
                 )
             }
-        }
+        } //:DEBUG
     }
+
 }
 
 @Composable

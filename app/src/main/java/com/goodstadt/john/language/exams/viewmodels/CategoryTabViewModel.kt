@@ -83,7 +83,8 @@ class CategoryTabViewModel @Inject constructor(
     private val ttsStatsRepository: TTSStatsRepository,
     private val xpManager: XPManager,
     private val billingRepository: BillingRepository,
-    private val loadingManager: GlobalLoadingManager
+    private val loadingManager: GlobalLoadingManager,
+    private val globalLoadingManager: GlobalLoadingManager
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<CategoryTabUiState>(CategoryTabUiState.Loading)
@@ -145,15 +146,7 @@ class CategoryTabViewModel @Inject constructor(
                 _uiState.update { currentState ->
                     if (currentState is CategoryTabUiState.Success) {
 
-                        // Recalculate progress bar count on the fly
-                        // (This is cheaper than building the whole Set<String>)
-//                        val (heard, _) = calculateTabStats(currentState.categories, historyMap)
-//                        val heardCount = calculateCurrentHeardCount(currentState.categories)
-//                        val (heard, total) = calculateTabSpecificStats(currentState.categories)
-
                         currentState.copy(
-//                            heardCountOnTab = heard,
-//                            totalWordsOnTab = total,
                             lastUpdate = System.currentTimeMillis() // ⚡ Forces Redraw
                         )
                     } else currentState
@@ -777,5 +770,9 @@ class CategoryTabViewModel @Inject constructor(
             kotlinx.coroutines.delay(4000)
             _showCelebration.value = false
         }
+    }
+
+    fun playSuccessSound() {
+        globalLoadingManager.playSuccessSound(context)
     }
 }

@@ -312,4 +312,17 @@ class UserPreferencesRepository @Inject constructor(
         val set = getCompletedSections(examName)
         return set.contains(sectionKey)
     }
- }
+
+    // In UserPreferencesRepository.kt
+
+    fun removeCompletedSection(examName: String, sectionKey: String) {
+        val prefs = context.getSharedPreferences("completion_prefs", Context.MODE_PRIVATE)
+        val currentSet = prefs.getStringSet("completed_$examName", emptySet())?.toMutableSet() ?: mutableSetOf()
+
+        if (currentSet.contains(sectionKey)) {
+            currentSet.remove(sectionKey)
+            prefs.edit().putStringSet("completed_$examName", currentSet).apply()
+            Log.d("TAG", "📉 Debug: Section '$sectionKey' marked as incomplete.")
+        }
+    }
+}
