@@ -35,7 +35,7 @@ import com.goodstadt.john.language.exams.managers.XpState
 fun LifetimeStatsGrid(
     // You can pass the whole XP state or individual values
     // Assuming you pass specific values from MyProgressScreen:
-    totalXP: Int,
+    totalXP: Int, //TODO: can remote
     totalXPString:String,
     badges: Int,
     longestStreak: Int,
