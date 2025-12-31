@@ -268,6 +268,8 @@ dependencies {
     implementation(libs.timber)
     implementation("com.google.code.gson:gson:2.11.0")
 
+    implementation(libs.firebase.appcheck.playintegrity)
+    implementation(libs.firebase.appcheck.debug)
 }
 
 //// Allow Hilt to access classes in different build variants

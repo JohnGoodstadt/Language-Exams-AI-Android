@@ -11,6 +11,9 @@ import android.util.Log
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.utils.logging.FaultTree
 import com.google.firebase.analytics.ktx.analytics
+import com.google.firebase.appcheck.FirebaseAppCheck
+import com.google.firebase.appcheck.debug.DebugAppCheckProviderFactory
+import com.google.firebase.appcheck.playintegrity.PlayIntegrityAppCheckProviderFactory
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
@@ -56,6 +59,19 @@ class LanguageExamsApp : Application() {
 
         // 3. Add the Firebase initialization line. This will fix the crash.
         FirebaseApp.initializeApp(this)
+
+        // 2. Install App Check
+        val firebaseAppCheck = FirebaseAppCheck.getInstance()
+
+        firebaseAppCheck.installAppCheckProviderFactory(
+            if (BuildConfig.DEBUG) {
+                // Use Debug Provider for Emulator/Local builds
+                DebugAppCheckProviderFactory.getInstance()
+            } else {
+                // Use Play Integrity for Release builds
+                PlayIntegrityAppCheckProviderFactory.getInstance()
+            }
+        )
 
         setupAppDependencies()
 
