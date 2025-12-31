@@ -229,6 +229,7 @@ fun Format1Screen(
                             adjectives = sideQuestData.adjectives,
                             quickRefs = sideQuestData.quickRefs,
                             quizManager = entryPoint.getQuizManager(),
+                            xpManager = entryPoint.getXPManager(),
                             onNavigate = { target ->
                                 showSideQuestSheet = false // Close sheet first
                                 navViewModel.requestNavigation(target) // Send signal to Parent

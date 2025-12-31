@@ -146,6 +146,7 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                             adjectives = sideQuestData.adjectives,
                             quickRefs = sideQuestData.quickRefs,
                             quizManager = entryPoint.getQuizManager(),
+                            xpManager = entryPoint.getXPManager(),
                             onNavigate = { target ->
                                 showSideQuestSheet = false // Close sheet first
                                 navViewModel.requestNavigation(target) // Send signal to Parent

@@ -24,6 +24,15 @@ import javax.inject.Inject
 import javax.inject.Singleton
 import kotlin.math.max
 
+
+// 1. Add Data Class for the Result
+@Keep
+data class LevelProgressInfo(
+    val currentXPInBracket: Int, // e.g. 50 (out of 150)
+    val requiredXPForBracket: Int, // e.g. 150
+    val fraction: Float, // 0.33
+    val isMaxLevel: Boolean
+)
 // MARK: - Data Models
 @Keep
 data class XpState(
@@ -102,15 +111,13 @@ class XPManager @Inject constructor(
     private var dailyStats: MutableMap<String, DailyStats> = mutableMapOf()
     private val DAILY_STATS_KEY = "xp_daily_stats_v1"
 
-    // Config
-//    private val xpPerAction = mapOf(
-//        XpActionType.HearNewSentence to 3,
-//        XpActionType.ReplaySentence to 1,
-//        XpActionType.CompleteQuiz to 10,
-//        XpActionType.PerfectQuiz to 5,
-//        XpActionType.GenerateParagraph to 3,
-//        XpActionType.MemoryBoost to 35
-//    )
+    private val thresholds = mapOf(
+        "A1" to listOf(0, 60, 150, 300, 500, 800, 1200),
+        "A2" to listOf(0, 80, 200, 400, 700, 1100, 1600),
+        "B1" to listOf(0, 100, 300, 600, 1000, 1500, 2000, 2500),
+        "B2" to listOf(0, 50, 150, 300, 500, 800)
+    )
+
     private val xpPerAction = mapOf(
         XpActionType.HearNewSentence to 3,
         XpActionType.ReplaySentence to 1,
@@ -136,6 +143,46 @@ class XPManager @Inject constructor(
     }
 
     // MARK: - Public API
+    // MARK: - Progress Logic
+
+    /**
+     * Calculates where the user stands within their current numeric level.
+     * Used by XPSummaryCard to draw the circular progress.
+     */
+    fun getLevelProgress(levelName: String): LevelProgressInfo {
+        val levelState = _state.value.levels[levelName]
+        val totalXP = levelState?.xp ?: 0
+
+        // Get thresholds for this level (default to A1 if missing)
+        val levels = thresholds[levelName] ?: thresholds["A1"]!!
+
+        // 1. Check Max Level
+        val maxXP = levels.last()
+        if (totalXP >= maxXP) {
+            return LevelProgressInfo(totalXP, maxXP, 1.0f, true)
+        }
+
+        // 2. Find Bracket
+        // We want to find the range: [base, target]
+        var base = 0
+        var target = 100
+
+        for (i in 0 until levels.size - 1) {
+            if (totalXP >= levels[i]) {
+                base = levels[i]
+                target = levels[i + 1]
+            }
+        }
+
+        // 3. Calculate Fraction
+        val range = (target - base).toFloat()
+        val gained = (totalXP - base).toFloat()
+
+        // Safety div/0
+        val fraction = if (range > 0) gained / range else 0f
+
+        return LevelProgressInfo(gained.toInt(), range.toInt(), fraction, false)
+    }
 
     fun registerAction(action: XpActionType, count: Int = 1) {
         scope.launch {
@@ -197,9 +244,19 @@ class XPManager @Inject constructor(
         // Calculate Learner Level (Simple formula or thresholds)
         // Using Config Thresholds logic here (Simplified for brevity)
         val xp = levelState.xp
-        val newLevel = calculateLevel(xp) // Implement your threshold logic here
-        levelState.learnerLevel = newLevel
+//        val newLevel = calculateLevel(xp) // Implement your threshold logic here
+//        levelState.learnerLevel = newLevel
         // levelState.progressToNextLevel = ... calc logic ...
+        val levelThresholds = thresholds[level] ?: thresholds["A1"]!!
+        var newLevel = 1
+        for ((index, threshold) in levelThresholds.withIndex()) {
+            if (xp >= threshold) {
+                newLevel = index + 1
+            }
+        }
+
+        levelState.learnerLevel = newLevel
+
 
         // Analytics
         val params = Bundle().apply {

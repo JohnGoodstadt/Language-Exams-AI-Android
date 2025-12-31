@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.screens.shared.gamification.AIWriterCard
 import com.goodstadt.john.language.exams.screens.shared.BadgeShowcaseSection
 import com.goodstadt.john.language.exams.screens.shared.gamification.GlobalProgressRow
@@ -24,6 +25,7 @@ import com.goodstadt.john.language.exams.screens.shared.gamification.QuizMastery
 import com.goodstadt.john.language.exams.screens.shared.gamification.ReferenceGroupCard
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.screens.shared.gamification.TopicProgressRow
+import com.goodstadt.john.language.exams.screens.shared.gamification.XPSummaryCard
 import com.goodstadt.john.language.exams.viewmodels.ActivityChartCard
 import com.goodstadt.john.language.exams.viewmodels.ConsistencyHeatmap
 import com.goodstadt.john.language.exams.viewmodels.LifetimeStatsGrid
@@ -36,10 +38,15 @@ import com.goodstadt.john.language.exams.viewmodels.SkillBreakdownView
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MyProgressScreen(
+    xpManager: XPManager,
     viewModel: MyProgressViewModel = hiltViewModel(),
     onNavigate: (SideQuestNavTarget) -> Unit,
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val xpState by xpManager.state.collectAsState()
+    val levelInfo = remember(xpState) {
+        xpManager.getLevelProgress(xpState.currentLevel)
+    }
 
     Scaffold(
         topBar = {
@@ -75,29 +82,27 @@ fun MyProgressScreen(
                     gems = state.xpState.gems
                 )
 
+                
                 ConsistencyHeatmap(xpManager = viewModel.getXpManager()) // Assuming you exposed the getter
 
                 Spacer(modifier = Modifier.height(12.dp))
 
                 ActivityChartCard(xpManager = viewModel.getXpManager())
 
-               // ConsistencyHeatmap(xpManager = viewModel.getAudioCacheManager()) // *Need to pass XPManager or expose stats
-
-                //LifetimeStatsGrid(xpState = state.xpState)
                 LifetimeStatsGrid(
                     totalXP = state.xpState.levels.values.sumOf { it.xp },
+                    totalXPString = "${levelInfo.currentXPInBracket}/${levelInfo.requiredXPForBracket}",
                     badges = state.xpState.earnedBadges.size,
                     longestStreak = state.xpState.longestStreak,
                     gems = state.xpState.gems,
                     // Extract the simple status name (e.g. "Super User")
                     userStatus = "Learner" // Or derive from logic: xpManager.userType().name
                 )
-//
-//                LifetimeStatsGrid(
-//                    totalXP = state.xpState.levels.values.sumOf { it.xp },
-//                    badges = state.xpState.earnedBadges.size,
-//                    longestStreak = state.xpState.longestStreak
-//                )
+
+                XPSummaryCard(
+                    xpState = xpState,
+                    progressInfo = levelInfo
+                )
 
                 SkillBreakdownView(xpState = state.xpState)
 

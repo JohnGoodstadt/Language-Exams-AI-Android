@@ -42,6 +42,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -66,6 +67,14 @@ fun VocabGamificationStatsSheet(
 ) {
     // Collect State for Advice Logic
     val xpState by xpManager.state.collectAsState()
+
+    val currentLevel = xpState.currentLevel // e.g. "B1"
+    val currentXP = xpState.levels[currentLevel]?.xp ?: 0
+
+    // We use remember so it doesn't recalc on every scroll frame
+    val levelInfo = remember(xpState) {
+        xpManager.getLevelProgress(xpState.currentLevel)
+    }
 
     // Calculate total progress percentage
     val globalProgress = if (grandTotalWords > 0)
@@ -113,6 +122,11 @@ fun VocabGamificationStatsSheet(
                     ?: "Exam"
             )
 
+//            XPSummaryCard(currentXP = currentXP,"ESOL $currentLevel")
+            XPSummaryCard(
+                xpState = xpState,
+                progressInfo = levelInfo
+            )
             // 2. THE SMART COACH (Dynamic Advice)
             // Note: We need to calculate targetDailyRate from XPManager if available
             val advice = generateNuancedAdvice(

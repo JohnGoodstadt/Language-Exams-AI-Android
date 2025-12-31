@@ -53,7 +53,7 @@ fun HighlightedWordInSentenceRow(
                 Text(text = "🔴", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
 //                Text(text = "$playCount", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
             } else if (playCount >= 10) {
-                Text(text = "🟡", fontSize = 12.sp, modifier = Modifier.padding(start = 4.dp))
+                Text(text = "⭐", fontSize = 14.sp, modifier = Modifier.padding(start = 4.dp))
             }
 
 

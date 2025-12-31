@@ -30,88 +30,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.goodstadt.john.language.exams.managers.XpState
 
-@Composable
-fun LifetimeStatsGridObsolete(xpState: XpState) {
-
-    // 1. Calculate Totals dynamically
-    val totalXP = xpState.levels.values.sumOf { it.xp }
-
-    // 2. Determine Status Label (Simple logic based on Total XP)
-    // You can replace this with a more complex calc from XPManager if you ported userType()
-    val statusLabel = when {
-        totalXP > 5000 -> "Super User"
-        totalXP > 2000 -> "Heavy User"
-        totalXP > 500 -> "Regular"
-        else -> "Learner"
-    }
-
-    Column(
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        // HEADER
-        Text(
-            text = "Lifetime Stats",
-            style = MaterialTheme.typography.titleMedium,
-            fontWeight = FontWeight.Bold
-        )
-
-        // ROW 1
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            // Total XP
-            StatGridItem(
-                label = "Total XP",
-                value = "$totalXP",
-                icon = Icons.Default.AutoAwesome,
-                color = Color(0xFFFFC107), // Amber
-                modifier = Modifier.weight(1f)
-            )
-
-            // Gems
-            StatGridItem(
-                label = "Gems",
-                value = "${xpState.gems}",
-                icon = Icons.Default.Diamond,
-                color = Color(0xFF00BCD4), // Cyan
-                modifier = Modifier.weight(1f)
-            )
-        }
-
-        // ROW 2
-        Row(
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            // Best Streak
-            StatGridItem(
-                label = "Best Streak",
-                value = "${xpState.longestStreak}",
-                icon = Icons.Default.LocalFireDepartment, // Flame
-                color = Color(0xFFFF5722), // Deep Orange
-                modifier = Modifier.weight(1f)
-            )
-
-            // Status / Rank
-            StatGridItem(
-                label = "Status",
-                value = statusLabel,
-                icon = Icons.Default.EmojiEvents, // Trophy
-                color = Color(0xFF9C27B0), // Purple
-                modifier = Modifier.weight(1f)
-            )
-        }
-    }
-}
-
 
 @Composable
 fun LifetimeStatsGrid(
     // You can pass the whole XP state or individual values
     // Assuming you pass specific values from MyProgressScreen:
     totalXP: Int,
+    totalXPString:String,
     badges: Int,
     longestStreak: Int,
     gems: Int,
@@ -135,7 +60,7 @@ fun LifetimeStatsGrid(
             // Total XP
             DetailedStatCard(
                 title = "Total XP",
-                value = "$totalXP",
+                value = totalXPString,
                 subTitle = "Experience",
                 description = "Cumulative points across all exam levels.",
                 icon = Icons.Default.AutoAwesome, // Sparkles

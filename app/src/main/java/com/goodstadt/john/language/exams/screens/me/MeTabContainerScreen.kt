@@ -29,6 +29,7 @@ import com.goodstadt.john.language.exams.navigation.MeScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
+import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
@@ -36,6 +37,7 @@ import com.goodstadt.john.language.exams.utils.findActivity
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
+import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.launch
 
 /**
@@ -77,6 +79,14 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
     var selectedChipTitle by remember(menuItems) {
         mutableStateOf(menuItems.firstOrNull() ?: "")
     }
+
+    val entryPoint = remember(key1 = context) {
+        EntryPointAccessors.fromApplication(
+            context.applicationContext,
+            StatsSheetEntryPoint::class.java
+        )
+    }
+
     Column(modifier = Modifier.fillMaxSize().statusBarsPadding() ) {
         // Part A: The Persistent Horizontal Menu
         LazyRow(
@@ -121,8 +131,11 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
             composable(MeScreen.Settings.route) { SettingsScreen() }
             composable(MeScreen.Search.route) { SearchScreen() }
 
+
             composable(MeScreen.Progress.route) {
-                MyProgressScreen(onNavigate = { target ->
+                MyProgressScreen(
+                    xpManager = entryPoint.getXPManager(),
+                    onNavigate = { target ->
                     // Send the signal to switch tabs/screens
                     navViewModel.requestNavigation(target)
                 })
