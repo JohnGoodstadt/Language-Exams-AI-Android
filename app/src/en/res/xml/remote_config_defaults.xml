@@ -2,11 +2,11 @@
 <defaultsMap>
     <entry>
         <key>android_minimum_version_code</key>
-        <value>69</value> <!-- Lowest number we will support -->
+        <value>73</value> <!-- Lowest number we will support -->
     </entry>
     <entry>
         <key>android_recommended_version_code</key>
-        <value>70</value> <!-- A safe, low default -->
+        <value>76</value> <!-- A safe, low default -->
     </entry>
     <entry>
         <key>update_message_optional</key>
@@ -115,7 +115,7 @@
             "EnglishB1Adjectives": 1,
             "EnglishB2Adjectives": 1,
             "EnglishA1Vocab": 1,
-            "EnglishA2Vocab": 1,
+            "EnglishA2Vocab": 10,
             "EnglishB1Vocab": 1,
             "EnglishB2Vocab": 1,
             "EnglishDefinitionsFormat1": 1
