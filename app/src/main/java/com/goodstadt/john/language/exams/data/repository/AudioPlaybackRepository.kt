@@ -94,7 +94,7 @@ class AudioPlaybackRepository @Inject constructor(
                 // D. Update XP & Graphs (Only on first listen)
                 if (isFirstTime) {
                     // XP
-                    xpManager.registerAction(XpActionType.HearNewSentence)
+                    xpManager.registerAction(XpActionType.HearNewSentence,specificLevel = level)
 
                     // Legacy Stats
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
@@ -122,7 +122,7 @@ class AudioPlaybackRepository @Inject constructor(
 
                 } else {
                     // Replay Logic
-                    xpManager.registerAction(XpActionType.ReplaySentence)
+                    xpManager.registerAction(XpActionType.ReplaySentence,specificLevel = level)
                     ttsStatsRepository.updateTTSStatsWithoutCosts()
                 }
             }

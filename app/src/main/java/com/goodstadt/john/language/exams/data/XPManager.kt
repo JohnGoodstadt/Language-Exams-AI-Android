@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.annotation.Keep
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 //import com.goodstadt.john.language.exams.models.XpActionType
 import com.google.firebase.analytics.FirebaseAnalytics
@@ -15,6 +16,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
 import java.io.File
@@ -84,7 +86,8 @@ data class DailyStats(
 @Singleton
 class XPManager @Inject constructor(
     @ApplicationContext private val context: Context,
-    private val audioCacheManager: AudioCacheManager // Needed for Badge checks (Total Heard)
+//    private val audioCacheManager: AudioCacheManager // Needed for Badge checks (Total Heard)
+    private val userPreferencesRepository: UserPreferencesRepository
 ) {
 
     companion object {
@@ -140,6 +143,12 @@ class XPManager @Inject constructor(
     init {
         loadFromDisk()
         loadDailyStatsFromDisk()
+
+        scope.launch {
+            userPreferencesRepository.selectedSkillLevelFlow.collect { level ->
+                _state.update { it.copy(currentLevel = level) }
+            }
+        }
     }
 
     // MARK: - Public API
@@ -184,10 +193,11 @@ class XPManager @Inject constructor(
         return LevelProgressInfo(gained.toInt(), range.toInt(), fraction, false)
     }
 
-    fun registerAction(action: XpActionType, count: Int = 1) {
+    fun registerAction(action: XpActionType, count: Int = 1,specificLevel: String? = null) {
         scope.launch {
             val currentState = _state.value.copy() // Snapshot
-            val level = currentState.currentLevel
+//            val level = currentState.currentLevel
+            val level = specificLevel ?: currentState.currentLevel
             val baseXp = xpPerAction[action] ?: 0
             val delta = baseXp * count
 
