@@ -379,7 +379,9 @@ fun CategoryTabScreen(
                         isVisible = showCelebration,
                         title = bannerTitle,       // ✅ Pass Dynamic Title
                         subtitle = bannerSubtitle, // ✅ Pass Dynamic Subtitle
-                        onDismiss = { }
+                        onDismiss = {
+                            Timber.i("User did dismiss")
+                        }
                     )
                 }
             }
@@ -562,25 +564,24 @@ fun SentencesBottomSheetContent(
         HorizontalDivider()
 
         // 3. Loop through and display each sentence
-        word.sentences.forEach { sentence ->
-            Column(
-                verticalArrangement = Arrangement.spacedBy(2.dp)
-            ) {
-
+        word.sentences.forEachIndexed { index, sentence ->
+            Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 val displayData = buildSentenceParts(entry = word, sentence = sentence)
-                var thisPlayCount = 0
-                if (sentence.sentence == word.sentences.first().sentence) {
-                    thisPlayCount = playCount
-                }
-                Column(modifier = Modifier.clickable { onBottomSheetRowTapped(word, sentence) }) {
+                val playCountForThisRow = if (index == 0) playCount else 0
+
+                Column(
+                    modifier = Modifier.clickable {
+                        onBottomSheetRowTapped(word, sentence)
+                    }
+                ) {
                     HighlightedWordInSentenceRow(
                         word = word.word,
                         parts = displayData.parts,
                         sentence = displayData.sentence,
                         isRecalling = false,
-                        displayDot = false,//achedAudioWordKeys.contains(uniqueSentenceId),
-                        playCount = thisPlayCount,
-                        isDownloading = false//, //TODO: maybe dynamic?
+                        displayDot = false,
+                        playCount = playCountForThisRow,  // ← clean and clear
+                        isDownloading = false
                     )
                 }
             }

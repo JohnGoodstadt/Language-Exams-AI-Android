@@ -264,27 +264,35 @@ fun BarColumn(xp: Int, maxXP: Int, label: String, isToday: Boolean) {
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Bottom,
         modifier = Modifier.fillMaxHeight()
     ) {
-        // The Bar
+        // 1. Bar Container (The "Track")
+        // logic: weight(1f) makes this Box take up all available vertical space
+        // AFTER the Text and Spacer have claimed their space.
         Box(
             modifier = Modifier
-                .width(24.dp)
-                // We use weight to push it down, but fillMaxHeight(fraction) is better for bars
-                .fillMaxHeight(fillRatio)
-                // Minimal height so 0 isn't invisible
-                .heightIn(min = 4.dp)
-                .clip(RoundedCornerShape(topStart = 4.dp, topEnd = 4.dp))
-                .background(
-                    if (xp > 0) Color(0xFF4CAF50) // Green if active
-                    else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f) // Grey ghost if empty
-                )
-        )
+                .weight(1f)
+                .width(24.dp), // Keep the width constraint here
+            contentAlignment = Alignment.BottomCenter // Grow bar from bottom up
+        ) {
+            // 2. The Actual Colored Bar
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .fillMaxHeight(fillRatio) // Height is now relative to the *Container*, not the whole card
+                    .heightIn(min = 4.dp) // Ensure 0 stats still show a tiny nub
+                    .clip(RoundedCornerShape(topStart = 6.dp, topEnd = 6.dp))
+                    .background(
+                        if (xp > 0) Color(0xFF4CAF50) // Green
+                        else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)
+                    )
+            )
+        }
 
+        // 3. Spacing between Bar and Text
         Spacer(modifier = Modifier.height(8.dp))
 
-        // The Label
+        // 4. The Label
         Text(
             text = label,
             style = MaterialTheme.typography.labelSmall,
