@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.annotation.Keep
+import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 //import com.goodstadt.john.language.exams.models.XpActionType
@@ -26,6 +27,15 @@ import javax.inject.Inject
 import javax.inject.Singleton
 import kotlin.math.max
 
+
+// 1. Define the Rank Enum
+@Keep
+enum class UserType(val title: String) {
+    Light("Light Learner"),
+    Regular("Regular Learner"),
+    Serious("Serious Learner"),
+    Super("Super User")
+}
 
 // 1. Add Data Class for the Result
 @Keep
@@ -230,7 +240,51 @@ class XPManager @Inject constructor(
             _state.value = currentState
         }
     }
+    // Helper to aggregate the last 7 days
+    private data class WeeklyStats(val totalXP: Int, val daysActive: Int)
 
+    private fun getWeeklyStats(): WeeklyStats {
+        val last7Days = getDailyStatsList(daysBack = 7)
+
+        var totalXP = 0
+        var daysActive = 0
+
+        for (day in last7Days) {
+            if (day.xpGained > 0) {
+                totalXP += day.xpGained
+                daysActive++
+            }
+        }
+
+        return WeeklyStats(totalXP, daysActive)
+    }
+    /**
+     * Calculates the user's "Rank" based on their recent activity.
+     * Logic: Average XP per Active Day over the last 7 days.
+     */
+    fun getUserType(): UserType {
+        val weeklyStats = getWeeklyStats()
+
+        // Avoid division by zero
+        val avgXp = if (weeklyStats.daysActive > 0) {
+            weeklyStats.totalXP.toDouble() / weeklyStats.daysActive.toDouble()
+        } else {
+            0.0
+        }
+
+        return when {
+            avgXp < 30 -> UserType.Light
+            avgXp < 80 -> UserType.Regular
+            avgXp < 150 -> UserType.Serious
+            else -> UserType.Super
+        }
+    }
+//    val statusColor = when (getUserType()) {
+//        UserType.Light -> Color.Gray
+//        UserType.Regular -> Color(0xFF2196F3) // Blue
+//        UserType.Serious -> Color(0xFFFF9800) // Orange
+//        UserType.Super -> Color(0xFF9C27B0)   // Purple
+//    }
     fun buyStreakFreeze(): Boolean {
         val currentState = _state.value.copy()
         if (currentState.gems >= streakFreezeCost) {

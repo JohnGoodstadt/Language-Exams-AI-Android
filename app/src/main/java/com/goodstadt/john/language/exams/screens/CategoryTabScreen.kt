@@ -568,7 +568,10 @@ fun SentencesBottomSheetContent(
             ) {
 
                 val displayData = buildSentenceParts(entry = word, sentence = sentence)
-                //val playCount = viewModel.getPlayCount(sentenceEntry.sentence)
+                var thisPlayCount = 0
+                if (sentence.sentence == word.sentences.first().sentence) {
+                    thisPlayCount = playCount
+                }
                 Column(modifier = Modifier.clickable { onBottomSheetRowTapped(word, sentence) }) {
                     HighlightedWordInSentenceRow(
                         word = word.word,
@@ -576,7 +579,7 @@ fun SentencesBottomSheetContent(
                         sentence = displayData.sentence,
                         isRecalling = false,
                         displayDot = false,//achedAudioWordKeys.contains(uniqueSentenceId),
-                        playCount = 2,
+                        playCount = thisPlayCount,
                         isDownloading = false//, //TODO: maybe dynamic?
                     )
                 }

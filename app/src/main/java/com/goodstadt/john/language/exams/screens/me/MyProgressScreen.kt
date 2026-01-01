@@ -95,8 +95,7 @@ fun MyProgressScreen(
                     badges = state.xpState.earnedBadges.size,
                     longestStreak = state.xpState.longestStreak,
                     gems = state.xpState.gems,
-                    // Extract the simple status name (e.g. "Super User")
-                    userStatus = "Learner" // Or derive from logic: xpManager.userType().name
+                    userType = viewModel.getXpManager().getUserType()
                 )
 
                 XPSummaryCard(

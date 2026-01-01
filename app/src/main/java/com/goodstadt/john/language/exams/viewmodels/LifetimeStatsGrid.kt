@@ -28,7 +28,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.goodstadt.john.language.exams.managers.XpState
+import com.goodstadt.john.language.exams.managers.UserType
+import com.goodstadt.john.language.exams.managers.XPManager
 
 
 @Composable
@@ -40,8 +41,16 @@ fun LifetimeStatsGrid(
     badges: Int,
     longestStreak: Int,
     gems: Int,
-    userStatus: String
+    userType: UserType
 ) {
+
+    val statusColor = when (userType) {
+        UserType.Light -> Color.Gray
+        UserType.Regular -> Color(0xFF2196F3)   // Blue
+        UserType.Serious -> Color(0xFFFF9800)   // Orange
+        UserType.Super -> Color(0xFF9C27B0)     // Purple
+    }
+
     Column(
         verticalArrangement = Arrangement.spacedBy(12.dp),
         modifier = Modifier.fillMaxWidth()
@@ -99,15 +108,16 @@ fun LifetimeStatsGrid(
             // Status
             DetailedStatCard(
                 title = "Status",
-                value = userStatus,
+                value = userType.title,
                 subTitle = "Rank",
                 description = "Based on your 7-day activity average.",
                 icon = Icons.Default.EmojiEvents, // Crown/Trophy
-                color = Color(0xFF9C27B0), // Purple
+                color = statusColor,// Color(0xFF9C27B0), // Purple
                 modifier = Modifier.weight(1f)
             )
         }
     }
+
 }
 
 // MARK: - Subcomponent: The Card
@@ -197,11 +207,23 @@ fun DetailedStatCard(
                     modifier = Modifier.size(24.dp)
                 )
 
+                // ✅ FIX: Dynamic Font Sizing Logic
+                // If text is short (e.g. "2500"), use Large Title.
+                // If text is medium ("Super User"), use Medium Title.
+                // If text is long ("Serious Learner"), use Small Title.
+                val dynamicStyle = when {
+                    value.length > 14 -> MaterialTheme.typography.titleSmall // ~14sp
+                    value.length > 9 -> MaterialTheme.typography.titleMedium // ~16sp
+                    else -> MaterialTheme.typography.titleLarge // ~22sp
+                }
+
                 Text(
                     text = value,
-                    style = MaterialTheme.typography.titleLarge,
+                    style = dynamicStyle,
                     fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.onSurface
+                    color = MaterialTheme.colorScheme.onSurface,
+                    maxLines = 1, // Force single line
+                    softWrap = false // Prevent wrapping
                 )
             }
 
