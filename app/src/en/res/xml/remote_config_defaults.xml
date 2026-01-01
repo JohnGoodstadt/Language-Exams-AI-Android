@@ -6,7 +6,7 @@
     </entry>
     <entry>
         <key>android_recommended_version_code</key>
-        <value>76</value> <!-- A safe, low default -->
+        <value>77</value> <!-- A safe, low default -->
     </entry>
     <entry>
         <key>update_message_optional</key>

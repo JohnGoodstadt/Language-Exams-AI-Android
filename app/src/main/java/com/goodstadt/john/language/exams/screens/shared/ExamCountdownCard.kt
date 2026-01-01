@@ -268,7 +268,7 @@ fun ActiveModeView(
             val pace = xpManager.getExamPace(totalWords, masteredWords)
             val adviceText = if (pace != null) {
                 if (pace.remaining <= 0) "Level Complete! Review to maintain."
-                else "Learn ${pace.dailyRate} words/day to finish."
+                else "Learn ${pace.dailyRate} word(s)/day to finish."
             } else {
                 "Exam date passed!"
             }
