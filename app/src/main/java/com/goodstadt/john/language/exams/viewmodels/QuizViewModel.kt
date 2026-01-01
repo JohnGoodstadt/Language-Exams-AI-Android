@@ -183,7 +183,7 @@ enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
     val description: String
         get() = when(this) {
             ELEMENTARY -> "Elementary"
-            INTER -> "Intermediate" // Explicitly string match if needed
+            INTER -> "Inter" // Explicitly string match if needed
             UPPER -> "Upper"
             ADVANCED -> "Advanced"
         }
