@@ -461,11 +461,11 @@ fun CategoryTabScreen(
                     )
                 }
                 Box(modifier = Modifier.fillMaxHeight(0.85f)) {
-//                com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme{
                     VocabGamificationStatsSheet(
                         grandTotalWords = total,
                         grandTotalMastered = heard,
                         categoryProgress = allProgress,//, // Pass the list
+                        skillLevel = viewModel.getCurrentSkillLevel(),
                         xpManager = entryPoint.getXPManager(),
                         quizManager = entryPoint.getQuizManager(),
                         onDismiss = { showGamificationSheet = false }

@@ -820,6 +820,9 @@ class CategoryTabViewModel @Inject constructor(
     fun playSuccessSound() {
         globalLoadingManager.playSuccessSound(context)
     }
+    fun getCurrentSkillLevel() : String {
+        return currentLoadedLevel
+    }
 
 
 }

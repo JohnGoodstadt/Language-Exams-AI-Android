@@ -10,7 +10,7 @@ object LanguageConfig {
     val meTabMenuItems = listOf(
         "Focusing",
         "Settings",
-        "Search",
+        "Vocab",
         "Progress",
         "Paragraph",
 

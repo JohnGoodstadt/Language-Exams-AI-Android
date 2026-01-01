@@ -54,6 +54,7 @@ import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.screens.shared.ExamCountdownCard
 import com.goodstadt.john.language.exams.utils.CategoryProgress
+import com.goodstadt.john.language.exams.viewmodels.ConsistencyHeatmap
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,6 +62,7 @@ fun VocabGamificationStatsSheet(
     grandTotalWords: Int,
     grandTotalMastered: Int,
     categoryProgress: List<CategoryProgress>,
+    skillLevel:String,
     xpManager: XPManager, // Pass via Hilt EntryPoint if needed
     quizManager: QuizHistoryManager,
     onDismiss: () -> Unit
@@ -80,8 +82,6 @@ fun VocabGamificationStatsSheet(
     val globalProgress = if (grandTotalWords > 0)
         grandTotalMastered.toFloat() / grandTotalWords.toFloat()
     else 0f
-
-//    com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme {
 
 
     Scaffold(
@@ -117,16 +117,15 @@ fun VocabGamificationStatsSheet(
                 xpManager = xpManager,
                 totalWords = grandTotalWords,
                 masteredWords = grandTotalMastered,
-                // Assuming 'currentLevel' is derived from the first category or passed in
-                currentLevelName = categoryProgress.firstOrNull()?.let { "Tab ${it.tabNumber}" }
-                    ?: "Exam"
+
+//                currentLevelName = categoryProgress.firstOrNull()?.let { "Tab ${it.tabNumber}" }
+//                    ?: "Exam"
+                currentLevelName = skillLevel
+
+
             )
 
-//            XPSummaryCard(currentXP = currentXP,"ESOL $currentLevel")
-            XPSummaryCard(
-                xpState = xpState,
-                progressInfo = levelInfo
-            )
+
             // 2. THE SMART COACH (Dynamic Advice)
             // Note: We need to calculate targetDailyRate from XPManager if available
             val advice = generateNuancedAdvice(
@@ -143,6 +142,19 @@ fun VocabGamificationStatsSheet(
                 icon = advice.icon,
                 color = advice.color
             )
+
+
+
+            XPSummaryCard(
+                xpState = xpState,
+                progressInfo = levelInfo
+            )
+
+            ConsistencyHeatmap(xpManager = xpManager)
+
+            SkillBreakdownView(xpState = xpState)
+
+
 
             // 3. TOPIC MASTERY LIST
             Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {

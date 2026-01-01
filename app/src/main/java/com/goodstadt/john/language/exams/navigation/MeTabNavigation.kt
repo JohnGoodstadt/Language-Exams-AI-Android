@@ -8,7 +8,7 @@ sealed class MeScreen(val route: String, val title: String) {
     // Routes for each of the possible menu items
     object Focusing : MeScreen("me_focus", "Focusing")
     object Settings : MeScreen("me_settings", "Settings")
-    object Search : MeScreen("me_search", "Search")
+    object Search : MeScreen("me_search", "Vocab")
     object Progress : MeScreen("me_progress", "Progress")
     object Paragraph : MeScreen("me_paragraph", "Paragraph")
 

@@ -19,6 +19,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.screens.shared.gamification.AIWriterCard
 import com.goodstadt.john.language.exams.screens.shared.BadgeShowcaseSection
+import com.goodstadt.john.language.exams.screens.shared.gamification.SkillBreakdownView
 import com.goodstadt.john.language.exams.screens.shared.gamification.GlobalProgressRow
 import com.goodstadt.john.language.exams.screens.shared.gamification.QuickReferenceRow
 import com.goodstadt.john.language.exams.screens.shared.gamification.QuizMasteryCard
@@ -33,7 +34,6 @@ import com.goodstadt.john.language.exams.viewmodels.LifetimeStatsGrid
 import com.goodstadt.john.language.exams.viewmodels.MyProgressViewModel
 import com.goodstadt.john.language.exams.viewmodels.ProfileHeaderView
 import com.goodstadt.john.language.exams.viewmodels.SectionHeader
-import com.goodstadt.john.language.exams.viewmodels.SkillBreakdownView
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,7 +61,7 @@ fun MyProgressScreen(
                 CircularProgressIndicator()
             }
         } else {
-            val state = uiState!!
+            val  state = uiState!!
 
             Column(
                 modifier = Modifier

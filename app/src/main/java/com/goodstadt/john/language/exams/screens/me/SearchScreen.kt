@@ -79,7 +79,7 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                 text = "All your exam words.",
                 fontSize = 12.sp,
                 textAlign = TextAlign.Start,
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 4.dp)
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp)
             )
 
             when (val state = uiState) {
@@ -115,7 +115,7 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                                     categoryTitle,
                                     categoryTabNumber
                                 )
-                            })
+                            }.padding(vertical = 8.dp, horizontal = 10.dp) )
                             {
                                 HighlightedWordInSentenceRow(
                                     word = result.word.word,
