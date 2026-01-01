@@ -152,7 +152,7 @@ fun VocabGamificationStatsSheet(
 
             ConsistencyHeatmap(xpManager = xpManager)
 
-            SkillBreakdownView(xpState = xpState)
+            SkillBreakdownView(xpManager)
 
 
 

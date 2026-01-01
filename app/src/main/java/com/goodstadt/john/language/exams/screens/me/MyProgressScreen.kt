@@ -104,7 +104,7 @@ fun MyProgressScreen(
                     progressInfo = levelInfo
                 )
 
-                SkillBreakdownView(xpState = state.xpState)
+                SkillBreakdownView(xpManager)
 
                 // ==========================================
                 // 2. MAIN QUEST (Vocab)
