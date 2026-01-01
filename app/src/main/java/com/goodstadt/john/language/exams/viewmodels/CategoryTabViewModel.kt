@@ -200,7 +200,7 @@ class CategoryTabViewModel @Inject constructor(
                 audioCacheManager.setCurrentVocabFile(vocabFile, voiceName)
 
                 // Initialize Recalling Set
-                val recalledKeys = recallingRepository.getAllRecalledKeys()
+               // val recalledKeys = recallingRepository.getAllRecalledKeys()
 
                 // ✅ FIX: Calculate the initial Heard Count immediately
 //                val initialHeardCount = calculateCurrentHeardCount(tabCategories)
@@ -334,16 +334,14 @@ class CategoryTabViewModel @Inject constructor(
 
                 if (!wasAlreadyHeard) {
                     checkSectionCompletionAfterNewSentence(category,sentence)
+                    _uiState.update { currentState ->
+                        if (currentState is CategoryTabUiState.Success) {
+                            currentState.copy(
+                                heardCountOnTab = currentState.heardCountOnTab + 1
+                            )
+                        } else currentState
+                    }
                 }
-
-                _uiState.update { currentState ->
-                    if (currentState is CategoryTabUiState.Success) {
-                        currentState.copy(
-                            heardCountOnTab = currentState.heardCountOnTab + 1
-                        )
-                    } else currentState
-                }
-
 
                 checkHelpTrigger()
             }else{

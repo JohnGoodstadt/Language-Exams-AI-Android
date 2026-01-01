@@ -212,13 +212,11 @@ fun CategoryTabScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(top = innerPadding.calculateTopPadding())
-//                .padding(innerPadding)
         ) {
 
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-//                    .padding(innerPadding)
             ) {
 
                 // --- Loading State ---
