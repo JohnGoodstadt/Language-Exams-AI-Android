@@ -328,6 +328,11 @@ class ParagraphViewModel @Inject constructor(
                         val totalTokensUsed = llmResponse.totalTokensUsed
                         ttsStatsRepository.uncUserOpenAITotalTokenCount(totalTokensUsed)
                         ttsStatsRepository.incUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
+
+                        ttsStatsRepository.uncGlobalOpenAITotalTokenCount(totalTokensUsed)
+                        ttsStatsRepository.incGlobalStatDouble(OpenAIEstCostUSD, totalCostUSD)
+
+
                         val modelFieldName = "${llmModel_}${openAIModel?.title}" //e.g. llmModel_gemini-2.5-flash
                         ttsStatsRepository.updateUserStatField(modelFieldName)
                         audioCacheManager.incrementAIParagraphCount()
@@ -429,8 +434,14 @@ class ParagraphViewModel @Inject constructor(
 
                                     val modelFieldName = "${llmModel_}${selectedModel.title}" //e.g. llmModel_gemini-2.5-flash
                                     ttsStatsRepository.updateUserStatField(modelFieldName)
+
                                     ttsStatsRepository.incUserGeminiTotalTokenCount(totalTokenCount)
                                     ttsStatsRepository.incUserStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
+
+                                    ttsStatsRepository.incGlobalGeminiTotalTokenCount(totalTokenCount)
+                                    ttsStatsRepository.incGlobalStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
+
+
                                     audioCacheManager.incrementAIParagraphCount()
 
                                     if (!isPurchased.value) {

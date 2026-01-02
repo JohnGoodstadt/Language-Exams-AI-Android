@@ -18,7 +18,7 @@ import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSOther
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSPremium
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSQuality
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStandard
-import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStats
+import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSCallCount
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.TTSStudio
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.models.Category
@@ -115,6 +115,10 @@ class TTSStatsRepository @Inject constructor(
 
         const val GeminiPremiumCallCount = "geminiPremiumCallCount"
         const val OpenAIPremiumCallCount = "openAIPremiumCallCount"
+
+        const val CloudStorageUploadCount = "CloudStorageUploadCount"
+        const val CloudStorageDownloadCount = "CloudStorageDownloadCount"
+        const val CloudStorageDownloadMissCount = "CloudStorageDownloadMissCount"
 
         const val TTSAPIEstCostUSD = "ttsAPIEstCostUSD"
         const val TTSTotalCharCount = "ttsTotalCharCount"
@@ -386,7 +390,7 @@ class TTSStatsRepository @Inject constructor(
 
         val characters = words.count()
         inc(fsDOC.GlobalStats, TTSChars, characters)
-        inc(fsDOC.GlobalStats, TTSStats)
+        inc(fsDOC.GlobalStats, TTSCallCount)
 
         val TTSLevel = googleVoiceToChargingLevel(googleVoiceName)
         when (TTSLevel) {
@@ -439,10 +443,13 @@ class TTSStatsRepository @Inject constructor(
         val characters = words.count()
 
         inc(fsDOC.GlobalStats, TTSChars, characters)
-        inc(fsDOC.GlobalStats, TTSStats)
+        inc(fsDOC.GlobalStats, TTSCallCount)
     }
     fun incUserStatDouble(fieldName:String, value:Double) {
         incDouble(fsDOC.USER,fieldName,value)
+    }
+    fun incGlobalStatDouble(fieldName:String, value:Double) {
+        incDouble(fsDOC.GlobalStats,fieldName,value)
     }
     fun updateUserStatField(fieldName:String,value:String) {
         update(fsDOC.USER,fieldName,value)
@@ -460,6 +467,10 @@ class TTSStatsRepository @Inject constructor(
         inc(fsDOC.USER, OpenAICallCount)
         inc(fsDOC.USER, OpenAITotalTokenCount,count)
     }
+    fun uncGlobalOpenAITotalTokenCount(count:Int) {
+        inc(fsDOC.GlobalStats, OpenAICallCount)
+        inc(fsDOC.GlobalStats, OpenAITotalTokenCount,count)
+    }
     fun updateUserTTSCurrentTokenCount(value:Int) {
         update(fsDOC.USER, TTSCurrentTokenCount,value)
     }
@@ -470,6 +481,29 @@ class TTSStatsRepository @Inject constructor(
         inc(fsDOC.USER, GeminiCallCount)
         inc(fsDOC.USER, GeminiTotalTokenCount,count)
     }
+    fun incGlobalGeminiTotalTokenCount(count:Int) {
+        inc(fsDOC.GlobalStats, GeminiCallCount)
+        inc(fsDOC.GlobalStats, GeminiTotalTokenCount,count)
+    }
+    fun incGlobalCloudStorageCounts(upload:Int = 0, download:Int=0, miss:Int = 0) {
+        /*
+        const val CloudStorageUploadCount = "CloudStorageUploadCount"
+        const val CloudStorageDownloadCount = "CloudStorageDownloadCount"
+        const val CloudStorageDownloadMissCount = "CloudStorageDownloadMissCount"
+         */
+        if (upload > 0) {
+            inc(fsDOC.GlobalStats, CloudStorageUploadCount, upload)
+        }
+        if (download > 0) {
+            inc(fsDOC.GlobalStats, CloudStorageDownloadCount, download)
+        }
+        if (miss > 0) {
+            inc(fsDOC.GlobalStats, CloudStorageDownloadMissCount, miss)
+        }
+
+
+    }
+
     fun incUserTTSCounts(count:Int) {
         inc(fsDOC.USER, TTSAPICallCount)
         inc(fsDOC.USER, TTSTotalCharCount,count)

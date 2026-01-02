@@ -18,6 +18,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -301,9 +302,12 @@ fun CategoryTabScreen(
                                     CategoryHeader(title = category.title.removeContentInBracketsAndTrim())
                                 }
 
-                                items(
+                                itemsIndexed(
                                     category.words,
-                                    key = { "${it.id}-${it.word}" }) { wordEntry ->
+                                    // Add 'index' to the key to guarantee uniqueness
+                                    key = { index, word -> "${word.id}-${word.word}-$index" }
+                                ) { index, wordEntry -> // You now get 'index' and 'wordEntry'
+
                                     val sentenceEntry = wordEntry.sentences.firstOrNull()
 
                                     if (sentenceEntry != null) {

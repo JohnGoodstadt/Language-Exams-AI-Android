@@ -483,6 +483,7 @@ class ContentRepository @Inject constructor(
                 // We only upload if playback worked (valid audio)
                 if (playResult.isSuccess) {
                     FirebaseAudioService.uploadAudio(localFile, uniqueSentenceId, text)
+                    ttsStatsRepository.incGlobalCloudStorageCounts(upload = 1)
                 }
 
                 if (playResult.isSuccess) {
@@ -576,6 +577,7 @@ class ContentRepository @Inject constructor(
         // If it came from Disk or Firebase, it's already in the cloud.
         if (source == AudioDataSource.GOOGLE_TTS) {
             FirebaseAudioService.uploadAudio(localFile, uniqueSentenceId, text)
+            ttsStatsRepository.incGlobalCloudStorageCounts(upload = 1)
         }
 
         // --- PHASE 3: RETURN INSTANTLY ---
@@ -633,11 +635,15 @@ class ContentRepository @Inject constructor(
         val cloudSuccess = FirebaseAudioService.downloadAudio(filename, destFile)
 
         if (cloudSuccess) {
+            ttsStatsRepository.incGlobalCloudStorageCounts(download = 1)
             val bytes = try { destFile.readBytes() } catch (e: Exception) { null }
             if (bytes != null && bytes.isNotEmpty()) {
                 return Pair(bytes, AudioDataSource.FIREBASE_CLOUD)
             }
         }
+
+        ttsStatsRepository.incGlobalCloudStorageCounts(miss = 1)
+
 
         // 2. Not in Cloud (or read failed) -> Try Google TTS
         val ttsResult = googleCloudTts.getAudioData(text, voiceName, languageCode)

@@ -232,6 +232,7 @@ class ConjugationsViewModel @Inject constructor(
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
                     ttsStatsRepository.incWordStats(word.word)
+
                     //TODO: not inc but update!
                     ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
                 }

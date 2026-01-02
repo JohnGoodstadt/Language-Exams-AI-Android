@@ -1,14 +1,11 @@
 package com.goodstadt.john.language.exams.data
 
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
-import com.goodstadt.john.language.exams.di.FirebaseModule.provideFirebaseAuth
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.ServerTimestamp
 import com.google.firebase.firestore.SetOptions
-import kotlinx.coroutines.tasks.await
 import sanitizedForFirestore
 import timber.log.Timber
 import java.text.SimpleDateFormat
@@ -101,7 +98,7 @@ class FirestoreRepository @Inject constructor(
         const val stats = "stats"
         const val TTSTotal = "TTSTotal"
         const val TTSChars = "TTSChars"
-        const val TTSStats = "TTSStats"
+        const val TTSCallCount = "TTSCallCount"
 
 
         const val TTSPremium = "TTSPremium"

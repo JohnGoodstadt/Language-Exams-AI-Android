@@ -111,6 +111,7 @@ object FirebaseAudioService {
             // Attempt download
             fileRef.getFile(destFile).await()
             Timber.tag(TAG).d("☁️ Downloaded: $filename to ${destFile.name}")
+
             true
         } catch (e: Exception) {
             // Check if it's a "Not Found" error (StorageException)
