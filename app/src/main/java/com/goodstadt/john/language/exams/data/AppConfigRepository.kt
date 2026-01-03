@@ -68,8 +68,8 @@ class AppConfigRepository @Inject constructor(
         val currentVersionCode = BuildConfig.VERSION_CODE
 
         // Get the version codes from Remote Config
-        val minRequiredVersion = remoteConfig.getLong("android_minimum_version_code")
-        val recommendedVersion = remoteConfig.getLong("android_recommended_version_code")
+        val minRequiredVersion = remoteConfig.getLong("android_minimum_version_code") //e.g. 73
+        val recommendedVersion = remoteConfig.getLong("android_recommended_version_code") //e.g. 78
 
         // Get the messages and URL
         val optionalMessage = remoteConfig.getString("update_message_optional")

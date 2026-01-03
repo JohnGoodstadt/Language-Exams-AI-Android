@@ -492,7 +492,7 @@ fun SettingsScreen(
             SettingsInfoItem(
                 icon = Icons.Default.Info,
                 title = "Version",
-                value = uiState.appVersion
+                value = "${uiState.appVersion} -- ${uiState.appVersionCode}"
             )
         }
 
