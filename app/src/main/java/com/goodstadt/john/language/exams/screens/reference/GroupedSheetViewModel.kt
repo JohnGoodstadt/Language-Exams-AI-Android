@@ -410,7 +410,7 @@ class GroupedSheetViewModel @Inject constructor(
 
     fun isHeard(sentence: String): Boolean {
         val contentID = FirebaseAudioService.generateContentID(sentence)
-        Timber.i("Play Count:${historyManager.getPlayCount("Reference", contentID)} $sentence")
+//        Timber.i("Play Count:${historyManager.getPlayCount("Reference", contentID)} $sentence")
         return historyManager.getPlayCount("Reference", contentID) > 0
     }
 

@@ -13,6 +13,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -49,18 +50,39 @@ fun GroupedSheetScreen(
         // 2. The Sub-Tab Picker (the sub-menu)
         // This only shows if there are sub-tabs to display
         if (uiState.subTabs.isNotEmpty()) {
-            val options: List<String> = remember(uiState.subTabs) {
-                uiState.subTabs.map { it.title }
+            // 1. Detect Screen Size
+            val configuration = LocalConfiguration.current
+            val isSmallScreen = configuration.screenWidthDp < 380 // 360dp is the breakpoint for old phones
+
+//            val options: List<String> = remember(uiState.subTabs) {
+//                uiState.subTabs.map { it.title }
+//            }
+            // 2. Prepare Display Options (Dynamic Shortening)
+            // We use 'remember' so this doesn't run on every frame
+            val options: List<String> = remember(uiState.subTabs, isSmallScreen) {
+                uiState.subTabs.map { tab ->
+                    if (isSmallScreen) getShortTabTitle(tab.title) else tab.title
+                }
             }
-            val selectedOption: String = uiState.selectedSubTab?.title ?: ""
+
+            // 3. Determine Selected Option (Must match the display version)
+            val rawSelectedTitle = uiState.selectedSubTab?.title ?: ""
+            val selectedOption = if (isSmallScreen) getShortTabTitle(rawSelectedTitle) else rawSelectedTitle
+
+//            val selectedOption: String = uiState.selectedSubTab?.title ?: ""
 
             // b) Call your reusable composable
             HorizontalLevelPicker(
                 options = options,
                 selectedOption = selectedOption,
-                onOptionSelected = { selectedTitle ->
-                    // c) Find the corresponding SubTabDefinition and notify the ViewModel
-                    val newSelectedSubTab = uiState.subTabs.firstOrNull { it.title == selectedTitle }
+                onOptionSelected = { selectedDisplayTitle ->
+                    // 4. Reverse Lookup
+                    // We need to find the original tab object based on the Display Title we just clicked
+                    val newSelectedSubTab = uiState.subTabs.firstOrNull { tab ->
+                        val displayTitle = if (isSmallScreen) getShortTabTitle(tab.title) else tab.title
+                        displayTitle == selectedDisplayTitle
+                    }
+
                     if (newSelectedSubTab != null) {
                         viewModel.onSubTabSelected(newSelectedSubTab)
                     }
@@ -168,5 +190,21 @@ fun GroupedSheetScreen(
                 }
             }
         }
+
+    } //: Column
+
+}
+// Helper to shorten names for small screens (Huawei LMN-LX9 etc)
+private fun getShortTabTitle(original: String): String {
+    return when (original) {
+        "Conjugations" -> "Conj."
+        "Intermediate" -> "Inter."
+        "Advanced" -> "Adv."
+        "Adjectives" -> "Adj."
+        "Prepositions" -> "Preps"
+        "Sounds the Same" -> "Sounds"
+        "Good vs Well" -> "Good/Well"
+        // Add other long titles here
+        else -> original
     }
 }
