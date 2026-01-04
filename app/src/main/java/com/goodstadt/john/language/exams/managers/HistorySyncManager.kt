@@ -22,6 +22,28 @@ import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
+/**
+ * **HistorySyncManager**
+ *
+ * A Singleton repository acting as the authoritative source for the user's learning progress.
+ * Implements an "Offline-First" architecture to track which content the user has consumed, ensuring data persistence across app restarts and device switches.
+ *
+ * **Key Responsibilities:**
+ * - **Progress Tracking:** Records play counts for specific content items using Voice-Agnostic Content IDs (SHA-256 hashes of text).
+ * - **Synchronization:** Manages the bidirectional sync between Local Storage and Firestore, resolving conflicts using a "Max Value Wins" strategy.
+ * - **Cost Optimization:** Buffers write operations in memory and performs batched updates to Firestore only when the application backgrounds, minimizing database write costs.
+ *
+ * **Key Methods (Inputs/Outputs):**
+ * - `isHeard(level, contentID) -> Boolean`: The primary query used by the UI to determine if a "Red Dot" or "Checkmark" should be displayed.
+ * - `getPlayCount(level, contentID) -> Int`: Returns the raw engagement count for specific content.
+ * - `markSentenceHeard(...)`: Input signal to increment the play count. Triggers an immediate local save and marks the state as "Dirty" for future cloud sync.
+ *
+ * **Persistence Strategy:**
+ * - **Local (Hot):** In-memory `StateFlow` for instant UI reactivity.
+ * - **Local (Cold):** Serialized JSON (`history_cache.json`) in internal storage for crash resilience and offline support.
+ * - **Cloud:** **Firestore** (`users/{uid}/history/{level}`). This is the master record used to sync progress to other devices (e.g., iPad/Android Tablet).
+ */
+
 @Singleton
 class HistorySyncManager @Inject constructor(
     @ApplicationContext private val context: Context,

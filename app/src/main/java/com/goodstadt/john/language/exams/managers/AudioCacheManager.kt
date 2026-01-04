@@ -27,6 +27,32 @@ import java.lang.Integer.max
 import javax.inject.Inject
 import javax.inject.Singleton
 
+/**
+ * **AudioCacheManager**
+ *
+ * A Singleton repository acting as the central aggregator for application statistics and disk cache tracking.
+ * It serves as the bridge between the raw data (History/Files) and the UI's visualization (Progress Bars/Graphs).
+ *
+ * **Key Responsibilities:**
+ * - **Statistics Aggregation:** Calculates and exposes reactive counters for "Main Quest" progress (e.g., Total words heard in Tab 1 vs Total available).
+ * - **Side Quest Tracking:** Manages specific counters for Reference sheets (e.g., Conjugations, AI Paragraphs) to power the "Side Quest" dashboard.
+ * - **Disk Cache Registry:** Maintains an in-memory set of unified filenames present on the device to optimize playback logic.
+ * - **Legacy Migration:** Handles one-off file system migrations (renaming legacy MP3s to unified SHA format).
+ *
+ * **Inputs:**
+ * - Receives the raw `VocabFile` (JSON structure) via `setCurrentVocabFile` to establish total denominators.
+ * - Receives signals via `didPlaySentence` when audio is successfully played to increment local counters.
+ * - Synchronizes with `HistorySyncManager` to backfill stats from the user's permanent history.
+ *
+ * **Outputs:**
+ * - Exposes `StateFlow` properties (e.g., `totalExamWordsHeardOverall`, `referenceHeardCounts`) consumed by UI screens and Gamification sheets.
+ *
+ * **Persistence Strategy:**
+ * - **Local (Stats):** Side Quest and AI counters are persisted to `SharedPreferences` (`audio_cache_prefs`) to survive app restarts.
+ * - **Local (Files):** Tracks physical MP3 files in the Application's internal storage (`filesDir`).
+ * - **Cloud:** Logs usage events to **Firebase Analytics**. Does *not* sync stats to Firestore directly (relies on `HistorySyncManager` for cross-device truth).
+ */
+
 @Singleton
 class AudioCacheManager @Inject constructor(
     @ApplicationContext private val context: Context,

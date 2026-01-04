@@ -11,6 +11,29 @@ import javax.inject.Inject
 import javax.inject.Singleton
 import kotlin.coroutines.resume
 
+/**
+ * **AudioPlayerService**
+ *
+ * A low-level infrastructure service responsible for the physical playback of audio media on the Android device.
+ * Wraps the Android `MediaPlayer` API to provide a simplified, thread-safe interface for consuming raw audio data.
+ *
+ * **Key Responsibilities:**
+ * - **Media Playback:** Decodes and plays raw MP3 byte arrays received from the Repository layer.
+ * - **Lifecycle Management:** Handles resource allocation/deallocation and state transitions (Idle, Playing, Stopped) to prevent memory leaks or overlapping audio.
+ * - **Concurrency:** Ensures audio operations do not block the Main Thread, while managing callbacks for completion or errors.
+ *
+ * **Inputs:**
+ * - Receives raw `ByteArray` data (MP3 format) from `ContentRepository` (sourced from Disk, Cloud, or TTS API).
+ *
+ * **Outputs:**
+ * - Returns a `Result` type indicating whether playback started successfully or failed (e.g., corrupt data/codec error).
+ * - Triggers completion listeners (if attached) when audio finishes.
+ *
+ * **Persistence Strategy:**
+ * - **Transient:** This service is stateless regarding data storage. It does not save files or user preferences.
+ * - It acts purely as a consumer of data provided by upstream repositories.
+ */
+
 @Singleton
 class AudioPlayerService @Inject constructor() {
     private var mediaPlayer: MediaPlayer? = null

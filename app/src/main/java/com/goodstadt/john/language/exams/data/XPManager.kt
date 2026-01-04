@@ -92,6 +92,30 @@ data class DailyStats(
     var actionCount: Int = 0
 )
 
+/**
+ * **XPManager**
+ *
+ * A Singleton repository responsible for managing the application's gamification economy and user engagement metrics.
+ * Acts as the calculation engine for converting user actions into progress, streaks, and rewards.
+ *
+ * **Key Responsibilities:**
+ * - **State Management:** Tracks Experience Points (XP), Learner Levels (A1-B2), Daily/Weekly Streaks, Gem currency, and Badge acquisition.
+ * - **Goal Tracking:** Manages user-defined exam dates and calculates daily velocity requirements.
+ * - **Analytics:** Aggregates session density and usage patterns for product health monitoring.
+ *
+ * **Inputs:**
+ * - Receives granular user events via `registerAction(XpActionType)` (e.g., Hearing a sentence, Completing a quiz).
+ * - Receives manual goal updates via `setExactGoal` / `setDurationGoal`.
+ *
+ * **Outputs:**
+ * - Exposes a reactive `StateFlow<XpState>` for the UI (consumed by Dashboards and Progress Screens).
+ * - Generates derived metrics like `UserType` (Rank) and `WeeklyStats`.
+ *
+ * **Persistence Strategy:**
+ * - **Local:** State is serialized to JSON (`xp_state_v1.json` and `xp_daily_stats_v1.json`) in the device's internal storage.
+ * - **Cloud:** Logs key behavioral events to **Firebase Analytics** (e.g., `xp_awarded`, `freeze_consumed`).
+ * - *Note:* This manager currently operates as a Local-First store; it does not sync state to Firestore for cross-device usage.
+ */
 
 @Singleton
 class XPManager @Inject constructor(
