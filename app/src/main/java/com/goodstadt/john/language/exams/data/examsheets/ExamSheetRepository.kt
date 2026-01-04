@@ -1,6 +1,9 @@
 package com.goodstadt.john.language.exams.data.examsheets
 
 import android.content.Context
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultDownloadSheet
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultTTSAPICount
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.toObject
 import com.goodstadt.john.language.exams.models.Category
@@ -18,6 +21,7 @@ import com.goodstadt.john.language.exams.models.Format2Sentence
 import com.goodstadt.john.language.exams.models.Format2WordAndSentenceDTO
 import com.goodstadt.john.language.exams.models.SheetHeaderFormat2DTO
 import com.goodstadt.john.language.exams.models.WordAndSentenceForFirestore
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -31,6 +35,33 @@ import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
+/**
+ * **ExamSheetRepository**
+ *
+ * A Singleton repository responsible for the retrieval, deserialization, and caching of static educational content (JSON sheets).
+ * It acts as the direct interface between the application and the Firestore "Content" collections.
+ *
+ * **Key Responsibilities:**
+ * - **Multi-Level Caching:** Implements a robust caching strategy to minimize network usage and ensure offline access:
+ *     1. **L1 (Memory):** Returns hot objects instantly if already loaded in the current session.
+ *     2. **L2 (Disk):** Checks internal storage for previously downloaded JSON files.
+ *     3. **L3 (Network):** Fetches fresh data from **Firestore** if local data is missing or stale.
+ * - **Version Control:** Compares local file versions against **Remote Config** or Firestore metadata to determine if a "Force Refresh" is required to download content updates.
+ * - **Data Parsing:** Handles the deserialization of raw JSON into typed data models (`VocabFile`, `Format1File`, `Format2File`, `TestMyselfListRoot`).
+ *
+ * **Inputs:**
+ * - Sheet Identifiers (e.g., "EnglishB1Vocab", "EnglishPrepositions").
+ * - `forceRefresh` flags triggered by version mismatches.
+ *
+ * **Outputs:**
+ * - Strongly-typed data objects representing the structure of a specific screen (Vocab List, Reference Table, or Quiz).
+ * - Throws exceptions for network failures to be handled by the UI or upper layers.
+ *
+ * **Persistence Strategy:**
+ * - **Cloud:** **Firestore** acts as the master source of truth for all text content.
+ * - **Local:** Downloaded JSON files are saved to the device's internal storage directory, allowing the app to function fully offline after the initial sync.
+ */
+
 /*
 Layer 3 (UI Logic)	ViewModels (GroupedVM, GenericVM, etc.)	To prepare UI state for a specific screen.	(No one below it)
 Layer 2 (Orchestration & Business Logic)	VocabRepository	To be the single entry point for all VocabFile data. It orchestrates caching, versioning, and data source selection.	Only ViewModels.
@@ -40,6 +71,7 @@ Layer 1 (Data Source Implementation)	ExamSheetRepository	To be a low-level worke
 @Singleton
 class ExamSheetRepository @Inject constructor(
     private val firestore: FirebaseFirestore,
+    private val ttsStatsRepository:TTSStatsRepository,
     @ApplicationContext private val context: Context,
     private val jsonParser: Json
 ) {
@@ -75,6 +107,13 @@ class ExamSheetRepository @Inject constructor(
                     e,
                     "ExamSheetRepo.getVocabSheet(): CRITICAL Error in getVocabSheet for '$sheet_name'."
                 )
+                TimberFault.f(
+                    message = "ExamSheetRepo: ERROR - Failed to fetch or cache '$sheet_name' (Format0).",
+                    localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                    secondaryText = "android",
+                    area = "ExamSheetRepository.getFormat0Sheet()"
+                )
+                ttsStatsRepository.incGlobalFaultCount(faultDownloadSheet)
                 return@withContext Result.failure(e)
             }
         }
@@ -123,6 +162,13 @@ class ExamSheetRepository @Inject constructor(
             Result.success(format1File)
         } catch (e: Exception) {
             Timber.e(e, "ExamSheetRepo: ERROR - Failed to fetch or cache '$examName' (Format1).")
+            TimberFault.f(
+                message = "ExamSheetRepo: ERROR - Failed to fetch or cache '$examName' (Format1).",
+                localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                secondaryText = "android",
+                area = "ExamSheetRepository.fetchFormat1FromNetworkAndCache()"
+            )
+            ttsStatsRepository.incGlobalFaultCount(faultDownloadSheet)
             Result.failure(e)
         }
     }
@@ -194,6 +240,13 @@ class ExamSheetRepository @Inject constructor(
                 e,
                 "ExxamSheetRepo.fetchFromNetworkAndCache(): ERROR - Failed to fetch or cache '$sheet_name'."
             )
+            TimberFault.f(
+                message = "ExxamSheetRepo ERROR - Failed to fetch or cache'${sheet_name}'.",
+                localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                secondaryText = "android",
+                area = "ExamSheetRepository.fetchFromNetworkAndCacheFormat0File()"
+            )
+            ttsStatsRepository.incGlobalFaultCount(faultDownloadSheet)
             Result.failure(e)
         }
     }
@@ -248,6 +301,13 @@ class ExamSheetRepository @Inject constructor(
                                 e,
                                 "Codable ERROR: Failed to decode VocabWord in category '${firestoreCategory.title}'."
                             )
+                            TimberFault.f(
+                                message = "ExamSheetRepo: Codable ERROR: Failed to decode VocabWord in category '${firestoreCategory.title}}'.",
+                                localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                                secondaryText = "android",
+                                area = "ExamSheetRepository.downloadFromFirestoreCollections()"
+                            )
+                            ttsStatsRepository.incGlobalFaultCount(faultDownloadSheet)
                             null
                         }
                     }
@@ -383,6 +443,13 @@ class ExamSheetRepository @Inject constructor(
 
         } catch (e: Exception) {
             Timber.e(e, "ExamSheetRepo: CRITICAL Error in getFormat2Sheet for '$sheet_name'.")
+            TimberFault.f(
+                message = "ExamSheetRepo: CRITICAL Error in getFormat2Sheet for '$sheet_name'.",
+                localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                secondaryText = "android",
+                area = "ExamSheetRepository.getFormat2Sheet()"
+            )
+            ttsStatsRepository.incGlobalFaultCount(faultDownloadSheet)
             return Result.failure(e)
         }
     }

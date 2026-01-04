@@ -6,6 +6,8 @@ import com.goodstadt.john.language.exams.data.AudioPlayerService
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
 import com.goodstadt.john.language.exams.data.examsheets.ExamSheetRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.currentGoogleVoiceName
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultTTSAPICount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalMP3HitCount
@@ -17,6 +19,7 @@ import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -34,10 +37,38 @@ import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
-enum class PlaybackSource {
-    CACHE,
-    NETWORK
-}
+/**
+ * **ContentRepository**
+ *
+ * A Singleton repository acting as the primary data gateway for the application's educational content.
+ * It abstracts the complexity of data fetching, versioning, and media retrieval, providing a unified API for ViewModels.
+ *
+ * **Key Responsibilities:**
+ * - **Content Resolution:** Fetches and parses structural data (Vocab Lists, Reference Sheets, Quizzes) using a Multi-Level Caching strategy (Memory L1 -> Disk L2 -> Firestore L3).
+ * - **Audio Orchestration:** Implements a cost-optimized "Waterfall" strategy for TTS playback:
+ *     1. Checks **Local Disk** (Free/Instant).
+ *     2. Checks **Firebase Cloud Storage** (Free/Fast).
+ *     3. Falls back to **Google Cloud TTS API** (Paid/Slow), then caches the result to Disk and Cloud for future use.
+ * - **AI Generation:** Interfaces with the Generative AI (Gemini) API to create dynamic paragraphs and content on demand.
+ *
+ * **Inputs:**
+ * - Sheet Identifiers (e.g., "EnglishB1Vocab") to request specific JSON structures.
+ * - Raw text strings to request audio playback or AI generation.
+ *
+ * **Outputs:**
+ * - Deserialized Data Models (`VocabFile`, `Format1File`, etc.) ready for UI consumption.
+ * - `PlaybackResult` status indicating success, failure, or the source of the audio (Network vs Cache).
+ *
+ * **Persistence Strategy:**
+ * - **Local (JSON):** Caches versioned content files to internal storage to enable offline text capability and reduce Firestore reads.
+ * - **Local (Audio):** Writes generated MP3s to the device's internal `filesDir`, creating a permanent offline audio cache.
+ * - **Cloud:** Uploads generated TTS audio to Firebase Storage to create a shared "Crowdsourced Cache" for other users.
+ */
+
+//enum class PlaybackSource {
+//    CACHE,
+//    NETWORK
+//}
 
 /*
 Layer 3 (UI Logic)	ViewModels (GroupedVM, GenericVM, etc.)	To prepare UI state for a specific screen.	(No one below it)
@@ -411,6 +442,14 @@ class ContentRepository @Inject constructor(
                     }
                 },
                 onFailure = { exception ->
+                    TimberFault.f(
+                        message = "TTS API - Failure",
+                        localizedMessage = exception.localizedMessage ?: "null localizedMessage",
+                        secondaryText = text.take(12),
+                        area = "ContentRepository.playTextToSpeech()"
+                    )
+                    ttsStatsRepository.incGlobalFaultCount(faultTTSAPICount)
+
                     PlaybackResult.Failure(
                         exception as? Exception ?: Exception(
                             "Network error",

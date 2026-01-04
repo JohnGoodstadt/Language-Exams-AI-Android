@@ -326,10 +326,10 @@ class ParagraphViewModel @Inject constructor(
 
 
                         val totalTokensUsed = llmResponse.totalTokensUsed
-                        ttsStatsRepository.uncUserOpenAITotalTokenCount(totalTokensUsed)
+                        ttsStatsRepository.incUserOpenAITotalTokenCount(totalTokensUsed)
                         ttsStatsRepository.incUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
 
-                        ttsStatsRepository.uncGlobalOpenAITotalTokenCount(totalTokensUsed)
+                        ttsStatsRepository.incGlobalOpenAITotalTokenCount(totalTokensUsed)
                         ttsStatsRepository.incGlobalStatDouble(OpenAIEstCostUSD, totalCostUSD)
 
 

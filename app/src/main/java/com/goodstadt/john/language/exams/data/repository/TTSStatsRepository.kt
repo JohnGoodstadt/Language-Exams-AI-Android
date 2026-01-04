@@ -132,7 +132,12 @@ class TTSStatsRepository @Inject constructor(
         const val statProgressCompleted = "statProgress__Completed" // '__" replaced with Exam A1,A2,B1,B2
         const val statProgressTotal = "statProgress__Total"
 
-
+        //serious errors
+        const val faultCount = "faultCount"
+        const val faultTTSAPICount = "Google TTS API failure"
+        const val faultSignInAsAnon = "Sign In As Anon"
+        const val faultSceenType = "Unknown Screen Type"
+        const val faultDownloadSheet = "Download Sheet"
 
 
         const val TR_CHARS = "TRChars"
@@ -463,11 +468,11 @@ class TTSStatsRepository @Inject constructor(
     fun incUserStatCount(fieldNamw:String,value:Int = 1) {
         inc(fsDOC.USER, fieldNamw,value)
     }
-    fun uncUserOpenAITotalTokenCount(count:Int) {
+    fun incUserOpenAITotalTokenCount(count:Int) {
         inc(fsDOC.USER, OpenAICallCount)
         inc(fsDOC.USER, OpenAITotalTokenCount,count)
     }
-    fun uncGlobalOpenAITotalTokenCount(count:Int) {
+    fun incGlobalOpenAITotalTokenCount(count:Int) {
         inc(fsDOC.GlobalStats, OpenAICallCount)
         inc(fsDOC.GlobalStats, OpenAITotalTokenCount,count)
     }
@@ -503,7 +508,11 @@ class TTSStatsRepository @Inject constructor(
 
 
     }
-
+    //StatsManager.shared.incGlobalFaultCount(for: StatsManager.StatNames.faultTTSAPICount)
+    fun incGlobalFaultCount(errorType:String){
+        inc(fsDOC.GlobalStats, faultCount) //general
+        inc(fsDOC.GlobalStats, errorType)  // particular
+    }
     fun incUserTTSCounts(count:Int) {
         inc(fsDOC.USER, TTSAPICallCount)
         inc(fsDOC.USER, TTSTotalCharCount,count)

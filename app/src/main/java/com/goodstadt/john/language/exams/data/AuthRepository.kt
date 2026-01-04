@@ -4,7 +4,11 @@ import android.app.Application
 import android.os.Build
 import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultSignInAsAnon
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultTTSAPICount
 import com.goodstadt.john.language.exams.models.UserFirebase
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -31,6 +35,7 @@ class AuthRepository @Inject constructor(
     private val auth: FirebaseAuth,
     private val firestore: FirebaseFirestore,
     private val application: Application,
+    private val ttsStatsRepository: TTSStatsRepository
 ) {
 
     private object fb {
@@ -66,6 +71,13 @@ class AuthRepository @Inject constructor(
                 currentUser
             }
         } catch (e: Exception) {
+            TimberFault.f(
+                message = "TTS API - Failure",
+                localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                secondaryText = "",
+                area = "AuthRepository.signInAnonymouslyIfNeeded()"
+            )
+            ttsStatsRepository.incGlobalFaultCount(faultSignInAsAnon)
             // Handle exceptions like no network connection, etc.
             e.printStackTrace()
             null
