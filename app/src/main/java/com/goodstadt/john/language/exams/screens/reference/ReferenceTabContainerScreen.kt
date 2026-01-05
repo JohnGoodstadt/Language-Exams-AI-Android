@@ -144,10 +144,14 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
             ScreenType.FORMAT_2_SCREEN -> definition.firestoreDocumentId?.let { docId ->
                 RefScreen.Format2.createRoute(docId)
             }
+            ScreenType.GROUPED_FORMAT_2_SCREEN -> {
+                // We route to a new destination, passing the Parent Tab ID
+                RefScreen.GroupedFormat2.createRoute(selectedTab.id)
+            }
             // The 'else' is not needed because 'when' on an enum is exhaustive.
             // If you add a new ScreenType to the enum, the compiler will force you to handle it here.
             ScreenType.UNKNOWN -> null
-
+            //ScreenType.GROUPED_FORMAT_2_SCREEN -> TODO()
         }
 
         // If a valid route was determined, perform the navigation.
@@ -331,6 +335,14 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                                 }
                             }
                         }
+                    }
+
+                    composable(
+                        route = RefScreen.GroupedFormat2.route, // "grouped_format2/{tabId}"
+                        arguments = listOf(navArgument("tabId") { type = NavType.StringType })
+                    ) {
+                        // This is the container screen we just created/discussed
+                        Format2GroupedScreen()
                     }
                 }
             } //: Not Unknown type

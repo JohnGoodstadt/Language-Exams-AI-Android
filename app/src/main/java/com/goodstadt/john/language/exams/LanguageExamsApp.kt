@@ -103,7 +103,7 @@ class LanguageExamsApp : Application() {
         FirebaseCrashlytics.getInstance().setCrashlyticsCollectionEnabled(true)
 
         if (BuildConfig.DEBUG) {
-            Firebase.analytics.setUserProperty("is_developer", "true")
+            Firebase.analytics.setUserProperty("is_developer", "false")
         }
     }
 }

@@ -74,15 +74,28 @@ class Format2ViewModel @Inject constructor(
     private val _showRateHourlyLimitSheet = MutableStateFlow(false)
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
+    // 1. Hold the sheetName in a variable (mutable so we can set it later)
+    private var sheetName: String = ""
     // 3. Get the documentId from the navigation arguments via SavedStateHandle.
     //    The key "documentId" MUST match the argument name in your NavHost route.
-    private val sheetName: String = savedStateHandle.get<String>("documentId")!!
+//    private val sheetName: String = savedStateHandle.get<String>("documentId")!!
 
     init {
         // 4. Trigger the data loading process as soon as the ViewModel is created.
-        loadData()
+//        loadData()
+        val navArgId = savedStateHandle.get<String>("documentId")
+
+        if (navArgId != null) {
+            // If we navigated here directly, load immediately
+            loadData(navArgId)
+        } else {
+            // If embedded in a Group, wait for the View to call loadData()
+            // Do not emit Error yet, just stay Loading or Idle
+        }
     }
-    private fun loadData() {
+    private fun loadData(documentId: String) {
+        this.sheetName = documentId
+
         viewModelScope.launch {
             _uiState.value = Format2UiState.Loading
 

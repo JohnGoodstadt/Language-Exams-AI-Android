@@ -30,5 +30,6 @@ enum class ScreenType(val serialName: String) {
     FORMAT_1_SCREEN("Format1Screen"),
     FORMAT_2_SCREEN("Format2Screen"),
     GRAMMAR_SCREEN("GrammarScreen"),
+    GROUPED_FORMAT_2_SCREEN("GroupedFormat2Screen"),
     UNKNOWN("unknown") // ✅ ADD the unknown case
 }
