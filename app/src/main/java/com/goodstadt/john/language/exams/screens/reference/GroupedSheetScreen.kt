@@ -156,10 +156,11 @@ fun GroupedSheetScreen(
 
                 // Collect latest stats
                 val referenceCounts by acm.referenceHeardCounts.collectAsStateWithLifecycle()
-                val refData = remember(referenceCounts) { getReferenceData(acm, referenceCounts) }
+               // val refData = remember(referenceCounts) { getReferenceData(acm, referenceCounts) }
 
+                val manifest = viewModel.getCachedManifest()
                 val sideQuestData = remember(referenceCounts) {
-                    buildSideQuestData(acm)
+                    buildSideQuestData(acm,manifest)
                 }
 
                 Timber.i("$sideQuestData")
@@ -174,6 +175,7 @@ fun GroupedSheetScreen(
                         paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
                         conjugations = sideQuestData.conjugations,
                         adjectives = sideQuestData.adjectives,
+                        pairs = sideQuestData.pairs,
                         quickRefs = sideQuestData.quickRefs,
                         quizManager = entryPoint.getQuizManager(),
                         xpManager = entryPoint.getXPManager(),

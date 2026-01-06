@@ -3,12 +3,14 @@ package com.goodstadt.john.language.exams.uti
 import com.goodstadt.john.language.exams.screens.reference.SideQuestData
 
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.CompareArrows
 import androidx.compose.material.icons.filled.*
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.ReferenceCategory
 import com.goodstadt.john.language.exams.models.ReferenceSubItem
 
-fun buildSideQuestData(manager: AudioCacheManager): SideQuestData {
+fun buildSideQuestData(manager: AudioCacheManager, manifest: AppUIManifest?): SideQuestData {
 
     // Helper to fetch stats and create a SubItem
     fun makeSubItem(uiTitle: String, documentKey: String, tabId: String): ReferenceSubItem {
@@ -41,7 +43,6 @@ fun buildSideQuestData(manager: AudioCacheManager): SideQuestData {
     )
 
     // 2. ADJECTIVES
-    val adjectivesTabId = "AdjectivesGroup"//"AdjectivesGroup"
     val adjectives = ReferenceCategory(
         title = "Adjectives",
         icon = Icons.Default.Palette, // Represents description/color
@@ -52,12 +53,59 @@ fun buildSideQuestData(manager: AudioCacheManager): SideQuestData {
             makeSubItem("Upper",        "EnglishB1Adjectives", tabId = "AdjectivesGroup"),
             makeSubItem("Advanced",     "EnglishB2Adjectives", tabId = "AdjectivesGroup"),
         )
-//                items = listOf(
-//                makeSubItem("Basic",        "AdjectivesGroup", tabId = adjectivesTabId),
-//        makeSubItem("Intermediate", "AdjectivesGroup", tabId = adjectivesTabId),
-//        makeSubItem("Upper",        "AdjectivesGroup", tabId = adjectivesTabId),
-//        makeSubItem("Advanced",     "AdjectivesGroup", tabId = adjectivesTabId),
+    )
+
+    // 3. ✅ NEW: PAIRS (Tab ID: "PairsGroup")
+    // This matches your Remote Config 'sheetRegistry' key for the grouped screen
+//    val pairsTabId = "PairsGroup"
+//
+//    val pairs = ReferenceCategory(
+//        title = "Word Pairs",
+//        // CompareArrows is perfect for "X vs Y"
+//        icon = Icons.AutoMirrored.Filled.CompareArrows,
+//        description = "Commonly confused words. Learn the subtle differences.",
+//        items = listOf(
+//            makeSubItem("Good vs Well",   "EnglishGoodVsWell",   tabId = pairsTabId),
+//            makeSubItem("Say vs Tell",    "EnglishSayVsTell",    tabId = pairsTabId),
+//            makeSubItem("Speak vs Talk",  "EnglishSpeakVsTalk",  tabId = pairsTabId),
+//            makeSubItem("Hear vs Listen", "EnglishHearVsListen", tabId = pairsTabId)
+//        )
 //    )
+
+    // 3. ✅ DYNAMIC PAIRS GROUP
+    val pairsTabId = "PairsGroup" // This must match the key in sheetRegistry
+    var pairsItems: List<ReferenceSubItem> = emptyList()
+
+    // A. Try Remote Config
+    if (manifest != null) {
+        val pairsDef = manifest.sheetRegistry[pairsTabId]
+        val subTabs = pairsDef?.subTabs
+
+        if (!subTabs.isNullOrEmpty()) {
+            pairsItems = subTabs.mapNotNull { tab ->
+                val docId = tab.firestoreDocumentId
+                if (docId != null) {
+                    makeSubItem(tab.title, docId, pairsTabId)
+                } else null
+            }
+        }
+    }
+
+    // B. Fallback (If remote config missing)
+    if (pairsItems.isEmpty()) {
+        pairsItems = listOf(
+            makeSubItem("Good vs Well",   "EnglishGoodVsWell",   pairsTabId),
+            makeSubItem("Say vs Tell",    "EnglishSayVsTell",    pairsTabId),
+            makeSubItem("Speak vs Talk",  "EnglishSpeakVsTalk",  pairsTabId),
+            makeSubItem("Hear vs Listen", "EnglishHearVsListen", pairsTabId)
+        )
+    }
+
+    val pairs = ReferenceCategory(
+        title = "Word Pairs",
+        icon = Icons.AutoMirrored.Filled.CompareArrows,
+        description = "Commonly confused words. Learn the subtle differences.",
+        items = pairsItems // ✅ Use dynamic list
     )
 
     // 3. QUICK REFERENCE (List of individual categories)
@@ -74,14 +122,14 @@ fun buildSideQuestData(manager: AudioCacheManager): SideQuestData {
             icon = Icons.Default.Hearing,
             description = "Homophones (e.g. There, Their, They're).",
             items = listOf(makeSubItem("Main", "EnglishDefinitionsFormat1","EnglishDefinitionsFormat1"))
-        ),
-        ReferenceCategory(
-            title = "Good vs Well",
-            icon = Icons.Default.CheckCircle,
-            description = "Common confusion between adjectives and adverbs.",
-            items = listOf(makeSubItem("Main", "EnglishGoodVsWell","EnglishGoodVsWell"))
-        )
+        )//,
+//        ReferenceCategory(
+//            title = "Good vs Well",
+//            icon = Icons.Default.CheckCircle,
+//            description = "Common confusion between adjectives and adverbs.",
+//            items = listOf(makeSubItem("Main", "EnglishGoodVsWell","EnglishGoodVsWell"))
+//        )
     )
 
-    return SideQuestData(conjugations, adjectives, quickRefs)
+    return SideQuestData(conjugations, adjectives, pairs,quickRefs)
 }

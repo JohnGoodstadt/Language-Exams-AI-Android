@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.repository.*
 import com.goodstadt.john.language.exams.managers.*
+import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.SubTabDefinition
 import com.goodstadt.john.language.exams.screens.reference.Format2UiState
@@ -281,4 +282,7 @@ class GroupedFormat2ViewModel @Inject constructor(
     fun hideDailyRateLimitSheet() { _showRateDailyLimitSheet.value = false }
     fun hideHourlyRateLimitSheet() { _showRateHourlyLimitSheet.value = false }
     fun hideRateOKLimitSheet() { _showRateLimitSheet.value = false }
+    fun getCachedManifest(): AppUIManifest? {
+        return appConfigRepository.getAppUiManifest()
+    }
 }

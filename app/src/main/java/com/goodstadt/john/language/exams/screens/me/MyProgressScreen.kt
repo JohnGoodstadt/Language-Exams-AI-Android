@@ -157,6 +157,7 @@ fun MyProgressScreen(
                     state.sideQuestData?.let { refData ->
                         ReferenceGroupCard(category = refData.conjugations, color = Color(0xFF3F51B5),onNavigate = onNavigate )
                         ReferenceGroupCard(category = refData.adjectives, color = Color(0xFF009688),onNavigate = onNavigate )
+                        ReferenceGroupCard(category = refData.pairs, color = Color(0xFFFF9800),onNavigate = onNavigate )
 
                         SectionHeader(title = "Quick Reference", icon = Icons.Default.AutoAwesome, color = Color(0xFF9C27B0)) // Purple
                         // Quick Refs

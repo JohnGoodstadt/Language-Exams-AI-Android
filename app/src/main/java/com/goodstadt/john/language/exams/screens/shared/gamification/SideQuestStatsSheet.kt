@@ -53,6 +53,7 @@ fun SideQuestStatsSheet(
     paragraphHeardCount: Int,
     conjugations: ReferenceCategory?,
     adjectives: ReferenceCategory?,
+    pairs: ReferenceCategory?,
     quickRefs: List<ReferenceCategory>, // Contains Prepositions, Sounds Same, Good vs Well
     quizManager: QuizHistoryManager,
     xpManager: XPManager,
@@ -137,6 +138,14 @@ fun SideQuestStatsSheet(
 
                     if (adjectives != null) {
                         ReferenceGroupCard(category = adjectives, color = Color(0xFF3F51B5),onNavigate = onNavigate) // Indigo
+                    }
+
+                    if (pairs != null) {
+                        ReferenceGroupCard(
+                            category = pairs,
+                            color = Color(0xFFFF9800), // Orange
+                            onNavigate = onNavigate
+                        )
                     }
                 }
             }

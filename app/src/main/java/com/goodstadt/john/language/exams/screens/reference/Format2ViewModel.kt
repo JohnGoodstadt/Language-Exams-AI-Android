@@ -5,6 +5,7 @@ import android.app.Activity
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
@@ -16,6 +17,7 @@ import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -47,11 +49,7 @@ sealed interface Format2UiState {
 @HiltViewModel
 class Format2ViewModel @Inject constructor(
     private val vocabRepository: ContentRepository,
-    private val contentRepository: ContentRepository,
-    private val userPreferencesRepository: UserPreferencesRepository,
-    private val connectivityRepository: ConnectivityRepository,
-    private val rateLimiter: SimpleRateLimiter,
-    private val ttsStatsRepository: TTSStatsRepository,
+    private val appConfigRepository: AppConfigRepository,
     private val billingRepository: BillingRepository,
     private val historyManager: HistorySyncManager,
     private val audioPlaybackRepository: AudioPlaybackRepository,
@@ -247,5 +245,9 @@ class Format2ViewModel @Inject constructor(
 
     fun getAIParagraphHeardCount(): Int {
         return audioCacheManager.getAIParagraphHeardCount()
+    }
+
+    fun getCachedManifest(): AppUIManifest? {
+        return appConfigRepository.getAppUiManifest()
     }
 }

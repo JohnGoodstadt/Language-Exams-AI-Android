@@ -21,6 +21,7 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -309,6 +310,9 @@ class ReferenceGenericViewModel @Inject constructor(
     fun getAudioCacheManager(): AudioCacheManager = audioCacheManager
     fun getAIParagraphCount(): Int = audioCacheManager.getAIParagraphCount()
     fun getAIParagraphHeardCount(): Int = audioCacheManager.getAIParagraphHeardCount()
+    fun getCachedManifest(): AppUIManifest? {
+        return appConfigRepository.getAppUiManifest()
+    }
 
 
 }

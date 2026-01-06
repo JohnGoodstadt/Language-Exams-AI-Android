@@ -220,9 +220,9 @@ fun Format2Screen(
             val referenceCounts by audioCache.referenceHeardCounts.collectAsStateWithLifecycle()
 
             // 3. Build the Data Models using the Helper
-            val refData = remember(referenceCounts) {
-                getReferenceData(audioCache, referenceCounts)
-            }
+//            val refData = remember(referenceCounts) {
+//                getReferenceData(audioCache, referenceCounts)
+//            }
 
             // 4. Get Hilt Entry Point for QuizManager
             val entryPoint = remember(context) {
@@ -231,8 +231,9 @@ fun Format2Screen(
 
             // 3. Build the Data
             // We use 'remember(referenceCounts)' so it rebuilds whenever the counts change
+            val manifest = viewModel.getCachedManifest()
             val sideQuestData = remember(referenceCounts) {
-                buildSideQuestData(audioCache)
+                buildSideQuestData(audioCache,manifest)
             }
 
             Box(modifier = Modifier.fillMaxHeight(0.85f)) {
@@ -243,6 +244,7 @@ fun Format2Screen(
                     paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
                     conjugations = sideQuestData.conjugations,
                     adjectives = sideQuestData.adjectives,
+                    pairs = sideQuestData.pairs,
                     quickRefs = sideQuestData.quickRefs,
                     quizManager = entryPoint.getQuizManager(),
                     xpManager = entryPoint.getXPManager(),

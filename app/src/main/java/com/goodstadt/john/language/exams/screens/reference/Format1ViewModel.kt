@@ -3,11 +3,13 @@ package com.goodstadt.john.language.exams.screens.reference
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
+import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -34,6 +36,7 @@ class Format1ViewModel @Inject constructor(
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val historyManager: HistorySyncManager,
     private val audioCacheManager: AudioCacheManager,
+    private val appConfigRepository: AppConfigRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -197,6 +200,9 @@ class Format1ViewModel @Inject constructor(
 
     fun getAIParagraphHeardCount(): Int {
         return audioCacheManager.getAIParagraphHeardCount()
+    }
+    fun getCachedManifest(): AppUIManifest? {
+        return appConfigRepository.getAppUiManifest()
     }
     /**
      * Loops through the loaded data, checks History for each sentence,

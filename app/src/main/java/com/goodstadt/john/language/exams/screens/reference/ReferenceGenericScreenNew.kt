@@ -26,6 +26,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import dagger.hilt.android.EntryPointAccessors
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
@@ -170,7 +171,12 @@ fun ReferenceGenericScreenNew(
 
                         // Collect latest stats
                         val referenceCounts by acm.referenceHeardCounts.collectAsStateWithLifecycle()
-                        val refData = remember(referenceCounts) { getReferenceData(acm, referenceCounts) }
+                        //val refData = remember(referenceCounts) { getReferenceData(acm, referenceCounts) }
+
+                        val manifest = viewModel.getCachedManifest()
+                        val sideQuestData = remember(referenceCounts) {
+                            buildSideQuestData(acm,manifest)
+                        }
 
                         val entryPoint = remember(key1 = context) {
                             EntryPointAccessors.fromApplication(context.applicationContext, StatsSheetEntryPoint::class.java)
@@ -180,9 +186,10 @@ fun ReferenceGenericScreenNew(
                             SideQuestStatsSheet(
                                 paragraphCount = viewModel.getAIParagraphCount(),
                                 paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
-                                conjugations = refData.conjugations,
-                                adjectives = refData.adjectives,
-                                quickRefs = refData.quickRefs,
+                                conjugations = sideQuestData.conjugations,
+                                adjectives = sideQuestData.adjectives,
+                                pairs = sideQuestData.pairs,
+                                quickRefs = sideQuestData.quickRefs,
                                 quizManager = entryPoint.getQuizManager(),
                                 xpManager = entryPoint.getXPManager(),
                                 onNavigate = { target ->

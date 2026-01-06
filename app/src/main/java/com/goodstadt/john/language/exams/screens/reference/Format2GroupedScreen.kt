@@ -128,7 +128,8 @@ fun GroupedFormat2Screen(
         ) {
             val acm = viewModel.getAudioCacheManager()
             val referenceCounts by acm.referenceHeardCounts.collectAsStateWithLifecycle()
-            val sideQuestData = remember(referenceCounts) { buildSideQuestData(acm) }
+            val manifest = viewModel.getCachedManifest()
+            val sideQuestData = remember(referenceCounts) { buildSideQuestData(acm,manifest) }
             //val refData = remember(referenceCounts) { getReferenceData(acm, referenceCounts) } // if you use this helper
 
             val entryPoint = remember(context) { EntryPointAccessors.fromApplication(context.applicationContext, StatsSheetEntryPoint::class.java) }
@@ -139,6 +140,7 @@ fun GroupedFormat2Screen(
                     paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
                     conjugations = sideQuestData.conjugations,
                     adjectives = sideQuestData.adjectives,
+                    pairs = sideQuestData.pairs,
                     quickRefs = sideQuestData.quickRefs,
                     quizManager = entryPoint.getQuizManager(),
                     xpManager = entryPoint.getXPManager(),

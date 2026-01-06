@@ -1,15 +1,18 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+import androidx.compose.runtime.remember
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.screens.reference.SideQuestData
-import com.goodstadt.john.language.exams.screens.reference.getReferenceData
 
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpState
+import com.goodstadt.john.language.exams.models.AppUIManifest
+import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -32,7 +35,9 @@ data class MyProgressUiState(
 class MyProgressViewModel @Inject constructor(
     private val xpManager: XPManager,
     private val audioCacheManager: AudioCacheManager,
-    val quizManager: QuizHistoryManager
+    private val appConfigRepository: AppConfigRepository,
+    val quizManager: QuizHistoryManager,
+
 ) : ViewModel() {
 
     // Combine flows from Managers into one UI State
@@ -51,12 +56,16 @@ class MyProgressViewModel @Inject constructor(
             .sortedWith(compareBy({ it.tabNumber }, { it.sortOrder }))
 
         // 2. Build Side Quest Data (Reference)
-        val sideQuest = getReferenceData(audioCacheManager, refHeardMap)
+//        val sideQuest = getReferenceData(audioCacheManager, refHeardMap)
+
+        val manifest = getCachedManifest()
+        val sideQuestData =    buildSideQuestData(audioCacheManager,manifest)
+
 
         MyProgressUiState(
             xpState = xpState,
             mainQuestProgress = mainQuest,
-            sideQuestData = sideQuest,
+            sideQuestData = sideQuestData,
             aiCount = audioCacheManager.getAIParagraphCount(),
             aiHeard = audioCacheManager.getAIParagraphHeardCount()
         )
@@ -79,5 +88,9 @@ class MyProgressViewModel @Inject constructor(
         val heard = audioCacheManager.totalExamWordsHeardOverall.value
         val total = audioCacheManager.totalExamWordCount.value
         return Pair(heard, total)
+    }
+    private fun getCachedManifest(): AppUIManifest? {
+        // This assumes you have a getter in your repository
+        return appConfigRepository.getAppUiManifest()
     }
 }
