@@ -213,12 +213,16 @@ class AppConfigRepository @Inject constructor(
         val versionsJson = remoteConfig.getString("sheet_versions")
         return if (versionsJson.isNotBlank()) {
             try {
+                //this works
+                //val fred = Json.decodeFromString<Map<String, Int>>(versionsJson)
+                //Timber.i("$fred")
                 Json.decodeFromString<Map<String, Int>>(versionsJson)
             } catch (e: Exception) {
-                Timber.e(e, "Could not parse remote sheet versions JSON")
+                Timber.e(e, "Could not parse remote sheet versions JSON (1)")
                 emptyMap()
             }
         } else {
+            Timber.e("Could not parse remote sheet versions JSON (2)")
             emptyMap()
         }
     }

@@ -168,8 +168,8 @@
             "EnglishSayVsTell": 1,
             "EnglishSpeakVsTalk": 1,
             "EnglishHearVsListen": 1,
-            "EnglishBorrowVsLend": 1
-            "EnglishBringVsTake": 1
+            "EnglishBorrowVsLend": 1,
+            "EnglishBringVsTake": 1,
             "EnglishLookVsSee": 1
             }
         </value>
