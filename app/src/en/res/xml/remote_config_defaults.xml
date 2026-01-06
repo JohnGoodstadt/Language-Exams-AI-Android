@@ -42,23 +42,23 @@
             {
             "sheetRegistry": {
             "quiz": {
-            "title": "Quiz",
+            "title": "Quiz.",
             "sheetDataType": "fixed",
             "screenType": "FixedScreen"
             },
             "conjugations": {
-            "title": "Conjugations",
+            "title": "Conjugations.",
             "sheetDataType": "fixed",
             "screenType": "FixedScreen"
             },
             "EnglishPrepositions": {
-            "title": "Prepositions",
+            "title": "Prepositions.",
             "sheetDataType": "VocabFile",
             "screenType": "VocabScreen",
             "firestoreDocumentId": "EnglishPrepositions"
             },
             "AdjectivesGroup": {
-            "title": "Adjectives",
+            "title": "Adjectives.",
             "screenType": "GroupedVocabScreen",
             "sheetDataType": "VocabFile",
             "subTabs": [
@@ -69,16 +69,61 @@
             ]
             },
             "EnglishDefinitionsFormat1": {
-            "title": "Same Sounds",
+            "title": "Sounds the Same",
             "sheetDataType": "Format1",
             "screenType": "Format1Screen",
             "firestoreDocumentId": "EnglishDefinitionsFormat1"
             },
-            "EnglishGoodVsWell": {
-            "title": "Good vs Well",
+            "PairsGroup": {
+            "title": "Pairs",
+            "screenType": "GroupedFormat2Screen",
             "sheetDataType": "Format2",
-            "screenType": "Format2Screen",
-            "firestoreDocumentId": "EnglishGoodVsWell"
+            "subTabs": [
+            {
+            "title": "Good vs Well",
+            "firestoreDocumentId": "EnglishGoodVsWell",
+            "sheetDataType": "Format2",
+            "screenType": "Format2Screen"
+            },
+            {
+            "title": "Say vs Tell",
+            "firestoreDocumentId": "EnglishSayVsTell",
+            "sheetDataType": "Format2",
+            "screenType": "Format2Screen"
+            },
+            {
+            "title": "Speak vs Talk",
+            "firestoreDocumentId": "EnglishSpeakVsTalk",
+            "sheetDataType": "Format2",
+            "screenType": "Format2Screen"
+            },
+            {
+            "title": "Hear vs Listen",
+            "firestoreDocumentId": "EnglishHearVsListen",
+            "sheetDataType": "Format2",
+            "screenType": "Format2Screen"
+            }
+            ,
+            {
+            "title": "Borrow vs Lend",
+            "firestoreDocumentId": "EnglishBorrowVsLend",
+            "sheetDataType": "Format2",
+            "screenType": "Format2Screen"
+            },
+            {
+            "title": "Bring Vs Take",
+            "firestoreDocumentId": "EnglishBringVsTake",
+            "sheetDataType": "Format2",
+            "screenType": "Format2Screen"
+            },
+            {
+            "title": "Look vs See",
+            "firestoreDocumentId": "EnglishLookVsSee",
+            "sheetDataType": "Format2",
+            "screenType": "Format2Screen"
+            }
+
+            ]
             }
             },
             "layouts": {
@@ -89,7 +134,7 @@
             "EnglishPrepositions",
             "AdjectivesGroup",
             "EnglishDefinitionsFormat1",
-            "EnglishGoodVsWell"
+            "PairsGroup"
             ]
             },
             "meTab": {
@@ -109,16 +154,23 @@
         <key>sheet_versions</key>
         <value>
             {
-            "EnglishPrepositions": 1,
-            "EnglishA1Adjectives": 1,
-            "EnglishA2Adjectives": 1,
-            "EnglishB1Adjectives": 1,
-            "EnglishB2Adjectives": 1,
-            "EnglishA1Vocab": 1,
-            "EnglishA2Vocab": 10,
-            "EnglishB1Vocab": 1,
-            "EnglishB2Vocab": 1,
-            "EnglishDefinitionsFormat1": 1
+            "EnglishPrepositions": 5,
+            "EnglishA1Adjectives": 4,
+            "EnglishA2Adjectives": 4,
+            "EnglishB1Adjectives": 4,
+            "EnglishB2Adjectives": 4,
+            "EnglishA1Vocab": 8,
+            "EnglishA2Vocab": 11,
+            "EnglishB1Vocab": 8,
+            "EnglishB2Vocab": 8,
+            "EnglishDefinitionsFormat1": 4,
+            "EnglishGoodVsWell": 5,
+            "EnglishSayVsTell": 1,
+            "EnglishSpeakVsTalk": 1,
+            "EnglishHearVsListen": 1,
+            "EnglishBorrowVsLend": 1
+            "EnglishBringVsTake": 1
+            "EnglishLookVsSee": 1
             }
         </value>
     </entry>

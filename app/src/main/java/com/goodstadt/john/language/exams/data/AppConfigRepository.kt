@@ -9,7 +9,9 @@ import com.goodstadt.john.language.exams.models.TabDefinition
 import com.goodstadt.john.language.exams.models.TabsManifest
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfig
 import kotlinx.coroutines.tasks.await
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
@@ -282,6 +284,28 @@ class AppConfigRepository @Inject constructor(
         } else {
             Timber.e("FATAL: BUNDLED default 'app_ui_manifest' is missing or blank.")
             AppUIManifest()
+        }
+    }
+    // In AppConfigRepository or MainActivity
+    fun debugRemoteConfig() {
+        val config = Firebase.remoteConfig
+
+        config.fetchAndActivate().addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                val updated = task.result
+                Timber.d("Config params updated: $updated")
+
+                // Check what the server actually sent
+                val json = config.getString("app_ui_manifest")
+                val info = config.info
+
+                Timber.d("Fetch status: ${info.lastFetchStatus}")
+                Timber.d("Content Source: ${info.lastFetchStatus}") // Should be 'REMOTE'
+                Timber.d("JSON starts with: ${json.take(50)}") // Check if it has PairsGroup
+
+            } else {
+                Timber.e("Config fetch failed")
+            }
         }
     }
     /**

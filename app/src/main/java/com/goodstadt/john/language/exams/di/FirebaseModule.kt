@@ -38,8 +38,6 @@ object FirebaseModule {
 
         // 2. Create configuration settings
         val configSettings = remoteConfigSettings {
-            // Set a low fetch interval for debug builds to allow for rapid testing.
-            // For release builds, a higher value (e.g., 12 hours) is recommended.
             minimumFetchIntervalInSeconds = if (BuildConfig.DEBUG) {
                 0
             } else {
