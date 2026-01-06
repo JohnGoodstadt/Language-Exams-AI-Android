@@ -30,6 +30,8 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
 import dagger.hilt.android.EntryPointAccessors
 import androidx.compose.foundation.lazy.items
 import androidx.compose.ui.draw.clip
+import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
+import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -66,7 +68,7 @@ fun GroupedFormat2Screen(
 //            val selectedOption = if (isSmallScreen) getShortTabTitle(rawSelectedTitle) else rawSelectedTitle
             val selectedOption = getShortTabTitle(rawSelectedTitle)
 
-            HorizontalLevelPicker(
+            ScrollableHorizontalLevelPicker(
                 options = options,
                 selectedOption = selectedOption,
                 onOptionSelected = { selectedDisplayTitle ->

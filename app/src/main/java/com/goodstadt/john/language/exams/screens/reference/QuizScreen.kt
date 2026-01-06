@@ -42,6 +42,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
@@ -588,43 +589,7 @@ fun DropdownMenuBox(options: List<String>, selectedOption: String, onOptionSelec
 }
 
 
-//TODO: Should be shared amongst screens
-@Composable
-fun HorizontalLevelPicker(
-    options: List<String>,
-    selectedOption: String,
-    onOptionSelected: (String) -> Unit
-) {
-    Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 1.dp),
-            //horizontalArrangement = Arrangement.spacedBy(1.dp),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically
-    ) {
-        options.forEach { option ->
-            val isSelected = selectedOption == option
-            Button(
-                    onClick = { onOptionSelected(option) },
-                    colors = ButtonDefaults.buttonColors(
-                            containerColor = if (isSelected) selectedBackground else nonSelectedBackground, // Dark grey for selected, light grey for unselected
-                            contentColor = Color.White // White text for all buttons
-                    ),
-                    shape = RoundedCornerShape(8.dp),
-                    modifier = Modifier.padding(horizontal = 1.dp)
-            ) {
-                Text(
-                        text = option,
-                        color =  if (isSelected) accentColor else Color.LightGray,
-                        maxLines = 1,
-                        fontSize = 12.sp,
-                        textAlign = TextAlign.Center
-                )
-            }
-        }
-    }
-}
+
 @Composable
 fun dotColor(index: Int,scores:MutableMap<Int, Boolean>): Color {
 
