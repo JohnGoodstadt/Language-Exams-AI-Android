@@ -24,7 +24,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -262,7 +261,7 @@ fun Format2Screen(
  * A helper composable for displaying a single row within the Format2Screen.
  */
 @Composable
-private fun Format2Row(
+fun Format2Row(
     word: String,
     sentence: String,
     isHeard:Boolean,

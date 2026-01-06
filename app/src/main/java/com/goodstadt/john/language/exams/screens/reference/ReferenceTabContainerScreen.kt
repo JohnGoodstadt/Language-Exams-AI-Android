@@ -1,6 +1,5 @@
 package com.goodstadt.john.language.exams.screens.reference
 
-import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -295,13 +294,13 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                     ) {
                         // 1. Create an instance of the specific ViewModel for THIS screen (Format2ViewModel).
                         //    Hilt automatically provides the `documentId` to it via SavedStateHandle.
-                        val viewModel: Format2ViewModel = hiltViewModel()
+                        val format2ViewModel: Format2ViewModel = hiltViewModel()
 
                         // 2. Collect the UI state FROM THE FORMAT2VIEWMODEL.
-                        val uiState by viewModel.uiState.collectAsState()
+                        val uiStateFormat2 by format2ViewModel.uiState.collectAsState()
 
                         // 3. Use a 'when' block to display the UI based on the Format2ViewModel's state.
-                        when (val state = uiState) {
+                        when (val state = uiStateFormat2) {
                             is Format2UiState.Loading -> {
                                 // Show a loading indicator while the Format2ViewModel is fetching data.
                                 Box(
@@ -342,7 +341,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                         arguments = listOf(navArgument("tabId") { type = NavType.StringType })
                     ) {
                         // This is the container screen we just created/discussed
-                        Format2GroupedScreen()
+                        GroupedFormat2Screen()
                     }
                 }
             } //: Not Unknown type

@@ -50,15 +50,10 @@ fun GroupedSheetScreen(
         // 2. The Sub-Tab Picker (the sub-menu)
         // This only shows if there are sub-tabs to display
         if (uiState.subTabs.isNotEmpty()) {
-            // 1. Detect Screen Size
+
             val configuration = LocalConfiguration.current
             val isSmallScreen = configuration.screenWidthDp < 380 // 360dp is the breakpoint for old phones
 
-//            val options: List<String> = remember(uiState.subTabs) {
-//                uiState.subTabs.map { it.title }
-//            }
-            // 2. Prepare Display Options (Dynamic Shortening)
-            // We use 'remember' so this doesn't run on every frame
             val options: List<String> = remember(uiState.subTabs, isSmallScreen) {
                 uiState.subTabs.map { tab ->
                     if (isSmallScreen) getShortTabTitle(tab.title) else tab.title
