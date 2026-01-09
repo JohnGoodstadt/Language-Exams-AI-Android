@@ -143,6 +143,7 @@ class ContentRepository @Inject constructor(
         //allowTrailingCommas = true  // NOT ALLOWED in standard json parser. allow trailing commas, common in hand-edited JSON
     }
 
+
     /**
      * The primary data orchestrator. It follows the strategy:
      * 1. Check in-memory cache (if not forcing a refresh).
@@ -1026,7 +1027,7 @@ class ContentRepository @Inject constructor(
                 val bytes = localFile.readBytes()
                 val result = audioPlayerService.playAudio(bytes)
                 if (result.isSuccess) {
-                    //Timber.v("🔊 Played from Local Disk: $filename")
+                    Timber.v("🔊 Played from Local Disk: $filename")
                     true
                 } else {
                     Timber.e(result.exceptionOrNull(), "Local file exists but failed to play")

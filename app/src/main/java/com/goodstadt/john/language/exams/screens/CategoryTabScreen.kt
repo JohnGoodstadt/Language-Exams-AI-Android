@@ -337,8 +337,14 @@ fun CategoryTabScreen(
                                                 viewModel.handleTap(s.sentence, category)
                                             },
 
-                                            onFocus = { viewModel.onFocusClicked(wordEntry) },
-                                            onCancel = { viewModel.onCancelClicked(wordEntry) },
+                                            onFocus = {
+                                                Timber.i("CategoryTabScreen().onFocus")
+                                                viewModel.onFocusClicked(wordEntry)
+                                            },
+                                            onCancel = {
+                                                Timber.i("CategoryTabScreen().onCancel")
+                                                viewModel.onCancelClicked(wordEntry)
+                                            },
                                             onMore = {
                                                 selectedWordForSheet = wordEntry
                                                 selectedCategoryForSheet = category

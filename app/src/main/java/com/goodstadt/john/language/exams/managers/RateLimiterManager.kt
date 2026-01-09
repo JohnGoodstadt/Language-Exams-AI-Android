@@ -27,9 +27,9 @@ object RateLimiterModule {
 
 
 
-//        if (BuildConfig.DEBUG){
-        if (false){
-            return SimpleRateLimiter( //called from app Injection using Hilt
+        if (BuildConfig.DEBUG){
+//        if (false){
+            return SimpleRateLimiter(
                 context = context,
                 hourlyLimit = 4,
                 dailyLimit = 10,

@@ -262,25 +262,12 @@ class CategoryTabViewModel @Inject constructor(
         //TODO: Should I check for local cache first?
         playbackJob = viewModelScope.launch {
 
-//            val guardResult = rateLimitGuard.checkIsAllowed(isPremiumUser = false)
-//            if (guardResult is RateLimitResult.Blocked) {
-//
-//                // Update the specific UI sheet based on the reason
-//                when (guardResult.reason) {
-//                    SimpleRateLimiter.FailReason.DAILY -> _showRateDailyLimitSheet.value = true
-//                    else -> _showRateHourlyLimitSheet.value = true
-//                }
-//
-//                // 🛑 STOP HERE. Do not proceed to playback.
-//                return@launch
-//            }
-
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
-            val loadingJob = launch {
-                delay(2000) // Wait 1 second
-                // If we haven't been cancelled yet, show the spinner
-                loadingManager.show()
-            }
+//            val loadingJob = launch {
+//                delay(2000) // Wait 1 second
+//                // If we haven't been cancelled yet, show the spinner
+//                loadingManager.show()
+//            }
 
             val contentID = FirebaseAudioService.generateContentID(sentence)
             val wasAlreadyHeard = historyManager.isHeard(currentLoadedLevel, contentID)
@@ -298,8 +285,8 @@ class CategoryTabViewModel @Inject constructor(
                 isPremiumUser = isPremiumUser.value // Replace with actual check if available
             )
 
-            loadingJob.cancel() // ✅ Cancel the 1s timer if it's still running
-            loadingManager.hide() // ✅ Hide the spinner if it was showing
+//            loadingJob.cancel() // ✅ Cancel the 1s timer if it's still running
+//            loadingManager.hide() // ✅ Hide the spinner if it was showing
 
             if (success) {
                 // 2. ⚡️ NON OPTIMISTIC UPDATE (Lightning). Now that playback is async
@@ -500,15 +487,56 @@ class CategoryTabViewModel @Inject constructor(
     fun onFocusClicked(word: Format0Word) {
         viewModelScope.launch {
             recallingRepository.addWord(word)
+            xpManager.registerAction(XpActionType.MasterWord)
         }
     }
+    fun onFocusClickedObsolete(word: Format0Word) {
+        viewModelScope.launch {
+            // 1. Save to Disk
+            recallingRepository.addWord(word)
 
-    fun onCancelClicked(word: Format0Word) {
+            // 2. ✅ OPTIMISTIC UPDATE: Update UI State immediately
+            // This turns the row Green instantly
+            _uiState.update { currentState ->
+                if (currentState is CategoryTabUiState.Success) {
+                    val newSet = currentState.recalledWordKeys.toMutableSet()
+                    newSet.add(word.word)
+                    currentState.copy(recalledWordKeys = newSet)
+                } else currentState
+            }
+
+            // 3. XP
+            xpManager.registerAction(XpActionType.MasterWord)
+        }
+    }
+    fun onCancelClickedObsolete(word: Format0Word) {
         viewModelScope.launch {
             recallingRepository.removeWord(word)
         }
     }
+    fun onCancelClicked(word: Format0Word) {
+        viewModelScope.launch {
+            // 1. Update Repository (Source of Truth)
+            // Note: Ensure your repo has a removeWord(Format0Word) or remove(String)
+            recallingRepository.removeWord(word)
 
+            // 2. ✅ OPTIMISTIC UPDATE: Update UI State immediately
+            // This turns the row back to White instantly
+            _uiState.update { currentState ->
+                if (currentState is CategoryTabUiState.Success) {
+                    val newSet = currentState.recalledWordKeys.toMutableSet()
+
+                    // Remove the word from the set
+                    newSet.remove(word.word)
+
+                    currentState.copy(recalledWordKeys = newSet)
+                } else currentState
+            }
+
+            // Optional: Log analytics or other actions
+            // Timber.d("Removed focus: ${word.word}")
+        }
+    }
     fun refreshCacheState(voiceName: String) {
         historyManager.fetchCloudUpdates()
     }

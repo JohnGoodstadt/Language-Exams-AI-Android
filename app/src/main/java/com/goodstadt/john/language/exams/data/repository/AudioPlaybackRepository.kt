@@ -4,6 +4,7 @@ import android.content.Context
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 
@@ -14,7 +15,10 @@ import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -28,7 +32,8 @@ class AudioPlaybackRepository @Inject constructor(
     private val audioCacheManager: AudioCacheManager,
     private val userPreferencesRepository: UserPreferencesRepository,
     private val rateLimiter: SimpleRateLimiter,
-    private val ttsStatsRepository: TTSStatsRepository
+    private val ttsStatsRepository: TTSStatsRepository,
+    private val loadingManager: GlobalLoadingManager
 ) {
 
     /**
@@ -157,6 +162,11 @@ class AudioPlaybackRepository @Inject constructor(
         val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
         val uniqueSentenceId = FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
 
+        val loadingJob = CoroutineScope(Dispatchers.Main).launch {
+            kotlinx.coroutines.delay(500)
+            loadingManager.show()
+        }
+
         // ---------------------------------------------------------
         // 1. CHECK LOCAL DISK (Free & Fast)
         // ---------------------------------------------------------
@@ -164,6 +174,8 @@ class AudioPlaybackRepository @Inject constructor(
             // Stats logic for replay...
             handleSuccess(sentence, level, isNew = false)
             Timber.v("🔊 Waterfall L1: Playing from Local Disk,  Yippee!!: $uniqueSentenceId")
+            loadingJob.cancel()
+            loadingManager.hide()
             return AudioPlaybackStatus.PlayedFromLocalCache
         }
 
@@ -171,60 +183,91 @@ class AudioPlaybackRepository @Inject constructor(
         // 2. CHECK CLOUD STORAGE (Free-ish)
         // Only if user has heard it before (History Check)
         // ---------------------------------------------------------
+
+
+
+
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val isHeard = historyManager.isHeard(level, contentID)
 
         if (isHeard) { //enforce user has already heard it so check storage
             if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId)) {
+                loadingJob.cancel()
+                loadingManager.hide()
+
                 handleSuccess(sentence, level, isNew = false)
                 Timber.v("☁️ Waterfall L2: Downloaded from Cloud Storage. Yippee!")
                 return AudioPlaybackStatus.PlayedFromCloudStorage
             }
         }
 
-        // ---------------------------------------------------------
-        // 3. RATE LIMIT CHECK (Before spending money)
-        // ---------------------------------------------------------
-        val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+        try {
 
-        if (!isPremiumUser && todayIsNotAFreePassDay) {
-            if (rateLimiter.doIForbidCall()) {
-                val failType = rateLimiter.canMakeCallWithResult()
 
-                // Log Analytics
-                val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
-                AnalyticsHelper.logRateLimitHit(context, limitType, 0)
+            // ---------------------------------------------------------
+            // 3. RATE LIMIT CHECK (Before spending money)
+            // ---------------------------------------------------------
+            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
 
-                // Return Blocked Status
-                return AudioPlaybackStatus.RateLimited(failType.failReason ?: SimpleRateLimiter.FailReason.HOURLY)
+            if (!isPremiumUser && todayIsNotAFreePassDay) {
+                if (rateLimiter.doIForbidCall()) {
+                    val failType = rateLimiter.canMakeCallWithResult()
+
+                    // Log Analytics
+                    val limitType =
+                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
+                    AnalyticsHelper.logRateLimitHit(context, limitType, 0)
+
+                    loadingJob.cancel()
+                    loadingManager.hide()
+
+                    // Return Blocked Status
+                    return AudioPlaybackStatus.RateLimited(
+                        failType.failReason ?: SimpleRateLimiter.FailReason.HOURLY
+                    )
+                }
             }
-        }
 
-        // ---------------------------------------------------------
-        // 4. GOOGLE TTS (Paid)
-        // ---------------------------------------------------------
-        val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
+            // ---------------------------------------------------------
+            // 4. GOOGLE TTS (Paid)
+            // ---------------------------------------------------------
+            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
 
-        Timber.v("🗣️ Waterfall L3: Calling Google TTS")
-        val result = contentRepository.generateAndPlayTTS(
-            text = sentence,
-            uniqueSentenceId = uniqueSentenceId,
-            voiceName = currentVoiceName,
-            languageCode = currentLanguageCode
-        )
+            Timber.v("🗣️ Waterfall L3: Calling Google TTS")
+            val result = contentRepository.generateAndPlayTTS(
+                text = sentence,
+                uniqueSentenceId = uniqueSentenceId,
+                voiceName = currentVoiceName,
+                languageCode = currentLanguageCode
+            )
 
+            loadingJob.cancel()
+            loadingManager.hide()
 
-        return if (result is PlaybackResultSplit.PlayedFromGoogleTTS) {
-            handleSuccess(sentence, level, isNew = true)
+            return if (result is PlaybackResultSplit.PlayedFromGoogleTTS) {
+                handleSuccess(sentence, level, isNew = true)
 
-            // Record Cost & Usage
-            if (todayIsNotAFreePassDay) { rateLimiter.recordCall() }
+                // Record Cost & Usage
+                if (todayIsNotAFreePassDay) {
+                    rateLimiter.recordCall()
+                }
 //            xpManager.incrementTTSCount() // Session Density Analytics
 
-            AudioPlaybackStatus.PlayedFromTTSAPI
-        } else {
-            AudioPlaybackStatus.Failure
+                AudioPlaybackStatus.PlayedFromTTSAPI
+            } else {
+                AudioPlaybackStatus.Failure
+            }
+
+        } catch (e: Exception) {
+            Timber.e(e, "AudioPlaybackRepository: Error during playback waterfall")
+
+            // Critical: Stop the spinner so the UI doesn't freeze
+            loadingJob.cancel()
+            loadingManager.hide()
+
+            return AudioPlaybackStatus.Failure
         }
+
     }
 
     private fun handleSuccess(sentence: String, level: String, isNew: Boolean) {

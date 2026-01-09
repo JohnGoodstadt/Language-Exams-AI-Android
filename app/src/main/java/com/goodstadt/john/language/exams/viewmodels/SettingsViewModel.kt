@@ -1,6 +1,6 @@
 package com.goodstadt.john.language.exams.viewmodels
 
-//import com.goodstadt.john.language.exams.data.PremiumStatus
+
 import android.app.Activity
 import android.content.Context
 import androidx.lifecycle.ViewModel
@@ -29,7 +29,6 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
-import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -43,12 +42,15 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import javax.inject.Inject
+import kotlinx.coroutines.flow.combine
+
 
 // --- MODIFICATION 1: Add pending state to UiState ---
 data class SettingsUiState(
@@ -132,7 +134,7 @@ class SettingsViewModel @Inject constructor(
     private val _showHelpSheet = MutableStateFlow(false)
     val showHelpSheet = _showHelpSheet.asStateFlow()
 
-    init {
+    fun initObsolete() {
 
         // This initialization logic is correct and remains the same.
         // It keeps the "current" state in sync with saved preferences.
@@ -172,36 +174,6 @@ class SettingsViewModel @Inject constructor(
             }
         }
 
-//        viewModelScope.launch {
-//            // 1. Fetch the one-time, non-flow data first.
-//            val activeLanguageDetails = controlRepository.getActiveLanguageDetails().getOrNull()
-//
-//            // 2. Define the flows you want to listen to.
-//            val voiceFlow = userPreferencesRepository.selectedVoiceNameFlow
-//            val fileFlow = userPreferencesRepository.selectedFileNameFlow
-//
-//            // 3. Use 'combine' to create a NEW Flow<YourUiState>.
-//            //    This is the core of the fix.
-//            combine(voiceFlow, fileFlow) { voiceId, fileName ->
-//                // This lambda's only job is to TRANSFORM the inputs into a new state object.
-//                // It runs whenever voiceId or fileName changes.
-//                val friendlyName = voiceRepository.getFriendlyNameForVoice(voiceId)
-//
-//                // Create and return the complete state object.
-//                SettingsUiState(
-//                    currentFriendlyVoiceName = friendlyName,
-//                    currentVoiceName = voiceId,
-//                    currentExamName = fileName,
-//                    currentLanguage = activeLanguageDetails?.name ?: "",
-//                    // We can also merge in other existing state values
-//                   // isLoading = _uiState.value.isLoading // Preserve other state if needed
-//                )
-//            }.collect { newUiState ->
-//                // 4. The 'collect' block now receives the fully-formed state object.
-//                //    Its only job is to update the ViewModel's state.
-//                _uiState.value = newUiState
-//            }
-//        }
 
         loadInitialData()
 
@@ -211,6 +183,58 @@ class SettingsViewModel @Inject constructor(
 
     }
 
+    init {
+        // 1. Load Initial Data
+        loadInitialData()
+        initializeBilling()
+        updateRateLimiterState()
+
+        // 2. Combine Flows (The Fix)
+        // Instead of launching 3 separate collectors, we combine the data streams.
+        // This ensures the UI updates atomically and handles the async language fetch properly.
+
+        viewModelScope.launch {
+            // Convert the async call to a Flow so we can combine it
+            val languageDetailsFlow = flow {
+                emit(controlRepository.getActiveLanguageDetails())
+            }
+
+            combine(
+                userPreferencesRepository.selectedVoiceNameFlow,
+                userPreferencesRepository.selectedFileNameFlow,
+                languageDetailsFlow
+            ) { voiceId, fileName, langResult ->
+
+                // --- Logic Block ---
+
+                // 1. Handle Voice Friendly Name
+                var friendlyName = ""
+                var currentLangName = ""
+
+                langResult.onSuccess { details ->
+                    currentLangName = details.name
+                    // Note: Ensure getFriendlyNameForVoice is fast/synchronous.
+                    // If it is suspend, we should use 'flatMapLatest' instead of 'combine'.
+                    friendlyName = voiceRepository.getFriendlyNameForVoice(voiceId, details.code)
+                }
+
+                // 2. Return a data object to update UI
+                Triple(voiceId, fileName, Triple(friendlyName, currentLangName, langResult))
+
+            }.collect { (voiceId, fileName, metaData) ->
+                val (friendlyName, langName, _) = metaData
+
+                _uiState.update {
+                    it.copy(
+                        currentVoiceName = voiceId,
+                        currentFriendlyVoiceName = friendlyName,
+                        currentExamName = fileName,
+                        currentLanguage = langName
+                    )
+                }
+            }
+        }
+    }
     private fun initializeBilling() {
         viewModelScope.launch {
             try {

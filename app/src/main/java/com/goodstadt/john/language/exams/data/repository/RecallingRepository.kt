@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import timber.log.Timber
 import java.io.IOException
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -25,7 +26,7 @@ class RecallingRepository @Inject constructor(
     private val dataStore: DataStore<Preferences>
 ) {
 
-    private val TAG = "RecallingRepository"
+   // private val TAG = "RecallingRepository"
     private val gson = Gson()
     private val KEY_ITEMS_JSON = stringPreferencesKey("recalling_items_v2")
 
@@ -77,7 +78,7 @@ class RecallingRepository @Inject constructor(
 
     // MARK: - Actions
 
-    suspend fun addWord(word: Format0Word) {
+    suspend fun addWordObsolete(word: Format0Word) {
         updateList { currentList ->
             // Only add if not exists
             if (currentList.none { it.key == word.word }) {
@@ -89,16 +90,48 @@ class RecallingRepository @Inject constructor(
         }
     }
 
-    suspend fun remove(key: String) {
+    suspend fun addWord(word: Format0Word) {
+        val key = word.word.trim()
+        if (key.isEmpty()) return
+
         updateList { currentList ->
-            currentList.filter { it.key != key }
+            // Only add if not exists
+            if (currentList.none { it.key == key }) {
+
+                // Create fully populated item
+                val newItem = RecallingItem(
+                    key = key,
+                    text = word.translation,        // Crucial for UI display
+                    additionalText = word.romanisation,
+                    recallState = RecallState.Waiting,
+                    createdDate = System.currentTimeMillis(),
+                    nextEventTime = System.currentTimeMillis() // Due immediately
+                )
+
+                Timber.d( "✅ Focused word: $key")
+                currentList + newItem
+            } else {
+                currentList
+            }
         }
     }
+    private suspend fun updateList(transform: (List<RecallingItem>) -> List<RecallingItem>) {
+        try {
+            dataStore.edit { prefs ->
+                // 1. Read
+                val oldJson = prefs[KEY_ITEMS_JSON]
+                val currentList = parseJsonList(oldJson)
 
-    suspend fun removeAll() {
-        updateList { emptyList() }
+                // 2. Transform
+                val newList = transform(currentList)
+
+                // 3. Write
+                prefs[KEY_ITEMS_JSON] = gson.toJson(newList)
+            }
+        } catch (e: Exception) {
+            Timber.e( "Failed to update list", e)
+        }
     }
-
     /**
      * Logic for "I remembered this!" (Button Click: OK)
      * Moves the item to a future date based on Spaced Repetition logic.
@@ -131,7 +164,7 @@ class RecallingRepository @Inject constructor(
     }
 
     // MARK: - Internal Helper
-    private suspend fun updateList(transform: (List<RecallingItem>) -> List<RecallingItem>) {
+    private suspend fun updateListObsolete(transform: (List<RecallingItem>) -> List<RecallingItem>) {
         dataStore.edit { prefs ->
             val jsonString = prefs[KEY_ITEMS_JSON] ?: ""
             val currentList: List<RecallingItem> = if (jsonString.isNotEmpty()) {
@@ -158,8 +191,12 @@ class RecallingRepository @Inject constructor(
         }
     }
 
-    suspend fun getItem(key: String): RecallingItem? {
+    suspend fun getItemObsolete(key: String): RecallingItem? {
         return getList().find { it.key == key }
+    }
+    suspend fun getItem(key: String): RecallingItem? {
+        val list = allItems.first()
+        return list.find { it.key == key }
     }
 
     suspend fun addItem(item: RecallingItem) {
@@ -179,7 +216,7 @@ class RecallingRepository @Inject constructor(
      * One-shot fetch (Suspend function).
      * Useful for initial state setup in ViewModel init blocks.
      */
-    suspend fun getAllRecalledKeys(): Set<String> {
+    suspend fun getAllRecalledKeysObsolete(): Set<String> {
         return try {
             val preferences = dataStore.data.first()
             preferences[PreferencesKeys.RECALLED_WORDS] ?: emptySet()
@@ -187,7 +224,14 @@ class RecallingRepository @Inject constructor(
             emptySet()
         }
     }
-
+    suspend fun getAllRecalledKeys(): Set<String> {
+        return try {
+            val list = allItems.first()
+            list.map { it.key }.toSet()
+        } catch (e: Exception) {
+            emptySet()
+        }
+    }
     // MARK: - Write Data
 
     /**
@@ -220,7 +264,7 @@ class RecallingRepository @Inject constructor(
     /**
      * Removes a word from the "Focus" list.
      */
-    suspend fun removeWord(word: Format0Word) {
+    suspend fun removeWordObsolete(word: Format0Word) {
         val key = word.word.trim()
 
         try {
@@ -228,7 +272,7 @@ class RecallingRepository @Inject constructor(
                 val currentSet = preferences[PreferencesKeys.RECALLED_WORDS] ?: emptySet()
                 if (currentSet.contains(key)) {
                     preferences[PreferencesKeys.RECALLED_WORDS] = currentSet - key
-                    Log.d(TAG, "❌ Removed focus: $key")
+                    Timber.d("❌ Removed focus: $key")
                 }
             }
 
@@ -236,10 +280,37 @@ class RecallingRepository @Inject constructor(
             // cancelNotification(word)
 
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to remove word", e)
+            Timber.e( "Failed to remove word", e)
         }
     }
+    // 1. Helper to accept the object
+    suspend fun removeWord(word: Format0Word) {
+        remove(word.word)
+    }
 
+    // 2. The Actual Logic (Targeting the JSON list)
+    suspend fun remove(key: String) {
+        updateList { currentList ->
+            val wasPresent = currentList.any { it.key == key }
+            if (wasPresent) {
+                Timber.d( "❌ Removed focus: $key")
+                currentList.filter { it.key != key }
+            } else {
+                currentList
+            }
+        }
+    }
+    suspend fun removeAll() {
+        dataStore.edit { it.remove(KEY_ITEMS_JSON) }
+        Timber.d( "🗑️ All items removed")
+    }
+    // The logic we wrote earlier
+    suspend fun removeObsolete(key: String) {
+        updateList { currentList ->
+            // Keep items that DO NOT match the key
+            currentList.filter { it.key != key }
+        }
+    }
     // MARK: - Helpers
 
     suspend fun isRecalled(word: String): Boolean {
@@ -250,5 +321,15 @@ class RecallingRepository @Inject constructor(
 
     suspend fun clearAll() {
         dataStore.edit { it.remove(PreferencesKeys.RECALLED_WORDS) }
+    }
+    private fun parseJsonList(jsonString: String?): List<RecallingItem> {
+        if (jsonString.isNullOrEmpty()) return emptyList()
+        return try {
+            val type = object : TypeToken<List<RecallingItem>>() {}.type
+            gson.fromJson(jsonString, type)
+        } catch (e: Exception) {
+            Timber.e("JSON Parse error", e)
+            emptyList()
+        }
     }
 }

@@ -29,6 +29,8 @@ import androidx.compose.material.icons.filled.Cancel
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material3.SwipeToDismissBoxValue
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.rememberUpdatedState
 
 // --- Other necessary UI imports ---
 import androidx.compose.ui.Alignment
@@ -50,6 +52,7 @@ import com.goodstadt.john.language.exams.models.Format0Word
 import androidx.compose.ui.text.AnnotatedString
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.utils.buildSentencePartsSimple
+import timber.log.Timber
 
 //import com.google.android.material.progressindicator.CircularProgressIndicator
 
@@ -71,17 +74,30 @@ fun SwipeableVocabRow(
 
     val isRecalling = recalledWordKeys.contains(word.word)
 
+    // ✅ FIX: Capture the latest values in a State holder.
+    // This allows the 'rememberSwipeToDismissBoxState' lambda to read the
+    // CURRENT value, not the value from when the row was first drawn.
+    val currentIsRecalling by rememberUpdatedState(isRecalling)
+    val currentOnFocus by rememberUpdatedState(onFocus)
+    val currentOnCancel by rememberUpdatedState(onCancel)
+    val currentOnMore by rememberUpdatedState(onMore)
     // --- CHANGE 1: Use the new state remember function ---
+
     val dismissState = rememberSwipeToDismissBoxState(
         confirmValueChange = { dismissValue ->
             when (dismissValue) {
                 // Swiped from right-to-left
                 SwipeToDismissBoxValue.EndToStart -> {
-                    if (isRecalling) onCancel() else onFocus()
+                    Timber.e("isRecalling $isRecalling currentIsRecalling $currentIsRecalling")
+                    if (currentIsRecalling) {
+                        currentOnCancel()
+                    } else {
+                        currentOnFocus()
+                    }
                 }
                 // ADDED: Swiped from left-to-right
                 SwipeToDismissBoxValue.StartToEnd -> {
-                    onMore()
+                    currentOnMore()
                 }
                 // Default case for settled state
                 SwipeToDismissBoxValue.Settled -> {}
