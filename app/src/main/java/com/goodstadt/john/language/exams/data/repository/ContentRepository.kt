@@ -82,6 +82,31 @@ sealed class PlaybackResult {
     data object PlayedFromNetworkAndCached : PlaybackResult()
     data class Failure(val exception: Exception) : PlaybackResult()
 }
+sealed interface PlaybackResultSplit {
+
+    // 1. ✅ FREE & INSTANT
+    // Found on the user's device (filesDir). No network used.
+    object PlayedFromCache : PlaybackResultSplit
+
+    // 2. ✅ FREE & FAST
+    // Downloaded from Firebase Storage.
+    // Bandwidth cost only (negligible). Does NOT count towards Rate Limit.
+    object PlayedFromCloudStorage : PlaybackResultSplit
+
+    // 3. 💲 PAID & SLOWER
+    // Generated via Google Cloud TTS API.
+    // Costs money. COUNTS towards Hourly/Daily Rate Limit.
+    object PlayedFromGoogleTTS : PlaybackResultSplit
+
+    // 4. LEGACY / GENERIC
+    // Kept for backwards compatibility if other parts of your app check this.
+    // (Usually represents a successful network download before we distinguished Cloud vs TTS)
+    object PlayedFromNetworkAndCached : PlaybackResultSplit
+
+    // 5. FAILURES
+    data class Failure(val exception: Throwable) : PlaybackResultSplit
+    object CacheNotFound : PlaybackResultSplit
+}
 
 private enum class AudioDataSource {
     LOCAL_DISK,
@@ -462,7 +487,7 @@ class ContentRepository @Inject constructor(
         finally { }
 
     }
-    suspend fun playTextToSpeechAndSaveToCacheOriginal(
+    suspend fun playTextToSpeechAndSaveToCache(
         text: String,
         uniqueSentenceId: String, // This should be the Unified Filename (with .mp3)
         voiceName: String,
@@ -545,7 +570,7 @@ class ContentRepository @Inject constructor(
 
 
 
-    suspend fun playTextToSpeechAndSaveToCache(
+    suspend fun playTextToSpeechAndSaveToCacheObsolete(
         text: String,
         uniqueSentenceId: String,
         voiceName: String,
@@ -627,6 +652,7 @@ class ContentRepository @Inject constructor(
             PlaybackResult.PlayedFromNetworkAndCached
         }
     }
+
 
     // Helper to keep the main function clean
     private suspend fun acquireAudioFromNetwork(
@@ -951,6 +977,150 @@ class ContentRepository @Inject constructor(
         audioPlayerService.stopPlayback()
     }
 
+    /*
+    New Code to split up large function playTextToSpeechAndSaveToCache() in to 3
+     */
+    // MARK: - The Orchestrator (Parent Function)
+
+    suspend fun playTextToSpeechAndSaveToCacheSplit(
+        text: String,
+        uniqueSentenceId: String,
+        voiceName: String,
+        languageCode: String,
+        checkCloud: Boolean = true
+    ): PlaybackResultSplit {
+
+        // 1. Check Local Disk (Fastest, Free)
+        if (playFromLocalCacheIfExists(uniqueSentenceId)) {
+            return PlaybackResultSplit.PlayedFromCache
+        }
+
+        // 2. Check Firebase Cloud (Fast, Free)
+        // Only if allowed by logic (e.g. user has heard it before)
+        if (checkCloud) {
+            if (playFromCloudStorageIfExists(uniqueSentenceId)) {
+                return PlaybackResultSplit.PlayedFromCloudStorage // or PlayedFromNetworkAndCached
+            }
+        }
+
+        // 3. Fallback to Google TTS (Slow, Paid)
+        return generateAndPlayTTS(
+            text = text,
+            uniqueSentenceId = uniqueSentenceId,
+            voiceName = voiceName,
+            languageCode = languageCode
+        )
+    }
+
+    // MARK: - Step 1: Local Cache
+
+    /**
+     * Checks if file exists locally. If so, plays it.
+     * Returns TRUE if found and played successfully.
+     */
+    suspend fun playFromLocalCacheIfExists(filename: String): Boolean {
+        val localFile = File(context.filesDir, filename)
+
+        if (localFile.exists()) {
+            return try {
+                val bytes = localFile.readBytes()
+                val result = audioPlayerService.playAudio(bytes)
+                if (result.isSuccess) {
+                    //Timber.v("🔊 Played from Local Disk: $filename")
+                    true
+                } else {
+                    Timber.e(result.exceptionOrNull(), "Local file exists but failed to play")
+                    false // Corrupt file? Fall through to network to repair it.
+                }
+            } catch (e: Exception) {
+                Timber.e(e, "Error reading local file")
+                false
+            }
+        }
+        return false
+    }
+
+    // MARK: - Step 2: Cloud Storage
+
+    /**
+     * Checks if file exists in Firebase. If so, downloads, saves, and plays it.
+     * Returns TRUE if found, downloaded, and played successfully.
+     */
+    suspend fun playFromCloudStorageIfExists(filename: String): Boolean {
+        val localFile = File(context.filesDir, filename)
+
+        return try {
+            // downloadAudio returns Boolean (true if found, false if 404/error)
+            val foundInCloud = FirebaseAudioService.downloadAudio(filename, localFile)
+
+            if (foundInCloud) {
+                // If download succeeded, file is now on disk. Read and Play.
+                val bytes = localFile.readBytes()
+                val result = audioPlayerService.playAudio(bytes)
+
+                if (result.isSuccess) {
+                    Timber.v("☁️ Played from Cloud Storage: $filename")
+                    true
+                } else {
+                    false
+                }
+            } else {
+                false // Not in cloud
+            }
+        } catch (e: Exception) {
+            Timber.w("Cloud check failed: ${e.message}")
+            false
+        }
+    }
+
+    // MARK: - Step 3: Google TTS API
+
+    /**
+     * Calls Google API. On success: Saves to Disk, Plays, and Uploads to Cloud.
+     * Returns a full PlaybackResult (Success or Failure).
+     */
+    suspend fun generateAndPlayTTS(
+        text: String,
+        uniqueSentenceId: String,
+        voiceName: String,
+        languageCode: String
+    ): PlaybackResultSplit {
+
+        Timber.v("🗣️ Calling Google TTS API")
+
+        val ttsResult = googleCloudTts.getAudioData(text, voiceName, languageCode)
+        val localFile = File(context.filesDir, uniqueSentenceId)
+
+        return ttsResult.fold(
+            onSuccess = { audioData ->
+                // A. Save to Local Disk (Critical for Step 1 next time)
+                try {
+                    localFile.writeBytes(audioData)
+                } catch (e: Exception) {
+                    Timber.e(e, "Failed to write TTS data to disk")
+                }
+
+                // B. Play Audio
+                val playResult = audioPlayerService.playAudio(audioData)
+
+                // C. Upload to Firebase (Background / Fire & Forget)
+                // Only upload if playback worked (valid audio)
+                if (playResult.isSuccess) {
+                    FirebaseAudioService.uploadAudio(localFile, uniqueSentenceId, text)
+                }
+
+                if (playResult.isSuccess) {
+                    PlaybackResultSplit.PlayedFromGoogleTTS
+                } else {
+                    PlaybackResultSplit.Failure(playResult.exceptionOrNull() as? Exception ?: Exception("TTS Playback failed"))
+                }
+            },
+            onFailure = { exception ->
+                Timber.e(exception, "TTS API Call failed")
+                PlaybackResultSplit.Failure(exception as? Exception ?: Exception("TTS API error"))
+            }
+        )
+    }
     // --- HELPER FUNCTIONS ---
     /**
      * ✅ ADDED: This is the "Anti-Corruption Layer".

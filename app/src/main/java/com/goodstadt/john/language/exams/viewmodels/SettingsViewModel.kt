@@ -136,6 +136,10 @@ class SettingsViewModel @Inject constructor(
 
         // This initialization logic is correct and remains the same.
         // It keeps the "current" state in sync with saved preferences.
+        /* can get
+         Process: com.goodstadt.john.language.exams.en, PID: 10506
+        java.lang.IllegalArgumentException: method com.goodstadt.john.language.exams.viewmodels.SettingsViewModel$1$1$emit$1.<init> argument 1 has type com.goodstadt.john.language.exams.viewmodels.SettingsViewModel$1$1, got $Proxy2
+         */
         viewModelScope.launch {
             userPreferencesRepository.selectedVoiceNameFlow.collect { voiceId ->
 
@@ -151,7 +155,6 @@ class SettingsViewModel @Inject constructor(
                         )
                     }
                 }
-
             }
         }
         viewModelScope.launch {
@@ -618,13 +621,14 @@ class SettingsViewModel @Inject constructor(
         }
     }
 
-    fun debugAppRateLimiting(): String {
+    fun debugAppRateLimiting(){
 
         if (isItMe()) { //JG onSamsung phone
-            return rateLimiter.printableStatus()
+            Timber.i(rateLimiter.printableStatus())
+//            return rateLimiter.printableStatus()
         }
 
-        return ""
+//        return ""
     }
 
     fun debugAppBilling(): String {
@@ -652,7 +656,8 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun isItMe(): Boolean {
-        return authRepository.fsCurrentUID() == "SkmfAlqdG6hj216UC2DTkIIvaUx1" || authRepository.fsCurrentUID() == "TECvYwk9i7RJcyLhFver15Ywbp93"
+        val uid = authRepository.fsCurrentUID() //new id when new install
+        return uid == "SkmfAlqdG6hj216UC2DTkIIvaUx1" || uid == "TECvYwk9i7RJcyLhFver15Ywbp93" || uid == "98rrtKmAASbXGr6DTqZWWu38Z4m1"
     }
 
     fun onDebugCrashlyitcs() {

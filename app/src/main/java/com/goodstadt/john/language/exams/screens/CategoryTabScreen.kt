@@ -333,10 +333,8 @@ fun CategoryTabScreen(
 
                                             // ✅ TAP HANDLER (Delegate to ViewModel)
                                             onRowTapped = { w, s ->
-                                                // Extract sentence string
-                                                val sentence = s.sentence
-//                                            viewModel.handleSentenceTap(sentence, category)
-                                                viewModel.handleTap(sentence, category)
+//                                                val sentence = s.sentence
+                                                viewModel.handleTap(s.sentence, category)
                                             },
 
                                             onFocus = { viewModel.onFocusClicked(wordEntry) },

@@ -13,22 +13,17 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPSheetDisplayedCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
-import com.goodstadt.john.language.exams.managers.DAILY_LIMIT
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
-import com.goodstadt.john.language.exams.managers.HOURLY_LIMIT
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
-import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.utils.CategoryProgress
-import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
-import com.goodstadt.john.language.exams.utils.getDaysSinceInstall
+import com.goodstadt.john.language.exams.utils.RateLimitGuard
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -84,7 +79,8 @@ class CategoryTabViewModel @Inject constructor(
     private val xpManager: XPManager,
     private val billingRepository: BillingRepository,
     private val loadingManager: GlobalLoadingManager,
-    private val globalLoadingManager: GlobalLoadingManager
+    private val globalLoadingManager: GlobalLoadingManager,
+    private val rateLimitGuard: RateLimitGuard
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<CategoryTabUiState>(CategoryTabUiState.Loading)
@@ -262,49 +258,22 @@ class CategoryTabViewModel @Inject constructor(
             if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
         }
 
-
-        //Do rate limiting checks
-
-
-
-//        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
-//        // This turns the Red Dot ON immediately.
-//        didPlayVocabSentence(sentence, category.title, category.tabNumber)
-
         // 2. START NEW JOB
         //TODO: Should I check for local cache first?
         playbackJob = viewModelScope.launch {
-            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
-                if (rateLimiter.doIForbidCall()) {
-                    val failType = rateLimiter.canMakeCallWithResult()
-                    Timber.v("${failType.canICallAPI}")
-                    Timber.v("${failType.failReason}")
-                    Timber.v("${failType.timeLeftToWait}")
-                    if (!failType.canICallAPI) {
-                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
-                            _showRateDailyLimitSheet.value = true
-                        } else {
-                            _showRateHourlyLimitSheet.value = true
-                        }
-                    } else {
-                        _showRateLimitSheet.value = true
-                    }
 
-                    val dayNum = getDaysSinceInstall(context)
-                    val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
-                    // 2. Log the Hit
-                    // This answers: "Are 50/150 too strict?"
-                    AnalyticsHelper.logRateLimitHit(
-                        context = context,
-                        limitType = limitType,
-                        currentCount = if (limitType == "daily") DAILY_LIMIT else HOURLY_LIMIT
-                    )
-
-                    return@launch
-                }
-            }
-
+//            val guardResult = rateLimitGuard.checkIsAllowed(isPremiumUser = false)
+//            if (guardResult is RateLimitResult.Blocked) {
+//
+//                // Update the specific UI sheet based on the reason
+//                when (guardResult.reason) {
+//                    SimpleRateLimiter.FailReason.DAILY -> _showRateDailyLimitSheet.value = true
+//                    else -> _showRateHourlyLimitSheet.value = true
+//                }
+//
+//                // 🛑 STOP HERE. Do not proceed to playback.
+//                return@launch
+//            }
 
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
             val loadingJob = launch {
@@ -316,13 +285,18 @@ class CategoryTabViewModel @Inject constructor(
             val contentID = FirebaseAudioService.generateContentID(sentence)
             val wasAlreadyHeard = historyManager.isHeard(currentLoadedLevel, contentID)
 
-            val success = audioPlaybackRepository.playTrackAndGetResult(
+//            val success = audioPlaybackRepository.playTrackAndGetResult(
+//                sentence = sentence,
+//                level = levelName,
+//                sheetName = "", // Main tabs aggregate by Level, not SheetName
+//                isPremiumUser = isPremiumUser.value // Replace with actual check if available
+//            )
+            val success = false //TODO: forcing
+            val result = audioPlaybackRepository.playTrackAndGetResult(
                 sentence = sentence,
                 level = levelName,
-                sheetName = "", // Main tabs aggregate by Level, not SheetName
                 isPremiumUser = isPremiumUser.value // Replace with actual check if available
             )
-
 
             loadingJob.cancel() // ✅ Cancel the 1s timer if it's still running
             loadingManager.hide() // ✅ Hide the spinner if it was showing
@@ -344,18 +318,69 @@ class CategoryTabViewModel @Inject constructor(
                 }
 
                 checkHelpTrigger()
-            }else{
+            }else if (false){
                 // ❌ FAILURE
                 _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed"))
                 _uiState.update {
                     if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Error("Failed")) else it
                 }
             }
-//            else{
-//                if (!wasAlreadyHeard) {
-//                    historyManager.undoMarkSentenceHeard(levelName, contentID)
-//                }
-//            }
+
+            when (result) {
+                is AudioPlaybackStatus.PlayedFromTTSAPI,is AudioPlaybackStatus.PlayedFromLocalCache , is AudioPlaybackStatus.PlayedFromCloudStorage -> {
+                    // Success! Stats already updated by Repo/AudioCacheManager.
+                    // Just check for section completion.
+                    // ⚡️ NON OPTIMISTIC UPDATE (Lightning). Now that playback is async
+                    didPlayVocabSentence(sentence, category.title, category.tabNumber)
+
+
+
+                    if (!wasAlreadyHeard) {
+                        checkSectionCompletionAfterNewSentence(category, sentence)
+                        _uiState.update { currentState ->
+                            if (currentState is CategoryTabUiState.Success) {
+                                currentState.copy(
+                                    heardCountOnTab = currentState.heardCountOnTab + 1
+                                )
+                            } else currentState
+                        }
+                    }
+                    checkHelpTrigger()
+
+
+                    //TODO: could split off cloud storage here - if there are charges
+                    if (result is AudioPlaybackStatus.PlayedFromLocalCache || result is AudioPlaybackStatus.PlayedFromCloudStorage){
+                        ttsStatsRepository.updateTTSStatsWithoutCosts()
+                    }else { // result is AudioPlaybackStatus.PlayedFromTTSAPI
+                        val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+                        ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
+                    }
+                }
+
+                is AudioPlaybackStatus.RateLimited -> {
+                    // B. Show Limit Sheet
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.w("Rate Limiter Triggered")
+                    Timber.w("canICallAPI = %s", failType.canICallAPI)
+                    Timber.w("failReason = %s", (failType.failReason))
+                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w(rateLimiter.printCurrentStatus)
+
+                    if (result.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                        _showRateDailyLimitSheet.value = true
+                    } else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
+                }
+
+                is AudioPlaybackStatus.Failure -> {
+                    _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed"))
+                    _uiState.update {
+                        if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Error("Failed")) else it
+                    }
+                }
+            }
+
 
             refreshUI()
         }
@@ -417,63 +442,6 @@ class CategoryTabViewModel @Inject constructor(
          */
 
     }
-    fun onRowTapped(word: Format0Word, sentence: Sentence, category: Category) {
-        val sentenceText = sentence.sentence
-
-        // Reset UI Playback State
-        _uiState.update {
-            if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
-        }
-
-        viewModelScope.launch {
-            // 1. UI Feedback: Show "Playing" state
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val uniqueSentenceId = FirebaseAudioService.generateUnifiedFilename(sentenceText, currentVoiceName)
-
-            _uiState.update {
-                if (it is CategoryTabUiState.Success) {
-                    it.copy(playbackState = PlaybackState.Playing(uniqueSentenceId))
-                } else it
-            }
-
-            // 2. Capture Previous State (For Rollback)
-            val contentID = FirebaseAudioService.generateContentID(sentenceText)
-            val wasAlreadyHeard = historyManager.isHeard(currentLoadedLevel, contentID)
-
-            // 3. OPTIMISTIC UPDATE
-            didPlayVocabSentence(sentenceText, category.title, category.tabNumber)
-
-            // 4. Play Audio (Background / Waterfall)
-            val success = audioPlaybackRepository.playTrackAndGetResult(
-                sentence = sentenceText,
-                level = currentLoadedLevel,
-                sheetName = "",
-                isPremiumUser = false
-            )
-
-            // 5. ROLLBACK ON FAILURE
-            if (!success) {
-                // A. Revert History (Red Dot)
-                historyManager.undoMarkSentenceHeard(currentLoadedLevel, contentID)
-
-                // B. Revert Graph Stats (Only if it was new)
-                _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed"))
-
-                _uiState.update {
-                    if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Error("Failed")) else it
-                }
-            } else {
-                // Success: Reset to Idle
-                if (!wasAlreadyHeard) {
-                    checkSectionCompletionAfterNewSentence(category,sentenceText)
-                }
-
-                _uiState.update {
-                    if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Idle) else it
-                }
-            }
-        }
-    }
 
     private fun didPlayVocabSentence(sentence: String, categoryTitle: String, categoryTabNumber: Int) {
 
@@ -486,7 +454,7 @@ class CategoryTabViewModel @Inject constructor(
 
             // 2. Update History (Source of Truth)
             // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes -- inc heard by 1
-            historyManager.markSentenceHeard(levelName, contentID)
+           // historyManager.markSentenceHeard(levelName, contentID) //moved to playTrackAndGetResult()
 
             // 3. Update Graph Stats (If new)
             if (isFirstTime) {

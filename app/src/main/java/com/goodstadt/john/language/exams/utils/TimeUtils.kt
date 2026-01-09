@@ -1,7 +1,9 @@
 package com.goodstadt.john.language.exams.utils // Or your preferred package
 
 import android.content.Context
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import org.jetbrains.annotations.Debug
 import java.util.Calendar
 import java.util.Date
 import java.util.concurrent.TimeUnit
@@ -114,6 +116,9 @@ suspend fun calcIsTodayFreePassDay(userPreferencesRepository: UserPreferencesRep
     // Attempt to load the initial install date from DataStore
     val initialAppInstallDate = userPreferencesRepository.getInitialAppInstallDate()
 
+    if (BuildConfig.DEBUG){
+        return false
+    }
     if (initialAppInstallDate != null) {
         // Log the loaded date for debugging (equivalent to Logger.d)
         println("Initial Install Date found: $initialAppInstallDate")

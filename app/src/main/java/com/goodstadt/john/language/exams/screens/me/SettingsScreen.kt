@@ -523,24 +523,50 @@ fun SettingsScreen(
                 )
             }
             item {
-                SettingsInfoItem(
+                SettingsActionItem(
                     icon = Icons.Default.Info,
-                    title = "Debug Rate Limiting (It's me)",
-                    value =  viewModel.debugAppRateLimiting()
+                    title = "Debug App Rate Limiting (It's me)",
+                    currentValue =  "Rate Limiting",
+                    onClick = {
+                        if (viewModel.isItMe()) { //JG onSamsung phone
+                            viewModel.debugAppRateLimiting()
+                        }
+                    }
                 )
             }
             item {
-                SettingsInfoItem(
+                SettingsActionItem(
                     icon = Icons.Default.Info,
-                    title = "LLM Credits (It's me)",
-                    value =  viewModel.debugAppLLMCredits()
+                    title = "Debug LLM Credits (It's me)",
+                    currentValue =  "LLMCredits",
+                    onClick = {
+                        if (viewModel.isItMe()) { //JG onSamsung phone
+                            viewModel.debugAppLLMCredits()
+                        }
+                    }
                 )
+
+//                SettingsInfoItem(
+//                    icon = Icons.Default.Info,
+//                    title = "LLM Credits (It's me)",
+//                    value =  viewModel.debugAppLLMCredits()
+//                )
             }
             item {
-                SettingsInfoItem(
+//                SettingsInfoItem(
+//                    icon = Icons.Default.Info,
+//                    title = "Billing (It's me)",
+//                    value =  viewModel.debugAppBilling()
+//                )
+                SettingsActionItem(
                     icon = Icons.Default.Info,
-                    title = "Billing (It's me)",
-                    value =  viewModel.debugAppBilling()
+                    title = "Debug App Billing(It's me)",
+                    currentValue =  "App Billing",
+                    onClick = {
+                        if (viewModel.isItMe()) { //JG onSamsung phone
+                            viewModel.debugAppBilling()
+                        }
+                    }
                 )
             }
 

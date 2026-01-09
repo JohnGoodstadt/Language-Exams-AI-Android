@@ -1,9 +1,8 @@
 package com.goodstadt.john.language.exams.data.repository
 
+import android.content.Context
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalMP3HitCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSSuccessCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -11,7 +10,10 @@ import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
+import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.first
 import timber.log.Timber
 import javax.inject.Inject
@@ -19,6 +21,7 @@ import javax.inject.Singleton
 
 @Singleton
 class AudioPlaybackRepository @Inject constructor(
+    @ApplicationContext private val context: Context,
     private val contentRepository: ContentRepository,
     private val historyManager: HistorySyncManager,
     private val xpManager: XPManager,
@@ -142,6 +145,117 @@ class AudioPlaybackRepository @Inject constructor(
             is PlaybackResult.PlayedFromLocalCache,
             is PlaybackResult.PlayedFromNetworkAndCached -> true
             else -> false
+        }
+    }
+
+    suspend fun playTrackAndGetResult(
+        sentence: String,
+        level: String,
+        isPremiumUser: Boolean
+    ): AudioPlaybackStatus {
+
+        val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+        val uniqueSentenceId = FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
+
+        // ---------------------------------------------------------
+        // 1. CHECK LOCAL DISK (Free & Fast)
+        // ---------------------------------------------------------
+        if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId)) {
+            // Stats logic for replay...
+            handleSuccess(sentence, level, isNew = false)
+            Timber.v("🔊 Waterfall L1: Playing from Local Disk,  Yippee!!: $uniqueSentenceId")
+            return AudioPlaybackStatus.PlayedFromLocalCache
+        }
+
+        // ---------------------------------------------------------
+        // 2. CHECK CLOUD STORAGE (Free-ish)
+        // Only if user has heard it before (History Check)
+        // ---------------------------------------------------------
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        val isHeard = historyManager.isHeard(level, contentID)
+
+        if (isHeard) { //enforce user has already heard it so check storage
+            if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId)) {
+                handleSuccess(sentence, level, isNew = false)
+                Timber.v("☁️ Waterfall L2: Downloaded from Cloud Storage. Yippee!")
+                return AudioPlaybackStatus.PlayedFromCloudStorage
+            }
+        }
+
+        // ---------------------------------------------------------
+        // 3. RATE LIMIT CHECK (Before spending money)
+        // ---------------------------------------------------------
+        val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+
+        if (!isPremiumUser && todayIsNotAFreePassDay) {
+            if (rateLimiter.doIForbidCall()) {
+                val failType = rateLimiter.canMakeCallWithResult()
+
+                // Log Analytics
+                val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
+                AnalyticsHelper.logRateLimitHit(context, limitType, 0)
+
+                // Return Blocked Status
+                return AudioPlaybackStatus.RateLimited(failType.failReason ?: SimpleRateLimiter.FailReason.HOURLY)
+            }
+        }
+
+        // ---------------------------------------------------------
+        // 4. GOOGLE TTS (Paid)
+        // ---------------------------------------------------------
+        val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
+
+        Timber.v("🗣️ Waterfall L3: Calling Google TTS")
+        val result = contentRepository.generateAndPlayTTS(
+            text = sentence,
+            uniqueSentenceId = uniqueSentenceId,
+            voiceName = currentVoiceName,
+            languageCode = currentLanguageCode
+        )
+
+
+        return if (result is PlaybackResultSplit.PlayedFromGoogleTTS) {
+            handleSuccess(sentence, level, isNew = true)
+
+            // Record Cost & Usage
+            if (todayIsNotAFreePassDay) { rateLimiter.recordCall() }
+//            xpManager.incrementTTSCount() // Session Density Analytics
+
+            AudioPlaybackStatus.PlayedFromTTSAPI
+        } else {
+            AudioPlaybackStatus.Failure
+        }
+    }
+
+    private fun handleSuccess(sentence: String, level: String, isNew: Boolean) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        historyManager.markSentenceHeard(level, contentID)
+
+        if (isNew) xpManager.registerAction(XpActionType.HearNewSentence)
+        else xpManager.registerAction(XpActionType.ReplaySentence)
+    }
+    private fun handleSuccess(sentence: String, level: String, sheetName: String, isNew: Boolean) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+
+        // 1. Update History (Red Dots)
+        historyManager.markSentenceHeard(level, contentID)
+
+        // 2. Update XP
+        if (isNew) {
+            xpManager.registerAction(XpActionType.HearNewSentence)
+
+            // 3. Update Side Quest Graph (Only if it's a new Reference item)
+            // We check sheetName to ensure we aren't updating Main Quest tabs here (they use TabNumber)
+            if (sheetName.isNotEmpty()) {
+                val currentStats = audioCacheManager.getReferenceStats(sheetName)
+                audioCacheManager.updateReferenceStats(
+                    key = sheetName,
+                    heard = currentStats.heard + 1,
+                    total = currentStats.total
+                )
+            }
+        } else {
+            xpManager.registerAction(XpActionType.ReplaySentence)
         }
     }
 }
