@@ -27,8 +27,8 @@ object RateLimiterModule {
 
 
 
-        if (BuildConfig.DEBUG){
-//        if (false){
+//        if (BuildConfig.DEBUG){
+        if (false){
             return SimpleRateLimiter(
                 context = context,
                 hourlyLimit = 4,
