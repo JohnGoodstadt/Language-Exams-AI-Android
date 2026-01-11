@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
@@ -33,10 +35,12 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
+import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.android.EntryPointAccessors
+import timber.log.Timber
 
 // ... other necessary imports
 
@@ -57,6 +61,9 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
+    val showCelebration by viewModel.showCelebration.collectAsStateWithLifecycle()
+    val bannerTitle by viewModel.celebrationTitle.collectAsStateWithLifecycle()
+    val bannerSubtitle by viewModel.celebrationSubtitle.collectAsStateWithLifecycle()
 
     val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -91,69 +98,94 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
 //            }
 //        }
         is GenericVocabUiState.Success -> {
-            SimpleSectionedVocabList(
-                data = state.categories,
-                isHeard = { sentence -> viewModel.isHeard(sentence) },
-                playCount = { sentence -> viewModel.playCount(sentence) },
-                listState = lazyListState,
-                contentPadding = PaddingValues(bottom = 80.dp),
+            Box(modifier = Modifier.fillMaxSize()) {
 
-                // ACTIONS
-                onRowTapped = { _, sentence, _ ->
-                    viewModel.handleTap(sentence.sentence)
-                },
-                onSideQuestTapped = {
-                    showSideQuestSheet = true
-                }
-            )
-            if (showSideQuestSheet) {
-                ModalBottomSheet(
-                    onDismissRequest = { showSideQuestSheet = false },
-                    sheetState = sheetStateSideQuest,
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    contentColor = MaterialTheme.colorScheme.onSurface
-                ) {
-                    // 1. Get Managers
-                    val audioCache = viewModel.getAudioCacheManager()
 
-                    // 2. Collect Latest Stats (Reactive)
-                    // This ensures the sheet has data even if it wasn't pre-calculated
-                    val referenceCounts by audioCache.referenceHeardCounts.collectAsStateWithLifecycle()
+                SimpleSectionedVocabList(
+                    data = state.categories,
+                    isHeard = { sentence -> viewModel.isHeard(sentence) },
+                    playCount = { sentence -> viewModel.playCount(sentence) },
+                    listState = lazyListState,
+                    contentPadding = PaddingValues(bottom = 80.dp),
 
-                    // 3. Build the Data Models using the Helper
+                    // ACTIONS
+                    onRowTapped = { _, sentence, _ ->
+                        viewModel.handleTap(sentence.sentence)
+                    },
+                    onSideQuestTapped = {
+                        showSideQuestSheet = true
+                    }
+                )
+                if (showSideQuestSheet) {
+                    ModalBottomSheet(
+                        onDismissRequest = { showSideQuestSheet = false },
+                        sheetState = sheetStateSideQuest,
+                        containerColor = MaterialTheme.colorScheme.surface,
+                        contentColor = MaterialTheme.colorScheme.onSurface
+                    ) {
+                        // 1. Get Managers
+                        val audioCache = viewModel.getAudioCacheManager()
+
+                        // 2. Collect Latest Stats (Reactive)
+                        // This ensures the sheet has data even if it wasn't pre-calculated
+                        val referenceCounts by audioCache.referenceHeardCounts.collectAsStateWithLifecycle()
+
+                        // 3. Build the Data Models using the Helper
 //                    val refData = remember(referenceCounts) {
 //                        getReferenceData(audioCache, referenceCounts)
 //                    }
 
-                    // 4. Get Hilt Entry Point for QuizManager
-                    val entryPoint = remember(context) {
-                        EntryPointAccessors.fromApplication(context.applicationContext, StatsSheetEntryPoint::class.java)
-                    }
+                        // 4. Get Hilt Entry Point for QuizManager
+                        val entryPoint = remember(context) {
+                            EntryPointAccessors.fromApplication(
+                                context.applicationContext,
+                                StatsSheetEntryPoint::class.java
+                            )
+                        }
 
-                    // 3. Build the Data
-                    // We use 'remember(referenceCounts)' so it rebuilds whenever the counts change
-                    val manifest = viewModel.getCachedManifest()
-                    val sideQuestData = remember(referenceCounts) {
-                        buildSideQuestData(audioCache,manifest)
-                    }
+                        // 3. Build the Data
+                        // We use 'remember(referenceCounts)' so it rebuilds whenever the counts change
+                        val manifest = viewModel.getCachedManifest()
+                        val sideQuestData = remember(referenceCounts) {
+                            buildSideQuestData(audioCache, manifest)
+                        }
 
-                    Box(modifier = Modifier.fillMaxHeight(0.85f)) {
-                        // Note: You might need to pass data in here if SideQuestStatsSheet
-                        // doesn't pull everything from Hilt automatically yet.
-                        SideQuestStatsSheet(
-                            paragraphCount = viewModel.getAIParagraphCount(),
-                            paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
-                            conjugations = sideQuestData.conjugations,
-                            adjectives = sideQuestData.adjectives,
-                            pairs = sideQuestData.pairs,
-                            quickRefs = sideQuestData.quickRefs,
-                            quizManager = entryPoint.getQuizManager(),
-                            xpManager = entryPoint.getXPManager(),
-                            onNavigate = { target ->
-                                showSideQuestSheet = false // Close sheet first
-                                navViewModel.requestNavigation(target) // Send signal to Parent
-                            },
-                            onDismiss = { showSideQuestSheet = false }
+                        Box(modifier = Modifier.fillMaxHeight(0.85f)) {
+                            // Note: You might need to pass data in here if SideQuestStatsSheet
+                            // doesn't pull everything from Hilt automatically yet.
+                            SideQuestStatsSheet(
+                                paragraphCount = viewModel.getAIParagraphCount(),
+                                paragraphHeardCount = viewModel.getAIParagraphHeardCount(),
+                                conjugations = sideQuestData.conjugations,
+                                adjectives = sideQuestData.adjectives,
+                                pairs = sideQuestData.pairs,
+                                quickRefs = sideQuestData.quickRefs,
+                                quizManager = entryPoint.getQuizManager(),
+                                xpManager = entryPoint.getXPManager(),
+                                onNavigate = { target ->
+                                    showSideQuestSheet = false // Close sheet first
+                                    navViewModel.requestNavigation(target) // Send signal to Parent
+                                },
+                                onDismiss = { showSideQuestSheet = false }
+                            )
+                        }
+                    }
+                } //: SideShow
+
+                if (showCelebration) {
+                    viewModel.playSuccessSound()
+                    Box(
+                        modifier = Modifier
+                            .align(Alignment.TopCenter) // This is now valid!
+                            .zIndex(10f) // Ensures it floats above the list headers
+                    ) {
+                        AchievementBanner(
+                            isVisible = showCelebration,
+                            title = bannerTitle,       // ✅ Pass Dynamic Title
+                            subtitle = bannerSubtitle, // ✅ Pass Dynamic Subtitle
+                            onDismiss = {
+                                Timber.i("User did dismiss")
+                            }
                         )
                     }
                 }

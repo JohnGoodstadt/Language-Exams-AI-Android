@@ -83,7 +83,8 @@ enum class XpActionType {
     CompleteQuiz,
     PerfectQuiz,
     GenerateParagraph,
-    MemoryBoost
+    MemoryBoost,
+    CompletedReferenceSheet,
 }
 @Keep
 data class DailyStats(
@@ -163,6 +164,7 @@ class XPManager @Inject constructor(
         XpActionType.MasterWord to 5,          // When user swipes to "Focus"
         XpActionType.CompleteSection to 20,    // The Section Banner reward
         XpActionType.CompletedSheet to 100,    // The Level Up reward
+        XpActionType.CompletedReferenceSheet to 50,    //ref less than vocab sheet -- less importance
         XpActionType.CompleteDailyGoal to 15,  // If you use this
 
         // Existing

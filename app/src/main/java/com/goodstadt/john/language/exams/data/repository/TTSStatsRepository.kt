@@ -383,8 +383,8 @@ class TTSStatsRepository @Inject constructor(
         if (!stats.isEmpty()) {
 //            val statsDictionary = HashMap<String, Int>()
 
-            Timber.d("Updating Firebase with stats: $stats for uid: ${firestoreRepository.firebaseUid()}")
-            Timber.w("Flushing global TTS stats. count:${stats.size}")
+            Timber.i("Updating Firebase with stats: $stats for uid: ${firestoreRepository.firebaseUid()}")
+            Timber.d("Flushing global TTS stats. count:${stats.size}")
 
             firestoreRepository.fsUpdateGlobalStats(stats = stats)
 

@@ -6,9 +6,11 @@ package com.goodstadt.john.language.exams.screens.reference
 //import com.yourpackage.data.repository.ExamSheetRepository
 //import com.yourpackage.data.repository.VocabRepository
 import android.app.Activity
+import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -18,14 +20,17 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -54,6 +59,7 @@ sealed interface GenericVocabUiState {
 @HiltViewModel
 class ReferenceGenericViewModel @Inject constructor(
     // 2. MODIFIED: Injected SavedStateHandle to get navigation arguments
+    @ApplicationContext private val context: Context,
     private val savedStateHandle: SavedStateHandle,
     // Keep all other dependencies that are still needed
     private val vocabRepository: ContentRepository,
@@ -69,7 +75,8 @@ class ReferenceGenericViewModel @Inject constructor(
     private val xpManager: XPManager,
     private val historyManager: HistorySyncManager,
 //    private val examSheetRepository: ExamSheetRepository,
-    private val appConfigRepository: AppConfigRepository
+    private val appConfigRepository: AppConfigRepository,
+    private val globalLoadingManager: GlobalLoadingManager,
 ) : ViewModel() {
 
 
@@ -87,6 +94,15 @@ class ReferenceGenericViewModel @Inject constructor(
     val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
     private val _showRateHourlyLimitSheet = MutableStateFlow(false)
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
+
+    private val _showCelebration = MutableStateFlow(false)
+    val showCelebration = _showCelebration.asStateFlow()
+
+    private val _celebrationTitle = MutableStateFlow("")
+    val celebrationTitle = _celebrationTitle.asStateFlow()
+
+    private val _celebrationSubtitle = MutableStateFlow("")
+    val celebrationSubtitle = _celebrationSubtitle.asStateFlow()
 
     val currentVoiceName: StateFlow<String> = userPreferencesRepository.selectedVoiceNameFlow
         .stateIn(
@@ -201,6 +217,8 @@ class ReferenceGenericViewModel @Inject constructor(
     fun handleTap(sentence: String) {
         viewModelScope.launch {
 
+            val wasAlreadyHeard = isHeard(sentence)
+
             // 1. CALL REPOSITORY
             // The Repository handles everything: Playback, History, XP, and Graph Stats.
             val status = audioPlaybackRepository.playTrackAndGetStatus(
@@ -216,6 +234,9 @@ class ReferenceGenericViewModel @Inject constructor(
                 is AudioPlaybackStatus.PlayedFromCloudStorage,
                 is AudioPlaybackStatus.PlayedFromTTSAPI -> {
                     refreshUI()
+                    if (!wasAlreadyHeard) {
+                        checkSheetCompletionAfterNewSentence()
+                    }
                 }
 
                 is AudioPlaybackStatus.RateLimited -> {
@@ -230,6 +251,96 @@ class ReferenceGenericViewModel @Inject constructor(
             }
         }
     }
+
+    private fun checkSheetCompletionAfterNewSentenceObsolete() {
+
+
+        val currentState = _uiState.value
+        if (currentState is GenericVocabUiState.Success) {
+            val categories = currentState.categories
+            println("Found ${categories.size} categories")
+
+            val allSentences = categories
+                .flatMap { it.words }
+                .flatMap { it.sentences }
+                .map { it.sentence }
+
+            var heardCount = 0
+            for (sentence in allSentences) {
+                if (isHeard(sentence)) heardCount++
+            }
+
+            Timber.i("allSentences:${allSentences.count()} heardCount:$heardCount")
+            if (heardCount >= allSentences.count() ){
+                xpManager.registerAction(XpActionType.CompletedReferenceSheet)
+                Timber.i("🏆🏆 WHOLE REFERENCE SHEET COMPLETED!")
+
+            }
+        }
+    }
+    private fun checkSheetCompletionAfterNewSentence() {
+        val currentState = _uiState.value as? GenericVocabUiState.Success ?: return // Or Format1UiState
+
+        // 1. Unique Key for this Sheet's completion
+        // We reuse the userPrefs repository logic we built for Tabs,
+        // but using the sheetName (e.g. "EnglishConjugationsToBe")
+        val completionKey = "sheet_complete_$sheetName"
+
+        // If already awarded, stop here
+        if (userPreferencesRepository.isSectionCompleted("Reference", completionKey)) {
+            return
+        }
+
+        // 2. Flatten all sentences in this sheet
+        val allSentences = currentState.categories
+            .flatMap { it.words }
+            .flatMap { it.sentences }
+            .map { it.sentence }
+
+        if (allSentences.isEmpty()) return
+
+        // 3. Check if ALL are heard
+        // We use HistoryManager because it is the Source of Truth
+        val allHeard = allSentences.all { sentence ->
+            val id = FirebaseAudioService.generateContentID(sentence)
+            historyManager.isHeard("Reference", id)
+        }
+
+        // 4. Award & Celebrate
+        if (allHeard) {
+            // A. Save persistent flag
+            userPreferencesRepository.addCompletedSection("Reference", completionKey)
+
+            // B. Award XP (Big Bonus for Sheet Completion)
+            xpManager.registerAction(XpActionType.CompletedReferenceSheet)
+
+            // C. Show Banner
+            _celebrationTitle.value = "Sheet Completed!"
+            _celebrationSubtitle.value = "You mastered all ${allSentences.size} sentences! +100 XP"
+
+            viewModelScope.launch {
+                _showCelebration.value = true
+                kotlinx.coroutines.delay(4000)
+                _showCelebration.value = false
+            }
+
+            Timber.i("🏆 Reference Sheet Completed: $sheetName")
+        } else {
+            if (BuildConfig.DEBUG) {
+                _celebrationTitle.value = "Sheet Almost Completed!"
+                _celebrationSubtitle.value =
+                    "You mastered all ${allSentences.size} sentences! +0 XP"
+
+                viewModelScope.launch {
+                    _showCelebration.value = true
+                    kotlinx.coroutines.delay(4000)
+                    _showCelebration.value = false
+                }
+            }
+        }
+    }
+
+
     private fun didPlayReferenceSentence(sentence: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val levelName = "Reference"
@@ -344,6 +455,10 @@ class ReferenceGenericViewModel @Inject constructor(
     fun getAIParagraphHeardCount(): Int = audioCacheManager.getAIParagraphHeardCount()
     fun getCachedManifest(): AppUIManifest? {
         return appConfigRepository.getAppUiManifest()
+    }
+
+    fun playSuccessSound() {
+        globalLoadingManager.playSuccessSound(context)
     }
 
 
