@@ -61,7 +61,14 @@ fun QuizScreen(
     viewModel: QuizViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
-    val options = listOf("Quiz 1", "Quiz 2 - Word Pairs","Quiz 3 - Word Order","Quiz 4 - Spelling 1","Quiz 5 - Spelling 2","Quiz 6 - Definitions")
+    val options = listOf(
+        "Quiz 1",
+        "Quiz 2 - Word Pairs",
+        "Quiz 3 - Word Order",
+        "Quiz 4 - Spelling 1",
+        "Quiz 5 - Spelling 2",
+        "Quiz 6 - Definitions"
+    )
     var infoDisabled by remember { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
 
@@ -100,11 +107,12 @@ fun QuizScreen(
 //                displayedSentence = ""
 //            }
 
-            val questionText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                question.sentence.replace("_", "___")
-            } else {
-                ""//question.sentence
-            }
+            val questionText =
+                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                    question.sentence.replace("_", "___")
+                } else {
+                    ""//question.sentence
+                }
             displayedSentence = AnnotatedString(questionText)
             // Reset the selection state for the new question
             selectedOption = null
@@ -112,58 +120,52 @@ fun QuizScreen(
         }
     }
 
-//    LaunchedEffect(true) {
-//       Timber.v("QuizScreen LaunchedEffect")
-//    }
-
     Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(10.dp),
-            verticalArrangement = Arrangement.spacedBy(6.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(10.dp),
+        verticalArrangement = Arrangement.spacedBy(6.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Level Picker
         HorizontalLevelPicker(
-                options = QuizLevelsNew.entries.map { it.description },
-                selectedOption = selectedLevel.description,
-                onOptionSelected = { newLevel ->
-                    val level = QuizLevelsNew.entries.first { it.description == newLevel }
+            options = QuizLevelsNew.entries.map { it.description },
+            selectedOption = selectedLevel.description,
+            onOptionSelected = { newLevel ->
+                val level = QuizLevelsNew.entries.first { it.description == newLevel }
 //                    viewModel.selectedLevel.value = level
-                    viewModel.onLevelSelected(level)
-                    viewModel.loadQuestions()
+                viewModel.onLevelSelected(level)
+                viewModel.loadQuestions()
 
-                    if (viewModel.doIHaveCurrentQuestionInfo()){
-                        infoDisabled = false
-                    }else{
-                        infoDisabled = true
-                    }
-                }//,
-                //fontSize = 16.sp
+                if (viewModel.doIHaveCurrentQuestionInfo()) {
+                    infoDisabled = false
+                } else {
+                    infoDisabled = true
+                }
+            }//,
+            //fontSize = 16.sp
         )
 
         // Quiz Number Picker
         DropdownMenuBox(
-                options = availableQuizzes.map { it.title },
+            options = availableQuizzes.map { it.title },
 //                selectedOption = options.getOrNull(selectedQuizNumber - 1) ?: options[0],∂
-                selectedOption = selectedQuiz?.title ?: "Select a Quiz",
+            selectedOption = selectedQuiz?.title ?: "Select a Quiz",
 //                onOptionSelected = { newQuiz ->
 //                    viewModel.selectedQuizNumber.value = options.indexOf(newQuiz) + 1 //1 based index
 //                    viewModel.loadQuestions()
 //                }
-                   onOptionSelected = { newQuizTitle ->
-                    // Find the QuizDetail object that matches the selected title
-                    val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
-                    // Call the new ViewModel function
-                    viewModel.onQuizSelected(quizDetail)
-                }
+            onOptionSelected = { newQuizTitle ->
+                // Find the QuizDetail object that matches the selected title
+                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
+                // Call the new ViewModel function
+                viewModel.onQuizSelected(quizDetail)
+            }
         )
 
-//        Divider()
         HorizontalDivider(
-                modifier = Modifier.fillMaxWidth(),
-                thickness = 1.dp,
-                color = greyLight2
+            modifier = Modifier.fillMaxWidth(),
+            thickness = 1.dp,
+            color = greyLight2
         )
 
         if (currentQuestionIndex == 0) {
@@ -177,7 +179,7 @@ fun QuizScreen(
                     // This will add 16.dp of space on the top AND 16.dp on the bottom.
                     .padding(vertical = 16.dp)
             )
-        }else{
+        } else {
             Text( //still keep the space
                 text = "",
                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
@@ -187,198 +189,169 @@ fun QuizScreen(
                     .padding(vertical = 16.dp)
             )
         }
-        // Question Display
+
         if (questions.isNotEmpty()) {
             val question = questions[currentQuestionIndex]
 
-            val annotatedQuestionText = if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                AnnotatedString(question.title)
-            }else{
-                buildAnnotatedString {
-                    if (isCurrentAnswerCorrect == true && selectedOption != null) {
-                        // --- SUCCESS STATE ---
-                        // The user has answered correctly.
-                        val parts = question.sentence.split("_")
-                        if (parts.size == 2) {
-                            append(parts[0]) // Append part before the blank
-                            withStyle(
-                                style = SpanStyle(
-                                    color = Color.Green,
-                                    fontWeight = FontWeight.Bold
-                                )
-                            ) {
-                                append(selectedOption!!) // Append the correct word in green
+            val annotatedQuestionText =
+                if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                    AnnotatedString(question.title)
+                } else {
+                    buildAnnotatedString {
+                        if (isCurrentAnswerCorrect == true && selectedOption != null) {
+                            // --- SUCCESS STATE ---
+                            // The user has answered correctly.
+                            val parts = question.sentence.split("_")
+                            if (parts.size == 2) {
+                                append(parts[0]) // Append part before the blank
+                                withStyle(
+                                    style = SpanStyle(
+                                        color = Color.Green,
+                                        fontWeight = FontWeight.Bold
+                                    )
+                                ) {
+                                    append(selectedOption!!) // Append the correct word in green
+                                }
+                                append(parts[1]) // Append part after the blank
+                            } else {
+                                // Fallback for complex sentences
+                                append(displayedSentence)
                             }
-                            append(parts[1]) // Append part after the blank
                         } else {
-                            // Fallback for complex sentences
+                            // --- QUESTION STATE ---
+                            // Not answered yet, or answered incorrectly.
                             append(displayedSentence)
                         }
-                    } else {
-                        // --- QUESTION STATE ---
-                        // Not answered yet, or answered incorrectly.
-                        append(displayedSentence)
                     }
                 }
-            }
-//            val annotatedQuestionText = buildAnnotatedString {
-//                if (isCurrentAnswerCorrect == true && selectedOption != null) {
-//                    // --- SUCCESS STATE ---
-//                    // The user has answered correctly.
-//                    val parts = question.sentence.split("_")
-//                    if (parts.size == 2) {
-//                        append(parts[0]) // Append part before the blank
-//                        withStyle(style = SpanStyle(color = Color.Green, fontWeight = FontWeight.Bold)) {
-//                            append(selectedOption!!) // Append the correct word in green
-//                        }
-//                        append(parts[1]) // Append part after the blank
-//                    } else {
-//                        // Fallback for complex sentences
-//                        append(displayedSentence)
-//                    }
-//                } else {
-//                    // --- QUESTION STATE ---
-//                    // Not answered yet, or answered incorrectly.
-//                    append(displayedSentence)
-//                }
-//            }
 
             Text(
-
-                    text = annotatedQuestionText,
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth(),
-                    color = orangeLight,
+                text = annotatedQuestionText,
+                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth(),
+                color = orangeLight,
             )
 
-          //  var selectedOption by remember { mutableStateOf<String?>(null) } // State for selected option
 
             question.words.forEach { option ->
-                val isOptionCorrect = option == question.correctOption // Determine if option is correct
+                val isOptionCorrect =
+                    option == question.correctOption // Determine if option is correct
 
                 Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        modifier = Modifier.fillMaxWidth()
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    modifier = Modifier.fillMaxWidth()
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
-                                modifier = Modifier.clickable {
-                                    //Timber.v(" ${ question.sentence.replace("_", option)}")
-                                    val isCorrect = option == question.correctOption
-                                    viewModel.updateAnswer(isCorrect)
+                            modifier = Modifier.clickable {
+                                //Timber.v(" ${ question.sentence.replace("_", option)}")
+                                val isCorrect = option == question.correctOption
+                                viewModel.updateAnswer(isCorrect)
 
-                                    val fullSentence = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                                val fullSentence =
+                                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                         question.sentence.replace("_", option)
                                     } else {
                                         if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                                            option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()//remove ()
-                                        }else {
+                                            option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
+                                                .trim()//remove ()
+                                        } else {
                                             option
                                         }
-//                                        val o = option
-//                                        ""//o ption
                                     }
-
-                                    viewModel.playTrack(fullSentence)
-                                },
-                                painter = painterResource(R.drawable.ic_speaker),
-                                contentDescription = "Speak ${question.sentence.replace("_", option)}",
-                                tint = Color.White
+                                viewModel.playTrack(fullSentence)
+                            },
+                            painter = painterResource(R.drawable.ic_speaker),
+                            contentDescription = "Speak ${question.sentence.replace("_", option)}",
+                            tint = Color.White
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
-                                text = option,
-                                color = orangeLight,
-                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
-                                modifier = Modifier
-                                    .padding(vertical = 4.dp)
-                                    .clickable {
-                                       // val fullSentence = question.sentence.replace("_", option)
-                                       // Timber.v(fullSentence)
-                                        val fullSentence = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                            text = option,
+                            color = orangeLight,
+                            style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
+                            modifier = Modifier
+                                .padding(vertical = 4.dp)
+                                .clickable {
+                                    // val fullSentence = question.sentence.replace("_", option)
+                                    // Timber.v(fullSentence)
+                                    val fullSentence =
+                                        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                             question.sentence.replace("_", option)
                                         } else {
                                             if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
-                                                option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()//remove ()
-                                            }else {
+                                                option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
+                                                    .trim()//remove ()
+                                            } else {
                                                 option
                                             }
                                         }
 
-                                        val isCorrect = option == question.correctOption
-                                        viewModel.updateAnswer(isCorrect)
+                                    val isCorrect = option == question.correctOption
+                                    viewModel.updateAnswer(isCorrect)
 
-                                       viewModel.playTrack(fullSentence)
+                                    viewModel.playTrack(fullSentence)
 
-                                    }
+                                }
                         )
                     }
 
                     // Radio button on the far right
                     RadioButton(
-                            selected = selectedOption == option && isOptionCorrect, // Select only if correct
-                            onClick = {
-                                selectedOption = option
-                                isCurrentAnswerCorrect = isOptionCorrect
-                                viewModel.updateAnswer(isOptionCorrect)
-                                if (isOptionCorrect){
+                        selected = selectedOption == option && isOptionCorrect, // Select only if correct
+                        onClick = {
+                            selectedOption = option
+                            isCurrentAnswerCorrect = isOptionCorrect
+                            viewModel.updateAnswer(isOptionCorrect)
+                            if (isOptionCorrect) {
 
-                                   // val wordToHilight: String
-                                    //val sentenceToStyle: String
+                                // val wordToHilight: String
+                                //val sentenceToStyle: String
 
-                                    var sentenceToSpeak = ""
-                                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                        val sentence = question.sentence.replace("_", option)
+                                var sentenceToSpeak = ""
+                                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                                    val sentence = question.sentence.replace("_", option)
 //                                        val sentenceToStyle = option
-                                        displayedSentence = viewModel.highlightWordInSentence(
-                                            sentence = option,
-                                            wordToHighlight = sentence,
-                                            highlightColor = Color.Green
-                                        )
-                                        sentenceToSpeak = sentence
-                                    }else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                                    displayedSentence = viewModel.highlightWordInSentence(
+                                        sentence = option,
+                                        wordToHighlight = sentence,
+                                        highlightColor = Color.Green
+                                    )
+                                    sentenceToSpeak = sentence
+                                } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
 //                                        val wordToHilight = question.title
 //                                        val sentence = "${wordToHilight}:${question.sentence}"
-                                        displayedSentence = AnnotatedString(question.title)
-                                        sentenceToSpeak = "${question.title}:${option}:${question.sentence}"
-                                    }else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
-                                        displayedSentence = AnnotatedString(option)
-                                        val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ").trim()//remove ()
-                                        sentenceToSpeak = cleaned
-                                    } else { // Multiple Choice
-                                       // val wordToHilight = question.sentence
-                                        //val sentenceToStyle = option
-                                        sentenceToSpeak = option
-                                        displayedSentence = viewModel.highlightWordInSentence(
-                                            sentence = option,
-                                            wordToHighlight = question.sentence,
-                                            highlightColor = Color.Green
-                                        )
-                                    }
-
-                                    // Call your global helper function
-//                                    displayedSentence = viewModel.highlightWordInSentence(
-//                                        sentence = sentenceToStyle,
-//                                        wordToHighlight = wordToHilight,
-//                                        highlightColor = Color.Green
-//                                    )
-
-                                    // Play the audio
-                                  //  val toSpeak = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) wordToHilight else option
-
-
-                                    viewModel.playTrack(sentenceToSpeak)
+                                    displayedSentence = AnnotatedString(question.title)
+                                    sentenceToSpeak =
+                                        "${question.title}:${option}:${question.sentence}"
+                                } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                    displayedSentence = AnnotatedString(option)
+                                    val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
+                                        .trim()//remove ()
+                                    sentenceToSpeak = cleaned
+                                } else { // Multiple Choice
+                                    // val wordToHilight = question.sentence
+                                    //val sentenceToStyle = option
+                                    sentenceToSpeak = option
+                                    displayedSentence = viewModel.highlightWordInSentence(
+                                        sentence = option,
+                                        wordToHighlight = question.sentence,
+                                        highlightColor = Color.Green
+                                    )
                                 }
 
+                                viewModel.playTrack(sentenceToSpeak)
+                            }
 
-                            },
-                            colors = RadioButtonDefaults.colors(
-                                    selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red, // Conditional color
-                                    unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified // Conditional color
-                            ),
-                            modifier = Modifier.semantics { contentDescription = option }
+
+                        },
+                        colors = RadioButtonDefaults.colors(
+                            selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red, // Conditional color
+                            unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified // Conditional color
+                        ),
+                        modifier = Modifier.semantics { contentDescription = option }
                     )
                 } // Row
             }
@@ -386,64 +359,62 @@ fun QuizScreen(
             Spacer(Modifier.height(4.dp))
 
             Row(
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    modifier = Modifier.fillMaxWidth()
+                horizontalArrangement = Arrangement.SpaceBetween,
+                modifier = Modifier.fillMaxWidth()
             ) {
                 InfoButtonRow(infoDisabled = infoDisabled,
-                        onClick = {
+                    onClick = {
 
-                            if (infoDisabled == false){
-                                showInfoBottomSheet = true
-                            }
-//                            Toast.makeText(context, "Info button clicked", Toast.LENGTH_SHORT)
-//                                .show()
-                        })
+                        if (infoDisabled == false) {
+                            showInfoBottomSheet = true
+                        }
+                    })
             }// row
 
             Row(
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    modifier = Modifier.fillMaxWidth()
+                horizontalArrangement = Arrangement.SpaceBetween,
+                modifier = Modifier.fillMaxWidth()
             ) {
                 IconButton(
-                        onClick = {
-                            if (currentQuestionIndex > 0) {
-                                viewModel.currentQuestionIndex.value -= 1
-                                if (viewModel.doIHaveCurrentQuestionInfo()){
-                                    infoDisabled = false
-                                }else{
-                                    infoDisabled = true
-                                }
+                    onClick = {
+                        if (currentQuestionIndex > 0) {
+                            viewModel.currentQuestionIndex.value -= 1
+                            if (viewModel.doIHaveCurrentQuestionInfo()) {
+                                infoDisabled = false
+                            } else {
+                                infoDisabled = true
                             }
-                        },
-                        enabled = currentQuestionIndex > 0
+                        }
+                    },
+                    enabled = currentQuestionIndex > 0
                 ) {
                     Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "Previous",
-                            tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor, // Conditional color
-                            modifier = Modifier.size(36.dp)
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = "Previous",
+                        tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor, // Conditional color
+                        modifier = Modifier.size(36.dp)
                     )
                 }
 
                 IconButton(
-                        onClick = {
-                            if (currentQuestionIndex < questions.lastIndex) {
-                                viewModel.currentQuestionIndex.value += 1
-                                if (viewModel.doIHaveCurrentQuestionInfo()){
-                                    infoDisabled = false
-                                }else{
-                                    infoDisabled = true
-                                }
+                    onClick = {
+                        if (currentQuestionIndex < questions.lastIndex) {
+                            viewModel.currentQuestionIndex.value += 1
+                            if (viewModel.doIHaveCurrentQuestionInfo()) {
+                                infoDisabled = false
+                            } else {
+                                infoDisabled = true
                             }
-                        },
-                        enabled = currentQuestionIndex < questions.lastIndex
+                        }
+                    },
+                    enabled = currentQuestionIndex < questions.lastIndex
 
                 ) {
                     Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                            contentDescription = "Next",
-                            tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor, // Conditional color
-                            modifier = Modifier.size(36.dp)
+                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                        contentDescription = "Next",
+                        tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor, // Conditional color
+                        modifier = Modifier.size(36.dp)
                     )
                 }
             }
@@ -451,54 +422,63 @@ fun QuizScreen(
 
         // Statistics
         HorizontalDivider(
-                modifier = Modifier.fillMaxWidth(),
-                thickness = 1.dp,
-                color = greyLight2
+            modifier = Modifier.fillMaxWidth(),
+            thickness = 1.dp,
+            color = greyLight2
         )
         Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween // Arrange items with space between
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween // Arrange items with space between
         ) {
             Text(
-                    text = "Correct: ${quizStatistics.correct}",
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp, color = Color.Green),
-                    modifier = Modifier
-                        .weight(1f)
-                        .padding(start = 16.dp) // Add padding to the start
+                text = "Correct: ${quizStatistics.correct}",
+                style = MaterialTheme.typography.bodyLarge.copy(
+                    fontSize = 16.sp,
+                    color = Color.Green
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(start = 16.dp) // Add padding to the start
             )
             Text(
-                    text = "Tries: ${quizStatistics.tries}",
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp, color = Color.Red),
-                    modifier = Modifier
-                        .weight(1f)
-                        .padding(end = 16.dp), // Add padding to the end
-                    textAlign = TextAlign.End // Align text to the end
+                text = "Tries: ${quizStatistics.tries}",
+                style = MaterialTheme.typography.bodyLarge.copy(
+                    fontSize = 16.sp,
+                    color = Color.Red
+                ),
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(end = 16.dp), // Add padding to the end
+                textAlign = TextAlign.End // Align text to the end
             )
         }
         // Paging control (dots)
         Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 8.dp),
-                horizontalArrangement = Arrangement.Center // Center the dots horizontally
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 8.dp),
+            horizontalArrangement = Arrangement.Center // Center the dots horizontally
         ) {
             for (index in 0 until questions.size) { // Iterate through the questions
                 Box(
-                        modifier = Modifier
-                            .size(10.dp) // Set size of the dot
-                            .clip(CircleShape) // Make it a circle
-                            .background(
-                                    if (index == currentQuestionIndex) blueBright2 else dotColor(index,userAnswers)
-                            ) // Set color based on current page
+                    modifier = Modifier
+                        .size(10.dp) // Set size of the dot
+                        .clip(CircleShape) // Make it a circle
+                        .background(
+                            if (index == currentQuestionIndex) blueBright2 else dotColor(
+                                index,
+                                userAnswers
+                            )
+                        ) // Set color based on current page
                 )
                 Spacer(modifier = Modifier.width(4.dp)) // Add spacing between dots
             }
         }
     }
-    if (isRateLimitingSheetVisible){
+    if (isRateLimitingSheetVisible) {
         RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
     }
-    if (isDailyRateLimitingSheetVisible){
+    if (isDailyRateLimitingSheetVisible) {
 //        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
         if (context is androidx.activity.ComponentActivity) {
             RateLimitDailyReasonsBottomSheet(
@@ -507,8 +487,7 @@ fun QuizScreen(
             )
         }
     }
-    if (isHourlyRateLimitingSheetVisible){
-//        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
+    if (isHourlyRateLimitingSheetVisible) {
         if (context is androidx.activity.ComponentActivity) {
             RateLimitHourlyReasonsBottomSheet(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
@@ -516,72 +495,73 @@ fun QuizScreen(
             )
         }
     }
-    /*
 
-    if (isUpgradeAppSheetVisible){
-        UpdateAppPromptSheet(onCloseSheet = { viewModel.hideAppUpgradeSheet() })
-    }
-    if (isForceUpgradeAppSheetVisible){
-        ForceUpdateAppPromptSheet(onUpdateClick = {
-            viewModel.hideForceAppUpgradeSheet()
-            openAppStore(context)
-        })
-    }
-
-     */
-    if (showInfoBottomSheet){
+    if (showInfoBottomSheet) {
         QuizInfoBottomSheetView(
-                questions[currentQuestionIndex].summary,questions[currentQuestionIndex].explain, onCloseSheet = { showInfoBottomSheet = false }
+            questions[currentQuestionIndex].summary,
+            questions[currentQuestionIndex].explain,
+            onCloseSheet = { showInfoBottomSheet = false }
         )
     }
-}
+} //:QuizScreen
 
 @Composable
-fun DropdownMenuBox(options: List<String>, selectedOption: String, onOptionSelected: (String) -> Unit) {
+fun DropdownMenuBox(
+    options: List<String>,
+    selectedOption: String,
+    onOptionSelected: (String) -> Unit
+) {
     var expanded by remember { mutableStateOf(false) }
-    var buttonCoordinates by remember { mutableStateOf(Offset(0f, 0f)) } // Store button coordinates as Offset
+    var buttonCoordinates by remember {
+        mutableStateOf(
+            Offset(
+                0f,
+                0f
+            )
+        )
+    } // Store button coordinates as Offset
     val density = LocalDensity.current
 
     Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .onGloballyPositioned { layoutCoordinates ->
-                    // Capture the button's position in pixels
-                    buttonCoordinates = layoutCoordinates.positionInWindow()
-                },
-            contentAlignment = Alignment.Center
+        modifier = Modifier
+            .fillMaxWidth()
+            .onGloballyPositioned { layoutCoordinates ->
+                // Capture the button's position in pixels
+                buttonCoordinates = layoutCoordinates.positionInWindow()
+            },
+        contentAlignment = Alignment.Center
     ) {
         Button(
-                onClick = { expanded = true },
-                modifier = Modifier.wrapContentWidth(),
-                colors = ButtonDefaults.buttonColors(
-                        containerColor = nonSelectedBackground, // Dark grey background
-                        contentColor = Color.White // White text color
-                ),
-                shape = RoundedCornerShape(4.dp) // Small rounded corners
+            onClick = { expanded = true },
+            modifier = Modifier.wrapContentWidth(),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = nonSelectedBackground, // Dark grey background
+                contentColor = Color.White // White text color
+            ),
+            shape = RoundedCornerShape(4.dp) // Small rounded corners
         ) {
             Text(selectedOption)
         }
         DropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false },
-                modifier = Modifier
-                    .background(nonSelectedBackground) // Dark grey background for dropdown
-                    .clip(RoundedCornerShape(4.dp)), // Small rounded corners for dropdown
-                offset = with(density) {
-                    DpOffset(
-                            x = 100.dp,//buttonCoordinates.x.toDp(), // Convert X coordinate to Dp
-                            y = 0.dp//buttonCoordinates.y.toDp()// + 48.dp // Convert Y coordinate to Dp and add padding
-                    )
-                }
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+            modifier = Modifier
+                .background(nonSelectedBackground) // Dark grey background for dropdown
+                .clip(RoundedCornerShape(4.dp)), // Small rounded corners for dropdown
+            offset = with(density) {
+                DpOffset(
+                    x = 100.dp,//buttonCoordinates.x.toDp(), // Convert X coordinate to Dp
+                    y = 0.dp//buttonCoordinates.y.toDp()// + 48.dp // Convert Y coordinate to Dp and add padding
+                )
+            }
         ) {
             options.forEach { option ->
                 DropdownMenuItem(
-                        text = { Text(option, color = Color.White) }, // White text color for items
-                        onClick = {
-                            onOptionSelected(option)
-                            expanded = false
-                        }
+                    text = { Text(option, color = Color.White) }, // White text color for items
+                    onClick = {
+                        onOptionSelected(option)
+                        expanded = false
+                    }
                 )
             }
         }
@@ -589,9 +569,8 @@ fun DropdownMenuBox(options: List<String>, selectedOption: String, onOptionSelec
 }
 
 
-
 @Composable
-fun dotColor(index: Int,scores:MutableMap<Int, Boolean>): Color {
+fun dotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
 
     scores[index]?.let {
         return if (it) Color.Green else Color.Red // Green for correct, red for incorrect
@@ -599,22 +578,23 @@ fun dotColor(index: Int,scores:MutableMap<Int, Boolean>): Color {
 
     return Color.LightGray
 }
+
 @Composable
 fun InfoButtonRow(infoDisabled: Boolean, onClick: () -> Unit) {
     Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween, // Equivalent to Spacer() on both sides
-            verticalAlignment = Alignment.CenterVertically
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween, // Equivalent to Spacer() on both sides
+        verticalAlignment = Alignment.CenterVertically
     ) {
         Spacer(modifier = Modifier.weight(1f)) // Pushes the icon to the right
         Icon(
-                imageVector = Icons.Outlined.Info, // Use a built-in Material icon
-                contentDescription = "Info", // Accessibility description
-                modifier = Modifier
-                    .size(32.dp)
-                    .clickable(enabled = !infoDisabled, onClick = onClick)
-                    .padding(start = 4.dp),
-                tint = if (infoDisabled) Color.Gray else buttonColor
+            imageVector = Icons.Outlined.Info, // Use a built-in Material icon
+            contentDescription = "Info", // Accessibility description
+            modifier = Modifier
+                .size(32.dp)
+                .clickable(enabled = !infoDisabled, onClick = onClick)
+                .padding(start = 4.dp),
+            tint = if (infoDisabled) Color.Gray else buttonColor
 //                tint = Color.White
         )
         Spacer(modifier = Modifier.weight(1f)) // Pushes the icon to the left

@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -32,8 +33,10 @@ import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
+import com.goodstadt.john.language.exams.utils.QuizDataConverter
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
 import dagger.hilt.android.EntryPointAccessors
+import timber.log.Timber
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -60,7 +63,9 @@ fun Format1Screen(
     // Bottom Sheet Logic
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    var showQuizSheet by remember { mutableStateOf(false) }
 
+    
     when (val state = uiState) {
         is Format1UiState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -95,6 +100,24 @@ fun Format1Screen(
                                 color = orangeLight,
                                 modifier = Modifier.weight(1f)
                             )
+                            IconButton(onClick = {
+                                val refData = state.data // Your List<HeaderWordsSentencesList>
+
+                                val quizQuestions = QuizDataConverter.generateHomophoneSwapQuiz(refData)
+
+                                if (quizQuestions.isNotEmpty()) {
+                                    // Navigate to Quiz Screen, passing these questions
+                                    // Or load them into the QuizViewModel
+                                    Timber.i("${quizQuestions.count()}")
+
+                                }
+                            }) {
+                                Icon(
+                                    imageVector = Icons.Default.SportsEsports,
+                                    contentDescription = "Stats",
+                                    tint = Color(0xFFFF9800)
+                                )
+                            }
                             // Side Quest Icon
                             IconButton(onClick = { showSideQuestSheet = true }) {
                                 Icon(

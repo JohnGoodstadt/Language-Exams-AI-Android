@@ -325,22 +325,6 @@ class QuizViewModel @Inject constructor(
         _showRateLimitSheet.value = false
     }
 
-    fun showAppUpgradeSheet() {
-        _showUpgradeAppSheet.value = true
-    }
-
-    fun showForceAppUpgradeSheet() {
-        _showForceUpgradeAppSheet.value = true
-    }
-
-    fun hideAppUpgradeSheet() {
-        _showUpgradeAppSheet.value = false
-    }
-
-    fun hideForceAppUpgradeSheet() {
-        _showForceUpgradeAppSheet.value = false
-    }
-
     fun playTrack(sentence: String) {
 
         if (_playbackState.value is PlaybackState.Playing) return
@@ -424,19 +408,7 @@ class QuizViewModel @Inject constructor(
     fun loadQuestions() {
         viewModelScope.launch {
 
-//            val fileName99 = when (selectedQuizNumber.value) {
-//                1 -> selectedLevel.value
-//                2 -> selectedLevel.value
-//                3 -> selectedLevel.value
-//                4 -> selectedLevel.value
-//                5 -> selectedLevel.value
-//                else -> selectedLevel.value
-//            }// + ".json" // Append the JSON file extension
-//
-//            val fn = selectedQuizNumber.value //?: selectedLevel.value.quizzes.first()) + ".json"
-            // Fall back to the first quiz in the level if none is selected.
-            val jsonName =
-                (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).sheetName + ".json"
+            val jsonName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).sheetName + ".json"
 
             //  val jsonName = "${fn}.json"
             _questions.value = generateQuestionsFromJson(appContext, jsonName)
@@ -553,21 +525,7 @@ class QuizViewModel @Inject constructor(
         val lastAttempt = quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)
 
         viewModelScope.launch {
-            // 1. Save to Manager
-//            quizHistoryManager.saveAttempt(
-//                skillLevel = qs.value.skillLevel,
-//                quizNumber = qs.value.quizNumber,
-//                correct = qs.value.correct,
-//                total = qs.value.tries
-//            )
 
-            // 2. Award XP
-//            if (qs.value.tries == qs.value.correct) {
-//                xpManager.registerAction(XpActionType.PerfectQuiz)
-//            } else {
-//                xpManager.registerAction(XpActionType.CompleteQuiz)
-//            }
-            // 2. Save
             quizHistoryManager.saveAttempt(qs.value.skillLevel, qs.value.quizNumber, qs.value.title, qs.value.correct, qs.value.tries)
 
             // 3. Logic
@@ -615,9 +573,6 @@ class QuizViewModel @Inject constructor(
             onQuizFinished()
             val fieldValue =
                 "${quizStatistics.value.quizNumber}:${quizStatistics.value.answered}:${quizStatistics.value.correct}:${quizStatistics.value.tries}"
-            // val fieldKEY = "${StatsManager.QUIZ_COMPLETE}${selectedLevel.value}" //combine both quiz number and level
-            //statsManager.update(StatsManager.fsDOC.USER, fieldKEY, fieldValue)
-
         }
 
     }
