@@ -18,6 +18,7 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.AppUIManifest
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
@@ -47,7 +48,8 @@ data class GroupedSheetUiState(
     val currentSheetName: String = "",
     val subTabs: List<SubTabDefinition> = emptyList(),
     val selectedSubTab: SubTabDefinition? = null,
-    val contentState: ContentState = ContentState.Idle
+    val contentState: ContentState = ContentState.Idle,
+    val lastUpdate: Long = System.currentTimeMillis()
     // You could also add PlaybackState and other sheet visibility booleans here
     // if this screen will also play audio, just like in your other ViewModels.
 )
@@ -284,7 +286,7 @@ class GroupedSheetViewModel @Inject constructor(
     }
 
     // ✅ ACTION: View calls this on tap
-    fun handleTap(sentence: String) {
+    fun handleTapObsolete(sentence: String) {
         viewModelScope.launch {
             // 1. Play Audio (Waterfall)
             val success = audioPlaybackRepository.playTrackAndGetResult(
@@ -299,7 +301,46 @@ class GroupedSheetViewModel @Inject constructor(
         }
         historyManager.debugPrintAllHistory()
     }
+    fun handleTap(sentence: String) {
+        viewModelScope.launch {
 
+            // 1. CALL REPOSITORY
+            // The Repository handles everything: Playback, History, XP, and Graph Stats.
+            val status = audioPlaybackRepository.playTrackAndGetStatus(
+                sentence = sentence,
+                level = "Reference",
+                sheetName = _uiState.value.currentSheetName, // Important: Pass this so Graph Stats update!
+                isPremiumUser = false
+            )
+
+            when (status) {
+                // Group all success cases together
+                is AudioPlaybackStatus.PlayedFromLocalCache,
+                is AudioPlaybackStatus.PlayedFromCloudStorage,
+                is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                    refreshUI()
+                }
+
+                is AudioPlaybackStatus.RateLimited -> {
+                    // Show Paywall logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                }
+
+                is AudioPlaybackStatus.Failure -> {
+                    // Show Snackbar logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.Failure")
+                }
+            }
+        }
+    }
+    // Keep this helper to force redraw
+    private fun refreshUI() {
+        _uiState.update { currentState ->
+//            if (currentState is GroupedSheetUiState) {
+                currentState.copy(lastUpdate = System.currentTimeMillis())
+//            } else currentState
+        }
+    }
     private fun didPlayReferenceSentence(sentence: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val levelName = "Reference"
