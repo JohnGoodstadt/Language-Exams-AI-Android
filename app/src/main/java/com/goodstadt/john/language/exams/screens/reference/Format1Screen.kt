@@ -65,7 +65,7 @@ fun Format1Screen(
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showQuizSheet by remember { mutableStateOf(false) }
 
-    
+
     when (val state = uiState) {
         is Format1UiState.Loading -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -101,16 +101,7 @@ fun Format1Screen(
                                 modifier = Modifier.weight(1f)
                             )
                             IconButton(onClick = {
-                                val refData = state.data // Your List<HeaderWordsSentencesList>
-
-                                val quizQuestions = QuizDataConverter.generateHomophoneSwapQuiz(refData)
-
-                                if (quizQuestions.isNotEmpty()) {
-                                    // Navigate to Quiz Screen, passing these questions
-                                    // Or load them into the QuizViewModel
-                                    Timber.i("${quizQuestions.count()}")
-
-                                }
+                                showQuizSheet = true
                             }) {
                                 Icon(
                                     imageVector = Icons.Default.SportsEsports,
@@ -261,7 +252,42 @@ fun Format1Screen(
                         )
                     }
                 }
+            } //"SideQuestSheet
+            if (showQuizSheet) {
+                val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+                val questions = remember(state.data) {
+                    QuizDataConverter.generateHomophoneSwapQuiz(state.data, limit = 10)
+                }
+
+                if (questions.isNotEmpty()) {
+                    ModalBottomSheet(
+                        onDismissRequest = { showQuizSheet = false },
+                        sheetState = quizSheetState,
+                        // ✅ FIX 1: Force the sheet to take up 95% of the screen height
+                        modifier = Modifier.fillMaxHeight(0.80f),
+                        // ✅ FIX 2: Ensure it respects system colors
+                        containerColor = MaterialTheme.colorScheme.surface,
+                        contentColor = MaterialTheme.colorScheme.onSurface
+                    ) {
+                        // ✅ FIX 3: Container that fills the sheet AND adds bottom padding
+                        // We use a Box with fillMaxSize so the QuizView's Spacers work correctly.
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                // Add padding for the Android Gesture Bar / Navigation Bar
+                                .padding(bottom = 40.dp)
+                        ) {
+                            QuizSheetView(
+                                questions = questions,
+                                title = "Quiz: Sounds the Same",
+                                onDismiss = { showQuizSheet = false }
+                            )
+                        }
+                    }
+                }
             }
+
         }
     }
 }
