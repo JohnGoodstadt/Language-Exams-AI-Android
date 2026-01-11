@@ -175,11 +175,14 @@ class TTSStatsRepository @Inject constructor(
         const val viewPracticeCount = "viewPracticeCount"
 
         //from iOS
+        const val statLocalCacheHitCount = "statLocalCacheHitCount"
+        const val statLocalCacheMissCount = "statLocalCacheMissCount"
         const val statFBCloudHitCount = "statFBCloudHitCount"
         const val statFBCloudMissCount = "statFBCloudMissCount"
-        const val statLocalMP3HitCount = "statLocalMP3HitCount"
+        //const val statLocalMP3HitCount = "statLocalMP3HitCount"
         const val statTTSFailureCount = "statTTSFailureCount"
         const val statTTSSuccessCount = "statTTSSuccessCount"
+        const val statRateLimiterForbidCount = "statRateLimiterForbidCount"
 
         //IAP
         const val statIAPSheetDisplayedCount = "statIAPSheetDisplayedCount"

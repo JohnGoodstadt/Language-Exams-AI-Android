@@ -3,6 +3,12 @@ package com.goodstadt.john.language.exams.data.repository
 import android.content.Context
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalCacheHitCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalCacheMissCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSFailureCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSSuccessCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
@@ -64,6 +70,10 @@ class AudioPlaybackRepository @Inject constructor(
                 Timber.tag("AudioPlayback").w("Rate limit exceeded.")
                 // Note: The UI showing the BottomSheet should be handled by the ViewModel
                 // checking rateLimiter status before calling this, or handling a specific failure result.
+                val failType = rateLimiter.canMakeCallWithResult()
+                val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
+                AnalyticsHelper.logRateLimitHit(context, limitType, 0)
+
                 return false
             }
         }
@@ -173,10 +183,13 @@ class AudioPlaybackRepository @Inject constructor(
         if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId)) {
             // Stats logic for replay...
             handleSuccess(sentence, level, sheetName = sheetName)
-            Timber.v("🔊 Waterfall L1: Playing from Local Disk,  Yippee!!: $uniqueSentenceId")
+            Timber.v("🔊 Waterfall L1: Playing from Local Disk,  Yippee!! '${sentence.take(21)}'")
             loadingJob.cancel()
             loadingManager.hide()
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statLocalCacheHitCount)
             return AudioPlaybackStatus.PlayedFromLocalCache
+        }else{
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statLocalCacheMissCount)
         }
 
         // ---------------------------------------------------------
@@ -196,14 +209,15 @@ class AudioPlaybackRepository @Inject constructor(
                 loadingManager.hide()
 
                 handleSuccess(sentence, level, sheetName)
-                Timber.v("☁️ Waterfall L2: Downloaded from Cloud Storage. Yippee!")
+                Timber.v("☁️ Waterfall L2: Downloaded from Cloud Storage. Yippee! '${sentence.take(21)}'")
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statFBCloudHitCount)
                 return AudioPlaybackStatus.PlayedFromCloudStorage
+            }else{
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statFBCloudMissCount)
             }
         }
 
         try {
-
-
             // ---------------------------------------------------------
             // 3. RATE LIMIT CHECK (Before spending money)
             // ---------------------------------------------------------
@@ -214,13 +228,13 @@ class AudioPlaybackRepository @Inject constructor(
                     val failType = rateLimiter.canMakeCallWithResult()
 
                     // Log Analytics
-                    val limitType =
-                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
+                    val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
                     AnalyticsHelper.logRateLimitHit(context, limitType, 0)
 
                     loadingJob.cancel()
                     loadingManager.hide()
 
+                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterForbidCount)
                     // Return Blocked Status
                     return AudioPlaybackStatus.RateLimited(
                         failType.failReason ?: SimpleRateLimiter.FailReason.HOURLY
@@ -233,7 +247,7 @@ class AudioPlaybackRepository @Inject constructor(
             // ---------------------------------------------------------
             val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
 
-            Timber.v("🗣️ Waterfall L3: Calling Google TTS")
+            Timber.v("🗣️ Waterfall L3: Calling Google TTS '${sentence.take(21)}'")
             val result = contentRepository.generateAndPlayTTS(
                 text = sentence,
                 uniqueSentenceId = uniqueSentenceId,
@@ -251,8 +265,10 @@ class AudioPlaybackRepository @Inject constructor(
                 if (todayIsNotAFreePassDay) {
                     rateLimiter.recordCall()
                 }
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statTTSSuccessCount)
                 AudioPlaybackStatus.PlayedFromTTSAPI
             } else {
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statTTSFailureCount)
                 AudioPlaybackStatus.Failure
             }
 
@@ -262,7 +278,7 @@ class AudioPlaybackRepository @Inject constructor(
             // Critical: Stop the spinner so the UI doesn't freeze
             loadingJob.cancel()
             loadingManager.hide()
-
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statTTSFailureCount)
             return AudioPlaybackStatus.Failure
         }
 

@@ -127,7 +127,6 @@ fun QuizSheetView(
                                 modifier = Modifier
                                     .size(24.dp)
                                     .clickable {
-                                        // Play audio without selecting the answer
                                         viewModel.playAudio(option.word)
                                     }
                             )
@@ -138,7 +137,6 @@ fun QuizSheetView(
                             Text(
                                 text = option.word,
                                 style = MaterialTheme.typography.bodyLarge,
-//                                color = MaterialTheme.colorScheme.onSurface,
                                 color = orangeLight,
                                 modifier = Modifier.fillMaxWidth() // Wraps if multi-line
                             )
@@ -222,8 +220,8 @@ fun QuizSheetView(
         if (uiState.showInfoSheet) {
             ModalBottomSheet(onDismissRequest = { viewModel.toggleInfo() }) {
                 Column(modifier = Modifier.padding(24.dp)) {
-                    Text("Explanation", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                    Spacer(Modifier.height(16.dp))
+                    //Text("Explanation", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                    //Spacer(Modifier.height(16.dp))
                     Text(currentQuestion.explain, style = MaterialTheme.typography.bodyLarge)
                     Spacer(Modifier.height(32.dp))
                 }

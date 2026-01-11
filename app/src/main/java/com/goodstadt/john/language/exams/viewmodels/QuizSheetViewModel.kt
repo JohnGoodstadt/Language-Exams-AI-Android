@@ -74,7 +74,9 @@ class QuizSheetViewModel @Inject constructor(
         }
 
         // 2. Play Audio
-        playAudio(option.word) // Or option.tts if available
+        if (isCorrect) {
+            playAudio(option.word) // Or option.tts if available
+        }
 
         // 3. Handle Completion
         if (_uiState.value.isComplete) {

@@ -10,7 +10,6 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultTTSAPICount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalMP3HitCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSFailureCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSSuccessCount
 import com.goodstadt.john.language.exams.models.Category
@@ -571,88 +570,6 @@ class ContentRepository @Inject constructor(
 
 
 
-    suspend fun playTextToSpeechAndSaveToCacheObsolete(
-        text: String,
-        uniqueSentenceId: String,
-        voiceName: String,
-        languageCode: String
-    ): PlaybackResult {
-
-        val audioData: ByteArray
-        val source: AudioDataSource
-
-        // --- PHASE 1: ACQUIRE DATA ---
-        val localFile = File(context.filesDir, uniqueSentenceId)
-        if (localFile.exists()) {
-            Timber.v("🔊 Waterfall L1: Playing from Local Disk: $uniqueSentenceId. Yippee!!")
-            // 1. Try Local Disk
-            val bytes = try { localFile.readBytes() } catch (e: Exception) { null }
-            if (bytes != null && bytes.isNotEmpty()) {
-                audioData = bytes
-                source = AudioDataSource.LOCAL_DISK
-                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statLocalMP3HitCount)
-            } else {
-                Timber.v("🔊 Waterfall L1: Local file exists but has a problem: $uniqueSentenceId")
-                // File existed but was corrupt/empty, try network
-                val networkResult =
-                    acquireFromNetwork(text, uniqueSentenceId, voiceName, languageCode, localFile)
-                        ?: return PlaybackResult.Failure(Exception("Audio acquisition failed"))
-                audioData = networkResult.first
-                source = networkResult.second
-
-
-            }
-        } else {
-            // 2. Try Network (Firebase -> TTS)
-            Timber.v("☁️ Waterfall L2: Try downloading from Cloud Storage")
-            val networkResult = acquireFromNetwork(text, uniqueSentenceId, voiceName, languageCode, localFile)
-            if (networkResult == null){
-                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statTTSFailureCount)
-                return PlaybackResult.Failure(Exception("Audio acquisition failed"))
-            }
-
-            audioData = networkResult.first
-            source = networkResult.second
-            if (source==AudioDataSource.GOOGLE_TTS) {
-                Timber.v("☁️ Waterfall L3: Downloaded from Google TTS API")
-                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statTTSSuccessCount)
-                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statFBCloudMissCount) //if gone to TTS API then cloud miss
-            }else{
-                Timber.v("☁️ Waterfall L3: Downloaded from Cloud Storage Yippee!")
-                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statFBCloudHitCount)
-            }
-
-        }
-
-        // --- PHASE 2: ACTIONS (Non-Blocking / Fire & Forget) ---
-        // We have the data. We consider this a "Success".
-        // We start playback and upload in parallel, but return immediately.
-
-        // A. Start Playback (Don't wait for it)
-        playbackScope.launch {
-            try {
-                audioPlayerService.playAudio(audioData)
-            } catch (e: Exception) {
-                Timber.e(e, "Playback failed (background)")
-            }
-        }
-
-        // B. Upload to Firebase (Background - Don't wait)
-        // ✅ LOGIC: Only upload if it came from Google TTS.
-        // If it came from Disk or Firebase, it's already in the cloud.
-        if (source == AudioDataSource.GOOGLE_TTS) {
-            FirebaseAudioService.uploadAudio(localFile, uniqueSentenceId, text)
-            ttsStatsRepository.incGlobalCloudStorageCounts(upload = 1)
-        }
-
-        // --- PHASE 3: RETURN INSTANTLY ---
-        // The UI gets the result immediately, stopping the spinner.
-        return if (source == AudioDataSource.LOCAL_DISK) {
-            PlaybackResult.PlayedFromLocalCache
-        } else {
-            PlaybackResult.PlayedFromNetworkAndCached
-        }
-    }
 
 
     // Helper to keep the main function clean

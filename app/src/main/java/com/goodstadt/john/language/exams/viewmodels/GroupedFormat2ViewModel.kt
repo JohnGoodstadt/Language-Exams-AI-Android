@@ -8,12 +8,14 @@ import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.repository.*
 import com.goodstadt.john.language.exams.managers.*
 import com.goodstadt.john.language.exams.models.AppUIManifest
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.SubTabDefinition
 import com.goodstadt.john.language.exams.screens.reference.Format2UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
+import timber.log.Timber
 import javax.inject.Inject
 
 // Separate UI State for Format 2
@@ -192,7 +194,7 @@ class GroupedFormat2ViewModel @Inject constructor(
 
     // MARK: - Playback Logic
 
-    fun handleSentenceTap(sentence: String) {
+    fun handleSentenceTapObsolete(sentence: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
 
@@ -230,6 +232,39 @@ class GroupedFormat2ViewModel @Inject constructor(
             }
             // Note: History update -> Red Dot update happens automatically via observeHistory()
             historyManager.debugPrintAllHistory()
+        }
+    }
+    fun handleSentenceTap(sentence: String) {
+        viewModelScope.launch {
+
+            val sheetName = _uiState.value.currentSheetName
+            // 1. CALL REPOSITORY
+            // The Repository handles everything: Playback, History, XP, and Graph Stats.
+            val status = audioPlaybackRepository.playTrackAndGetStatus(
+                sentence = sentence,
+                level = "Reference",
+                sheetName = sheetName, // Important: Pass this so Graph Stats update!
+                isPremiumUser = false //TODO: fix this to live
+            )
+
+            when (status) {
+                // Group all success cases together
+                is AudioPlaybackStatus.PlayedFromLocalCache,
+                is AudioPlaybackStatus.PlayedFromCloudStorage,
+                is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                    refreshUI()
+                }
+
+                is AudioPlaybackStatus.RateLimited -> {
+                    // Show Paywall logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                }
+
+                is AudioPlaybackStatus.Failure -> {
+                    // Show § logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.Failure")
+                }
+            }
         }
     }
     fun isHeard(sentence: String): Boolean {
