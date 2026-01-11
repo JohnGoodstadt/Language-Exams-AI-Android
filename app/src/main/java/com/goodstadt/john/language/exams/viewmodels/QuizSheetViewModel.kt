@@ -82,12 +82,21 @@ class QuizSheetViewModel @Inject constructor(
         }
     }
 
-    private fun playAudio(sentence: String) {
+    //private
+    fun playAudio(sentence: String) {
         viewModelScope.launch {
             // Use the centralized repo (fire and forget for quiz feedback)
-            audioPlaybackRepository.playTrackAndGetResult(
+//            audioPlaybackRepository.playTrackAndGetResult(
+//                sentence = sentence,
+//                level = "Quiz", // Or "Reference"
+//                isPremiumUser = false, //TODO: fill this in? i.e. Not Hard Coded
+//                sheetName = _uiState.value.title
+//            )
+
+            audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = sentence,
                 level = "Quiz", // Or "Reference"
+                isPremiumUser = false, //TODO: fill this in? i.e. Not Hard Coded
                 sheetName = _uiState.value.title
             )
         }
@@ -124,4 +133,6 @@ class QuizSheetViewModel @Inject constructor(
     fun toggleInfo() {
         _uiState.update { it.copy(showInfoSheet = !it.showInfoSheet) }
     }
+
+
 }

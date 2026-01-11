@@ -71,8 +71,7 @@ class AudioPlaybackRepository @Inject constructor(
         // --- 2. Prepare Data ---
         val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
         val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
-        val uniqueSentenceId =
-            FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
+        val uniqueSentenceId = FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
 
         // --- 3. Execute Playback (The Waterfall) ---
         val result = contentRepository.playTextToSpeechAndSaveToCache(
@@ -153,10 +152,11 @@ class AudioPlaybackRepository @Inject constructor(
         }
     }
 
-    suspend fun playTrackAndGetResult(
+    suspend fun playTrackAndGetStatus(
         sentence: String,
         level: String,
-        isPremiumUser: Boolean
+        sheetName:String = "", //for reference tab - stats for sheet otherwise must be vocab tabs 1,2,3
+        isPremiumUser: Boolean = false
     ): AudioPlaybackStatus {
 
         val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
@@ -172,7 +172,7 @@ class AudioPlaybackRepository @Inject constructor(
         // ---------------------------------------------------------
         if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId)) {
             // Stats logic for replay...
-            handleSuccess(sentence, level, isNew = false)
+            handleSuccess(sentence, level, sheetName = sheetName)
             Timber.v("🔊 Waterfall L1: Playing from Local Disk,  Yippee!!: $uniqueSentenceId")
             loadingJob.cancel()
             loadingManager.hide()
@@ -190,12 +190,12 @@ class AudioPlaybackRepository @Inject constructor(
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val isHeard = historyManager.isHeard(level, contentID)
 
-        if (isHeard) { //enforce user has already heard it so check storage
+        if (isHeard) { //enforce user has already heard it so check storage - i.e. business logic not code logic
             if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId)) {
                 loadingJob.cancel()
                 loadingManager.hide()
 
-                handleSuccess(sentence, level, isNew = false)
+                handleSuccess(sentence, level, sheetName)
                 Timber.v("☁️ Waterfall L2: Downloaded from Cloud Storage. Yippee!")
                 return AudioPlaybackStatus.PlayedFromCloudStorage
             }
@@ -245,14 +245,12 @@ class AudioPlaybackRepository @Inject constructor(
             loadingManager.hide()
 
             return if (result is PlaybackResultSplit.PlayedFromGoogleTTS) {
-                handleSuccess(sentence, level, isNew = true)
+                handleSuccess(sentence, level, sheetName)
 
                 // Record Cost & Usage
                 if (todayIsNotAFreePassDay) {
                     rateLimiter.recordCall()
                 }
-//            xpManager.incrementTTSCount() // Session Density Analytics
-
                 AudioPlaybackStatus.PlayedFromTTSAPI
             } else {
                 AudioPlaybackStatus.Failure
@@ -270,14 +268,47 @@ class AudioPlaybackRepository @Inject constructor(
 
     }
 
-    private fun handleSuccess(sentence: String, level: String, isNew: Boolean) {
+    private fun handleSuccess(sentence: String, level: String, sheetName: String) {
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+
+        // 1. Check if First Time (Voice Agnostic)
+        // We check before marking it, so we know if we should award XP/Stats
+        val isFirstTime = !historyManager.isHeard(level, contentID)
+
+        // 2. Update History (The Red Dot Source of Truth)
+        historyManager.markSentenceHeard(level, contentID)
+
+        // 3. Update XP
+        if (isFirstTime) {
+            xpManager.registerAction(XpActionType.HearNewSentence)
+
+            // 4. ✅ CONDITIONAL REFERENCE UPDATE
+            // If a sheetName is provided, we update the Side Quest Graph immediately.
+            if (sheetName.isNotEmpty()) {
+                val currentStats = audioCacheManager.getReferenceStats(sheetName)
+                audioCacheManager.updateReferenceStats(
+                    key = sheetName,
+                    heard = currentStats.heard + 1,
+                    total = currentStats.total // Assumes total was set on load
+                )
+            }
+
+        } else {
+            xpManager.registerAction(XpActionType.ReplaySentence)
+        }
+    }
+
+
+
+
+    private fun handleSuccessAlsoObsolete(sentence: String, level: String, isNew: Boolean) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         historyManager.markSentenceHeard(level, contentID)
 
         if (isNew) xpManager.registerAction(XpActionType.HearNewSentence)
         else xpManager.registerAction(XpActionType.ReplaySentence)
     }
-    private fun handleSuccess(sentence: String, level: String, sheetName: String, isNew: Boolean) {
+    private fun handleSuccessObsolete(sentence: String, level: String, sheetName: String, isNew: Boolean) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
 
         // 1. Update History (Red Dots)
@@ -301,4 +332,8 @@ class AudioPlaybackRepository @Inject constructor(
             xpManager.registerAction(XpActionType.ReplaySentence)
         }
     }
+    // MARK: - Unified Success Handler
+
+
 }
+

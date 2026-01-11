@@ -279,7 +279,7 @@ class CategoryTabViewModel @Inject constructor(
 //                isPremiumUser = isPremiumUser.value // Replace with actual check if available
 //            )
             val success = false //TODO: forcing
-            val result = audioPlaybackRepository.playTrackAndGetResult(
+            val result = audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = sentence,
                 level = levelName,
                 isPremiumUser = isPremiumUser.value // Replace with actual check if available

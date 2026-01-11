@@ -10,6 +10,7 @@ import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.models.AppUIManifest
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -93,8 +94,50 @@ class Format1ViewModel @Inject constructor(
         return historyManager.getPlayCount("Reference", contentID)
     }
 
-    // ✅ ACTION: View calls this on tap
     fun handleTap(sentence: String) {
+        viewModelScope.launch {
+
+            // 1. CALL REPOSITORY
+            // The Repository handles everything: Playback, History, XP, and Graph Stats.
+            val status = audioPlaybackRepository.playTrackAndGetStatus(
+                sentence = sentence,
+                level = "Reference",
+                sheetName = sheetName, // Important: Pass this so Graph Stats update!
+                isPremiumUser = false
+            )
+
+            when (status) {
+                // Group all success cases together
+                is AudioPlaybackStatus.PlayedFromLocalCache,
+                is AudioPlaybackStatus.PlayedFromCloudStorage,
+                is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                    refreshUI()
+                }
+
+                is AudioPlaybackStatus.RateLimited -> {
+                    // Show Paywall logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                }
+
+                is AudioPlaybackStatus.Failure -> {
+                    // Show Snackbar logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.Failure")
+                }
+            }
+        }
+    }
+
+    // Keep this helper to force redraw
+    private fun refreshUI() {
+        _uiState.update { currentState ->
+            if (currentState is Format1UiState.Success) {
+                currentState.copy(lastUpdate = System.currentTimeMillis())
+            } else currentState
+        }
+    }
+
+    // ✅ ACTION: View calls this on tap
+    fun handleTapObsolete(sentence: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
 
@@ -150,7 +193,7 @@ class Format1ViewModel @Inject constructor(
 
         refreshUI()
     }
-    private fun refreshUI() {
+    private fun refreshUIObsolete() {
         _uiState.update { currentState ->
             if (currentState is Format1UiState.Success) {
                 currentState.copy(lastUpdate = System.currentTimeMillis())

@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Info
@@ -22,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.models.TestMyselfSections
 import com.goodstadt.john.language.exams.ui.theme.Orange
+import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.viewmodels.QuizSheetViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -84,43 +86,77 @@ fun QuizSheetView(
             )
 
             // 3. Options List
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 currentQuestion.words.forEach { option ->
+
+                    // Determine State
                     val isSelected = uiState.userAnswers[uiState.currentIndex] == option
                     val isCorrect = option.ok
 
-                    // Color Logic:
-                    // If selected and correct -> Green
-                    // If selected and wrong -> Red
-                    val cardColor = if (isSelected) {
-                        if (isCorrect) Color(0xFFE8F5E9) else Color(0xFFFFEBEE)
-                    } else MaterialTheme.colorScheme.surfaceVariant
+                    // Determine Colors
+                    // If selected & correct -> Green
+                    // If selected & wrong -> Red
+                    // Otherwise -> Default Theme Colors
+                    val radioColor = when {
+                        isSelected && isCorrect -> Color.Green
+                        isSelected && !isCorrect -> Color.Red
+                        else -> MaterialTheme.colorScheme.onSurfaceVariant
+                    }
 
-                    Card(
-                        colors = CardDefaults.cardColors(containerColor = cardColor),
-                        shape = RoundedCornerShape(12.dp),
+                    // Main Row Container
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clickable { viewModel.onAnswerSelected(option) }
+                            .clickable { viewModel.onAnswerSelected(option) } // Tap anywhere to select
+                            .padding(vertical = 8.dp)
                     ) {
+                        // Left Side: Speaker + Text
                         Row(
-                            modifier = Modifier.padding(16.dp),
-                            verticalAlignment = Alignment.CenterVertically
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.weight(1f) // Take up all space except Radio Button
                         ) {
+                            // Speaker Icon
+                            // Using standard icon for portability, replace with painterResource(R.drawable.ic_speaker) if available
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                                contentDescription = "Play Audio",
+                                //tint = MaterialTheme.colorScheme.primary,
+                                tint = Color.White,
+                                modifier = Modifier
+                                    .size(24.dp)
+                                    .clickable {
+                                        // Play audio without selecting the answer
+                                        viewModel.playAudio(option.word)
+                                    }
+                            )
+
+                            Spacer(modifier = Modifier.width(12.dp))
+
+                            // Option Text
                             Text(
                                 text = option.word,
                                 style = MaterialTheme.typography.bodyLarge,
-                                modifier = Modifier.weight(1f)
+//                                color = MaterialTheme.colorScheme.onSurface,
+                                color = orangeLight,
+                                modifier = Modifier.fillMaxWidth() // Wraps if multi-line
                             )
-
-                            if (isSelected) {
-                                Text(
-                                    text = if (isCorrect) "✅" else "❌",
-                                    fontSize = 18.sp
-                                )
-                            }
                         }
+
+                        // Right Side: Radio Button
+                        RadioButton(
+                            selected = isSelected,
+                            onClick = { viewModel.onAnswerSelected(option) },
+                            colors = RadioButtonDefaults.colors(
+                                selectedColor = radioColor,
+                                unselectedColor = if (isSelected && !isCorrect) Color.Red else MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        )
                     }
+
+                    // Optional: Thin divider between rows
+                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.5f))
                 }
             }
 

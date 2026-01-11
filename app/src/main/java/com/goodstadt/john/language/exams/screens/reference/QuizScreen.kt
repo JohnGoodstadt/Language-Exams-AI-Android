@@ -8,6 +8,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.outlined.Info
 
 import androidx.compose.material3.*
@@ -263,7 +264,8 @@ fun QuizScreen(
                                     }
                                 viewModel.playTrack(fullSentence)
                             },
-                            painter = painterResource(R.drawable.ic_speaker),
+//                            painter = painterResource(R.drawable.ic_speaker),
+                            imageVector = Icons.AutoMirrored.Filled.VolumeUp,
                             contentDescription = "Speak ${question.sentence.replace("_", option)}",
                             tint = Color.White
                         )
