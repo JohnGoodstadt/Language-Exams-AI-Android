@@ -16,6 +16,7 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -436,37 +437,75 @@ class SearchViewModel @Inject constructor(
         return historyManager.getPlayCount(currentLoadedLevel, contentID)
     }
     //fun handleTap(sentence: String, category: Category) {
+//    fun handleTapObaolete(sentence: String,categoryTitle:String,categoryTabNumber:Int) {
+//        val contentID = FirebaseAudioService.generateContentID(sentence)
+//        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+//
+//        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+//        // This turns the Red Dot ON immediately.
+//        didPlayVocabSentence(sentence,categoryTitle,categoryTabNumber)
+//
+//        viewModelScope.launch {
+//            val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
+//
+//            val success = audioPlaybackRepository.playTrackAndGetResult(
+//                sentence = sentence,
+//                level = levelName,
+//                sheetName = "", // Main tabs aggregate by Level, not SheetName
+//                isPremiumUser = isPremiumUser.value // Replace with actual check if available
+//            )
+//
+//            if (success) {
+//                _uiState.update { currentState ->
+//                    if (currentState is SearchUiState.Success) {
+//                        currentState.copy(lastUpdate = System.currentTimeMillis())
+//                    } else currentState
+//                }
+//            }else{
+//                if (!wasAlreadyHeard) {
+//                    historyManager.undoMarkSentenceHeard(levelName, contentID)
+//                }
+//            }
+//
+//            refreshUI()
+//        }
+//    }
     fun handleTap(sentence: String,categoryTitle:String,categoryTabNumber:Int) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
-
-        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
-        // This turns the Red Dot ON immediately.
-        didPlayVocabSentence(sentence,categoryTitle,categoryTabNumber)
-
         viewModelScope.launch {
-            val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
 
-            val success = audioPlaybackRepository.playTrackAndGetResult(
+            // 1. CALL REPOSITORY
+            // The Repository handles everything: Playback, History, XP, and Graph Stats.
+//            val status = audioPlaybackRepository.playTrackAndGetStatus(
+//                sentence = sentence,
+//                level = "Search",
+//                sheetName = "",
+//                isPremiumUser = false
+//            )
+            val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
+            val status = audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = sentence,
                 level = levelName,
-                sheetName = "", // Main tabs aggregate by Level, not SheetName
                 isPremiumUser = isPremiumUser.value // Replace with actual check if available
             )
 
-            if (success) {
-                _uiState.update { currentState ->
-                    if (currentState is SearchUiState.Success) {
-                        currentState.copy(lastUpdate = System.currentTimeMillis())
-                    } else currentState
+            when (status) {
+                // Group all success cases together
+                is AudioPlaybackStatus.PlayedFromLocalCache,
+                is AudioPlaybackStatus.PlayedFromCloudStorage,
+                is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                    refreshUI()
                 }
-            }else{
-                if (!wasAlreadyHeard) {
-                    historyManager.undoMarkSentenceHeard(levelName, contentID)
+
+                is AudioPlaybackStatus.RateLimited -> {
+                    // Show Paywall logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                }
+
+                is AudioPlaybackStatus.Failure -> {
+                    // Show Snackbar logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.Failure")
                 }
             }
-
-            refreshUI()
         }
     }
     private fun didPlayVocabSentence(sentence: String,categoryTitle:String,categoryTabNumber:Int) {

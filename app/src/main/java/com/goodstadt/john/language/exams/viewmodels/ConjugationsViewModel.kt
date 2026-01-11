@@ -17,6 +17,7 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0Word
@@ -311,37 +312,78 @@ class ConjugationsViewModel @Inject constructor(
         val contentID = FirebaseAudioService.generateContentID(sentence)
         return historyManager.getPlayCount("Reference", contentID)
     }
+//    fun handleTapObsolete(sentence: String) {
+//        val contentID = FirebaseAudioService.generateContentID(sentence)
+//        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+//
+//        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+//        // This turns the Red Dot ON immediately.
+//        didPlayReferenceSentence(sentence)
+//
+//        viewModelScope.launch {
+//            // 1. Play Audio (Waterfall)
+//            when (val currentState = _uiState.value) {
+//
+//                is ConjugationsUiState.Success -> {
+//                    val sheetName = currentState.currentSheetName
+//                    val success = audioPlaybackRepository.playTrackAndGetResult(
+//                        sentence = sentence,
+//                        level = "Reference",
+//                        sheetName = sheetName,
+//                        isPremiumUser = false // Inject actual status
+//                    )
+//
+//                    // 2. Update Stats on Success
+//                    if (!success) {
+//                        Timber.w("Playback failed. Rolling back Red Dot.")
+//
+//                        // Only undo if it wasn't there before this specific tap
+//                        if (!wasAlreadyHeard) {
+//                            undoPlayReferenceSentence(sentence)
+//                        }
+//                    }
+//                    historyManager.debugPrintAllHistory()
+//                }
+//                else -> {
+//                    println("State is not UiState, skipping audio playback.")
+//                }
+//            }
+//        }
+//    }
     fun handleTap(sentence: String) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
-
-        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
-        // This turns the Red Dot ON immediately.
-        didPlayReferenceSentence(sentence)
 
         viewModelScope.launch {
             // 1. Play Audio (Waterfall)
             when (val currentState = _uiState.value) {
 
                 is ConjugationsUiState.Success -> {
+
                     val sheetName = currentState.currentSheetName
-                    val success = audioPlaybackRepository.playTrackAndGetResult(
+                    val status = audioPlaybackRepository.playTrackAndGetStatus(
                         sentence = sentence,
                         level = "Reference",
-                        sheetName = sheetName,
-                        isPremiumUser = false // Inject actual status
+                        sheetName = sheetName, // Important: Pass this so Graph Stats update!
+                        isPremiumUser = false
                     )
 
-                    // 2. Update Stats on Success
-                    if (!success) {
-                        Timber.w("Playback failed. Rolling back Red Dot.")
+                    when (status) {
+                        // Group all success cases together
+                        is AudioPlaybackStatus.PlayedFromLocalCache,
+                        is AudioPlaybackStatus.PlayedFromCloudStorage,
+                        is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                            refreshUI()
+                        }
 
-                        // Only undo if it wasn't there before this specific tap
-                        if (!wasAlreadyHeard) {
-                            undoPlayReferenceSentence(sentence)
+                        is AudioPlaybackStatus.RateLimited -> {
+                            // Show Paywall logic
+                            Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                        }
+
+                        is AudioPlaybackStatus.Failure -> {
+                            // Show Snackbar logic
+                            Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.Failure")
                         }
                     }
-                    historyManager.debugPrintAllHistory()
                 }
                 else -> {
                     println("State is not UiState, skipping audio playback.")
@@ -349,7 +391,6 @@ class ConjugationsViewModel @Inject constructor(
             }
         }
     }
-
     private fun didPlayReferenceSentence(sentence: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val levelName = "Reference"

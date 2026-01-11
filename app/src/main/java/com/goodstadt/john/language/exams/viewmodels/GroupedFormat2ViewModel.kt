@@ -194,46 +194,46 @@ class GroupedFormat2ViewModel @Inject constructor(
 
     // MARK: - Playback Logic
 
-    fun handleSentenceTapObsolete(sentence: String) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
-
-
-        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
-        // This turns the Red Dot ON immediately.
-
-
-        viewModelScope.launch {
-            val sheetName = _uiState.value.currentSheetName
-
-            // 1. Play Audio
-            val success = audioPlaybackRepository.playTrackAndGetResult(
-                sentence = sentence,
-                level = "Reference",
-                sheetName = sheetName
-            )
-
-            // 2. Update Graph Stats (If First Time)
-            if (success) {
-                didPlayReferenceSentence(sentence,sheetName)
-//                val contentID = FirebaseAudioService.generateContentID(sentence)
-//                val count = historyManager.getPlayCount("Reference", contentID)
-
-
-                // If count is exactly 1, it means the repository just added it.
-//                if (wasAlreadyHeard) {
-//                    val currentStats = audioCacheManager.getReferenceStats(sheetName)
-//                    audioCacheManager.updateReferenceStats(
-//                        key = sheetName,
-//                        heard = currentStats.heard + 1,
-//                        total = currentStats.total
-//                    )
-//                }
-            }
-            // Note: History update -> Red Dot update happens automatically via observeHistory()
-            historyManager.debugPrintAllHistory()
-        }
-    }
+//    fun handleSentenceTapObsolete(sentence: String) {
+//        val contentID = FirebaseAudioService.generateContentID(sentence)
+//        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+//
+//
+//        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+//        // This turns the Red Dot ON immediately.
+//
+//
+//        viewModelScope.launch {
+//            val sheetName = _uiState.value.currentSheetName
+//
+//            // 1. Play Audio
+//            val success = audioPlaybackRepository.playTrackAndGetResult(
+//                sentence = sentence,
+//                level = "Reference",
+//                sheetName = sheetName
+//            )
+//
+//            // 2. Update Graph Stats (If First Time)
+//            if (success) {
+//                didPlayReferenceSentence(sentence,sheetName)
+////                val contentID = FirebaseAudioService.generateContentID(sentence)
+////                val count = historyManager.getPlayCount("Reference", contentID)
+//
+//
+//                // If count is exactly 1, it means the repository just added it.
+////                if (wasAlreadyHeard) {
+////                    val currentStats = audioCacheManager.getReferenceStats(sheetName)
+////                    audioCacheManager.updateReferenceStats(
+////                        key = sheetName,
+////                        heard = currentStats.heard + 1,
+////                        total = currentStats.total
+////                    )
+////                }
+//            }
+//            // Note: History update -> Red Dot update happens automatically via observeHistory()
+//            historyManager.debugPrintAllHistory()
+//        }
+//    }
     fun handleSentenceTap(sentence: String) {
         viewModelScope.launch {
 

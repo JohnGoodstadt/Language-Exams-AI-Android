@@ -22,6 +22,7 @@ import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.AppUIManifest
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -168,36 +169,67 @@ class ReferenceGenericViewModel @Inject constructor(
             } else currentState
         }
     }
+//    fun handleTapObsolete(sentence: String) {
+//        val contentID = FirebaseAudioService.generateContentID(sentence)
+//        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+//
+//        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+//        // This turns the Red Dot ON immediately.
+//        didPlayReferenceSentence(sentence)
+//
+//        viewModelScope.launch {
+//            // 1. Play Audio (Waterfall)
+//            val success = audioPlaybackRepository.playTrackAndGetResult(
+//                sentence = sentence,
+//                level = "Reference",
+//                sheetName = sheetName,
+//                isPremiumUser = false // Inject actual status
+//            )
+//
+//            // 2. Update Stats on Success
+//            if (!success) {
+//                Timber.w("Playback failed. Rolling back Red Dot.")
+//
+//                // Only undo if it wasn't there before this specific tap
+//                if (!wasAlreadyHeard) {
+//                    undoPlayReferenceSentence(sentence)
+//                }
+//            }
+//            historyManager.debugPrintAllHistory()
+//        }
+//    }
     fun handleTap(sentence: String) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
-
-        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
-        // This turns the Red Dot ON immediately.
-        didPlayReferenceSentence(sentence)
-
         viewModelScope.launch {
-            // 1. Play Audio (Waterfall)
-            val success = audioPlaybackRepository.playTrackAndGetResult(
+
+            // 1. CALL REPOSITORY
+            // The Repository handles everything: Playback, History, XP, and Graph Stats.
+            val status = audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = sentence,
                 level = "Reference",
-                sheetName = sheetName,
-                isPremiumUser = false // Inject actual status
+                sheetName = sheetName, // Important: Pass this so Graph Stats update!
+                isPremiumUser = false
             )
 
-            // 2. Update Stats on Success
-            if (!success) {
-                Timber.w("Playback failed. Rolling back Red Dot.")
+            when (status) {
+                // Group all success cases together
+                is AudioPlaybackStatus.PlayedFromLocalCache,
+                is AudioPlaybackStatus.PlayedFromCloudStorage,
+                is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                    refreshUI()
+                }
 
-                // Only undo if it wasn't there before this specific tap
-                if (!wasAlreadyHeard) {
-                    undoPlayReferenceSentence(sentence)
+                is AudioPlaybackStatus.RateLimited -> {
+                    // Show Paywall logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                }
+
+                is AudioPlaybackStatus.Failure -> {
+                    // Show Snackbar logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.Failure")
                 }
             }
-            historyManager.debugPrintAllHistory()
         }
     }
-
     private fun didPlayReferenceSentence(sentence: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val levelName = "Reference"

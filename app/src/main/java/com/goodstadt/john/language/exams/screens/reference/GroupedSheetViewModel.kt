@@ -286,21 +286,21 @@ class GroupedSheetViewModel @Inject constructor(
     }
 
     // ✅ ACTION: View calls this on tap
-    fun handleTapObsolete(sentence: String) {
-        viewModelScope.launch {
-            // 1. Play Audio (Waterfall)
-            val success = audioPlaybackRepository.playTrackAndGetResult(
-                sentence = sentence,
-                level = "Reference",
-                sheetName = _uiState.value.currentSheetName
-            )
-            // 2. Update Graph Stats (If success)
-            if (success) {
-                didPlayReferenceSentence(sentence)
-            }
-        }
-        historyManager.debugPrintAllHistory()
-    }
+//    fun handleTapObsolete(sentence: String) {
+//        viewModelScope.launch {
+//            // 1. Play Audio (Waterfall)
+//            val success = audioPlaybackRepository.playTrackAndGetResult(
+//                sentence = sentence,
+//                level = "Reference",
+//                sheetName = _uiState.value.currentSheetName
+//            )
+//            // 2. Update Graph Stats (If success)
+//            if (success) {
+//                didPlayReferenceSentence(sentence)
+//            }
+//        }
+//        historyManager.debugPrintAllHistory()
+//    }
     fun handleTap(sentence: String) {
         viewModelScope.launch {
 

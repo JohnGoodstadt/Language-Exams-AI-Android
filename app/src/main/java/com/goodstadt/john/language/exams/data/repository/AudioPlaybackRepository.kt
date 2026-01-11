@@ -49,7 +49,7 @@ class AudioPlaybackRepository @Inject constructor(
      * 3. Updates History (Red Dots)
      * 4. Updates XP & Graphs
      */
-    suspend fun playTrackAndGetResult(
+    suspend fun playTrackAndGetResultObsolete(
         sentence: String,
         level: String,          // e.g. "A1", "B1", "Reference"
         sheetName: String = "", // e.g. "EnglishConjugationsToBe" (Required for Graph stats)

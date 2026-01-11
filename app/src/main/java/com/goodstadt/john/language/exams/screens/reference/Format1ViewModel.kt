@@ -137,35 +137,35 @@ class Format1ViewModel @Inject constructor(
     }
 
     // ✅ ACTION: View calls this on tap
-    fun handleTapObsolete(sentence: String) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
-
-        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
-        // This turns the Red Dot ON immediately.
-        didPlayReferenceSentence(sentence)
-
-        viewModelScope.launch {
-            // 1. Play Audio (Waterfall)
-            val success = audioPlaybackRepository.playTrackAndGetResult(
-                sentence = sentence,
-                level = "Reference",
-                sheetName = sheetName
-            )
-
-            // 2. Update Graph Stats (If success)
-            if (!success) {
-                Timber.w("Playback failed. Rolling back Red Dot.")
-
-                // Only undo if it wasn't there before this specific tap
-                if (!wasAlreadyHeard) {
-                    undoPlayReferenceSentence(sentence)
-                }
-            }
-            historyManager.debugPrintAllHistory()
-        }
-
-    }
+//    fun handleTapObsolete(sentence: String) {
+//        val contentID = FirebaseAudioService.generateContentID(sentence)
+//        val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+//
+//        // 2. ⚡️ OPTIMISTIC UPDATE (Lightning)
+//        // This turns the Red Dot ON immediately.
+//        didPlayReferenceSentence(sentence)
+//
+//        viewModelScope.launch {
+//            // 1. Play Audio (Waterfall)
+//            val success = audioPlaybackRepository.playTrackAndGetResult(
+//                sentence = sentence,
+//                level = "Reference",
+//                sheetName = sheetName
+//            )
+//
+//            // 2. Update Graph Stats (If success)
+//            if (!success) {
+//                Timber.w("Playback failed. Rolling back Red Dot.")
+//
+//                // Only undo if it wasn't there before this specific tap
+//                if (!wasAlreadyHeard) {
+//                    undoPlayReferenceSentence(sentence)
+//                }
+//            }
+//            historyManager.debugPrintAllHistory()
+//        }
+//
+//    }
 
 
     private fun didPlayReferenceSentence(sentence: String) {
