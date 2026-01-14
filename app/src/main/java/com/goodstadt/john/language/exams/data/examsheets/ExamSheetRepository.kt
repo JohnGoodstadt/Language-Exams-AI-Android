@@ -294,7 +294,9 @@ class ExamSheetRepository @Inject constructor(
                                 sentences = sentences,
                                 definition = firestoreWord.definition,
                                 IPA = firestoreWord.IPA,
-                                pronounce = firestoreWord.pronounce
+                                pronounce = firestoreWord.pronounce,
+                                lockedClause = firestoreWord.lockedClause,
+                                weakenedClause = firestoreWord.weakenedClause
                             )
                         } catch (e: Exception) {
                             Timber.e(

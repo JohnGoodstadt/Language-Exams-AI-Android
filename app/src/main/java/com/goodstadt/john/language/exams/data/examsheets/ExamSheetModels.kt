@@ -51,5 +51,7 @@ internal data class FirestoreWordDTO(
     val pronounce: String = "",
     val group: String = "",
     val sentences: List<String> = emptyList(),
-    val translations: List<String> = emptyList()
+    val translations: List<String> = emptyList(),
+    val lockedClause: String = "",
+    val weakenedClause: String = ""
 )

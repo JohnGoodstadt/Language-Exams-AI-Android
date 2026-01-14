@@ -12,9 +12,14 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -40,8 +45,10 @@ fun SimpleSectionedVocabList(
 
     // Actions
     onRowTapped: (Format0Word, Sentence, Category) -> Unit,
-    onSideQuestTapped: () -> Unit
+    onSideQuestTapped: () -> Unit,
+    onQuizSheetTapped: () -> Unit
 ) {
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         state = listState,
@@ -68,6 +75,13 @@ fun SimpleSectionedVocabList(
 
                         // Stats / Side Quest Icon
                         if (category == data[0]) {
+                            IconButton(onClick = onQuizSheetTapped) {
+                                Icon(
+                                    imageVector = Icons.Default.SportsEsports,
+                                    contentDescription = "Quiz",
+                                    tint = Color(0xFFFF9800)
+                                )
+                            }
                             IconButton(onClick = onSideQuestTapped) {
                                 Icon(
                                     imageVector = Icons.Filled.WorkspacePremium,

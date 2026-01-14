@@ -57,7 +57,9 @@ data class Format0Word(
     val IPA: String = "",
     val pronounce: String = "",
     val group: String,
-    val sentences: List<Sentence>
+    val sentences: List<Sentence>,
+    val lockedClause: String = "",
+    val weakenedClause: String = ""
 )
 
 @Serializable

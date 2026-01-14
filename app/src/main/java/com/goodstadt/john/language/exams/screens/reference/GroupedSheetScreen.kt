@@ -25,6 +25,7 @@ import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLeve
 import com.goodstadt.john.language.exams.screens.reference.shared.SectionedVocabList
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
+import com.goodstadt.john.language.exams.utils.QuizDataConverter
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.android.EntryPointAccessors
@@ -44,9 +45,17 @@ fun GroupedSheetScreen(
     val lazyListState = rememberLazyListState()
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    var showQuizSheet by remember { mutableStateOf(false) }
+    val sheetStateQuiz = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+
+
     val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
     // The main layout is a vertical column
-    Column(modifier = Modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 4.dp)) {
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(horizontal = 16.dp, vertical = 4.dp)) {
 
         // 2. The Sub-Tab Picker (the sub-menu)
         // This only shows if there are sub-tabs to display
@@ -112,7 +121,13 @@ fun GroupedSheetScreen(
                         viewModel.handleTap(sentence.sentence)
                     },
                     onSideQuestTapped = {
+                        showQuizSheet = false
                         showSideQuestSheet = true
+
+                    },
+                    onQuizSheetTapped = {
+                        showSideQuestSheet = false
+                        showQuizSheet = true
                     }
                 )
             }
@@ -130,7 +145,7 @@ fun GroupedSheetScreen(
             RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
         }
         if (isDailyRateLimitingSheetVisible){
-            if (context is androidx.activity.ComponentActivity) {
+            if (context is ComponentActivity) {
                 RateLimitDailyReasonsBottomSheet(
                     onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                     onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
@@ -138,7 +153,7 @@ fun GroupedSheetScreen(
             }
         }
         if (isHourlyRateLimitingSheetVisible){
-            if (context is androidx.activity.ComponentActivity) {
+            if (context is ComponentActivity) {
                 RateLimitHourlyReasonsBottomSheet(
                     onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                     onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
@@ -188,7 +203,50 @@ fun GroupedSheetScreen(
                 }
             }
         }
+        if (showQuizSheet) {
+            val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
+            when (val contentState = uiState.contentState) {
+                is ContentState.Success -> {
+                    val categories = contentState.categories
+                    val questions = remember(uiState.contentState) {
+                        QuizDataConverter.generateAdjectivesQuiz(categories, limit = 10)
+                    }
+
+                    val pageTitle = uiState.title
+                    if (questions.isNotEmpty()) {
+                        ModalBottomSheet(
+                            onDismissRequest = { showQuizSheet = false },
+                            sheetState = quizSheetState,
+                            // ✅ FIX 1: Force the sheet to take up 95% of the screen height
+                            modifier = Modifier.fillMaxHeight(0.80f),
+                            // ✅ FIX 2: Ensure it respects system colors
+                            containerColor = MaterialTheme.colorScheme.surface,
+                            contentColor = MaterialTheme.colorScheme.onSurface
+                        ) {
+                            // ✅ FIX 3: Container that fills the sheet AND adds bottom padding
+                            // We use a Box with fillMaxSize so the QuizView's Spacers work correctly.
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    // Add padding for the Android Gesture Bar / Navigation Bar
+                                    .padding(bottom = 40.dp)
+                            ) {
+                                QuizSheetView(
+                                    questions = questions,
+                                    title = "Quiz: $pageTitle",
+                                    onDismiss = { showQuizSheet = false }
+                                )
+                            }
+                        }
+                    }
+                }
+                else -> {}
+            }
+
+
+
+        } //: show sheet
     } //: Column
 
 }

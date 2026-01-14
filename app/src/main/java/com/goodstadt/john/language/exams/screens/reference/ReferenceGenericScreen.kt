@@ -31,6 +31,7 @@ import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
@@ -65,7 +66,7 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     val bannerTitle by viewModel.celebrationTitle.collectAsStateWithLifecycle()
     val bannerSubtitle by viewModel.celebrationSubtitle.collectAsStateWithLifecycle()
 
-    val lifecycleOwner = androidx.lifecycle.compose.LocalLifecycleOwner.current
+    val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) {
@@ -114,7 +115,10 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                     },
                     onSideQuestTapped = {
                         showSideQuestSheet = true
-                    }
+                    },
+                    onQuizSheetTapped =  {
+                       Timber.e("TODO: finish this code")
+                    },
                 )
                 if (showSideQuestSheet) {
                     ModalBottomSheet(

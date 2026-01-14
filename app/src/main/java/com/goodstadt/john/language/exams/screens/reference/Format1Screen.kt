@@ -260,7 +260,7 @@ fun Format1Screen(
                 val questions = remember(state.data) {
                     QuizDataConverter.generateHomophoneSwapQuiz(state.data, limit = 10)
                 }
-
+                val pageTitle = "10 Questions"
                 if (questions.isNotEmpty()) {
                     ModalBottomSheet(
                         onDismissRequest = { showQuizSheet = false },
@@ -281,7 +281,7 @@ fun Format1Screen(
                         ) {
                             QuizSheetView(
                                 questions = questions,
-                                title = "Quiz: Sounds the Same",
+                                title = pageTitle,//"Quiz: Sounds the Same",
                                 onDismiss = { showQuizSheet = false }
                             )
                         }
