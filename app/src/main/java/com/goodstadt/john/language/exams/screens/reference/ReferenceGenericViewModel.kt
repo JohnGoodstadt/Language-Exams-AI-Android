@@ -461,5 +461,14 @@ class ReferenceGenericViewModel @Inject constructor(
         globalLoadingManager.playSuccessSound(context)
     }
 
+    fun incSideQuestStat() {
+        val statName = "${TTSStatsRepository.Companion.statSideQuestCount}_$sheetName"
+
+        ttsStatsRepository.inc(
+            TTSStatsRepository.fsDOC.GlobalStats,
+            statName
+        )
+    }
+
 
 }

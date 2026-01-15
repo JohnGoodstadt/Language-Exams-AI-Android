@@ -1,0 +1,834 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "QuizSheetWordPairs-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Say vs Tell",
+			"description": "Learn when to use 'say' and 'tell' so you can report speech naturally and accurately.",
+			"sortorder": 1,
+			"sortbypage": true,
+			"sections": [
+				{
+					"title": "Say vs Tell",
+					"page": 1,
+					"sentence": "Say vs Tell",
+					"summary": "SAY focuses on the words spoken. TELL usually needs a person (tell someone).",
+					"explain": "Use SAY to report what was spoken. Use TELL when you include the listener (tell someone something).",
+					"words": [
+						{ "word": "He said he would call me back later.", "ok": true },
+						{ "word": "He told he would call me back later.", "ok": false }
+					]
+				},
+				{
+					"title": "Say vs Tell",
+					"page": 2,
+					"sentence": "Say vs Tell",
+					"summary": "TELL + person is common: tell me, tell her, tell them.",
+					"explain": "TELL normally takes an object (a person). Without a person, SAY is usually the natural choice.",
+					"words": [
+						{ "word": "She told me the meeting was cancelled.", "ok": true },
+						{ "word": "She said me the meeting was cancelled.", "ok": false }
+					]
+				},
+				{
+					"title": "Say vs Tell",
+					"page": 3,
+					"sentence": "Say vs Tell",
+					"summary": "SAY something; TELL someone something.",
+					"explain": "SAY does not take a direct person object (not 'say me/him/her').",
+					"words": [
+						{ "word": "What did you say to your manager?", "ok": true },
+						{ "word": "What did you say your manager about the problem?", "ok": false }
+					]
+				},
+				{
+					"title": "Say vs Tell",
+					"page": 4,
+					"sentence": "Say vs Tell",
+					"summary": "If you name the listener, TELL is often best.",
+					"explain": "With a named listener, use TELL + person. SAY needs 'to' before the person.",
+					"words": [
+						{ "word": "I told Sarah I was running late.", "ok": true },
+						{ "word": "I said Sarah I was running late.", "ok": false }
+					]
+				},
+				{
+					"title": "Say vs Tell",
+					"page": 5,
+					"sentence": "Say vs Tell",
+					"summary": "SAY can introduce a quote; TELL generally does not.",
+					"explain": "For direct quotes, SAY is the natural reporting verb. TELL is usually followed by information, not a quoted sentence.",
+					"words": [
+						{ "word": "He said, \"I’m not ready yet.\"", "ok": true },
+						{ "word": "He told, \"I’m not ready yet.\"", "ok": false }
+					]
+				},
+				{
+					"title": "Say vs Tell",
+					"page": 6,
+					"sentence": "Say vs Tell",
+					"summary": "TELL is common for giving advice/instructions to a person.",
+					"explain": "Use TELL when the focus is giving information to someone. If you use SAY, you normally need 'to' before the person.",
+					"words": [
+						{ "word": "They told us to take a different route.", "ok": true },
+						{ "word": "They said us to take a different route.", "ok": false }
+					]
+				},
+				{
+					"title": "Say vs Tell",
+					"page": 7,
+					"sentence": "Say vs Tell",
+					"summary": "Future reporting: said/told work like other tenses.",
+					"explain": "SAY reports the content; TELL needs a person. Both can be used in future forms if structured correctly.",
+					"words": [
+						{ "word": "I’ll tell you the results as soon as I know.", "ok": true },
+						{ "word": "I’ll say you the results as soon as I know.", "ok": false }
+					]
+				},
+				{
+					"title": "Say vs Tell",
+					"page": 8,
+					"sentence": "Say vs Tell",
+					"summary": "SAY something to someone.",
+					"explain": "If you want to include the listener with SAY, use 'to': say something to someone.",
+					"words": [
+						{ "word": "Please say it again more slowly.", "ok": true },
+						{ "word": "Please tell it again more slowly.", "ok": false }
+					]
+				},
+				{
+					"title": "Say vs Tell",
+					"page": 9,
+					"sentence": "Say vs Tell",
+					"summary": "TELL is used for secrets/true information to a person.",
+					"explain": "TELL is natural with 'the truth', 'a secret', 'the story' when there is a listener (me/him/us).",
+					"words": [
+						{ "word": "He finally told me the truth.", "ok": true },
+						{ "word": "He finally said me the truth.", "ok": false }
+					]
+				},
+				{
+					"title": "Say vs Tell",
+					"page": 10,
+					"sentence": "Say vs Tell",
+					"summary": "SAY can be used without a listener when the content matters.",
+					"explain": "Use SAY when the listener is not named and you focus on the message (what was said).",
+					"words": [
+						{ "word": "She didn’t say why she was upset.", "ok": true },
+						{ "word": "She didn’t tell why she was upset.", "ok": false }
+					]
+				}
+			]
+		},
+		{
+			"title": "Good vs Well",
+			"description": "Learn when to use 'good' (adjective) and 'well' (adverb/health) so you can sound natural and accurate.",
+			"sortorder": 2,
+			"sortbypage": true,
+			"sections": [
+				{
+					"title": "Good vs Well",
+					"page": 20,
+					"sentence": "Good vs Well",
+					"summary": "GOOD describes nouns. WELL describes actions (or health).",
+					"explain": "Use GOOD for a thing/person. Use WELL for how something is done (adverb) or to mean 'healthy'.",
+					"words": [
+						{ "word": "She speaks English very well.", "ok": true },
+						{ "word": "She speaks English very good.", "ok": false }
+					]
+				},
+				{
+					"title": "Good vs Well",
+					"page": 21,
+					"sentence": "Good vs Well",
+					"summary": "WELL can mean 'healthy'.",
+					"explain": "After 'feel', WELL often means healthy; GOOD can describe mood but is less precise for health.",
+					"words": [
+						{ "word": "I don’t feel well today.", "ok": true },
+						{ "word": "I don’t feel good today because I’m ill.", "ok": false }
+					]
+				},
+				{
+					"title": "Good vs Well",
+					"page": 22,
+					"sentence": "Good vs Well",
+					"summary": "GOOD modifies nouns.",
+					"explain": "Use GOOD before a noun (good idea, good plan).",
+					"words": [
+						{ "word": "That’s a good suggestion.", "ok": true },
+						{ "word": "That’s a well suggestion.", "ok": false }
+					]
+				},
+				{
+					"title": "Good vs Well",
+					"page": 23,
+					"sentence": "Good vs Well",
+					"summary": "WELL modifies verbs.",
+					"explain": "Use WELL to describe performance (do well, work well, explain well).",
+					"words": [
+						{ "word": "He explained the problem well.", "ok": true },
+						{ "word": "He explained the problem good.", "ok": false }
+					]
+				},
+				{
+					"title": "Good vs Well",
+					"page": 24,
+					"sentence": "Good vs Well",
+					"summary": "Past tense still follows the same rule.",
+					"explain": "Even in past forms, GOOD describes nouns; WELL describes actions/health.",
+					"words": [
+						{ "word": "The presentation was good, but the timing wasn’t perfect.", "ok": true },
+						{ "word": "The presentation was well, but the timing wasn’t perfect.", "ok": false }
+					]
+				},
+				{
+					"title": "Good vs Well",
+					"page": 25,
+					"sentence": "Good vs Well",
+					"summary": "DO WELL is common for results.",
+					"explain": "Use DO WELL for performance or outcomes (exam, interview, business).",
+					"words": [
+						{ "word": "She did well in the interview yesterday.", "ok": true },
+						{ "word": "She did good in the interview yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "Good vs Well",
+					"page": 26,
+					"sentence": "Good vs Well",
+					"summary": "Future tense: same grammar.",
+					"explain": "Use WELL for how something will be done; GOOD for a noun quality.",
+					"words": [
+						{ "word": "I’m sure you’ll do well on the test.", "ok": true },
+						{ "word": "I’m sure you’ll do good on the test.", "ok": false }
+					]
+				},
+				{
+					"title": "Good vs Well",
+					"page": 27,
+					"sentence": "Good vs Well",
+					"summary": "WELL after 'work' describes function.",
+					"explain": "Use WELL to describe how something functions (work well).",
+					"words": [
+						{ "word": "This plan will work well if everyone cooperates.", "ok": true },
+						{ "word": "This plan will work good if everyone cooperates.", "ok": false }
+					]
+				},
+				{
+					"title": "Good vs Well",
+					"page": 28,
+					"sentence": "Good vs Well",
+					"summary": "Adjectives vs adverbs.",
+					"explain": "With linking verbs like 'seem', use GOOD (adjective) to describe the subject.",
+					"words": [
+						{ "word": "The proposal sounds good to me.", "ok": true },
+						{ "word": "The proposal sounds well to me.", "ok": false }
+					]
+				},
+				{
+					"title": "Good vs Well",
+					"page": 29,
+					"sentence": "Good vs Well",
+					"summary": "WELL can mean 'satisfactorily'.",
+					"explain": "Use WELL to describe how something is done (manage well, handle well).",
+					"words": [
+						{ "word": "He handled the complaint well.", "ok": true },
+						{ "word": "He handled the complaint good.", "ok": false }
+					]
+				}
+			]
+		},
+		{
+			"title": "Speak vs Talk",
+			"description": "Learn when to use 'speak' and 'talk' for language ability, conversations, and formal situations.",
+			"sortorder": 3,
+			"sortbypage": true,
+			"sections": [
+				{
+					"title": "Speak vs Talk",
+					"page": 30,
+					"sentence": "Speak vs Talk",
+					"summary": "SPEAK is often about ability or formality.",
+					"explain": "Use SPEAK for languages/ability and formal contexts.",
+					"words": [
+						{ "word": "She speaks three languages fluently.", "ok": true },
+						{ "word": "She talks three languages fluently.", "ok": false }
+					]
+				},
+				{
+					"title": "Speak vs Talk",
+					"page": 31,
+					"sentence": "Speak vs Talk",
+					"summary": "TALK is common for conversations.",
+					"explain": "Use TALK about/with for informal conversation.",
+					"words": [
+						{ "word": "We talked about the budget for an hour.", "ok": true },
+						{ "word": "We spoke about the budget for an hour.", "ok": false }
+					]
+				},
+				{
+					"title": "Speak vs Talk",
+					"page": 32,
+					"sentence": "Speak vs Talk",
+					"summary": "SPEAK TO is more formal than TALK TO.",
+					"explain": "Both can work, but SPEAK TO is often preferred in formal contexts.",
+					"words": [
+						{ "word": "Could I speak to the manager, please?", "ok": true },
+						{ "word": "Could I talk the manager, please?", "ok": false }
+					]
+				},
+				{
+					"title": "Speak vs Talk",
+					"page": 33,
+					"sentence": "Speak vs Talk",
+					"summary": "SPEAK in public settings.",
+					"explain": "Use SPEAK for giving a speech/presentation.",
+					"words": [
+						{ "word": "He spoke at the conference last year.", "ok": true },
+						{ "word": "He talked at the conference last year.", "ok": false }
+					]
+				},
+				{
+					"title": "Speak vs Talk",
+					"page": 34,
+					"sentence": "Speak vs Talk",
+					"summary": "TALK ABOUT a topic.",
+					"explain": "TALK ABOUT is very common for topics; SPEAK ABOUT is possible but less everyday.",
+					"words": [
+						{ "word": "Let’s talk about your options tomorrow.", "ok": true },
+						{ "word": "Let’s speak your options tomorrow.", "ok": false }
+					]
+				},
+				{
+					"title": "Speak vs Talk",
+					"page": 35,
+					"sentence": "Speak vs Talk",
+					"summary": "SPEAK up/down is fixed usage.",
+					"explain": "Use SPEAK in common phrases like 'speak up' and 'speak clearly'.",
+					"words": [
+						{ "word": "Please speak up—I can’t hear you.", "ok": true },
+						{ "word": "Please talk up—I can’t hear you.", "ok": false }
+					]
+				},
+				{
+					"title": "Speak vs Talk",
+					"page": 36,
+					"sentence": "Speak vs Talk",
+					"summary": "TALK to someone is natural for informal chats.",
+					"explain": "TALK TO is the default for casual conversation.",
+					"words": [
+						{ "word": "I talked to my neighbour yesterday.", "ok": true },
+						{ "word": "I talked my neighbour yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "Speak vs Talk",
+					"page": 37,
+					"sentence": "Speak vs Talk",
+					"summary": "SPEAK for ability in future plans.",
+					"explain": "For language ability, use SPEAK (present/past/future).",
+					"words": [
+						{ "word": "By next year, he will speak Spanish confidently.", "ok": true },
+						{ "word": "By next year, he will talk Spanish confidently.", "ok": false }
+					]
+				},
+				{
+					"title": "Speak vs Talk",
+					"page": 38,
+					"sentence": "Speak vs Talk",
+					"summary": "TALK is common with 'to' and 'with'.",
+					"explain": "TALK WITH is common for mutual conversation.",
+					"words": [
+						{ "word": "I’ll talk with you after the meeting.", "ok": true },
+						{ "word": "I’ll speak with you after the meeting about.", "ok": false }
+					]
+				},
+				{
+					"title": "Speak vs Talk",
+					"page": 39,
+					"sentence": "Speak vs Talk",
+					"summary": "SPEAK to someone about a topic.",
+					"explain": "SPEAK TO (person) ABOUT (topic) is standard and slightly formal.",
+					"words": [
+						{ "word": "I spoke to HR about my contract.", "ok": true },
+						{ "word": "I spoke about HR my contract.", "ok": false }
+					]
+				}
+			]
+		},
+		{
+			"title": "Hear vs Listen",
+			"description": "Learn the difference between 'hear' (receive sound) and 'listen' (pay attention).",
+			"sortorder": 4,
+			"sortbypage": true,
+			"sections": [
+				{
+					"title": "Hear vs Listen",
+					"page": 40,
+					"sentence": "Hear vs Listen",
+					"summary": "HEAR is passive; LISTEN is active.",
+					"explain": "Use HEAR for noticing sounds. Use LISTEN (often with 'to') for paying attention.",
+					"words": [
+						{ "word": "I heard a strange noise outside.", "ok": true },
+						{ "word": "I listened a strange noise outside.", "ok": false }
+					]
+				},
+				{
+					"title": "Hear vs Listen",
+					"page": 41,
+					"sentence": "Hear vs Listen",
+					"summary": "LISTEN TO is required.",
+					"explain": "LISTEN normally takes 'to' before the object (listen to music).",
+					"words": [
+						{ "word": "She listens to podcasts on the train.", "ok": true },
+						{ "word": "She listens podcasts on the train.", "ok": false }
+					]
+				},
+				{
+					"title": "Hear vs Listen",
+					"page": 42,
+					"sentence": "Hear vs Listen",
+					"summary": "HEAR about = receive news.",
+					"explain": "HEAR ABOUT means you learned some information/news.",
+					"words": [
+						{ "word": "Did you hear about the new policy?", "ok": true },
+						{ "word": "Did you listen about the new policy?", "ok": false }
+					]
+				},
+				{
+					"title": "Hear vs Listen",
+					"page": 43,
+					"sentence": "Hear vs Listen",
+					"summary": "LISTEN carefully = attention.",
+					"explain": "Use LISTEN for instructions/advice, because you must pay attention.",
+					"words": [
+						{ "word": "Listen carefully—you’ll need these details later.", "ok": true },
+						{ "word": "Hear carefully—you’ll need these details later.", "ok": false }
+					]
+				},
+				{
+					"title": "Hear vs Listen",
+					"page": 44,
+					"sentence": "Hear vs Listen",
+					"summary": "Can you hear me? = ability to perceive sound.",
+					"explain": "HEAR is used for whether sound reaches you (phone calls, distance).",
+					"words": [
+						{ "word": "Can you hear me clearly on this call?", "ok": true },
+						{ "word": "Can you listen me clearly on this call?", "ok": false }
+					]
+				},
+				{
+					"title": "Hear vs Listen",
+					"page": 45,
+					"sentence": "Hear vs Listen",
+					"summary": "LISTEN to someone (with 'to') for attention.",
+					"explain": "Use LISTEN TO when you pay attention to a person’s words.",
+					"words": [
+						{ "word": "I listened to his explanation and changed my mind.", "ok": true },
+						{ "word": "I heard to his explanation and changed my mind.", "ok": false }
+					]
+				},
+				{
+					"title": "Hear vs Listen",
+					"page": 46,
+					"sentence": "Hear vs Listen",
+					"summary": "Future: hear vs listen depends on meaning.",
+					"explain": "Use HEAR for noticing sound; LISTEN TO for paying attention.",
+					"words": [
+						{ "word": "If you listen to the announcement, you’ll know which platform to use.", "ok": true },
+						{ "word": "If you hear to the announcement, you’ll know which platform to use.", "ok": false }
+					]
+				},
+				{
+					"title": "Hear vs Listen",
+					"page": 47,
+					"sentence": "Hear vs Listen",
+					"summary": "HEAR from = receive communication.",
+					"explain": "HEAR FROM means you received a message/call/email from someone.",
+					"words": [
+						{ "word": "I haven’t heard from him since Monday.", "ok": true },
+						{ "word": "I haven’t listened from him since Monday.", "ok": false }
+					]
+				},
+				{
+					"title": "Hear vs Listen",
+					"page": 48,
+					"sentence": "Hear vs Listen",
+					"summary": "LISTEN for = try to catch a sound.",
+					"explain": "LISTEN FOR means you are actively waiting/trying to detect a particular sound.",
+					"words": [
+						{ "word": "Listen for your name when they call the next patient.", "ok": true },
+						{ "word": "Hear for your name when they call the next patient.", "ok": false }
+					]
+				},
+				{
+					"title": "Hear vs Listen",
+					"page": 49,
+					"sentence": "Hear vs Listen",
+					"summary": "HEAR a sound; LISTEN to content.",
+					"explain": "A typical contrast: hear a noise vs listen to music.",
+					"words": [
+						{ "word": "I heard the alarm, but I didn’t react immediately.", "ok": true },
+						{ "word": "I listened the alarm, but I didn’t react immediately.", "ok": false }
+					]
+				}
+			]
+		},
+		{
+			"title": "Borrow vs Lend",
+			"description": "Learn 'borrow' (receive temporarily) vs 'lend' (give temporarily).",
+			"sortorder": 5,
+			"sortbypage": true,
+			"sections": [
+				{
+					"title": "Borrow vs Lend",
+					"page": 50,
+					"sentence": "Borrow vs Lend",
+					"summary": "BORROW = take from someone; LEND = give to someone.",
+					"explain": "Borrow something from someone. Lend something to someone.",
+					"words": [
+						{ "word": "Could I borrow your charger for an hour?", "ok": true },
+						{ "word": "Could I lend your charger for an hour?", "ok": false }
+					]
+				},
+				{
+					"title": "Borrow vs Lend",
+					"page": 51,
+					"sentence": "Borrow vs Lend",
+					"summary": "LEND takes the giver’s perspective.",
+					"explain": "If you give the item temporarily, use LEND.",
+					"words": [
+						{ "word": "I lent him my notes after class.", "ok": true },
+						{ "word": "I borrowed him my notes after class.", "ok": false }
+					]
+				},
+				{
+					"title": "Borrow vs Lend",
+					"page": 52,
+					"sentence": "Borrow vs Lend",
+					"summary": "BORROW FROM is standard.",
+					"explain": "BORROW is normally followed by FROM when you name the person.",
+					"words": [
+						{ "word": "She borrowed some money from her sister.", "ok": true },
+						{ "word": "She borrowed some money to her sister.", "ok": false }
+					]
+				},
+				{
+					"title": "Borrow vs Lend",
+					"page": 53,
+					"sentence": "Borrow vs Lend",
+					"summary": "LEND TO is standard.",
+					"explain": "LEND is normally followed by TO when you name the person.",
+					"words": [
+						{ "word": "He lent his car to a colleague for the weekend.", "ok": true },
+						{ "word": "He lent his car from a colleague for the weekend.", "ok": false }
+					]
+				},
+				{
+					"title": "Borrow vs Lend",
+					"page": 54,
+					"sentence": "Borrow vs Lend",
+					"summary": "Past tense: meaning matters.",
+					"explain": "BORROW means you received it; LEND means you provided it.",
+					"words": [
+						{ "word": "I borrowed a book from the library yesterday.", "ok": true },
+						{ "word": "I lent a book from the library yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "Borrow vs Lend",
+					"page": 55,
+					"sentence": "Borrow vs Lend",
+					"summary": "Future: lend/borrow follow the same patterns.",
+					"explain": "Use BORROW when you will receive; use LEND when you will give.",
+					"words": [
+						{ "word": "I’ll lend you my umbrella if it starts raining.", "ok": true },
+						{ "word": "I’ll borrow you my umbrella if it starts raining.", "ok": false }
+					]
+				},
+				{
+					"title": "Borrow vs Lend",
+					"page": 56,
+					"sentence": "Borrow vs Lend",
+					"summary": "Common error: mixing direction.",
+					"explain": "If you need something, you BORROW it. If someone needs it, you LEND it.",
+					"words": [
+						{ "word": "Can I borrow your pen for a moment?", "ok": true },
+						{ "word": "Can I lend your pen for a moment?", "ok": false }
+					]
+				},
+				{
+					"title": "Borrow vs Lend",
+					"page": 57,
+					"sentence": "Borrow vs Lend",
+					"summary": "LEND usually needs the receiver.",
+					"explain": "LEND normally includes who you lend to (lend me/him/us...).",
+					"words": [
+						{ "word": "She wouldn’t lend me her laptop.", "ok": true },
+						{ "word": "She wouldn’t borrow me her laptop.", "ok": false }
+					]
+				},
+				{
+					"title": "Borrow vs Lend",
+					"page": 58,
+					"sentence": "Borrow vs Lend",
+					"summary": "Borrowed items should be returned.",
+					"explain": "BORROW is used when you take something temporarily and will return it.",
+					"words": [
+						{ "word": "I’ve borrowed his camera, so I need to return it tomorrow.", "ok": true },
+						{ "word": "I’ve lent his camera, so I need to return it tomorrow.", "ok": false }
+					]
+				},
+				{
+					"title": "Borrow vs Lend",
+					"page": 59,
+					"sentence": "Borrow vs Lend",
+					"summary": "LEND can be used with money too.",
+					"explain": "LEND money to someone; BORROW money from someone.",
+					"words": [
+						{ "word": "They lent us some money to cover the deposit.", "ok": true },
+						{ "word": "They borrowed us some money to cover the deposit.", "ok": false }
+					]
+				}
+			]
+		},
+		{
+			"title": "Bring vs Take",
+			"description": "Learn 'bring' (towards the speaker/this place) vs 'take' (away from the speaker/this place).",
+			"sortorder": 6,
+			"sortbypage": true,
+			"sections": [
+				{
+					"title": "Bring vs Take",
+					"page": 60,
+					"sentence": "Bring vs Take",
+					"summary": "BRING = towards here; TAKE = away from here.",
+					"explain": "Use BRING when the destination is where the speaker is/will be. Use TAKE when moving away.",
+					"words": [
+						{ "word": "Can you bring your passport to the interview tomorrow?", "ok": true },
+						{ "word": "Can you take your passport to the interview tomorrow?", "ok": false }
+					]
+				},
+				{
+					"title": "Bring vs Take",
+					"page": 61,
+					"sentence": "Bring vs Take",
+					"summary": "TAKE something home (away from here).",
+					"explain": "If you move something away from the current place, TAKE is typical.",
+					"words": [
+						{ "word": "Please take these documents home and read them.", "ok": true },
+						{ "word": "Please bring these documents home and read them.", "ok": false }
+					]
+				},
+				{
+					"title": "Bring vs Take",
+					"page": 62,
+					"sentence": "Bring vs Take",
+					"summary": "Bring it back = return it here.",
+					"explain": "BRING BACK means return something to this place/person.",
+					"words": [
+						{ "word": "He brought the book back the next day.", "ok": true },
+						{ "word": "He took the book back the next day.", "ok": false }
+					]
+				},
+				{
+					"title": "Bring vs Take",
+					"page": 63,
+					"sentence": "Bring vs Take",
+					"summary": "Take someone somewhere (away from here).",
+					"explain": "TAKE is common for accompanying someone away from the current location.",
+					"words": [
+						{ "word": "I took my parents to the airport yesterday.", "ok": true },
+						{ "word": "I brought my parents to the airport yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "Bring vs Take",
+					"page": 64,
+					"sentence": "Bring vs Take",
+					"summary": "Bring to a meeting (towards the meeting).",
+					"explain": "If the focus is the destination where people will gather, BRING is natural.",
+					"words": [
+						{ "word": "She brought her notes to the meeting.", "ok": true },
+						{ "word": "She took her notes to the meeting (when the meeting is here).", "ok": false }
+					]
+				},
+				{
+					"title": "Bring vs Take",
+					"page": 65,
+					"sentence": "Bring vs Take",
+					"summary": "Take away = remove from here.",
+					"explain": "TAKE AWAY is used when removing something from the current place.",
+					"words": [
+						{ "word": "The waiter took away the empty plates.", "ok": true },
+						{ "word": "The waiter brought away the empty plates.", "ok": false }
+					]
+				},
+				{
+					"title": "Bring vs Take",
+					"page": 66,
+					"sentence": "Bring vs Take",
+					"summary": "Future plans: bring vs take depends on direction.",
+					"explain": "If you’re coming to me/us, BRING. If you’re going elsewhere, TAKE.",
+					"words": [
+						{ "word": "I’ll bring the contract to your office on Friday.", "ok": true },
+						{ "word": "I’ll take the contract to your office on Friday (if you’re waiting there).", "ok": false }
+					]
+				},
+				{
+					"title": "Bring vs Take",
+					"page": 67,
+					"sentence": "Bring vs Take",
+					"summary": "Take with you = carry away.",
+					"explain": "TAKE WITH YOU is common when leaving this place.",
+					"words": [
+						{ "word": "Take your ID with you in case they ask for it.", "ok": true },
+						{ "word": "Bring your ID with you in case they ask for it (when leaving here).", "ok": false }
+					]
+				},
+				{
+					"title": "Bring vs Take",
+					"page": 68,
+					"sentence": "Bring vs Take",
+					"summary": "Bring someone along = to here/with us.",
+					"explain": "BRING is natural when the destination includes the speaker/group.",
+					"words": [
+						{ "word": "He brought a colleague along to the workshop.", "ok": true },
+						{ "word": "He took a colleague along to the workshop (when joining us).", "ok": false }
+					]
+				},
+				{
+					"title": "Bring vs Take",
+					"page": 69,
+					"sentence": "Bring vs Take",
+					"summary": "Take it there; bring it here.",
+					"explain": "If the destination is 'there' (not here), TAKE is typical.",
+					"words": [
+						{ "word": "Could you take this package to reception, please?", "ok": true },
+						{ "word": "Could you bring this package to reception, please? (if reception is not here)", "ok": false }
+					]
+				}
+			]
+		},
+		{
+			"title": "Look vs See",
+			"description": "Learn 'look' (intentional) vs 'see' (notice/ability).",
+			"sortorder": 7,
+			"sortbypage": true,
+			"sections": [
+				{
+					"title": "Look vs See",
+					"page": 70,
+					"sentence": "Look vs See",
+					"summary": "LOOK is intentional; SEE is passive/ability.",
+					"explain": "Use LOOK when you direct your eyes deliberately. Use SEE for noticing or ability.",
+					"words": [
+						{ "word": "Look at this graph for a moment.", "ok": true },
+						{ "word": "See at this graph for a moment.", "ok": false }
+					]
+				},
+				{
+					"title": "Look vs See",
+					"page": 71,
+					"sentence": "Look vs See",
+					"summary": "SEE does not take 'at' in most uses.",
+					"explain": "Say 'I see it' not 'I see at it'.",
+					"words": [
+						{ "word": "I can see the mountains from here.", "ok": true },
+						{ "word": "I can see at the mountains from here.", "ok": false }
+					]
+				},
+				{
+					"title": "Look vs See",
+					"page": 72,
+					"sentence": "Look vs See",
+					"summary": "LOOK for = search; SEE = notice/find.",
+					"explain": "LOOK FOR means search actively. SEE means you notice something.",
+					"words": [
+						{ "word": "I’m looking for my keys—have you seen them?", "ok": true },
+						{ "word": "I’m seeing for my keys—have you looked them?", "ok": false }
+					]
+				},
+				{
+					"title": "Look vs See",
+					"page": 73,
+					"sentence": "Look vs See",
+					"summary": "SEE someone = meet/visit.",
+					"explain": "SEE can mean meet/visit (see a doctor, see a friend).",
+					"words": [
+						{ "word": "I saw the dentist last week.", "ok": true },
+						{ "word": "I looked the dentist last week.", "ok": false }
+					]
+				},
+				{
+					"title": "Look vs See",
+					"page": 74,
+					"sentence": "Look vs See",
+					"summary": "LOOK like = appearance.",
+					"explain": "Use LOOK like to describe appearance (look tired, look like rain).",
+					"words": [
+						{ "word": "You look tired—did you sleep enough?", "ok": true },
+						{ "word": "You see tired—did you sleep enough?", "ok": false }
+					]
+				},
+				{
+					"title": "Look vs See",
+					"page": 75,
+					"sentence": "Look vs See",
+					"summary": "SEE what you mean = understand.",
+					"explain": "SEE is used for understanding (I see what you mean).",
+					"words": [
+						{ "word": "I see what you mean, but I still disagree.", "ok": true },
+						{ "word": "I look what you mean, but I still disagree.", "ok": false }
+					]
+				},
+				{
+					"title": "Look vs See",
+					"page": 76,
+					"sentence": "Look vs See",
+					"summary": "Future: look at vs see depends on intention.",
+					"explain": "You LOOK at something deliberately; you SEE something when you notice it/it becomes visible.",
+					"words": [
+						{ "word": "I’ll look at the report tonight and give feedback tomorrow.", "ok": true },
+						{ "word": "I’ll see at the report tonight and give feedback tomorrow.", "ok": false }
+					]
+				},
+				{
+					"title": "Look vs See",
+					"page": 77,
+					"sentence": "Look vs See",
+					"summary": "LOOK after = take care of (fixed phrase).",
+					"explain": "LOOK AFTER is a set phrase meaning take care of.",
+					"words": [
+						{ "word": "Could you look after the kids on Saturday?", "ok": true },
+						{ "word": "Could you see after the kids on Saturday?", "ok": false }
+					]
+				},
+				{
+					"title": "Look vs See",
+					"page": 78,
+					"sentence": "Look vs See",
+					"summary": "SEE if = check/discover.",
+					"explain": "SEE IF means check/discover information (see if it works).",
+					"words": [
+						{ "word": "I’ll see if the shop is still open.", "ok": true },
+						{ "word": "I’ll look if the shop is still open.", "ok": false }
+					]
+				},
+				{
+					"title": "Look vs See",
+					"page": 79,
+					"sentence": "Look vs See",
+					"summary": "LOOK at vs SEE the difference.",
+					"explain": "LOOK AT is a deliberate action; SEE is the result/ability.",
+					"words": [
+						{ "word": "Look at the two versions and see which one is clearer.", "ok": true },
+						{ "word": "See the two versions and look which one is clearer.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

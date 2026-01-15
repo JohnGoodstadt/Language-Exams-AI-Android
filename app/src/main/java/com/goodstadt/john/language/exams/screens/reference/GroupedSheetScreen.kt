@@ -184,6 +184,8 @@ fun GroupedSheetScreen(
                     EntryPointAccessors.fromApplication(context.applicationContext, StatsSheetEntryPoint::class.java)
                 }
 
+                viewModel.incSideQuestStat()
+
                 Box(modifier = Modifier.fillMaxHeight(0.85f)) {
                     SideQuestStatsSheet(
                         paragraphCount = viewModel.getAIParagraphCount(),
@@ -212,6 +214,8 @@ fun GroupedSheetScreen(
                     val questions = remember(uiState.contentState) {
                         QuizDataConverter.generateAdjectivesQuiz(categories, limit = 10)
                     }
+
+                    viewModel.incQuizSheetStat()
 
                     val pageTitle = uiState.title
                     if (questions.isNotEmpty()) {

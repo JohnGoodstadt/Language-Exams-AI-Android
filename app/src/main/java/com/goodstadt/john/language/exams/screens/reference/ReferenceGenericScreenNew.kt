@@ -182,6 +182,8 @@ fun ReferenceGenericScreenNew(
                             EntryPointAccessors.fromApplication(context.applicationContext, StatsSheetEntryPoint::class.java)
                         }
 
+                        viewModel.incSideQuestStat()
+
                         Box(modifier = Modifier.fillMaxHeight(0.85f)) {
                             SideQuestStatsSheet(
                                 paragraphCount = viewModel.getAIParagraphCount(),

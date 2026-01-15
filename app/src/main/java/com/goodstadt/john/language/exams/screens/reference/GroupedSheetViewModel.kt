@@ -370,4 +370,24 @@ class GroupedSheetViewModel @Inject constructor(
     fun getCachedManifest(): AppUIManifest? {
         return appConfigRepository.getAppUiManifest()
     }
+
+    fun incSideQuestStat() {
+        val sheetName = uiState.value.currentSheetName
+        val statName = "${TTSStatsRepository.Companion.statSideQuestCount}_$sheetName"
+
+        ttsStatsRepository.inc(
+            TTSStatsRepository.fsDOC.GlobalStats,
+            statName
+        )
+    }
+
+    fun incQuizSheetStat() {
+        val sheetName = uiState.value.currentSheetName
+        val statName = "${TTSStatsRepository.Companion.statSheetQuizCount}_$sheetName"
+
+        ttsStatsRepository.inc(
+            TTSStatsRepository.fsDOC.GlobalStats,
+            statName
+        )
+    }
 }

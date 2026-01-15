@@ -8,6 +8,9 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statSideQuestCount
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
@@ -38,6 +41,7 @@ class Format1ViewModel @Inject constructor(
     private val historyManager: HistorySyncManager,
     private val audioCacheManager: AudioCacheManager,
     private val appConfigRepository: AppConfigRepository,
+    private val ttsStatsRepository: TTSStatsRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -246,6 +250,24 @@ class Format1ViewModel @Inject constructor(
     }
     fun getCachedManifest(): AppUIManifest? {
         return appConfigRepository.getAppUiManifest()
+    }
+
+    fun incSideQuestStat() {
+        val statName = "${TTSStatsRepository.Companion.statSideQuestCount}_$sheetName"
+
+        ttsStatsRepository.inc(
+            TTSStatsRepository.fsDOC.GlobalStats,
+            statName
+        )
+    }
+
+    fun incQuizSheetStat() {
+        val statName = "${TTSStatsRepository.Companion.statSheetQuizCount}_$sheetName"
+
+        ttsStatsRepository.inc(
+            TTSStatsRepository.fsDOC.GlobalStats,
+            statName
+        )
     }
     /**
      * Loops through the loaded data, checks History for each sentence,

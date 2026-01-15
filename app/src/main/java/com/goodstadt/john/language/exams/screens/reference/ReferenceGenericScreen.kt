@@ -154,6 +154,8 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                             buildSideQuestData(audioCache, manifest)
                         }
 
+                        viewModel.incSideQuestStat()
+
                         Box(modifier = Modifier.fillMaxHeight(0.85f)) {
                             // Note: You might need to pass data in here if SideQuestStatsSheet
                             // doesn't pull everything from Hilt automatically yet.

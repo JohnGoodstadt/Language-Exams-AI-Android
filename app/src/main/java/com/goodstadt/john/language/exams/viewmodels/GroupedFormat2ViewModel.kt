@@ -43,7 +43,7 @@ class GroupedFormat2ViewModel @Inject constructor(
     private val historyManager: HistorySyncManager,
     private val audioCacheManager: AudioCacheManager,
     private val billingRepository: BillingRepository,
-    private val rateLimiter: SimpleRateLimiter, // If needed for UI
+    private val ttsStatsRepository: TTSStatsRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -319,5 +319,15 @@ class GroupedFormat2ViewModel @Inject constructor(
     fun hideRateOKLimitSheet() { _showRateLimitSheet.value = false }
     fun getCachedManifest(): AppUIManifest? {
         return appConfigRepository.getAppUiManifest()
+    }
+
+    fun incSideQuestStat() {
+        val sheetName = _uiState.value.currentSheetName
+        val statName = "${TTSStatsRepository.Companion.statSideQuestCount}_$sheetName"
+
+        ttsStatsRepository.inc(
+            TTSStatsRepository.fsDOC.GlobalStats,
+            statName
+        )
     }
 }

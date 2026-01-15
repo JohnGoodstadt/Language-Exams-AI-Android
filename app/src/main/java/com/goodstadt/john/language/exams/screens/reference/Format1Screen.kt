@@ -25,6 +25,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.ReferenceCategory
@@ -233,6 +235,8 @@ fun Format1Screen(
                         buildSideQuestData(audioCache,manifest)
                     }
 
+                    viewModel.incSideQuestStat()
+
                     Box(modifier = Modifier.fillMaxHeight(0.85f)) {
                         // Note: You might need to pass data in here if SideQuestStatsSheet 
                         // doesn't pull everything from Hilt automatically yet.
@@ -260,6 +264,9 @@ fun Format1Screen(
                 val questions = remember(state.data) {
                     QuizDataConverter.generateHomophoneSwapQuiz(state.data, limit = 10)
                 }
+
+                viewModel.incQuizSheetStat()
+
                 val pageTitle = "10 Questions"
                 if (questions.isNotEmpty()) {
                     ModalBottomSheet(

@@ -55,6 +55,7 @@ class Format2ViewModel @Inject constructor(
     private val historyManager: HistorySyncManager,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val audioCacheManager: AudioCacheManager,
+    private val ttsStatsRepository: TTSStatsRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
@@ -282,5 +283,14 @@ class Format2ViewModel @Inject constructor(
 
     fun getCachedManifest(): AppUIManifest? {
         return appConfigRepository.getAppUiManifest()
+    }
+
+    fun incSideQuestStat() {
+        val statName = "${TTSStatsRepository.Companion.statSideQuestCount}_$sheetName"
+
+        ttsStatsRepository.inc(
+            TTSStatsRepository.fsDOC.GlobalStats,
+            statName
+        )
     }
 }

@@ -184,6 +184,10 @@ class TTSStatsRepository @Inject constructor(
         const val statTTSSuccessCount = "statTTSSuccessCount"
         const val statRateLimiterForbidCount = "statRateLimiterForbidCount"
 
+        //Button usage
+        const val statSheetQuizCount = "statSheetQuizCount"
+        const val statSideQuestCount = "statSideQuestCount"
+
         //IAP
         const val statIAPSheetDisplayedCount = "statIAPSheetDisplayedCount"
         const val statIAPHourlyHitCount = "statIAPHourlyHitCount"
