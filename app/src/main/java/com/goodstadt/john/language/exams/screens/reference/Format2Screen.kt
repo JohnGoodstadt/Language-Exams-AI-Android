@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -38,6 +39,7 @@ import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
+import com.goodstadt.john.language.exams.utils.QuizDataConverter
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.android.EntryPointAccessors
@@ -66,7 +68,9 @@ fun Format2Screen(
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    var showQuizSheet by remember { mutableStateOf(false) }
     val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
+  //  val uiState by viewModel.uiState.collectAsState()
 
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -102,6 +106,15 @@ fun Format2Screen(
                         color = orangeLight
                     )
                     Spacer(modifier = Modifier.weight(1f))
+                    IconButton(onClick = {
+                        showQuizSheet = true
+                    }) {
+                        Icon(
+                            imageVector = Icons.Default.SportsEsports,
+                            contentDescription = "Stats",
+                            tint = Color(0xFFFF9800)
+                        )
+                    }
                     // Side Quest Icon
                     IconButton(onClick = { showSideQuestSheet = true }) {
                         Icon(
@@ -259,6 +272,40 @@ fun Format2Screen(
             }
         }
     }
+    if (showQuizSheet) {
+        val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+        val questions = QuizDataConverter.readWordPairsJSONForQuiz( context,"QuizSheetWordPairs-en.json" )
+        viewModel.incQuizSheetStat()
+
+        val pageTitle = "10 Questions"
+        if (questions.isNotEmpty()) {
+            ModalBottomSheet(
+                onDismissRequest = { showQuizSheet = false },
+                sheetState = quizSheetState,
+                // ✅ FIX 1: Force the sheet to take up 95% of the screen height
+                modifier = Modifier.fillMaxHeight(0.80f),
+                // ✅ FIX 2: Ensure it respects system colors
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                // ✅ FIX 3: Container that fills the sheet AND adds bottom padding
+                // We use a Box with fillMaxSize so the QuizView's Spacers work correctly.
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        // Add padding for the Android Gesture Bar / Navigation Bar
+                        .padding(bottom = 40.dp)
+                ) {
+                    QuizSheetView(
+                        questions = questions,
+                        title = pageTitle,//"Quiz: Sounds the Same",
+                        onDismiss = { showQuizSheet = false }
+                    )
+                }
+            }
+        }
+    } //: QuizSheet
 }
 
 /**

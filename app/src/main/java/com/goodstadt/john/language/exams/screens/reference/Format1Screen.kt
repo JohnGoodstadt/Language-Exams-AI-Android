@@ -294,8 +294,7 @@ fun Format1Screen(
                         }
                     }
                 }
-            }
-
+            } //: QuizSheet
         }
     }
 }

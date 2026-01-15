@@ -29,9 +29,11 @@ import com.goodstadt.john.language.exams.viewmodels.GroupedFormat2ViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.android.EntryPointAccessors
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.ui.draw.clip
 import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
+import com.goodstadt.john.language.exams.utils.QuizDataConverter
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,6 +52,7 @@ fun GroupedFormat2Screen(
     // Side Quest Sheet
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    var showQuizSheet by remember { mutableStateOf(false) }
 
     Column(modifier = Modifier.fillMaxSize()) {
 
@@ -101,13 +104,16 @@ fun GroupedFormat2Screen(
 
                     // Logic Delegates
                     isHeard = { sentence ->
-//                        val id = FirebaseAudioService.generateContentID(sentence)
+
                         viewModel.isHeard(sentence)
-//                        uiState.heardSentenceIDs.contains(id)
+
                     },
                     getPlayCount = { 0 }, // Optional if you want to implement count logic
                     onPlayTrack = { sentence -> viewModel.handleSentenceTap(sentence) },
-                    onShowSideQuestSheet = { showSideQuestSheet = true }
+                    onShowSideQuestSheet = { showSideQuestSheet = true },
+                    onShowQuizSheet = {
+                        showQuizSheet = true
+                    }
                 )
             }
         }
@@ -154,7 +160,41 @@ fun GroupedFormat2Screen(
                 )
             }
         }
-    }
+    } //: Side Quest
+    if (showQuizSheet) {
+        val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+        val questions = QuizDataConverter.readWordPairsJSONForQuiz( context,"QuizSheetWordPairs-en.json" )
+        viewModel.incQuizSheetStat()
+
+        val pageTitle = "Word Pairs"
+        if (questions.isNotEmpty()) {
+            ModalBottomSheet(
+                onDismissRequest = { showQuizSheet = false },
+                sheetState = quizSheetState,
+                // ✅ FIX 1: Force the sheet to take up 95% of the screen height
+                modifier = Modifier.fillMaxHeight(0.80f),
+                // ✅ FIX 2: Ensure it respects system colors
+                containerColor = MaterialTheme.colorScheme.surface,
+                contentColor = MaterialTheme.colorScheme.onSurface
+            ) {
+                // ✅ FIX 3: Container that fills the sheet AND adds bottom padding
+                // We use a Box with fillMaxSize so the QuizView's Spacers work correctly.
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        // Add padding for the Android Gesture Bar / Navigation Bar
+                        .padding(bottom = 40.dp)
+                ) {
+                    QuizSheetView(
+                        questions = questions,
+                        title = pageTitle,//"Quiz: Sounds the Same",
+                        onDismiss = { showQuizSheet = false }
+                    )
+                }
+            }
+        }
+    } //: QuizSheet
 }
 
 // Helper (Copy from GroupedSheetScreen if not shared)
@@ -179,8 +219,10 @@ fun Format2Content(
     getPlayCount: (String) -> Int,
     onPlayTrack: (String) -> Unit,
     onShowSideQuestSheet: () -> Unit,
+    onShowQuizSheet: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -203,6 +245,14 @@ fun Format2Content(
                     )
                     Spacer(modifier = Modifier.weight(1f))
 
+                    Spacer(modifier = Modifier.weight(1f))
+                    IconButton(onClick = onShowQuizSheet) {
+                        Icon(
+                            imageVector = Icons.Default.SportsEsports,
+                            contentDescription = "Stats",
+                            tint = Color(0xFFFF9800)
+                        )
+                    }
                     // Side Quest Icon
                     IconButton(onClick = onShowSideQuestSheet) {
                         Icon(

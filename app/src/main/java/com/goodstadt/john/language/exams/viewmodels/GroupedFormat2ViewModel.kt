@@ -330,4 +330,13 @@ class GroupedFormat2ViewModel @Inject constructor(
             statName
         )
     }
+    fun incQuizSheetStat() {
+        val sheetName = _uiState.value.currentSheetName
+        val statName = "${TTSStatsRepository.Companion.statSheetQuizCount}_$sheetName"
+
+        ttsStatsRepository.inc(
+            TTSStatsRepository.fsDOC.GlobalStats,
+            statName
+        )
+    }
 }

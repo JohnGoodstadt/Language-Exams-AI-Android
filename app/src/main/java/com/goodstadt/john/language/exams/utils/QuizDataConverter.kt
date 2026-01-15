@@ -2,8 +2,11 @@ package com.goodstadt.john.language.exams.utils
 
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
+import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.models.TestMyselfSections
 import com.goodstadt.john.language.exams.models.TestMyselfWordsState
+import kotlin.random.Random
+import android.content.Context
 
 object QuizDataConverter {
 
@@ -151,6 +154,36 @@ object QuizDataConverter {
 
         return generatedQuestions
     }
+
+
+    fun randomSectionsFromAllLists(
+        root: TestMyselfListRoot,
+        count: Int = 10,
+        random: Random = Random.Default
+    ): List<TestMyselfSections> {
+        val allSections: List<TestMyselfSections> =
+            root.data.flatMap { it.sections }
+
+        if (allSections.isEmpty()) return emptyList()
+
+        val n = minOf(count, allSections.size)
+        return allSections.shuffled(random).take(n)
+    }
+
+
+    fun readWordPairsJSONForQuiz(
+        context: Context,
+        filename: String,
+        count: Int = 10
+    ): List<TestMyselfSections> {
+
+       // val fileName = "QuizSheetWordPairs-en.json" // stored under assets/Quizzes/
+        val root: TestMyselfListRoot = readTestMyselfDataFromAssets(context, filename)
+            ?: return emptyList()
+
+        return randomSectionsFromAllLists(root, count)
+    }
+
     // MARK: - Helper: Word Boundary Replacement
     /**
      * Replaces whole words only, case insensitive.
