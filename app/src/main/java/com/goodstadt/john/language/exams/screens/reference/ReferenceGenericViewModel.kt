@@ -470,5 +470,14 @@ class ReferenceGenericViewModel @Inject constructor(
         )
     }
 
+    fun incQuizSheetStat() {
+        val statName = "${TTSStatsRepository.Companion.statSheetQuizCount}_$sheetName"
+
+        ttsStatsRepository.inc(
+            TTSStatsRepository.fsDOC.GlobalStats,
+            statName
+        )
+    }
+
 
 }

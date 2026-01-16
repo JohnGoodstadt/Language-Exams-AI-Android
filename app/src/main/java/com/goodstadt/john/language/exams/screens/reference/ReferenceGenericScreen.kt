@@ -39,6 +39,7 @@ import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
+import com.goodstadt.john.language.exams.utils.QuizDataConverter
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.android.EntryPointAccessors
 import timber.log.Timber
@@ -61,6 +62,7 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     val lazyListState = rememberLazyListState()
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    var showQuizSheet by remember { mutableStateOf(false) }
 
     val showCelebration by viewModel.showCelebration.collectAsStateWithLifecycle()
     val bannerTitle by viewModel.celebrationTitle.collectAsStateWithLifecycle()
@@ -117,7 +119,8 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                         showSideQuestSheet = true
                     },
                     onQuizSheetTapped =  {
-                       Timber.e("TODO: finish this code")
+
+                        showQuizSheet = true
                     },
                 )
                 if (showSideQuestSheet) {
@@ -130,16 +133,8 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                         // 1. Get Managers
                         val audioCache = viewModel.getAudioCacheManager()
 
-                        // 2. Collect Latest Stats (Reactive)
-                        // This ensures the sheet has data even if it wasn't pre-calculated
                         val referenceCounts by audioCache.referenceHeardCounts.collectAsStateWithLifecycle()
 
-                        // 3. Build the Data Models using the Helper
-//                    val refData = remember(referenceCounts) {
-//                        getReferenceData(audioCache, referenceCounts)
-//                    }
-
-                        // 4. Get Hilt Entry Point for QuizManager
                         val entryPoint = remember(context) {
                             EntryPointAccessors.fromApplication(
                                 context.applicationContext,
@@ -177,7 +172,41 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
                         }
                     }
                 } //: SideShow
+                if (showQuizSheet) {
+                    val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
+                    val questions = QuizDataConverter.readPrepositionsQuizQuestions( context,"QuizSheetPrepositions-en")
+                    viewModel.incQuizSheetStat()
+
+                    val pageTitle = "Prepositions"
+                    if (questions.isNotEmpty()) {
+                        ModalBottomSheet(
+                            onDismissRequest = { showQuizSheet = false },
+                            sheetState = quizSheetState,
+                            // ✅ FIX 1: Force the sheet to take up 95% of the screen height
+                            modifier = Modifier.fillMaxHeight(0.80f),
+                            // ✅ FIX 2: Ensure it respects system colors
+                            containerColor = MaterialTheme.colorScheme.surface,
+                            contentColor = MaterialTheme.colorScheme.onSurface
+                        ) {
+                            // ✅ FIX 3: Container that fills the sheet AND adds bottom padding
+                            // We use a Box with fillMaxSize so the QuizView's Spacers work correctly.
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(bottom = 40.dp)
+                            ) {
+                                QuizSheetView(
+                                    questions = questions,
+                                    title = pageTitle,
+                                    onDismiss = { showQuizSheet = false }
+                                )
+                            }
+                        }
+                    }else{
+                        //TODO: show toast? or fault?
+                    }
+                } //: QuizSheet
                 if (showCelebration) {
                     viewModel.playSuccessSound()
                     Box(

@@ -1,0 +1,736 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "QuizSheetPrepositions-en",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "English Prepositions",
+			"description": "Choose the correct sentence for each preposition. Includes core prepositions plus B2+ multi-word and formal prepositions.",
+			"sortorder": 1,
+			"sortbypage": true,
+			"sections": [
+				{
+					"title": "in",
+					"page": 1,
+					"sentence": "in",
+					"summary": "IN is used for enclosed spaces, months/years, and general periods.",
+					"explain": "Use IN for something inside boundaries (in the box, in London) and for longer time periods (in 2026, in June).",
+					"words": [
+						{ "word": "The report will be ready in June.", "ok": true },
+						{ "word": "The report will be ready on June.", "ok": false },
+						{ "word": "The report will be ready at June.", "ok": false }
+					]
+				},
+				{
+					"title": "on",
+					"page": 2,
+					"sentence": "on",
+					"summary": "ON is used for surfaces and specific days/dates.",
+					"explain": "Use ON for contact with a surface (on the table) and for days/dates (on Monday, on 12 March).",
+					"words": [
+						{ "word": "We met on Monday to finalise the budget.", "ok": true },
+						{ "word": "We met in Monday to finalise the budget.", "ok": false },
+						{ "word": "We met at Monday to finalise the budget.", "ok": false }
+					]
+				},
+				{
+					"title": "at",
+					"page": 3,
+					"sentence": "at",
+					"summary": "AT is used for precise times and specific points/locations.",
+					"explain": "Use AT for clock times (at 7:30) and for a specific point (at the entrance, at the corner).",
+					"words": [
+						{ "word": "Let’s meet at 7:30 outside the station.", "ok": true },
+						{ "word": "Let’s meet on 7:30 outside the station.", "ok": false },
+						{ "word": "Let’s meet in 7:30 outside the station.", "ok": false }
+					]
+				},
+				{
+					"title": "by",
+					"page": 4,
+					"sentence": "by",
+					"summary": "BY often means 'no later than' or shows method/means.",
+					"explain": "Use BY for deadlines (by Friday) and for method (by email, by train). It does not mean 'until' in duration.",
+					"words": [
+						{ "word": "Please send the signed contract by Friday.", "ok": true },
+						{ "word": "Please send the signed contract until Friday.", "ok": false },
+						{ "word": "Please send the signed contract since Friday.", "ok": false }
+					]
+				},
+				{
+					"title": "until",
+					"page": 5,
+					"sentence": "until",
+					"summary": "UNTIL marks the end point of a continuing situation.",
+					"explain": "Use UNTIL to show something continues up to a time and then stops/changes (stay until 6).",
+					"words": [
+						{ "word": "I’ll be in the office until 6, then I’m heading home.", "ok": true },
+						{ "word": "I’ll be in the office by 6, then I’m heading home.", "ok": false },
+						{ "word": "I’ll be in the office for 6, then I’m heading home.", "ok": false }
+					]
+				},
+				{
+					"title": "for",
+					"page": 6,
+					"sentence": "for",
+					"summary": "FOR is used for duration and purpose/benefit.",
+					"explain": "Use FOR with a period of time (for two weeks) and to indicate purpose/benefit (for you).",
+					"words": [
+						{ "word": "They lived in Berlin for two years before moving back.", "ok": true },
+						{ "word": "They lived in Berlin since two years before moving back.", "ok": false },
+						{ "word": "They lived in Berlin during two years before moving back.", "ok": false }
+					]
+				},
+				{
+					"title": "since",
+					"page": 7,
+					"sentence": "since",
+					"summary": "SINCE is used from a starting point up to now/then.",
+					"explain": "Use SINCE with a starting time (since 2019) to show a situation continues to the present or to a later reference point.",
+					"words": [
+						{ "word": "I’ve worked remotely since 2020.", "ok": true },
+						{ "word": "I’ve worked remotely for 2020.", "ok": false },
+						{ "word": "I’ve worked remotely during 2020.", "ok": false }
+					]
+				},
+				{
+					"title": "during",
+					"page": 8,
+					"sentence": "during",
+					"summary": "DURING means 'at some point in the period'.",
+					"explain": "Use DURING for something happening within a period (during the meeting, during the night).",
+					"words": [
+						{ "word": "Please keep your phone on silent during the presentation.", "ok": true },
+						{ "word": "Please keep your phone on silent for the presentation.", "ok": false },
+						{ "word": "Please keep your phone on silent since the presentation.", "ok": false }
+					]
+				},
+				{
+					"title": "between",
+					"page": 9,
+					"sentence": "between",
+					"summary": "BETWEEN is for two items (or clear endpoints).",
+					"explain": "Use BETWEEN for two people/things, or for ranges with two endpoints (between 3 and 5).",
+					"words": [
+						{ "word": "The agreement is between the supplier and the distributor.", "ok": true },
+						{ "word": "The agreement is among the supplier and the distributor.", "ok": false },
+						{ "word": "The agreement is within the supplier and the distributor.", "ok": false }
+					]
+				},
+				{
+					"title": "among",
+					"page": 10,
+					"sentence": "among",
+					"summary": "AMONG is for three or more items as a group.",
+					"explain": "Use AMONG when something is distributed or shared within a group of three or more.",
+					"words": [
+						{ "word": "The bonus will be shared among the five team members.", "ok": true },
+						{ "word": "The bonus will be shared between the five team members.", "ok": false },
+						{ "word": "The bonus will be shared across of the five team members.", "ok": false }
+					]
+				},
+				{
+					"title": "into",
+					"page": 11,
+					"sentence": "into",
+					"summary": "INTO suggests movement to the inside of something.",
+					"explain": "Use INTO when something moves from outside to inside (walk into the room).",
+					"words": [
+						{ "word": "She walked into the room without knocking.", "ok": true },
+						{ "word": "She walked in the room without knocking.", "ok": false },
+						{ "word": "She walked onto the room without knocking.", "ok": false }
+					]
+				},
+				{
+					"title": "onto",
+					"page": 12,
+					"sentence": "onto",
+					"summary": "ONTO suggests movement to a surface.",
+					"explain": "Use ONTO when something moves to a surface (put it onto the table).",
+					"words": [
+						{ "word": "He placed the documents onto the desk and sat down.", "ok": true },
+						{ "word": "He placed the documents into the desk and sat down.", "ok": false },
+						{ "word": "He placed the documents at the desk and sat down.", "ok": false }
+					]
+				},
+				{
+					"title": "within",
+					"page": 13,
+					"sentence": "within",
+					"summary": "WITHIN means 'inside a limit' (time/space/rules).",
+					"explain": "Use WITHIN for limits and deadlines measured from now/then (within 24 hours) and boundaries (within the site).",
+					"words": [
+						{ "word": "You must submit the form within 24 hours of receiving the link.", "ok": true },
+						{ "word": "You must submit the form by 24 hours of receiving the link.", "ok": false },
+						{ "word": "You must submit the form until 24 hours of receiving the link.", "ok": false }
+					]
+				},
+				{
+					"title": "throughout",
+					"page": 14,
+					"sentence": "throughout",
+					"summary": "THROUGHOUT means 'from start to finish' of a whole period/place.",
+					"explain": "Use THROUGHOUT when something applies continuously across an entire period or area (throughout the year/country).",
+					"words": [
+						{ "word": "The policy remained in force throughout the year.", "ok": true },
+						{ "word": "The policy remained in force during the year (meaning only at some times).", "ok": false },
+						{ "word": "The policy remained in force by the year.", "ok": false }
+					]
+				},
+				{
+					"title": "over",
+					"page": 15,
+					"sentence": "over",
+					"summary": "OVER can mean 'more than' or 'covering a period'.",
+					"explain": "Use OVER for duration/coverage (over the next few weeks) and for 'more than' (over £100).",
+					"words": [
+						{ "word": "Sales increased steadily over the next three months.", "ok": true },
+						{ "word": "Sales increased steadily in the next three months.", "ok": false },
+						{ "word": "Sales increased steadily at the next three months.", "ok": false }
+					]
+				},
+				{
+					"title": "under",
+					"page": 16,
+					"sentence": "under",
+					"summary": "UNDER can mean 'beneath' or 'subject to'.",
+					"explain": "Use UNDER for physical position and for rules/authority (under the contract, under pressure).",
+					"words": [
+						{ "word": "Under the current contract, refunds are limited.", "ok": true },
+						{ "word": "Below the current contract, refunds are limited.", "ok": false },
+						{ "word": "Between the current contract, refunds are limited.", "ok": false }
+					]
+				},
+				{
+					"title": "above",
+					"page": 17,
+					"sentence": "above",
+					"summary": "ABOVE is often used in formal writing to refer to earlier text or higher values.",
+					"explain": "Use ABOVE to refer to something earlier in a document (as stated above) or higher levels/values.",
+					"words": [
+						{ "word": "As stated above, all claims must include evidence.", "ok": true },
+						{ "word": "As stated over, all claims must include evidence.", "ok": false },
+						{ "word": "As stated across, all claims must include evidence.", "ok": false }
+					]
+				},
+				{
+					"title": "below",
+					"page": 18,
+					"sentence": "below",
+					"summary": "BELOW is used for lower position or later text.",
+					"explain": "Use BELOW for lower position, lower values, or later text (see below).",
+					"words": [
+						{ "word": "Please see the detailed breakdown below.", "ok": true },
+						{ "word": "Please see the detailed breakdown under.", "ok": false },
+						{ "word": "Please see the detailed breakdown beneath of.", "ok": false }
+					]
+				},
+				{
+					"title": "beneath",
+					"page": 19,
+					"sentence": "beneath",
+					"summary": "BENEATH is like 'under' but more formal/literary.",
+					"explain": "Use BENEATH for something lower in position, often in more formal or descriptive writing.",
+					"words": [
+						{ "word": "The safe was hidden beneath the floorboards.", "ok": true },
+						{ "word": "The safe was hidden below the floorboards (could be okay, but less exact for contact/cover).", "ok": false },
+						{ "word": "The safe was hidden under of the floorboards.", "ok": false }
+					]
+				},
+				{
+					"title": "towards",
+					"page": 20,
+					"sentence": "towards",
+					"summary": "TOWARDS indicates direction or attitude.",
+					"explain": "Use TOWARDS for movement in a direction (towards the exit) or attitude (towards change).",
+					"words": [
+						{ "word": "She moved towards the door as the meeting ended.", "ok": true },
+						{ "word": "She moved until the door as the meeting ended.", "ok": false },
+						{ "word": "She moved within the door as the meeting ended.", "ok": false }
+					]
+				},
+				{
+					"title": "through",
+					"page": 21,
+					"sentence": "through",
+					"summary": "THROUGH suggests passing from one side to the other.",
+					"explain": "Use THROUGH for movement across an enclosed space or process (through the tunnel; through negotiations).",
+					"words": [
+						{ "word": "We got through security faster than expected.", "ok": true },
+						{ "word": "We got across security faster than expected.", "ok": false },
+						{ "word": "We got along security faster than expected.", "ok": false }
+					]
+				},
+				{
+					"title": "across",
+					"page": 22,
+					"sentence": "across",
+					"summary": "ACROSS means from one side to the other (often on a surface/area).",
+					"explain": "Use ACROSS for movement from one side to another across an area (across the road/field).",
+					"words": [
+						{ "word": "He ran across the road without looking.", "ok": true },
+						{ "word": "He ran through the road without looking.", "ok": false },
+						{ "word": "He ran over the road without looking.", "ok": false }
+					]
+				},
+				{
+					"title": "along",
+					"page": 23,
+					"sentence": "along",
+					"summary": "ALONG suggests movement following a line (road/river).",
+					"explain": "Use ALONG when you move next to and following something long and thin (along the river, along the street).",
+					"words": [
+						{ "word": "We walked along the river to avoid traffic.", "ok": true },
+						{ "word": "We walked across the river to avoid traffic.", "ok": false },
+						{ "word": "We walked into the river to avoid traffic.", "ok": false }
+					]
+				},
+				{
+					"title": "via",
+					"page": 24,
+					"sentence": "via",
+					"summary": "VIA means 'through' or 'by way of' (route/method).",
+					"explain": "Use VIA to indicate a route or method, especially in formal contexts (via email, via Paris).",
+					"words": [
+						{ "word": "Please submit your request via the online portal.", "ok": true },
+						{ "word": "Please submit your request by the online portal.", "ok": false },
+						{ "word": "Please submit your request with the online portal.", "ok": false }
+					]
+				},
+				{
+					"title": "per",
+					"page": 25,
+					"sentence": "per",
+					"summary": "PER means 'for each' (formal).",
+					"explain": "Use PER in measurements and rates (per hour, per person). It’s more formal than 'a/an' or 'each'.",
+					"words": [
+						{ "word": "The service costs £10 per user per month.", "ok": true },
+						{ "word": "The service costs £10 by user per month.", "ok": false },
+						{ "word": "The service costs £10 for user per month.", "ok": false }
+					]
+				},
+				{
+					"title": "despite",
+					"page": 26,
+					"sentence": "despite",
+					"summary": "DESPITE is used to show contrast.",
+					"explain": "Use DESPITE + noun/gerund to show something happened even though there was an obstacle.",
+					"words": [
+						{ "word": "Despite the delays, the project launched on time.", "ok": true },
+						{ "word": "Despite of the delays, the project launched on time.", "ok": false },
+						{ "word": "Although the delays, the project launched on time.", "ok": false }
+					]
+				},
+				{
+					"title": "in spite of",
+					"page": 27,
+					"sentence": "in spite of",
+					"summary": "IN SPITE OF is like DESPITE but slightly longer/more emphatic.",
+					"explain": "Use IN SPITE OF + noun/gerund to show strong contrast.",
+					"words": [
+						{ "word": "In spite of the criticism, she stuck to her plan.", "ok": true },
+						{ "word": "In spite the criticism, she stuck to her plan.", "ok": false },
+						{ "word": "In spite of she was criticised, she stuck to her plan.", "ok": false }
+					]
+				},
+				{
+					"title": "because of",
+					"page": 28,
+					"sentence": "because of",
+					"summary": "BECAUSE OF gives a reason (followed by a noun phrase).",
+					"explain": "Use BECAUSE OF + noun phrase. Use BECAUSE + clause.",
+					"words": [
+						{ "word": "The flight was cancelled because of bad weather.", "ok": true },
+						{ "word": "The flight was cancelled because bad weather.", "ok": false },
+						{ "word": "The flight was cancelled because of it was raining.", "ok": false }
+					]
+				},
+				{
+					"title": "owing to",
+					"page": 29,
+					"sentence": "owing to",
+					"summary": "OWING TO is a formal alternative to 'because of'.",
+					"explain": "Use OWING TO + noun phrase in formal writing (owing to circumstances).",
+					"words": [
+						{ "word": "Owing to staffing shortages, the office will close early.", "ok": true },
+						{ "word": "Owing to we are short-staffed, the office will close early.", "ok": false },
+						{ "word": "Owing for staffing shortages, the office will close early.", "ok": false }
+					]
+				},
+				{
+					"title": "due to",
+					"page": 30,
+					"sentence": "due to",
+					"summary": "DUE TO is often used to mean 'caused by' (formal).",
+					"explain": "In careful usage, DUE TO links to a noun (The delay was due to...). Many speakers also use it like 'because of'.",
+					"words": [
+						{ "word": "The delay was due to a technical fault.", "ok": true },
+						{ "word": "The delay was due to the train was late.", "ok": false },
+						{ "word": "The delay was owing that a technical fault.", "ok": false }
+					]
+				},
+				{
+					"title": "according to",
+					"page": 31,
+					"sentence": "according to",
+					"summary": "ACCORDING TO introduces a source.",
+					"explain": "Use ACCORDING TO to reference information from a person/document/source.",
+					"words": [
+						{ "word": "According to the forecast, the storm will arrive tonight.", "ok": true },
+						{ "word": "According the forecast, the storm will arrive tonight.", "ok": false },
+						{ "word": "Depending to the forecast, the storm will arrive tonight.", "ok": false }
+					]
+				},
+				{
+					"title": "regardless of",
+					"page": 32,
+					"sentence": "regardless of",
+					"summary": "REGARDLESS OF means 'it doesn’t matter'.",
+					"explain": "Use REGARDLESS OF + noun/gerund to show something is true even if conditions change.",
+					"words": [
+						{ "word": "We will proceed regardless of the outcome.", "ok": true },
+						{ "word": "We will proceed regardless the outcome.", "ok": false },
+						{ "word": "We will proceed despite of the outcome.", "ok": false }
+					]
+				},
+				{
+					"title": "instead of",
+					"page": 33,
+					"sentence": "instead of",
+					"summary": "INSTEAD OF means 'as a replacement'.",
+					"explain": "Use INSTEAD OF + noun/gerund to show substitution.",
+					"words": [
+						{ "word": "He took the train instead of driving.", "ok": true },
+						{ "word": "He took the train instead driving.", "ok": false },
+						{ "word": "He took the train rather than of driving.", "ok": false }
+					]
+				},
+				{
+					"title": "rather than",
+					"page": 34,
+					"sentence": "rather than",
+					"summary": "RATHER THAN expresses preference/contrast.",
+					"explain": "Use RATHER THAN to contrast two options (do X rather than Y).",
+					"words": [
+						{ "word": "I’d email the client rather than call them without warning.", "ok": true },
+						{ "word": "I’d email the client rather than to call them without warning.", "ok": false },
+						{ "word": "I’d email the client instead than call them without warning.", "ok": false }
+					]
+				},
+				{
+					"title": "apart from",
+					"page": 35,
+					"sentence": "apart from",
+					"summary": "APART FROM can mean 'except for' or 'in addition to' (context matters).",
+					"explain": "Use APART FROM to exclude something (apart from one detail) or add something (apart from that, ...).",
+					"words": [
+						{ "word": "Apart from one minor typo, the proposal is excellent.", "ok": true },
+						{ "word": "Apart of one minor typo, the proposal is excellent.", "ok": false },
+						{ "word": "Apart from the proposal is excellent, one minor typo.", "ok": false }
+					]
+				},
+				{
+					"title": "aside from",
+					"page": 36,
+					"sentence": "aside from",
+					"summary": "ASIDE FROM is similar to 'apart from' (except for).",
+					"explain": "Use ASIDE FROM + noun phrase to mean 'except for'.",
+					"words": [
+						{ "word": "Aside from the cost, the solution is ideal.", "ok": true },
+						{ "word": "Aside the cost, the solution is ideal.", "ok": false },
+						{ "word": "Aside from it is expensive, the solution is ideal.", "ok": false }
+					]
+				},
+				{
+					"title": "as of",
+					"page": 37,
+					"sentence": "as of",
+					"summary": "AS OF means 'from that date/time'.",
+					"explain": "Use AS OF to indicate an official starting point (as of 1 April, new rules apply).",
+					"words": [
+						{ "word": "As of 1 April, the company will adopt a new policy.", "ok": true },
+						{ "word": "As from 1 April, the company will adopt a new policy.", "ok": false },
+						{ "word": "As at 1 April, the company will adopt a new policy.", "ok": false }
+					]
+				},
+				{
+					"title": "as per",
+					"page": 38,
+					"sentence": "as per",
+					"summary": "AS PER means 'according to' (formal/business).",
+					"explain": "Use AS PER in formal/business English to refer to instructions or a previous agreement.",
+					"words": [
+						{ "word": "As per your email, we have updated the schedule.", "ok": true },
+						{ "word": "As per you emailed, we have updated the schedule.", "ok": false },
+						{ "word": "As by your email, we have updated the schedule.", "ok": false }
+					]
+				},
+				{
+					"title": "prior to",
+					"page": 39,
+					"sentence": "prior to",
+					"summary": "PRIOR TO is a formal alternative to 'before'.",
+					"explain": "Use PRIOR TO + noun/gerund in formal writing (prior to departure).",
+					"words": [
+						{ "word": "Prior to departure, please double-check your documents.", "ok": true },
+						{ "word": "Prior of departure, please double-check your documents.", "ok": false },
+						{ "word": "Prior to you depart, please double-check your documents.", "ok": false }
+					]
+				},
+				{
+					"title": "subsequent to",
+					"page": 40,
+					"sentence": "subsequent to",
+					"summary": "SUBSEQUENT TO is a formal alternative to 'after'.",
+					"explain": "Use SUBSEQUENT TO + noun/gerund in formal contexts (subsequent to the meeting).",
+					"words": [
+						{ "word": "Subsequent to the meeting, the minutes were circulated.", "ok": true },
+						{ "word": "Subsequent the meeting, the minutes were circulated.", "ok": false },
+						{ "word": "Subsequent to we met, the minutes were circulated.", "ok": false }
+					]
+				},
+				{
+					"title": "in addition to",
+					"page": 41,
+					"sentence": "in addition to",
+					"summary": "IN ADDITION TO means 'as well as' (followed by a noun/gerund).",
+					"explain": "Use IN ADDITION TO + noun/gerund, not a full clause.",
+					"words": [
+						{ "word": "In addition to reviewing the draft, she proposed new examples.", "ok": true },
+						{ "word": "In addition to she reviewed the draft, she proposed new examples.", "ok": false },
+						{ "word": "In addition with reviewing the draft, she proposed new examples.", "ok": false }
+					]
+				},
+				{
+					"title": "in terms of",
+					"page": 42,
+					"sentence": "in terms of",
+					"summary": "IN TERMS OF sets the aspect/criteria you are discussing.",
+					"explain": "Use IN TERMS OF to specify the perspective (in terms of cost, speed, risk). Avoid overusing it.",
+					"words": [
+						{ "word": "In terms of reliability, this model performs best.", "ok": true },
+						{ "word": "In term of reliability, this model performs best.", "ok": false },
+						{ "word": "On terms of reliability, this model performs best.", "ok": false }
+					]
+				},
+				{
+					"title": "with regard to",
+					"page": 43,
+					"sentence": "with regard to",
+					"summary": "WITH REGARD TO means 'concerning' (formal).",
+					"explain": "Use WITH REGARD TO to introduce the topic, often in business writing.",
+					"words": [
+						{ "word": "With regard to your complaint, we are investigating the issue.", "ok": true },
+						{ "word": "With regards to your complaint, we are investigating the issue.", "ok": false },
+						{ "word": "With regard of your complaint, we are investigating the issue.", "ok": false }
+					]
+				},
+				{
+					"title": "in relation to",
+					"page": 44,
+					"sentence": "in relation to",
+					"summary": "IN RELATION TO means 'concerning' or 'compared with'.",
+					"explain": "Use IN RELATION TO for connections between topics or for comparison in formal language.",
+					"words": [
+						{ "word": "In relation to last quarter, profits have improved.", "ok": true },
+						{ "word": "In relation with last quarter, profits have improved.", "ok": false },
+						{ "word": "In relation last quarter, profits have improved.", "ok": false }
+					]
+				},
+				{
+					"title": "in respect of",
+					"page": 45,
+					"sentence": "in respect of",
+					"summary": "IN RESPECT OF is very formal and means 'regarding'.",
+					"explain": "Use IN RESPECT OF in legal/official contexts to refer to a specific matter.",
+					"words": [
+						{ "word": "Payment is due in respect of services provided in December.", "ok": true },
+						{ "word": "Payment is due with respect of services provided in December.", "ok": false },
+						{ "word": "Payment is due in respect to services provided in December.", "ok": false }
+					]
+				},
+				{
+					"title": "with respect to",
+					"page": 46,
+					"sentence": "with respect to",
+					"summary": "WITH RESPECT TO means 'regarding' (formal/neutral).",
+					"explain": "Use WITH RESPECT TO to introduce a topic in formal English; it is common in technical writing.",
+					"words": [
+						{ "word": "With respect to safety, the new procedure reduces risk.", "ok": true },
+						{ "word": "With respect of safety, the new procedure reduces risk.", "ok": false },
+						{ "word": "With respects to safety, the new procedure reduces risk.", "ok": false }
+					]
+				},
+				{
+					"title": "in accordance with",
+					"page": 47,
+					"sentence": "in accordance with",
+					"summary": "IN ACCORDANCE WITH means 'following/complying with'.",
+					"explain": "Use IN ACCORDANCE WITH to state that something follows rules, law, or instructions.",
+					"words": [
+						{ "word": "The data was processed in accordance with company policy.", "ok": true },
+						{ "word": "The data was processed in accordance to company policy.", "ok": false },
+						{ "word": "The data was processed in accordance of company policy.", "ok": false }
+					]
+				},
+				{
+					"title": "in line with",
+					"page": 48,
+					"sentence": "in line with",
+					"summary": "IN LINE WITH means 'consistent with'.",
+					"explain": "Use IN LINE WITH when something matches a standard, expectation, or trend.",
+					"words": [
+						{ "word": "The new pricing is in line with market rates.", "ok": true },
+						{ "word": "The new pricing is on line with market rates.", "ok": false },
+						{ "word": "The new pricing is in line to market rates.", "ok": false }
+					]
+				},
+				{
+					"title": "on behalf of",
+					"page": 49,
+					"sentence": "on behalf of",
+					"summary": "ON BEHALF OF means 'representing' or 'for'.",
+					"explain": "Use ON BEHALF OF when someone acts as a representative (on behalf of the team/company).",
+					"words": [
+						{ "word": "I’m writing on behalf of the recruitment team.", "ok": true },
+						{ "word": "I’m writing in behalf of the recruitment team.", "ok": false },
+						{ "word": "I’m writing on behalf the recruitment team.", "ok": false }
+					]
+				},
+				{
+					"title": "in favour of",
+					"page": 50,
+					"sentence": "in favour of",
+					"summary": "IN FAVOUR OF means supporting/choosing one option.",
+					"explain": "Use IN FAVOUR OF to show preference or support (vote in favour of; decide in favour of).",
+					"words": [
+						{ "word": "They voted in favour of the proposed merger.", "ok": true },
+						{ "word": "They voted on favour of the proposed merger.", "ok": false },
+						{ "word": "They voted in favour for the proposed merger.", "ok": false }
+					]
+				},
+				{
+					"title": "in light of",
+					"page": 51,
+					"sentence": "in light of",
+					"summary": "IN LIGHT OF means 'considering new information'.",
+					"explain": "Use IN LIGHT OF to introduce a reason based on recent facts (in light of recent events...).",
+					"words": [
+						{ "word": "In light of recent findings, we will revise the guidelines.", "ok": true },
+						{ "word": "In the light for recent findings, we will revise the guidelines.", "ok": false },
+						{ "word": "On light of recent findings, we will revise the guidelines.", "ok": false }
+					]
+				},
+				{
+					"title": "by means of",
+					"page": 52,
+					"sentence": "by means of",
+					"summary": "BY MEANS OF means 'using' (formal).",
+					"explain": "Use BY MEANS OF to describe the method used to achieve something, often in formal writing.",
+					"words": [
+						{ "word": "The device is activated by means of a secure code.", "ok": true },
+						{ "word": "The device is activated by means to a secure code.", "ok": false },
+						{ "word": "The device is activated with means of a secure code.", "ok": false }
+					]
+				},
+				{
+					"title": "by virtue of",
+					"page": 53,
+					"sentence": "by virtue of",
+					"summary": "BY VIRTUE OF means 'because of' (formal, often legal).",
+					"explain": "Use BY VIRTUE OF to explain why something is true due to a quality/status/law.",
+					"words": [
+						{ "word": "By virtue of her role, she has access to confidential data.", "ok": true },
+						{ "word": "By virtue to her role, she has access to confidential data.", "ok": false },
+						{ "word": "By virtue of she is a manager, she has access to confidential data.", "ok": false }
+					]
+				},
+				{
+					"title": "in the event of",
+					"page": 54,
+					"sentence": "in the event of",
+					"summary": "IN THE EVENT OF means 'if something happens' (formal).",
+					"explain": "Use IN THE EVENT OF + noun/gerund, common in instructions and warnings.",
+					"words": [
+						{ "word": "In the event of a fire, use the stairs and do not use the lift.", "ok": true },
+						{ "word": "In the event a fire, use the stairs and do not use the lift.", "ok": false },
+						{ "word": "In the event of it catches fire, use the stairs and do not use the lift.", "ok": false }
+					]
+				},
+				{
+					"title": "in case of",
+					"page": 55,
+					"sentence": "in case of",
+					"summary": "IN CASE OF is used for precautions about possible events.",
+					"explain": "Use IN CASE OF + noun for warnings/instructions (in case of emergency). It differs from 'in case' + clause.",
+					"words": [
+						{ "word": "Keep this receipt in case of any issues with the product.", "ok": true },
+						{ "word": "Keep this receipt in case any issues with the product.", "ok": false },
+						{ "word": "Keep this receipt in case of you have issues with the product.", "ok": false }
+					]
+				},
+				{
+					"title": "in lieu of",
+					"page": 56,
+					"sentence": "in lieu of",
+					"summary": "IN LIEU OF means 'instead of' (formal).",
+					"explain": "Use IN LIEU OF + noun/gerund in formal contexts (in lieu of payment; in lieu of a refund).",
+					"words": [
+						{ "word": "We offered store credit in lieu of a cash refund.", "ok": true },
+						{ "word": "We offered store credit in lieu for a cash refund.", "ok": false },
+						{ "word": "We offered store credit in place of to a cash refund.", "ok": false }
+					]
+				},
+				{
+					"title": "in return for",
+					"page": 57,
+					"sentence": "in return for",
+					"summary": "IN RETURN FOR shows exchange/compensation.",
+					"explain": "Use IN RETURN FOR to indicate what you receive as a result of giving something.",
+					"words": [
+						{ "word": "He volunteered extra hours in return for time off later.", "ok": true },
+						{ "word": "He volunteered extra hours in return to time off later.", "ok": false },
+						{ "word": "He volunteered extra hours in exchange of time off later.", "ok": false }
+					]
+				},
+				{
+					"title": "for the sake of",
+					"page": 58,
+					"sentence": "for the sake of",
+					"summary": "FOR THE SAKE OF means 'to achieve/preserve something'.",
+					"explain": "Use FOR THE SAKE OF + noun/gerund to show purpose, often involving a compromise.",
+					"words": [
+						{ "word": "For the sake of clarity, let’s define the terms first.", "ok": true },
+						{ "word": "For sake of clarity, let’s define the terms first.", "ok": false },
+						{ "word": "For the sake to clarity, let’s define the terms first.", "ok": false }
+					]
+				},
+				{
+					"title": "with a view to",
+					"page": 59,
+					"sentence": "with a view to",
+					"summary": "WITH A VIEW TO means 'in order to' (followed by a noun/gerund).",
+					"explain": "Use WITH A VIEW TO + noun/gerund (with a view to improving...). It does not take an infinitive directly.",
+					"words": [
+						{ "word": "They redesigned the workflow with a view to reducing errors.", "ok": true },
+						{ "word": "They redesigned the workflow with a view to reduce errors.", "ok": false },
+						{ "word": "They redesigned the workflow for a view to reducing errors.", "ok": false }
+					]
+				},
+				{
+					"title": "notwithstanding",
+					"page": 60,
+					"sentence": "notwithstanding",
+					"summary": "NOTWITHSTANDING means 'despite' (very formal).",
+					"explain": "Use NOTWITHSTANDING + noun phrase to mean 'in spite of'. Common in legal/official writing.",
+					"words": [
+						{ "word": "Notwithstanding the risks, they approved the investment.", "ok": true },
+						{ "word": "Notwithstanding of the risks, they approved the investment.", "ok": false },
+						{ "word": "Notwithstanding they were aware of the risks, they approved the investment.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

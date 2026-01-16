@@ -200,4 +200,50 @@ object QuizDataConverter {
             return text // Fail safe
         }
     }
+
+
+    fun readPrepositionsQuizQuestions(
+        context: Context,
+        fileName: String,
+        count: Int = 10
+    ): List<TestMyselfSections> {
+
+        val jsonFileName = "$fileName.json" // assets/Quizzes/QuizSheetPrepositions-en.json
+        val root: TestMyselfListRoot = readTestMyselfDataFromAssets(context, jsonFileName) ?: return emptyList()
+
+        return pickRandomQuizSections(
+            root = root,
+            count = count,
+            renumberPagesFrom1 = true,
+            shuffleAnswers = true
+        )
+    }
+
+
+    fun pickRandomQuizSections(
+        root: TestMyselfListRoot,
+        count: Int = 10,
+        renumberPagesFrom1: Boolean = true,
+        shuffleAnswers: Boolean = true,
+        random: Random = Random.Default
+    ): List<TestMyselfSections> {
+
+        // 1) Flatten all sections from all TestMyselfList blocks
+        val allSections: List<TestMyselfSections> = root.data.flatMap { it.sections }
+        if (allSections.isEmpty()) return emptyList()
+
+        // 2) Shuffle + take N (no duplicates within a single call)
+        val n = minOf(count, allSections.size)
+        val picked: List<TestMyselfSections> = allSections.shuffled(random).take(n)
+
+        // 3) Optionally renumber pages and shuffle answer options
+        return picked.mapIndexed { index, section ->
+            val newPage = if (renumberPagesFrom1) index + 1 else section.page
+            val newWords = if (shuffleAnswers) section.words.shuffled(random) else section.words
+
+            // Prefer copy() if your models are data classes; otherwise construct a new instance.
+            section.copy(page = newPage, words = newWords)
+        }
+    }
+
 }
