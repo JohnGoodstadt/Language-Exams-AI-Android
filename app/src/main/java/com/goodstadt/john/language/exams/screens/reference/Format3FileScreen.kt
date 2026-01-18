@@ -23,23 +23,26 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.models.Format3Category
 import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.models.Format3Sentence
+import timber.log.Timber
 
 @Composable
 fun Format3FileScreen(
-    filename: String,
+    assetPath: String,
     onSentenceTapped: (String) -> Unit,
     vm: Format3FileViewModel = viewModel()
 ) {
+    val context = LocalContext.current
     val state by vm.uiState.collectAsState()
 
-    LaunchedEffect(filename) {
+    LaunchedEffect(assetPath) {
         if (state.file == null && state.errorMessage == null && !state.isLoading) {
-            vm.load(filename)
+            vm.loadFromAssets(context, assetPath)
         }
     }
 
@@ -48,7 +51,7 @@ fun Format3FileScreen(
 
         state.errorMessage != null -> ErrorView(
             message = state.errorMessage ?: "Load failed",
-            onRetry = { vm.load(filename) }
+            onRetry = { Timber.i("Error")}
         )
 
         state.file != null -> Format3ContentView(
@@ -57,7 +60,7 @@ fun Format3FileScreen(
             onSentenceTapped = onSentenceTapped
         )
 
-        else -> EmptyView(onLoad = { vm.load(filename) })
+        else -> EmptyView(onLoad = { Timber.i("Error")})
     }
 }
 

@@ -21,9 +21,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.MeScreen
@@ -33,6 +35,7 @@ import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.recall.RecallScreen
 import com.goodstadt.john.language.exams.screens.reference.Format3FileScreen
+import com.goodstadt.john.language.exams.screens.reference.Format3FileViewModel
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
@@ -41,6 +44,7 @@ import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 /**
  * This is the main container for the entire "Me" tab. It sets up the persistent
@@ -62,7 +66,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
     val context = LocalContext.current
 //    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
 
-    val activity = LocalContext.current.findActivity() as? androidx.activity.ComponentActivity
+    val activity = LocalContext.current.findActivity() as? ComponentActivity
     val navViewModel: NavigationViewModel = if (activity != null) {
         hiltViewModel(activity)
     } else {
@@ -89,7 +93,9 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
         )
     }
 
-    Column(modifier = Modifier.fillMaxSize().statusBarsPadding() ) {
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .statusBarsPadding() ) {
         // Part A: The Persistent Horizontal Menu
         LazyRow(
             modifier = Modifier.fillMaxWidth(),
@@ -142,7 +148,42 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
             }
             composable(MeScreen.Paragraph.route) { ParagraphScreen() }
             if (BuildConfig.DEBUG) {
-                composable(MeScreen.Paragraph.route) { Format3FileScreen() }
+//                composable(MeScreen.LocalLanguage.route) {
+//                    Format3FileScreen(
+//                    filename = "SpanishReferenceSheet1",
+//                    onSentenceTapped = { Timber.i("Sentence Tapped") },
+//                    vm = Format3FileViewModel()
+//                ) }
+//                composable(
+//                    route = MeScreen.LocalLanguage.route,
+//                    arguments = listOf(
+//                        navArgument("filename") { type = NavType.StringType }
+//                    )
+//                ) { backStackEntry ->
+//
+//                    val filename = backStackEntry
+//                        .arguments
+//                        ?.getString("filename")
+//                        ?: return@composable
+//
+//                    Format3FileScreen(
+//                        filename = filename,
+//                        onSentenceTapped = { sentence ->
+//                            Timber.i("Sentence Tapped $sentence")
+//                            // Google TTS, recording, analytics, etc.
+//                        }
+//                    )
+//                }
+                composable(MeScreen.LocalLanguage.route) {
+                    val filename = "SpanishReferenceSheet1" // or map from device language
+                    Format3FileScreen(
+                        assetPath = "SpanishReferenceSheet1.json",
+                        onSentenceTapped = { sentence ->
+                            Timber.i("Sentence tapped: $sentence")
+                        }
+                    )
+                }
+
             }
         }
     } //:Column

@@ -13,6 +13,7 @@ object LanguageConfig {
         "Vocab",
         "Progress",
         "Paragraph",
+        "Spanish",
 
     )
     val refTabMenuItems = listOf(
