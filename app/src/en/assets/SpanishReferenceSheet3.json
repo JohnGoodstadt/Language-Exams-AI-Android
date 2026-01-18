@@ -1,0 +1,62 @@
+{
+  "fileformat": 3,
+  "location": 0,
+  "sheetname": "WeakSoundsAndSchwaForSpanishB1",
+  "title": "Weak Sounds and the Schwa",
+  "subtitle": "Why native speakers sound fast and why listening feels difficult",
+  "description": "English uses weak sounds and reduced vowels in normal speech. Spanish vowels are always clear. This sheet helps Spanish learners hear and use weak sounds naturally at B1 level.",
+  "level": "B1",
+  "targetLanguage": "Spanish",
+  "categories": [
+    {
+      "sortOrder": 1,
+      "title": "Weak Function Words",
+      "description": "Small grammar words are not stressed in English and become very short in normal speech.",
+      "words": [
+        {
+          "id": 1,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I want to GO to the STORE." },
+            { "sentence": "She gave it to ME." },
+            { "sentence": "This is a CUP of TEA." },
+            { "sentence": "He’s looking for a JOB." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "title": "Schwa Inside Words",
+      "description": "Unstressed syllables inside words become weak and short. English usually has one strong syllable.",
+      "words": [
+        {
+          "id": 2,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I’m aBOUT to START." },
+            { "sentence": "We had a PROblem yesterday." },
+            { "sentence": "My FAther works late." },
+            { "sentence": "She lives in aBOUT three MInutes away." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "title": "Sentence Rhythm",
+      "description": "English rhythm comes from strong and weak words, not from speaking fast.",
+      "words": [
+        {
+          "id": 3,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I DIDN’T unDERstand the QUEStion." },
+            { "sentence": "She CAN work toMORrow." },
+            { "sentence": "They HAVE to FINish toDAY." }
+          ]
+        }
+      ]
+    }
+  ]
+}

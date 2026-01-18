@@ -1,0 +1,62 @@
+{
+  "fileformat": 3,
+  "location": 0,
+  "sheetname": "EnglishWordStressForSpanishB1",
+  "title": "Word Stress That Changes Meaning",
+  "subtitle": "Why English words sound wrong even when the pronunciation is correct",
+  "description": "English word stress is unpredictable and can change meaning. Spanish stress is more regular. This sheet focuses on the most important stress patterns for Spanish learners at B1 level.",
+  "level": "B1",
+  "targetLanguage": "Spanish",
+  "categories": [
+    {
+      "sortOrder": 1,
+      "title": "Noun vs Verb Stress",
+      "description": "Many English words change stress depending on whether they are nouns or verbs. Spanish does not do this.",
+      "words": [
+        {
+          "id": 1,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I bought the REcord yesterday." },
+            { "sentence": "Please reCORD the meeting." },
+            { "sentence": "The PREsent is on the table." },
+            { "sentence": "They will preSENT the plan tomorrow." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "title": "Stress in Longer Words",
+      "description": "English stress in longer words is often unpredictable and must be learned with the word.",
+      "words": [
+        {
+          "id": 2,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "This job is very imPORtant." },
+            { "sentence": "We need to deVELop a solution." },
+            { "sentence": "He gave a clear exPLAination." },
+            { "sentence": "The results were aMAzing." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "title": "Stress Makes English Sound Natural",
+      "description": "Correct stress helps English sound fluent and confident. Flat stress makes speech harder to understand.",
+      "words": [
+        {
+          "id": 3,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I didn’t unDERstand the question." },
+            { "sentence": "She is reSPONsible for the project." },
+            { "sentence": "They reCOMmended a change." }
+          ]
+        }
+      ]
+    }
+  ]
+}

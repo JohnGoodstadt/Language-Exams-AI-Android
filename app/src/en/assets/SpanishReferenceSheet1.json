@@ -1,0 +1,63 @@
+{
+  "fileformat": 3,
+  "location": 0,
+  "sheetname": "EnglishVowelsForSpanishB1",
+  "title": "Some English Vowels Change Meaning",
+  "subtitle": "Why English words sound the same to Spanish speakers — and how to fix it",
+  "description": "Spanish has five clear vowels, but English has many more. Small vowel differences change meaning and affect listening and speaking scores at the Citizenship level.",
+  "level": "B1",
+  "targetLanguage": "Spanish",
+  "categories": [
+    {
+      "sortOrder": 1,
+      "title": "Short vs Long “i” Sounds (ship / sheep)",
+      "description": "English has two different \"i\" sounds (\"i\" and \"ee\"). Spanish has only one. This difference often causes listening and pronunciation mistakes.",
+      "words": [
+        {
+          "id": 1,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I live near the beach." },
+            { "sentence": "Leave the key on the table." },
+            { "sentence": "She sits next to me." },
+            { "sentence": "The seat is free." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "title": "“Cup” vs “Cap” Sounds",
+      "description": "Spanish speakers often hear both sounds as \"a\", but in English these vowels are very different and change meaning.",
+      "words": [
+        {
+          "id": 2,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I bought a cup of coffee." },
+            { "sentence": "He is wearing a red cap." },
+            { "sentence": "The bus stopped suddenly." },
+            { "sentence": "Put the bag under the table." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "title": "“Full” vs “Fool” Sounds",
+      "description": "English uses both vowel quality and length. Spanish does not clearly separate these two sounds.",
+      "words": [
+        {
+          "id": 3,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "The bottle is full." },
+            { "sentence": "Don’t be a fool." },
+            { "sentence": "I took the book home." },
+            { "sentence": "She likes good food." }
+          ]
+        }
+      ]
+    }
+  ]
+}

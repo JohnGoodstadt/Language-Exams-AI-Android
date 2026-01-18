@@ -24,6 +24,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.MeScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
@@ -31,6 +32,7 @@ import com.goodstadt.john.language.exams.screens.CategoryTabScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.recall.RecallScreen
+import com.goodstadt.john.language.exams.screens.reference.Format3FileScreen
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
@@ -130,8 +132,6 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
             composable(MeScreen.Focusing.route) { RecallScreen() }
             composable(MeScreen.Settings.route) { SettingsScreen() }
             composable(MeScreen.Search.route) { SearchScreen() }
-
-
             composable(MeScreen.Progress.route) {
                 MyProgressScreen(
                     xpManager = entryPoint.getXPManager(),
@@ -141,6 +141,9 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
                 })
             }
             composable(MeScreen.Paragraph.route) { ParagraphScreen() }
+            if (BuildConfig.DEBUG) {
+                composable(MeScreen.Paragraph.route) { Format3FileScreen() }
+            }
         }
     } //:Column
 

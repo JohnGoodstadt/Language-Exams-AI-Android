@@ -1,0 +1,63 @@
+{
+  "fileformat": 3,
+  "location": 0,
+  "sheetname": "FinalConsonantsAndAudibleGrammarForSpanishB1",
+  "title": "Final Consonants and Audible Grammar",
+  "subtitle": "When grammar is correct but listeners can’t hear it",
+  "description": "English grammar is often carried by final consonant sounds. Spanish speakers tend to soften or drop these sounds. This sheet focuses on making grammar audible at B1 level.",
+  "level": "B1",
+  "targetLanguage": "Spanish",
+  "categories": [
+    {
+      "sortOrder": 1,
+      "title": "Past Tense Endings",
+      "description": "Past tense in English is often shown by a quiet final sound that must be heard.",
+      "words": [
+        {
+          "id": 1,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I FINished the WORK." },
+            { "sentence": "She WALKed home YESterday." },
+            { "sentence": "They VISited us LAST week." },
+            { "sentence": "We STARTed EARly." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "title": "Plural and Third Person S",
+      "description": "Final S sounds show plurals and he or she in the present tense.",
+      "words": [
+        {
+          "id": 2,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "She WORKs from HOME." },
+            { "sentence": "The DOGs are LOUD." },
+            { "sentence": "He LIKes this MUvie." },
+            { "sentence": "I have TWO ticketS." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "title": "Ending Sounds Change Meaning",
+      "description": "Final sounds change time and meaning. Missing them causes grammar mistakes.",
+      "words": [
+        {
+          "id": 3,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I LIVE in MADrid." },
+            { "sentence": "I LIVED in MADrid." },
+            { "sentence": "He WANTs to LEAve." },
+            { "sentence": "They WANT to LEAve." }
+          ]
+        }
+      ]
+    }
+  ]
+}
