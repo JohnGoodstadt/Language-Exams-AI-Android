@@ -28,6 +28,14 @@ class Format3FileViewModel(
     private val _uiState = MutableStateFlow(Format3UiState())
     val uiState: StateFlow<Format3UiState> = _uiState.asStateFlow()
 
+    fun setFile(file: Format3File) {
+        _uiState.value = Format3UiState(
+            isLoading = false,
+            file = file,
+            errorMessage = null
+        )
+    }
+
     /**
      * Loads a Format3 JSON file from assets.
      *
@@ -63,6 +71,15 @@ class Format3FileViewModel(
                 )
             }
         }
+    }
+
+    fun translateLanguageToTopTitle(language:String): String {
+        val title = when (language.lowercase()) {
+            "spanish" -> "Special note for Spanish speakers"
+            else -> language
+        }
+
+        return title
     }
 
     /** Flatten words → sentences for display */

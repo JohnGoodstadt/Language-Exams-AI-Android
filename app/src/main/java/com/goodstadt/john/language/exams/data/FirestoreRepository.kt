@@ -23,6 +23,7 @@ class FirestoreRepository @Inject constructor(
     //see also TTSStatsRepository
     object fb {
         const val global = "global"
+        const val exam_sheets = "exam_sheets"
         const val WordListControl = "WordListControl"
 
         const val users = "users"

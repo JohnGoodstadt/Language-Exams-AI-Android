@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.data.examsheets
 
 import android.content.Context
+import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultDownloadSheet
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.faultTTSAPICount
@@ -35,6 +36,7 @@ import timber.log.Timber
 import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
+import com.goodstadt.john.language.exams.data.FirestoreRepository.fb
 
 /**
  * **ExamSheetRepository**
@@ -255,7 +257,7 @@ class ExamSheetRepository @Inject constructor(
     private suspend fun downloadFromFirestoreCollections(examName: String): Format0File =
         coroutineScope {
             Timber.i("ExamSheetRepo.downloadFromFirestoreCollections(): '$examName'.")
-            val examDocRef = firestore.collection("global").document("exam_sheets")
+            val examDocRef = firestore.collection("global").document(fb.exam_sheets)
                 .collection("sheets").document(examName)
 
             // 1. Fetch metadata and categories concurrently
@@ -349,7 +351,7 @@ class ExamSheetRepository @Inject constructor(
         Timber.d("ExamSheetRepo: Assembling Format1 sheet for '$examName' from sub-collections.")
 
         // Define the base path to the specific exam sheet document
-        val examDocRef = firestore.collection("global").document("exam_sheets")
+        val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)
             .collection("sheets").document(examName)
 
         //1 of 3
@@ -363,14 +365,14 @@ class ExamSheetRepository @Inject constructor(
         //2 of 3
         // 'async' starts a coroutine and returns a 'Deferred' which is a promise of a future result.
         val headersDeferred = async(Dispatchers.IO) {
-            val snapshot = examDocRef.collection("tabs").orderBy("sortorder").get().await()
+            val snapshot = examDocRef.collection(fb.tabs).orderBy(fb.sortorder).get().await()
             // Use .toObjects() for clean conversion from documents to a list of data classes
             snapshot.toObjects(TabHeaderForFirestore::class.java)
         }
 
         //3 of 3
         val bodyDeferred = async(Dispatchers.IO) {
-            val snapshot = examDocRef.collection("wordsAndSentences").get().await()
+            val snapshot = examDocRef.collection(fb.wordsAndSentences).get().await()
             snapshot.toObjects(WordAndSentenceForFirestore::class.java)
         }
 
@@ -490,46 +492,19 @@ class ExamSheetRepository @Inject constructor(
         }
     }
 
-    private fun downloadAndAssembleFormat3Obsolete(sheetName: String): Format3File? {
-//        suspend fun getFormat3Sheet(documentId: String): Format3File? {
-            // 1. Get Firestore Instance
-            val db = FirebaseFirestore.getInstance()
 
-            // 2. Define your collection name (Change 'reference_sheets' to your actual collection name)
-            val collectionName = "reference_sheets"
 
-        return null
-//            return try {
-//                // 3. Fetch the document
-//                val snapshot = db.collection(collectionName)
-//                    .document(sheetName)
-//                    .get()
-//                    .await()
-//
-//                if (snapshot.exists()) {
-//                    // 4. Convert Firestore Document to your Kotlin Object
-//                    val sheet = snapshot.toObject(Format3File::class.java)
-//                    Timber.i("Successfully loaded sheet: ${sheet?.title}")
-//                    sheet
-//                } else {
-//                    Timber.w("Document $sheetName does not exist")
-//                    null
-//                }
-//            } catch (e: Exception) {
-//                Timber.e(e, "Error fetching Format3 sheet: $sheetName")
-//                null
-//            }
-
-    }
-
-    suspend fun downloadAndAssembleFormat3(documentId: String): Format3File {
+    private suspend fun downloadAndAssembleFormat3(documentId: String): Format3File {
         val db = FirebaseFirestore.getInstance()
         // Make sure this matches your actual Firestore collection name
         val collectionName = "reference_sheets"
 
+       // val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)
+         //   .collection("sheets").document(documentId)
+
         return try {
-            val snapshot = db.collection(collectionName)
-                .document(documentId)
+            val snapshot = db.collection(fb.global).document(fb.exam_sheets)
+                .collection("sheets").document(documentId)
                 .get()
                 .await()
 
@@ -588,7 +563,7 @@ class ExamSheetRepository @Inject constructor(
     private suspend fun downloadAndAssembleFormat2(examName: String): Format2File = coroutineScope {
         Timber.d("ExamSheetRepo: Assembling Format2 sheet for '$examName' from sub-collections.")
 
-        val examDocRef = firestore.collection("global").document("exam_sheets")
+        val examDocRef = firestore.collection(fb.global).document(fb.exam_sheets)
             .collection("sheets").document(examName)
 
         // 1. --- LAUNCH CONCURRENT FETCHES for the root metadata and the flattened word list ---
@@ -597,7 +572,7 @@ class ExamSheetRepository @Inject constructor(
                 ?: throw Exception("Root document '$examName' (Format2) not found or failed to parse.")
         }
         val allEntriesDeferred = async(Dispatchers.IO) {
-            val snapshot = examDocRef.collection("wordsAndSentences").get().await()
+            val snapshot = examDocRef.collection(fb.wordsAndSentences).get().await()
             snapshot.toObjects(Format2WordAndSentenceDTO::class.java)
         }
 

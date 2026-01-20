@@ -375,10 +375,10 @@ class AppConfigRepository @Inject constructor(
                     "screenType": "GroupedFormat3Screen",
                     "sheetDataType": "Format3",
                     "subTabs": [
-                        { "title": "Vowels", "firestoreDocumentId": "SpanishReference1", "sheetDataType": "Format3" },
-                        { "title": "Word Stress", "firestoreDocumentId": "SpanishReference2", "sheetDataType": "Format3" },
-                        { "title": "Schwa", "firestoreDocumentId": "SpanishReference3", "sheetDataType": "Format3" },
-                        { "title": "Final", "firestoreDocumentId": "SpanishReference4", "sheetDataType": "Format3" }
+                        { "title": "Vowels", "firestoreDocumentId": "SpanishReferenceSheet1", "sheetDataType": "Format3" },
+                        { "title": "Word Stress", "firestoreDocumentId": "SpanishReferenceSheet2", "sheetDataType": "Format3" },
+                        { "title": "Schwa", "firestoreDocumentId": "SpanishReferenceSheet3", "sheetDataType": "Format3" },
+                        { "title": "Final", "firestoreDocumentId": "SpanishReferenceSheet4", "sheetDataType": "Format3" }
                     ]
                 }
             },

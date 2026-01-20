@@ -33,17 +33,21 @@ import timber.log.Timber
 
 @Composable
 fun Format3FileScreen(
-    assetPath: String,
+//    assetPath: String,
+    file: Format3File,
     onSentenceTapped: (String) -> Unit,
     vm: Format3FileViewModel = viewModel()
 ) {
     val context = LocalContext.current
     val state by vm.uiState.collectAsState()
 
-    LaunchedEffect(assetPath) {
-        if (state.file == null && state.errorMessage == null && !state.isLoading) {
-            vm.loadFromAssets(context, assetPath)
-        }
+//    LaunchedEffect(assetPath) {
+//        if (state.file == null && state.errorMessage == null && !state.isLoading) {
+//            vm.loadFromAssets(context, assetPath)
+//        }
+//    }
+    LaunchedEffect(file) {
+        vm.setFile(file)
     }
 
     when {

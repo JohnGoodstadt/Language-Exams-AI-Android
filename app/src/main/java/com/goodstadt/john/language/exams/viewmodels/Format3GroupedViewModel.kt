@@ -129,8 +129,13 @@ class Format3GroupedViewModel @Inject constructor(
             result.onSuccess { format3File ->
                 contentCache[sheetName] = format3File
 
-                // 1. Update Graph Stats
-                recalculateStats(format3File, sheetName)
+                if (format3File.categories.isNotEmpty()){ //dont store if download error return empty object (e.g. mis-spelt sheet name)
+                    contentCache[sheetName] = format3File
+                    recalculateStats(format3File, sheetName) // 1. Update Graph Stats
+                    Timber.d("ContentRepo: Warmed up memory cache for '$sheetName' (Format3).")
+                }else{
+                    Timber.e("ContentRepo: Error getting  sheet for '$sheetName' (Format3). Empty object. (mis-spelt sheet name?)")
+                }
 
                 // 2. Update UI
                 _uiState.update {
@@ -262,5 +267,39 @@ class Format3GroupedViewModel @Inject constructor(
             TTSStatsRepository.fsDOC.GlobalStats,
             statName
         )
+    }
+
+    fun handleSentenceTap(sentence: String) {
+        viewModelScope.launch {
+
+            val sheetName = _uiState.value.currentSheetName
+            // 1. CALL REPOSITORY
+            // The Repository handles everything: Playback, History, XP, and Graph Stats.
+            val status = audioPlaybackRepository.playTrackAndGetStatus(
+                sentence = sentence,
+                level = "Reference",
+                sheetName = sheetName, // Important: Pass this so Graph Stats update!
+                isPremiumUser = false //TODO: fix this to live
+            )
+
+            when (status) {
+                // Group all success cases together
+                is AudioPlaybackStatus.PlayedFromLocalCache,
+                is AudioPlaybackStatus.PlayedFromCloudStorage,
+                is AudioPlaybackStatus.PlayedFromTTSAPI -> {
+                    refreshUI()
+                }
+
+                is AudioPlaybackStatus.RateLimited -> {
+                    // Show Paywall logic
+                    Timber.i("Format3ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                }
+
+                is AudioPlaybackStatus.Failure -> {
+                    // Show § logic
+                    Timber.i("Format3ViewModel.handleTap().AudioPlaybackStatus.Failure")
+                }
+            }
+        }
     }
 }

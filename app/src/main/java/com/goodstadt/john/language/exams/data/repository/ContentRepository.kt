@@ -356,11 +356,17 @@ class ContentRepository @Inject constructor(
             //val result: Result<Format2File> = Result.failure(NotImplementedError("getFormat2Sheet is not yet implemented in ExamSheetRepository"))
 
 
-            // --- 4. WARM UP MEMORY CACHE & UPDATE VERSION ---
+            // --- 4. WARM UP MEMORY CACHE & UPDATE VERSION ---f
             if (result.isSuccess) {
                 val format3File = result.getOrThrow()
-                format3Cache[logicalName] = format3File
-                Timber.d("ContentRepo: Warmed up memory cache for '$logicalName' (Format3).")
+                if (format3File.categories.isNotEmpty()){ //dont store if download error return empty object (e.g. mis-spelt sheet name)
+                    format3Cache[logicalName] = format3File
+                    Timber.d("ContentRepo: Warmed up memory cache for '$logicalName' (Format3).")
+                }else{
+                    Timber.e("ContentRepo: Error getting  sheet for '$logicalName' (Format3). Empty object. (mis-spelt sheet name?)")
+                }
+
+
 
                 if (forceRefresh) {
                     appConfigRepository.updateLocalVersion(logicalName,remoteVersion)

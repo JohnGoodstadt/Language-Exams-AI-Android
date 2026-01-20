@@ -33,6 +33,7 @@ import com.goodstadt.john.language.exams.screens.reference.shared.MissingView
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
 import com.goodstadt.john.language.exams.viewmodels.Format3GroupedViewModel
+import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -92,10 +93,19 @@ fun Format3GroupedScreen(
             }
         } else {
             // Render the Format 2 Content
+
             uiState.currentFormat3File?.let { file ->
+                if (file.categories.isNotEmpty()) {
 
-                Format3FileScreen()
 
+                    Format3SheetView(
+                        file = file,
+                        onSentenceTapped = { sentence ->
+                            Timber.i("tapped on $sentence")
+                            viewModel.handleSentenceTap(sentence)
+                        }
+                    )
+                }
             }
         }
     }
