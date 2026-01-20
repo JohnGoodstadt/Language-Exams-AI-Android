@@ -374,6 +374,7 @@ class AppConfigRepository @Inject constructor(
                     "title": "Spanish",
                     "screenType": "GroupedFormat3Screen",
                     "sheetDataType": "Format3",
+                    "requiredLocale": "es",
                     "subTabs": [
                         { "title": "Vowels", "firestoreDocumentId": "SpanishReferenceSheet1", "sheetDataType": "Format3" },
                         { "title": "Word Stress", "firestoreDocumentId": "SpanishReferenceSheet2", "sheetDataType": "Format3" },

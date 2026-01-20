@@ -19,7 +19,8 @@ data class SheetDefinition(
     val screenType: ScreenType,
     val sheetDataType: SheetDataType,
     val firestoreDocumentId: String? = null,
-    val subTabs: List<SubTabDefinition>? = null
+    val subTabs: List<SubTabDefinition>? = null,
+    val requiredLocale: String? = null //for Spanish/Mandarin specific sheets
 )
 
 // 3. The definition for a sub-tab within a grouped sheet

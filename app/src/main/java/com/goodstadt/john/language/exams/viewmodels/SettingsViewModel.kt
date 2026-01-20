@@ -570,7 +570,11 @@ class SettingsViewModel @Inject constructor(
 
             result.onSuccess { voicesResponse ->
                 // Use a Json parser with pretty printing for a readable file
-                val jsonParser = Json { prettyPrint = true }
+                val jsonParser = Json {
+                    prettyPrint = true
+                    ignoreUnknownKeys = true
+                }
+
                 val jsonString = jsonParser.encodeToString(voicesResponse)
 
                 // Save the pretty-printed string to a file

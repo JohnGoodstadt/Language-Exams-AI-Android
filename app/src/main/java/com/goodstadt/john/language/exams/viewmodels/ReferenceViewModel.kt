@@ -6,6 +6,7 @@ import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.RefreshTrigger
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.SheetDataType
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.SheetDefinition
@@ -18,6 +19,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.util.Locale
 import javax.inject.Inject
 
 
@@ -68,24 +70,89 @@ class ReferenceViewModel @Inject constructor(
             // 1. Get the entire manifest from the repository.
             val manifest = appConfigRepository.getAppUiManifest()
 
-            val registry = manifest.sheetRegistry
-            val tabOrder = manifest.layouts.referenceTab.order
+            val newTabs = buildTabsFromManifest(manifest)
+
+
+            //val registry = manifest.sheetRegistry
+            //val tabOrder = manifest.layouts.referenceTab.order
 
             // 2. Perform the "join" operation (same logic as iOS).
-            val newTabs = tabOrder.mapNotNull { id ->
-                registry[id]?.let { definition ->
-                    // Change 'id to definition' to 'DisplayTab(...)'.
-                    DisplayTab(id = id, definition = definition)
+//            val newTabs = tabOrder.mapNotNull { id ->
+//                registry[id]?.let { definition ->
+//                     Change 'id to definition' to 'DisplayTab(...)'.
+//                    DisplayTab(id = id, definition = definition)
+//                }
+//            }
+
+            // 3. Update the UI state.
+            _uiState.update { currentState ->
+
+                // Safety Check:
+                // If the user was already looking at a specific tab (e.g. from a deep link),
+                // check if that tab still exists in the new list.
+                // If yes, keep it. If no (or if ID is empty), default to the first tab.
+                val validSelection = if (newTabs.any { it.id == currentState.selectedTabId }) {
+                    currentState.selectedTabId
+                } else {
+                    newTabs.firstOrNull()?.id ?: ""
+                }
+
+                currentState.copy(
+                    tabs = newTabs,
+                    selectedTabId = validSelection
+                )
+            }
+
+        }
+    }
+
+    private fun buildTabsFromManifestObsolete(manifest: AppUIManifest): List<DisplayTab> {
+        val registry = manifest.sheetRegistry
+        val tabOrder = manifest.layouts.referenceTab.order
+
+        // Get device language code (e.g., "en", "es", "fr")
+        val deviceLanguage = Locale.getDefault().language
+
+        return tabOrder.mapNotNull { id ->
+
+            // --- FILTER LOGIC ---
+            // If the tab is "LocalLanguage", strictly require the device to be Spanish ("es")
+            if (id == "LocalLanguage" && deviceLanguage != "es") {
+                // Timber.d("Hiding LocalLanguage tab because device is $deviceLanguage")
+                return@mapNotNull null
+            }
+
+            // --- MAP LOGIC ---
+            registry[id]?.let { definition ->
+                DisplayTab(id = id, definition = definition)
+            }
+        }
+    }
+    private fun buildTabsFromManifest(manifest: AppUIManifest): List<DisplayTab> {
+        val registry = manifest.sheetRegistry
+        val tabOrder = manifest.layouts.referenceTab.order
+
+        // Get device language (e.g., "en", "es", "de", "pt")
+        val deviceLanguage = Locale.getDefault().language
+
+        return tabOrder.mapNotNull { id ->
+
+            // 1. Get the definition
+            val definition = registry[id] ?: return@mapNotNull null
+
+            // 2. GENERIC FILTER LOGIC
+            // If 'requiredLocale' is set in JSON, check against device language.
+            if (!definition.requiredLocale.isNullOrBlank()) {
+                // If the required language (e.g. "es") does NOT match device (e.g. "en")
+                // then skip this tab.
+                if (definition.requiredLocale != deviceLanguage) {
+                    // Timber.d("Skipping '$id'. Requires '${definition.requiredLocale}', device is '$deviceLanguage'")
+                    return@mapNotNull null
                 }
             }
 
-            // 3. Update the UI state.
-            _uiState.update {
-                it.copy(
-                    tabs = newTabs,
-                    selectedTabId = newTabs.firstOrNull()?.id ?: ""
-                )
-            }
+            // 3. Pass Validation -> Create Tab
+            DisplayTab(id = id, definition = definition)
         }
     }
     private fun observeVoiceName() {
