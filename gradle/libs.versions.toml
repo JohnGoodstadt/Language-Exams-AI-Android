@@ -39,6 +39,7 @@ timber = "5.0.1"
 foundationAndroid = "1.6.6"
 firebaseCrashlyticsPlugin = "2.9.9"
 firebaseAppCheck = "18.0.0"
+facebook = "17.0.0"
 
 [libraries]
 # Core & AppCompat
@@ -116,6 +117,9 @@ firebase-storage = { group = "com.google.firebase", name = "firebase-storage" }
 #App Check
 firebase-appcheck-playintegrity = { group = "com.google.firebase", name = "firebase-appcheck-playintegrity", version.ref = "firebaseAppCheck" }
 firebase-appcheck-debug = { group = "com.google.firebase", name = "firebase-appcheck-debug", version.ref = "firebaseAppCheck" }
+
+#facebook
+facebook-android-sdk = { group = "com.facebook.android", name = "facebook-android-sdk", version.ref = "facebook" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -270,6 +270,9 @@ dependencies {
 
     implementation(libs.firebase.appcheck.playintegrity)
     implementation(libs.firebase.appcheck.debug)
+
+    implementation(libs.facebook.android.sdk)
+
 }
 
 //// Allow Hilt to access classes in different build variants

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Exam Words AI</string>
+    <string name="facebook_app_id">1605775513747047</string>
+    <string name="facebook_client_token">e4017ae5a1841e6cef7b6c68db771119</string>
 </resources>

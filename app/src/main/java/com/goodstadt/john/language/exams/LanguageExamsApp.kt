@@ -8,6 +8,9 @@ import timber.log.Timber
 
 
 import android.util.Log
+import com.facebook.FacebookSdk
+import com.facebook.LoggingBehavior
+import com.facebook.appevents.AppEventsLogger
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.utils.logging.FaultTree
 import com.google.firebase.analytics.ktx.analytics
@@ -73,7 +76,14 @@ class LanguageExamsApp : Application() {
             }
         )
 
-        setupAppDependencies()
+
+        // Initialize Facebook SDK
+        FacebookSdk.setIsDebugEnabled(true)
+//        FacebookSdk.addLoggingBehavior(LoggingBehavior.APP_EVENTS)
+//        FacebookSdk.addLoggingBehavior(LoggingBehavior.INCLUDE_RAW_RESPONSES)
+        FacebookSdk.addLoggingBehavior(LoggingBehavior.REQUESTS) // Shows the HTTP code (200 vs 400)
+
+        AppEventsLogger.activateApp(this) // <--- This fires the "Install" signal
 
     }
     private fun setupAppDependencies() {
