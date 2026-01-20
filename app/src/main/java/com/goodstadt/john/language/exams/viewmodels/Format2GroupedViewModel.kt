@@ -11,7 +11,6 @@ import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.SubTabDefinition
-import com.goodstadt.john.language.exams.screens.reference.Format2UiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
@@ -19,7 +18,7 @@ import timber.log.Timber
 import javax.inject.Inject
 
 // Separate UI State for Format 2
-data class GroupedFormat2UiState(
+data class Format2GroupedUiState(
     val title: String = "",
     val currentSheetName: String = "",
     val subTabs: List<SubTabDefinition> = emptyList(),
@@ -36,7 +35,7 @@ data class GroupedFormat2UiState(
 )
 
 @HiltViewModel
-class GroupedFormat2ViewModel @Inject constructor(
+class Format2GroupedViewModel @Inject constructor(
     private val contentRepository: ContentRepository,
     private val appConfigRepository: AppConfigRepository,
     private val audioPlaybackRepository: AudioPlaybackRepository,
@@ -49,7 +48,7 @@ class GroupedFormat2ViewModel @Inject constructor(
 
     private val parentTabId: String = savedStateHandle.get<String>("tabId")!!
 
-    private val _uiState = MutableStateFlow(GroupedFormat2UiState())
+    private val _uiState = MutableStateFlow(Format2GroupedUiState())
     val uiState = _uiState.asStateFlow()
 
     // Rate Limit Sheets

@@ -29,13 +29,15 @@ import dagger.hilt.android.EntryPointAccessors
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.ui.draw.clip
+import com.goodstadt.john.language.exams.screens.reference.shared.MissingView
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
+import com.goodstadt.john.language.exams.viewmodels.Format3GroupedViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Format2GroupedScreen(
-    viewModel: Format2GroupedViewModel = hiltViewModel()
+fun Format3GroupedScreen(
+    viewModel: Format3GroupedViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val context = LocalContext.current
@@ -65,7 +67,7 @@ fun Format2GroupedScreen(
                 uiState.subTabs.map { getShortTabTitle(it.title) }
             }
             val rawSelectedTitle = uiState.selectedSubTab?.title ?: ""
-//            val selectedOption = if (isSmallScreen) getShortTabTitle(rawSelectedTitle) else rawSelectedTitle
+
             val selectedOption = getShortTabTitle(rawSelectedTitle)
 
             ScrollableHorizontalLevelPicker(
@@ -90,28 +92,10 @@ fun Format2GroupedScreen(
             }
         } else {
             // Render the Format 2 Content
-            uiState.currentFormat2File?.let { file ->
+            uiState.currentFormat3File?.let { file ->
 
+                Format3FileScreen()
 
-                // ✅ USE THE STATELESS COMPONENT
-                Format2Content(
-                    title = file.title,
-                    description = file.description,
-                    levels = file.data,
-
-                    // Logic Delegates
-                    isHeard = { sentence ->
-
-                        viewModel.isHeard(sentence)
-
-                    },
-                    getPlayCount = { 0 }, // Optional if you want to implement count logic
-                    onPlayTrack = { sentence -> viewModel.handleSentenceTap(sentence) },
-                    onShowSideQuestSheet = { showSideQuestSheet = true },
-                    onShowQuizSheet = {
-                        showQuizSheet = true
-                    }
-                )
             }
         }
     }
@@ -203,124 +187,5 @@ private fun getShortTabTitle(original: String): String {
         "Hear vs Listen" -> "Hear/Listen"
 
         else -> original
-    }
-}
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-fun Format2Content(
-    title: String,
-    description: String,
-    levels: List<Format2Level>,
-    // Callbacks for logic
-    isHeard: (String) -> Boolean,
-    getPlayCount: (String) -> Int,
-    onPlayTrack: (String) -> Unit,
-    onShowSideQuestSheet: () -> Unit,
-    onShowQuizSheet: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-
-    LazyColumn(
-        modifier = modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        contentPadding = PaddingValues(vertical = 16.dp)
-    ) {
-        // --- 1. Top-Level Title and Description ---
-        item {
-            Column(modifier = Modifier.padding(16.dp)) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(MaterialTheme.colorScheme.surface)
-                        .padding(horizontal = 16.dp, vertical = 12.dp)
-                ) {
-                    Text(
-                        text = title,
-                        style = MaterialTheme.typography.headlineMedium,
-                        color = orangeLight
-                    )
-                    Spacer(modifier = Modifier.weight(1f))
-
-                    Spacer(modifier = Modifier.weight(1f))
-                    IconButton(onClick = onShowQuizSheet) {
-                        Icon(
-                            imageVector = Icons.Default.SportsEsports,
-                            contentDescription = "Stats",
-                            tint = Color(0xFFFF9800)
-                        )
-                    }
-                    // Side Quest Icon
-                    IconButton(onClick = onShowSideQuestSheet) {
-                        Icon(
-                            imageVector = Icons.Filled.WorkspacePremium,
-                            contentDescription = "Stats",
-                            tint = Color(0xFFFF9800)
-                        )
-                    }
-                }
-                if (description.isNotBlank()) {
-                    Text(
-                        text = description,
-                        style = MaterialTheme.typography.titleSmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-                Spacer(modifier = Modifier.height(8.dp))
-                HorizontalDivider()
-            }
-        }
-
-        // --- 2. Loop through each 'level' ---
-        levels.forEach { level ->
-            stickyHeader {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .background(MaterialTheme.colorScheme.surface)
-                        .padding(horizontal = 16.dp, vertical = 8.dp)
-                ) {
-                    if (level.description.isNotBlank()) {
-                        Text(
-                            text = level.description,
-                            style = MaterialTheme.typography.titleMedium,
-                        )
-                    }
-                }
-            }
-
-            items(
-                items = level.wordsAndSentences,
-                key = { entry -> "${entry.word}-${entry.definition}" }
-            ) { entry ->
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 16.dp, vertical = 12.dp)
-                        .clip(RoundedCornerShape(12.dp))
-                        .background(MaterialTheme.colorScheme.surfaceContainerHigh),
-                    verticalArrangement = Arrangement.spacedBy(4.dp)
-                ) {
-                    entry.sentences.forEach { item ->
-
-                        // Use callbacks
-                        val isSentenceHeard = isHeard(item.sentence)
-                        val count = getPlayCount(item.sentence)
-
-                        Format2Row(
-                            word = entry.word,
-                            sentence = item.sentence,
-                            isHeard = isSentenceHeard,
-                            playCount = count,
-                            onTapped = {
-                                onPlayTrack(item.sentence)
-                            },
-                            modifier = Modifier.padding(start = 16.dp)
-                        )
-                    }
-                }
-                HorizontalDivider(modifier = Modifier.padding(horizontal = 16.dp, vertical = 16.dp))
-            }
-        }
     }
 }

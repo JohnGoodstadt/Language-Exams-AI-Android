@@ -19,6 +19,7 @@ import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Format2Level
 import com.goodstadt.john.language.exams.models.Format2Sentence
 import com.goodstadt.john.language.exams.models.Format2WordAndSentenceDTO
+import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.models.SheetHeaderFormat2DTO
 import com.goodstadt.john.language.exams.models.WordAndSentenceForFirestore
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
@@ -455,6 +456,105 @@ class ExamSheetRepository @Inject constructor(
             return Result.failure(e)
         }
     }
+    suspend fun getFormat3Sheet(sheet_name: String, forceRefresh: Boolean): Result<Format3File>{
+        return try {
+            // a. Check disk cache first (unless forcing a refresh)
+            if (!forceRefresh) {
+                readFormat3SheetFromCache(sheet_name)?.let { cachedFile ->
+                    Timber.d("ExamSheetRepo: Returning '$sheet_name' (Format2) from disk cache. Yippee")
+                    return Result.success(cachedFile)
+                }
+            }
+
+            val format3File = downloadAndAssembleFormat3(sheet_name)
+            val cacheFile = getCacheFilePointer(sheet_name)
+            val jsonString = jsonParser.encodeToString(Format3File.serializer(), format3File)
+            cacheFile.writeText(jsonString)
+
+            Timber.i("ExamSheetRepo: Successfully fetched and cached '$sheet_name' (Format3).")
+
+            // 3. ✅ Wrap the successful result in Result.success()
+            Result.success(format3File)
+
+
+        } catch (e: Exception) {
+            Timber.e(e, "ExamSheetRepo: CRITICAL Error in getFormat3Sheet for '$sheet_name'.")
+            TimberFault.f(
+                message = "ExamSheetRepo: CRITICAL Error in getFormat3Sheet for '$sheet_name'.",
+                localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                secondaryText = "android",
+                area = "ExamSheetRepository.getFormat3Sheet()"
+            )
+            ttsStatsRepository.incGlobalFaultCount(faultDownloadSheet)
+            return Result.failure(e)
+        }
+    }
+
+    private fun downloadAndAssembleFormat3Obsolete(sheetName: String): Format3File? {
+//        suspend fun getFormat3Sheet(documentId: String): Format3File? {
+            // 1. Get Firestore Instance
+            val db = FirebaseFirestore.getInstance()
+
+            // 2. Define your collection name (Change 'reference_sheets' to your actual collection name)
+            val collectionName = "reference_sheets"
+
+        return null
+//            return try {
+//                // 3. Fetch the document
+//                val snapshot = db.collection(collectionName)
+//                    .document(sheetName)
+//                    .get()
+//                    .await()
+//
+//                if (snapshot.exists()) {
+//                    // 4. Convert Firestore Document to your Kotlin Object
+//                    val sheet = snapshot.toObject(Format3File::class.java)
+//                    Timber.i("Successfully loaded sheet: ${sheet?.title}")
+//                    sheet
+//                } else {
+//                    Timber.w("Document $sheetName does not exist")
+//                    null
+//                }
+//            } catch (e: Exception) {
+//                Timber.e(e, "Error fetching Format3 sheet: $sheetName")
+//                null
+//            }
+
+    }
+
+    suspend fun downloadAndAssembleFormat3(documentId: String): Format3File {
+        val db = FirebaseFirestore.getInstance()
+        // Make sure this matches your actual Firestore collection name
+        val collectionName = "reference_sheets"
+
+        return try {
+            val snapshot = db.collection(collectionName)
+                .document(documentId)
+                .get()
+                .await()
+
+            if (snapshot.exists()) {
+                // Convert to object. If parsing fails, toObject returns null,
+                // so we elvis operator (?:) to fall back to an empty object.
+                val sheet = snapshot.toObject(Format3File::class.java)
+
+                if (sheet != null) {
+                    Timber.i("Successfully loaded sheet: ${sheet.title}")
+                    sheet
+                } else {
+                    Timber.e("Document exists but failed to parse into Format3File")
+                    Format3File() // Return empty object
+                }
+            } else {
+                Timber.w("Document $documentId does not exist. Returning empty sheet.")
+                Format3File() // Return empty object
+            }
+        } catch (e: Exception) {
+            Timber.e(e, "Error fetching Format3 sheet: $documentId")
+            Format3File() // Return empty object
+        }
+    }
+
     private suspend fun readFormat2SheetFromCache(logicalName: String): Format2File? = withContext(Dispatchers.IO) {
         val file = getCacheFilePointer(logicalName)
         if (!file.exists()) return@withContext null
@@ -462,6 +562,18 @@ class ExamSheetRepository @Inject constructor(
         return@withContext try {
             val jsonString = file.readText()
             jsonParser.decodeFromString<Format2File>(jsonString)
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to read Format2 from disk cache for '$logicalName'")
+            null
+        }
+    }
+    private suspend fun readFormat3SheetFromCache(logicalName: String): Format3File? = withContext(Dispatchers.IO) {
+        val file = getCacheFilePointer(logicalName)
+        if (!file.exists()) return@withContext null
+
+        return@withContext try {
+            val jsonString = file.readText()
+            jsonParser.decodeFromString<Format3File>(jsonString)
         } catch (e: Exception) {
             Timber.e(e, "Failed to read Format2 from disk cache for '$logicalName'")
             null

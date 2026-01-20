@@ -36,6 +36,7 @@ import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.models.ScreenType
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
+import com.goodstadt.john.language.exams.screens.reference.shared.MissingView
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
@@ -147,10 +148,19 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                 // We route to a new destination, passing the Parent Tab ID
                 RefScreen.GroupedFormat2.createRoute(selectedTab.id)
             }
+
+
+            ScreenType.FORMAT_3_SCREEN  -> definition.firestoreDocumentId?.let { docId ->
+                RefScreen.Format3.createRoute(docId)
+            }
+            ScreenType.GROUPED_FORMAT_3_SCREEN -> {
+                // We route to a new destination, passing the Parent Tab ID
+                RefScreen.GroupedFormat3.createRoute(selectedTab.id)
+            }
+
             // The 'else' is not needed because 'when' on an enum is exhaustive.
             // If you add a new ScreenType to the enum, the compiler will force you to handle it here.
             ScreenType.UNKNOWN -> null
-            //ScreenType.GROUPED_FORMAT_2_SCREEN -> TODO()
         }
 
         // If a valid route was determined, perform the navigation.
@@ -341,7 +351,15 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                         arguments = listOf(navArgument("tabId") { type = NavType.StringType })
                     ) {
                         // This is the container screen we just created/discussed
-                        GroupedFormat2Screen()
+                        Format2GroupedScreen()
+                    }
+
+                    composable(
+                        route = RefScreen.GroupedFormat3.route,
+                        arguments = listOf(navArgument("tabId") { type = NavType.StringType })
+                    ) {
+                        Format3GroupedScreen()
+//                        MissingView()
                     }
                 }
             } //: Not Unknown type

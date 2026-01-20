@@ -17,6 +17,7 @@ import com.goodstadt.john.language.exams.models.HeaderWordsSentencesListRoot
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.Format2File
+import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -127,6 +128,7 @@ class ContentRepository @Inject constructor(
     private val vocabCache = mutableMapOf<String, Format0File>()
     private val format1Cache = mutableMapOf<String, HeaderWordsSentencesListRoot>()
     private val format2Cache = mutableMapOf<String, Format2File>()
+    private val format3Cache = mutableMapOf<String, Format3File>()
 
     //Problem was getVocabData() called twice sub millisecond
     // ✅ ADDED: A map to store ongoing fetch operations.
@@ -324,6 +326,51 @@ class ContentRepository @Inject constructor(
         } catch (e: Exception) {
             Timber.e(e, "ContentRepo: CRITICAL error in getFormat2Data for '$logicalName'.")
             FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat2Data() failed for $name", e))
+            return@withContext Result.failure(e) // Format2 does not have a bundle fallback
+        }
+    }
+    suspend fun getFormat3Data(name: String): Result<Format3File> = withContext(Dispatchers.IO) {
+        val logicalName = normalizeToLogicalName(name)
+        try {
+            // --- 1. VERSION CHECK ---
+            val remoteVersions = appConfigRepository.getRemoteSheetVersions()
+            val remoteVersion = remoteVersions[logicalName] ?: 1
+            val localVersion = appConfigRepository.getLocalVersion(logicalName)
+            val forceRefresh = remoteVersion > localVersion
+            Timber.d("ContentRepo: Sheet '$logicalName' (Format3) -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
+
+            // --- 2. IN-MEMORY CACHE CHECK ---
+            if (!forceRefresh) {
+                format3Cache[logicalName]?.let { cachedFile ->
+                    Timber.d("ContentRepo: Returning '$logicalName' (Format3 from MEMORY CACHE.")
+                    return@withContext Result.success(cachedFile)
+                }
+            }
+
+            // --- 3. DELEGATE TO ExamSheetRepository ---
+            Timber.d("ContentRepo: Delegating fetch for '$logicalName' (Format3) to ExamSheetRepository...")
+
+            // This is the line you will add in the next step.
+            // For now, let's create a placeholder that fails, so you can see the flow.
+            val result = examSheetRepository.getFormat3Sheet(logicalName, forceRefresh = forceRefresh)
+            //val result: Result<Format2File> = Result.failure(NotImplementedError("getFormat2Sheet is not yet implemented in ExamSheetRepository"))
+
+
+            // --- 4. WARM UP MEMORY CACHE & UPDATE VERSION ---
+            if (result.isSuccess) {
+                val format3File = result.getOrThrow()
+                format3Cache[logicalName] = format3File
+                Timber.d("ContentRepo: Warmed up memory cache for '$logicalName' (Format3).")
+
+                if (forceRefresh) {
+                    appConfigRepository.updateLocalVersion(logicalName,remoteVersion)
+                }
+            }
+            return@withContext result
+
+        } catch (e: Exception) {
+            Timber.e(e, "ContentRepo: CRITICAL error in getFormat2Data for '$logicalName'.")
+            FirebaseCrashlytics.getInstance().recordException(Exception("ContentRepository.getFormat3Data() failed for $name", e))
             return@withContext Result.failure(e) // Format2 does not have a bundle fallback
         }
     }

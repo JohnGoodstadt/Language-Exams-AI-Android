@@ -203,7 +203,7 @@ class AppConfigRepository @Inject constructor(
      * Fetches the map of all sheet versions from Remote Config.
      * This function should be suspend to ensure latest values are fetched.
      */
-    suspend fun getRemoteSheetVersions(): Map<String, Int> {
+    suspend fun getRemoteSheetVersionsOriginal(): Map<String, Int> {
         try {
             remoteConfig.fetchAndActivate().await()
         } catch (e: Exception) {
@@ -226,6 +226,61 @@ class AppConfigRepository @Inject constructor(
             emptyMap()
         }
     }
+    suspend fun getRemoteSheetVersions(): Map<String, Int> {
+        // 1. Fetch from network (We keep this for Prod, but it doesn't hurt in Debug)
+        try {
+            remoteConfig.fetchAndActivate().await()
+        } catch (e: Exception) {
+            Timber.e(e, "Failed to fetch remote config for sheet versions")
+        }
+
+        // 2. DECIDE: Real JSON or Fake JSON?
+        val versionsJson = if (BuildConfig.DEBUG) {
+            Timber.w("⚠️ DEV MODE: Using Local Sheet Versions Override")
+            // Paste your Full JSON here (Existing sheets + New Spanish ones)
+            """
+        {
+            "EnglishPrepositions": 5,
+            "EnglishA1Adjectives": 5,
+            "EnglishA2Adjectives": 5,
+            "EnglishB1Adjectives": 5,
+            "EnglishB2Adjectives": 5,
+            "EnglishA1Vocab": 8,
+            "EnglishA2Vocab": 11,
+            "EnglishB1Vocab": 8,
+            "EnglishB2Vocab": 8,
+            "EnglishDefinitionsFormat1": 4,
+            "EnglishGoodVsWell": 5,
+            "EnglishSayVsTell": 1,
+            "EnglishSpeakVsTalk": 1,
+            "EnglishHearVsListen": 1,
+            "EnglishBorrowVsLend": 1,
+            "EnglishBringVsTake": 1,
+            "EnglishLookVsSee": 1,
+            "SpanishReferenceSheet1": 1,
+            "SpanishReferenceSheet2": 1,
+            "SpanishReferenceSheet3": 1,
+            "SpanishReferenceSheet4": 1
+        }
+        """.trimIndent()
+        } else {
+            // Production: Get from Firebase
+            remoteConfig.getString("sheet_versions")
+        }
+
+        // 3. Decode whatever string we got (Local or Remote)
+        return if (versionsJson.isNotBlank()) {
+            try {
+                Json.decodeFromString<Map<String, Int>>(versionsJson)
+            } catch (e: Exception) {
+                Timber.e(e, "Could not parse remote sheet versions JSON")
+                emptyMap()
+            }
+        } else {
+            Timber.e("Could not parse remote sheet versions JSON (Empty)")
+            emptyMap()
+        }
+    }
     /**
      * Fetches and parses the entire UI manifest from Remote Config.
      * This function is the single source of truth for UI structure.
@@ -233,14 +288,8 @@ class AppConfigRepository @Inject constructor(
      *
      * @return The parsed AppUIManifest, or a default/empty manifest on failure.
      */
-    fun getAppUiManifest(): AppUIManifest {
+    fun getAppUiManifestOriginal(): AppUIManifest {
         val crashlytics = FirebaseCrashlytics.getInstance()
-//        try {
-//            remoteConfig.fetchAndActivate().await()
-//            Timber.d("Remote Config fetched and activated.")
-//        } catch (e: Exception) {
-//            Timber.e(e, "Failed to fetch remote config; will use cached or default values.")
-//        }
 
         // Get the single manifest JSON string from Remote Config
         val manifestJsonString = remoteConfig.getString("app_ui_manifest")
@@ -268,6 +317,114 @@ class AppConfigRepository @Inject constructor(
             crashlytics.recordException(error)
 
             // If the remote string is empty, fall back to the default immediately.
+            Timber.w("Remote 'app_ui_manifest' is blank. Falling back to default.")
+            parseDefaultManifest()
+        }
+    }
+    fun getAppUiManifest(): AppUIManifest {
+        val crashlytics = FirebaseCrashlytics.getInstance()
+
+        // 1. Determine which JSON string to use
+        val manifestJsonString = if (BuildConfig.DEBUG) {
+            Timber.w("⚠️ DEV MODE: Using Local Manifest Override")
+            // Hardcoded JSON for testing
+            """
+        {
+            "sheetRegistry": {
+                "quiz": {
+                    "title": "Quiz.",
+                    "sheetDataType": "fixed",
+                    "screenType": "FixedScreen"
+                },
+                "conjugations": {
+                    "title": "Conjugations.",
+                    "sheetDataType": "fixed",
+                    "screenType": "FixedScreen"
+                },
+                "EnglishPrepositions": {
+                    "title": "Prepositions.",
+                    "sheetDataType": "VocabFile",
+                    "screenType": "VocabScreen",
+                    "firestoreDocumentId": "EnglishPrepositions"
+                },
+                "AdjectivesGroup": {
+                    "title": "Adjectives.",
+                    "screenType": "GroupedVocabScreen",
+                    "sheetDataType": "VocabFile",
+                    "subTabs": [
+                        { "title": "Basic", "firestoreDocumentId": "EnglishA1Adjectives", "sheetDataType": "VocabFile" },
+                        { "title": "Intermediate", "firestoreDocumentId": "EnglishA2Adjectives", "sheetDataType": "VocabFile" },
+                        { "title": "Upper", "firestoreDocumentId": "EnglishB1Adjectives", "sheetDataType": "VocabFile" },
+                        { "title": "Advanced", "firestoreDocumentId": "EnglishB2Adjectives", "sheetDataType": "VocabFile" }
+                    ]
+                },
+                "EnglishDefinitionsFormat1": {
+                    "title": "Sounds the Same",
+                    "sheetDataType": "Format1",
+                    "screenType": "Format1Screen",
+                    "firestoreDocumentId": "EnglishDefinitionsFormat1"
+                },
+                "EnglishGoodVsWell": {
+                    "title": "Good vs Well.",
+                    "sheetDataType": "Format2",
+                    "screenType": "GroupedVocabScreen",
+                    "firestoreDocumentId": "EnglishGoodVsWell"
+                },
+                "LocalLanguage": {
+                    "title": "Spanish",
+                    "screenType": "GroupedFormat3Screen",
+                    "sheetDataType": "Format3",
+                    "subTabs": [
+                        { "title": "Vowels", "firestoreDocumentId": "SpanishReference1", "sheetDataType": "Format3" },
+                        { "title": "Word Stress", "firestoreDocumentId": "SpanishReference2", "sheetDataType": "Format3" },
+                        { "title": "Schwa", "firestoreDocumentId": "SpanishReference3", "sheetDataType": "Format3" },
+                        { "title": "Final", "firestoreDocumentId": "SpanishReference4", "sheetDataType": "Format3" }
+                    ]
+                }
+            },
+            "layouts": {
+                "referenceTab": {
+                    "order": [
+                        "quiz",
+                        "conjugations",
+                        "EnglishPrepositions",
+                        "AdjectivesGroup",
+                        "EnglishDefinitionsFormat1",
+                        "EnglishGoodVsWell",
+                        "LocalLanguage"
+                    ]
+                },
+                "meTab": {
+                    "order": [
+                        "focusing",
+                        "settings",
+                        "vocabulary",
+                        "progress",
+                        "paragraph"
+                    ]
+                }
+            }
+        }
+        """.trimIndent()
+        } else {
+            // PRODUCTION: Fetch from Remote Config
+            remoteConfig.getString("app_ui_manifest")
+        }
+
+        // 2. Proceed with Parsing (The rest of your code stays exactly the same)
+        return if (manifestJsonString.isNotBlank()) {
+            try {
+                // Attempt to parse the JSON string from the server (or our debug string)
+                jsonParser.decodeFromString<AppUIManifest>(manifestJsonString)
+            } catch (e: Exception) {
+                // If parsing fails, log it and fall back to the bundled default.
+                Timber.e(e, "CRITICAL: Failed to parse 'app_ui_manifest'. Falling back to default.")
+                crashlytics.recordException(e)
+                parseDefaultManifest()
+            }
+        } else {
+            val error = Exception("Data load failed completely for app_ui_manifest")
+            crashlytics.recordException(error)
             Timber.w("Remote 'app_ui_manifest' is blank. Falling back to default.")
             parseDefaultManifest()
         }

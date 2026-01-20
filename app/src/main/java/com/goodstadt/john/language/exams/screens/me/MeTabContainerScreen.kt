@@ -148,32 +148,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
             }
             composable(MeScreen.Paragraph.route) { ParagraphScreen() }
             if (BuildConfig.DEBUG) {
-//                composable(MeScreen.LocalLanguage.route) {
-//                    Format3FileScreen(
-//                    filename = "SpanishReferenceSheet1",
-//                    onSentenceTapped = { Timber.i("Sentence Tapped") },
-//                    vm = Format3FileViewModel()
-//                ) }
-//                composable(
-//                    route = MeScreen.LocalLanguage.route,
-//                    arguments = listOf(
-//                        navArgument("filename") { type = NavType.StringType }
-//                    )
-//                ) { backStackEntry ->
-//
-//                    val filename = backStackEntry
-//                        .arguments
-//                        ?.getString("filename")
-//                        ?: return@composable
-//
-//                    Format3FileScreen(
-//                        filename = filename,
-//                        onSentenceTapped = { sentence ->
-//                            Timber.i("Sentence Tapped $sentence")
-//                            // Google TTS, recording, analytics, etc.
-//                        }
-//                    )
-//                }
+
                 composable(MeScreen.LocalLanguage.route) {
                     val filename = "SpanishReferenceSheet1" // or map from device language
                     Format3FileScreen(

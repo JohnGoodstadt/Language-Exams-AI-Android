@@ -4,36 +4,36 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Format3File(
-    val fileformat: Int,
-    val location: Int,
-    val sheetname: String,
+    val fileformat: Int = 0,
+    val location: Int = 0,
+    val sheetname: String = "",
 
-    val title: String,
-    val subtitle: String,
-    val description: String,
+    val title: String = "",
+    val subtitle: String= "",
+    val description: String= "",
 
-    val level: String,
-    val targetLanguage: String,
+    val level: String= "",
+    val targetLanguage: String= "",
 
-    val categories: List<Format3Category>
+    val categories: List<Format3Category> = emptyList()
 )
 
 @Serializable
 data class Format3Category(
-    val sortOrder: Int,
-    val title: String,
-    val description: String,
-    val words: List<Format3Word>
+    val sortOrder: Int = 0,
+    val title: String= "",
+    val description: String= "",
+    val words: List<Format3Word> = emptyList()
 )
 
 @Serializable
 data class Format3Word(
-    val id: Int,
-    val sortOrder: Int,
-    val sentences: List<Format3Sentence>
+    val id: Int = 0,
+    val sortOrder: Int = 0,
+    val sentences: List<Format3Sentence> = emptyList()
 )
 
 @Serializable
 data class Format3Sentence(
-    val sentence: String
+    val sentence: String = ""
 )
