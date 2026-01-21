@@ -147,19 +147,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
                 })
             }
             composable(MeScreen.Paragraph.route) { ParagraphScreen() }
-//            if (BuildConfig.DEBUG) {
-//
-//                composable(MeScreen.LocalLanguage.route) {
-//                    val filename = "SpanishReferenceSheet1" // or map from device language
-//                    Format3FileScreen(
-//                        assetPath = "SpanishReferenceSheet1.json",
-//                        onSentenceTapped = { sentence ->
-//                            Timber.i("Sentence tapped: $sentence")
-//                        }
-//                    )
-//                }
-//
-//            }
+
         }
     } //:Column
 

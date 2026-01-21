@@ -23,11 +23,7 @@ import com.goodstadt.john.language.exams.models.Format3Sentence
 // --- Colors ---
 val IosOrange = Color(0xFFFF9500)
 
-// Light Mode Colors
-val IosBackgroundLight = Color(0xFFF2F2F7)
-val IosSurfaceLight = Color.White
-
-// Dark Mode Colors (iOS System Colors)
+// Strict Dark Mode Colors
 val IosBackgroundDark = Color(0xFF000000)
 val IosSurfaceDark = Color(0xFF1C1C1E) // Dark Grey for cards
 
@@ -39,14 +35,12 @@ fun Format3SheetView(
 ) {
     val state by vm.uiState.collectAsState()
 
-    // Detect System Theme
-    val isDark = isSystemInDarkTheme()
-
-    // Set dynamic colors
-    val backgroundColor = if (isDark) IosBackgroundDark else IosBackgroundLight
-    val cardBackgroundColor = if (isDark) IosSurfaceDark else IosSurfaceLight
-    val primaryTextColor = if (isDark) Color.White else Color.Black
-    val secondaryTextColor = if (isDark) Color.LightGray else Color.Gray
+    // CHANGED: Removed isSystemInDarkTheme() check.
+    // We now hardcode these variables to the Dark values.
+    val backgroundColor = IosBackgroundDark
+    val cardBackgroundColor = IosSurfaceDark
+    val primaryTextColor = Color.White
+    val secondaryTextColor = Color.LightGray
 
     // Initialize
     LaunchedEffect(file) {
@@ -56,7 +50,7 @@ fun Format3SheetView(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(backgroundColor) // Dynamic Background
+            .background(backgroundColor) // Always Black
     ) {
         when {
             state.isLoading -> {
@@ -127,7 +121,7 @@ private fun TopSheetInfoView(
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.Start
     ) {
-       //TODO: move to vm
+        //TODO: move to vm
         fun translateLanguageToTopTitle(language:String): String {
             val title = when (language.lowercase()) {
                 "spanish" -> "Special note for Spanish speakers"
@@ -141,7 +135,7 @@ private fun TopSheetInfoView(
             Text(
                 text = translateLanguageToTopTitle(file.targetLanguage),
                 style = MaterialTheme.typography.labelSmall,
-                color = textColor, // Dynamic Text
+                color = textColor,
                 modifier = Modifier.fillMaxWidth().padding(),
                 textAlign = TextAlign.Center
             )
@@ -151,7 +145,7 @@ private fun TopSheetInfoView(
             text = file.title,
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.SemiBold,
-            color = IosOrange, // Orange stays Orange in both modes
+            color = IosOrange,
             modifier = Modifier.padding(top = 8.dp)
         )
 
@@ -160,7 +154,7 @@ private fun TopSheetInfoView(
                 text = file.subtitle,
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
-                color = textColor, // Dynamic Text
+                color = textColor,
                 modifier = Modifier.padding(top = 8.dp)
             )
         }
@@ -169,16 +163,15 @@ private fun TopSheetInfoView(
             Text(
                 text = file.description,
                 style = MaterialTheme.typography.bodyMedium,
-                color = textColor, // Dynamic Text
+                color = textColor,
                 modifier = Modifier.padding(top = 8.dp)
             )
         }
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // Divider adjusts to theme automatically using MaterialTheme
         HorizontalDivider(
-            color = MaterialTheme.colorScheme.outlineVariant
+            color = Color.DarkGray // CHANGED: Forced Dark Gray
         )
     }
 }
@@ -208,14 +201,14 @@ private fun CategorySectionView(
                 Text(
                     text = category.description,
                     style = MaterialTheme.typography.bodySmall,
-                    color = secondaryColor // Dynamic Grey
+                    color = secondaryColor
                 )
             }
         }
 
         // --- CONTENT CARD ---
         Card(
-            colors = CardDefaults.cardColors(containerColor = cardColor), // Dynamic Card Color
+            colors = CardDefaults.cardColors(containerColor = cardColor),
             shape = RoundedCornerShape(10.dp),
             elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
             modifier = Modifier.fillMaxWidth()
@@ -231,7 +224,7 @@ private fun CategorySectionView(
                         Text(
                             text = s.sentence,
                             style = MaterialTheme.typography.bodyLarge,
-                            color = textColor // Dynamic Text
+                            color = textColor
                         )
                     }
 
@@ -239,8 +232,8 @@ private fun CategorySectionView(
                         HorizontalDivider(
                             modifier = Modifier.padding(start = 16.dp),
                             thickness = 0.5.dp,
-                            // Make divider subtle in both modes
-                            color = if (isSystemInDarkTheme()) Color.DarkGray else Color.LightGray.copy(alpha = 0.5f)
+                            // CHANGED: Forced Dark Gray for the divider
+                            color = Color.DarkGray
                         )
                     }
                 }

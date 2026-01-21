@@ -364,13 +364,56 @@ class AppConfigRepository @Inject constructor(
                     "screenType": "Format1Screen",
                     "firestoreDocumentId": "EnglishDefinitionsFormat1"
                 },
-                "EnglishGoodVsWell": {
-                    "title": "Good vs Well.",
-                    "sheetDataType": "Format2",
-                    "screenType": "GroupedVocabScreen",
-                    "firestoreDocumentId": "EnglishGoodVsWell"
-                },
-                "LocalLanguage": {
+               "PairsGroup": {
+      "title": "Word Pairs",
+      "screenType": "GroupedFormat2Screen",
+      "sheetDataType": "Format2",
+      "subTabs": [
+        {
+          "title": "Good vs Well",
+          "firestoreDocumentId": "EnglishGoodVsWell",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        },
+        {
+          "title": "Say vs Tell",
+          "firestoreDocumentId": "EnglishSayVsTell",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        },
+        {
+          "title": "Speak vs Talk",
+          "firestoreDocumentId": "EnglishSpeakVsTalk",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        },
+        {
+          "title": "Hear vs Listen",
+          "firestoreDocumentId": "EnglishHearVsListen",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        },
+        {
+          "title": "Borrow vs Lend",
+          "firestoreDocumentId": "EnglishBorrowVsLend",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        },
+        {
+          "title": "Bring Vs Take",
+          "firestoreDocumentId": "EnglishBringVsTake",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        },
+        {
+          "title": "Look vs See",
+          "firestoreDocumentId": "EnglishLookVsSee",
+          "sheetDataType": "Format2",
+          "screenType": "Format2Screen"
+        }
+      ]
+    },
+                "SpanishLanguage": {
                     "title": "Spanish",
                     "screenType": "GroupedFormat3Screen",
                     "sheetDataType": "Format3",
@@ -389,10 +432,11 @@ class AppConfigRepository @Inject constructor(
                         "quiz",
                         "conjugations",
                         "EnglishPrepositions",
+                        "SpanishLanguage",
                         "AdjectivesGroup",
                         "EnglishDefinitionsFormat1",
-                        "EnglishGoodVsWell",
-                        "LocalLanguage"
+                        "PairsGroup"
+                        
                     ]
                 },
                 "meTab": {
