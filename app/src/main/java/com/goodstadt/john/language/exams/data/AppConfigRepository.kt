@@ -203,7 +203,7 @@ class AppConfigRepository @Inject constructor(
      * Fetches the map of all sheet versions from Remote Config.
      * This function should be suspend to ensure latest values are fetched.
      */
-    suspend fun getRemoteSheetVersionsOriginal(): Map<String, Int> {
+    suspend fun getRemoteSheetVersions(): Map<String, Int> {
         try {
             remoteConfig.fetchAndActivate().await()
         } catch (e: Exception) {
@@ -214,8 +214,10 @@ class AppConfigRepository @Inject constructor(
         return if (versionsJson.isNotBlank()) {
             try {
                 //this works
-                //val fred = Json.decodeFromString<Map<String, Int>>(versionsJson)
-                //Timber.i("$fred")
+                if (BuildConfig.DEBUG) {
+                    val fred = Json.decodeFromString<Map<String, Int>>(versionsJson)
+                    Timber.i("$fred")
+                }
                 Json.decodeFromString<Map<String, Int>>(versionsJson)
             } catch (e: Exception) {
                 Timber.e(e, "Could not parse remote sheet versions JSON (1)")
@@ -226,7 +228,7 @@ class AppConfigRepository @Inject constructor(
             emptyMap()
         }
     }
-    suspend fun getRemoteSheetVersions(): Map<String, Int> {
+    suspend fun getRemoteSheetVersionsDEBUG(): Map<String, Int> {
         // 1. Fetch from network (We keep this for Prod, but it doesn't hurt in Debug)
         try {
             remoteConfig.fetchAndActivate().await()
@@ -288,7 +290,7 @@ class AppConfigRepository @Inject constructor(
      *
      * @return The parsed AppUIManifest, or a default/empty manifest on failure.
      */
-    fun getAppUiManifestOriginal(): AppUIManifest {
+    fun getAppUiManifest(): AppUIManifest {
         val crashlytics = FirebaseCrashlytics.getInstance()
 
         // Get the single manifest JSON string from Remote Config
@@ -321,7 +323,7 @@ class AppConfigRepository @Inject constructor(
             parseDefaultManifest()
         }
     }
-    fun getAppUiManifest(): AppUIManifest {
+    fun getAppUiManifestDEBUG(): AppUIManifest {
         val crashlytics = FirebaseCrashlytics.getInstance()
 
         // 1. Determine which JSON string to use

@@ -118,8 +118,10 @@ class ReferenceViewModel @Inject constructor(
             // --- FILTER LOGIC ---
             // If the tab is "LocalLanguage", strictly require the device to be Spanish ("es")
             if (id == "SpanishLanguage" && deviceLanguage != "es") {
-                // Timber.d("Hiding Local Language tab because device is $deviceLanguage")
+                 Timber.d("Hiding Local Language tab because device is $deviceLanguage")
                 return@mapNotNull null
+            }else{
+                Timber.d("Found Local Language $deviceLanguage")
             }
 
             // --- MAP LOGIC ---
