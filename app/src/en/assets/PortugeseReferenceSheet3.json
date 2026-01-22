@@ -1,0 +1,44 @@
+{
+  "fileformat": 3,
+  "location": 0,
+  "sheetname": "FinalConsonantsForPortugueseBR",
+  "title": "Final Consonants and Audible Grammar",
+  "subtitle": "When grammar is correct but not heard",
+  "description": "English grammar is often heard at the end of words. Portuguese speakers often soften or drop these sounds.",
+  "level": "B1",
+  "targetLanguage": "Portuguese (Brazil)",
+  "categories": [
+    {
+      "sortOrder": 1,
+      "title": "Past Tense Endings",
+      "description": "Past tense in English is often shown by a quiet sound at the end of the word.",
+      "words": [
+        {
+          "id": 1,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I FINISHED the work." },
+            { "sentence": "She WALKED home yesterday." },
+            { "sentence": "They VISITED us last week." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "title": "Plural and Third Person S",
+      "description": "Final S sounds show plural and he or she in the present tense.",
+      "words": [
+        {
+          "id": 2,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "She WORKS from home." },
+            { "sentence": "The DOGS are loud." },
+            { "sentence": "He LIKES this movie." }
+          ]
+        }
+      ]
+    }
+  ]
+}

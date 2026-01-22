@@ -6,6 +6,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
@@ -24,6 +25,8 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.goodstadt.john.language.exams.utils.RateLimitGuard
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
+import com.google.firebase.crashlytics.BuildConfig
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -80,7 +83,7 @@ class CategoryTabViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val loadingManager: GlobalLoadingManager,
     private val globalLoadingManager: GlobalLoadingManager,
-    private val rateLimitGuard: RateLimitGuard
+    private val firestoreRepository: FirestoreRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<CategoryTabUiState>(CategoryTabUiState.Loading)
@@ -137,6 +140,12 @@ class CategoryTabViewModel @Inject constructor(
         viewModelScope.launch {
             hasSeenHelp = userPreferencesRepository.hasSeenHelpSheetFlow.first()
         }
+
+
+//        if (BuildConfig.DEBUG) { //Just for Jan 2026
+         //   firestoreRepository.updateUserInFirestore()
+//        }
+
     }
 
     // MARK: - Reactive Listeners

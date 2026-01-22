@@ -1,0 +1,45 @@
+{
+  "fileformat": 3,
+  "location": 0,
+  "sheetname": "WeakSoundsAndSchwaForPortugueseBR",
+  "title": "Weak Sounds and the Schwa",
+  "subtitle": "Why English sounds fast to Brazilian learners",
+  "description": "In Brazilian Portuguese, vowels are usually clear. In English, many vowels become weak and short. This makes listening difficult and speech sound unnatural.",
+  "level": "B1",
+  "targetLanguage": "Portuguese (Brazil)",
+  "categories": [
+    {
+      "sortOrder": 1,
+      "title": "Weak Function Words",
+      "description": "Small grammar words are not stressed in English and become very short in normal speech.",
+      "words": [
+        {
+          "id": 1,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I want to GO to the STORE." },
+            { "sentence": "This is a CUP of TEA." },
+            { "sentence": "She gave it to ME." },
+            { "sentence": "He’s looking for a JOB." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "title": "Schwa Inside Words",
+      "description": "Unstressed syllables inside words become weak and short in English.",
+      "words": [
+        {
+          "id": 2,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I’m aBOUT to START." },
+            { "sentence": "We had a PROblem yesterday." },
+            { "sentence": "My FAther works late." }
+          ]
+        }
+      ]
+    }
+  ]
+}

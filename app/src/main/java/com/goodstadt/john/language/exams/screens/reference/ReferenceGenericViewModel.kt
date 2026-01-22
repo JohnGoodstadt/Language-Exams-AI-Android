@@ -325,18 +325,6 @@ class ReferenceGenericViewModel @Inject constructor(
             }
 
             Timber.i("🏆 Reference Sheet Completed: $sheetName")
-        } else {
-            if (BuildConfig.DEBUG) {
-                _celebrationTitle.value = "Sheet Almost Completed!"
-                _celebrationSubtitle.value =
-                    "You mastered all ${allSentences.size} sentences! +0 XP"
-
-                viewModelScope.launch {
-                    _showCelebration.value = true
-                    kotlinx.coroutines.delay(4000)
-                    _showCelebration.value = false
-                }
-            }
         }
     }
 

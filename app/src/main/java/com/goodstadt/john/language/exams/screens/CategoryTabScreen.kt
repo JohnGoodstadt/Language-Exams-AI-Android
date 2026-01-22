@@ -73,6 +73,7 @@ import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
 import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamificationStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
+import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
@@ -126,6 +127,8 @@ fun CategoryTabScreen(
     val bannerTitle by viewModel.celebrationTitle.collectAsState()
     val bannerSubtitle by viewModel.celebrationSubtitle.collectAsState()
     val currentExamName by viewModel.currentExamName.collectAsStateWithLifecycle()
+
+
 
     // --- Lifecycle & Loading ---
     LaunchedEffect(Unit) {

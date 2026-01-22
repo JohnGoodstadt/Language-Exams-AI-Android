@@ -14,12 +14,40 @@
       },
       "oauth_client": [
         {
+          "client_id": "396419988924-2lbp4a50f7peui8k9v7shjapmediirr2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goodstadt.john.language.exams.en",
+            "certificate_hash": "bd6c397c5a41c42cdb1bb9548a8f1bf5e19389f6"
+          }
+        },
+        {
           "client_id": "396419988924-k4tml4a5hbvc4k83hed1nf29j1p4idro.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.goodstadt.john.language.exams.en",
             "certificate_hash": "92f84a499fc66f4cadd5357340171338374c713c"
           }
+        },
+        {
+          "client_id": "396419988924-kmjkhq02qokvql202nhg3oublhkaknir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goodstadt.john.language.exams.en",
+            "certificate_hash": "a32e0651596eca2f3f87193ee6281503690261cd"
+          }
+        },
+        {
+          "client_id": "396419988924-qbut3vufgsg6t194779ac6j3nsd6geve.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goodstadt.john.language.exams.en",
+            "certificate_hash": "4eeab7a411717ea86ce1da991d0a4948eb07dd11"
+          }
+        },
+        {
+          "client_id": "396419988924-n5lold2mlkm7r45j00qog6mjh29d7gd8.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
@@ -29,7 +57,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "396419988924-n5lold2mlkm7r45j00qog6mjh29d7gd8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "396419988924-o00a7roun6ilqucls0e4bmdb7bfdq4un.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.goodstadt.john.language.exams.en"
+              }
+            }
+          ]
         }
       }
     }

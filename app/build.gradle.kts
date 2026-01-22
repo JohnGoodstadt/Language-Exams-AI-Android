@@ -55,6 +55,13 @@ android {
             secretsProperties.getProperty("GEMINI_API_KEY")
         )
 
+        buildConfigField(
+            "String",
+            "GOOGLE_CLIENT_ID",
+            secretsProperties.getProperty("GOOGLE_CLIENT_ID")
+        )
+
+
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -272,6 +279,10 @@ dependencies {
     implementation(libs.firebase.appcheck.debug)
 
     implementation(libs.facebook.android.sdk)
+
+    implementation(libs.androidx.credentials)
+    implementation(libs.androidx.credentials.play.services.auth)
+    implementation(libs.googleid)
 
 }
 

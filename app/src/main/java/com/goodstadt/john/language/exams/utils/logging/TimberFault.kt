@@ -1,7 +1,14 @@
 package com.goodstadt.john.language.exams.utils.logging
 
 import android.util.Log
+import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.data.FirestoreRepository
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import timber.log.Timber
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 /**
  * A simple logging class to mimic Timber for our extension function experiment.
@@ -35,18 +42,35 @@ object TimberFault {
 
         // 2. Call wtf() with the custom tag
         Timber.tag(tag).wtf(message)
+
+        if(!BuildConfig.DEBUG) {
+            FirestoreRepository.createFaultLog(
+                message = message,
+                secondaryText = secondaryText,
+                area = area
+            )
+        }
     }
     fun f(
         message: String,
         localizedMessage:String = "",
-        secondaryText: String = "",
-        area: String = ""
+        secondaryText: String = "android",
+        area: String = "android"
     ) {
         // 1. Encode the extra data into a JSON string tag
         val tag = FaultDataEncoder.encode(secondaryText, area)
 
         // 2. Call wtf() with the custom tag
         Timber.tag(tag).wtf(message)
+
+        if(!BuildConfig.DEBUG) {
+            FirestoreRepository.createFaultLog(
+                message = message,
+                secondaryText = secondaryText,
+                area = area
+            )
+        }
+
     }
     fun f(
         t: Throwable,

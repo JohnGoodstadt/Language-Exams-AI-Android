@@ -1,0 +1,45 @@
+{
+  "fileformat": 3,
+  "location": 0,
+  "sheetname": "WordStressForPortugueseBR",
+  "title": "Word Stress That Changes Meaning",
+  "subtitle": "Why English sounds unnatural even with correct words",
+  "description": "English word stress is not predictable like Portuguese stress. Stressing the wrong syllable affects clarity and fluency.",
+  "level": "B1",
+  "targetLanguage": "Portuguese (Brazil)",
+  "categories": [
+    {
+      "sortOrder": 1,
+      "title": "Noun and Verb Stress",
+      "description": "Some English words change stress depending on how they are used.",
+      "words": [
+        {
+          "id": 1,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I bought the REcord yesterday." },
+            { "sentence": "Please reCORD the meeting." },
+            { "sentence": "The PREsent is on the table." },
+            { "sentence": "They will preSENT the plan." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "title": "Stress in Longer Words",
+      "description": "English usually has one strong syllable in long words.",
+      "words": [
+        {
+          "id": 2,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "This job is very imPORtant." },
+            { "sentence": "She is reSPONsible for sales." },
+            { "sentence": "The results were aMAzing." }
+          ]
+        }
+      ]
+    }
+  ]
+}

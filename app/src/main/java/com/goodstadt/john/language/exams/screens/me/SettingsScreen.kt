@@ -1,6 +1,8 @@
 package com.goodstadt.john.language.exams.screens.me
 
 //import com.goodstadt.john.language.exams.data.PremiumStatus
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
@@ -8,6 +10,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ExitToApp
+import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.Info
@@ -29,7 +33,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.models.ExamDetails
@@ -40,11 +47,16 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
+import com.goodstadt.john.language.exams.viewmodels.SignInViewModel
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.ktx.Firebase
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
+
     viewModel: SettingsViewModel = hiltViewModel()
 ) {
 
@@ -64,6 +76,10 @@ fun SettingsScreen(
 
     val showHelpSheet by viewModel.showHelpSheet.collectAsState()
     val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    var showSignInSheet by remember { mutableStateOf(false) }
+ //   val signInVm: SignInViewModel = viewModel()
+ //   val isLoggedIn by signInVm.isUserLoggedIn.collectAsState()
 
 //test
     LaunchedEffect(Unit) {
@@ -404,6 +420,12 @@ fun SettingsScreen(
             }
         }
     }
+    if (showSignInSheet) {
+        SignInBottomSheet(
+            onDismiss = { showSignInSheet = false }//,
+//            vm = signInVm // Pass the same VM so state is shared
+        )
+    }
     // Main Screen Content
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -472,7 +494,7 @@ fun SettingsScreen(
                 }
 
             }
-        }else{
+        } else {
             item {
                 SettingsActionItem(
                     icon = Icons.Default.WorkspacePremium,
@@ -485,6 +507,32 @@ fun SettingsScreen(
             }
 
         }
+
+        if (viewModel.isUserAnonymous()) {
+            item {
+                SettingsActionItem(
+                    icon = Icons.AutoMirrored.Filled.Login,
+                    title = "Sign In",
+                    "To enable sync to another device sign in here",
+                    onClick = {
+                        showSignInSheet = true
+
+                    }
+                )
+            }
+        }//:not logged in
+
+        if (BuildConfig.DEBUG){
+            item {
+                SettingsActionItem(
+                    icon = Icons.AutoMirrored.Filled.Login,
+                    title = "Sign Out",
+                    "Go back to Anonymous (D)",
+                    onClick = { viewModel.onSignOutClicked() }
+                )
+            }
+        }
+
 
         item { Divider(modifier = Modifier.padding(vertical = 8.dp, horizontal = 16.dp)) }
         item { SectionHeader("About") }
@@ -673,6 +721,8 @@ private fun SectionHeader(title: String) {
         color = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
     )
+
+
 }
 
 @Composable
@@ -857,15 +907,3 @@ private fun VoiceCategoryDropdownHeader(
     }
 }
 
-// Obsolete composables can be removed if you wish
-@Composable
-private fun ExpandableVoiceHeaderObsolete(
-    voice: VoiceOption,
-    isExpanded: Boolean,
-    onClick: () -> Unit
-) {
-}
-
-@Composable
-private fun GenderHeaderObsolete(genderName: String) {
-}

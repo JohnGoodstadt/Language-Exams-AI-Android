@@ -1,11 +1,15 @@
 package com.goodstadt.john.language.exams.data
 
+import com.goodstadt.john.language.exams.BuildConfig
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.FirebaseFirestoreException
 import com.google.firebase.firestore.ServerTimestamp
 import com.google.firebase.firestore.SetOptions
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import sanitizedForFirestore
 import timber.log.Timber
 import java.text.SimpleDateFormat
@@ -47,6 +51,10 @@ class FirestoreRepository @Inject constructor(
         const val premiumToken = "premiumToken"
         const val premiumOrderId = "premiumOrderId"
         const val premiumProductId = "premiumProductId"
+
+        const val photoUrl = "photoUrl"
+        const val lastLoggedInDate = "lastLoggedInDate"
+
 
         const val premiumError = "premiumError"
 
@@ -608,5 +616,51 @@ class FirestoreRepository @Inject constructor(
             Timber.e(e, "Failed to log user error to Firestore.")
         }
     }
+    fun updateUserInFirestore() {
+        val currentUser = FirebaseAuth.getInstance().currentUser ?: return
 
+        updateUserInFirestore(currentUser)
+    }
+    fun updateUserInFirestore(user: FirebaseUser) {
+        val db = Firebase.firestore
+        val userRef = db.collection(FirestoreRepository.fb.users).document(user.uid)
+
+        val userData = mapOf(
+            fb.name to user.displayName,
+            fb.email to user.email,
+            fb.photoUrl to user.photoUrl?.toString(),
+            fb.isAnon to false,
+            fb.lastLoggedInDate to FieldValue.serverTimestamp()
+        )
+
+        // Using merge: true ensures we don't wipe out existing data
+        userRef.set(userData, SetOptions.merge())
+            .addOnSuccessListener { Timber.d("Firestore user doc updated") }
+            .addOnFailureListener { Timber.e(it, "Firestore update failed") }
+    }
+
+    companion object {
+        fun createFaultLog( message: String,
+                            secondaryText: String = "android",
+                            area: String = "android"){
+
+            val currentUser = FirebaseAuth.getInstance().currentUser ?: return
+
+            val errorLog = UserError(
+                uid = currentUser.uid,
+                text = message,
+                secondaryText = secondaryText,
+                area = area
+            )
+
+            val db = FirebaseFirestore.getInstance()
+
+            if(!BuildConfig.DEBUG){
+                val docId = SimpleDateFormat("yyyy-MM-dd-HH:mm:ss.SSS", Locale.ROOT).format(Date())
+                db.collection("faults").document(docId)
+                    .set(errorLog)
+            }
+
+        }
+    }
 }

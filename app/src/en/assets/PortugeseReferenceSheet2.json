@@ -1,0 +1,46 @@
+{
+  "fileformat": 3,
+  "location": 0,
+  "sheetname": "EnglishVowelsForPortugueseBR",
+  "title": "English Vowels That Change Meaning",
+  "subtitle": "Small vowel differences, big meaning changes",
+  "description": "English vowel sounds are different from Portuguese vowels. Small changes can create a completely different word.",
+  "level": "B1",
+  "targetLanguage": "Portuguese (Brazil)",
+  "categories": [
+    {
+      "sortOrder": 1,
+      "title": "Short and Long I Sounds",
+      "description": "English has two different I sounds. Portuguese learners often hear them as the same.",
+      "words": [
+        {
+          "id": 1,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "I LIVE near the beach." },
+            { "sentence": "LEAVE the key on the table." },
+            { "sentence": "She SITS next to me." },
+            { "sentence": "The SEAT is free." }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "title": "Cat vs Cut Sounds",
+      "description": "These vowel sounds do not exist clearly in Portuguese and often get confused.",
+      "words": [
+        {
+          "id": 2,
+          "sortOrder": 1,
+          "sentences": [
+            { "sentence": "The CAT is black." },
+            { "sentence": "Please CUT the paper." },
+            { "sentence": "That MAN is tall." },
+            { "sentence": "Ten MEN are waiting." }
+          ]
+        }
+      ]
+    }
+  ]
+}

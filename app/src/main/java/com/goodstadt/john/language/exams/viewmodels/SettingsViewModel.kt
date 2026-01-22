@@ -746,20 +746,23 @@ class SettingsViewModel @Inject constructor(
 
             userPreferencesRepository.removeCompletedSection(examName, sectionKey)
 
-            // 4. Update Local UI State (Instant feedback)
-//            _uiState.update { currentState ->
-////                if (currentState is CategoryTabUiState.Success) {
-//                    val newHeardIDs = currentState.heardSentenceIDs.toMutableSet()
-//                    newHeardIDs.remove(contentID)
-//
-//                    currentState.copy(
-////                        heardSentenceIDs = newHeardIDs,
-////                        cachedAudioCount = max(0, currentState.cachedAudioCount - 1),
-//                        lastUpdate = System.currentTimeMillis()
-//                    )
-////                } else currentState
-//            }
         }
+    }
+
+    fun onSignInClicked() {
+        TODO("Not yet implemented")
+    }
+
+    fun onSignOutClicked() {
+        TODO("Not yet implemented")
+    }
+
+    fun isUserNotLoggedIn(): Boolean {
+        return firestoreRepository.isUserNotLoggedIn()
+    }
+
+    fun isUserAnonymous(): Boolean {
+        return firestoreRepository.isUserAnonymous()
     }
 
 
