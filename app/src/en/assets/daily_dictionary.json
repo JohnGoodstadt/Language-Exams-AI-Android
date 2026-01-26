@@ -1,0 +1,155 @@
+{
+  "fileFormat": 1,
+  "bundleId": "daily-dictionary-bundle-v1",
+  "locale": "en-GB",
+  "updatedDate": 1769212800,
+  "entries": [
+    {
+      "entryId": "underscore",
+      "headword": "underscore",
+      "pronunciation": {
+        "display": "ˈən-dər-ˌskȯr",
+        "ipaUK": "/ˌʌndəˈskɔː/",
+        "ipaUS": "/ˌʌndərˈskɔːr/"
+      },
+      "labels": ["advanced", "formal"],
+      "partsOfSpeech": [
+        {
+          "ordinal": "1 of 2",
+          "pos": "verb",
+          "grammarType": "transitive verb",
+          "headwordLine": "un·der·score",
+          "inflectionsLine": "underscored; underscoring; underscores",
+          "synonyms": ["emphasize", "stress", "highlight", "underline"],
+          "senses": [
+            {
+              "senseNumber": 1,
+              "definition": "to draw a line under : underline",
+              "examples": [
+                "Please underscore the key terms on the worksheet."
+              ]
+            },
+            {
+              "senseNumber": 2,
+              "definition": "to make evident : emphasize, stress",
+              "examples": [
+                "She arrived early to underscore the importance of the occasion.",
+                "The results underscore the need for consistent practice."
+              ]
+            },
+            {
+              "senseNumber": 3,
+              "definition": "to provide (action on film) with accompanying music",
+              "examples": [
+                "The composer underscored the final scene with a tense motif."
+              ]
+            }
+          ]
+        },
+        {
+          "ordinal": "2 of 2",
+          "pos": "noun",
+          "grammarType": "countable noun",
+          "headwordLine": "underscore",
+          "inflectionsLine": "plural: underscores",
+          "synonyms": ["underline", "score (line)", "background music"],
+          "senses": [
+            {
+              "senseNumber": 1,
+              "definition": "a line drawn under a word or line especially for emphasis",
+              "examples": [
+                "Add an underscore beneath the title."
+              ]
+            },
+            {
+              "senseNumber": 2,
+              "definition": "music accompanying the action and dialogue of a film",
+              "examples": [
+                "The film’s underscore subtly reinforced the mood."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entryId": "meticulous",
+      "headword": "meticulous",
+      "pronunciation": {
+        "display": "mə-ˈti-kyə-ləs",
+        "ipaUK": "/məˈtɪkjʊləs/",
+        "ipaUS": "/məˈtɪkjələs/"
+      },
+      "labels": ["advanced", "useful", "writing", "work"],
+      "partsOfSpeech": [
+        {
+          "ordinal": "1 of 1",
+          "pos": "adjective",
+          "grammarType": "adjective",
+          "headwordLine": "me·tic·u·lous",
+          "inflectionsLine": "more meticulous; most meticulous",
+          "synonyms": ["thorough", "careful", "precise"],
+          "senses": [
+            {
+              "senseNumber": 1,
+              "definition": "very careful and precise about small details",
+              "examples": [
+                "She keeps meticulous notes during every meeting.",
+                "He is meticulous about saving receipts and tracking expenses."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entryId": "nuance",
+      "headword": "nuance",
+      "pronunciation": {
+        "display": "ˈnü-ˌän(t)s",
+        "ipaUK": "/ˈnjuːɑːns/",
+        "ipaUS": "/ˈnuːɑːns/"
+      },
+      "labels": ["advanced", "speaking", "writing"],
+      "partsOfSpeech": [
+        {
+          "ordinal": "1 of 1",
+          "pos": "noun",
+          "grammarType": "countable noun",
+          "headwordLine": "nu·ance",
+          "inflectionsLine": "plural: nuances",
+          "synonyms": ["subtlety", "shade", "distinction"],
+          "senses": [
+            {
+              "senseNumber": 1,
+              "definition": "a subtle difference in meaning, expression, or sound",
+              "examples": [
+                "Her choice of words added nuance to the argument.",
+                "Two synonyms can have different nuances."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "wotd": {
+    "timezoneRule": "UTC",
+    "selectionPolicy": "scheduled_then_fallback",
+    "scheduledAssignments": [
+      { "date": "2026-01-26", "entryId": "underscore" },
+      { "date": "2026-01-27", "entryId": "meticulous" },
+      { "date": "2026-01-28", "entryId": "nuance" },
+      { "date": "2026-01-29", "entryId": "underscore" },
+      { "date": "2026-01-30", "entryId": "meticulous" }
+    ],
+    "fallback": {
+      "seed": "dailyword-v1",
+      "poolEntryIds": ["underscore", "meticulous", "nuance"],
+      "method": "hash(date)%poolCount"
+    },
+    "historyPolicy": {
+      "showPreviousDays": 30
+    }
+  }
+}
