@@ -447,7 +447,8 @@ class AppConfigRepository @Inject constructor(
                         "settings",
                         "vocabulary",
                         "progress",
-                        "paragraph"
+                        "paragraph",
+                        "dailyWord"
                     ]
                 }
             }

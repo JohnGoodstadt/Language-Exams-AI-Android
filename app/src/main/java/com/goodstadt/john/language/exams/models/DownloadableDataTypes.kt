@@ -17,6 +17,7 @@ enum class SheetDataType(val serialName: String) {
     FORMAT_3("Format3"),
     GRAMMAR_FILE("GrammarFile"),
     FIXED("fixed"),
+    DICTIONARY("dictionary"),
     UNKNOWN("unknown") // ✅ ADD the unknown case
 }
 
@@ -34,5 +35,6 @@ enum class ScreenType(val serialName: String) {
     GRAMMAR_SCREEN("GrammarScreen"),
     GROUPED_FORMAT_2_SCREEN("GroupedFormat2Screen"),
     GROUPED_FORMAT_3_SCREEN("GroupedFormat3Screen"),
+    DICTIONARY("Dictionary"),
     UNKNOWN("unknown") // ✅ ADD the unknown case
 }

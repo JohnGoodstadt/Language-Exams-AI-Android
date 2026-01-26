@@ -765,5 +765,9 @@ class SettingsViewModel @Inject constructor(
         return firestoreRepository.isUserAnonymous()
     }
 
+    fun ShowDictionEntryScreen() {
+        TODO("Not yet implemented")
+    }
+
 
 }

@@ -34,6 +34,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.FirestoreRepository
@@ -80,6 +83,10 @@ fun SettingsScreen(
     var showSignInSheet by remember { mutableStateOf(false) }
  //   val signInVm: SignInViewModel = viewModel()
  //   val isLoggedIn by signInVm.isUserLoggedIn.collectAsState()
+
+
+    var showDictionaryDebugSheet by remember { mutableStateOf(false) }
+
 
 //test
     LaunchedEffect(Unit) {
@@ -426,6 +433,27 @@ fun SettingsScreen(
 //            vm = signInVm // Pass the same VM so state is shared
         )
     }
+
+    if (showDictionaryDebugSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { showDictionaryDebugSheet = false },
+            dragHandle = { BottomSheetDefaults.DragHandle() }
+        ) {
+            // Give the sheet a reasonable height so you can see scrolling and typography
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .heightIn(min = 320.dp, max = 700.dp)
+            ) {
+                DictionaryEntryScreen(
+                    modifier = Modifier.fillMaxSize()
+                )
+            }
+
+            // Optional: bottom padding so content isn't tight against nav bar
+            Spacer(modifier = Modifier.height(12.dp))
+        }
+    }
     // Main Screen Content
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -639,8 +667,13 @@ fun SettingsScreen(
                     title = "Debug Something",
                     currentValue = "Test Crashylytics (D)",
                     onClick = {
+                        showDictionaryDebugSheet = true
                             //viewModel.onDebugCrashlyitcs()
-                            viewModel.debugAppLLMCredits()
+                            //viewModel.debugAppLLMCredits()
+                        //viewModel.ShowDictionEntryScreen()
+//                        Button(onClick = { showDictionary = true }) {
+//                            Text("Open Dictionary Entry")
+//                        }
                     }
                 )
             }
@@ -706,6 +739,8 @@ fun SettingsScreen(
     }
 
 }
+
+
 
 @Composable
 fun IAPCancelled() {
@@ -907,3 +942,28 @@ private fun VoiceCategoryDropdownHeader(
     }
 }
 
+//sealed class Screen(val route: String) {
+//    object Home : Screen("home")
+//    object Dictionary : Screen("dictionary")
+//}
+//@Composable
+//fun AppNavHost() {
+//    val navController = rememberNavController()
+//
+//    NavHost(
+//        navController = navController,
+//        startDestination = Screen.Home.route
+//    ) {
+//        composable(Screen.Home.route) {
+//            HomeScreen(
+//                onOpenDictionary = {
+//                    navController.navigate(Screen.Dictionary.route)
+//                }
+//            )
+//        }
+//
+//        composable(Screen.Dictionary.route) {
+//            DictionaryEntryScreen()
+//        }
+//    }
+//}
