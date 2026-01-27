@@ -7,14 +7,17 @@ object LanguageConfig {
     val languageCode: String = "en-GB"
     val defaultFileName: String = "vocab_data_b1"
     val defaulSkillLevel: String = "B1"
+    /*
+    NOTE:   1. this drives the screen
+            2. MeScreen() goes from this title to route (getMeScreenRouteFromTitle)
+     */
     val meTabMenuItems = listOf(
         "Focusing",
         "Settings",
         "Vocab",
         "Progress",
-        "Paragraph"
-
-
+        "Paragraph",
+        "Daily Word"
     )
     val refTabMenuItems = listOf(
         "Quiz",

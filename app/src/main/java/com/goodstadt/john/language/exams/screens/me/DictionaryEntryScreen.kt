@@ -20,7 +20,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 // MARK: - Models
-
+/*
 data class DictionaryEntry(
     val id: String,
     val headword: String,
@@ -326,3 +326,5 @@ private fun ChipsRow(items: List<String>) {
         }
     }
 }
+
+ */

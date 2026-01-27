@@ -11,7 +11,7 @@ sealed class MeScreen(val route: String, val title: String) {
     object Search : MeScreen("me_search", "Vocab")
     object Progress : MeScreen("me_progress", "Progress")
     object Paragraph : MeScreen("me_paragraph", "Paragraph")
-    //object LocalL anguage : MeScreen("me_locall anguage", "Spanish")
+    object DailyWord : MeScreen("me_daily_word", "Daily Word")
 
 }
 
@@ -23,7 +23,7 @@ fun getMeScreenRouteFromTitle(title: String): String? {
         MeScreen.Search.title -> MeScreen.Search.route
         MeScreen.Progress.title -> MeScreen.Progress.route
         MeScreen.Paragraph.title -> MeScreen.Paragraph.route
-       // MeScreen.Local Language.title -> MeScreen.Local Language.route
+        MeScreen.DailyWord.title -> MeScreen.DailyWord.route
         else -> null
     }
 }

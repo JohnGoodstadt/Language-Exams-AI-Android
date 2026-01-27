@@ -48,6 +48,7 @@ import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
+import com.goodstadt.john.language.exams.viewmodels.DictionaryEntryBrowserViewModel
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
 import com.goodstadt.john.language.exams.viewmodels.SignInViewModel
@@ -85,7 +86,9 @@ fun SettingsScreen(
  //   val isLoggedIn by signInVm.isUserLoggedIn.collectAsState()
 
 
-    var showDictionaryDebugSheet by remember { mutableStateOf(false) }
+    var showDebugSheet by remember { mutableStateOf(false) }
+    val vm: DictionaryEntryBrowserViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+
 
 
 //test
@@ -434,9 +437,9 @@ fun SettingsScreen(
         )
     }
 
-    if (showDictionaryDebugSheet) {
+    if (showDebugSheet) {
         ModalBottomSheet(
-            onDismissRequest = { showDictionaryDebugSheet = false },
+            onDismissRequest = { showDebugSheet = false },
             dragHandle = { BottomSheetDefaults.DragHandle() }
         ) {
             // Give the sheet a reasonable height so you can see scrolling and typography
@@ -445,8 +448,9 @@ fun SettingsScreen(
                     .fillMaxWidth()
                     .heightIn(min = 320.dp, max = 700.dp)
             ) {
-                DictionaryEntryScreen(
-                    modifier = Modifier.fillMaxSize()
+                DictionaryEntryBrowserScreen(
+                    modifier = Modifier.fillMaxSize(),
+                    viewModel = vm
                 )
             }
 
@@ -665,9 +669,9 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Debug Something",
-                    currentValue = "Test Crashylytics (D)",
+                    currentValue = "Daily Dictionary (D)",
                     onClick = {
-                        showDictionaryDebugSheet = true
+                        showDebugSheet = true
                             //viewModel.onDebugCrashlyitcs()
                             //viewModel.debugAppLLMCredits()
                         //viewModel.ShowDictionEntryScreen()

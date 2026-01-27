@@ -25,9 +25,7 @@
             {
               "senseNumber": 1,
               "definition": "to draw a line under : underline",
-              "examples": [
-                "Please underscore the key terms on the worksheet."
-              ]
+              "examples": ["Please underscore the key terms on the worksheet."]
             },
             {
               "senseNumber": 2,
@@ -40,9 +38,7 @@
             {
               "senseNumber": 3,
               "definition": "to provide (action on film) with accompanying music",
-              "examples": [
-                "The composer underscored the final scene with a tense motif."
-              ]
+              "examples": ["The composer underscored the final scene with a tense motif."]
             }
           ]
         },
@@ -52,21 +48,17 @@
           "grammarType": "countable noun",
           "headwordLine": "underscore",
           "inflectionsLine": "plural: underscores",
-          "synonyms": ["underline", "score (line)", "background music"],
+          "synonyms": ["underline", "background music"],
           "senses": [
             {
               "senseNumber": 1,
               "definition": "a line drawn under a word or line especially for emphasis",
-              "examples": [
-                "Add an underscore beneath the title."
-              ]
+              "examples": ["Add an underscore beneath the title."]
             },
             {
               "senseNumber": 2,
               "definition": "music accompanying the action and dialogue of a film",
-              "examples": [
-                "The film’s underscore subtly reinforced the mood."
-              ]
+              "examples": ["The film’s underscore subtly reinforced the mood."]
             }
           ]
         }
@@ -80,7 +72,7 @@
         "ipaUK": "/məˈtɪkjʊləs/",
         "ipaUS": "/məˈtɪkjələs/"
       },
-      "labels": ["advanced", "useful", "writing", "work"],
+      "labels": ["advanced", "useful", "work", "writing"],
       "partsOfSpeech": [
         {
           "ordinal": "1 of 1",
@@ -118,7 +110,7 @@
           "grammarType": "countable noun",
           "headwordLine": "nu·ance",
           "inflectionsLine": "plural: nuances",
-          "synonyms": ["subtlety", "shade", "distinction"],
+          "synonyms": ["subtlety", "distinction"],
           "senses": [
             {
               "senseNumber": 1,
@@ -135,21 +127,14 @@
   ],
   "wotd": {
     "timezoneRule": "UTC",
-    "selectionPolicy": "scheduled_then_fallback",
-    "scheduledAssignments": [
-      { "date": "2026-01-26", "entryId": "underscore" },
-      { "date": "2026-01-27", "entryId": "meticulous" },
-      { "date": "2026-01-28", "entryId": "nuance" },
-      { "date": "2026-01-29", "entryId": "underscore" },
-      { "date": "2026-01-30", "entryId": "meticulous" }
-    ],
-    "fallback": {
-      "seed": "dailyword-v1",
-      "poolEntryIds": ["underscore", "meticulous", "nuance"],
-      "method": "hash(date)%poolCount"
+    "uiPolicy": {
+      "lockForwardAtToday": true,
+      "maxBrowseDaysBack": 3
     },
-    "historyPolicy": {
-      "showPreviousDays": 30
-    }
+    "scheduledAssignments": [
+      { "date": "2026-01-25", "entryId": "nuance" },
+      { "date": "2026-01-26", "entryId": "meticulous" },
+      { "date": "2026-01-27", "entryId": "underscore" }
+    ]
   }
 }

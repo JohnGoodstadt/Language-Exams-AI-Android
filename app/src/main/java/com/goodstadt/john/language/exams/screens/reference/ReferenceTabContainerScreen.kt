@@ -161,7 +161,8 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
             // The 'else' is not needed because 'when' on an enum is exhaustive.
             // If you add a new ScreenType to the enum, the compiler will force you to handle it here.
             ScreenType.UNKNOWN -> null
-            ScreenType.DICTIONARY -> null
+//            ScreenType.DICTIONARY -> null
+//            ScreenType.DAILY_WORD -> null
         }
 
         // If a valid route was determined, perform the navigation.
