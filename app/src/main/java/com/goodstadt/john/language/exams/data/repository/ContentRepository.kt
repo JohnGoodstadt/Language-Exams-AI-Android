@@ -20,6 +20,7 @@ import com.goodstadt.john.language.exams.models.Format2File
 import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
+import com.google.firebase.crashlytics.BuildConfig
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -186,6 +187,11 @@ class ContentRepository @Inject constructor(
                         }
                     }
 
+//                    if (BuildConfig.DEBUG){
+//                        val resourceName2 = mapLogicalToResourceName(logicalName)
+//                        val bundleResult2 = loadBundledFormat0Data(resourceName2)
+//                        Timber.d("${bundleResult2.isSuccess}")
+//                    }
                     // --- 3. Delegate to ExamSheetRepository (Disk/Network) ---
                     Timber.d("VocabRepository.getVocabData: Delegating to ExamSheetRepository for '$logicalName'...")
                     val result = examSheetRepository.getFormat0Sheet(
@@ -1104,10 +1110,12 @@ class ContentRepository @Inject constructor(
             "vocab_data_a2" -> "EnglishA2Vocab"
             "vocab_data_b1" -> "EnglishB1Vocab"
             "vocab_data_b2" -> "EnglishB2Vocab"
-            "conjugations_to_be" -> "EnglishBConjugationsToBe"
-            "conjugations_to_have" -> "EnglishBConjugationsToHave"
-            "conjugations_to_do" -> "EnglishBConjugationsToDo"
-            "conjugations_to_get" -> "EnglishBConjugationsToGet"
+            "conjugations_to_be" -> "EnglishConjugationsToBe"
+            "conjugations_to_have" -> "EnglishConjugationsToHave"
+            "conjugations_to_do" -> "EnglishConjugationsToDo"
+            "conjugations_to_get" -> "EnglishConjugationsToGet"
+            "prepositions_en" -> "EnglishPrepositions"
+
 
             // Add any other legacy mappings here
 
@@ -1124,10 +1132,11 @@ class ContentRepository @Inject constructor(
             "EnglishA2Vocab" -> "vocab_data_a2"
             "EnglishB1Vocab" -> "vocab_data_b1"
             "EnglishB2Vocab" -> "vocab_data_b2"
-            "EnglishBConjugationsToBe" -> "conjugations_to_be"
-            "EnglishBConjugationsToHave" -> "conjugations_to_have"
-            "EnglishBConjugationsToDo" -> "conjugations_to_do"
-            "EnglishBConjugationsToGet" -> "conjugations_to_get"
+            "EnglishConjugationsToBe" -> "conjugations_to_be"
+            "EnglishConjugationsToHave" -> "conjugations_to_have"
+            "EnglishConjugationsToDo" -> "conjugations_to_do"
+            "EnglishConjugationsToGet" -> "conjugations_to_get"
+            "EnglishPrepositions" -> "prepositions_en"
             // Add other mappings here as needed
             else -> sheet_name // Fallback for other files
         }

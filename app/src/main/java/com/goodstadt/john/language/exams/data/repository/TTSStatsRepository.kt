@@ -198,6 +198,10 @@ class TTSStatsRepository @Inject constructor(
         const val statIAPNotReadyCount = "statIAPNotReadyCount"
         const val statIAPFailedCount = "statIAPFailedCount"
 
+        //word of the day
+        const val statWOTDHitCount = "statWOTDHitCount"
+        const val statWOTDBackHitCount = "statWOTDBackHitCount"
+        const val statWOTDForwardHitCount = "statWOTDForwardHitCount"
     }
 
 

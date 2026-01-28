@@ -1,11 +1,10 @@
-package com.goodstadt.john.language.exams.models
+package com.goodstadt.john.language.exams.packages.dailydictionary
 
 import android.content.Context
-import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
-@Serializable
+//@Serializable
 data class DailyDictionaryBundle(
     val fileFormat: Int,
     val bundleId: String,
@@ -15,66 +14,63 @@ data class DailyDictionaryBundle(
     val wotd: WotdConfig
 )
 
-@Serializable
+//@Serializable
 data class DictionaryEntry(
-    val entryId: String,
-    val headword: String,
-    val pronunciation: Pronunciation,
+    val entryId: String = "",
+    val headword: String = "",
+    val pronunciation: Pronunciation = Pronunciation(),
     val labels: List<String> = emptyList(),
-    val partsOfSpeech: List<PartOfSpeechBlock>
+    val partsOfSpeech: List<PartOfSpeechBlock> = emptyList(),
+    val version: Int = 1,
+    val updatedDate: Long = 0L
 )
-
-@Serializable
 data class Pronunciation(
-    val display: String,
+    val display: String = "",
     val ipaUK: String? = null,
     val ipaUS: String? = null
 )
 
-@Serializable
 data class PartOfSpeechBlock(
-    val ordinal: String,
-    val pos: String,
+    val ordinal: String = "",
+    val pos: String = "",
     val grammarType: String? = null,
     val headwordLine: String? = null,
     val inflectionsLine: String? = null,
     val synonyms: List<String> = emptyList(),
-    val senses: List<Sense>
+    val senses: List<Sense> = emptyList()
 )
 
-@Serializable
 data class Sense(
-    val senseNumber: Int,
-    val definition: String,
+    val senseNumber: Int = 1,
+    val definition: String = "",
     val examples: List<String> = emptyList()
 )
 
-@Serializable
+//@Serializable
 data class WotdConfig(
     val timezoneRule: String,
     val uiPolicy: UiPolicy? = null,
     val scheduledAssignments: List<WotdAssignment>
 )
 
-@Serializable
+//@Serializable
 data class UiPolicy(
     val lockForwardAtToday: Boolean = true,
     val maxBrowseDaysBack: Int = 3
 )
 
-@Serializable
+//@Serializable
 data class WotdAssignment(
-    val date: String,     // YYYY-MM-DD
-    val entryId: String
+    val date: Int,
+    val entryId: String,
+    val label: String
 )
 
-object DailyDictionaryBundleLoader {
-    private val json = Json {
-        ignoreUnknownKeys = true
-    }
 
-    fun loadFromAssets(context: Context, fileName: String = "DailyDictionaryBundle.json"): DailyDictionaryBundle {
-        val text = context.assets.open(fileName).bufferedReader().use { it.readText() }
-        return json.decodeFromString(DailyDictionaryBundle.serializer(), text)
-    }
-}
+data class PoolDoc(
+    val orderedEntryIds: List<String> = emptyList(),
+    val uiPolicy: UiPolicy? = null,
+    val updatedDate: Long? = null,
+    val timezoneRule: String? = null
+)
+

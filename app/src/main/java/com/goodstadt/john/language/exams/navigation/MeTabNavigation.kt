@@ -11,7 +11,7 @@ sealed class MeScreen(val route: String, val title: String) {
     object Search : MeScreen("me_search", "Vocab")
     object Progress : MeScreen("me_progress", "Progress")
     object Paragraph : MeScreen("me_paragraph", "Paragraph")
-    object DailyWord : MeScreen("me_daily_word", "Daily Word")
+    object DailyWord : MeScreen("me_daily_word", "Word of the Day")
 
 }
 
