@@ -272,30 +272,16 @@ class CategoryTabViewModel @Inject constructor(
         playbackJob = viewModelScope.launch {
 
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
-//            val loadingJob = launch {
-//                delay(2000) // Wait 1 second
-//                // If we haven't been cancelled yet, show the spinner
-//                loadingManager.show()
-//            }
 
             val contentID = FirebaseAudioService.generateContentID(sentence)
             val wasAlreadyHeard = historyManager.isHeard(currentLoadedLevel, contentID)
 
-//            val success = audioPlaybackRepository.playTrackAndGetResult(
-//                sentence = sentence,
-//                level = levelName,
-//                sheetName = "", // Main tabs aggregate by Level, not SheetName
-//                isPremiumUser = isPremiumUser.value // Replace with actual check if available
-//            )
             val success = false //TODO: forcing
             val result = audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = sentence,
                 level = levelName,
                 isPremiumUser = isPremiumUser.value // Replace with actual check if available
             )
-
-//            loadingJob.cancel() // ✅ Cancel the 1s timer if it's still running
-//            loadingManager.hide() // ✅ Hide the spinner if it was showing
 
             if (success) {
                 // 2. ⚡️ NON OPTIMISTIC UPDATE (Lightning). Now that playback is async

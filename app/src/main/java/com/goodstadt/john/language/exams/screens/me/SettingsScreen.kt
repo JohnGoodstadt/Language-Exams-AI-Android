@@ -1,8 +1,8 @@
 package com.goodstadt.john.language.exams.screens.me
 
 //import com.goodstadt.john.language.exams.data.PremiumStatus
+import androidx.activity.ComponentActivity
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -12,7 +12,6 @@ import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Verified
@@ -21,7 +20,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
@@ -30,10 +28,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.BuildConfig
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.Gender
-import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
@@ -42,6 +39,10 @@ import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
+import com.goodstadt.john.language.exams.screens.shared.speakerSelection.SpeakerSelectionBottomSheet
+import com.goodstadt.john.language.exams.screens.shared.speakerSelection.SpeakerSelectionViewModel
+import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
+import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
 import timber.log.Timber
@@ -76,9 +77,9 @@ fun SettingsScreen(
 
 
     var showDebugSheet by remember { mutableStateOf(false) }
-    val vm: DictionaryEntryBrowserViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
+    val vm: DictionaryEntryBrowserViewModel = viewModel()
 
-
+    var showTryOutVoicesSheet by remember { mutableStateOf(false) }
 
 //test
     LaunchedEffect(Unit) {
@@ -143,8 +144,7 @@ fun SettingsScreen(
                         var isMaleExpanded by remember { mutableStateOf(false) }
 
                         val pendingSelectedVoice = uiState.pendingSelectedVoice
-                        val femaleVoices =
-                            uiState.availableVoices.filter { it.gender == Gender.FEMALE }
+                        val femaleVoices = uiState.availableVoices.filter { it.gender == Gender.FEMALE }
                         val maleVoices = uiState.availableVoices.filter { it.gender == Gender.MALE }
 
                         Text(
@@ -301,7 +301,7 @@ fun SettingsScreen(
                 Spacer(modifier = Modifier.height(12.dp)) //extra space below buttons
             }
         }
-    }
+    } //: sheetContent
 
     if (uiState.showIAPBottomSheet) {
         ModalBottomSheet(
@@ -369,7 +369,7 @@ fun SettingsScreen(
                 ) {
 
                     Button(onClick = {
-                        if (context is androidx.activity.ComponentActivity) {
+                        if (context is ComponentActivity) {
                             AnalyticsHelper.logPaywallResponse(context,"accepted", "limit_paragraph")
                             viewModel.buyPremiumButtonPressed(context)
                             viewModel.onBottomSheetDismissed()
@@ -446,6 +446,11 @@ fun SettingsScreen(
             // Optional: bottom padding so content isn't tight against nav bar
             Spacer(modifier = Modifier.height(12.dp))
         }
+    }
+    if (showTryOutVoicesSheet) {
+        val vm2: SpeakerSelectionViewModel = hiltViewModel()
+        LaunchedEffect(Unit) { vm2.show() }
+        SpeakerSelectionBottomSheet()
     }
     // Main Screen Content
     LazyColumn(
@@ -543,7 +548,7 @@ fun SettingsScreen(
             }
         }//:not logged in
 
-        if (BuildConfig.DEBUG){
+        if (DEBUG){
             item {
                 SettingsActionItem(
                     icon = Icons.AutoMirrored.Filled.Login,
@@ -648,7 +653,7 @@ fun SettingsScreen(
                     title = "IAP",
                     currentValue = "Tap to Log IAP Status (D)",
                     onClick = {
-                        if (context is androidx.activity.ComponentActivity) {
+                        if (context is ComponentActivity) {
                             viewModel.onDebugPrintBillingStatus(context)
                         }
                     }
@@ -658,9 +663,9 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Debug Something",
-                    currentValue = "Daily Dictionary (D)",
+                    currentValue = "Try out Voices (D)",
                     onClick = {
-                        showDebugSheet = true
+                        showTryOutVoicesSheet = true
                             //viewModel.onDebugCrashlyitcs()
                             //viewModel.debugAppLLMCredits()
                         //viewModel.ShowDictionEntryScreen()
@@ -866,97 +871,5 @@ fun LanguageSelectionRow(
         }
     }
 }
-@Composable
-private fun VoiceSelectionRow(
-    voice: VoiceOption,
-    isSelected: Boolean,
-    onClick: () -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text(
-            text = voice.friendlyName,
-            modifier = Modifier.weight(1f),
-            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal
-        )
-        if (isSelected) {
-            Icon(
-                imageVector = Icons.Default.Check,
-                contentDescription = "Selected",
-                tint = MaterialTheme.colorScheme.primary
-            )
-        }
-    }
-}
 
-@Composable
-private fun VoiceCategoryDropdownHeader(
-    title: String,
-    selectedVoiceName: String?,
-    isExpanded: Boolean,
-    onClick: () -> Unit
-) {
-    val rotationAngle by animateFloatAsState(targetValue = if (isExpanded) 180f else 0f)
 
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        // --- CHANGE 3: Center the text content ---
-        Column(
-            modifier = Modifier.weight(1f),
-            // Add this line to center the text elements inside the column
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                text = title,
-                style = MaterialTheme.typography.labelLarge,
-                color = accentColor
-            )
-            Text(
-                text = selectedVoiceName ?: "Tap to select",
-                style = MaterialTheme.typography.bodyLarge,
-                fontWeight = if (selectedVoiceName != null) FontWeight.Bold else FontWeight.Normal
-            )
-        }
-        Icon(
-            imageVector = Icons.Default.KeyboardArrowDown,
-            contentDescription = "Expand or collapse selection",
-            modifier = Modifier.rotate(rotationAngle)
-        )
-    }
-}
-
-//sealed class Screen(val route: String) {
-//    object Home : Screen("home")
-//    object Dictionary : Screen("dictionary")
-//}
-//@Composable
-//fun AppNavHost() {
-//    val navController = rememberNavController()
-//
-//    NavHost(
-//        navController = navController,
-//        startDestination = Screen.Home.route
-//    ) {
-//        composable(Screen.Home.route) {
-//            HomeScreen(
-//                onOpenDictionary = {
-//                    navController.navigate(Screen.Dictionary.route)
-//                }
-//            )
-//        }
-//
-//        composable(Screen.Dictionary.route) {
-//            DictionaryEntryScreen()
-//        }
-//    }
-//}

@@ -307,8 +307,7 @@ class SettingsViewModel @Inject constructor(
                 }
 
                 SheetContent.SpeakerSelection -> {
-                    val currentVoice =
-                        currentState.availableVoices.find { it.id == currentState.currentVoiceName }
+                    val currentVoice = currentState.availableVoices.find { it.id == currentState.currentVoiceName }
                     currentState.copy(pendingSelectedVoice = currentVoice)
                 }
 
@@ -387,18 +386,9 @@ class SettingsViewModel @Inject constructor(
         Timber.d("Voice selected: ${voice.friendlyName} google: ${voice.id}")
 
         viewModelScope.launch {
-            val selectedLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
-            // Use val for an immutable variable, as it's only assigned once.
-            val sentence = when (selectedLanguageCode.substring(0, 2).lowercase()) {
-                "de" -> "Hallo, ich bin ${voice.friendlyName}. Willkommen zu 'English Exam Words'"
-                // The `else` branch is required for a 'when' expression, and it handles the default case.
-                else -> "Hello, I'm ${voice.friendlyName}. Welcome to 'English Exam Words'."
-            }
-
+            val sentence = "Hello, I'm ${voice.friendlyName}. Welcome to 'English Exam Words'."
             playTrack(sentence, voice.id)
         }
-
-
     }
 
     private fun playTrack(sentence: String, googleVoice: String) {
@@ -445,6 +435,110 @@ class SettingsViewModel @Inject constructor(
 
     // --- MODIFICATION 4: Create a SAVE function for the new button ---
     fun saveSelection() {
+        viewModelScope.launch {
+            val pendingExam = _uiState.value.pendingSelectedExam
+            val pendingVoice = _uiState.value.pendingSelectedVoice
+            val pendingLanguage = _uiState.value.pendingSelectedLanguage
+
+            when (_sheetState.value) {
+                SheetContent.ExamSelection -> {
+
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)//so that old exam has correct stat
+                    pendingExam?.let { selectedExam ->
+                        // 1. Save the user's preference (already here)
+                        userPreferencesRepository.saveSelectedFileName(selectedExam.json)
+                        userPreferencesRepository.saveSelectedSkillLevel(selectedExam.skillLevel)
+                        userPreferencesRepository.updateExamName(selectedExam.json) //this will be used on TAB1,2,3
+                        // --- THIS IS THE NEW, CRITICAL PART ---
+                        // 2. Tell the shared manager to load the recalled items for the NEW exam
+                        Timber.d("New exam selected. Reloading recalled items for key: ${selectedExam.json}")
+
+//                        recallingItemsManager.load(selectedExam.json)
+
+                    }
+
+
+
+                }
+
+                SheetContent.SpeakerSelection -> {
+                    pendingVoice?.let {
+                        val voiceName = it.id
+                        userPreferencesRepository.saveSelectedVoiceName(voiceName)
+                        ttsStatsRepository.updateUserStatField(currentGoogleVoiceName, voiceName)
+
+                        firestoreRepository.fsUpdateUserGoogleVoices(voiceName)
+                    }
+
+                }
+
+                SheetContent.LanguageSelection -> {
+                    pendingLanguage?.let { selectedLanguage ->
+                        voiceRepository.clearCache() //all voice will change
+                        controlRepository.clearCache() //stpred language details will change
+
+                        Timber.d(selectedLanguage.name)
+                        //1. default voice
+                        val voiceName = selectedLanguage.defaultFemaleVoice
+                        userPreferencesRepository.saveSelectedVoiceName(voiceName)
+                        userPreferencesRepository.saveSelectedLanguageCode(selectedLanguage.code)
+
+                        _uiState.update { it.copy(currentLanguage = selectedLanguage.name) } //update UI
+
+                        // 1. Save the user's preference (already here)
+
+//                        userPreferencesRepository.saveSelectedSkillLevel(selectedLanguage.skillLevel)
+                        // --- THIS IS THE NEW, CRITICAL PART ---
+                        // 2. Tell the shared manager to load the recalled items for the NEW exam
+                        Timber.d("New language selected. Reloading recalled items for key: ${selectedLanguage.code}")
+
+
+                    }
+                }
+
+                SheetContent.BothSelection -> {
+                    Timber.e("BothSelection")
+                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.WORDSTATS)//so that old exam has correct stat
+                    pendingExam?.let { selectedExam ->
+                        // 1. Save the user's preference (already here)
+                        userPreferencesRepository.saveSelectedFileName(selectedExam.json)
+                        userPreferencesRepository.saveSelectedSkillLevel(selectedExam.skillLevel)
+                        userPreferencesRepository.updateExamName(selectedExam.json) //this will be used on TAB1,2,3
+                        // --- THIS IS THE NEW, CRITICAL PART ---
+                        // 2. Tell the shared manager to load the recalled items for the NEW exam
+                        Timber.d("New exam selected. Reloading recalled items for key: ${selectedExam.json}")
+//                        recallingItemsManager.load(selectedExam.json)
+
+                    }
+
+                    pendingLanguage?.let { selectedLanguage ->
+                        voiceRepository.clearCache() //all voice will change
+                        controlRepository.clearCache() //stpred language details will change
+
+                        Timber.d(selectedLanguage.name)
+                        //1. default voice
+                        val voiceName = selectedLanguage.defaultFemaleVoice
+                        userPreferencesRepository.saveSelectedVoiceName(voiceName)
+                        userPreferencesRepository.saveSelectedLanguageCode(selectedLanguage.code)
+
+                        _uiState.update { it.copy(currentLanguage = selectedLanguage.name) } //update UI
+
+                        // 2. Tell the shared manager to load the recalled items for the NEW exam
+                        Timber.d("New exam selected. Reloading recalled items for key: ${selectedLanguage.code}")
+
+
+                    }
+                }
+
+                SheetContent.Hidden -> { /* Do nothing */
+                }
+
+            }
+            // After saving, hide the sheet, which will also clear the pending state.
+            hideBottomSheet()
+        }
+    }
+    fun saveSelectionNew() {
         viewModelScope.launch {
             val pendingExam = _uiState.value.pendingSelectedExam
             val pendingVoice = _uiState.value.pendingSelectedVoice

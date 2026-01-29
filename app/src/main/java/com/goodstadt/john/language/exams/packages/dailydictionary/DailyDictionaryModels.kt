@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.packages.dailydictionary
 
 import android.content.Context
+import androidx.annotation.Keep
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
@@ -15,6 +16,7 @@ data class DailyDictionaryBundle(
 )
 
 //@Serializable
+@Keep
 data class DictionaryEntry(
     val entryId: String = "",
     val headword: String = "",
@@ -24,12 +26,14 @@ data class DictionaryEntry(
     val version: Int = 1,
     val updatedDate: Long = 0L
 )
+@Keep
 data class Pronunciation(
     val display: String = "",
     val ipaUK: String? = null,
     val ipaUS: String? = null
 )
 
+@Keep
 data class PartOfSpeechBlock(
     val ordinal: String = "",
     val pos: String = "",
@@ -40,6 +44,7 @@ data class PartOfSpeechBlock(
     val senses: List<Sense> = emptyList()
 )
 
+@Keep
 data class Sense(
     val senseNumber: Int = 1,
     val definition: String = "",
@@ -47,6 +52,7 @@ data class Sense(
 )
 
 //@Serializable
+@Keep
 data class WotdConfig(
     val timezoneRule: String,
     val uiPolicy: UiPolicy? = null,
@@ -54,19 +60,21 @@ data class WotdConfig(
 )
 
 //@Serializable
+@Keep
 data class UiPolicy(
     val lockForwardAtToday: Boolean = true,
     val maxBrowseDaysBack: Int = 3
 )
 
 //@Serializable
+@Keep
 data class WotdAssignment(
     val date: Int,
     val entryId: String,
     val label: String
 )
 
-
+@Keep
 data class PoolDoc(
     val orderedEntryIds: List<String> = emptyList(),
     val uiPolicy: UiPolicy? = null,

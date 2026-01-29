@@ -197,9 +197,6 @@ class AudioPlaybackRepository @Inject constructor(
         // Only if user has heard it before (History Check)
         // ---------------------------------------------------------
 
-
-
-
         val contentID = FirebaseAudioService.generateContentID(sentence)
         val isHeard = historyManager.isHeard(level, contentID)
 
