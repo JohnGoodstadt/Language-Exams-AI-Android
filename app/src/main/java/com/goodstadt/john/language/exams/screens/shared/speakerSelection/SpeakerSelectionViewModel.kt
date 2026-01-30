@@ -10,11 +10,13 @@ import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -38,6 +40,11 @@ class SpeakerSelectionViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow(SpeakerSelectionUiState())
     val uiState: StateFlow<SpeakerSelectionUiState> = _uiState.asStateFlow()
+
+//    init {
+//        _uiState.update { it.copy(isSheetVisible = true, error = null) }
+//        ensureVoicesLoaded()
+//    }
 
     /** Call from any screen to open the sheet */
     fun show() {
@@ -91,7 +98,7 @@ class SpeakerSelectionViewModel @Inject constructor(
     }
 
     /** Save pending voice to preferences + stats + firestore, then hide */
-    fun saveSelection(currentGoogleVoiceNameField: String) {
+    fun saveSelectionOriginal(currentGoogleVoiceNameField: String) {
         val pending = _uiState.value.pendingSelectedVoice ?: run {
             hide()
             return
@@ -111,4 +118,21 @@ class SpeakerSelectionViewModel @Inject constructor(
             }
         }
     }
+    suspend fun saveSelection(currentGoogleVoiceNameField: String): Boolean {
+        val pending = _uiState.value.pendingSelectedVoice ?: return false
+        return try {
+            withContext(Dispatchers.IO) {
+                val voiceName = pending.id
+                userPreferencesRepository.saveSelectedVoiceName(voiceName)
+                ttsStatsRepository.updateUserStatField(currentGoogleVoiceNameField, voiceName)
+                firestoreRepository.fsUpdateUserGoogleVoices(voiceName)
+            }
+            true
+        } catch (e: Exception) {
+            _uiState.update { it.copy(error = e.message ?: "Failed to save voice") }
+            false
+        }
+    }
+
+
 }

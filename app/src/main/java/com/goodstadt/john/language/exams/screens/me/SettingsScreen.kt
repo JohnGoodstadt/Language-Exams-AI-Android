@@ -450,7 +450,7 @@ fun SettingsScreen(
     if (showTryOutVoicesSheet) {
         val vm2: SpeakerSelectionViewModel = hiltViewModel()
         LaunchedEffect(Unit) { vm2.show() }
-        SpeakerSelectionBottomSheet()
+        SpeakerSelectionBottomSheet(  onDismiss = { viewModel.dismissHelpSheet() })
     }
     // Main Screen Content
     LazyColumn(

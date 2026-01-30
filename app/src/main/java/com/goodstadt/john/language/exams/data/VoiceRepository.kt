@@ -52,16 +52,22 @@ class VoiceRepository @Inject constructor(
 //            val voices = jsonParser.decodeFromString<List<VoiceInfo>>(jsonString)
 //                .map { VoiceOption(it.id, it.friendlyName) } // Convert to our domain object
 
-            val voices = jsonParser.decodeFromString<List<VoiceInfo>>(jsonString)
+            val allVoices = jsonParser.decodeFromString<List<VoiceInfo>>(jsonString)
                 .map { voiceInfo ->
-                    // Now you have access to the strongly-typed enum!
-                    //Timber.e("Parsed ${voiceInfo.friendlyName} with gender ${voiceInfo.gender}")
+
+
                     VoiceOption(voiceInfo.id, voiceInfo.friendlyName, voiceInfo.gender)
                 }
 
+            val filteredVoices = allVoices.filter {
+                it.id.startsWith(languageCode, ignoreCase = true)
+            }
+
+            cachedVoices = filteredVoices
+
             //compare "en-us" to "en-us"
-            cachedVoices = voices.filter { it.id.take(5).lowercase() == languageCode.take(5).lowercase()}
-            Result.success(voices)
+//            cachedVoices = voices.filter { it.id.take(5).lowercase() == languageCode.take(5).lowercase()}
+            Result.success(filteredVoices)
         } catch (e: Exception) {
             // This might happen if a flavor is missing its voices.json file
             e.printStackTrace()

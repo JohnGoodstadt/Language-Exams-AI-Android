@@ -70,9 +70,13 @@ import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
+import com.goodstadt.john.language.exams.screens.shared.VoiceSettingsBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamificationStatsSheet
+import com.goodstadt.john.language.exams.screens.shared.speakerSelection.SpeakerSelectionBottomSheet
+import com.goodstadt.john.language.exams.screens.shared.speakerSelection.SpeakerSelectionViewModel
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
+import com.goodstadt.john.language.exams.utils.findActivity
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
@@ -128,6 +132,25 @@ fun CategoryTabScreen(
     val bannerSubtitle by viewModel.celebrationSubtitle.collectAsState()
     val currentExamName by viewModel.currentExamName.collectAsStateWithLifecycle()
 
+    val activity = LocalContext.current.findActivity() as ComponentActivity
+    val speakerVm: SpeakerSelectionViewModel = hiltViewModel(activity)
+
+   // val showSpeakerSheet by viewModel.showSpeakerSheet.collectAsState()
+    //val speakerSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    val showSPEAKERSheet by viewModel.showSPEAKERSheet.collectAsState()
+    val SPEAKERSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    var showVoiceSheet by remember { mutableStateOf(false) }
+
+    LaunchedEffect(Unit) {
+        viewModel.showSpeakerSheet.collect {
+//            viewModel.showSPEAKERSheet()
+            showVoiceSheet = true
+         //   showSPEAKERSheet = true
+//            speakerVm.show()
+        }
+    }
 
 
     // --- Lifecycle & Loading ---
@@ -503,6 +526,19 @@ fun CategoryTabScreen(
                     )
                 }
             }
+        }
+        if (showSPEAKERSheet) {
+           // val vm2: SpeakerSelectionViewModel = hiltViewModel()
+            //LaunchedEffect(Unit) { vm2.show() }
+            SpeakerSelectionBottomSheet(
+                onDismiss = { viewModel.dismissSPEAKERSheet() }
+            )
+        }
+        if (showVoiceSheet) {
+            VoiceSettingsBottomSheet(
+                sentence = viewModel.getLatestSentence(),
+                onDismiss = { showVoiceSheet = false }
+            )
         }
     } //: Box
 }

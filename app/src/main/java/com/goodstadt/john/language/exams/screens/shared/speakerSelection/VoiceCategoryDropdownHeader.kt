@@ -49,7 +49,7 @@ fun VoiceCategoryDropdownHeader(
                 color = accentColor
             )
             Text(
-                text = selectedVoiceName ?: "Tap to select",
+                text = selectedVoiceName ?: "Tap to Hear",
                 style = MaterialTheme.typography.bodyLarge,
                 fontWeight = if (selectedVoiceName != null) FontWeight.Bold else FontWeight.Normal
             )

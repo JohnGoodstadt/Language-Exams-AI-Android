@@ -32,11 +32,11 @@ object AppModule {
         return GoogleCloudTTS()
     }
 
-    @Provides
-    @Singleton
-    fun provideAudioPlayerService(): AudioPlayerService {
-        return AudioPlayerService()
-    }
+//    @Provides
+//    @Singleton
+//    fun provideAudioPlayerService(): AudioPlayerService {
+//        return AudioPlayerService()
+//    }
 
     // Since VocabRepository now has dependencies, we need to explicitly provide it.
     /*

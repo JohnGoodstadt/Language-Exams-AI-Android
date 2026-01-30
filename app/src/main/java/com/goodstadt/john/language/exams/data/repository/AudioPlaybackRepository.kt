@@ -172,24 +172,28 @@ class AudioPlaybackRepository @Inject constructor(
         val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
         val uniqueSentenceId = FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
 
-        val loadingJob = CoroutineScope(Dispatchers.Main).launch {
-            kotlinx.coroutines.delay(500)
-            loadingManager.show()
-        }
+
 
         // ---------------------------------------------------------
         // 1. CHECK LOCAL DISK (Free & Fast)
         // ---------------------------------------------------------
-        if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId)) {
+        if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId))
+        {
             // Stats logic for replay...
             handleSuccess(sentence, level, sheetName = sheetName)
             Timber.v("🔊 Waterfall L1: Playing from Local Disk,  Yippee!! '${sentence.take(21)}'")
-            loadingJob.cancel()
-            loadingManager.hide()
-            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statLocalCacheHitCount)
+          //  loadingJob.cancel()
+//            loadingManager.hide()
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statLocalCacheHitCount)
             return AudioPlaybackStatus.PlayedFromLocalCache
-        }else{
-            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statLocalCacheMissCount)
+        } else {
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statLocalCacheMissCount)
+        }
+
+        //only show if not locally cached
+        val loadingJob = CoroutineScope(Dispatchers.Main).launch {
+            kotlinx.coroutines.delay(500)
+            loadingManager.show()
         }
 
         // ---------------------------------------------------------
@@ -280,7 +284,98 @@ class AudioPlaybackRepository @Inject constructor(
         }
 
     }
+    suspend fun playTrackSimply(
+        sentence: String,
+        currentVoiceName : String
+    ) : Boolean {
 
+        val uniqueSentenceId = FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
+
+
+        // ---------------------------------------------------------
+        // 1. CHECK LOCAL DISK (Free & Fast)
+        // ---------------------------------------------------------
+        if (contentRepository.playFromLocalCacheIfExists(uniqueSentenceId))
+        {
+
+            Timber.v("🔊 Waterfall L1: Playing from Local Disk,  Yippee!! '${sentence.take(21)}'")
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statLocalCacheHitCount)
+            return true //AudioPlaybackStatus.PlayedFromLocalCache
+        } else {
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statLocalCacheMissCount)
+        }
+
+        //only show if not locally cached
+        val loadingJob = CoroutineScope(Dispatchers.Main).launch {
+            kotlinx.coroutines.delay(500)
+            loadingManager.show()
+        }
+
+        // ---------------------------------------------------------
+        // 2. CHECK CLOUD STORAGE (Free-ish)
+        // Only if user has heard it before (History Check)
+        // ---------------------------------------------------------
+
+        val contentID = FirebaseAudioService.generateContentID(sentence)
+        //val isHeard = historyManager.isHeard(level, contentID)
+
+
+        if (contentRepository.playFromCloudStorageIfExists(uniqueSentenceId)) {
+            loadingJob.cancel()
+            loadingManager.hide()
+
+            Timber.v("☁️ Waterfall L2: Downloaded from Cloud Storage. Yippee! '${sentence.take(21)}'")
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statFBCloudHitCount)
+            return true//AudioPlaybackStatus.PlayedFromCloudStorage
+        } else {
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statFBCloudMissCount)
+        }
+
+
+        try {
+
+            // ---------------------------------------------------------
+            // 4. GOOGLE TTS (Paid)
+            // ---------------------------------------------------------
+            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
+
+            Timber.v("🗣️ Waterfall L3: Calling Google TTS '${sentence.take(21)}'")
+            val result = contentRepository.generateAndPlayTTS(
+                text = sentence,
+                uniqueSentenceId = uniqueSentenceId,
+                voiceName = currentVoiceName,
+                languageCode = currentLanguageCode
+            )
+
+            loadingJob.cancel()
+            loadingManager.hide()
+
+            return true
+//            return if (result is PlaybackResultSplit.PlayedFromGoogleTTS) {
+//                handleSuccess(sentence, level, sheetName)
+//
+//                // Record Cost & Usage
+//                if (todayIsNotAFreePassDay) {
+//                    rateLimiter.recordCall()
+//                }
+//                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statTTSSuccessCount)
+//                AudioPlaybackStatus.PlayedFromTTSAPI
+//            } else {
+//                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statTTSFailureCount)
+//                AudioPlaybackStatus.Failure
+//            }
+
+        } catch (e: Exception) {
+            Timber.e(e, "AudioPlaybackRepository: Error during playback waterfall")
+
+            // Critical: Stop the spinner so the UI doesn't freeze
+            loadingJob.cancel()
+            loadingManager.hide()
+//            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statTTSFailureCount)
+            return false//AudioPlaybackStatus.Failure
+        }
+
+    }
     private fun handleSuccess(sentence: String, level: String, sheetName: String) {
         val contentID = FirebaseAudioService.generateContentID(sentence)
 

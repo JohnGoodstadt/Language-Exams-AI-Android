@@ -123,7 +123,8 @@ class ContentRepository @Inject constructor(
     private val googleCloudTts: GoogleCloudTTS,
     private val audioPlayerService: AudioPlayerService,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val ttsStatsRepository: TTSStatsRepository
+    private val ttsStatsRepository: TTSStatsRepository,
+   // private val vocabRepository: ContentRepository,
 ) {
     // Cache the result in memory after the first successful load
     private val vocabCache = mutableMapOf<String, Format0File>()

@@ -24,6 +24,8 @@ import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.CategoryProgress
+import com.goodstadt.john.language.exams.utils.PlaybackEvent
+import com.goodstadt.john.language.exams.utils.PlaybackEventBus
 import com.goodstadt.john.language.exams.utils.RateLimitGuard
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.BuildConfig
@@ -81,9 +83,8 @@ class CategoryTabViewModel @Inject constructor(
     private val ttsStatsRepository: TTSStatsRepository,
     private val xpManager: XPManager,
     private val billingRepository: BillingRepository,
-    private val loadingManager: GlobalLoadingManager,
+    private val playbackEventBus: PlaybackEventBus,
     private val globalLoadingManager: GlobalLoadingManager,
-    private val firestoreRepository: FirestoreRepository,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<CategoryTabUiState>(CategoryTabUiState.Loading)
@@ -108,8 +109,15 @@ class CategoryTabViewModel @Inject constructor(
     private var playbackJob: Job? = null
     private val _showHelpSheet = MutableStateFlow(false)
 
+    private val _showSpeakerSheet = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
+    val showSpeakerSheet = _showSpeakerSheet.asSharedFlow()
+
+    private val _showSPEAKERSheet = MutableStateFlow(false)
+    val showSPEAKERSheet = _showSPEAKERSheet.asStateFlow()
+
     // MARK: - Show Help screen
     val showHelpSheet = _showHelpSheet.asStateFlow()
+    private var lastPlayedSentence: String = ""
 
     // Internal session counter
     private var sessionPlayCount = 0
@@ -139,6 +147,24 @@ class CategoryTabViewModel @Inject constructor(
         initializeBilling()
         viewModelScope.launch {
             hasSeenHelp = userPreferencesRepository.hasSeenHelpSheetFlow.first()
+
+            playbackEventBus.events.collect { event ->
+                if (event is PlaybackEvent.Completed) {
+                    Timber.i("mp3 finished")
+
+                    _showSpeakerSheet.tryEmit(Unit)
+
+//                    nudgeStore.incrementPlayCount()
+//
+//                    val shown = nudgeStore.shownFlow.first()
+//                    val count = nudgeStore.playCountFlow.first()
+//
+//                    if (!shown && count >= 15) {
+//                        nudgeStore.markShown()
+//                        _showSpeakerSheet.tryEmit(Unit)
+//                    }
+                }
+            }
         }
 
 
@@ -257,8 +283,8 @@ class CategoryTabViewModel @Inject constructor(
     }
     // MARK: - Playback Logic
     fun handleTap(sentence: String, category: Category) {
-//        val contentID = FirebaseAudioService.generateContentID(sentence)
-        //val wasAlreadyHeard = historyManager.isHeard("Reference", contentID)
+
+        lastPlayedSentence = sentence
 
         //if still playing handle it
         playbackJob?.cancel()
@@ -391,7 +417,12 @@ class CategoryTabViewModel @Inject constructor(
     fun dismissHelpSheet() {
         _showHelpSheet.value = false
     }
-
+    fun showSPEAKERSheet() {
+        _showSPEAKERSheet.value = true
+    }
+    fun dismissSPEAKERSheet() {
+        _showSPEAKERSheet.value = false
+    }
     fun onResume() {
         // If data changed while app was backgrounded (e.g. sync), this ensures we see it
         refreshUI()
@@ -814,6 +845,8 @@ class CategoryTabViewModel @Inject constructor(
     fun getCurrentSkillLevel() : String {
         return currentLoadedLevel
     }
-
+    fun getLatestSentence(): String {
+        return lastPlayedSentence
+    }
 
 }

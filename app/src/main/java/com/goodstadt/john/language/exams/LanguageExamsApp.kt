@@ -76,7 +76,7 @@ class LanguageExamsApp : Application() {
             }
         )
 
-
+        setupAppDependencies()
         // Initialize Facebook SDK
 //        FacebookSdk.setIsDebugEnabled(true)
 //        FacebookSdk.addLoggingBehavior(LoggingBehavior.APP_EVENTS)
