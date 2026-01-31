@@ -859,4 +859,12 @@ class SettingsViewModel @Inject constructor(
         return firestoreRepository.isUserAnonymous()
     }
 
+    fun userPreferences() {
+        if (BuildConfig.DEBUG) {
+            viewModelScope.launch {
+                userPreferencesRepository.setVoiceHelp(false)
+            }
+        }
+    }
+
 }

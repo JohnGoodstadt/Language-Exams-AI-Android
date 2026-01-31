@@ -39,8 +39,6 @@ import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
-import com.goodstadt.john.language.exams.screens.shared.speakerSelection.SpeakerSelectionBottomSheet
-import com.goodstadt.john.language.exams.screens.shared.speakerSelection.SpeakerSelectionViewModel
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
@@ -79,7 +77,7 @@ fun SettingsScreen(
     var showDebugSheet by remember { mutableStateOf(false) }
     val vm: DictionaryEntryBrowserViewModel = viewModel()
 
-    var showTryOutVoicesSheet by remember { mutableStateOf(false) }
+//    var showTryOutVoicesSheet by remember { mutableStateOf(false) }
 
 //test
     LaunchedEffect(Unit) {
@@ -447,11 +445,7 @@ fun SettingsScreen(
             Spacer(modifier = Modifier.height(12.dp))
         }
     }
-    if (showTryOutVoicesSheet) {
-        val vm2: SpeakerSelectionViewModel = hiltViewModel()
-        LaunchedEffect(Unit) { vm2.show() }
-        SpeakerSelectionBottomSheet(  onDismiss = { viewModel.dismissHelpSheet() })
-    }
+
     // Main Screen Content
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -665,10 +659,11 @@ fun SettingsScreen(
                     title = "Debug Something",
                     currentValue = "Try out Voices (D)",
                     onClick = {
-                        showTryOutVoicesSheet = true
-                            //viewModel.onDebugCrashlyitcs()
+//                        showTryOutVoicesSheet = true
+//                            viewModel.onDebugCrashlyitcs()
+                            viewModel.userPreferences()
                             //viewModel.debugAppLLMCredits()
-                        //viewModel.ShowDictionEntryScreen()
+//                        viewModel.ShowDictionEntryScreen()
 //                        Button(onClick = { showDictionary = true }) {
 //                            Text("Open Dictionary Entry")
 //                        }

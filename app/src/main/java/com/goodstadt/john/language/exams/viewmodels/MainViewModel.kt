@@ -50,6 +50,7 @@ class MainViewModel @Inject constructor(
     private val appConfigRepository: AppConfigRepository,
     private val connectivityRepository: ConnectivityRepository,
     private val loadingManager: GlobalLoadingManager
+
 //    private val billingRepository: BillingRepository,
 ) : ViewModel() {
 
@@ -82,6 +83,8 @@ class MainViewModel @Inject constructor(
             }
         }
     )
+
+    val startDestination = appConfigRepository.startDestination
 
     init {
         // 1. Initialize the user session (as before).

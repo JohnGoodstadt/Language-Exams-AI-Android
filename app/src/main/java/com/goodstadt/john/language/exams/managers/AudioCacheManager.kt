@@ -9,6 +9,7 @@ import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.ReferenceStats
 import com.goodstadt.john.language.exams.models.TabNumberEnum
 import com.goodstadt.john.language.exams.utils.CategoryProgress
+import com.google.common.math.Stats
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -279,9 +280,23 @@ class AudioCacheManager @Inject constructor(
                 _referenceHeardCounts.value = newMap
 
                 saveReferenceStats()
+
+                // 2. CRITICAL FIX: Recalculate the Grand Total Flow IMMEDIATELY
+              //  recalculateTotals(newMap)
             }
         }
     }
+//    private fun recalculateTotals(map: Map<String, Stats>) {
+//        // Sum up 'heard' from ALL sheets
+//        val newTotalHeard = map.values.sumOf { it.heard }
+//        val newTotalCount = map.values.sumOf { it.total }
+//
+//        // Emit the new value to the StateFlow
+//        _totalExamWordsHeardOverall.value = newTotalHeard
+//        _totalExamWordCount.value = newTotalCount
+//
+//         Timber.d("Grand Total Updated: $newTotalHeard")
+//    }
 // MARK: - Vocab Stats Sync (Tabs 1, 2, 3)
 
     /**

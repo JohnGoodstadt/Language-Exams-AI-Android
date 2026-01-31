@@ -38,8 +38,10 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
@@ -140,6 +142,13 @@ class CategoryTabViewModel @Inject constructor(
 
     // ✅ 1. Local Cache for the keys
     private var currentRecalledKeys: Set<String> = emptySet()
+
+    val hasSeenVoiceHelp: StateFlow<Boolean> = userPreferencesRepository.hasSeenVoiceHelp
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000), // Efficient lifecycle handling
+            initialValue = false
+        )
 
     init {
         observeHistoryChanges() //do I need this now?
@@ -847,6 +856,13 @@ class CategoryTabViewModel @Inject constructor(
     }
     fun getLatestSentence(): String {
         return lastPlayedSentence
+    }
+    // Combine the totals logic with the "seen" state
+
+    fun markVoiceHelpAsSeen() {
+        viewModelScope.launch {
+            userPreferencesRepository.setHasSeenVoiceHelp()
+        }
     }
 
 }

@@ -72,12 +72,8 @@ import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
 import com.goodstadt.john.language.exams.screens.shared.VoiceSettingsBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamificationStatsSheet
-import com.goodstadt.john.language.exams.screens.shared.speakerSelection.SpeakerSelectionBottomSheet
-import com.goodstadt.john.language.exams.screens.shared.speakerSelection.SpeakerSelectionViewModel
 import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
-import com.goodstadt.john.language.exams.utils.findActivity
-import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
@@ -97,6 +93,8 @@ interface StatsSheetEntryPoint {
     fun getQuizManager(): QuizHistoryManager
 }
 
+private const val HELP_TRIGGER_VOICE_SELECTION_COUNT = 35 //after 30 plays - show choose voice help screen
+
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun CategoryTabScreen(
@@ -105,6 +103,9 @@ fun CategoryTabScreen(
     selectedVoiceName: String,
     viewModel: CategoryTabViewModel = hiltViewModel()
 ) {
+
+
+
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
     val uiState by viewModel.uiState.collectAsState()
@@ -132,23 +133,32 @@ fun CategoryTabScreen(
     val bannerSubtitle by viewModel.celebrationSubtitle.collectAsState()
     val currentExamName by viewModel.currentExamName.collectAsStateWithLifecycle()
 
-    val activity = LocalContext.current.findActivity() as ComponentActivity
-    val speakerVm: SpeakerSelectionViewModel = hiltViewModel(activity)
 
-   // val showSpeakerSheet by viewModel.showSpeakerSheet.collectAsState()
-    //val speakerSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-
-    val showSPEAKERSheet by viewModel.showSPEAKERSheet.collectAsState()
-    val SPEAKERSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-
+//    val activity = LocalContext.current.findActivity() as ComponentActivity
+//    val speakerVm: SpeakerSelectionViewModel = hiltViewModel(activity)
+//
+//   // val showSpeakerSheet by viewModel.showSpeakerSheet.collectAsState()
+//    //val speakerSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+//
+//    val showSPEAKERSheet by viewModel.showSPEAKERSheet.collectAsState()
+//    val SPEAKERSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+//
     var showVoiceSheet by remember { mutableStateOf(false) }
+    val hasSeenHelp by viewModel.hasSeenVoiceHelp.collectAsStateWithLifecycle()
 
     LaunchedEffect(Unit) {
         viewModel.showSpeakerSheet.collect {
-//            viewModel.showSPEAKERSheet()
-            showVoiceSheet = true
-         //   showSPEAKERSheet = true
-//            speakerVm.show()
+
+            val (heard, _) = viewModel.calculateGrandTotals()
+            Timber.i("heard total is $heard")
+            if (heard > HELP_TRIGGER_VOICE_SELECTION_COUNT) {
+                Timber.i("Screen has been triggered")
+            }
+            if (!hasSeenHelp && (heard > HELP_TRIGGER_VOICE_SELECTION_COUNT)) {
+                Timber.i("Showing Help")
+                viewModel.markVoiceHelpAsSeen() // Save to DataStore
+                showVoiceSheet = true    // Show UI
+            }
         }
     }
 
@@ -347,7 +357,8 @@ fun CategoryTabScreen(
 //                                        if (isHeard){
 //                                            playCount = viewModel.getPlayCount(sentenceEntry.sentence)
 //                                        }
-                                        val playCount = viewModel.getPlayCount(sentenceEntry.sentence)
+                                        val playCount =
+                                            viewModel.getPlayCount(sentenceEntry.sentence)
 
                                         SwipeableVocabRow(
                                             word = wordEntry,
@@ -527,13 +538,7 @@ fun CategoryTabScreen(
                 }
             }
         }
-        if (showSPEAKERSheet) {
-           // val vm2: SpeakerSelectionViewModel = hiltViewModel()
-            //LaunchedEffect(Unit) { vm2.show() }
-            SpeakerSelectionBottomSheet(
-                onDismiss = { viewModel.dismissSPEAKERSheet() }
-            )
-        }
+
         if (showVoiceSheet) {
             VoiceSettingsBottomSheet(
                 sentence = viewModel.getLatestSentence(),

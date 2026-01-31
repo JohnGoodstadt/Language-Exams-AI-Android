@@ -12,6 +12,7 @@ import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.goodstadt.john.language.exams.config.LanguageConfig
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository.PreferenceKeys.HAS_SEEN_VOICE_HELP
 import com.goodstadt.john.language.exams.models.dataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.Flow
@@ -49,6 +50,7 @@ class UserPreferencesRepository @Inject constructor(
         val APP_INSTALL_DATE = longPreferencesKey("app_install_date")
         val EXAM_NAME = stringPreferencesKey("currentExamJSONName")
         val HAS_SEEN_HELP_SHEET = booleanPreferencesKey("has_seen_help_sheet_v1")
+        val HAS_SEEN_VOICE_HELP = booleanPreferencesKey("has_seen_voice_help")
     }
 
     /**
@@ -323,6 +325,20 @@ class UserPreferencesRepository @Inject constructor(
             currentSet.remove(sectionKey)
             prefs.edit().putStringSet("completed_$examName", currentSet).apply()
             Log.d("TAG", "📉 Debug: Section '$sectionKey' marked as incomplete.")
+        }
+    }
+    val hasSeenVoiceHelp: Flow<Boolean>  = context.dataStore.data
+        .map { preferences -> preferences[HAS_SEEN_VOICE_HELP] ?: false }
+
+    // Function to save the "seen" state
+    suspend fun setHasSeenVoiceHelp() {
+        context.dataStore.edit { preferences ->
+            preferences[HAS_SEEN_VOICE_HELP] = true
+        }
+    }
+    suspend fun setVoiceHelp(flag:Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[HAS_SEEN_VOICE_HELP] = flag
         }
     }
 }

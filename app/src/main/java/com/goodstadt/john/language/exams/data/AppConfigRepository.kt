@@ -7,6 +7,7 @@ import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.TabDefinition
 import com.goodstadt.john.language.exams.models.TabsManifest
+import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.google.firebase.ktx.Firebase
@@ -39,6 +40,7 @@ class AppConfigRepository @Inject constructor(
 
     //A key for storing our local versions map
     private val KEY_LOCAL_SHEET_VERSIONS = "local_sheet_versions_cache"
+    private val INITIAL_SCREEN = Screen.Tab4.route //reference TAB
 
     private val defaultModels = listOf(
         LlmModelInfo(
@@ -48,6 +50,20 @@ class AppConfigRepository @Inject constructor(
         )
     )
 
+    /**
+     * Determines where the user should land on app launch.
+     * Currently returns hardcoded value, but ready for Remote Config logic.
+     */
+    val startDestination: String
+        get() {
+            // --- FUTURE LOGIC GOES HERE ---
+            // Example:
+            // val remoteIndex = remoteConfig.getLong("default_start_tab_index")
+            // if (remoteIndex == 3L) return Screen.Tab4.route
+
+            // --- CURRENT LOGIC ---
+            return INITIAL_SCREEN
+        }
     //Reference Tab dynamic sheets
     private val defaultTabs = listOf(
         TabDefinition(id = "quiz", title = "Quiz", type = "fixed_view"),
