@@ -89,7 +89,8 @@ fun VocabGamificationStatsSheet(
         contentColor = MaterialTheme.colorScheme.onSurface,
         topBar = {
             CenterAlignedTopAppBar(
-                title = { Text("Exam Progress", fontWeight = FontWeight.Bold) },
+//                title = { Text("Exam Progress", fontWeight = FontWeight.Bold) },
+                title = { Text("Progress", fontWeight = FontWeight.Bold) },
                 actions = {
                     IconButton(onClick = onDismiss) {
                         Icon(

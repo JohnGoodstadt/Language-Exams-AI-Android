@@ -93,7 +93,7 @@ interface StatsSheetEntryPoint {
     fun getQuizManager(): QuizHistoryManager
 }
 
-private const val HELP_TRIGGER_VOICE_SELECTION_COUNT = 35 //after 30 plays - show choose voice help screen
+private const val HELP_TRIGGER_VOICE_SELECTION_COUNT = 15 //after 15 plays - show choose voice help screen
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -149,7 +149,16 @@ fun CategoryTabScreen(
     LaunchedEffect(Unit) {
         viewModel.showSpeakerSheet.collect {
 
-            val (heard, _) = viewModel.calculateGrandTotals()
+//            val (heard, _) = viewModel.calculateGrandTotals()
+            //val heard = viewModel.totalHeardFlow.value
+
+
+//            val h = viewModel.checkTotalsNow()
+            val heard = viewModel.calculateGrandTotalsNow()
+
+            Timber.i("Freshly calculated Exam Total is: $heard")
+
+
             Timber.i("heard total is $heard")
             if (heard > HELP_TRIGGER_VOICE_SELECTION_COUNT) {
                 Timber.i("Screen has been triggered")
@@ -498,7 +507,10 @@ fun CategoryTabScreen(
                 // Filter for this tab if needed, or show all
 
                 // Note: You might need a helper in ViewModel to sum specific tab totals
-                val (heard, total) = viewModel.calculateGrandTotals()
+               // val (heard, total) = viewModel.calculateGrandTotals()
+
+                val heard by viewModel.totalHeardFlow.collectAsState() // or collectAsStateWithLifecycle()
+                val total by viewModel.totalCountFlow.collectAsState()
 
                 //  val context = LocalContext.current
                 val entryPoint = remember(context) {

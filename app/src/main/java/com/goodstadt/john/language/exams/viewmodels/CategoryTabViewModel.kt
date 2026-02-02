@@ -150,6 +150,9 @@ class CategoryTabViewModel @Inject constructor(
             initialValue = false
         )
 
+    val totalHeardFlow = audioCacheManager.totalExamWordsHeardOverall
+    val totalCountFlow = audioCacheManager.totalExamWordCount
+
     init {
         observeHistoryChanges() //do I need this now?
         observeRecallingChanges()
@@ -618,7 +621,7 @@ class CategoryTabViewModel @Inject constructor(
     }
     fun hideRateOKLimitSheet() { _showRateLimitSheet.value = false }
 
-    fun calculateGrandTotals(): Pair<Int, Int> {
+    fun calculateGrandTotalsOriginal(): Pair<Int, Int> {
         val heard = audioCacheManager.totalExamWordsHeardOverall.value
         val total = audioCacheManager.totalExamWordCount.value
         return Pair(heard, total)
@@ -631,7 +634,10 @@ class CategoryTabViewModel @Inject constructor(
     fun setTestExamGoal() {}
 
 
-
+    fun calculateGrandTotalsNow(): Int {
+//        Timber.i("The fresh total is: $freshHeard")
+        return audioCacheManager.getFreshExamTotalHeard()
+    }
     /**
      * Calculates stats strictly for the provided list of categories.
      * Since 'categories' in our State is already filtered by Tab, this gives Tab-specific numbers.

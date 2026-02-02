@@ -279,6 +279,20 @@ class AudioCacheManager @Inject constructor(
                 newMap[key] = heard
                 _referenceHeardCounts.value = newMap
 
+
+
+                // ---------------------------------------------------------
+                // 2. THE FIX: Recalculate Grand Totals IMMEDIATELY
+                // ---------------------------------------------------------
+
+                val newGrandTotalHeard = newMap.values.sum() // Sum up all values in the map to get the new Grand Total
+                val newGrandTotalCount = referenceTotalCounts.values.sum() // Sum up the totals map
+
+// Push to the StateFlows that the UI is watching
+                _totalExamWordsHeardOverall.value = newGrandTotalHeard
+                _totalExamWordCount.value = newGrandTotalCount
+
+
                 saveReferenceStats()
 
                 // 2. CRITICAL FIX: Recalculate the Grand Total Flow IMMEDIATELY
@@ -490,7 +504,27 @@ class AudioCacheManager @Inject constructor(
             Timber.tag("AudioCacheManager").e(e, "Error saving reference stats")
         }
     }
+    // This calculates the sum at the exact moment you call it.
+// It does not rely on the StateFlow being updated yet.
 
+    fun getFreshExamTotalHeard(): Int {
+        // 1. Get the map of per-tab counts (e.g., { Tab1=10, Tab2=5, Tab3=0 })
+        // This is your Source of Truth.
+        val tabMap = _totalExamWordHeardCount.value
+
+        // 2. Calculate the Sum RIGHT NOW (CPU calculation)
+        val freshTotal = tabMap.values.sum()
+
+        // 3. Self-Healing:
+        // If the "Overall" flow was stale/lagging, force update it now
+        // so any UI observing it gets fixed instantly.
+        if (_totalExamWordsHeardOverall.value != freshTotal) {
+            // Timber.i("Syncing Exam Total: Was ${_totalExamWordsHeardOverall.value}, Now $freshTotal")
+            _totalExamWordsHeardOverall.value = freshTotal
+        }
+
+        return freshTotal
+    }
     // MARK: - AI & Debugging
     // (Keep your existing AI log functions and debugPrintAllReferenceStats here)
     // Ensure debugPrintAllReferenceStats uses _referenceHeardCounts.value
