@@ -347,128 +347,217 @@ class AppConfigRepository @Inject constructor(
             Timber.w("⚠️ DEV MODE: Using Local Manifest Override")
             // Hardcoded JSON for testing
             """
-        {
-            "sheetRegistry": {
-                "quiz": {
-                    "title": "Quiz.",
-                    "sheetDataType": "fixed",
-                    "screenType": "FixedScreen"
-                },
-                "conjugations": {
-                    "title": "Conjugations.",
-                    "sheetDataType": "fixed",
-                    "screenType": "FixedScreen"
-                },
-                "EnglishPrepositions": {
-                    "title": "Prepositions.",
-                    "sheetDataType": "VocabFile",
-                    "screenType": "VocabScreen",
-                    "firestoreDocumentId": "EnglishPrepositions"
-                },
-                "AdjectivesGroup": {
-                    "title": "Adjectives.",
-                    "screenType": "GroupedVocabScreen",
-                    "sheetDataType": "VocabFile",
-                    "subTabs": [
-                        { "title": "Basic", "firestoreDocumentId": "EnglishA1Adjectives", "sheetDataType": "VocabFile" },
-                        { "title": "Intermediate", "firestoreDocumentId": "EnglishA2Adjectives", "sheetDataType": "VocabFile" },
-                        { "title": "Upper", "firestoreDocumentId": "EnglishB1Adjectives", "sheetDataType": "VocabFile" },
-                        { "title": "Advanced", "firestoreDocumentId": "EnglishB2Adjectives", "sheetDataType": "VocabFile" }
-                    ]
-                },
-                "EnglishDefinitionsFormat1": {
-                    "title": "Sounds the Same",
-                    "sheetDataType": "Format1",
-                    "screenType": "Format1Screen",
-                    "firestoreDocumentId": "EnglishDefinitionsFormat1"
-                },
-               "PairsGroup": {
-      "title": "Word Pairs",
-      "screenType": "GroupedFormat2Screen",
-      "sheetDataType": "Format2",
-      "subTabs": [
-        {
-          "title": "Good vs Well",
-          "firestoreDocumentId": "EnglishGoodVsWell",
-          "sheetDataType": "Format2",
-          "screenType": "Format2Screen"
-        },
-        {
-          "title": "Say vs Tell",
-          "firestoreDocumentId": "EnglishSayVsTell",
-          "sheetDataType": "Format2",
-          "screenType": "Format2Screen"
-        },
-        {
-          "title": "Speak vs Talk",
-          "firestoreDocumentId": "EnglishSpeakVsTalk",
-          "sheetDataType": "Format2",
-          "screenType": "Format2Screen"
-        },
-        {
-          "title": "Hear vs Listen",
-          "firestoreDocumentId": "EnglishHearVsListen",
-          "sheetDataType": "Format2",
-          "screenType": "Format2Screen"
-        },
-        {
-          "title": "Borrow vs Lend",
-          "firestoreDocumentId": "EnglishBorrowVsLend",
-          "sheetDataType": "Format2",
-          "screenType": "Format2Screen"
-        },
-        {
-          "title": "Bring Vs Take",
-          "firestoreDocumentId": "EnglishBringVsTake",
-          "sheetDataType": "Format2",
-          "screenType": "Format2Screen"
-        },
-        {
-          "title": "Look vs See",
-          "firestoreDocumentId": "EnglishLookVsSee",
-          "sheetDataType": "Format2",
-          "screenType": "Format2Screen"
-        }
-      ]
-    },
-                "SpanishLanguage": {
-                    "title": "Spanish",
-                    "screenType": "GroupedFormat3Screen",
-                    "sheetDataType": "Format3",
-                    "requiredLocale": "es",
-                    "subTabs": [
-                        { "title": "Vowels", "firestoreDocumentId": "SpanishReferenceSheet1", "sheetDataType": "Format3" },
-                        { "title": "Word Stress", "firestoreDocumentId": "SpanishReferenceSheet2", "sheetDataType": "Format3" },
-                        { "title": "Schwa", "firestoreDocumentId": "SpanishReferenceSheet3", "sheetDataType": "Format3" },
-                        { "title": "Final", "firestoreDocumentId": "SpanishReferenceSheet4", "sheetDataType": "Format3" }
-                    ]
-                }
-            },
-            "layouts": {
-                "referenceTab": {
-                    "order": [
-                        "quiz",
-                        "conjugations",
-                        "EnglishPrepositions",
-                        "SpanishLanguage",
-                        "AdjectivesGroup",
-                        "EnglishDefinitionsFormat1",
-                        "PairsGroup"
-                        
-                    ]
-                },
-                "meTab": {
-                    "order": [
-                        "focusing",
-                        "settings",
-                        "vocabulary",
-                        "progress",
-                        "paragraph",
-                        "dailyWord"
-                    ]
-                }
-            }
-        }
+       {
+         "sheetRegistry": {
+       	"quiz": {
+       	  "title": "Quiz.",
+       	  "sheetDataType": "fixed",
+       	  "screenType": "FixedScreen"
+       	},
+       	"conjugations": {
+       	  "title": "Conjugations.",
+       	  "sheetDataType": "fixed",
+       	  "screenType": "FixedScreen"
+       	},
+       	"EnglishPrepositions": {
+       	  "title": "Prepositions.",
+       	  "sheetDataType": "VocabFile",
+       	  "screenType": "VocabScreen",
+       	  "firestoreDocumentId": "EnglishPrepositions"
+       	},
+       	"AdjectivesGroup": {
+       	  "title": "Adjectives.",
+       	  "screenType": "GroupedVocabScreen",
+       	  "sheetDataType": "VocabFile",
+       	  "subTabs": [
+       		{
+       		  "title": "Basic",
+       		  "firestoreDocumentId": "EnglishA1Adjectives",
+       		  "sheetDataType": "VocabFile"
+       		},
+       		{
+       		  "title": "Intermediate",
+       		  "firestoreDocumentId": "EnglishA2Adjectives",
+       		  "sheetDataType": "VocabFile"
+       		},
+       		{
+       		  "title": "Upper",
+       		  "firestoreDocumentId": "EnglishB1Adjectives",
+       		  "sheetDataType": "VocabFile"
+       		},
+       		{
+       		  "title": "Advanced",
+       		  "firestoreDocumentId": "EnglishB2Adjectives",
+       		  "sheetDataType": "VocabFile"
+       		}
+       	  ]
+       	},
+       	"EnglishDefinitionsFormat1": {
+       	  "title": "Sounds the Same",
+       	  "sheetDataType": "Format1",
+       	  "screenType": "Format1Screen",
+       	  "firestoreDocumentId": "EnglishDefinitionsFormat1"
+       	},
+       	"PairsGroup": {
+       	  "title": "Pairs",
+       	  "screenType": "GroupedFormat2Screen",
+       	  "sheetDataType": "Format2",
+       	  "subTabs": [
+       		{
+       		  "title": "Good vs Well",
+       		  "firestoreDocumentId": "EnglishGoodVsWell",
+       		  "sheetDataType": "Format2",
+       		  "screenType": "Format2Screen"
+       		},
+       		{
+       		  "title": "Say vs Tell",
+       		  "firestoreDocumentId": "EnglishSayVsTell",
+       		  "sheetDataType": "Format2",
+       		  "screenType": "Format2Screen"
+       		},
+       		{
+       		  "title": "Speak vs Talk",
+       		  "firestoreDocumentId": "EnglishSpeakVsTalk",
+       		  "sheetDataType": "Format2",
+       		  "screenType": "Format2Screen"
+       		},
+       		{
+       		  "title": "Hear vs Listen",
+       		  "firestoreDocumentId": "EnglishHearVsListen",
+       		  "sheetDataType": "Format2",
+       		  "screenType": "Format2Screen"
+       		},
+       		{
+       		  "title": "Borrow vs Lend",
+       		  "firestoreDocumentId": "EnglishBorrowVsLend",
+       		  "sheetDataType": "Format2",
+       		  "screenType": "Format2Screen"
+       		},
+       		{
+       		  "title": "Bring Vs Take",
+       		  "firestoreDocumentId": "EnglishBringVsTake",
+       		  "sheetDataType": "Format2",
+       		  "screenType": "Format2Screen"
+       		},
+       		{
+       		  "title": "Look vs See",
+       		  "firestoreDocumentId": "EnglishLookVsSee",
+       		  "sheetDataType": "Format2",
+       		  "screenType": "Format2Screen"
+       		}
+       	  ]
+       	},
+       	"SpanishLanguage": {
+       	  "title": "Spanish",
+       	  "screenType": "GroupedFormat3Screen",
+       	  "sheetDataType": "Format3",
+       	  "requiredLocale": "es",
+       	  "subTabs": [
+       		{
+       		  "title": "Vowels",
+       		  "firestoreDocumentId": "SpanishReferenceSheet1",
+       		  "sheetDataType": "Format3"
+       		},
+       		{
+       		  "title": "Word Stress",
+       		  "firestoreDocumentId": "SpanishReferenceSheet2",
+       		  "sheetDataType": "Format3"
+       		},
+       		{
+       		  "title": "Schwa",
+       		  "firestoreDocumentId": "SpanishReferenceSheet3",
+       		  "sheetDataType": "Format3"
+       		},
+       		{
+       		  "title": "Final",
+       		  "firestoreDocumentId": "SpanishReferenceSheet4",
+       		  "sheetDataType": "Format3"
+       		}
+       	  ]
+       	},
+       	"PortugeseLanguage": {
+       	  "title": "Portugese",
+       	  "screenType": "GroupedFormat3Screen",
+       	  "sheetDataType": "Format3",
+       	  "requiredLocale": "pt",
+       	  "subTabs": [
+       		{
+       		  "title": "Vowels",
+       		  "firestoreDocumentId": "PortugeseReferenceSheet1",
+       		  "sheetDataType": "Format3"
+       		},
+       		{
+       		  "title": "Word Stress",
+       		  "firestoreDocumentId": "PortugeseReferenceSheet2",
+       		  "sheetDataType": "Format3"
+       		},
+       		{
+       		  "title": "Schwa",
+       		  "firestoreDocumentId": "PortugeseReferenceSheet3",
+       		  "sheetDataType": "Format3"
+       		},
+       		{
+       		  "title": "Final",
+       		  "firestoreDocumentId": "PortugeseReferenceSheet4",
+       		  "sheetDataType": "Format3"
+       		}
+       	  ]
+       	},
+       	  "IndianLanguage": {
+       		"title": "India",
+       		"screenType": "GroupedFormat3Screen",
+       		"sheetDataType": "Format3",
+       		"requiredLocale": "hi",
+       		"subTabs": [
+       		  {
+       			"title": "Consonant Clusters",
+       			"firestoreDocumentId": "IndianReferenceSheet1",
+       			"sheetDataType": "Format3"
+       		  },
+       		  {
+       			"title": "Vowel Length",
+       			"firestoreDocumentId": "IndianReferenceSheet2",
+       			"sheetDataType": "Format3"
+       		  },
+       		  {
+       			"title": "Word Stress",
+       			"firestoreDocumentId": "IndianReferenceSheet3",
+       			"sheetDataType": "Format3"
+       		  },
+       		  {
+       			"title": "Articles & Prepositions",
+       			"firestoreDocumentId": "IndianReferenceSheet4",
+       			"sheetDataType": "Format3"
+       		  }
+       		]
+       	  }
+         },
+         "layouts": {
+       	"referenceTab": {
+       	  "order": [
+       		"quiz",
+       		"conjugations",
+       		"EnglishPrepositions",
+       		"SpanishLanguage",
+       		"PortugeseLanguage",
+       		"IndianLanguage",
+       		"AdjectivesGroup",
+       		"EnglishDefinitionsFormat1",
+       		"PairsGroup"
+       	  ]
+       	},
+       	"meTab": {
+       	  "order": [
+       		"focusing",
+       		"settings",
+       		"vocabulary",
+       		"progress",
+       		"paragraph"
+       	  ]
+       	}
+         }
+       }
+
         """.trimIndent()
         } else {
             // PRODUCTION: Fetch from Remote Config
