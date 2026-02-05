@@ -1,0 +1,136 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz1Inter-hi",
+	"title": "Quiz 1 - Prepositions Time/Place",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Prepositions",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "I wake up _ 6 o’clock every day.",
+					"summary": "Teaching Focus: Use 'at' with specific clock times.",
+					"explain": "Key Differences Addressed: Hindi often uses a single postposition where English distinguishes between 'at', 'on', and 'in'. This tests correct use of 'at' for exact times.",
+					"words": [
+						{ "word": "at", "ok": true },
+						{ "word": "in", "ok": false },
+						{ "word": "on", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 2,
+					"sentence": "My birthday is _ July.",
+					"summary": "Teaching Focus: Use 'in' with months.",
+					"explain": "Key Differences Addressed: Learners may incorrectly choose 'on' or omit the preposition. English requires 'in' for months and longer periods of time.",
+					"words": [
+						{ "word": "in", "ok": true },
+						{ "word": "on", "ok": false },
+						{ "word": "at", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 3,
+					"sentence": "We met _ Monday morning.",
+					"summary": "Teaching Focus: Use 'on' with days and dates.",
+					"explain": "Key Differences Addressed: Hindi does not change form for days versus months. This reinforces using 'on' for specific days.",
+					"words": [
+						{ "word": "on", "ok": true },
+						{ "word": "in", "ok": false },
+						{ "word": "at", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 4,
+					"sentence": "She lives _ Delhi.",
+					"summary": "Teaching Focus: Use 'in' with cities and countries.",
+					"explain": "Key Differences Addressed: Learners sometimes use 'at' for cities due to direct translation. English uses 'in' for large places like cities and countries.",
+					"words": [
+						{ "word": "in", "ok": true },
+						{ "word": "at", "ok": false },
+						{ "word": "on", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 5,
+					"sentence": "He is waiting _ the bus stop.",
+					"summary": "Teaching Focus: Use 'at' for specific points or locations.",
+					"explain": "Key Differences Addressed: Hindi often expresses location without fine distinctions. In English, 'at' is used for exact points like bus stops or entrances.",
+					"words": [
+						{ "word": "at", "ok": true },
+						{ "word": "in", "ok": false },
+						{ "word": "on", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 6,
+					"sentence": "The keys are _ the table.",
+					"summary": "Teaching Focus: Use 'on' for surfaces.",
+					"explain": "Key Differences Addressed: Learners may choose 'in' due to literal translation. English uses 'on' when something is on a surface.",
+					"words": [
+						{ "word": "on", "ok": true },
+						{ "word": "in", "ok": false },
+						{ "word": "at", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 7,
+					"sentence": "I usually study _ the evening.",
+					"summary": "Teaching Focus: Use 'in' with parts of the day (except night).",
+					"explain": "Key Differences Addressed: Hindi does not require a specific preposition for parts of the day. English uses 'in the morning/afternoon/evening'.",
+					"words": [
+						{ "word": "in", "ok": true },
+						{ "word": "on", "ok": false },
+						{ "word": "at", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 8,
+					"sentence": "There is a good restaurant _ the corner of this street.",
+					"summary": "Teaching Focus: Use 'at' for exact positions.",
+					"explain": "Key Differences Addressed: Learners may overuse 'on' with streets. 'At the corner' refers to a specific point, so 'at' is required.",
+					"words": [
+						{ "word": "at", "ok": true },
+						{ "word": "on", "ok": false },
+						{ "word": "in", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 9,
+					"sentence": "He arrived _ the airport early.",
+					"summary": "Teaching Focus: Use 'at' with places seen as points.",
+					"explain": "Key Differences Addressed: Hindi speakers may choose 'in' for all locations. English treats places like airports and stations as points when talking about arrival.",
+					"words": [
+						{ "word": "at", "ok": true },
+						{ "word": "in", "ok": false },
+						{ "word": "on", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 10,
+					"sentence": "We will meet _ the weekend.",
+					"summary": "Teaching Focus: Use 'at' with 'the weekend' in standard British English.",
+					"explain": "Key Differences Addressed: This is challenging because different varieties of English exist. For exam-focused British English, 'at the weekend' is the expected form.",
+					"words": [
+						{ "word": "at", "ok": true },
+						{ "word": "on", "ok": false },
+						{ "word": "in", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

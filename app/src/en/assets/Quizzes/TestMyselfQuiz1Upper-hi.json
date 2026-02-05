@@ -1,0 +1,136 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz1Upper-hi",
+	"title": "Quiz 1 - Verb Prepositions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Verb + prep",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "She is afraid _ dogs.",
+					"summary": "Teaching Focus: Some adjectives and verbs are followed by fixed prepositions.",
+					"explain": "Key Differences Addressed: Hindi often uses one general postposition where English requires specific verb–preposition combinations. 'Afraid' is followed by 'of', not 'from' or 'about'.",
+					"words": [
+						{ "word": "of", "ok": true },
+						{ "word": "from", "ok": false },
+						{ "word": "about", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 2,
+					"sentence": "We are looking _ a new flat.",
+					"summary": "Teaching Focus: Phrasal verbs change meaning depending on the preposition.",
+					"explain": "Key Differences Addressed: Learners may translate directly and choose the wrong preposition. 'Look for' means search; other options change the meaning.",
+					"words": [
+						{ "word": "for", "ok": true },
+						{ "word": "at", "ok": false },
+						{ "word": "after", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 3,
+					"sentence": "He apologized _ being late.",
+					"summary": "Teaching Focus: Use 'for' after 'apologize' to give the reason.",
+					"explain": "Key Differences Addressed: Hindi structure does not clearly separate verb and reason. In English, 'apologize for' is the fixed form.",
+					"words": [
+						{ "word": "for", "ok": true },
+						{ "word": "to", "ok": false },
+						{ "word": "about", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 4,
+					"sentence": "This job depends _ your experience.",
+					"summary": "Teaching Focus: Certain verbs require a specific following preposition.",
+					"explain": "Key Differences Addressed: Learners may omit the preposition or choose 'on' incorrectly based on intuition. The correct collocation is 'depend on'.",
+					"words": [
+						{ "word": "on", "ok": true },
+						{ "word": "of", "ok": false },
+						{ "word": "from", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 5,
+					"sentence": "She is very good _ maths.",
+					"summary": "Teaching Focus: Use 'at' to describe ability or skill.",
+					"explain": "Key Differences Addressed: Hindi often expresses ability without a preposition. English uses 'good at' when talking about skills or subjects.",
+					"words": [
+						{ "word": "at", "ok": true },
+						{ "word": "in", "ok": false },
+						{ "word": "with", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 6,
+					"sentence": "They are responsible _ the safety of children.",
+					"summary": "Teaching Focus: Adjectives often require fixed prepositions.",
+					"explain": "Key Differences Addressed: Learners may translate directly and use 'for' or omit the preposition. The correct form is 'responsible for'.",
+					"words": [
+						{ "word": "for", "ok": true },
+						{ "word": "of", "ok": false },
+						{ "word": "to", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 7,
+					"sentence": "I am not interested _ politics.",
+					"summary": "Teaching Focus: Use 'in' after 'interested'.",
+					"explain": "Key Differences Addressed: Hindi does not require an equivalent preposition. In English, 'interested' is always followed by 'in'.",
+					"words": [
+						{ "word": "in", "ok": true },
+						{ "word": "on", "ok": false },
+						{ "word": "about", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 8,
+					"sentence": "He applied _ a British passport.",
+					"summary": "Teaching Focus: Use 'for' when requesting or asking to receive something.",
+					"explain": "Key Differences Addressed: This is especially relevant for citizenship contexts. In English, you 'apply for' a job, visa, or passport.",
+					"words": [
+						{ "word": "for", "ok": true },
+						{ "word": "to", "ok": false },
+						{ "word": "with", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 9,
+					"sentence": "She complained _ the noise next door.",
+					"summary": "Teaching Focus: Use 'about' to introduce the subject of a complaint.",
+					"explain": "Key Differences Addressed: Learners may confuse 'complain to' (the person) and 'complain about' (the problem). This tests the correct structure.",
+					"words": [
+						{ "word": "about", "ok": true },
+						{ "word": "to", "ok": false },
+						{ "word": "for", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 10,
+					"sentence": "He succeeded _ passing the citizenship test.",
+					"summary": "Teaching Focus: Use 'in' after 'succeed' to describe success in an activity.",
+					"explain": "Key Differences Addressed: Hindi learners may omit the preposition. English requires 'succeed in' followed by a noun or -ing form.",
+					"words": [
+						{ "word": "in", "ok": true },
+						{ "word": "at", "ok": false },
+						{ "word": "to", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

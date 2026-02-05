@@ -1,0 +1,138 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "TestMyselfQuiz1Elementary-hi",
+	"title": "Quiz 1 - Articles A/An/The",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Articles",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "I have _ apple.",
+					"summary": "Teaching Focus: Use 'an' before words that start with a vowel sound.",
+					"explain": "Key Differences Addressed: Hindi often does not require an equivalent of 'a/an', so learners may omit it or choose the wrong one. This checks choosing 'an' before a vowel sound.",
+					"words": [
+						{ "word": "a", "ok": false },
+						{ "word": "an", "ok": true },
+						{ "word": "the", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 2,
+					"sentence": "She is _ teacher.",
+					"summary": "Teaching Focus: Use 'a' with singular jobs and roles when mentioned generally.",
+					"explain": "Key Differences Addressed: Learners may omit the article (\"She is teacher\") because Hindi can express the idea without an article. This tests adding 'a' for a singular profession.",
+					"words": [
+						{ "word": "a", "ok": true },
+						{ "word": "an", "ok": false },
+						{ "word": "the", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 3,
+					"sentence": "He has _ umbrella.",
+					"summary": "Teaching Focus: Use 'an' before vowel sounds (u-/ʌ-/ʊ-), even if the letter is different.",
+					"explain": "Key Differences Addressed: Hindi speakers often drop articles. This reinforces that 'umbrella' begins with a vowel sound, so we use 'an'.",
+					"words": [
+						{ "word": "a", "ok": false },
+						{ "word": "an", "ok": true },
+						{ "word": "the", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 4,
+					"sentence": "I want _ cup of tea.",
+					"summary": "Teaching Focus: Use 'a' for one, non-specific singular countable nouns.",
+					"explain": "Key Differences Addressed: In Hindi you can say the equivalent of \"I want cup of tea\" without an article. In English, a singular countable noun needs an article when it is general/non-specific.",
+					"words": [
+						{ "word": "a", "ok": true },
+						{ "word": "an", "ok": false },
+						{ "word": "the", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 5,
+					"sentence": "The sun is in _ sky.",
+					"summary": "Teaching Focus: Use 'the' for something unique (only one in our context).",
+					"explain": "Key Differences Addressed: Hindi does not always mark 'the'. English uses 'the' for unique things like the sun, the moon, and the sky in general statements.",
+					"words": [
+						{ "word": "a", "ok": false },
+						{ "word": "an", "ok": false },
+						{ "word": "the", "ok": true }
+					]
+				},
+				{
+					"title": "1",
+					"page": 6,
+					"sentence": "Please open _ door.",
+					"summary": "Teaching Focus: Use 'the' when both people know which thing you mean (specific).",
+					"explain": "Key Differences Addressed: Hindi can rely on context without an article. In English, when a specific door is understood (e.g., the room door), we use 'the'.",
+					"words": [
+						{ "word": "a", "ok": false },
+						{ "word": "an", "ok": false },
+						{ "word": "the", "ok": true }
+					]
+				},
+				{
+					"title": "1",
+					"page": 7,
+					"sentence": "He is _ honest man.",
+					"summary": "Teaching Focus: Use 'an' before a vowel sound; 'honest' starts with a vowel sound (silent 'h').",
+					"explain": "Key Differences Addressed: This targets two common issues: article omission and choosing by sound (not spelling). 'Honest' begins with a vowel sound, so we say 'an honest man'.",
+					"words": [
+						{ "word": "a", "ok": false },
+						{ "word": "an", "ok": true },
+						{ "word": "the", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 8,
+					"sentence": "I go to _ school every day.",
+					"summary": "Teaching Focus: Use no article for common places in their general purpose (go to school = study).",
+					"explain": "Key Differences Addressed: Learners may overuse 'the' (\"go to the school\") because they try to add an article everywhere. In English, we often use no article for school/hospital/work when speaking about the normal purpose.",
+					"words": [
+						{ "word": "the", "ok": false },
+						{ "word": "a", "ok": false },
+						{ "word": "an", "ok": false },
+						{ "word": "(no article)", "ok": true }
+					]
+				},
+				{
+					"title": "1",
+					"page": 9,
+					"sentence": "She has _ car. _ car is new.",
+					"summary": "Teaching Focus: Use 'a' first (new information) and 'the' next (specific after mention).",
+					"explain": "Key Differences Addressed: Hindi often expresses definiteness without articles. In English we introduce something with 'a' and then refer back with 'the' once it is known.",
+					"words": [
+						{ "word": "a / a", "ok": false },
+						{ "word": "the / the", "ok": false },
+						{ "word": "a / the", "ok": true },
+						{ "word": "the / a", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 10,
+					"sentence": "I saw _ elephant at the zoo.",
+					"summary": "Teaching Focus: Use 'an' before vowel sounds with singular countable nouns.",
+					"explain": "Key Differences Addressed: This reinforces that singular countable nouns need an article, and 'elephant' starts with a vowel sound, so 'an' is correct.",
+					"words": [
+						{ "word": "a", "ok": false },
+						{ "word": "an", "ok": true },
+						{ "word": "the", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}
