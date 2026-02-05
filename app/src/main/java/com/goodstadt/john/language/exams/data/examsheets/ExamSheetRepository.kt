@@ -241,10 +241,10 @@ class ExamSheetRepository @Inject constructor(
         } catch (e: Exception) {
             Timber.e(
                 e,
-                "ExxamSheetRepo.fetchFromNetworkAndCache(): ERROR - Failed to fetch or cache '$sheet_name'."
+                "ExamSheetRepo.fetchFromNetworkAndCache(): ERROR - Failed to fetch or cache '$sheet_name'."
             )
             TimberFault.f(
-                message = "ExxamSheetRepo ERROR - Failed to fetch or cache'${sheet_name}'.",
+                message = "ExamSheetRepo ERROR - Failed to fetch or cache'${sheet_name}'.",
                 localizedMessage = e.localizedMessage ?: "null localizedMessage",
                 secondaryText = "android",
                 area = "ExamSheetRepository.fetchFromNetworkAndCacheFormat0File()"
