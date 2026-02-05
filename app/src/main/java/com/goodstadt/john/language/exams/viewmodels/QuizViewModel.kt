@@ -44,6 +44,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import timber.log.Timber
+import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
 
@@ -87,32 +88,32 @@ enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
         quizzes = listOf(
             QuizDetail(
                 id = 1,
-                sheetName = "TestMyselfQuiz1Elementary-en",
+                baseName = "TestMyselfQuiz1Elementary",
                 title = "Quiz 1 - Simple Tenses"
             ),
             QuizDetail(
                 id = 2,
-                sheetName = "TestMyselfQuiz2Elementary-en",
+                baseName = "TestMyselfQuiz2Elementary",
                 title = "Quiz 2 - Word Pairs"
             ),
             QuizDetail(
                 id = 3,
-                sheetName = "TestMyselfQuiz3Elementary-en",
+                baseName = "TestMyselfQuiz3Elementary",
                 title = "Quiz 3 - Word Order"
             ),
             QuizDetail(
                 id = 4,
-                sheetName = "TestMyselfQuiz4Elementary-en",
+                baseName = "TestMyselfQuiz4Elementary",
                 title = "Quiz 4 - Spelling 1"
             ),
             QuizDetail(
                 id = 5,
-                sheetName = "TestMyselfQuiz5Elementary-en",
+                baseName = "TestMyselfQuiz5Elementary",
                 title = "Quiz 5 - Spelling 2"
             ),
             QuizDetail(
                 id = 7,
-                sheetName = "TestMyselfQuiz7Elementary-en",
+                baseName = "TestMyselfQuiz7Elementary",
                 title = "Quiz 6 - A vs An"
             )
         )
@@ -121,59 +122,59 @@ enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
         quizzes = listOf(
             QuizDetail(
                 id = 1,
-                sheetName = "TestMyselfQuiz1Inter-en",
+                baseName = "TestMyselfQuiz1Inter",
                 title = "Quiz 1 - Simple Tenses"
             ),
             QuizDetail(
                 id = 2,
-                sheetName = "TestMyselfQuiz2Inter-en",
+                baseName = "TestMyselfQuiz2Inter",
                 title = "Quiz 2 - Word Pairs"
             ),
-            QuizDetail(2, "TestMyselfQuiz2Inter-en", "Quiz 2 - Word Pairs"),
-            QuizDetail(3, "TestMyselfQuiz3Inter-en", "Quiz 3 - Word Order"),
-            QuizDetail(4, "TestMyselfQuiz4Inter-en", "Quiz 4 - Spelling 1"),
-            QuizDetail(5, "TestMyselfQuiz5Inter-en", "Quiz 5 - Spelling 2"),
-//					QuizDetail(id: 6, sheetName: "TestMyselfQuiz6Inter-en", title: "Quiz 6 - Superlatives"),
+            QuizDetail(2, "TestMyselfQuiz2Inter", "Quiz 2 - Word Pairs"),
+            QuizDetail(3, "TestMyselfQuiz3Inter", "Quiz 3 - Word Order"),
+            QuizDetail(4, "TestMyselfQuiz4Inter", "Quiz 4 - Spelling 1"),
+            QuizDetail(5, "TestMyselfQuiz5Inter", "Quiz 5 - Spelling 2"),
+//					QuizDetail(id: 6, sheetName: "TestMyselfQuiz6Inter", title: "Quiz 6 - Superlatives"),
         )
     ),
     UPPER(
         quizzes = listOf(
-            QuizDetail(id = 1, sheetName = "TestMyselfQuiz1Upper-en", title = "Quiz 1 - Tenses"),
+            QuizDetail(id = 1, baseName = "TestMyselfQuiz1Upper", title = "Quiz 1 - Tenses"),
             QuizDetail(
                 id = 2,
-                sheetName = "TestMyselfQuiz2Upper-en",
+                baseName = "TestMyselfQuiz2Upper",
                 title = "Quiz 2 - Word Pairs"
             ),
             QuizDetail(
                 id = 3,
-                sheetName = "TestMyselfQuiz3Upper-en",
+                baseName = "TestMyselfQuiz3Upper",
                 title = "Quiz 3 - Word Order"
             ),
             QuizDetail(
                 id = 4,
-                sheetName = "TestMyselfQuiz4Upper-en",
+                baseName = "TestMyselfQuiz4Upper",
                 title = "Quiz 4 - Spelling 1"
             ),
             QuizDetail(
                 id = 5,
-                sheetName = "TestMyselfQuiz5Upper-en",
+                baseName = "TestMyselfQuiz5Upper",
                 title = "Quiz 5 - Spelling 2"
             ),
-            QuizDetail(6, "TestMyselfQuiz6Upper-en", "Quiz 6 - Pronounce 'the'"),
+            QuizDetail(6, "TestMyselfQuiz6Upper", "Quiz 6 - Pronounce 'the'"),
         )
     ),
     ADVANCED(
         quizzes = listOf(
-            QuizDetail(id = 1, sheetName = "TestMyselfQuiz1Advanced-en", title = "Quiz 1 - Tenses"),
+            QuizDetail(id = 1, baseName = "TestMyselfQuiz1Advanced", title = "Quiz 1 - Tenses"),
             QuizDetail(
                 id = 2,
-                sheetName = "TestMyselfQuiz2Advanced-en",
+                baseName = "TestMyselfQuiz2Advanced",
                 title = "Quiz 2 - Word Pairs"
             ),
-            QuizDetail(3, "TestMyselfQuiz3Advanced-en", "Quiz 3 - Word Order"),
-            QuizDetail(4, "TestMyselfQuiz4Advanced-en", "Quiz 4 - Spelling 1"),
-            QuizDetail(5, "TestMyselfQuiz5Advanced-en", "Quiz 5 - Spelling 2"),
-            QuizDetail(6, "TestMyselfQuiz6Advanced-en", "Quiz 6 - Adv. Words"),
+            QuizDetail(3, "TestMyselfQuiz3Advanced", "Quiz 3 - Word Order"),
+            QuizDetail(4, "TestMyselfQuiz4Advanced", "Quiz 4 - Spelling 1"),
+            QuizDetail(5, "TestMyselfQuiz5Advanced", "Quiz 5 - Spelling 2"),
+            QuizDetail(6, "TestMyselfQuiz6Advanced", "Quiz 6 - Adv. Words"),
         )
     );
 
@@ -290,12 +291,12 @@ class QuizViewModel @Inject constructor(
      * A simple data class to hold the metadata for a single quiz.
      *
      * @param id A unique identifier for the quiz within its level (e.g., 1, 2, 3...).
-     * @param sheetName The name of the JSON asset file for this quiz.
+     * @param baseName The name of the JSON asset file for this quiz.
      * @param title The human-readable display name for this quiz (e.g., "Quiz 1 - Simple Tenses").
      */
     data class QuizDetail(
         val id: Int,
-        val sheetName: String,
+        val baseName: String, //e.g. "TestMyselfQuiz1Elementary-en"
         val title: String
     )
 
@@ -408,11 +409,16 @@ class QuizViewModel @Inject constructor(
     fun loadQuestions() {
         viewModelScope.launch {
 
-            val jsonName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).sheetName + ".json"
+            val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
 
-            //  val jsonName = "${fn}.json"
-            _questions.value = generateQuestionsFromJson(appContext, jsonName)
+            val finalFilename = getLocalizedFileName(appContext, baseName)
+
+            Timber.v(finalFilename)
+
+
+            _questions.value = generateQuestionsFromJson(appContext, finalFilename)
             Timber.v("${_questions.value.count()}")
+
 
             resetQuiz()
 
@@ -661,6 +667,35 @@ class QuizViewModel @Inject constructor(
 
             // 3. Append the part of the sentence AFTER the highlighted word
             append(sentence.substring(endIndex))
+        }
+    }
+    // In QuizViewModel.kt
+
+    private fun getLocalizedFileName(context: Context, baseName: String): String {
+        // 1. Get current language code (e.g., "hi", "es", "zh")
+        // Use your UserPreferences or system default
+        // val currentCode = userPreferencesRepository.selectedLanguageCodeFlow.value // if available
+        val currentCode = java.util.Locale.getDefault().language
+
+        // 2. Construct the localized filename
+        val localizedName = "$baseName-$currentCode.json"
+        val defaultName = "$baseName-en.json"
+
+        // 3. Check if the localized file exists in Assets
+        // We list files in the "Quizzes" folder to check existence efficiently
+        val filesInAssets = try {
+            context.assets.list("Quizzes")?.toList() ?: emptyList()
+        } catch (e: IOException) {
+            return defaultName
+        }
+
+        // 4. Return localized if found, otherwise default
+        return if (filesInAssets.contains(localizedName)) {
+            Timber.i("✅ Found localized quiz: $localizedName")
+            localizedName
+        } else {
+            Timber.i("⚠️ Localized quiz not found, falling back to: $defaultName")
+            defaultName
         }
     }
 }
