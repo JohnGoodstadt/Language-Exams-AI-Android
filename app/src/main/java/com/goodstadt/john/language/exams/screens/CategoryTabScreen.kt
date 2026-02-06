@@ -149,6 +149,9 @@ fun CategoryTabScreen(
     LaunchedEffect(Unit) {
         viewModel.showSpeakerSheet.collect {
 
+
+
+            viewModel.refreshGamificationStatsAndWait()
 //            val (heard, _) = viewModel.calculateGrandTotals()
             //val heard = viewModel.totalHeardFlow.value
 
@@ -156,7 +159,7 @@ fun CategoryTabScreen(
 //            val h = viewModel.checkTotalsNow()
             val heard = viewModel.calculateGrandTotalsNow()
 
-            Timber.i("Freshly calculated Exam Total is: $heard")
+            Timber.i("LaunchedEffect() freshly calculated Exam Total is: $heard")
 
 
             Timber.i("heard total is $heard")

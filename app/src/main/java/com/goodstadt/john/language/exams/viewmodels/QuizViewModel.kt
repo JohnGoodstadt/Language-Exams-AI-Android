@@ -26,6 +26,8 @@ import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
@@ -413,11 +415,11 @@ class QuizViewModel @Inject constructor(
 
             val finalFilename = getLocalizedFileName(appContext, baseName)
 
-            Timber.v(finalFilename)
+         //   Timber.v(finalFilename)
 
 
             _questions.value = generateQuestionsFromJson(appContext, finalFilename)
-            Timber.v("${_questions.value.count()}")
+         //   Timber.v("${_questions.value.count()}")
 
 
             resetQuiz()
@@ -670,7 +672,6 @@ class QuizViewModel @Inject constructor(
         }
     }
     // In QuizViewModel.kt
-
     private fun getLocalizedFileName(context: Context, baseName: String): String {
         // 1. Get current language code (e.g., "hi", "es", "zh")
         // Use your UserPreferences or system default
@@ -698,4 +699,45 @@ class QuizViewModel @Inject constructor(
             defaultName
         }
     }
+    private fun getLocalizedName(context: Context, baseName: String): String {
+        // 1. Get current language code (e.g., "hi", "es", "zh")
+        // Use your UserPreferences or system default
+        // val currentCode = userPreferencesRepository.selectedLanguageCodeFlow.value // if available
+        val currentCode = java.util.Locale.getDefault().language
+
+        // 2. Construct the localized filename
+        val localizedName = "$baseName-$currentCode"
+        val defaultName = "$baseName-en"
+
+        // 3. Check if the localized file exists in Assets
+        // We list files in the "Quizzes" folder to check existence efficiently
+        val filesInAssets = try {
+            context.assets.list("Quizzes")?.toList() ?: emptyList()
+        } catch (e: IOException) {
+            return defaultName
+        }
+
+        // 4. Return localized if found, otherwise default
+        return if (filesInAssets.contains(localizedName)) {
+            Timber.i("✅ Found localized quiz: $localizedName")
+            localizedName
+        } else {
+            Timber.i("⚠️ Localized quiz not found, falling back to: $defaultName")
+            defaultName
+        }
+    }
+    fun incQuizStat(success:Boolean = true) {
+
+        val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName
+        val finalName = getLocalizedName(appContext, baseName) //no json
+
+        Timber.v(finalName)
+
+        val statName = if (success ) "${statQuizOkCount}_$finalName" else "${statQuizNotOKCount}_$finalName"
+
+        ttsStatsRepository.inc(  TTSStatsRepository.fsDOC.USER,   statName  )
+        ttsStatsRepository.inc(  TTSStatsRepository.fsDOC.GlobalStats,   statName  )
+    }
+
+
 }

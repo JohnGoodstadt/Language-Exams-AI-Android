@@ -266,9 +266,74 @@ class AudioCacheManager @Inject constructor(
             Timber.tag("AudioCacheManager").d("📊 Stats refreshed from History in ${System.currentTimeMillis() - start}ms")
         }
     }
+    private suspend fun calculateStatsInternal() {
+        val file = currentVocabFile ?: return
+        val level = getCurrentAppLevel()
 
+        scope.launch {
+            val start = System.currentTimeMillis()
+
+            // Local Accumulators
+            val newTotalByTab = mutableMapOf<TabNumberEnum, Int>()
+            val newHeardByTab = mutableMapOf<TabNumberEnum, Int>()
+            val newHeardByCat = mutableMapOf<String, Int>()
+            val newTotalByCat = mutableMapOf<String, Int>()
+
+            // Get Snapshot for speed
+            val historySnapshot = historyManager.getSnapshot(level)
+
+            for (category in file.categories) {
+                val tab = TabNumberEnum.fromInt(category.tabNumber) ?: continue
+                val title = category.title.trim()
+                val words = category.words
+
+                // Totals
+                newTotalByTab[tab] = (newTotalByTab[tab] ?: 0) + words.size
+                newTotalByCat[title] = (newTotalByCat[title] ?: 0) + words.size
+
+                // Heard
+                var heardCount = 0
+                for (wordEntry in words) {
+                    val sentence = wordEntry.sentences.firstOrNull()?.sentence ?: continue
+                    val contentID = FirebaseAudioService.generateContentID(sentence)
+
+                    if ((historySnapshot[contentID] ?: 0) > 0) {
+                        heardCount++
+                    }
+                }
+
+                newHeardByTab[tab] = (newHeardByTab[tab] ?: 0) + heardCount
+                newHeardByCat[title] = (newHeardByCat[title] ?: 0) + heardCount
+            }
+
+            // Publish
+            mutex.withLock {
+                categoryTotalCounts = newTotalByCat
+                categoryHeardCounts = newHeardByCat
+
+                _totalExamWordCount.value = newTotalByTab.values.sum()
+                _totalExamWordHeardCount.value = newHeardByTab
+                _totalExamWordsHeardOverall.value = newHeardByTab.values.sum()
+            }
+
+            Timber.tag("AudioCacheManager").d("📊 Stats refreshed from History in ${System.currentTimeMillis() - start}ms")
+        }
+    }
     // MARK: - Reference Stats API
-
+    /**
+     * Forces a recalculation of all Main Quest stats (Tabs 1, 2, 3) based on the
+     * currently loaded VocabFile and the latest History.
+     * Call this before showing the Gamification Sheet to ensure numbers are 100% fresh.
+     */
+    fun forceStatsRecalculation() {
+        scope.launch {
+            calculateStatsInternal()
+        }
+    }
+    suspend fun awaitFreshStats() {
+        // This will block the calling coroutine until calculation is done
+        calculateStatsInternal()
+    }
     fun updateReferenceStats(key: String, heard: Int, total: Int) {
         scope.launch {
             mutex.withLock {

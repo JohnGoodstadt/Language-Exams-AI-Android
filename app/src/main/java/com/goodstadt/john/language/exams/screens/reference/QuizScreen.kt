@@ -54,6 +54,7 @@ import com.goodstadt.john.language.exams.ui.theme.selectedBackground
 import com.goodstadt.john.language.exams.viewmodels.QuizLevelsNew
 import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+import timber.log.Timber
 import java.text.AttributedString
 
 
@@ -307,6 +308,7 @@ fun QuizScreen(
                             selectedOption = option
                             isCurrentAnswerCorrect = isOptionCorrect
                             viewModel.updateAnswer(isOptionCorrect)
+
                             if (isOptionCorrect) {
 
                                 // val wordToHilight: String
@@ -345,6 +347,12 @@ fun QuizScreen(
                                 }
 
                                 viewModel.playTrack(sentenceToSpeak)
+
+                                viewModel.incQuizStat()
+
+                            }
+                            else{ //incorrect
+                                viewModel.incQuizStat(false)
                             }
 
 

@@ -188,6 +188,11 @@ class TTSStatsRepository @Inject constructor(
         const val statSheetQuizCount = "statSheetQuizCount"
         const val statSideQuestCount = "statSideQuestCount"
 
+        //Quiz Screen
+        const val statQuizOkCount = "statQuizOkCount"
+        const val statQuizNotOKCount = "statQuizNotOKCount"
+
+
         //IAP
         const val statIAPSheetDisplayedCount = "statIAPSheetDisplayedCount"
         const val statIAPHourlyHitCount = "statIAPHourlyHitCount"

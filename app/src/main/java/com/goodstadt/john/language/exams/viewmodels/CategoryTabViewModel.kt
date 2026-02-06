@@ -871,4 +871,11 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
 
+    fun refreshGamificationStats() {
+        audioCacheManager.forceStatsRecalculation()
+    }
+    suspend fun refreshGamificationStatsAndWait() {
+        audioCacheManager.awaitFreshStats()
+    }
+
 }
