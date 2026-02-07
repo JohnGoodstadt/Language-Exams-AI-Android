@@ -90,32 +90,32 @@ enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
         quizzes = listOf(
             QuizDetail(
                 id = 1,
-                baseName = "TestMyselfQuiz1Elementary",
+                baseName = "Quiz1Elementary",
                 title = "Quiz 1 - Simple Tenses"
             ),
             QuizDetail(
                 id = 2,
-                baseName = "TestMyselfQuiz2Elementary",
+                baseName = "Quiz2Elementary",
                 title = "Quiz 2 - Word Pairs"
             ),
             QuizDetail(
                 id = 3,
-                baseName = "TestMyselfQuiz3Elementary",
+                baseName = "Quiz3Elementary",
                 title = "Quiz 3 - Word Order"
             ),
             QuizDetail(
                 id = 4,
-                baseName = "TestMyselfQuiz4Elementary",
+                baseName = "Quiz4Elementary",
                 title = "Quiz 4 - Spelling 1"
             ),
             QuizDetail(
                 id = 5,
-                baseName = "TestMyselfQuiz5Elementary",
+                baseName = "Quiz5Elementary",
                 title = "Quiz 5 - Spelling 2"
             ),
             QuizDetail(
                 id = 7,
-                baseName = "TestMyselfQuiz7Elementary",
+                baseName = "Quiz7Elementary",
                 title = "Quiz 6 - A vs An"
             )
         )
@@ -124,59 +124,59 @@ enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
         quizzes = listOf(
             QuizDetail(
                 id = 1,
-                baseName = "TestMyselfQuiz1Inter",
+                baseName = "Quiz1Inter",
                 title = "Quiz 1 - Simple Tenses"
             ),
             QuizDetail(
                 id = 2,
-                baseName = "TestMyselfQuiz2Inter",
+                baseName = "Quiz2Inter",
                 title = "Quiz 2 - Word Pairs"
             ),
-            QuizDetail(2, "TestMyselfQuiz2Inter", "Quiz 2 - Word Pairs"),
-            QuizDetail(3, "TestMyselfQuiz3Inter", "Quiz 3 - Word Order"),
-            QuizDetail(4, "TestMyselfQuiz4Inter", "Quiz 4 - Spelling 1"),
-            QuizDetail(5, "TestMyselfQuiz5Inter", "Quiz 5 - Spelling 2"),
-//					QuizDetail(id: 6, sheetName: "TestMyselfQuiz6Inter", title: "Quiz 6 - Superlatives"),
+            QuizDetail(2, "Quiz2Inter", "Quiz 2 - Word Pairs"),
+            QuizDetail(3, "Quiz3Inter", "Quiz 3 - Word Order"),
+            QuizDetail(4, "Quiz4Inter", "Quiz 4 - Spelling 1"),
+            QuizDetail(5, "Quiz5Inter", "Quiz 5 - Spelling 2"),
+//					QuizDetail(id: 6, sheetName: "Quiz6Inter", title: "Quiz 6 - Superlatives"),
         )
     ),
     UPPER(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "TestMyselfQuiz1Upper", title = "Quiz 1 - Tenses"),
+            QuizDetail(id = 1, baseName = "Quiz1Upper", title = "Quiz 1 - Tenses"),
             QuizDetail(
                 id = 2,
-                baseName = "TestMyselfQuiz2Upper",
+                baseName = "Quiz2Upper",
                 title = "Quiz 2 - Word Pairs"
             ),
             QuizDetail(
                 id = 3,
-                baseName = "TestMyselfQuiz3Upper",
+                baseName = "Quiz3Upper",
                 title = "Quiz 3 - Word Order"
             ),
             QuizDetail(
                 id = 4,
-                baseName = "TestMyselfQuiz4Upper",
+                baseName = "Quiz4Upper",
                 title = "Quiz 4 - Spelling 1"
             ),
             QuizDetail(
                 id = 5,
-                baseName = "TestMyselfQuiz5Upper",
+                baseName = "Quiz5Upper",
                 title = "Quiz 5 - Spelling 2"
             ),
-            QuizDetail(6, "TestMyselfQuiz6Upper", "Quiz 6 - Pronounce 'the'"),
+            QuizDetail(6, "Quiz6Upper", "Quiz 6 - Pronounce 'the'"),
         )
     ),
     ADVANCED(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "TestMyselfQuiz1Advanced", title = "Quiz 1 - Tenses"),
+            QuizDetail(id = 1, baseName = "Quiz1Advanced", title = "Quiz 1 - Tenses"),
             QuizDetail(
                 id = 2,
-                baseName = "TestMyselfQuiz2Advanced",
+                baseName = "Quiz2Advanced",
                 title = "Quiz 2 - Word Pairs"
             ),
-            QuizDetail(3, "TestMyselfQuiz3Advanced", "Quiz 3 - Word Order"),
-            QuizDetail(4, "TestMyselfQuiz4Advanced", "Quiz 4 - Spelling 1"),
-            QuizDetail(5, "TestMyselfQuiz5Advanced", "Quiz 5 - Spelling 2"),
-            QuizDetail(6, "TestMyselfQuiz6Advanced", "Quiz 6 - Adv. Words"),
+            QuizDetail(3, "Quiz3Advanced", "Quiz 3 - Word Order"),
+            QuizDetail(4, "Quiz4Advanced", "Quiz 4 - Spelling 1"),
+            QuizDetail(5, "Quiz5Advanced", "Quiz 5 - Spelling 2"),
+            QuizDetail(6, "Quiz6Advanced", "Quiz 6 - Adv. Words"),
         )
     );
 
@@ -298,7 +298,7 @@ class QuizViewModel @Inject constructor(
      */
     data class QuizDetail(
         val id: Int,
-        val baseName: String, //e.g. "TestMyselfQuiz1Elementary-en"
+        val baseName: String, //e.g. "Quiz1Elementary-en"
         val title: String
     )
 
@@ -419,7 +419,7 @@ class QuizViewModel @Inject constructor(
 
 
             _questions.value = generateQuestionsFromJson(appContext, finalFilename)
-         //   Timber.v("${_questions.value.count()}")
+            Timber.v("${_questions.value.count()}")
 
 
             resetQuiz()
