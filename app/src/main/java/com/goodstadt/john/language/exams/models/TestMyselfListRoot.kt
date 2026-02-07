@@ -10,7 +10,7 @@ import kotlinx.serialization.Serializable
 data class TestMyselfListRoot(
     @SerialName("fileformat") val fileFormat: Int, //case sensitive
     @SerialName("sheetname") var sheetName: String,
-    val title: String = "", //read title for localised versions
+    val title: String? = null,//"", //read title for localised versions
     val updatedDate: Long,
     val location: Int,
     val data: List<TestMyselfList>

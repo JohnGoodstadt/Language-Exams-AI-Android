@@ -530,7 +530,7 @@ class ContentRepository @Inject constructor(
                     TimberFault.f(
                         message = "TTS API - Failure",
                         localizedMessage = exception.localizedMessage ?: "null localizedMessage",
-                        secondaryText = text.take(12),
+                        secondaryText = text.take(24),
                         area = "ContentRepository.playTextToSpeech()"
                     )
                     ttsStatsRepository.incGlobalFaultCount(faultTTSAPICount)

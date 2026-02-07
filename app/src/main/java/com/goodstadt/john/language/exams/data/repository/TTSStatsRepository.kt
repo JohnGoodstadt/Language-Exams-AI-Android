@@ -480,6 +480,7 @@ class TTSStatsRepository @Inject constructor(
     }
     private fun incUserPlayedSentenceCount() {
         inc(fsDOC.USER, MP3PlayedCount)
+        inc(fsDOC.GlobalStats, MP3PlayedCount)
     }
     fun incUserStatCount(fieldNamw:String,value:Int = 1) {
         inc(fsDOC.USER, fieldNamw,value)

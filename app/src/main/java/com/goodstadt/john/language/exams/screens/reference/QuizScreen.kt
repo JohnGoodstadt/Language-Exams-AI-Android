@@ -21,7 +21,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInWindow
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
@@ -40,22 +39,17 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
-import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.ui.theme.selectedBackground
 import com.goodstadt.john.language.exams.viewmodels.QuizLevelsNew
 import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
-import timber.log.Timber
-import java.text.AttributedString
 
 
 @Composable
@@ -92,7 +86,9 @@ fun QuizScreen(
     var displayedSentence by remember { mutableStateOf(AnnotatedString("")) }
 
     //val selectedLevel by viewModel.selectedLevel
-    val availableQuizzes by viewModel.availableQuizzes
+    val availableQuizzesObsolete by viewModel.availableQuizzesObsolete
+    val availableQuizzes by viewModel.availableQuizzes.collectAsState()
+
     val selectedQuiz by viewModel.selectedQuiz
     val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
         "Hear, and then choose the correct answer"
@@ -150,12 +146,7 @@ fun QuizScreen(
         // Quiz Number Picker
         DropdownMenuBox(
             options = availableQuizzes.map { it.title },
-//                selectedOption = options.getOrNull(selectedQuizNumber - 1) ?: options[0],∂
             selectedOption = selectedQuiz?.title ?: "Select a Quiz",
-//                onOptionSelected = { newQuiz ->
-//                    viewModel.selectedQuizNumber.value = options.indexOf(newQuiz) + 1 //1 based index
-//                    viewModel.loadQuestions()
-//                }
             onOptionSelected = { newQuizTitle ->
                 // Find the QuizDetail object that matches the selected title
                 val quizDetail = availableQuizzes.first { it.title == newQuizTitle }

@@ -33,10 +33,12 @@ import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.storage.UiEvent
+import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.viewmodels.QuizViewModel.QuizDetail
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -44,6 +46,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.io.IOException
@@ -114,8 +117,8 @@ enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
                 title = "Quiz 5 - Spelling 2"
             ),
             QuizDetail(
-                id = 7,
-                baseName = "Quiz7Elementary",
+                id = 6,
+                baseName = "Quiz6Elementary",
                 title = "Quiz 6 - A vs An"
             )
         )
@@ -271,10 +274,10 @@ class QuizViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        QuizStatistics(skillLevel = QuizLevelsNew.ELEMENTARY.description, quizNumber = 1, title = "Quiz 1")
+        QuizStatistics(skillLevel = QuizLevelsNew.UPPER.description, quizNumber = 1, title = "Quiz 1")
     )
-    val selectedLevel = mutableStateOf(QuizLevelsNew.ELEMENTARY)
-    val availableQuizzes = derivedStateOf { selectedLevel.value.quizzes }
+    val selectedLevel = mutableStateOf(QuizLevelsNew.UPPER)
+
     val selectedQuiz = mutableStateOf<QuizDetail?>(null)
 
     val selectedQuizNumber = mutableStateOf(1)
@@ -287,6 +290,17 @@ class QuizViewModel @Inject constructor(
     val quizMultipleChoice = 11
     val quizDefinitions = 12
     val currentFileFormat = mutableStateOf(quizFillInTheBlanks) //either 7 (fill in the blank) or 10 (Multiple choice)
+
+    // ❌ OLD (Static):
+    val availableQuizzesObsolete = derivedStateOf { selectedLevel.value.quizzes }
+
+    // ✅ NEW (Dynamic):
+    // This starts with the default English titles, but we can overwrite them later
+    private val _availableQuizzes = MutableStateFlow<List<QuizDetail>>(QuizLevelsNew.UPPER.quizzes)
+    val availableQuizzes = _availableQuizzes.asStateFlow()
+
+    // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized QuizDetails
+    private val quizTitleCache = mutableMapOf<QuizLevelsNew, List<QuizDetail>>()
 
 
     /**
@@ -304,6 +318,9 @@ class QuizViewModel @Inject constructor(
 
 
     init {
+        // 1. Start background loading
+        preloadLocalizedTitles()
+
         selectedQuiz.value = selectedLevel.value.quizzes.firstOrNull()
         loadQuestions()
         viewModelScope.launch {
@@ -411,14 +428,35 @@ class QuizViewModel @Inject constructor(
     fun loadQuestions() {
         viewModelScope.launch {
 
+            val quizDetail = selectedQuiz.value ?: selectedLevel.value.quizzes.first()
             val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
 
             val finalFilename = getLocalizedFileName(appContext, baseName)
 
-         //   Timber.v(finalFilename)
+            val testData = readTestMyselfDataFromAssets(appContext, finalFilename)
+
+            if (testData == null) {
+                Timber.wtf("Failed to parse JSON file: $finalFilename")
+                return@launch
+            }
 
 
-            _questions.value = generateQuestionsFromJson(appContext, finalFilename)
+
+           // val loadedTitle = testData.data.firstOrNull()?.title ?: quizDetail.title
+
+            if (testData.title?.isNotEmpty() == true){
+                Timber.i("Sheet title is ${testData.title} ")
+//                quizStatistics.value = quizStatistics.value.copy(
+//                    title = testData.title
+//                )
+            }
+            quizStatistics.value = quizStatistics.value.copy(
+                title = quizDetail.title
+            )
+
+            _questions.value = generateQuestionsFromData(testData)
+
+
             Timber.v("${_questions.value.count()}")
 
 
@@ -428,19 +466,29 @@ class QuizViewModel @Inject constructor(
     }
 
     // A new function for the UI to call when a different level is picked.
-    fun onLevelSelected(level: QuizLevelsNew) {
+    fun onLevelSelectedObsolete(level: QuizLevelsNew) {
         selectedLevel.value = level
         // When the level changes, reset the selected quiz to the first one of the new level.
         selectedQuiz.value = level.quizzes.firstOrNull()
         loadQuestions()
     }
+    fun onLevelSelected(level: QuizLevelsNew) {
+        selectedLevel.value = level
 
+        // 1. Update the list of quizzes (Async)
+        refreshQuizTitlesForLevel(level)
+
+        // 2. Reset selection to first (we use the Enum list temporarily until async finishes)
+//        selectedQuiz.value = level.quizzes.firstOrNull()
+        selectedQuiz.value = _availableQuizzes.value.firstOrNull()
+
+        loadQuestions()
+    }
     // A new function for the UI to call when a different quiz is picked from the dropdown.
     fun onQuizSelected(quizDetail: QuizDetail) {
         selectedQuiz.value = quizDetail
         loadQuestions()
     }
-
     private fun generateQuestionsFromJson(context: Context, fileName: String): List<QuizQuestion> {
         val testData = readTestMyselfDataFromAssets(context, fileName)
 
@@ -448,6 +496,46 @@ class QuizViewModel @Inject constructor(
             Timber.wtf("Failed to parse JSON file: $fileName")
             return emptyList()
         }
+
+        if (testData.title?.isNotEmpty() == true){
+            Timber.i("Sheet title is ${testData.title}")
+        }
+
+        if (testData.fileFormat == quizQandA) {
+            currentFileFormat.value = quizQandA
+        }else if (testData.fileFormat == quizDefinitions) {
+            currentFileFormat.value = quizDefinitions
+        }else if (testData.fileFormat == quizMultipleChoice) {
+            currentFileFormat.value = quizMultipleChoice
+        } else {
+            currentFileFormat.value = quizFillInTheBlanks
+        }
+
+        val a  = when (testData.fileFormat) {
+            quizQandA -> quizQandA
+            quizDefinitions -> quizDefinitions
+            quizMultipleChoice -> quizMultipleChoice
+            else -> quizFillInTheBlanks
+
+        }
+
+        //because spellings should follow each other
+        if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
+
+
+        return testData.data.flatMap { section ->
+            section.sections.map { quizSection ->
+                val shuffledWords = quizSection.words.shuffled()
+                val words = shuffledWords.map { it.word }
+                val correctOption = quizSection.words.firstOrNull { it.ok }?.word ?: ""
+                val summary = quizSection.summary
+                val explain = quizSection.explain
+                val title = quizSection.title
+                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title)
+            }
+        }
+    }
+    private fun generateQuestionsFromData(testData: TestMyselfListRoot): List<QuizQuestion> {
 
         if (testData.fileFormat == quizQandA) {
             currentFileFormat.value = quizQandA
@@ -601,6 +689,110 @@ class QuizViewModel @Inject constructor(
         }
     }
 
+    // Call this whenever the Level changes (e.g. from Elementary to Inter)
+    private fun refreshQuizTitlesForLevel(level: QuizLevelsNew) {
+        viewModelScope.launch {
+
+            // 1. Get the list of default quizzes for this level
+            val defaultQuizzes = level.quizzes
+
+            // 2. Map them to potentially new titles by peeking at the JSON files
+            val updatedQuizzes = defaultQuizzes.map { quizDetail ->
+
+                // A. Resolve Filename (e.g. "...-hi.json")
+                val filename = getLocalizedFileName(appContext, quizDetail.baseName)
+
+                // B. Peek at the JSON to get the title
+                // Note: This needs to be fast. If reading the whole file is too slow,
+                // you might want to cache this or use a lighter "Metadata" read.
+                val title = peekTitleFromJson(filename) ?: quizDetail.title
+
+                // C. Return updated object
+                quizDetail.copy(title = title)
+            }
+
+            // 3. Publish the new list to the UI
+            _availableQuizzes.value = updatedQuizzes
+
+            // 4. Also ensure the currently selected quiz object is updated if needed
+            val currentId = selectedQuiz.value?.id
+            if (currentId != null) {
+                selectedQuiz.value = updatedQuizzes.find { it.id == currentId }
+            }
+        }
+    }
+
+    // Helper to read just the title
+    private fun peekTitleFromJson(filename: String): String? {
+        return try {
+            // Reusing your existing reader logic, but maybe we can optimize later
+            val data = readTestMyselfDataFromAssets(appContext, filename)
+            // Get the title from the root object if you added it there, or the first section
+            data?.title // Assuming you added 'val title: String' to TestMyselfListRoot
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    private fun preloadLocalizedTitles() {
+        viewModelScope.launch(Dispatchers.IO) {
+
+            // Loop through all Enum Levels (Elementary, Inter, etc.)
+            QuizLevelsNew.entries.forEach { level ->
+
+                // Map the default quizzes to their localized versions
+                val localizedList = level.quizzes.map { quizDetail ->
+
+                    // A. Resolve Filename (e.g. "...-hi.json")
+                    val finalFileName = getLocalizedFileName(appContext, quizDetail.baseName)
+
+                    // B. Peek at the JSON to get the title
+                    // Note: We catch errors here so one bad file doesn't break the whole loop
+                    val newTitle = try {
+                        val data = readTestMyselfDataFromAssets(appContext, finalFileName)
+                        // If file has a title, use it. Else fall back to Enum default.
+                        data?.title ?: quizDetail.title
+                    } catch (e: Exception) {
+                        quizDetail.title
+                    }
+
+                    // Return the updated QuizDetail object
+                    quizDetail.copy(title = newTitle)
+                }
+
+                // Save to Cache
+                quizTitleCache[level] = localizedList
+            }
+
+            // ✅ UPDATE UI: Once loading is done, refresh the *currently* displayed list
+            // so the user sees the change if they are already looking at the screen.
+            withContext(Dispatchers.Main) {
+                updateAvailableQuizzesFor(selectedLevel.value)
+
+                // 2. FIX: Refresh the currently selected quiz text
+                // We take the ID of the current selection (e.g. ID: 1, Title: "Simple Tenses")
+                // And find its "Twin" in the new localized list (e.g. ID: 1, Title: "Tenses (Hindi)")
+                val current = selectedQuiz.value
+
+                if (current != null) {
+                    val updatedVersion = _availableQuizzes.value.find { it.id == current.id }
+
+                    if (updatedVersion != null) {
+                        // This triggers the Dropdown to redraw with the new title
+                        selectedQuiz.value = updatedVersion
+
+                        // Optional: Update stats title to match if needed
+                        // quizStatistics.value = quizStatistics.value.copy(title = updatedVersion.title)
+                    }
+                }
+
+            }
+        }
+    }
+    private fun updateAvailableQuizzesFor(level: QuizLevelsNew) {
+        // If cache is ready, use it. If not (still loading), use default English list.
+        _availableQuizzes.value = quizTitleCache[level] ?: level.quizzes
+    }
     fun TestMyselfListRoot.shuffleLists() {
         data.forEach { testMyselfList ->
             testMyselfList.sections = testMyselfList.sections.shuffled() // Shuffle sections
@@ -737,6 +929,16 @@ class QuizViewModel @Inject constructor(
 
         ttsStatsRepository.inc(  TTSStatsRepository.fsDOC.USER,   statName  )
         ttsStatsRepository.inc(  TTSStatsRepository.fsDOC.GlobalStats,   statName  )
+
+
+        viewModelScope.launch {
+            if (calcIsTodayFreePassDay(userPreferencesRepository)){
+                //Let's see usage for Quiz on Day 1 - immediately
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+            }
+        }
+
     }
 
 

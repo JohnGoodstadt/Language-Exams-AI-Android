@@ -27,6 +27,7 @@ import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.goodstadt.john.language.exams.utils.PlaybackEvent
 import com.goodstadt.john.language.exams.utils.PlaybackEventBus
 import com.goodstadt.john.language.exams.utils.RateLimitGuard
+import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.BuildConfig
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -375,6 +376,13 @@ class CategoryTabViewModel @Inject constructor(
                         val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
                         ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
                     }
+
+                    if (calcIsTodayFreePassDay(userPreferencesRepository)){
+                        //Let's see usage for hearing on Day 1 - immediately
+                        ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
+                        ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+                    }
+
                 }
 
                 is AudioPlaybackStatus.RateLimited -> {
