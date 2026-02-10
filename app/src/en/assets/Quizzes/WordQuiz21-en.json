@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz21-en",
+	"title": "Business, Buying & Services",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Commerce and services",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "bargain", "summary": "", "explain": "", "words": [
+					{ "word": "I found a bargain at the market.", "ok": true },
+					{ "word": "I bargained the price cheap.", "ok": false },
+					{ "word": "Bargain is a receipt.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "bill", "summary": "", "explain": "", "words": [
+					{ "word": "Could we have the bill, please?", "ok": true },
+					{ "word": "Could we have bill please?", "ok": false },
+					{ "word": "Bill is a menu.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "checkout", "summary": "", "explain": "", "words": [
+					{ "word": "Please pay at the checkout.", "ok": true },
+					{ "word": "Please pay in checkout.", "ok": false },
+					{ "word": "Checkout is a receipt.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "customer", "summary": "", "explain": "", "words": [
+					{ "word": "The customer asked for help.", "ok": true },
+					{ "word": "The customer is the seller.", "ok": false },
+					{ "word": "Customer buys nothing.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "deal", "summary": "", "explain": "", "words": [
+					{ "word": "They agreed on a fair deal.", "ok": true },
+					{ "word": "They dealed on a fair price.", "ok": false },
+					{ "word": "Deal is a job title.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "exchange", "summary": "", "explain": "", "words": [
+					{ "word": "You can exchange the item within 30 days.", "ok": true },
+					{ "word": "You can exchange to the item.", "ok": false },
+					{ "word": "Exchange is refund only.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "sale", "summary": "", "explain": "", "words": [
+					{ "word": "The store is having a sale this week.", "ok": true },
+					{ "word": "The store sale this week.", "ok": false },
+					{ "word": "Sale is delivery.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "shipping", "summary": "", "explain": "", "words": [
+					{ "word": "Shipping usually takes three days.", "ok": true },
+					{ "word": "Shipping takes three days for deliver.", "ok": false },
+					{ "word": "Shipping is payment.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "shopper", "summary": "", "explain": "", "words": [
+					{ "word": "Shoppers crowded the mall.", "ok": true },
+					{ "word": "Shopper is the cashier.", "ok": false },
+					{ "word": "Shopper sells goods.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "refund", "summary": "", "explain": "", "words": [
+					{ "word": "She asked for a refund.", "ok": true },
+					{ "word": "She refunded the shop.", "ok": false },
+					{ "word": "Refund is payment.", "ok": false }
+				]}
+			]
+		}
+	]
+}

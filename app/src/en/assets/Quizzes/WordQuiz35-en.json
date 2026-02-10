@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz35-en",
+	"title": "Travel Logistics & Accommodation (Set 1)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Travel planning and accommodation",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "accommodation", "summary": "", "explain": "", "words": [
+					{ "word": "We booked accommodation near the city centre.", "ok": true },
+					{ "word": "We accommodated near the city centre.", "ok": false },
+					{ "word": "Accommodation is the same as a passport.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "booking", "summary": "", "explain": "", "words": [
+					{ "word": "I confirmed my booking by email.", "ok": true },
+					{ "word": "I booked my booking yesterday.", "ok": false },
+					{ "word": "Booking is a suitcase.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "check-in", "summary": "", "explain": "", "words": [
+					{ "word": "Check-in opens two hours before departure.", "ok": true },
+					{ "word": "I check-in my passport at home.", "ok": false },
+					{ "word": "Check-in means landing.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "cruise", "summary": "", "explain": "", "words": [
+					{ "word": "They went on a cruise around the Mediterranean.", "ok": true },
+					{ "word": "They cruised the hotel for a week.", "ok": false },
+					{ "word": "A cruise is a type of questionnaire.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "hostel", "summary": "", "explain": "", "words": [
+					{ "word": "The hostel was cheap but clean.", "ok": true },
+					{ "word": "The hostel is a flight gate.", "ok": false },
+					{ "word": "We hosted in a hostel for a week.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "hotel", "summary": "", "explain": "", "words": [
+					{ "word": "We stayed in a hotel near the station.", "ok": true },
+					{ "word": "We hotel near the station.", "ok": false },
+					{ "word": "A hotel is a piece of luggage.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "immigration", "summary": "", "explain": "", "words": [
+					{ "word": "We waited at immigration for our passports to be checked.", "ok": true },
+					{ "word": "Immigration is the same as a discount.", "ok": false },
+					{ "word": "We immigrated in the airport line.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "luggage", "summary": "", "explain": "", "words": [
+					{ "word": "Her luggage was too heavy to carry alone.", "ok": true },
+					{ "word": "Her luggages were too heavy.", "ok": false },
+					{ "word": "Luggage is a travel ticket.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "reservation", "summary": "", "explain": "", "words": [
+					{ "word": "I made a reservation for two people.", "ok": true },
+					{ "word": "I reserved a reservation for two people.", "ok": false },
+					{ "word": "Reservation means takeoff.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "ticket", "summary": "", "explain": "", "words": [
+					{ "word": "Keep your ticket until you leave the station.", "ok": true },
+					{ "word": "Keep your ticketing until you leave.", "ok": false },
+					{ "word": "A ticket is a form of medication.", "ok": false }
+				]}
+			]
+		}
+	]
+}

@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz30-en",
+	"title": "Commerce & Customer Service (Set 2)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Shopping and customer service",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "cashier", "summary": "", "explain": "", "words": [
+					{ "word": "The cashier gave me my change.", "ok": true },
+					{ "word": "The cashier is the person who buys the item.", "ok": false },
+					{ "word": "The cashier cashiered my receipt.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "clerk", "summary": "", "explain": "", "words": [
+					{ "word": "A shop clerk helped me find my size.", "ok": true },
+					{ "word": "A clerk is the customer.", "ok": false },
+					{ "word": "A clerk helped me to finding my size.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "client", "summary": "", "explain": "", "words": [
+					{ "word": "The lawyer met a new client today.", "ok": true },
+					{ "word": "The client is the worker in the office.", "ok": false },
+					{ "word": "The lawyer met with a new clienting today.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "compensation", "summary": "", "explain": "", "words": [
+					{ "word": "They offered compensation for the delay.", "ok": true },
+					{ "word": "They compensated me of the delay.", "ok": false },
+					{ "word": "Compensation is a discount ticket.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "courier", "summary": "", "explain": "", "words": [
+					{ "word": "A courier delivered the package this morning.", "ok": true },
+					{ "word": "A courier is a cashier at the shop.", "ok": false },
+					{ "word": "A courier delivered me the package to.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "clearance", "summary": "", "explain": "", "words": [
+					{ "word": "I bought it in the clearance sale.", "ok": true },
+					{ "word": "Clearance means a refund.", "ok": false },
+					{ "word": "I bought it on clearance of sale.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "mall", "summary": "", "explain": "", "words": [
+					{ "word": "We went to the mall to buy clothes.", "ok": true },
+					{ "word": "A mall is a small receipt.", "ok": false },
+					{ "word": "We went mall for buy clothes.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "proof of purchase", "summary": "", "explain": "", "words": [
+					{ "word": "You need proof of purchase to return the item.", "ok": true },
+					{ "word": "You need proof of purchase for returning it back.", "ok": false },
+					{ "word": "Proof of purchase is a discount.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "purchase", "summary": "", "explain": "", "words": [
+					{ "word": "Please keep a record of your purchase.", "ok": true },
+					{ "word": "Please keep a record to your purchase.", "ok": false },
+					{ "word": "Purchase is the same as delivery.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "return", "summary": "", "explain": "", "words": [
+					{ "word": "You can return the item within 14 days.", "ok": true },
+					{ "word": "You can return back the item within 14 days.", "ok": false },
+					{ "word": "You can return the item in 14 days ago.", "ok": false }
+				]}
+			]
+		}
+	]
+}

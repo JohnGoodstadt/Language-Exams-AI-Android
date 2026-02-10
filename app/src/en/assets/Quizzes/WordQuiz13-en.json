@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz13-en",
+	"title": "Travel & Journey Vocabulary (Set 2)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Travel and movement",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "journey", "summary": "", "explain": "", "words": [
+					{ "word": "The journey took more than five hours.", "ok": true },
+					{ "word": "The journey was very journey.", "ok": false },
+					{ "word": "Journey is a ticket.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "destination", "summary": "", "explain": "", "words": [
+					{ "word": "Paris is a popular tourist destination.", "ok": true },
+					{ "word": "Paris is destination very popular.", "ok": false },
+					{ "word": "Destination is the suitcase.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "arrival", "summary": "", "explain": "", "words": [
+					{ "word": "Our arrival was delayed due to bad weather.", "ok": true },
+					{ "word": "Our arrival delayed because weather bad.", "ok": false },
+					{ "word": "Arrival is leaving a place.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "departure", "summary": "", "explain": "", "words": [
+					{ "word": "The departure time has changed.", "ok": true },
+					{ "word": "The departure has change.", "ok": false },
+					{ "word": "Departure means arrival.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "gate", "summary": "", "explain": "", "words": [
+					{ "word": "Please go to gate 23 for boarding.", "ok": true },
+					{ "word": "Please go to gate of 23.", "ok": false },
+					{ "word": "Gate is a passport.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "takeoff", "summary": "", "explain": "", "words": [
+					{ "word": "The plane took off on time.", "ok": true },
+					{ "word": "The plane made a takeoffed.", "ok": false },
+					{ "word": "Takeoff is landing.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "landing", "summary": "", "explain": "", "words": [
+					{ "word": "The landing was smooth.", "ok": true },
+					{ "word": "The landing was land.", "ok": false },
+					{ "word": "Landing is a journey.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "itinerary", "summary": "", "explain": "", "words": [
+					{ "word": "The itinerary includes three cities.", "ok": true },
+					{ "word": "The itinerary include of three cities.", "ok": false },
+					{ "word": "Itinerary is luggage.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "voyage", "summary": "", "explain": "", "words": [
+					{ "word": "The voyage across the ocean lasted weeks.", "ok": true },
+					{ "word": "The voyage was very voyaging.", "ok": false },
+					{ "word": "Voyage is a document.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "tourist", "summary": "", "explain": "", "words": [
+					{ "word": "Many tourists visit the city each year.", "ok": true },
+					{ "word": "Many tourist visit the city each year.", "ok": false },
+					{ "word": "Tourist is a guide book.", "ok": false }
+				]}
+			]
+		}
+	]
+}

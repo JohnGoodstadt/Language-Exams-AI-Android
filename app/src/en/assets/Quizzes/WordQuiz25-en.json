@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz25-en",
+	"title": "Communication & Social Interaction (Set 4)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Social communication",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "communication", "summary": "", "explain": "", "words": [
+					{ "word": "Good communication is essential at work.", "ok": true },
+					{ "word": "Good communication are essential at work.", "ok": false },
+					{ "word": "Communication is a document.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "connection", "summary": "", "explain": "", "words": [
+					{ "word": "There is a strong connection between stress and sleep.", "ok": true },
+					{ "word": "There is connection strong between stress.", "ok": false },
+					{ "word": "Connection is a person.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "interaction", "summary": "", "explain": "", "words": [
+					{ "word": "Interaction with customers is part of the job.", "ok": true },
+					{ "word": "Interaction is talking alone.", "ok": false },
+					{ "word": "Interaction interact people.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "platform", "summary": "", "explain": "", "words": [
+					{ "word": "The app provides a platform for learning.", "ok": true },
+					{ "word": "Platform is a train.", "ok": false },
+					{ "word": "Platform is a document.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "networking", "summary": "", "explain": "", "words": [
+					{ "word": "Networking can help you find a job.", "ok": true },
+					{ "word": "Networking is watching TV.", "ok": false },
+					{ "word": "Networking networks people.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "link", "summary": "", "explain": "", "words": [
+					{ "word": "There is a link between diet and health.", "ok": true },
+					{ "word": "Link is a chain only.", "ok": false },
+					{ "word": "Link links people.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "tie", "summary": "", "explain": "", "words": [
+					{ "word": "Family ties are very important to her.", "ok": true },
+					{ "word": "Tie is a document.", "ok": false },
+					{ "word": "Tie ties people legally.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "bond", "summary": "", "explain": "", "words": [
+					{ "word": "The team formed a strong bond.", "ok": true },
+					{ "word": "Bond is a job.", "ok": false },
+					{ "word": "Bond bonds paper.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "companionship", "summary": "", "explain": "", "words": [
+					{ "word": "Pets provide companionship for many people.", "ok": true },
+					{ "word": "Companionship is friendship paper.", "ok": false },
+					{ "word": "Companionship companions.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "fellowship", "summary": "", "explain": "", "words": [
+					{ "word": "The club encourages fellowship among members.", "ok": true },
+					{ "word": "Fellowship is a job contract.", "ok": false },
+					{ "word": "Fellowship fellows people.", "ok": false }
+				]}
+			]
+		}
+	]
+}

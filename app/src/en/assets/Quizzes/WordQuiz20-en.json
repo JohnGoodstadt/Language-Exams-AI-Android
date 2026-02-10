@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz20-en",
+	"title": "Identity, Records & Life Stories",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Personal records and documents",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "biography", "summary": "", "explain": "", "words": [
+					{ "word": "The biography describes her early life.", "ok": true },
+					{ "word": "Biography is written by the person.", "ok": false },
+					{ "word": "Biography is a passport.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "autobiography", "summary": "", "explain": "", "words": [
+					{ "word": "He wrote an autobiography about his career.", "ok": true },
+					{ "word": "Autobiography is written by another person.", "ok": false },
+					{ "word": "Autobiography is a document form.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "memoir", "summary": "", "explain": "", "words": [
+					{ "word": "Her memoir focuses on her childhood.", "ok": true },
+					{ "word": "Memoir is a legal contract.", "ok": false },
+					{ "word": "Memoir describes future plans.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "initial", "summary": "", "explain": "", "words": [
+					{ "word": "Write your initial at the top of the page.", "ok": true },
+					{ "word": "Initial is the full name.", "ok": false },
+					{ "word": "Initial means final.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "interview", "summary": "", "explain": "", "words": [
+					{ "word": "She prepared carefully for the interview.", "ok": true },
+					{ "word": "She interviewed to the job.", "ok": false },
+					{ "word": "Interview is a certificate.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "interviewer", "summary": "", "explain": "", "words": [
+					{ "word": "The interviewer asked several questions.", "ok": true },
+					{ "word": "The interviewer was interviewed.", "ok": false },
+					{ "word": "Interviewer is the candidate.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "rank", "summary": "", "explain": "", "words": [
+					{ "word": "He holds a high rank in the organisation.", "ok": true },
+					{ "word": "He ranked very much.", "ok": false },
+					{ "word": "Rank is a document.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "register", "summary": "", "explain": "", "words": [
+					{ "word": "You must register before voting.", "ok": true },
+					{ "word": "You must register the vote.", "ok": false },
+					{ "word": "Register is a passport.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "survey", "summary": "", "explain": "", "words": [
+					{ "word": "The survey collected public opinions.", "ok": true },
+					{ "word": "Survey is a job interview.", "ok": false },
+					{ "word": "Surveying opinions.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "sign", "summary": "", "explain": "", "words": [
+					{ "word": "Please sign the form here.", "ok": true },
+					{ "word": "Please sign on the form.", "ok": false },
+					{ "word": "Sign is a document.", "ok": false }
+				]}
+			]
+		}
+	]
+}

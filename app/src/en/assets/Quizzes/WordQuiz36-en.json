@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz36-en",
+	"title": "Social Issues & Community (Set 1)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Society and community vocabulary",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "community", "summary": "", "explain": "", "words": [
+					{ "word": "The community organised a local event.", "ok": true },
+					{ "word": "The community is one neighbour.", "ok": false },
+					{ "word": "Community means a private opinion.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "culture", "summary": "", "explain": "", "words": [
+					{ "word": "Food is an important part of culture.", "ok": true },
+					{ "word": "Culture is a government policy.", "ok": false },
+					{ "word": "Culture means a medical symptom.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "discrimination", "summary": "", "explain": "", "words": [
+					{ "word": "Discrimination at work is illegal.", "ok": true },
+					{ "word": "Discrimination means equality.", "ok": false },
+					{ "word": "Discrimination discriminates the law.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "diversity", "summary": "", "explain": "", "words": [
+					{ "word": "The company values diversity in its staff.", "ok": true },
+					{ "word": "Diversity means everyone is the same.", "ok": false },
+					{ "word": "Diversity diversifies people by law.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "homelessness", "summary": "", "explain": "", "words": [
+					{ "word": "The charity works to reduce homelessness.", "ok": true },
+					{ "word": "Homelessness is a travel itinerary.", "ok": false },
+					{ "word": "Homelessness means having a big home.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "legislation", "summary": "", "explain": "", "words": [
+					{ "word": "New legislation protects workers’ rights.", "ok": true },
+					{ "word": "Legislation is a personal biography.", "ok": false },
+					{ "word": "Legislation legislate people daily.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "migrant", "summary": "", "explain": "", "words": [
+					{ "word": "Many migrants move to cities to find work.", "ok": true },
+					{ "word": "A migrant is a local resident always.", "ok": false },
+					{ "word": "Migrant means a type of certificate.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "neighborhood", "summary": "", "explain": "", "words": [
+					{ "word": "The neighborhood is quiet and safe.", "ok": true },
+					{ "word": "Neighborhood means one colleague only.", "ok": false },
+					{ "word": "Neighborhood is a shopping receipt.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "policy", "summary": "", "explain": "", "words": [
+					{ "word": "The company has a strict policy on privacy.", "ok": true },
+					{ "word": "The company policied on privacy.", "ok": false },
+					{ "word": "Policy is a type of snack.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "asylum", "summary": "", "explain": "", "words": [
+					{ "word": "He applied for asylum after leaving his country.", "ok": true },
+					{ "word": "Asylum is a shopping centre.", "ok": false },
+					{ "word": "He asylumed for help.", "ok": false }
+				]}
+			]
+		}
+	]
+}

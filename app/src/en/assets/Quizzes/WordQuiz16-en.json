@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz16-en",
+	"title": "Feelings & Personal States (Set 3)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Emotional and mental states",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "apprehensive", "summary": "", "explain": "", "words": [
+					{ "word": "She felt apprehensive before the interview.", "ok": true },
+					{ "word": "She felt apprehensive of the interview.", "ok": false },
+					{ "word": "Apprehensive means excited.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "ashamed", "summary": "", "explain": "", "words": [
+					{ "word": "He felt ashamed of his behaviour.", "ok": true },
+					{ "word": "He felt ashamed about to his behaviour.", "ok": false },
+					{ "word": "Ashamed means proud.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "calm", "summary": "", "explain": "", "words": [
+					{ "word": "She remained calm during the emergency.", "ok": true },
+					{ "word": "She remained calmly during the emergency.", "ok": false },
+					{ "word": "Calm is anger.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "embarrassed", "summary": "", "explain": "", "words": [
+					{ "word": "He felt embarrassed by his mistake.", "ok": true },
+					{ "word": "He felt embarrassed from his mistake.", "ok": false },
+					{ "word": "Embarrassed means relaxed.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "grateful", "summary": "", "explain": "", "words": [
+					{ "word": "She was grateful for the support.", "ok": true },
+					{ "word": "She was grateful of the support.", "ok": false },
+					{ "word": "Grateful means angry.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "inquisitive", "summary": "", "explain": "", "words": [
+					{ "word": "The child was curious and inquisitive.", "ok": true },
+					{ "word": "The child was inquisitive about to everything.", "ok": false },
+					{ "word": "Inquisitive means bored.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "patient", "summary": "", "explain": "", "words": [
+					{ "word": "Please be patient while we fix the problem.", "ok": true },
+					{ "word": "Please be patience while we fix the problem.", "ok": false },
+					{ "word": "Patient is a doctor.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "peaceful", "summary": "", "explain": "", "words": [
+					{ "word": "The village was quiet and peaceful.", "ok": true },
+					{ "word": "The village was peace.", "ok": false },
+					{ "word": "Peaceful means noisy.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "tense", "summary": "", "explain": "", "words": [
+					{ "word": "The atmosphere became tense.", "ok": true },
+					{ "word": "The atmosphere became tensely.", "ok": false },
+					{ "word": "Tense means relaxed.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "thankful", "summary": "", "explain": "", "words": [
+					{ "word": "I am thankful for your help.", "ok": true },
+					{ "word": "I am thankful of your help.", "ok": false },
+					{ "word": "Thankful means unhappy.", "ok": false }
+				]}
+			]
+		}
+	]
+}

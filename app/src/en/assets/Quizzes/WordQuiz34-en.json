@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz34-en",
+	"title": "Tech Basics (Set 3)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Basic technology vocabulary",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "URL", "summary": "", "explain": "", "words": [
+					{ "word": "Please copy the URL into your browser.", "ok": true },
+					{ "word": "Please copy the URL in your website.", "ok": false },
+					{ "word": "A URL is a type of email.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "Wi-Fi", "summary": "", "explain": "", "words": [
+					{ "word": "The café has free Wi-Fi.", "ok": true },
+					{ "word": "The café has free Wi-Fis.", "ok": false },
+					{ "word": "Wi-Fi is a file attachment.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "email", "summary": "", "explain": "", "words": [
+					{ "word": "I will send you an email tonight.", "ok": true },
+					{ "word": "I will email to you tonight.", "ok": false },
+					{ "word": "Email is a smartphone.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "file", "summary": "", "explain": "", "words": [
+					{ "word": "Please download the file and open it.", "ok": true },
+					{ "word": "Please download the file and open.", "ok": false },
+					{ "word": "A file is a website.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "gadget", "summary": "", "explain": "", "words": [
+					{ "word": "He bought a new gadget for his kitchen.", "ok": true },
+					{ "word": "He bought a new gadget to his kitchen.", "ok": false },
+					{ "word": "A gadget is an internet connection.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "internet", "summary": "", "explain": "", "words": [
+					{ "word": "I read the news on the internet.", "ok": true },
+					{ "word": "I read the news in internet.", "ok": false },
+					{ "word": "Internet is a document.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "network", "summary": "", "explain": "", "words": [
+					{ "word": "The network is down at the moment.", "ok": true },
+					{ "word": "The network are down at the moment.", "ok": false },
+					{ "word": "A network is a menu.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "device", "summary": "", "explain": "", "words": [
+					{ "word": "This device connects to Wi-Fi.", "ok": true },
+					{ "word": "This device connect to Wi-Fi.", "ok": false },
+					{ "word": "A device is a recipe.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "digital", "summary": "", "explain": "", "words": [
+					{ "word": "I keep digital copies of my documents.", "ok": true },
+					{ "word": "I keep digitals copies of my documents.", "ok": false },
+					{ "word": "Digital means paper only.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "electronic", "summary": "", "explain": "", "words": [
+					{ "word": "Electronic tickets are accepted at the gate.", "ok": true },
+					{ "word": "Electronic ticket are accepted at the gate.", "ok": false },
+					{ "word": "Electronic means made of wood.", "ok": false }
+				]}
+			]
+		}
+	]
+}

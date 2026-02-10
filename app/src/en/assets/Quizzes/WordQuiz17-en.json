@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz17-en",
+	"title": "Health, Routine & Well-being (Set 2)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Health and daily routine",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "checkup", "summary": "", "explain": "", "words": [
+					{ "word": "I have a medical checkup once a year.", "ok": true },
+					{ "word": "I checkup once a year.", "ok": false },
+					{ "word": "Checkup is medicine.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "consultation", "summary": "", "explain": "", "words": [
+					{ "word": "The consultation lasted twenty minutes.", "ok": true },
+					{ "word": "The consultation was consult.", "ok": false },
+					{ "word": "Consultation is a prescription.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "diet", "summary": "", "explain": "", "words": [
+					{ "word": "She follows a healthy diet.", "ok": true },
+					{ "word": "She diets healthy.", "ok": false },
+					{ "word": "Diet is an exercise.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "dose", "summary": "", "explain": "", "words": [
+					{ "word": "Take one dose twice a day.", "ok": true },
+					{ "word": "Take one dose two days.", "ok": false },
+					{ "word": "Dose is a disease.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "routine", "summary": "", "explain": "", "words": [
+					{ "word": "Exercise is part of my daily routine.", "ok": true },
+					{ "word": "Exercise is routine daily.", "ok": false },
+					{ "word": "Routine is a surprise.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "recovery", "summary": "", "explain": "", "words": [
+					{ "word": "Her recovery was faster than expected.", "ok": true },
+					{ "word": "Her recovery was recovering fast.", "ok": false },
+					{ "word": "Recovery is treatment.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "symptom", "summary": "", "explain": "", "words": [
+					{ "word": "Fever is a common symptom of flu.", "ok": true },
+					{ "word": "Fever is symptom common.", "ok": false },
+					{ "word": "Symptom is medicine.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "treatment", "summary": "", "explain": "", "words": [
+					{ "word": "The treatment was very effective.", "ok": true },
+					{ "word": "The treatment treated well.", "ok": false },
+					{ "word": "Treatment is diagnosis.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "urgent", "summary": "", "explain": "", "words": [
+					{ "word": "This matter is urgent and needs attention.", "ok": true },
+					{ "word": "This matter is urgently.", "ok": false },
+					{ "word": "Urgent means slow.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "well-being", "summary": "", "explain": "", "words": [
+					{ "word": "Exercise improves mental well-being.", "ok": true },
+					{ "word": "Exercise improves well being mental.", "ok": false },
+					{ "word": "Well-being is illness.", "ok": false }
+				]}
+			]
+		}
+	]
+}

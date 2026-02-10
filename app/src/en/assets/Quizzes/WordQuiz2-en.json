@@ -1,0 +1,136 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz2-en",
+	"title": "Actions, Thinking & Change (Set 1)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Verbs & adverbs",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "achieve",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "She worked hard to achieve her goal.", "ok": true },
+						{ "word": "She achieved to her goal last year.", "ok": false },
+						{ "word": "She achieved her goal to study.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "depend",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "It depends on the weather.", "ok": true },
+						{ "word": "It depends of the weather.", "ok": false },
+						{ "word": "It depends the weather to be good.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "recommend",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "I recommend this book for B1 students.", "ok": true },
+						{ "word": "I recommend you to buy this book.", "ok": false },
+						{ "word": "I recommend this book to the B1.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "suggest",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "She suggested taking the earlier train.", "ok": true },
+						{ "word": "She suggested to take the earlier train.", "ok": false },
+						{ "word": "She suggested me to taking the earlier train.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "persuade",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "He persuaded me to apply for the position.", "ok": true },
+						{ "word": "He persuaded me applying for the position.", "ok": false },
+						{ "word": "He persuaded that I apply for the position me.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "improve",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "I want to improve my English this year.", "ok": true },
+						{ "word": "I want to improve in my English this year.", "ok": false },
+						{ "word": "I want to improve my Englishing this year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "express",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "He found it hard to express his opinion.", "ok": true },
+						{ "word": "He found it hard to express about his opinion.", "ok": false },
+						{ "word": "He found it hard expressing his opinion to.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "completely",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "I completely agree with you.", "ok": true },
+						{ "word": "I agree with you completelyly.", "ok": false },
+						{ "word": "I complete agree with you.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "barely",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "I barely had time to eat breakfast.", "ok": true },
+						{ "word": "I had barely time to eat breakfast.", "ok": false },
+						{ "word": "I barely had time for ate breakfast.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "suddenly",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "Suddenly, the lights went out.", "ok": true },
+						{ "word": "The lights went out sudden.", "ok": false },
+						{ "word": "Suddenly, the lights have went out.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

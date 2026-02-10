@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz14-en",
+	"title": "Environment & Sustainability (Set 3)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Environmental topics",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "ecosystem", "summary": "", "explain": "", "words": [
+					{ "word": "An ecosystem includes plants and animals.", "ok": true },
+					{ "word": "Ecosystem is only animals.", "ok": false },
+					{ "word": "Ecosystem are living.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "conservation", "summary": "", "explain": "", "words": [
+					{ "word": "Conservation helps protect nature.", "ok": true },
+					{ "word": "Conservation is pollution.", "ok": false },
+					{ "word": "Conservation protects to nature.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "contamination", "summary": "", "explain": "", "words": [
+					{ "word": "Water contamination can harm wildlife.", "ok": true },
+					{ "word": "Contamination is recycling.", "ok": false },
+					{ "word": "Contamination harm to wildlife.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "preservation", "summary": "", "explain": "", "words": [
+					{ "word": "Preservation of forests is essential.", "ok": true },
+					{ "word": "Preservation is destroying forests.", "ok": false },
+					{ "word": "Preservation of forests are essential.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "protection", "summary": "", "explain": "", "words": [
+					{ "word": "Environmental protection is a global issue.", "ok": true },
+					{ "word": "Protection environment is global issue.", "ok": false },
+					{ "word": "Protection is pollution.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "reduce", "summary": "", "explain": "", "words": [
+					{ "word": "We should reduce waste at home.", "ok": true },
+					{ "word": "We should reduce of waste.", "ok": false },
+					{ "word": "Reduce is reuse.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "reuse", "summary": "", "explain": "", "words": [
+					{ "word": "Try to reuse plastic bags.", "ok": true },
+					{ "word": "Try reuse to plastic bags.", "ok": false },
+					{ "word": "Reuse is throw away.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "waste", "summary": "", "explain": "", "words": [
+					{ "word": "Food waste is a serious problem.", "ok": true },
+					{ "word": "Waste food is serious problem.", "ok": false },
+					{ "word": "Waste is saving.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "weather", "summary": "", "explain": "", "words": [
+					{ "word": "The weather was cold and windy.", "ok": true },
+					{ "word": "The weather were cold.", "ok": false },
+					{ "word": "Weather is climate change.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "temperature", "summary": "", "explain": "", "words": [
+					{ "word": "The temperature dropped overnight.", "ok": true },
+					{ "word": "The temperature was coldly.", "ok": false },
+					{ "word": "Temperature is weather report.", "ok": false }
+				]}
+			]
+		}
+	]
+}

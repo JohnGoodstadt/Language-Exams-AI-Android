@@ -1,0 +1,136 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz1-en",
+	"title": "Communication, Society & Relationships (Set 1)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Communication & relationships",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "trust",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "I trust him to keep my secret.", "ok": true },
+						{ "word": "I trust on him to keep my secret.", "ok": false },
+						{ "word": "I am trusting him keeping my secret.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "colleague",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "My colleague sits next to me at work.", "ok": true },
+						{ "word": "My colleague is my neighbour in the street.", "ok": false },
+						{ "word": "My colleague is the person I marry.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "relationship",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "They have a good relationship with their parents.", "ok": true },
+						{ "word": "They have a good relationship to go shopping.", "ok": false },
+						{ "word": "They relationship well every weekend.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "conversation",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "We had a short conversation about the exam.", "ok": true },
+						{ "word": "We did a conversation to the exam.", "ok": false },
+						{ "word": "We conversated about the exam for short.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "support",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "My family gave me a lot of support during my course.", "ok": true },
+						{ "word": "My family gave me many supports during my course.", "ok": false },
+						{ "word": "My family supported me to passing the course.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "confidence",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "She spoke with confidence in the interview.", "ok": true },
+						{ "word": "She spoke with confidences in the interview.", "ok": false },
+						{ "word": "She spoke confident in the interview.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "discrimination",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "Discrimination at work is illegal in many countries.", "ok": true },
+						{ "word": "Discrimination is when you are very disciplined.", "ok": false },
+						{ "word": "He discriminations her because she was late.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "community",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "The community organised a clean-up in the park.", "ok": true },
+						{ "word": "The community is a single person in a house.", "ok": false },
+						{ "word": "The community organised to cleaning-up in the park.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "policy",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "The company has a policy about working from home.", "ok": true },
+						{ "word": "The company has a police about working from home.", "ok": false },
+						{ "word": "The company has a policy to works from home.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "immigration",
+					"summary": "",
+					"explain": "",
+					"words": [
+						{ "word": "Immigration rules can change over time.", "ok": true },
+						{ "word": "Immigration is when you improve your imagination.", "ok": false },
+						{ "word": "Immigration rules can change since of time.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz29-en",
+	"title": "Condition, Reaction & Emotion",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Emotional and mental states",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "anxious", "summary": "", "explain": "", "words": [
+					{ "word": "She felt anxious before the exam.", "ok": true },
+					{ "word": "She felt anxious of the exam.", "ok": false },
+					{ "word": "Anxious means calm.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "assured", "summary": "", "explain": "", "words": [
+					{ "word": "He sounded calm and assured.", "ok": true },
+					{ "word": "Assured is uncertain.", "ok": false },
+					{ "word": "Assured assures.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "certain", "summary": "", "explain": "", "words": [
+					{ "word": "She is certain about her decision.", "ok": true },
+					{ "word": "She is certain of do it.", "ok": false },
+					{ "word": "Certain is unsure.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "curious", "summary": "", "explain": "", "words": [
+					{ "word": "The child was curious about the world.", "ok": true },
+					{ "word": "Curious is bored.", "ok": false },
+					{ "word": "Curious curiously.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "eager", "summary": "", "explain": "", "words": [
+					{ "word": "She is eager to learn English.", "ok": true },
+					{ "word": "She is eager learning English.", "ok": false },
+					{ "word": "Eager is lazy.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "enthusiastic", "summary": "", "explain": "", "words": [
+					{ "word": "The students were enthusiastic about the project.", "ok": true },
+					{ "word": "Enthusiastic is negative.", "ok": false },
+					{ "word": "Enthusiastic enthuses.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "excited", "summary": "", "explain": "", "words": [
+					{ "word": "She was excited about the trip.", "ok": true },
+					{ "word": "Excited is angry.", "ok": false },
+					{ "word": "Excited excites.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "nervous", "summary": "", "explain": "", "words": [
+					{ "word": "He felt nervous before speaking.", "ok": true },
+					{ "word": "Nervous is confident.", "ok": false },
+					{ "word": "Nervous nerves.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "relaxed", "summary": "", "explain": "", "words": [
+					{ "word": "She felt relaxed after the massage.", "ok": true },
+					{ "word": "Relaxed is stressed.", "ok": false },
+					{ "word": "Relaxed relaxes.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "worried", "summary": "", "explain": "", "words": [
+					{ "word": "They were worried about the results.", "ok": true },
+					{ "word": "Worried is calm.", "ok": false },
+					{ "word": "Worried worries.", "ok": false }
+				]}
+			]
+		}
+	]
+}

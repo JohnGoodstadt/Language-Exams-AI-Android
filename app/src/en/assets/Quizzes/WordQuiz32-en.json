@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz32-en",
+	"title": "Food, Cooking & Preferences (Set 2)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Food and cooking",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "dining", "summary": "", "explain": "", "words": [
+					{ "word": "We enjoyed fine dining on our anniversary.", "ok": true },
+					{ "word": "We enjoyed dining to our anniversary.", "ok": false },
+					{ "word": "Dining is a recipe.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "dinner", "summary": "", "explain": "", "words": [
+					{ "word": "We invited friends to dinner.", "ok": true },
+					{ "word": "We invited friends for dinner to.", "ok": false },
+					{ "word": "Dinner is breakfast.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "drink", "summary": "", "explain": "", "words": [
+					{ "word": "Would you like a hot drink?", "ok": true },
+					{ "word": "Would you like to drink a hot?", "ok": false },
+					{ "word": "Drink is a dessert.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "component", "summary": "", "explain": "", "words": [
+					{ "word": "Fresh vegetables are a key component of the meal.", "ok": true },
+					{ "word": "Fresh vegetables are component of the meal key.", "ok": false },
+					{ "word": "Component means recipe instructions.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "element", "summary": "", "explain": "", "words": [
+					{ "word": "Spice adds an element of heat to the dish.", "ok": true },
+					{ "word": "Spice adds element to heat of the dish.", "ok": false },
+					{ "word": "Element is a menu.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "instructions", "summary": "", "explain": "", "words": [
+					{ "word": "Follow the instructions carefully.", "ok": true },
+					{ "word": "Follow the instructions with carefully.", "ok": false },
+					{ "word": "Instructions are ingredients.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "meat-free", "summary": "", "explain": "", "words": [
+					{ "word": "I chose a meat-free option.", "ok": true },
+					{ "word": "I chose an option meat free.", "ok": false },
+					{ "word": "Meat-free means extra meat.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "pudding", "summary": "", "explain": "", "words": [
+					{ "word": "For dessert, we had chocolate pudding.", "ok": true },
+					{ "word": "For dessert, we had pudding chocolate.", "ok": false },
+					{ "word": "Pudding is a starter.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "refreshment", "summary": "", "explain": "", "words": [
+					{ "word": "Light refreshments were served after the talk.", "ok": true },
+					{ "word": "Light refreshment were served after the talk.", "ok": false },
+					{ "word": "Refreshment is a recipe.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "specialty", "summary": "", "explain": "", "words": [
+					{ "word": "Seafood is a specialty of this restaurant.", "ok": true },
+					{ "word": "Seafood is specialty in this restaurant.", "ok": false },
+					{ "word": "Specialty is a beverage.", "ok": false }
+				]}
+			]
+		}
+	]
+}

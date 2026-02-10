@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz43-en",
+	"title": "Connectors & Conditions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Linking words",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "although", "summary": "", "explain": "", "words": [
+					{ "word": "Although it was raining, we went out.", "ok": true },
+					{ "word": "Although of the rain, we went out.", "ok": false },
+					{ "word": "Although means because.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "even though", "summary": "", "explain": "", "words": [
+					{ "word": "Even though he was tired, he continued.", "ok": true },
+					{ "word": "Even though of being tired, he continued.", "ok": false },
+					{ "word": "Even though means so that.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "unless", "summary": "", "explain": "", "words": [
+					{ "word": "We will leave unless it rains.", "ok": true },
+					{ "word": "We will leave unless it will rain.", "ok": false },
+					{ "word": "Unless means because.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "whereas", "summary": "", "explain": "", "words": [
+					{ "word": "She likes coffee, whereas he prefers tea.", "ok": true },
+					{ "word": "Whereas of liking coffee, he prefers tea.", "ok": false },
+					{ "word": "Whereas is a verb.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "while", "summary": "", "explain": "", "words": [
+					{ "word": "She was reading while he was cooking.", "ok": true },
+					{ "word": "She was reading during he cooked.", "ok": false },
+					{ "word": "While means therefore.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "because", "summary": "", "explain": "", "words": [
+					{ "word": "He stayed home because he was ill.", "ok": true },
+					{ "word": "He stayed home because of he was ill.", "ok": false },
+					{ "word": "Because means although.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "since", "summary": "", "explain": "", "words": [
+					{ "word": "Since it was late, we left.", "ok": true },
+					{ "word": "Since of being late, we left.", "ok": false },
+					{ "word": "Since means unless.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "before", "summary": "", "explain": "", "words": [
+					{ "word": "Wash your hands before dinner.", "ok": true },
+					{ "word": "Wash your hands before to dinner.", "ok": false },
+					{ "word": "Before means after.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "after", "summary": "", "explain": "", "words": [
+					{ "word": "We met after the meeting.", "ok": true },
+					{ "word": "We met after of the meeting.", "ok": false },
+					{ "word": "After means before.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "so that", "summary": "", "explain": "", "words": [
+					{ "word": "She whispered so that no one could hear.", "ok": true },
+					{ "word": "She whispered so that to not hear.", "ok": false },
+					{ "word": "So that means although.", "ok": false }
+				]}
+			]
+		}
+	]
+}

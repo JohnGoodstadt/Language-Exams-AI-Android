@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz44-en",
+	"title": "Higher-Value Verbs (Final Set)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Core B1 verbs",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "accomplish", "summary": "", "explain": "", "words": [
+					{ "word": "She accomplished her goal.", "ok": true },
+					{ "word": "She accomplished to finish.", "ok": false },
+					{ "word": "Accomplish means fail.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "admire", "summary": "", "explain": "", "words": [
+					{ "word": "I admire her dedication.", "ok": true },
+					{ "word": "I admire to her dedication.", "ok": false },
+					{ "word": "Admire means dislike.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "assure", "summary": "", "explain": "", "words": [
+					{ "word": "He assured me everything was ready.", "ok": true },
+					{ "word": "He assured to me everything.", "ok": false },
+					{ "word": "Assure means doubt.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "attain", "summary": "", "explain": "", "words": [
+					{ "word": "She attained a high level of fluency.", "ok": true },
+					{ "word": "She attained to a high level.", "ok": false },
+					{ "word": "Attain means lose.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "convey", "summary": "", "explain": "", "words": [
+					{ "word": "The message conveyed urgency.", "ok": true },
+					{ "word": "The message conveyed to urgency.", "ok": false },
+					{ "word": "Convey means hide.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "enhance", "summary": "", "explain": "", "words": [
+					{ "word": "Practice can enhance your skills.", "ok": true },
+					{ "word": "Practice enhances to your skills.", "ok": false },
+					{ "word": "Enhance means reduce.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "express", "summary": "", "explain": "", "words": [
+					{ "word": "She expressed her opinion clearly.", "ok": true },
+					{ "word": "She expressed to her opinion.", "ok": false },
+					{ "word": "Express means hide.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "include", "summary": "", "explain": "", "words": [
+					{ "word": "The price includes tax.", "ok": true },
+					{ "word": "The price includes of tax.", "ok": false },
+					{ "word": "Include means exclude.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "uncover", "summary": "", "explain": "", "words": [
+					{ "word": "The report uncovered new facts.", "ok": true },
+					{ "word": "The report uncovered to new facts.", "ok": false },
+					{ "word": "Uncover means hide.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "trust", "summary": "", "explain": "", "words": [
+					{ "word": "Trust is essential in relationships.", "ok": true },
+					{ "word": "Trust is a legal document.", "ok": false },
+					{ "word": "Trust means suspicion.", "ok": false }
+				]}
+			]
+		}
+	]
+}

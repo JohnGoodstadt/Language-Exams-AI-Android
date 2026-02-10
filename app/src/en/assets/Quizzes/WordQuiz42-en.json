@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz42-en",
+	"title": "Environment & Sustainability (Final Set)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Environmental vocabulary",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "biodiversity", "summary": "", "explain": "", "words": [
+					{ "word": "Biodiversity is vital for healthy ecosystems.", "ok": true },
+					{ "word": "Biodiversity is one animal.", "ok": false },
+					{ "word": "Biodiversity biodiverse plants.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "climate", "summary": "", "explain": "", "words": [
+					{ "word": "The region has a warm climate.", "ok": true },
+					{ "word": "Climate is daily weather.", "ok": false },
+					{ "word": "Climate climates people.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "conservation", "summary": "", "explain": "", "words": [
+					{ "word": "Conservation protects natural resources.", "ok": true },
+					{ "word": "Conservation is pollution.", "ok": false },
+					{ "word": "Conservation conserves animals only.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "environment", "summary": "", "explain": "", "words": [
+					{ "word": "We must protect the environment.", "ok": true },
+					{ "word": "Environment is a government policy.", "ok": false },
+					{ "word": "Environment environ people.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "green", "summary": "", "explain": "", "words": [
+					{ "word": "Green energy reduces pollution.", "ok": true },
+					{ "word": "Green means dirty.", "ok": false },
+					{ "word": "Green greens electricity.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "pollution", "summary": "", "explain": "", "words": [
+					{ "word": "Air pollution harms public health.", "ok": true },
+					{ "word": "Pollution is recycling.", "ok": false },
+					{ "word": "Pollution pollutes weather.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "renewable", "summary": "", "explain": "", "words": [
+					{ "word": "Solar power is renewable energy.", "ok": true },
+					{ "word": "Renewable means limited.", "ok": false },
+					{ "word": "Renewable renews buildings.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "sustainable", "summary": "", "explain": "", "words": [
+					{ "word": "Sustainable farming protects the land.", "ok": true },
+					{ "word": "Sustainable means temporary.", "ok": false },
+					{ "word": "Sustainable sustains money.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "reuse", "summary": "", "explain": "", "words": [
+					{ "word": "We should reuse plastic bags.", "ok": true },
+					{ "word": "Reuse means throw away.", "ok": false },
+					{ "word": "Reuse reuses people.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "recycling", "summary": "", "explain": "", "words": [
+					{ "word": "Recycling helps reduce waste.", "ok": true },
+					{ "word": "Recycling is pollution.", "ok": false },
+					{ "word": "Recycling recycles people.", "ok": false }
+				]}
+			]
+		}
+	]
+}

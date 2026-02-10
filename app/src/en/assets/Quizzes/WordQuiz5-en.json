@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz5-en",
+	"title": "Social Interaction & Society (Set 2)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Social and civic vocabulary",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "acquaintance", "summary": "", "explain": "", "words": [
+					{ "word": "She is an acquaintance from my English class.", "ok": true },
+					{ "word": "She is my acquaintance very close friend.", "ok": false },
+					{ "word": "I acquainted her last year.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "neighbor", "summary": "", "explain": "", "words": [
+					{ "word": "My neighbor helped me carry the boxes.", "ok": true },
+					{ "word": "My neighbor is my colleague at work.", "ok": false },
+					{ "word": "I neighbor with him for years.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "survey", "summary": "", "explain": "", "words": [
+					{ "word": "The company conducted a survey of customers.", "ok": true },
+					{ "word": "The company surveyed to customers.", "ok": false },
+					{ "word": "The survey is a formal party.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "signature", "summary": "", "explain": "", "words": [
+					{ "word": "Please add your signature at the bottom.", "ok": true },
+					{ "word": "Please sign your signature name.", "ok": false },
+					{ "word": "Please signature this document.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "registration", "summary": "", "explain": "", "words": [
+					{ "word": "Online registration closes tomorrow.", "ok": true },
+					{ "word": "Online register closes tomorrow.", "ok": false },
+					{ "word": "Online registration close tomorrow.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "certificate", "summary": "", "explain": "", "words": [
+					{ "word": "She received a certificate after the course.", "ok": true },
+					{ "word": "She received certificate of finish.", "ok": false },
+					{ "word": "She certificated the course.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "candidate", "summary": "", "explain": "", "words": [
+					{ "word": "Each candidate answered the same questions.", "ok": true },
+					{ "word": "Each candidate is a voting paper.", "ok": false },
+					{ "word": "Each candidate applied the job.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "position", "summary": "", "explain": "", "words": [
+					{ "word": "She applied for a position in marketing.", "ok": true },
+					{ "word": "She applied position in marketing.", "ok": false },
+					{ "word": "Position is how you sit.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "poll", "summary": "", "explain": "", "words": [
+					{ "word": "The poll showed strong public support.", "ok": true },
+					{ "word": "The poll is a long stick.", "ok": false },
+					{ "word": "They polled to people.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "rank", "summary": "", "explain": "", "words": [
+					{ "word": "She reached a high rank in the company.", "ok": true },
+					{ "word": "She ranked to high in company.", "ok": false },
+					{ "word": "Rank is a smell.", "ok": false }
+				]}
+			]
+		}
+	]
+}

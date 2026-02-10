@@ -1,0 +1,67 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz38-en",
+	"title": "Strong Feelings & Reactions (Set 4)",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Emotions and reactions",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "appreciative", "summary": "", "explain": "", "words": [
+					{ "word": "I’m very appreciative of your help.", "ok": true },
+					{ "word": "I’m appreciative for your help.", "ok": false },
+					{ "word": "Appreciative means jealous.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "confident", "summary": "", "explain": "", "words": [
+					{ "word": "She feels confident about the exam.", "ok": true },
+					{ "word": "She feels confidence about the exam.", "ok": false },
+					{ "word": "Confident means nervous.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "covetous", "summary": "", "explain": "", "words": [
+					{ "word": "He became covetous of his friend’s success.", "ok": true },
+					{ "word": "He became covetous to his friend.", "ok": false },
+					{ "word": "Covetous means thankful.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "envious", "summary": "", "explain": "", "words": [
+					{ "word": "She felt envious of her colleague’s promotion.", "ok": true },
+					{ "word": "She felt envious to her colleague.", "ok": false },
+					{ "word": "Envious means calm.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "humiliated", "summary": "", "explain": "", "words": [
+					{ "word": "He felt humiliated after the mistake.", "ok": true },
+					{ "word": "He felt humiliated of the mistake.", "ok": false },
+					{ "word": "Humiliated means excited.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "interested", "summary": "", "explain": "", "words": [
+					{ "word": "She is interested in learning new languages.", "ok": true },
+					{ "word": "She is interested to learn new languages.", "ok": false },
+					{ "word": "Interested means bored.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "assistance", "summary": "", "explain": "", "words": [
+					{ "word": "If you need assistance, please call reception.", "ok": true },
+					{ "word": "If you need assist, please call reception.", "ok": false },
+					{ "word": "Assistance is a kind of recipe.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "support", "summary": "", "explain": "", "words": [
+					{ "word": "Her family gave her support during the move.", "ok": true },
+					{ "word": "Her family supported to her during the move.", "ok": false },
+					{ "word": "Support is a type of passport.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "tranquil", "summary": "", "explain": "", "words": [
+					{ "word": "The lake was calm and tranquil.", "ok": true },
+					{ "word": "The lake was tranquilised.", "ok": false },
+					{ "word": "Tranquil means tense.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "confidence", "summary": "", "explain": "", "words": [
+					{ "word": "Practice helped her build confidence.", "ok": true },
+					{ "word": "Practice helped her build confident.", "ok": false },
+					{ "word": "Confidence means fear.", "ok": false }
+				]}
+
+			]
+		}
+	]
+}

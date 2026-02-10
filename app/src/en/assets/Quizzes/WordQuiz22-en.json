@@ -1,0 +1,66 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "WordQuiz22-en",
+	"title": "Nature & Living World",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Natural world",
+			"sortorder": 1,
+			"sections": [
+				{ "title": "", "page": 1, "sentence": "flora", "summary": "", "explain": "", "words": [
+					{ "word": "The park is rich in flora.", "ok": true },
+					{ "word": "Flora means animals.", "ok": false },
+					{ "word": "Flora grow fastly.", "ok": false }
+				]},
+				{ "title": "", "page": 2, "sentence": "fauna", "summary": "", "explain": "", "words": [
+					{ "word": "The island has unique fauna.", "ok": true },
+					{ "word": "Fauna is flowers.", "ok": false },
+					{ "word": "Fauna grows in soil.", "ok": false }
+				]},
+				{ "title": "", "page": 3, "sentence": "habitat", "summary": "", "explain": "", "words": [
+					{ "word": "The forest is their natural habitat.", "ok": true },
+					{ "word": "Habitat is weather.", "ok": false },
+					{ "word": "Habitat lives animals.", "ok": false }
+				]},
+				{ "title": "", "page": 4, "sentence": "wildlife", "summary": "", "explain": "", "words": [
+					{ "word": "Wildlife is protected in this area.", "ok": true },
+					{ "word": "Wildlife are plants.", "ok": false },
+					{ "word": "Wildlife protect animals.", "ok": false }
+				]},
+				{ "title": "", "page": 5, "sentence": "shelter", "summary": "", "explain": "", "words": [
+					{ "word": "The animals found shelter from the storm.", "ok": true },
+					{ "word": "Shelter is weather.", "ok": false },
+					{ "word": "Shelter is travelling.", "ok": false }
+				]},
+				{ "title": "", "page": 6, "sentence": "surroundings", "summary": "", "explain": "", "words": [
+					{ "word": "She adapted quickly to her new surroundings.", "ok": true },
+					{ "word": "Surroundings is one place.", "ok": false },
+					{ "word": "Surroundings surround her.", "ok": false }
+				]},
+				{ "title": "", "page": 7, "sentence": "greenhouse effect", "summary": "", "explain": "", "words": [
+					{ "word": "The greenhouse effect raises global temperatures.", "ok": true },
+					{ "word": "Greenhouse effect is a building.", "ok": false },
+					{ "word": "Greenhouse effect grows plants.", "ok": false }
+				]},
+				{ "title": "", "page": 8, "sentence": "global warming", "summary": "", "explain": "", "words": [
+					{ "word": "Global warming affects polar regions.", "ok": true },
+					{ "word": "Global warming is daily weather.", "ok": false },
+					{ "word": "Global warming cools climate.", "ok": false }
+				]},
+				{ "title": "", "page": 9, "sentence": "nature", "summary": "", "explain": "", "words": [
+					{ "word": "She enjoys spending time in nature.", "ok": true },
+					{ "word": "Nature is city.", "ok": false },
+					{ "word": "Nature means technology.", "ok": false }
+				]},
+				{ "title": "", "page": 10, "sentence": "home", "summary": "", "explain": "", "words": [
+					{ "word": "After the trip, she was happy to be home.", "ok": true },
+					{ "word": "Home is house only.", "ok": false },
+					{ "word": "Home travels.", "ok": false }
+				]}
+			]
+		}
+	]
+}
