@@ -209,6 +209,7 @@ dependencies {
     implementation(libs.hilt.android)
     implementation(libs.androidx.lifecycle.runtime.compose.android)
     implementation(libs.androidx.foundation.android)
+    implementation(libs.androidx.foundation.layout.android)
 //    implementation(libs.billing.ktx)
 
     ksp(libs.hilt.compiler)

@@ -59,10 +59,13 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
     // MODIFIED: We only have ONE uiState to collect now
     val uiState by viewModel.uiState.collectAsState()
 
-    // --- Bottom Sheet Logic ---
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-    // MODIFIED: Use the merged state to determine if the sheet is visible
     val isSheetVisible = uiState.selectedCategoryTitleForSheet != null
+//    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+//    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+//    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+
+
     // This LaunchedEffect for hiding the sheet remains the same
     val scope = rememberCoroutineScope()
     LaunchedEffect(isSheetVisible) {

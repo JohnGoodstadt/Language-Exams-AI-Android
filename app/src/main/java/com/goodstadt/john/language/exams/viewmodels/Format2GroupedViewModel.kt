@@ -42,6 +42,7 @@ class Format2GroupedViewModel @Inject constructor(
     private val historyManager: HistorySyncManager,
     private val audioCacheManager: AudioCacheManager,
     private val billingRepository: BillingRepository,
+    private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
@@ -256,12 +257,24 @@ class Format2GroupedViewModel @Inject constructor(
 
                 is AudioPlaybackStatus.RateLimited -> {
                     // Show Paywall logic
-                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    Timber.i("Format2GroupedViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.w("Rate Limiter Triggered")
+                    Timber.w("canICallAPI = %s", failType.canICallAPI)
+                    Timber.w("failReason = %s", (failType.failReason))
+                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w(rateLimiter.printCurrentStatus)
+
+                    if (status.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                        _showRateDailyLimitSheet.value = true
+                    } else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
                 }
 
                 is AudioPlaybackStatus.Failure -> {
                     // Show § logic
-                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.Failure")
+                    Timber.i("Format2GroupedViewModel.handleTap().AudioPlaybackStatus.Failure")
                 }
             }
         }

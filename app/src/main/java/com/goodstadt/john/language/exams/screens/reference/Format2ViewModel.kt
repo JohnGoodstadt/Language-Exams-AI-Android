@@ -53,6 +53,7 @@ class Format2ViewModel @Inject constructor(
     private val historyManager: HistorySyncManager,
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val audioCacheManager: AudioCacheManager,
+    private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
@@ -202,7 +203,19 @@ class Format2ViewModel @Inject constructor(
 
                 is AudioPlaybackStatus.RateLimited -> {
                     // Show Paywall logic
-                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    Timber.i("Format2ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.w("Rate Limiter Triggered")
+                    Timber.w("canICallAPI = %s", failType.canICallAPI)
+                    Timber.w("failReason = %s", (failType.failReason))
+                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w(rateLimiter.printCurrentStatus)
+
+                    if (status.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                        _showRateDailyLimitSheet.value = true
+                    } else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
                 }
 
                 is AudioPlaybackStatus.Failure -> {

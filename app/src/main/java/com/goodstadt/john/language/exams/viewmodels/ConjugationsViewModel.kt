@@ -154,115 +154,8 @@ class ConjugationsViewModel @Inject constructor(
             loadConjugationsData(bundleName,sheet_name)
         }
     }
-    // This function is almost identical to the ones in our other ViewModels
-    fun playTrackObsolete(word: Format0Word, sentence: Sentence) {
-        if (_playbackState.value is PlaybackState.Playing) {
-            return
-        }
-
-        if (!connectivityRepository.isCurrentlyOnline()) {
-            _playbackState.value = PlaybackState.Idle
-            return
-        }
 
 
-        viewModelScope.launch {
-            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
-                if (rateLimiter.doIForbidCall()) {
-                    val failType = rateLimiter.canMakeCallWithResult()
-                    Timber.v("${failType.canICallAPI}")
-                    Timber.v("${failType.failReason}")
-                    Timber.v("${failType.timeLeftToWait}")
-                    if (!failType.canICallAPI) {
-                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
-                            _showRateDailyLimitSheet.value = true
-                        } else {
-                            _showRateHourlyLimitSheet.value = true
-                        }
-                    } else {
-                        _showRateLimitSheet.value = true
-                    }
-
-                    return@launch
-                }
-            }
-
-
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-//            val currentVoiceName = _uiState.value.selectedVoiceName
-            val uniqueSentenceId = generateUniqueSentenceId(word, sentence, currentVoiceName)
-
-            _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
-
-            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
-            if (played) {//short cut so user cna play cached sentences with no Internet connection
-                _playbackState.value = PlaybackState.Idle
-                ttsStatsRepository.updateTTSStatsWithoutCosts()
-                ttsStatsRepository.incWordStats(word.word)
-                return@launch
-            }
-
-
-
-//            _uiState.update { currentState ->
-//                if (currentState is ConjugationsUiState.Success) {
-//                    val updatedKeys = currentState.cachedAudioWordKeys +  generateUniqueSentenceId(word, sentence, currentVoiceName)//word.word
-//                    currentState.copy(cachedAudioWordKeys = updatedKeys)
-//                } else {
-//                    currentState
-//                }
-//            }
-
-            val currentLanguageCode =  userPreferencesRepository.selectedLanguageCodeFlow.first()
-
-            val result = vocabRepository.playTextToSpeech(
-                text = sentence.sentence,
-                uniqueSentenceId = uniqueSentenceId,
-                voiceName = currentVoiceName,
-                languageCode = currentLanguageCode
-            )
-
-            when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    _playbackState.value = PlaybackState.Idle
-
-                    if (todayIsNotAFreePassDay){
-                        rateLimiter.recordCall()
-                    }
-                    Timber.v(rateLimiter.printCurrentStatus)
-                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-                    ttsStatsRepository.incWordStats(word.word)
-
-                    //TODO: not inc but update!
-                    ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
-                }
-
-                is PlaybackResult.PlayedFromLocalCache -> {
-                    _playbackState.value = PlaybackState.Idle
-                    ttsStatsRepository.updateTTSStatsWithoutCosts()
-                    ttsStatsRepository.incWordStats(word.word)
-                }
-
-                is PlaybackResult.Failure -> {
-                    _playbackState.value = PlaybackState.Idle
-                    // Handle the error
-//                    _uiState.update { it.copy(playbackState = PlaybackState.Error(result.exception.message ?: "Playback failed")) }
-                    // Optionally reset to Idle after a delay
-//                    _uiState.update { it.copy(playbackState = PlaybackState.Idle) }
-                    _playbackState.value =
-                        PlaybackState.Error(result.exception.message ?: "Playback failed")
-                }
-
-                PlaybackResult.CacheNotFound -> {
-                    _playbackState.value = PlaybackState.Idle
-                    Timber.e("Cache found to exist but not played")
-                }
-            }
-
-            _playbackState.value = PlaybackState.Idle
-        }
-    }
 
     fun saveDataOnExit() {
         // We use appScope to ensure this save operation completes even if the
@@ -377,6 +270,18 @@ class ConjugationsViewModel @Inject constructor(
                         is AudioPlaybackStatus.RateLimited -> {
                             // Show Paywall logic
                             Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                            val failType = rateLimiter.canMakeCallWithResult()
+                            Timber.w("Rate Limiter Triggered")
+                            Timber.w("canICallAPI = %s", failType.canICallAPI)
+                            Timber.w("failReason = %s", (failType.failReason))
+                            Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                            Timber.w(rateLimiter.printCurrentStatus)
+
+                            if (status.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                                _showRateDailyLimitSheet.value = true
+                            } else {
+                                _showRateHourlyLimitSheet.value = true
+                            }
                         }
 
                         is AudioPlaybackStatus.Failure -> {

@@ -31,12 +31,15 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.ReferenceCategory
 import com.goodstadt.john.language.exams.models.ReferenceSubItem
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
 import com.goodstadt.john.language.exams.utils.annotatedSentenceByWords
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.android.EntryPointAccessors
 import timber.log.Timber
 
@@ -66,7 +69,9 @@ fun Format1Screen(
     var showSideQuestSheet by remember { mutableStateOf(false) }
     val sheetStateSideQuest = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     var showQuizSheet by remember { mutableStateOf(false) }
-
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
     when (val state = uiState) {
         is Format1UiState.Loading -> {
@@ -295,6 +300,27 @@ fun Format1Screen(
                     }
                 }
             } //: QuizSheet
+            if (isRateLimitingSheetVisible){
+                RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+            }
+            if (isDailyRateLimitingSheetVisible){
+                if (context is androidx.activity.ComponentActivity) {
+                    RateLimitDailyPaywallBottomSheet(
+                        onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                        onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+                    )
+                }
+
+            }
+            if (isHourlyRateLimitingSheetVisible){
+                if (context is androidx.activity.ComponentActivity) {
+                    RateLimitHourlyPaywallBottomSheet(
+                        onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                        onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+                    )
+                }
+            }
+
         }
     }
 }

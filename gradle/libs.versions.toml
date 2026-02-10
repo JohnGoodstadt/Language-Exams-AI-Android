@@ -42,6 +42,7 @@ firebaseAppCheck = "18.0.0"
 facebook = "17.0.0"
 androidx-credentials = "1.2.2"
 googleid = "1.1.1"
+foundationLayoutAndroid = "1.6.6"
 
 [libraries]
 # Core & AppCompat
@@ -127,6 +128,7 @@ facebook-android-sdk = { group = "com.facebook.android", name = "facebook-androi
 androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "androidx-credentials" }
 androidx-credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "androidx-credentials" }
 googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+androidx-foundation-layout-android = { group = "androidx.compose.foundation", name = "foundation-layout-android", version.ref = "foundationLayoutAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

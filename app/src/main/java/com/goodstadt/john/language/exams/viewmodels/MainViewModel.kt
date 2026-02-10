@@ -10,6 +10,7 @@ import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UpdateState
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.utils.AppLifecycleObserver
@@ -49,7 +50,8 @@ class MainViewModel @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val appConfigRepository: AppConfigRepository,
     private val connectivityRepository: ConnectivityRepository,
-    private val loadingManager: GlobalLoadingManager
+    private val loadingManager: GlobalLoadingManager,
+    private val billingRepository: BillingRepository
 
 //    private val billingRepository: BillingRepository,
 ) : ViewModel() {
@@ -95,6 +97,7 @@ class MainViewModel @Inject constructor(
             userPreferencesRepository.selectedVoiceNameFlow.collect { voiceName ->
                 _uiState.update { it.copy(selectedVoiceName = voiceName) }
             }
+            billingRepository.connect()//pre warm up for price
         }
 
 //        viewModelScope.launch {

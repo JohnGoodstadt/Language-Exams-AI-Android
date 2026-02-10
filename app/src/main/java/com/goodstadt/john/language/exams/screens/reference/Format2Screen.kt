@@ -33,8 +33,8 @@ import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.models.Format2Level
-import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
-import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
@@ -204,7 +204,7 @@ fun Format2Screen(
     }
     if (isDailyRateLimitingSheetVisible){
         if (context is androidx.activity.ComponentActivity) {
-            RateLimitDailyReasonsBottomSheet(
+            RateLimitDailyPaywallBottomSheet(
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                 onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
             )
@@ -212,7 +212,7 @@ fun Format2Screen(
     }
     if (isHourlyRateLimitingSheetVisible){
         if (context is androidx.activity.ComponentActivity) {
-            RateLimitHourlyReasonsBottomSheet(
+            RateLimitHourlyPaywallBottomSheet(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
             )

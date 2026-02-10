@@ -25,9 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
-import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
-import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.PlaybackState

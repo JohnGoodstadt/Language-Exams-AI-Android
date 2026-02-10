@@ -199,7 +199,7 @@ fun CategoryTabScreen(
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) {
                 viewModel.refreshCacheState(selectedVoiceName)
-                viewModel.connectToBilling()
+               viewModel.connectToBilling()
                 viewModel.onResume()
             } else if (event == Lifecycle.Event.ON_PAUSE) {
                 viewModel.saveDataOnExit()

@@ -226,191 +226,7 @@ class SearchViewModel @Inject constructor(
     fun onSearchQueryChanged(query: String) {
         _searchQuery.value = query
     }
-//    private fun loadFullWordList() {
-//        viewModelScope.launch {
-//            val fileName = userPreferencesRepository.selectedFileNameFlow.first()
-//            vocabRepository.getFormat0Data(fileName).onSuccess { vocabFile ->
-//                // Flatten the entire structure into a single list of words
-////                allWords =
-////                    vocabFile.categories.flatMap { it.words }.sortedBy { it.word.lowercase() }
-//
-//
-//                _searchResults.value = vocabFile.categories.flatMap { category ->
-//                    // Inside this block, we know the Category info
-//                    category.words.mapNotNull { word ->
-//
-//                        // Get the sentence (if it exists)
-//                        val sentence = word.sentences.firstOrNull()?.sentence
-//
-//                        if (sentence != null) {
-//                            // Create the result immediately, capturing Parent info
-//                            SearchResult(
-//                                word = word,
-//                                firstSentence = sentence,
-//                                categoryTitle = category.title,
-//                                categoryTabNumber = category.tabNumber
-//                            )
-//                        } else {
-//                            null // Skip words that have no sentence
-//                        }
-//                    }
-//                }
-//// Finally, sort the list of SearchResults
-//                    .sortedBy { it.word.word.lowercase() }
-//
-//                allSearchResults = _searchResults.value
-//                Timber.i("_searchResults:${_searchResults.value.count()}")
-//            }
-//        }
-//    }
-//    private fun observeSearchQueryObsolete() {
-//        searchQuery
-//            .debounce(300L) // Wait for user to stop typing
-//            .distinctUntilChanged() // Don't search for "hell" twice
-//            .map { query ->
-//                // This block runs on a background thread thanks to flowOn below
-//                if (query.isBlank()) {
-//                    allSearchResults
-//                } else {
-//                    allSearchResults.filter { result ->
-//                        result.word.word.contains(query, ignoreCase = true) ||
-//                                result.word.translation.contains(query, ignoreCase = true)
-//                    }
-//                }
-//            }
-//            .flowOn(Dispatchers.Default) // ⚡️ CPU-intensive work goes here
-//            .onEach { results ->
-//                _searchResults.value = results // Updates StateFlow (Thread-safe)
-//            }
-//            .launchIn(viewModelScope) // Replaces viewModelScope.launch { .collect() }
-//    }
-//    private fun observeSearchQueryObsolete() {
-////        return
-//        viewModelScope.launch {
-//            searchQuery
-//                .debounce(300L)
-//                .distinctUntilChanged()
-//                .map { query ->
-//                    // --- THIS IS THE MAIN LOGIC FIX ---
-//                    if (query.isBlank()) { // Use isBlank() to handle empty strings and whitespace
-//                        // If the query is empty, return the full list.
-//                        allSearchResults
-//                    } else {
-//                        // If the query has text, filter the master list.
-//                        allSearchResults.filter {
-//                            it.word.contains(query, ignoreCase = true) ||
-//                                    it.translation.contains(query, ignoreCase = true) // Bonus: search translation too
-//                        }
-//                    }
-//                }
-//                .map { words ->
-//                    // This second map converts the filtered VocabWord list to the SearchResult list.
-//                    // This ensures the logic isn't duplicated.
-//                    words.mapNotNull { word ->
-//                        word.sentences.firstOrNull()?.let { sentence ->
-//                            SearchResult(word, sentence.sentence)
-//                        }
-//                    }
-//                }
-//                .collect { results ->
-//                    _searchResults.value = results
-//                }
-//        }
-//    }
 
-
-
-    fun playTrack(searchResult: SearchResult) {
-        if (_playbackState.value is PlaybackState.Playing) return
-
-        viewModelScope.launch {
-            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
-                if (rateLimiter.doIForbidCall()) {
-                    val failType = rateLimiter.canMakeCallWithResult()
-                    Timber.v("${failType.canICallAPI}")
-                    Timber.v("${failType.failReason}")
-                    Timber.v("${failType.timeLeftToWait}")
-                    if (!failType.canICallAPI) {
-                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
-                            _showRateDailyLimitSheet.value = true
-                        } else {
-                            _showRateHourlyLimitSheet.value = true
-                        }
-                    } else {
-                        _showRateLimitSheet.value = true
-                    }
-
-                    return@launch
-                }
-            }
-
-
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val uniqueSentenceId = generateUniqueSentenceId(
-                searchResult.word,
-                searchResult.word.sentences.first(),
-                currentVoiceName
-            )
-            _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
-
-            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
-            if (played) {//short cut so user cna play cached sentences with no Internet connection
-                _playbackState.value = PlaybackState.Idle
-                ttsStatsRepository.updateTTSStatsWithoutCosts()
-                ttsStatsRepository.incWordStats(searchResult.word.word)
-                return@launch
-            }
-
-            if (!connectivityRepository.isCurrentlyOnline()) {
-                _uiEvent.emit(
-                    SearchUiEvent.ShowSnackbar(
-                        "No internet connection",
-                        actionLabel = "Retry"
-                    )
-                )
-                return@launch
-            }
-
-            // Use .first() to get the most recent value from the Flow
-            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
-
-            val result = vocabRepository.playTextToSpeech(
-                text = searchResult.firstSentence,
-                uniqueSentenceId = uniqueSentenceId,
-                voiceName = currentVoiceName,
-                languageCode = currentLanguageCode
-            )
-
-            when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    if (todayIsNotAFreePassDay){
-                        rateLimiter.recordCall()
-                    }
-                    _playbackState.value = PlaybackState.Idle
-                    ttsStatsRepository.updateTTSStatsWithCosts(
-                        searchResult.firstSentence,
-                        currentVoiceName
-                    )
-                    ttsStatsRepository.incWordStats(searchResult.word.word)
-                }
-
-                is PlaybackResult.PlayedFromLocalCache -> {
-                    _playbackState.value = PlaybackState.Idle
-                    ttsStatsRepository.updateTTSStatsWithoutCosts()
-                    ttsStatsRepository.incWordStats(searchResult.word.word)
-                }
-
-                is PlaybackResult.Failure -> {
-                    _playbackState.value =
-                        PlaybackState.Error(result.exception.message ?: "Playback failed")
-                }
-
-                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
-            }
-            _playbackState.value = PlaybackState.Idle
-        }
-    }
     fun hideDailyRateLimitSheet(){
         _showRateDailyLimitSheet.value = false
     }
@@ -498,7 +314,19 @@ class SearchViewModel @Inject constructor(
 
                 is AudioPlaybackStatus.RateLimited -> {
                     // Show Paywall logic
-                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    Timber.i("SearchViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.w("Rate Limiter Triggered")
+                    Timber.w("canICallAPI = %s", failType.canICallAPI)
+                    Timber.w("failReason = %s", (failType.failReason))
+                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w(rateLimiter.printCurrentStatus)
+
+                    if (status.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                        _showRateDailyLimitSheet.value = true
+                    } else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
                 }
 
                 is AudioPlaybackStatus.Failure -> {

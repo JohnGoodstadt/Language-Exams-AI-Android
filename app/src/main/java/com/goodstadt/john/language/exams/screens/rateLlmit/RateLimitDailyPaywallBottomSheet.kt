@@ -67,6 +67,7 @@ fun RateLimitDailyPaywallBottomSheet (
 //    val limitMessage = "Call limits exceeded for the day. Please wait till tomorrow for your next hearing."
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true) // Prevent half-open states
+    val priceText by viewModel.priceFlow.collectAsState()
 
     LaunchedEffect(true) {
         viewModel.incStatForDaily()
@@ -160,7 +161,7 @@ fun RateLimitDailyPaywallBottomSheet (
             ) {
                 Icon(Icons.Default.WorkspacePremium, null)
                 Spacer(Modifier.width(8.dp))
-                Text("Unlock Premium - $1.99", fontSize = 18.sp)
+                Text("Go Unlimited - ${priceText}", fontSize = 18.sp)
             }
 
             // 6. NOT NOW BUTTON

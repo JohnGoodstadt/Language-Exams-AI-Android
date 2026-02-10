@@ -42,6 +42,7 @@ class Format3GroupedViewModel @Inject constructor(
     private val historyManager: HistorySyncManager,
     private val audioCacheManager: AudioCacheManager,
     private val billingRepository: BillingRepository,
+    private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
@@ -165,36 +166,7 @@ class Format3GroupedViewModel @Inject constructor(
   //      refreshRedDots(file)
     }
 
-//    private fun observeHistory() {
-//        viewModelScope.launch {
-//            historyManager.historyState.collect { _ ->
-//                // Whenever history updates, re-check the current file's dots
-//                _uiState.value.currentFormat3File?.let { file ->
-//                    refreshRedDots(file)
-//                }
-//            }
-//        }
-//    }
 
-//    private fun refreshRedDots(file: Format3File) {
-//        val allSentences = file.data
-//            .flatMap { it.wordsAndSentences }
-//            .flatMap { it.sentences }
-//            .map { it.sentence }
-//
-//        val newHeardSet = mutableSetOf<String>()
-//
-//        // Check History Manager (Synchronous check against its cached map)
-//        // Since we are inside the 'collect' block or load success, we have latest data
-//        for (sentence in allSentences) {
-//            val id = FirebaseAudioService.generateContentID(sentence)
-//            if (historyManager.isHeard("Reference", id)) {
-//                newHeardSet.add(id)
-//            }
-//        }
-//
-//        _uiState.update { it.copy(heardSentenceIDs = newHeardSet) }
-//    }
 
     fun isHeard(sentence: String): Boolean {
         val contentID = FirebaseAudioService.generateContentID(sentence)
@@ -204,31 +176,7 @@ class Format3GroupedViewModel @Inject constructor(
         val contentID = FirebaseAudioService.generateContentID(sentence)
         return historyManager.getPlayCount("Reference", contentID)
     }
-    private fun didPlayReferenceSentence(sentence: String,sheetName:String) {
-        val contentID = FirebaseAudioService.generateContentID(sentence)
-        val levelName = "Reference"
 
-        // 1. Check Previous Count
-        val previousCount = historyManager.getPlayCount(levelName, contentID)
-        val isFirstTime = previousCount == 0
-
-        // 2. Update History (Source of Truth)
-        // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes -- inc heard by 1
-        historyManager.markSentenceHeard(levelName, contentID)
-
-        // 3. Update Graph Stats (If new)
-        if (isFirstTime) {
-           // val sheetTitle = sheetName
-            val currentStats = audioCacheManager.getReferenceStats(sheetName)
-            audioCacheManager.updateReferenceStats(
-                key = sheetName,
-                heard = currentStats.heard + 1,
-                total = currentStats.total
-            )
-        }
-
-        refreshUI()
-    }
     // MARK: - Helpers & Billing
     private fun refreshUI() {
         _uiState.update { currentState ->
@@ -292,7 +240,19 @@ class Format3GroupedViewModel @Inject constructor(
 
                 is AudioPlaybackStatus.RateLimited -> {
                     // Show Paywall logic
-                    Timber.i("Format3ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    Timber.i("Format3GroupedViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.w("Rate Limiter Triggered")
+                    Timber.w("canICallAPI = %s", failType.canICallAPI)
+                    Timber.w("failReason = %s", (failType.failReason))
+                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w(rateLimiter.printCurrentStatus)
+
+                    if (status.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                        _showRateDailyLimitSheet.value = true
+                    } else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
                 }
 
                 is AudioPlaybackStatus.Failure -> {

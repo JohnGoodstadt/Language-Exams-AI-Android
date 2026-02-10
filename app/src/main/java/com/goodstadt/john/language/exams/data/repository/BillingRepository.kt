@@ -70,6 +70,11 @@ class BillingRepository @Inject constructor(
     private val _billingError = MutableStateFlow<String?>(null)
     val billingError: StateFlow<String?> = _billingError.asStateFlow()
 
+
+    // ✅ 1. Add a StateFlow to hold the price permanently in memory
+    private val _productPrice = MutableStateFlow<String?>(null)
+    val productPrice = _productPrice.asStateFlow()
+
     // A SharedFlow is perfect for sending one-off events like a new purchase token.
 //    private val _newPurchaseToken = MutableSharedFlow<String>()
 //    val newPurchaseToken = _newPurchaseToken.asSharedFlow()
@@ -103,7 +108,12 @@ class BillingRepository @Inject constructor(
     fun connect() {
         if (billingClient.isReady) {
             Timber.d("BillingClient is already connected.")
-            scope.launch { checkPurchases() } // Refresh purchases on reconnect
+
+            scope.launch {
+                if (_productPrice.value == null) queryProductDetails()
+
+                checkPurchases() // Refresh purchases on reconnect
+            }
             return
         }
 
@@ -157,6 +167,10 @@ class BillingRepository @Inject constructor(
             if (result.billingResult.responseCode == BillingClient.BillingResponseCode.OK && detailsList.isNotEmpty()) {
                 _productDetails.value = detailsList.firstOrNull()
                 Timber.w("Product details:$PRODUCT_ID")
+                // ✅ 2. Save the price to the StateFlow
+                val price = _productDetails.value?.oneTimePurchaseOfferDetails?.formattedPrice
+                _productPrice.value = price
+
                 if(_isPurchased.value) {
                     Timber.w("✅ User is a Paid user")
                 }else{

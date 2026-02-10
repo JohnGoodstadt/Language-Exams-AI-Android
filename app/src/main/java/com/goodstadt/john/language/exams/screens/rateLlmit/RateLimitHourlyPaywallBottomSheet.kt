@@ -64,7 +64,10 @@ fun RateLimitHourlyPaywallBottomSheet(
     val coroutineScope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true) // Prevent half-open states
 
+    val priceText by viewModel.priceFlow.collectAsState()
+
     LaunchedEffect(true) {
+//        viewModel.connectToBilling()
       //  limitMessage = "So far -- Hourly calls:${currentHourlyCount}, Daily calls:$currentDailyCount "
         limitMessage = "Limits exceeded for this hour. Please wait for your next hearing."
         viewModel.currentHourlyTimeLeftToWait().let { hours ->
@@ -158,7 +161,7 @@ fun RateLimitHourlyPaywallBottomSheet(
             ){
                 Icon(Icons.Default.WorkspacePremium, null)
                 Spacer(Modifier.width(8.dp))
-                Text("Go Unlimited - ${viewModel.formattedPrice()}", fontSize = 18.sp)
+                Text("Go Unlimited - ${priceText}", fontSize = 18.sp)
 
             }
             // 6. NOT NOW BUTTON

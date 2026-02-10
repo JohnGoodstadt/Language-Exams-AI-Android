@@ -9,8 +9,18 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
@@ -18,15 +28,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
-import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
-import com.goodstadt.john.language.exams.screens.reference.shared.SectionedVocabList
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
-import com.goodstadt.john.language.exams.viewmodels.PlaybackState
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.android.EntryPointAccessors
 import timber.log.Timber
@@ -146,7 +154,7 @@ fun GroupedSheetScreen(
         }
         if (isDailyRateLimitingSheetVisible){
             if (context is ComponentActivity) {
-                RateLimitDailyReasonsBottomSheet(
+                RateLimitDailyPaywallBottomSheet(
                     onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                     onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
                 )
@@ -154,7 +162,7 @@ fun GroupedSheetScreen(
         }
         if (isHourlyRateLimitingSheetVisible){
             if (context is ComponentActivity) {
-                RateLimitHourlyReasonsBottomSheet(
+                RateLimitHourlyPaywallBottomSheet(
                     onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                     onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
                 )

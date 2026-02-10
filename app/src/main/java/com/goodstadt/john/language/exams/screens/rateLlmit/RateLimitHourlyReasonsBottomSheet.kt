@@ -33,7 +33,7 @@ import com.goodstadt.john.language.exams.viewmodels.RateLimitSheetViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RateLimitHourlyReasonsBottomSheet(
+fun RateLimitHourlyReasonsBottomSheetObsolete(
     viewModel: RateLimitSheetViewModel = hiltViewModel(),
     onBuyPremiumButtonPressed: () -> Unit,
     onCloseSheet: () -> Unit

@@ -18,8 +18,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.config.LanguageConfig
-import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
-import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.screens.reference.shared.SectionedVocabList
 import com.goodstadt.john.language.exams.viewmodels.ConjugationsUiState
@@ -86,7 +86,7 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
     if (isDailyRateLimitingSheetVisible){
 //        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
         if (context is androidx.activity.ComponentActivity) {
-            RateLimitDailyReasonsBottomSheet(
+            RateLimitDailyPaywallBottomSheet(
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                 onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
             )
@@ -95,7 +95,7 @@ fun ConjugationsScreen(viewModel: ConjugationsViewModel = hiltViewModel()) {
     }
     if (isHourlyRateLimitingSheetVisible){
         if (context is androidx.activity.ComponentActivity) {
-            RateLimitHourlyReasonsBottomSheet(
+            RateLimitHourlyPaywallBottomSheet(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
             )

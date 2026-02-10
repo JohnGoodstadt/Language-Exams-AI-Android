@@ -39,7 +39,7 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RateLimitDailyReasonsBottomSheet (
+fun RateLimitDailyReasonsBottomSheetObsolete (
     viewModel: RateLimitSheetViewModel = hiltViewModel(),
     onBuyPremiumButtonPressed: () -> Unit,
     onCloseSheet: () -> Unit

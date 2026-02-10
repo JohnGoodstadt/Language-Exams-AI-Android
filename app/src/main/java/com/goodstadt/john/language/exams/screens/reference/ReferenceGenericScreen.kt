@@ -33,8 +33,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
-import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
@@ -44,7 +44,7 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
 import dagger.hilt.android.EntryPointAccessors
 import timber.log.Timber
 
-// ... other necessary imports
+// ... other necessary imports∫
 
 // 1. RENAMED: PrepositionsScreen -> ReferenceGenericScreen
 // 2. MODIFIED: The ViewModel type is now our new generic one
@@ -232,7 +232,7 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     }
     if (isDailyRateLimitingSheetVisible){
         if (context is ComponentActivity) {
-            RateLimitDailyReasonsBottomSheet(
+            RateLimitDailyPaywallBottomSheet(
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                 onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
             )
@@ -240,7 +240,7 @@ fun ReferenceGenericScreen(viewModel: ReferenceGenericViewModel = hiltViewModel(
     }
     if (isHourlyRateLimitingSheetVisible){
         if (context is ComponentActivity) {
-            RateLimitHourlyReasonsBottomSheet(
+            RateLimitHourlyPaywallBottomSheet(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
             )

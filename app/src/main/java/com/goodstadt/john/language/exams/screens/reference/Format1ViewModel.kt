@@ -1,17 +1,21 @@
 package com.goodstadt.john.language.exams.screens.reference
 
+import android.app.Activity
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
+import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statSideQuestCount
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.HeaderWordsSentencesList
@@ -41,6 +45,8 @@ class Format1ViewModel @Inject constructor(
     private val historyManager: HistorySyncManager,
     private val audioCacheManager: AudioCacheManager,
     private val appConfigRepository: AppConfigRepository,
+    private val billingRepository: BillingRepository,
+    private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
@@ -49,10 +55,46 @@ class Format1ViewModel @Inject constructor(
     private val _uiState = MutableStateFlow<Format1UiState>(Format1UiState.Loading)
     val uiState = _uiState.asStateFlow()
 
+    private val _isPremiumUser = MutableStateFlow(false)
+    val isPremiumUser = _isPremiumUser.asStateFlow()
+
+    private val _showRateLimitSheet = MutableStateFlow(false)
+    val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
+
+    private val _showRateDailyLimitSheet = MutableStateFlow(false)
+    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
+
+    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
+    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
+
     init {
         loadData()
+        viewModelScope.launch {
+            billingRepository.isPurchased.collect { purchasedStatus ->
+                _isPremiumUser.value = purchasedStatus
+                if (DEBUG) {
+                    billingRepository.logCurrentStatus()
+                }
+            }
+        }
+    }
+    fun hideDailyRateLimitSheet() {
+        _showRateDailyLimitSheet.value = false
     }
 
+    fun hideHourlyRateLimitSheet() {
+        _showRateHourlyLimitSheet.value = false
+    }
+
+    fun hideRateOKLimitSheet() {
+        _showRateLimitSheet.value = false
+    }
+    fun buyPremiumButtonPressed(activity: Activity) {
+        Timber.i("purchasePremium()")
+        viewModelScope.launch {
+            billingRepository.launchPurchase(activity)
+        }
+    }
     private fun loadData() {
         viewModelScope.launch {
             _uiState.value = Format1UiState.Loading
@@ -121,6 +163,18 @@ class Format1ViewModel @Inject constructor(
                 is AudioPlaybackStatus.RateLimited -> {
                     // Show Paywall logic
                     Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.w("Rate Limiter Triggered")
+                    Timber.w("canICallAPI = %s", failType.canICallAPI)
+                    Timber.w("failReason = %s", (failType.failReason))
+                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w(rateLimiter.printCurrentStatus)
+
+                    if (status.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                        _showRateDailyLimitSheet.value = true
+                    } else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
                 }
 
                 is AudioPlaybackStatus.Failure -> {
