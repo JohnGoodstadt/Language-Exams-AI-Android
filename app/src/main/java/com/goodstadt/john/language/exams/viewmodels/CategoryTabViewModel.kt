@@ -322,30 +322,30 @@ class CategoryTabViewModel @Inject constructor(
                 isPremiumUser = isPremiumUser.value // Replace with actual check if available
             )
 
-            if (success) {
-                // 2. ⚡️ NON OPTIMISTIC UPDATE (Lightning). Now that playback is async
-                // This turns the Red Dot ON immediately.
-                didPlayVocabSentence(sentence, category.title, category.tabNumber)
-
-                if (!wasAlreadyHeard) {
-                    checkSectionCompletionAfterNewSentence(category,sentence)
-                    _uiState.update { currentState ->
-                        if (currentState is CategoryTabUiState.Success) {
-                            currentState.copy(
-                                heardCountOnTab = currentState.heardCountOnTab + 1
-                            )
-                        } else currentState
-                    }
-                }
-
-                checkHelpTrigger()
-            }else if (false){
-                // ❌ FAILURE
-                _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed"))
-                _uiState.update {
-                    if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Error("Failed")) else it
-                }
-            }
+//            if (success) {
+//                // 2. ⚡️ NON OPTIMISTIC UPDATE (Lightning). Now that playback is async
+//                // This turns the Red Dot ON immediately.
+//                didPlayVocabSentence(sentence, category.title, category.tabNumber)
+//
+//                if (!wasAlreadyHeard) {
+//                    checkSectionCompletionAfterNewSentence(category,sentence)
+//                    _uiState.update { currentState ->
+//                        if (currentState is CategoryTabUiState.Success) {
+//                            currentState.copy(
+//                                heardCountOnTab = currentState.heardCountOnTab + 1
+//                            )
+//                        } else currentState
+//                    }
+//                }
+//
+//                checkHelpTrigger()
+//            }else if (false){
+//                // ❌ FAILURE
+//                _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed"))
+//                _uiState.update {
+//                    if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Error("Failed")) else it
+//                }
+//            }
 
             when (result) {
                 is AudioPlaybackStatus.PlayedFromTTSAPI,is AudioPlaybackStatus.PlayedFromLocalCache , is AudioPlaybackStatus.PlayedFromCloudStorage -> {
@@ -884,6 +884,12 @@ class CategoryTabViewModel @Inject constructor(
     }
     suspend fun refreshGamificationStatsAndWait() {
         audioCacheManager.awaitFreshStats()
+    }
+
+    fun hideSheets() {
+        _showRateDailyLimitSheet.value = false
+        _showRateHourlyLimitSheet.value = false
+
     }
 
 }

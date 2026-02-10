@@ -93,7 +93,8 @@ interface StatsSheetEntryPoint {
     fun getQuizManager(): QuizHistoryManager
 }
 
-private const val HELP_TRIGGER_VOICE_SELECTION_COUNT = 15 //after 15 plays - show choose voice help screen
+private const val HELP_TRIGGER_VOICE_SELECTION_COUNT =
+    15 //after 15 plays - show choose voice help screen
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
@@ -103,7 +104,6 @@ fun CategoryTabScreen(
     selectedVoiceName: String,
     viewModel: CategoryTabViewModel = hiltViewModel()
 ) {
-
 
 
     val context = LocalContext.current
@@ -148,7 +148,6 @@ fun CategoryTabScreen(
 
     LaunchedEffect(Unit) {
         viewModel.showSpeakerSheet.collect {
-
 
 
             viewModel.refreshGamificationStatsAndWait()
@@ -450,7 +449,7 @@ fun CategoryTabScreen(
             }
             if (isDailyRateLimitingSheetVisible) {
                 if (context is ComponentActivity) {
-                    RateLimitDailyReasonsBottomSheet(
+                    RateLimitDailyPaywallBottomSheet(
                         onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                         onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
                     )
@@ -458,13 +457,13 @@ fun CategoryTabScreen(
             }
             if (isHourlyRateLimitingSheetVisible) {
                 if (context is ComponentActivity) {
-                    RateLimitHourlyReasonsBottomSheet(
+                    RateLimitHourlyPaywallBottomSheet(
                         onCloseSheet = {
-
                             viewModel.hideHourlyRateLimitSheet()
                         },
                         onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
                     )
+
                 }
             }
 
@@ -510,7 +509,7 @@ fun CategoryTabScreen(
                 // Filter for this tab if needed, or show all
 
                 // Note: You might need a helper in ViewModel to sum specific tab totals
-               // val (heard, total) = viewModel.calculateGrandTotals()
+                // val (heard, total) = viewModel.calculateGrandTotals()
 
                 val heard by viewModel.totalHeardFlow.collectAsState() // or collectAsStateWithLifecycle()
                 val total by viewModel.totalCountFlow.collectAsState()

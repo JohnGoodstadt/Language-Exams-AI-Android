@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import androidx.lifecycle.ViewModel
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.rateLimitDailyViewCount
 import com.goodstadt.john.language.exams.data.FirestoreRepository.fb.rateLimitHourlyViewCount
+import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBoughtCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
@@ -14,6 +15,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
+import timber.log.Timber
 import javax.inject.Inject
 
 data class RateLimitUiState(
@@ -30,17 +32,29 @@ data class RateLimitUiState(
 class RateLimitSheetViewModel  @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val rateLimiter: SimpleRateLimiter,
+    private val billingRepository: BillingRepository
 ): ViewModel() {
 
     private val _uiState = MutableStateFlow(RateLimitUiState())
     val uiState = _uiState.asStateFlow()
+
+    val productDetails = billingRepository.productDetails
 
     init {
         updateRateLimiterState()
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statIAPSheetDisplayedCount)
 
     }
+    fun formattedPrice() : String {
 
+        Timber.w("Product Details: ${productDetails.value?.let { "${it.name} - ${it.oneTimePurchaseOfferDetails?.formattedPrice}" } ?: "None"}")
+
+        productDetails.value?.let {
+            return it.oneTimePurchaseOfferDetails?.formattedPrice ?: "Unknown Price"
+        }
+
+        return "Unknown Price"
+    }
     fun incStatForDaily() {
         ttsStatsRepository.incUserStatCount(rateLimitDailyViewCount)
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPDailyHitCount)
@@ -55,19 +69,28 @@ class RateLimitSheetViewModel  @Inject constructor(
     private fun updateRateLimiterState() {
         _uiState.update {
             it.copy(
-//                callsMadeThisHour = rateLimiter.currentHourlyCount,
                 hourlyLimit = rateLimiter.hourlyLimit,
-//                callsMadeToday = rateLimiter.callsMadeToday,
                 dailyLimit = rateLimiter.dailyLimit
             )
         }
     }
-    fun incStatIAPBought() {
-        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBoughtCount)
+
+
+    // ✅ NEW: Helper to format time for the UI
+    fun getFormattedTimeLeft(isDaily: Boolean): String {
+        val secondsRemaining = 0//rateLimiter.timeLeftToWait // Accessing property from SimpleRateLimiter
+
+        if (secondsRemaining <= 0) return "Ready now"
+
+        val hours = secondsRemaining / 3600
+        val minutes = (secondsRemaining % 3600) / 60
+
+        return if (isDaily) {
+            // Logic for daily reset (usually wait until tomorrow)
+            if (hours > 0) "$hours hrs $minutes mins" else "$minutes mins"
+        } else {
+            // Logic for hourly
+            "$minutes mins"
+        }
     }
-//    fun incStatIAPCancelled() {
-//        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBuyCancelledCount)
-//    }
-
-
 }

@@ -675,7 +675,7 @@ class QuizViewModel @Inject constructor(
 
     fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyselfListRoot? {
         return try {
-            Timber.v("reading json: $fileName")
+           // Timber.v("reading json: $fileName")
 
             val jsonString = context.assets.open("Quizzes/$fileName")
                 .bufferedReader()
@@ -884,7 +884,7 @@ class QuizViewModel @Inject constructor(
 
         // 4. Return localized if found, otherwise default
         return if (filesInAssets.contains(localizedName)) {
-            Timber.i("✅ Found localized quiz: $localizedName")
+           // Timber.i("✅ Found localized quiz: $localizedName")
             localizedName
         } else {
             Timber.i("⚠️ Localized quiz not found, falling back to: $defaultName")

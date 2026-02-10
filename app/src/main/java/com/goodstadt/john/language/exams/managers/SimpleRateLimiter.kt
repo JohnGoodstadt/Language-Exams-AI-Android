@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.managers
 import android.content.Context
 import android.content.SharedPreferences
 import androidx.annotation.VisibleForTesting
+import com.goodstadt.john.language.exams.BuildConfig
 import timber.log.Timber
 import java.util.*
 import javax.inject.Inject
@@ -98,6 +99,33 @@ class SimpleRateLimiter @Inject constructor(
 
         resetIfNeeded()
 
+
+
+
+        if (BuildConfig.DEBUG) {
+            Timber.i(printableStatus())
+//            when {
+//                dailyCount >= dailyLimit -> {
+//                    val d1 = CallResult(false, FailReason.DAILY, timeUntilNextDay())
+//                    Timber.i(d1.toString())
+//                }
+//
+//                hourlyCount >= hourlyLimit ->  {
+//                    val d2 = CallResult(false, FailReason.HOURLY, currentHourlyTimeLeftToWait)
+//                    Timber.i(d2.toString())
+//                }
+//                else -> {
+//                    val d3 = CallResult(true, null, null)
+//                    Timber.i(d3.toString())
+//                }
+//            }
+
+//            val debug1 =
+//                dailyCount >= dailyLimit -> CallResult(false, FailReason.DAILY, timeUntilNextDay())
+//            val debug2 =
+//                dailyCount >= dailyLimit -> CallResult(false, FailReason.DAILY, timeUntilNextDay())
+//            val debug3 = CallResult(true, null, null)
+        }
         return when {
             dailyCount >= dailyLimit -> CallResult(false, FailReason.DAILY, timeUntilNextDay())
             hourlyCount >= hourlyLimit -> CallResult(false, FailReason.HOURLY, currentHourlyTimeLeftToWait)
@@ -119,6 +147,7 @@ private fun canMakeAPICall():Boolean {
         }
     }
     fun doIForbidCall():Boolean {
+//        return true //:TODO 1 day test Feb 2026
         return !canMakeAPICall()
     }
     fun canMakeCall(): Triple<Boolean, FailReason?, Long?> {

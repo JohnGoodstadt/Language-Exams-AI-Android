@@ -134,6 +134,12 @@ class SettingsViewModel @Inject constructor(
     private val _showHelpSheet = MutableStateFlow(false)
     val showHelpSheet = _showHelpSheet.asStateFlow()
 
+    //TODO: Test IAP screens
+    private val _showRateDailyLimitSheet = MutableStateFlow(false)
+    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
+    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
+    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
+
     fun initObsolete() {
 
         // This initialization logic is correct and remains the same.
@@ -866,5 +872,8 @@ class SettingsViewModel @Inject constructor(
             }
         }
     }
-
+    fun hideDailyRateLimitSheet() { _showRateDailyLimitSheet.value = false }
+    fun hideHourlyRateLimitSheet() {  _showRateHourlyLimitSheet.value = false  }
+    fun showDailyRateLimitSheet() { _showRateDailyLimitSheet.value = true }
+    fun ShowHourlyRateLimitSheet() {  _showRateHourlyLimitSheet.value = true  }
 }

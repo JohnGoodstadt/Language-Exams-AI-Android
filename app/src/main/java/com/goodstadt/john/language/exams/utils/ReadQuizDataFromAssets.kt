@@ -7,7 +7,7 @@ import timber.log.Timber
 
 fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyselfListRoot? {
     return try {
-        Timber.v("reading json: $fileName")
+     //   Timber.v("reading json: $fileName")
 
         val jsonParser = Json {
             ignoreUnknownKeys = true

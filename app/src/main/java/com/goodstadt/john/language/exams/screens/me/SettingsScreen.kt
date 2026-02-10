@@ -7,13 +7,16 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Login
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.CloudSync
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.Stars
 import androidx.compose.material.icons.filled.Verified
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
@@ -39,6 +42,11 @@ import com.goodstadt.john.language.exams.ui.theme.accentColor
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.rateLlmit.ConnectedRateLimitPaywall
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
@@ -70,8 +78,8 @@ fun SettingsScreen(
     val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     var showSignInSheet by remember { mutableStateOf(false) }
- //   val signInVm: SignInViewModel = viewModel()
- //   val isLoggedIn by signInVm.isUserLoggedIn.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
 
     var showDebugSheet by remember { mutableStateOf(false) }
@@ -301,7 +309,7 @@ fun SettingsScreen(
         }
     } //: sheetContent
 
-    if (uiState.showIAPBottomSheet) {
+    if (false) {
         ModalBottomSheet(
             // 5. This callback is triggered when the user dismisses the sheet.
             onDismissRequest = { viewModel.onBottomSheetDismissed() },
@@ -402,6 +410,112 @@ fun SettingsScreen(
         }
     }
 
+    if (uiState.showIAPBottomSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { viewModel.onBottomSheetDismissed() },
+            sheetState = sheetStateIAP,
+            containerColor = MaterialTheme.colorScheme.surface, // Clean background
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 24.dp)
+                    .padding(bottom = 32.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                // 1. Visual "Premium" Header
+                Icon(
+                    imageVector = Icons.Default.Stars, // A "Gold Star" or "Crown" icon
+                    contentDescription = null,
+                    tint = Color(0xFFFFD700), // Gold Color
+                    modifier = Modifier.size(48.dp)
+                )
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                Text(
+                    text = "Unlock Full Exam Mastery",
+                    style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Bold),
+                    textAlign = TextAlign.Center
+                )
+
+                Text(
+                    text = "Master the official 3,000+ word bank",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.secondary,
+                    textAlign = TextAlign.Center
+                )
+
+                Spacer(modifier = Modifier.height(24.dp))
+
+                // 2. Value Proposition (Instead of just limits)
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(12.dp),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    BenefitRow("Unlimited AI Pronunciation", "No more ${uiState.hourlyLimit} per hour limits")
+                    BenefitRow("Complete A1-B2 Vocabulary", "All 3,000+ official exam words")
+                    BenefitRow("Lifetime Access", "One-time payment. No subscriptions.")
+                    BenefitRow("Pass Your Exam", "Focus on the words that actually matter")
+                }
+
+                Spacer(modifier = Modifier.height(32.dp))
+
+                // 3. Action Buttons
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    // Main CTA Button
+                    Button(
+                        modifier = Modifier.weight(1.5f).height(56.dp),
+                        shape = RoundedCornerShape(12.dp),
+                        onClick = {
+                            if (context is ComponentActivity) {
+                                AnalyticsHelper.logPaywallResponse(context, "accepted", "limit_sheet")
+                                viewModel.buyPremiumButtonPressed(context)
+                                viewModel.onBottomSheetDismissed()
+                            }
+                        }
+                    ) {
+                        productDetails?.let { details ->
+                            details.oneTimePurchaseOfferDetails?.let { offerDetails ->
+                                Text(
+                                    "Upgrade: ${offerDetails.formattedPrice}",
+                                    style = MaterialTheme.typography.titleMedium
+                                )
+                            }
+                        }
+                    }
+
+                    // Secondary Cancel Button
+                    OutlinedButton(
+                        modifier = Modifier.weight(1f).height(56.dp),
+                        shape = RoundedCornerShape(12.dp),
+                        onClick = {
+                            AnalyticsHelper.logPaywallResponse(context, "rejected", "limit_sheet")
+                            viewModel.IAPCancelled()
+                            viewModel.onBottomSheetDismissed()
+                        }
+                    ) {
+                        Text("Not Now")
+                    }
+                }
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                Text(
+                    text = "Secure your success in IELTS, TOEFL & Cambridge",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.outline,
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
+    }
+
+
+
     if (showHelpSheet) {
         ModalBottomSheet(
             onDismissRequest = { viewModel.dismissHelpSheet() },
@@ -445,7 +559,26 @@ fun SettingsScreen(
             Spacer(modifier = Modifier.height(12.dp))
         }
     }
+    if (isDailyRateLimitingSheetVisible) {
+        if (context is ComponentActivity) {
+            RateLimitDailyPaywallBottomSheet(
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+            )
+        }
 
+    }
+    if (isHourlyRateLimitingSheetVisible) {
+        if (context is ComponentActivity) {
+
+            RateLimitHourlyPaywallBottomSheet(
+                onCloseSheet = {
+                    viewModel.hideHourlyRateLimitSheet()
+                },
+                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+            )
+        }
+    }
     // Main Screen Content
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
@@ -494,8 +627,9 @@ fun SettingsScreen(
                     item {
                         SettingsInfoItem(
                             icon = Icons.Default.Verified,
-                            title = "You are a Premium user!",
-                            value = "Thank you for your support."
+                            title = "Premium Account Verified",
+                            value = "All exam lists and AI limits have been removed forever. Good luck with your studies.",
+                            iconTint = Color(0xFF4CAF50)
                         )
                     }
 
@@ -506,6 +640,7 @@ fun SettingsScreen(
                     SettingsActionItem(
                         icon = Icons.Default.WorkspacePremium, // Use a premium icon
                         title = "Tap to UNDO a Premium user (T  )",
+
                         currentValue = "", // Display the price
                         onClick = {
                             viewModel.onDebugResetPurchases()
@@ -518,8 +653,8 @@ fun SettingsScreen(
             item {
                 SettingsActionItem(
                     icon = Icons.Default.WorkspacePremium,
-                    title = "Some restrictions are in place",
-                    currentValue = "AI has charges so we limit some tasks. Tap to unlock all exam words.",
+                    title = "Upgrade to Exam Mastery",
+                    currentValue = "Unlock 3,000+ official words and unlimited AI pronunciation for life. Tap to secure your score.",
                     onClick = {
                         viewModel.onShowBottomSheetClicked()
                     }
@@ -673,6 +808,26 @@ fun SettingsScreen(
             item {
                 SettingsActionItem(
                     icon = Icons.Default.Info,
+                    title = "Daily IAP",
+                    currentValue = "Try out Daily Rate Limiting Screen (D)",
+                    onClick = {
+                        viewModel.showDailyRateLimitSheet()
+                    }
+                )
+            }
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.Info,
+                    title = "Hourly IAP",
+                    currentValue = "Try out Hourly Rate Limiting Screen (D)",
+                    onClick = {
+                        viewModel.ShowHourlyRateLimitSheet()
+                    }
+                )
+            }
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.Info,
                     title = "Print History Stats",
                     currentValue = "(D)",
                     onClick = {
@@ -740,7 +895,25 @@ fun IAPCancelled() {
     TODO("Not yet implemented")
 }
 
-// Helper Composable (unchanged)
+
+// Helper component for the benefit list
+@Composable
+fun BenefitRow(title: String, subtitle: String) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Icon(
+            imageVector = Icons.Default.CheckCircle,
+            contentDescription = null,
+            tint = Color(0xFF4CAF50), // Success Green
+            modifier = Modifier.size(20.dp)
+        )
+        Spacer(modifier = Modifier.width(12.dp))
+        Column {
+            Text(text = title, style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.SemiBold))
+            Text(text = subtitle, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+        }
+    }
+}
+
 @Composable
 private fun SectionHeader(title: String) {
     Text(
@@ -785,7 +958,7 @@ private fun SettingsActionItem(
 }
 
 @Composable
-private fun SettingsInfoItem(icon: ImageVector, title: String, value: String) {
+private fun SettingsInfoItem(icon: ImageVector, title: String, value: String,iconTint: Color = MaterialTheme.colorScheme.secondary ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -795,7 +968,7 @@ private fun SettingsInfoItem(icon: ImageVector, title: String, value: String) {
         Icon(
             imageVector = icon,
             contentDescription = title,
-            tint = MaterialTheme.colorScheme.secondary
+            tint = iconTint
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column(modifier = Modifier.weight(1f)) {
