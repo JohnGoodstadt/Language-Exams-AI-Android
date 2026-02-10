@@ -27,11 +27,11 @@ object RateLimiterModule {
 
 
 
-        if (BuildConfig.DEBUG){ //Test IAP Purchase
-//        if (false){
+//      if (BuildConfig.DEBUG){ //Test IAP Purchase
+        if (false){
             return SimpleRateLimiter(
                 context = context,
-                hourlyLimit = 4,
+                hourlyLimit = 6,
                 dailyLimit = 10,
                 schemeID = "schemeDebug",
                 name = "schemeDebug", //same as main prod scheme. so no download is done on app start

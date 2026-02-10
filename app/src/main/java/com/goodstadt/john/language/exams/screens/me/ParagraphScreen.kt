@@ -59,7 +59,10 @@ import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.goodstadt.john.language.exams.viewmodels.ParagraphViewModel
+import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import timber.log.Timber
 import java.util.Date
 
@@ -74,15 +77,12 @@ fun ParagraphScreen(
 //    val globalUiState by mainViewModel.uiState.collectAsState()
 //    val isPremium = globalUiState.isPremiumUser
 
-    // --- STEP 1: Collect the state from the ViewModel ---
-    // The `by` keyword unwraps the State<ParagraphUiState> into a plain ParagraphUiState object.
-    // This line creates the subscription. Whenever the ViewModel updates its state,
-    // this `uiState` variable will change, triggering a recomposition.
-//    val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val uiState by viewModel.uiState.collectAsState()
-//    val sheetState = rememberModalBottomSheetState()
     val sheetStateIAP = rememberModalBottomSheetState()
-//    val tokenCount by viewModel.totalTokenCount.collectAsState()
+    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
+    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
+    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+
 
     val lifecycleOwner = LocalLifecycleOwner.current
     val isPurchased by viewModel.isPurchased.collectAsState(initial = false)
@@ -265,7 +265,7 @@ fun ParagraphScreen(
                         delay(2000) // wait 2s before next tick
                     }
                 }
-
+/*
                 if (uiState.showIAPBottomSheet) {
                     ModalBottomSheet(
                         // 5. This callback is triggered when the user dismisses the sheet.
@@ -419,6 +419,28 @@ fun ParagraphScreen(
                             .padding(horizontal = 12.dp, vertical = 4.dp)
                             .fillMaxWidth()
                     )
+                }
+*/
+
+                if (isRateLimitingSheetVisible){
+                    RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
+                }
+                if (isDailyRateLimitingSheetVisible){
+                    if (context is androidx.activity.ComponentActivity) {
+                        RateLimitDailyPaywallBottomSheet(
+                            onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+                            onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+                        )
+                    }
+
+                }
+                if (isHourlyRateLimitingSheetVisible){
+                    if (context is androidx.activity.ComponentActivity) {
+                        RateLimitHourlyPaywallBottomSheet(
+                            onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+                            onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+                        )
+                    }
                 }
             } else {
                 if (DEBUG) {

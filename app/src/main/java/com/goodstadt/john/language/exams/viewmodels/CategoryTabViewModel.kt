@@ -402,7 +402,7 @@ class CategoryTabViewModel @Inject constructor(
                 }
 
                 is AudioPlaybackStatus.Failure -> {
-                    _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed"))
+                    _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed. Please check your internet connection and try again"))
                     _uiState.update {
                         if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Error("Failed")) else it
                     }

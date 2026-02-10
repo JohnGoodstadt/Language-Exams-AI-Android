@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
@@ -124,6 +125,15 @@ class ParagraphViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(  ParagraphUiState())
     val uiState = _uiState.asStateFlow()
 
+    private val _showRateLimitSheet = MutableStateFlow(false)
+    val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
+
+    private val _showRateDailyLimitSheet = MutableStateFlow(false)
+    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
+
+    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
+    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
+
 
     //NOTE: rate Limiting
 //    private val rateLimiter = RateLimiterManager.getInstance()
@@ -208,6 +218,18 @@ class ParagraphViewModel @Inject constructor(
 
         updateRateLimiterState()
     }
+    fun hideDailyRateLimitSheet() {
+        _showRateDailyLimitSheet.value = false
+    }
+
+    fun hideHourlyRateLimitSheet() {
+        _showRateHourlyLimitSheet.value = false
+    }
+
+    fun hideRateOKLimitSheet() {
+        _showRateLimitSheet.value = false
+    }
+
 
     private fun updateRateLimiterState() {
         _uiState.update {
@@ -621,8 +643,10 @@ class ParagraphViewModel @Inject constructor(
                     if (!failType.canICallAPI) {
                         if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
                             Timber.v("User would fail DAILY rate limiting")
+                            _showRateDailyLimitSheet.value = true
                         } else {
                             Timber.v("User would fail HOURLY rate limiting")
+                            _showRateHourlyLimitSheet.value = true
                         }
                     }
 
@@ -683,7 +707,11 @@ class ParagraphViewModel @Inject constructor(
                         audioCacheManager.incrementAIParagraphHeardCount()
                     }
                     is PlaybackResult.Failure -> {
-                        _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }
+                        if (BuildConfig.DEBUG) {
+                            _uiState.update { it.copy(error = "Text-to-speech failed: ${result.exception.message ?: "Playback failed"}") }
+                        }else {
+                            _uiState.update { it.copy(error = "Text-to-speech failed: Check your internet connection, and try again") }
+                        }
                     }
                     PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
                 }
