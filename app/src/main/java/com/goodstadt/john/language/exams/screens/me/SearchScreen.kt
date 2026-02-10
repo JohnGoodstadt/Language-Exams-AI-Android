@@ -24,7 +24,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
@@ -137,28 +139,24 @@ fun SearchScreen(viewModel: SearchViewModel = hiltViewModel()) {
                 }
             }
 
-
             if (isRateLimitingSheetVisible) {
                 RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
             }
             if (isDailyRateLimitingSheetVisible) {
-//        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
                 if (context is androidx.activity.ComponentActivity) {
-                    RateLimitDailyReasonsBottomSheet(
+                    RateLimitDailyPaywallBottomSheet(
                         onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                         onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
                     )
                 }
             }
             if (isHourlyRateLimitingSheetVisible) {
-//        RateLimitHourlyReasonsBottomSheet(onCloseSheet = { viewModel.hideHourlyRateLimitSheet() })
                 if (context is androidx.activity.ComponentActivity) {
-                    RateLimitHourlyReasonsBottomSheet(
+                    RateLimitHourlyPaywallBottomSheet(
                         onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                         onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
                     )
                 }
-
             }
         }
     }//: Scaffold

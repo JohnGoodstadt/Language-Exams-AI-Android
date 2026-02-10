@@ -29,6 +29,8 @@ import dagger.hilt.android.EntryPointAccessors
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.ui.draw.clip
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
 
@@ -120,9 +122,18 @@ fun Format2GroupedScreen(
 
     // Rate Limits
     if (isRateLimitingSheetVisible) RateLimitOKReasonsBottomSheet { viewModel.hideRateOKLimitSheet() }
-    if (isDailyRateLimitingSheetVisible) { /* ... RateLimitDailyReasons ... */ }
-    if (isHourlyRateLimitingSheetVisible) { /* ... RateLimitHourlyReasons ... */ }
-
+    if (isDailyRateLimitingSheetVisible) {
+        RateLimitDailyPaywallBottomSheet(
+            onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+            onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+        )
+    }
+    if (isHourlyRateLimitingSheetVisible) {
+        RateLimitHourlyPaywallBottomSheet(
+            onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+            onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+        )
+    }
     // Side Quest Sheet
     if (showSideQuestSheet) {
         ModalBottomSheet(

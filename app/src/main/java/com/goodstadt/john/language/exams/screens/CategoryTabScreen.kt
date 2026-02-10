@@ -66,6 +66,7 @@ import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
+import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.HighlightedWordInSentenceRow
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
@@ -458,9 +459,7 @@ fun CategoryTabScreen(
             if (isHourlyRateLimitingSheetVisible) {
                 if (context is ComponentActivity) {
                     RateLimitHourlyPaywallBottomSheet(
-                        onCloseSheet = {
-                            viewModel.hideHourlyRateLimitSheet()
-                        },
+                        onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                         onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
                     )
 

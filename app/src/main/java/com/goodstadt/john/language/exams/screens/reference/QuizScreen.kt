@@ -39,7 +39,9 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitDailyReasonsBottomSheet
+import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyReasonsBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
@@ -482,7 +484,11 @@ fun QuizScreen(
     if (isDailyRateLimitingSheetVisible) {
 //        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
         if (context is androidx.activity.ComponentActivity) {
-            RateLimitDailyReasonsBottomSheet(
+//            RateLimitDailyReasonsBottomSheet(
+//                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
+//                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
+//            )
+            RateLimitDailyPaywallBottomSheet(
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                 onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
             )
@@ -490,7 +496,11 @@ fun QuizScreen(
     }
     if (isHourlyRateLimitingSheetVisible) {
         if (context is androidx.activity.ComponentActivity) {
-            RateLimitHourlyReasonsBottomSheet(
+//            RateLimitHourlyReasonsBottomSheet(
+//                onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
+//                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
+//            )
+            RateLimitHourlyPaywallBottomSheet(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
             )

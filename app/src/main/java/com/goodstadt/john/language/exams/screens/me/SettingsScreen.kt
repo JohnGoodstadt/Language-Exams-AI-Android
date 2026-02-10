@@ -570,7 +570,6 @@ fun SettingsScreen(
     }
     if (isHourlyRateLimitingSheetVisible) {
         if (context is ComponentActivity) {
-
             RateLimitHourlyPaywallBottomSheet(
                 onCloseSheet = {
                     viewModel.hideHourlyRateLimitSheet()
