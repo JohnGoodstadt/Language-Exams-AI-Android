@@ -200,44 +200,56 @@ fun WordQuizScreen(
             val question = questions[currentQuestionIndex]
 
             val annotatedQuestionText =
-                if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                    AnnotatedString(question.title)
-                } else {
-                    buildAnnotatedString {
-                        if (isCurrentAnswerCorrect == true && selectedOption != null) {
-                            // --- SUCCESS STATE ---
-                            // The user has answered correctly.
-                            val parts = question.sentence.split("_")
-                            if (parts.size == 2) {
-                                append(parts[0]) // Append part before the blank
-                                withStyle(
-                                    style = SpanStyle(
-                                        color = Color.Green,
-                                        fontWeight = FontWeight.Bold
-                                    )
-                                ) {
-                                    append(selectedOption!!) // Append the correct word in green
-                                }
-                                append(parts[1]) // Append part after the blank
-                            } else {
-                                // Fallback for complex sentences
-                                append(displayedSentence)
-                            }
-                        } else {
-                            // --- QUESTION STATE ---
-                            // Not answered yet, or answered incorrectly.
+                buildAnnotatedString {
+                    if (isCurrentAnswerCorrect == true && selectedOption != null) {
+                        // --- SUCCESS STATE ---
+
                             append(displayedSentence)
+//                                withStyle(
+//                                    style = SpanStyle(
+//                                        color = Color.Green,
+//                                        fontWeight = FontWeight.Bold
+//                                    )
+//                                ) {
+//                                    append(displayedSentence) // Append the correct word in green
+//                                }
+
+                    } else {
+                        // --- QUESTION STATE ---
+                        // Not answered yet, or answered incorrectly.
+                        append(displayedSentence)
+                        withStyle(
+                            style = SpanStyle(
+                                color = Color.Green,
+                                fontWeight = FontWeight.Bold
+                            )
+                        ) {
+                            // append(displayedSentence) // Append the correct word in green
                         }
                     }
                 }
 
-            Text(
-                text = annotatedQuestionText,
-                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth(),
-                color = orangeLight,
-            )
+
+            if (isCurrentAnswerCorrect == true){
+                Text(
+                    text = annotatedQuestionText,
+                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth(),
+                    color = orangeLight,
+                )
+            }else{
+                Text(
+                    text = annotatedQuestionText,
+                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth(),
+                    color = Color.Green
+                )
+            }
+
+
+
 
 
             question.words.forEach { option ->
@@ -329,7 +341,7 @@ fun WordQuizScreen(
                                     )
                                     sentenceToSpeak = sentence
                                 } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
-                                    val sentence = question.sentence.replace("_", option)
+                                  //  val sentence = question.sentence.replace("_", option)
                                     displayedSentence = viewModel.highlightWordInSentence(
                                         sentence = option,
                                         wordToHighlight =  question.sentence,
