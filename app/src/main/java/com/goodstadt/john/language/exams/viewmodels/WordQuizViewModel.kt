@@ -53,14 +53,14 @@ import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
 
-enum class QuizState(val description: String) {
+enum class WordQuizState(val description: String) {
     NOT_STARTED("Not Started"),
     STARTED("Started"),
     IN_PROGRESS("In Progress"),
     COMPLETED("Completed")
 }
 
-data class QuizStatistics(
+data class WordQuizStatistics(
     val timestamp: Date = Date(),
     var state: QuizState = QuizState.NOT_STARTED,
     val skillLevel: String,
@@ -77,49 +77,23 @@ data class QuizStatistics(
         return "${dateFormatter.format(timestamp)} '${state.description}' '$skillLevel' level:$quizNumber answered:$answered tries:$tries correct:$correct"
     }
 
-    val readyForDB: String
-        get() {
-            val dateFormatter =
-                java.text.SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.getDefault())
-            return "${dateFormatter.format(timestamp)}:${state.description}:$skillLevel:$quizNumber:$answered:$tries:$correct"
-        }
 
     fun update(answered: Int, correct: Int, tries: Int) =
         copy(answered = answered, correct = correct, tries = tries)
 }
 
-enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
+enum class WordQuizLevels(val quizzes: List<QuizDetail>) {
     ELEMENTARY(
         quizzes = listOf(
             QuizDetail(
                 id = 1,
-                baseName = "Quiz1Elementary",
-                title = "Quiz 1 - Simple Tenses"
+                baseName = "WordQuiz1",
+                title = "Quiz 1"
             ),
             QuizDetail(
                 id = 2,
-                baseName = "Quiz2Elementary",
-                title = "Quiz 2 - Word Pairs"
-            ),
-            QuizDetail(
-                id = 3,
-                baseName = "Quiz3Elementary",
-                title = "Quiz 3 - Word Order"
-            ),
-            QuizDetail(
-                id = 4,
-                baseName = "Quiz4Elementary",
-                title = "Quiz 4 - Spelling 1"
-            ),
-            QuizDetail(
-                id = 5,
-                baseName = "Quiz5Elementary",
-                title = "Quiz 5 - Spelling 2"
-            ),
-            QuizDetail(
-                id = 6,
-                baseName = "Quiz6Elementary",
-                title = "Quiz 6 - A vs An"
+                baseName = "WordQuiz2",
+                title = "Quiz 2"
             )
         )
     ),
@@ -127,59 +101,30 @@ enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
         quizzes = listOf(
             QuizDetail(
                 id = 1,
-                baseName = "Quiz1Inter",
-                title = "Quiz 1 - Simple Tenses"
+                baseName = "WordQuiz3",
+                title = "Quiz 3"
             ),
             QuizDetail(
                 id = 2,
-                baseName = "Quiz2Inter",
-                title = "Quiz 2 - Word Pairs"
-            ),
-            QuizDetail(2, "Quiz2Inter", "Quiz 2 - Word Pairs"),
-            QuizDetail(3, "Quiz3Inter", "Quiz 3 - Word Order"),
-            QuizDetail(4, "Quiz4Inter", "Quiz 4 - Spelling 1"),
-            QuizDetail(5, "Quiz5Inter", "Quiz 5 - Spelling 2"),
-//					QuizDetail(id: 6, sheetName: "Quiz6Inter", title: "Quiz 6 - Superlatives"),
+                baseName = "WordQuiz4",
+                title = "Quiz 4"
+            )
         )
     ),
     UPPER(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "Quiz1Upper", title = "Quiz 1 - Tenses"),
+            QuizDetail(id = 1, baseName = "WordQuiz5", title = "Quiz 5"),
             QuizDetail(
                 id = 2,
-                baseName = "Quiz2Upper",
-                title = "Quiz 2 - Word Pairs"
-            ),
-            QuizDetail(
-                id = 3,
-                baseName = "Quiz3Upper",
-                title = "Quiz 3 - Word Order"
-            ),
-            QuizDetail(
-                id = 4,
-                baseName = "Quiz4Upper",
-                title = "Quiz 4 - Spelling 1"
-            ),
-            QuizDetail(
-                id = 5,
-                baseName = "Quiz5Upper",
-                title = "Quiz 5 - Spelling 2"
-            ),
-            QuizDetail(6, "Quiz6Upper", "Quiz 6 - Pronounce 'the'"),
+                baseName = "WordQuiz6",
+                title = "Quiz 6"
+            )
         )
     ),
     ADVANCED(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "Quiz1Advanced", title = "Quiz 1 - Tenses"),
-            QuizDetail(
-                id = 2,
-                baseName = "Quiz2Advanced",
-                title = "Quiz 2 - Word Pairs"
-            ),
-            QuizDetail(3, "Quiz3Advanced", "Quiz 3 - Word Order"),
-            QuizDetail(4, "Quiz4Advanced", "Quiz 4 - Spelling 1"),
-            QuizDetail(5, "Quiz5Advanced", "Quiz 5 - Spelling 2"),
-            QuizDetail(6, "Quiz6Advanced", "Quiz 6 - Adv. Words"),
+            QuizDetail(id = 1, baseName = "WordQuiz7", title = "Quiz 7"),
+            QuizDetail( id = 2,baseName = "WordQuiz8",title = "Quiz 8")
         )
     );
 
@@ -188,19 +133,15 @@ enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
 //        get() = name.lowercase().replaceFirstChar { it.uppercase() }
     val description: String
         get() = when(this) {
-            ELEMENTARY -> "Elementary"
-            INTER -> "Inter" // Explicitly string match if needed
-            UPPER -> "Upper"
-            ADVANCED -> "Advanced"
+            ELEMENTARY -> "Verbs & Patterns"
+            INTER -> "Nouns & Countability" // Explicitly string match if needed
+            UPPER -> "Adjectives, Adverbs & Collocations"
+            ADVANCED -> "Functional / Exam Words"
         }
 }
 
-data class WordOK(
-    val word: String,
-    val ok: Boolean
-)
 
-data class QuizQuestion(
+data class WordQuizQuestion(
     val sentence: String,
     val words: List<String>,
     val correctOption: String,
@@ -209,7 +150,7 @@ data class QuizQuestion(
     val title: String,
 )
 
-sealed interface QuizUiState {
+sealed interface WordQuizUiState {
     object Loading : QuizUiState
     data class Success(
         //val categories: List<Category>,
@@ -221,7 +162,7 @@ sealed interface QuizUiState {
 }
 
 @HiltViewModel
-class QuizViewModel @Inject constructor(
+class WordQuizViewModel @Inject constructor(
     private val application: Application,
     private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
@@ -274,9 +215,9 @@ class QuizViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        QuizStatistics(skillLevel = QuizLevelsNew.UPPER.description, quizNumber = 1, title = "Quiz 1")
+        QuizStatistics(skillLevel = QuizLevelsNew.ELEMENTARY.description, quizNumber = 1, title = "Quiz 1")
     )
-    val selectedLevel = mutableStateOf(QuizLevelsNew.UPPER)
+    val selectedLevel = mutableStateOf(WordQuizLevels.ELEMENTARY)
 
     val selectedQuiz = mutableStateOf<QuizDetail?>(null)
 
@@ -289,6 +230,7 @@ class QuizViewModel @Inject constructor(
     val quizQandA = 10
     val quizMultipleChoice = 11
     val quizDefinitions = 12
+    val quizWordDefinition = 13
     val currentFileFormat = mutableStateOf(quizFillInTheBlanks) //either 7 (fill in the blank) or 10 (Multiple choice)
 
     // ❌ OLD (Static):
@@ -296,14 +238,25 @@ class QuizViewModel @Inject constructor(
 
     // ✅ NEW (Dynamic):
     // This starts with the default English titles, but we can overwrite them later
-    private val _availableQuizzes = MutableStateFlow<List<QuizDetail>>(QuizLevelsNew.UPPER.quizzes)
+    private val _availableQuizzes = MutableStateFlow<List<QuizDetail>>(WordQuizLevels.ELEMENTARY.quizzes)
     val availableQuizzes = _availableQuizzes.asStateFlow()
 
     // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized QuizDetails
-    private val quizTitleCache = mutableMapOf<QuizLevelsNew, List<QuizDetail>>()
+    private val quizTitleCache = mutableMapOf<WordQuizLevels, List<QuizDetail>>()
 
 
-
+    /**
+     * A simple data class to hold the metadata for a single quiz.
+     *
+     * @param id A unique identifier for the quiz within its level (e.g., 1, 2, 3...).
+     * @param baseName The name of the JSON asset file for this quiz.
+     * @param title The human-readable display name for this quiz (e.g., "Quiz 1 - Simple Tenses").
+     */
+//    data class QuizDetail(
+//        val id: Int,
+//        val baseName: String, //e.g. "Quiz1Elementary-en"
+//        val title: String
+//    )
 
 
     init {
@@ -418,7 +371,7 @@ class QuizViewModel @Inject constructor(
         viewModelScope.launch {
 
             val quizDetail = selectedQuiz.value ?: selectedLevel.value.quizzes.first()
-            val baseName = quizDetail.baseName//(selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
+            val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
 
             val finalFilename = getLocalizedFileName(appContext, baseName)
 
@@ -455,13 +408,13 @@ class QuizViewModel @Inject constructor(
     }
 
     // A new function for the UI to call when a different level is picked.
-    fun onLevelSelectedObsolete(level: QuizLevelsNew) {
+    fun onLevelSelectedObsolete(level: WordQuizLevels) {
         selectedLevel.value = level
         // When the level changes, reset the selected quiz to the first one of the new level.
         selectedQuiz.value = level.quizzes.firstOrNull()
         loadQuestions()
     }
-    fun onLevelSelected(level: QuizLevelsNew) {
+    fun onLevelSelected(level: WordQuizLevels) {
         selectedLevel.value = level
 
         // 1. Update the list of quizzes (Async)
@@ -496,6 +449,8 @@ class QuizViewModel @Inject constructor(
             currentFileFormat.value = quizDefinitions
         }else if (testData.fileFormat == quizMultipleChoice) {
             currentFileFormat.value = quizMultipleChoice
+        }else if (testData.fileFormat == quizWordDefinition) {
+            currentFileFormat.value = quizWordDefinition
         } else {
             currentFileFormat.value = quizFillInTheBlanks
         }
@@ -532,6 +487,8 @@ class QuizViewModel @Inject constructor(
             currentFileFormat.value = quizDefinitions
         }else if (testData.fileFormat == quizMultipleChoice) {
             currentFileFormat.value = quizMultipleChoice
+        }else if (testData.fileFormat == quizWordDefinition) {
+            currentFileFormat.value = quizWordDefinition
         } else {
             currentFileFormat.value = quizFillInTheBlanks
         }
@@ -679,7 +636,7 @@ class QuizViewModel @Inject constructor(
     }
 
     // Call this whenever the Level changes (e.g. from Elementary to Inter)
-    private fun refreshQuizTitlesForLevel(level: QuizLevelsNew) {
+    private fun refreshQuizTitlesForLevel(level: WordQuizLevels) {
         viewModelScope.launch {
 
             // 1. Get the list of default quizzes for this level
@@ -727,7 +684,7 @@ class QuizViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
 
             // Loop through all Enum Levels (Elementary, Inter, etc.)
-            QuizLevelsNew.entries.forEach { level ->
+            WordQuizLevels.entries.forEach { level ->
 
                 // Map the default quizzes to their localized versions
                 val localizedList = level.quizzes.map { quizDetail ->
@@ -778,7 +735,7 @@ class QuizViewModel @Inject constructor(
             }
         }
     }
-    private fun updateAvailableQuizzesFor(level: QuizLevelsNew) {
+    private fun updateAvailableQuizzesFor(level: WordQuizLevels) {
         // If cache is ready, use it. If not (still loading), use default English list.
         _availableQuizzes.value = quizTitleCache[level] ?: level.quizzes
     }

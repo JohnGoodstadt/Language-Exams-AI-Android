@@ -1,8 +1,8 @@
 {
-	"fileformat": 7,
+	"fileformat": 13,
 	"location": 0,
 	"sheetname": "WordQuiz1-en",
-	"title": "Communication, Society & Relationships (Set 1)",
+	"title": "1. Comms, Society & Relationships ",
 	"updatedDate": 0,
 	"data": [
 		{
@@ -17,9 +17,9 @@
 					"summary": "",
 					"explain": "",
 					"words": [
-						{ "word": "I trust him to keep my secret.", "ok": true },
-						{ "word": "I trust on him to keep my secret.", "ok": false },
-						{ "word": "I am trusting him keeping my secret.", "ok": false }
+						{ "word": "I trust him to keep my secret", "ok": true },
+						{ "word": "I trust on him to keep my secret", "ok": false },
+						{ "word": "I am trusting him keeping my secret", "ok": false }
 					]
 				},
 				{

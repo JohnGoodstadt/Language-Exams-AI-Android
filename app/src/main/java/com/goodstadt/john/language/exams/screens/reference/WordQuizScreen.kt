@@ -63,29 +63,22 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
+import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.viewmodels.QuizLevelsNew
-import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
+import com.goodstadt.john.language.exams.viewmodels.WordQuizLevels
+import com.goodstadt.john.language.exams.viewmodels.WordQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
 @Composable
-fun QuizScreen(
-    viewModel: QuizViewModel = hiltViewModel()
+fun WordQuizScreen(
+    viewModel: WordQuizViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
-//    val options = listOf(
-//        "Quiz 1",
-//        "Quiz 2 - Word Pairs",
-//        "Quiz 3 - Word Order",
-//        "Quiz 4 - Spelling 1",
-//        "Quiz 5 - Spelling 2",
-//        "Quiz 6 - Definitions"
-//    )
     var infoDisabled by remember { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
 
@@ -113,6 +106,8 @@ fun QuizScreen(
     val selectedQuiz by viewModel.selectedQuiz
     val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
         "Hear, and then choose the correct answer"
+    } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
+        "Choose the most suitable usage for the word"
     } else {
         "Choose the correct answer"
     }
@@ -124,6 +119,8 @@ fun QuizScreen(
             val questionText =
                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                     question.sentence.replace("_", "___")
+                } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
+                        question.sentence
                 } else {
                     ""//question.sentence
                 }
@@ -141,11 +138,11 @@ fun QuizScreen(
         verticalArrangement = Arrangement.spacedBy(6.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        HorizontalLevelPicker(
-            options = QuizLevelsNew.entries.map { it.description },
+        ScrollableHorizontalLevelPicker(
+            options = WordQuizLevels.entries.map { it.description },
             selectedOption = selectedLevel.description,
             onOptionSelected = { newLevel ->
-                val level = QuizLevelsNew.entries.first { it.description == newLevel }
+                val level = WordQuizLevels.entries.first { it.description == newLevel }
 //                    viewModel.selectedLevel.value = level
                 viewModel.onLevelSelected(level)
                 viewModel.loadQuestions()
@@ -331,6 +328,14 @@ fun QuizScreen(
                                         highlightColor = Color.Green
                                     )
                                     sentenceToSpeak = sentence
+                                } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
+                                    val sentence = question.sentence.replace("_", option)
+                                    displayedSentence = viewModel.highlightWordInSentence(
+                                        sentence = option,
+                                        wordToHighlight =  question.sentence,
+                                        highlightColor = Color.Green
+                                    )
+                                    sentenceToSpeak = option
                                 } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
 //                                        val wordToHilight = question.title
 //                                        val sentence = "${wordToHilight}:${question.sentence}"
@@ -531,7 +536,7 @@ fun QuizScreen(
 } //:QuizScreen
 
 @Composable
-fun DropdownMenuBox(
+fun WordDropdownMenuBox(
     options: List<String>,
     selectedOption: String,
     onOptionSelected: (String) -> Unit
@@ -595,7 +600,7 @@ fun DropdownMenuBox(
 
 
 @Composable
-fun dotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
+fun WorddotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
 
     scores[index]?.let {
         return if (it) Color.Green else Color.Red // Green for correct, red for incorrect
@@ -605,7 +610,7 @@ fun dotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
 }
 
 @Composable
-fun InfoButtonRow(infoDisabled: Boolean, onClick: () -> Unit) {
+fun WordInfoButtonRow(infoDisabled: Boolean, onClick: () -> Unit) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween, // Equivalent to Spacer() on both sides

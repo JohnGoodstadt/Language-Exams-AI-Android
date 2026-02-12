@@ -32,6 +32,7 @@ import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomShee
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
+import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestStatsSheet
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.QuizDataConverter
@@ -82,10 +83,10 @@ fun GroupedSheetScreen(
             val rawSelectedTitle = uiState.selectedSubTab?.title ?: ""
             val selectedOption = if (isSmallScreen) getShortTabTitle(rawSelectedTitle) else rawSelectedTitle
 
-//            val selectedOption: String = uiState.selectedSubTab?.title ?: ""
 
-            // b) Call your reusable composable
-            HorizontalLevelPicker(
+
+
+            ScrollableHorizontalLevelPicker(
                 options = options,
                 selectedOption = selectedOption,
                 onOptionSelected = { selectedDisplayTitle ->

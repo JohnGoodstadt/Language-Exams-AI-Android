@@ -17,7 +17,8 @@ object LanguageConfig {
         "Vocab",
         "Word of the Day",
         "Progress",
-        "Paragraph"
+        "Paragraph",
+        "Word Quiz"
 
     )
     val refTabMenuItems = listOf(

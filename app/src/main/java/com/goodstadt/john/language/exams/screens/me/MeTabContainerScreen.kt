@@ -37,6 +37,7 @@ import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
+import com.goodstadt.john.language.exams.screens.reference.WordQuizScreen
 import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
 import dagger.hilt.android.EntryPointAccessors
@@ -150,6 +151,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
                     viewModel = vm
                 )
             }
+            composable(MeScreen.WordQuiz.route) { WordQuizScreen() }
 
         }
     } //:Column
@@ -169,6 +171,16 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
     }
 //    }
 }
+
+//@Composable
+//fun WordQuizScreen() {
+//    Box(
+//        modifier = Modifier.fillMaxSize(),
+//        contentAlignment = Alignment.Center
+//    ) {
+//        Text(text = "Hello, World!")
+//    }
+//}
 
 /**
  * A reusable placeholder screen for any destination within the "Me" tab.

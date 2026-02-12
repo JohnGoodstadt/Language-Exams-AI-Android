@@ -12,7 +12,7 @@ sealed class MeScreen(val route: String, val title: String) {
     object Progress : MeScreen("me_progress", "Progress")
     object Paragraph : MeScreen("me_paragraph", "Paragraph")
     object DailyWord : MeScreen("me_daily_word", "Word of the Day")
-
+    object WordQuiz : MeScreen("me_word_quiz", "Word Quiz")
 }
 
 // A helper function to map a menu item title string to its corresponding screen route
@@ -24,6 +24,7 @@ fun getMeScreenRouteFromTitle(title: String): String? {
         MeScreen.Progress.title -> MeScreen.Progress.route
         MeScreen.Paragraph.title -> MeScreen.Paragraph.route
         MeScreen.DailyWord.title -> MeScreen.DailyWord.route
+        MeScreen.WordQuiz.title -> MeScreen.WordQuiz.route
         else -> null
     }
 }
