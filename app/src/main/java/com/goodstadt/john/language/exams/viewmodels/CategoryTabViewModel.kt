@@ -244,18 +244,18 @@ class CategoryTabViewModel @Inject constructor(
                 // Initialize AudioCacheManager (Calculates Global Totals)
                 audioCacheManager.setCurrentVocabFile(vocabFile, voiceName)
 
-                if (com.goodstadt.john.language.exams.BuildConfig.DEBUG) { // 1 day only
-                    tabCategories.forEach({
-                        Timber.v("${it.title}")
-                        val list = mutableListOf<String>()
-                        it.words.forEach({
-                            list.add(it.word)
-//                            print("${it.word},")
-                        })
-
-                        Timber.v(list.toString())
-                    })
-                }
+//                if (com.goodstadt.john.language.exams.BuildConfig.DEBUG) { // 1 day only
+//                    tabCategories.forEach({
+//                        Timber.v("${it.title}")
+//                        val list = mutableListOf<String>()
+//                        it.words.forEach({
+//                            list.add(it.word)
+////                            print("${it.word},")
+//                        })
+//
+//                        Timber.v(list.toString())
+//                    })
+//                }
                 // Initialize Recalling Set
                // val recalledKeys = recallingRepository.getAllRecalledKeys()
 

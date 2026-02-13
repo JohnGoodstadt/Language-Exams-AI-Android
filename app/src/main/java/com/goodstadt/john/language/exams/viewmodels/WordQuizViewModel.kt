@@ -31,7 +31,7 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
-import com.goodstadt.john.language.exams.models.TestMyselfListRoot
+import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
@@ -83,70 +83,67 @@ data class WordQuizStatistics(
 }
 
 enum class WordQuizLevels(val quizzes: List<QuizDetail>) {
-    ELEMENTARY(
+    PERSONAL(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "WordQuiz1", title = "Words 1 to 10"),
-            QuizDetail(id = 2, baseName = "WordQuiz2", title = "Words 11 to 20"),
-            QuizDetail(id = 3, baseName = "WordQuiz3", title = "21 to 30"),
-            QuizDetail(id = 4, baseName = "WordQuiz4", title = "31 to 40"),
-            QuizDetail(id = 5, baseName = "WordQuiz5", title = "Quiz 5"),
-            QuizDetail(id = 6, baseName = "WordQuiz6", title = "Quiz 6"),
-            QuizDetail(id = 7, baseName = "WordQuiz7", title = "Quiz 7"),
-            QuizDetail(id = 8, baseName = "WordQuiz8", title = "Quiz 8"),
-            QuizDetail(id = 9, baseName = "WordQuiz9", title = "Quiz 9"),
-            QuizDetail(id = 10, baseName = "WordQuiz10", title = "Quiz 10"),
+            QuizDetail(id = 1, baseName = "WordQuizPersonal1", title = "1. Personal"),
+            QuizDetail(id = 2, baseName = "WordQuizPersonal2", title = "2. Personal"),
+            QuizDetail(id = 3, baseName = "WordQuizPersonal3", title = "3. Personal"),
+//            QuizDetail(id = 4, baseName = "WordQuiz4", title = "31 to 40"),
+//            QuizDetail(id = 5, baseName = "WordQuiz5", title = "Quiz 5"),
+//            QuizDetail(id = 6, baseName = "WordQuiz6", title = "Quiz 6"),
+//            QuizDetail(id = 7, baseName = "WordQuiz7", title = "Quiz 7"),
+//            QuizDetail(id = 8, baseName = "WordQuiz8", title = "Quiz 8"),
+//            QuizDetail(id = 9, baseName = "WordQuiz9", title = "Quiz 9"),
+//            QuizDetail(id = 10, baseName = "WordQuiz10", title = "Quiz 10"),
+//
+//            QuizDetail(id = 20, baseName = "WordQuiz20", title = "Quiz 20"),
+//            QuizDetail(id = 21, baseName = "WordQuiz21", title = "Quiz 21"),
+//            QuizDetail(id = 30, baseName = "WordQuiz30", title = "Quiz 30"),
+//            QuizDetail(id = 32, baseName = "WordQuiz32", title = "Quiz 32"),
+//            QuizDetail(id = 33, baseName = "WordQuiz33", title = "Quiz 33"),
+//            QuizDetail(id = 34, baseName = "WordQuiz34", title = "Quiz 34"),
+//            QuizDetail(id = 35, baseName = "WordQuiz35", title = "Quiz 35"),
+//            QuizDetail(id = 37, baseName = "WordQuiz37", title = "Quiz 37"),
 
-            QuizDetail(id = 20, baseName = "WordQuiz20", title = "Quiz 20"),
-            QuizDetail(id = 21, baseName = "WordQuiz21", title = "Quiz 21"),
-            QuizDetail(id = 30, baseName = "WordQuiz30", title = "Quiz 30"),
-            QuizDetail(id = 32, baseName = "WordQuiz32", title = "Quiz 32"),
-            QuizDetail(id = 33, baseName = "WordQuiz33", title = "Quiz 33"),
-            QuizDetail(id = 34, baseName = "WordQuiz34", title = "Quiz 34"),
-            QuizDetail(id = 35, baseName = "WordQuiz35", title = "Quiz 35"),
-            QuizDetail(id = 37, baseName = "WordQuiz37", title = "Quiz 37"),
+        )
+    ),
+    EDUCATION(
+        quizzes = listOf(
+            QuizDetail(id = 1, baseName = "WordQuizEducation1", title = "Education 1"),
+            QuizDetail(id = 2, baseName = "WordQuizEducation2", title = "Education 2"),
+            QuizDetail(id = 3, baseName = "WordQuizEducation3", title = "Education 3")
+        )
+    ),
 
+    ADJECTIVES(
+        quizzes = listOf(
+            QuizDetail(id = 1, baseName = "WordQuizAdjectives1", title = "Adjectives 1"),
+            QuizDetail(id = 2, baseName = "WordQuizAdjectives2", title = "Adjectives 2"),
+            QuizDetail(id = 3, baseName = "WordQuizAdjectives3", title = "Adjectives 3")
         )
     ),
-    INTER(
+    HEALTH(
         quizzes = listOf(
-            QuizDetail(
-                id = 1,
-                baseName = "WordQuiz3",
-                title = "Quiz 3"
-            ),
-            QuizDetail(
-                id = 2,
-                baseName = "WordQuiz4",
-                title = "Quiz 4"
-            )
+            QuizDetail(id = 1, baseName = "WordQuizHealth1", title = "Health 1"),
+            QuizDetail(id = 2, baseName = "WordQuizHealth2", title = "Health 2"),
+            QuizDetail(id = 3, baseName = "WordQuizHealth3", title = "Health 3")
         )
     ),
-    UPPER(
-        quizzes = listOf(
-            QuizDetail(id = 1, baseName = "WordQuiz5", title = "Quiz 5"),
-            QuizDetail(
-                id = 2,
-                baseName = "WordQuiz6",
-                title = "Quiz 6"
-            )
-        )
-    ),
-    ADVANCED(
-        quizzes = listOf(
-            QuizDetail(id = 1, baseName = "WordQuiz7", title = "Quiz 7"),
-            QuizDetail(id = 2, baseName = "WordQuiz8", title = "Quiz 8")
-        )
+    LEISURE(
+    quizzes = listOf(
+        QuizDetail(id = 1, baseName = "WordQuizLeisure1", title = "1. Leisure"),
+        QuizDetail(id = 2, baseName = "WordQuizLeisure2", title = "2. Leisure"),
+        QuizDetail(id = 3, baseName = "WordQuizLeisure3", title = "3. Leisure")
+    )
     );
 
-    // This description property remains the same and is correct.
-//    val description: String
-//        get() = name.lowercase().replaceFirstChar { it.uppercase() }
     val description: String
         get() = when (this) {
-            ELEMENTARY -> "Comms, Relationships & Society"
-            INTER -> "Practical Life"
-            UPPER -> "Ideas, Environment & Global Topics"
-            ADVANCED -> "Grammar & Structure Words"
+            PERSONAL -> "Personal"
+            EDUCATION -> "Education"
+            ADJECTIVES -> "Adjectives"
+            HEALTH -> "Health"
+            LEISURE -> "Leisure"
         }
 }
 
@@ -161,14 +158,14 @@ data class WordQuizQuestion(
 )
 
 sealed interface WordQuizUiState {
-    object Loading : QuizUiState
+    object Loading : WordQuizUiState
     data class Success(
         //val categories: List<Category>,
         val selectedVoiceName: String = "" // Add a default empty value
-    ) : QuizUiState
+    ) : WordQuizUiState
 
-    data class Error(val message: String) : QuizUiState
-    object NotAvailable : QuizUiState // For flavors like 'zh'
+    data class Error(val message: String) : WordQuizUiState
+    object NotAvailable : WordQuizUiState // For flavors like 'zh'
 }
 
 @HiltViewModel
@@ -187,8 +184,9 @@ class WordQuizViewModel @Inject constructor(
 ) : ViewModel() {
     private val appContext: Context = application.applicationContext
 
-    private val _uiState99 = MutableStateFlow<QuizUiState>(QuizUiState.Loading)
+    private val _uiState99 = MutableStateFlow<WordQuizUiState>(WordQuizUiState.Loading)
     val uiState99 = _uiState99.asStateFlow()
+
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
     val playbackState = _playbackState.asStateFlow()
 
@@ -196,8 +194,8 @@ class WordQuizViewModel @Inject constructor(
     val isPremiumUser = _isPremiumUser.asStateFlow()
 
     // region State FLow
-    private val _questions = MutableStateFlow<List<QuizQuestion>>(emptyList())
-    val questions: StateFlow<List<QuizQuestion>> get() = _questions
+    private val _questions = MutableStateFlow<List<WordQuizQuestion>>(emptyList())
+    val questions: StateFlow<List<WordQuizQuestion>> get() = _questions
 
 
     private val _showUpgradeAppSheet = MutableStateFlow(false)
@@ -226,12 +224,12 @@ class WordQuizViewModel @Inject constructor(
 
     val quizStatistics = mutableStateOf(
         QuizStatistics(
-            skillLevel = QuizLevelsNew.ELEMENTARY.description,
+            skillLevel = WordQuizLevels.PERSONAL.description,
             quizNumber = 1,
             title = "Quiz 1"
         )
     )
-    val selectedLevel = mutableStateOf(WordQuizLevels.ELEMENTARY)
+    val selectedLevel = mutableStateOf(WordQuizLevels.PERSONAL)
 
     val selectedQuiz = mutableStateOf<QuizDetail?>(null)
 
@@ -254,10 +252,10 @@ class WordQuizViewModel @Inject constructor(
     // ✅ NEW (Dynamic):
     // This starts with the default English titles, but we can overwrite them later
     private val _availableQuizzes =
-        MutableStateFlow<List<QuizDetail>>(WordQuizLevels.ELEMENTARY.quizzes)
+        MutableStateFlow<List<QuizDetail>>(WordQuizLevels.PERSONAL.quizzes)
     val availableQuizzes = _availableQuizzes.asStateFlow()
 
-    // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized QuizDetails
+    // 1. The Cache: Maps a Level (e.g. PERSONAL) to its list of localized QuizDetails
     private val quizTitleCache = mutableMapOf<WordQuizLevels, List<QuizDetail>>()
 
 
@@ -391,7 +389,7 @@ class WordQuizViewModel @Inject constructor(
 
             val finalFilename = getLocalizedFileName(appContext, baseName)
 
-            val testData = readTestMyselfDataFromAssets(appContext, finalFilename)
+            val testData = readWordQuizDataFromAssets(appContext, finalFilename)
 
             if (testData == null) {
                 Timber.wtf("Failed to parse JSON file: $finalFilename")
@@ -449,17 +447,8 @@ class WordQuizViewModel @Inject constructor(
         loadQuestions()
     }
 
-    private fun generateQuestionsFromJson(context: Context, fileName: String): List<QuizQuestion> {
-        val testData = readTestMyselfDataFromAssets(context, fileName)
 
-        if (testData == null) {
-            Timber.wtf("Failed to parse JSON file: $fileName")
-            return emptyList()
-        }
-
-        if (testData.title?.isNotEmpty() == true) {
-            Timber.i("Sheet title is ${testData.title}")
-        }
+    private fun generateQuestionsFromData(testData: WordQuizRoot): List<WordQuizQuestion> {
 
         if (testData.fileFormat == quizQandA) {
             currentFileFormat.value = quizQandA
@@ -487,52 +476,13 @@ class WordQuizViewModel @Inject constructor(
 
         return testData.data.flatMap { section ->
             section.sections.map { quizSection ->
-                val shuffledWords = quizSection.words.shuffled()
-                val words = shuffledWords.map { it.word }
-                val correctOption = quizSection.words.firstOrNull { it.ok }?.word ?: ""
+                val shuffledWords = quizSection.answers.shuffled()
+                val words = shuffledWords.map { it.answer }
+                val correctOption = quizSection.answers.firstOrNull { it.ok }?.answer ?: ""
                 val summary = quizSection.summary
                 val explain = quizSection.explain
                 val title = quizSection.title
-                QuizQuestion(quizSection.sentence, words, correctOption, summary, explain, title)
-            }
-        }
-    }
-
-    private fun generateQuestionsFromData(testData: TestMyselfListRoot): List<QuizQuestion> {
-
-        if (testData.fileFormat == quizQandA) {
-            currentFileFormat.value = quizQandA
-        } else if (testData.fileFormat == quizDefinitions) {
-            currentFileFormat.value = quizDefinitions
-        } else if (testData.fileFormat == quizMultipleChoice) {
-            currentFileFormat.value = quizMultipleChoice
-        } else if (testData.fileFormat == quizWordDefinition) {
-            currentFileFormat.value = quizWordDefinition
-        } else {
-            currentFileFormat.value = quizFillInTheBlanks
-        }
-
-        val a = when (testData.fileFormat) {
-            quizQandA -> quizQandA
-            quizDefinitions -> quizDefinitions
-            quizMultipleChoice -> quizMultipleChoice
-            else -> quizFillInTheBlanks
-
-        }
-
-        //because spellings should follow each other
-        if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
-
-
-        return testData.data.flatMap { section ->
-            section.sections.map { quizSection ->
-                val shuffledWords = quizSection.words.shuffled()
-                val words = shuffledWords.map { it.word }
-                val correctOption = quizSection.words.firstOrNull { it.ok }?.word ?: ""
-                val summary = quizSection.summary
-                val explain = quizSection.explain
-                val title = quizSection.title
-                QuizQuestion(quizSection.sentence, words, correctOption, summary, explain, title)
+                WordQuizQuestion(quizSection.question, words, correctOption, summary, explain, title)
             }
         }
     }
@@ -648,7 +598,7 @@ class WordQuizViewModel @Inject constructor(
 
     }
 
-    fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyselfListRoot? {
+    fun readWordQuizDataFromAssets(context: Context, fileName: String): WordQuizRoot? {
         return try {
             // Timber.v("reading json: $fileName")
 
@@ -656,7 +606,7 @@ class WordQuizViewModel @Inject constructor(
                 .bufferedReader()
                 .use { it.readText() }
 
-            return jsonParser.decodeFromString<TestMyselfListRoot>(jsonString)
+            return jsonParser.decodeFromString<WordQuizRoot>(jsonString)
 
         } catch (e: Exception) {
             e.printStackTrace()
@@ -701,7 +651,7 @@ class WordQuizViewModel @Inject constructor(
     private fun peekTitleFromJson(filename: String): String? {
         return try {
             // Reusing your existing reader logic, but maybe we can optimize later
-            val data = readTestMyselfDataFromAssets(appContext, filename)
+            val data = readWordQuizDataFromAssets(appContext, filename)
             // Get the title from the root object if you added it there, or the first section
             data?.title // Assuming you added 'val title: String' to TestMyselfListRoot
         } catch (e: Exception) {
@@ -724,7 +674,7 @@ class WordQuizViewModel @Inject constructor(
                     // B. Peek at the JSON to get the title
                     // Note: We catch errors here so one bad file doesn't break the whole loop
                     val newTitle = try {
-                        val data = readTestMyselfDataFromAssets(appContext, finalFileName)
+                        val data = readWordQuizDataFromAssets(appContext, finalFileName)
                         // If file has a title, use it. Else fall back to Enum default.
                         data?.title ?: quizDetail.title
                     } catch (e: Exception) {
@@ -770,11 +720,11 @@ class WordQuizViewModel @Inject constructor(
         _availableQuizzes.value = quizTitleCache[level] ?: level.quizzes
     }
 
-    fun TestMyselfListRoot.shuffleLists() {
-        data.forEach { testMyselfList ->
-            testMyselfList.sections = testMyselfList.sections.shuffled() // Shuffle sections
-            testMyselfList.sections.forEach { section ->
-                section.words = section.words.shuffled() // Shuffle words within each section
+    fun WordQuizRoot.shuffleLists() {
+        data.forEach { WordQuizList ->
+            WordQuizList.sections = WordQuizList.sections.shuffled() // Shuffle sections
+            WordQuizList.sections.forEach { section ->
+                section.answers = section.answers.shuffled() // Shuffle words within each section
             }
         }
     }
