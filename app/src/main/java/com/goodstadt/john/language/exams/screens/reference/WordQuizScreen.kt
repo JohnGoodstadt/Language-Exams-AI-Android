@@ -62,7 +62,6 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
-import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
@@ -118,9 +117,9 @@ fun WordQuizScreen(
 
             val questionText =
                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                    question.sentence.replace("_", "___")
+                    question.question.replace("_", "___")
                 } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
-                        question.sentence
+                    question.question
                 } else {
                     ""//question.sentence
                 }
@@ -204,7 +203,7 @@ fun WordQuizScreen(
                     if (isCurrentAnswerCorrect == true && selectedOption != null) {
                         // --- SUCCESS STATE ---
 
-                            append(displayedSentence)
+                        append(displayedSentence)
 //                                withStyle(
 //                                    style = SpanStyle(
 //                                        color = Color.Green,
@@ -230,7 +229,7 @@ fun WordQuizScreen(
                 }
 
 
-            if (isCurrentAnswerCorrect == true){
+            if (isCurrentAnswerCorrect == true) {
                 Text(
                     text = annotatedQuestionText,
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
@@ -238,7 +237,7 @@ fun WordQuizScreen(
                     modifier = Modifier.fillMaxWidth(),
                     color = orangeLight,
                 )
-            }else{
+            } else {
                 Text(
                     text = annotatedQuestionText,
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
@@ -252,7 +251,7 @@ fun WordQuizScreen(
 
 
 
-            question.words.forEach { option ->
+            question.answers.forEach { option ->
                 val isOptionCorrect =
                     option == question.correctOption // Determine if option is correct
 
@@ -270,7 +269,7 @@ fun WordQuizScreen(
 
                                 val fullSentence =
                                     if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                        question.sentence.replace("_", option)
+                                        question.question.replace("_", option)
                                     } else {
                                         if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
                                             option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
@@ -283,7 +282,7 @@ fun WordQuizScreen(
                             },
 //                            painter = painterResource(R.drawable.ic_speaker),
                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
-                            contentDescription = "Speak ${question.sentence.replace("_", option)}",
+                            contentDescription = "Speak ${question.question.replace("_", option)}",
                             tint = Color.White
                         )
                         Spacer(modifier = Modifier.width(8.dp))
@@ -298,7 +297,7 @@ fun WordQuizScreen(
                                     // Timber.v(fullSentence)
                                     val fullSentence =
                                         if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                            question.sentence.replace("_", option)
+                                            question.question.replace("_", option)
                                         } else {
                                             if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
                                                 option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
@@ -310,6 +309,7 @@ fun WordQuizScreen(
 
                                     val isCorrect = option == question.correctOption
                                     viewModel.updateAnswer(isCorrect)
+                                    viewModel.vocabQuizAttemptStats(isOptionCorrect,question.question)
 
                                     viewModel.playTrack(fullSentence)
 
@@ -324,60 +324,26 @@ fun WordQuizScreen(
                             selectedOption = option
                             isCurrentAnswerCorrect = isOptionCorrect
                             viewModel.updateAnswer(isOptionCorrect)
+                            viewModel.vocabQuizAttemptStats(isOptionCorrect,question.question)
 
                             if (isOptionCorrect) {
 
-                                // val wordToHilight: String
-                                //val sentenceToStyle: String
-
                                 var sentenceToSpeak = ""
-                                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                    val sentence = question.sentence.replace("_", option)
-//                                        val sentenceToStyle = option
-                                    displayedSentence = viewModel.highlightWordInSentence(
-                                        sentence = option,
-                                        wordToHighlight = sentence,
-                                        highlightColor = Color.Green
-                                    )
-                                    sentenceToSpeak = sentence
-                                } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
-                                  //  val sentence = question.sentence.replace("_", option)
-                                    displayedSentence = viewModel.highlightWordInSentence(
-                                        sentence = option,
-                                        wordToHighlight =  question.sentence,
-                                        highlightColor = Color.Green
-                                    )
-                                    sentenceToSpeak = option
-                                } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-//                                        val wordToHilight = question.title
-//                                        val sentence = "${wordToHilight}:${question.sentence}"
-                                    displayedSentence = AnnotatedString(question.title)
-                                    sentenceToSpeak =
-                                        "${question.title}:${option}:${question.sentence}"
-                                } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
-                                    displayedSentence = AnnotatedString(option)
-                                    val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                        .trim()//remove ()
-                                    sentenceToSpeak = cleaned
-                                } else { // Multiple Choice
-                                    // val wordToHilight = question.sentence
-                                    //val sentenceToStyle = option
-                                    sentenceToSpeak = option
-                                    displayedSentence = viewModel.highlightWordInSentence(
-                                        sentence = option,
-                                        wordToHighlight = question.sentence,
-                                        highlightColor = Color.Green
-                                    )
-                                }
+                                displayedSentence = viewModel.highlightWordInSentence(
+                                    sentence = option,
+                                    wordToHighlight = question.question,
+                                    highlightColor = Color.Green
+                                )
+                                sentenceToSpeak = option
 
                                 viewModel.playTrack(sentenceToSpeak)
 
                                 viewModel.incQuizStat()
 
-                            }
-                            else{ //incorrect
+                            } else { //incorrect
                                 viewModel.incQuizStat(false)
                             }
+
 
 
                         },
@@ -412,6 +378,7 @@ fun WordQuizScreen(
                 IconButton(
                     onClick = {
                         if (currentQuestionIndex > 0) {
+                            viewModel.resetCurrentQuestionAttempts()
                             viewModel.currentQuestionIndex.value -= 1
                             if (viewModel.doIHaveCurrentQuestionInfo()) {
                                 infoDisabled = false
@@ -433,6 +400,7 @@ fun WordQuizScreen(
                 IconButton(
                     onClick = {
                         if (currentQuestionIndex < questions.lastIndex) {
+                            viewModel.resetCurrentQuestionAttempts()
                             viewModel.currentQuestionIndex.value += 1
                             if (viewModel.doIHaveCurrentQuestionInfo()) {
                                 infoDisabled = false

@@ -28,6 +28,7 @@ import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
+import com.goodstadt.john.language.exams.data.repository.VocabQuizRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
@@ -130,11 +131,11 @@ enum class WordQuizLevels(val quizzes: List<QuizDetail>) {
         )
     ),
     LEISURE(
-    quizzes = listOf(
-        QuizDetail(id = 1, baseName = "WordQuizLeisure1", title = "1. Leisure"),
-        QuizDetail(id = 2, baseName = "WordQuizLeisure2", title = "2. Leisure"),
-        QuizDetail(id = 3, baseName = "WordQuizLeisure3", title = "3. Leisure")
-    )
+        quizzes = listOf(
+            QuizDetail(id = 1, baseName = "WordQuizLeisure1", title = "1. Leisure"),
+            QuizDetail(id = 2, baseName = "WordQuizLeisure2", title = "2. Leisure"),
+            QuizDetail(id = 3, baseName = "WordQuizLeisure3", title = "3. Leisure")
+        )
     );
 
     val description: String
@@ -149,8 +150,8 @@ enum class WordQuizLevels(val quizzes: List<QuizDetail>) {
 
 
 data class WordQuizQuestion(
-    val sentence: String,
-    val words: List<String>,
+    val question: String,
+    val answers: List<String>,
     val correctOption: String,
     val summary: String,
     val explain: String,
@@ -179,9 +180,10 @@ class WordQuizViewModel @Inject constructor(
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
     private val quizHistoryManager: QuizHistoryManager,
-    private val xpManager: XPManager
+    private val xpManager: XPManager,
+    private val vocabQuizRepository: VocabQuizRepository,
 
-) : ViewModel() {
+    ) : ViewModel() {
     private val appContext: Context = application.applicationContext
 
     private val _uiState99 = MutableStateFlow<WordQuizUiState>(WordQuizUiState.Loading)
@@ -223,7 +225,7 @@ class WordQuizViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        QuizStatistics(
+        WordQuizStatistics(
             skillLevel = WordQuizLevels.PERSONAL.description,
             quizNumber = 1,
             title = "Quiz 1"
@@ -258,6 +260,8 @@ class WordQuizViewModel @Inject constructor(
     // 1. The Cache: Maps a Level (e.g. PERSONAL) to its list of localized QuizDetails
     private val quizTitleCache = mutableMapOf<WordQuizLevels, List<QuizDetail>>()
 
+    private var _currentQuestionAttempts = 0
+//    private var _currentQuestionSuccess = 0
 
     /**
      * A simple data class to hold the metadata for a single quiz.
@@ -287,6 +291,8 @@ class WordQuizViewModel @Inject constructor(
                 }
             }
         }
+
+        vocabQuizRepository.debugPrintStatus()
     }
 
     fun hideDailyRateLimitSheet() {
@@ -471,7 +477,8 @@ class WordQuizViewModel @Inject constructor(
         }
 
         //because spellings should follow each other
-        if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
+//        if (testData.fileFormat == quizFillInTheBlanks)
+        testData.shuffleLists()
 
 
         return testData.data.flatMap { section ->
@@ -482,7 +489,14 @@ class WordQuizViewModel @Inject constructor(
                 val summary = quizSection.summary
                 val explain = quizSection.explain
                 val title = quizSection.title
-                WordQuizQuestion(quizSection.question, words, correctOption, summary, explain, title)
+                WordQuizQuestion(
+                    quizSection.question,
+                    words,
+                    correctOption,
+                    summary,
+                    explain,
+                    title
+                )
             }
         }
     }
@@ -592,8 +606,6 @@ class WordQuizViewModel @Inject constructor(
             )
 
             onQuizFinished()
-            val fieldValue =
-                "${quizStatistics.value.quizNumber}:${quizStatistics.value.answered}:${quizStatistics.value.correct}:${quizStatistics.value.tries}"
         }
 
     }
@@ -871,6 +883,35 @@ class WordQuizViewModel @Inject constructor(
             }
         }
 
+    }
+
+    fun vocabQuizAttemptStats(isCorrect: Boolean, word: String) {
+
+        //if this is called then an attempt has been made -- either OK or not OK
+
+        //
+
+
+        if (isCorrect) {
+            // If they got it right on try #1, tries = 1.
+            // If they got it right after 2 fails, tries = 3.
+
+            // Note: You need to track 'triesForCurrentQuestion' locally in VM
+            // because quizStatistics.value.tries might be total for the whole quiz.
+            _currentQuestionAttempts++
+            Timber.v("vocabQuizAttemptStats()  correct:$isCorrect word:$word  tries:$_currentQuestionAttempts")
+
+
+            vocabQuizRepository.recordResult(word, _currentQuestionAttempts)
+        } else {
+            _currentQuestionAttempts++
+            Timber.v("vocabQuizAttemptStats()  correct:$isCorrect word:$word  tries:$_currentQuestionAttempts")
+
+        }
+    }
+
+    fun resetCurrentQuestionAttempts() {
+        _currentQuestionAttempts = 0
     }
 
 
