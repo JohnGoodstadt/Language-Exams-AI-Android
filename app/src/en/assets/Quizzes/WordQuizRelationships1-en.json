@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizRelationships1-en",
+	"title": "Relationships",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Relationships & social connection (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "acquaintance",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She is an acquaintance from university.", "ok": true },
+						{ "answer": "She is acquaintance from university.", "ok": false },
+						{ "answer": "Acquaintance are very friendly.", "ok": false },
+						{ "answer": "I am acquainted to her.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "assistance",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She asked for assistance with the project.", "ok": true },
+						{ "answer": "She asked for an assistance with the project.", "ok": false },
+						{ "answer": "Assistances are available.", "ok": false },
+						{ "answer": "She assisted to the project.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "bond",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They share a strong bond.", "ok": true },
+						{ "answer": "They share strong bond.", "ok": false },
+						{ "answer": "Bonds is very important.", "ok": false },
+						{ "answer": "They bonded to each other deeply.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "colleague",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "My colleague works in the same office.", "ok": true },
+						{ "answer": "My colleague work in the same office.", "ok": false },
+						{ "answer": "Colleague are helpful.", "ok": false },
+						{ "answer": "She is colleague of mine.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "communication",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Good communication improves teamwork.", "ok": true },
+						{ "answer": "The good communication improves teamwork.", "ok": false },
+						{ "answer": "Communications is important.", "ok": false },
+						{ "answer": "They communicated to each other clearly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "companionship",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Pets provide companionship for many people.", "ok": true },
+						{ "answer": "Pets provide a companionship for many people.", "ok": false },
+						{ "answer": "Companionships are valuable.", "ok": false },
+						{ "answer": "They companioned together.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "confidence",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Trust is built on confidence.", "ok": true },
+						{ "answer": "Trust is built on the confidence.", "ok": false },
+						{ "answer": "Confidences are important.", "ok": false },
+						{ "answer": "She is confident to him.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "connection",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They felt an instant connection.", "ok": true },
+						{ "answer": "They felt instant connection.", "ok": false },
+						{ "answer": "Connections is strong.", "ok": false },
+						{ "answer": "They connected to each other emotionally.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "conversation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We had a long conversation about the issue.", "ok": true },
+						{ "answer": "We had long conversation about the issue.", "ok": false },
+						{ "answer": "Conversations is difficult.", "ok": false },
+						{ "answer": "We conversed about on the issue.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "courtship",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Their courtship lasted two years.", "ok": true },
+						{ "answer": "The courtship lasted two years.", "ok": false },
+						{ "answer": "Courtships are common today.", "ok": false },
+						{ "answer": "They courted to each other for years.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

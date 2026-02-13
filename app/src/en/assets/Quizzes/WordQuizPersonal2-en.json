@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonal2-en",
+	"title": "Personal",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Personal processes & records",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "interview",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She has a job interview tomorrow morning.", "ok": true },
+						{ "answer": "She interviewed to the manager yesterday.", "ok": false },
+						{ "answer": "An interview is a driving permit.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "interviewer",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The interviewer asked about her experience.", "ok": true },
+						{ "answer": "The interviewer answered all the questions.", "ok": false },
+						{ "answer": "An interviewer is a written document.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "memoir",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He published a memoir about his time abroad.", "ok": true },
+						{ "answer": "He memoired his passport yesterday.", "ok": false },
+						{ "answer": "A memoir is a job position.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "passport",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Her passport expires next year.", "ok": true },
+						{ "answer": "She passported through the airport quickly.", "ok": false },
+						{ "answer": "A passport is a school certificate.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "poll",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The poll showed strong public support.", "ok": true },
+						{ "answer": "The poll asked him personally for a job.", "ok": false },
+						{ "answer": "A poll is a driving license.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "position",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She applied for a position in marketing.", "ok": true },
+						{ "answer": "She positioned for a marketing job.", "ok": false },
+						{ "answer": "A position is a type of survey.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "questionnaire",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Please complete the questionnaire before leaving.", "ok": true },
+						{ "answer": "Please questionnaire your details carefully.", "ok": false },
+						{ "answer": "A questionnaire is a passport control officer.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "rank",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He reached the rank of manager after five years.", "ok": true },
+						{ "answer": "He ranked the company yesterday.", "ok": false },
+						{ "answer": "A rank is a personal autobiography.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "register",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "You must register before the deadline.", "ok": true },
+						{ "answer": "You must register your passport at home.", "ok": false },
+						{ "answer": "Register is another word for interview.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "registration",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Online registration closes tonight.", "ok": true },
+						{ "answer": "She registrationed for the course.", "ok": false },
+						{ "answer": "Registration is a biography.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

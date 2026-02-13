@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFood1-en",
+	"title": "Food",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Food & dining (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "appetizer",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We ordered an appetizer before the main course.", "ok": true },
+						{ "answer": "We ordered appetizer before main course.", "ok": false },
+						{ "answer": "We ordered an appetizer for the dessert.", "ok": false },
+						{ "answer": "Appetizer is the person who cooks the food.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "beverage",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Tea is a popular beverage in the UK.", "ok": true },
+						{ "answer": "Tea is popular beverage in UK.", "ok": false },
+						{ "answer": "A beverage is a type of plate.", "ok": false },
+						{ "answer": "She beverage her coffee slowly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "component",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Salt is an important component of the dish.", "ok": true },
+						{ "answer": "Salt is important component of dish.", "ok": false },
+						{ "answer": "A component is the restaurant menu.", "ok": false },
+						{ "answer": "She component the recipe carefully.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "cuisine",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Italian cuisine is famous worldwide.", "ok": true },
+						{ "answer": "An Italian cuisine is famous worldwide.", "ok": false },
+						{ "answer": "Cuisine are very delicious.", "ok": false },
+						{ "answer": "Cuisine is the person serving food.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "dessert",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We had chocolate cake for dessert.", "ok": true },
+						{ "answer": "We had a chocolate cake for the dessert.", "ok": false },
+						{ "answer": "Dessert is eaten before the main course.", "ok": false },
+						{ "answer": "She desserted the table quickly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "dine",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They dined at a French restaurant.", "ok": true },
+						{ "answer": "They dined in a French restaurant.", "ok": false },
+						{ "answer": "They dine a French restaurant.", "ok": false },
+						{ "answer": "Dine is a type of dessert.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "dining",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We enjoyed fine dining at the hotel.", "ok": true },
+						{ "answer": "We enjoyed a fine dining at hotel.", "ok": false },
+						{ "answer": "Dining are very expensive.", "ok": false },
+						{ "answer": "Dining is a type of drink.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "dinner",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We had dinner at 7 p.m.", "ok": true },
+						{ "answer": "We had a dinner at 7 p.m.", "ok": false },
+						{ "answer": "Dinner is a cooking method.", "ok": false },
+						{ "answer": "She dinnered quickly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "dish",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Pasta is my favourite dish.", "ok": true },
+						{ "answer": "Pasta is my favourite dishes.", "ok": false },
+						{ "answer": "A dish is a restaurant worker.", "ok": false },
+						{ "answer": "She dished to the menu.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "drink",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Would you like a drink?", "ok": true },
+						{ "answer": "Would you like drink?", "ok": false },
+						{ "answer": "A drink is a type of kitchen.", "ok": false },
+						{ "answer": "She drinked her coffee slowly.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

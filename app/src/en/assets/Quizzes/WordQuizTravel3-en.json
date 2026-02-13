@@ -1,0 +1,133 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel3-en",
+	"title": "Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Travel & transport (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "reservation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I made a reservation for two nights.", "ok": true },
+						{ "answer": "I made reservation for two nights.", "ok": false },
+						{ "answer": "Reservations is confirmed.", "ok": false },
+						{ "answer": "I reserved to a room for two nights.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "schedule",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The train schedule changed this week.", "ok": true },
+						{ "answer": "The train schedule change this week.", "ok": false },
+						{ "answer": "Schedules is a single plan.", "ok": false },
+						{ "answer": "It depends of the schedule.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "ship",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The ship arrived at the port early.", "ok": true },
+						{ "answer": "Ship arrived at the port early.", "ok": false },
+						{ "answer": "Ships is very big today.", "ok": false },
+						{ "answer": "We shipped to the island by ship.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "sightseeing",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We went sightseeing in the old town.", "ok": true },
+						{ "answer": "We did a sightseeing in the old town.", "ok": false },
+						{ "answer": "Sightseeings are fun.", "ok": false },
+						{ "answer": "We went sightseeing at the museum to buy.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "suitcase",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He packed his suitcase the night before.", "ok": true },
+						{ "answer": "He packed his suitcase in the night before.", "ok": false },
+						{ "answer": "Suitcases is heavy.", "ok": false },
+						{ "answer": "He packed a luggage into his suitcase.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "takeoff",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Please turn off your phone during takeoff.", "ok": true },
+						{ "answer": "Please turn off your phone during the takeoff.", "ok": false },
+						{ "answer": "Takeoffs is at 8 a.m.", "ok": false },
+						{ "answer": "We took off at to 8 a.m.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "ticket",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I bought a ticket online.", "ok": true },
+						{ "answer": "I bought ticket online.", "ok": false },
+						{ "answer": "Tickets is expensive.", "ok": false },
+						{ "answer": "I bought a ticket for to London.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "tour",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We joined a tour of the city.", "ok": true },
+						{ "answer": "We joined tour of the city.", "ok": false },
+						{ "answer": "Tours is a single trip.", "ok": false },
+						{ "answer": "We toured to the city centre.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "voyage",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The voyage across the ocean took two weeks.", "ok": true },
+						{ "answer": "The voyage across ocean took two weeks.", "ok": false },
+						{ "answer": "Voyages is very dangerous.", "ok": false },
+						{ "answer": "They voyaged to the airport.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

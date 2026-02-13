@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation2-en",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Workplace & study roles",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "employee",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The employee arrived early for work.", "ok": true },
+						{ "answer": "The employee employed the manager.", "ok": false },
+						{ "answer": "An employee is the company owner.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "employer",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The employer offered her a full-time job.", "ok": true },
+						{ "answer": "The employer worked under the staff.", "ok": false },
+						{ "answer": "An employer is a school subject.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "experience",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She gained valuable experience during her internship.", "ok": true },
+						{ "answer": "She experienced to the manager yesterday.", "ok": false },
+						{ "answer": "Experience is a university building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "homework",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I finished my homework before dinner.", "ok": true },
+						{ "answer": "I homeworked all evening.", "ok": false },
+						{ "answer": "Homework is a job interview.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "internship",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She completed an internship at a law firm.", "ok": true },
+						{ "answer": "She interned her degree yesterday.", "ok": false },
+						{ "answer": "An internship is a type of certificate.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "lecture",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The lecture lasted two hours.", "ok": true },
+						{ "answer": "He lectured his homework yesterday.", "ok": false },
+						{ "answer": "A lecture is a written exam.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "lecturer",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The lecturer explained the theory clearly.", "ok": true },
+						{ "answer": "The lecturer was listening to the class quietly.", "ok": false },
+						{ "answer": "A lecturer is a school building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "manager",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The manager approved the project plan.", "ok": true },
+						{ "answer": "The managered the homework carefully.", "ok": false },
+						{ "answer": "A manager is a university diploma.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "occupation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Teaching is her main occupation.", "ok": true },
+						{ "answer": "She occupationed the office.", "ok": false },
+						{ "answer": "An occupation is a school assignment.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "profession",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Medicine is a respected profession.", "ok": true },
+						{ "answer": "She professioned in the hospital.", "ok": false },
+						{ "answer": "A profession is a homework task.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

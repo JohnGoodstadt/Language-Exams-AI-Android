@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology1-en",
+	"title": "Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Technology basics (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "RL",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "RL stands for 'real life' in online conversations.", "ok": true },
+						{ "answer": "An RL stands for real life.", "ok": false },
+						{ "answer": "RL is a type of search engine.", "ok": false },
+						{ "answer": "She RL the message yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Wi-Fi",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The Wi-Fi connection is very fast.", "ok": true },
+						{ "answer": "The Wi-Fi is very fast connection.", "ok": false },
+						{ "answer": "Wi-Fi are very expensive.", "ok": false },
+						{ "answer": "She Wi-Fied the document.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "app",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I downloaded a new app on my phone.", "ok": true },
+						{ "answer": "I downloaded new app on my phone.", "ok": false },
+						{ "answer": "An app is a type of website address.", "ok": false },
+						{ "answer": "She apped the software yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "application",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "This application allows you to edit photos.", "ok": true },
+						{ "answer": "This application allow you edit photos.", "ok": false },
+						{ "answer": "An application is an internet cable.", "ok": false },
+						{ "answer": "She applicationed the file.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "attachment",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Please check the email attachment.", "ok": true },
+						{ "answer": "Please check the attachment of email.", "ok": false },
+						{ "answer": "An attachment is a search engine.", "ok": false },
+						{ "answer": "She attached the attachment.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "browser",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Open the website in your browser.", "ok": true },
+						{ "answer": "Open the website at your browser.", "ok": false },
+						{ "answer": "A browser is a type of smartphone.", "ok": false },
+						{ "answer": "She browsered the page.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "connection",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The internet connection is unstable.", "ok": true },
+						{ "answer": "The connection of internet is unstable.", "ok": false },
+						{ "answer": "Connection are very slow today.", "ok": false },
+						{ "answer": "She connectioned to the network.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "device",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "This device can store a lot of data.", "ok": true },
+						{ "answer": "This device can store many datas.", "ok": false },
+						{ "answer": "A device is a website address.", "ok": false },
+						{ "answer": "She deviced a new app.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "digital",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We use digital technology every day.", "ok": true },
+						{ "answer": "We use a digital technologies every day.", "ok": false },
+						{ "answer": "Digital is a search engine.", "ok": false },
+						{ "answer": "She digitals the file.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "document",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Please save the document before closing it.", "ok": true },
+						{ "answer": "Please save document before closing it.", "ok": false },
+						{ "answer": "A document is a Wi-Fi signal.", "ok": false },
+						{ "answer": "She document the browser.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

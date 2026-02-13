@@ -1,0 +1,124 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizLeisure3-en",
+	"title": "Leisure",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Leisure & entertainment (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "recreation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Parks are used for recreation and relaxation.", "ok": true },
+						{ "answer": "Parks are used for recreations.", "ok": false },
+						{ "answer": "Recreation is a type of lecture.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "relaxation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Yoga helps with relaxation.", "ok": true },
+						{ "answer": "Yoga helps with relaxations.", "ok": false },
+						{ "answer": "Relaxation is a sports competition.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "show",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We watched a show on television.", "ok": true },
+						{ "answer": "We watched show on the television.", "ok": false },
+						{ "answer": "A show is a museum building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "sightseeing",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We went sightseeing in Paris.", "ok": true },
+						{ "answer": "We did a sightseeing in Paris.", "ok": false },
+						{ "answer": "Sightseeing is a university subject.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "sports",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He plays sports every weekend.", "ok": true },
+						{ "answer": "He plays a sports every weekend.", "ok": false },
+						{ "answer": "Sports is a museum exhibition.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "stage",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The actor walked onto the stage.", "ok": true },
+						{ "answer": "The actor walked on the stage.", "ok": false },
+						{ "answer": "A stage is a cinema ticket.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "theatre",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We went to the theatre last night.", "ok": true },
+						{ "answer": "We went to theatre last night.", "ok": false },
+						{ "answer": "A theatre is a type of homework.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "tourism",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Tourism is important for the local economy.", "ok": true },
+						{ "answer": "Tourism are important for the economy.", "ok": false },
+						{ "answer": "Tourism is a person who travels.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "tourist",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The tourist took photos of the monument.", "ok": true },
+						{ "answer": "The tourist visited to the museum.", "ok": false },
+						{ "answer": "A tourist is a type of exhibition.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

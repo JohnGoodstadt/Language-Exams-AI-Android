@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEmotions2-en",
+	"title": "Emotions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Mindset & personal qualities (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "emotion",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Anger is a strong emotion.", "ok": true },
+						{ "answer": "Anger is strong emotion.", "ok": false },
+						{ "answer": "Emotion are important.", "ok": false },
+						{ "answer": "She emotioned during the speech.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "enthusiasm",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She showed enthusiasm for the project.", "ok": true },
+						{ "answer": "She showed an enthusiasm for the project.", "ok": false },
+						{ "answer": "Enthusiasm are important at work.", "ok": false },
+						{ "answer": "She was enthusiastic to the project.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "excitement",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "There was a feeling of excitement in the room.", "ok": true },
+						{ "answer": "There was excitement in the room a feeling.", "ok": false },
+						{ "answer": "Excitements are high today.", "ok": false },
+						{ "answer": "She excited to the concert.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "experience",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He has experience in teaching adults.", "ok": true },
+						{ "answer": "He has an experience in teaching adults.", "ok": false },
+						{ "answer": "Experiences is important for the job.", "ok": false },
+						{ "answer": "He experienced to teach adults.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "feeling",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I had a strange feeling about the interview.", "ok": true },
+						{ "answer": "I had strange feeling about the interview.", "ok": false },
+						{ "answer": "Feeling are difficult to explain.", "ok": false },
+						{ "answer": "I felt to the interview was difficult.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "gift",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She bought him a gift for his birthday.", "ok": true },
+						{ "answer": "She bought him gift for his birthday.", "ok": false },
+						{ "answer": "A gift is a type of opinion.", "ok": false },
+						{ "answer": "She gifted to him a book.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "goal",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Her goal is to pass the exam.", "ok": true },
+						{ "answer": "Her goal is pass the exam.", "ok": false },
+						{ "answer": "Goals is important for success.", "ok": false },
+						{ "answer": "She goaled the exam last week.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "insight",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The report provides insight into customer needs.", "ok": true },
+						{ "answer": "The report provides an insight into customer needs.", "ok": false },
+						{ "answer": "Insights is very helpful.", "ok": false },
+						{ "answer": "She insighted into the problem.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "knowledge",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He has good knowledge of English grammar.", "ok": true },
+						{ "answer": "He has a good knowledge of English grammar.", "ok": false },
+						{ "answer": "Knowledges are important for work.", "ok": false },
+						{ "answer": "He knowledge about grammar well.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "manner",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He spoke in a polite manner.", "ok": true },
+						{ "answer": "He spoke in polite manner.", "ok": false },
+						{ "answer": "Manners is very polite.", "ok": false },
+						{ "answer": "He mannered to the teacher.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

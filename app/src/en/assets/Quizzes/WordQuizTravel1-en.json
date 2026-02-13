@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel1-en",
+	"title": "Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Travel & transport (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "accommodation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We booked accommodation near the beach.", "ok": true },
+						{ "answer": "We booked an accommodation near the beach.", "ok": false },
+						{ "answer": "Accommodations is expensive in summer.", "ok": false },
+						{ "answer": "We stayed at accommodation in the city.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "arrival",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "On arrival, we collected our luggage.", "ok": true },
+						{ "answer": "On the arrival, we collected our luggage.", "ok": false },
+						{ "answer": "Arrivals is delayed today.", "ok": false },
+						{ "answer": "We arrived to the arrival at noon.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "attraction",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The museum is a popular tourist attraction.", "ok": true },
+						{ "answer": "The museum is popular tourist attraction.", "ok": false },
+						{ "answer": "Attractions is very interesting.", "ok": false },
+						{ "answer": "We were attracted on the museum.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "baggage",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Please collect your baggage at belt 4.", "ok": true },
+						{ "answer": "Please collect your baggages at belt 4.", "ok": false },
+						{ "answer": "A baggage is very heavy.", "ok": false },
+						{ "answer": "Please collect your baggage in the belt 4.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "booking",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I confirmed my booking by email.", "ok": true },
+						{ "answer": "I confirmed my booking on email.", "ok": false },
+						{ "answer": "Bookings is important to print.", "ok": false },
+						{ "answer": "I booked a booking for the flight.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "check-in",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Check-in opens two hours before departure.", "ok": true },
+						{ "answer": "The check-in open two hours before departure.", "ok": false },
+						{ "answer": "Check-ins is very slow today.", "ok": false },
+						{ "answer": "We checked in at to the desk.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "cruise",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They went on a cruise in the Mediterranean.", "ok": true },
+						{ "answer": "They went on cruise in the Mediterranean.", "ok": false },
+						{ "answer": "Cruises is a type of airport gate.", "ok": false },
+						{ "answer": "They cruised to the ship for a week.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "customs",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We had to go through customs after landing.", "ok": true },
+						{ "answer": "We had to go through the customs after landing.", "ok": false },
+						{ "answer": "Customs are a person at the airport.", "ok": false },
+						{ "answer": "We went at customs after landing.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "departure",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Departure is at 10:15 from gate 12.", "ok": true },
+						{ "answer": "The departure are at 10:15.", "ok": false },
+						{ "answer": "Departures is a travel document.", "ok": false },
+						{ "answer": "We departed to the departure at 10:15.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "destination",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Paris is our final destination.", "ok": true },
+						{ "answer": "Paris is our final destinations.", "ok": false },
+						{ "answer": "A destination is a suitcase.", "ok": false },
+						{ "answer": "We arrived to our destination at night.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

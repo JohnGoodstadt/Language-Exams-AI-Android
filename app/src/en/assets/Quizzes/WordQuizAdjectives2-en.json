@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives2-en",
+	"title": "Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Emotions & personality (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "eager",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She was eager to start her new job.", "ok": true },
+						{ "answer": "She was eager about to start.", "ok": false },
+						{ "answer": "Eager means feeling bored.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "embarrassed",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He felt embarrassed after forgetting her name.", "ok": true },
+						{ "answer": "He embarrassed of his mistake.", "ok": false },
+						{ "answer": "Embarrassed means very peaceful.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "enthusiastic",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She was enthusiastic about the project.", "ok": true },
+						{ "answer": "She enthusiastic for the project.", "ok": false },
+						{ "answer": "Enthusiastic means very jealous.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "envious",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He was envious of his brother's success.", "ok": true },
+						{ "answer": "He envious about his brother.", "ok": false },
+						{ "answer": "Envious means feeling relaxed.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "excited",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She was excited about the trip.", "ok": true },
+						{ "answer": "She excited for go abroad.", "ok": false },
+						{ "answer": "Excited means feeling ashamed.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "grateful",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I am grateful for your support.", "ok": true },
+						{ "answer": "I am grateful to your support.", "ok": false },
+						{ "answer": "Grateful means very nervous.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "humiliated",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He felt humiliated after the public criticism.", "ok": true },
+						{ "answer": "He humiliated about the comment.", "ok": false },
+						{ "answer": "Humiliated means feeling confident.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "inquisitive",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The child was inquisitive and asked many questions.", "ok": true },
+						{ "answer": "The child inquisitive about the answer.", "ok": false },
+						{ "answer": "Inquisitive means feeling jealous.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "interested",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She is interested in learning Spanish.", "ok": true },
+						{ "answer": "She interested to learn Spanish.", "ok": false },
+						{ "answer": "Interested means feeling tense.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "jealous",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He was jealous of his friend's promotion.", "ok": true },
+						{ "answer": "He jealous about his friend.", "ok": false },
+						{ "answer": "Jealous means thankful.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

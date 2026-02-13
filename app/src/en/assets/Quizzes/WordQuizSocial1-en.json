@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial1-en",
+	"title": "Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Social issues (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "abuse",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Child abuse is a serious crime.", "ok": true },
+						{ "answer": "The abuse is serious problem.", "ok": false },
+						{ "answer": "Abuse are very common.", "ok": false },
+						{ "answer": "He abused to the system.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "asylum",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They applied for asylum in another country.", "ok": true },
+						{ "answer": "They applied asylum in another country.", "ok": false },
+						{ "answer": "An asylum are a safe place.", "ok": false },
+						{ "answer": "She asylumed to the city.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "community",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The community worked together to solve the problem.", "ok": true },
+						{ "answer": "Community worked together to solve problem.", "ok": false },
+						{ "answer": "The communities is very supportive.", "ok": false },
+						{ "answer": "She communitied with her neighbours.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "crime",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Crime rates have increased recently.", "ok": true },
+						{ "answer": "The crime rates has increased.", "ok": false },
+						{ "answer": "Crime is the police officer.", "ok": false },
+						{ "answer": "He crimmed last night.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "culture",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The country has a rich culture.", "ok": true },
+						{ "answer": "Country has rich culture.", "ok": false },
+						{ "answer": "Cultures is very important.", "ok": false },
+						{ "answer": "She cultured to the tradition.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "discrimination",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Discrimination at work is illegal.", "ok": true },
+						{ "answer": "The discrimination at work are illegal.", "ok": false },
+						{ "answer": "Discrimination is when you discriminate to someone.", "ok": false },
+						{ "answer": "She discriminated to him.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "diversity",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The company promotes diversity in the workplace.", "ok": true },
+						{ "answer": "The company promotes a diversity.", "ok": false },
+						{ "answer": "Diversities is increasing.", "ok": false },
+						{ "answer": "She diversitied the team.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "equality",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They believe in equality for all.", "ok": true },
+						{ "answer": "They believe in an equality for all.", "ok": false },
+						{ "answer": "Equalities is very important.", "ok": false },
+						{ "answer": "She equalitied the law.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "fairness",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Fairness is essential in a legal system.", "ok": true },
+						{ "answer": "The fairness is essential in legal system.", "ok": false },
+						{ "answer": "Fairness are important.", "ok": false },
+						{ "answer": "She fairnessed the rules.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "freedom",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Freedom of speech is a basic right.", "ok": true },
+						{ "answer": "The freedom of speech are basic right.", "ok": false },
+						{ "answer": "A freedom is a type of law.", "ok": false },
+						{ "answer": "She freedomed to travel.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

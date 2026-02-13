@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth2-en",
+	"title": "Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Health basics (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "exercise",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Regular exercise improves your health.", "ok": true },
+						{ "answer": "She exercised about the appointment.", "ok": false },
+						{ "answer": "Exercise is a hospital department.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "health",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Good health is very important.", "ok": true },
+						{ "answer": "She healths every morning.", "ok": false },
+						{ "answer": "Health is a type of medicine.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "hospital",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He was taken to hospital after the accident.", "ok": true },
+						{ "answer": "He hospitaled last night.", "ok": false },
+						{ "answer": "A hospital is a type of insurance.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "injury",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He suffered a serious injury during the match.", "ok": true },
+						{ "answer": "He injured of his leg.", "ok": false },
+						{ "answer": "An injury is a healthy habit.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "insurance",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She bought health insurance last year.", "ok": true },
+						{ "answer": "She insured about her doctor.", "ok": false },
+						{ "answer": "Insurance is a type of hospital room.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "medication",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The doctor prescribed new medication.", "ok": true },
+						{ "answer": "She medicated about the appointment.", "ok": false },
+						{ "answer": "Medication is a hospital building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "nutrition",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Good nutrition is essential for children.", "ok": true },
+						{ "answer": "She nutritioned her homework.", "ok": false },
+						{ "answer": "Nutrition is a medical emergency.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "policy",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The insurance policy covers dental treatment.", "ok": true },
+						{ "answer": "She policied the doctor yesterday.", "ok": false },
+						{ "answer": "A policy is a medical wound.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "prescription",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "You need a prescription to buy this medicine.", "ok": true },
+						{ "answer": "She prescriptioned the hospital.", "ok": false },
+						{ "answer": "A prescription is a type of injury.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "reaction",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She had a reaction to the medication.", "ok": true },
+						{ "answer": "She reacted the hospital.", "ok": false },
+						{ "answer": "A reaction is a healthy diet.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

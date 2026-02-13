@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFood2-en",
+	"title": "Food",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Food & dining (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "element",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Fresh herbs add an important element to the dish.", "ok": true },
+						{ "answer": "Fresh herbs add important element to dish.", "ok": false },
+						{ "answer": "An element is a type of dessert.", "ok": false },
+						{ "answer": "She elemented the recipe carefully.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "hors d'oeuvre",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They served hors d'oeuvres before the main course.", "ok": true },
+						{ "answer": "They served a hors d'oeuvre before main course.", "ok": false },
+						{ "answer": "Hors d'oeuvre are a type of drink.", "ok": false },
+						{ "answer": "She hors d'oeuvred the guests.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "ingredient",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Flour is a basic ingredient in bread.", "ok": true },
+						{ "answer": "Flour is basic ingredient in bread.", "ok": false },
+						{ "answer": "An ingredient is the person cooking the meal.", "ok": false },
+						{ "answer": "She ingrediented the soup carefully.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "instructions",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Follow the instructions carefully.", "ok": true },
+						{ "answer": "Follow the instruction carefully.", "ok": false },
+						{ "answer": "Instructions is a cooking ingredient.", "ok": false },
+						{ "answer": "She instructed the recipe yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "list",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I wrote a shopping list.", "ok": true },
+						{ "answer": "I wrote shopping list.", "ok": false },
+						{ "answer": "A list is a cooking method.", "ok": false },
+						{ "answer": "She listed to the menu.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "meat-free",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They chose a meat-free option.", "ok": true },
+						{ "answer": "They chose meat-free option.", "ok": false },
+						{ "answer": "Meat-free is a type of dessert.", "ok": false },
+						{ "answer": "The dish was meat-freely prepared.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "menu",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The waiter gave us the menu.", "ok": true },
+						{ "answer": "The waiter gave us menu.", "ok": false },
+						{ "answer": "A menu is a type of ingredient.", "ok": false },
+						{ "answer": "She menued the restaurant.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "method",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "This recipe uses a traditional method.", "ok": true },
+						{ "answer": "This recipe uses traditional method.", "ok": false },
+						{ "answer": "A method is a sweet dessert.", "ok": false },
+						{ "answer": "She methoded the ingredients together.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "nibble",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She nibbled on some cheese.", "ok": true },
+						{ "answer": "She nibbled some cheese.", "ok": false },
+						{ "answer": "A nibble is a full meal.", "ok": false },
+						{ "answer": "She nibble the cheese slowly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "pudding",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "For pudding, we had ice cream.", "ok": true },
+						{ "answer": "For a pudding, we had ice cream.", "ok": false },
+						{ "answer": "Pudding are very healthy.", "ok": false },
+						{ "answer": "She puddinged the cake carefully.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

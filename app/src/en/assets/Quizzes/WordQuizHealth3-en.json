@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth3-en",
+	"title": "Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Health basics (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "recovery",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "His recovery took several weeks.", "ok": true },
+						{ "answer": "He recovered about the injury.", "ok": false },
+						{ "answer": "Recovery is a type of hospital.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "routine",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She has a daily exercise routine.", "ok": true },
+						{ "answer": "She routined her doctor.", "ok": false },
+						{ "answer": "A routine is a medical wound.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "schedule",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The surgery is scheduled for Monday.", "ok": true },
+						{ "answer": "She schedule about the hospital.", "ok": false },
+						{ "answer": "A schedule is a type of medicine.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "symptoms",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He described his symptoms to the doctor.", "ok": true },
+						{ "answer": "He symptom about his illness.", "ok": false },
+						{ "answer": "Symptoms is a medical building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "therapy",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She started therapy after the accident.", "ok": true },
+						{ "answer": "She therapied the injury.", "ok": false },
+						{ "answer": "Therapy is a type of prescription paper.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "treatment",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The treatment was effective.", "ok": true },
+						{ "answer": "She treatmented the patient.", "ok": false },
+						{ "answer": "Treatment is a hospital room.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "urgent",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "This is an urgent medical case.", "ok": true },
+						{ "answer": "This urgent about the doctor.", "ok": false },
+						{ "answer": "Urgent means very calm.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "well-being",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Exercise improves your overall well-being.", "ok": true },
+						{ "answer": "She well-being every morning.", "ok": false },
+						{ "answer": "Well-being is a hospital department.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "workout",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He does a workout at the gym every day.", "ok": true },
+						{ "answer": "He workouted yesterday evening.", "ok": false },
+						{ "answer": "A workout is a type of surgery.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "wound",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The nurse cleaned the wound carefully.", "ok": true },
+						{ "answer": "He wounded about the doctor.", "ok": false },
+						{ "answer": "A wound is a medical certificate.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

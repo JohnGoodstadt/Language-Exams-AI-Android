@@ -1,0 +1,124 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives3-en",
+	"title": "Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Emotions & personality (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "nervous",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She felt nervous before speaking in public.", "ok": true },
+						{ "answer": "She nervous about the speech.", "ok": false },
+						{ "answer": "Nervous means calm and relaxed.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "patient",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He was patient with the children.", "ok": true },
+						{ "answer": "He patient about the delay.", "ok": false },
+						{ "answer": "Patient means easily angry.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "peaceful",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They enjoyed a peaceful afternoon in the park.", "ok": true },
+						{ "answer": "They peaceful about the situation.", "ok": false },
+						{ "answer": "Peaceful means very tense.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "relaxed",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She felt relaxed after the holiday.", "ok": true },
+						{ "answer": "She relaxed about the exam.", "ok": false },
+						{ "answer": "Relaxed means extremely worried.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "tense",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The atmosphere was tense before the results were announced.", "ok": true },
+						{ "answer": "He tense about the meeting.", "ok": false },
+						{ "answer": "Tense means very calm.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "thankful",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She was thankful for their kindness.", "ok": true },
+						{ "answer": "She thankful to their help.", "ok": false },
+						{ "answer": "Thankful means jealous.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "tolerant",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He is tolerant of different opinions.", "ok": true },
+						{ "answer": "He tolerant about different views.", "ok": false },
+						{ "answer": "Tolerant means very nervous.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "tranquil",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The lake looked tranquil at sunset.", "ok": true },
+						{ "answer": "The lake tranquil about sunset.", "ok": false },
+						{ "answer": "Tranquil means extremely angry.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "worried",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She was worried about her exam results.", "ok": true },
+						{ "answer": "She worried for fail the exam.", "ok": false },
+						{ "answer": "Worried means confident and relaxed.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

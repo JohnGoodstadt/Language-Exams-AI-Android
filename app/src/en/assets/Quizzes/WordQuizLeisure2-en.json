@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizLeisure2-en",
+	"title": "Leisure",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Leisure & entertainment (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "exhibition",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The art exhibition opens tomorrow.", "ok": true },
+						{ "answer": "The exhibition of art opens tomorrow.", "ok": false },
+						{ "answer": "An exhibition is a live band.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "film",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We watched a film at the cinema.", "ok": true },
+						{ "answer": "We watched film at cinema.", "ok": false },
+						{ "answer": "A film is a theatre stage.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "free time",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I read books in my free time.", "ok": true },
+						{ "answer": "I read books at my free time.", "ok": false },
+						{ "answer": "Free time is a public museum.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "gallery",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The gallery displays modern art.", "ok": true },
+						{ "answer": "The gallery shows a modern arts.", "ok": false },
+						{ "answer": "A gallery is a sports activity.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "game",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They played a game of chess.", "ok": true },
+						{ "answer": "They played game of chess.", "ok": false },
+						{ "answer": "A game is a music performance.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "hobby",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Photography is her favourite hobby.", "ok": true },
+						{ "answer": "Photography is her favourite hobbying.", "ok": false },
+						{ "answer": "A hobby is a university degree.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "leisure",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He spends his leisure time reading.", "ok": true },
+						{ "answer": "He spends his leisure times reading.", "ok": false },
+						{ "answer": "Leisure is a type of ticket.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "museum",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We visited the museum on Sunday.", "ok": true },
+						{ "answer": "We visited museum on Sunday.", "ok": false },
+						{ "answer": "A museum is a musical instrument.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "performance",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Her performance was excellent.", "ok": true },
+						{ "answer": "Her performance was very success.", "ok": false },
+						{ "answer": "A performance is a cinema building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "play",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We saw a play at the theatre.", "ok": true },
+						{ "answer": "We saw play at theatre.", "ok": false },
+						{ "answer": "A play is a sports stadium.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

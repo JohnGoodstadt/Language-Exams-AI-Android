@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEmotions3-en",
+	"title": "Emotions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Mindset & personal qualities (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "opinion",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "In my opinion, this plan will work.", "ok": true },
+						{ "answer": "In my opinion, this plan will works.", "ok": false },
+						{ "answer": "Opinions is always correct.", "ok": false },
+						{ "answer": "She opinioned about the project.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "personality",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Her friendly personality makes her popular.", "ok": true },
+						{ "answer": "Her friendly personality make her popular.", "ok": false },
+						{ "answer": "Personality are interesting.", "ok": false },
+						{ "answer": "She personalityed the team.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "perspective",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Try to see the problem from a different perspective.", "ok": true },
+						{ "answer": "Try to see the problem from different perspective.", "ok": false },
+						{ "answer": "Perspectives is difficult.", "ok": false },
+						{ "answer": "She perspectived on the issue.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "self-esteem",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Good feedback can improve self-esteem.", "ok": true },
+						{ "answer": "Good feedback can improve the self-esteem.", "ok": false },
+						{ "answer": "Self-esteems are important.", "ok": false },
+						{ "answer": "She self-esteemed after the exam.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "sentiment",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "There is growing sentiment against the policy.", "ok": true },
+						{ "answer": "There is a growing sentiment against the policy.", "ok": false },
+						{ "answer": "Sentiments is very strong.", "ok": false },
+						{ "answer": "She sentimented about the decision.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "skill",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Listening is an important skill.", "ok": true },
+						{ "answer": "Listening is important skill.", "ok": false },
+						{ "answer": "Skills is important for success.", "ok": false },
+						{ "answer": "She skilled to the course.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "talent",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He has a talent for music.", "ok": true },
+						{ "answer": "He has talent for music.", "ok": false },
+						{ "answer": "Talents is rare.", "ok": false },
+						{ "answer": "He talented to play piano.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "traits",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Patience and honesty are important traits.", "ok": true },
+						{ "answer": "Patience and honesty are an important traits.", "ok": false },
+						{ "answer": "Trait are important for work.", "ok": false },
+						{ "answer": "She traited very kindly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "view",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "In my view, we should leave early.", "ok": true },
+						{ "answer": "In my view, we should to leave early.", "ok": false },
+						{ "answer": "View are important.", "ok": false },
+						{ "answer": "She viewed to the meeting.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "wisdom",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He shared his wisdom with the younger students.", "ok": true },
+						{ "answer": "He shared his wisdoms with the younger students.", "ok": false },
+						{ "answer": "A wisdom is a type of skill.", "ok": false },
+						{ "answer": "He wisdomed the class.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

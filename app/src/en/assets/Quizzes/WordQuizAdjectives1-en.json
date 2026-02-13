@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives1-en",
+	"title": "Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Emotions & personality (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "anxious",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She felt anxious before the exam.", "ok": true },
+						{ "answer": "She was anxious about to fail.", "ok": false },
+						{ "answer": "Anxious means very relaxed.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "appreciative",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He was appreciative of her help.", "ok": true },
+						{ "answer": "He appreciated of her help.", "ok": false },
+						{ "answer": "Appreciative means feeling jealous.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "apprehensive",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She was apprehensive about starting her new job.", "ok": true },
+						{ "answer": "She apprehensive about the interview.", "ok": false },
+						{ "answer": "Apprehensive means extremely excited.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "ashamed",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He felt ashamed of his behaviour.", "ok": true },
+						{ "answer": "He ashamed about his behaviour.", "ok": false },
+						{ "answer": "Ashamed means proud and confident.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "assured",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She sounded assured during her presentation.", "ok": true },
+						{ "answer": "She assured in her presentation.", "ok": false },
+						{ "answer": "Assured means feeling nervous.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "calm",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He remained calm during the emergency.", "ok": true },
+						{ "answer": "He calmed about the situation.", "ok": false },
+						{ "answer": "Calm means very angry.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "certain",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She was certain that she had locked the door.", "ok": true },
+						{ "answer": "She certain about the answer.", "ok": false },
+						{ "answer": "Certain means unsure and confused.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "confident",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He felt confident before the interview.", "ok": true },
+						{ "answer": "He confident about his skills.", "ok": false },
+						{ "answer": "Confident means feeling embarrassed.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "covetous",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He gave her a covetous look at the new car.", "ok": true },
+						{ "answer": "He was covetous of very calm.", "ok": false },
+						{ "answer": "Covetous means deeply thankful.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "curious",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She was curious about how the machine worked.", "ok": true },
+						{ "answer": "She curious to learn more.", "ok": false },
+						{ "answer": "Curious means feeling ashamed.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

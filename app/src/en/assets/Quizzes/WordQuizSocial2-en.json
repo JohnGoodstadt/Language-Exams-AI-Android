@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial2-en",
+	"title": "Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Social issues (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "heritage",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The city is proud of its cultural heritage.", "ok": true },
+						{ "answer": "The city is proud of the cultural heritage.", "ok": false },
+						{ "answer": "Heritage are very important.", "ok": false },
+						{ "answer": "She heritaged the tradition.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "homelessness",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The government is trying to reduce homelessness.", "ok": true },
+						{ "answer": "The government is trying to reduce the homelessness.", "ok": false },
+						{ "answer": "Homelessness are increasing.", "ok": false },
+						{ "answer": "He homelessed last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "immigration",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Immigration policies vary between countries.", "ok": true },
+						{ "answer": "The immigration policies varies between countries.", "ok": false },
+						{ "answer": "An immigration is a person moving country.", "ok": false },
+						{ "answer": "She immigrated to the UK last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "inclusiveness",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The company values inclusiveness.", "ok": true },
+						{ "answer": "The company values an inclusiveness.", "ok": false },
+						{ "answer": "Inclusiveness are important.", "ok": false },
+						{ "answer": "She inclusived the team.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "justice",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They demanded justice for the victims.", "ok": true },
+						{ "answer": "They demanded the justice for victims.", "ok": false },
+						{ "answer": "Justice are very slow.", "ok": false },
+						{ "answer": "She justiced the case.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "legislation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "New legislation was introduced last year.", "ok": true },
+						{ "answer": "The new legislations were introduced.", "ok": false },
+						{ "answer": "A legislation is a person in parliament.", "ok": false },
+						{ "answer": "They legislated the rule yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "liberty",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "People fought for liberty and independence.", "ok": true },
+						{ "answer": "People fought for the liberty and independence.", "ok": false },
+						{ "answer": "Liberty are very important.", "ok": false },
+						{ "answer": "She libertied the country.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "migrant",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Many migrants moved to the city for work.", "ok": true },
+						{ "answer": "Many migrant moved to the city.", "ok": false },
+						{ "answer": "A migrant is immigration.", "ok": false },
+						{ "answer": "He migrated to Germany last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "neighborhood",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She lives in a quiet neighborhood.", "ok": true },
+						{ "answer": "She lives in quiet neighborhood.", "ok": false },
+						{ "answer": "Neighborhood are very friendly.", "ok": false },
+						{ "answer": "She neighborhooded last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "policy",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The company changed its policy on remote work.", "ok": true },
+						{ "answer": "The company changed the policy on remote work.", "ok": false },
+						{ "answer": "Policy are very strict.", "ok": false },
+						{ "answer": "She policied the staff.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

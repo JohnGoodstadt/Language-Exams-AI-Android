@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEmotions1-en",
+	"title": "Emotions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Mindset & personal qualities (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "ability",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She has the ability to learn languages quickly.", "ok": true },
+						{ "answer": "She has ability to learn languages quickly.", "ok": false },
+						{ "answer": "Ability are important for success.", "ok": false },
+						{ "answer": "She abilityed to speak better.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "ambition",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "His ambition is to become a doctor.", "ok": true },
+						{ "answer": "His ambition is become a doctor.", "ok": false },
+						{ "answer": "Ambitions is what motivates him.", "ok": false },
+						{ "answer": "He ambitioned a new job.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "aspiration",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Her aspiration is to start her own business.", "ok": true },
+						{ "answer": "Her aspiration is for start her own business.", "ok": false },
+						{ "answer": "Aspiration are very important.", "ok": false },
+						{ "answer": "She aspirated her career yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "assurance",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He gave me assurance that everything would be fine.", "ok": true },
+						{ "answer": "He gave me an assurance that everything would be fine.", "ok": false },
+						{ "answer": "Assurance are important in relationships.", "ok": false },
+						{ "answer": "He assured me about that everything would be fine.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "background",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She comes from a musical background.", "ok": true },
+						{ "answer": "She comes from musical background.", "ok": false },
+						{ "answer": "Background are very interesting.", "ok": false },
+						{ "answer": "She backgrounded in music.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "behavior",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "His behavior in class was respectful.", "ok": true },
+						{ "answer": "His behavior in the class was respectful.", "ok": false },
+						{ "answer": "Behavior are changing quickly.", "ok": false },
+						{ "answer": "He behaved to the teacher politely.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "character",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Honesty is an important part of her character.", "ok": true },
+						{ "answer": "Honesty is important part of her character.", "ok": false },
+						{ "answer": "Character are important in life.", "ok": false },
+						{ "answer": "She charactered very strongly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "conduct",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Students must follow rules of conduct at school.", "ok": true },
+						{ "answer": "Students must follow the rules of conduct at school.", "ok": false },
+						{ "answer": "Conducts are very strict.", "ok": false },
+						{ "answer": "He conducted badly with his friends.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "confidence",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She spoke with confidence in the interview.", "ok": true },
+						{ "answer": "She spoke with the confidence in the interview.", "ok": false },
+						{ "answer": "Confidence are important for speaking.", "ok": false },
+						{ "answer": "She was confident to the interview.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "eagerness",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "His eagerness to learn impressed the teacher.", "ok": true },
+						{ "answer": "His eagerness for learn impressed the teacher.", "ok": false },
+						{ "answer": "Eagerness are helpful.", "ok": false },
+						{ "answer": "He eagernessed to start the course.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

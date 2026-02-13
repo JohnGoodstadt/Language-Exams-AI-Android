@@ -1,0 +1,120 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology3-en",
+	"title": "Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Technology basics (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "program",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She installed a new program on her laptop.", "ok": true },
+						{ "answer": "She installed new program on her laptop.", "ok": false },
+						{ "answer": "A program are very useful.", "ok": false },
+						{ "answer": "She programed to the website.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "search engine",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Google is a popular search engine.", "ok": true },
+						{ "answer": "Google is popular search engine.", "ok": false },
+						{ "answer": "Search engine are very fast.", "ok": false },
+						{ "answer": "She searched engine yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "smartphone",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He bought a new smartphone.", "ok": true },
+						{ "answer": "He bought new smartphone.", "ok": false },
+						{ "answer": "Smartphone are very expensive.", "ok": false },
+						{ "answer": "She smartphoned the message.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "software",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The software needs to be updated.", "ok": true },
+						{ "answer": "The softwares need to be updated.", "ok": false },
+						{ "answer": "A software is a type of website page.", "ok": false },
+						{ "answer": "She software the device.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "tab",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Open a new tab in your browser.", "ok": true },
+						{ "answer": "Open new tab in your browser.", "ok": false },
+						{ "answer": "A tab is a search engine.", "ok": false },
+						{ "answer": "She tabbed to the homepage.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "virtual",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They attended a virtual meeting.", "ok": true },
+						{ "answer": "They attended virtual meeting.", "ok": false },
+						{ "answer": "Virtual are very expensive.", "ok": false },
+						{ "answer": "She virtualed the class.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "web",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He searched the web for information.", "ok": true },
+						{ "answer": "He searched web for information.", "ok": false },
+						{ "answer": "A web is a type of smartphone.", "ok": false },
+						{ "answer": "She webbed the file.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "website",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The website loads quickly.", "ok": true },
+						{ "answer": "Website loads quickly.", "ok": false },
+						{ "answer": "Website are very useful.", "ok": false },
+						{ "answer": "She websited the document.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizRelationships2-en",
+	"title": "Relationships",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Relationships & social connection (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "dating",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They have been dating for six months.", "ok": true },
+						{ "answer": "They have been dating since six months.", "ok": false },
+						{ "answer": "Dating are very popular.", "ok": false },
+						{ "answer": "They dated to each other last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "faith",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She has faith in her friends.", "ok": true },
+						{ "answer": "She has a faith in her friends.", "ok": false },
+						{ "answer": "Faiths are important in life.", "ok": false },
+						{ "answer": "She believed on her friends.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "fellowship",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The group offers fellowship and support.", "ok": true },
+						{ "answer": "The group offers a fellowship and support.", "ok": false },
+						{ "answer": "Fellowships is important.", "ok": false },
+						{ "answer": "They fellowshipped together.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "friendship",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Their friendship has lasted for years.", "ok": true },
+						{ "answer": "The friendship has lasted for years.", "ok": false },
+						{ "answer": "Friendships is very valuable.", "ok": false },
+						{ "answer": "They friended with each other.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "help",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She offered help when I needed it.", "ok": true },
+						{ "answer": "She offered a help when I needed it.", "ok": false },
+						{ "answer": "Helps are important.", "ok": false },
+						{ "answer": "She helped to me yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "interaction",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Social interaction improves communication skills.", "ok": true },
+						{ "answer": "The social interaction improves communication skills.", "ok": false },
+						{ "answer": "Interactions is important.", "ok": false },
+						{ "answer": "They interacted to each other politely.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "link",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "There is a clear link between trust and honesty.", "ok": true },
+						{ "answer": "There is clear link between trust and honesty.", "ok": false },
+						{ "answer": "Links is very strong.", "ok": false },
+						{ "answer": "They linked to together yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "neighbor",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Our neighbor is very friendly.", "ok": true },
+						{ "answer": "Our neighbor are very friendly.", "ok": false },
+						{ "answer": "Neighbors is helpful.", "ok": false },
+						{ "answer": "She neighbored to us last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "networking",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Networking can help you find new opportunities.", "ok": true },
+						{ "answer": "The networking can help you find new opportunities.", "ok": false },
+						{ "answer": "Networkings are important.", "ok": false },
+						{ "answer": "She networked to new opportunities.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "platform",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The platform allows users to share ideas.", "ok": true },
+						{ "answer": "Platform allows users to share ideas.", "ok": false },
+						{ "answer": "Platforms is very useful.", "ok": false },
+						{ "answer": "She platformed the message online.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

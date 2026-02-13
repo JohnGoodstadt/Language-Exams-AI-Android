@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth1-en",
+	"title": "Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Health basics (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "allergy",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She has an allergy to peanuts.", "ok": true },
+						{ "answer": "She is allergy about peanuts.", "ok": false },
+						{ "answer": "An allergy is a medical building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "appointment",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I have a doctor's appointment tomorrow.", "ok": true },
+						{ "answer": "I appointed to the doctor at 9 a.m.", "ok": false },
+						{ "answer": "An appointment is a type of medicine.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "balanced",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She tries to eat a balanced diet.", "ok": true },
+						{ "answer": "She balanced very healthy yesterday.", "ok": false },
+						{ "answer": "Balanced means seriously injured.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "checkup",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He went to the doctor for a routine checkup.", "ok": true },
+						{ "answer": "He checkuped last week.", "ok": false },
+						{ "answer": "A checkup is a type of surgery.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "consultation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She had a consultation with the specialist.", "ok": true },
+						{ "answer": "She consulted her homework yesterday.", "ok": false },
+						{ "answer": "A consultation is a hospital room.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "coverage",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The insurance provides coverage for medical expenses.", "ok": true },
+						{ "answer": "The coverage covers doctor personally.", "ok": false },
+						{ "answer": "Coverage is a medical treatment.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "cure",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Scientists are searching for a cure for cancer.", "ok": true },
+						{ "answer": "He cured about the problem.", "ok": false },
+						{ "answer": "A cure is a hospital building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "diet",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She started a healthy diet last month.", "ok": true },
+						{ "answer": "She dieted her doctor yesterday.", "ok": false },
+						{ "answer": "A diet is a medical emergency.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "dose",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Take one dose of the medicine every morning.", "ok": true },
+						{ "answer": "He dosed about the appointment.", "ok": false },
+						{ "answer": "A dose is a type of surgery.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "emergency",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Call an ambulance in case of an emergency.", "ok": true },
+						{ "answer": "She emergency to the hospital.", "ok": false },
+						{ "answer": "An emergency is a balanced diet.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature1-en",
+	"title": "Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Environment & climate (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "biodiversity",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Protecting forests helps preserve biodiversity.", "ok": true },
+						{ "answer": "Protecting forests helps preserve the biodiversity.", "ok": false },
+						{ "answer": "Biodiversity are decreasing.", "ok": false },
+						{ "answer": "She biodiverse the park.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "climate",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The climate here is warm and dry.", "ok": true },
+						{ "answer": "The climate here are warm and dry.", "ok": false },
+						{ "answer": "A climate is a kind of animal.", "ok": false },
+						{ "answer": "It depends of the climate.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "climate change",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Climate change is affecting weather patterns worldwide.", "ok": true },
+						{ "answer": "The climate change is affecting weather patterns worldwide.", "ok": false },
+						{ "answer": "Climate changes are a single event.", "ok": false },
+						{ "answer": "We must fight against to climate change.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "conservation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Wildlife conservation protects endangered species.", "ok": true },
+						{ "answer": "Wildlife conservation protect endangered species.", "ok": false },
+						{ "answer": "A conservation is a type of pollution.", "ok": false },
+						{ "answer": "They did conservation of the animals.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "contamination",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Water contamination can make people ill.", "ok": true },
+						{ "answer": "The water contamination can make people ill.", "ok": false },
+						{ "answer": "Contaminations is increasing.", "ok": false },
+						{ "answer": "The river was contaminated by to chemicals.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "ecosystem",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "A coral reef is a fragile ecosystem.", "ok": true },
+						{ "answer": "Coral reef is a fragile ecosystem.", "ok": false },
+						{ "answer": "Ecosystem are very delicate.", "ok": false },
+						{ "answer": "Animals depend in the ecosystem.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "environment",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We should protect the environment.", "ok": true },
+						{ "answer": "We should protect environment.", "ok": false },
+						{ "answer": "Environments is getting worse.", "ok": false },
+						{ "answer": "They are concerned on the environment.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "fauna",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The island has unique fauna and flora.", "ok": true },
+						{ "answer": "The island has a unique fauna and flora.", "ok": false },
+						{ "answer": "Faunas is disappearing.", "ok": false },
+						{ "answer": "Fauna means the plants in a region.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "flora",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The park is known for its rich flora.", "ok": true },
+						{ "answer": "The park is known for rich flora.", "ok": false },
+						{ "answer": "Floras are very colourful.", "ok": false },
+						{ "answer": "Flora means the animals of a region.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "global warming",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Global warming is raising sea levels.", "ok": true },
+						{ "answer": "The global warming is raising sea levels.", "ok": false },
+						{ "answer": "Global warmings are a small problem.", "ok": false },
+						{ "answer": "It is caused from global warming.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

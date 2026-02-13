@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation3-en",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Academic roles & skills",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "professor",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The professor published a new research paper.", "ok": true },
+						{ "answer": "The professor studied under the student.", "ok": false },
+						{ "answer": "A professor is a type of assignment.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "project",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They worked together on a group project.", "ok": true },
+						{ "answer": "They projected the homework yesterday.", "ok": false },
+						{ "answer": "A project is a job position.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "qualification",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She has the right qualifications for the job.", "ok": true },
+						{ "answer": "She qualificationed last year.", "ok": false },
+						{ "answer": "A qualification is a lecture hall.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "seminar",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He attended a seminar on climate change.", "ok": true },
+						{ "answer": "He seminated his homework yesterday.", "ok": false },
+						{ "answer": "A seminar is a written certificate.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "skill",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Communication is an important skill.", "ok": true },
+						{ "answer": "She skilled her homework carefully.", "ok": false },
+						{ "answer": "A skill is a university building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "staff",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The staff were helpful and friendly.", "ok": true },
+						{ "answer": "The staffs were helpful yesterday.", "ok": false },
+						{ "answer": "Staff is a type of assignment.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "teacher",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The teacher explained the lesson clearly.", "ok": true },
+						{ "answer": "The teachered the students yesterday.", "ok": false },
+						{ "answer": "A teacher is a university degree.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "trainee",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The trainee is learning how to use the system.", "ok": true },
+						{ "answer": "The trainee trained the manager.", "ok": false },
+						{ "answer": "A trainee is a diploma.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "worker",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The worker arrived early for the shift.", "ok": true },
+						{ "answer": "The worker workeded all night.", "ok": false },
+						{ "answer": "A worker is a seminar room.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "workshop",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She attended a workshop on public speaking.", "ok": true },
+						{ "answer": "She workshopped her homework yesterday.", "ok": false },
+						{ "answer": "A workshop is a university degree.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizShopping2-en",
+	"title": "Shopping",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Shopping & retail (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "courier",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The courier delivered the package on time.", "ok": true },
+						{ "answer": "Courier delivered the package on time.", "ok": false },
+						{ "answer": "Couriers is late today.", "ok": false },
+						{ "answer": "The package was delivered from courier.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "customer",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The customer asked for a refund.", "ok": true },
+						{ "answer": "Customer asked for a refund.", "ok": false },
+						{ "answer": "Customers is unhappy.", "ok": false },
+						{ "answer": "She customered at the shop.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "deal",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "That laptop is a good deal.", "ok": true },
+						{ "answer": "That laptop is good deal.", "ok": false },
+						{ "answer": "Deals is very cheap.", "ok": false },
+						{ "answer": "She dealt to the offer quickly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "delivery",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The delivery arrived this morning.", "ok": true },
+						{ "answer": "Delivery arrived this morning.", "ok": false },
+						{ "answer": "Deliveries is delayed.", "ok": false },
+						{ "answer": "They delivered to me the delivery.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "discount",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Students receive a discount on tickets.", "ok": true },
+						{ "answer": "Students receive discount on tickets.", "ok": false },
+						{ "answer": "Discounts is available.", "ok": false },
+						{ "answer": "They discounted to the price.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "exchange",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "You can exchange the item within 30 days.", "ok": true },
+						{ "answer": "You can exchange the item in 30 days.", "ok": false },
+						{ "answer": "Exchanges is allowed.", "ok": false },
+						{ "answer": "They exchanged to the shirt.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "mall",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We went to the mall after work.", "ok": true },
+						{ "answer": "We went to mall after work.", "ok": false },
+						{ "answer": "Malls is very busy.", "ok": false },
+						{ "answer": "We went at the mall yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "proof of purchase",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "You need proof of purchase to get a refund.", "ok": true },
+						{ "answer": "You need a proof of purchase to get a refund.", "ok": false },
+						{ "answer": "Proofs of purchase is required.", "ok": false },
+						{ "answer": "You need proof for purchase to get refund.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "purchase",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She made a purchase online.", "ok": true },
+						{ "answer": "She made purchase online.", "ok": false },
+						{ "answer": "Purchases is expensive.", "ok": false },
+						{ "answer": "She purchased to a new laptop.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "receipt",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Keep the receipt in case you need to return it.", "ok": true },
+						{ "answer": "Keep receipt in case you need to return it.", "ok": false },
+						{ "answer": "Receipts is important.", "ok": false },
+						{ "answer": "She receipted the item yesterday.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

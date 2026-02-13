@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature2-en",
+	"title": "Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Environment & climate (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "green",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They support green energy projects.", "ok": true },
+						{ "answer": "They support a green energy projects.", "ok": false },
+						{ "answer": "Green are important for the planet.", "ok": false },
+						{ "answer": "They are interested on green energy.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "greenhouse effect",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The greenhouse effect traps heat in the atmosphere.", "ok": true },
+						{ "answer": "Greenhouse effect traps heat in the atmosphere.", "ok": false },
+						{ "answer": "Greenhouse effects is very dangerous.", "ok": false },
+						{ "answer": "It is responsible of the greenhouse effect.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "habitat",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Deforestation destroys the habitat of many animals.", "ok": true },
+						{ "answer": "Deforestation destroys habitat of many animals.", "ok": false },
+						{ "answer": "Habitats is getting smaller.", "ok": false },
+						{ "answer": "Animals live on their habitat.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "home",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Many birds return to the same home each year.", "ok": true },
+						{ "answer": "Many birds return to same home each year.", "ok": false },
+						{ "answer": "Homes is where one animal live.", "ok": false },
+						{ "answer": "They went at home by train.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "nature",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He loves spending time in nature.", "ok": true },
+						{ "answer": "He loves spending time in the nature.", "ok": false },
+						{ "answer": "Natures are beautiful.", "ok": false },
+						{ "answer": "He is interested on nature.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "pollution",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Air pollution is a major problem in big cities.", "ok": true },
+						{ "answer": "The air pollution is a major problem in big cities.", "ok": false },
+						{ "answer": "Pollutions are getting worse.", "ok": false },
+						{ "answer": "The city suffers from to pollution.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "preservation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Preservation of forests helps wildlife.", "ok": true },
+						{ "answer": "The preservation of forests helps wildlife.", "ok": false },
+						{ "answer": "Preservations is important.", "ok": false },
+						{ "answer": "They preserved the forests for preservation.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "protection",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Sunscreen provides protection from the sun.", "ok": true },
+						{ "answer": "Sunscreen provides a protection from the sun.", "ok": false },
+						{ "answer": "Protections are necessary.", "ok": false },
+						{ "answer": "It protects you against to the sun.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "recycling",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Recycling reduces the amount of waste.", "ok": true },
+						{ "answer": "The recycling reduces the amount of waste.", "ok": false },
+						{ "answer": "Recyclings are increasing.", "ok": false },
+						{ "answer": "We recycle the bottles to recycling.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "reduce",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We should reduce plastic use.", "ok": true },
+						{ "answer": "We should reduce the plastic uses.", "ok": false },
+						{ "answer": "Reduce is a kind of recycling bin.", "ok": false },
+						{ "answer": "We should reduce of plastic use.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

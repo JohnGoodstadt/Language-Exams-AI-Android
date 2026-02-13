@@ -1,0 +1,94 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizRelationships3-en",
+	"title": "Relationships",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Relationships & social connection (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "relationship",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They have a strong relationship built on trust.", "ok": true },
+						{ "answer": "They have strong relationship built on trust.", "ok": false },
+						{ "answer": "Relationships is complicated.", "ok": false },
+						{ "answer": "They related to each other for years.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "romance",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The film tells a story of romance.", "ok": true },
+						{ "answer": "The film tells a story of a romance.", "ok": false },
+						{ "answer": "Romances is very popular.", "ok": false },
+						{ "answer": "They romanced to each other.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "social media",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She spends too much time on social media.", "ok": true },
+						{ "answer": "She spends too much time in social media.", "ok": false },
+						{ "answer": "Social medias is addictive.", "ok": false },
+						{ "answer": "She social mediaed her photo.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "support",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He gave me support during a difficult time.", "ok": true },
+						{ "answer": "He gave me a support during a difficult time.", "ok": false },
+						{ "answer": "Supports are necessary.", "ok": false },
+						{ "answer": "He supported to me last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "tie",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Family ties are very important.", "ok": true },
+						{ "answer": "Family tie is very important.", "ok": false },
+						{ "answer": "Ties is strong between them.", "ok": false },
+						{ "answer": "They tied to each other emotionally.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "trust",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Trust is essential in any relationship.", "ok": true },
+						{ "answer": "The trust is essential in any relationship.", "ok": false },
+						{ "answer": "Trusts are difficult to build.", "ok": false },
+						{ "answer": "She trusted on him completely.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

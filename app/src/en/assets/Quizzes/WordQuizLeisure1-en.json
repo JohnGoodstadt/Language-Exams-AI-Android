@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizLeisure1-en",
+	"title": "Leisure",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Leisure & entertainment (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "activity",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Swimming is a popular activity in summer.", "ok": true },
+						{ "answer": "Swimming is popular activity in the summer.", "ok": false },
+						{ "answer": "She activity every weekend with friends.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "actor",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The actor performed brilliantly in the film.", "ok": true },
+						{ "answer": "The actor played in the film as doctor.", "ok": false },
+						{ "answer": "An actor is a place where films are shown.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "audience",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The audience applauded at the end of the show.", "ok": true },
+						{ "answer": "The audiences were very large.", "ok": false },
+						{ "answer": "Audience is the person who acts on stage.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "band",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The band played live music at the festival.", "ok": true },
+						{ "answer": "The band played a music at festival.", "ok": false },
+						{ "answer": "A band is a large art exhibition.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "collection",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She has a collection of old coins.", "ok": true },
+						{ "answer": "She has collection of old coins.", "ok": false },
+						{ "answer": "Collection is a musical performance.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "concert",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We went to a concert last night.", "ok": true },
+						{ "answer": "We went to concert last night.", "ok": false },
+						{ "answer": "A concert is a painting in a museum.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "craft",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She enjoys making craft items in her free time.", "ok": true },
+						{ "answer": "She enjoys to make crafts in her free time.", "ok": false },
+						{ "answer": "Craft is a type of cinema ticket.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "drama",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He loves watching drama on television.", "ok": true },
+						{ "answer": "He loves watching a drama on television every day.", "ok": false },
+						{ "answer": "Drama is a sports competition.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "entertainment",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The city offers a lot of entertainment.", "ok": true },
+						{ "answer": "The city offers many entertainments.", "ok": false },
+						{ "answer": "Entertainment is a museum building.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "event",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The charity event raised a lot of money.", "ok": true },
+						{ "answer": "The charity event was very successfully.", "ok": false },
+						{ "answer": "An event is a person who visits a museum.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

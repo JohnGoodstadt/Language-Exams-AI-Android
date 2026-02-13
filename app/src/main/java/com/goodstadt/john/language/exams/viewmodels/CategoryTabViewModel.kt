@@ -15,6 +15,7 @@ import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.DailyStats
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -243,11 +244,23 @@ class CategoryTabViewModel @Inject constructor(
                 // Initialize AudioCacheManager (Calculates Global Totals)
                 audioCacheManager.setCurrentVocabFile(vocabFile, voiceName)
 
+                if (com.goodstadt.john.language.exams.BuildConfig.DEBUG) { // 1 day only
+                    tabCategories.forEach({
+                        Timber.v("${it.title}")
+                        val list = mutableListOf<String>()
+                        it.words.forEach({
+                            list.add(it.word)
+//                            print("${it.word},")
+                        })
+
+                        Timber.v(list.toString())
+                    })
+                }
                 // Initialize Recalling Set
                // val recalledKeys = recallingRepository.getAllRecalledKeys()
 
                 // ✅ FIX: Calculate the initial Heard Count immediately
-//                val initialHeardCount = calculateCurrentHeardCount(tabCategories)
+
                 val (heardOnTab, total) = calculateTabSpecificStats(tabCategories)
 
                 Timber.i("loadContentForTab() tabNumber:$tabNumber heardOnTab:$heardOnTab total:$total")

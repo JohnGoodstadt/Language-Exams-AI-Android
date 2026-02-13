@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation1-en",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Education & work basics",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "apprenticeship",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She started an apprenticeship with a local electrician.", "ok": true },
+						{ "answer": "She apprenticed her university degree.", "ok": false },
+						{ "answer": "An apprenticeship is a school certificate.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "assignment",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I handed in my assignment before the deadline.", "ok": true },
+						{ "answer": "I assigned my homework to the teacher.", "ok": false },
+						{ "answer": "An assignment is a type of lecture.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "boss",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "My boss approved my holiday request.", "ok": true },
+						{ "answer": "My bossed me yesterday at work.", "ok": false },
+						{ "answer": "A boss is a university degree.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "career",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She is planning a career in engineering.", "ok": true },
+						{ "answer": "She careered her homework last night.", "ok": false },
+						{ "answer": "A career is a school project.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "certificate",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He received a certificate after finishing the training.", "ok": true },
+						{ "answer": "He certificated the seminar yesterday.", "ok": false },
+						{ "answer": "A certificate is a type of homework.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "class",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Our English class starts at 9 a.m.", "ok": true },
+						{ "answer": "I classed my teacher yesterday.", "ok": false },
+						{ "answer": "A class is a job position.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "conference",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She presented her research at an international conference.", "ok": true },
+						{ "answer": "She conferenced her homework.", "ok": false },
+						{ "answer": "A conference is a school exam.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "course",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He enrolled in a course on digital marketing.", "ok": true },
+						{ "answer": "He coursed his professor yesterday.", "ok": false },
+						{ "answer": "A course is a company manager.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "degree",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She earned a degree in biology.", "ok": true },
+						{ "answer": "She degreed from university.", "ok": false },
+						{ "answer": "A degree is a classroom teacher.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "diploma",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He received a diploma after completing the program.", "ok": true },
+						{ "answer": "He diplomad his exam results.", "ok": false },
+						{ "answer": "A diploma is a homework task.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial3-en",
+	"title": "Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Social issues (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "poverty",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Poverty remains a serious global issue.", "ok": true },
+						{ "answer": "The poverty remains serious issue.", "ok": false },
+						{ "answer": "Poverty are increasing.", "ok": false },
+						{ "answer": "He povertied last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "prejudice",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Prejudice can harm social relationships.", "ok": true },
+						{ "answer": "The prejudice can harm social relationships.", "ok": false },
+						{ "answer": "Prejudices is dangerous.", "ok": false },
+						{ "answer": "She prejudiced to him.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "racism",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Racism has no place in modern society.", "ok": true },
+						{ "answer": "The racism has no place in society.", "ok": false },
+						{ "answer": "Racisms are very harmful.", "ok": false },
+						{ "answer": "She racismed him.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "regulation",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The new regulation affects small businesses.", "ok": true },
+						{ "answer": "New regulation affects small businesses.", "ok": false },
+						{ "answer": "Regulation are complicated.", "ok": false },
+						{ "answer": "They regulated to the law.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "rights",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Everyone has equal rights under the law.", "ok": true },
+						{ "answer": "Everyone has the equal rights under law.", "ok": false },
+						{ "answer": "Right is very important.", "ok": false },
+						{ "answer": "She righted the injustice.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "society",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Technology has changed modern society.", "ok": true },
+						{ "answer": "Technology has changed the modern society.", "ok": false },
+						{ "answer": "Society are developing quickly.", "ok": false },
+						{ "answer": "She societied the people.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "tradition",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "It is a tradition to celebrate the festival together.", "ok": true },
+						{ "answer": "It is tradition to celebrate the festival.", "ok": false },
+						{ "answer": "Tradition are very old.", "ok": false },
+						{ "answer": "She traditioned the event.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "unemployment",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Unemployment has risen this year.", "ok": true },
+						{ "answer": "The unemployment has risen this year.", "ok": false },
+						{ "answer": "Unemployments are increasing.", "ok": false },
+						{ "answer": "He unemploymented last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "variety",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The shop offers a variety of products.", "ok": true },
+						{ "answer": "The shop offers variety of products.", "ok": false },
+						{ "answer": "Variety are important.", "ok": false },
+						{ "answer": "She varietied the menu.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "violence",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The film contains scenes of violence.", "ok": true },
+						{ "answer": "The film contains the violence scenes.", "ok": false },
+						{ "answer": "Violence are increasing.", "ok": false },
+						{ "answer": "He violenced the situation.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology2-en",
+	"title": "Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Technology basics (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "electronic",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She bought an electronic device online.", "ok": true },
+						{ "answer": "She bought electronic device online.", "ok": false },
+						{ "answer": "Electronic are very useful.", "ok": false },
+						{ "answer": "She electroniced the message.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "email",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I sent her an email yesterday.", "ok": true },
+						{ "answer": "I sent her the email yesterday.", "ok": false },
+						{ "answer": "Email are very fast.", "ok": false },
+						{ "answer": "She emailed to me yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "file",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Please attach the file to your message.", "ok": true },
+						{ "answer": "Please attach file to your message.", "ok": false },
+						{ "answer": "A file is a Wi-Fi connection.", "ok": false },
+						{ "answer": "She filed to the internet.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "gadget",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He loves buying new gadgets.", "ok": true },
+						{ "answer": "He loves buying a new gadgets.", "ok": false },
+						{ "answer": "A gadget is a website page.", "ok": false },
+						{ "answer": "She gadgeted the phone.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "homepage",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The homepage contains useful information.", "ok": true },
+						{ "answer": "Homepage contains useful information.", "ok": false },
+						{ "answer": "A homepage is a search engine company.", "ok": false },
+						{ "answer": "She homepage the browser.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "inbox",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Check your inbox for new messages.", "ok": true },
+						{ "answer": "Check the inbox for the new messages.", "ok": false },
+						{ "answer": "Inbox are very slow today.", "ok": false },
+						{ "answer": "She inboxed the attachment.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "internet",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The internet has changed the way we communicate.", "ok": true },
+						{ "answer": "Internet has changed the way we communicate.", "ok": false },
+						{ "answer": "An internet is a mobile phone.", "ok": false },
+						{ "answer": "She internetted the file.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "message",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He left me a message on my phone.", "ok": true },
+						{ "answer": "He left me message on my phone.", "ok": false },
+						{ "answer": "Message are very important.", "ok": false },
+						{ "answer": "She messaged to me yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "network",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The company has a strong professional network.", "ok": true },
+						{ "answer": "The company has strong professional network.", "ok": false },
+						{ "answer": "Network are very useful.", "ok": false },
+						{ "answer": "She networked to the Wi-Fi.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "online",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "You can shop online easily.", "ok": true },
+						{ "answer": "You can shop in online easily.", "ok": false },
+						{ "answer": "Online are very fast.", "ok": false },
+						{ "answer": "She onlined the file.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

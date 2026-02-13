@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFood3-en",
+	"title": "Food",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Food & dining (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "recipe",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She followed the recipe carefully.", "ok": true },
+						{ "answer": "She followed recipe carefully.", "ok": false },
+						{ "answer": "A recipe is a restaurant worker.", "ok": false },
+						{ "answer": "She reciped the ingredients.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "refreshment",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Light refreshments were served after the meeting.", "ok": true },
+						{ "answer": "Light refreshment were served after meeting.", "ok": false },
+						{ "answer": "A refreshment is a cooking instruction.", "ok": false },
+						{ "answer": "She refreshmented the guests.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "selection",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The restaurant offers a wide selection of desserts.", "ok": true },
+						{ "answer": "The restaurant offers wide selection of desserts.", "ok": false },
+						{ "answer": "A selection is a cooking ingredient.", "ok": false },
+						{ "answer": "She selectioned the cake.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "snack",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He had a snack between meals.", "ok": true },
+						{ "answer": "He had snack between meals.", "ok": false },
+						{ "answer": "A snack is a full dinner.", "ok": false },
+						{ "answer": "She snacked to the chocolate.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "specialty",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Seafood is the restaurant's specialty.", "ok": true },
+						{ "answer": "Seafood is restaurant's specialty.", "ok": false },
+						{ "answer": "A specialty is a type of spoon.", "ok": false },
+						{ "answer": "She specialtied the dish.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "starter",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We ordered a starter before the main course.", "ok": true },
+						{ "answer": "We ordered starter before main course.", "ok": false },
+						{ "answer": "A starter is the final dessert.", "ok": false },
+						{ "answer": "She startered the meal.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "sweet",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She prefers sweet food to savoury food.", "ok": true },
+						{ "answer": "She prefers sweets food.", "ok": false },
+						{ "answer": "Sweet is a type of restaurant.", "ok": false },
+						{ "answer": "She sweeted the tea.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "treat",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Ice cream is a special treat.", "ok": true },
+						{ "answer": "Ice cream is special treat.", "ok": false },
+						{ "answer": "A treat is a cooking method.", "ok": false },
+						{ "answer": "She treated the dessert carefully.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "vegan",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She follows a vegan diet.", "ok": true },
+						{ "answer": "She follows vegan diet.", "ok": false },
+						{ "answer": "Vegan is a cooking ingredient.", "ok": false },
+						{ "answer": "She vegans every Monday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "vegetarian",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He is vegetarian, so he doesn't eat meat.", "ok": true },
+						{ "answer": "He is a vegetarian person.", "ok": false },
+						{ "answer": "Vegetarian is a type of restaurant.", "ok": false },
+						{ "answer": "He vegetarianed his dinner.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}
