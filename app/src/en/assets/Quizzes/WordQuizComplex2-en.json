@@ -1,0 +1,94 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizComplex2-en",
+	"title": "Complex Sentences",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Subordinating conjunctions (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "since",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Since it was late, we decided to go home.", "ok": true },
+						{ "answer": "Since it was late so we decided to go home.", "ok": false },
+						{ "answer": "Since was late, we decided to go home.", "ok": false },
+						{ "answer": "We decided to go home since it is late yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "so that",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She spoke clearly so that everyone could understand her.", "ok": true },
+						{ "answer": "She spoke clearly so everyone could understand her.", "ok": false },
+						{ "answer": "She spoke clearly so that could understand her.", "ok": false },
+						{ "answer": "She spoke clearly so that everyone can understood her.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "though",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The task was difficult, though we managed to finish it.", "ok": true },
+						{ "answer": "Though the task was difficult, but we managed to finish it.", "ok": false },
+						{ "answer": "The task was difficult though but we managed to finish it.", "ok": false },
+						{ "answer": "The task was difficult, though managed to finish it.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "unless",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "You won’t pass unless you study harder.", "ok": true },
+						{ "answer": "You won’t pass unless you will study harder.", "ok": false },
+						{ "answer": "Unless you study harder you won’t pass it, but.", "ok": false },
+						{ "answer": "You won’t pass unless studying harder.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "whereas",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She prefers tea, whereas I prefer coffee.", "ok": true },
+						{ "answer": "She prefers tea whereas but I prefer coffee.", "ok": false },
+						{ "answer": "She prefers tea, whereas prefer coffee.", "ok": false },
+						{ "answer": "She prefers tea whereas to I prefer coffee.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "while",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "While I was cooking, he was setting the table.", "ok": true },
+						{ "answer": "While I was cooking he was setting, the table.", "ok": false },
+						{ "answer": "While was cooking, he was setting the table.", "ok": false },
+						{ "answer": "He was setting the table while I cooking.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

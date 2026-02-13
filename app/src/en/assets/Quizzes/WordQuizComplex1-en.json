@@ -1,0 +1,94 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizComplex1-en",
+	"title": "Complex Sentences",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Subordinating conjunctions (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "after",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "After she finished her homework, she went out with her friends.", "ok": true },
+						{ "answer": "After she finished her homework she went out, with her friends.", "ok": false },
+						{ "answer": "After she finished her homework, went out with her friends.", "ok": false },
+						{ "answer": "She went out after she will finish her homework.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "although",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Although it was raining, they decided to continue the match.", "ok": true },
+						{ "answer": "Although it was raining but they decided to continue the match.", "ok": false },
+						{ "answer": "Although raining, they decided to continue the match.", "ok": false },
+						{ "answer": "They decided to continue the match although was raining.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "because",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She left early because she was feeling unwell.", "ok": true },
+						{ "answer": "She left early because of she was feeling unwell.", "ok": false },
+						{ "answer": "Because she was feeling unwell, so she left early.", "ok": false },
+						{ "answer": "She left early because was feeling unwell.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "before",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Before you submit the form, check it carefully.", "ok": true },
+						{ "answer": "Before you submit the form check it carefully carefully.", "ok": false },
+						{ "answer": "Before submit the form, check it carefully.", "ok": false },
+						{ "answer": "You check it carefully before you will submit the form.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "even though",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Even though he studied hard, he didn’t pass the exam.", "ok": true },
+						{ "answer": "Even though he studied hard but he didn’t pass the exam.", "ok": false },
+						{ "answer": "Even though studied hard, he didn’t pass the exam.", "ok": false },
+						{ "answer": "He didn’t pass the exam even though was studied hard.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "if",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "If you need help, let me know.", "ok": true },
+						{ "answer": "If you will need help, let me know.", "ok": false },
+						{ "answer": "If need help, let me know.", "ok": false },
+						{ "answer": "Let me know if you would need help yesterday.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

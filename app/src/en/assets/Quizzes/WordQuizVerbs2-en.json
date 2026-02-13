@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs2-en",
+	"title": "Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the verb correctly.",
+			"description": "Academic & functional verbs (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "convince",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She convinced him to change his mind.", "ok": true },
+						{ "answer": "She convinced him change his mind.", "ok": false },
+						{ "answer": "She convinced to him to change his mind.", "ok": false },
+						{ "answer": "She convinced that him change his mind.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "depend",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "It depends on the weather.", "ok": true },
+						{ "answer": "It depends of the weather.", "ok": false },
+						{ "answer": "It depends from the weather.", "ok": false },
+						{ "answer": "It is depend on the weather.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "develop",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She developed her skills over time.", "ok": true },
+						{ "answer": "She developed to her skills over time.", "ok": false },
+						{ "answer": "She was developed her skills.", "ok": false },
+						{ "answer": "She developed in her skills.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "discover",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They discovered a new solution to the problem.", "ok": true },
+						{ "answer": "They discovered about a new solution.", "ok": false },
+						{ "answer": "They discovered to a new solution.", "ok": false },
+						{ "answer": "They were discovered a new solution.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "engage",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The teacher engaged the students in discussion.", "ok": true },
+						{ "answer": "The teacher engaged the students to discussion.", "ok": false },
+						{ "answer": "The teacher engaged in the students discussion.", "ok": false },
+						{ "answer": "The teacher was engaged the students.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "enhance",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "This course will enhance your career prospects.", "ok": true },
+						{ "answer": "This course will enhance to your career prospects.", "ok": false },
+						{ "answer": "This course will enhance in your career prospects.", "ok": false },
+						{ "answer": "Your career prospects will enhance by this course.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "express",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He expressed his concerns clearly.", "ok": true },
+						{ "answer": "He expressed about his concerns clearly.", "ok": false },
+						{ "answer": "He expressed to his concerns clearly.", "ok": false },
+						{ "answer": "He was expressed his concerns clearly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "find",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I find this topic very interesting.", "ok": true },
+						{ "answer": "I find this topic as very interesting.", "ok": false },
+						{ "answer": "I am find this topic very interesting.", "ok": false },
+						{ "answer": "I find very interesting this topic.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "improve",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She improved her English by practising daily.", "ok": true },
+						{ "answer": "She improved in her English by practising daily.", "ok": false },
+						{ "answer": "She improved to her English by practising daily.", "ok": false },
+						{ "answer": "Her English was improved by she daily.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "include",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The price includes breakfast.", "ok": true },
+						{ "answer": "The price includes the breakfast.", "ok": false },
+						{ "answer": "The price include breakfast.", "ok": false },
+						{ "answer": "Breakfast is included to the price.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs3-en",
+	"title": "Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Adverbs of degree & manner (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "reasonably",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The apartment is reasonably priced.", "ok": true },
+						{ "answer": "The apartment is reasonable priced.", "ok": false },
+						{ "answer": "The apartment reasonably is priced.", "ok": false },
+						{ "answer": "The apartment is reasonably price.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "relatively",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "This topic is relatively easy to understand.", "ok": true },
+						{ "answer": "This topic is relative easy to understand.", "ok": false },
+						{ "answer": "This topic relatively is easy to understand.", "ok": false },
+						{ "answer": "This topic is relatively easy for understand.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "scarcely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "There was scarcely any time to prepare.", "ok": true },
+						{ "answer": "There was scarce any time to prepare.", "ok": false },
+						{ "answer": "There scarcely was any time to prepare.", "ok": false },
+						{ "answer": "There was scarcely any time for to prepare.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "sincerely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I sincerely apologise for the mistake.", "ok": true },
+						{ "answer": "I sincere apologise for the mistake.", "ok": false },
+						{ "answer": "I apologise sincerely for the mistake.", "ok": false },
+						{ "answer": "I sincerely apologise about for the mistake.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "suddenly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Suddenly, the lights went out.", "ok": true },
+						{ "answer": "The lights suddenly went out.", "ok": false },
+						{ "answer": "The lights went out sudden.", "ok": false },
+						{ "answer": "Suddenly, the lights went out at.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "surely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Surely you can see the problem.", "ok": true },
+						{ "answer": "Surely you can to see the problem.", "ok": false },
+						{ "answer": "You can surely see the problem.", "ok": false },
+						{ "answer": "Surely, you can see about the problem.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "totally",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I totally forgot the appointment.", "ok": true },
+						{ "answer": "I total forgot the appointment.", "ok": false },
+						{ "answer": "I forgot totally the appointment.", "ok": false },
+						{ "answer": "I totally forgot about to the appointment.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "truly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I truly believe you can pass.", "ok": true },
+						{ "answer": "I true believe you can pass.", "ok": false },
+						{ "answer": "I believe truly you can pass.", "ok": false },
+						{ "answer": "I truly believe in you can pass.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "unexpectedly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He arrived unexpectedly early.", "ok": true },
+						{ "answer": "He arrived unexpected early.", "ok": false },
+						{ "answer": "Unexpectedly he arrived early.", "ok": false },
+						{ "answer": "He arrived unexpectedly at early.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "utterly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I was utterly exhausted after the trip.", "ok": true },
+						{ "answer": "I was utter exhausted after the trip.", "ok": false },
+						{ "answer": "I utterly was exhausted after the trip.", "ok": false },
+						{ "answer": "I was utterly exhausted from to the trip.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

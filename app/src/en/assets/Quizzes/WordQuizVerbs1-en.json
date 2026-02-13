@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs1-en",
+	"title": "Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the verb correctly.",
+			"description": "Academic & functional verbs (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "accomplish",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She accomplished her goal after months of effort.", "ok": true },
+						{ "answer": "She accomplished to her goal after months of effort.", "ok": false },
+						{ "answer": "She accomplished in her goal.", "ok": false },
+						{ "answer": "She was accomplished her goal.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "achieve",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He achieved success through hard work.", "ok": true },
+						{ "answer": "He achieved to success through hard work.", "ok": false },
+						{ "answer": "He achieved in success.", "ok": false },
+						{ "answer": "He was achieved success.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "admire",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I admire her dedication to the project.", "ok": true },
+						{ "answer": "I admire to her dedication.", "ok": false },
+						{ "answer": "I admire on her dedication.", "ok": false },
+						{ "answer": "I am admired her dedication.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "advise",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She advised me to apply early.", "ok": true },
+						{ "answer": "She advised me apply early.", "ok": false },
+						{ "answer": "She advised to me to apply early.", "ok": false },
+						{ "answer": "She advised me that apply early.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "appreciate",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I appreciate your support.", "ok": true },
+						{ "answer": "I appreciate for your support.", "ok": false },
+						{ "answer": "I appreciate to your support.", "ok": false },
+						{ "answer": "I am appreciating your support yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "articulate",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He articulated his ideas clearly.", "ok": true },
+						{ "answer": "He articulated about his ideas clearly.", "ok": false },
+						{ "answer": "He was articulate his ideas clearly.", "ok": false },
+						{ "answer": "He articulated to his ideas clearly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "assure",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She assured me that everything was fine.", "ok": true },
+						{ "answer": "She assured to me that everything was fine.", "ok": false },
+						{ "answer": "She assured me everything is fine.", "ok": false },
+						{ "answer": "She assured about everything was fine.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "attain",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He attained a high level of proficiency.", "ok": true },
+						{ "answer": "He attained to a high level.", "ok": false },
+						{ "answer": "He attained in a high level.", "ok": false },
+						{ "answer": "He was attained a high level.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "communicate",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "They communicate effectively with clients.", "ok": true },
+						{ "answer": "They communicate to clients effectively.", "ok": false },
+						{ "answer": "They communicate with to clients.", "ok": false },
+						{ "answer": "They communicated about to clients.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "convey",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The message conveyed a strong sense of urgency.", "ok": true },
+						{ "answer": "The message conveyed about a strong sense.", "ok": false },
+						{ "answer": "The message was convey a strong sense.", "ok": false },
+						{ "answer": "The message conveyed to a strong sense.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

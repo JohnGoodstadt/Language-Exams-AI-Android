@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs2-en",
+	"title": "Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Adverbs of degree & manner (Set 2)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "fully",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I fully understand the instructions.", "ok": true },
+						{ "answer": "I understand fully the instructions.", "ok": false },
+						{ "answer": "I full understand the instructions.", "ok": false },
+						{ "answer": "I fully understand about the instructions.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "genuinely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I am genuinely happy for you.", "ok": true },
+						{ "answer": "I am genuine happy for you.", "ok": false },
+						{ "answer": "I genuinely am happy for you.", "ok": false },
+						{ "answer": "I am genuinely happy to you.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "greatly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Your help is greatly appreciated.", "ok": true },
+						{ "answer": "Your help is great appreciated.", "ok": false },
+						{ "answer": "Your help greatly is appreciated.", "ok": false },
+						{ "answer": "Your help is greatly appreciated of you.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "hardly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I hardly slept last night.", "ok": true },
+						{ "answer": "I slept hardly last night.", "ok": false },
+						{ "answer": "I was hardly to sleep last night.", "ok": false },
+						{ "answer": "I hardly slept at last night.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "highly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "This course is highly recommended.", "ok": true },
+						{ "answer": "This course is high recommended.", "ok": false },
+						{ "answer": "This course highly is recommended.", "ok": false },
+						{ "answer": "This course is highly recommended to you to do.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "maybe",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Maybe we can meet tomorrow.", "ok": true },
+						{ "answer": "We can meet maybe tomorrow.", "ok": false },
+						{ "answer": "May be we can meet tomorrow.", "ok": false },
+						{ "answer": "Maybe to meet tomorrow we can.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "moderately",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The hotel is moderately priced.", "ok": true },
+						{ "answer": "The hotel is moderate priced.", "ok": false },
+						{ "answer": "The hotel moderately is priced.", "ok": false },
+						{ "answer": "The hotel is moderately price.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "perhaps",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Perhaps you should rest for a while.", "ok": true },
+						{ "answer": "You should perhaps to rest for a while.", "ok": false },
+						{ "answer": "Perhap you should rest for a while.", "ok": false },
+						{ "answer": "Perhaps you should rest in a while.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "possibly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I can't possibly finish it today.", "ok": true },
+						{ "answer": "I can't finish possibly it today.", "ok": false },
+						{ "answer": "I can't possible finish it today.", "ok": false },
+						{ "answer": "I can't possibly finish it in today.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "quite",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The exam was quite challenging.", "ok": true },
+						{ "answer": "The exam was quiet challenging.", "ok": false },
+						{ "answer": "The exam quite was challenging.", "ok": false },
+						{ "answer": "The exam was quite of challenging.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

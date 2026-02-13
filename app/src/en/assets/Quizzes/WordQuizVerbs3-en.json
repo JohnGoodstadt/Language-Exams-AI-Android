@@ -1,0 +1,133 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs3-en",
+	"title": "Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the verb correctly.",
+			"description": "Academic & functional verbs (Set 3)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "interact",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "Students interact with each other during group work.", "ok": true },
+						{ "answer": "Students interact to each other during group work.", "ok": false },
+						{ "answer": "Students interact between each other.", "ok": false },
+						{ "answer": "Students are interact with each other.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "involve",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The project involves working in teams.", "ok": true },
+						{ "answer": "The project involves to work in teams.", "ok": false },
+						{ "answer": "The project is involved working in teams.", "ok": false },
+						{ "answer": "The project involves in working in teams.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "persuade",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He persuaded her to apply for the job.", "ok": true },
+						{ "answer": "He persuaded her apply for the job.", "ok": false },
+						{ "answer": "He persuaded to her to apply for the job.", "ok": false },
+						{ "answer": "He persuaded that she apply for the job.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "recommend",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I recommend visiting the museum.", "ok": true },
+						{ "answer": "I recommend to visit the museum.", "ok": false },
+						{ "answer": "I recommend you visit to the museum.", "ok": false },
+						{ "answer": "I recommended him to visiting the museum.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "rely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "You can rely on her advice.", "ok": true },
+						{ "answer": "You can rely her advice.", "ok": false },
+						{ "answer": "You can rely in her advice.", "ok": false },
+						{ "answer": "You can relied on her advice.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "respect",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "We respect people who work hard.", "ok": true },
+						{ "answer": "We respect to people who work hard.", "ok": false },
+						{ "answer": "We are respect people who work hard.", "ok": false },
+						{ "answer": "We respect for people who work hard.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "suggest",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "She suggested going earlier.", "ok": true },
+						{ "answer": "She suggested to go earlier.", "ok": false },
+						{ "answer": "She suggested that go earlier.", "ok": false },
+						{ "answer": "She suggested me to go earlier.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "trust",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I trust him completely.", "ok": true },
+						{ "answer": "I trust on him completely.", "ok": false },
+						{ "answer": "I am trust him completely.", "ok": false },
+						{ "answer": "I trusted to him completely.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "uncover",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The investigation uncovered new evidence.", "ok": true },
+						{ "answer": "The investigation uncovered about new evidence.", "ok": false },
+						{ "answer": "The investigation was uncovered new evidence.", "ok": false },
+						{ "answer": "The investigation uncovered to new evidence.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

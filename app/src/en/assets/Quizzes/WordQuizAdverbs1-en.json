@@ -1,0 +1,146 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs1-en",
+	"title": "Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Adverbs of degree & manner (Set 1)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "abruptly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "He stopped talking abruptly.", "ok": true },
+						{ "answer": "He stopped abruptly to talk.", "ok": false },
+						{ "answer": "He was abrupt to stop talking.", "ok": false },
+						{ "answer": "He stopped talking in abruptly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "absolutely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I absolutely agree with you.", "ok": true },
+						{ "answer": "I agree absolutely with you.", "ok": false },
+						{ "answer": "I am absolute agree with you.", "ok": false },
+						{ "answer": "I absolutely agree to you.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "barely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I could barely hear the speaker.", "ok": true },
+						{ "answer": "I could hear barely the speaker.", "ok": false },
+						{ "answer": "I was barely to hear the speaker.", "ok": false },
+						{ "answer": "I could barely hear about the speaker.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "certainly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I will certainly call you later.", "ok": true },
+						{ "answer": "I will call certainly you later.", "ok": false },
+						{ "answer": "I am certain call you later.", "ok": false },
+						{ "answer": "I will certainly call to you later.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "comparatively",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "This exam was comparatively easy.", "ok": true },
+						{ "answer": "This exam was comparative easy.", "ok": false },
+						{ "answer": "Comparatively, it was easy than the last one.", "ok": false },
+						{ "answer": "This exam was comparatively to easy.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "completely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I completely forgot his name.", "ok": true },
+						{ "answer": "I forgot completely his name.", "ok": false },
+						{ "answer": "I complete forgot his name.", "ok": false },
+						{ "answer": "I completely forgot about to his name.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "definitely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I will definitely attend the meeting.", "ok": true },
+						{ "answer": "I will attend definitely the meeting.", "ok": false },
+						{ "answer": "I am definite attend the meeting.", "ok": false },
+						{ "answer": "I will definitely attend to the meeting.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "entirely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "I entirely understand your point.", "ok": true },
+						{ "answer": "I understand entirely your point.", "ok": false },
+						{ "answer": "I am entire understand your point.", "ok": false },
+						{ "answer": "I entirely understand about your point.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "extremely",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The test was extremely difficult.", "ok": true },
+						{ "answer": "The test was extreme difficult.", "ok": false },
+						{ "answer": "The test was extremely difficulty.", "ok": false },
+						{ "answer": "The test was extremely of difficult.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "fairly",
+					"summary": "",
+					"explain": "",
+					"answers": [
+						{ "answer": "The lesson was fairly easy to follow.", "ok": true },
+						{ "answer": "The lesson was fair easy to follow.", "ok": false },
+						{ "answer": "The lesson was fairly easiness to follow.", "ok": false },
+						{ "answer": "The lesson was fairly easy for follow.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}
