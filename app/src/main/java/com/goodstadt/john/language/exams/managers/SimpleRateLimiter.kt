@@ -99,32 +99,8 @@ class SimpleRateLimiter @Inject constructor(
 
         resetIfNeeded()
 
-
-
-
         if (BuildConfig.DEBUG) {
             Timber.i(printableStatus())
-//            when {
-//                dailyCount >= dailyLimit -> {
-//                    val d1 = CallResult(false, FailReason.DAILY, timeUntilNextDay())
-//                    Timber.i(d1.toString())
-//                }
-//
-//                hourlyCount >= hourlyLimit ->  {
-//                    val d2 = CallResult(false, FailReason.HOURLY, currentHourlyTimeLeftToWait)
-//                    Timber.i(d2.toString())
-//                }
-//                else -> {
-//                    val d3 = CallResult(true, null, null)
-//                    Timber.i(d3.toString())
-//                }
-//            }
-
-//            val debug1 =
-//                dailyCount >= dailyLimit -> CallResult(false, FailReason.DAILY, timeUntilNextDay())
-//            val debug2 =
-//                dailyCount >= dailyLimit -> CallResult(false, FailReason.DAILY, timeUntilNextDay())
-//            val debug3 = CallResult(true, null, null)
         }
         return when {
             dailyCount >= dailyLimit -> CallResult(false, FailReason.DAILY, timeUntilNextDay())
@@ -132,13 +108,7 @@ class SimpleRateLimiter @Inject constructor(
             else -> CallResult(true, null, null)
         }
     }
-//    fun canMakeCall():Boolean {
-//
-//        return when {
-//            canMakeCallWithResult().canICallAPI -> true
-//            else -> false
-//        }
-//    }
+
 private fun canMakeAPICall():Boolean {
 
         return when {

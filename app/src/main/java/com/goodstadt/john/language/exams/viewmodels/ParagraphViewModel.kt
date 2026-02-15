@@ -26,8 +26,12 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.UserCredits
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -111,9 +115,10 @@ class ParagraphViewModel @Inject constructor(
     private val firestoreRepository: FirestoreRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
-    private val audioCacheManager: AudioCacheManager
+    private val audioCacheManager: AudioCacheManager,
+    private val audioPlaybackRepository: AudioPlaybackRepository,
 
-) : ViewModel() {
+    ) : ViewModel() {
 
     val isPurchased = billingRepository.isPurchased
     val productDetails = billingRepository.productDetails
@@ -259,8 +264,8 @@ class ParagraphViewModel @Inject constructor(
             val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
             if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
  */
-            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPurchased.value && todayIsNotAFreePassDay){ //if premium user don't check credits or is on day 1
+            //val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)  //AI Reccommends ignore install day free
+            if (!isPurchased.value){ //if premium user don't check credits or is on day 1
                 // --- THE NEW, ROBUST CHECK ---
                 // 1. Wait until credits are initialized.
                 // 2. Then check if the count is zero or less.
@@ -620,6 +625,28 @@ class ParagraphViewModel @Inject constructor(
     /**
      * Plays the audio for the current sentence by delegating to the VocabRepository.
      */
+//    fun handleTap(sentence: String) {
+//
+//        audioPlaybackRepository.stopPlayback()
+//
+//        val sentenceToSpeak = _uiState.value.generatedSentence
+//        if (sentenceToSpeak.isBlank() || sentenceToSpeak == "Tap 'Generate' to begin." || _uiState.value.isSpeaking) {
+//            return // Prevent multiple clicks or playing placeholder text
+//        }
+//
+//        viewModelScope.launch {
+//            //All stats updated in playTrackAndGetStatus()
+//            val result = audioPlaybackRepository.playTrackAndGetStatus(
+//                sentence = sentence,
+//                level = "Reference",
+//                isPremiumUser = false
+//            )
+//
+//
+//
+//
+//        }
+//    }
     fun speakSentence() {
 
         vocabRepository.stopPlayback()
@@ -633,8 +660,8 @@ class ParagraphViewModel @Inject constructor(
 
         viewModelScope.launch {
         //For Paragraph screen don't deny rateLimiting - credits will do that
-            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
+           // val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPremiumUser.value) { //if premium user don't check credits or is on day 1
                 if (rateLimiter.doIForbidCall()) {
                     val failType = rateLimiter.canMakeCallWithResult()
                     Timber.v("${failType.canICallAPI}")
@@ -644,12 +671,15 @@ class ParagraphViewModel @Inject constructor(
                         if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
                             Timber.v("User would fail DAILY rate limiting")
                             _showRateDailyLimitSheet.value = true
+                            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statRateLimiterDayForbidCount)
                         } else {
                             Timber.v("User would fail HOURLY rate limiting")
                             _showRateHourlyLimitSheet.value = true
+                            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterHourForbidCount)
                         }
                     }
 
+                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statRateLimiterForbidCount)
                     return@launch
                 }
             }
@@ -692,9 +722,9 @@ class ParagraphViewModel @Inject constructor(
                 when (result) {
                     is PlaybackResult.PlayedFromNetworkAndCached -> {
                         //NOTE: record call but don't disallow on Paragraph screen
-                        if (todayIsNotAFreePassDay){
+//                        if (todayIsNotAFreePassDay){
                             rateLimiter.recordCall()
-                        }
+//                        }
                         Timber.v(rateLimiter.printCurrentStatus)
                         ttsStatsRepository.updateTTSStatsWithCosts(Sentence(sentenceToSpeak,""), currentVoiceName)
                         audioCacheManager.incrementAIParagraphHeardCount()
@@ -763,14 +793,13 @@ class ParagraphViewModel @Inject constructor(
         }
     }
     fun saveDataOnExit() {
-        if (false) {
             appScope.launch {
-                if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+                //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
+                if (ttsStatsRepository.isFebOrMarch2026()) {
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                 }
             }
-        }
     }
 
 

@@ -22,22 +22,28 @@ import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
 import com.goodstadt.john.language.exams.data.repository.VocabQuizRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
+import com.goodstadt.john.language.exams.utils.isTodayInstallDay
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -174,7 +180,6 @@ class WordQuizViewModel @Inject constructor(
     private val application: Application,
     private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
-    private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository: TTSStatsRepository,
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
@@ -182,6 +187,7 @@ class WordQuizViewModel @Inject constructor(
     private val quizHistoryManager: QuizHistoryManager,
     private val xpManager: XPManager,
     private val vocabQuizRepository: VocabQuizRepository,
+    private val audioPlaybackRepository: AudioPlaybackRepository
 
     ) : ViewModel() {
     private val appContext: Context = application.applicationContext
@@ -306,7 +312,55 @@ class WordQuizViewModel @Inject constructor(
     fun hideRateOKLimitSheet() {
         _showRateLimitSheet.value = false
     }
+    fun handleTap(sentence: String) {
+        // if (_playbackState.value is PlaybackState.Playing) return
 
+        audioPlaybackRepository.stopPlayback()
+
+
+        viewModelScope.launch {
+
+            //All stats updated in playTrackAndGetStatus()
+            val result = audioPlaybackRepository.playTrackAndGetStatus(
+                sentence = sentence,
+                level = "Quiz",
+                isPremiumUser = false
+            )
+
+            when (result) {
+                is AudioPlaybackStatus.PlayedFromTTSAPI,is AudioPlaybackStatus.PlayedFromLocalCache , is AudioPlaybackStatus.PlayedFromCloudStorage -> {
+
+                }
+                is AudioPlaybackStatus.RateLimited -> {
+                    // Show Paywall logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.w("Rate Limiter Triggered")
+                    Timber.w("canICallAPI = %s", failType.canICallAPI)
+                    Timber.w("failReason = %s", (failType.failReason))
+                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w(rateLimiter.printCurrentStatus)
+
+                    if (result.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                        _showRateDailyLimitSheet.value = true
+                    } else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
+                }
+
+                AudioPlaybackStatus.Failure -> {
+                    //TODO: Show Snackbar logic
+                    Timber.i("QuizViewModel.handleTap().AudioPlaybackStatus.Failure")
+                }
+            }
+            //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
+            if (ttsStatsRepository.isFebOrMarch2026()) {
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+            }
+
+        }
+    }
     fun playTrack(sentence: String) {
 
         if (_playbackState.value is PlaybackState.Playing) return
@@ -317,8 +371,9 @@ class WordQuizViewModel @Inject constructor(
         }
 
         viewModelScope.launch {
-            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
+            //AI Recommends ignore install day free
+//            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+            if (!isPremiumUser.value) { //if premium user don't check credits or is on day 1
                 if (rateLimiter.doIForbidCall()) {
                     val failType = rateLimiter.canMakeCallWithResult()
                     Timber.v("${failType.canICallAPI}")
@@ -327,13 +382,15 @@ class WordQuizViewModel @Inject constructor(
                     if (!failType.canICallAPI) {
                         if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
                             _showRateDailyLimitSheet.value = true
+                            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statRateLimiterDayForbidCount)
                         } else {
                             _showRateHourlyLimitSheet.value = true
+                            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterHourForbidCount)
                         }
                     } else {
                         _showRateLimitSheet.value = true
                     }
-
+                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statRateLimiterForbidCount)
                     return@launch
                 }
             }
@@ -341,8 +398,6 @@ class WordQuizViewModel @Inject constructor(
 
             val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
             val uniqueSentenceId = generateUniqueSentenceId(sentence, currentVoiceName)
-
-            //  _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
 
             val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
             if (played) {//short cut so user cna play cached sentences with no Internet connection
@@ -363,9 +418,9 @@ class WordQuizViewModel @Inject constructor(
 
             when (result) {
                 is PlaybackResult.PlayedFromNetworkAndCached -> {
-                    if (todayIsNotAFreePassDay) {
+//                    if (todayIsNotAFreePassDay) {
                         rateLimiter.recordCall()
-                    }
+//                    }
                     Timber.v(rateLimiter.printCurrentStatus)
                     ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
                 }
@@ -876,8 +931,8 @@ class WordQuizViewModel @Inject constructor(
 
 
         viewModelScope.launch {
-            if (calcIsTodayFreePassDay(userPreferencesRepository)) {
-                //Let's see usage for Quiz on Day 1 - immediately
+            //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
+            if (ttsStatsRepository.isFebOrMarch2026()) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }

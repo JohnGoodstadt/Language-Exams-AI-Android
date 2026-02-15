@@ -29,6 +29,8 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import java.io.File
+import java.time.LocalDate
+import java.time.Month
 
 @Singleton
 class TTSStatsRepository @Inject constructor(
@@ -183,6 +185,8 @@ class TTSStatsRepository @Inject constructor(
         const val statTTSFailureCount = "statTTSFailureCount"
         const val statTTSSuccessCount = "statTTSSuccessCount"
         const val statRateLimiterForbidCount = "statRateLimiterForbidCount"
+        const val statRateLimiterHourForbidCount = "statRateLimiterHourForbidCount"
+        const val statRateLimiterDayForbidCount = "statRateLimiterDayForbidCount"
 
         //Button usage
         const val statSheetQuizCount = "statSheetQuizCount"
@@ -356,7 +360,20 @@ class TTSStatsRepository @Inject constructor(
 
         }
     }
+    fun isFebOrMarch2026() : Boolean {
+//        val now = LocalDate.now()
+        val now = LocalDate.now()
 
+        return when {
+            // Execute code for Feb/March 2026
+            now.year == 2026 && now.month in listOf(Month.FEBRUARY, Month.MARCH) -> {
+                true
+            }
+            else -> {
+                false
+            }
+        }
+    }
     suspend private fun flushWordStatsToFirebase() {
         val stats = getAllStats(fsDOC.WORDSTATS)
 

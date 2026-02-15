@@ -278,7 +278,8 @@ fun WordQuizScreen(
                                             option
                                         }
                                     }
-                                viewModel.playTrack(fullSentence)
+//                                viewModel.playTrack(fullSentence)
+                                viewModel.handleTap(fullSentence)
                             },
 //                            painter = painterResource(R.drawable.ic_speaker),
                             imageVector = Icons.AutoMirrored.Filled.VolumeUp,
@@ -311,7 +312,8 @@ fun WordQuizScreen(
                                     viewModel.updateAnswer(isCorrect)
                                     viewModel.vocabQuizAttemptStats(isOptionCorrect,question.question)
 
-                                    viewModel.playTrack(fullSentence)
+//                                    viewModel.playTrack(fullSentence)
+                                    viewModel.handleTap(fullSentence)
 
                                 }
                         )
@@ -336,7 +338,8 @@ fun WordQuizScreen(
                                 )
                                 sentenceToSpeak = option
 
-                                viewModel.playTrack(sentenceToSpeak)
+//                                viewModel.playTrack(sentenceToSpeak)
+                                viewModel.handleTap(sentenceToSpeak)
 
                                 viewModel.incQuizStat()
 

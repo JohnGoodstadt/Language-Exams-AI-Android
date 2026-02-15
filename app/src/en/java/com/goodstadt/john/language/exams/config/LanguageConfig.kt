@@ -11,14 +11,14 @@ object LanguageConfig {
     NOTE:   1. this drives the screen
             2. MeScreen() goes from this title to route (getMeScreenRouteFromTitle)
      */
-    val meTabMenuItems = listOf(
+    val meTabMenuItems = listOf( //NOTE:  this drives the screen -- not RemoteConfig Yet
         "Focusing",
         "Settings",
         "Vocab",
         "Word of the Day",
         "Progress",
         "Paragraph",
-        "Vocab Quiz"
+//        "Vocab Quiz"
 
     )
     val refTabMenuItems = listOf(

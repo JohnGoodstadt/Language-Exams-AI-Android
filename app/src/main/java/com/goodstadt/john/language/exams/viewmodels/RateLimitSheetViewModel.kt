@@ -28,12 +28,7 @@ import timber.log.Timber
 import javax.inject.Inject
 
 data class RateLimitUiState(
-    // ... your existing properties: isLoading, categories, etc.
-
-    // --- ADD NEW RATE LIMITER STATE ---
-//    val currentHourlyLimit: Int = 0,
     val hourlyLimit: Int = 0,
-//    val callsMadeToday: Int = 0,
     val dailyLimit: Int = 0
 )
 
@@ -53,12 +48,13 @@ class RateLimitSheetViewModel  @Inject constructor(
         .map { it ?: "Unknown Price" } // Fallback if null (or use a loading spinner)
         .stateIn(viewModelScope, SharingStarted.Eagerly, "")
 
-    val productDetails = billingRepository.productDetails
+//    val productDetails = billingRepository.productDetails
 
     init {
         billingRepository.startConnection()
         updateRateLimiterState()
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statIAPSheetDisplayedCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER,statIAPSheetDisplayedCount)
 
     }
 
@@ -67,24 +63,19 @@ class RateLimitSheetViewModel  @Inject constructor(
         viewModelScope.launch { billingRepository.launchPurchase(activity) }
     }
 
-//    fun formattedPrice() : String {
-//
-//        Timber.i("Product Details: ${productDetails.value}" )
-//
-//        productDetails.value?.let {
-//            return it.oneTimePurchaseOfferDetails?.formattedPrice ?: "Unknown Price."
-//        }
-//
-//        Timber.wtf("Product Details: is Unknown, So no formatted Price! RateLimitSheetViewModel.formattedPrice()")
-//        return "Unknown Price"
-//    }
     fun incStatForDaily() {
         ttsStatsRepository.incUserStatCount(rateLimitDailyViewCount)
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPDailyHitCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPDailyHitCount)
     }
     fun incStatForHourly() {
         ttsStatsRepository.incUserStatCount(rateLimitHourlyViewCount)
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPHourlyHitCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPHourlyHitCount)
+    }
+    fun incIAPCancel() {
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBuyCancelledCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPBuyCancelledCount)
     }
     fun currentHourlyTimeLeftToWait() : Long? {
         return rateLimiter.currentHourlyTimeLeftToWait
@@ -95,25 +86,6 @@ class RateLimitSheetViewModel  @Inject constructor(
                 hourlyLimit = rateLimiter.hourlyLimit,
                 dailyLimit = rateLimiter.dailyLimit
             )
-        }
-    }
-
-
-    // ✅ NEW: Helper to format time for the UI
-    fun getFormattedTimeLeft(isDaily: Boolean): String {
-        val secondsRemaining = 0//rateLimiter.timeLeftToWait // Accessing property from SimpleRateLimiter
-
-        if (secondsRemaining <= 0) return "Ready now"
-
-        val hours = secondsRemaining / 3600
-        val minutes = (secondsRemaining % 3600) / 60
-
-        return if (isDaily) {
-            // Logic for daily reset (usually wait until tomorrow)
-            if (hours > 0) "$hours hrs $minutes mins" else "$minutes mins"
-        } else {
-            // Logic for hourly
-            "$minutes mins"
         }
     }
 }

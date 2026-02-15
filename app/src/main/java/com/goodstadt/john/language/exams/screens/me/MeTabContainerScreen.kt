@@ -151,7 +151,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
                     viewModel = vm
                 )
             }
-            composable(MeScreen.WordQuiz.route) { WordQuizScreen() }
+           // composable(MeScreen..route) { WordQuizScreen() }
 
         }
     } //:Column

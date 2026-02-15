@@ -12,8 +12,13 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Singleton
 import dagger.hilt.components.SingletonComponent
 
+/* AI reccomend smaller numbers + no day 1 free
 const val HOURLY_LIMIT = 40
 const val DAILY_LIMIT = 150
+
+ */
+const val HOURLY_LIMIT = 25
+const val DAILY_LIMIT = 50
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -27,8 +32,8 @@ object RateLimiterModule {
 
 
 
-//      if (BuildConfig.DEBUG){ //Test IAP Purchase
-        if (false){
+      if (BuildConfig.DEBUG){ //Test IAP Purchase
+//        if (false){
             return SimpleRateLimiter(
                 context = context,
                 hourlyLimit = 6,

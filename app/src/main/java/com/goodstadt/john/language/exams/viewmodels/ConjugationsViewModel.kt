@@ -162,8 +162,8 @@ class ConjugationsViewModel @Inject constructor(
         // viewModelScope is paused or cancelled as the user navigates away.
         if (false) {
             appScope.launch {
-                Timber.d("Saving data because screen is no longer active.")
-                if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+                //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
+                if (ttsStatsRepository.isFebOrMarch2026()) {
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                 }

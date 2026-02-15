@@ -547,175 +547,17 @@ class ContentRepository @Inject constructor(
         finally { }
 
     }
-    suspend fun playTextToSpeechAndSaveToCache(
-        text: String,
-        uniqueSentenceId: String, // This should be the Unified Filename (with .mp3)
-        voiceName: String,
-        languageCode: String
-    ): PlaybackResult {
 
-        // 1. Setup File Reference
-        // context.filesDir is the correct place for permanent audio storage
-        val localFile = File(context.filesDir, uniqueSentenceId)
-
-        // ---------------------------------------------------------
-        // STEP 1: LOCAL CACHE (Fastest, $0)
-        // ---------------------------------------------------------
-        if (localFile.exists()) {
-            Timber.v("🔊 Waterfall L1: Playing from Local Disk: $uniqueSentenceId")
-            return playFromLocalFile(localFile, isNetwork = false)
-        }
-
-        // ---------------------------------------------------------
-        // STEP 2: FIREBASE CLOUD STORAGE (Fast, Low/No Cost)
-        // ---------------------------------------------------------
-        try {
-            // Check/Download directly to the local file
-            // This throws an exception if the file doesn't exist in cloud
-            FirebaseAudioService.downloadAudio(uniqueSentenceId, localFile)
-
-            Timber.v("☁️ Waterfall L2: Downloaded from Firebase")
-
-            // If download succeeded, file is now on disk. Play it.
-            return playFromLocalFile(localFile, isNetwork = true)
-
-        } catch (e: Exception) {
-            // Not in cloud, or network failed. Fall through to TTS.
-            // Log.v("ContentRepository", "Not in Firebase, falling back to TTS")
-        }
-
-        // ---------------------------------------------------------
-        // STEP 3: GOOGLE TTS API (Slower, $$)
-        // ---------------------------------------------------------
-        Timber.v("🗣️ Waterfall L3: Calling Google TTS")
-
-        val ttsResult = googleCloudTts.getAudioData(text, voiceName, languageCode)
-
-        return ttsResult.fold(
-            onSuccess = { audioData ->
-                // A. Save to Local Disk (Critical for L1 next time)
-                try {
-                    localFile.writeBytes(audioData)
-                } catch (e: Exception) {
-                    Timber.e(e, "Failed to write TTS data to disk")
-                }
-
-                // B. Play Audio
-                val playResult = audioPlayerService.playAudio(audioData)
-
-                // C. Upload to Firebase (Background / Fire & Forget)
-                // We only upload if playback worked (valid audio)
-                if (playResult.isSuccess) {
-                    FirebaseAudioService.uploadAudio(localFile, uniqueSentenceId, text)
-                    ttsStatsRepository.incGlobalCloudStorageCounts(upload = 1)
-                }
-
-                if (playResult.isSuccess) {
-                    PlaybackResult.PlayedFromNetworkAndCached
-                } else {
-                    PlaybackResult.Failure(
-                        playResult.exceptionOrNull() as? Exception
-                            ?: Exception("TTS Playback failed")
-                    )
-                }
-            },
-            onFailure = { exception ->
-                Timber.e(exception, "TTS API Call failed")
-                PlaybackResult.Failure(exception as? Exception ?: Exception("TTS API error"))
-            }
-        )
-    }
 
 // In ContentRepository.kt
 
 
 
-
-
     // Helper to keep the main function clean
-    private suspend fun acquireAudioFromNetwork(
-        text: String,
-        uniqueSentenceId: String,
-        voiceName: String,
-        languageCode: String,
-        destFile: File
-    ): ByteArray? {
-        // 1. Try Firebase
-        try {
-            FirebaseAudioService.downloadAudio(uniqueSentenceId, destFile)
-            return destFile.readBytes()
-        } catch (e: Exception) { /* Continue to TTS */ }
 
-        // 2. Try Google TTS
-        val result = googleCloudTts.getAudioData(text, voiceName, languageCode)
-
-        return result.getOrNull()?.also { bytes ->
-            try { destFile.writeBytes(bytes) } catch (e: Exception) { }
-        }
-    }
     // MARK: - Helper
-    /**
-     * Helper to try Firebase, then fallback to Google TTS.
-     * Returns the Bytes and the Source.
-     */
-    private suspend fun acquireFromNetwork(
-        text: String,
-        filename: String,
-        voiceName: String,
-        languageCode: String,
-        destFile: File
-    ): Pair<ByteArray, AudioDataSource>? {
-
-        // ✅ DEBUG: Simulate a slow network (3 seconds)
-        // This forces the ViewModel's 1-second timer to fire, showing the ProgressView.
-        // REMOVE THIS BEFORE RELEASE or wrap in BuildConfig.DEBUG
-        //if (com.goodstadt.john.language.exams.BuildConfig.DEBUG) {
-        if (false) {
-            kotlinx.coroutines.delay(3000)
-        }
-        // 1. Try Firebase Download
-        // ✅ No try/catch needed here anymore, the Service handles it safely.
-        val cloudSuccess = FirebaseAudioService.downloadAudio(filename, destFile)
-
-        if (cloudSuccess) {
-            ttsStatsRepository.incGlobalCloudStorageCounts(download = 1)
-            val bytes = try { destFile.readBytes() } catch (e: Exception) { null }
-            if (bytes != null && bytes.isNotEmpty()) {
-                return Pair(bytes, AudioDataSource.FIREBASE_CLOUD)
-            }
-        }
-
-        ttsStatsRepository.incGlobalCloudStorageCounts(miss = 1)
 
 
-        // 2. Not in Cloud (or read failed) -> Try Google TTS
-        val ttsResult = googleCloudTts.getAudioData(text, voiceName, languageCode)
-
-        return ttsResult.getOrNull()?.let { bytes ->
-            if (bytes.isNotEmpty()) {
-                try { destFile.writeBytes(bytes) } catch (e: Exception) { Timber.e(e) }
-                return Pair(bytes, AudioDataSource.GOOGLE_TTS)
-            }
-            null
-        }
-    }
-    private suspend fun playFromLocalFile(file: File, isNetwork: Boolean): PlaybackResult {
-        return try {
-            val bytes = file.readBytes()
-            val result = audioPlayerService.playAudio(bytes)
-
-            if (result.isSuccess) {
-                if (isNetwork) PlaybackResult.PlayedFromNetworkAndCached
-                else PlaybackResult.PlayedFromLocalCache
-            } else {
-                PlaybackResult.Failure(
-                    result.exceptionOrNull() as? Exception ?: Exception("Local playback failed")
-                )
-            }
-        } catch (e: Exception) {
-            PlaybackResult.Failure(e)
-        }
-    }
     /**
      * Fetches audio data for the given text from the TTS service and plays it.
      * This version includes a file-based caching mechanism.

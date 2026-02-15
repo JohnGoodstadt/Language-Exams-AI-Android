@@ -415,15 +415,22 @@ class ReferenceGenericViewModel @Inject constructor(
     fun saveDataOnExit() {
         // We use appScope to ensure this save operation completes even if the
         // viewModelScope is paused or cancelled as the user navigates away.
-        if (false) {
+        //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
+        if (ttsStatsRepository.isFebOrMarch2026()) {
             appScope.launch {
-                Timber.d("Saving data because screen is no longer active.")
-                if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
-                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
-                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
-                }
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
         }
+//        if (false) {
+//            appScope.launch {
+//                Timber.d("Saving data because screen is no longer active.")
+//                if (ttsStatsRepository.checkIfStatsFlushNeeded(forced = true)) {
+//                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
+//                    ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+//                }
+//            }
+//        }
     }
 
     fun hideDailyRateLimitSheet() {

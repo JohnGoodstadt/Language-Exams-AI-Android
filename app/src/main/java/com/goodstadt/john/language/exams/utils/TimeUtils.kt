@@ -112,6 +112,9 @@ fun formatTimeInterval(interval: Double): String {
  * @param context The application context needed for DataStore access.
  * @return True if the app was installed less than 24 hours ago, false otherwise.
  */
+suspend fun isTodayInstallDay(userPreferencesRepository: UserPreferencesRepository): Boolean{
+    return calcIsTodayFreePassDay(userPreferencesRepository)
+}
 suspend fun calcIsTodayFreePassDay(userPreferencesRepository: UserPreferencesRepository): Boolean {
     // Attempt to load the initial install date from DataStore
     val initialAppInstallDate = userPreferencesRepository.getInitialAppInstallDate()

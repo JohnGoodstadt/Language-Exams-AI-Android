@@ -1,12 +1,15 @@
 package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
+import com.goodstadt.john.language.exams.data.AudioPlayerService
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudMissCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalCacheHitCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statLocalCacheMissCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSFailureCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statTTSSuccessCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
@@ -39,7 +42,8 @@ class AudioPlaybackRepository @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val ttsStatsRepository: TTSStatsRepository,
-    private val loadingManager: GlobalLoadingManager
+    private val loadingManager: GlobalLoadingManager,
+    private val audioPlayerService: AudioPlayerService
 ) {
 
     /**
@@ -49,118 +53,6 @@ class AudioPlaybackRepository @Inject constructor(
      * 3. Updates History (Red Dots)
      * 4. Updates XP & Graphs
      */
-    suspend fun playTrackAndGetResultObsolete(
-        sentence: String,
-        level: String,          // e.g. "A1", "B1", "Reference"
-        sheetName: String = "", // e.g. "EnglishConjugationsToBe" (Required for Graph stats)
-        isPremiumUser: Boolean = false
-    ): Boolean {
-
-        // --- 1. Rate Limiting Check ---
-        // (Logic copied from your previous snippets)
-        val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-
-        // Only block API calls if not premium and not on a free pass day
-        // Note: contentRepository handles the actual "Is this file on disk?" check.
-        // If it's on disk, we shouldn't block. But here we do a pre-check.
-        // For strict correctness, the Repo could return "Cached" without hitting this limit,
-        // but checking here prevents abuse.
-        if (!isPremiumUser && todayIsNotAFreePassDay) {
-            if (rateLimiter.doIForbidCall()) {
-                Timber.tag("AudioPlayback").w("Rate limit exceeded.")
-                // Note: The UI showing the BottomSheet should be handled by the ViewModel
-                // checking rateLimiter status before calling this, or handling a specific failure result.
-                val failType = rateLimiter.canMakeCallWithResult()
-                val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
-                AnalyticsHelper.logRateLimitHit(context, limitType, 0)
-
-                return false
-            }
-        }
-
-        // --- 2. Prepare Data ---
-        val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-        val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
-        val uniqueSentenceId = FirebaseAudioService.generateUnifiedFilename(sentence, currentVoiceName)
-
-        // --- 3. Execute Playback (The Waterfall) ---
-        val result = contentRepository.playTextToSpeechAndSaveToCache(
-            text = sentence,
-            uniqueSentenceId = uniqueSentenceId,
-            voiceName = currentVoiceName,
-            languageCode = currentLanguageCode
-        )
-
-        // --- 4. Handle Side Effects (Stats & History) ---
-        when (result) {
-            is PlaybackResult.PlayedFromNetworkAndCached,
-            is PlaybackResult.PlayedFromLocalCache -> {
-
-                // A. Generate ID
-                val contentID = FirebaseAudioService.generateContentID(sentence)
-
-                // B. Check if this is a "First Time" listen (Voice Agnostic)
-                // We check !isHeard BEFORE we mark it heard.
-                val isFirstTime = !historyManager.isHeard(level, contentID)
-
-                // C. Update History (The Red Dot Source of Truth)
-                // This triggers the StateFlow that ViewModels observe
-                //This can inc twice as later also does it
-                //historyManager.markSentenceHeard(level, contentID)
-
-                // D. Update XP & Graphs (Only on first listen)
-                if (isFirstTime) {
-                    // XP
-                    xpManager.registerAction(XpActionType.HearNewSentence,specificLevel = level)
-
-                    // Legacy Stats
-                    ttsStatsRepository.incProgressSize(userPreferencesRepository.selectedSkillLevelFlow.first())
-
-                    // Graph Stats (Side Quest Sheet)
-                    // Only update if we have a valid sheet name (Reference tabs)
-                    if (sheetName.isNotEmpty()) {
-                        val currentStats = audioCacheManager.getReferenceStats(sheetName)
-                        audioCacheManager.updateReferenceStats(
-                            key = sheetName,
-                            heard = currentStats.heard + 1,
-                            total = currentStats.total // Assumes total was set on load
-                        )
-                    }
-
-                    // Cost Tracking (Only if network used)
-                    if (result is PlaybackResult.PlayedFromNetworkAndCached) {
-                        if (todayIsNotAFreePassDay) { rateLimiter.recordCall() }
-                        ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-
-                    } else {
-                        ttsStatsRepository.updateTTSStatsWithoutCosts()
-                        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statFBCloudHitCount)
-                    }
-
-                } else {
-                    // Replay Logic
-                    xpManager.registerAction(XpActionType.ReplaySentence,specificLevel = level)
-                    ttsStatsRepository.updateTTSStatsWithoutCosts()
-                }
-            }
-
-            is PlaybackResult.Failure -> {
-                Timber.e(result.exception, "AudioPlaybackRepository: Failure")
-            }
-
-            PlaybackResult.CacheNotFound -> {
-                // Should not happen if waterfall logic works
-                Timber.e("AudioPlaybackRepository: Cache not found logic error")
-            }
-        }
-
-        // --- 5. Return Simple Boolean ---
-        return when (result) {
-            is PlaybackResult.PlayedFromLocalCache,
-            is PlaybackResult.PlayedFromNetworkAndCached -> true
-            else -> false
-        }
-    }
 
     suspend fun playTrackAndGetStatus(
         sentence: String,
@@ -185,6 +77,7 @@ class AudioPlaybackRepository @Inject constructor(
           //  loadingJob.cancel()
 //            loadingManager.hide()
             ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statLocalCacheHitCount)
+            ttsStatsRepository.updateTTSStatsWithoutCosts() //MP3PlayedCount
             return AudioPlaybackStatus.PlayedFromLocalCache
         } else {
             ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statLocalCacheMissCount)
@@ -195,6 +88,37 @@ class AudioPlaybackRepository @Inject constructor(
             kotlinx.coroutines.delay(500)
             loadingManager.show()
         }
+
+        // ---------------------------------------------------------
+        // 3. RATE LIMIT CHECK (Before spending money)
+        // ---------------------------------------------------------
+        //AI Recommends ignore install day free
+        //val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+
+        //if (!isPremiumUser && todayIsNotAFreePassDay) {
+        if (!isPremiumUser) {
+            if (rateLimiter.doIForbidCall()) {
+                val failType = rateLimiter.canMakeCallWithResult()
+
+                // Log Analytics
+                val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
+                AnalyticsHelper.logRateLimitHit(context, limitType, 0)
+
+                loadingJob.cancel()
+                loadingManager.hide()
+
+                when (failType.failReason) {
+                    SimpleRateLimiter.FailReason.DAILY -> {ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterDayForbidCount)}
+                    SimpleRateLimiter.FailReason.HOURLY -> {ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterHourForbidCount)}
+                    null -> {}
+                }
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterForbidCount)
+                ttsStatsRepository.updateTTSStatsWithoutCosts() //MP3PlayedCount
+                // Return Blocked Status
+                return AudioPlaybackStatus.RateLimited(failType.failReason ?: SimpleRateLimiter.FailReason.HOURLY)
+            }
+        }
+
 
         // ---------------------------------------------------------
         // 2. CHECK CLOUD STORAGE (Free-ish)
@@ -219,29 +143,7 @@ class AudioPlaybackRepository @Inject constructor(
         }
 
         try {
-            // ---------------------------------------------------------
-            // 3. RATE LIMIT CHECK (Before spending money)
-            // ---------------------------------------------------------
-            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
 
-            if (!isPremiumUser && todayIsNotAFreePassDay) {
-                if (rateLimiter.doIForbidCall()) {
-                    val failType = rateLimiter.canMakeCallWithResult()
-
-                    // Log Analytics
-                    val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
-                    AnalyticsHelper.logRateLimitHit(context, limitType, 0)
-
-                    loadingJob.cancel()
-                    loadingManager.hide()
-
-                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterForbidCount)
-                    // Return Blocked Status
-                    return AudioPlaybackStatus.RateLimited(
-                        failType.failReason ?: SimpleRateLimiter.FailReason.HOURLY
-                    )
-                }
-            }
 
             // ---------------------------------------------------------
             // 4. GOOGLE TTS (Paid)
@@ -263,10 +165,12 @@ class AudioPlaybackRepository @Inject constructor(
                 handleSuccess(sentence, level, sheetName)
 
                 // Record Cost & Usage
-                if (todayIsNotAFreePassDay) {
+//                if (todayIsNotAFreePassDay) { //AI Reccommends ignore install day free
                     rateLimiter.recordCall()
-                }
+//                }
                 ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statTTSSuccessCount)
+                val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
+                ttsStatsRepository.updateTTSStatsWithCosts(sentence,currentVoiceName) //MP3PlayedCount
                 AudioPlaybackStatus.PlayedFromTTSAPI
             } else {
                 ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statTTSFailureCount)
@@ -439,6 +343,10 @@ class AudioPlaybackRepository @Inject constructor(
         } else {
             xpManager.registerAction(XpActionType.ReplaySentence)
         }
+    }
+
+    fun stopPlayback() {
+        audioPlayerService.stopPlayback()
     }
     // MARK: - Unified Success Handler
 

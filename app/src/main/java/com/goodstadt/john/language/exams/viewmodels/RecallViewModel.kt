@@ -10,8 +10,11 @@ import com.goodstadt.john.language.exams.data.RecallingItem
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
+import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
+import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.TabDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -38,7 +41,9 @@ class RecallViewModel @Inject constructor(
     private val userPreferencesRepository: UserPreferencesRepository,
     private val ttsStatsRepository : TTSStatsRepository,
     private val billingRepository: BillingRepository,
-    private val recallingRepository: RecallingRepository
+    private val recallingRepository: RecallingRepository,
+    private val audioPlaybackRepository: AudioPlaybackRepository,
+    private val rateLimiter: SimpleRateLimiter,
 ) : ViewModel() {
 
   //  val recalledItemsFlow = recallingItemsManager.items
@@ -48,6 +53,12 @@ class RecallViewModel @Inject constructor(
 
     private val _isPremiumUser = MutableStateFlow(false)
     val isPremiumUser = _isPremiumUser.asStateFlow()
+
+    private val _showRateDailyLimitSheet = MutableStateFlow(false)
+    val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
+
+    private val _showRateHourlyLimitSheet = MutableStateFlow(false)
+    val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
     init {
         // Equivalent of .onAppear for the whole screen
@@ -207,6 +218,53 @@ class RecallViewModel @Inject constructor(
         val itemCal = java.util.Calendar.getInstance().apply { timeInMillis = ms }
         return todayCal.get(java.util.Calendar.YEAR) == itemCal.get(java.util.Calendar.YEAR) &&
                 todayCal.get(java.util.Calendar.DAY_OF_YEAR) == itemCal.get(java.util.Calendar.DAY_OF_YEAR)
+    }
+    fun onPlayWord2(word: String) {
+
+        audioPlaybackRepository.stopPlayback()
+
+        viewModelScope.launch {
+            //All stats updated in playTrackAndGetStatus()
+            val result = audioPlaybackRepository.playTrackAndGetStatus(
+                sentence = word,
+                level = "Reference",
+                isPremiumUser = false
+            )
+
+            when (result) {
+                is AudioPlaybackStatus.PlayedFromTTSAPI,is AudioPlaybackStatus.PlayedFromLocalCache , is AudioPlaybackStatus.PlayedFromCloudStorage -> {
+
+                }
+                is AudioPlaybackStatus.RateLimited -> {
+                    // Show Paywall logic
+                    Timber.i("Format1ViewModel.handleTap().AudioPlaybackStatus.RateLimited ")
+                    val failType = rateLimiter.canMakeCallWithResult()
+                    Timber.w("Rate Limiter Triggered")
+                    Timber.w("canICallAPI = %s", failType.canICallAPI)
+                    Timber.w("failReason = %s", (failType.failReason))
+                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w(rateLimiter.printCurrentStatus)
+
+                    if (result.failReason == SimpleRateLimiter.FailReason.DAILY) {
+                        _showRateDailyLimitSheet.value = true
+                    } else {
+                        _showRateHourlyLimitSheet.value = true
+                    }
+                }
+
+                AudioPlaybackStatus.Failure -> {
+                    //TODO: Show Snackbar logic
+                    Timber.i("QuizViewModel.handleTap().AudioPlaybackStatus.Failure")
+                }
+            }
+            //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
+            if (ttsStatsRepository.isFebOrMarch2026()) {
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+            }
+
+        }
+
     }
     fun onPlayWord(word: String) {
 

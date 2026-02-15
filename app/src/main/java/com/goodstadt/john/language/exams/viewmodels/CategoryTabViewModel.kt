@@ -29,6 +29,7 @@ import com.goodstadt.john.language.exams.utils.PlaybackEvent
 import com.goodstadt.john.language.exams.utils.PlaybackEventBus
 import com.goodstadt.john.language.exams.utils.RateLimitGuard
 import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
+import com.goodstadt.john.language.exams.utils.isTodayInstallDay
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.BuildConfig
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -328,37 +329,12 @@ class CategoryTabViewModel @Inject constructor(
             val contentID = FirebaseAudioService.generateContentID(sentence)
             val wasAlreadyHeard = historyManager.isHeard(currentLoadedLevel, contentID)
 
-            val success = false //TODO: forcing
+            //val success = false //TODO: forcing
             val result = audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = sentence,
                 level = levelName,
                 isPremiumUser = isPremiumUser.value // Replace with actual check if available
             )
-
-//            if (success) {
-//                // 2. ⚡️ NON OPTIMISTIC UPDATE (Lightning). Now that playback is async
-//                // This turns the Red Dot ON immediately.
-//                didPlayVocabSentence(sentence, category.title, category.tabNumber)
-//
-//                if (!wasAlreadyHeard) {
-//                    checkSectionCompletionAfterNewSentence(category,sentence)
-//                    _uiState.update { currentState ->
-//                        if (currentState is CategoryTabUiState.Success) {
-//                            currentState.copy(
-//                                heardCountOnTab = currentState.heardCountOnTab + 1
-//                            )
-//                        } else currentState
-//                    }
-//                }
-//
-//                checkHelpTrigger()
-//            }else if (false){
-//                // ❌ FAILURE
-//                _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed"))
-//                _uiState.update {
-//                    if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Error("Failed")) else it
-//                }
-//            }
 
             when (result) {
                 is AudioPlaybackStatus.PlayedFromTTSAPI,is AudioPlaybackStatus.PlayedFromLocalCache , is AudioPlaybackStatus.PlayedFromCloudStorage -> {
@@ -381,17 +357,8 @@ class CategoryTabViewModel @Inject constructor(
                     }
                     checkHelpTrigger()
 
-
-                    //TODO: could split off cloud storage here - if there are charges
-                    if (result is AudioPlaybackStatus.PlayedFromLocalCache || result is AudioPlaybackStatus.PlayedFromCloudStorage){
-                        ttsStatsRepository.updateTTSStatsWithoutCosts()
-                    }else { // result is AudioPlaybackStatus.PlayedFromTTSAPI
-                        val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-                        ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-                    }
-
-                    if (calcIsTodayFreePassDay(userPreferencesRepository)){
-                        //Let's see usage for hearing on Day 1 - immediately
+                    //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
+                    if (ttsStatsRepository.isFebOrMarch2026()) {
                         ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                         ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                     }

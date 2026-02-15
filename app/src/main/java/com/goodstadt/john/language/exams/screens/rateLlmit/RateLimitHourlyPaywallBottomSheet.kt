@@ -167,6 +167,7 @@ fun RateLimitHourlyPaywallBottomSheet(
             // 6. NOT NOW BUTTON
             OutlinedButton(
                 onClick = {
+                    viewModel.incIAPCancel()
                     coroutineScope.launch {
                         AnalyticsHelper.logPaywallResponse(context, "rejected", "limit_hourly")
                         sheetState.hide()

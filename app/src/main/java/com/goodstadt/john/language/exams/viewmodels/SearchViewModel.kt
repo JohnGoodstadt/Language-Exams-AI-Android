@@ -291,12 +291,7 @@ class SearchViewModel @Inject constructor(
 
             // 1. CALL REPOSITORY
             // The Repository handles everything: Playback, History, XP, and Graph Stats.
-//            val status = audioPlaybackRepository.playTrackAndGetStatus(
-//                sentence = sentence,
-//                level = "Search",
-//                sheetName = "",
-//                isPremiumUser = false
-//            )
+
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
             val status = audioPlaybackRepository.playTrackAndGetStatus(
                 sentence = sentence,

@@ -372,6 +372,7 @@ class SettingsViewModel @Inject constructor(
     }
     fun IAPCancelled(){
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBuyCancelledCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPBuyCancelledCount)
     }
     // --- MODIFICATION 3: Create functions to handle PENDING selections ---
     fun onPendingExamSelect(exam: ExamDetails) {
