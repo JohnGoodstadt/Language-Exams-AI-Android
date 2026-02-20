@@ -11,7 +11,19 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AltRoute
+import androidx.compose.material.icons.filled.AutoAwesome
+import androidx.compose.material.icons.filled.Bolt
+import androidx.compose.material.icons.filled.Favorite
+import androidx.compose.material.icons.filled.Flight
+import androidx.compose.material.icons.filled.Forest
+import androidx.compose.material.icons.filled.Groups
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.School
+import androidx.compose.material.icons.filled.SentimentSatisfied
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material.icons.filled.Warning
+import androidx.compose.material.icons.filled.Work
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -22,6 +34,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -34,8 +47,13 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.goodstadt.john.language.exams.models.ScreenType
+import com.goodstadt.john.language.exams.navigation.QUIZ_DETAIL_ROUTE
 import com.goodstadt.john.language.exams.navigation.RefScreen
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
+import com.goodstadt.john.language.exams.screens.reference.VocabQuiz.CategoryDetailScreen
+import com.goodstadt.john.language.exams.screens.reference.VocabQuiz.QuizCategory
+import com.goodstadt.john.language.exams.screens.reference.VocabQuiz.QuizSet
+import com.goodstadt.john.language.exams.screens.reference.VocabQuiz.VocabQuizDashboard
 import com.goodstadt.john.language.exams.screens.reference.shared.MissingView
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
@@ -238,7 +256,71 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 
                 ) {
 
-                    composable(RefScreen.Quiz.route) { QuizScreen() }
+                   // composable(RefScreen.Quiz.route) { QuizScreen() }
+                    // 1. THE NEW DASHBOARD
+                    composable(RefScreen.Quiz.route) {
+                        // Dummy Data for Preview/Testing
+                        val dummyCategories = remember {
+                            listOf(
+                                QuizCategory("personal", "Personal", Icons.Default.Person, 40, 10),
+                                QuizCategory("education", "Education", Icons.Default.School, 30, 30),
+                                QuizCategory("social", "Social", Icons.Default.Groups, 50, 5),
+                                QuizCategory("work", "Work", Icons.Default.Work, 45, 0),
+                                QuizCategory("health", "Health", Icons.Default.Favorite, 20, 18),
+                                QuizCategory("travel", "Travel", Icons.Default.Flight, 25, 2),
+                                QuizCategory("emotions", "Emotions", Icons.Default.SentimentSatisfied, 30, 5),
+                                QuizCategory("nature", "Nature", Icons.Default.Forest, 25, 0),
+                                QuizCategory("relationships", "Relationships", Icons.Default.Groups, 35, 12),
+                                QuizCategory("shopping", "Shopping", Icons.Default.ShoppingCart, 20, 20),
+                                QuizCategory("adverbs", "Adverbs", Icons.Default.AutoAwesome, 50, 0),
+                                QuizCategory("complex", "Complex Sentences", Icons.Default.AltRoute, 30, 2),
+                                QuizCategory("verbs", "Verbs", Icons.Default.Bolt, 60, 15)
+
+                            )
+                        }
+
+                        VocabQuizDashboard(
+                            weakWordCount = 8, // Dummy count
+                            categories = dummyCategories,
+                            onCategoryClick = { category ->
+                                // Navigate to the detail screen using the inner controller
+                                refTabNavController.navigate("quiz_detail/${category.id}")
+                            },
+                            onWeakWordsClick = {
+                                Timber.i("Navigate to Smart Review Mode")
+                            }
+                        )
+                    }
+// 2. THE CATEGORY DETAIL SCREEN
+                    composable(
+                        route = QUIZ_DETAIL_ROUTE,
+                        arguments = listOf(navArgument("categoryId") { type = NavType.StringType })
+                    ) { backStackEntry ->
+                        val catId = backStackEntry.arguments?.getString("categoryId") ?: ""
+
+                        // Dummy Logic to find the title based on ID
+                        val displayTitle = catId.replaceFirstChar { it.uppercase() }
+
+                        // Dummy Data for the sets in this category
+                        val dummySets = remember(catId) {
+                            listOf(
+                                QuizSet("1", "Set 1 of 3", "Ambitious, Reliable...", 10, 10),
+                                QuizSet("2", "Set 2 of 3", "Sustainable, Capable...", 4, 10),
+                                QuizSet("3", "Set 3 of 3", "Efficient, Logic...", 0, 10)
+                            )
+                        }
+
+                        CategoryDetailScreen(
+                            categoryTitle = displayTitle,
+                            quizSets = dummySets,
+                            onBackClick = { refTabNavController.popBackStack() },
+                            onStartSet = { selectedSet ->
+                                Timber.i("Launching actual quiz for ${selectedSet.id}")
+                                // Later: refTabNavController.navigate("actual_quiz/${selectedSet.id}")
+                            }
+                        )
+                    }
+
                     composable(RefScreen.Conjugations.route) { ConjugationsScreen() }
 //                composable(RefScreen.Prepositions.route) { PrepositionsScreen() }
 

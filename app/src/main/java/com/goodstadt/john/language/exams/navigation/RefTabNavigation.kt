@@ -30,9 +30,18 @@ package com.goodstadt.john.language.exams.navigation
 //    }
 //}
 
+const val QUIZ_DETAIL_ROUTE = "quiz_detail/{categoryId}"
+
 sealed class RefScreen(val route: String) {
     // These are for your FIXED screens
     object Quiz : RefScreen("quiz")
+
+    // 2. NEW: This represents the sub-screen (The List of Sets)
+    object QuizDetail : RefScreen("quiz_detail/{categoryId}") {
+        fun createRoute(categoryId: String) = "quiz_detail/$categoryId"
+    }
+
+
     object Conjugations : RefScreen("conjugations")
     object Prepositions : RefScreen("prepositions")
 
@@ -58,6 +67,7 @@ sealed class RefScreen(val route: String) {
     object GroupedFormat3 : RefScreen("grouped_format3/{tabId}") {
         fun createRoute(tabId: String) = "grouped_format3/$tabId"
     }
+
 }
 
 // Helper function (can be simplified or removed later, but useful for startDestination)
