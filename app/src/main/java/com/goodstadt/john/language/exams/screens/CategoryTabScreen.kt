@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,6 +24,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.SportsEsports
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -65,6 +67,7 @@ import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
+import com.goodstadt.john.language.exams.screens.reference.WordQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
@@ -78,6 +81,7 @@ import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
+import com.goodstadt.john.language.exams.viewmodels.WordQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
@@ -127,6 +131,8 @@ fun CategoryTabScreen(
     val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
     val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
+    val currentQuizCategory by viewModel.currentQuizCategory.collectAsStateWithLifecycle()
+    val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // ✅ Watch for celebration trigger
     val showCelebration by viewModel.showCelebration.collectAsState()
@@ -347,7 +353,32 @@ fun CategoryTabScreen(
                         ) {
                             categories.forEach { category ->
                                 stickyHeader {
-                                    CategoryHeader(title = category.title.removeContentInBracketsAndTrim())
+
+                                    Row(
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .background(MaterialTheme.colorScheme.surface) // Important: Solid background for sticky behavior
+                                            .padding(horizontal = 16.dp, vertical = 8.dp), // Adjust padding as needed
+                                        verticalAlignment = Alignment.CenterVertically
+                                    ) {
+//                                        CategoryHeader(title = category.title.removeContentInBracketsAndTrim())
+                                        Text(
+                                            text = category.title.removeContentInBracketsAndTrim(),
+                                            fontSize = 20.sp, // Match your existing CategoryHeader style
+                                            fontWeight = FontWeight.Bold,
+                                            color = accentColor, // Or MaterialTheme.colorScheme.primary
+                                            modifier = Modifier.weight(1f) // ✅ Pushes the icon to the far right
+                                        )
+                                        IconButton(onClick = { viewModel.openQuizForCategory(category) }) {
+                                            Icon(
+                                                imageVector = Icons.Default.SportsEsports,
+                                                contentDescription = "Take Quiz",
+                                                tint = Color(0xFFFF9800)
+                                            )
+                                        }
+                                    }
+
+
                                 }
 
                                 itemsIndexed(
@@ -558,6 +589,17 @@ fun CategoryTabScreen(
                 onDismiss = { showVoiceSheet = false }
             )
         }
+        if (currentQuizCategory != null) {
+            ModalBottomSheet(
+                onDismissRequest = { viewModel.closeQuizSheet() },
+                sheetState = quizSheetState,
+                containerColor = MaterialTheme.colorScheme.surface
+            ) {
+                // Wrapper to initialize the specific quiz
+                SectionQuizContainer(categoryTitle = currentQuizCategory!!.title)
+            }
+        }
+
     } //: Box
 }
 
@@ -676,3 +718,21 @@ fun CategoryHeader(title: String) {
 
 // Helper extension for strings (placeholder)
 fun String.removeContentInBracketsAndTrim(): String = this.replace(Regex("\\(.*?\\)"), "").trim()
+
+//✅ 4. HELPER COMPOSABLE
+// This ensures we get a fresh ViewModel and trigger the load
+@Composable
+fun SectionQuizContainer(
+    categoryTitle: String,
+    viewModel: WordQuizViewModel = hiltViewModel()
+) {
+    // Trigger load when this view appears
+    LaunchedEffect(categoryTitle) {
+        viewModel.loadSectionQuiz(categoryTitle)
+    }
+
+    // Render the existing screen
+    Box(modifier = Modifier.fillMaxHeight(0.9f)) {
+        WordQuizScreen(viewModel = viewModel)
+    }
+}

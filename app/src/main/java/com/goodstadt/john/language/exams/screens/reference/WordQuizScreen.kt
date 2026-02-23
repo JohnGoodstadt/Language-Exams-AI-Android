@@ -75,7 +75,8 @@ import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomShe
 
 @Composable
 fun WordQuizScreen(
-    viewModel: WordQuizViewModel = hiltViewModel()
+    viewModel: WordQuizViewModel = hiltViewModel(),
+    autoLoad: Boolean = true
 ) {
     val context = LocalContext.current
     var infoDisabled by remember { mutableStateOf(false) }
@@ -111,6 +112,8 @@ fun WordQuizScreen(
         "Choose the correct answer"
     }
 
+    val isSectionMode by viewModel.isSectionMode.collectAsState()
+
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
             val question = questions[currentQuestionIndex]
@@ -137,23 +140,37 @@ fun WordQuizScreen(
         verticalArrangement = Arrangement.spacedBy(6.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        ScrollableHorizontalLevelPicker(
-            options = WordQuizLevels.entries.map { it.description },
-            selectedOption = selectedLevel.description,
-            onOptionSelected = { newLevel ->
-                val level = WordQuizLevels.entries.first { it.description == newLevel }
-//                    viewModel.selectedLevel.value = level
-                viewModel.onLevelSelected(level)
-                viewModel.loadQuestions()
 
-                if (viewModel.doIHaveCurrentQuestionInfo()) {
-                    infoDisabled = false
-                } else {
-                    infoDisabled = true
-                }
-            }//,
-            //fontSize = 16.sp
-        )
+        if (!isSectionMode) {
+            ScrollableHorizontalLevelPicker(
+                options = WordQuizLevels.entries.map { it.description },
+                selectedOption = selectedLevel.description,
+                onOptionSelected = { newLevel ->
+                    val level = WordQuizLevels.entries.first { it.description == newLevel }
+//                    viewModel.selectedLevel.value = level
+                    viewModel.onLevelSelected(level)
+                    viewModel.loadQuestions()
+
+                    if (viewModel.doIHaveCurrentQuestionInfo()) {
+                        infoDisabled = false
+                    } else {
+                        infoDisabled = true
+                    }
+                }//,
+                //fontSize = 16.sp
+            )
+        }else{
+            Text(
+                text = quizStatistics.title,
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(bottom = 8.dp)
+            )
+            HorizontalDivider()
+        }
+
+
 
         // Quiz Number Picker
         DropdownMenuBox(

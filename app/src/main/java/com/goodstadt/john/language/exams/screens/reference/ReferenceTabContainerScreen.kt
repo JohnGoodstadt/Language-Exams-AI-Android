@@ -256,8 +256,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 
                 ) {
 
-                   // composable(RefScreen.Quiz.route) { QuizScreen() }
+                    composable(RefScreen.Quiz.route) { QuizScreen() }//Existing Quiz
                     // 1. THE NEW DASHBOARD
+                    /*
                     composable(RefScreen.Quiz.route) {
                         // Dummy Data for Preview/Testing
                         val dummyCategories = remember {
@@ -291,6 +292,8 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                             }
                         )
                     }
+
+                    */
 // 2. THE CATEGORY DETAIL SCREEN
                     composable(
                         route = QUIZ_DETAIL_ROUTE,

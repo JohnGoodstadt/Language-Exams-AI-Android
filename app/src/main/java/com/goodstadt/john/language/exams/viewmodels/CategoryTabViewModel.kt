@@ -124,6 +124,20 @@ class CategoryTabViewModel @Inject constructor(
     val showHelpSheet = _showHelpSheet.asStateFlow()
     private var lastPlayedSentence: String = ""
 
+    // 1. State: Holds the category we want to quiz on. Null = Closed.
+    private val _currentQuizCategory = MutableStateFlow<Category?>(null)
+    val currentQuizCategory = _currentQuizCategory.asStateFlow()
+
+    // 2. Action: Open
+    fun openQuizForCategory(category: Category) {
+        _currentQuizCategory.value = category
+    }
+
+    // 3. Action: Close
+    fun closeQuizSheet() {
+        _currentQuizCategory.value = null
+    }
+
     // Internal session counter
     private var sessionPlayCount = 0
     private var hasSeenHelp = false

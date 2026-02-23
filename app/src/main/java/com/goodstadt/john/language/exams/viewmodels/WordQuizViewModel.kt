@@ -44,6 +44,8 @@ import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
 import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.goodstadt.john.language.exams.utils.isTodayInstallDay
+import com.goodstadt.john.language.exams.utils.readTestMyselfDataFromAssets
+import dagger.hilt.android.internal.Contexts.getApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -56,6 +58,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import timber.log.Timber
+import java.io.File
+import java.io.FileNotFoundException
 import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
@@ -224,6 +228,11 @@ class WordQuizViewModel @Inject constructor(
     private val _showRateHourlyLimitSheet = MutableStateFlow(false)
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
+    private val _isSectionMode = MutableStateFlow(false)
+    val isSectionMode = _isSectionMode.asStateFlow()
+
+
+
     private val jsonParser = Json {
         ignoreUnknownKeys = true
         coerceInputValues = true
@@ -288,7 +297,7 @@ class WordQuizViewModel @Inject constructor(
         //preloadLocalizedTitles()
 
         selectedQuiz.value = selectedLevel.value.quizzes.firstOrNull()
-        loadQuestions()
+       // loadQuestions()
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
                 _isPremiumUser.value = purchasedStatus
@@ -300,7 +309,46 @@ class WordQuizViewModel @Inject constructor(
 
         vocabQuizRepository.debugPrintStatus()
     }
+    /**
+     * Loads a quiz specifically for a Category Section (e.g. "Personal Information")
+     */
+    fun loadSectionQuiz(categoryTitle: String) {
+        viewModelScope.launch {
+            _isSectionMode.value = true
 
+            // 1. Sanitize the title
+            // Remove spaces and non-alphanumeric characters
+            // Example: "Personal Information" -> "PersonalInformation"
+            // Example: "Q & A" -> "QA"
+            val cleanTitle = categoryTitle.replace(Regex("[^A-Za-z0-9]"), "")
+
+            // 2. Construct the filename
+            // Pattern: "WordQuiz" + CleanTitle + "1-en"
+            // Example: "WordQuizAdverbs1-en"
+            val filename = "WordQuiz${cleanTitle}1-en"
+
+            Timber.i("Section Quiz: Attempting to load '$filename' derived from '$categoryTitle'")
+
+            // 3. Load Data
+            val testData = readWordQuizDataFromAssets(application, filename)
+
+            if (testData != null) {
+                _questions.value = generateQuestionsFromData(testData)
+
+                // Update stats title so the UI shows the correct header
+                quizStatistics.value = quizStatistics.value.copy(
+                    title = categoryTitle,
+                    skillLevel = "Section Practice" // Marker for analytics to distinguish from Main Quiz
+                )
+
+                resetQuiz()
+            } else {
+                Timber.e("Section Quiz file not found: $filename")
+                // Clear questions so we don't show old state
+                _questions.value = emptyList()
+            }
+        }
+    }
     fun hideDailyRateLimitSheet() {
         _showRateDailyLimitSheet.value = false
     }
@@ -665,11 +713,12 @@ class WordQuizViewModel @Inject constructor(
 
     }
 
-    fun readWordQuizDataFromAssets(context: Context, fileName: String): WordQuizRoot? {
+    fun readWordQuizDataFromAssetsObsolete(context: Context, fileName: String): WordQuizRoot? {
         return try {
             // Timber.v("reading json: $fileName")
 
-            val jsonString = context.assets.open("Quizzes/$fileName")
+            val finalFilename = "$fileName.json"
+            val jsonString = context.assets.open("Quizzes/$finalFilename")
                 .bufferedReader()
                 .use { it.readText() }
 
@@ -680,7 +729,33 @@ class WordQuizViewModel @Inject constructor(
             null
         }
     }
+    fun readWordQuizDataFromAssets(context: Context, fileName: String): WordQuizRoot? {
+        // 1. Sanitize input: Remove folder prefix if passed, handle extension
+        val cleanName = File(fileName).name // Removes "Quizzes/" if passed accidentally
+        val finalName = if (cleanName.endsWith(".json")) cleanName else "$cleanName.json"
+        val fullPath = "Quizzes/$finalName"
 
+        return try {
+            // 2. Read
+            val jsonString = context.assets.open(fullPath)
+                .bufferedReader()
+                .use { it.readText() }
+
+            // 3. Decode
+            jsonParser.decodeFromString<WordQuizRoot>(jsonString)
+
+        } catch (e: FileNotFoundException) {
+            Timber.e("❌ FILE NOT FOUND: '$fullPath'. (Check folder 'Quizzes' and case sensitivity)")
+
+            // Debug aid: List what IS there to help you fix it
+            val actualFiles = context.assets.list("Quizzes")?.joinToString() ?: "Empty/Missing Folder"
+            Timber.e("   -> Available files: $actualFiles")
+            null
+        } catch (e: Exception) {
+            Timber.e(e, "❌ Error parsing JSON in '$fullPath'")
+            null
+        }
+    }
     // Call this whenever the Level changes (e.g. from Elementary to Inter)
     private fun refreshQuizTitlesForLevel(level: WordQuizLevels) {
         viewModelScope.launch {
