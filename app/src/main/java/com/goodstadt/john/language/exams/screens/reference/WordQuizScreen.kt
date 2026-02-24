@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens.reference
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -48,6 +49,7 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInWindow
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
@@ -60,6 +62,7 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
@@ -100,8 +103,8 @@ fun WordQuizScreen(
     var displayedSentence by remember { mutableStateOf(AnnotatedString("")) }
 
     //val selectedLevel by viewModel.selectedLevel
-    val availableQuizzesObsolete by viewModel.availableQuizzesObsolete
-    val availableQuizzes by viewModel.availableQuizzes.collectAsState()
+//    val availableQuizzesObsolete by viewModel.availableQuizzesObsolete
+//    val availableQuizzes by viewModel.availableQuizzes.collectAsState()
 
     val selectedQuiz by viewModel.selectedQuiz
     val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
@@ -113,6 +116,8 @@ fun WordQuizScreen(
     }
 
     val isSectionMode by viewModel.isSectionMode.collectAsState()
+    val availableIndices by viewModel.availableSectionIndices.collectAsState()
+    val currentIndex by viewModel.currentSectionIndex.collectAsState()
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
@@ -141,7 +146,61 @@ fun WordQuizScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        if (!isSectionMode) {
+
+        if (isSectionMode) {
+            // Only show picker if we have more than 1 quiz
+            if (availableIndices.size > 1) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    // ✅ FIX: Use spacedBy to add a gap, but keep the whole group centered
+                    horizontalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterHorizontally),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    availableIndices.forEach { index ->
+                        val isSelected = (index == currentIndex)
+
+                        val accentOrange = Color.Green//Color(0xFFFF9800)
+                        val borderColor = if (isSelected) accentOrange else Color.Gray.copy(alpha = 0.5f)
+                        val backgroundColor = if (isSelected) accentOrange.copy(alpha = 0.1f) else Color.Transparent
+                        val textColor = if (isSelected) accentOrange else MaterialTheme.colorScheme.onSurfaceVariant
+
+                        Box(
+                            contentAlignment = Alignment.Center,
+                            modifier = Modifier
+                                .size(40.dp)
+                                .background(backgroundColor, CircleShape)
+                                .border(1.dp, borderColor, CircleShape)
+                                .clip(CircleShape)
+                                .clickable { viewModel.onSectionIndexSelected(index) }
+                        ) {
+                            Text(
+                                text = "$index",
+                                color = textColor,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 18.sp,
+                                textAlign = TextAlign.Center
+                            )
+                        }
+                    }
+                }
+                HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
+            } else { //TODO: This could be deleted if file is only Section Quiz
+                // If only 1 quiz, maybe just show the title
+                Text(
+                    text = quizStatistics.title, // "Quiz 1"
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.primary,
+                    modifier = Modifier.padding(vertical = 8.dp)
+                )
+                HorizontalDivider()
+            }
+        }
+
+        // 2. IF MAIN MODE: Show standard pickers (Existing logic)
+        else {
             ScrollableHorizontalLevelPicker(
                 options = WordQuizLevels.entries.map { it.description },
                 selectedOption = selectedLevel.description,
@@ -159,36 +218,28 @@ fun WordQuizScreen(
                 }//,
                 //fontSize = 16.sp
             )
-        }else{
-            Text(
-                text = quizStatistics.title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
-            HorizontalDivider()
         }
 
 
 
-        // Quiz Number Picker
-        DropdownMenuBox(
-            options = availableQuizzes.map { it.title },
-            selectedOption = selectedQuiz?.title ?: "Select a Quiz",
-            onOptionSelected = { newQuizTitle ->
-                // Find the QuizDetail object that matches the selected title
-                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
-                // Call the new ViewModel function
-                viewModel.onQuizSelected(quizDetail)
-            }
-        )
 
-        HorizontalDivider(
-            modifier = Modifier.fillMaxWidth(),
-            thickness = 1.dp,
-            color = greyLight2
-        )
+        // Quiz Number Picker
+//        DropdownMenuBox(
+//            options = availableQuizzes.map { it.title },
+//            selectedOption = selectedQuiz?.title ?: "Select a Quiz",
+//            onOptionSelected = { newQuizTitle ->
+//                // Find the QuizDetail object that matches the selected title
+//                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
+//                // Call the new ViewModel function
+//                viewModel.onQuizSelected(quizDetail)
+//            }
+//        )
+//
+//        HorizontalDivider(
+//            modifier = Modifier.fillMaxWidth(),
+//            thickness = 1.dp,
+//            color = greyLight2
+//        )
 
         if (currentQuestionIndex == 0) {
             Text(
@@ -199,7 +250,7 @@ fun WordQuizScreen(
                     .fillMaxWidth()
                     // ✅ THE FIX: Add vertical padding.
                     // This will add 16.dp of space on the top AND 16.dp on the bottom.
-                    .padding(vertical = 16.dp)
+                    .padding(vertical = 32.dp)
             )
         } else {
             Text( //still keep the space
@@ -251,7 +302,7 @@ fun WordQuizScreen(
                     text = annotatedQuestionText,
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth() .padding(bottom = 32.dp),
                     color = orangeLight,
                 )
             } else {
@@ -259,7 +310,7 @@ fun WordQuizScreen(
                     text = annotatedQuestionText,
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth() .padding(bottom = 32.dp),,
                     color = Color.Green
                 )
             }
@@ -625,7 +676,6 @@ fun WordInfoButtonRow(infoDisabled: Boolean, onClick: () -> Unit) {
                 .clickable(enabled = !infoDisabled, onClick = onClick)
                 .padding(start = 4.dp),
             tint = if (infoDisabled) Color.Gray else buttonColor
-//                tint = Color.White
         )
         Spacer(modifier = Modifier.weight(1f)) // Pushes the icon to the left
     }
