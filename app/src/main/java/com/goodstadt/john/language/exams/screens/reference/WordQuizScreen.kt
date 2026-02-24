@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens.reference
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -48,6 +49,7 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInWindow
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
@@ -60,6 +62,7 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
@@ -100,8 +103,8 @@ fun WordQuizScreen(
     var displayedSentence by remember { mutableStateOf(AnnotatedString("")) }
 
     //val selectedLevel by viewModel.selectedLevel
-    val availableQuizzesObsolete by viewModel.availableQuizzesObsolete
-    val availableQuizzes by viewModel.availableQuizzes.collectAsState()
+    //val availableQuizzesObsolete by viewModel.availableQuizzesObsolete
+    //val availableQuizzes by viewModel.availableQuizzes.collectAsState()
 
     val selectedQuiz by viewModel.selectedQuiz
     val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
@@ -113,6 +116,8 @@ fun WordQuizScreen(
     }
 
     val isSectionMode by viewModel.isSectionMode.collectAsState()
+    val availableIndices by viewModel.availableSectionIndices.collectAsState()
+    val currentIndex by viewModel.currentSectionIndex.collectAsState()
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
@@ -141,54 +146,90 @@ fun WordQuizScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-        if (!isSectionMode) {
-            ScrollableHorizontalLevelPicker(
-                options = WordQuizLevels.entries.map { it.description },
-                selectedOption = selectedLevel.description,
-                onOptionSelected = { newLevel ->
-                    val level = WordQuizLevels.entries.first { it.description == newLevel }
-//                    viewModel.selectedLevel.value = level
-                    viewModel.onLevelSelected(level)
-                    viewModel.loadQuestions()
+//        if (!isSectionMode) {
+            if (isSectionMode) {
+                // Only show picker if we have more than 1 quiz
+                if (availableIndices.size > 1) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        availableIndices.forEach { index ->
+                            val isSelected = (index == currentIndex)
 
-                    if (viewModel.doIHaveCurrentQuestionInfo()) {
-                        infoDisabled = false
-                    } else {
-                        infoDisabled = true
+
+
+                            val borderColor = if (isSelected) orangeLight else Color.Gray.copy(alpha = 0.5f)
+                            val backgroundColor = if (isSelected) orangeLight.copy(alpha = 0.1f) else Color.Transparent
+                            val textColor = if (isSelected) orangeLight else MaterialTheme.colorScheme.onSurfaceVariant
+
+                            Box(
+                                contentAlignment = Alignment.Center,
+                                modifier = Modifier
+                                    .size(40.dp)
+                                    .background(backgroundColor, CircleShape) // The tint
+                                    .border(1.dp, borderColor, CircleShape)   // The outer ring
+                                    .clip(CircleShape)
+                                    .clickable { viewModel.onSectionIndexSelected(index) }
+                            ) {
+                                // 3. ✅ REPLACE ICON WITH TEXT
+                                // This removes the "inner circle" because we are just drawing the number now.
+                                Text(
+                                    text = "$index",
+                                    color = textColor,
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 18.sp, // Adjust size to match the look you want
+                                    textAlign = TextAlign.Center
+                                )
+                            }
+                        }
                     }
-                }//,
-                //fontSize = 16.sp
-            )
-        }else{
-            Text(
-                text = quizStatistics.title,
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.padding(bottom = 8.dp)
-            )
-            HorizontalDivider()
-        }
+                    HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
+                } else {
+                    // If only 1 quiz, maybe just show the title
+                    Text(
+                        text = quizStatistics.title, // "Quiz 1"
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(vertical = 8.dp)
+                    )
+                    HorizontalDivider()
+                }
+            }
+//        }else{
+//            Text(
+//                text = quizStatistics.title,
+//                style = MaterialTheme.typography.titleMedium,
+//                fontWeight = FontWeight.Bold,
+//                color = MaterialTheme.colorScheme.primary,
+//                modifier = Modifier.padding(bottom = 8.dp)
+//            )
+//            HorizontalDivider()
+//        }
 
 
 
         // Quiz Number Picker
-        DropdownMenuBox(
-            options = availableQuizzes.map { it.title },
-            selectedOption = selectedQuiz?.title ?: "Select a Quiz",
-            onOptionSelected = { newQuizTitle ->
-                // Find the QuizDetail object that matches the selected title
-                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
-                // Call the new ViewModel function
-                viewModel.onQuizSelected(quizDetail)
-            }
-        )
-
-        HorizontalDivider(
-            modifier = Modifier.fillMaxWidth(),
-            thickness = 1.dp,
-            color = greyLight2
-        )
+//        DropdownMenuBox(
+//            options = availableQuizzes.map { it.title },
+//            selectedOption = selectedQuiz?.title ?: "Select a Quiz",
+//            onOptionSelected = { newQuizTitle ->
+//                // Find the QuizDetail object that matches the selected title
+//                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
+//                // Call the new ViewModel function
+//                viewModel.onQuizSelected(quizDetail)
+//            }
+//        )
+//
+//        HorizontalDivider(
+//            modifier = Modifier.fillMaxWidth(),
+//            thickness = 1.dp,
+//            color = greyLight2
+//        )
 
         if (currentQuestionIndex == 0) {
             Text(
@@ -630,3 +671,20 @@ fun WordInfoButtonRow(infoDisabled: Boolean, onClick: () -> Unit) {
         Spacer(modifier = Modifier.weight(1f)) // Pushes the icon to the left
     }
 }
+//@Composable
+//fun getCounterIcon(index: Int): Int {
+//    // Return the drawable resource ID based on the index
+//    // Ensure these exist in your res/drawable folder
+//    return when (index) {
+//        1 -> R.drawable.counter_1_24px
+//        2 -> R.drawable.counter_2_24px
+//        3 -> R.drawable.counter_3_24px
+////        4 -> R.drawable.counter_4_24px
+////        5 -> R.drawable.counter_5_24px
+////        6 -> R.drawable.counter_6_24px
+////        7 -> R.drawable.counter_7_24px
+////        8 -> R.drawable.counter_8_24px
+////        9 -> R.drawable.counter_9_24px
+//        else -> R.drawable.counter_1_24px // Fallback
+//    }
+//}

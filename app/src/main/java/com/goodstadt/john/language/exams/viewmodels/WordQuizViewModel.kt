@@ -231,7 +231,14 @@ class WordQuizViewModel @Inject constructor(
     private val _isSectionMode = MutableStateFlow(false)
     val isSectionMode = _isSectionMode.asStateFlow()
 
+    private val _availableSectionIndices = MutableStateFlow<List<Int>>(emptyList())
+    val availableSectionIndices = _availableSectionIndices.asStateFlow()
 
+    private val _currentSectionIndex = MutableStateFlow(1)
+    val currentSectionIndex = _currentSectionIndex.asStateFlow()
+
+    // Store the cleaned base name (e.g. "WordQuizTravel") so we can switch numbers easily
+    private var currentSectionBaseName: String = ""
 
     private val jsonParser = Json {
         ignoreUnknownKeys = true
@@ -313,39 +320,73 @@ class WordQuizViewModel @Inject constructor(
      * Loads a quiz specifically for a Category Section (e.g. "Personal Information")
      */
     fun loadSectionQuiz(categoryTitle: String) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             _isSectionMode.value = true
 
-            // 1. Sanitize the title
-            // Remove spaces and non-alphanumeric characters
-            // Example: "Personal Information" -> "PersonalInformation"
-            // Example: "Q & A" -> "QA"
-            val cleanTitle = categoryTitle.replace(Regex("[^A-Za-z0-9]"), "")
+            // 1. Sanitize Title
+            val cleanTitle = categoryTitle.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
+            val baseFilenamePrefix = "WordQuiz${cleanTitle}" // e.g. "WordQuizTravel"
+            currentSectionBaseName = baseFilenamePrefix
 
-            // 2. Construct the filename
-            // Pattern: "WordQuiz" + CleanTitle + "1-en"
-            // Example: "WordQuizAdverbs1-en"
-            val filename = "WordQuiz${cleanTitle}1-en"
+            // 2. Scan Assets to find how many exist
+            // We look for "WordQuizTravel1-en.json", "WordQuizTravel2-en.json", etc.
+            val foundIndices = mutableListOf<Int>()
 
-            Timber.i("Section Quiz: Attempting to load '$filename' derived from '$categoryTitle'")
+            try {
+                // Get all files in Quizzes folder
+                val allFiles = application.assets.list("Quizzes")?.toList() ?: emptyList()
 
-            // 3. Load Data
+                // Check 1..10 (Reasonable limit)
+                for (i in 1..10) {
+                    // Note: You might want to handle localized suffixes here too (-hi, etc)
+                    // For now, assuming -en base checks
+                    val target = "${baseFilenamePrefix}${i}-en.json"
+                    if (allFiles.contains(target)) {
+                        foundIndices.add(i)
+                    }
+                }
+            } catch (e: Exception) {
+                Timber.e("Error scanning assets for section quizzes")
+            }
+
+            _availableSectionIndices.value = foundIndices
+
+            // 3. Load the first one (Default)
+            if (foundIndices.isNotEmpty()) {
+                loadSpecificSectionIndex(foundIndices.first())
+            } else {
+                // Handle empty case
+                _questions.value = emptyList()
+            }
+        }
+    }
+
+    // ✅ NEW: Switch between 1, 2, 3
+    fun onSectionIndexSelected(index: Int) {
+        if (_currentSectionIndex.value == index) return
+        loadSpecificSectionIndex(index)
+    }
+
+    private fun loadSpecificSectionIndex(index: Int) {
+        viewModelScope.launch {
+            _currentSectionIndex.value = index
+
+            // Construct filename: "WordQuizTravel" + "2" + "-en"
+            // (You should use your getLocalizedFileName helper here if you want translation support)
+            val filename = "${currentSectionBaseName}${index}-en"
+
             val testData = readWordQuizDataFromAssets(application, filename)
 
             if (testData != null) {
                 _questions.value = generateQuestionsFromData(testData)
 
-                // Update stats title so the UI shows the correct header
+                // Update title to show which number we are on
                 quizStatistics.value = quizStatistics.value.copy(
-                    title = categoryTitle,
-                    skillLevel = "Section Practice" // Marker for analytics to distinguish from Main Quiz
+                    title = "Quiz $index", // or fetch title from JSON
+                    skillLevel = "Section Practice"
                 )
 
                 resetQuiz()
-            } else {
-                Timber.e("Section Quiz file not found: $filename")
-                // Clear questions so we don't show old state
-                _questions.value = emptyList()
             }
         }
     }
@@ -559,29 +600,30 @@ class WordQuizViewModel @Inject constructor(
 
     private fun generateQuestionsFromData(testData: WordQuizRoot): List<WordQuizQuestion> {
 
-        if (testData.fileFormat == quizQandA) {
-            currentFileFormat.value = quizQandA
-        } else if (testData.fileFormat == quizDefinitions) {
-            currentFileFormat.value = quizDefinitions
-        } else if (testData.fileFormat == quizMultipleChoice) {
-            currentFileFormat.value = quizMultipleChoice
-        } else if (testData.fileFormat == quizWordDefinition) {
+//        if (testData.fileFormat == quizQandA) {
+//            currentFileFormat.value = quizQandA
+//        } else if (testData.fileFormat == quizDefinitions) {
+//            currentFileFormat.value = quizDefinitions
+//        } else if (testData.fileFormat == quizMultipleChoice) {
+//            currentFileFormat.value = quizMultipleChoice
+//        } else if (testData.fileFormat == quizWordDefinition) {
             currentFileFormat.value = quizWordDefinition
-        } else {
-            currentFileFormat.value = quizFillInTheBlanks
-        }
+//        } else {
+//            currentFileFormat.value = quizFillInTheBlanks
+//        }
 
-        val a = when (testData.fileFormat) {
-            quizQandA -> quizQandA
-            quizDefinitions -> quizDefinitions
-            quizMultipleChoice -> quizMultipleChoice
-            else -> quizFillInTheBlanks
-
-        }
+//        val a = when (testData.fileFormat) {
+//            quizQandA -> quizQandA
+//            quizDefinitions -> quizDefinitions
+//            quizMultipleChoice -> quizMultipleChoice
+//            else -> quizFillInTheBlanks
+//
+//        }
 
         //because spellings should follow each other
 //        if (testData.fileFormat == quizFillInTheBlanks)
-        testData.shuffleLists()
+        //keep same order as section
+      //  testData.shuffleLists()
 
 
         return testData.data.flatMap { section ->
