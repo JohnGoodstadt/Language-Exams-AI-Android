@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
+import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordLearningState
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.models.WordQuizAttempt
@@ -48,23 +49,29 @@ class VocabQuizRepository @Inject constructor(
      * @param word The word (e.g. "acquire")
      * @param tries How many attempts it took (1 = Perfect)
      */
-    fun recordResult(word: String, tries: Int) {
+    fun recordResult(word: String, outcome: VocabQuizOutcome) {
+
         scope.launch {
             val state = wordStates.getOrPut(word) { WordLearningState(word) }
+            state.lastOutcome = outcome
 
             // 1. Create History Entry
+            // We store the outcome enum directly now, or map it to tries if you prefer
+            // Assuming you updated WordQuizAttempt to store 'outcome' or we map it here:
             val attempt = WordQuizAttempt(
                 word = word,
-                triesNeeded = tries,
-                wasCorrectEventually = true // Assuming they eventually got it right to proceed
+                triesNeeded = getTriesFromOutcome(outcome), // Helper to map back to Int for history
+                wasCorrectEventually = outcome != VocabQuizOutcome.FAILED
             )
             state.history.add(attempt)
 
-            // 2. Update Algorithm (The Brain)
-            updateMasteryLogic(state, tries)
+            // 2. Update Algorithm
+            updateMasteryLogic(state, outcome)
 
             // 3. Save
             saveToDisk()
+
+            debugPrintAllWordStates()
         }
     }
 
@@ -127,7 +134,7 @@ class VocabQuizRepository @Inject constructor(
 
         Timber.d("Quiz: Updated '${state.word}' to ${state.masteryLevel}. Next review in ${(state.nextReviewTime - System.currentTimeMillis()) / 1000}s")
     }
-    private fun updateMasteryLogic(state: WordLearningState, tries: Int) {
+    private fun updateMasteryLogicNextOriginal(state: WordLearningState, tries: Int) {
         val now = System.currentTimeMillis()
 
         if (tries == 1) {
@@ -180,7 +187,78 @@ class VocabQuizRepository @Inject constructor(
         Timber.d("Quiz: Updated '${state.word}' to ${state.masteryLevel}. New time: ${java.util.Date(state.nextReviewTime)}")
     }
     // Requires: import java.time.*
+    private fun updateMasteryLogic(state: WordLearningState, outcome: VocabQuizOutcome) {
+        val now = System.currentTimeMillis()
 
+        // 🛑 ANTI-CRAMMING CHECK
+        // If it wasn't due yet, and they got it right, don't boost them further.
+        if (state.nextReviewTime > now && state.masteryLevel != WordMasteryLevel.Struggling) {
+            // Only return if it was a "Success" type outcome.
+            // If they failed or stumbled while cramming, we STILL want to downgrade them.
+            if (outcome == VocabQuizOutcome.FLAWLESS || outcome == VocabQuizOutcome.ASSISTED) {
+                Timber.d("Quiz: User reviewed '${state.word}' too early. Schedule unchanged.")
+                return
+            }
+        }
+
+        when (outcome) {
+            // --- PERFECT ---
+            VocabQuizOutcome.FLAWLESS -> {
+                state.correctStreak++
+
+                if (state.masteryLevel == WordMasteryLevel.Struggling) {
+                    // Graduated from struggling
+                    state.masteryLevel = WordMasteryLevel.Learning
+                    state.nextReviewTime = getFutureMorningTime(1) // Tomorrow
+                } else if (state.correctStreak >= 3) {
+                    // Mastered
+                    state.masteryLevel = WordMasteryLevel.Mastered
+                    state.nextReviewTime = Long.MAX_VALUE
+                } else {
+                    // Standard Review
+                    state.masteryLevel = WordMasteryLevel.Review
+                    state.nextReviewTime = getFutureMorningTime(state.correctStreak)
+                }
+            }
+
+            // --- CHEATED / HINTED ---
+            VocabQuizOutcome.ASSISTED -> {
+                // They got it right, but needed help.
+                // Treat as "Learning" (Tomorrow), but don't increase streak.
+                state.masteryLevel = WordMasteryLevel.Review
+                state.nextReviewTime = getFutureMorningTime(1)
+                // Optional: Reset streak or keep it? usually reset or freeze.
+                // state.correctStreak = 0
+            }
+
+            // --- ALMOST ---
+            VocabQuizOutcome.STUMBLED -> {
+                state.correctStreak = 0
+                state.masteryLevel = WordMasteryLevel.Learning
+                // Review later today (e.g. 6 hours)
+                state.nextReviewTime = now + (6 * 60 * 60 * 1000L)
+            }
+
+            // --- FAILED ---
+            VocabQuizOutcome.FAILED -> {
+                state.correctStreak = 0
+                state.masteryLevel = WordMasteryLevel.Struggling
+                // Review immediately (10 mins)
+                state.nextReviewTime = now + (10 * 60 * 1000L)
+            }
+        }
+
+        Timber.d("Quiz: Updated '${state.word}' to ${state.masteryLevel}. Outcome: $outcome")
+    }
+
+    // Helper to map Enum -> Int (For your history log)
+    private fun getTriesFromOutcome(outcome: VocabQuizOutcome): Int {
+        return when(outcome) {
+            VocabQuizOutcome.FLAWLESS, VocabQuizOutcome.ASSISTED -> 1
+            VocabQuizOutcome.STUMBLED -> 2
+            VocabQuizOutcome.FAILED -> 3
+        }
+    }
     private fun getFutureMorningTime(daysToAdd: Int): Long {
         val zone = ZoneId.systemDefault()
         val today = LocalDate.now(zone)
@@ -283,7 +361,7 @@ class VocabQuizRepository @Inject constructor(
     }
 
     // Helpers for the debug print
-    private fun getStatusIcon(level: WordMasteryLevel): String {
+    private fun getStatusIconObsolete(level: WordMasteryLevel): String {
         return when (level) {
             WordMasteryLevel.New -> "🆕"
             WordMasteryLevel.Struggling -> "🔴" // Warning
@@ -293,13 +371,90 @@ class VocabQuizRepository @Inject constructor(
         }
     }
 
-    private fun getTimeString(dueTime: Long, now: Long): String {
+    private fun getTimeStringObsolete(dueTime: Long, now: Long): String {
         if (dueTime == Long.MAX_VALUE) return "NEVER (Mastered)"
 
         val diff = dueTime - now
         if (diff <= 0) return "✅ READY NOW"
 
         // Format milliseconds into readable time
+        val seconds = diff / 1000
+        val minutes = seconds / 60
+        val hours = minutes / 60
+        val days = hours / 24
+
+        return when {
+            days > 0 -> "${days}d ${hours % 24}h"
+            hours > 0 -> "${hours}h ${minutes % 60}m"
+            else -> "${minutes}m ${seconds % 60}s"
+        }
+    }
+    // MARK: - Debugging
+
+    fun debugPrintAllWordStates() {
+        val now = System.currentTimeMillis()
+        val tag = "VocabRepo"
+
+        Timber.tag(tag).d("\n🧠 ===== VOCAB QUIZ REPOSITORY STATE =====")
+
+        if (wordStates.isEmpty()) {
+            Timber.tag(tag).d("   (No words tracked yet)")
+            Timber.tag(tag).d("==========================================\n")
+            return
+        }
+
+        // 1. Summary Counts
+        val counts = wordStates.values.groupingBy { it.masteryLevel }.eachCount()
+        Timber.tag(tag).d("📊 SUMMARY:")
+        Timber.tag(tag).d("   🆕 New:        ${counts[WordMasteryLevel.New] ?: 0}")
+        Timber.tag(tag).d("   🟠 Learning:   ${counts[WordMasteryLevel.Learning] ?: 0}")
+        Timber.tag(tag).d("   🔵 Review:     ${counts[WordMasteryLevel.Review] ?: 0}")
+        Timber.tag(tag).d("   🔴 Struggling: ${counts[WordMasteryLevel.Struggling] ?: 0}")
+        Timber.tag(tag).d("   🟢 Mastered:   ${counts[WordMasteryLevel.Mastered] ?: 0}")
+
+        Timber.tag(tag).d("--------------------------------------------------------------------------------")
+        Timber.tag(tag).d("   LVL | WORD             | STRK | LAST OUTCOME | DUE IN")
+        Timber.tag(tag).d("--------------------------------------------------------------------------------")
+
+        // 2. Sort by Next Review Time (Overdue first)
+        val sortedList = wordStates.values.sortedBy { it.nextReviewTime }
+
+        // 3. Print Rows
+        sortedList.forEach { state ->
+            val icon = getStatusIcon(state.masteryLevel)
+            val word = state.word.take(16).padEnd(16) // Padding for alignment
+            val streak = state.correctStreak.toString().padEnd(4)
+            val outcome = (state.lastOutcome?.name ?: "-").take(12).padEnd(12)
+            val due = getTimeString(state.nextReviewTime, now)
+
+            Timber.tag(tag).d("   $icon | $word | $streak | $outcome | $due")
+        }
+
+        Timber.tag(tag).d("================================================================================\n")
+    }
+
+    // MARK: - Debug Helpers
+
+    private fun getStatusIcon(level: WordMasteryLevel): String {
+        return when (level) {
+            WordMasteryLevel.New -> "🆕"
+            WordMasteryLevel.Struggling -> "🔴"
+            WordMasteryLevel.Learning -> "🟠"
+            WordMasteryLevel.Review -> "🔵"
+            WordMasteryLevel.Mastered -> "🟢"
+        }
+    }
+
+    private fun getTimeString(dueTime: Long, now: Long): String {
+        if (dueTime == Long.MAX_VALUE) return "NEVER"
+        if (dueTime == 0L) return "NOW"
+
+        val diff = dueTime - now
+
+        // Handle Overdue/Ready
+        if (diff <= 0) return "✅ READY"
+
+        // Format nice relative string
         val seconds = diff / 1000
         val minutes = seconds / 60
         val hours = minutes / 60

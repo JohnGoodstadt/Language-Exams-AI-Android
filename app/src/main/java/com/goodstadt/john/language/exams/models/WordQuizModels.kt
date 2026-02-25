@@ -31,5 +31,6 @@ data class WordLearningState(
     @SerializedName("lvl") var masteryLevel: WordMasteryLevel = WordMasteryLevel.New,
     @SerializedName("streak") var correctStreak: Int = 0, // Consecutive first-try successes
     @SerializedName("next_due") var nextReviewTime: Long = 0, // When to show this again
-    @SerializedName("history") val history: MutableList<WordQuizAttempt> = mutableListOf()
+    @SerializedName("history") val history: MutableList<WordQuizAttempt> = mutableListOf(),
+    @SerializedName("last_out") var lastOutcome: VocabQuizOutcome? = null
 )

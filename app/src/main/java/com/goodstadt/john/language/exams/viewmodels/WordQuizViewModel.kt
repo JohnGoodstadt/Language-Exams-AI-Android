@@ -37,6 +37,7 @@ import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
+import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
@@ -283,7 +284,11 @@ class WordQuizViewModel @Inject constructor(
     private val quizTitleCache = mutableMapOf<WordQuizLevels, List<QuizDetail>>()
 
     private var _currentQuestionAttempts = 0
-//    private var _currentQuestionSuccess = 0
+
+    private var infoUsedForCurrentQuestion = false
+//    private var currentQuestionAttempts = 0
+    private val _showInfoSheet = MutableStateFlow(false)
+    val showInfoSheet = _showInfoSheet.asStateFlow()
 
     /**
      * A simple data class to hold the metadata for a single quiz.
@@ -654,6 +659,7 @@ class WordQuizViewModel @Inject constructor(
         // Use the selectedQuiz for the ID (e.g. 6), fallback to 1 if null
         val currentQuizId = selectedQuiz.value?.id ?: 1
         val currentTitle = selectedQuiz.value?.title ?: "Quiz $currentQuizId"
+        _currentQuestionAttempts = 0
 
         quizStatistics.value = quizStatistics.value.copy(
             state = QuizState.NOT_STARTED,
@@ -1073,7 +1079,7 @@ class WordQuizViewModel @Inject constructor(
             Timber.v("vocabQuizAttemptStats()  correct:$isCorrect word:$word  tries:$_currentQuestionAttempts")
 
 
-            vocabQuizRepository.recordResult(word, _currentQuestionAttempts)
+           // vocabQuizRepository.recordResult(word, _currentQuestionAttempts)
         } else {
             _currentQuestionAttempts++
             Timber.v("vocabQuizAttemptStats()  correct:$isCorrect word:$word  tries:$_currentQuestionAttempts")
@@ -1085,5 +1091,45 @@ class WordQuizViewModel @Inject constructor(
         _currentQuestionAttempts = 0
     }
 
+    fun onInfoClicked() {
+//        _showInfoSheet.value = true
+        infoUsedForCurrentQuestion = true
+    }
 
+    fun markAnswerSelected(word: String,isCorrect:Boolean) {
+        val tries = _currentQuestionAttempts // You need to track attempts count per word
+
+        // ... Check if correct ...
+        if (isCorrect) {
+
+            // 1. Calculate Outcome
+            val outcome = when {
+                tries == 1 && !infoUsedForCurrentQuestion -> VocabQuizOutcome.FLAWLESS
+                tries == 1 && infoUsedForCurrentQuestion -> VocabQuizOutcome.ASSISTED
+                tries == 2 -> VocabQuizOutcome.STUMBLED
+                else -> VocabQuizOutcome.FAILED
+            }
+
+            // 2. Save to Repo
+            vocabQuizRepository.recordResult(word, outcome)
+
+            // 3. Award XP (Ideas)
+            awardXP(outcome)
+
+            // Reset for next question
+            infoUsedForCurrentQuestion = false
+            _currentQuestionAttempts = 0
+        } else {
+            _currentQuestionAttempts++
+        }
+    }
+
+    private fun awardXP(outcome: VocabQuizOutcome) {
+        when (outcome) {
+            VocabQuizOutcome.FLAWLESS -> xpManager.registerAction(XpActionType.PerfectWord, count = 5) // High Reward
+            VocabQuizOutcome.ASSISTED -> xpManager.registerAction(XpActionType.MasterWord, count = 2) // Small Reward
+            VocabQuizOutcome.STUMBLED -> xpManager.registerAction(XpActionType.MasterWord, count = 1) // Token Reward
+            VocabQuizOutcome.FAILED -> { /* No XP, try again later */ }
+        }
+    }
 }

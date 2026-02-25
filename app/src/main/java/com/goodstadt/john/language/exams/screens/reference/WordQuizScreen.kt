@@ -118,6 +118,7 @@ fun WordQuizScreen(
     val isSectionMode by viewModel.isSectionMode.collectAsState()
     val availableIndices by viewModel.availableSectionIndices.collectAsState()
     val currentIndex by viewModel.currentSectionIndex.collectAsState()
+    val showInfoSheet by viewModel.showInfoSheet.collectAsState()
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
@@ -211,9 +212,11 @@ fun WordQuizScreen(
                     viewModel.loadQuestions()
 
                     if (viewModel.doIHaveCurrentQuestionInfo()) {
-                        infoDisabled = false
+                        viewModel.onInfoClicked()
+//                        infoDisabled = false
                     } else {
-                        infoDisabled = true
+//                        viewModel.showInfoSheet = false
+//                        infoDisabled  = true
                     }
                 }//,
                 //fontSize = 16.sp
@@ -302,7 +305,7 @@ fun WordQuizScreen(
                     text = annotatedQuestionText,
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth() .padding(bottom = 32.dp),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 32.dp),
                     color = orangeLight,
                 )
             } else {
@@ -310,7 +313,7 @@ fun WordQuizScreen(
                     text = annotatedQuestionText,
                     style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth() .padding(bottom = 32.dp),,
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 32.dp),
                     color = Color.Green
                 )
             }
@@ -415,6 +418,7 @@ fun WordQuizScreen(
                                 viewModel.incQuizStat(false)
                             }
 
+                            viewModel.markAnswerSelected(question.question,isOptionCorrect)
 
 
                         },
@@ -438,6 +442,7 @@ fun WordQuizScreen(
 
                         if (infoDisabled == false) {
                             showInfoBottomSheet = true
+                            viewModel.onInfoClicked()
                         }
                     })
             }// row

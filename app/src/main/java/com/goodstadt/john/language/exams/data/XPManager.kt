@@ -1,13 +1,11 @@
 package com.goodstadt.john.language.exams.managers
 
+//import com.goodstadt.john.language.exams.models.XpActionType
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.annotation.Keep
-import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.utils.AnalyticsHelper
-//import com.goodstadt.john.language.exams.models.XpActionType
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -45,6 +43,7 @@ data class LevelProgressInfo(
     val fraction: Float, // 0.33
     val isMaxLevel: Boolean
 )
+
 // MARK: - Data Models
 @Keep
 data class XpState(
@@ -65,6 +64,7 @@ data class XpState(
     var targetExamLevel: String? = null,
     var datePrecision: String = "none" // "exact", "month", "duration"
 )
+
 @Keep
 data class LevelXpState(
     var xp: Int = 0,
@@ -72,6 +72,7 @@ data class LevelXpState(
     var progressToNextLevel: Double = 0.0,
     var lastUpdatedAt: Long = 0
 )
+
 @Keep
 enum class XpActionType {
     HearNewSentence,
@@ -85,7 +86,9 @@ enum class XpActionType {
     GenerateParagraph,
     MemoryBoost,
     CompletedReferenceSheet,
+    PerfectWord
 }
+
 @Keep
 data class DailyStats(
     val dateId: String, // "2025-12-15"
@@ -160,7 +163,7 @@ class XPManager @Inject constructor(
         XpActionType.HearNewSentence to 3,
         XpActionType.ReplaySentence to 1,
 
-        // ✅ ADD THESE:
+
         XpActionType.MasterWord to 5,          // When user swipes to "Focus"
         XpActionType.CompleteSection to 20,    // The Section Banner reward
         XpActionType.CompletedSheet to 100,    // The Level Up reward
@@ -171,7 +174,8 @@ class XPManager @Inject constructor(
         XpActionType.CompleteQuiz to 10,
         XpActionType.PerfectQuiz to 5,         // Bonus on top of Complete
         XpActionType.GenerateParagraph to 3,
-        XpActionType.MemoryBoost to 35
+        XpActionType.MemoryBoost to 35,
+        XpActionType.PerfectWord to 5
     )
 
     private val streakFreezeCost = 200
@@ -229,7 +233,7 @@ class XPManager @Inject constructor(
         return LevelProgressInfo(gained.toInt(), range.toInt(), fraction, false)
     }
 
-    fun registerAction(action: XpActionType, count: Int = 1,specificLevel: String? = null) {
+    fun registerAction(action: XpActionType, count: Int = 1, specificLevel: String? = null) {
         scope.launch {
             val currentState = _state.value.copy() // Snapshot
 //            val level = currentState.currentLevel
@@ -266,6 +270,7 @@ class XPManager @Inject constructor(
             _state.value = currentState
         }
     }
+
     // Helper to aggregate the last 7 days
     private data class WeeklyStats(val totalXP: Int, val daysActive: Int)
 
@@ -284,6 +289,7 @@ class XPManager @Inject constructor(
 
         return WeeklyStats(totalXP, daysActive)
     }
+
     /**
      * Calculates the user's "Rank" based on their recent activity.
      * Logic: Average XP per Active Day over the last 7 days.
@@ -305,7 +311,8 @@ class XPManager @Inject constructor(
             else -> UserType.Super
         }
     }
-//    val statusColor = when (getUserType()) {
+
+    //    val statusColor = when (getUserType()) {
 //        UserType.Light -> Color.Gray
 //        UserType.Regular -> Color(0xFF2196F3) // Blue
 //        UserType.Serious -> Color(0xFFFF9800) // Orange
