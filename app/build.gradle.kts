@@ -20,8 +20,8 @@ if (secretsFile.exists()) {
     secretsProperties.load(FileInputStream(secretsFile))
 }
 
-val VERSION_CODE = 102   //for remote config versioning.  localised quizzes
-val VERSION_NAME = "3.8.102" //go live now matches iOS 3.7
+val VERSION_CODE = 103   //for remote config versioning.  localised quizzes
+val VERSION_NAME = "3.8.103" //go live now matches iOS 3.7
 
 android {
     namespace = "com.goodstadt.john.language.exams" // Base namespace
@@ -210,7 +210,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.compose.android)
     implementation(libs.androidx.foundation.android)
     implementation(libs.androidx.foundation.layout.android)
-//    implementation(libs.billing.ktx)
+
 
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
@@ -219,10 +219,10 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     implementation(libs.androidx.datastore.preferences)
-////    implementation(platform(libs.google.play.services.bom))
-//    implementation("com.google.android.gms:play-services-auth")
 
-//    implementation("com.google.android.gms:play-services-base:18.7.2")
+
+
+
 
     //
     // 1. Declare the Bills of Materials (BOMs) FIRST.
@@ -237,7 +237,7 @@ dependencies {
 
     // This library is NOT part of the Firebase BOM, so it needs its own version.
     // Ensure this is defined correctly in your TOML file.
-//    implementation(libs.androidx.billing.ktx)
+
     implementation(libs.billing)
     implementation(libs.billing.ktx)
     implementation(libs.play.services.auth)
@@ -267,7 +267,7 @@ dependencies {
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
     androidTestImplementation(libs.hilt.android.testing)
-//    kaptAndroidTest(libs.hilt.compiler)
+
     kspAndroidTest(libs.hilt.compiler)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
@@ -287,7 +287,3 @@ dependencies {
 
 }
 
-//// Allow Hilt to access classes in different build variants
-//kapt {
-//    correctErrorTypes = true
-//}

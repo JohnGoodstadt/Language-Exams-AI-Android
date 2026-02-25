@@ -17,8 +17,8 @@ const val HOURLY_LIMIT = 40
 const val DAILY_LIMIT = 150
 
  */
-const val HOURLY_LIMIT = 25
-const val DAILY_LIMIT = 50
+const val HOURLY_LIMIT = 30
+const val DAILY_LIMIT = 80
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -32,8 +32,8 @@ object RateLimiterModule {
 
 
 
-      if (BuildConfig.DEBUG){ //Test IAP Purchase
-//        if (false){
+//      if (BuildConfig.DEBUG){ //Test IAP Purchase
+        if (false){
             return SimpleRateLimiter(
                 context = context,
                 hourlyLimit = 6,
