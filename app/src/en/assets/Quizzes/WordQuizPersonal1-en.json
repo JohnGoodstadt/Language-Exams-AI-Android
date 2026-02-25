@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "application",
-					"summary": "",
-					"explain": "",
+					"summary": "an official request, usually written, for a job, course, or service",
+					"explain": {
+						"entryId": "application",
+						"headword": "application",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["request", "form"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a formal (often written) request for something, such as a job, course, or permission",
+										"examples": [
+											"She submitted her application online."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She submitted her application online.", "ok": true },
 						{ "answer": "She applied her application online.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "autobiography",
-					"summary": "",
-					"explain": "",
+					"summary": "a book someone writes about their own life",
+					"explain": {
+						"entryId": "autobiography",
+						"headword": "autobiography",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["life story", "memoir"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a book or text that a person writes about their own life",
+										"examples": [
+											"He wrote an autobiography about his childhood."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He wrote an autobiography about his childhood.", "ok": true },
 						{ "answer": "He wrote an autobiography by his teacher.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "biography",
-					"summary": "",
-					"explain": "",
+					"summary": "a book about someone’s life, written by another person",
+					"explain": {
+						"entryId": "biography",
+						"headword": "biography",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["life story"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a book or text about a person’s life, written by someone else",
+										"examples": [
+											"She read a biography of Nelson Mandela."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She read a biography of Nelson Mandela.", "ok": true },
 						{ "answer": "She biographied Nelson Mandela last week.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "candidate",
-					"summary": "",
-					"explain": "",
+					"summary": "a person being considered for a job, position, or election",
+					"explain": {
+						"entryId": "candidate",
+						"headword": "candidate",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["applicant"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is being considered for a job or chosen for a position (including an election)",
+										"examples": [
+											"Each candidate was interviewed carefully."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Each candidate was interviewed carefully.", "ok": true },
 						{ "answer": "Each candidate interviewed the company.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "certificate",
-					"summary": "",
-					"explain": "",
+					"summary": "an official document that proves something is true or completed",
+					"explain": {
+						"entryId": "certificate",
+						"headword": "certificate",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["document", "proof"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official document that proves something, such as completion, qualification, or identity",
+										"examples": [
+											"She received a certificate after completing the course."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She received a certificate after completing the course.", "ok": true },
 						{ "answer": "She certificated the course yesterday.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "document",
-					"summary": "",
-					"explain": "",
+					"summary": "a piece of paper or file that gives information or proof",
+					"explain": {
+						"entryId": "document",
+						"headword": "document",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["file", "record", "paper"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a written or electronic piece of information, often used as proof or a record",
+										"examples": [
+											"Please upload the document as a PDF file."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Please upload the document as a PDF file.", "ok": true },
 						{ "answer": "Please document your passport at the airport.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "driver's license",
-					"summary": "",
-					"explain": "",
+					"summary": "an official card that allows you to drive a vehicle",
+					"explain": {
+						"entryId": "drivers_license",
+						"headword": "driver's license",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["driving licence"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official document/card that shows you are allowed to drive a vehicle",
+										"examples": [
+											"You must carry your driver's license when driving."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "You must carry your driver's license when driving.", "ok": true },
 						{ "answer": "You must license your driver before travel.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "form",
-					"summary": "",
-					"explain": "",
+					"summary": "a document with spaces to fill in information",
+					"explain": {
+						"entryId": "form",
+						"headword": "form",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["document", "application"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a document with questions or boxes where you write information",
+										"examples": [
+											"Please fill in the form before the interview."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Please fill in the form before the interview.", "ok": true },
 						{ "answer": "Please fill the form on before interview.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "identification",
-					"summary": "",
-					"explain": "",
+					"summary": "official proof of who you are (for example, a passport or ID card)",
+					"explain": {
+						"entryId": "identification",
+						"headword": "identification",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["ID", "proof of identity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "official proof of who someone is (for example, an ID card, passport, or driving licence)",
+										"examples": [
+											"You need identification to enter the building."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "You need identification to enter the building.", "ok": true },
 						{ "answer": "You need identify to enter the building.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "initial",
-					"summary": "",
-					"explain": "",
+					"summary": "the first letter of a name (often written as a short signature)",
+					"explain": {
+						"entryId": "initial",
+						"headword": "initial",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["first letter"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the first letter of a name; often written instead of the full name, especially on documents",
+										"examples": [
+											"Please write your initial next to your signature."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Please write your initial next to your signature.", "ok": true },
 						{ "answer": "Please initial your full name completely.", "ok": false },

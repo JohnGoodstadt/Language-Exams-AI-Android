@@ -583,7 +583,7 @@ fun WordQuizScreen(
     }
 
     if (showInfoBottomSheet) {
-        QuizInfoBottomSheetView(
+        WordQuizInfoBottomSheetView(
             questions[currentQuestionIndex].summary,
             questions[currentQuestionIndex].explain,
             onCloseSheet = { showInfoBottomSheet = false }

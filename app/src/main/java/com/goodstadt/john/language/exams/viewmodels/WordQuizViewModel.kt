@@ -39,6 +39,7 @@ import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordQuizRoot
+import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
@@ -165,7 +166,7 @@ data class WordQuizQuestion(
     val answers: List<String>,
     val correctOption: String,
     val summary: String,
-    val explain: String,
+    val explain: DictionaryEntry?,
     val title: String,
 )
 
@@ -329,7 +330,8 @@ class WordQuizViewModel @Inject constructor(
             _isSectionMode.value = true
 
             // 1. Sanitize Title
-            val cleanTitle = categoryTitle.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
+            val noB1Title = categoryTitle.replace(" (B1)", "") //personal title
+            val cleanTitle = noB1Title.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
             val baseFilenamePrefix = "WordQuiz${cleanTitle}" // e.g. "WordQuizTravel"
             currentSectionBaseName = baseFilenamePrefix
 
@@ -636,7 +638,7 @@ class WordQuizViewModel @Inject constructor(
                 val words = shuffledWords.map { it.answer }
                 val correctOption = quizSection.answers.firstOrNull { it.ok }?.answer ?: ""
                 val summary = quizSection.summary
-                val explain = quizSection.explain
+                val explain = quizSection.explain ?: DictionaryEntry()
                 val title = quizSection.title
                 WordQuizQuestion(
                     quizSection.question,

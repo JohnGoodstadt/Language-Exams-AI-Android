@@ -14,8 +14,32 @@
 					"title": "",
 					"page": 1,
 					"question": "interview",
-					"summary": "",
-					"explain": "",
+					"summary": "a formal meeting where someone is asked questions for a job or information",
+					"explain": {
+						"entryId": "interview",
+						"headword": "interview",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["meeting", "discussion"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a formal meeting in which someone is asked questions to assess suitability for a job or to gather information",
+										"examples": ["She has a job interview tomorrow morning."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She has a job interview tomorrow morning.", "ok": true },
 						{ "answer": "She interviewed to the manager yesterday.", "ok": false },
@@ -26,8 +50,30 @@
 					"title": "",
 					"page": 2,
 					"question": "interviewer",
-					"summary": "",
-					"explain": "",
+					"summary": "a person who asks questions in an interview",
+					"explain": {
+						"entryId": "interviewer",
+						"headword": "interviewer",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"synonyms": ["questioner", "recruiter"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who conducts an interview by asking questions",
+										"examples": ["The interviewer asked about her experience."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The interviewer asked about her experience.", "ok": true },
 						{ "answer": "The interviewer answered all the questions.", "ok": false },
@@ -38,8 +84,29 @@
 					"title": "",
 					"page": 3,
 					"question": "memoir",
-					"summary": "",
-					"explain": "",
+					"summary": "a book about someone’s personal experiences, written by that person",
+					"explain": {
+						"entryId": "memoir",
+						"headword": "memoir",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"synonyms": ["autobiography", "life story"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a written account of the author’s personal experiences, often focusing on a particular period of life",
+										"examples": ["He published a memoir about his time abroad."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He published a memoir about his time abroad.", "ok": true },
 						{ "answer": "He memoired his passport yesterday.", "ok": false },
@@ -50,8 +117,29 @@
 					"title": "",
 					"page": 4,
 					"question": "passport",
-					"summary": "",
-					"explain": "",
+					"summary": "an official document that allows you to travel to other countries",
+					"explain": {
+						"entryId": "passport",
+						"headword": "passport",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"synonyms": ["travel document"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official government document that proves identity and citizenship and allows international travel",
+										"examples": ["Her passport expires next year."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Her passport expires next year.", "ok": true },
 						{ "answer": "She passported through the airport quickly.", "ok": false },
@@ -62,8 +150,29 @@
 					"title": "",
 					"page": 5,
 					"question": "poll",
-					"summary": "",
-					"explain": "",
+					"summary": "a survey that collects people’s opinions",
+					"explain": {
+						"entryId": "poll",
+						"headword": "poll",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"synonyms": ["survey", "vote"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a survey of public opinion or a process of voting",
+										"examples": ["The poll showed strong public support."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The poll showed strong public support.", "ok": true },
 						{ "answer": "The poll asked him personally for a job.", "ok": false },
@@ -74,8 +183,29 @@
 					"title": "",
 					"page": 6,
 					"question": "position",
-					"summary": "",
-					"explain": "",
+					"summary": "a job or role in a company or organisation",
+					"explain": {
+						"entryId": "position",
+						"headword": "position",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"synonyms": ["job", "role", "post"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a job or role within an organisation or company",
+										"examples": ["She applied for a position in marketing."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She applied for a position in marketing.", "ok": true },
 						{ "answer": "She positioned for a marketing job.", "ok": false },
@@ -86,8 +216,29 @@
 					"title": "",
 					"page": 7,
 					"question": "questionnaire",
-					"summary": "",
-					"explain": "",
+					"summary": "a written set of questions used to collect information",
+					"explain": {
+						"entryId": "questionnaire",
+						"headword": "questionnaire",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"synonyms": ["survey form"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a document containing a list of questions used to gather information from people",
+										"examples": ["Please complete the questionnaire before leaving."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Please complete the questionnaire before leaving.", "ok": true },
 						{ "answer": "Please questionnaire your details carefully.", "ok": false },
@@ -98,8 +249,29 @@
 					"title": "",
 					"page": 8,
 					"question": "rank",
-					"summary": "",
-					"explain": "",
+					"summary": "a level or position in an organisation or group",
+					"explain": {
+						"entryId": "rank",
+						"headword": "rank",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"synonyms": ["level", "status"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a level or position in a hierarchy or organisation",
+										"examples": ["He reached the rank of manager after five years."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He reached the rank of manager after five years.", "ok": true },
 						{ "answer": "He ranked the company yesterday.", "ok": false },
@@ -110,8 +282,29 @@
 					"title": "",
 					"page": 9,
 					"question": "register",
-					"summary": "",
-					"explain": "",
+					"summary": "to officially record your name or details",
+					"explain": {
+						"entryId": "register",
+						"headword": "register",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"synonyms": ["enrol", "sign up"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to officially record information or sign up for something",
+										"examples": ["You must register before the deadline."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "You must register before the deadline.", "ok": true },
 						{ "answer": "You must register your passport at home.", "ok": false },
@@ -122,8 +315,29 @@
 					"title": "",
 					"page": 10,
 					"question": "registration",
-					"summary": "",
-					"explain": "",
+					"summary": "the act of officially recording your name or details",
+					"explain": {
+						"entryId": "registration",
+						"headword": "registration",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"synonyms": ["enrolment", "sign-up"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of officially recording information or signing up for something",
+										"examples": ["Online registration closes tonight."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Online registration closes tonight.", "ok": true },
 						{ "answer": "She registrationed for the course.", "ok": false },

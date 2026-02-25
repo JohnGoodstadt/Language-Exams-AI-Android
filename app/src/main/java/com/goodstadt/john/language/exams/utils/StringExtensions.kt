@@ -42,3 +42,14 @@ fun String.sanitizedForFirestore(): String {
         sanitized
     }
 }
+fun String.capitalizeFirstLetter(locale: java.util.Locale = java.util.Locale.getDefault()): String {
+    val firstLetterIndex = indexOfFirst { it.isLetter() }
+    if (firstLetterIndex == -1) return this
+
+    val firstChar = this[firstLetterIndex].uppercase(locale)
+    return buildString {
+        append(this@capitalizeFirstLetter.substring(0, firstLetterIndex))
+        append(firstChar)
+        append(this@capitalizeFirstLetter.substring(firstLetterIndex + 1))
+    }
+}

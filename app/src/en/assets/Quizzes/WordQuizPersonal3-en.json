@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "sign",
-					"summary": "",
-					"explain": "",
+					"summary": "to write your name on a document to show agreement",
+					"explain": {
+						"entryId": "sign",
+						"headword": "sign",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": "signs, signing, signed",
+								"synonyms": ["write your name", "approve"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to write your name on a document to show that you agree with or accept it",
+										"examples": [
+											"Please sign the contract at the bottom."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Please sign the contract at the bottom.", "ok": true },
 						{ "answer": "Please sign in your passport details.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "signature",
-					"summary": "",
-					"explain": "",
+					"summary": "your written name used to show agreement or identity",
+					"explain": {
+						"entryId": "signature",
+						"headword": "signature",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": "signatures",
+								"synonyms": ["autograph"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "your name written by yourself, especially on a document to show agreement or to confirm identity",
+										"examples": [
+											"Your signature must match your identification."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Your signature must match your identification.", "ok": true },
 						{ "answer": "You must signature the form carefully.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "survey",
-					"summary": "",
-					"explain": "",
+					"summary": "a set of questions used to collect information or opinions",
+					"explain": {
+						"entryId": "survey",
+						"headword": "survey",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": "surveys",
+								"synonyms": ["questionnaire", "poll"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a method of collecting information by asking a group of people questions",
+										"examples": [
+											"They conducted a survey about public transport."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "They conducted a survey about public transport.", "ok": true },
 						{ "answer": "They surveyed him a passport.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "title",
-					"summary": "",
-					"explain": "",
+					"summary": "the name of a book, article, or other work",
+					"explain": {
+						"entryId": "title",
+						"headword": "title",
+						"pronunciation": { "display": "", "ipaUK": null, "ipaUS": null },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": "titles",
+								"synonyms": ["name", "heading"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the name of a book, film, article, or other work, usually shown at the beginning or on the cover",
+										"examples": [
+											"The book's title is printed on the cover."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The book's title is printed on the cover.", "ok": true },
 						{ "answer": "She titled her passport yesterday.", "ok": false },

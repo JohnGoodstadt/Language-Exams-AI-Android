@@ -17,6 +17,7 @@ data class DailyDictionaryBundle(
 
 //@Serializable
 @Keep
+@Serializable
 data class DictionaryEntry(
     val entryId: String = "",
     val headword: String = "",
@@ -27,6 +28,7 @@ data class DictionaryEntry(
     val updatedDate: Long = 0L
 )
 @Keep
+@Serializable
 data class Pronunciation(
     val display: String = "",
     val ipaUK: String? = null,
@@ -34,6 +36,7 @@ data class Pronunciation(
 )
 
 @Keep
+@Serializable
 data class PartOfSpeechBlock(
     val ordinal: String = "",
     val pos: String = "",
@@ -45,6 +48,7 @@ data class PartOfSpeechBlock(
 )
 
 @Keep
+@Serializable
 data class Sense(
     val senseNumber: Int = 1,
     val definition: String = "",
@@ -53,20 +57,21 @@ data class Sense(
 
 //@Serializable
 @Keep
+@Serializable
 data class WotdConfig(
     val timezoneRule: String,
     val uiPolicy: UiPolicy? = null,
     val scheduledAssignments: List<WotdAssignment>
 )
 
-//@Serializable
+@Serializable
 @Keep
 data class UiPolicy(
     val lockForwardAtToday: Boolean = true,
     val maxBrowseDaysBack: Int = 3
 )
 
-//@Serializable
+@Serializable
 @Keep
 data class WotdAssignment(
     val date: Int,
@@ -75,6 +80,7 @@ data class WotdAssignment(
 )
 
 @Keep
+@Serializable
 data class PoolDoc(
     val orderedEntryIds: List<String> = emptyList(),
     val uiPolicy: UiPolicy? = null,
