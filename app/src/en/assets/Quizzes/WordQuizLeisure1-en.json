@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "activity",
-					"summary": "",
-					"explain": "",
+					"summary": "Something that a person does for interest, enjoyment, or as part of their job.",
+					"explain": {
+						"entryId": "activity",
+						"headword": "activity",
+						"pronunciation": { "display": "", "ipaUK": "/ækˈtɪvɪti/", "ipaUS": "/ækˈtɪvɪti/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["pursuit", "pastime", "occupation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "something that a person or group does for enjoyment, interest, or as part of a job or routine",
+										"examples": [
+											"Going to the gym is a fun activity to do after work."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Swimming is a popular activity in summer.", "ok": true },
 						{ "answer": "Swimming is popular activity in the summer.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "actor",
-					"summary": "",
-					"explain": "",
+					"summary": "A person whose job is to perform in plays, films, or television programmes.",
+					"explain": {
+						"entryId": "actor",
+						"headword": "actor",
+						"pronunciation": { "display": "", "ipaUK": "/ˈæktər/", "ipaUS": "/ˈæktər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["performer", "player", "artist"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person whose profession is performing in plays, films, or television programmes",
+										"examples": [
+											"The young actor won an award for his debut film role."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The actor performed brilliantly in the film.", "ok": true },
 						{ "answer": "The actor played in the film as doctor.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "audience",
-					"summary": "",
-					"explain": "",
+					"summary": "A group of people who watch or listen to a performance, show, or event.",
+					"explain": {
+						"entryId": "audience",
+						"headword": "audience",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɔːdiəns/", "ipaUS": "/ˈɔːdiəns/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["spectators", "crowd", "viewers"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a group of people who have gathered to watch or listen to a performance, speech, or event",
+										"examples": [
+											"The audience was completely silent during the performance."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The audience applauded at the end of the show.", "ok": true },
 						{ "answer": "The audiences were very large.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "band",
-					"summary": "",
-					"explain": "",
+					"summary": "A group of musicians who play together, especially popular or rock music.",
+					"explain": {
+						"entryId": "band",
+						"headword": "band",
+						"pronunciation": { "display": "", "ipaUK": "/bænd/", "ipaUS": "/bænd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["group", "ensemble", "musical group"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a group of musicians who perform together, especially one that plays popular, rock, or jazz music",
+										"examples": [
+											"The band practised together every evening before their concert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The band played live music at the festival.", "ok": true },
 						{ "answer": "The band played a music at festival.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "collection",
-					"summary": "",
-					"explain": "",
+					"summary": "A group of objects of the same type that someone has gathered together over time.",
+					"explain": {
+						"entryId": "collection",
+						"headword": "collection",
+						"pronunciation": { "display": "", "ipaUK": "/kəˈlɛkʃən/", "ipaUS": "/kəˈlɛkʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["set", "assortment", "array"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a group of objects of the same type that someone has gathered together, often as a hobby",
+										"examples": [
+											"He has an impressive collection of vinyl records."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She has a collection of old coins.", "ok": true },
 						{ "answer": "She has collection of old coins.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "concert",
-					"summary": "",
-					"explain": "",
+					"summary": "A live musical performance given before an audience.",
+					"explain": {
+						"entryId": "concert",
+						"headword": "concert",
+						"pronunciation": { "display": "", "ipaUK": "/ˈkɒnsət/", "ipaUS": "/ˈkɑːnsərt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["performance", "show", "gig"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a live musical performance given before an audience, in a venue such as a hall, stadium, or outdoor space",
+										"examples": [
+											"The open-air concert attracted thousands of visitors to the park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We went to a concert last night.", "ok": true },
 						{ "answer": "We went to concert last night.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "craft",
-					"summary": "",
-					"explain": "",
+					"summary": "A skilled activity involving making things by hand, such as knitting, pottery, or weaving.",
+					"explain": {
+						"entryId": "craft",
+						"headword": "craft",
+						"pronunciation": { "display": "", "ipaUK": "/krɑːft/", "ipaUS": "/kræft/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["handicraft", "art", "trade"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a skilled activity that involves making things by hand, often as a hobby or traditional art form",
+										"examples": [
+											"Paper folding is a traditional craft that children enjoy."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She enjoys making craft items in her free time.", "ok": true },
 						{ "answer": "She enjoys to make crafts in her free time.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "drama",
-					"summary": "",
-					"explain": "",
+					"summary": "A type of play, film, or television programme that tells a serious story.",
+					"explain": {
+						"entryId": "drama",
+						"headword": "drama",
+						"pronunciation": { "display": "", "ipaUK": "/ˈdrɑːmə/", "ipaUS": "/ˈdrɑːmə/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["play", "production", "theatre"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a type of play, film, or television programme that tells a serious or emotional story; also the art of performing or writing plays",
+										"examples": [
+											"She joined the school drama club to improve her acting skills."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He loves watching drama on television.", "ok": true },
 						{ "answer": "He loves watching a drama on television every day.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "entertainment",
-					"summary": "",
-					"explain": "",
+					"summary": "Activities, performances, or shows that provide enjoyment and amusement.",
+					"explain": {
+						"entryId": "entertainment",
+						"headword": "entertainment",
+						"pronunciation": { "display": "", "ipaUK": "/ˌɛntəˈteɪnmənt/", "ipaUS": "/ˌɛntərˈteɪnmənt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["amusement", "enjoyment", "recreation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "activities, performances, or shows that provide enjoyment, interest, or amusement",
+										"examples": [
+											"The festival provided entertainment for visitors of all ages."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The city offers a lot of entertainment.", "ok": true },
 						{ "answer": "The city offers many entertainments.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "event",
-					"summary": "",
-					"explain": "",
+					"summary": "Something that happens, especially something planned, important, or unusual.",
+					"explain": {
+						"entryId": "event",
+						"headword": "event",
+						"pronunciation": { "display": "", "ipaUK": "/ɪˈvɛnt/", "ipaUS": "/ɪˈvɛnt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["occasion", "happening", "function"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "something that happens, especially a planned occasion or an important or unusual occurrence",
+										"examples": [
+											"The sports event attracted teams from across the country."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The charity event raised a lot of money.", "ok": true },
 						{ "answer": "The charity event was very successfully.", "ok": false },

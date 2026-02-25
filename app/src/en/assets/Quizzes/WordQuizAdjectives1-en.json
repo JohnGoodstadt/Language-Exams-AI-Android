@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "anxious",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling worried or nervous about something that might happen.",
+					"explain": {
+						"entryId": "anxious",
+						"headword": "anxious",
+						"pronunciation": { "display": "", "ipaUK": "/ˈæŋkʃəs/", "ipaUS": "/ˈæŋkʃəs/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["worried", "nervous", "uneasy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling worried and nervous about something that might happen or about a situation that is uncertain",
+										"examples": [
+											"He felt anxious before the job interview."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She felt anxious before the exam.", "ok": true },
 						{ "answer": "She was anxious about to fail.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "appreciative",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling or showing gratitude and thanks for something someone has done.",
+					"explain": {
+						"entryId": "appreciative",
+						"headword": "appreciative",
+						"pronunciation": { "display": "", "ipaUK": "/əˈpriːʃətɪv/", "ipaUS": "/əˈpriːʃieɪtɪv/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["grateful", "thankful", "recognisant"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling or showing that you are grateful and pleased about something someone has done for you",
+										"examples": [
+											"The team was appreciative of the manager's extra support."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He was appreciative of her help.", "ok": true },
 						{ "answer": "He appreciated of her help.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "apprehensive",
-					"summary": "",
-					"explain": "",
+					"summary": "Worried or afraid that something unpleasant might happen.",
+					"explain": {
+						"entryId": "apprehensive",
+						"headword": "apprehensive",
+						"pronunciation": { "display": "", "ipaUK": "/ˌæprɪˈhɛnsɪv/", "ipaUS": "/ˌæprɪˈhɛnsɪv/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["anxious", "uneasy", "nervous"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "worried or afraid that something bad or unpleasant might happen",
+										"examples": [
+											"He felt apprehensive about speaking in front of a large crowd."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She was apprehensive about starting her new job.", "ok": true },
 						{ "answer": "She apprehensive about the interview.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "ashamed",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling guilty or embarrassed because of something you have done.",
+					"explain": {
+						"entryId": "ashamed",
+						"headword": "ashamed",
+						"pronunciation": { "display": "", "ipaUK": "/əˈʃeɪmd/", "ipaUS": "/əˈʃeɪmd/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["guilty", "embarrassed", "remorseful"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling embarrassed or guilty because of something you have done or said, or because of a situation you are in",
+										"examples": [
+											"She felt ashamed of the mistake she made in class."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He felt ashamed of his behaviour.", "ok": true },
 						{ "answer": "He ashamed about his behaviour.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "assured",
-					"summary": "",
-					"explain": "",
+					"summary": "Confident, calm, and certain of your own abilities.",
+					"explain": {
+						"entryId": "assured",
+						"headword": "assured",
+						"pronunciation": { "display": "", "ipaUK": "/əˈʃʊəd/", "ipaUS": "/əˈʃʊrd/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["confident", "self-assured", "composed"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "confident, calm, and certain of your own abilities; not nervous or doubtful",
+										"examples": [
+											"The speaker seemed calm and assured throughout the talk."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She sounded assured during her presentation.", "ok": true },
 						{ "answer": "She assured in her presentation.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "calm",
-					"summary": "",
-					"explain": "",
+					"summary": "Not worried, nervous, or excited; peaceful and undisturbed.",
+					"explain": {
+						"entryId": "calm",
+						"headword": "calm",
+						"pronunciation": { "display": "", "ipaUK": "/kɑːm/", "ipaUS": "/kɑːm/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["peaceful", "relaxed", "composed"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not worried, excited, or upset; peaceful and relaxed, especially in a difficult situation",
+										"examples": [
+											"Try to stay calm when things go wrong."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He remained calm during the emergency.", "ok": true },
 						{ "answer": "He calmed about the situation.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "certain",
-					"summary": "",
-					"explain": "",
+					"summary": "Completely sure about something, with no doubt at all.",
+					"explain": {
+						"entryId": "certain",
+						"headword": "certain",
+						"pronunciation": { "display": "", "ipaUK": "/ˈsɜːtən/", "ipaUS": "/ˈsɜːrtən/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["sure", "confident", "positive"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "completely sure about something, with no doubt at all",
+										"examples": [
+											"I am certain that he will arrive on time."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She was certain that she had locked the door.", "ok": true },
 						{ "answer": "She certain about the answer.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "confident",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling sure about your own abilities and that things will go well.",
+					"explain": {
+						"entryId": "confident",
+						"headword": "confident",
+						"pronunciation": { "display": "", "ipaUK": "/ˈkɒnfɪdənt/", "ipaUS": "/ˈkɑːnfɪdənt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["assured", "self-assured", "positive"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling sure about your own abilities and that things will succeed; not shy or uncertain",
+										"examples": [
+											"She was confident that she would pass the test."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He felt confident before the interview.", "ok": true },
 						{ "answer": "He confident about his skills.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "covetous",
-					"summary": "",
-					"explain": "",
+					"summary": "Strongly wanting something that belongs to someone else, in a way considered wrong.",
+					"explain": {
+						"entryId": "covetous",
+						"headword": "covetous",
+						"pronunciation": { "display": "", "ipaUK": "/ˈkʌvɪtəs/", "ipaUS": "/ˈkʌvɪtəs/" },
+						"labels": ["C1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["envious", "jealous", "greedy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "strongly wanting something that belongs to someone else, especially in a way that is considered morally wrong",
+										"examples": [
+											"She cast a covetous eye over her neighbour's new car."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He gave her a covetous look at the new car.", "ok": true },
 						{ "answer": "He was covetous of very calm.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "curious",
-					"summary": "",
-					"explain": "",
+					"summary": "Having a strong desire to know or learn about something.",
+					"explain": {
+						"entryId": "curious",
+						"headword": "curious",
+						"pronunciation": { "display": "", "ipaUK": "/ˈkjʊərɪəs/", "ipaUS": "/ˈkjʊrɪəs/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["inquisitive", "interested", "eager"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having a strong desire to know or find out about something",
+										"examples": [
+											"The children were curious about the new display in the museum."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She was curious about how the machine worked.", "ok": true },
 						{ "answer": "She curious to learn more.", "ok": false },

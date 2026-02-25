@@ -1,133 +1,556 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizNature3-en",
-	"title": "3. Nature",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Environment & climate (Set 3)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "renewable",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Wind power is a renewable energy source.", "ok": true },
-						{ "answer": "Wind power is renewable energy source.", "ok": false },
-						{ "answer": "Renewables is a single type of energy.", "ok": false },
-						{ "answer": "We depend of renewable energy.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "reuse",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Try to reuse bags instead of buying new ones.", "ok": true },
-						{ "answer": "Try to reuse the bags instead of buying new ones.", "ok": false },
-						{ "answer": "Reuse are good for environment.", "ok": false },
-						{ "answer": "Try to reuse of bags.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "shelter",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The hikers looked for shelter from the rain.", "ok": true },
-						{ "answer": "The hikers looked for a shelter from the rain.", "ok": false },
-						{ "answer": "Shelters is important for one person.", "ok": false },
-						{ "answer": "They sheltered from to the rain.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "surroundings",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The hotel has beautiful surroundings.", "ok": true },
-						{ "answer": "The hotel has a beautiful surroundings.", "ok": false },
-						{ "answer": "Surrounding is very pretty.", "ok": false },
-						{ "answer": "They surrounded of the hotel.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "sustainable",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "They want a more sustainable way of living.", "ok": true },
-						{ "answer": "They want a sustainable ways of living.", "ok": false },
-						{ "answer": "Sustainable is a type of pollution.", "ok": false },
-						{ "answer": "They are focused on to be sustainable.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "temperature",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The temperature dropped below zero.", "ok": true },
-						{ "answer": "Temperature dropped below zero.", "ok": false },
-						{ "answer": "Temperatures is very cold today.", "ok": false },
-						{ "answer": "The temperature depends of the weather.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "waste",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We should reduce food waste.", "ok": true },
-						{ "answer": "We should reduce the food wastes.", "ok": false },
-						{ "answer": "A waste is a type of recycling.", "ok": false },
-						{ "answer": "Don’t waste of water.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "weather",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The weather is sunny today.", "ok": true },
-						{ "answer": "The weather are sunny today.", "ok": false },
-						{ "answer": "A weather is a kind of climate.", "ok": false },
-						{ "answer": "It depends from the weather.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "wildlife",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The park is home to a lot of wildlife.", "ok": true },
-						{ "answer": "The park is home to many wildlifes.", "ok": false },
-						{ "answer": "Wildlife are a single animal.", "ok": false },
-						{ "answer": "They protect wildlife from to hunters.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizNature3-en",
+  "title": "3. Nature",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Environment & climate (Set 3)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "renewable",
+          "summary": "able to be replaced naturally and used again (e.g., wind, solar)",
+          "explain": {
+            "entryId": "renewable",
+            "headword": "renewable",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sustainable",
+                  "replenishable"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "describing energy or resources that are naturally replaced and do not run out quickly",
+                    "examples": [
+                      "Wind power is a renewable energy source."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Wind power is a renewable energy source.",
+              "ok": true
+            },
+            {
+              "answer": "Wind power is renewable energy source.",
+              "ok": false
+            },
+            {
+              "answer": "Renewables is a single type of energy.",
+              "ok": false
+            },
+            {
+              "answer": "We depend of renewable energy.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "reuse",
+          "summary": "to use something again instead of throwing it away",
+          "explain": {
+            "entryId": "reuse",
+            "headword": "reuse",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "reuses, reusing, reused",
+                "synonyms": [
+                  "use again",
+                  "recycle"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to use something again, rather than throwing it away or buying a new one",
+                    "examples": [
+                      "Try to reuse bags instead of buying new ones."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Try to reuse bags instead of buying new ones.",
+              "ok": true
+            },
+            {
+              "answer": "Try to reuse the bags instead of buying new ones.",
+              "ok": false
+            },
+            {
+              "answer": "Reuse are good for environment.",
+              "ok": false
+            },
+            {
+              "answer": "Try to reuse of bags.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "shelter",
+          "summary": "a safe place that protects you from bad weather or danger",
+          "explain": {
+            "entryId": "shelter",
+            "headword": "shelter",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "cover",
+                  "protection"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a place that gives protection from weather, danger, or harm",
+                    "examples": [
+                      "The hikers looked for shelter from the rain."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The hikers looked for shelter from the rain.",
+              "ok": true
+            },
+            {
+              "answer": "The hikers looked for a shelter from the rain.",
+              "ok": false
+            },
+            {
+              "answer": "Shelters is important for one person.",
+              "ok": false
+            },
+            {
+              "answer": "They sheltered from to the rain.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "surroundings",
+          "summary": "the area and things around a place",
+          "explain": {
+            "entryId": "surroundings",
+            "headword": "surroundings",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "environment",
+                  "area"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the things and conditions around someone or something",
+                    "examples": [
+                      "The hotel has beautiful surroundings."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The hotel has beautiful surroundings.",
+              "ok": true
+            },
+            {
+              "answer": "The hotel has a beautiful surroundings.",
+              "ok": false
+            },
+            {
+              "answer": "Surrounding is very pretty.",
+              "ok": false
+            },
+            {
+              "answer": "They surrounded of the hotel.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "sustainable",
+          "summary": "able to continue for a long time without harming the environment",
+          "explain": {
+            "entryId": "sustainable",
+            "headword": "sustainable",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "eco-friendly",
+                  "green"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "able to continue long-term without using up resources or damaging the environment",
+                    "examples": [
+                      "They want a more sustainable way of living."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They want a more sustainable way of living.",
+              "ok": true
+            },
+            {
+              "answer": "They want a sustainable ways of living.",
+              "ok": false
+            },
+            {
+              "answer": "Sustainable is a type of pollution.",
+              "ok": false
+            },
+            {
+              "answer": "They are focused on to be sustainable.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "temperature",
+          "summary": "how hot or cold something is",
+          "explain": {
+            "entryId": "temperature",
+            "headword": "temperature",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "heat level",
+                  "degree"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the measured level of heat or cold, usually in degrees",
+                    "examples": [
+                      "The temperature dropped below zero."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The temperature dropped below zero.",
+              "ok": true
+            },
+            {
+              "answer": "Temperature dropped below zero.",
+              "ok": false
+            },
+            {
+              "answer": "Temperatures is very cold today.",
+              "ok": false
+            },
+            {
+              "answer": "The temperature depends of the weather.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "waste",
+          "summary": "unwanted material; things thrown away or used carelessly",
+          "explain": {
+            "entryId": "waste",
+            "headword": "waste",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "rubbish",
+                  "garbage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "unwanted material or resources that are thrown away or used carelessly",
+                    "examples": [
+                      "We should reduce food waste."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We should reduce food waste.",
+              "ok": true
+            },
+            {
+              "answer": "We should reduce the food wastes.",
+              "ok": false
+            },
+            {
+              "answer": "A waste is a type of recycling.",
+              "ok": false
+            },
+            {
+              "answer": "Don’t waste of water.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "weather",
+          "summary": "the conditions outside, like rain, sun, wind, and temperature",
+          "explain": {
+            "entryId": "weather",
+            "headword": "weather",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "conditions",
+                  "forecast"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the day-to-day conditions in the air, such as rain, sun, wind, and temperature",
+                    "examples": [
+                      "The weather is sunny today."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The weather is sunny today.",
+              "ok": true
+            },
+            {
+              "answer": "The weather are sunny today.",
+              "ok": false
+            },
+            {
+              "answer": "A weather is a kind of climate.",
+              "ok": false
+            },
+            {
+              "answer": "It depends from the weather.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "wildlife",
+          "summary": "animals (and sometimes plants) living in natural areas",
+          "explain": {
+            "entryId": "wildlife",
+            "headword": "wildlife",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "animals",
+                  "fauna"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "animals that live in the natural environment, not kept by humans",
+                    "examples": [
+                      "The park is home to a lot of wildlife."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The park is home to a lot of wildlife.",
+              "ok": true
+            },
+            {
+              "answer": "The park is home to many wildlifes.",
+              "ok": false
+            },
+            {
+              "answer": "Wildlife are a single animal.",
+              "ok": false
+            },
+            {
+              "answer": "They protect wildlife from to hunters.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

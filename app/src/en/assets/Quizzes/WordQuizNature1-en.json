@@ -1,146 +1,615 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizNature1-en",
-	"title": "1. Nature",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Environment & climate (Set 1)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "biodiversity",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Protecting forests helps preserve biodiversity.", "ok": true },
-						{ "answer": "Protecting forests helps preserve the biodiversity.", "ok": false },
-						{ "answer": "Biodiversity are decreasing.", "ok": false },
-						{ "answer": "She biodiverse the park.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "climate",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The climate here is warm and dry.", "ok": true },
-						{ "answer": "The climate here are warm and dry.", "ok": false },
-						{ "answer": "A climate is a kind of animal.", "ok": false },
-						{ "answer": "It depends of the climate.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "climate change",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Climate change is affecting weather patterns worldwide.", "ok": true },
-						{ "answer": "The climate change is affecting weather patterns worldwide.", "ok": false },
-						{ "answer": "Climate changes are a single event.", "ok": false },
-						{ "answer": "We must fight against to climate change.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "conservation",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Wildlife conservation protects endangered species.", "ok": true },
-						{ "answer": "Wildlife conservation protect endangered species.", "ok": false },
-						{ "answer": "A conservation is a type of pollution.", "ok": false },
-						{ "answer": "They did conservation of the animals.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "contamination",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Water contamination can make people ill.", "ok": true },
-						{ "answer": "The water contamination can make people ill.", "ok": false },
-						{ "answer": "Contaminations is increasing.", "ok": false },
-						{ "answer": "The river was contaminated by to chemicals.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "ecosystem",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "A coral reef is a fragile ecosystem.", "ok": true },
-						{ "answer": "Coral reef is a fragile ecosystem.", "ok": false },
-						{ "answer": "Ecosystem are very delicate.", "ok": false },
-						{ "answer": "Animals depend in the ecosystem.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "environment",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We should protect the environment.", "ok": true },
-						{ "answer": "We should protect environment.", "ok": false },
-						{ "answer": "Environments is getting worse.", "ok": false },
-						{ "answer": "They are concerned on the environment.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "fauna",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The island has unique fauna and flora.", "ok": true },
-						{ "answer": "The island has a unique fauna and flora.", "ok": false },
-						{ "answer": "Faunas is disappearing.", "ok": false },
-						{ "answer": "Fauna means the plants in a region.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "flora",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The park is known for its rich flora.", "ok": true },
-						{ "answer": "The park is known for rich flora.", "ok": false },
-						{ "answer": "Floras are very colourful.", "ok": false },
-						{ "answer": "Flora means the animals of a region.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "global warming",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Global warming is raising sea levels.", "ok": true },
-						{ "answer": "The global warming is raising sea levels.", "ok": false },
-						{ "answer": "Global warmings are a small problem.", "ok": false },
-						{ "answer": "It is caused from global warming.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizNature1-en",
+  "title": "1. Nature",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Environment & climate (Set 1)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "biodiversity",
+          "summary": "the variety of different plants and animals in an area",
+          "explain": {
+            "entryId": "biodiversity",
+            "headword": "biodiversity",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "variety of life",
+                  "species variety"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the variety of living things (plants, animals, etc.) in a particular place",
+                    "examples": [
+                      "Protecting forests helps preserve biodiversity."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Protecting forests helps preserve biodiversity.",
+              "ok": true
+            },
+            {
+              "answer": "Protecting forests helps preserve the biodiversity.",
+              "ok": false
+            },
+            {
+              "answer": "Biodiversity are decreasing.",
+              "ok": false
+            },
+            {
+              "answer": "She biodiverse the park.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "climate",
+          "summary": "the usual weather of a place over a long time",
+          "explain": {
+            "entryId": "climate",
+            "headword": "climate",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "weather patterns"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the typical weather conditions of a place over a long period",
+                    "examples": [
+                      "The climate here is warm and dry."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The climate here is warm and dry.",
+              "ok": true
+            },
+            {
+              "answer": "The climate here are warm and dry.",
+              "ok": false
+            },
+            {
+              "answer": "A climate is a kind of animal.",
+              "ok": false
+            },
+            {
+              "answer": "It depends of the climate.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "climate change",
+          "summary": "long-term changes in the Earth’s climate, especially warming",
+          "explain": {
+            "entryId": "climate_change",
+            "headword": "climate change",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "global warming",
+                  "climate crisis"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "long-term changes in global or regional climate patterns, especially rising temperatures",
+                    "examples": [
+                      "Climate change is affecting weather patterns worldwide."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Climate change is affecting weather patterns worldwide.",
+              "ok": true
+            },
+            {
+              "answer": "The climate change is affecting weather patterns worldwide.",
+              "ok": false
+            },
+            {
+              "answer": "Climate changes are a single event.",
+              "ok": false
+            },
+            {
+              "answer": "We must fight against to climate change.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "conservation",
+          "summary": "the protection of nature and wildlife",
+          "explain": {
+            "entryId": "conservation",
+            "headword": "conservation",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "protection",
+                  "preservation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the act of protecting and carefully managing the natural environment and wildlife",
+                    "examples": [
+                      "Wildlife conservation protects endangered species."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Wildlife conservation protects endangered species.",
+              "ok": true
+            },
+            {
+              "answer": "Wildlife conservation protect endangered species.",
+              "ok": false
+            },
+            {
+              "answer": "A conservation is a type of pollution.",
+              "ok": false
+            },
+            {
+              "answer": "They did conservation of the animals.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "contamination",
+          "summary": "the process of making something dirty or harmful with chemicals or germs",
+          "explain": {
+            "entryId": "contamination",
+            "headword": "contamination",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "pollution",
+                  "impurity"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the presence of harmful substances that make something (like water or food) unsafe",
+                    "examples": [
+                      "Water contamination can make people ill."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Water contamination can make people ill.",
+              "ok": true
+            },
+            {
+              "answer": "The water contamination can make people ill.",
+              "ok": false
+            },
+            {
+              "answer": "Contaminations is increasing.",
+              "ok": false
+            },
+            {
+              "answer": "The river was contaminated by to chemicals.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "ecosystem",
+          "summary": "all the plants and animals in an area and how they live together",
+          "explain": {
+            "entryId": "ecosystem",
+            "headword": "ecosystem",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "habitat",
+                  "environment"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a community of living things and their environment, interacting as a system",
+                    "examples": [
+                      "A coral reef is a fragile ecosystem."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "A coral reef is a fragile ecosystem.",
+              "ok": true
+            },
+            {
+              "answer": "Coral reef is a fragile ecosystem.",
+              "ok": false
+            },
+            {
+              "answer": "Ecosystem are very delicate.",
+              "ok": false
+            },
+            {
+              "answer": "Animals depend in the ecosystem.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "environment",
+          "summary": "the natural world around us (air, land, and water)",
+          "explain": {
+            "entryId": "environment",
+            "headword": "environment",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "nature",
+                  "surroundings"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the natural world in which people, animals, and plants live",
+                    "examples": [
+                      "We should protect the environment."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We should protect the environment.",
+              "ok": true
+            },
+            {
+              "answer": "We should protect environment.",
+              "ok": false
+            },
+            {
+              "answer": "Environments is getting worse.",
+              "ok": false
+            },
+            {
+              "answer": "They are concerned on the environment.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "fauna",
+          "summary": "the animals of a particular place or time",
+          "explain": {
+            "entryId": "fauna",
+            "headword": "fauna",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "wildlife",
+                  "animals"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "all the animals that live in a particular area",
+                    "examples": [
+                      "The island has unique fauna and flora."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The island has unique fauna and flora.",
+              "ok": true
+            },
+            {
+              "answer": "The island has a unique fauna and flora.",
+              "ok": false
+            },
+            {
+              "answer": "Faunas is disappearing.",
+              "ok": false
+            },
+            {
+              "answer": "Fauna means the plants in a region.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "flora",
+          "summary": "the plants of a particular place or time",
+          "explain": {
+            "entryId": "flora",
+            "headword": "flora",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "plants",
+                  "vegetation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "all the plants that grow in a particular area",
+                    "examples": [
+                      "The park is known for its rich flora."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The park is known for its rich flora.",
+              "ok": true
+            },
+            {
+              "answer": "The park is known for rich flora.",
+              "ok": false
+            },
+            {
+              "answer": "Floras are very colourful.",
+              "ok": false
+            },
+            {
+              "answer": "Flora means the animals of a region.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "global warming",
+          "summary": "the increase in the Earth’s average temperature",
+          "explain": {
+            "entryId": "global_warming",
+            "headword": "global warming",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "climate change",
+                  "warming"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a rise in Earth’s average temperature, mainly caused by greenhouse gases",
+                    "examples": [
+                      "Global warming is raising sea levels."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Global warming is raising sea levels.",
+              "ok": true
+            },
+            {
+              "answer": "The global warming is raising sea levels.",
+              "ok": false
+            },
+            {
+              "answer": "Global warmings are a small problem.",
+              "ok": false
+            },
+            {
+              "answer": "It is caused from global warming.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

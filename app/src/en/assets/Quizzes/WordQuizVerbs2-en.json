@@ -1,146 +1,616 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizVerbs2-en",
-	"title": "2. Verbs",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the verb correctly.",
-			"description": "Academic & functional verbs (Set 2)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "convince",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She convinced him to change his mind.", "ok": true },
-						{ "answer": "She convinced him change his mind.", "ok": false },
-						{ "answer": "She convinced to him to change his mind.", "ok": false },
-						{ "answer": "She convinced that him change his mind.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "depend",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "It depends on the weather.", "ok": true },
-						{ "answer": "It depends of the weather.", "ok": false },
-						{ "answer": "It depends from the weather.", "ok": false },
-						{ "answer": "It is depend on the weather.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "develop",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She developed her skills over time.", "ok": true },
-						{ "answer": "She developed to her skills over time.", "ok": false },
-						{ "answer": "She was developed her skills.", "ok": false },
-						{ "answer": "She developed in her skills.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "discover",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "They discovered a new solution to the problem.", "ok": true },
-						{ "answer": "They discovered about a new solution.", "ok": false },
-						{ "answer": "They discovered to a new solution.", "ok": false },
-						{ "answer": "They were discovered a new solution.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "engage",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The teacher engaged the students in discussion.", "ok": true },
-						{ "answer": "The teacher engaged the students to discussion.", "ok": false },
-						{ "answer": "The teacher engaged in the students discussion.", "ok": false },
-						{ "answer": "The teacher was engaged the students.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "enhance",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "This course will enhance your career prospects.", "ok": true },
-						{ "answer": "This course will enhance to your career prospects.", "ok": false },
-						{ "answer": "This course will enhance in your career prospects.", "ok": false },
-						{ "answer": "Your career prospects will enhance by this course.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "express",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He expressed his concerns clearly.", "ok": true },
-						{ "answer": "He expressed about his concerns clearly.", "ok": false },
-						{ "answer": "He expressed to his concerns clearly.", "ok": false },
-						{ "answer": "He was expressed his concerns clearly.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "find",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I find this topic very interesting.", "ok": true },
-						{ "answer": "I find this topic as very interesting.", "ok": false },
-						{ "answer": "I am find this topic very interesting.", "ok": false },
-						{ "answer": "I find very interesting this topic.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "improve",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She improved her English by practising daily.", "ok": true },
-						{ "answer": "She improved in her English by practising daily.", "ok": false },
-						{ "answer": "She improved to her English by practising daily.", "ok": false },
-						{ "answer": "Her English was improved by she daily.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "include",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The price includes breakfast.", "ok": true },
-						{ "answer": "The price includes the breakfast.", "ok": false },
-						{ "answer": "The price include breakfast.", "ok": false },
-						{ "answer": "Breakfast is included to the price.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizVerbs2-en",
+  "title": "2. Verbs",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the verb correctly.",
+      "description": "Academic & functional verbs (Set 2)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "convince",
+          "summary": "to make someone believe something or agree to do something",
+          "explain": {
+            "entryId": "convince",
+            "headword": "convince",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "convinces, convincing, convinced",
+                "synonyms": [
+                  "persuade",
+                  "sway"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to make someone believe something or agree to do something",
+                    "examples": [
+                      "She convinced him to change his mind."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She convinced him to change his mind.",
+              "ok": true
+            },
+            {
+              "answer": "She convinced him change his mind.",
+              "ok": false
+            },
+            {
+              "answer": "She convinced to him to change his mind.",
+              "ok": false
+            },
+            {
+              "answer": "She convinced that him change his mind.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "depend",
+          "summary": "to be decided by something",
+          "explain": {
+            "entryId": "depend",
+            "headword": "depend",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "depends, depending, depended",
+                "synonyms": [
+                  "rely on",
+                  "be based on"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to be decided by something; to rely on something",
+                    "examples": [
+                      "It depends on the weather."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "It depends on the weather.",
+              "ok": true
+            },
+            {
+              "answer": "It depends of the weather.",
+              "ok": false
+            },
+            {
+              "answer": "It depends from the weather.",
+              "ok": false
+            },
+            {
+              "answer": "It is depend on the weather.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "develop",
+          "summary": "to grow or improve something over time",
+          "explain": {
+            "entryId": "develop",
+            "headword": "develop",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "develops, developing, developed",
+                "synonyms": [
+                  "build",
+                  "improve"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to grow or improve something over time",
+                    "examples": [
+                      "She developed her skills over time."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She developed her skills over time.",
+              "ok": true
+            },
+            {
+              "answer": "She developed to her skills over time.",
+              "ok": false
+            },
+            {
+              "answer": "She was developed her skills.",
+              "ok": false
+            },
+            {
+              "answer": "She developed in her skills.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "discover",
+          "summary": "to find something or learn something for the first time",
+          "explain": {
+            "entryId": "discover",
+            "headword": "discover",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "discovers, discovering, discovered",
+                "synonyms": [
+                  "find",
+                  "uncover"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to find something or learn something for the first time",
+                    "examples": [
+                      "They discovered a new solution to the problem."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They discovered a new solution to the problem.",
+              "ok": true
+            },
+            {
+              "answer": "They discovered about a new solution.",
+              "ok": false
+            },
+            {
+              "answer": "They discovered to a new solution.",
+              "ok": false
+            },
+            {
+              "answer": "They were discovered a new solution.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "engage",
+          "summary": "to involve someone in an activity",
+          "explain": {
+            "entryId": "engage",
+            "headword": "engage",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "engages, engaging, engaged",
+                "synonyms": [
+                  "involve",
+                  "interest"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to involve someone in an activity; to interest them",
+                    "examples": [
+                      "The teacher engaged the students in discussion."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The teacher engaged the students in discussion.",
+              "ok": true
+            },
+            {
+              "answer": "The teacher engaged the students to discussion.",
+              "ok": false
+            },
+            {
+              "answer": "The teacher engaged in the students discussion.",
+              "ok": false
+            },
+            {
+              "answer": "The teacher was engaged the students.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "enhance",
+          "summary": "to improve something and make it better",
+          "explain": {
+            "entryId": "enhance",
+            "headword": "enhance",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "enhances, enhancing, enhanced",
+                "synonyms": [
+                  "improve",
+                  "boost"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to improve something and make it better",
+                    "examples": [
+                      "This course will enhance your career prospects."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "This course will enhance your career prospects.",
+              "ok": true
+            },
+            {
+              "answer": "This course will enhance to your career prospects.",
+              "ok": false
+            },
+            {
+              "answer": "This course will enhance in your career prospects.",
+              "ok": false
+            },
+            {
+              "answer": "Your career prospects will enhance by this course.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "express",
+          "summary": "to show or communicate a thought or feeling",
+          "explain": {
+            "entryId": "express",
+            "headword": "express",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "expresses, expressing, expressed",
+                "synonyms": [
+                  "say",
+                  "communicate"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to show or communicate a thought or feeling",
+                    "examples": [
+                      "He expressed his concerns clearly."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He expressed his concerns clearly.",
+              "ok": true
+            },
+            {
+              "answer": "He expressed about his concerns clearly.",
+              "ok": false
+            },
+            {
+              "answer": "He expressed to his concerns clearly.",
+              "ok": false
+            },
+            {
+              "answer": "He was expressed his concerns clearly.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "find",
+          "summary": "to discover, or to have an opinion about something",
+          "explain": {
+            "entryId": "find",
+            "headword": "find",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "finds, finding, found",
+                "synonyms": [
+                  "discover",
+                  "consider"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to discover, or to have an opinion about something",
+                    "examples": [
+                      "I find this topic very interesting."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I find this topic very interesting.",
+              "ok": true
+            },
+            {
+              "answer": "I find this topic as very interesting.",
+              "ok": false
+            },
+            {
+              "answer": "I am find this topic very interesting.",
+              "ok": false
+            },
+            {
+              "answer": "I find very interesting this topic.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "improve",
+          "summary": "to become better, or make something better",
+          "explain": {
+            "entryId": "improve",
+            "headword": "improve",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "improves, improving, improved",
+                "synonyms": [
+                  "enhance",
+                  "develop"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to become better, or make something better",
+                    "examples": [
+                      "She improved her English by practising daily."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She improved her English by practising daily.",
+              "ok": true
+            },
+            {
+              "answer": "She improved in her English by practising daily.",
+              "ok": false
+            },
+            {
+              "answer": "She improved to her English by practising daily.",
+              "ok": false
+            },
+            {
+              "answer": "Her English was improved by she daily.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "include",
+          "summary": "to contain something as part of a whole",
+          "explain": {
+            "entryId": "include",
+            "headword": "include",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "includes, including, included",
+                "synonyms": [
+                  "contain",
+                  "involve"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to contain something as part of a whole",
+                    "examples": [
+                      "The price includes breakfast."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The price includes breakfast.",
+              "ok": true
+            },
+            {
+              "answer": "The price includes the breakfast.",
+              "ok": false
+            },
+            {
+              "answer": "The price include breakfast.",
+              "ok": false
+            },
+            {
+              "answer": "Breakfast is included to the price.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

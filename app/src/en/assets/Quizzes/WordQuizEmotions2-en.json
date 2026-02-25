@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "emotion",
-					"summary": "",
-					"explain": "",
+					"summary": "A strong feeling such as joy, love, fear, or anger that affects your thoughts and behaviour.",
+					"explain": {
+						"entryId": "emotion",
+						"headword": "emotion",
+						"pronunciation": { "display": "", "ipaUK": "/ɪˈməʊʃən/", "ipaUS": "/ɪˈmoʊʃən/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["feeling", "sentiment", "reaction"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a strong feeling such as happiness, sadness, fear, or love, that affects how you think and behave",
+										"examples": [
+											"The film was so moving that it stirred up strong emotions."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Anger is a strong emotion.", "ok": true },
 						{ "answer": "Anger is strong emotion.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "enthusiasm",
-					"summary": "",
-					"explain": "",
+					"summary": "A feeling of great excitement and eager interest in something.",
+					"explain": {
+						"entryId": "enthusiasm",
+						"headword": "enthusiasm",
+						"pronunciation": { "display": "", "ipaUK": "/ɪnˈθjuːziæzəm/", "ipaUS": "/ɪnˈθuːziæzəm/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["eagerness", "passion", "keenness"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "intense and eager enjoyment or interest in something; a strong feeling of excitement or energy about a subject or activity",
+										"examples": [
+											"She approached every new challenge with great enthusiasm."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She showed enthusiasm for the project.", "ok": true },
 						{ "answer": "She showed an enthusiasm for the project.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "excitement",
-					"summary": "",
-					"explain": "",
+					"summary": "A feeling of great happiness and eager anticipation about something enjoyable.",
+					"explain": {
+						"entryId": "excitement",
+						"headword": "excitement",
+						"pronunciation": { "display": "", "ipaUK": "/ɪkˈsaɪtmənt/", "ipaUS": "/ɪkˈsaɪtmənt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["thrill", "anticipation", "elation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a feeling of great happiness, eagerness, or anticipation, usually caused by something enjoyable that is happening or about to happen",
+										"examples": [
+											"There was great excitement at school on the last day of term."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "There was a feeling of excitement in the room.", "ok": true },
 						{ "answer": "There was excitement in the room a feeling.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "experience",
-					"summary": "",
-					"explain": "",
+					"summary": "Knowledge or skill gained by doing something or being involved in something over time.",
+					"explain": {
+						"entryId": "experience",
+						"headword": "experience",
+						"pronunciation": { "display": "", "ipaUK": "/ɪkˈspɪəriəns/", "ipaUS": "/ɪkˈspɪriəns/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["knowledge", "expertise", "practice"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "knowledge, skill, or understanding that comes from direct involvement in or exposure to something over a period of time",
+										"examples": [
+											"She has a lot of experience working with young children."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He has experience in teaching adults.", "ok": true },
 						{ "answer": "He has an experience in teaching adults.", "ok": false },
@@ -66,8 +170,34 @@
 					"title": "",
 					"page": 5,
 					"question": "feeling",
-					"summary": "",
-					"explain": "",
+					"summary": "An emotion or physical sensation that you are aware of in your mind or body.",
+					"explain": {
+						"entryId": "feeling",
+						"headword": "feeling",
+						"pronunciation": { "display": "", "ipaUK": "/ˈfiːlɪŋ/", "ipaUS": "/ˈfiːlɪŋ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["emotion", "sensation", "sense"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an emotion or physical sensation that you are aware of; the way something makes you feel inside",
+										"examples": [
+											"He had a good feeling about the job interview."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I had a strange feeling about the interview.", "ok": true },
 						{ "answer": "I had strange feeling about the interview.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "gift",
-					"summary": "",
-					"explain": "",
+					"summary": "Something that you give to another person, especially to celebrate a special occasion.",
+					"explain": {
+						"entryId": "gift",
+						"headword": "gift",
+						"pronunciation": { "display": "", "ipaUK": "/ɡɪft/", "ipaUS": "/ɡɪft/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["present", "offering", "token"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "something that you give to someone, especially to show affection or to celebrate a special occasion; a present",
+										"examples": [
+											"They gave her a gift to thank her for all her help."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She bought him a gift for his birthday.", "ok": true },
 						{ "answer": "She bought him gift for his birthday.", "ok": false },
@@ -92,8 +248,34 @@
 					"title": "",
 					"page": 7,
 					"question": "goal",
-					"summary": "",
-					"explain": "",
+					"summary": "Something that you want to achieve in the future; an aim or objective.",
+					"explain": {
+						"entryId": "goal",
+						"headword": "goal",
+						"pronunciation": { "display": "", "ipaUK": "/ɡəʊl/", "ipaUS": "/ɡoʊl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["aim", "objective", "target"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "something that you want to achieve in the future; a specific aim, target, or purpose you are working towards",
+										"examples": [
+											"Setting clear goals can help you stay focused and motivated."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Her goal is to pass the exam.", "ok": true },
 						{ "answer": "Her goal is pass the exam.", "ok": false },
@@ -105,8 +287,34 @@
 					"title": "",
 					"page": 8,
 					"question": "insight",
-					"summary": "",
-					"explain": "",
+					"summary": "A deep and clear understanding of a person, situation, or subject.",
+					"explain": {
+						"entryId": "insight",
+						"headword": "insight",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɪnsaɪt/", "ipaUS": "/ˈɪnsaɪt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["understanding", "perception", "awareness"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the ability to understand something clearly and deeply; a piece of understanding gained about a complex situation or subject",
+										"examples": [
+											"The course gave me real insight into how languages work."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The report provides insight into customer needs.", "ok": true },
 						{ "answer": "The report provides an insight into customer needs.", "ok": false },
@@ -118,8 +326,34 @@
 					"title": "",
 					"page": 9,
 					"question": "knowledge",
-					"summary": "",
-					"explain": "",
+					"summary": "Information, understanding, or skills gained through learning or experience.",
+					"explain": {
+						"entryId": "knowledge",
+						"headword": "knowledge",
+						"pronunciation": { "display": "", "ipaUK": "/ˈnɒlɪdʒ/", "ipaUS": "/ˈnɑːlɪdʒ/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["understanding", "information", "expertise"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the information, understanding, or skills that you gain through learning, education, or experience",
+										"examples": [
+											"She has excellent knowledge of European history."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He has good knowledge of English grammar.", "ok": true },
 						{ "answer": "He has a good knowledge of English grammar.", "ok": false },
@@ -131,8 +365,34 @@
 					"title": "",
 					"page": 10,
 					"question": "manner",
-					"summary": "",
-					"explain": "",
+					"summary": "The way in which something is done or the way a person behaves towards others.",
+					"explain": {
+						"entryId": "manner",
+						"headword": "manner",
+						"pronunciation": { "display": "", "ipaUK": "/ˈmænər/", "ipaUS": "/ˈmænər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["way", "style", "fashion"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the way in which something is done or happens; also, the way a person behaves towards other people",
+										"examples": [
+											"The teacher always addressed the students in a kind and respectful manner."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He spoke in a polite manner.", "ok": true },
 						{ "answer": "He spoke in polite manner.", "ok": false },

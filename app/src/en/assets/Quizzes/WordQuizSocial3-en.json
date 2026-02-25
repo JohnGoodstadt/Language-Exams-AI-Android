@@ -1,146 +1,613 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizSocial3-en",
-	"title": "3. Social",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Social issues (Set 3)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "poverty",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Poverty remains a serious global issue.", "ok": true },
-						{ "answer": "The poverty remains serious issue.", "ok": false },
-						{ "answer": "Poverty are increasing.", "ok": false },
-						{ "answer": "He povertied last year.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "prejudice",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Prejudice can harm social relationships.", "ok": true },
-						{ "answer": "The prejudice can harm social relationships.", "ok": false },
-						{ "answer": "Prejudices is dangerous.", "ok": false },
-						{ "answer": "She prejudiced to him.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "racism",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Racism has no place in modern society.", "ok": true },
-						{ "answer": "The racism has no place in society.", "ok": false },
-						{ "answer": "Racisms are very harmful.", "ok": false },
-						{ "answer": "She racismed him.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "regulation",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The new regulation affects small businesses.", "ok": true },
-						{ "answer": "New regulation affects small businesses.", "ok": false },
-						{ "answer": "Regulation are complicated.", "ok": false },
-						{ "answer": "They regulated to the law.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "rights",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Everyone has equal rights under the law.", "ok": true },
-						{ "answer": "Everyone has the equal rights under law.", "ok": false },
-						{ "answer": "Right is very important.", "ok": false },
-						{ "answer": "She righted the injustice.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "society",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Technology has changed modern society.", "ok": true },
-						{ "answer": "Technology has changed the modern society.", "ok": false },
-						{ "answer": "Society are developing quickly.", "ok": false },
-						{ "answer": "She societied the people.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "tradition",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "It is a tradition to celebrate the festival together.", "ok": true },
-						{ "answer": "It is tradition to celebrate the festival.", "ok": false },
-						{ "answer": "Tradition are very old.", "ok": false },
-						{ "answer": "She traditioned the event.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "unemployment",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Unemployment has risen this year.", "ok": true },
-						{ "answer": "The unemployment has risen this year.", "ok": false },
-						{ "answer": "Unemployments are increasing.", "ok": false },
-						{ "answer": "He unemploymented last year.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "variety",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The shop offers a variety of products.", "ok": true },
-						{ "answer": "The shop offers variety of products.", "ok": false },
-						{ "answer": "Variety are important.", "ok": false },
-						{ "answer": "She varietied the menu.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "violence",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The film contains scenes of violence.", "ok": true },
-						{ "answer": "The film contains the violence scenes.", "ok": false },
-						{ "answer": "Violence are increasing.", "ok": false },
-						{ "answer": "He violenced the situation.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizSocial3-en",
+  "title": "3. Social",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Social issues (Set 3)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "poverty",
+          "summary": "the condition of being very poor, with little money",
+          "explain": {
+            "entryId": "poverty",
+            "headword": "poverty",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "need",
+                  "hardship"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the condition of being very poor, with little money",
+                    "examples": [
+                      "Poverty remains a serious global issue."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Poverty remains a serious global issue.",
+              "ok": true
+            },
+            {
+              "answer": "The poverty remains serious issue.",
+              "ok": false
+            },
+            {
+              "answer": "Poverty are increasing.",
+              "ok": false
+            },
+            {
+              "answer": "He povertied last year.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "prejudice",
+          "summary": "an unfair opinion about someone before knowing the facts",
+          "explain": {
+            "entryId": "prejudice",
+            "headword": "prejudice",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "bias"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an unfair opinion about someone before knowing the facts",
+                    "examples": [
+                      "Prejudice can harm social relationships."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Prejudice can harm social relationships.",
+              "ok": true
+            },
+            {
+              "answer": "The prejudice can harm social relationships.",
+              "ok": false
+            },
+            {
+              "answer": "Prejudices is dangerous.",
+              "ok": false
+            },
+            {
+              "answer": "She prejudiced to him.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "racism",
+          "summary": "the unfair belief that some races are better than others",
+          "explain": {
+            "entryId": "racism",
+            "headword": "racism",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "racial discrimination"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the unfair belief that some races are better than others",
+                    "examples": [
+                      "Racism has no place in modern society."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Racism has no place in modern society.",
+              "ok": true
+            },
+            {
+              "answer": "The racism has no place in society.",
+              "ok": false
+            },
+            {
+              "answer": "Racisms are very harmful.",
+              "ok": false
+            },
+            {
+              "answer": "She racismed him.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "regulation",
+          "summary": "an official rule made by an authority",
+          "explain": {
+            "entryId": "regulation",
+            "headword": "regulation",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "rule",
+                  "law"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an official rule made by an authority",
+                    "examples": [
+                      "The new regulation affects small businesses."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The new regulation affects small businesses.",
+              "ok": true
+            },
+            {
+              "answer": "New regulation affects small businesses.",
+              "ok": false
+            },
+            {
+              "answer": "Regulation are complicated.",
+              "ok": false
+            },
+            {
+              "answer": "They regulated to the law.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "rights",
+          "summary": "things you are allowed to do by law or society",
+          "explain": {
+            "entryId": "rights",
+            "headword": "rights",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "entitlements",
+                  "freedoms"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "things you are allowed to do by law or society",
+                    "examples": [
+                      "Everyone has equal rights under the law."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Everyone has equal rights under the law.",
+              "ok": true
+            },
+            {
+              "answer": "Everyone has the equal rights under law.",
+              "ok": false
+            },
+            {
+              "answer": "Right is very important.",
+              "ok": false
+            },
+            {
+              "answer": "She righted the injustice.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "society",
+          "summary": "people in general living together with shared laws and customs",
+          "explain": {
+            "entryId": "society",
+            "headword": "society",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "community",
+                  "public"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "people in general living together with shared laws and customs",
+                    "examples": [
+                      "Technology has changed modern society."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Technology has changed modern society.",
+              "ok": true
+            },
+            {
+              "answer": "Technology has changed the modern society.",
+              "ok": false
+            },
+            {
+              "answer": "Society are developing quickly.",
+              "ok": false
+            },
+            {
+              "answer": "She societied the people.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "tradition",
+          "summary": "a custom or belief that is passed down over time",
+          "explain": {
+            "entryId": "tradition",
+            "headword": "tradition",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "custom",
+                  "heritage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a custom or belief that is passed down over time",
+                    "examples": [
+                      "It is a tradition to celebrate the festival together."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "It is a tradition to celebrate the festival together.",
+              "ok": true
+            },
+            {
+              "answer": "It is tradition to celebrate the festival.",
+              "ok": false
+            },
+            {
+              "answer": "Tradition are very old.",
+              "ok": false
+            },
+            {
+              "answer": "She traditioned the event.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "unemployment",
+          "summary": "the state of not having a job when you want one",
+          "explain": {
+            "entryId": "unemployment",
+            "headword": "unemployment",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "joblessness"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the state of not having a job when you want one",
+                    "examples": [
+                      "Unemployment has risen this year."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Unemployment has risen this year.",
+              "ok": true
+            },
+            {
+              "answer": "The unemployment has risen this year.",
+              "ok": false
+            },
+            {
+              "answer": "Unemployments are increasing.",
+              "ok": false
+            },
+            {
+              "answer": "He unemploymented last year.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "variety",
+          "summary": "a range of different types of things",
+          "explain": {
+            "entryId": "variety",
+            "headword": "variety",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "range",
+                  "selection"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a range of different types of things",
+                    "examples": [
+                      "The shop offers a variety of products."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The shop offers a variety of products.",
+              "ok": true
+            },
+            {
+              "answer": "The shop offers variety of products.",
+              "ok": false
+            },
+            {
+              "answer": "Variety are important.",
+              "ok": false
+            },
+            {
+              "answer": "She varietied the menu.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "violence",
+          "summary": "actions that hurt people physically or cause serious harm",
+          "explain": {
+            "entryId": "violence",
+            "headword": "violence",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "aggression",
+                  "force"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "actions that hurt people physically or cause serious harm",
+                    "examples": [
+                      "The film contains scenes of violence."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The film contains scenes of violence.",
+              "ok": true
+            },
+            {
+              "answer": "The film contains the violence scenes.",
+              "ok": false
+            },
+            {
+              "answer": "Violence are increasing.",
+              "ok": false
+            },
+            {
+              "answer": "He violenced the situation.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

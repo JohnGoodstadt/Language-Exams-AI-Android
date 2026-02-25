@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "apprenticeship",
-					"summary": "",
-					"explain": "",
+					"summary": "A period of working under an experienced person to learn a trade or skill.",
+					"explain": {
+						"entryId": "apprenticeship",
+						"headword": "apprenticeship",
+						"pronunciation": { "display": "", "ipaUK": "/əˈprɛntɪsʃɪp/", "ipaUS": "/əˈprɛntɪsʃɪp/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["traineeship", "placement"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a period of time spent working for an employer while learning the practical skills needed for a particular trade or profession",
+										"examples": [
+											"She started an apprenticeship with a local electrician."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She started an apprenticeship with a local electrician.", "ok": true },
 						{ "answer": "She apprenticed her university degree.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "assignment",
-					"summary": "",
-					"explain": "",
+					"summary": "A piece of work given to a student or employee as part of their duties.",
+					"explain": {
+						"entryId": "assignment",
+						"headword": "assignment",
+						"pronunciation": { "display": "", "ipaUK": "/əˈsaɪnmənt/", "ipaUS": "/əˈsaɪnmənt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["task", "homework", "project"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a piece of work or a task that is given to someone, especially a student, as part of their studies or job",
+										"examples": [
+											"I handed in my assignment before the deadline."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I handed in my assignment before the deadline.", "ok": true },
 						{ "answer": "I assigned my homework to the teacher.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "boss",
-					"summary": "",
-					"explain": "",
+					"summary": "The person who is in charge of a workplace or group of workers.",
+					"explain": {
+						"entryId": "boss",
+						"headword": "boss",
+						"pronunciation": { "display": "", "ipaUK": "/bɒs/", "ipaUS": "/bɑːs/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["manager", "employer", "supervisor"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the person who is in charge of an organization, business, or group of workers, and who gives orders or makes decisions",
+										"examples": [
+											"My boss approved my holiday request."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "My boss approved my holiday request.", "ok": true },
 						{ "answer": "My bossed me yesterday at work.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "career",
-					"summary": "",
-					"explain": "",
+					"summary": "The series of jobs or profession that a person has over their working life.",
+					"explain": {
+						"entryId": "career",
+						"headword": "career",
+						"pronunciation": { "display": "", "ipaUK": "/kəˈrɪə/", "ipaUS": "/kəˈrɪr/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["profession", "vocation", "occupation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the work and professional activities that someone does over their working life, often in one particular area",
+										"examples": [
+											"She is planning a career in engineering."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She is planning a career in engineering.", "ok": true },
 						{ "answer": "She careered her homework last night.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "certificate",
-					"summary": "",
-					"explain": "",
+					"summary": "An official document proving that you have completed a course or achieved a qualification.",
+					"explain": {
+						"entryId": "certificate",
+						"headword": "certificate",
+						"pronunciation": { "display": "", "ipaUK": "/səˈtɪfɪkɪt/", "ipaUS": "/sərˈtɪfɪkɪt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["diploma", "credential", "qualification"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official document that proves you have successfully completed a course of study, passed an exam, or achieved a particular level",
+										"examples": [
+											"He received a certificate after finishing the training."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He received a certificate after finishing the training.", "ok": true },
 						{ "answer": "He certificated the seminar yesterday.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "class",
-					"summary": "",
-					"explain": "",
+					"summary": "A group of students taught together, or the lesson they attend.",
+					"explain": {
+						"entryId": "class",
+						"headword": "class",
+						"pronunciation": { "display": "", "ipaUK": "/klɑːs/", "ipaUS": "/klæs/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["lesson", "session", "course"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a group of students who are taught together, or the period of time during which they are taught",
+										"examples": [
+											"Our English class starts at 9 a.m."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Our English class starts at 9 a.m.", "ok": true },
 						{ "answer": "I classed my teacher yesterday.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "conference",
-					"summary": "",
-					"explain": "",
+					"summary": "A large formal meeting where people discuss a particular topic, often over several days.",
+					"explain": {
+						"entryId": "conference",
+						"headword": "conference",
+						"pronunciation": { "display": "", "ipaUK": "/ˈkɒnfərəns/", "ipaUS": "/ˈkɑːnfərəns/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["convention", "summit", "symposium"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large formal meeting, often lasting several days, where people with shared interests or the same profession come together to discuss topics",
+										"examples": [
+											"She presented her research at an international conference."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She presented her research at an international conference.", "ok": true },
 						{ "answer": "She conferenced her homework.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "course",
-					"summary": "",
-					"explain": "",
+					"summary": "A series of lessons or study on a particular subject, often leading to a qualification.",
+					"explain": {
+						"entryId": "course",
+						"headword": "course",
+						"pronunciation": { "display": "", "ipaUK": "/kɔːs/", "ipaUS": "/kɔːrs/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["programme", "class", "module"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a series of lessons or study on a particular subject, often designed to teach a skill or lead to a qualification",
+										"examples": [
+											"He enrolled in a course on digital marketing."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He enrolled in a course on digital marketing.", "ok": true },
 						{ "answer": "He coursed his professor yesterday.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "degree",
-					"summary": "",
-					"explain": "",
+					"summary": "A qualification awarded by a university after completing a programme of study.",
+					"explain": {
+						"entryId": "degree",
+						"headword": "degree",
+						"pronunciation": { "display": "", "ipaUK": "/dɪˈɡriː/", "ipaUS": "/dɪˈɡriː/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["qualification", "diploma", "bachelor's"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an academic qualification awarded by a university or college when a student has successfully completed a course of study",
+										"examples": [
+											"She earned a degree in biology."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She earned a degree in biology.", "ok": true },
 						{ "answer": "She degreed from university.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "diploma",
-					"summary": "",
-					"explain": "",
+					"summary": "An official document awarded by an educational institution for completing a course or programme.",
+					"explain": {
+						"entryId": "diploma",
+						"headword": "diploma",
+						"pronunciation": { "display": "", "ipaUK": "/dɪˈpləʊmə/", "ipaUS": "/dɪˈploʊmə/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["certificate", "degree", "qualification"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official document given by an educational institution to show that a student has successfully completed a course or programme of study",
+										"examples": [
+											"He received a diploma after completing the program."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He received a diploma after completing the program.", "ok": true },
 						{ "answer": "He diplomad his exam results.", "ok": false },

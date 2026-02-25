@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "exhibition",
-					"summary": "",
-					"explain": "",
+					"summary": "A public display of art, objects, or information for people to view.",
+					"explain": {
+						"entryId": "exhibition",
+						"headword": "exhibition",
+						"pronunciation": { "display": "", "ipaUK": "/ˌɛksɪˈbɪʃən/", "ipaUS": "/ˌɛksɪˈbɪʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["display", "show", "exposition"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a public display of works of art, historical objects, or other items for people to look at",
+										"examples": [
+											"The museum is hosting a photography exhibition this month."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The art exhibition opens tomorrow.", "ok": true },
 						{ "answer": "The exhibition of art opens tomorrow.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "film",
-					"summary": "",
-					"explain": "",
+					"summary": "A story or event recorded as a moving image, shown in a cinema or on television.",
+					"explain": {
+						"entryId": "film",
+						"headword": "film",
+						"pronunciation": { "display": "", "ipaUK": "/fɪlm/", "ipaUS": "/fɪlm/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["movie", "motion picture", "feature"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a story or sequence of events recorded as moving images and shown in a cinema or on television",
+										"examples": [
+											"The film was so exciting that nobody wanted it to end."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We watched a film at the cinema.", "ok": true },
 						{ "answer": "We watched film at cinema.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "free time",
-					"summary": "",
-					"explain": "",
+					"summary": "Time when you are not working or studying and can do what you enjoy.",
+					"explain": {
+						"entryId": "free time",
+						"headword": "free time",
+						"pronunciation": { "display": "", "ipaUK": "/ˈfriː taɪm/", "ipaUS": "/ˈfriː taɪm/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["leisure time", "spare time", "downtime"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "time when you are not working, studying, or occupied with duties, and are free to do what you enjoy",
+										"examples": [
+											"She uses her free time to learn new languages."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I read books in my free time.", "ok": true },
 						{ "answer": "I read books at my free time.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "gallery",
-					"summary": "",
-					"explain": "",
+					"summary": "A room or building where works of art are displayed or sold.",
+					"explain": {
+						"entryId": "gallery",
+						"headword": "gallery",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɡæləri/", "ipaUS": "/ˈɡæləri/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["art gallery", "exhibition space", "studio"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a room or building in which works of art are displayed for the public to see, or offered for sale",
+										"examples": [
+											"The gallery near the city centre has some beautiful sculptures."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The gallery displays modern art.", "ok": true },
 						{ "answer": "The gallery shows a modern arts.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "game",
-					"summary": "",
-					"explain": "",
+					"summary": "An activity or contest with rules, played for fun or competition.",
+					"explain": {
+						"entryId": "game",
+						"headword": "game",
+						"pronunciation": { "display": "", "ipaUK": "/ɡeɪm/", "ipaUS": "/ɡeɪm/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["match", "contest", "activity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an activity or contest with rules that is played for fun, competition, or entertainment",
+										"examples": [
+											"A board game is a great way to spend an evening with family."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "They played a game of chess.", "ok": true },
 						{ "answer": "They played game of chess.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "hobby",
-					"summary": "",
-					"explain": "",
+					"summary": "An activity that someone does regularly in their spare time for enjoyment.",
+					"explain": {
+						"entryId": "hobby",
+						"headword": "hobby",
+						"pronunciation": { "display": "", "ipaUK": "/ˈhɒbi/", "ipaUS": "/ˈhɑːbi/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["pastime", "interest", "pursuit"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an activity that someone does regularly for enjoyment during their spare time, not as a job",
+										"examples": [
+											"His hobby is making model aeroplanes out of wood."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Photography is her favourite hobby.", "ok": true },
 						{ "answer": "Photography is her favourite hobbying.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "leisure",
-					"summary": "",
-					"explain": "",
+					"summary": "Time when you are free from work or duties and can relax and enjoy yourself.",
+					"explain": {
+						"entryId": "leisure",
+						"headword": "leisure",
+						"pronunciation": { "display": "", "ipaUK": "/ˈlɛʒər/", "ipaUS": "/ˈliːʒər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["free time", "spare time", "relaxation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "time when you are free from work or duties and can relax, pursue hobbies, or enjoy activities",
+										"examples": [
+											"People with active leisure pursuits tend to be happier and healthier."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He spends his leisure time reading.", "ok": true },
 						{ "answer": "He spends his leisure times reading.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "museum",
-					"summary": "",
-					"explain": "",
+					"summary": "A building where important objects of historical, scientific, or artistic interest are kept and displayed.",
+					"explain": {
+						"entryId": "museum",
+						"headword": "museum",
+						"pronunciation": { "display": "", "ipaUK": "/mjuːˈziːəm/", "ipaUS": "/mjuːˈziːəm/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["gallery", "exhibition hall", "collection"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building where objects of historical, scientific, or artistic interest are collected, displayed, and preserved for the public",
+										"examples": [
+											"The natural history museum has fascinating dinosaur exhibits."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We visited the museum on Sunday.", "ok": true },
 						{ "answer": "We visited museum on Sunday.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "performance",
-					"summary": "",
-					"explain": "",
+					"summary": "An act of performing a play, concert, or other form of entertainment before an audience.",
+					"explain": {
+						"entryId": "performance",
+						"headword": "performance",
+						"pronunciation": { "display": "", "ipaUK": "/pəˈfɔːməns/", "ipaUS": "/pərˈfɔːrməns/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["show", "presentation", "display"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an act of performing a play, concert, or other entertainment before an audience; also how well someone does something",
+										"examples": [
+											"The dance performance received a standing ovation from the crowd."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Her performance was excellent.", "ok": true },
 						{ "answer": "Her performance was very success.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "play",
-					"summary": "",
-					"explain": "",
+					"summary": "A piece of writing performed on stage by actors, usually in a theatre.",
+					"explain": {
+						"entryId": "play",
+						"headword": "play",
+						"pronunciation": { "display": "", "ipaUK": "/pleɪ/", "ipaUS": "/pleɪ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["drama", "theatrical production", "stage show"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a piece of dramatic writing performed on stage by actors, usually in a theatre",
+										"examples": [
+											"The school's end-of-year play was a huge success."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We saw a play at the theatre.", "ok": true },
 						{ "answer": "We saw play at theatre.", "ok": false },

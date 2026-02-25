@@ -1,146 +1,616 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizTravel1-en",
-	"title": "1. Travel",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Travel & transport (Set 1)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "accommodation",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We booked accommodation near the beach.", "ok": true },
-						{ "answer": "We booked an accommodation near the beach.", "ok": false },
-						{ "answer": "Accommodations is expensive in summer.", "ok": false },
-						{ "answer": "We stayed at accommodation in the city.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "arrival",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "On arrival, we collected our luggage.", "ok": true },
-						{ "answer": "On the arrival, we collected our luggage.", "ok": false },
-						{ "answer": "Arrivals is delayed today.", "ok": false },
-						{ "answer": "We arrived to the arrival at noon.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "attraction",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The museum is a popular tourist attraction.", "ok": true },
-						{ "answer": "The museum is popular tourist attraction.", "ok": false },
-						{ "answer": "Attractions is very interesting.", "ok": false },
-						{ "answer": "We were attracted on the museum.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "baggage",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Please collect your baggage at belt 4.", "ok": true },
-						{ "answer": "Please collect your baggages at belt 4.", "ok": false },
-						{ "answer": "A baggage is very heavy.", "ok": false },
-						{ "answer": "Please collect your baggage in the belt 4.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "booking",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I confirmed my booking by email.", "ok": true },
-						{ "answer": "I confirmed my booking on email.", "ok": false },
-						{ "answer": "Bookings is important to print.", "ok": false },
-						{ "answer": "I booked a booking for the flight.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "check-in",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Check-in opens two hours before departure.", "ok": true },
-						{ "answer": "The check-in open two hours before departure.", "ok": false },
-						{ "answer": "Check-ins is very slow today.", "ok": false },
-						{ "answer": "We checked in at to the desk.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "cruise",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "They went on a cruise in the Mediterranean.", "ok": true },
-						{ "answer": "They went on cruise in the Mediterranean.", "ok": false },
-						{ "answer": "Cruises is a type of airport gate.", "ok": false },
-						{ "answer": "They cruised to the ship for a week.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "customs",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We had to go through customs after landing.", "ok": true },
-						{ "answer": "We had to go through the customs after landing.", "ok": false },
-						{ "answer": "Customs are a person at the airport.", "ok": false },
-						{ "answer": "We went at customs after landing.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "departure",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Departure is at 10:15 from gate 12.", "ok": true },
-						{ "answer": "The departure are at 10:15.", "ok": false },
-						{ "answer": "Departures is a travel document.", "ok": false },
-						{ "answer": "We departed to the departure at 10:15.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "destination",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Paris is our final destination.", "ok": true },
-						{ "answer": "Paris is our final destinations.", "ok": false },
-						{ "answer": "A destination is a suitcase.", "ok": false },
-						{ "answer": "We arrived to our destination at night.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizTravel1-en",
+  "title": "1. Travel",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Travel & transport (Set 1)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "accommodation",
+          "summary": "a place to stay, such as a hotel, apartment, or room",
+          "explain": {
+            "entryId": "accommodation",
+            "headword": "accommodation",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "accommodations",
+                "synonyms": [
+                  "lodging",
+                  "place to stay"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a place to stay, such as a hotel, apartment, or room",
+                    "examples": [
+                      "We booked accommodation near the beach."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We booked accommodation near the beach.",
+              "ok": true
+            },
+            {
+              "answer": "We booked an accommodation near the beach.",
+              "ok": false
+            },
+            {
+              "answer": "Accommodations is expensive in summer.",
+              "ok": false
+            },
+            {
+              "answer": "We stayed at accommodation in the city.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "arrival",
+          "summary": "the act of arriving somewhere; the time when someone or something arrives",
+          "explain": {
+            "entryId": "arrival",
+            "headword": "arrival",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "arrivals",
+                "synonyms": [
+                  "coming",
+                  "arrival time"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the act of arriving somewhere; the time when someone or something arrives",
+                    "examples": [
+                      "On arrival, we collected our luggage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "On arrival, we collected our luggage.",
+              "ok": true
+            },
+            {
+              "answer": "On the arrival, we collected our luggage.",
+              "ok": false
+            },
+            {
+              "answer": "Arrivals is delayed today.",
+              "ok": false
+            },
+            {
+              "answer": "We arrived to the arrival at noon.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "attraction",
+          "summary": "a place or thing that interests people and makes them want to visit",
+          "explain": {
+            "entryId": "attraction",
+            "headword": "attraction",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "attractions",
+                "synonyms": [
+                  "sight",
+                  "tourist spot"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a place or thing that interests people and makes them want to visit",
+                    "examples": [
+                      "The museum is a popular tourist attraction."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The museum is a popular tourist attraction.",
+              "ok": true
+            },
+            {
+              "answer": "The museum is popular tourist attraction.",
+              "ok": false
+            },
+            {
+              "answer": "Attractions is very interesting.",
+              "ok": false
+            },
+            {
+              "answer": "We were attracted on the museum.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "baggage",
+          "summary": "bags and suitcases that you take when you travel",
+          "explain": {
+            "entryId": "baggage",
+            "headword": "baggage",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "baggages",
+                "synonyms": [
+                  "luggage",
+                  "bags"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bags and suitcases that you take when you travel",
+                    "examples": [
+                      "Please collect your baggage at belt 4."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Please collect your baggage at belt 4.",
+              "ok": true
+            },
+            {
+              "answer": "Please collect your baggages at belt 4.",
+              "ok": false
+            },
+            {
+              "answer": "A baggage is very heavy.",
+              "ok": false
+            },
+            {
+              "answer": "Please collect your baggage in the belt 4.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "booking",
+          "summary": "an arrangement you make to reserve a seat, room, or ticket",
+          "explain": {
+            "entryId": "booking",
+            "headword": "booking",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "bookings",
+                "synonyms": [
+                  "reservation",
+                  "reservation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an arrangement you make to reserve a seat, room, or ticket",
+                    "examples": [
+                      "I confirmed my booking by email."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I confirmed my booking by email.",
+              "ok": true
+            },
+            {
+              "answer": "I confirmed my booking on email.",
+              "ok": false
+            },
+            {
+              "answer": "Bookings is important to print.",
+              "ok": false
+            },
+            {
+              "answer": "I booked a booking for the flight.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "check-in",
+          "summary": "the process of registering when you arrive at an airport or hotel",
+          "explain": {
+            "entryId": "check_in",
+            "headword": "check-in",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "registration",
+                  "check-in desk"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the process of registering when you arrive at an airport or hotel",
+                    "examples": [
+                      "Check-in opens two hours before departure."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Check-in opens two hours before departure.",
+              "ok": true
+            },
+            {
+              "answer": "The check-in open two hours before departure.",
+              "ok": false
+            },
+            {
+              "answer": "Check-ins is very slow today.",
+              "ok": false
+            },
+            {
+              "answer": "We checked in at to the desk.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "cruise",
+          "summary": "a holiday on a ship that visits different places",
+          "explain": {
+            "entryId": "cruise",
+            "headword": "cruise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "cruises",
+                "synonyms": [
+                  "sea trip",
+                  "voyage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a holiday on a ship that visits different places",
+                    "examples": [
+                      "They went on a cruise in the Mediterranean."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They went on a cruise in the Mediterranean.",
+              "ok": true
+            },
+            {
+              "answer": "They went on cruise in the Mediterranean.",
+              "ok": false
+            },
+            {
+              "answer": "Cruises is a type of airport gate.",
+              "ok": false
+            },
+            {
+              "answer": "They cruised to the ship for a week.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "customs",
+          "summary": "the place at an airport/border where officials check your bags and goods",
+          "explain": {
+            "entryId": "customs",
+            "headword": "customs",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "customss",
+                "synonyms": [
+                  "border control",
+                  "customs office"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the place at an airport/border where officials check your bags and goods",
+                    "examples": [
+                      "We had to go through customs after landing."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We had to go through customs after landing.",
+              "ok": true
+            },
+            {
+              "answer": "We had to go through the customs after landing.",
+              "ok": false
+            },
+            {
+              "answer": "Customs are a person at the airport.",
+              "ok": false
+            },
+            {
+              "answer": "We went at customs after landing.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "departure",
+          "summary": "the act of leaving; the time when a plane/train/bus leaves",
+          "explain": {
+            "entryId": "departure",
+            "headword": "departure",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "departures",
+                "synonyms": [
+                  "leaving",
+                  "takeoff"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the act of leaving; the time when a plane/train/bus leaves",
+                    "examples": [
+                      "Departure is at 10:15 from gate 12."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Departure is at 10:15 from gate 12.",
+              "ok": true
+            },
+            {
+              "answer": "The departure are at 10:15.",
+              "ok": false
+            },
+            {
+              "answer": "Departures is a travel document.",
+              "ok": false
+            },
+            {
+              "answer": "We departed to the departure at 10:15.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "destination",
+          "summary": "the place you are travelling to",
+          "explain": {
+            "entryId": "destination",
+            "headword": "destination",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "destinations",
+                "synonyms": [
+                  "end point",
+                  "target place"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the place you are travelling to",
+                    "examples": [
+                      "Paris is our final destination."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Paris is our final destination.",
+              "ok": true
+            },
+            {
+              "answer": "Paris is our final destinations.",
+              "ok": false
+            },
+            {
+              "answer": "A destination is a suitcase.",
+              "ok": false
+            },
+            {
+              "answer": "We arrived to our destination at night.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

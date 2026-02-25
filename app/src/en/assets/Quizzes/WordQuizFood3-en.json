@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "recipe",
-					"summary": "",
-					"explain": "",
+					"summary": "A set of instructions for preparing and cooking a particular dish.",
+					"explain": {
+						"entryId": "recipe",
+						"headword": "recipe",
+						"pronunciation": { "display": "", "ipaUK": "/ˈrɛsɪpi/", "ipaUS": "/ˈrɛsɪpi/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["instructions", "formula", "method"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a set of instructions describing how to prepare and cook a particular dish, including a list of ingredients",
+										"examples": [
+											"She found an easy recipe for banana bread online."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She followed the recipe carefully.", "ok": true },
 						{ "answer": "She followed recipe carefully.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "refreshment",
-					"summary": "",
-					"explain": "",
+					"summary": "Food and drink provided at an event, or something that restores energy.",
+					"explain": {
+						"entryId": "refreshment",
+						"headword": "refreshment",
+						"pronunciation": { "display": "", "ipaUK": "/rɪˈfrɛʃmənt/", "ipaUS": "/rɪˈfrɛʃmənt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["snack", "drink", "sustenance"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "food and drink provided at an event or meeting; also used in the plural 'refreshments' to refer to light snacks and drinks served at a gathering",
+										"examples": [
+											"Light refreshments were available during the interval."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Light refreshments were served after the meeting.", "ok": true },
 						{ "answer": "Light refreshment were served after meeting.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "selection",
-					"summary": "",
-					"explain": "",
+					"summary": "A range or variety of things available to choose from.",
+					"explain": {
+						"entryId": "selection",
+						"headword": "selection",
+						"pronunciation": { "display": "", "ipaUK": "/sɪˈlɛkʃən/", "ipaUS": "/sɪˈlɛkʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["range", "variety", "choice"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a range or variety of things available to choose from; a group of items that have been chosen",
+										"examples": [
+											"The bakery offers an impressive selection of breads and pastries."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The restaurant offers a wide selection of desserts.", "ok": true },
 						{ "answer": "The restaurant offers wide selection of desserts.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "snack",
-					"summary": "",
-					"explain": "",
+					"summary": "A small amount of food eaten between main meals.",
+					"explain": {
+						"entryId": "snack",
+						"headword": "snack",
+						"pronunciation": { "display": "", "ipaUK": "/snæk/", "ipaUS": "/snæk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["nibble", "bite", "light meal"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small amount of food eaten between main meals, or a small portion of food eaten quickly",
+										"examples": [
+											"She had a snack of fruit and yoghurt in the afternoon."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He had a snack between meals.", "ok": true },
 						{ "answer": "He had snack between meals.", "ok": false },
@@ -66,8 +170,34 @@
 					"title": "",
 					"page": 5,
 					"question": "specialty",
-					"summary": "",
-					"explain": "",
+					"summary": "A particular food or dish that a place or chef is especially famous for.",
+					"explain": {
+						"entryId": "specialty",
+						"headword": "specialty",
+						"pronunciation": { "display": "", "ipaUK": "/ˈspɛʃəlti/", "ipaUS": "/ˈspɛʃəlti/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["speciality", "signature dish", "feature"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a particular food or dish that a place, chef, or region is especially known for and does particularly well",
+										"examples": [
+											"The paella is the chef's specialty and is always in high demand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Seafood is the restaurant's specialty.", "ok": true },
 						{ "answer": "Seafood is restaurant's specialty.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "starter",
-					"summary": "",
-					"explain": "",
+					"summary": "The first course of a meal, served before the main course.",
+					"explain": {
+						"entryId": "starter",
+						"headword": "starter",
+						"pronunciation": { "display": "", "ipaUK": "/ˈstɑːtər/", "ipaUS": "/ˈstɑːrtər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["appetizer", "first course", "hors d'oeuvre"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the first course of a meal, typically a small dish served before the main course",
+										"examples": [
+											"For a starter, he chose the soup of the day."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We ordered a starter before the main course.", "ok": true },
 						{ "answer": "We ordered starter before main course.", "ok": false },
@@ -92,8 +248,34 @@
 					"title": "",
 					"page": 7,
 					"question": "sweet",
-					"summary": "",
-					"explain": "",
+					"summary": "Having a taste like sugar; not sour, salty, or bitter.",
+					"explain": {
+						"entryId": "sweet",
+						"headword": "sweet",
+						"pronunciation": { "display": "", "ipaUK": "/swiːt/", "ipaUS": "/swiːt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["sugary", "honeyed", "sugared"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having a taste like sugar; not sour, salty, or bitter; pleasant to the taste in a sugary way",
+										"examples": [
+											"This mango is really sweet and juicy."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She prefers sweet food to savoury food.", "ok": true },
 						{ "answer": "She prefers sweets food.", "ok": false },
@@ -105,8 +287,34 @@
 					"title": "",
 					"page": 8,
 					"question": "treat",
-					"summary": "",
-					"explain": "",
+					"summary": "Something special and enjoyable, especially an unusual or indulgent food.",
+					"explain": {
+						"entryId": "treat",
+						"headword": "treat",
+						"pronunciation": { "display": "", "ipaUK": "/triːt/", "ipaUS": "/triːt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["indulgence", "luxury", "delight"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "something special and enjoyable, especially an unusual or indulgent food that you do not have very often",
+										"examples": [
+											"A trip to the cinema and popcorn is always a great treat."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Ice cream is a special treat.", "ok": true },
 						{ "answer": "Ice cream is special treat.", "ok": false },
@@ -118,8 +326,34 @@
 					"title": "",
 					"page": 9,
 					"question": "vegan",
-					"summary": "",
-					"explain": "",
+					"summary": "Not containing any animal products; relating to a diet that excludes all animal-derived foods.",
+					"explain": {
+						"entryId": "vegan",
+						"headword": "vegan",
+						"pronunciation": { "display": "", "ipaUK": "/ˈviːɡən/", "ipaUS": "/ˈviːɡən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["plant-based", "meat-free", "dairy-free"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not containing any animal products including meat, dairy, or eggs; relating to a lifestyle or diet that avoids all animal-derived foods",
+										"examples": [
+											"The café offers a wide range of vegan dishes."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She follows a vegan diet.", "ok": true },
 						{ "answer": "She follows vegan diet.", "ok": false },
@@ -131,8 +365,34 @@
 					"title": "",
 					"page": 10,
 					"question": "vegetarian",
-					"summary": "",
-					"explain": "",
+					"summary": "Not eating or containing meat; relating to a diet or lifestyle that excludes meat.",
+					"explain": {
+						"entryId": "vegetarian",
+						"headword": "vegetarian",
+						"pronunciation": { "display": "", "ipaUK": "/ˌvɛdʒɪˈteəriən/", "ipaUS": "/ˌvɛdʒɪˈtɛriən/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["meat-free", "plant-based", "non-meat"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not eating or containing meat or fish; relating to a diet or lifestyle that excludes meat",
+										"examples": [
+											"There is always a vegetarian option on the school menu."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He is vegetarian, so he doesn't eat meat.", "ok": true },
 						{ "answer": "He is a vegetarian person.", "ok": false },

@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "after",
-					"summary": "",
-					"explain": "",
+					"summary": "Used to show that one event happens at a later time than another; following in time or order.",
+					"explain": {
+						"entryId": "after",
+						"headword": "after",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɑːftə/", "ipaUS": "/ˈæftər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["following", "subsequent to", "once"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a clause describing an event that happens at a later time than the event in the main clause",
+										"examples": [
+											"After the lesson ended, the students went to the library."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "After she finished her homework, she went out with her friends.", "ok": true },
 						{ "answer": "After she finished her homework she went out, with her friends.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "although",
-					"summary": "",
-					"explain": "",
+					"summary": "In spite of the fact that; used to introduce a contrast or something surprising.",
+					"explain": {
+						"entryId": "although",
+						"headword": "although",
+						"pronunciation": { "display": "", "ipaUK": "/ɔːlˈðəʊ/", "ipaUS": "/ɔːlˈðoʊ/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["even though", "though", "despite the fact that"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a clause that contains a fact which makes the main clause surprising or unexpected; in spite of the fact that",
+										"examples": [
+											"Although the exam was hard, most students passed."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Although it was raining, they decided to continue the match.", "ok": true },
 						{ "answer": "Although it was raining but they decided to continue the match.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "because",
-					"summary": "",
-					"explain": "",
+					"summary": "For the reason that; used to introduce a clause that gives a reason or explanation.",
+					"explain": {
+						"entryId": "because",
+						"headword": "because",
+						"pronunciation": { "display": "", "ipaUK": "/bɪˈkɒz/", "ipaUS": "/bɪˈkɔːz/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["since", "as", "given that"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a clause that gives the reason for what is stated in the main clause; for the reason that",
+										"examples": [
+											"He wore a coat because the weather was cold."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She left early because she was feeling unwell.", "ok": true },
 						{ "answer": "She left early because of she was feeling unwell.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "before",
-					"summary": "",
-					"explain": "",
+					"summary": "Used to show that one event happens at an earlier time than another; earlier than.",
+					"explain": {
+						"entryId": "before",
+						"headword": "before",
+						"pronunciation": { "display": "", "ipaUK": "/bɪˈfɔː/", "ipaUS": "/bɪˈfɔːr/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["prior to", "earlier than", "preceding"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a clause describing an event that happens at an earlier time than the event in the main clause",
+										"examples": [
+											"Make sure you turn off the lights before you leave."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Before you submit the form, check it carefully.", "ok": true },
 						{ "answer": "Before you submit the form check it carefully carefully.", "ok": false },
@@ -66,21 +170,73 @@
 					"title": "",
 					"page": 5,
 					"question": "even though",
-					"summary": "",
-					"explain": "",
+					"summary": "In spite of the fact that; used to introduce a strong contrast, emphasising that something is surprising.",
+					"explain": {
+						"entryId": "even though",
+						"headword": "even though",
+						"pronunciation": { "display": "", "ipaUK": "/ˈiːvən ðəʊ/", "ipaUS": "/ˈiːvən ðoʊ/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["although", "despite the fact that", "in spite of the fact that"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a clause that makes the main clause surprising or unexpected; a stronger form of 'although' used to emphasise the contrast",
+										"examples": [
+											"She kept smiling even though she was clearly upset."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
-						{ "answer": "Even though he studied hard, he didn’t pass the exam.", "ok": true },
-						{ "answer": "Even though he studied hard but he didn’t pass the exam.", "ok": false },
-						{ "answer": "Even though studied hard, he didn’t pass the exam.", "ok": false },
-						{ "answer": "He didn’t pass the exam even though was studied hard.", "ok": false }
+						{ "answer": "Even though he studied hard, he didn't pass the exam.", "ok": true },
+						{ "answer": "Even though he studied hard but he didn't pass the exam.", "ok": false },
+						{ "answer": "Even though studied hard, he didn't pass the exam.", "ok": false },
+						{ "answer": "He didn't pass the exam even though was studied hard.", "ok": false }
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
 					"question": "if",
-					"summary": "",
-					"explain": "",
+					"summary": "Used to introduce a condition; on the condition that something is or will be true.",
+					"explain": {
+						"entryId": "if",
+						"headword": "if",
+						"pronunciation": { "display": "", "ipaUK": "/ɪf/", "ipaUS": "/ɪf/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["provided that", "on condition that", "supposing"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a clause expressing a condition; the main clause describes what happens when that condition is true or fulfilled",
+										"examples": [
+											"If the weather is fine, we will have lunch outside."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "If you need help, let me know.", "ok": true },
 						{ "answer": "If you will need help, let me know.", "ok": false },

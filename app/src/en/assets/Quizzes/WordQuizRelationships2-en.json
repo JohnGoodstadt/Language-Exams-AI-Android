@@ -1,146 +1,616 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizRelationships2-en",
-	"title": "2. Relationships",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Relationships & social connection (Set 2)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "dating",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "They have been dating for six months.", "ok": true },
-						{ "answer": "They have been dating since six months.", "ok": false },
-						{ "answer": "Dating are very popular.", "ok": false },
-						{ "answer": "They dated to each other last year.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "faith",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She has faith in her friends.", "ok": true },
-						{ "answer": "She has a faith in her friends.", "ok": false },
-						{ "answer": "Faiths are important in life.", "ok": false },
-						{ "answer": "She believed on her friends.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "fellowship",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The group offers fellowship and support.", "ok": true },
-						{ "answer": "The group offers a fellowship and support.", "ok": false },
-						{ "answer": "Fellowships is important.", "ok": false },
-						{ "answer": "They fellowshipped together.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "friendship",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Their friendship has lasted for years.", "ok": true },
-						{ "answer": "The friendship has lasted for years.", "ok": false },
-						{ "answer": "Friendships is very valuable.", "ok": false },
-						{ "answer": "They friended with each other.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "help",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She offered help when I needed it.", "ok": true },
-						{ "answer": "She offered a help when I needed it.", "ok": false },
-						{ "answer": "Helps are important.", "ok": false },
-						{ "answer": "She helped to me yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "interaction",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Social interaction improves communication skills.", "ok": true },
-						{ "answer": "The social interaction improves communication skills.", "ok": false },
-						{ "answer": "Interactions is important.", "ok": false },
-						{ "answer": "They interacted to each other politely.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "link",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "There is a clear link between trust and honesty.", "ok": true },
-						{ "answer": "There is clear link between trust and honesty.", "ok": false },
-						{ "answer": "Links is very strong.", "ok": false },
-						{ "answer": "They linked to together yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "neighbor",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Our neighbor is very friendly.", "ok": true },
-						{ "answer": "Our neighbor are very friendly.", "ok": false },
-						{ "answer": "Neighbors is helpful.", "ok": false },
-						{ "answer": "She neighbored to us last year.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "networking",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Networking can help you find new opportunities.", "ok": true },
-						{ "answer": "The networking can help you find new opportunities.", "ok": false },
-						{ "answer": "Networkings are important.", "ok": false },
-						{ "answer": "She networked to new opportunities.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "platform",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The platform allows users to share ideas.", "ok": true },
-						{ "answer": "Platform allows users to share ideas.", "ok": false },
-						{ "answer": "Platforms is very useful.", "ok": false },
-						{ "answer": "She platformed the message online.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizRelationships2-en",
+  "title": "2. Relationships",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Relationships & social connection (Set 2)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "dating",
+          "summary": "to be in a romantic relationship with someone",
+          "explain": {
+            "entryId": "dating",
+            "headword": "dating",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "go out with",
+                  "see"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to be in a romantic relationship with someone",
+                    "examples": [
+                      "They have been dating for six months."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They have been dating for six months.",
+              "ok": true
+            },
+            {
+              "answer": "They have been dating since six months.",
+              "ok": false
+            },
+            {
+              "answer": "Dating are very popular.",
+              "ok": false
+            },
+            {
+              "answer": "They dated to each other last year.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "faith",
+          "summary": "strong belief or trust in someone or something",
+          "explain": {
+            "entryId": "faith",
+            "headword": "faith",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "trust",
+                  "belief"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "strong belief or trust in someone or something",
+                    "examples": [
+                      "She has faith in her friends."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She has faith in her friends.",
+              "ok": true
+            },
+            {
+              "answer": "She has a faith in her friends.",
+              "ok": false
+            },
+            {
+              "answer": "Faiths are important in life.",
+              "ok": false
+            },
+            {
+              "answer": "She believed on her friends.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "fellowship",
+          "summary": "friendliness and support within a group",
+          "explain": {
+            "entryId": "fellowship",
+            "headword": "fellowship",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "companionship",
+                  "community"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "friendliness and support within a group",
+                    "examples": [
+                      "The group offers fellowship and support."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The group offers fellowship and support.",
+              "ok": true
+            },
+            {
+              "answer": "The group offers a fellowship and support.",
+              "ok": false
+            },
+            {
+              "answer": "Fellowships is important.",
+              "ok": false
+            },
+            {
+              "answer": "They fellowshipped together.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "friendship",
+          "summary": "a close relationship between friends",
+          "explain": {
+            "entryId": "friendship",
+            "headword": "friendship",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "companionship",
+                  "bond"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a close relationship between friends",
+                    "examples": [
+                      "Their friendship has lasted for years."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Their friendship has lasted for years.",
+              "ok": true
+            },
+            {
+              "answer": "The friendship has lasted for years.",
+              "ok": false
+            },
+            {
+              "answer": "Friendships is very valuable.",
+              "ok": false
+            },
+            {
+              "answer": "They friended with each other.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "help",
+          "summary": "support or assistance given to someone",
+          "explain": {
+            "entryId": "help",
+            "headword": "help",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "assistance",
+                  "support"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "support or assistance given to someone",
+                    "examples": [
+                      "She offered help when I needed it."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She offered help when I needed it.",
+              "ok": true
+            },
+            {
+              "answer": "She offered a help when I needed it.",
+              "ok": false
+            },
+            {
+              "answer": "Helps are important.",
+              "ok": false
+            },
+            {
+              "answer": "She helped to me yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "interaction",
+          "summary": "communication or activity between people",
+          "explain": {
+            "entryId": "interaction",
+            "headword": "interaction",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "contact",
+                  "communication"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "communication or activity between people",
+                    "examples": [
+                      "Social interaction improves communication skills."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Social interaction improves communication skills.",
+              "ok": true
+            },
+            {
+              "answer": "The social interaction improves communication skills.",
+              "ok": false
+            },
+            {
+              "answer": "Interactions is important.",
+              "ok": false
+            },
+            {
+              "answer": "They interacted to each other politely.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "link",
+          "summary": "a connection between two things",
+          "explain": {
+            "entryId": "link",
+            "headword": "link",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "connection",
+                  "relationship"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a connection between two things",
+                    "examples": [
+                      "There is a clear link between trust and honesty."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "There is a clear link between trust and honesty.",
+              "ok": true
+            },
+            {
+              "answer": "There is clear link between trust and honesty.",
+              "ok": false
+            },
+            {
+              "answer": "Links is very strong.",
+              "ok": false
+            },
+            {
+              "answer": "They linked to together yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "neighbor",
+          "summary": "a person who lives near you",
+          "explain": {
+            "entryId": "neighbor",
+            "headword": "neighbor",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "local resident",
+                  "next-door neighbor"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a person who lives near you",
+                    "examples": [
+                      "Our neighbor is very friendly."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Our neighbor is very friendly.",
+              "ok": true
+            },
+            {
+              "answer": "Our neighbor are very friendly.",
+              "ok": false
+            },
+            {
+              "answer": "Neighbors is helpful.",
+              "ok": false
+            },
+            {
+              "answer": "She neighbored to us last year.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "networking",
+          "summary": "meeting people to build useful relationships, especially for work",
+          "explain": {
+            "entryId": "networking",
+            "headword": "networking",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "making contacts",
+                  "connecting"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "meeting people to build useful relationships, especially for work",
+                    "examples": [
+                      "Networking can help you find new opportunities."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Networking can help you find new opportunities.",
+              "ok": true
+            },
+            {
+              "answer": "The networking can help you find new opportunities.",
+              "ok": false
+            },
+            {
+              "answer": "Networkings are important.",
+              "ok": false
+            },
+            {
+              "answer": "She networked to new opportunities.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "platform",
+          "summary": "a service or system used to share information or provide something online",
+          "explain": {
+            "entryId": "platform",
+            "headword": "platform",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "service",
+                  "system"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a service or system used to share information or provide something online",
+                    "examples": [
+                      "The platform allows users to share ideas."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The platform allows users to share ideas.",
+              "ok": true
+            },
+            {
+              "answer": "Platform allows users to share ideas.",
+              "ok": false
+            },
+            {
+              "answer": "Platforms is very useful.",
+              "ok": false
+            },
+            {
+              "answer": "She platformed the message online.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

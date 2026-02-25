@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "recreation",
-					"summary": "",
-					"explain": "",
+					"summary": "Activities done for enjoyment and relaxation during free time.",
+					"explain": {
+						"entryId": "recreation",
+						"headword": "recreation",
+						"pronunciation": { "display": "", "ipaUK": "/ˌrɛkriˈeɪʃən/", "ipaUS": "/ˌrɛkriˈeɪʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["leisure", "relaxation", "pastime"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "activities done for enjoyment and relaxation during free time; the refreshment of body and mind through pleasurable activity",
+										"examples": [
+											"Outdoor recreation such as hiking and cycling is very popular."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Parks are used for recreation and relaxation.", "ok": true },
 						{ "answer": "Parks are used for recreations.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "relaxation",
-					"summary": "",
-					"explain": "",
+					"summary": "The state of being free from tension and anxiety; rest and freedom from activity.",
+					"explain": {
+						"entryId": "relaxation",
+						"headword": "relaxation",
+						"pronunciation": { "display": "", "ipaUK": "/ˌriːlækˈseɪʃən/", "ipaUS": "/ˌriːlækˈseɪʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["rest", "calm", "unwinding"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the state of being free from tension and worry; rest and freedom from activity or effort",
+										"examples": [
+											"She found relaxation by listening to classical music in the evening."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Yoga helps with relaxation.", "ok": true },
 						{ "answer": "Yoga helps with relaxations.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "show",
-					"summary": "",
-					"explain": "",
+					"summary": "A television or radio programme, or a live performance for an audience.",
+					"explain": {
+						"entryId": "show",
+						"headword": "show",
+						"pronunciation": { "display": "", "ipaUK": "/ʃəʊ/", "ipaUS": "/ʃoʊ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["programme", "performance", "production"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a television or radio programme, or a live performance or event for an audience",
+										"examples": [
+											"The cooking show has been on air for more than ten years."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We watched a show on television.", "ok": true },
 						{ "answer": "We watched show on the television.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "sightseeing",
-					"summary": "",
-					"explain": "",
+					"summary": "The activity of visiting interesting or famous places as a tourist.",
+					"explain": {
+						"entryId": "sightseeing",
+						"headword": "sightseeing",
+						"pronunciation": { "display": "", "ipaUK": "/ˈsaɪtsiːɪŋ/", "ipaUS": "/ˈsaɪtsiːɪŋ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["touring", "exploring", "visiting"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the activity of visiting interesting, famous, or historic places as a tourist",
+										"examples": [
+											"The bus tour is a great way to go sightseeing around the city."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We went sightseeing in Paris.", "ok": true },
 						{ "answer": "We did a sightseeing in Paris.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "sports",
-					"summary": "",
-					"explain": "",
+					"summary": "Physical activities or games that people take part in for exercise or competition.",
+					"explain": {
+						"entryId": "sports",
+						"headword": "sports",
+						"pronunciation": { "display": "", "ipaUK": "/spɔːts/", "ipaUS": "/spɔːrts/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["athletics", "games", "physical activities"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "physical activities or competitive games that require skill and are played for exercise or entertainment",
+										"examples": [
+											"Team sports teach children about cooperation and fair play."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He plays sports every weekend.", "ok": true },
 						{ "answer": "He plays a sports every weekend.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "stage",
-					"summary": "",
-					"explain": "",
+					"summary": "A raised platform in a theatre or hall where performers act, dance, or speak.",
+					"explain": {
+						"entryId": "stage",
+						"headword": "stage",
+						"pronunciation": { "display": "", "ipaUK": "/steɪdʒ/", "ipaUS": "/steɪdʒ/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["platform", "podium", "boards"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a raised platform in a theatre, concert hall, or other venue where performers act, sing, dance, or speak",
+										"examples": [
+											"The dancers stood nervously at the side of the stage."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The actor walked onto the stage.", "ok": true },
 						{ "answer": "The actor walked on the stage.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "theatre",
-					"summary": "",
-					"explain": "",
+					"summary": "A building where plays and other dramatic performances are performed on a stage.",
+					"explain": {
+						"entryId": "theatre",
+						"headword": "theatre",
+						"pronunciation": { "display": "", "ipaUK": "/ˈθɪətər/", "ipaUS": "/ˈθiːətər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["playhouse", "auditorium", "venue"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building where plays and other dramatic or musical performances are staged for an audience",
+										"examples": [
+											"The city has a beautiful old theatre built in the nineteenth century."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We went to the theatre last night.", "ok": true },
 						{ "answer": "We went to theatre last night.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "tourism",
-					"summary": "",
-					"explain": "",
+					"summary": "The activity of travelling to places for pleasure and the industry that supports this.",
+					"explain": {
+						"entryId": "tourism",
+						"headword": "tourism",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtʊərɪzəm/", "ipaUS": "/ˈtʊrɪzəm/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["travel industry", "sightseeing", "holidaymaking"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the activity of travelling to places for pleasure and interest; the industry that provides services for people travelling on holiday",
+										"examples": [
+											"The town relies heavily on tourism to support local businesses."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Tourism is important for the local economy.", "ok": true },
 						{ "answer": "Tourism are important for the economy.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "tourist",
-					"summary": "",
-					"explain": "",
+					"summary": "A person who travels to a place for pleasure and sightseeing.",
+					"explain": {
+						"entryId": "tourist",
+						"headword": "tourist",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtʊərɪst/", "ipaUS": "/ˈtʊrɪst/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["visitor", "traveller", "sightseer"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who travels to a place for pleasure, sightseeing, or a holiday, rather than for work",
+										"examples": [
+											"The city attracts millions of tourists every year."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The tourist took photos of the monument.", "ok": true },
 						{ "answer": "The tourist visited to the museum.", "ok": false },

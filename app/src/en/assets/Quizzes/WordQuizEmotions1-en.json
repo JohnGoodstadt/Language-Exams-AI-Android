@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "ability",
-					"summary": "",
-					"explain": "",
+					"summary": "A natural or learned skill that makes it possible to do something well.",
+					"explain": {
+						"entryId": "ability",
+						"headword": "ability",
+						"pronunciation": { "display": "", "ipaUK": "/əˈbɪlɪti/", "ipaUS": "/əˈbɪlɪti/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["skill", "capability", "talent"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a natural or learned skill or talent that makes it possible to do something well or effectively",
+										"examples": [
+											"The children showed great ability in art and music."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She has the ability to learn languages quickly.", "ok": true },
 						{ "answer": "She has ability to learn languages quickly.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "ambition",
-					"summary": "",
-					"explain": "",
+					"summary": "A strong desire to achieve success, power, or a particular goal.",
+					"explain": {
+						"entryId": "ambition",
+						"headword": "ambition",
+						"pronunciation": { "display": "", "ipaUK": "/æmˈbɪʃən/", "ipaUS": "/æmˈbɪʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["drive", "aspiration", "determination"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a strong desire to achieve success, power, fame, or a particular goal in life",
+										"examples": [
+											"From a young age, she had ambition to become a scientist."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "His ambition is to become a doctor.", "ok": true },
 						{ "answer": "His ambition is become a doctor.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "aspiration",
-					"summary": "",
-					"explain": "",
+					"summary": "A strong hope or desire to achieve something important in the future.",
+					"explain": {
+						"entryId": "aspiration",
+						"headword": "aspiration",
+						"pronunciation": { "display": "", "ipaUK": "/ˌæspɪˈreɪʃən/", "ipaUS": "/ˌæspɪˈreɪʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["ambition", "goal", "hope"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a strong hope or desire to achieve something important, usually referring to a career or life goal",
+										"examples": [
+											"Her aspiration is to work for an international organisation."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Her aspiration is to start her own business.", "ok": true },
 						{ "answer": "Her aspiration is for start her own business.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "assurance",
-					"summary": "",
-					"explain": "",
+					"summary": "A confident statement that something will happen or is true; a promise or guarantee.",
+					"explain": {
+						"entryId": "assurance",
+						"headword": "assurance",
+						"pronunciation": { "display": "", "ipaUK": "/əˈʃʊərəns/", "ipaUS": "/əˈʃʊrəns/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["guarantee", "promise", "reassurance"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a confident statement intended to make someone less worried; a promise or guarantee that something is certain",
+										"examples": [
+											"The manager gave assurance that the project would be completed on time."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He gave me assurance that everything would be fine.", "ok": true },
 						{ "answer": "He gave me an assurance that everything would be fine.", "ok": false },
@@ -66,8 +170,34 @@
 					"title": "",
 					"page": 5,
 					"question": "background",
-					"summary": "",
-					"explain": "",
+					"summary": "A person's past experience, education, family, and social history.",
+					"explain": {
+						"entryId": "background",
+						"headword": "background",
+						"pronunciation": { "display": "", "ipaUK": "/ˈbækɡraʊnd/", "ipaUS": "/ˈbækɡraʊnd/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["history", "upbringing", "experience"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the facts about a person's family, education, and past experiences that have shaped who they are",
+										"examples": [
+											"Candidates from all backgrounds are welcome to apply."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She comes from a musical background.", "ok": true },
 						{ "answer": "She comes from musical background.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "behavior",
-					"summary": "",
-					"explain": "",
+					"summary": "The way a person acts or conducts themselves in a particular situation.",
+					"explain": {
+						"entryId": "behavior",
+						"headword": "behavior",
+						"pronunciation": { "display": "", "ipaUK": "/bɪˈheɪvjər/", "ipaUS": "/bɪˈheɪvjər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["conduct", "manner", "actions"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the way in which a person acts or conducts themselves in a given situation; the way someone behaves towards other people",
+										"examples": [
+											"Good behavior is expected from all students during lessons."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "His behavior in class was respectful.", "ok": true },
 						{ "answer": "His behavior in the class was respectful.", "ok": false },
@@ -92,8 +248,34 @@
 					"title": "",
 					"page": 7,
 					"question": "character",
-					"summary": "",
-					"explain": "",
+					"summary": "The combination of qualities and values that make a person who they are.",
+					"explain": {
+						"entryId": "character",
+						"headword": "character",
+						"pronunciation": { "display": "", "ipaUK": "/ˈkærɪktər/", "ipaUS": "/ˈkærɪktər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["personality", "nature", "disposition"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the combination of qualities and moral values that makes a person unique and defines who they are",
+										"examples": [
+											"Her strong character helped her overcome many difficult challenges."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Honesty is an important part of her character.", "ok": true },
 						{ "answer": "Honesty is important part of her character.", "ok": false },
@@ -105,8 +287,34 @@
 					"title": "",
 					"page": 8,
 					"question": "conduct",
-					"summary": "",
-					"explain": "",
+					"summary": "The way a person behaves, especially in relation to accepted social or professional standards.",
+					"explain": {
+						"entryId": "conduct",
+						"headword": "conduct",
+						"pronunciation": { "display": "", "ipaUK": "/ˈkɒndʌkt/", "ipaUS": "/ˈkɑːndʌkt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["behavior", "manner", "deportment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the way a person behaves, particularly in relation to moral or professional standards; behaviour in a formal context",
+										"examples": [
+											"The coach praised the team for their excellent conduct throughout the tournament."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Students must follow rules of conduct at school.", "ok": true },
 						{ "answer": "Students must follow the rules of conduct at school.", "ok": false },
@@ -118,8 +326,34 @@
 					"title": "",
 					"page": 9,
 					"question": "confidence",
-					"summary": "",
-					"explain": "",
+					"summary": "A feeling of certainty and trust in your own abilities.",
+					"explain": {
+						"entryId": "confidence",
+						"headword": "confidence",
+						"pronunciation": { "display": "", "ipaUK": "/ˈkɒnfɪdəns/", "ipaUS": "/ˈkɑːnfɪdəns/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["self-assurance", "assurance", "belief"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a feeling of certainty and trust in your own abilities or qualities; belief in yourself and what you can do",
+										"examples": [
+											"Practising regularly will help you build confidence in speaking English."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She spoke with confidence in the interview.", "ok": true },
 						{ "answer": "She spoke with the confidence in the interview.", "ok": false },
@@ -131,8 +365,34 @@
 					"title": "",
 					"page": 10,
 					"question": "eagerness",
-					"summary": "",
-					"explain": "",
+					"summary": "A feeling of keen enthusiasm and strong desire to do or experience something.",
+					"explain": {
+						"entryId": "eagerness",
+						"headword": "eagerness",
+						"pronunciation": { "display": "", "ipaUK": "/ˈiːɡənəs/", "ipaUS": "/ˈiːɡənəs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["enthusiasm", "keenness", "zeal"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a strong feeling of interest and enthusiasm; a keen desire to do or experience something",
+										"examples": [
+											"Her eagerness to help was obvious to everyone in the team."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "His eagerness to learn impressed the teacher.", "ok": true },
 						{ "answer": "His eagerness for learn impressed the teacher.", "ok": false },

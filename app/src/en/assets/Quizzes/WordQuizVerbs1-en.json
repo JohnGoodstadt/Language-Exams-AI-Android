@@ -1,146 +1,616 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizVerbs1-en",
-	"title": "1. Verbs",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the verb correctly.",
-			"description": "Academic & functional verbs (Set 1)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "accomplish",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She accomplished her goal after months of effort.", "ok": true },
-						{ "answer": "She accomplished to her goal after months of effort.", "ok": false },
-						{ "answer": "She accomplished in her goal.", "ok": false },
-						{ "answer": "She was accomplished her goal.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "achieve",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He achieved success through hard work.", "ok": true },
-						{ "answer": "He achieved to success through hard work.", "ok": false },
-						{ "answer": "He achieved in success.", "ok": false },
-						{ "answer": "He was achieved success.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "admire",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I admire her dedication to the project.", "ok": true },
-						{ "answer": "I admire to her dedication.", "ok": false },
-						{ "answer": "I admire on her dedication.", "ok": false },
-						{ "answer": "I am admired her dedication.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "advise",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She advised me to apply early.", "ok": true },
-						{ "answer": "She advised me apply early.", "ok": false },
-						{ "answer": "She advised to me to apply early.", "ok": false },
-						{ "answer": "She advised me that apply early.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "appreciate",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I appreciate your support.", "ok": true },
-						{ "answer": "I appreciate for your support.", "ok": false },
-						{ "answer": "I appreciate to your support.", "ok": false },
-						{ "answer": "I am appreciating your support yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "articulate",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He articulated his ideas clearly.", "ok": true },
-						{ "answer": "He articulated about his ideas clearly.", "ok": false },
-						{ "answer": "He was articulate his ideas clearly.", "ok": false },
-						{ "answer": "He articulated to his ideas clearly.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "assure",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She assured me that everything was fine.", "ok": true },
-						{ "answer": "She assured to me that everything was fine.", "ok": false },
-						{ "answer": "She assured me everything is fine.", "ok": false },
-						{ "answer": "She assured about everything was fine.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "attain",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He attained a high level of proficiency.", "ok": true },
-						{ "answer": "He attained to a high level.", "ok": false },
-						{ "answer": "He attained in a high level.", "ok": false },
-						{ "answer": "He was attained a high level.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "communicate",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "They communicate effectively with clients.", "ok": true },
-						{ "answer": "They communicate to clients effectively.", "ok": false },
-						{ "answer": "They communicate with to clients.", "ok": false },
-						{ "answer": "They communicated about to clients.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "convey",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The message conveyed a strong sense of urgency.", "ok": true },
-						{ "answer": "The message conveyed about a strong sense.", "ok": false },
-						{ "answer": "The message was convey a strong sense.", "ok": false },
-						{ "answer": "The message conveyed to a strong sense.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizVerbs1-en",
+  "title": "1. Verbs",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the verb correctly.",
+      "description": "Academic & functional verbs (Set 1)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "accomplish",
+          "summary": "to succeed in doing something you planned or tried to do",
+          "explain": {
+            "entryId": "accomplish",
+            "headword": "accomplish",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "accomplishes, accomplishing, accomplished",
+                "synonyms": [
+                  "achieve",
+                  "carry out"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to succeed in doing something you planned or tried to do",
+                    "examples": [
+                      "She accomplished her goal after months of effort."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She accomplished her goal after months of effort.",
+              "ok": true
+            },
+            {
+              "answer": "She accomplished to her goal after months of effort.",
+              "ok": false
+            },
+            {
+              "answer": "She accomplished in her goal.",
+              "ok": false
+            },
+            {
+              "answer": "She was accomplished her goal.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "achieve",
+          "summary": "to succeed in reaching a goal or result",
+          "explain": {
+            "entryId": "achieve",
+            "headword": "achieve",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "achieves, achieving, achieved",
+                "synonyms": [
+                  "accomplish",
+                  "reach"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to succeed in reaching a goal or result",
+                    "examples": [
+                      "He achieved success through hard work."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He achieved success through hard work.",
+              "ok": true
+            },
+            {
+              "answer": "He achieved to success through hard work.",
+              "ok": false
+            },
+            {
+              "answer": "He achieved in success.",
+              "ok": false
+            },
+            {
+              "answer": "He was achieved success.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "admire",
+          "summary": "to respect or like someone because of their qualities or achievements",
+          "explain": {
+            "entryId": "admire",
+            "headword": "admire",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "admires, admiring, admired",
+                "synonyms": [
+                  "respect",
+                  "look up to"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to respect or like someone because of their qualities or achievements",
+                    "examples": [
+                      "I admire her dedication to the project."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I admire her dedication to the project.",
+              "ok": true
+            },
+            {
+              "answer": "I admire to her dedication.",
+              "ok": false
+            },
+            {
+              "answer": "I admire on her dedication.",
+              "ok": false
+            },
+            {
+              "answer": "I am admired her dedication.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "advise",
+          "summary": "to tell someone what you think they should do",
+          "explain": {
+            "entryId": "advise",
+            "headword": "advise",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "advises, advising, advised",
+                "synonyms": [
+                  "recommend",
+                  "suggest"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to tell someone what you think they should do",
+                    "examples": [
+                      "She advised me to apply early."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She advised me to apply early.",
+              "ok": true
+            },
+            {
+              "answer": "She advised me apply early.",
+              "ok": false
+            },
+            {
+              "answer": "She advised to me to apply early.",
+              "ok": false
+            },
+            {
+              "answer": "She advised me that apply early.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "appreciate",
+          "summary": "to be grateful for something",
+          "explain": {
+            "entryId": "appreciate",
+            "headword": "appreciate",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "appreciates, appreciating, appreciated",
+                "synonyms": [
+                  "value",
+                  "be grateful for"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to be grateful for something; to value it",
+                    "examples": [
+                      "I appreciate your support."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I appreciate your support.",
+              "ok": true
+            },
+            {
+              "answer": "I appreciate for your support.",
+              "ok": false
+            },
+            {
+              "answer": "I appreciate to your support.",
+              "ok": false
+            },
+            {
+              "answer": "I am appreciating your support yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "articulate",
+          "summary": "to express ideas clearly and effectively",
+          "explain": {
+            "entryId": "articulate",
+            "headword": "articulate",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "articulates, articulating, articulated",
+                "synonyms": [
+                  "express",
+                  "explain"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to express ideas clearly and effectively",
+                    "examples": [
+                      "He articulated his ideas clearly."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He articulated his ideas clearly.",
+              "ok": true
+            },
+            {
+              "answer": "He articulated about his ideas clearly.",
+              "ok": false
+            },
+            {
+              "answer": "He was articulate his ideas clearly.",
+              "ok": false
+            },
+            {
+              "answer": "He articulated to his ideas clearly.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "assure",
+          "summary": "to tell someone confidently that something is true or will happen",
+          "explain": {
+            "entryId": "assure",
+            "headword": "assure",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "assures, assuring, assured",
+                "synonyms": [
+                  "promise",
+                  "reassure"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to tell someone confidently that something is true or will happen",
+                    "examples": [
+                      "She assured me that everything was fine."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She assured me that everything was fine.",
+              "ok": true
+            },
+            {
+              "answer": "She assured to me that everything was fine.",
+              "ok": false
+            },
+            {
+              "answer": "She assured me everything is fine.",
+              "ok": false
+            },
+            {
+              "answer": "She assured about everything was fine.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "attain",
+          "summary": "to achieve something after effort",
+          "explain": {
+            "entryId": "attain",
+            "headword": "attain",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "attains, attaining, attained",
+                "synonyms": [
+                  "achieve",
+                  "reach"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to achieve something after effort",
+                    "examples": [
+                      "He attained a high level of proficiency."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He attained a high level of proficiency.",
+              "ok": true
+            },
+            {
+              "answer": "He attained to a high level.",
+              "ok": false
+            },
+            {
+              "answer": "He attained in a high level.",
+              "ok": false
+            },
+            {
+              "answer": "He was attained a high level.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "communicate",
+          "summary": "to share information or ideas with someone",
+          "explain": {
+            "entryId": "communicate",
+            "headword": "communicate",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "communicates, communicating, communicated",
+                "synonyms": [
+                  "talk",
+                  "convey"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to share information or ideas with someone",
+                    "examples": [
+                      "They communicate effectively with clients."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They communicate effectively with clients.",
+              "ok": true
+            },
+            {
+              "answer": "They communicate to clients effectively.",
+              "ok": false
+            },
+            {
+              "answer": "They communicate with to clients.",
+              "ok": false
+            },
+            {
+              "answer": "They communicated about to clients.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "convey",
+          "summary": "to communicate a message, idea, or feeling",
+          "explain": {
+            "entryId": "convey",
+            "headword": "convey",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "conveys, conveying, conveyed",
+                "synonyms": [
+                  "communicate",
+                  "express"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to communicate a message, idea, or feeling",
+                    "examples": [
+                      "The message conveyed a strong sense of urgency."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The message conveyed a strong sense of urgency.",
+              "ok": true
+            },
+            {
+              "answer": "The message conveyed about a strong sense.",
+              "ok": false
+            },
+            {
+              "answer": "The message was convey a strong sense.",
+              "ok": false
+            },
+            {
+              "answer": "The message conveyed to a strong sense.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

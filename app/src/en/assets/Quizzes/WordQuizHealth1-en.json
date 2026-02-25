@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "allergy",
-					"summary": "",
-					"explain": "",
+					"summary": "A medical condition in which your body reacts badly to a particular food, substance, or material.",
+					"explain": {
+						"entryId": "allergy",
+						"headword": "allergy",
+						"pronunciation": { "display": "", "ipaUK": "/ˈælədʒi/", "ipaUS": "/ˈælədʒi/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["sensitivity", "intolerance", "reaction"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a medical condition in which the body reacts badly to a particular food, substance, or material, causing symptoms such as sneezing, rashes, or breathing difficulty",
+										"examples": [
+											"He discovered his allergy to cats when he started sneezing at his friend's house."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She has an allergy to peanuts.", "ok": true },
 						{ "answer": "She is allergy about peanuts.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "appointment",
-					"summary": "",
-					"explain": "",
+					"summary": "A formal arrangement to meet someone at a particular time, especially a doctor or specialist.",
+					"explain": {
+						"entryId": "appointment",
+						"headword": "appointment",
+						"pronunciation": { "display": "", "ipaUK": "/əˈpɔɪntmənt/", "ipaUS": "/əˈpɔɪntmənt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["meeting", "booking", "consultation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a formal arrangement to meet a professional such as a doctor or dentist at a particular time",
+										"examples": [
+											"She made an appointment to see the dentist next week."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I have a doctor's appointment tomorrow.", "ok": true },
 						{ "answer": "I appointed to the doctor at 9 a.m.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "balanced",
-					"summary": "",
-					"explain": "",
+					"summary": "Having the right amounts of different things; not extreme in any one direction.",
+					"explain": {
+						"entryId": "balanced",
+						"headword": "balanced",
+						"pronunciation": { "display": "", "ipaUK": "/ˈbælənst/", "ipaUS": "/ˈbælənst/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["well-rounded", "even", "varied"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "containing the right amounts of different things; not having too much or too little of any one thing",
+										"examples": [
+											"A balanced diet includes fruit, vegetables, protein, and carbohydrates."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She tries to eat a balanced diet.", "ok": true },
 						{ "answer": "She balanced very healthy yesterday.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "checkup",
-					"summary": "",
-					"explain": "",
+					"summary": "A routine medical examination to make sure that you are healthy.",
+					"explain": {
+						"entryId": "checkup",
+						"headword": "checkup",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtʃɛkʌp/", "ipaUS": "/ˈtʃɛkʌp/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["examination", "check", "medical"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a routine medical or dental examination to ensure that a person is in good health",
+										"examples": [
+											"The doctor recommended a checkup every year to stay on top of your health."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He went to the doctor for a routine checkup.", "ok": true },
 						{ "answer": "He checkuped last week.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "consultation",
-					"summary": "",
-					"explain": "",
+					"summary": "A meeting with a professional, such as a doctor, to discuss a problem and get advice.",
+					"explain": {
+						"entryId": "consultation",
+						"headword": "consultation",
+						"pronunciation": { "display": "", "ipaUK": "/ˌkɒnsəlˈteɪʃən/", "ipaUS": "/ˌkɑːnsəlˈteɪʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["appointment", "discussion", "meeting"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a meeting with a professional, especially a doctor or specialist, to discuss a problem and receive advice or a diagnosis",
+										"examples": [
+											"He had a consultation with a skin specialist about the rash."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She had a consultation with the specialist.", "ok": true },
 						{ "answer": "She consulted her homework yesterday.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "coverage",
-					"summary": "",
-					"explain": "",
+					"summary": "The protection provided by an insurance policy; the extent to which something is protected.",
+					"explain": {
+						"entryId": "coverage",
+						"headword": "coverage",
+						"pronunciation": { "display": "", "ipaUK": "/ˈkʌvərɪdʒ/", "ipaUS": "/ˈkʌvərɪdʒ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["protection", "insurance", "provision"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the protection provided by an insurance policy; the extent to which costs or risks are covered by a policy",
+										"examples": [
+											"Check that your travel insurance includes coverage for medical emergencies."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The insurance provides coverage for medical expenses.", "ok": true },
 						{ "answer": "The coverage covers doctor personally.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "cure",
-					"summary": "",
-					"explain": "",
+					"summary": "A substance or treatment that makes a sick person healthy again; a remedy.",
+					"explain": {
+						"entryId": "cure",
+						"headword": "cure",
+						"pronunciation": { "display": "", "ipaUK": "/kjʊər/", "ipaUS": "/kjʊr/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["remedy", "treatment", "antidote"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a substance, treatment, or process that makes a sick person well again; a solution to a medical problem",
+										"examples": [
+											"Researchers hope to find a cure for the disease within the next decade."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Scientists are searching for a cure for cancer.", "ok": true },
 						{ "answer": "He cured about the problem.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "diet",
-					"summary": "",
-					"explain": "",
+					"summary": "The food and drink that a person regularly consumes; also a plan for controlled eating.",
+					"explain": {
+						"entryId": "diet",
+						"headword": "diet",
+						"pronunciation": { "display": "", "ipaUK": "/ˈdaɪɪt/", "ipaUS": "/ˈdaɪɪt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["eating plan", "nutrition", "food intake"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the food and drink that a person regularly eats; also a plan to control what you eat, often to lose weight or improve health",
+										"examples": [
+											"A diet rich in vegetables and fruit can help prevent many illnesses."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She started a healthy diet last month.", "ok": true },
 						{ "answer": "She dieted her doctor yesterday.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "dose",
-					"summary": "",
-					"explain": "",
+					"summary": "A measured amount of medicine or a drug to be taken at one time.",
+					"explain": {
+						"entryId": "dose",
+						"headword": "dose",
+						"pronunciation": { "display": "", "ipaUK": "/dəʊs/", "ipaUS": "/doʊs/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["amount", "measure", "quantity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a measured quantity of medicine or drug to be taken at one time, as specified by a doctor or on the packaging",
+										"examples": [
+											"The nurse gave him a dose of antibiotics twice a day."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Take one dose of the medicine every morning.", "ok": true },
 						{ "answer": "He dosed about the appointment.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "emergency",
-					"summary": "",
-					"explain": "",
+					"summary": "A sudden and serious situation requiring immediate action.",
+					"explain": {
+						"entryId": "emergency",
+						"headword": "emergency",
+						"pronunciation": { "display": "", "ipaUK": "/ɪˈmɜːdʒənsi/", "ipaUS": "/ɪˈmɜːrdʒənsi/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["crisis", "urgency", "incident"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a sudden and serious situation that requires immediate action to prevent harm or danger",
+										"examples": [
+											"In case of an emergency, press the red button to call for help."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Call an ambulance in case of an emergency.", "ok": true },
 						{ "answer": "She emergency to the hospital.", "ok": false },

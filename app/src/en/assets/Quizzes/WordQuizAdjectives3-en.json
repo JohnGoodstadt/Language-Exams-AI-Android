@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "nervous",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling anxious and worried, especially about something you are about to do.",
+					"explain": {
+						"entryId": "nervous",
+						"headword": "nervous",
+						"pronunciation": { "display": "", "ipaUK": "/ˈnɜːvəs/", "ipaUS": "/ˈnɜːrvəs/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["anxious", "worried", "uneasy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling worried and anxious about something, especially something you are about to do or that might happen",
+										"examples": [
+											"I always feel nervous before an important meeting."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She felt nervous before speaking in public.", "ok": true },
 						{ "answer": "She nervous about the speech.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "patient",
-					"summary": "",
-					"explain": "",
+					"summary": "Able to wait calmly or accept difficulties without becoming annoyed or upset.",
+					"explain": {
+						"entryId": "patient",
+						"headword": "patient",
+						"pronunciation": { "display": "", "ipaUK": "/ˈpeɪʃənt/", "ipaUS": "/ˈpeɪʃənt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["calm", "tolerant", "easygoing"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "able to wait for something or to accept difficulties without becoming annoyed or upset",
+										"examples": [
+											"She was patient with the new student who kept asking questions."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He was patient with the children.", "ok": true },
 						{ "answer": "He patient about the delay.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "peaceful",
-					"summary": "",
-					"explain": "",
+					"summary": "Calm, quiet, and free from trouble, noise, or conflict.",
+					"explain": {
+						"entryId": "peaceful",
+						"headword": "peaceful",
+						"pronunciation": { "display": "", "ipaUK": "/ˈpiːsfʊl/", "ipaUS": "/ˈpiːsfʊl/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["calm", "tranquil", "serene"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "calm, quiet, and free from trouble, noise, or conflict",
+										"examples": [
+											"We had a peaceful walk through the countryside."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "They enjoyed a peaceful afternoon in the park.", "ok": true },
 						{ "answer": "They peaceful about the situation.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "relaxed",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling calm and free from stress or worry; not tense.",
+					"explain": {
+						"entryId": "relaxed",
+						"headword": "relaxed",
+						"pronunciation": { "display": "", "ipaUK": "/rɪˈlækst/", "ipaUS": "/rɪˈlækst/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["calm", "at ease", "easygoing"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling calm and free from stress or worry; not tense or anxious",
+										"examples": [
+											"She felt relaxed sitting by the fire with a book."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She felt relaxed after the holiday.", "ok": true },
 						{ "answer": "She relaxed about the exam.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "tense",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling nervous and unable to relax, or creating that feeling in a situation.",
+					"explain": {
+						"entryId": "tense",
+						"headword": "tense",
+						"pronunciation": { "display": "", "ipaUK": "/tɛns/", "ipaUS": "/tɛns/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["anxious", "nervous", "strained"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling nervous and unable to relax, or causing this feeling in a situation or between people",
+										"examples": [
+											"There was a tense silence before the announcement."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The atmosphere was tense before the results were announced.", "ok": true },
 						{ "answer": "He tense about the meeting.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "thankful",
-					"summary": "",
-					"explain": "",
+					"summary": "Pleased and grateful about something that has happened or that someone has done.",
+					"explain": {
+						"entryId": "thankful",
+						"headword": "thankful",
+						"pronunciation": { "display": "", "ipaUK": "/ˈθæŋkfʊl/", "ipaUS": "/ˈθæŋkfʊl/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["grateful", "appreciative", "relieved"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling pleased and grateful about something that has happened or something that someone has done",
+										"examples": [
+											"I was thankful that nobody was hurt in the accident."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She was thankful for their kindness.", "ok": true },
 						{ "answer": "She thankful to their help.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "tolerant",
-					"summary": "",
-					"explain": "",
+					"summary": "Willing to accept beliefs or behaviour that are different from your own without criticising them.",
+					"explain": {
+						"entryId": "tolerant",
+						"headword": "tolerant",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtɒlərənt/", "ipaUS": "/ˈtɑːlərənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["open-minded", "accepting", "patient"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "willing to accept or allow beliefs, behaviour, or customs that are different from your own without criticising them",
+										"examples": [
+											"A good teacher is tolerant of different learning styles."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He is tolerant of different opinions.", "ok": true },
 						{ "answer": "He tolerant about different views.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "tranquil",
-					"summary": "",
-					"explain": "",
+					"summary": "Calm, quiet, and completely undisturbed.",
+					"explain": {
+						"entryId": "tranquil",
+						"headword": "tranquil",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtræŋkwɪl/", "ipaUS": "/ˈtræŋkwɪl/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["peaceful", "serene", "calm"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "calm, quiet, and completely undisturbed; without noise or excitement",
+										"examples": [
+											"We spent the weekend in a tranquil village in the hills."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The lake looked tranquil at sunset.", "ok": true },
 						{ "answer": "The lake tranquil about sunset.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "worried",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling anxious and troubled about possible problems or something that might go wrong.",
+					"explain": {
+						"entryId": "worried",
+						"headword": "worried",
+						"pronunciation": { "display": "", "ipaUK": "/ˈwʌrɪd/", "ipaUS": "/ˈwɜːrɪd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["anxious", "concerned", "troubled"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling anxious and troubled about possible problems or something bad that might happen",
+										"examples": [
+											"She looked worried when she heard the news."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She was worried about her exam results.", "ok": true },
 						{ "answer": "She worried for fail the exam.", "ok": false },

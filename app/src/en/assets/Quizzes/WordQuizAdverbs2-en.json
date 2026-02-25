@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "fully",
-					"summary": "",
-					"explain": "",
+					"summary": "Completely and to the greatest possible degree; without anything missing.",
+					"explain": {
+						"entryId": "fully",
+						"headword": "fully",
+						"pronunciation": { "display": "", "ipaUK": "/ˈfʊli/", "ipaUS": "/ˈfʊli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["completely", "entirely", "wholly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "completely and to the greatest possible degree; without anything missing or left out",
+										"examples": [
+											"Please read the instructions fully before starting."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I fully understand the instructions.", "ok": true },
 						{ "answer": "I understand fully the instructions.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "genuinely",
-					"summary": "",
-					"explain": "",
+					"summary": "In a real and sincere way; truly and authentically, without pretending.",
+					"explain": {
+						"entryId": "genuinely",
+						"headword": "genuinely",
+						"pronunciation": { "display": "", "ipaUK": "/ˈdʒɛnjuɪnli/", "ipaUS": "/ˈdʒɛnjuɪnli/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["truly", "sincerely", "authentically"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in a real and sincere way; without pretending or exaggerating; in a way that is authentic and honest",
+										"examples": [
+											"She was genuinely surprised by the good news."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I am genuinely happy for you.", "ok": true },
 						{ "answer": "I am genuine happy for you.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "greatly",
-					"summary": "",
-					"explain": "",
+					"summary": "To a very large degree; very much; used to intensify the meaning of a verb or adjective.",
+					"explain": {
+						"entryId": "greatly",
+						"headword": "greatly",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɡreɪtli/", "ipaUS": "/ˈɡreɪtli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["enormously", "considerably", "immensely"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to a very large degree; very much; used to emphasise how significant or great something is",
+										"examples": [
+											"Your advice greatly helped me make the right decision."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Your help is greatly appreciated.", "ok": true },
 						{ "answer": "Your help is great appreciated.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "hardly",
-					"summary": "",
-					"explain": "",
+					"summary": "Almost not at all; only just; to a very small degree.",
+					"explain": {
+						"entryId": "hardly",
+						"headword": "hardly",
+						"pronunciation": { "display": "", "ipaUK": "/ˈhɑːdli/", "ipaUS": "/ˈhɑːrdli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["barely", "scarcely", "almost not"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "almost not at all; only just; used to say that something is nearly impossible or nearly not true",
+										"examples": [
+											"I hardly know him — we have only met once."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I hardly slept last night.", "ok": true },
 						{ "answer": "I slept hardly last night.", "ok": false },
@@ -66,8 +170,34 @@
 					"title": "",
 					"page": 5,
 					"question": "highly",
-					"summary": "",
-					"explain": "",
+					"summary": "To a great degree; very; used especially before adjectives expressing quality or approval.",
+					"explain": {
+						"entryId": "highly",
+						"headword": "highly",
+						"pronunciation": { "display": "", "ipaUK": "/ˈhaɪli/", "ipaUS": "/ˈhaɪli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["very", "extremely", "greatly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to a great degree; very; used especially before adjectives that express praise, quality, or a high standard",
+										"examples": [
+											"She is highly respected in her field of research."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "This course is highly recommended.", "ok": true },
 						{ "answer": "This course is high recommended.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "maybe",
-					"summary": "",
-					"explain": "",
+					"summary": "Perhaps; possibly; used when something is uncertain or not yet decided.",
+					"explain": {
+						"entryId": "maybe",
+						"headword": "maybe",
+						"pronunciation": { "display": "", "ipaUK": "/ˈmeɪbi/", "ipaUS": "/ˈmeɪbi/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["perhaps", "possibly", "conceivably"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to say that something is possible but not certain; perhaps; also used when making suggestions",
+										"examples": [
+											"Maybe we can go for a walk after lunch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Maybe we can meet tomorrow.", "ok": true },
 						{ "answer": "We can meet maybe tomorrow.", "ok": false },
@@ -92,8 +248,34 @@
 					"title": "",
 					"page": 7,
 					"question": "moderately",
-					"summary": "",
-					"explain": "",
+					"summary": "To a medium degree; not too much and not too little; within reasonable limits.",
+					"explain": {
+						"entryId": "moderately",
+						"headword": "moderately",
+						"pronunciation": { "display": "", "ipaUK": "/ˈmɒdərɪtli/", "ipaUS": "/ˈmɑːdərɪtli/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["fairly", "reasonably", "somewhat"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to a medium degree; not too much and not too little; at an average or acceptable level",
+										"examples": [
+											"The weather was moderately warm for the time of year."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The hotel is moderately priced.", "ok": true },
 						{ "answer": "The hotel is moderate priced.", "ok": false },
@@ -105,8 +287,34 @@
 					"title": "",
 					"page": 8,
 					"question": "perhaps",
-					"summary": "",
-					"explain": "",
+					"summary": "Used to say that something is possible or might be true, but you are not certain.",
+					"explain": {
+						"entryId": "perhaps",
+						"headword": "perhaps",
+						"pronunciation": { "display": "", "ipaUK": "/pəˈhæps/", "ipaUS": "/pərˈhæps/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["maybe", "possibly", "conceivably"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to say that something is possible or might be true, without being certain; also used to make suggestions or requests more polite",
+										"examples": [
+											"Perhaps she missed the bus and will arrive a little late."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Perhaps you should rest for a while.", "ok": true },
 						{ "answer": "You should perhaps to rest for a while.", "ok": false },
@@ -118,8 +326,34 @@
 					"title": "",
 					"page": 9,
 					"question": "possibly",
-					"summary": "",
-					"explain": "",
+					"summary": "Maybe; perhaps; used to say that something might be true or might happen.",
+					"explain": {
+						"entryId": "possibly",
+						"headword": "possibly",
+						"pronunciation": { "display": "", "ipaUK": "/ˈpɒsɪbli/", "ipaUS": "/ˈpɑːsɪbli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["perhaps", "maybe", "conceivably"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to say that something might be true or might happen, though it is not certain; also used in polite requests",
+										"examples": [
+											"Could you possibly help me carry these bags?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I can't possibly finish it today.", "ok": true },
 						{ "answer": "I can't finish possibly it today.", "ok": false },
@@ -131,8 +365,34 @@
 					"title": "",
 					"page": 10,
 					"question": "quite",
-					"summary": "",
-					"explain": "",
+					"summary": "To a moderate or fairly large degree; fairly but not very or extremely.",
+					"explain": {
+						"entryId": "quite",
+						"headword": "quite",
+						"pronunciation": { "display": "", "ipaUK": "/kwaɪt/", "ipaUS": "/kwaɪt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["fairly", "rather", "reasonably"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to a moderate or fairly large degree; not completely but more than a little; used to modify adjectives and adverbs",
+										"examples": [
+											"The film was quite long but very enjoyable."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The exam was quite challenging.", "ok": true },
 						{ "answer": "The exam was quiet challenging.", "ok": false },

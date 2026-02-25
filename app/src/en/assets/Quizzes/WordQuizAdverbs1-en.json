@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "abruptly",
-					"summary": "",
-					"explain": "",
+					"summary": "Suddenly and unexpectedly, often in a way that seems rude or unplanned.",
+					"explain": {
+						"entryId": "abruptly",
+						"headword": "abruptly",
+						"pronunciation": { "display": "", "ipaUK": "/əˈbrʌptli/", "ipaUS": "/əˈbrʌptli/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["suddenly", "sharply", "unexpectedly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in a sudden and unexpected way, often seeming rude or without warning",
+										"examples": [
+											"The meeting ended abruptly when the fire alarm went off."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He stopped talking abruptly.", "ok": true },
 						{ "answer": "He stopped abruptly to talk.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "absolutely",
-					"summary": "",
-					"explain": "",
+					"summary": "Completely and in every way; used to make a statement stronger.",
+					"explain": {
+						"entryId": "absolutely",
+						"headword": "absolutely",
+						"pronunciation": { "display": "", "ipaUK": "/ˈæbsəluːtli/", "ipaUS": "/ˈæbsəluːtli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["completely", "totally", "entirely"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "completely and in every way; used for emphasis to make a statement stronger",
+										"examples": [
+											"She was absolutely right about the decision."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I absolutely agree with you.", "ok": true },
 						{ "answer": "I agree absolutely with you.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "barely",
-					"summary": "",
-					"explain": "",
+					"summary": "Only just; almost not; by a very small amount.",
+					"explain": {
+						"entryId": "barely",
+						"headword": "barely",
+						"pronunciation": { "display": "", "ipaUK": "/ˈbeəli/", "ipaUS": "/ˈberli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["hardly", "scarcely", "just"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "only just; almost not; by a very small amount or to a very small degree",
+										"examples": [
+											"She barely had enough time to catch the train."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I could barely hear the speaker.", "ok": true },
 						{ "answer": "I could hear barely the speaker.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "certainly",
-					"summary": "",
-					"explain": "",
+					"summary": "Without any doubt; definitely; used to show complete confidence.",
+					"explain": {
+						"entryId": "certainly",
+						"headword": "certainly",
+						"pronunciation": { "display": "", "ipaUK": "/ˈsɜːtənli/", "ipaUS": "/ˈsɜːrtənli/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["definitely", "undoubtedly", "surely"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "without any doubt; used to emphasise that something is definitely true or will definitely happen",
+										"examples": [
+											"He will certainly be at the meeting tomorrow."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I will certainly call you later.", "ok": true },
 						{ "answer": "I will call certainly you later.", "ok": false },
@@ -66,8 +170,34 @@
 					"title": "",
 					"page": 5,
 					"question": "comparatively",
-					"summary": "",
-					"explain": "",
+					"summary": "To a certain degree when judged against something else; relatively.",
+					"explain": {
+						"entryId": "comparatively",
+						"headword": "comparatively",
+						"pronunciation": { "display": "", "ipaUK": "/kəmˈpærətɪvli/", "ipaUS": "/kəmˈpærətɪvli/" },
+						"labels": ["C1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["relatively", "by comparison", "proportionally"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to a certain degree when compared to something else or to a general standard; relatively",
+										"examples": [
+											"The winters here are comparatively mild."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "This exam was comparatively easy.", "ok": true },
 						{ "answer": "This exam was comparative easy.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "completely",
-					"summary": "",
-					"explain": "",
+					"summary": "Totally and in every way; with nothing missing or left out.",
+					"explain": {
+						"entryId": "completely",
+						"headword": "completely",
+						"pronunciation": { "display": "", "ipaUK": "/kəmˈpliːtli/", "ipaUS": "/kəmˈpliːtli/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["totally", "entirely", "absolutely"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in every way or as much as possible; totally and without leaving anything out",
+										"examples": [
+											"I completely forgot about the appointment."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I completely forgot his name.", "ok": true },
 						{ "answer": "I forgot completely his name.", "ok": false },
@@ -92,8 +248,34 @@
 					"title": "",
 					"page": 7,
 					"question": "definitely",
-					"summary": "",
-					"explain": "",
+					"summary": "Without any doubt; in a way that is certain and clear.",
+					"explain": {
+						"entryId": "definitely",
+						"headword": "definitely",
+						"pronunciation": { "display": "", "ipaUK": "/ˈdɛfɪnɪtli/", "ipaUS": "/ˈdɛfɪnɪtli/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["certainly", "undoubtedly", "absolutely"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "without any doubt; in a way that is certain and clear; used to emphasise a strong opinion or decision",
+										"examples": [
+											"She will definitely come to the party."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I will definitely attend the meeting.", "ok": true },
 						{ "answer": "I will attend definitely the meeting.", "ok": false },
@@ -105,8 +287,34 @@
 					"title": "",
 					"page": 8,
 					"question": "entirely",
-					"summary": "",
-					"explain": "",
+					"summary": "Completely and in every part; with nothing left out or excluded.",
+					"explain": {
+						"entryId": "entirely",
+						"headword": "entirely",
+						"pronunciation": { "display": "", "ipaUK": "/ɪnˈtaɪəli/", "ipaUS": "/ɪnˈtaɪərli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["completely", "totally", "wholly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "completely and in every part; with nothing left out or excluded",
+										"examples": [
+											"The decision was entirely up to her."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I entirely understand your point.", "ok": true },
 						{ "answer": "I understand entirely your point.", "ok": false },
@@ -118,8 +326,34 @@
 					"title": "",
 					"page": 9,
 					"question": "extremely",
-					"summary": "",
-					"explain": "",
+					"summary": "To a very great degree; used to make an adjective or adverb much stronger.",
+					"explain": {
+						"entryId": "extremely",
+						"headword": "extremely",
+						"pronunciation": { "display": "", "ipaUK": "/ɪkˈstriːmli/", "ipaUS": "/ɪkˈstriːmli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["very", "highly", "exceptionally"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to a very great degree; used to make an adjective or another adverb much stronger",
+										"examples": [
+											"The journey was extremely long and tiring."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The test was extremely difficult.", "ok": true },
 						{ "answer": "The test was extreme difficult.", "ok": false },
@@ -131,8 +365,34 @@
 					"title": "",
 					"page": 10,
 					"question": "fairly",
-					"summary": "",
-					"explain": "",
+					"summary": "To a moderate degree; more than a little but not very or extremely.",
+					"explain": {
+						"entryId": "fairly",
+						"headword": "fairly",
+						"pronunciation": { "display": "", "ipaUK": "/ˈfeəli/", "ipaUS": "/ˈferli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["quite", "reasonably", "rather"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to a moderate degree; more than a little but less than very or extremely",
+										"examples": [
+											"The hotel was fairly comfortable and well located."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The lesson was fairly easy to follow.", "ok": true },
 						{ "answer": "The lesson was fair easy to follow.", "ok": false },

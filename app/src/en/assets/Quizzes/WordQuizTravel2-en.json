@@ -1,146 +1,614 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizTravel2-en",
-	"title": "2. Travel",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Travel & transport (Set 2)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "gate",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Our flight leaves from gate 7.", "ok": true },
-						{ "answer": "Our flight leaves from the gate 7.", "ok": false },
-						{ "answer": "Gates is very busy today.", "ok": false },
-						{ "answer": "We waited at to the gate.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "hostel",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We stayed in a hostel to save money.", "ok": true },
-						{ "answer": "We stayed in hostel to save money.", "ok": false },
-						{ "answer": "A hostel are expensive.", "ok": false },
-						{ "answer": "We stayed at hostel for saving money.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "hotel",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The hotel has a pool and a gym.", "ok": true },
-						{ "answer": "Hotel has a pool and a gym.", "ok": false },
-						{ "answer": "Hotels is very comfortable.", "ok": false },
-						{ "answer": "We stayed in the hotel at two nights.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "immigration",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We showed our passports at immigration.", "ok": true },
-						{ "answer": "We showed our passports in immigration.", "ok": false },
-						{ "answer": "Immigrations are very strict.", "ok": false },
-						{ "answer": "Immigration is the place you collect luggage.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "itinerary",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I printed the itinerary for our trip.", "ok": true },
-						{ "answer": "I printed itinerary for our trip.", "ok": false },
-						{ "answer": "Itineraries is a single plan.", "ok": false },
-						{ "answer": "I printed the itinerary on paper for.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "journey",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The journey took five hours by train.", "ok": true },
-						{ "answer": "The journey took five hours with train.", "ok": false },
-						{ "answer": "Journeys is very long today.", "ok": false },
-						{ "answer": "We journeyed to home at night.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "landing",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "After landing, we turned on our phones.", "ok": true },
-						{ "answer": "After the landing, we turned on our phones.", "ok": false },
-						{ "answer": "Landings is at 6 p.m.", "ok": false },
-						{ "answer": "We landed at to the airport.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "luggage",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "My luggage is too heavy.", "ok": true },
-						{ "answer": "My luggages are too heavy.", "ok": false },
-						{ "answer": "A luggage is too heavy.", "ok": false },
-						{ "answer": "I put my luggage in the on the taxi.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "passport control",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We waited at passport control for 20 minutes.", "ok": true },
-						{ "answer": "We waited in passport control for 20 minutes.", "ok": false },
-						{ "answer": "Passport controls is very slow.", "ok": false },
-						{ "answer": "Passport control is where you buy tickets.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "plan",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We made a plan for the weekend.", "ok": true },
-						{ "answer": "We made plan for the weekend.", "ok": false },
-						{ "answer": "Plans is always changing.", "ok": false },
-						{ "answer": "We planned to the weekend carefully.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizTravel2-en",
+  "title": "2. Travel",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Travel & transport (Set 2)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "gate",
+          "summary": "the place at an airport where you board your plane",
+          "explain": {
+            "entryId": "gate",
+            "headword": "gate",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "gates",
+                "synonyms": [
+                  "boarding gate"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the place at an airport where you board your plane",
+                    "examples": [
+                      "Our flight leaves from gate 7."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Our flight leaves from gate 7.",
+              "ok": true
+            },
+            {
+              "answer": "Our flight leaves from the gate 7.",
+              "ok": false
+            },
+            {
+              "answer": "Gates is very busy today.",
+              "ok": false
+            },
+            {
+              "answer": "We waited at to the gate.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "hostel",
+          "summary": "a cheap place to stay where you often share rooms",
+          "explain": {
+            "entryId": "hostel",
+            "headword": "hostel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "hostels",
+                "synonyms": [
+                  "budget hotel",
+                  "youth hostel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a cheap place to stay where you often share rooms",
+                    "examples": [
+                      "We stayed in a hostel to save money."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We stayed in a hostel to save money.",
+              "ok": true
+            },
+            {
+              "answer": "We stayed in hostel to save money.",
+              "ok": false
+            },
+            {
+              "answer": "A hostel are expensive.",
+              "ok": false
+            },
+            {
+              "answer": "We stayed at hostel for saving money.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "hotel",
+          "summary": "a building where you pay to stay in a room",
+          "explain": {
+            "entryId": "hotel",
+            "headword": "hotel",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "hotels",
+                "synonyms": [
+                  "accommodation",
+                  "inn"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a building where you pay to stay in a room",
+                    "examples": [
+                      "The hotel has a pool and a gym."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The hotel has a pool and a gym.",
+              "ok": true
+            },
+            {
+              "answer": "Hotel has a pool and a gym.",
+              "ok": false
+            },
+            {
+              "answer": "Hotels is very comfortable.",
+              "ok": false
+            },
+            {
+              "answer": "We stayed in the hotel at two nights.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "immigration",
+          "summary": "the place/process of checking passports when entering a country",
+          "explain": {
+            "entryId": "immigration",
+            "headword": "immigration",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "immigrations",
+                "synonyms": [
+                  "border check",
+                  "passport check"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the place/process of checking passports when entering a country",
+                    "examples": [
+                      "We showed our passports at immigration."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We showed our passports at immigration.",
+              "ok": true
+            },
+            {
+              "answer": "We showed our passports in immigration.",
+              "ok": false
+            },
+            {
+              "answer": "Immigrations are very strict.",
+              "ok": false
+            },
+            {
+              "answer": "Immigration is the place you collect luggage.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "itinerary",
+          "summary": "a plan or list of the places you will visit and times of travel",
+          "explain": {
+            "entryId": "itinerary",
+            "headword": "itinerary",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "itinerarys",
+                "synonyms": [
+                  "travel plan",
+                  "schedule"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a plan or list of the places you will visit and times of travel",
+                    "examples": [
+                      "I printed the itinerary for our trip."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I printed the itinerary for our trip.",
+              "ok": true
+            },
+            {
+              "answer": "I printed itinerary for our trip.",
+              "ok": false
+            },
+            {
+              "answer": "Itineraries is a single plan.",
+              "ok": false
+            },
+            {
+              "answer": "I printed the itinerary on paper for.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "journey",
+          "summary": "a trip from one place to another",
+          "explain": {
+            "entryId": "journey",
+            "headword": "journey",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "journeys",
+                "synonyms": [
+                  "trip",
+                  "travel"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a trip from one place to another",
+                    "examples": [
+                      "The journey took five hours by train."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The journey took five hours by train.",
+              "ok": true
+            },
+            {
+              "answer": "The journey took five hours with train.",
+              "ok": false
+            },
+            {
+              "answer": "Journeys is very long today.",
+              "ok": false
+            },
+            {
+              "answer": "We journeyed to home at night.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "landing",
+          "summary": "when a plane comes down and touches the ground",
+          "explain": {
+            "entryId": "landing",
+            "headword": "landing",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "landings",
+                "synonyms": [
+                  "touchdown"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "when a plane comes down and touches the ground",
+                    "examples": [
+                      "After landing, we turned on our phones."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "After landing, we turned on our phones.",
+              "ok": true
+            },
+            {
+              "answer": "After the landing, we turned on our phones.",
+              "ok": false
+            },
+            {
+              "answer": "Landings is at 6 p.m.",
+              "ok": false
+            },
+            {
+              "answer": "We landed at to the airport.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "luggage",
+          "summary": "bags and suitcases you take when you travel",
+          "explain": {
+            "entryId": "luggage",
+            "headword": "luggage",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "luggages",
+                "synonyms": [
+                  "baggage",
+                  "bags"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bags and suitcases you take when you travel",
+                    "examples": [
+                      "My luggage is too heavy."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "My luggage is too heavy.",
+              "ok": true
+            },
+            {
+              "answer": "My luggages are too heavy.",
+              "ok": false
+            },
+            {
+              "answer": "A luggage is too heavy.",
+              "ok": false
+            },
+            {
+              "answer": "I put my luggage in the on the taxi.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "passport control",
+          "summary": "the area where officers check passports at an airport/border",
+          "explain": {
+            "entryId": "passport_control",
+            "headword": "passport control",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "immigration",
+                  "border control"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the area where officers check passports at an airport/border",
+                    "examples": [
+                      "We waited at passport control for 20 minutes."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We waited at passport control for 20 minutes.",
+              "ok": true
+            },
+            {
+              "answer": "We waited in passport control for 20 minutes.",
+              "ok": false
+            },
+            {
+              "answer": "Passport controls is very slow.",
+              "ok": false
+            },
+            {
+              "answer": "Passport control is where you buy tickets.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "plan",
+          "summary": "an idea or arrangement about what you will do",
+          "explain": {
+            "entryId": "plan",
+            "headword": "plan",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "plans",
+                "synonyms": [
+                  "intention",
+                  "programme"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an idea or arrangement about what you will do",
+                    "examples": [
+                      "We made a plan for the weekend."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We made a plan for the weekend.",
+              "ok": true
+            },
+            {
+              "answer": "We made plan for the weekend.",
+              "ok": false
+            },
+            {
+              "answer": "Plans is always changing.",
+              "ok": false
+            },
+            {
+              "answer": "We planned to the weekend carefully.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

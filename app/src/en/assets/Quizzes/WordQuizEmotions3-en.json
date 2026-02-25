@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "opinion",
-					"summary": "",
-					"explain": "",
+					"summary": "A personal view or belief about something, not necessarily based on fact.",
+					"explain": {
+						"entryId": "opinion",
+						"headword": "opinion",
+						"pronunciation": { "display": "", "ipaUK": "/əˈpɪnjən/", "ipaUS": "/əˈpɪnjən/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["view", "belief", "perspective"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a personal view, belief, or judgement about something, not necessarily based on fact or knowledge",
+										"examples": [
+											"In my opinion, the second option is the better choice."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "In my opinion, this plan will work.", "ok": true },
 						{ "answer": "In my opinion, this plan will works.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "personality",
-					"summary": "",
-					"explain": "",
+					"summary": "The combination of qualities and characteristics that make a person unique.",
+					"explain": {
+						"entryId": "personality",
+						"headword": "personality",
+						"pronunciation": { "display": "", "ipaUK": "/ˌpɜːsəˈnælɪti/", "ipaUS": "/ˌpɜːrsəˈnælɪti/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["character", "nature", "disposition"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the combination of qualities, characteristics, and behaviours that make a person different from everyone else",
+										"examples": [
+											"He has a warm and outgoing personality that everyone admires."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Her friendly personality makes her popular.", "ok": true },
 						{ "answer": "Her friendly personality make her popular.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "perspective",
-					"summary": "",
-					"explain": "",
+					"summary": "A particular way of thinking about or viewing a situation or subject.",
+					"explain": {
+						"entryId": "perspective",
+						"headword": "perspective",
+						"pronunciation": { "display": "", "ipaUK": "/pəˈspɛktɪv/", "ipaUS": "/pərˈspɛktɪv/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["viewpoint", "standpoint", "outlook"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a particular way of considering or judging a situation or subject; a point of view shaped by personal experience or position",
+										"examples": [
+											"Travel can give you a new perspective on life."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Try to see the problem from a different perspective.", "ok": true },
 						{ "answer": "Try to see the problem from different perspective.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "self-esteem",
-					"summary": "",
-					"explain": "",
+					"summary": "Confidence in and respect for yourself and your own abilities and worth.",
+					"explain": {
+						"entryId": "self-esteem",
+						"headword": "self-esteem",
+						"pronunciation": { "display": "", "ipaUK": "/ˌsɛlfɪˈstiːm/", "ipaUS": "/ˌsɛlfɪˈstiːm/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["self-respect", "self-confidence", "self-worth"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "confidence in your own worth and abilities; respect and belief in yourself as a capable and valuable person",
+										"examples": [
+											"Completing the course helped her self-esteem enormously."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Good feedback can improve self-esteem.", "ok": true },
 						{ "answer": "Good feedback can improve the self-esteem.", "ok": false },
@@ -66,8 +170,34 @@
 					"title": "",
 					"page": 5,
 					"question": "sentiment",
-					"summary": "",
-					"explain": "",
+					"summary": "A feeling or opinion held by a person or group about a particular topic.",
+					"explain": {
+						"entryId": "sentiment",
+						"headword": "sentiment",
+						"pronunciation": { "display": "", "ipaUK": "/ˈsɛntɪmənt/", "ipaUS": "/ˈsɛntɪmənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["feeling", "opinion", "attitude"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a view, feeling, or attitude, especially one shared by many people; an opinion expressed through or based on emotion",
+										"examples": [
+											"Public sentiment towards the new policy was mostly positive."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "There is growing sentiment against the policy.", "ok": true },
 						{ "answer": "There is a growing sentiment against the policy.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "skill",
-					"summary": "",
-					"explain": "",
+					"summary": "The ability to do something well, usually developed through training or practice.",
+					"explain": {
+						"entryId": "skill",
+						"headword": "skill",
+						"pronunciation": { "display": "", "ipaUK": "/skɪl/", "ipaUS": "/skɪl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["ability", "expertise", "talent"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the ability to do something well as a result of training, practice, or natural talent",
+										"examples": [
+											"Good communication is an essential skill in any workplace."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Listening is an important skill.", "ok": true },
 						{ "answer": "Listening is important skill.", "ok": false },
@@ -92,8 +248,34 @@
 					"title": "",
 					"page": 7,
 					"question": "talent",
-					"summary": "",
-					"explain": "",
+					"summary": "A natural ability or aptitude for something, especially one that can be developed.",
+					"explain": {
+						"entryId": "talent",
+						"headword": "talent",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtælənt/", "ipaUS": "/ˈtælənt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["gift", "flair", "ability"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a natural ability or aptitude for something, especially one that can be further developed with practice",
+										"examples": [
+											"She showed a real talent for painting from a very early age."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He has a talent for music.", "ok": true },
 						{ "answer": "He has talent for music.", "ok": false },
@@ -105,8 +287,34 @@
 					"title": "",
 					"page": 8,
 					"question": "traits",
-					"summary": "",
-					"explain": "",
+					"summary": "Particular and distinguishing qualities or characteristics of a person's personality.",
+					"explain": {
+						"entryId": "traits",
+						"headword": "traits",
+						"pronunciation": { "display": "", "ipaUK": "/treɪts/", "ipaUS": "/treɪts/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["characteristics", "qualities", "features"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "particular and distinguishing qualities or characteristics of a person's personality or behaviour",
+										"examples": [
+											"Kindness and honesty are traits that people admire greatly."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Patience and honesty are important traits.", "ok": true },
 						{ "answer": "Patience and honesty are an important traits.", "ok": false },
@@ -118,8 +326,34 @@
 					"title": "",
 					"page": 9,
 					"question": "view",
-					"summary": "",
-					"explain": "",
+					"summary": "A personal opinion or belief about a particular subject or issue.",
+					"explain": {
+						"entryId": "view",
+						"headword": "view",
+						"pronunciation": { "display": "", "ipaUK": "/vjuː/", "ipaUS": "/vjuː/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["opinion", "perspective", "standpoint"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a personal opinion, belief, or attitude about a particular subject or issue",
+										"examples": [
+											"In my view, the project needs more planning before we start."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "In my view, we should leave early.", "ok": true },
 						{ "answer": "In my view, we should to leave early.", "ok": false },
@@ -131,8 +365,34 @@
 					"title": "",
 					"page": 10,
 					"question": "wisdom",
-					"summary": "",
-					"explain": "",
+					"summary": "The ability to make good judgements and decisions based on knowledge and experience.",
+					"explain": {
+						"entryId": "wisdom",
+						"headword": "wisdom",
+						"pronunciation": { "display": "", "ipaUK": "/ˈwɪzdəm/", "ipaUS": "/ˈwɪzdəm/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["insight", "judgement", "understanding"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the quality of having good judgement and understanding, based on knowledge and experience accumulated over time",
+										"examples": [
+											"The older students shared their wisdom with those just starting the course."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He shared his wisdom with the younger students.", "ok": true },
 						{ "answer": "He shared his wisdoms with the younger students.", "ok": false },

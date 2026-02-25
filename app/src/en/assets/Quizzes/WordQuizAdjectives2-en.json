@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "eager",
-					"summary": "",
-					"explain": "",
+					"summary": "Very keen and wanting very much to do or have something.",
+					"explain": {
+						"entryId": "eager",
+						"headword": "eager",
+						"pronunciation": { "display": "", "ipaUK": "/ˈiːɡə/", "ipaUS": "/ˈiːɡər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["keen", "enthusiastic", "motivated"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "very keen and wanting very much to do or have something; showing a lot of enthusiasm and interest",
+										"examples": [
+											"He was eager to learn everything about his new role."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She was eager to start her new job.", "ok": true },
 						{ "answer": "She was eager about to start.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "embarrassed",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling ashamed or self-conscious because of something awkward.",
+					"explain": {
+						"entryId": "embarrassed",
+						"headword": "embarrassed",
+						"pronunciation": { "display": "", "ipaUK": "/ɪmˈbærəst/", "ipaUS": "/ɪmˈbærəst/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["ashamed", "self-conscious", "awkward"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling ashamed or self-conscious because of something awkward you have done or that has happened to you",
+										"examples": [
+											"She felt embarrassed when she tripped in front of everyone."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He felt embarrassed after forgetting her name.", "ok": true },
 						{ "answer": "He embarrassed of his mistake.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "enthusiastic",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling or showing great excitement and interest in something.",
+					"explain": {
+						"entryId": "enthusiastic",
+						"headword": "enthusiastic",
+						"pronunciation": { "display": "", "ipaUK": "/ɪnˌθjuːziˈæstɪk/", "ipaUS": "/ɪnˌθuːziˈæstɪk/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["eager", "keen", "passionate"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling or showing great excitement and interest in something; having a lot of enthusiasm",
+										"examples": [
+											"He was enthusiastic about the new challenge at work."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She was enthusiastic about the project.", "ok": true },
 						{ "answer": "She enthusiastic for the project.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "envious",
-					"summary": "",
-					"explain": "",
+					"summary": "Wishing you had something that another person has; feeling envy.",
+					"explain": {
+						"entryId": "envious",
+						"headword": "envious",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɛnvɪəs/", "ipaUS": "/ˈɛnvɪəs/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["jealous", "resentful", "covetous"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wishing you had something that another person has; feeling unhappy because someone else has something you want",
+										"examples": [
+											"She was envious of her friend's new laptop."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He was envious of his brother's success.", "ok": true },
 						{ "answer": "He envious about his brother.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "excited",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling very happy and enthusiastic, especially about something that is going to happen.",
+					"explain": {
+						"entryId": "excited",
+						"headword": "excited",
+						"pronunciation": { "display": "", "ipaUK": "/ɪkˈsaɪtɪd/", "ipaUS": "/ɪkˈsaɪtɪd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["thrilled", "eager", "enthusiastic"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling very happy and enthusiastic, especially about something that is going to happen",
+										"examples": [
+											"The children were excited about the school trip."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She was excited about the trip.", "ok": true },
 						{ "answer": "She excited for go abroad.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "grateful",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling or showing thanks because someone has helped you or been kind.",
+					"explain": {
+						"entryId": "grateful",
+						"headword": "grateful",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɡreɪtfʊl/", "ipaUS": "/ˈɡreɪtfʊl/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["thankful", "appreciative", "obliged"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling or showing that you want to thank someone because they have helped you or done something kind for you",
+										"examples": [
+											"We are grateful for all the support you have given us."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I am grateful for your support.", "ok": true },
 						{ "answer": "I am grateful to your support.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "humiliated",
-					"summary": "",
-					"explain": "",
+					"summary": "Made to feel deeply ashamed and embarrassed, especially in front of others.",
+					"explain": {
+						"entryId": "humiliated",
+						"headword": "humiliated",
+						"pronunciation": { "display": "", "ipaUK": "/hjuːˈmɪlɪeɪtɪd/", "ipaUS": "/hjuːˈmɪlɪeɪtɪd/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["embarrassed", "ashamed", "degraded"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "made to feel very ashamed and embarrassed, especially in front of other people",
+										"examples": [
+											"He felt humiliated when his answer was wrong in front of the whole class."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He felt humiliated after the public criticism.", "ok": true },
 						{ "answer": "He humiliated about the comment.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "inquisitive",
-					"summary": "",
-					"explain": "",
+					"summary": "Curious and eager to learn or find out new things.",
+					"explain": {
+						"entryId": "inquisitive",
+						"headword": "inquisitive",
+						"pronunciation": { "display": "", "ipaUK": "/ɪnˈkwɪzɪtɪv/", "ipaUS": "/ɪnˈkwɪzɪtɪv/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["curious", "enquiring", "interested"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "interested in learning about many different things; curious and eager to find out information",
+										"examples": [
+											"An inquisitive mind is a great advantage when studying science."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The child was inquisitive and asked many questions.", "ok": true },
 						{ "answer": "The child inquisitive about the answer.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "interested",
-					"summary": "",
-					"explain": "",
+					"summary": "Giving attention to something because you want to know more about it or enjoy it.",
+					"explain": {
+						"entryId": "interested",
+						"headword": "interested",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɪntrɪstɪd/", "ipaUS": "/ˈɪntrɪstɪd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["curious", "engaged", "attentive"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "giving attention to something because you want to know more about it or you enjoy it",
+										"examples": [
+											"He was interested in the history of the local town."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She is interested in learning Spanish.", "ok": true },
 						{ "answer": "She interested to learn Spanish.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "jealous",
-					"summary": "",
-					"explain": "",
+					"summary": "Feeling unhappy and angry because someone else has something you want.",
+					"explain": {
+						"entryId": "jealous",
+						"headword": "jealous",
+						"pronunciation": { "display": "", "ipaUK": "/ˈdʒɛləs/", "ipaUS": "/ˈdʒɛləs/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["envious", "resentful", "covetous"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling unhappy and angry because someone else has something you want, or because someone you care about is paying attention to another person",
+										"examples": [
+											"She felt jealous when her colleague got the promotion."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He was jealous of his friend's promotion.", "ok": true },
 						{ "answer": "He jealous about his friend.", "ok": false },

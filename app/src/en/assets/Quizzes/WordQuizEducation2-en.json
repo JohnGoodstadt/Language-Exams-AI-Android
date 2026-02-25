@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "employee",
-					"summary": "",
-					"explain": "",
+					"summary": "A person who works for a company or organization and is paid for it.",
+					"explain": {
+						"entryId": "employee",
+						"headword": "employee",
+						"pronunciation": { "display": "", "ipaUK": "/ɪmˈplɔɪiː/", "ipaUS": "/ɪmˈplɔɪiː/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["worker", "member of staff", "staff member"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is paid to work for a company, organization, or individual",
+										"examples": [
+											"The employee arrived early for work."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The employee arrived early for work.", "ok": true },
 						{ "answer": "The employee employed the manager.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "employer",
-					"summary": "",
-					"explain": "",
+					"summary": "A person or organization that hires and pays workers.",
+					"explain": {
+						"entryId": "employer",
+						"headword": "employer",
+						"pronunciation": { "display": "", "ipaUK": "/ɪmˈplɔɪə/", "ipaUS": "/ɪmˈplɔɪər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["boss", "company", "organization"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person, company, or organization that employs people and pays them to work",
+										"examples": [
+											"The employer offered her a full-time job."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The employer offered her a full-time job.", "ok": true },
 						{ "answer": "The employer worked under the staff.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "experience",
-					"summary": "",
-					"explain": "",
+					"summary": "Knowledge or skill gained by doing something over a period of time.",
+					"explain": {
+						"entryId": "experience",
+						"headword": "experience",
+						"pronunciation": { "display": "", "ipaUK": "/ɪkˈspɪərɪəns/", "ipaUS": "/ɪkˈspɪrɪəns/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["knowledge", "practice", "expertise"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "knowledge or skill that you gain by doing a job or activity for a period of time",
+										"examples": [
+											"She gained valuable experience during her internship."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She gained valuable experience during her internship.", "ok": true },
 						{ "answer": "She experienced to the manager yesterday.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "homework",
-					"summary": "",
-					"explain": "",
+					"summary": "School work that a teacher gives students to do at home.",
+					"explain": {
+						"entryId": "homework",
+						"headword": "homework",
+						"pronunciation": { "display": "", "ipaUK": "/ˈhəʊmwɜːk/", "ipaUS": "/ˈhoʊmwɜːrk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["assignment", "schoolwork", "exercises"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "work that a teacher gives a student to do at home, outside of school hours",
+										"examples": [
+											"I finished my homework before dinner."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I finished my homework before dinner.", "ok": true },
 						{ "answer": "I homeworked all evening.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "internship",
-					"summary": "",
-					"explain": "",
+					"summary": "A short period of work experience, often for students or recent graduates, sometimes unpaid.",
+					"explain": {
+						"entryId": "internship",
+						"headword": "internship",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɪntɜːnʃɪp/", "ipaUS": "/ˈɪntɜːrnʃɪp/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["placement", "work placement", "traineeship"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a period of time in which a student or recent graduate works for a company or organization to gain practical experience, often without pay",
+										"examples": [
+											"She completed an internship at a law firm."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She completed an internship at a law firm.", "ok": true },
 						{ "answer": "She interned her degree yesterday.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "lecture",
-					"summary": "",
-					"explain": "",
+					"summary": "A formal talk given to a large group of people, especially students at a university.",
+					"explain": {
+						"entryId": "lecture",
+						"headword": "lecture",
+						"pronunciation": { "display": "", "ipaUK": "/ˈlɛktʃə/", "ipaUS": "/ˈlɛktʃər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["talk", "presentation", "address"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a formal talk given to an audience, especially to students at a university or college, as a method of teaching",
+										"examples": [
+											"The lecture lasted two hours."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The lecture lasted two hours.", "ok": true },
 						{ "answer": "He lectured his homework yesterday.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "lecturer",
-					"summary": "",
-					"explain": "",
+					"summary": "A person whose job is to give lectures, especially at a university or college.",
+					"explain": {
+						"entryId": "lecturer",
+						"headword": "lecturer",
+						"pronunciation": { "display": "", "ipaUK": "/ˈlɛktʃərə/", "ipaUS": "/ˈlɛktʃərər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["tutor", "teacher", "professor"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person whose job is to teach by giving lectures at a university or college",
+										"examples": [
+											"The lecturer explained the theory clearly."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The lecturer explained the theory clearly.", "ok": true },
 						{ "answer": "The lecturer was listening to the class quietly.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "manager",
-					"summary": "",
-					"explain": "",
+					"summary": "A person who is responsible for controlling or organizing a business, team, or department.",
+					"explain": {
+						"entryId": "manager",
+						"headword": "manager",
+						"pronunciation": { "display": "", "ipaUK": "/ˈmænɪdʒə/", "ipaUS": "/ˈmænɪdʒər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["supervisor", "director", "head"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is in charge of running a business, organization, department, or team of people",
+										"examples": [
+											"The manager approved the project plan."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The manager approved the project plan.", "ok": true },
 						{ "answer": "The managered the homework carefully.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "occupation",
-					"summary": "",
-					"explain": "",
+					"summary": "A person's regular job or profession.",
+					"explain": {
+						"entryId": "occupation",
+						"headword": "occupation",
+						"pronunciation": { "display": "", "ipaUK": "/ˌɒkjʊˈpeɪʃən/", "ipaUS": "/ˌɑːkjəˈpeɪʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["job", "profession", "career"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person's regular job, employment, or main activity",
+										"examples": [
+											"Teaching is her main occupation."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Teaching is her main occupation.", "ok": true },
 						{ "answer": "She occupationed the office.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "profession",
-					"summary": "",
-					"explain": "",
+					"summary": "A paid job that requires special education, training, or skill.",
+					"explain": {
+						"entryId": "profession",
+						"headword": "profession",
+						"pronunciation": { "display": "", "ipaUK": "/prəˈfɛʃən/", "ipaUS": "/prəˈfɛʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["occupation", "career", "vocation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a job that requires a high level of education, training, or skill, especially one that is considered respectable",
+										"examples": [
+											"Medicine is a respected profession."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Medicine is a respected profession.", "ok": true },
 						{ "answer": "She professioned in the hospital.", "ok": false },

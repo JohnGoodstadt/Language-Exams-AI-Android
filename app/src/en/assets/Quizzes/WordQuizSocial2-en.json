@@ -1,146 +1,612 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizSocial2-en",
-	"title": "2. Social",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Social issues (Set 2)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "heritage",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The city is proud of its cultural heritage.", "ok": true },
-						{ "answer": "The city is proud of the cultural heritage.", "ok": false },
-						{ "answer": "Heritage are very important.", "ok": false },
-						{ "answer": "She heritaged the tradition.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "homelessness",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The government is trying to reduce homelessness.", "ok": true },
-						{ "answer": "The government is trying to reduce the homelessness.", "ok": false },
-						{ "answer": "Homelessness are increasing.", "ok": false },
-						{ "answer": "He homelessed last year.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "immigration",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Immigration policies vary between countries.", "ok": true },
-						{ "answer": "The immigration policies varies between countries.", "ok": false },
-						{ "answer": "An immigration is a person moving country.", "ok": false },
-						{ "answer": "She immigrated to the UK last year.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "inclusiveness",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The company values inclusiveness.", "ok": true },
-						{ "answer": "The company values an inclusiveness.", "ok": false },
-						{ "answer": "Inclusiveness are important.", "ok": false },
-						{ "answer": "She inclusived the team.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "justice",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "They demanded justice for the victims.", "ok": true },
-						{ "answer": "They demanded the justice for victims.", "ok": false },
-						{ "answer": "Justice are very slow.", "ok": false },
-						{ "answer": "She justiced the case.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "legislation",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "New legislation was introduced last year.", "ok": true },
-						{ "answer": "The new legislations were introduced.", "ok": false },
-						{ "answer": "A legislation is a person in parliament.", "ok": false },
-						{ "answer": "They legislated the rule yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "liberty",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "People fought for liberty and independence.", "ok": true },
-						{ "answer": "People fought for the liberty and independence.", "ok": false },
-						{ "answer": "Liberty are very important.", "ok": false },
-						{ "answer": "She libertied the country.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "migrant",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Many migrants moved to the city for work.", "ok": true },
-						{ "answer": "Many migrant moved to the city.", "ok": false },
-						{ "answer": "A migrant is immigration.", "ok": false },
-						{ "answer": "He migrated to Germany last year.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "neighborhood",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She lives in a quiet neighborhood.", "ok": true },
-						{ "answer": "She lives in quiet neighborhood.", "ok": false },
-						{ "answer": "Neighborhood are very friendly.", "ok": false },
-						{ "answer": "She neighborhooded last year.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "policy",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The company changed its policy on remote work.", "ok": true },
-						{ "answer": "The company changed the policy on remote work.", "ok": false },
-						{ "answer": "Policy are very strict.", "ok": false },
-						{ "answer": "She policied the staff.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizSocial2-en",
+  "title": "2. Social",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Social issues (Set 2)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "heritage",
+          "summary": "the traditions, buildings, and history passed down from the past",
+          "explain": {
+            "entryId": "heritage",
+            "headword": "heritage",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "legacy",
+                  "tradition"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the traditions, buildings, and history passed down from the past",
+                    "examples": [
+                      "The city is proud of its cultural heritage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The city is proud of its cultural heritage.",
+              "ok": true
+            },
+            {
+              "answer": "The city is proud of the cultural heritage.",
+              "ok": false
+            },
+            {
+              "answer": "Heritage are very important.",
+              "ok": false
+            },
+            {
+              "answer": "She heritaged the tradition.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "homelessness",
+          "summary": "the state of having no home to live in",
+          "explain": {
+            "entryId": "homelessness",
+            "headword": "homelessness",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "housing insecurity"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the state of having no home to live in",
+                    "examples": [
+                      "The government is trying to reduce homelessness."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The government is trying to reduce homelessness.",
+              "ok": true
+            },
+            {
+              "answer": "The government is trying to reduce the homelessness.",
+              "ok": false
+            },
+            {
+              "answer": "Homelessness are increasing.",
+              "ok": false
+            },
+            {
+              "answer": "He homelessed last year.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "immigration",
+          "summary": "the process of people coming to live in a country from another country",
+          "explain": {
+            "entryId": "immigration",
+            "headword": "immigration",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "migration"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the process of people coming to live in a country from another country",
+                    "examples": [
+                      "Immigration policies vary between countries."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Immigration policies vary between countries.",
+              "ok": true
+            },
+            {
+              "answer": "The immigration policies varies between countries.",
+              "ok": false
+            },
+            {
+              "answer": "An immigration is a person moving country.",
+              "ok": false
+            },
+            {
+              "answer": "She immigrated to the UK last year.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "inclusiveness",
+          "summary": "the practice of including people of all backgrounds",
+          "explain": {
+            "entryId": "inclusiveness",
+            "headword": "inclusiveness",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "inclusion"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the practice of including people of all backgrounds",
+                    "examples": [
+                      "The company values inclusiveness."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The company values inclusiveness.",
+              "ok": true
+            },
+            {
+              "answer": "The company values an inclusiveness.",
+              "ok": false
+            },
+            {
+              "answer": "Inclusiveness are important.",
+              "ok": false
+            },
+            {
+              "answer": "She inclusived the team.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "justice",
+          "summary": "fair treatment under the law; the quality of being fair",
+          "explain": {
+            "entryId": "justice",
+            "headword": "justice",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "fairness",
+                  "law"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "fair treatment under the law; the quality of being fair",
+                    "examples": [
+                      "They demanded justice for the victims."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They demanded justice for the victims.",
+              "ok": true
+            },
+            {
+              "answer": "They demanded the justice for victims.",
+              "ok": false
+            },
+            {
+              "answer": "Justice are very slow.",
+              "ok": false
+            },
+            {
+              "answer": "She justiced the case.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "legislation",
+          "summary": "laws or the act of making laws",
+          "explain": {
+            "entryId": "legislation",
+            "headword": "legislation",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "laws",
+                  "rules"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "laws or the act of making laws",
+                    "examples": [
+                      "New legislation was introduced last year."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "New legislation was introduced last year.",
+              "ok": true
+            },
+            {
+              "answer": "The new legislations were introduced.",
+              "ok": false
+            },
+            {
+              "answer": "A legislation is a person in parliament.",
+              "ok": false
+            },
+            {
+              "answer": "They legislated the rule yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "liberty",
+          "summary": "freedom to live and act as you choose within the law",
+          "explain": {
+            "entryId": "liberty",
+            "headword": "liberty",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "freedom"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "freedom to live and act as you choose within the law",
+                    "examples": [
+                      "People fought for liberty and independence."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "People fought for liberty and independence.",
+              "ok": true
+            },
+            {
+              "answer": "People fought for the liberty and independence.",
+              "ok": false
+            },
+            {
+              "answer": "Liberty are very important.",
+              "ok": false
+            },
+            {
+              "answer": "She libertied the country.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "migrant",
+          "summary": "a person who moves to another place or country, often for work",
+          "explain": {
+            "entryId": "migrant",
+            "headword": "migrant",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "immigrant",
+                  "mover"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a person who moves to another place or country, often for work",
+                    "examples": [
+                      "Many migrants moved to the city for work."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Many migrants moved to the city for work.",
+              "ok": true
+            },
+            {
+              "answer": "Many migrant moved to the city.",
+              "ok": false
+            },
+            {
+              "answer": "A migrant is immigration.",
+              "ok": false
+            },
+            {
+              "answer": "He migrated to Germany last year.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "neighborhood",
+          "summary": "an area of a town or city and the people who live there",
+          "explain": {
+            "entryId": "neighborhood",
+            "headword": "neighborhood",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "area",
+                  "community"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an area of a town or city and the people who live there",
+                    "examples": [
+                      "She lives in a quiet neighborhood."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She lives in a quiet neighborhood.",
+              "ok": true
+            },
+            {
+              "answer": "She lives in quiet neighborhood.",
+              "ok": false
+            },
+            {
+              "answer": "Neighborhood are very friendly.",
+              "ok": false
+            },
+            {
+              "answer": "She neighborhooded last year.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "policy",
+          "summary": "an official plan or rule used by an organisation or government",
+          "explain": {
+            "entryId": "policy",
+            "headword": "policy",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "rule",
+                  "guideline"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an official plan or rule used by an organisation or government",
+                    "examples": [
+                      "The company changed its policy on remote work."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The company changed its policy on remote work.",
+              "ok": true
+            },
+            {
+              "answer": "The company changed the policy on remote work.",
+              "ok": false
+            },
+            {
+              "answer": "Policy are very strict.",
+              "ok": false
+            },
+            {
+              "answer": "She policied the staff.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

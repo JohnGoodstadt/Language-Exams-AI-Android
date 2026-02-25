@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "element",
-					"summary": "",
-					"explain": "",
+					"summary": "An important or essential part of something, such as a dish or recipe.",
+					"explain": {
+						"entryId": "element",
+						"headword": "element",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɛlɪmənt/", "ipaUS": "/ˈɛlɪmənt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["component", "ingredient", "part"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an important or essential part of something; one of several features or aspects that together make a whole",
+										"examples": [
+											"Timing is an essential element when cooking pasta correctly."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Fresh herbs add an important element to the dish.", "ok": true },
 						{ "answer": "Fresh herbs add important element to dish.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "hors d'oeuvre",
-					"summary": "",
-					"explain": "",
+					"summary": "A small savoury dish served as an appetiser at the start of a meal or at a party.",
+					"explain": {
+						"entryId": "hors d'oeuvre",
+						"headword": "hors d'oeuvre",
+						"pronunciation": { "display": "", "ipaUK": "/ɔː ˈdɜːv/", "ipaUS": "/ɔːr ˈdɜːrv/" },
+						"labels": ["C1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["appetizer", "starter", "canapé"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small savoury dish or snack served as an appetiser before the main course of a meal, or passed around at a party",
+										"examples": [
+											"The waiter offered us hors d'oeuvres as we waited for the main course."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "They served hors d'oeuvres before the main course.", "ok": true },
 						{ "answer": "They served a hors d'oeuvre before main course.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "ingredient",
-					"summary": "",
-					"explain": "",
+					"summary": "A food item used in making a dish or recipe.",
+					"explain": {
+						"entryId": "ingredient",
+						"headword": "ingredient",
+						"pronunciation": { "display": "", "ipaUK": "/ɪnˈɡriːdiənt/", "ipaUS": "/ɪnˈɡriːdiənt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["component", "element", "item"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "one of the foods or substances that is used to make a particular dish or recipe",
+										"examples": [
+											"Eggs are a key ingredient in most cakes and pastries."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Flour is a basic ingredient in bread.", "ok": true },
 						{ "answer": "Flour is basic ingredient in bread.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "instructions",
-					"summary": "",
-					"explain": "",
+					"summary": "Directions that tell you how to do, prepare, or use something step by step.",
+					"explain": {
+						"entryId": "instructions",
+						"headword": "instructions",
+						"pronunciation": { "display": "", "ipaUK": "/ɪnˈstrʌkʃənz/", "ipaUS": "/ɪnˈstrʌkʃənz/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["directions", "steps", "guidance"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "directions or information that tell you how to do, use, or operate something, often given as a series of steps",
+										"examples": [
+											"Always read the instructions before assembling the furniture."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Follow the instructions carefully.", "ok": true },
 						{ "answer": "Follow the instruction carefully.", "ok": false },
@@ -66,8 +170,34 @@
 					"title": "",
 					"page": 5,
 					"question": "list",
-					"summary": "",
-					"explain": "",
+					"summary": "A written record of a series of items, names, or things to do.",
+					"explain": {
+						"entryId": "list",
+						"headword": "list",
+						"pronunciation": { "display": "", "ipaUK": "/lɪst/", "ipaUS": "/lɪst/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["record", "inventory", "catalogue"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a written or printed series of items, names, or things arranged one after another",
+										"examples": [
+											"She made a list of everything she needed to buy."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I wrote a shopping list.", "ok": true },
 						{ "answer": "I wrote shopping list.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "meat-free",
-					"summary": "",
-					"explain": "",
+					"summary": "Containing no meat; suitable for people who do not eat meat.",
+					"explain": {
+						"entryId": "meat-free",
+						"headword": "meat-free",
+						"pronunciation": { "display": "", "ipaUK": "/ˈmiːt friː/", "ipaUS": "/ˈmiːt friː/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["vegetarian", "plant-based", "meatless"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "containing no meat; suitable for vegetarians or people who do not eat meat",
+										"examples": [
+											"They introduced several meat-free options to the restaurant menu."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "They chose a meat-free option.", "ok": true },
 						{ "answer": "They chose meat-free option.", "ok": false },
@@ -92,8 +248,34 @@
 					"title": "",
 					"page": 7,
 					"question": "menu",
-					"summary": "",
-					"explain": "",
+					"summary": "A list of the food and drinks available at a restaurant or café.",
+					"explain": {
+						"entryId": "menu",
+						"headword": "menu",
+						"pronunciation": { "display": "", "ipaUK": "/ˈmɛnjuː/", "ipaUS": "/ˈmɛnjuː/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["bill of fare", "food list", "carte"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a list of the food and drinks available to order in a restaurant or café, usually printed on a card or sheet",
+										"examples": [
+											"She looked at the menu and chose the grilled fish."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The waiter gave us the menu.", "ok": true },
 						{ "answer": "The waiter gave us menu.", "ok": false },
@@ -105,8 +287,34 @@
 					"title": "",
 					"page": 8,
 					"question": "method",
-					"summary": "",
-					"explain": "",
+					"summary": "A particular way or process of doing or preparing something.",
+					"explain": {
+						"entryId": "method",
+						"headword": "method",
+						"pronunciation": { "display": "", "ipaUK": "/ˈmɛθəd/", "ipaUS": "/ˈmɛθəd/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["technique", "approach", "process"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a particular way or process of doing, preparing, or achieving something, especially one that is planned and systematic",
+										"examples": [
+											"Slow cooking is a traditional method used to make the meat very tender."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "This recipe uses a traditional method.", "ok": true },
 						{ "answer": "This recipe uses traditional method.", "ok": false },
@@ -118,8 +326,34 @@
 					"title": "",
 					"page": 9,
 					"question": "nibble",
-					"summary": "",
-					"explain": "",
+					"summary": "To eat small amounts of food by taking small, gentle bites.",
+					"explain": {
+						"entryId": "nibble",
+						"headword": "nibble",
+						"pronunciation": { "display": "", "ipaUK": "/ˈnɪbəl/", "ipaUS": "/ˈnɪbəl/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["snack", "peck", "munch"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to eat something by taking small, gentle bites; to eat small amounts of food slowly or nervously",
+										"examples": [
+											"He nibbled on a biscuit while waiting for dinner."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She nibbled on some cheese.", "ok": true },
 						{ "answer": "She nibbled some cheese.", "ok": false },
@@ -131,8 +365,34 @@
 					"title": "",
 					"page": 10,
 					"question": "pudding",
-					"summary": "",
-					"explain": "",
+					"summary": "A sweet dish served at the end of a meal; used in British English as a general term for dessert.",
+					"explain": {
+						"entryId": "pudding",
+						"headword": "pudding",
+						"pronunciation": { "display": "", "ipaUK": "/ˈpʊdɪŋ/", "ipaUS": "/ˈpʊdɪŋ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["dessert", "sweet", "afters"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a sweet dish eaten at the end of a meal; in British English, a general term for any dessert",
+										"examples": [
+											"For pudding, she ordered a warm chocolate brownie with ice cream."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "For pudding, we had ice cream.", "ok": true },
 						{ "answer": "For a pudding, we had ice cream.", "ok": false },

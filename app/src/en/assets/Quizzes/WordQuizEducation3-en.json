@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "professor",
-					"summary": "",
-					"explain": "",
+					"summary": "A senior teacher or researcher at a university who is an expert in their subject.",
+					"explain": {
+						"entryId": "professor",
+						"headword": "professor",
+						"pronunciation": { "display": "", "ipaUK": "/prəˈfɛsə/", "ipaUS": "/prəˈfɛsər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["academic", "scholar", "educator"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a teacher of the highest rank at a university or college who is an expert in their subject",
+										"examples": [
+											"The professor published a new research paper."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The professor published a new research paper.", "ok": true },
 						{ "answer": "The professor studied under the student.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "project",
-					"summary": "",
-					"explain": "",
+					"summary": "A planned piece of work or activity with a specific aim, often done over a period of time.",
+					"explain": {
+						"entryId": "project",
+						"headword": "project",
+						"pronunciation": { "display": "", "ipaUK": "/ˈprɒdʒɛkt/", "ipaUS": "/ˈprɑːdʒɛkt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["assignment", "task", "undertaking"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a planned piece of work or activity that has a specific aim and is completed over a period of time, often involving research or cooperation",
+										"examples": [
+											"They worked together on a group project."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "They worked together on a group project.", "ok": true },
 						{ "answer": "They projected the homework yesterday.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "qualification",
-					"summary": "",
-					"explain": "",
+					"summary": "An official record showing that you have completed a course or passed an exam.",
+					"explain": {
+						"entryId": "qualification",
+						"headword": "qualification",
+						"pronunciation": { "display": "", "ipaUK": "/ˌkwɒlɪfɪˈkeɪʃən/", "ipaUS": "/ˌkwɑːlɪfɪˈkeɪʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["credential", "certificate", "diploma"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official record or certificate showing that you have successfully completed a course of study or have the skills and knowledge needed for a particular job",
+										"examples": [
+											"She has the right qualifications for the job."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She has the right qualifications for the job.", "ok": true },
 						{ "answer": "She qualificationed last year.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "seminar",
-					"summary": "",
-					"explain": "",
+					"summary": "A small class or meeting for discussion on a topic in depth, often at a university.",
+					"explain": {
+						"entryId": "seminar",
+						"headword": "seminar",
+						"pronunciation": { "display": "", "ipaUK": "/ˈsɛmɪnɑː/", "ipaUS": "/ˈsɛmɪnɑːr/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["workshop", "tutorial", "class"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a class at a university or college in which a small group of students discuss a topic in depth with a teacher, or a short training event for professionals",
+										"examples": [
+											"He attended a seminar on climate change."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He attended a seminar on climate change.", "ok": true },
 						{ "answer": "He seminated his homework yesterday.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "skill",
-					"summary": "",
-					"explain": "",
+					"summary": "An ability to do something well, developed through training or practice.",
+					"explain": {
+						"entryId": "skill",
+						"headword": "skill",
+						"pronunciation": { "display": "", "ipaUK": "/skɪl/", "ipaUS": "/skɪl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["ability", "talent", "expertise"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a particular ability or type of expertise that can be developed through training and practice",
+										"examples": [
+											"Communication is an important skill."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Communication is an important skill.", "ok": true },
 						{ "answer": "She skilled her homework carefully.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "staff",
-					"summary": "",
-					"explain": "",
+					"summary": "All the people employed by an organization.",
+					"explain": {
+						"entryId": "staff",
+						"headword": "staff",
+						"pronunciation": { "display": "", "ipaUK": "/stɑːf/", "ipaUS": "/stæf/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["employees", "workforce", "personnel"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "all the people who work for a particular organization or employer, considered as a group",
+										"examples": [
+											"The staff were helpful and friendly."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The staff were helpful and friendly.", "ok": true },
 						{ "answer": "The staffs were helpful yesterday.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "teacher",
-					"summary": "",
-					"explain": "",
+					"summary": "A person whose job is to instruct or educate students.",
+					"explain": {
+						"entryId": "teacher",
+						"headword": "teacher",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtiːtʃə/", "ipaUS": "/ˈtiːtʃər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["instructor", "educator", "tutor"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person whose job is to teach students, especially in a school or other educational institution",
+										"examples": [
+											"The teacher explained the lesson clearly."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The teacher explained the lesson clearly.", "ok": true },
 						{ "answer": "The teachered the students yesterday.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "trainee",
-					"summary": "",
-					"explain": "",
+					"summary": "A person who is being trained to do a job or learn a skill.",
+					"explain": {
+						"entryId": "trainee",
+						"headword": "trainee",
+						"pronunciation": { "display": "", "ipaUK": "/ˌtreɪˈniː/", "ipaUS": "/ˌtreɪˈniː/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["apprentice", "learner", "novice"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is learning the skills needed for a particular job or role, usually under the supervision of an experienced person",
+										"examples": [
+											"The trainee is learning how to use the system."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The trainee is learning how to use the system.", "ok": true },
 						{ "answer": "The trainee trained the manager.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "worker",
-					"summary": "",
-					"explain": "",
+					"summary": "A person who does a job as part of their employment.",
+					"explain": {
+						"entryId": "worker",
+						"headword": "worker",
+						"pronunciation": { "display": "", "ipaUK": "/ˈwɜːkə/", "ipaUS": "/ˈwɜːrkər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["employee", "labourer", "member of staff"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is employed to do a job, especially one involving physical or manual work",
+										"examples": [
+											"The worker arrived early for the shift."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The worker arrived early for the shift.", "ok": true },
 						{ "answer": "The worker workeded all night.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "workshop",
-					"summary": "",
-					"explain": "",
+					"summary": "A short, practical session where people learn skills or discuss ideas together.",
+					"explain": {
+						"entryId": "workshop",
+						"headword": "workshop",
+						"pronunciation": { "display": "", "ipaUK": "/ˈwɜːkʃɒp/", "ipaUS": "/ˈwɜːrkʃɑːp/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["seminar", "session", "training"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a meeting or series of meetings in which people learn practical skills or discuss ideas through active participation rather than just listening",
+										"examples": [
+											"She attended a workshop on public speaking."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She attended a workshop on public speaking.", "ok": true },
 						{ "answer": "She workshopped her homework yesterday.", "ok": false },

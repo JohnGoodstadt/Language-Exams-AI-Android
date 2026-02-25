@@ -1,133 +1,554 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizShopping3-en",
-	"title": "3. Shopping",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Shopping & retail (Set 3)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "refund",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She asked for a refund after returning the item.", "ok": true },
-						{ "answer": "She asked for refund after returning the item.", "ok": false },
-						{ "answer": "Refunds is processed quickly.", "ok": false },
-						{ "answer": "They refunded to her the money.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "reimbursement",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He requested reimbursement for travel expenses.", "ok": true },
-						{ "answer": "He requested a reimbursement for travel expenses.", "ok": false },
-						{ "answer": "Reimbursements is delayed.", "ok": false },
-						{ "answer": "They reimbursed to him the cost.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "return",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "You can return the item within 14 days.", "ok": true },
-						{ "answer": "You can return the item in 14 days.", "ok": false },
-						{ "answer": "Returns is accepted.", "ok": false },
-						{ "answer": "She returned to the shop the product.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "sale",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The store has a big sale this weekend.", "ok": true },
-						{ "answer": "Store has big sale this weekend.", "ok": false },
-						{ "answer": "Sales is very popular.", "ok": false },
-						{ "answer": "They saled the items quickly.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "shipping",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Shipping costs are included in the price.", "ok": true },
-						{ "answer": "The shipping cost are included in the price.", "ok": false },
-						{ "answer": "Shippings is expensive.", "ok": false },
-						{ "answer": "They shipped to the package yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "shopper",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The shopper compared prices carefully.", "ok": true },
-						{ "answer": "Shopper compared prices carefully.", "ok": false },
-						{ "answer": "Shoppers is looking for discounts.", "ok": false },
-						{ "answer": "She shopped to the shopper yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "shopping center",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We met at the shopping center.", "ok": true },
-						{ "answer": "We met at shopping center.", "ok": false },
-						{ "answer": "Shopping centers is crowded.", "ok": false },
-						{ "answer": "We went in the shopping center yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "shopping mall",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The shopping mall closes at 9 p.m.", "ok": true },
-						{ "answer": "Shopping mall closes at 9 p.m.", "ok": false },
-						{ "answer": "Shopping malls is busy.", "ok": false },
-						{ "answer": "We went at the shopping mall yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "swap",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "They agreed to swap seats.", "ok": true },
-						{ "answer": "They agreed to swap the seats.", "ok": false },
-						{ "answer": "Swaps is allowed.", "ok": false },
-						{ "answer": "They swapped to their seats.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizShopping3-en",
+  "title": "3. Shopping",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Shopping & retail (Set 3)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "refund",
+          "summary": "money returned to you after you return something",
+          "explain": {
+            "entryId": "refund",
+            "headword": "refund",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "repayment"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "money returned to you after you return something",
+                    "examples": [
+                      "She asked for a refund after returning the item."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She asked for a refund after returning the item.",
+              "ok": true
+            },
+            {
+              "answer": "She asked for refund after returning the item.",
+              "ok": false
+            },
+            {
+              "answer": "Refunds is processed quickly.",
+              "ok": false
+            },
+            {
+              "answer": "They refunded to her the money.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "reimbursement",
+          "summary": "money paid back to cover costs you have already paid",
+          "explain": {
+            "entryId": "reimbursement",
+            "headword": "reimbursement",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "repayment",
+                  "refund"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "money paid back to cover costs you have already paid",
+                    "examples": [
+                      "He requested reimbursement for travel expenses."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He requested reimbursement for travel expenses.",
+              "ok": true
+            },
+            {
+              "answer": "He requested a reimbursement for travel expenses.",
+              "ok": false
+            },
+            {
+              "answer": "Reimbursements is delayed.",
+              "ok": false
+            },
+            {
+              "answer": "They reimbursed to him the cost.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "return",
+          "summary": "to take something back to a shop and give it back",
+          "explain": {
+            "entryId": "return",
+            "headword": "return",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "returns, returning, returned",
+                "synonyms": [
+                  "bring back",
+                  "give back"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to take something back to a shop and give it back",
+                    "examples": [
+                      "You can return the item within 14 days."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "You can return the item within 14 days.",
+              "ok": true
+            },
+            {
+              "answer": "You can return the item in 14 days.",
+              "ok": false
+            },
+            {
+              "answer": "Returns is accepted.",
+              "ok": false
+            },
+            {
+              "answer": "She returned to the shop the product.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "sale",
+          "summary": "a time when a shop sells things at lower prices",
+          "explain": {
+            "entryId": "sale",
+            "headword": "sale",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "discount event",
+                  "clearance"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a time when a shop sells things at lower prices",
+                    "examples": [
+                      "The store has a big sale this weekend."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The store has a big sale this weekend.",
+              "ok": true
+            },
+            {
+              "answer": "Store has big sale this weekend.",
+              "ok": false
+            },
+            {
+              "answer": "Sales is very popular.",
+              "ok": false
+            },
+            {
+              "answer": "They saled the items quickly.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "shipping",
+          "summary": "the delivery of goods, especially by post or courier",
+          "explain": {
+            "entryId": "shipping",
+            "headword": "shipping",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "delivery",
+                  "postage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the delivery of goods, especially by post or courier",
+                    "examples": [
+                      "Shipping costs are included in the price."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Shipping costs are included in the price.",
+              "ok": true
+            },
+            {
+              "answer": "The shipping cost are included in the price.",
+              "ok": false
+            },
+            {
+              "answer": "Shippings is expensive.",
+              "ok": false
+            },
+            {
+              "answer": "They shipped to the package yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "shopper",
+          "summary": "a person who is buying things",
+          "explain": {
+            "entryId": "shopper",
+            "headword": "shopper",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "customer",
+                  "buyer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a person who is buying things",
+                    "examples": [
+                      "The shopper compared prices carefully."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The shopper compared prices carefully.",
+              "ok": true
+            },
+            {
+              "answer": "Shopper compared prices carefully.",
+              "ok": false
+            },
+            {
+              "answer": "Shoppers is looking for discounts.",
+              "ok": false
+            },
+            {
+              "answer": "She shopped to the shopper yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "shopping center",
+          "summary": "a place with many shops together (often outdoors or in one area)",
+          "explain": {
+            "entryId": "shopping_center",
+            "headword": "shopping center",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "mall",
+                  "shopping centre"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a place with many shops together (often outdoors or in one area)",
+                    "examples": [
+                      "We met at the shopping center."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We met at the shopping center.",
+              "ok": true
+            },
+            {
+              "answer": "We met at shopping center.",
+              "ok": false
+            },
+            {
+              "answer": "Shopping centers is crowded.",
+              "ok": false
+            },
+            {
+              "answer": "We went in the shopping center yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "shopping mall",
+          "summary": "a large indoor building with many shops and services",
+          "explain": {
+            "entryId": "shopping_mall",
+            "headword": "shopping mall",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "mall"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a large indoor building with many shops and services",
+                    "examples": [
+                      "The shopping mall closes at 9 p.m."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The shopping mall closes at 9 p.m.",
+              "ok": true
+            },
+            {
+              "answer": "Shopping mall closes at 9 p.m.",
+              "ok": false
+            },
+            {
+              "answer": "Shopping malls is busy.",
+              "ok": false
+            },
+            {
+              "answer": "We went at the shopping mall yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "swap",
+          "summary": "to exchange one thing for another",
+          "explain": {
+            "entryId": "swap",
+            "headword": "swap",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "swaps, swapping, swapped",
+                "synonyms": [
+                  "exchange",
+                  "trade"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to exchange one thing for another",
+                    "examples": [
+                      "They agreed to swap seats."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They agreed to swap seats.",
+              "ok": true
+            },
+            {
+              "answer": "They agreed to swap the seats.",
+              "ok": false
+            },
+            {
+              "answer": "Swaps is allowed.",
+              "ok": false
+            },
+            {
+              "answer": "They swapped to their seats.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

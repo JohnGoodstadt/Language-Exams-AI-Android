@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "appetizer",
-					"summary": "",
-					"explain": "",
+					"summary": "A small dish of food served before the main course of a meal.",
+					"explain": {
+						"entryId": "appetizer",
+						"headword": "appetizer",
+						"pronunciation": { "display": "", "ipaUK": "/ˈæpɪtaɪzər/", "ipaUS": "/ˈæpɪtaɪzər/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["starter", "hors d'oeuvre", "first course"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small dish of food served at the start of a meal, before the main course, intended to stimulate the appetite",
+										"examples": [
+											"The menu included several appetizers such as soup and garlic bread."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We ordered an appetizer before the main course.", "ok": true },
 						{ "answer": "We ordered appetizer before main course.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "beverage",
-					"summary": "",
-					"explain": "",
+					"summary": "A drink of any kind, other than water; a liquid that people drink.",
+					"explain": {
+						"entryId": "beverage",
+						"headword": "beverage",
+						"pronunciation": { "display": "", "ipaUK": "/ˈbɛvərɪdʒ/", "ipaUS": "/ˈbɛvərɪdʒ/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["drink", "liquid", "refreshment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a drink of any kind; a liquid that people consume, often used as a formal or general term for drinks",
+										"examples": [
+											"The café offers a wide range of hot and cold beverages."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Tea is a popular beverage in the UK.", "ok": true },
 						{ "answer": "Tea is popular beverage in UK.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "component",
-					"summary": "",
-					"explain": "",
+					"summary": "One of several parts that together make up a whole dish or recipe.",
+					"explain": {
+						"entryId": "component",
+						"headword": "component",
+						"pronunciation": { "display": "", "ipaUK": "/kəmˈpəʊnənt/", "ipaUS": "/kəmˈpoʊnənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["element", "ingredient", "part"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "one of several parts or elements that together make up a whole thing, such as a dish or a system",
+										"examples": [
+											"Olive oil is a key component of Mediterranean cooking."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Salt is an important component of the dish.", "ok": true },
 						{ "answer": "Salt is important component of dish.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "cuisine",
-					"summary": "",
-					"explain": "",
+					"summary": "A style of cooking associated with a particular country or region.",
+					"explain": {
+						"entryId": "cuisine",
+						"headword": "cuisine",
+						"pronunciation": { "display": "", "ipaUK": "/kwɪˈziːn/", "ipaUS": "/kwɪˈziːn/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["cooking", "food style", "gastronomy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a style or method of cooking associated with a particular country, region, or culture",
+										"examples": [
+											"Japanese cuisine is known for its fresh ingredients and delicate flavours."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Italian cuisine is famous worldwide.", "ok": true },
 						{ "answer": "An Italian cuisine is famous worldwide.", "ok": false },
@@ -66,8 +170,34 @@
 					"title": "",
 					"page": 5,
 					"question": "dessert",
-					"summary": "",
-					"explain": "",
+					"summary": "A sweet food or dish eaten at the end of a meal.",
+					"explain": {
+						"entryId": "dessert",
+						"headword": "dessert",
+						"pronunciation": { "display": "", "ipaUK": "/dɪˈzɜːt/", "ipaUS": "/dɪˈzɜːrt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["pudding", "sweet", "afters"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a sweet food or dish, such as cake or ice cream, served at the end of a meal",
+										"examples": [
+											"For dessert, she chose a slice of lemon tart."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We had chocolate cake for dessert.", "ok": true },
 						{ "answer": "We had a chocolate cake for the dessert.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "dine",
-					"summary": "",
-					"explain": "",
+					"summary": "To eat a formal or special evening meal, especially at a restaurant.",
+					"explain": {
+						"entryId": "dine",
+						"headword": "dine",
+						"pronunciation": { "display": "", "ipaUK": "/daɪn/", "ipaUS": "/daɪn/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["eat", "feast", "have dinner"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to eat a formal or special meal, especially dinner, typically at a restaurant or as a guest",
+										"examples": [
+											"We dined at an Italian restaurant to celebrate the occasion."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "They dined at a French restaurant.", "ok": true },
 						{ "answer": "They dined in a French restaurant.", "ok": false },
@@ -92,8 +248,34 @@
 					"title": "",
 					"page": 7,
 					"question": "dining",
-					"summary": "",
-					"explain": "",
+					"summary": "The activity of eating a formal or high-quality meal, especially at a restaurant.",
+					"explain": {
+						"entryId": "dining",
+						"headword": "dining",
+						"pronunciation": { "display": "", "ipaUK": "/ˈdaɪnɪŋ/", "ipaUS": "/ˈdaɪnɪŋ/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["eating", "feasting", "gastronomy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the activity of eating a formal or high-quality meal; often used in the phrase 'fine dining' to refer to upscale restaurant experiences",
+										"examples": [
+											"The hotel is well known for offering excellent fine dining."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We enjoyed fine dining at the hotel.", "ok": true },
 						{ "answer": "We enjoyed a fine dining at hotel.", "ok": false },
@@ -105,8 +287,34 @@
 					"title": "",
 					"page": 8,
 					"question": "dinner",
-					"summary": "",
-					"explain": "",
+					"summary": "The main meal of the day, usually eaten in the evening.",
+					"explain": {
+						"entryId": "dinner",
+						"headword": "dinner",
+						"pronunciation": { "display": "", "ipaUK": "/ˈdɪnər/", "ipaUS": "/ˈdɪnər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["supper", "evening meal", "main meal"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the main meal of the day, usually eaten in the evening; also used for formal meals or special occasions",
+										"examples": [
+											"We had dinner together as a family every evening."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "We had dinner at 7 p.m.", "ok": true },
 						{ "answer": "We had a dinner at 7 p.m.", "ok": false },
@@ -118,8 +326,34 @@
 					"title": "",
 					"page": 9,
 					"question": "dish",
-					"summary": "",
-					"explain": "",
+					"summary": "A particular type of food prepared and served as part of a meal.",
+					"explain": {
+						"entryId": "dish",
+						"headword": "dish",
+						"pronunciation": { "display": "", "ipaUK": "/dɪʃ/", "ipaUS": "/dɪʃ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["meal", "food", "recipe"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a particular type of food that is prepared and cooked in a specific way; a recipe or meal prepared as part of a menu",
+										"examples": [
+											"Risotto is a classic Italian dish made with rice."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Pasta is my favourite dish.", "ok": true },
 						{ "answer": "Pasta is my favourite dishes.", "ok": false },
@@ -131,8 +365,34 @@
 					"title": "",
 					"page": 10,
 					"question": "drink",
-					"summary": "",
-					"explain": "",
+					"summary": "A liquid that people consume, such as water, juice, or tea.",
+					"explain": {
+						"entryId": "drink",
+						"headword": "drink",
+						"pronunciation": { "display": "", "ipaUK": "/drɪŋk/", "ipaUS": "/drɪŋk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["beverage", "liquid", "refreshment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a liquid that people consume; something to drink, such as water, juice, tea, or another beverage",
+										"examples": [
+											"She asked for a cold drink after the long walk."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Would you like a drink?", "ok": true },
 						{ "answer": "Would you like drink?", "ok": false },

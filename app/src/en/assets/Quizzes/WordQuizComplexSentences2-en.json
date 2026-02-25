@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "since",
-					"summary": "",
-					"explain": "",
+					"summary": "Because; given that; used to introduce a reason or explanation for something.",
+					"explain": {
+						"entryId": "since",
+						"headword": "since",
+						"pronunciation": { "display": "", "ipaUK": "/sɪns/", "ipaUS": "/sɪns/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["because", "as", "given that"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a clause that gives the reason for what is stated in the main clause; because; given that",
+										"examples": [
+											"Since nobody objected, the plan was approved."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Since it was late, we decided to go home.", "ok": true },
 						{ "answer": "Since it was late so we decided to go home.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "so that",
-					"summary": "",
-					"explain": "",
+					"summary": "Used to introduce a clause expressing purpose or intended result; in order that.",
+					"explain": {
+						"entryId": "so that",
+						"headword": "so that",
+						"pronunciation": { "display": "", "ipaUK": "/səʊ ðæt/", "ipaUS": "/soʊ ðæt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["in order that", "with the aim that", "in order to"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a clause that expresses the purpose or intended result of the action in the main clause; in order that",
+										"examples": [
+											"He left early so that he could catch the first train."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She spoke clearly so that everyone could understand her.", "ok": true },
 						{ "answer": "She spoke clearly so everyone could understand her.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "though",
-					"summary": "",
-					"explain": "",
+					"summary": "In spite of the fact that; used to introduce a contrast; similar to 'although'.",
+					"explain": {
+						"entryId": "though",
+						"headword": "though",
+						"pronunciation": { "display": "", "ipaUK": "/ðəʊ/", "ipaUS": "/ðoʊ/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["although", "even though", "despite the fact that"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a clause that contrasts with or qualifies the main clause; in spite of the fact that; a slightly less formal alternative to 'although'",
+										"examples": [
+											"The food was good, though the service was very slow."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The task was difficult, though we managed to finish it.", "ok": true },
 						{ "answer": "Though the task was difficult, but we managed to finish it.", "ok": false },
@@ -53,21 +131,73 @@
 					"title": "",
 					"page": 4,
 					"question": "unless",
-					"summary": "",
-					"explain": "",
+					"summary": "Except if; only if not; used to introduce a condition that must be met to prevent something.",
+					"explain": {
+						"entryId": "unless",
+						"headword": "unless",
+						"pronunciation": { "display": "", "ipaUK": "/ənˈlɛs/", "ipaUS": "/ənˈlɛs/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["except if", "if not", "only if"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "except if; used to introduce the only condition under which the situation in the main clause will not happen or is not true",
+										"examples": [
+											"You will miss the show unless you leave right now."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
-						{ "answer": "You won’t pass unless you study harder.", "ok": true },
-						{ "answer": "You won’t pass unless you will study harder.", "ok": false },
-						{ "answer": "Unless you study harder you won’t pass it, but.", "ok": false },
-						{ "answer": "You won’t pass unless studying harder.", "ok": false }
+						{ "answer": "You won't pass unless you study harder.", "ok": true },
+						{ "answer": "You won't pass unless you will study harder.", "ok": false },
+						{ "answer": "Unless you study harder you won't pass it, but.", "ok": false },
+						{ "answer": "You won't pass unless studying harder.", "ok": false }
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
 					"question": "whereas",
-					"summary": "",
-					"explain": "",
+					"summary": "Used to contrast two different facts or situations; while on the other hand.",
+					"explain": {
+						"entryId": "whereas",
+						"headword": "whereas",
+						"pronunciation": { "display": "", "ipaUK": "/weəˈræz/", "ipaUS": "/werˈæz/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["while", "in contrast", "on the other hand"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a fact that contrasts with what is stated in the main clause; while on the other hand; used to highlight a difference between two things",
+										"examples": [
+											"My brother loves sport, whereas I prefer reading books."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She prefers tea, whereas I prefer coffee.", "ok": true },
 						{ "answer": "She prefers tea whereas but I prefer coffee.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "while",
-					"summary": "",
-					"explain": "",
+					"summary": "During the time that; at the same time as; also used to introduce a contrast.",
+					"explain": {
+						"entryId": "while",
+						"headword": "while",
+						"pronunciation": { "display": "", "ipaUK": "/waɪl/", "ipaUS": "/waɪl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["as", "during the time that", "whereas"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "during the time that something else is happening; at the same time as; also used to introduce a contrast between two situations",
+										"examples": [
+											"She listened to music while she was doing her homework."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "While I was cooking, he was setting the table.", "ok": true },
 						{ "answer": "While I was cooking he was setting, the table.", "ok": false },

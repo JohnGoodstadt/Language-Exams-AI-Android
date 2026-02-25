@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "reasonably",
-					"summary": "",
-					"explain": "",
+					"summary": "To a fair and acceptable degree; in a way that is sensible and not extreme.",
+					"explain": {
+						"entryId": "reasonably",
+						"headword": "reasonably",
+						"pronunciation": { "display": "", "ipaUK": "/ˈriːzənəbli/", "ipaUS": "/ˈriːzənəbli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["fairly", "moderately", "acceptably"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to a fair and acceptable degree; in a way that is sensible, not extreme, and within normal limits",
+										"examples": [
+											"The journey was reasonably short given the distance."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The apartment is reasonably priced.", "ok": true },
 						{ "answer": "The apartment is reasonable priced.", "ok": false },
@@ -27,8 +53,34 @@
 					"title": "",
 					"page": 2,
 					"question": "relatively",
-					"summary": "",
-					"explain": "",
+					"summary": "Compared to something else or to a general standard; to a certain degree.",
+					"explain": {
+						"entryId": "relatively",
+						"headword": "relatively",
+						"pronunciation": { "display": "", "ipaUK": "/ˈrɛlətɪvli/", "ipaUS": "/ˈrɛlətɪvli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["comparatively", "proportionally", "by comparison"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to a certain degree when compared to something else or to a general standard; in a way that is measured against other things",
+										"examples": [
+											"The new software is relatively simple to install."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "This topic is relatively easy to understand.", "ok": true },
 						{ "answer": "This topic is relative easy to understand.", "ok": false },
@@ -40,8 +92,34 @@
 					"title": "",
 					"page": 3,
 					"question": "scarcely",
-					"summary": "",
-					"explain": "",
+					"summary": "Almost not at all; only just; by a very small amount.",
+					"explain": {
+						"entryId": "scarcely",
+						"headword": "scarcely",
+						"pronunciation": { "display": "", "ipaUK": "/ˈskeəsli/", "ipaUS": "/ˈskersli/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["hardly", "barely", "almost not"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "almost not at all; only just; used to say that something is nearly not the case or nearly does not happen",
+										"examples": [
+											"He was so tired that he could scarcely keep his eyes open."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "There was scarcely any time to prepare.", "ok": true },
 						{ "answer": "There was scarce any time to prepare.", "ok": false },
@@ -53,8 +131,34 @@
 					"title": "",
 					"page": 4,
 					"question": "sincerely",
-					"summary": "",
-					"explain": "",
+					"summary": "In a genuine and heartfelt way; honestly and without pretending.",
+					"explain": {
+						"entryId": "sincerely",
+						"headword": "sincerely",
+						"pronunciation": { "display": "", "ipaUK": "/sɪnˈsɪəli/", "ipaUS": "/sɪnˈsɪrli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["genuinely", "honestly", "wholeheartedly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in a genuine and heartfelt way; honestly and without pretending; used to express that feelings or intentions are real",
+										"examples": [
+											"He sincerely hoped that things would get better for them."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I sincerely apologise for the mistake.", "ok": true },
 						{ "answer": "I sincere apologise for the mistake.", "ok": false },
@@ -66,8 +170,34 @@
 					"title": "",
 					"page": 5,
 					"question": "suddenly",
-					"summary": "",
-					"explain": "",
+					"summary": "Happening very quickly and unexpectedly; without any warning or preparation.",
+					"explain": {
+						"entryId": "suddenly",
+						"headword": "suddenly",
+						"pronunciation": { "display": "", "ipaUK": "/ˈsʌdənli/", "ipaUS": "/ˈsʌdənli/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["abruptly", "unexpectedly", "all at once"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "happening very quickly and unexpectedly; without any warning or advance notice",
+										"examples": [
+											"She suddenly remembered where she had put her keys."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Suddenly, the lights went out.", "ok": true },
 						{ "answer": "The lights suddenly went out.", "ok": false },
@@ -79,8 +209,34 @@
 					"title": "",
 					"page": 6,
 					"question": "surely",
-					"summary": "",
-					"explain": "",
+					"summary": "Used to express certainty or strong belief; without any doubt; definitely.",
+					"explain": {
+						"entryId": "surely",
+						"headword": "surely",
+						"pronunciation": { "display": "", "ipaUK": "/ˈʃʊəli/", "ipaUS": "/ˈʃʊrli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["certainly", "definitely", "undoubtedly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to express strong belief or certainty about something; without doubt; also used to show surprise that something is not the case",
+										"examples": [
+											"Surely there must be a better way to solve this problem."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Surely you can see the problem.", "ok": true },
 						{ "answer": "Surely you can to see the problem.", "ok": false },
@@ -92,8 +248,34 @@
 					"title": "",
 					"page": 7,
 					"question": "totally",
-					"summary": "",
-					"explain": "",
+					"summary": "Completely and in every way; used to give emphasis and mean to the fullest extent.",
+					"explain": {
+						"entryId": "totally",
+						"headword": "totally",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtəʊtəli/", "ipaUS": "/ˈtoʊtəli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["completely", "absolutely", "entirely"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "completely and in every way; used to give strong emphasis; to the fullest possible extent",
+										"examples": [
+											"The two approaches are totally different from each other."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I totally forgot the appointment.", "ok": true },
 						{ "answer": "I total forgot the appointment.", "ok": false },
@@ -105,8 +287,34 @@
 					"title": "",
 					"page": 8,
 					"question": "truly",
-					"summary": "",
-					"explain": "",
+					"summary": "In a genuine and sincere way; really and completely; used for emphasis.",
+					"explain": {
+						"entryId": "truly",
+						"headword": "truly",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtruːli/", "ipaUS": "/ˈtruːli/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["genuinely", "sincerely", "really"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in a genuine and sincere way; really and completely; used to emphasise that something is the case",
+										"examples": [
+											"This is a truly remarkable achievement for the whole team."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I truly believe you can pass.", "ok": true },
 						{ "answer": "I true believe you can pass.", "ok": false },
@@ -118,8 +326,34 @@
 					"title": "",
 					"page": 9,
 					"question": "unexpectedly",
-					"summary": "",
-					"explain": "",
+					"summary": "In a way that was not predicted or anticipated; as a surprise.",
+					"explain": {
+						"entryId": "unexpectedly",
+						"headword": "unexpectedly",
+						"pronunciation": { "display": "", "ipaUK": "/ˌʌnɪkˈspɛktɪdli/", "ipaUS": "/ˌʌnɪkˈspɛktɪdli/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["surprisingly", "suddenly", "out of the blue"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in a way that was not predicted, planned, or anticipated; causing surprise because it was not foreseen",
+										"examples": [
+											"The meeting ended unexpectedly when the power went out."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He arrived unexpectedly early.", "ok": true },
 						{ "answer": "He arrived unexpected early.", "ok": false },
@@ -131,8 +365,34 @@
 					"title": "",
 					"page": 10,
 					"question": "utterly",
-					"summary": "",
-					"explain": "",
+					"summary": "Completely and absolutely; to the greatest possible degree; used for strong emphasis.",
+					"explain": {
+						"entryId": "utterly",
+						"headword": "utterly",
+						"pronunciation": { "display": "", "ipaUK": "/ˈʌtəli/", "ipaUS": "/ˈʌtərli/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["completely", "absolutely", "totally"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "completely and absolutely; used to give very strong emphasis, often with negative adjectives or situations",
+										"examples": [
+											"The whole situation was utterly confusing from start to finish."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "I was utterly exhausted after the trip.", "ok": true },
 						{ "answer": "I was utter exhausted after the trip.", "ok": false },

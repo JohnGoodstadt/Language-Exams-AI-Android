@@ -1,133 +1,556 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizVerbs3-en",
-	"title": "Verbs",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the verb correctly.",
-			"description": "Academic & functional verbs (Set 3)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "interact",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Students interact with each other during group work.", "ok": true },
-						{ "answer": "Students interact to each other during group work.", "ok": false },
-						{ "answer": "Students interact between each other.", "ok": false },
-						{ "answer": "Students are interact with each other.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "involve",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The project involves working in teams.", "ok": true },
-						{ "answer": "The project involves to work in teams.", "ok": false },
-						{ "answer": "The project is involved working in teams.", "ok": false },
-						{ "answer": "The project involves in working in teams.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "persuade",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He persuaded her to apply for the job.", "ok": true },
-						{ "answer": "He persuaded her apply for the job.", "ok": false },
-						{ "answer": "He persuaded to her to apply for the job.", "ok": false },
-						{ "answer": "He persuaded that she apply for the job.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "recommend",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I recommend visiting the museum.", "ok": true },
-						{ "answer": "I recommend to visit the museum.", "ok": false },
-						{ "answer": "I recommend you visit to the museum.", "ok": false },
-						{ "answer": "I recommended him to visiting the museum.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "rely",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "You can rely on her advice.", "ok": true },
-						{ "answer": "You can rely her advice.", "ok": false },
-						{ "answer": "You can rely in her advice.", "ok": false },
-						{ "answer": "You can relied on her advice.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "respect",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We respect people who work hard.", "ok": true },
-						{ "answer": "We respect to people who work hard.", "ok": false },
-						{ "answer": "We are respect people who work hard.", "ok": false },
-						{ "answer": "We respect for people who work hard.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "suggest",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She suggested going earlier.", "ok": true },
-						{ "answer": "She suggested to go earlier.", "ok": false },
-						{ "answer": "She suggested that go earlier.", "ok": false },
-						{ "answer": "She suggested me to go earlier.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "trust",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I trust him completely.", "ok": true },
-						{ "answer": "I trust on him completely.", "ok": false },
-						{ "answer": "I am trust him completely.", "ok": false },
-						{ "answer": "I trusted to him completely.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "uncover",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The investigation uncovered new evidence.", "ok": true },
-						{ "answer": "The investigation uncovered about new evidence.", "ok": false },
-						{ "answer": "The investigation was uncovered new evidence.", "ok": false },
-						{ "answer": "The investigation uncovered to new evidence.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizVerbs3-en",
+  "title": "Verbs",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the verb correctly.",
+      "description": "Academic & functional verbs (Set 3)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "interact",
+          "summary": "to communicate or work together with someone",
+          "explain": {
+            "entryId": "interact",
+            "headword": "interact",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "interacts, interacting, interacted",
+                "synonyms": [
+                  "communicate",
+                  "engage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to communicate or work together with someone",
+                    "examples": [
+                      "Students interact with each other during group work."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Students interact with each other during group work.",
+              "ok": true
+            },
+            {
+              "answer": "Students interact to each other during group work.",
+              "ok": false
+            },
+            {
+              "answer": "Students interact between each other.",
+              "ok": false
+            },
+            {
+              "answer": "Students are interact with each other.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "involve",
+          "summary": "to include something as a necessary part",
+          "explain": {
+            "entryId": "involve",
+            "headword": "involve",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "involves, involving, involved",
+                "synonyms": [
+                  "include",
+                  "require"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to include something as a necessary part; to make someone take part",
+                    "examples": [
+                      "The project involves working in teams."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The project involves working in teams.",
+              "ok": true
+            },
+            {
+              "answer": "The project involves to work in teams.",
+              "ok": false
+            },
+            {
+              "answer": "The project is involved working in teams.",
+              "ok": false
+            },
+            {
+              "answer": "The project involves in working in teams.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "persuade",
+          "summary": "to make someone do or believe something by giving reasons",
+          "explain": {
+            "entryId": "persuade",
+            "headword": "persuade",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "persuades, persuading, persuaded",
+                "synonyms": [
+                  "convince",
+                  "encourage"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to make someone do or believe something by giving reasons",
+                    "examples": [
+                      "He persuaded her to apply for the job."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He persuaded her to apply for the job.",
+              "ok": true
+            },
+            {
+              "answer": "He persuaded her apply for the job.",
+              "ok": false
+            },
+            {
+              "answer": "He persuaded to her to apply for the job.",
+              "ok": false
+            },
+            {
+              "answer": "He persuaded that she apply for the job.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "recommend",
+          "summary": "to say that something is good and that someone should try it",
+          "explain": {
+            "entryId": "recommend",
+            "headword": "recommend",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "recommends, recommending, recommended",
+                "synonyms": [
+                  "suggest",
+                  "advise"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to say that something is good and that someone should try it",
+                    "examples": [
+                      "I recommend visiting the museum."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I recommend visiting the museum.",
+              "ok": true
+            },
+            {
+              "answer": "I recommend to visit the museum.",
+              "ok": false
+            },
+            {
+              "answer": "I recommend you visit to the museum.",
+              "ok": false
+            },
+            {
+              "answer": "I recommended him to visiting the museum.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "rely",
+          "summary": "to depend on someone or something",
+          "explain": {
+            "entryId": "rely",
+            "headword": "rely",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "relies, relying, relied",
+                "synonyms": [
+                  "depend on",
+                  "count on"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to depend on someone or something",
+                    "examples": [
+                      "You can rely on her advice."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "You can rely on her advice.",
+              "ok": true
+            },
+            {
+              "answer": "You can rely her advice.",
+              "ok": false
+            },
+            {
+              "answer": "You can rely in her advice.",
+              "ok": false
+            },
+            {
+              "answer": "You can relied on her advice.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "respect",
+          "summary": "to admire someone and treat them well",
+          "explain": {
+            "entryId": "respect",
+            "headword": "respect",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "respects, respecting, respected",
+                "synonyms": [
+                  "admire",
+                  "value"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to admire someone and treat them well",
+                    "examples": [
+                      "We respect people who work hard."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We respect people who work hard.",
+              "ok": true
+            },
+            {
+              "answer": "We respect to people who work hard.",
+              "ok": false
+            },
+            {
+              "answer": "We are respect people who work hard.",
+              "ok": false
+            },
+            {
+              "answer": "We respect for people who work hard.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "suggest",
+          "summary": "to propose an idea",
+          "explain": {
+            "entryId": "suggest",
+            "headword": "suggest",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "suggests, suggesting, suggested",
+                "synonyms": [
+                  "recommend",
+                  "propose"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to propose an idea; to recommend something",
+                    "examples": [
+                      "She suggested going earlier."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She suggested going earlier.",
+              "ok": true
+            },
+            {
+              "answer": "She suggested to go earlier.",
+              "ok": false
+            },
+            {
+              "answer": "She suggested that go earlier.",
+              "ok": false
+            },
+            {
+              "answer": "She suggested me to go earlier.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "trust",
+          "summary": "to believe someone is honest and will do the right thing",
+          "explain": {
+            "entryId": "trust",
+            "headword": "trust",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "trusts, trusting, trusted",
+                "synonyms": [
+                  "believe",
+                  "rely on"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to believe someone is honest and will do the right thing",
+                    "examples": [
+                      "I trust him completely."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I trust him completely.",
+              "ok": true
+            },
+            {
+              "answer": "I trust on him completely.",
+              "ok": false
+            },
+            {
+              "answer": "I am trust him completely.",
+              "ok": false
+            },
+            {
+              "answer": "I trusted to him completely.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "uncover",
+          "summary": "to find out something hidden",
+          "explain": {
+            "entryId": "uncover",
+            "headword": "uncover",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "uncovers, uncovering, uncovered",
+                "synonyms": [
+                  "discover",
+                  "reveal"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to find out something hidden; to reveal it",
+                    "examples": [
+                      "The investigation uncovered new evidence."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The investigation uncovered new evidence.",
+              "ok": true
+            },
+            {
+              "answer": "The investigation uncovered about new evidence.",
+              "ok": false
+            },
+            {
+              "answer": "The investigation was uncovered new evidence.",
+              "ok": false
+            },
+            {
+              "answer": "The investigation uncovered to new evidence.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

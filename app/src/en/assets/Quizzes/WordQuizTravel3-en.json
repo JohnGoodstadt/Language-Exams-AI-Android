@@ -1,133 +1,556 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizTravel3-en",
-	"title": "3. Travel",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Travel & transport (Set 3)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "reservation",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I made a reservation for two nights.", "ok": true },
-						{ "answer": "I made reservation for two nights.", "ok": false },
-						{ "answer": "Reservations is confirmed.", "ok": false },
-						{ "answer": "I reserved to a room for two nights.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "schedule",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The train schedule changed this week.", "ok": true },
-						{ "answer": "The train schedule change this week.", "ok": false },
-						{ "answer": "Schedules is a single plan.", "ok": false },
-						{ "answer": "It depends of the schedule.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "ship",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The ship arrived at the port early.", "ok": true },
-						{ "answer": "Ship arrived at the port early.", "ok": false },
-						{ "answer": "Ships is very big today.", "ok": false },
-						{ "answer": "We shipped to the island by ship.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "sightseeing",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We went sightseeing in the old town.", "ok": true },
-						{ "answer": "We did a sightseeing in the old town.", "ok": false },
-						{ "answer": "Sightseeings are fun.", "ok": false },
-						{ "answer": "We went sightseeing at the museum to buy.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "suitcase",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He packed his suitcase the night before.", "ok": true },
-						{ "answer": "He packed his suitcase in the night before.", "ok": false },
-						{ "answer": "Suitcases is heavy.", "ok": false },
-						{ "answer": "He packed a luggage into his suitcase.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "takeoff",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Please turn off your phone during takeoff.", "ok": true },
-						{ "answer": "Please turn off your phone during the takeoff.", "ok": false },
-						{ "answer": "Takeoffs is at 8 a.m.", "ok": false },
-						{ "answer": "We took off at to 8 a.m.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "ticket",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I bought a ticket online.", "ok": true },
-						{ "answer": "I bought ticket online.", "ok": false },
-						{ "answer": "Tickets is expensive.", "ok": false },
-						{ "answer": "I bought a ticket for to London.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "tour",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We joined a tour of the city.", "ok": true },
-						{ "answer": "We joined tour of the city.", "ok": false },
-						{ "answer": "Tours is a single trip.", "ok": false },
-						{ "answer": "We toured to the city centre.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "voyage",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The voyage across the ocean took two weeks.", "ok": true },
-						{ "answer": "The voyage across ocean took two weeks.", "ok": false },
-						{ "answer": "Voyages is very dangerous.", "ok": false },
-						{ "answer": "They voyaged to the airport.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizTravel3-en",
+  "title": "3. Travel",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Travel & transport (Set 3)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "reservation",
+          "summary": "an arrangement to keep a room/seat for you at a particular time",
+          "explain": {
+            "entryId": "reservation",
+            "headword": "reservation",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "reservations",
+                "synonyms": [
+                  "booking",
+                  "reservation"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an arrangement to keep a room/seat for you at a particular time",
+                    "examples": [
+                      "I made a reservation for two nights."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I made a reservation for two nights.",
+              "ok": true
+            },
+            {
+              "answer": "I made reservation for two nights.",
+              "ok": false
+            },
+            {
+              "answer": "Reservations is confirmed.",
+              "ok": false
+            },
+            {
+              "answer": "I reserved to a room for two nights.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "schedule",
+          "summary": "a list of planned times for events, buses, trains, etc.",
+          "explain": {
+            "entryId": "schedule",
+            "headword": "schedule",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "schedules",
+                "synonyms": [
+                  "timetable",
+                  "plan"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a list of planned times for events, buses, trains, etc.",
+                    "examples": [
+                      "The train schedule changed this week."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The train schedule changed this week.",
+              "ok": true
+            },
+            {
+              "answer": "The train schedule change this week.",
+              "ok": false
+            },
+            {
+              "answer": "Schedules is a single plan.",
+              "ok": false
+            },
+            {
+              "answer": "It depends of the schedule.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "ship",
+          "summary": "a large boat that carries people or goods",
+          "explain": {
+            "entryId": "ship",
+            "headword": "ship",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "ships",
+                "synonyms": [
+                  "vessel",
+                  "boat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a large boat that carries people or goods",
+                    "examples": [
+                      "The ship arrived at the port early."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The ship arrived at the port early.",
+              "ok": true
+            },
+            {
+              "answer": "Ship arrived at the port early.",
+              "ok": false
+            },
+            {
+              "answer": "Ships is very big today.",
+              "ok": false
+            },
+            {
+              "answer": "We shipped to the island by ship.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "sightseeing",
+          "summary": "visiting interesting places as a tourist",
+          "explain": {
+            "entryId": "sightseeing",
+            "headword": "sightseeing",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "sightseeings",
+                "synonyms": [
+                  "tourism",
+                  "visiting sights"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "visiting interesting places as a tourist",
+                    "examples": [
+                      "We went sightseeing in the old town."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We went sightseeing in the old town.",
+              "ok": true
+            },
+            {
+              "answer": "We did a sightseeing in the old town.",
+              "ok": false
+            },
+            {
+              "answer": "Sightseeings are fun.",
+              "ok": false
+            },
+            {
+              "answer": "We went sightseeing at the museum to buy.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "suitcase",
+          "summary": "a large case used for carrying clothes when travelling",
+          "explain": {
+            "entryId": "suitcase",
+            "headword": "suitcase",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "suitcases",
+                "synonyms": [
+                  "case",
+                  "bag"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a large case used for carrying clothes when travelling",
+                    "examples": [
+                      "He packed his suitcase the night before."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He packed his suitcase the night before.",
+              "ok": true
+            },
+            {
+              "answer": "He packed his suitcase in the night before.",
+              "ok": false
+            },
+            {
+              "answer": "Suitcases is heavy.",
+              "ok": false
+            },
+            {
+              "answer": "He packed a luggage into his suitcase.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "takeoff",
+          "summary": "the moment when a plane leaves the ground and starts flying",
+          "explain": {
+            "entryId": "takeoff",
+            "headword": "takeoff",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "takeoffs",
+                "synonyms": [
+                  "departure",
+                  "lift-off"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the moment when a plane leaves the ground and starts flying",
+                    "examples": [
+                      "Please turn off your phone during takeoff."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Please turn off your phone during takeoff.",
+              "ok": true
+            },
+            {
+              "answer": "Please turn off your phone during the takeoff.",
+              "ok": false
+            },
+            {
+              "answer": "Takeoffs is at 8 a.m.",
+              "ok": false
+            },
+            {
+              "answer": "We took off at to 8 a.m.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "ticket",
+          "summary": "a piece of paper or electronic pass that lets you travel or enter a place",
+          "explain": {
+            "entryId": "ticket",
+            "headword": "ticket",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "tickets",
+                "synonyms": [
+                  "pass",
+                  "fare ticket"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a piece of paper or electronic pass that lets you travel or enter a place",
+                    "examples": [
+                      "I bought a ticket online."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I bought a ticket online.",
+              "ok": true
+            },
+            {
+              "answer": "I bought ticket online.",
+              "ok": false
+            },
+            {
+              "answer": "Tickets is expensive.",
+              "ok": false
+            },
+            {
+              "answer": "I bought a ticket for to London.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "tour",
+          "summary": "a planned visit to several places, often with a guide",
+          "explain": {
+            "entryId": "tour",
+            "headword": "tour",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "tours",
+                "synonyms": [
+                  "trip",
+                  "guided visit"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a planned visit to several places, often with a guide",
+                    "examples": [
+                      "We joined a tour of the city."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We joined a tour of the city.",
+              "ok": true
+            },
+            {
+              "answer": "We joined tour of the city.",
+              "ok": false
+            },
+            {
+              "answer": "Tours is a single trip.",
+              "ok": false
+            },
+            {
+              "answer": "We toured to the city centre.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "voyage",
+          "summary": "a long journey, especially by sea",
+          "explain": {
+            "entryId": "voyage",
+            "headword": "voyage",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "voyages",
+                "synonyms": [
+                  "journey",
+                  "sea trip"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a long journey, especially by sea",
+                    "examples": [
+                      "The voyage across the ocean took two weeks."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The voyage across the ocean took two weeks.",
+              "ok": true
+            },
+            {
+              "answer": "The voyage across ocean took two weeks.",
+              "ok": false
+            },
+            {
+              "answer": "Voyages is very dangerous.",
+              "ok": false
+            },
+            {
+              "answer": "They voyaged to the airport.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

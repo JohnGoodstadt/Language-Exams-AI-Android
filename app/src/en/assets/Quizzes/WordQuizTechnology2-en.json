@@ -1,146 +1,611 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizTechnology2-en",
-	"title": "2. Technology",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Technology basics (Set 2)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "electronic",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She bought an electronic device online.", "ok": true },
-						{ "answer": "She bought electronic device online.", "ok": false },
-						{ "answer": "Electronic are very useful.", "ok": false },
-						{ "answer": "She electroniced the message.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "email",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I sent her an email yesterday.", "ok": true },
-						{ "answer": "I sent her the email yesterday.", "ok": false },
-						{ "answer": "Email are very fast.", "ok": false },
-						{ "answer": "She emailed to me yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "file",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Please attach the file to your message.", "ok": true },
-						{ "answer": "Please attach file to your message.", "ok": false },
-						{ "answer": "A file is a Wi-Fi connection.", "ok": false },
-						{ "answer": "She filed to the internet.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "gadget",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He loves buying new gadgets.", "ok": true },
-						{ "answer": "He loves buying a new gadgets.", "ok": false },
-						{ "answer": "A gadget is a website page.", "ok": false },
-						{ "answer": "She gadgeted the phone.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "homepage",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The homepage contains useful information.", "ok": true },
-						{ "answer": "Homepage contains useful information.", "ok": false },
-						{ "answer": "A homepage is a search engine company.", "ok": false },
-						{ "answer": "She homepage the browser.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "inbox",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Check your inbox for new messages.", "ok": true },
-						{ "answer": "Check the inbox for the new messages.", "ok": false },
-						{ "answer": "Inbox are very slow today.", "ok": false },
-						{ "answer": "She inboxed the attachment.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "internet",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The internet has changed the way we communicate.", "ok": true },
-						{ "answer": "Internet has changed the way we communicate.", "ok": false },
-						{ "answer": "An internet is a mobile phone.", "ok": false },
-						{ "answer": "She internetted the file.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "message",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He left me a message on my phone.", "ok": true },
-						{ "answer": "He left me message on my phone.", "ok": false },
-						{ "answer": "Message are very important.", "ok": false },
-						{ "answer": "She messaged to me yesterday.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "network",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The company has a strong professional network.", "ok": true },
-						{ "answer": "The company has strong professional network.", "ok": false },
-						{ "answer": "Network are very useful.", "ok": false },
-						{ "answer": "She networked to the Wi-Fi.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "online",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "You can shop online easily.", "ok": true },
-						{ "answer": "You can shop in online easily.", "ok": false },
-						{ "answer": "Online are very fast.", "ok": false },
-						{ "answer": "She onlined the file.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizTechnology2-en",
+  "title": "2. Technology",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Technology basics (Set 2)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "electronic",
+          "summary": "using electricity and electronic technology",
+          "explain": {
+            "entryId": "electronic",
+            "headword": "electronic",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "digital"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "using electricity and electronic technology",
+                    "examples": [
+                      "She bought an electronic device online."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She bought an electronic device online.",
+              "ok": true
+            },
+            {
+              "answer": "She bought electronic device online.",
+              "ok": false
+            },
+            {
+              "answer": "Electronic are very useful.",
+              "ok": false
+            },
+            {
+              "answer": "She electroniced the message.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "email",
+          "summary": "a message sent electronically over the internet",
+          "explain": {
+            "entryId": "email",
+            "headword": "email",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "electronic mail",
+                  "message"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a message sent electronically over the internet",
+                    "examples": [
+                      "I sent her an email yesterday."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I sent her an email yesterday.",
+              "ok": true
+            },
+            {
+              "answer": "I sent her the email yesterday.",
+              "ok": false
+            },
+            {
+              "answer": "Email are very fast.",
+              "ok": false
+            },
+            {
+              "answer": "She emailed to me yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "file",
+          "summary": "a document or item of data stored on a computer",
+          "explain": {
+            "entryId": "file",
+            "headword": "file",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "document",
+                  "data file"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a document or item of data stored on a computer",
+                    "examples": [
+                      "Please attach the file to your message."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Please attach the file to your message.",
+              "ok": true
+            },
+            {
+              "answer": "Please attach file to your message.",
+              "ok": false
+            },
+            {
+              "answer": "A file is a Wi-Fi connection.",
+              "ok": false
+            },
+            {
+              "answer": "She filed to the internet.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "gadget",
+          "summary": "a small useful device, often electronic",
+          "explain": {
+            "entryId": "gadget",
+            "headword": "gadget",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "device"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a small useful device, often electronic",
+                    "examples": [
+                      "He loves buying new gadgets."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He loves buying new gadgets.",
+              "ok": true
+            },
+            {
+              "answer": "He loves buying a new gadgets.",
+              "ok": false
+            },
+            {
+              "answer": "A gadget is a website page.",
+              "ok": false
+            },
+            {
+              "answer": "She gadgeted the phone.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "homepage",
+          "summary": "the main page of a website",
+          "explain": {
+            "entryId": "homepage",
+            "headword": "homepage",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "main page",
+                  "start page"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the main page of a website",
+                    "examples": [
+                      "The homepage contains useful information."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The homepage contains useful information.",
+              "ok": true
+            },
+            {
+              "answer": "Homepage contains useful information.",
+              "ok": false
+            },
+            {
+              "answer": "A homepage is a search engine company.",
+              "ok": false
+            },
+            {
+              "answer": "She homepage the browser.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "inbox",
+          "summary": "the place where received emails or messages appear",
+          "explain": {
+            "entryId": "inbox",
+            "headword": "inbox",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "mailbox"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the place where received emails or messages appear",
+                    "examples": [
+                      "Check your inbox for new messages."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Check your inbox for new messages.",
+              "ok": true
+            },
+            {
+              "answer": "Check the inbox for the new messages.",
+              "ok": false
+            },
+            {
+              "answer": "Inbox are very slow today.",
+              "ok": false
+            },
+            {
+              "answer": "She inboxed the attachment.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "internet",
+          "summary": "the global network that connects computers and allows online communication",
+          "explain": {
+            "entryId": "internet",
+            "headword": "internet",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "the net"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the global network that connects computers and allows online communication",
+                    "examples": [
+                      "The internet has changed the way we communicate."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The internet has changed the way we communicate.",
+              "ok": true
+            },
+            {
+              "answer": "Internet has changed the way we communicate.",
+              "ok": false
+            },
+            {
+              "answer": "An internet is a mobile phone.",
+              "ok": false
+            },
+            {
+              "answer": "She internetted the file.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "message",
+          "summary": "information you send to someone in writing, speech, or electronically",
+          "explain": {
+            "entryId": "message",
+            "headword": "message",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "note",
+                  "text"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "information you send to someone in writing, speech, or electronically",
+                    "examples": [
+                      "He left me a message on my phone."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He left me a message on my phone.",
+              "ok": true
+            },
+            {
+              "answer": "He left me message on my phone.",
+              "ok": false
+            },
+            {
+              "answer": "Message are very important.",
+              "ok": false
+            },
+            {
+              "answer": "She messaged to me yesterday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "network",
+          "summary": "a system of connected computers or people; in tech, connected devices that share data",
+          "explain": {
+            "entryId": "network",
+            "headword": "network",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "system",
+                  "connection"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a system of connected computers or people; in tech, connected devices that share data",
+                    "examples": [
+                      "The company has a strong professional network."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The company has a strong professional network.",
+              "ok": true
+            },
+            {
+              "answer": "The company has strong professional network.",
+              "ok": false
+            },
+            {
+              "answer": "Network are very useful.",
+              "ok": false
+            },
+            {
+              "answer": "She networked to the Wi-Fi.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "online",
+          "summary": "connected to or using the internet",
+          "explain": {
+            "entryId": "online",
+            "headword": "online",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "on the internet"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "connected to or using the internet",
+                    "examples": [
+                      "You can shop online easily."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "You can shop online easily.",
+              "ok": true
+            },
+            {
+              "answer": "You can shop in online easily.",
+              "ok": false
+            },
+            {
+              "answer": "Online are very fast.",
+              "ok": false
+            },
+            {
+              "answer": "She onlined the file.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

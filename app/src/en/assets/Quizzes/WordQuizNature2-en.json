@@ -1,146 +1,616 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizNature2-en",
-	"title": "2. Nature",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Environment & climate (Set 2)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "green",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "They support green energy projects.", "ok": true },
-						{ "answer": "They support a green energy projects.", "ok": false },
-						{ "answer": "Green are important for the planet.", "ok": false },
-						{ "answer": "They are interested on green energy.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "greenhouse effect",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The greenhouse effect traps heat in the atmosphere.", "ok": true },
-						{ "answer": "Greenhouse effect traps heat in the atmosphere.", "ok": false },
-						{ "answer": "Greenhouse effects is very dangerous.", "ok": false },
-						{ "answer": "It is responsible of the greenhouse effect.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "habitat",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Deforestation destroys the habitat of many animals.", "ok": true },
-						{ "answer": "Deforestation destroys habitat of many animals.", "ok": false },
-						{ "answer": "Habitats is getting smaller.", "ok": false },
-						{ "answer": "Animals live on their habitat.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "home",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Many birds return to the same home each year.", "ok": true },
-						{ "answer": "Many birds return to same home each year.", "ok": false },
-						{ "answer": "Homes is where one animal live.", "ok": false },
-						{ "answer": "They went at home by train.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "nature",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He loves spending time in nature.", "ok": true },
-						{ "answer": "He loves spending time in the nature.", "ok": false },
-						{ "answer": "Natures are beautiful.", "ok": false },
-						{ "answer": "He is interested on nature.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "pollution",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Air pollution is a major problem in big cities.", "ok": true },
-						{ "answer": "The air pollution is a major problem in big cities.", "ok": false },
-						{ "answer": "Pollutions are getting worse.", "ok": false },
-						{ "answer": "The city suffers from to pollution.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "preservation",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Preservation of forests helps wildlife.", "ok": true },
-						{ "answer": "The preservation of forests helps wildlife.", "ok": false },
-						{ "answer": "Preservations is important.", "ok": false },
-						{ "answer": "They preserved the forests for preservation.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "protection",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Sunscreen provides protection from the sun.", "ok": true },
-						{ "answer": "Sunscreen provides a protection from the sun.", "ok": false },
-						{ "answer": "Protections are necessary.", "ok": false },
-						{ "answer": "It protects you against to the sun.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "recycling",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Recycling reduces the amount of waste.", "ok": true },
-						{ "answer": "The recycling reduces the amount of waste.", "ok": false },
-						{ "answer": "Recyclings are increasing.", "ok": false },
-						{ "answer": "We recycle the bottles to recycling.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "reduce",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "We should reduce plastic use.", "ok": true },
-						{ "answer": "We should reduce the plastic uses.", "ok": false },
-						{ "answer": "Reduce is a kind of recycling bin.", "ok": false },
-						{ "answer": "We should reduce of plastic use.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizNature2-en",
+  "title": "2. Nature",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Environment & climate (Set 2)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "green",
+          "summary": "good for the environment; causing little pollution",
+          "explain": {
+            "entryId": "green",
+            "headword": "green",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "eco-friendly",
+                  "environmentally friendly"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "describing activities or products that are environmentally friendly",
+                    "examples": [
+                      "They support green energy projects."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They support green energy projects.",
+              "ok": true
+            },
+            {
+              "answer": "They support a green energy projects.",
+              "ok": false
+            },
+            {
+              "answer": "Green are important for the planet.",
+              "ok": false
+            },
+            {
+              "answer": "They are interested on green energy.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "greenhouse effect",
+          "summary": "the process where gases trap heat in the Earth’s atmosphere",
+          "explain": {
+            "entryId": "greenhouse_effect",
+            "headword": "greenhouse effect",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "heat trapping",
+                  "warming effect"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the warming of Earth when certain gases trap heat in the atmosphere",
+                    "examples": [
+                      "The greenhouse effect traps heat in the atmosphere."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The greenhouse effect traps heat in the atmosphere.",
+              "ok": true
+            },
+            {
+              "answer": "Greenhouse effect traps heat in the atmosphere.",
+              "ok": false
+            },
+            {
+              "answer": "Greenhouse effects is very dangerous.",
+              "ok": false
+            },
+            {
+              "answer": "It is responsible of the greenhouse effect.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "habitat",
+          "summary": "the natural home of an animal or plant",
+          "explain": {
+            "entryId": "habitat",
+            "headword": "habitat",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "home",
+                  "environment"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the place where an animal or plant normally lives",
+                    "examples": [
+                      "Deforestation destroys the habitat of many animals."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Deforestation destroys the habitat of many animals.",
+              "ok": true
+            },
+            {
+              "answer": "Deforestation destroys habitat of many animals.",
+              "ok": false
+            },
+            {
+              "answer": "Habitats is getting smaller.",
+              "ok": false
+            },
+            {
+              "answer": "Animals live on their habitat.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "home",
+          "summary": "the place where someone or an animal lives",
+          "explain": {
+            "entryId": "home",
+            "headword": "home",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "house",
+                  "habitat"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the place where a person or animal lives or returns to",
+                    "examples": [
+                      "Many birds return to the same home each year."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Many birds return to the same home each year.",
+              "ok": true
+            },
+            {
+              "answer": "Many birds return to same home each year.",
+              "ok": false
+            },
+            {
+              "answer": "Homes is where one animal live.",
+              "ok": false
+            },
+            {
+              "answer": "They went at home by train.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "nature",
+          "summary": "the natural world of plants, animals, and places outside cities",
+          "explain": {
+            "entryId": "nature",
+            "headword": "nature",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "the natural world",
+                  "outdoors"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the physical world of plants, animals, and landscapes",
+                    "examples": [
+                      "He loves spending time in nature."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He loves spending time in nature.",
+              "ok": true
+            },
+            {
+              "answer": "He loves spending time in the nature.",
+              "ok": false
+            },
+            {
+              "answer": "Natures are beautiful.",
+              "ok": false
+            },
+            {
+              "answer": "He is interested on nature.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "pollution",
+          "summary": "damage to air, water, or land caused by harmful substances",
+          "explain": {
+            "entryId": "pollution",
+            "headword": "pollution",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "contamination",
+                  "dirtying"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the process of making the environment dirty or harmful, especially air and water",
+                    "examples": [
+                      "Air pollution is a major problem in big cities."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Air pollution is a major problem in big cities.",
+              "ok": true
+            },
+            {
+              "answer": "The air pollution is a major problem in big cities.",
+              "ok": false
+            },
+            {
+              "answer": "Pollutions are getting worse.",
+              "ok": false
+            },
+            {
+              "answer": "The city suffers from to pollution.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "preservation",
+          "summary": "the act of keeping something safe and in good condition",
+          "explain": {
+            "entryId": "preservation",
+            "headword": "preservation",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "conservation",
+                  "protection"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the act of protecting something so it is not damaged or destroyed",
+                    "examples": [
+                      "Preservation of forests helps wildlife."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Preservation of forests helps wildlife.",
+              "ok": true
+            },
+            {
+              "answer": "The preservation of forests helps wildlife.",
+              "ok": false
+            },
+            {
+              "answer": "Preservations is important.",
+              "ok": false
+            },
+            {
+              "answer": "They preserved the forests for preservation.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "protection",
+          "summary": "keeping someone or something safe from harm",
+          "explain": {
+            "entryId": "protection",
+            "headword": "protection",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "safety",
+                  "defence"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the act of keeping someone or something safe from danger or damage",
+                    "examples": [
+                      "Sunscreen provides protection from the sun."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Sunscreen provides protection from the sun.",
+              "ok": true
+            },
+            {
+              "answer": "Sunscreen provides a protection from the sun.",
+              "ok": false
+            },
+            {
+              "answer": "Protections are necessary.",
+              "ok": false
+            },
+            {
+              "answer": "It protects you against to the sun.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "recycling",
+          "summary": "the process of using waste again by making it into new products",
+          "explain": {
+            "entryId": "recycling",
+            "headword": "recycling",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "reuse",
+                  "reprocessing"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the process of collecting and processing used materials to make new products",
+                    "examples": [
+                      "Recycling reduces the amount of waste."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Recycling reduces the amount of waste.",
+              "ok": true
+            },
+            {
+              "answer": "The recycling reduces the amount of waste.",
+              "ok": false
+            },
+            {
+              "answer": "Recyclings are increasing.",
+              "ok": false
+            },
+            {
+              "answer": "We recycle the bottles to recycling.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "reduce",
+          "summary": "to make something smaller or less",
+          "explain": {
+            "entryId": "reduce",
+            "headword": "reduce",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "reduces, reducing, reduced",
+                "synonyms": [
+                  "decrease",
+                  "cut down"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to make something smaller in amount, size, or number",
+                    "examples": [
+                      "We should reduce plastic use."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "We should reduce plastic use.",
+              "ok": true
+            },
+            {
+              "answer": "We should reduce the plastic uses.",
+              "ok": false
+            },
+            {
+              "answer": "Reduce is a kind of recycling bin.",
+              "ok": false
+            },
+            {
+              "answer": "We should reduce of plastic use.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

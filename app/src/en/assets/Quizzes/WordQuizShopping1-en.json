@@ -1,146 +1,616 @@
 {
-	"fileformat": 13,
-	"location": 0,
-	"sheetname": "WordQuizShopping1-en",
-	"title": "1. Shopping",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the sentence that uses the word correctly.",
-			"description": "Shopping & retail (Set 1)",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "acquire",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "She acquired new skills during the course.", "ok": true },
-						{ "answer": "She acquired to new skills during the course.", "ok": false },
-						{ "answer": "She made an acquire of new skills.", "ok": false },
-						{ "answer": "She was acquired by new skills.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "bargain",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I found a great bargain in the sale.", "ok": true },
-						{ "answer": "I found great bargain in the sale.", "ok": false },
-						{ "answer": "Bargains is very cheap.", "ok": false },
-						{ "answer": "I bargained to the price.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "bill",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The waiter brought the bill after dinner.", "ok": true },
-						{ "answer": "Waiter brought bill after dinner.", "ok": false },
-						{ "answer": "Bills is expensive.", "ok": false },
-						{ "answer": "He paid to the bill.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "buy",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "I want to buy a new jacket.", "ok": true },
-						{ "answer": "I want to buy new jacket.", "ok": false },
-						{ "answer": "He buys to a new jacket.", "ok": false },
-						{ "answer": "Buy is very expensive.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "cashier",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The cashier scanned the items quickly.", "ok": true },
-						{ "answer": "Cashier scanned the items quickly.", "ok": false },
-						{ "answer": "Cashiers is very helpful.", "ok": false },
-						{ "answer": "She cashiered to the customer.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "checkout",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "Please pay at the checkout.", "ok": true },
-						{ "answer": "Please pay at checkout.", "ok": false },
-						{ "answer": "Checkouts is very busy.", "ok": false },
-						{ "answer": "She checked out to the cashier.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "clearance",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "These shoes are on clearance.", "ok": true },
-						{ "answer": "These shoes are in clearance.", "ok": false },
-						{ "answer": "Clearances is popular.", "ok": false },
-						{ "answer": "They cleared the price for clearance.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "clerk",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The clerk helped me find my size.", "ok": true },
-						{ "answer": "Clerk helped me find my size.", "ok": false },
-						{ "answer": "Clerks is friendly.", "ok": false },
-						{ "answer": "She clerked to the customer politely.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "client",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "The lawyer met her client yesterday.", "ok": true },
-						{ "answer": "Lawyer met her client yesterday.", "ok": false },
-						{ "answer": "Clients is satisfied.", "ok": false },
-						{ "answer": "She cliented with the company.", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "compensation",
-					"summary": "",
-					"explain": "",
-					"answers": [
-						{ "answer": "He received compensation for the damage.", "ok": true },
-						{ "answer": "He received a compensation for the damage.", "ok": false },
-						{ "answer": "Compensations is necessary.", "ok": false },
-						{ "answer": "They compensated to him the damage.", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizShopping1-en",
+  "title": "1. Shopping",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Shopping & retail (Set 1)",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "question": "acquire",
+          "summary": "to get or obtain something, especially over time",
+          "explain": {
+            "entryId": "acquire",
+            "headword": "acquire",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "acquires, acquiring, acquired",
+                "synonyms": [
+                  "get",
+                  "obtain"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to get or obtain something, especially over time",
+                    "examples": [
+                      "She acquired new skills during the course."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She acquired new skills during the course.",
+              "ok": true
+            },
+            {
+              "answer": "She acquired to new skills during the course.",
+              "ok": false
+            },
+            {
+              "answer": "She made an acquire of new skills.",
+              "ok": false
+            },
+            {
+              "answer": "She was acquired by new skills.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "question": "bargain",
+          "summary": "something bought for a lower price than usual",
+          "explain": {
+            "entryId": "bargain",
+            "headword": "bargain",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "good deal",
+                  "discount"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "something bought for a lower price than usual",
+                    "examples": [
+                      "I found a great bargain in the sale."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I found a great bargain in the sale.",
+              "ok": true
+            },
+            {
+              "answer": "I found great bargain in the sale.",
+              "ok": false
+            },
+            {
+              "answer": "Bargains is very cheap.",
+              "ok": false
+            },
+            {
+              "answer": "I bargained to the price.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "question": "bill",
+          "summary": "a written statement of how much you must pay",
+          "explain": {
+            "entryId": "bill",
+            "headword": "bill",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "invoice",
+                  "check"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a written statement of how much you must pay",
+                    "examples": [
+                      "The waiter brought the bill after dinner."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The waiter brought the bill after dinner.",
+              "ok": true
+            },
+            {
+              "answer": "Waiter brought bill after dinner.",
+              "ok": false
+            },
+            {
+              "answer": "Bills is expensive.",
+              "ok": false
+            },
+            {
+              "answer": "He paid to the bill.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "question": "buy",
+          "summary": "to get something by paying money for it",
+          "explain": {
+            "entryId": "buy",
+            "headword": "buy",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": "buys, buying, bought",
+                "synonyms": [
+                  "purchase",
+                  "get"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to get something by paying money for it",
+                    "examples": [
+                      "I want to buy a new jacket."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I want to buy a new jacket.",
+              "ok": true
+            },
+            {
+              "answer": "I want to buy new jacket.",
+              "ok": false
+            },
+            {
+              "answer": "He buys to a new jacket.",
+              "ok": false
+            },
+            {
+              "answer": "Buy is very expensive.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "question": "cashier",
+          "summary": "a person whose job is to take payments in a shop",
+          "explain": {
+            "entryId": "cashier",
+            "headword": "cashier",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "till operator",
+                  "checkout assistant"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a person whose job is to take payments in a shop",
+                    "examples": [
+                      "The cashier scanned the items quickly."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The cashier scanned the items quickly.",
+              "ok": true
+            },
+            {
+              "answer": "Cashier scanned the items quickly.",
+              "ok": false
+            },
+            {
+              "answer": "Cashiers is very helpful.",
+              "ok": false
+            },
+            {
+              "answer": "She cashiered to the customer.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "question": "checkout",
+          "summary": "the place or process where you pay in a shop or online",
+          "explain": {
+            "entryId": "checkout",
+            "headword": "checkout",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "till",
+                  "payment"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the place or process where you pay in a shop or online",
+                    "examples": [
+                      "Please pay at the checkout."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Please pay at the checkout.",
+              "ok": true
+            },
+            {
+              "answer": "Please pay at checkout.",
+              "ok": false
+            },
+            {
+              "answer": "Checkouts is very busy.",
+              "ok": false
+            },
+            {
+              "answer": "She checked out to the cashier.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "question": "clearance",
+          "summary": "a sale to sell goods cheaply, often to clear stock",
+          "explain": {
+            "entryId": "clearance",
+            "headword": "clearance",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "sale",
+                  "reduction"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a sale to sell goods cheaply, often to clear stock",
+                    "examples": [
+                      "These shoes are on clearance."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "These shoes are on clearance.",
+              "ok": true
+            },
+            {
+              "answer": "These shoes are in clearance.",
+              "ok": false
+            },
+            {
+              "answer": "Clearances is popular.",
+              "ok": false
+            },
+            {
+              "answer": "They cleared the price for clearance.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "question": "clerk",
+          "summary": "a shop worker who helps customers",
+          "explain": {
+            "entryId": "clerk",
+            "headword": "clerk",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "assistant",
+                  "shop worker"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a shop worker who helps customers",
+                    "examples": [
+                      "The clerk helped me find my size."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The clerk helped me find my size.",
+              "ok": true
+            },
+            {
+              "answer": "Clerk helped me find my size.",
+              "ok": false
+            },
+            {
+              "answer": "Clerks is friendly.",
+              "ok": false
+            },
+            {
+              "answer": "She clerked to the customer politely.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "question": "client",
+          "summary": "a person who pays for professional services (lawyer, accountant, etc.)",
+          "explain": {
+            "entryId": "client",
+            "headword": "client",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "customer",
+                  "customer"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a person who pays for professional services (lawyer, accountant, etc.)",
+                    "examples": [
+                      "The lawyer met her client yesterday."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The lawyer met her client yesterday.",
+              "ok": true
+            },
+            {
+              "answer": "Lawyer met her client yesterday.",
+              "ok": false
+            },
+            {
+              "answer": "Clients is satisfied.",
+              "ok": false
+            },
+            {
+              "answer": "She cliented with the company.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "question": "compensation",
+          "summary": "money given to someone because of loss, damage, or injury",
+          "explain": {
+            "entryId": "compensation",
+            "headword": "compensation",
+            "pronunciation": {
+              "display": "",
+              "ipaUK": null,
+              "ipaUS": null
+            },
+            "labels": [
+              "B1"
+            ],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": null,
+                "headwordLine": null,
+                "inflectionsLine": null,
+                "synonyms": [
+                  "payment",
+                  "damages"
+                ],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "money given to someone because of loss, damage, or injury",
+                    "examples": [
+                      "He received compensation for the damage."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He received compensation for the damage.",
+              "ok": true
+            },
+            {
+              "answer": "He received a compensation for the damage.",
+              "ok": false
+            },
+            {
+              "answer": "Compensations is necessary.",
+              "ok": false
+            },
+            {
+              "answer": "They compensated to him the damage.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

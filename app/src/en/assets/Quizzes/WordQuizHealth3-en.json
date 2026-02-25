@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "recovery",
-					"summary": "",
-					"explain": "",
+					"summary": "The process of becoming well again after an illness, injury, or operation.",
+					"explain": {
+						"entryId": "recovery",
+						"headword": "recovery",
+						"pronunciation": { "display": "", "ipaUK": "/rɪˈkʌvəri/", "ipaUS": "/rɪˈkʌvəri/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["recuperation", "healing", "convalescence"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of becoming well again after illness, injury, or an operation; the return to a normal state of health",
+										"examples": [
+											"The doctor said her recovery would take at least three weeks."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "His recovery took several weeks.", "ok": true },
 						{ "answer": "He recovered about the injury.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "routine",
-					"summary": "",
-					"explain": "",
+					"summary": "A regular sequence of activities done at a set time as part of a daily habit.",
+					"explain": {
+						"entryId": "routine",
+						"headword": "routine",
+						"pronunciation": { "display": "", "ipaUK": "/ruːˈtiːn/", "ipaUS": "/ruːˈtiːn/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["habit", "schedule", "programme"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a regular sequence of activities or tasks that are done at a set time as part of an established habit or programme",
+										"examples": [
+											"He has a morning routine that includes stretching and a healthy breakfast."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She has a daily exercise routine.", "ok": true },
 						{ "answer": "She routined her doctor.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "schedule",
-					"summary": "",
-					"explain": "",
+					"summary": "To plan or arrange that something will happen at a particular time.",
+					"explain": {
+						"entryId": "schedule",
+						"headword": "schedule",
+						"pronunciation": { "display": "", "ipaUK": "/ˈʃɛdjuːl/", "ipaUS": "/ˈskɛdʒuːl/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["plan", "arrange", "book"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to plan or arrange that an event, appointment, or operation will happen at a particular time",
+										"examples": [
+											"We have scheduled the next checkup for the end of the month."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The surgery is scheduled for Monday.", "ok": true },
 						{ "answer": "She schedule about the hospital.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "symptoms",
-					"summary": "",
-					"explain": "",
+					"summary": "Physical or mental signs that indicate a person may have a particular illness.",
+					"explain": {
+						"entryId": "symptoms",
+						"headword": "symptoms",
+						"pronunciation": { "display": "", "ipaUK": "/ˈsɪmptəmz/", "ipaUS": "/ˈsɪmptəmz/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["signs", "indicators", "warning signs"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "physical or mental signs that indicate a person may have a particular illness; changes in the body that suggest something is wrong",
+										"examples": [
+											"Common symptoms of flu include fever, headache, and tiredness."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He described his symptoms to the doctor.", "ok": true },
 						{ "answer": "He symptom about his illness.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "therapy",
-					"summary": "",
-					"explain": "",
+					"summary": "Treatment of a physical or mental illness, especially without surgery or medicine.",
+					"explain": {
+						"entryId": "therapy",
+						"headword": "therapy",
+						"pronunciation": { "display": "", "ipaUK": "/ˈθɛrəpi/", "ipaUS": "/ˈθɛrəpi/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["treatment", "rehabilitation", "counselling"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the treatment of a physical, mental, or behavioural condition, often through exercises, talking sessions, or other non-surgical methods",
+										"examples": [
+											"He attended speech therapy sessions twice a week to improve his communication."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She started therapy after the accident.", "ok": true },
 						{ "answer": "She therapied the injury.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "treatment",
-					"summary": "",
-					"explain": "",
+					"summary": "Medical care given to a patient for an illness or injury.",
+					"explain": {
+						"entryId": "treatment",
+						"headword": "treatment",
+						"pronunciation": { "display": "", "ipaUK": "/ˈtriːtmənt/", "ipaUS": "/ˈtriːtmənt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["care", "therapy", "remedy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the medical care given to a patient for an illness, injury, or condition; a way of dealing with a health problem",
+										"examples": [
+											"The new treatment for the condition has shown very positive results."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The treatment was effective.", "ok": true },
 						{ "answer": "She treatmented the patient.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "urgent",
-					"summary": "",
-					"explain": "",
+					"summary": "Needing immediate action or attention; very important and requiring quick response.",
+					"explain": {
+						"entryId": "urgent",
+						"headword": "urgent",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɜːdʒənt/", "ipaUS": "/ˈɜːrdʒənt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["critical", "pressing", "immediate"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "needing immediate action or attention; very important and requiring a quick response",
+										"examples": [
+											"The patient's condition was urgent so the doctor saw him straight away."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "This is an urgent medical case.", "ok": true },
 						{ "answer": "This urgent about the doctor.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "well-being",
-					"summary": "",
-					"explain": "",
+					"summary": "The state of being comfortable, healthy, and happy in body and mind.",
+					"explain": {
+						"entryId": "well-being",
+						"headword": "well-being",
+						"pronunciation": { "display": "", "ipaUK": "/ˌwɛlˈbiːɪŋ/", "ipaUS": "/ˌwɛlˈbiːɪŋ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["health", "welfare", "happiness"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the state of being comfortable, healthy, and happy in terms of both physical and mental health",
+										"examples": [
+											"Getting enough sleep has a major effect on your overall well-being."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Exercise improves your overall well-being.", "ok": true },
 						{ "answer": "She well-being every morning.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "workout",
-					"summary": "",
-					"explain": "",
+					"summary": "A period of physical exercise, especially one done at a gym or as part of a fitness routine.",
+					"explain": {
+						"entryId": "workout",
+						"headword": "workout",
+						"pronunciation": { "display": "", "ipaUK": "/ˈwɜːkaʊt/", "ipaUS": "/ˈwɜːrkaʊt/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["exercise session", "training", "fitness session"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a period of physical exercise, especially one done at a gym or as part of a regular fitness routine",
+										"examples": [
+											"She does a thirty-minute workout every morning before breakfast."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He does a workout at the gym every day.", "ok": true },
 						{ "answer": "He workouted yesterday evening.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "wound",
-					"summary": "",
-					"explain": "",
+					"summary": "An injury to the body, especially a cut or damage to the skin caused by something sharp.",
+					"explain": {
+						"entryId": "wound",
+						"headword": "wound",
+						"pronunciation": { "display": "", "ipaUK": "/wuːnd/", "ipaUS": "/wuːnd/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["injury", "cut", "lesion"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a physical injury to the body, especially a cut or break in the skin caused by something sharp or by an accident",
+										"examples": [
+											"He kept the wound clean and covered until it healed completely."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The nurse cleaned the wound carefully.", "ok": true },
 						{ "answer": "He wounded about the doctor.", "ok": false },

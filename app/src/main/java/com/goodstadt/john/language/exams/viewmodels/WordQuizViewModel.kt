@@ -629,7 +629,7 @@ class WordQuizViewModel @Inject constructor(
 
         //because spellings should follow each other
 //        if (testData.fileFormat == quizFillInTheBlanks)
-        testData.shuffleLists()
+        //testData.shuffleLists()
 
 
         return testData.data.flatMap { section ->

@@ -14,8 +14,34 @@
 					"title": "",
 					"page": 1,
 					"question": "exercise",
-					"summary": "",
-					"explain": "",
+					"summary": "Physical activity done to keep the body fit and healthy.",
+					"explain": {
+						"entryId": "exercise",
+						"headword": "exercise",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɛksəsaɪz/", "ipaUS": "/ˈɛksərsaɪz/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["activity", "workout", "training"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "physical activity done to keep the body fit, strong, and healthy",
+										"examples": [
+											"She goes for a walk every morning as part of her daily exercise."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Regular exercise improves your health.", "ok": true },
 						{ "answer": "She exercised about the appointment.", "ok": false },
@@ -26,8 +52,34 @@
 					"title": "",
 					"page": 2,
 					"question": "health",
-					"summary": "",
-					"explain": "",
+					"summary": "The general condition of your body or mind, especially in terms of being well or ill.",
+					"explain": {
+						"entryId": "health",
+						"headword": "health",
+						"pronunciation": { "display": "", "ipaUK": "/hɛlθ/", "ipaUS": "/hɛlθ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["wellbeing", "fitness", "condition"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the general condition of the body or mind; the state of being free from illness or injury",
+										"examples": [
+											"Eating well and sleeping enough is essential for good health."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Good health is very important.", "ok": true },
 						{ "answer": "She healths every morning.", "ok": false },
@@ -38,8 +90,34 @@
 					"title": "",
 					"page": 3,
 					"question": "hospital",
-					"summary": "",
-					"explain": "",
+					"summary": "A place where people who are ill or injured receive medical care and treatment.",
+					"explain": {
+						"entryId": "hospital",
+						"headword": "hospital",
+						"pronunciation": { "display": "", "ipaUK": "/ˈhɒspɪtəl/", "ipaUS": "/ˈhɑːspɪtəl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["medical centre", "clinic", "infirmary"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large institution where people who are ill, injured, or having operations receive medical care and treatment",
+										"examples": [
+											"She was taken to hospital immediately after the accident."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He was taken to hospital after the accident.", "ok": true },
 						{ "answer": "He hospitaled last night.", "ok": false },
@@ -50,8 +128,34 @@
 					"title": "",
 					"page": 4,
 					"question": "injury",
-					"summary": "",
-					"explain": "",
+					"summary": "Physical damage done to part of the body as a result of an accident or attack.",
+					"explain": {
+						"entryId": "injury",
+						"headword": "injury",
+						"pronunciation": { "display": "", "ipaUK": "/ˈɪndʒəri/", "ipaUS": "/ˈɪndʒəri/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["wound", "harm", "damage"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "physical damage done to part of the body as a result of an accident, fall, or attack",
+										"examples": [
+											"The footballer had to rest for six weeks because of a knee injury."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "He suffered a serious injury during the match.", "ok": true },
 						{ "answer": "He injured of his leg.", "ok": false },
@@ -62,8 +166,34 @@
 					"title": "",
 					"page": 5,
 					"question": "insurance",
-					"summary": "",
-					"explain": "",
+					"summary": "An arrangement in which you pay money regularly to a company that will pay your costs if something bad happens.",
+					"explain": {
+						"entryId": "insurance",
+						"headword": "insurance",
+						"pronunciation": { "display": "", "ipaUK": "/ɪnˈʃʊərəns/", "ipaUS": "/ɪnˈʃʊrəns/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["cover", "policy", "protection"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an arrangement in which you pay regular amounts to a company and they pay your costs if you have an accident, become ill, or suffer a loss",
+										"examples": [
+											"You should always buy travel insurance before going abroad."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She bought health insurance last year.", "ok": true },
 						{ "answer": "She insured about her doctor.", "ok": false },
@@ -74,8 +204,34 @@
 					"title": "",
 					"page": 6,
 					"question": "medication",
-					"summary": "",
-					"explain": "",
+					"summary": "A drug or medicine prescribed by a doctor to treat an illness or condition.",
+					"explain": {
+						"entryId": "medication",
+						"headword": "medication",
+						"pronunciation": { "display": "", "ipaUK": "/ˌmɛdɪˈkeɪʃən/", "ipaUS": "/ˌmɛdɪˈkeɪʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["medicine", "drug", "treatment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a drug or medicine used to treat a medical condition or illness, usually prescribed by a doctor",
+										"examples": [
+											"She takes daily medication to control her blood pressure."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The doctor prescribed new medication.", "ok": true },
 						{ "answer": "She medicated about the appointment.", "ok": false },
@@ -86,8 +242,34 @@
 					"title": "",
 					"page": 7,
 					"question": "nutrition",
-					"summary": "",
-					"explain": "",
+					"summary": "The process of eating the right kinds of food to stay healthy; the study of food and health.",
+					"explain": {
+						"entryId": "nutrition",
+						"headword": "nutrition",
+						"pronunciation": { "display": "", "ipaUK": "/njuːˈtrɪʃən/", "ipaUS": "/nuːˈtrɪʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["diet", "nourishment", "sustenance"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of eating the right food for health and growth; the study of how food affects the body",
+										"examples": [
+											"Proper nutrition during pregnancy is very important for the baby's development."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "Good nutrition is essential for children.", "ok": true },
 						{ "answer": "She nutritioned her homework.", "ok": false },
@@ -98,8 +280,34 @@
 					"title": "",
 					"page": 8,
 					"question": "policy",
-					"summary": "",
-					"explain": "",
+					"summary": "A written contract with an insurance company specifying what is covered.",
+					"explain": {
+						"entryId": "policy",
+						"headword": "policy",
+						"pronunciation": { "display": "", "ipaUK": "/ˈpɒlɪsi/", "ipaUS": "/ˈpɑːlɪsi/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["contract", "plan", "agreement"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a written contract with an insurance company that sets out exactly what is covered in return for regular payments",
+										"examples": [
+											"Read the policy carefully before you sign to understand what is covered."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "The insurance policy covers dental treatment.", "ok": true },
 						{ "answer": "She policied the doctor yesterday.", "ok": false },
@@ -110,8 +318,34 @@
 					"title": "",
 					"page": 9,
 					"question": "prescription",
-					"summary": "",
-					"explain": "",
+					"summary": "A written instruction from a doctor allowing a patient to get medicine from a pharmacy.",
+					"explain": {
+						"entryId": "prescription",
+						"headword": "prescription",
+						"pronunciation": { "display": "", "ipaUK": "/prɪˈskrɪpʃən/", "ipaUS": "/prɪˈskrɪpʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["order", "authorisation", "medical note"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a written instruction from a doctor or medical professional that allows a patient to obtain a specific medicine from a pharmacy",
+										"examples": [
+											"The doctor gave her a prescription for antibiotics."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "You need a prescription to buy this medicine.", "ok": true },
 						{ "answer": "She prescriptioned the hospital.", "ok": false },
@@ -122,8 +356,34 @@
 					"title": "",
 					"page": 10,
 					"question": "reaction",
-					"summary": "",
-					"explain": "",
+					"summary": "A response by the body to a substance, drug, or treatment, often negative or unwanted.",
+					"explain": {
+						"entryId": "reaction",
+						"headword": "reaction",
+						"pronunciation": { "display": "", "ipaUK": "/riˈækʃən/", "ipaUS": "/riˈækʃən/" },
+						"labels": ["B1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": null,
+								"headwordLine": null,
+								"inflectionsLine": null,
+								"synonyms": ["response", "effect", "sensitivity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a response by the body to a substance, drug, or treatment, often an unwanted or unexpected one",
+										"examples": [
+											"Some people have a reaction to certain antibiotics, such as a rash or itching."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
 					"answers": [
 						{ "answer": "She had a reaction to the medication.", "ok": true },
 						{ "answer": "She reacted the hospital.", "ok": false },
