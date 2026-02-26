@@ -6,7 +6,6 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
-import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
@@ -15,7 +14,6 @@ import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
-import com.goodstadt.john.language.exams.managers.DailyStats
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -27,11 +25,6 @@ import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import com.goodstadt.john.language.exams.utils.PlaybackEvent
 import com.goodstadt.john.language.exams.utils.PlaybackEventBus
-import com.goodstadt.john.language.exams.utils.RateLimitGuard
-import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
-import com.goodstadt.john.language.exams.utils.isTodayInstallDay
-import com.goodstadt.john.language.exams.utils.logging.TimberFault
-import com.google.firebase.crashlytics.BuildConfig
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -44,7 +37,6 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
@@ -65,9 +57,13 @@ sealed interface CategoryTabUiState {
         val playbackState: PlaybackState = PlaybackState.Idle,
         val recalledWordKeys: Set<String> = emptySet(),
 
+        // ✅ NEW: Logic flag to hide/show buttons
+        val isQuizAvailable: Boolean = false,
+
         // ✅ NEW: Timestamp to force UI recomposition when History changes
         val lastUpdate: Long = System.currentTimeMillis()
     ) : CategoryTabUiState
+
     data class Error(val message: String) : CategoryTabUiState
 }
 
@@ -100,7 +96,7 @@ class CategoryTabViewModel @Inject constructor(
 
     private val _isPremiumUser = MutableStateFlow(false)
     val isPremiumUser = _isPremiumUser.asStateFlow()
-    
+
     // Rate Limit State
     private val _showRateLimitSheet = MutableStateFlow(false)
     val showRateLimitSheet = _showRateLimitSheet.asStateFlow()
@@ -198,7 +194,7 @@ class CategoryTabViewModel @Inject constructor(
 
 
 //        if (BuildConfig.DEBUG) { //Just for Jan 2026
-         //   firestoreRepository.updateUserInFirestore()
+        //   firestoreRepository.updateUserInFirestore()
 //        }
 
     }
@@ -251,6 +247,9 @@ class CategoryTabViewModel @Inject constructor(
             // Cache the level for isHeard calls later
             currentLoadedLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
+            val levelsWithQuizzes = listOf("B1")
+            val isQuizEnabled = levelsWithQuizzes.contains(currentLoadedLevel)
+
             val result = contentRepository.getFormat0Data(currentExamName.value)
 
             result.onSuccess { vocabFile ->
@@ -272,7 +271,7 @@ class CategoryTabViewModel @Inject constructor(
 //                    })
 //                }
                 // Initialize Recalling Set
-               // val recalledKeys = recallingRepository.getAllRecalledKeys()
+                // val recalledKeys = recallingRepository.getAllRecalledKeys()
 
                 // ✅ FIX: Calculate the initial Heard Count immediately
 
@@ -293,10 +292,12 @@ class CategoryTabViewModel @Inject constructor(
                     categories = tabCategories,
                     totalWordsOnTab = total,
                     heardCountOnTab = heardOnTab,
-                    recalledWordKeys = currentRecalledKeys //✅ USE THE CACHED VARIABLE
+                    recalledWordKeys = currentRecalledKeys, //✅ USE THE CACHED VARIABLE
+                    isQuizAvailable = isQuizEnabled
                 )
             }.onFailure { error ->
-                _uiState.value = CategoryTabUiState.Error(error.localizedMessage ?: "Failed to load")
+                _uiState.value =
+                    CategoryTabUiState.Error(error.localizedMessage ?: "Failed to load")
             }
         }
     }
@@ -314,14 +315,17 @@ class CategoryTabViewModel @Inject constructor(
             } else currentState
         }
     }
+
     fun isHeard(sentence: String): Boolean {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         return historyManager.isHeard(currentLoadedLevel, contentID)
     }
-    fun getPlayCount(sentence:String): Int {
+
+    fun getPlayCount(sentence: String): Int {
         val contentID = FirebaseAudioService.generateContentID(sentence)
         return historyManager.getPlayCount(currentLoadedLevel, contentID)
     }
+
     // MARK: - Playback Logic
     fun handleTap(sentence: String, category: Category) {
 
@@ -351,7 +355,7 @@ class CategoryTabViewModel @Inject constructor(
             )
 
             when (result) {
-                is AudioPlaybackStatus.PlayedFromTTSAPI,is AudioPlaybackStatus.PlayedFromLocalCache , is AudioPlaybackStatus.PlayedFromCloudStorage -> {
+                is AudioPlaybackStatus.PlayedFromTTSAPI, is AudioPlaybackStatus.PlayedFromLocalCache, is AudioPlaybackStatus.PlayedFromCloudStorage -> {
                     // Success! Stats already updated by Repo/AudioCacheManager.
                     // Just check for section completion.
                     // ⚡️ NON OPTIMISTIC UPDATE (Lightning). Now that playback is async
@@ -385,7 +389,7 @@ class CategoryTabViewModel @Inject constructor(
                     Timber.w("Rate Limiter Triggered")
                     Timber.w("canICallAPI = %s", failType.canICallAPI)
                     Timber.w("failReason = %s", (failType.failReason))
-                    Timber.w("timeLeftToWait = %s",failType.timeLeftToWait)
+                    Timber.w("timeLeftToWait = %s", failType.timeLeftToWait)
                     Timber.w(rateLimiter.printCurrentStatus)
 
                     if (result.failReason == SimpleRateLimiter.FailReason.DAILY) {
@@ -398,7 +402,11 @@ class CategoryTabViewModel @Inject constructor(
                 is AudioPlaybackStatus.Failure -> {
                     _uiEvent.emit(UiEvent.ShowSnackbar("Playback failed. Please check your internet connection and try again"))
                     _uiState.update {
-                        if (it is CategoryTabUiState.Success) it.copy(playbackState = PlaybackState.Error("Failed")) else it
+                        if (it is CategoryTabUiState.Success) it.copy(
+                            playbackState = PlaybackState.Error(
+                                "Failed"
+                            )
+                        ) else it
                     }
                 }
             }
@@ -431,16 +439,20 @@ class CategoryTabViewModel @Inject constructor(
     fun dismissHelpSheet() {
         _showHelpSheet.value = false
     }
+
     fun showSPEAKERSheet() {
         _showSPEAKERSheet.value = true
     }
+
     fun dismissSPEAKERSheet() {
         _showSPEAKERSheet.value = false
     }
+
     fun onResume() {
         // If data changed while app was backgrounded (e.g. sync), this ensures we see it
         refreshUI()
     }
+
     private fun undoPlayReferenceSentenceTODO(sentence: String) {
         /*
                 val contentID = FirebaseAudioService.generateContentID(sentence)
@@ -470,7 +482,11 @@ class CategoryTabViewModel @Inject constructor(
 
     }
 
-    private fun didPlayVocabSentence(sentence: String, categoryTitle: String, categoryTabNumber: Int) {
+    private fun didPlayVocabSentence(
+        sentence: String,
+        categoryTitle: String,
+        categoryTabNumber: Int
+    ) {
 
         viewModelScope.launch {
             val levelName = userPreferencesRepository.selectedSkillLevelFlow.first() // e.g. "B1"
@@ -481,7 +497,7 @@ class CategoryTabViewModel @Inject constructor(
 
             // 2. Update History (Source of Truth)
             // ✅ This triggers 'historyState' emission -> 'init' collector runs -> UI Recomposes -- inc heard by 1
-           // historyManager.markSentenceHeard(levelName, contentID) //moved to playTrackAndGetResult()
+            // historyManager.markSentenceHeard(levelName, contentID) //moved to playTrackAndGetResult()
 
             // 3. Update Graph Stats (If new)
             if (isFirstTime) {
@@ -530,6 +546,7 @@ class CategoryTabViewModel @Inject constructor(
             xpManager.registerAction(XpActionType.MasterWord)
         }
     }
+
     fun onFocusClickedObsolete(word: Format0Word) {
         viewModelScope.launch {
             // 1. Save to Disk
@@ -549,11 +566,13 @@ class CategoryTabViewModel @Inject constructor(
             xpManager.registerAction(XpActionType.MasterWord)
         }
     }
+
     fun onCancelClickedObsolete(word: Format0Word) {
         viewModelScope.launch {
             recallingRepository.removeWord(word)
         }
     }
+
     fun onCancelClicked(word: Format0Word) {
         viewModelScope.launch {
             // 1. Update Repository (Source of Truth)
@@ -577,15 +596,17 @@ class CategoryTabViewModel @Inject constructor(
             // Timber.d("Removed focus: ${word.word}")
         }
     }
+
     fun refreshCacheState(voiceName: String) {
         historyManager.fetchCloudUpdates()
     }
+
     fun saveDataOnExit() {
         historyManager.flushToFirebase()
         xpManager.logSessionDensity()
     }
-    
-    
+
+
     // MARK: - Billing for IAP
     fun connectToBilling() {
         viewModelScope.launch { billingRepository.startConnection() }
@@ -594,6 +615,7 @@ class CategoryTabViewModel @Inject constructor(
     fun buyPremiumButtonPressed(activity: Activity) {
         viewModelScope.launch { billingRepository.launchPurchase(activity) }
     }
+
     private fun initializeBilling() {
         viewModelScope.launch {
             try {
@@ -602,7 +624,8 @@ class CategoryTabViewModel @Inject constructor(
                 billingRepository.logCurrentStatus()  // Debug log on init
             } catch (e: Exception) {
                 Timber.e("${e.message}")
-                FirebaseCrashlytics.getInstance().recordException(Exception("CategoryTabViewModel.initializeBilling().catch. ${e.localizedMessage}"))
+                FirebaseCrashlytics.getInstance()
+                    .recordException(Exception("CategoryTabViewModel.initializeBilling().catch. ${e.localizedMessage}"))
 
             }
 
@@ -617,11 +640,17 @@ class CategoryTabViewModel @Inject constructor(
         }
     }
 
-    fun hideDailyRateLimitSheet() { _showRateDailyLimitSheet.value = false }
+    fun hideDailyRateLimitSheet() {
+        _showRateDailyLimitSheet.value = false
+    }
+
     fun hideHourlyRateLimitSheet() {
         _showRateHourlyLimitSheet.value = false
     }
-    fun hideRateOKLimitSheet() { _showRateLimitSheet.value = false }
+
+    fun hideRateOKLimitSheet() {
+        _showRateLimitSheet.value = false
+    }
 
     fun calculateGrandTotalsOriginal(): Pair<Int, Int> {
         val heard = audioCacheManager.totalExamWordsHeardOverall.value
@@ -640,6 +669,7 @@ class CategoryTabViewModel @Inject constructor(
 //        Timber.i("The fresh total is: $freshHeard")
         return audioCacheManager.getFreshExamTotalHeard()
     }
+
     /**
      * Calculates stats strictly for the provided list of categories.
      * Since 'categories' in our State is already filtered by Tab, this gives Tab-specific numbers.
@@ -647,7 +677,6 @@ class CategoryTabViewModel @Inject constructor(
     private fun calculateTabSpecificStats(categories: List<Category>): Pair<Int, Int> {
         var heardCount = 0
         var totalCount = 0
-
 
 
         // We use the cached level (e.g. "B1")
@@ -674,12 +703,14 @@ class CategoryTabViewModel @Inject constructor(
 
         return Pair(heardCount, totalCount)
     }
+
     fun getPlayCount(word: Format0Word): Int {
         word.sentences.firstOrNull()?.let { sentenceEntry ->
             return getPlayCount(sentenceEntry.sentence)
         }
         return 0
     }
+
     // UI State for Fireworks
     private val _showCelebration = MutableStateFlow(false)
     val showCelebration = _showCelebration.asStateFlow()
@@ -688,7 +719,10 @@ class CategoryTabViewModel @Inject constructor(
 
     // MARK: - Completion Logic (Ported from iOS)
 
-    private fun checkSectionCompletionAfterNewSentenceObsolete(category: Category,justPlayedSentence: String ) {
+    private fun checkSectionCompletionAfterNewSentenceObsolete(
+        category: Category,
+        justPlayedSentence: String
+    ) {
         val examName = runBlocking { userPreferencesRepository.selectedExamNameFlow.first() }
         val sectionKey = "${examName}|${category.title}" // Unique Key
 
@@ -735,6 +769,7 @@ class CategoryTabViewModel @Inject constructor(
             checkSheetCompletionIfNeeded(examName)
         }
     }
+
     private fun checkSectionCompletionAfterNewSentence(
         category: Category,
         justPlayedSentence: String
@@ -830,6 +865,7 @@ class CategoryTabViewModel @Inject constructor(
             checkSheetCompletionIfNeeded(examName)
         }
     }
+
     private fun checkSheetCompletionIfNeeded(examName: String) {
         // Logic: Get all categories in this tab from UI State
         val currentCategories = (uiState.value as? CategoryTabUiState.Success)?.categories ?: return
@@ -859,9 +895,11 @@ class CategoryTabViewModel @Inject constructor(
     fun playSuccessSound() {
         globalLoadingManager.playSuccessSound(context)
     }
-    fun getCurrentSkillLevel() : String {
+
+    fun getCurrentSkillLevel(): String {
         return currentLoadedLevel
     }
+
     fun getLatestSentence(): String {
         return lastPlayedSentence
     }
@@ -876,6 +914,7 @@ class CategoryTabViewModel @Inject constructor(
     fun refreshGamificationStats() {
         audioCacheManager.forceStatsRecalculation()
     }
+
     suspend fun refreshGamificationStatsAndWait() {
         audioCacheManager.awaitFreshStats()
     }

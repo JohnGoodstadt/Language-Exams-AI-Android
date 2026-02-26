@@ -121,7 +121,7 @@ fun SwipeableVocabRow(
         state = dismissState,
         modifier = modifier,
         // The directions logic is now part of the component itself
-        enableDismissFromEndToStart = true,
+        enableDismissFromEndToStart = false, //TODO: temp disable
         enableDismissFromStartToEnd = true,
         // --- CHANGE 4: 'background' is renamed to 'backgroundContent' ---
         backgroundContent = {

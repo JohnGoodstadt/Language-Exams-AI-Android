@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens
 
 import androidx.activity.ComponentActivity
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -23,6 +24,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.SportsEsports
@@ -35,6 +37,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Snackbar
 import androidx.compose.material3.SnackbarDuration
@@ -80,6 +83,7 @@ import com.goodstadt.john.language.exams.screens.shared.SwipeableVocabRow
 import com.goodstadt.john.language.exams.screens.shared.VoiceSettingsBottomSheet
 import com.goodstadt.john.language.exams.screens.shared.gamification.VocabGamificationStatsSheet
 import com.goodstadt.john.language.exams.ui.theme.accentColor
+import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
@@ -357,7 +361,7 @@ fun CategoryTabScreen(
                             categories.forEach { category ->
                                 stickyHeader {
 
-                                    val isFirstCategory = category == categories.first()
+
 
                                     Row(
                                         modifier = Modifier
@@ -366,7 +370,7 @@ fun CategoryTabScreen(
                                             .padding(horizontal = 16.dp, vertical = 8.dp), // Adjust padding as needed
                                         verticalAlignment = Alignment.CenterVertically
                                     ) {
-//                                        CategoryHeader(title = category.title.removeContentInBracketsAndTrim())
+
                                         Text(
                                             text = category.title.removeContentInBracketsAndTrim(),
                                             fontSize = 20.sp, // Match your existing CategoryHeader style
@@ -375,33 +379,40 @@ fun CategoryTabScreen(
                                             modifier = Modifier.weight(1f) // ✅ Pushes the icon to the far right
                                         )
 
-                                        if (isFirstCategory) {
-                                            TextButton(
-                                                onClick = { viewModel.openQuizForCategory(category) },
-                                                // Add a border or background if you want it to stand out more,
-                                                // or keep it simple to match the icon style.
-                                                colors = ButtonDefaults.textButtonColors(contentColor = Color(0xFFFF9800))
-                                            ) {
-                                                Text(
-                                                    text = "Quiz",
-                                                    fontWeight = FontWeight.Bold,
-                                                    style = MaterialTheme.typography.labelLarge
-                                                )
-//                                                Spacer(modifier = Modifier.width(4.dp))
-//                                                Icon(
-//                                                    imageVector = Icons.Default.SportsEsports,
-//                                                    contentDescription = "Take Quiz"
-//                                                )
-                                            }
-                                        } else {
-                                            IconButton(onClick = { viewModel.openQuizForCategory(category) }) {
-                                                Icon(
-                                                    imageVector = Icons.Default.SportsEsports,
-                                                    contentDescription = "Take Quiz",
-                                                    tint = Color(0xFFFF9800)
-                                                )
+                                        if (state.isQuizAvailable) {
+                                            val isFirstCategory = category == categories.first()
+                                            if (isFirstCategory) {
+                                                OutlinedButton(
+                                                    onClick = { viewModel.openQuizForCategory(category) },
+                                                    // 1. Set the Border width and color
+                                                    border = BorderStroke(1.dp, orangeLight),
+                                                    // 2. Set the Text/Icon color
+                                                    colors = ButtonDefaults.outlinedButtonColors(
+                                                        contentColor = orangeLight,
+                                                        containerColor = Color.Transparent
+                                                    ),
+                                                    // 3. Shape (Rounded corners)
+                                                    shape = RoundedCornerShape(8.dp),
+                                                    // Optional: Adjust padding if it feels too big
+                                                    contentPadding = PaddingValues(horizontal = 4.dp, vertical = 0.dp)
+                                                ) {
+                                                    Text(
+                                                        text = "Quiz",
+                                                        fontWeight = FontWeight.Bold,
+                                                        style = MaterialTheme.typography.labelLarge
+                                                    )
+                                                }
+                                            } else {
+                                                IconButton(onClick = { viewModel.openQuizForCategory(category) }) {
+                                                    Icon(
+                                                        imageVector = Icons.Default.SportsEsports,
+                                                        contentDescription = "Take Quiz",
+                                                        tint = orangeLight
+                                                    )
+                                                }
                                             }
                                         }
+
                                     }
 
 
