@@ -29,9 +29,11 @@ import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizTotalCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
@@ -980,8 +982,13 @@ class QuizViewModel @Inject constructor(
 
         val statName = if (success ) "${statQuizOkCount}_$finalName" else "${statQuizNotOKCount}_$finalName"
 
-        ttsStatsRepository.inc(  TTSStatsRepository.fsDOC.USER,   statName  )
-        ttsStatsRepository.inc(  TTSStatsRepository.fsDOC.GlobalStats,   statName  )
+        //individual totals
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statName)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statName)
+
+        //Grand Totals
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statQuizTotalCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statQuizTotalCount)
 
 
         viewModelScope.launch {

@@ -195,6 +195,13 @@ class TTSStatsRepository @Inject constructor(
         //Quiz Screen
         const val statQuizOkCount = "statQuizOkCount"
         const val statQuizNotOKCount = "statQuizNotOKCount"
+        const val statQuizTotalCount = "statQuizTotalCount"
+
+
+        //Vocab Quiz Screen
+        const val statVocabQuizOkCount = "statVocabQuizOkCount"
+        const val statVocabQuizNotOKCount = "statVocabQuizNotOKCount"
+        const val statVocabQuizTotalCount = "statVocabQuizTotalCount"
 
 
         //IAP

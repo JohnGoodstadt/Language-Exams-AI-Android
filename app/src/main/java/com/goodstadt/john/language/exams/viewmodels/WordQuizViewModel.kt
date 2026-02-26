@@ -32,6 +32,9 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizNotOKCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizOkCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
 import com.goodstadt.john.language.exams.data.repository.VocabQuizRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
@@ -1048,10 +1051,15 @@ class WordQuizViewModel @Inject constructor(
         Timber.v(finalName)
 
         val statName =
-            if (success) "${statQuizOkCount}_$finalName" else "${statQuizNotOKCount}_$finalName"
+            if (success) "${statVocabQuizOkCount}_$finalName" else "${statVocabQuizNotOKCount}_$finalName"
 
+        //individual totals
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statName)
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statName)
+
+        //Grand Totals
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statVocabQuizTotalCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statVocabQuizTotalCount)
 
 
         viewModelScope.launch {
