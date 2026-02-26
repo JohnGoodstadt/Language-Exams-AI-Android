@@ -12,7 +12,7 @@ object LanguageConfig {
             2. MeScreen() goes from this title to route (getMeScreenRouteFromTitle)
      */
     val meTabMenuItems = listOf( //NOTE:  this drives the screen -- not RemoteConfig Yet
-        "Focusing",
+//        "Focusing",
         "Settings",
         "Vocab",
         "Word of the Day",

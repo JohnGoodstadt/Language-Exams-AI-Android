@@ -118,7 +118,8 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
         // Part B: The NavHost that displays the content
         NavHost(
             navController = meTabNavController,
-            startDestination = MeScreen.Focusing.route,
+//            startDestination = MeScreen.Focusing.route,
+            startDestination = MeScreen.Settings.route,
             modifier = Modifier.weight(1f)
         ) {
             composable(MeScreen.MeRoot.route) {
@@ -132,7 +133,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
                 }
             }
             // All the screen destinations remain the same
-            composable(MeScreen.Focusing.route) { RecallScreen() }
+            //composable(MeScreen.Focusing.route) { RecallScreen() }
             composable(MeScreen.Settings.route) { SettingsScreen() }
             composable(MeScreen.Search.route) { SearchScreen() }
             composable(MeScreen.Progress.route) {
