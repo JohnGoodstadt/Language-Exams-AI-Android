@@ -49,7 +49,6 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInWindow
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
@@ -62,7 +61,6 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
@@ -71,14 +69,14 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.viewmodels.WordQuizLevels
-import com.goodstadt.john.language.exams.viewmodels.WordQuizViewModel
+import com.goodstadt.john.language.exams.viewmodels.VocabQuizLevels
+import com.goodstadt.john.language.exams.viewmodels.VocabQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
 @Composable
-fun WordQuizScreen(
-    viewModel: WordQuizViewModel = hiltViewModel(),
+fun VocabQuizScreen(
+    viewModel: VocabQuizViewModel = hiltViewModel(),
     autoLoad: Boolean = true
 ) {
     val context = LocalContext.current
@@ -203,10 +201,10 @@ fun WordQuizScreen(
         // 2. IF MAIN MODE: Show standard pickers (Existing logic)
         else {
             ScrollableHorizontalLevelPicker(
-                options = WordQuizLevels.entries.map { it.description },
+                options = VocabQuizLevels.entries.map { it.description },
                 selectedOption = selectedLevel.description,
                 onOptionSelected = { newLevel ->
-                    val level = WordQuizLevels.entries.first { it.description == newLevel }
+                    val level = VocabQuizLevels.entries.first { it.description == newLevel }
 //                    viewModel.selectedLevel.value = level
                     viewModel.onLevelSelected(level)
                     viewModel.loadQuestions()

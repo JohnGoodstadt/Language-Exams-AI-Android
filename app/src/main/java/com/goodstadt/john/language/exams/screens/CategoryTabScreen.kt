@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
@@ -44,7 +43,6 @@ import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -73,7 +71,7 @@ import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.screens.reference.WordQuizScreen
+import com.goodstadt.john.language.exams.screens.reference.VocabQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
@@ -88,7 +86,7 @@ import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
-import com.goodstadt.john.language.exams.viewmodels.WordQuizViewModel
+import com.goodstadt.john.language.exams.viewmodels.VocabQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
@@ -761,7 +759,7 @@ fun String.removeContentInBracketsAndTrim(): String = this.replace(Regex("\\(.*?
 @Composable
 fun SectionQuizContainer(
     categoryTitle: String,
-    viewModel: WordQuizViewModel = hiltViewModel()
+    viewModel: VocabQuizViewModel = hiltViewModel()
 ) {
     // Trigger load when this view appears
     LaunchedEffect(categoryTitle) {
@@ -770,6 +768,6 @@ fun SectionQuizContainer(
 
     // Render the existing screen
     Box(modifier = Modifier.fillMaxHeight(0.9f)) {
-        WordQuizScreen(viewModel = viewModel)
+        VocabQuizScreen(viewModel = viewModel)
     }
 }

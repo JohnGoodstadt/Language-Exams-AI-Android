@@ -21,14 +21,11 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
@@ -45,12 +42,7 @@ import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
-import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
-import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
-import com.goodstadt.john.language.exams.utils.isTodayInstallDay
-import com.goodstadt.john.language.exams.utils.readTestMyselfDataFromAssets
-import dagger.hilt.android.internal.Contexts.getApplication
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -69,14 +61,14 @@ import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
 
-enum class WordQuizState(val description: String) {
-    NOT_STARTED("Not Started"),
-    STARTED("Started"),
-    IN_PROGRESS("In Progress"),
-    COMPLETED("Completed")
-}
+//enum class WordQuizState(val description: String) {
+//    NOT_STARTED("Not Started"),
+//    STARTED("Started"),
+//    IN_PROGRESS("In Progress"),
+//    COMPLETED("Completed")
+//}
 
-data class WordQuizStatistics(
+data class VocabQuizStatistics(
     val timestamp: Date = Date(),
     var state: QuizState = QuizState.NOT_STARTED,
     val skillLevel: String,
@@ -98,28 +90,13 @@ data class WordQuizStatistics(
         copy(answered = answered, correct = correct, tries = tries)
 }
 
-enum class WordQuizLevels(val quizzes: List<QuizDetail>) {
+enum class VocabQuizLevels(val quizzes: List<QuizDetail>) {
     PERSONAL(
         quizzes = listOf(
             QuizDetail(id = 1, baseName = "WordQuizPersonal1", title = "1. Personal"),
             QuizDetail(id = 2, baseName = "WordQuizPersonal2", title = "2. Personal"),
             QuizDetail(id = 3, baseName = "WordQuizPersonal3", title = "3. Personal"),
-//            QuizDetail(id = 4, baseName = "WordQuiz4", title = "31 to 40"),
-//            QuizDetail(id = 5, baseName = "WordQuiz5", title = "Quiz 5"),
-//            QuizDetail(id = 6, baseName = "WordQuiz6", title = "Quiz 6"),
-//            QuizDetail(id = 7, baseName = "WordQuiz7", title = "Quiz 7"),
-//            QuizDetail(id = 8, baseName = "WordQuiz8", title = "Quiz 8"),
-//            QuizDetail(id = 9, baseName = "WordQuiz9", title = "Quiz 9"),
-//            QuizDetail(id = 10, baseName = "WordQuiz10", title = "Quiz 10"),
-//
-//            QuizDetail(id = 20, baseName = "WordQuiz20", title = "Quiz 20"),
-//            QuizDetail(id = 21, baseName = "WordQuiz21", title = "Quiz 21"),
-//            QuizDetail(id = 30, baseName = "WordQuiz30", title = "Quiz 30"),
-//            QuizDetail(id = 32, baseName = "WordQuiz32", title = "Quiz 32"),
-//            QuizDetail(id = 33, baseName = "WordQuiz33", title = "Quiz 33"),
-//            QuizDetail(id = 34, baseName = "WordQuiz34", title = "Quiz 34"),
-//            QuizDetail(id = 35, baseName = "WordQuiz35", title = "Quiz 35"),
-//            QuizDetail(id = 37, baseName = "WordQuiz37", title = "Quiz 37"),
+
 
         )
     ),
@@ -173,19 +150,19 @@ data class WordQuizQuestion(
     val title: String,
 )
 
-sealed interface WordQuizUiState {
-    object Loading : WordQuizUiState
+sealed interface VocabQuizUiState {
+    object Loading : VocabQuizUiState
     data class Success(
         //val categories: List<Category>,
         val selectedVoiceName: String = "" // Add a default empty value
-    ) : WordQuizUiState
+    ) : VocabQuizUiState
 
-    data class Error(val message: String) : WordQuizUiState
-    object NotAvailable : WordQuizUiState // For flavors like 'zh'
+    data class Error(val message: String) : VocabQuizUiState
+    object NotAvailable : VocabQuizUiState // For flavors like 'zh'
 }
 
 @HiltViewModel
-class WordQuizViewModel @Inject constructor(
+class VocabQuizViewModel @Inject constructor(
     private val application: Application,
     private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
@@ -201,7 +178,7 @@ class WordQuizViewModel @Inject constructor(
     ) : ViewModel() {
     private val appContext: Context = application.applicationContext
 
-    private val _uiState99 = MutableStateFlow<WordQuizUiState>(WordQuizUiState.Loading)
+    private val _uiState99 = MutableStateFlow<VocabQuizUiState>(VocabQuizUiState.Loading)
     val uiState99 = _uiState99.asStateFlow()
 
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
@@ -252,13 +229,13 @@ class WordQuizViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        WordQuizStatistics(
-            skillLevel = WordQuizLevels.PERSONAL.description,
+        VocabQuizStatistics(
+            skillLevel = VocabQuizLevels.PERSONAL.description,
             quizNumber = 1,
             title = "Quiz 1"
         )
     )
-    val selectedLevel = mutableStateOf(WordQuizLevels.PERSONAL)
+    val selectedLevel = mutableStateOf(VocabQuizLevels.PERSONAL)
 
     val selectedQuiz = mutableStateOf<QuizDetail?>(null)
 
@@ -281,11 +258,11 @@ class WordQuizViewModel @Inject constructor(
     // ✅ NEW (Dynamic):
     // This starts with the default English titles, but we can overwrite them later
     private val _availableQuizzes =
-        MutableStateFlow<List<QuizDetail>>(WordQuizLevels.PERSONAL.quizzes)
+        MutableStateFlow<List<QuizDetail>>(VocabQuizLevels.PERSONAL.quizzes)
     val availableQuizzes = _availableQuizzes.asStateFlow()
 
     // 1. The Cache: Maps a Level (e.g. PERSONAL) to its list of localized QuizDetails
-    private val quizTitleCache = mutableMapOf<WordQuizLevels, List<QuizDetail>>()
+    private val quizTitleCache = mutableMapOf<VocabQuizLevels, List<QuizDetail>>()
 
     private var _currentQuestionAttempts = 0
 
@@ -581,14 +558,14 @@ class WordQuizViewModel @Inject constructor(
     }
 
     // A new function for the UI to call when a different level is picked.
-    fun onLevelSelectedObsolete(level: WordQuizLevels) {
+    fun onLevelSelectedObsolete(level: VocabQuizLevels) {
         selectedLevel.value = level
         // When the level changes, reset the selected quiz to the first one of the new level.
         selectedQuiz.value = level.quizzes.firstOrNull()
         loadQuestions()
     }
 
-    fun onLevelSelected(level: WordQuizLevels) {
+    fun onLevelSelected(level: VocabQuizLevels) {
         selectedLevel.value = level
 
         // 1. Update the list of quizzes (Async)
@@ -809,7 +786,7 @@ class WordQuizViewModel @Inject constructor(
         }
     }
     // Call this whenever the Level changes (e.g. from Elementary to Inter)
-    private fun refreshQuizTitlesForLevel(level: WordQuizLevels) {
+    private fun refreshQuizTitlesForLevel(level: VocabQuizLevels) {
         viewModelScope.launch {
 
             // 1. Get the list of default quizzes for this level
@@ -857,7 +834,7 @@ class WordQuizViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
 
             // Loop through all Enum Levels (Elementary, Inter, etc.)
-            WordQuizLevels.entries.forEach { level ->
+            VocabQuizLevels.entries.forEach { level ->
 
                 // Map the default quizzes to their localized versions
                 val localizedList = level.quizzes.map { quizDetail ->
@@ -909,7 +886,7 @@ class WordQuizViewModel @Inject constructor(
         }
     }
 
-    private fun updateAvailableQuizzesFor(level: WordQuizLevels) {
+    private fun updateAvailableQuizzesFor(level: VocabQuizLevels) {
         // If cache is ready, use it. If not (still loading), use default English list.
         _availableQuizzes.value = quizTitleCache[level] ?: level.quizzes
     }

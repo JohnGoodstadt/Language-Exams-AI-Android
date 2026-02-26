@@ -306,7 +306,7 @@ class AppConfigRepository @Inject constructor(
      *
      * @return The parsed AppUIManifest, or a default/empty manifest on failure.
      */
-    fun getAppUiManifest(): AppUIManifest {
+    fun getAppUiManifestLive(): AppUIManifest {
         val crashlytics = FirebaseCrashlytics.getInstance()
 
         // Get the single manifest JSON string from Remote Config
@@ -339,7 +339,7 @@ class AppConfigRepository @Inject constructor(
             parseDefaultManifest()
         }
     }
-    fun getAppUiManifestDEBUG(): AppUIManifest {
+    fun getAppUiManifest(): AppUIManifest {
         val crashlytics = FirebaseCrashlytics.getInstance()
 
         // 1. Determine which JSON string to use
@@ -353,6 +353,11 @@ class AppConfigRepository @Inject constructor(
              "title": "Quiz",
              "sheetDataType": "fixed",
              "screenType": "FixedScreen"
+           },
+           "vocab_dashboard": {
+             "title": "Progress",
+             "sheetDataType": "fixed",
+             "screenType": "VocabDashboard"
            },
            "conjugations": {
              "title": "Conjugations",
@@ -480,6 +485,7 @@ class AppConfigRepository @Inject constructor(
            "referenceTab": {
              "order": [
                "quiz",
+               "vocab_dashboard",
                "conjugations",
                "EnglishPrepositions",
                "SpanishLanguage",

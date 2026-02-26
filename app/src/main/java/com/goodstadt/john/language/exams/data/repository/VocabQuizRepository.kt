@@ -1,8 +1,8 @@
 package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
+import com.goodstadt.john.language.exams.models.VocabLearningState
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
-import com.goodstadt.john.language.exams.models.WordLearningState
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.models.WordQuizAttempt
 import com.google.gson.Gson
@@ -32,7 +32,7 @@ class VocabQuizRepository @Inject constructor(
     private val scope = CoroutineScope(Dispatchers.IO)
 
     // In-Memory Store: Map<Word, State>
-    private var wordStates: MutableMap<String, WordLearningState> = mutableMapOf()
+    private var wordStates: MutableMap<String, VocabLearningState> = mutableMapOf()
 
     // Observable State for UI
     private val _quizDataLoaded = MutableStateFlow(false)
@@ -52,7 +52,7 @@ class VocabQuizRepository @Inject constructor(
     fun recordResult(word: String, outcome: VocabQuizOutcome) {
 
         scope.launch {
-            val state = wordStates.getOrPut(word) { WordLearningState(word) }
+            val state = wordStates.getOrPut(word) { VocabLearningState(word) }
             state.lastOutcome = outcome
 
             // 1. Create History Entry
@@ -92,7 +92,7 @@ class VocabQuizRepository @Inject constructor(
 
     // MARK: - The "Brain" Logic
 
-    private fun updateMasteryLogicOriginal(state: WordLearningState, tries: Int) {
+    private fun updateMasteryLogicOriginal(state: VocabLearningState, tries: Int) {
         val oneDay = 24 * 60 * 60 * 1000L
 
         if (tries == 1) {
@@ -134,7 +134,7 @@ class VocabQuizRepository @Inject constructor(
 
         Timber.d("Quiz: Updated '${state.word}' to ${state.masteryLevel}. Next review in ${(state.nextReviewTime - System.currentTimeMillis()) / 1000}s")
     }
-    private fun updateMasteryLogicNextOriginal(state: WordLearningState, tries: Int) {
+    private fun updateMasteryLogicNextOriginal(state: VocabLearningState, tries: Int) {
         val now = System.currentTimeMillis()
 
         if (tries == 1) {
@@ -187,7 +187,7 @@ class VocabQuizRepository @Inject constructor(
         Timber.d("Quiz: Updated '${state.word}' to ${state.masteryLevel}. New time: ${java.util.Date(state.nextReviewTime)}")
     }
     // Requires: import java.time.*
-    private fun updateMasteryLogic(state: WordLearningState, outcome: VocabQuizOutcome) {
+    private fun updateMasteryLogic(state: VocabLearningState, outcome: VocabQuizOutcome) {
         val now = System.currentTimeMillis()
 
         // 🛑 ANTI-CRAMMING CHECK
@@ -272,28 +272,6 @@ class VocabQuizRepository @Inject constructor(
         return targetDateTime.atZone(zone).toInstant().toEpochMilli()
     }
 
-//    private fun getTimeString(dueTime: Long, now: Long): String {
-//        // 1. Handle Special States
-//        if (dueTime == Long.MAX_VALUE) return "NEVER (Mastered)"
-//        if (dueTime <= now) return "✅ READY NOW"
-//
-//        // 2. Convert timestamps to Calendar Dates (Local Timezone)
-//        val zone = ZoneId.systemDefault()
-//        val dueDate = Instant.ofEpochMilli(dueTime).atZone(zone).toLocalDate()
-//        val todayDate = Instant.ofEpochMilli(now).atZone(zone).toLocalDate()
-//
-//        // 3. Calculate difference in whole days
-//        val daysBetween = ChronoUnit.DAYS.between(todayDate, dueDate)
-//
-//        // 4. Return Human Readable String
-//        return when (daysBetween) {
-//            0L -> "Today (Later)" // e.g. if pushed to 10 mins from now
-//            1L -> "Tomorrow"      // Replaces "11h 40m"
-//            2L -> "Day after Tmrw"
-//            in 3L..6L -> dueDate.dayOfWeek.getDisplayName(TextStyle.FULL, Locale.getDefault()) // e.g. "Monday"
-//            else -> "$daysBetween Days" // e.g. "7 Days"
-//        }
-//    }
     // MARK: - Persistence
 
     private fun saveToDisk() {
@@ -311,7 +289,7 @@ class VocabQuizRepository @Inject constructor(
                 val file = File(context.filesDir, fileName)
                 if (file.exists()) {
                     val jsonString = file.readText()
-                    val type = object : TypeToken<MutableMap<String, WordLearningState>>() {}.type
+                    val type = object : TypeToken<MutableMap<String, VocabLearningState>>() {}.type
                     wordStates = gson.fromJson(jsonString, type)
                 }
                 _quizDataLoaded.value = true
@@ -360,35 +338,6 @@ class VocabQuizRepository @Inject constructor(
         Timber.tag("VocabBrain").d("================================================================\n")
     }
 
-    // Helpers for the debug print
-    private fun getStatusIconObsolete(level: WordMasteryLevel): String {
-        return when (level) {
-            WordMasteryLevel.New -> "🆕"
-            WordMasteryLevel.Struggling -> "🔴" // Warning
-            WordMasteryLevel.Learning -> "🟠" // In progress
-            WordMasteryLevel.Review -> "🔵" // Good
-            WordMasteryLevel.Mastered -> "🟢" // Done
-        }
-    }
-
-    private fun getTimeStringObsolete(dueTime: Long, now: Long): String {
-        if (dueTime == Long.MAX_VALUE) return "NEVER (Mastered)"
-
-        val diff = dueTime - now
-        if (diff <= 0) return "✅ READY NOW"
-
-        // Format milliseconds into readable time
-        val seconds = diff / 1000
-        val minutes = seconds / 60
-        val hours = minutes / 60
-        val days = hours / 24
-
-        return when {
-            days > 0 -> "${days}d ${hours % 24}h"
-            hours > 0 -> "${hours}h ${minutes % 60}m"
-            else -> "${minutes}m ${seconds % 60}s"
-        }
-    }
     // MARK: - Debugging
 
     fun debugPrintAllWordStates() {
@@ -465,5 +414,10 @@ class VocabQuizRepository @Inject constructor(
             hours > 0 -> "${hours}h ${minutes % 60}m"
             else -> "${minutes}m ${seconds % 60}s"
         }
+    }
+
+    fun getAllStates(): Map<String, VocabLearningState> {
+        // Return a copy (.toMap) to prevent external modification
+        return wordStates.toMap()
     }
 }

@@ -72,16 +72,11 @@ import timber.log.Timber
 @Composable
 fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel()) {
 
-//    val navViewModel: NavigationViewModel = hiltViewModel(LocalContext.current as ComponentActivity)
     val refTabNavController = rememberNavController()
-    // MODIFIED: We only have ONE uiState to collect now
     val uiState by viewModel.uiState.collectAsState()
 
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val isSheetVisible = uiState.selectedCategoryTitleForSheet != null
-//    val isRateLimitingSheetVisible by viewModel.showRateLimitSheet.collectAsState()
-//    val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
-//    val isHourlyRateLimitingSheetVisible by viewModel.showRateHourlyLimitSheet.collectAsState()
 
 
     // This LaunchedEffect for hiding the sheet remains the same
@@ -92,10 +87,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
         }
     }
     // Perform the navigation
-// ✅ 1. Get the Shared Navigation ViewModel
     val context = LocalContext.current
-//    val navViewModel: NavigationViewModel = hiltViewModel(context as ComponentActivity)
-//    val pendingNav by navViewModel.pendingNavigation.collectAsState()
     val activity = LocalContext.current.findActivity() as? androidx.activity.ComponentActivity
     val navViewModel: NavigationViewModel = if (activity != null) {
         hiltViewModel(activity)
@@ -105,16 +97,12 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 
     // ✅ 2. React to the pending navigation
     LaunchedEffect(Unit) {
-// 1. CHECK STICKY (Fixes "Me -> Quiz" / Cross-Tab)
-        // If we arrived here via a cross-tab jump, the ID is waiting in this variable.
         val stickyTarget = navViewModel.pendingReferenceTabId
         if (stickyTarget != null) {
             viewModel.onTabSelected(stickyTarget)
             navViewModel.pendingReferenceTabId = null // Clear it
         }
 
-        // 2. LISTEN LIVE (Fixes "Conjugations -> Prepositions" / Same-Tab)
-        // If we are already viewing this screen and click a button, this catches the event.
         navViewModel.navigationEvent.collect { target ->
             viewModel.checkDeepLink(target)
         }
@@ -184,6 +172,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
             ScreenType.UNKNOWN -> null
 //            ScreenType.DICTIONARY -> null
 //            ScreenType.DAILY_WORD -> null
+            ScreenType.VOCAB_DASHBOARD -> {
+                RefScreen.VocabQuizDashboard.route
+            }
         }
 
         // If a valid route was determined, perform the navigation.
@@ -201,7 +192,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
     }
 
     Column(
-        modifier = Modifier.fillMaxSize().statusBarsPadding()
+        modifier = Modifier
+            .fillMaxSize()
+            .statusBarsPadding()
     ) {
         // Part A: The Dynamic Horizontal Menu (now uses the single uiState)
         if (uiState.tabs.isNotEmpty()) {
@@ -246,55 +239,15 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                 }
             } else {
                 NavHost(
-//                navController = refTabNavController,
-//                startDestination = getRefScreenRouteFromTitle(uiState.tabs.firstOrNull()?.definition?.title ?: "") ?: RefScreen.Quiz.route,
-//                modifier = Modifier.weight(1f)
                     navController = refTabNavController,
-                    // The startDestination is now derived from the first tab's ID
                     startDestination = uiState.tabs.first().id,
                     modifier = Modifier.weight(1f)
 
                 ) {
 
                     composable(RefScreen.Quiz.route) { QuizScreen() }//Existing Quiz
-                    // 1. THE NEW DASHBOARD
-                    /*
-                    composable(RefScreen.Quiz.route) {
-                        // Dummy Data for Preview/Testing
-                        val dummyCategories = remember {
-                            listOf(
-                                QuizCategory("personal", "Personal", Icons.Default.Person, 40, 10),
-                                QuizCategory("education", "Education", Icons.Default.School, 30, 30),
-                                QuizCategory("social", "Social", Icons.Default.Groups, 50, 5),
-                                QuizCategory("work", "Work", Icons.Default.Work, 45, 0),
-                                QuizCategory("health", "Health", Icons.Default.Favorite, 20, 18),
-                                QuizCategory("travel", "Travel", Icons.Default.Flight, 25, 2),
-                                QuizCategory("emotions", "Emotions", Icons.Default.SentimentSatisfied, 30, 5),
-                                QuizCategory("nature", "Nature", Icons.Default.Forest, 25, 0),
-                                QuizCategory("relationships", "Relationships", Icons.Default.Groups, 35, 12),
-                                QuizCategory("shopping", "Shopping", Icons.Default.ShoppingCart, 20, 20),
-                                QuizCategory("adverbs", "Adverbs", Icons.Default.AutoAwesome, 50, 0),
-                                QuizCategory("complex", "Complex Sentences", Icons.Default.AltRoute, 30, 2),
-                                QuizCategory("verbs", "Verbs", Icons.Default.Bolt, 60, 15)
 
-                            )
-                        }
 
-                        VocabQuizDashboard(
-                            weakWordCount = 8, // Dummy count
-                            categories = dummyCategories,
-                            onCategoryClick = { category ->
-                                // Navigate to the detail screen using the inner controller
-                                refTabNavController.navigate("quiz_detail/${category.id}")
-                            },
-                            onWeakWordsClick = {
-                                Timber.i("Navigate to Smart Review Mode")
-                            }
-                        )
-                    }
-
-                    */
-// 2. THE CATEGORY DETAIL SCREEN
                     composable(
                         route = QUIZ_DETAIL_ROUTE,
                         arguments = listOf(navArgument("categoryId") { type = NavType.StringType })
@@ -324,8 +277,25 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                         )
                     }
 
+                    composable(RefScreen.VocabQuizDashboard.route) {
+                        VocabDashboardScreen(
+                            onNavigateToQuiz = { categoryTitle ->
+                                if (categoryTitle == null) {
+                                    // 1. "Review Now" (Mixed Quiz) clicked
+                                    // Navigate to the main Quiz tab
+                                    refTabNavController.navigate(RefScreen.Quiz.route)
+                                } else {
+                                    // 2. Specific Category clicked
+                                    // You could navigate to the Tab containing this category,
+                                    // or handle it via a shared ViewModel.
+                                    // For now, let's just log it:
+                                    Timber.i("User wants to review: $categoryTitle")
+                                }
+                            }
+                        )
+                    }
+
                     composable(RefScreen.Conjugations.route) { ConjugationsScreen() }
-//                composable(RefScreen.Prepositions.route) { PrepositionsScreen() }
 
                     // 2. Destination for `ScreenType.VOCAB_SCREEN`
                     composable(
@@ -465,31 +435,3 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 
 } //:Fun
 
-
-@Composable
-fun RefProgressDetailView(title: String, selectedVoiceName: String) {
-    // It's just a wrapper around your super-flexible CategoryTabScreen!
-    val viewModel: CategoryTabViewModel = hiltViewModel(key = title)
-
-    CategoryTabScreen(
-        categoryTitle = title, // <-- Provide the category title
-        selectedVoiceName = selectedVoiceName,
-        viewModel = viewModel
-    )
-}
-
-@Composable
-fun GenericVocabScreen(firestoreDocumentId: String) {
-    // TODO: Create a ViewModel for this screen that takes the documentId,
-    // fetches the data from Firestore, and displays it.
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)
-    ) {
-        Text(
-            text = "This is the generic screen.\nIt should now load data from Firestore for document:\n\n'$firestoreDocumentId'",
-            style = MaterialTheme.typography.bodyLarge
-        )
-    }
-}

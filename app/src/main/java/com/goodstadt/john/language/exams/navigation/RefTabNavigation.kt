@@ -43,6 +43,7 @@ sealed class RefScreen(val route: String) {
 
 
     object Conjugations : RefScreen("conjugations")
+    object VocabQuizDashboard : RefScreen("vocab_dashboard")
     object Prepositions : RefScreen("prepositions")
 
     // These are for your DYNAMIC screen types

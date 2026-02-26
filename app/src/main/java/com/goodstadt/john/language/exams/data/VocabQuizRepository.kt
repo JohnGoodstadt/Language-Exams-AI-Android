@@ -1,9 +1,9 @@
 package com.goodstadt.john.language.exams.data
 
 import android.content.Context
-import com.goodstadt.john.language.exams.models.MasteryLevel
 import com.goodstadt.john.language.exams.models.VocabLearningState
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
+import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -15,7 +15,13 @@ import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 import java.util.Calendar
+/*
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! NOTE: IS THIS A DUPLICATE !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ */
 @Singleton
 class VocabQuizRepository @Inject constructor(
     @ApplicationContext private val context: Context
@@ -27,9 +33,9 @@ class VocabQuizRepository @Inject constructor(
     // In-memory cache: Map<Word, State>
     private var learningStates: MutableMap<String, VocabLearningState> = mutableMapOf()
 
-    init {
-        loadFromDisk()
-    }
+//    init {
+//        loadFromDisk()
+//    }
 
     // MARK: - Public API
 
@@ -38,6 +44,7 @@ class VocabQuizRepository @Inject constructor(
      * @param word The unique word (key).
      * @param outcome The result based on tries and info button usage.
      */
+    /*
     fun recordResult(word: String, outcome: VocabQuizOutcome) {
         scope.launch {
             val state = learningStates.getOrPut(word) { VocabLearningState(word) }
@@ -54,7 +61,7 @@ class VocabQuizRepository @Inject constructor(
                 // Scenario 1: Correct 1st time, no help.
                 // Action: Mark as Mastered (Exit the loop).
                 VocabQuizOutcome.FLAWLESS -> {
-                    state.masteryLevel = MasteryLevel.Mastered
+                    state.masteryLevel = WordMasteryLevel.Mastered
                     state.streak += 1
                     // Set to far future (or handle "Random Review" logic later)
                     state.nextReviewTimestamp = Long.MAX_VALUE
@@ -93,55 +100,60 @@ class VocabQuizRepository @Inject constructor(
         }
     }
 
+     */
+
     /**
      * Get words that need to be tested right now.
      * Use this to populate the Quiz Screen.
      */
-    fun getDueWords(limit: Int = 10): List<String> {
-        val now = System.currentTimeMillis()
-
-        return learningStates.values
-            .filter { it.masteryLevel != MasteryLevel.Mastered } // Exclude mastered
-            .filter { it.nextReviewTimestamp <= now }            // Only if due
-            .sortedBy { it.nextReviewTimestamp }                 // Most overdue first
-            .take(limit)
-            .map { it.word }
-    }
+//    fun getDueWords(limit: Int = 10): List<String> {
+//        val now = System.currentTimeMillis()
+//
+//        return learningStates.values
+//            .filter { it.masteryLevel != MasteryLevel.Mastered } // Exclude mastered
+//            .filter { it.nextReviewTimestamp <= now }            // Only if due
+//            .sortedBy { it.nextReviewTimestamp }                 // Most overdue first
+//            .take(limit)
+//            .map { it.word }
+//    }
 
     // MARK: - Helpers
 
     // Calculates "6:00 AM" on X days from now
-    private fun getNextMorning(daysToAdd: Int): Long {
-        val cal = Calendar.getInstance()
-        cal.add(Calendar.DAY_OF_YEAR, daysToAdd)
-        cal.set(Calendar.HOUR_OF_DAY, 6)
-        cal.set(Calendar.MINUTE, 0)
-        cal.set(Calendar.SECOND, 0)
-        return cal.timeInMillis
-    }
+//    private fun getNextMorning(daysToAdd: Int): Long {
+//        val cal = Calendar.getInstance()
+//        cal.add(Calendar.DAY_OF_YEAR, daysToAdd)
+//        cal.set(Calendar.HOUR_OF_DAY, 6)
+//        cal.set(Calendar.MINUTE, 0)
+//        cal.set(Calendar.SECOND, 0)
+//        return cal.timeInMillis
+//    }
+//
+//    // MARK: - Persistence
+//
+//    private fun saveToDisk() {
+//        try {
+//            val jsonString = gson.toJson(learningStates)
+//            File(context.filesDir, fileName).writeText(jsonString)
+//        } catch (e: Exception) {
+//            Timber.e(e, "Failed to save vocab states")
+//        }
+//    }
 
-    // MARK: - Persistence
+//    private fun loadFromDisk() {
+//        scope.launch {
+//            try {
+//                val file = File(context.filesDir, fileName)
+//                if (file.exists()) {
+//                    val type = object : TypeToken<MutableMap<String, VocabLearningState>>() {}.type
+//                    learningStates = gson.fromJson(file.readText(), type)
+//                }
+//            } catch (e: Exception) {
+//                Timber.e(e, "Failed to load vocab states")
+//            }
+//        }
+//    }
 
-    private fun saveToDisk() {
-        try {
-            val jsonString = gson.toJson(learningStates)
-            File(context.filesDir, fileName).writeText(jsonString)
-        } catch (e: Exception) {
-            Timber.e(e, "Failed to save vocab states")
-        }
-    }
 
-    private fun loadFromDisk() {
-        scope.launch {
-            try {
-                val file = File(context.filesDir, fileName)
-                if (file.exists()) {
-                    val type = object : TypeToken<MutableMap<String, VocabLearningState>>() {}.type
-                    learningStates = gson.fromJson(file.readText(), type)
-                }
-            } catch (e: Exception) {
-                Timber.e(e, "Failed to load vocab states")
-            }
-        }
-    }
+
 }
