@@ -51,6 +51,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
@@ -221,6 +222,8 @@ class VocabQuizViewModel @Inject constructor(
     // Store the cleaned base name (e.g. "WordQuizTravel") so we can switch numbers easily
     private var currentSectionBaseName: String = ""
 
+    private var currentSectionTitle: String = ""
+
 
     private val jsonParser = Json {
         ignoreUnknownKeys = true
@@ -312,6 +315,7 @@ class VocabQuizViewModel @Inject constructor(
             // 1. Sanitize Title
             val noB1Title = categoryTitle.replace(" (B1)", "") //personal title
             val cleanTitle = noB1Title.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
+            currentSectionTitle = cleanTitle
             val baseFilenamePrefix = "WordQuiz${cleanTitle}" // e.g. "WordQuizTravel"
             currentSectionBaseName = baseFilenamePrefix
 
@@ -347,7 +351,69 @@ class VocabQuizViewModel @Inject constructor(
             }
         }
     }
+    // Call this when "Review Now" is tapped
+    fun loadSmartReviewQuiz() {
+        viewModelScope.launch(Dispatchers.IO) {
+            _isSectionMode.value = true // Hide pickers
 
+            // 1. Get Due Items
+            val dueItems = vocabQuizRepository.getDueItems(limit = 20)
+
+            if (dueItems.isEmpty()) {
+                // Fallback: Just load random questions from current level?
+                // Or show "Nothing due!" message.
+//                _uiState99.update { it.copy(error = "No words due for review!") }
+                Timber.w("No words due for review!")
+                return@launch
+            }
+
+            // 2. Group by Category to minimize file reads
+            // Map: "Personal Information" -> List<"Name", "Age">
+            val itemsByCategory = dueItems.groupBy { it.category }
+
+            val compiledQuestions = mutableListOf<WordQuizQuestion>()
+
+            // 3. Iterate Categories and Load Files
+            for ((categoryTitle, items) in itemsByCategory) {
+                // Skip if category is missing (old data)
+                if (categoryTitle.isEmpty()) continue
+
+                // Generate Filename
+                val cleanTitle = categoryTitle.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
+                val filename = "WordQuiz${cleanTitle}1-en" // Assuming "1" for now
+
+                // Read File
+                val testData = readWordQuizDataFromAssets(application, filename) ?: continue
+
+                // 4. Extract ONLY the questions for the due words
+                val allQuestionsInFile = generateQuestionsFromData(testData)
+
+                val targetWords = items.map { it.word }.toSet()
+
+                // Filter: Keep question if the Correct Answer matches a Due Word
+                val matchingQuestions = allQuestionsInFile.filter { question ->
+                    targetWords.contains(question.correctOption)
+                }
+
+                compiledQuestions.addAll(matchingQuestions)
+            }
+
+            // 5. Update UI
+            if (compiledQuestions.isNotEmpty()) {
+                _questions.value = compiledQuestions.shuffled()
+
+                quizStatistics.value = quizStatistics.value.copy(
+                    title = "Smart Review (${compiledQuestions.size} words)",
+                    skillLevel = "Mixed Review"
+                )
+
+                resetQuiz()
+            } else {
+//                _uiState99.update { it.copy(error = "Could not find questions for review items.") }
+                Timber.w("No words due for review!")
+            }
+        }
+    }
     // ✅ NEW: Switch between 1, 2, 3
     fun onSectionIndexSelected(index: Int) {
         if (_currentSectionIndex.value == index) return
@@ -1098,7 +1164,7 @@ class VocabQuizViewModel @Inject constructor(
             }
 
             // 2. Save to Repo
-            vocabQuizRepository.recordResult(word, outcome)
+            vocabQuizRepository.recordResult(word, outcome,currentSectionTitle)
 
             // 3. Award XP (Ideas)
             awardXP(outcome)

@@ -283,12 +283,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                                 if (categoryTitle == null) {
                                     // 1. "Review Now" (Mixed Quiz) clicked
                                     // Navigate to the main Quiz tab
-                                    refTabNavController.navigate(RefScreen.Quiz.route)
+//                                    refTabNavController.navigate(RefScreen.Quiz.route)
+                                    Timber.i("No category to review")
                                 } else {
-                                    // 2. Specific Category clicked
-                                    // You could navigate to the Tab containing this category,
-                                    // or handle it via a shared ViewModel.
-                                    // For now, let's just log it:
                                     Timber.i("User wants to review: $categoryTitle")
                                 }
                             }

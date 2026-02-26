@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.screens.reference
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,11 +25,15 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -39,33 +44,76 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.CategoryMasteryStats
 import com.goodstadt.john.language.exams.models.DashboardUiState
+import com.goodstadt.john.language.exams.screens.SectionQuizContainer
 import com.goodstadt.john.language.exams.viewmodels.VocabDashboardViewModel
+import com.goodstadt.john.language.exams.viewmodels.VocabQuizViewModel
+import timber.log.Timber
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun VocabDashboardScreen(
     viewModel: VocabDashboardViewModel = hiltViewModel(),
     onNavigateToQuiz: (String?) -> Unit // Pass category title, or null for "Mixed Review"
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val currentQuizTitle by viewModel.currentQuizTitle.collectAsState()
+    val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    val showSmartReview by viewModel.showSmartReviewSheet.collectAsState()
+    val smartReviewSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     if (uiState.isLoading) {
-        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+        Box(
+            Modifier.fillMaxSize(), contentAlignment = Alignment.Center
+        ) { CircularProgressIndicator() }
     } else if (uiState.isColdStart) {
         // STATE A: Cold Start
         VocabQuizOnboardingView(onStartSuggestion = onNavigateToQuiz)
     } else {
         // STATE B: Active Dashboard
         VocabQuizActiveView(
+            onStartReview = { viewModel.openSmartReview() },
             state = uiState,
-            onStartReview = { onNavigateToQuiz(null) } // Null means "Review All"
+            onCategoryClick = { title -> viewModel.openQuizForCategory(title) },
+            onDebugClick = {viewModel.debugResetVocabProgress()}
         )
+
+        if (currentQuizTitle != null) {
+            ModalBottomSheet(
+                onDismissRequest = { viewModel.closeQuizSheet() },
+                sheetState = quizSheetState,
+                containerColor = MaterialTheme.colorScheme.surface
+            ) {
+                // Wrapper to initialize the specific quiz
+                // We reuse the exact same container from CategoryTabScreen
+                SectionQuizContainer(categoryTitle = currentQuizTitle!!)
+            }
+        }
+        if (showSmartReview) {
+            ModalBottomSheet(
+                onDismissRequest = { viewModel.closeSmartReview() },
+                sheetState = smartReviewSheetState,
+                containerColor = MaterialTheme.colorScheme.surface
+            ) {
+                // Call the container we created in Step 2
+                SmartReviewContainer()
+            }
+        }
+
+
     }
 }
 
 @Composable
-fun VocabQuizActiveView(state: DashboardUiState, onStartReview: () -> Unit) {
+fun VocabQuizActiveView(
+    state: DashboardUiState,
+    onStartReview: () -> Unit,
+    onCategoryClick: (String) -> Unit,
+    onDebugClick: () -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -80,8 +128,7 @@ fun VocabQuizActiveView(state: DashboardUiState, onStartReview: () -> Unit) {
             modifier = Modifier.fillMaxWidth()
         ) {
             Row(
-                modifier = Modifier.padding(20.dp),
-                verticalAlignment = Alignment.CenterVertically
+                modifier = Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
@@ -103,28 +150,74 @@ fun VocabQuizActiveView(state: DashboardUiState, onStartReview: () -> Unit) {
                 ) {
                     Text("Review Now")
                 }
+               // if (BuildConfig.DEBUG) {
+                if (false) {
+                    Button(
+                        onClick = {
+                            Timber.w("debugResetVocabProgress")
+                            onDebugClick()
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+                    ) {
+                        Text("(D)")
+                    }
+                }
             }
         }
 
         // 2. Breakdown Title
-        Text("Category Progress", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+        Text(
+            "Category Progress",
+            style = MaterialTheme.typography.titleMedium,
+            fontWeight = FontWeight.Bold
+        )
 
         // 3. Category List
         state.categoryStats.forEach { stat ->
-            CategoryMasteryRow(stat)
+            CategoryMasteryRow(stat, onClick = {
+                onCategoryClick(stat.categoryTitle)
+            })
+        }
+//        if (BuildConfig.DEBUG) {
+        if (false) {
+            Column {
+
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Button(
+                        onClick = {
+                            Timber.w("debugResetVocabProgress")
+                           // viewModel.debugResetVocabProgress()
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+                    ) {
+                        Text("Clear All Data (D)")
+                    }
+                }
+            }
+
         }
     }
 }
 
 @Composable
-fun CategoryMasteryRow(stat: CategoryMasteryStats) {
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+fun CategoryMasteryRow(
+    stat: CategoryMasteryStats, onClick: () -> Unit
+) {
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable { onClick() } // ✅ Make clickable
+            .padding(vertical = 4.dp) // Add padding for touch target
+    ) {
         // Header
         Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween
+            modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text(stat.categoryTitle, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.SemiBold)
+            Text(
+                stat.categoryTitle,
+                style = MaterialTheme.typography.bodyMedium,
+                fontWeight = FontWeight.SemiBold
+            )
 
             if (stat.masteredCount > 0) {
                 Text(
@@ -145,16 +238,30 @@ fun CategoryMasteryRow(stat: CategoryMasteryStats) {
         ) {
             // Mastered (Green)
             if (stat.masteredFraction > 0) {
-                Box(Modifier.fillMaxHeight().weight(stat.masteredFraction).background(Color(0xFF4CAF50)))
+                Box(
+                    Modifier
+                        .fillMaxHeight()
+                        .weight(stat.masteredFraction)
+                        .background(Color(0xFF4CAF50))
+                )
             }
             // Learning (Orange)
             if (stat.learningFraction > 0) {
-                Box(Modifier.fillMaxHeight().weight(stat.learningFraction).background(Color(0xFFFF9800)))
+                Box(
+                    Modifier
+                        .fillMaxHeight()
+                        .weight(stat.learningFraction)
+                        .background(Color(0xFFFF9800))
+                )
             }
             // Remaining (Transparent/Grey)
             val remaining = 1f - (stat.masteredFraction + stat.learningFraction)
             if (remaining > 0) {
-                Box(Modifier.fillMaxHeight().weight(remaining))
+                Box(
+                    Modifier
+                        .fillMaxHeight()
+                        .weight(remaining)
+                )
             }
         }
     }
@@ -208,11 +315,31 @@ fun VocabQuizOnboardingView(onStartSuggestion: (String) -> Unit) {
 @Composable
 fun SuggestionButton(title: String, onClick: () -> Unit) {
     OutlinedButton(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth().padding(vertical = 4.dp)
+        onClick = onClick, modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 4.dp)
     ) {
         Text(title)
         Spacer(Modifier.width(8.dp))
         Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(16.dp))
+    }
+}
+
+@Composable
+fun SmartReviewContainer(
+    viewModel: VocabQuizViewModel = hiltViewModel()
+) {
+    // 1. Trigger the specific logic for Smart Review
+    LaunchedEffect(Unit) {
+        viewModel.loadSmartReviewQuiz()
+    }
+
+    // 2. Render the Quiz Screen
+    // We use a Box with fixed height to ensure the BottomSheet behaves correctly
+    Box(modifier = Modifier.fillMaxHeight(0.95f)) {
+        VocabQuizScreen(
+            viewModel = viewModel,
+            autoLoad = false // Important: Don't load default B1/A1 quiz
+        )
     }
 }

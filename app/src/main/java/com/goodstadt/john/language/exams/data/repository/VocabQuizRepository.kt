@@ -23,6 +23,8 @@ import javax.inject.Inject
 import javax.inject.Singleton
 import java.util.Locale
 
+data class DueItem(val word: String, val category: String)
+
 @Singleton
 class VocabQuizRepository @Inject constructor(
     @ApplicationContext private val context: Context
@@ -49,10 +51,12 @@ class VocabQuizRepository @Inject constructor(
      * @param word The word (e.g. "acquire")
      * @param tries How many attempts it took (1 = Perfect)
      */
-    fun recordResult(word: String, outcome: VocabQuizOutcome) {
+    fun recordResult(word: String, outcome: VocabQuizOutcome, categoryTitle: String ) {
 
         scope.launch {
-            val state = wordStates.getOrPut(word) { VocabLearningState(word) }
+            val state = wordStates.getOrPut(word) {
+                VocabLearningState(word = word, sourceCategory = categoryTitle)
+            }
             state.lastOutcome = outcome
 
             // 1. Create History Entry
@@ -74,12 +78,23 @@ class VocabQuizRepository @Inject constructor(
             debugPrintAllWordStates()
         }
     }
+    // Updated Getter
+    fun getDueItems(limit: Int = 20): List<DueItem> {
+        val now = System.currentTimeMillis()
 
+        return wordStates.values
+            .filter { it.masteryLevel != WordMasteryLevel.Mastered }
+            .filter { it.nextReviewTime <= now }
+            .sortedBy { it.nextReviewTime }
+            .take(limit)
+            // Map to our helper struct
+            .map { DueItem(it.word, it.sourceCategory) }
+    }
     /**
      * Returns a list of words that need to be quizzed right now.
      * Filters out "Mastered" words and words scheduled for the future.
      */
-    fun getDueWords(limit: Int = 20): List<String> {
+    fun getDueWords(limit: Int = 10): List<String> {
         val now = System.currentTimeMillis()
 
         return wordStates.values
@@ -362,7 +377,7 @@ class VocabQuizRepository @Inject constructor(
         Timber.tag(tag).d("   🟢 Mastered:   ${counts[WordMasteryLevel.Mastered] ?: 0}")
 
         Timber.tag(tag).d("--------------------------------------------------------------------------------")
-        Timber.tag(tag).d("   LVL | WORD             | STRK | LAST OUTCOME | DUE IN")
+        Timber.tag(tag).d("   LVL | WORD             | STRK | LAST OUTCOME | DUE IN | CATEGORY")
         Timber.tag(tag).d("--------------------------------------------------------------------------------")
 
         // 2. Sort by Next Review Time (Overdue first)
@@ -375,8 +390,9 @@ class VocabQuizRepository @Inject constructor(
             val streak = state.correctStreak.toString().padEnd(4)
             val outcome = (state.lastOutcome?.name ?: "-").take(12).padEnd(12)
             val due = getTimeString(state.nextReviewTime, now)
+            val cat = state.sourceCategory
 
-            Timber.tag(tag).d("   $icon | $word | $streak | $outcome | $due")
+            Timber.tag(tag).d("   $icon | $word | $streak | $outcome | $due | $cat"  )
         }
 
         Timber.tag(tag).d("================================================================================\n")
@@ -419,5 +435,32 @@ class VocabQuizRepository @Inject constructor(
     fun getAllStates(): Map<String, VocabLearningState> {
         // Return a copy (.toMap) to prevent external modification
         return wordStates.toMap()
+    }
+    // MARK: - Debug / Reset
+
+    /**
+     * 🚨 DEBUG: Wipes all vocabulary mastery progress.
+     * Simulates a fresh install for the Vocab Quiz feature.
+     */
+    fun debugClearAllProgress() {
+        scope.launch {
+            // 1. Clear Memory
+            wordStates.clear()
+
+            // 2. Clear Disk
+            try {
+                val file = File(context.filesDir, fileName)
+                if (file.exists()) {
+                    val deleted = file.delete()
+                    if (deleted) {
+                        Timber.w("🚨 Vocab Quiz File deleted successfully.")
+                    }
+                }
+            } catch (e: Exception) {
+                Timber.e(e, "Failed to delete vocab quiz history")
+            }
+
+            Timber.w("🚨 VOCAB QUIZ MEMORY CLEARED (Simulating new user)")
+        }
     }
 }

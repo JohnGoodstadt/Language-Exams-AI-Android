@@ -355,7 +355,7 @@ class AppConfigRepository @Inject constructor(
              "screenType": "FixedScreen"
            },
            "vocab_dashboard": {
-             "title": "Progress",
+             "title": "Vocab Progress",
              "sheetDataType": "fixed",
              "screenType": "VocabDashboard"
            },

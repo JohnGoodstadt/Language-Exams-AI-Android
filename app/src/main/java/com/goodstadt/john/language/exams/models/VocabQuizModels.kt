@@ -42,6 +42,8 @@ data class WordQuizAttempt(
 data class VocabLearningState(
     @SerializedName("w") val word: String,
 
+    @SerializedName("cat") var sourceCategory: String = "",
+
     @SerializedName("lvl") var masteryLevel: WordMasteryLevel = WordMasteryLevel.New,
 
     @SerializedName("streak") var correctStreak: Int = 0, // Consecutive first-try successes
