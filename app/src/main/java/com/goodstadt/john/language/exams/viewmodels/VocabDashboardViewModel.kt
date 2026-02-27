@@ -147,6 +147,8 @@ class VocabDashboardViewModel @Inject constructor(
         vocabQuizRepository.updateEvents()
     }
     fun openSmartReview() {
+        vocabQuizRepository.debugPrintStatus()
+        vocabQuizRepository.debugPrintAllWordStates()
         _showSmartReviewSheet.value = true
     }
 

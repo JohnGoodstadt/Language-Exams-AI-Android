@@ -355,7 +355,7 @@ class VocabQuizViewModel @Inject constructor(
             _isSectionMode.value = true // Hide pickers
 
             // 1. Get Due Items
-            val dueItems = vocabQuizRepository.getDueItems(limit = 20)
+            val dueItems = vocabQuizRepository.getDueItems(limit = 10)
 
             if (dueItems.isEmpty()) {
                 // Fallback: Just load random questions from current level?
@@ -388,9 +388,9 @@ class VocabQuizViewModel @Inject constructor(
 
                 val targetWords = items.map { it.word }.toSet()
 
-                // Filter: Keep question if the Correct Answer matches a Due Word
+                // Filter: Keep question if the Word is contained in the target words
                 val matchingQuestions = allQuestionsInFile.filter { question ->
-                    targetWords.contains(question.correctOption)
+                    targetWords.contains(question.question)
                 }
 
                 compiledQuestions.addAll(matchingQuestions)
