@@ -44,6 +44,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.CategoryMasteryStats
 import com.goodstadt.john.language.exams.models.DashboardUiState
 import com.goodstadt.john.language.exams.screens.SectionQuizContainer
@@ -156,15 +157,15 @@ fun VocabQuizActiveView(
                 ) {
                     Text("Review Now")
                 }
-//                if (BuildConfig.DEBUG) {
-                if (false) {
+                if (BuildConfig.DEBUG) {
+//                if (false) {
                     Button(
                         onClick = {
                             onDebugClick()
                         },
                         colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
                     ) {
-                        Text("(D)")
+                        Text("Reset (D)")
                     }
                 }
             }

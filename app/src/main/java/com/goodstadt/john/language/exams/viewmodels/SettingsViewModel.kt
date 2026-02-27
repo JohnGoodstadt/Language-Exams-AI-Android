@@ -877,4 +877,36 @@ class SettingsViewModel @Inject constructor(
     fun hideHourlyRateLimitSheet() {  _showRateHourlyLimitSheet.value = false  }
     fun showDailyRateLimitSheet() { _showRateDailyLimitSheet.value = true }
     fun ShowHourlyRateLimitSheet() {  _showRateHourlyLimitSheet.value = true  }
+    fun printWords() {
+
+        viewModelScope.launch {
+            val result = vocabRepository.getFormat0Data("vocab_data_b2")
+            result.onSuccess { vocabFile ->
+                val categories = vocabFile.categories
+                var index = 1
+                var totalWordsCount = 0
+
+                for (category in categories) {
+                    totalWordsCount = totalWordsCount + category.words.count()
+                    var wordCounter = 1
+                    Timber.i("WordQuiz${category.title}$index-en count:${category.words.count()}")
+
+                    for (word in category.words){
+                        Timber.i("${wordCounter} ${word.word}")
+                        if (wordCounter > 10){
+                            index ++
+                            wordCounter = 1
+                            Timber.i("WordQuiz${category.title}$index-en")
+                        }else{
+                            wordCounter++
+                        }
+                    }
+                }
+                Timber.i("total Words ${totalWordsCount}")
+            }
+            result.onFailure { error ->
+                Timber.e(error)
+            }
+        }
+    }
 }

@@ -281,7 +281,7 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
                         VocabDashboardScreen(
                             onNavigateToQuiz = { categoryTitle ->
                                 if (categoryTitle == null) {
-                                    // 1. "Review Now" (Mixed Quiz) clicked
+                                    // 1. "Revi ew Now" (Mixed Quiz) clicked
                                     // Navigate to the main Quiz tab
 //                                    refTabNavController.navigate(RefScreen.Quiz.route)
                                     Timber.i("No category to review")

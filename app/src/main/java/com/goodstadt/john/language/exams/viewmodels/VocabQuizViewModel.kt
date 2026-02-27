@@ -211,9 +211,7 @@ class VocabQuizViewModel @Inject constructor(
     // Store the cleaned base name (e.g. "WordQuizTravel") so we can switch numbers easily
     private var currentSectionBaseName: String = ""
     private var currentSectionTitle: String = ""
-    // 1. This is what the Dashboard (Base Screen) observes.
-    // We will NOT update this while the quiz is running.
-//    val dashboardStats = userPreferencesRepository.progressFlow.stateIn(...)
+    private var currentSkillLevel: String = "B1" // Default
 
     // 2. This is what the BottomSheet observes.
     // This is purely local memory (not saved to disk yet).
@@ -310,28 +308,38 @@ class VocabQuizViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             _isSectionMode.value = true
 
+         //   val level = userPreferencesRepository.selectedSkillLevelFlow.first()
+
             // 1. Sanitize Title
             val noB1Title = categoryTitle.replace(" (B1)", "") //personal title
             val cleanTitle = noB1Title.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
             currentSectionTitle = cleanTitle
             val baseFilenamePrefix = "WordQuiz${cleanTitle}" // e.g. "WordQuizTravel"
             currentSectionBaseName = baseFilenamePrefix
+            currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+
+//            val folderPath = "$level/$baseFilenamePrefix"
+
+            // 5. Save the prefix for pagination: "B1/WordQuizPersonal"
+           // val currentPathPrefix = "$folderPath/$fileBase"
 
             // 2. Scan Assets to find how many exist
             // We look for "WordQuizTravel1-en.json", "WordQuizTravel2-en.json", etc.
             val foundIndices = mutableListOf<Int>()
 
             try {
-                // Get all files in Quizzes folder
-                val allFiles = application.assets.list("Quizzes")?.toList() ?: emptyList()
+                // List files inside "Quizzes/B1"
+                // The AssetManager path separator is always "/"
+                val assetFolder = "Quizzes/$currentSkillLevel"
+                val filesInFolder = application.assets.list(assetFolder)?.toList() ?: emptyList()
 
-                // Check 1..10 (Reasonable limit)
+                // Look for: "WordQuizPersonal1-en.json", "WordQuizPersonal2-en.json"
                 for (i in 1..10) {
-                    // Note: You might want to handle localized suffixes here too (-hi, etc)
-                    // For now, assuming -en base checks
-                    val target = "${baseFilenamePrefix}${i}-en.json"
-                    if (allFiles.contains(target)) {
+                    val targetFile = "${baseFilenamePrefix}${i}-en.json"
+                    if (filesInFolder.contains(targetFile)) {
                         foundIndices.add(i)
+                    }else{
+                        break //will start at 1 and inc up
                     }
                 }
             } catch (e: Exception) {
@@ -345,15 +353,19 @@ class VocabQuizViewModel @Inject constructor(
                 loadSpecificSectionIndex(foundIndices.first())
             } else {
                 // Handle empty case
+                //TODO: Give message to user
+                //TODO: Raise Fault
                 _questions.value = emptyList()
             }
         }
     }
-    // Call this when "Review Now" is tapped
+    // Call this when "Rev iew Now" is tapped
     fun loadSmartReviewQuiz() {
         viewModelScope.launch(Dispatchers.IO) {
             _isSectionMode.value = true // Hide pickers
 
+//            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
+            currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
             // 1. Get Due Items
             val dueItems = vocabQuizRepository.getDueItems(limit = 10)
 
@@ -381,7 +393,7 @@ class VocabQuizViewModel @Inject constructor(
                 val filename = "WordQuiz${cleanTitle}1-en" // Assuming "1" for now
 
                 // Read File
-                val testData = readWordQuizDataFromAssets(application, filename) ?: continue
+                val testData = readWordQuizDataFromAssets(application, filename,currentSkillLevel) ?: continue
 
                 // 4. Extract ONLY the questions for the due words
                 val allQuestionsInFile = generateQuestionsFromData(testData)
@@ -426,7 +438,10 @@ class VocabQuizViewModel @Inject constructor(
             // (You should use your getLocalizedFileName helper here if you want translation support)
             val filename = "${currentSectionBaseName}${index}-en"
 
-            val testData = readWordQuizDataFromAssets(application, filename)
+//            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
+            currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+
+            val testData = readWordQuizDataFromAssets(application, filename, currentSkillLevel)
 
             if (testData != null) {
                 _questions.value = generateQuestionsFromData(testData)
@@ -584,13 +599,17 @@ class VocabQuizViewModel @Inject constructor(
     fun loadQuestions() {
         viewModelScope.launch {
 
+            //val level = userPreferencesRepository.selectedSkillLevelFlow.first()
+            currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+
+
             val quizDetail = selectedQuiz.value ?: selectedLevel.value.quizzes.first()
             val baseName =
                 (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
 
             val finalFilename = getLocalizedFileName(appContext, baseName)
 
-            val testData = readWordQuizDataFromAssets(appContext, finalFilename)
+            val testData = readWordQuizDataFromAssets(appContext, finalFilename,currentSkillLevel)
 
             if (testData == null) {
                 Timber.wtf("Failed to parse JSON file: $finalFilename")
@@ -822,11 +841,11 @@ class VocabQuizViewModel @Inject constructor(
             null
         }
     }
-    fun readWordQuizDataFromAssets(context: Context, fileName: String): WordQuizRoot? {
+    fun readWordQuizDataFromAssets(context: Context, fileName: String, level:String): WordQuizRoot? {
         // 1. Sanitize input: Remove folder prefix if passed, handle extension
         val cleanName = File(fileName).name // Removes "Quizzes/" if passed accidentally
         val finalName = if (cleanName.endsWith(".json")) cleanName else "$cleanName.json"
-        val fullPath = "Quizzes/$finalName"
+        val fullPath = "Quizzes/$level/$finalName" //e.g. Quizzes/B1/WordQuizPersonal1-en.json
 
         return try {
             // 2. Read
@@ -850,9 +869,11 @@ class VocabQuizViewModel @Inject constructor(
         }
     }
     // Call this whenever the Level changes (e.g. from Elementary to Inter)
+    //TODO: I dont think I need this.
     private fun refreshQuizTitlesForLevel(level: VocabQuizLevels) {
         viewModelScope.launch {
 
+            val skillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
             // 1. Get the list of default quizzes for this level
             val defaultQuizzes = level.quizzes
 
@@ -865,7 +886,7 @@ class VocabQuizViewModel @Inject constructor(
                 // B. Peek at the JSON to get the title
                 // Note: This needs to be fast. If reading the whole file is too slow,
                 // you might want to cache this or use a lighter "Metadata" read.
-                val title = peekTitleFromJson(filename) ?: quizDetail.title
+                val title = peekTitleFromJson(filename,skillLevel) ?: quizDetail.title
 
                 // C. Return updated object
                 quizDetail.copy(title = title)
@@ -883,10 +904,11 @@ class VocabQuizViewModel @Inject constructor(
     }
 
     // Helper to read just the title
-    private fun peekTitleFromJson(filename: String): String? {
+    private fun peekTitleFromJson(filename: String, level:String): String? {
         return try {
             // Reusing your existing reader logic, but maybe we can optimize later
-            val data = readWordQuizDataFromAssets(appContext, filename)
+
+            val data = readWordQuizDataFromAssets(appContext, filename,level)
             // Get the title from the root object if you added it there, or the first section
             data?.title // Assuming you added 'val title: String' to TestMyselfListRoot
         } catch (e: Exception) {
@@ -909,7 +931,7 @@ class VocabQuizViewModel @Inject constructor(
                     // B. Peek at the JSON to get the title
                     // Note: We catch errors here so one bad file doesn't break the whole loop
                     val newTitle = try {
-                        val data = readWordQuizDataFromAssets(appContext, finalFileName)
+                        val data = readWordQuizDataFromAssets(appContext, finalFileName,"B1")
                         // If file has a title, use it. Else fall back to Enum default.
                         data?.title ?: quizDetail.title
                     } catch (e: Exception) {
@@ -1086,13 +1108,12 @@ class VocabQuizViewModel @Inject constructor(
 
     fun incQuizStat(success: Boolean = true) {
 
-        val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName
-        val finalName = getLocalizedName(appContext, baseName) //no json
+//        val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName
+        val sectionName = currentSectionTitle//getLocalizedName(appContext, baseName) //no json
 
-        Timber.v(finalName)
+//        Timber.v(finalName)
 
-        val statName =
-            if (success) "${statVocabQuizOkCount}_$finalName" else "${statVocabQuizNotOKCount}_$finalName"
+        val statName = if (success) "${statVocabQuizOkCount}_${currentSkillLevel}$sectionName" else "${statVocabQuizNotOKCount}_${currentSkillLevel}$sectionName"
 
         //individual totals
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statName)

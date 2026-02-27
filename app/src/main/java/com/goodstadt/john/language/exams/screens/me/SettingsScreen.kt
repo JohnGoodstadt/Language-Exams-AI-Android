@@ -818,11 +818,12 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Debug Something",
-                    currentValue = "Try out Voices (D)",
+                    currentValue = "Print Vocab (D)",
                     onClick = {
+                        viewModel.printWords()
 //                        showTryOutVoicesSheet = true
 //                            viewModel.onDebugCrashlyitcs()
-                            viewModel.userPreferences()
+//                            viewModel.userPreferences()
                             //viewModel.debugAppLLMCredits()
 //                        viewModel.ShowDictionEntryScreen()
 //                        Button(onClick = { showDictionary = true }) {
