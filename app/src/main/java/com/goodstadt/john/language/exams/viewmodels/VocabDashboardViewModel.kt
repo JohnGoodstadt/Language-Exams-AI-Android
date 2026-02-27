@@ -39,6 +39,15 @@ class VocabDashboardViewModel @Inject constructor(
 
     init {
         loadDashboard()
+
+        // 2. ✅ NEW: Listen for updates from the Repository
+        viewModelScope.launch {
+            vocabQuizRepository.dataUpdateEvents.collect {
+                // When repo says "I saved new data", we reload the stats
+                Timber.d("VocabDashboard: Repository updated, refreshing UI...")
+                loadDashboard()
+            }
+        }
     }
 
     fun loadDashboard() {
@@ -135,6 +144,7 @@ class VocabDashboardViewModel @Inject constructor(
 
     fun closeQuizSheet() {
         _currentQuizTitle.value = null
+        vocabQuizRepository.updateEvents()
     }
     fun openSmartReview() {
         _showSmartReviewSheet.value = true
@@ -144,7 +154,8 @@ class VocabDashboardViewModel @Inject constructor(
     fun closeSmartReview() {
         _showSmartReviewSheet.value = false
         // Optional: Reload dashboard stats when closing quiz to show updated progress
-        loadDashboard()
+//        loadDashboard()
+        vocabQuizRepository.updateEvents()
     }
     fun debugResetVocabProgress() {
         viewModelScope.launch {

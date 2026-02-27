@@ -11,6 +11,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -40,10 +41,18 @@ class VocabQuizRepository @Inject constructor(
     private val _quizDataLoaded = MutableStateFlow(false)
     val quizDataLoaded = _quizDataLoaded.asStateFlow()
 
+    // 1. ✅ ADD THIS: A trigger flow
+    // replay=1 ensures that if a view subscribes late, it gets the latest signal immediately
+    private val _dataUpdateEvents = kotlinx.coroutines.flow.MutableSharedFlow<Unit>(replay = 1)
+    val dataUpdateEvents = _dataUpdateEvents.asSharedFlow()
+
     init {
         loadFromDisk()
     }
 
+    fun updateEvents(){
+        _dataUpdateEvents.tryEmit(Unit)
+    }
     // MARK: - Public API
 
     /**
@@ -293,6 +302,9 @@ class VocabQuizRepository @Inject constructor(
         try {
             val jsonString = gson.toJson(wordStates)
             File(context.filesDir, fileName).writeText(jsonString)
+            // 🔥 SIGNAL THE APP THAT DATA CHANGED
+           // _dataUpdateEvents.tryEmit(Unit)
+
         } catch (e: Exception) {
             Timber.e(e, "Failed to save vocab quiz progress")
         }
@@ -456,6 +468,7 @@ class VocabQuizRepository @Inject constructor(
                         Timber.w("🚨 Vocab Quiz File deleted successfully.")
                     }
                 }
+                _dataUpdateEvents.tryEmit(Unit)
             } catch (e: Exception) {
                 Timber.e(e, "Failed to delete vocab quiz history")
             }

@@ -210,7 +210,7 @@ fun CategoryTabScreen(
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME) {
                 viewModel.refreshCacheState(selectedVoiceName)
-               viewModel.connectToBilling()
+                viewModel.connectToBilling()
                 viewModel.onResume()
             } else if (event == Lifecycle.Event.ON_PAUSE) {
                 viewModel.saveDataOnExit()
@@ -360,12 +360,14 @@ fun CategoryTabScreen(
                                 stickyHeader {
 
 
-
                                     Row(
                                         modifier = Modifier
                                             .fillMaxWidth()
                                             .background(MaterialTheme.colorScheme.surface) // Important: Solid background for sticky behavior
-                                            .padding(horizontal = 16.dp, vertical = 8.dp), // Adjust padding as needed
+                                            .padding(
+                                                horizontal = 16.dp,
+                                                vertical = 8.dp
+                                            ), // Adjust padding as needed
                                         verticalAlignment = Alignment.CenterVertically
                                     ) {
 
@@ -381,7 +383,11 @@ fun CategoryTabScreen(
                                             val isFirstCategory = category == categories.first()
                                             if (isFirstCategory) {
                                                 OutlinedButton(
-                                                    onClick = { viewModel.openQuizForCategory(category) },
+                                                    onClick = {
+                                                        viewModel.openQuizForCategory(
+                                                            category
+                                                        )
+                                                    },
                                                     // 1. Set the Border width and color
                                                     border = BorderStroke(1.dp, orangeLight),
                                                     // 2. Set the Text/Icon color
@@ -392,7 +398,10 @@ fun CategoryTabScreen(
                                                     // 3. Shape (Rounded corners)
                                                     shape = RoundedCornerShape(8.dp),
                                                     // Optional: Adjust padding if it feels too big
-                                                    contentPadding = PaddingValues(horizontal = 4.dp, vertical = 0.dp)
+                                                    contentPadding = PaddingValues(
+                                                        horizontal = 4.dp,
+                                                        vertical = 0.dp
+                                                    )
                                                 ) {
                                                     Text(
                                                         text = "Quiz",
@@ -401,7 +410,11 @@ fun CategoryTabScreen(
                                                     )
                                                 }
                                             } else {
-                                                IconButton(onClick = { viewModel.openQuizForCategory(category) }) {
+                                                IconButton(onClick = {
+                                                    viewModel.openQuizForCategory(
+                                                        category
+                                                    )
+                                                }) {
                                                     Icon(
                                                         imageVector = Icons.Default.SportsEsports,
                                                         contentDescription = "Take Quiz",
@@ -626,7 +639,9 @@ fun CategoryTabScreen(
         }
         if (currentQuizCategory != null) {
             ModalBottomSheet(
-                onDismissRequest = { viewModel.closeQuizSheet() },
+                onDismissRequest = {
+                    viewModel.closeQuizSheet()
+                },
                 sheetState = quizSheetState,
                 containerColor = MaterialTheme.colorScheme.surface
             ) {

@@ -78,12 +78,15 @@ fun VocabDashboardScreen(
             onStartReview = { viewModel.openSmartReview() },
             state = uiState,
             onCategoryClick = { title -> viewModel.openQuizForCategory(title) },
-            onDebugClick = {viewModel.debugResetVocabProgress()}
+            onDebugClick = { viewModel.debugResetVocabProgress() }
         )
 
         if (currentQuizTitle != null) {
             ModalBottomSheet(
-                onDismissRequest = { viewModel.closeQuizSheet() },
+                onDismissRequest = {
+                    viewModel.closeQuizSheet()
+//                    viewModel.loadDashboard()
+                },
                 sheetState = quizSheetState,
                 containerColor = MaterialTheme.colorScheme.surface
             ) {
@@ -94,7 +97,9 @@ fun VocabDashboardScreen(
         }
         if (showSmartReview) {
             ModalBottomSheet(
-                onDismissRequest = { viewModel.closeSmartReview() },
+                onDismissRequest = {
+                    viewModel.closeSmartReview()
+                },
                 sheetState = smartReviewSheetState,
                 containerColor = MaterialTheme.colorScheme.surface
             ) {
@@ -150,11 +155,10 @@ fun VocabQuizActiveView(
                 ) {
                     Text("Review Now")
                 }
-               // if (BuildConfig.DEBUG) {
-                if (false) {
+                if (BuildConfig.DEBUG) {
+//                if (false) {
                     Button(
                         onClick = {
-                            Timber.w("debugResetVocabProgress")
                             onDebugClick()
                         },
                         colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
@@ -186,7 +190,7 @@ fun VocabQuizActiveView(
                     Button(
                         onClick = {
                             Timber.w("debugResetVocabProgress")
-                           // viewModel.debugResetVocabProgress()
+                            // viewModel.debugResetVocabProgress()
                         },
                         colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
                     ) {

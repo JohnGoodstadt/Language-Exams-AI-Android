@@ -1,9 +1,5 @@
 package com.goodstadt.john.language.exams.viewmodels
 
-//import android.graphics.Color
-//import com.goodstadt.john.language.exams.managers.RateLimiterManager
-//import com.google.gson.Gson
-
 import android.app.Activity
 import android.app.Application
 import android.content.Context
@@ -61,13 +57,6 @@ import java.io.FileNotFoundException
 import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
-
-//enum class WordQuizState(val description: String) {
-//    NOT_STARTED("Not Started"),
-//    STARTED("Started"),
-//    IN_PROGRESS("In Progress"),
-//    COMPLETED("Completed")
-//}
 
 data class VocabQuizStatistics(
     val timestamp: Date = Date(),
@@ -221,9 +210,18 @@ class VocabQuizViewModel @Inject constructor(
 
     // Store the cleaned base name (e.g. "WordQuizTravel") so we can switch numbers easily
     private var currentSectionBaseName: String = ""
-
     private var currentSectionTitle: String = ""
+    // 1. This is what the Dashboard (Base Screen) observes.
+    // We will NOT update this while the quiz is running.
+//    val dashboardStats = userPreferencesRepository.progressFlow.stateIn(...)
 
+    // 2. This is what the BottomSheet observes.
+    // This is purely local memory (not saved to disk yet).
+    private val _sessionCorrectAnswers = MutableStateFlow(0)
+    val sessionCorrectAnswers = _sessionCorrectAnswers.asStateFlow()
+
+    // Keep a list of word IDs mastered during this specific session
+    private val masteredInThisSession = mutableListOf<String>()
 
     private val jsonParser = Json {
         ignoreUnknownKeys = true
