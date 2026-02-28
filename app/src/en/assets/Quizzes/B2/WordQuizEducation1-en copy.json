@@ -1,0 +1,553 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation1-en",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Education",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "academic",
+					"summary": "Relating to education and study at a school, college or university; or a person who teaches and does research at a university.",
+					"explain": {
+						"entryId": "academic",
+						"headword": "academic",
+						"pronunciation": { "display": "ak-uh-DEM-ik", "ipaUK": "/ˌæk.əˈdem.ɪk/", "ipaUS": "/ˌæk.əˈdem.ɪk/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "academic",
+								"inflectionsLine": null,
+								"synonyms": ["scholarly", "educational", "intellectual"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "relating to education and scholarship, especially at college or university level",
+										"examples": [
+											"Her academic achievements earned her a place at a top university."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "academic",
+								"inflectionsLine": "academics",
+								"synonyms": ["scholar", "professor", "researcher"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who teaches or does research at a university or college",
+										"examples": [
+											"Leading academics from around the world attended the international conference."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her academic record impressed the university admissions committee.", "ok": true },
+						{ "answer": "She submitted her academic to the professor two days before the deadline.", "ok": false },
+						{ "answer": "He was excited to collect his academic from the office after the ceremony.", "ok": false },
+						{ "answer": "The academic weather that morning made it impossible to hold the outdoor event.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "curriculum",
+					"summary": "The subjects or courses of study offered by a school or university, or the content covered in a particular course.",
+					"explain": {
+						"entryId": "curriculum",
+						"headword": "curriculum",
+						"pronunciation": { "display": "kuh-RIK-yuh-lum", "ipaUK": "/kəˈrɪk.jʊ.ləm/", "ipaUS": "/kəˈrɪk.jə.ləm/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "curriculum",
+								"inflectionsLine": "curricula / curriculums",
+								"synonyms": ["syllabus", "programme of study", "course of study"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the subjects that are included in a course of study or taught in a school, college or university",
+										"examples": [
+											"The school revised its curriculum to include digital literacy as a core subject."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "all the courses of study offered by an educational institution",
+										"examples": [
+											"The national curriculum sets out what children should learn at each stage of their education."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The school introduced coding into its curriculum from the age of seven.", "ok": true },
+						{ "answer": "She prepared her curriculum carefully before applying for the teaching position.", "ok": false },
+						{ "answer": "He forgot to bring his curriculum to class, so he could not follow the lesson.", "ok": false },
+						{ "answer": "The student read the curriculum from cover to cover the night before the exam.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "diploma",
+					"summary": "An official document or certificate awarded by a school, college or university to show that you have successfully completed a course of study.",
+					"explain": {
+						"entryId": "diploma",
+						"headword": "diploma",
+						"pronunciation": { "display": "di-PLOH-muh", "ipaUK": "/dɪˈpləʊ.mə/", "ipaUS": "/dɪˈploʊ.mə/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "diploma",
+								"inflectionsLine": "diplomas",
+								"synonyms": ["certificate", "qualification", "credential"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a document given by a college or university to show that you have passed an examination or completed a course of study",
+										"examples": [
+											"After three years of study, she received her diploma in graphic design."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a course of study at a college or university that is shorter than a degree",
+										"examples": [
+											"He enrolled in a one-year diploma in business management."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She proudly displayed her diploma on the wall of her new office.", "ok": true },
+						{ "answer": "He wrote a formal diploma to thank the school for the excellent teaching he received.", "ok": false },
+						{ "answer": "The two governments signed a diploma to improve trade relations between their countries.", "ok": false },
+						{ "answer": "She diploma the class every week with a short written test.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "elective",
+					"summary": "A course or subject that a student can choose to study, rather than one that is required; also used as an adjective to describe something that is optional or chosen freely.",
+					"explain": {
+						"entryId": "elective",
+						"headword": "elective",
+						"pronunciation": { "display": "ih-LEK-tiv", "ipaUK": "/ɪˈlek.tɪv/", "ipaUS": "/ɪˈlek.tɪv/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "elective",
+								"inflectionsLine": "electives",
+								"synonyms": ["optional course", "option", "free-choice subject"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a course that a student can choose to take rather than one that is compulsory",
+										"examples": [
+											"She chose photography as her elective for the spring semester."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "elective",
+								"inflectionsLine": null,
+								"synonyms": ["optional", "voluntary", "discretionary"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not compulsory; chosen freely by a student or patient",
+										"examples": [
+											"Elective modules allow students to explore subjects beyond their core degree."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "As part of her degree, she could take one elective from a list of twelve subjects.", "ok": true },
+						{ "answer": "The students had an elective vote at the end of the school year to choose a class president.", "ok": false },
+						{ "answer": "He was a very elective student who always chose the most efficient way to study.", "ok": false },
+						{ "answer": "The teacher told the class to be elective when deciding which questions to answer first.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "enrollment",
+					"summary": "The process of officially registering or signing up for a course, school or programme; also refers to the total number of students registered.",
+					"explain": {
+						"entryId": "enrollment",
+						"headword": "enrollment",
+						"pronunciation": { "display": "en-ROHL-ment", "ipaUK": "/ɪnˈrəʊl.mənt/", "ipaUS": "/ɪnˈroʊl.mənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "enrollment",
+								"inflectionsLine": "enrollments",
+								"synonyms": ["registration", "admission", "sign-up"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the act of officially registering to take part in a course or programme",
+										"examples": [
+											"Online enrollment for the spring semester opens on the first of December."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the total number of students registered at a school or university",
+										"examples": [
+											"The university reported a record enrollment of over 30,000 students this year."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Enrollment for next year's programme closes at the end of this month.", "ok": true },
+						{ "answer": "The teacher took enrollment at the start of every class to see who was present.", "ok": false },
+						{ "answer": "Her enrollment in the final exam was 92 out of 100, the highest in the class.", "ok": false },
+						{ "answer": "He sent his enrollment to three different universities hoping for an offer.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "faculty",
+					"summary": "The teaching staff of a university or college; also a division of a university specialising in a particular subject area; also a natural ability or power.",
+					"explain": {
+						"entryId": "faculty",
+						"headword": "faculty",
+						"pronunciation": { "display": "FAK-ul-tee", "ipaUK": "/ˈfæk.əl.ti/", "ipaUS": "/ˈfæk.əl.ti/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "faculty",
+								"inflectionsLine": "faculties",
+								"synonyms": ["department", "school", "division"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a group of related university departments forming a larger division of the university",
+										"examples": [
+											"She applied to the Faculty of Engineering and was offered a place on the mechanical engineering course."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the teaching and research staff of a university or college",
+										"examples": [
+											"The faculty voted to revise the assessment criteria for all undergraduate courses."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "faculty",
+								"inflectionsLine": "faculties",
+								"synonyms": ["ability", "power", "capability"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a natural ability or power of the mind or body",
+										"examples": [
+											"Even at the age of ninety, she retained all her mental faculties."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He graduated from the Faculty of Law after completing four years of study.", "ok": true },
+						{ "answer": "She packed her faculty into her bag every morning before leaving for class.", "ok": false },
+						{ "answer": "The students read through the entire faculty before writing their essays.", "ok": false },
+						{ "answer": "He was a very faculty person who always knew the answer to every question.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "lecture",
+					"summary": "A talk given to a group of students or an audience on a particular subject, especially at a university; also used as a verb meaning to give such a talk.",
+					"explain": {
+						"entryId": "lecture",
+						"headword": "lecture",
+						"pronunciation": { "display": "LEK-cher", "ipaUK": "/ˈlek.tʃə/", "ipaUS": "/ˈlek.tʃɚ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "lecture",
+								"inflectionsLine": "lectures",
+								"synonyms": ["talk", "presentation", "address"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a formal talk given to a group of students or an audience, especially at a university",
+										"examples": [
+											"The professor's lecture on the causes of the First World War lasted ninety minutes."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "lecture",
+								"inflectionsLine": "lectures, lectured, lecturing",
+								"synonyms": ["teach", "instruct", "address"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to give a formal talk to a class or large group, especially at a university",
+										"examples": [
+											"She lectures on contemporary literature at the University of Edinburgh."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The biology lecture covered three important topics related to cell division.", "ok": true },
+						{ "answer": "She studied her lecture carefully the evening before the exam.", "ok": false },
+						{ "answer": "The students handed in their lecture at the end of the class.", "ok": false },
+						{ "answer": "He wrote a lecture to explain to the teacher why he had missed the previous session.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "prerequisite",
+					"summary": "Something that must exist or happen before something else is possible; a course or qualification that must be completed before you can take a more advanced course.",
+					"explain": {
+						"entryId": "prerequisite",
+						"headword": "prerequisite",
+						"pronunciation": { "display": "pree-REK-wuh-zit", "ipaUK": "/priːˈrek.wɪ.zɪt/", "ipaUS": "/priˈrek.wɪ.zɪt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "prerequisite",
+								"inflectionsLine": "prerequisites",
+								"synonyms": ["requirement", "precondition", "condition"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "something that must be done or achieved before something else can happen or be done",
+										"examples": [
+											"A good knowledge of statistics is a prerequisite for the data analysis module."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "prerequisite",
+								"inflectionsLine": null,
+								"synonyms": ["required", "necessary", "obligatory"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "required as a prior condition before something else can take place",
+										"examples": [
+											"Students must complete the prerequisite modules before joining the advanced seminar."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Calculus is listed as a prerequisite for the advanced physics course.", "ok": true },
+						{ "answer": "The teacher gave the class a prerequisite to complete and hand in by Friday.", "ok": false },
+						{ "answer": "She submitted her prerequisite report two days before the end of term.", "ok": false },
+						{ "answer": "He read the prerequisite quickly and highlighted the most important passages.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "scholarship",
+					"summary": "Money given to a student by an institution to help pay for their education, usually based on academic achievement or financial need; also refers to serious academic study and research.",
+					"explain": {
+						"entryId": "scholarship",
+						"headword": "scholarship",
+						"pronunciation": { "display": "SKOL-er-ship", "ipaUK": "/ˈskɒl.ə.ʃɪp/", "ipaUS": "/ˈskɑː.lɚ.ʃɪp/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "scholarship",
+								"inflectionsLine": "scholarships",
+								"synonyms": ["grant", "bursary", "award"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an amount of money given to a student to help pay for their education, usually because of academic achievement or financial need",
+										"examples": [
+											"She was awarded a full scholarship to study medicine at Cambridge University."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "scholarship",
+								"inflectionsLine": null,
+								"synonyms": ["learning", "erudition", "academic work"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "serious academic study and the knowledge gained from it",
+										"examples": [
+											"His scholarship in the field of medieval history is internationally recognised."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He won a scholarship that covered his full tuition fees for three years.", "ok": true },
+						{ "answer": "The teacher gave a scholarship to every student who completed the homework on time.", "ok": false },
+						{ "answer": "She left her scholarship on the desk and the teacher collected it at the end of class.", "ok": false },
+						{ "answer": "He scholarship in English for two years before sitting his final university exams.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "thesis",
+					"summary": "A long piece of writing based on original research, submitted as part of a university degree, especially a postgraduate degree; also refers to a statement or theory put forward to be proved or discussed.",
+					"explain": {
+						"entryId": "thesis",
+						"headword": "thesis",
+						"pronunciation": { "display": "THEE-sis", "ipaUK": "/ˈθiː.sɪs/", "ipaUS": "/ˈθiː.sɪs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "thesis",
+								"inflectionsLine": "theses",
+								"synonyms": ["dissertation", "research paper", "treatise"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a long piece of original research written as part of a university degree, especially a master's or doctoral degree",
+										"examples": [
+											"She spent two years researching and writing her doctoral thesis on climate migration."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "thesis",
+								"inflectionsLine": "theses",
+								"synonyms": ["argument", "proposition", "theory"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a statement or idea that is discussed and argued about in a formal way",
+										"examples": [
+											"The central thesis of his book is that language shapes how we think."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He submitted his master's thesis after three years of research and writing.", "ok": true },
+						{ "answer": "The teacher asked the class to write a short thesis about what they did at the weekend.", "ok": false },
+						{ "answer": "She handed in her thesis to the teacher at the end of the lesson for marking.", "ok": false },
+						{ "answer": "The students read through the thesis quickly the night before the test.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

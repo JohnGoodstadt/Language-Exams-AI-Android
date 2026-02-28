@@ -1,0 +1,509 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocialIssues1-en",
+	"title": "Social Issues",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Social Issues",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "community service",
+					"summary": "Unpaid work done to benefit the local community; also work ordered by a court as a punishment instead of a prison sentence.",
+					"explain": {
+						"entryId": "community service",
+						"headword": "community service",
+						"pronunciation": { "display": "kuh-MYOO-ni-tee SER-vis", "ipaUK": "/kəˈmjuː.nɪ.ti ˈsɜː.vɪs/", "ipaUS": "/kəˈmjuː.nɪ.ti ˈsɜːr.vɪs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "community service",
+								"inflectionsLine": null,
+								"synonyms": ["voluntary work", "public service", "social work"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "unpaid work done voluntarily to help and benefit the local community",
+										"examples": [
+											"She spent her weekends doing community service at the local food bank."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "work ordered by a court as a punishment carried out in the community instead of a prison sentence",
+										"examples": [
+											"The judge sentenced him to two hundred hours of community service rather than a fine."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She volunteers for community service every Saturday, helping elderly residents with their shopping.", "ok": true },
+						{ "answer": "He signed up for community service to develop his cooking skills and improve his diet at home.", "ok": false },
+						{ "answer": "The community service arrived at seven o'clock and all the guests were served a hot meal.", "ok": false },
+						{ "answer": "She found the community service very difficult to read as it was so long and detailed.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "equality",
+					"summary": "The state of being equal, especially in having the same rights, opportunities and treatment regardless of differences such as gender, race or background.",
+					"explain": {
+						"entryId": "equality",
+						"headword": "equality",
+						"pronunciation": { "display": "ih-KWOL-ih-tee", "ipaUK": "/ɪˈkwɒl.ɪ.ti/", "ipaUS": "/ɪˈkwɑː.lɪ.ti/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "equality",
+								"inflectionsLine": null,
+								"synonyms": ["fairness", "equal rights", "equal opportunity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the right of different groups of people to have a similar social position and receive the same treatment",
+										"examples": [
+											"The new law was designed to promote equality in the workplace for all employees."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the situation in which everyone in a society has the same status, rights and opportunities",
+										"examples": [
+											"The organisation has campaigned for racial equality for over thirty years."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The charity campaigns for equality in education so that every child has the same opportunities.", "ok": true },
+						{ "answer": "The teacher gave each student an equality to solve during the maths lesson that morning.", "ok": false },
+						{ "answer": "She calculated the equality of both answers and showed her full working to the class.", "ok": false },
+						{ "answer": "He had great equality in his work, always producing consistent and high-quality results.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "human rights",
+					"summary": "The basic rights and freedoms that every person is entitled to, regardless of nationality, gender, race, religion or any other status.",
+					"explain": {
+						"entryId": "human rights",
+						"headword": "human rights",
+						"pronunciation": { "display": "HYOO-men RYTS", "ipaUK": "/ˌhjuː.mən ˈraɪts/", "ipaUS": "/ˌhjuː.mən ˈraɪts/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "human rights",
+								"inflectionsLine": null,
+								"synonyms": ["civil rights", "basic rights", "fundamental freedoms"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the basic rights and freedoms that all people are believed to be entitled to, including the right to life, freedom and fair treatment",
+										"examples": [
+											"The charity works to protect the human rights of refugees living in dangerous conditions."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The lawyer spent her career defending the human rights of people who had been treated unjustly.", "ok": true },
+						{ "answer": "She studied human rights at college in order to gain qualifications in biology and anatomy.", "ok": false },
+						{ "answer": "He was given full human rights to the university library, allowing him to borrow up to ten books.", "ok": false },
+						{ "answer": "The human rights of the old building were checked carefully before the students were allowed inside.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "justice",
+					"summary": "Fairness in the way people are treated; the legal system by which people are judged and punished for crimes; also used as a title for a judge.",
+					"explain": {
+						"entryId": "justice",
+						"headword": "justice",
+						"pronunciation": { "display": "JUS-tis", "ipaUK": "/ˈdʒʌs.tɪs/", "ipaUS": "/ˈdʒʌs.tɪs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "justice",
+								"inflectionsLine": null,
+								"synonyms": ["fairness", "equity", "impartiality"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the quality of being fair and reasonable in the treatment of people",
+										"examples": [
+											"The protesters demanded justice for those who had been wrongly imprisoned."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the legal system used to judge and punish people who break the law",
+										"examples": [
+											"He was eventually brought to justice after a lengthy police investigation."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The community marched through the streets demanding justice for victims of the policy.", "ok": true },
+						{ "answer": "She felt a great sense of justice when she finally crossed the finish line first.", "ok": false },
+						{ "answer": "He asked the justice to help carry the heavy boxes up to the office on the third floor.", "ok": false },
+						{ "answer": "The class was given a justice to complete and hand in before the end of the school year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "legislation",
+					"summary": "A law or set of laws made by a government or parliament; also the process of creating and passing laws.",
+					"explain": {
+						"entryId": "legislation",
+						"headword": "legislation",
+						"pronunciation": { "display": "lej-is-LAY-shun", "ipaUK": "/ˌledʒ.ɪsˈleɪ.ʃən/", "ipaUS": "/ˌledʒ.ɪsˈleɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "legislation",
+								"inflectionsLine": null,
+								"synonyms": ["law", "act", "statute"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a law or set of laws created by a government or official body",
+										"examples": [
+											"New legislation was introduced to protect workers from unsafe conditions in the workplace."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the process of creating and passing laws through a parliament or government",
+										"examples": [
+											"The legislation took several months to pass through parliament before becoming law."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The government introduced new legislation to reduce carbon emissions from large factories.", "ok": true },
+						{ "answer": "The minister wrote a legislation to send to all schools explaining the new changes to the timetable.", "ok": false },
+						{ "answer": "She put the legislation carefully into her bag before heading to the important meeting.", "ok": false },
+						{ "answer": "He legislated the new rules to the class at the start of every school year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "protest",
+					"summary": "A public event or action where people show that they strongly disagree with something; also used as a verb meaning to take part in or make a protest.",
+					"explain": {
+						"entryId": "protest",
+						"headword": "protest",
+						"pronunciation": { "display": "PROH-test (n) / pruh-TEST (v)", "ipaUK": "/ˈprəʊ.test/ (n)  /prəˈtest/ (v)", "ipaUS": "/ˈproʊ.test/ (n)  /prəˈtest/ (v)" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "protest",
+								"inflectionsLine": "protests",
+								"synonyms": ["demonstration", "march", "rally"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a strong complaint or disagreement, or a public event at which people show their opposition to something",
+										"examples": [
+											"Thousands of people attended the protest against the planned cuts to public services."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "protest",
+								"inflectionsLine": "protests, protested, protesting",
+								"synonyms": ["demonstrate", "object", "oppose"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to show publicly that you disagree with or are opposed to something",
+										"examples": [
+											"Students marched through the city centre to protest against the rise in tuition fees."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Hundreds of workers gathered outside the office to protest against the unfair redundancies.", "ok": true },
+						{ "answer": "She protested to school through the park every morning during the warm spring term.", "ok": false },
+						{ "answer": "He protested all night for the difficult entrance exam that was being held the next morning.", "ok": false },
+						{ "answer": "The students felt very protest after hearing the unfair decision about the new school rules.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "reform",
+					"summary": "A change made to a system, law or organisation in order to improve it; also used as a verb meaning to make such improvements.",
+					"explain": {
+						"entryId": "reform",
+						"headword": "reform",
+						"pronunciation": { "display": "rih-FORM", "ipaUK": "/rɪˈfɔːm/", "ipaUS": "/rɪˈfɔːrm/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "reform",
+								"inflectionsLine": "reforms",
+								"synonyms": ["improvement", "change", "overhaul"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a change made to improve a system, law or organisation",
+										"examples": [
+											"The government announced major reforms to improve standards in the public healthcare system."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "reform",
+								"inflectionsLine": "reforms, reformed, reforming",
+								"synonyms": ["improve", "change", "restructure"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to make changes to a system, organisation or law in order to improve it",
+										"examples": [
+											"The new minister pledged to reform the tax system to make it fairer for lower earners."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The organisation has been calling for prison reform to improve conditions for inmates.", "ok": true },
+						{ "answer": "She reformed her essay carefully the night before submitting it to the professor.", "ok": false },
+						{ "answer": "He asked the teacher to reform the test paper as it contained several printing mistakes.", "ok": false },
+						{ "answer": "The reform was extremely heavy and difficult to carry up the stairs to the main office.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "social justice",
+					"summary": "The idea that all people deserve equal access to rights, opportunities and resources in society, regardless of their background or identity.",
+					"explain": {
+						"entryId": "social justice",
+						"headword": "social justice",
+						"pronunciation": { "display": "SOH-shul JUS-tis", "ipaUK": "/ˌsəʊ.ʃəl ˈdʒʌs.tɪs/", "ipaUS": "/ˌsoʊ.ʃəl ˈdʒʌs.tɪs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "social justice",
+								"inflectionsLine": null,
+								"synonyms": ["fairness", "equal rights", "equity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the principle that all people should have equal rights, opportunities and treatment in society, regardless of their background",
+										"examples": [
+											"She dedicated her career to fighting for social justice and the equal treatment of all citizens."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The young activist gave a powerful speech about the importance of social justice for all.", "ok": true },
+						{ "answer": "The school held a social justice at the end of term to celebrate the students' hard work.", "ok": false },
+						{ "answer": "He joined the social justice club at his local gym to get fit and meet new people.", "ok": false },
+						{ "answer": "She always showed great social justice towards her classmates and was very well liked.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "volunteer",
+					"summary": "A person who freely offers to do something without being paid; also used as a verb meaning to offer to do something without being asked or paid.",
+					"explain": {
+						"entryId": "volunteer",
+						"headword": "volunteer",
+						"pronunciation": { "display": "vol-un-TEER", "ipaUK": "/ˌvɒl.ənˈtɪə/", "ipaUS": "/ˌvɑː.lənˈtɪr/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 3",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "volunteer",
+								"inflectionsLine": "volunteers",
+								"synonyms": ["helper", "unpaid worker", "charity worker"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who freely offers to do something without being paid",
+										"examples": [
+											"The charity relies entirely on volunteers to run its weekly food distribution programme."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 3",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "volunteer",
+								"inflectionsLine": "volunteers, volunteered, volunteering",
+								"synonyms": ["offer", "sign up", "give your time"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to freely offer to do something without being asked or paid",
+										"examples": [
+											"She decided to volunteer at the local care home every Sunday morning."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "3 of 3",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "volunteer",
+								"inflectionsLine": null,
+								"synonyms": ["unpaid", "voluntary", "non-professional"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "relating to work done freely without payment",
+										"examples": [
+											"The project is run entirely by a volunteer team of local residents."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He volunteered at the local hospital every weekend for more than three years.", "ok": true },
+						{ "answer": "She volunteered her notebook from the shelf and handed it to the teacher before leaving.", "ok": false },
+						{ "answer": "He felt very volunteer after helping at the school fair and wanted to do it again soon.", "ok": false },
+						{ "answer": "The students volunteered the exam questions and immediately began writing their answers.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "welfare",
+					"summary": "The health, happiness and comfort of a person or group; also financial support provided by the government to people who need it.",
+					"explain": {
+						"entryId": "welfare",
+						"headword": "welfare",
+						"pronunciation": { "display": "WEL-fair", "ipaUK": "/ˈwel.feə/", "ipaUS": "/ˈwel.fer/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "welfare",
+								"inflectionsLine": null,
+								"synonyms": ["wellbeing", "health", "social support"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the general health, happiness and comfort of a person or group of people",
+										"examples": [
+											"The school has a dedicated welfare officer who supports students with personal difficulties."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "financial or practical support provided by the government to people in need",
+										"examples": [
+											"The government increased welfare payments to help families who were struggling financially."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The new policy was introduced to improve the welfare of children living in poverty.", "ok": true },
+						{ "answer": "She showed great welfare in finishing her degree despite facing many personal difficulties.", "ok": false },
+						{ "answer": "The welfare was excellent, and all the students had a fantastic time at the end-of-year event.", "ok": false },
+						{ "answer": "He welfare the younger students by giving them extra time to finish the written exercise.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

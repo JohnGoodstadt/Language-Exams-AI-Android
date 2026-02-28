@@ -1,0 +1,448 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth1-en",
+	"title": "Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Health",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "allergy",
+					"summary": "A condition in which the body reacts badly to a particular substance, such as a food, pollen or animal hair, causing symptoms like sneezing, rashes or breathing difficulties.",
+					"explain": {
+						"entryId": "allergy",
+						"headword": "allergy",
+						"pronunciation": { "display": "AL-er-jee", "ipaUK": "/ˈæl.ə.dʒi/", "ipaUS": "/ˈæl.ɚ.dʒi/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "allergy",
+								"inflectionsLine": "allergies",
+								"synonyms": ["hypersensitivity", "intolerance", "sensitivity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a medical condition in which the body reacts badly to a particular food, substance or environment",
+										"examples": [
+											"She carries an EpiPen at all times because of her severe allergy to peanuts."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "an informal strong dislike or aversion to something",
+										"examples": [
+											"He seems to have an allergy to doing any housework whatsoever."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The restaurant always asks customers about food allergies before taking their order.", "ok": true },
+						{ "answer": "She showed great allergy in completing all the medical forms before her hospital appointment.", "ok": false },
+						{ "answer": "He felt allergy when the doctor confirmed the results were not as serious as he had feared.", "ok": false },
+						{ "answer": "The allergy was very comfortable and the patients were well looked after by all the nursing staff.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "diagnosis",
+					"summary": "The process of identifying a disease or condition by examining a patient; also the conclusion reached as a result of that examination.",
+					"explain": {
+						"entryId": "diagnosis",
+						"headword": "diagnosis",
+						"pronunciation": { "display": "dy-ag-NOH-sis", "ipaUK": "/ˌdaɪ.əɡˈnəʊ.sɪs/", "ipaUS": "/ˌdaɪ.əɡˈnoʊ.sɪs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "diagnosis",
+								"inflectionsLine": "diagnoses",
+								"synonyms": ["identification", "assessment", "conclusion"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of identifying a disease, illness or condition through examination and tests",
+										"examples": [
+											"The doctor provided a diagnosis of mild asthma and recommended a course of treatment."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the conclusion or opinion reached after careful examination of a problem",
+										"examples": [
+											"The engineer's diagnosis of the fault helped the team fix the problem within hours."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "After several tests, the specialist gave her a diagnosis and explained the treatment options.", "ok": true },
+						{ "answer": "She took the diagnosis to the pharmacy and collected the tablets she needed from the shelf.", "ok": false },
+						{ "answer": "He showed great diagnosis in finding the error in the complicated financial spreadsheet.", "ok": false },
+						{ "answer": "The diagnosis was very comfortable and all the patients felt well rested after their stay.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "examination",
+					"summary": "A careful and thorough inspection of a patient's body to assess their health; also a formal test of knowledge or ability.",
+					"explain": {
+						"entryId": "examination",
+						"headword": "examination",
+						"pronunciation": { "display": "ig-zam-ih-NAY-shun", "ipaUK": "/ɪɡˌzæm.ɪˈneɪ.ʃən/", "ipaUS": "/ɪɡˌzæm.ɪˈneɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "examination",
+								"inflectionsLine": "examinations",
+								"synonyms": ["check-up", "inspection", "assessment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a careful inspection of a patient by a doctor to assess their health",
+										"examples": [
+											"After a thorough physical examination, the doctor concluded that the patient was in excellent health."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a formal test of someone's knowledge or skills, especially at school or university",
+										"examples": [
+											"Students must pass a final examination before receiving their medical licence."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The doctor performed a careful examination of the patient's throat and chest before making a diagnosis.", "ok": true },
+						{ "answer": "She took her examination to the pharmacy to collect the medicine she had been told to take.", "ok": false },
+						{ "answer": "He showed great examination in identifying the fault in the complex computer system quickly.", "ok": false },
+						{ "answer": "The examination was very comfortable and guests were given a warm welcome on arrival.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "healthcare",
+					"summary": "The organised system of medical services and treatment provided to maintain or improve people's health.",
+					"explain": {
+						"entryId": "healthcare",
+						"headword": "healthcare",
+						"pronunciation": { "display": "HELTH-kair", "ipaUK": "/ˈhelθ.keər/", "ipaUS": "/ˈhelθ.ker/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "healthcare",
+								"inflectionsLine": null,
+								"synonyms": ["medical care", "health services", "medicine"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the system of medical services provided to prevent, treat and manage illness and preserve wellbeing",
+										"examples": [
+											"The government pledged to invest an additional five billion pounds in healthcare over the next decade."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Access to affordable healthcare is considered a basic right in many countries around the world.", "ok": true },
+						{ "answer": "She showed great healthcare in looking after her younger brother throughout the school holidays.", "ok": false },
+						{ "answer": "He wore his healthcare to the hospital appointment and felt much better immediately afterwards.", "ok": false },
+						{ "answer": "The healthcare was very tasty and the nurses enjoyed it thoroughly during their lunch break.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "immune system",
+					"summary": "The complex network of cells, tissues and organs in the body that work together to defend it against harmful bacteria, viruses and other foreign substances.",
+					"explain": {
+						"entryId": "immune system",
+						"headword": "immune system",
+						"pronunciation": { "display": "ih-MYOON SIS-tem", "ipaUK": "/ɪˈmjuːn ˈsɪs.təm/", "ipaUS": "/ɪˈmjuːn ˈsɪs.təm/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "immune system",
+								"inflectionsLine": null,
+								"synonyms": ["defence system", "body's defences", "immunity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the network of cells and biological processes that protect the body from disease and infection",
+										"examples": [
+											"A healthy diet and regular sleep help to keep your immune system strong and effective."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Regular exercise and good nutrition can significantly strengthen your immune system.", "ok": true },
+						{ "answer": "She showed great immune system in resisting the temptation to check her phone during the exam.", "ok": false },
+						{ "answer": "He bought some immune system from the pharmacy to help him recover from the cold more quickly.", "ok": false },
+						{ "answer": "The immune system was very comfortable and all the patients felt safe and secure inside.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "medication",
+					"summary": "A drug or medicine used to treat or prevent a disease or medical condition.",
+					"explain": {
+						"entryId": "medication",
+						"headword": "medication",
+						"pronunciation": { "display": "med-ih-KAY-shun", "ipaUK": "/ˌmed.ɪˈkeɪ.ʃən/", "ipaUS": "/ˌmed.ɪˈkeɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "medication",
+								"inflectionsLine": "medications",
+								"synonyms": ["medicine", "drug", "treatment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a drug or medicine used to treat or prevent a disease or medical condition",
+										"examples": [
+											"The doctor prescribed medication to help control her blood pressure over the long term."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He takes daily medication to manage his diabetes and must never miss a dose.", "ok": true },
+						{ "answer": "She showed great medication in caring for the elderly residents at the local care home.", "ok": false },
+						{ "answer": "He wore his medication to the hospital and felt much more comfortable straight away.", "ok": false },
+						{ "answer": "The medication was so heavy that the nurse needed a colleague's help to carry it to the ward.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "nutrition",
+					"summary": "The process of taking in and using food for growth, health and energy; also the study of nutrients and how they affect the body.",
+					"explain": {
+						"entryId": "nutrition",
+						"headword": "nutrition",
+						"pronunciation": { "display": "nyoo-TRISH-un (UK) / noo-TRISH-un (US)", "ipaUK": "/njuːˈtrɪʃ.ən/", "ipaUS": "/nuːˈtrɪʃ.ən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "nutrition",
+								"inflectionsLine": null,
+								"synonyms": ["diet", "nourishment", "sustenance"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of eating and absorbing the right foods to maintain good health",
+										"examples": [
+											"Good nutrition is essential for children's healthy development, especially in the early years."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the science that studies food, diet and how nutrients affect the body",
+										"examples": [
+											"She studied nutrition at university before becoming a registered dietitian."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Poor nutrition during childhood can have a lasting impact on a person's physical and mental health.", "ok": true },
+						{ "answer": "She showed great nutrition at the school sports day and won three gold medals overall.", "ok": false },
+						{ "answer": "He had a long nutrition with the school nurse about his plans for the summer term.", "ok": false },
+						{ "answer": "The nutrition was very comfortable and all the patients thoroughly enjoyed their time there.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "prescription",
+					"summary": "A written instruction from a doctor telling a pharmacist to supply a particular medicine to a patient; also a recommended course of action.",
+					"explain": {
+						"entryId": "prescription",
+						"headword": "prescription",
+						"pronunciation": { "display": "prih-SKRIP-shun", "ipaUK": "/prɪˈskrɪp.ʃən/", "ipaUS": "/prɪˈskrɪp.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "prescription",
+								"inflectionsLine": "prescriptions",
+								"synonyms": ["order", "directive", "authorisation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a written instruction from a doctor authorising a patient to receive a specific medicine from a pharmacist",
+										"examples": [
+											"The doctor wrote a prescription for antibiotics after confirming the patient had a bacterial infection."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a recommended course of action to solve a problem",
+										"examples": [
+											"Her prescription for success was simple: hard work, focus and constant learning."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She took the prescription to the pharmacy and collected her medication within ten minutes.", "ok": true },
+						{ "answer": "He showed the prescription to the museum attendant and was given free entry to the exhibition.", "ok": false },
+						{ "answer": "She prescription her patients to rest for at least a week before returning to full-time work.", "ok": false },
+						{ "answer": "The prescription was very comfortable and offered a wonderful view of the hospital garden.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "recovery",
+					"summary": "The process of becoming well again after an illness, injury or operation; also the process of regaining something that was lost.",
+					"explain": {
+						"entryId": "recovery",
+						"headword": "recovery",
+						"pronunciation": { "display": "rih-KUV-er-ee", "ipaUK": "/rɪˈkʌv.ər.i/", "ipaUS": "/rɪˈkʌv.ɚ.i/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "recovery",
+								"inflectionsLine": "recoveries",
+								"synonyms": ["healing", "recuperation", "rehabilitation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of returning to a normal state of health after an illness, injury or operation",
+										"examples": [
+											"Her recovery after the operation was faster than expected, and she left hospital within two days."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the process of regaining something that was lost or taken",
+										"examples": [
+											"The economic recovery following the crisis took several years to take hold fully."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The doctor advised plenty of rest to support a full recovery after the knee operation.", "ok": true },
+						{ "answer": "She showed great recovery in finishing all the project reports well before the submission deadline.", "ok": false },
+						{ "answer": "He put his recovery in a bag and handed it carefully to the doctor at the follow-up appointment.", "ok": false },
+						{ "answer": "The recovery was very tasty and all the patients enjoyed it greatly during their stay on the ward.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "vaccination",
+					"summary": "The process of injecting a substance into the body to protect against a specific disease by stimulating the immune system.",
+					"explain": {
+						"entryId": "vaccination",
+						"headword": "vaccination",
+						"pronunciation": { "display": "vak-sih-NAY-shun", "ipaUK": "/ˌvæk.sɪˈneɪ.ʃən/", "ipaUS": "/ˌvæk.sɪˈneɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "vaccination",
+								"inflectionsLine": "vaccinations",
+								"synonyms": ["immunisation", "jab", "inoculation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the act of giving someone a vaccine to protect them against a disease by stimulating their immune system",
+										"examples": [
+											"Doctors recommend annual vaccination against influenza, especially for elderly people."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The school arranged vaccination against measles for all students in the first year.", "ok": true },
+						{ "answer": "She showed great vaccination in protecting her team from criticism during the difficult project.", "ok": false },
+						{ "answer": "He wore his vaccination on his sleeve to show the border officials when he arrived at the airport.", "ok": false },
+						{ "answer": "The vaccination was very comfortable and the patients felt well-rested throughout their stay.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

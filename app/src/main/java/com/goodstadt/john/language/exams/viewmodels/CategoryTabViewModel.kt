@@ -247,7 +247,7 @@ class CategoryTabViewModel @Inject constructor(
             // Cache the level for isHeard calls later
             currentLoadedLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
-            val levelsWithQuizzes = listOf("B1")
+            val levelsWithQuizzes = listOf("B1","B2") //if we add A1 quiz then add here
             val isQuizEnabled = levelsWithQuizzes.contains(currentLoadedLevel)
 
             val result = contentRepository.getFormat0Data(currentExamName.value)

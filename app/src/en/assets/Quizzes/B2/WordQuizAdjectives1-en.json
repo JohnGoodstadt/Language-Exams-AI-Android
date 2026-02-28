@@ -1,0 +1,472 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives1-en",
+	"title": "Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Adjectives",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "ambitious",
+					"summary": "Having a strong desire to succeed, achieve something great, or reach a high level of success.",
+					"explain": {
+						"entryId": "ambitious",
+						"headword": "ambitious",
+						"pronunciation": { "display": "am-BISH-us", "ipaUK": "/æmˈbɪʃ.əs/", "ipaUS": "/æmˈbɪʃ.əs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "ambitious",
+								"inflectionsLine": null,
+								"synonyms": ["driven", "determined", "aspiring"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having a strong wish to be successful, powerful or rich",
+										"examples": [
+											"She is extremely ambitious and plans to become a surgeon before the age of thirty-five."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "(of a plan or idea) needing a great amount of effort, skill or resources to succeed",
+										"examples": [
+											"The school set an ambitious target of improving exam results by twenty percent within two years."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is extremely ambitious and hopes to run her own company before the age of thirty.", "ok": true },
+						{ "answer": "He was very ambitious to reach the book on the top shelf, so he stood on a chair.", "ok": false },
+						{ "answer": "She felt ambitious after the large meal and decided to take a short nap.", "ok": false },
+						{ "answer": "The ambitious storm caused serious damage to buildings across the whole city.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "confident",
+					"summary": "Feeling sure about your own abilities or that something will happen in the way you expect; showing a belief in yourself.",
+					"explain": {
+						"entryId": "confident",
+						"headword": "confident",
+						"pronunciation": { "display": "KON-fih-dent", "ipaUK": "/ˈkɒn.fɪ.dənt/", "ipaUS": "/ˈkɑːn.fɪ.dənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "confident",
+								"inflectionsLine": null,
+								"synonyms": ["self-assured", "certain", "positive"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling sure about your own abilities or that something will happen as you expect",
+										"examples": [
+											"She felt confident about the interview after preparing thoroughly for two weeks."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "showing a belief in your own abilities in a way that others can see",
+										"examples": [
+											"He gave a confident speech in front of the entire school without using any notes."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She felt confident about her presentation after practising it more than ten times.", "ok": true },
+						{ "answer": "He was very confident in his bag, which contained everything he needed for class.", "ok": false },
+						{ "answer": "She was very confident the exercise after completing it several times in a row.", "ok": false },
+						{ "answer": "The confident rain made the afternoon school sports day much more enjoyable for everyone.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "curious",
+					"summary": "Wanting to know or learn about something; also used to describe something that is strange or unusual.",
+					"explain": {
+						"entryId": "curious",
+						"headword": "curious",
+						"pronunciation": { "display": "KYOOR-ee-us", "ipaUK": "/ˈkjʊə.ri.əs/", "ipaUS": "/ˈkjʊr.i.əs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "curious",
+								"inflectionsLine": null,
+								"synonyms": ["inquisitive", "interested", "eager to learn"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wanting to know or learn about something",
+										"examples": [
+											"She was curious about how the engine worked and asked the mechanic many detailed questions."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "strange or unusual in a way that attracts your interest",
+										"examples": [
+											"It is a curious fact that the building was never officially given a name."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The children were curious about the fossils and asked the guide question after question.", "ok": true },
+						{ "answer": "She was curious to finish the exam as quickly as possible and leave the hall early.", "ok": false },
+						{ "answer": "He felt very curious after the long run and needed a large glass of water immediately.", "ok": false },
+						{ "answer": "The student was curious the correct answer, so he looked it up in his textbook.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "efficient",
+					"summary": "Working well and producing good results without wasting time, money or energy.",
+					"explain": {
+						"entryId": "efficient",
+						"headword": "efficient",
+						"pronunciation": { "display": "ih-FISH-ent", "ipaUK": "/ɪˈfɪʃ.ənt/", "ipaUS": "/ɪˈfɪʃ.ənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "efficient",
+								"inflectionsLine": null,
+								"synonyms": ["productive", "effective", "organised"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "working well and producing good results without wasting time, money or effort",
+										"examples": [
+											"The new online booking system is far more efficient and saves staff several hours each week."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "(of a person) able to do tasks quickly and well without wasting effort",
+										"examples": [
+											"She is a very efficient worker who always meets her deadlines well ahead of time."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The new filing system is far more efficient and saves the team at least two hours a day.", "ok": true },
+						{ "answer": "She was so efficient by the long journey that she fell asleep before the train arrived.", "ok": false },
+						{ "answer": "He was very efficient about hearing the final exam results and could not sleep at all.", "ok": false },
+						{ "answer": "The students felt efficient after hearing that the difficult test had been cancelled.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "enthusiastic",
+					"summary": "Showing a lot of excitement, energy and interest about something.",
+					"explain": {
+						"entryId": "enthusiastic",
+						"headword": "enthusiastic",
+						"pronunciation": { "display": "en-thyoo-zee-AS-tik", "ipaUK": "/ɪnˌθjuː.ziˈæs.tɪk/", "ipaUS": "/ɪnˌθuː.ziˈæs.tɪk/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "enthusiastic",
+								"inflectionsLine": null,
+								"synonyms": ["eager", "excited", "passionate"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "showing a lot of interest and excitement about something",
+										"examples": [
+											"The students were enthusiastic about the school trip and talked about it all week."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The new teacher was enthusiastic about the subject and made every lesson interesting.", "ok": true },
+						{ "answer": "She was very enthusiastic after the long exam and needed to sit quietly for a while.", "ok": false },
+						{ "answer": "He felt enthusiastic in his stomach just before giving his first public speech.", "ok": false },
+						{ "answer": "She was enthusiastic with the food at the canteen and ate it very slowly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "independent",
+					"summary": "Not needing others for support; able to think or act for yourself without being controlled by others.",
+					"explain": {
+						"entryId": "independent",
+						"headword": "independent",
+						"pronunciation": { "display": "in-dih-PEN-dent", "ipaUK": "/ˌɪn.dɪˈpen.dənt/", "ipaUS": "/ˌɪn.dɪˈpen.dənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "independent",
+								"inflectionsLine": null,
+								"synonyms": ["self-reliant", "autonomous", "self-sufficient"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not needing other people's help or support; able to do things for yourself",
+										"examples": [
+											"She is a very independent student who rarely needs guidance from the teacher."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "not controlled or influenced by another person or group",
+										"examples": [
+											"The report was carried out by an independent team of researchers with no connection to the company."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Living abroad taught her to be more independent and solve problems on her own.", "ok": true },
+						{ "answer": "He felt very independent after the large meal and wanted to lie down on the sofa.", "ok": false },
+						{ "answer": "The teacher was independent to explain the problem because the students did not follow.", "ok": false },
+						{ "answer": "She was independent the homework and placed it carefully on the teacher's desk.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "patient",
+					"summary": "Able to wait for a long time or accept problems without becoming annoyed or anxious; also a noun meaning a person receiving medical treatment.",
+					"explain": {
+						"entryId": "patient",
+						"headword": "patient",
+						"pronunciation": { "display": "PAY-shent", "ipaUK": "/ˈpeɪ.ʃənt/", "ipaUS": "/ˈpeɪ.ʃənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "patient",
+								"inflectionsLine": null,
+								"synonyms": ["calm", "tolerant", "composed"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "able to wait for a long time or deal with a difficult situation without becoming angry or upset",
+										"examples": [
+											"You need to be patient when learning a new language — real progress takes months of practice."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "patient",
+								"inflectionsLine": "patients",
+								"synonyms": ["sick person", "hospital case", "client"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is receiving medical treatment from a doctor or in a hospital",
+										"examples": [
+											"The doctor visited each patient on the ward before the end of her shift."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The teacher was very patient with the students who found the grammar exercise difficult.", "ok": true },
+						{ "answer": "She was very patient to start the exam as soon as the papers were handed out.", "ok": false },
+						{ "answer": "He was patient in the library, borrowing four books on the topic of climate change.", "ok": false },
+						{ "answer": "She was patient the test papers from the students at the end of the lesson.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "resilient",
+					"summary": "Able to recover quickly from difficult situations, problems or setbacks; strong enough to return to a normal state after difficulties.",
+					"explain": {
+						"entryId": "resilient",
+						"headword": "resilient",
+						"pronunciation": { "display": "rih-ZIL-ee-ent", "ipaUK": "/rɪˈzɪl.i.ənt/", "ipaUS": "/rɪˈzɪl.i.ənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "resilient",
+								"inflectionsLine": null,
+								"synonyms": ["tough", "strong", "adaptable"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "able to recover quickly from difficult events or situations",
+										"examples": [
+											"Despite several serious setbacks, she remained resilient and never gave up on her studies."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "(of a substance or material) able to return to its original shape after being bent or stretched",
+										"examples": [
+											"The material is resilient enough to withstand extreme temperatures without breaking."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She was resilient throughout the difficult year and managed to pass all her exams.", "ok": true },
+						{ "answer": "He was very resilient after the class and asked the teacher many more questions.", "ok": false },
+						{ "answer": "She felt resilient to start the new chapter without finishing the previous one first.", "ok": false },
+						{ "answer": "The resilient weather forced the school to cancel all outdoor activities that afternoon.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "successful",
+					"summary": "Having achieved what you wanted to achieve; producing good results or being popular.",
+					"explain": {
+						"entryId": "successful",
+						"headword": "successful",
+						"pronunciation": { "display": "suk-SES-ful", "ipaUK": "/səkˈses.fəl/", "ipaUS": "/səkˈses.fəl/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "successful",
+								"inflectionsLine": null,
+								"synonyms": ["accomplished", "thriving", "effective"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having achieved an aim or reached a desired result",
+										"examples": [
+											"The fundraising event was very successful and raised over five thousand pounds for charity."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "(of a person) having become rich or well-known through work or effort",
+										"examples": [
+											"She became a successful architect after graduating at the top of her class."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The school's new reading programme was very successful, with results improving across all year groups.", "ok": true },
+						{ "answer": "She was very successful that the difficult exam had been postponed until the following week.", "ok": false },
+						{ "answer": "He was successful to pass the driving test first time, which surprised him greatly.", "ok": false },
+						{ "answer": "The successful student left the classroom and walked quietly to the school library.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "supportive",
+					"summary": "Giving help, encouragement or sympathy to someone, especially during a difficult time.",
+					"explain": {
+						"entryId": "supportive",
+						"headword": "supportive",
+						"pronunciation": { "display": "suh-POR-tiv", "ipaUK": "/səˈpɔː.tɪv/", "ipaUS": "/səˈpɔːr.tɪv/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "supportive",
+								"inflectionsLine": null,
+								"synonyms": ["encouraging", "helpful", "caring"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "giving help and encouragement to someone, especially during a difficult time",
+										"examples": [
+											"Her colleagues were very supportive during her illness and helped cover her workload."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her friends were incredibly supportive during the difficult period and checked on her every day.", "ok": true },
+						{ "answer": "He was very supportive of money and put a small amount in a savings account every month.", "ok": false },
+						{ "answer": "She felt very supportive after receiving the unexpected good news from the admissions office.", "ok": false },
+						{ "answer": "The supportive rain fell throughout the night and watered the farmers' fields perfectly.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

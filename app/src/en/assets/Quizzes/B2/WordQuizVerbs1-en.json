@@ -1,0 +1,537 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs1-en",
+	"title": "Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Verbs",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "analyze",
+					"summary": "To examine something carefully and in detail in order to understand or explain it.",
+					"explain": {
+						"entryId": "analyze",
+						"headword": "analyze",
+						"pronunciation": { "display": "AN-uh-lize", "ipaUK": "/ˈæn.ə.laɪz/", "ipaUS": "/ˈæn.ə.laɪz/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "analyze",
+								"inflectionsLine": "analyzes, analyzed, analyzing",
+								"synonyms": ["examine", "investigate", "study"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to examine something carefully and in detail in order to understand or explain it",
+										"examples": [
+											"The scientists carefully analyzed the water samples taken from the river."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to think about something carefully in order to understand what it means",
+										"examples": [
+											"She analyzed the poem and identified several important themes."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "analysis",
+								"inflectionsLine": "analyses",
+								"synonyms": ["examination", "investigation", "study"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of studying something carefully to understand it (noun form: analysis)",
+										"examples": [
+											"The analysis of the results took several weeks to complete."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The research team analyzed the survey results to identify key trends.", "ok": true },
+						{ "answer": "She analyzed to revise her notes more carefully the night before the exam.", "ok": false },
+						{ "answer": "He analyzed his teacher a question about the part he did not understand.", "ok": false },
+						{ "answer": "The students analyzed a new list of vocabulary words every Friday in class.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "communicate",
+					"summary": "To share or exchange information, ideas or feelings with another person, either by speaking, writing or in other ways.",
+					"explain": {
+						"entryId": "communicate",
+						"headword": "communicate",
+						"pronunciation": { "display": "kuh-MYOO-ni-kayt", "ipaUK": "/kəˈmjuː.nɪ.keɪt/", "ipaUS": "/kəˈmjuː.nɪ.keɪt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "communicate",
+								"inflectionsLine": "communicates, communicated, communicating",
+								"synonyms": ["convey", "express", "share"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to share information, news or ideas with others by speaking, writing or other means",
+										"examples": [
+											"Good managers communicate clearly and listen carefully to their teams."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to express feelings or thoughts so that other people understand them",
+										"examples": [
+											"She found it difficult to communicate her ideas in front of the large group."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She communicates very effectively, which is why she is an excellent team leader.", "ok": true },
+						{ "answer": "The teacher communicated the students to open their books to page forty-five.", "ok": false },
+						{ "answer": "He communicated a long letter and posted it to the university admissions office.", "ok": false },
+						{ "answer": "The students communicated the classroom quietly and sat in their usual seats.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "consider",
+					"summary": "To think carefully about something, especially before making a decision; also to regard something in a particular way.",
+					"explain": {
+						"entryId": "consider",
+						"headword": "consider",
+						"pronunciation": { "display": "kun-SID-er", "ipaUK": "/kənˈsɪd.ə/", "ipaUS": "/kənˈsɪd.ɚ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "consider",
+								"inflectionsLine": "considers, considered, considering",
+								"synonyms": ["think about", "reflect on", "contemplate"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to think carefully about something, especially before making a decision",
+										"examples": [
+											"You should consider all the options carefully before making a final decision."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to regard someone or something in a particular way",
+										"examples": [
+											"Many people consider him to be one of the greatest writers of the twentieth century."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The committee carefully considered each application before making their final choice.", "ok": true },
+						{ "answer": "She considered her homework quickly and placed it neatly in her bag before class.", "ok": false },
+						{ "answer": "He considered the classroom and chose a seat near the window at the back.", "ok": false },
+						{ "answer": "The students considered their lunch in the canteen before afternoon classes began.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "demonstrate",
+					"summary": "To show clearly how something works or that something is true; also to take part in a public protest.",
+					"explain": {
+						"entryId": "demonstrate",
+						"headword": "demonstrate",
+						"pronunciation": { "display": "DEM-un-strayt", "ipaUK": "/ˈdem.ən.streɪt/", "ipaUS": "/ˈdem.ən.streɪt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "demonstrate",
+								"inflectionsLine": "demonstrates, demonstrated, demonstrating",
+								"synonyms": ["show", "illustrate", "prove"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to show clearly how something is done or how something works",
+										"examples": [
+											"The instructor demonstrated how to use the equipment before students tried it themselves."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to show clearly that something is true by providing evidence",
+										"examples": [
+											"The results demonstrate that the new teaching method is highly effective."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "demonstrate",
+								"inflectionsLine": "demonstrates, demonstrated, demonstrating",
+								"synonyms": ["protest", "march", "rally"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to take part in a public protest or march to show opposition to or support for something",
+										"examples": [
+											"Thousands of students demonstrated outside the parliament building."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The science teacher demonstrated the experiment step by step before the class repeated it.", "ok": true },
+						{ "answer": "She demonstrated the book from the shelf and began reading at her desk.", "ok": false },
+						{ "answer": "He demonstrated his teacher after class to ask about the upcoming assignment.", "ok": false },
+						{ "answer": "The students demonstrated the exercise six times each until the lesson ended.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "discuss",
+					"summary": "To talk or write about a topic in detail, considering different ideas or opinions.",
+					"explain": {
+						"entryId": "discuss",
+						"headword": "discuss",
+						"pronunciation": { "display": "dis-KUSS", "ipaUK": "/dɪˈskʌs/", "ipaUS": "/dɪˈskʌs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "discuss",
+								"inflectionsLine": "discusses, discussed, discussing",
+								"synonyms": ["talk about", "debate", "examine"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to talk about a topic with someone, especially to share opinions or make a decision",
+										"examples": [
+											"The students discussed the causes of climate change in small groups."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to write about a subject and consider different aspects of it",
+										"examples": [
+											"In this essay, we will discuss the advantages and disadvantages of social media."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The class discussed the novel in pairs before sharing their ideas with everyone.", "ok": true },
+						{ "answer": "She discussed about the importance of healthy eating in her presentation.", "ok": false },
+						{ "answer": "He discussed a new pen from his bag and started writing the answer on the board.", "ok": false },
+						{ "answer": "The teacher discussed the students a list of essay topics to choose from.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "evaluate",
+					"summary": "To judge or assess the quality, importance or value of something after thinking carefully about it.",
+					"explain": {
+						"entryId": "evaluate",
+						"headword": "evaluate",
+						"pronunciation": { "display": "ih-VAL-yoo-ayt", "ipaUK": "/ɪˈvæl.ju.eɪt/", "ipaUS": "/ɪˈvæl.ju.eɪt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "evaluate",
+								"inflectionsLine": "evaluates, evaluated, evaluating",
+								"synonyms": ["assess", "judge", "appraise"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to judge or assess the quality, importance or value of something",
+										"examples": [
+											"The teacher evaluated each student's presentation using a detailed checklist."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to consider information or results carefully in order to form a conclusion",
+										"examples": [
+											"The managers evaluated the new system after six months and decided to keep it."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The school board evaluated the new programme after one year to see if it had been successful.", "ok": true },
+						{ "answer": "She evaluated to apply for the scholarship after speaking with her teacher about it.", "ok": false },
+						{ "answer": "He evaluated a group project to the teacher at the end of the spring term.", "ok": false },
+						{ "answer": "The students evaluated the classroom slowly, looking at the posters on every wall.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "implement",
+					"summary": "To put a plan, system or decision into action; to start using something that has been officially decided.",
+					"explain": {
+						"entryId": "implement",
+						"headword": "implement",
+						"pronunciation": { "display": "IM-pluh-ment", "ipaUK": "/ˈɪm.plɪ.ment/", "ipaUS": "/ˈɪm.plɪ.ment/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "implement",
+								"inflectionsLine": "implements, implemented, implementing",
+								"synonyms": ["carry out", "execute", "put into practice"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to put a plan, policy or decision into effect",
+										"examples": [
+											"The school plans to implement a new digital attendance system from next term."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "implement",
+								"inflectionsLine": "implements",
+								"synonyms": ["tool", "instrument", "device"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a tool or piece of equipment used for a particular purpose",
+										"examples": [
+											"Farming implements such as ploughs and hoes have been used for thousands of years."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The government implemented a new policy to reduce plastic waste in schools.", "ok": true },
+						{ "answer": "She implemented her friend about the change to the class timetable after lunch.", "ok": false },
+						{ "answer": "He implemented to finish the group project before the end of the month.", "ok": false },
+						{ "answer": "The students implemented their pens and notebooks as soon as the test papers arrived.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "negotiate",
+					"summary": "To discuss something formally with someone in order to reach an agreement; also to successfully deal with a difficult situation or obstacle.",
+					"explain": {
+						"entryId": "negotiate",
+						"headword": "negotiate",
+						"pronunciation": { "display": "nih-GOH-shee-ayt", "ipaUK": "/nɪˈɡəʊ.ʃi.eɪt/", "ipaUS": "/nɪˈɡoʊ.ʃi.eɪt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "negotiate",
+								"inflectionsLine": "negotiates, negotiated, negotiating",
+								"synonyms": ["discuss", "bargain", "mediate"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to discuss something formally with someone in order to reach an agreement",
+										"examples": [
+											"The union negotiated a new contract that included a significant pay increase."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to successfully pass through or deal with a difficult situation or obstacle",
+										"examples": [
+											"The driver carefully negotiated the narrow mountain road in the dark."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The two sides negotiated for several weeks before finally reaching an agreement.", "ok": true },
+						{ "answer": "She negotiated the entrance exam successfully and was offered a place at the university.", "ok": false },
+						{ "answer": "He negotiated to school by bicycle every morning to avoid the heavy traffic.", "ok": false },
+						{ "answer": "The students negotiated the exam questions for a few minutes before choosing which to answer.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "participate",
+					"summary": "To take part in or become involved in an activity or event.",
+					"explain": {
+						"entryId": "participate",
+						"headword": "participate",
+						"pronunciation": { "display": "par-TIS-ih-payt", "ipaUK": "/pɑːˈtɪs.ɪ.peɪt/", "ipaUS": "/pɑːrˈtɪs.ɪ.peɪt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "participate",
+								"inflectionsLine": "participates, participated, participating",
+								"synonyms": ["take part", "join in", "engage"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to take part in an activity or event",
+										"examples": [
+											"All students are encouraged to participate in at least one extracurricular activity."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to be actively involved in a discussion or group activity",
+										"examples": [
+											"She always participates in class discussions and asks thoughtful questions."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Every member of the class was invited to participate in the end-of-year debate.", "ok": true },
+						{ "answer": "She participated the school drama competition and won the prize for best actress.", "ok": false },
+						{ "answer": "He participated a very good idea during the meeting that everyone agreed with.", "ok": false },
+						{ "answer": "The class participated the new vocabulary by reading it aloud together three times.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "resolve",
+					"summary": "To find a solution to a problem or disagreement; also used as a noun to mean firm determination to achieve something.",
+					"explain": {
+						"entryId": "resolve",
+						"headword": "resolve",
+						"pronunciation": { "display": "rih-ZOLV", "ipaUK": "/rɪˈzɒlv/", "ipaUS": "/rɪˈzɑːlv/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "resolve",
+								"inflectionsLine": "resolves, resolved, resolving",
+								"synonyms": ["settle", "solve", "sort out"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to find a satisfactory solution to a problem or disagreement",
+										"examples": [
+											"The mediator helped both parties resolve their dispute without going to court."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to make a firm decision to do something",
+										"examples": [
+											"After failing the exam, she resolved to study much harder for the retake."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "resolve",
+								"inflectionsLine": null,
+								"synonyms": ["determination", "willpower", "commitment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "strong determination to achieve something even when it is difficult",
+										"examples": [
+											"She showed great resolve in completing her degree while working full-time."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The two students resolved their disagreement with the help of the class teacher.", "ok": true },
+						{ "answer": "She resolved a new textbook from the school library before the project began.", "ok": false },
+						{ "answer": "He resolved the students a worksheet to complete before the next lesson.", "ok": false },
+						{ "answer": "The teacher resolved the class into groups and asked them to choose a topic.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

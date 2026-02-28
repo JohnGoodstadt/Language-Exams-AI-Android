@@ -1,0 +1,458 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizWork1-en",
+	"title": "Work",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Work",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "application",
+					"summary": "A formal written request for a job, place on a course or other opportunity; also used to mean a computer program or the practical use of a skill.",
+					"explain": {
+						"entryId": "application",
+						"headword": "application",
+						"pronunciation": { "display": "ap-lih-KAY-shun", "ipaUK": "/ˌæp.lɪˈkeɪ.ʃən/", "ipaUS": "/ˌæp.lɪˈkeɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "application",
+								"inflectionsLine": "applications",
+								"synonyms": ["request", "submission", "form"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a formal written or online request for a job, place on a course or other opportunity",
+										"examples": [
+											"She submitted her application for the marketing position two days before the closing date."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the practical use of a theory, skill or rule in a real situation",
+										"examples": [
+											"The application of new technology has transformed the way the company manages its data."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She sent her application to five different companies and received two interview invitations.", "ok": true },
+						{ "answer": "He wore his best application to the job interview at the company's head office.", "ok": false },
+						{ "answer": "She used her application to pay for lunch at the office canteen every day of the week.", "ok": false },
+						{ "answer": "The application was very comfortable and had an excellent view of the city skyline.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "benefits",
+					"summary": "Additional advantages provided by an employer beyond a basic salary, such as health insurance, a pension or paid leave; also general advantages or positive effects.",
+					"explain": {
+						"entryId": "benefits",
+						"headword": "benefits",
+						"pronunciation": { "display": "BEN-ih-fits", "ipaUK": "/ˈben.ɪ.fɪts/", "ipaUS": "/ˈben.ɪ.fɪts/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "benefits",
+								"inflectionsLine": null,
+								"synonyms": ["perks", "advantages", "allowances"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "extra advantages offered by an employer in addition to salary, such as health insurance, a company car or paid holidays",
+										"examples": [
+											"The position comes with excellent benefits, including private healthcare and a company pension."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "money paid by the government to people who are unemployed, ill or in need of support",
+										"examples": [
+											"He claimed unemployment benefits for three months while he was looking for a new job."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The job offers a competitive salary as well as excellent benefits including flexible working hours.", "ok": true },
+						{ "answer": "She showed great benefits in completing the project well ahead of the expected schedule.", "ok": false },
+						{ "answer": "He ate the benefits quickly and returned to his desk before the lunch break was over.", "ok": false },
+						{ "answer": "The benefits were so heavy that it took two assistants to carry them to the conference room.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "contract",
+					"summary": "A formal legal agreement between two or more parties, setting out terms and conditions; also used as a verb meaning to make a legal agreement or to become smaller.",
+					"explain": {
+						"entryId": "contract",
+						"headword": "contract",
+						"pronunciation": { "display": "KON-trakt (n) / kun-TRAKT (v)", "ipaUK": "/ˈkɒn.trækt/ (n)  /kənˈtrækt/ (v)", "ipaUS": "/ˈkɑːn.trækt/ (n)  /kənˈtrækt/ (v)" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "contract",
+								"inflectionsLine": "contracts",
+								"synonyms": ["agreement", "deal", "arrangement"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a written legal agreement between two or more people or organisations",
+										"examples": [
+											"She signed a two-year contract with the company after completing her three-month probation period."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "contract",
+								"inflectionsLine": "contracts, contracted, contracting",
+								"synonyms": ["agree", "arrange", "commit"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to make a formal legal agreement to do something",
+										"examples": [
+											"The company contracted an external firm to handle all of its marketing activities."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "to become smaller or shorter; or to catch an illness",
+										"examples": [
+											"Metals contract when the temperature drops significantly."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He read the contract carefully and asked a lawyer to check the terms before signing it.", "ok": true },
+						{ "answer": "She showed great contract in negotiating her salary and secured a much higher starting offer.", "ok": false },
+						{ "answer": "He contract to arrive at the office by nine o'clock every morning without fail.", "ok": false },
+						{ "answer": "The contract was very comfortable and had a pleasant view of the company garden from the window.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "entrepreneur",
+					"summary": "A person who starts and runs their own business, often taking on financial risks in the hope of making a profit.",
+					"explain": {
+						"entryId": "entrepreneur",
+						"headword": "entrepreneur",
+						"pronunciation": { "display": "on-truh-pruh-NUR", "ipaUK": "/ˌɒn.trə.prəˈnɜːr/", "ipaUS": "/ˌɑːn.trə.prəˈnɜːr/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "entrepreneur",
+								"inflectionsLine": "entrepreneurs",
+								"synonyms": ["businessperson", "founder", "innovator"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "someone who starts their own business, especially when this involves taking financial risks",
+										"examples": [
+											"The young entrepreneur launched her first online business from her bedroom at the age of nineteen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The entrepreneur secured funding from investors and opened her second restaurant within a year.", "ok": true },
+						{ "answer": "He was a very entrepreneur employee who always arrived early and never missed a deadline.", "ok": false },
+						{ "answer": "She showed great entrepreneur in completing all her tasks efficiently before the end of the week.", "ok": false },
+						{ "answer": "The entrepreneur was very tasty and all the guests thoroughly enjoyed it at the conference dinner.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "internship",
+					"summary": "A temporary position, often unpaid or low-paid, in which a student or recent graduate gains practical work experience in a professional environment.",
+					"explain": {
+						"entryId": "internship",
+						"headword": "internship",
+						"pronunciation": { "display": "IN-tern-ship", "ipaUK": "/ˈɪn.tɜːn.ʃɪp/", "ipaUS": "/ˈɪn.tɜːrn.ʃɪp/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "internship",
+								"inflectionsLine": "internships",
+								"synonyms": ["work placement", "traineeship", "work experience"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a short period of work experience, often unpaid, undertaken by a student or recent graduate to gain skills in a particular field",
+										"examples": [
+											"She completed a six-month internship at a law firm before graduating from university."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The internship gave him valuable experience in the finance industry and led directly to a job offer.", "ok": true },
+						{ "answer": "She showed great internship in solving the complex problem that her line manager had presented.", "ok": false },
+						{ "answer": "He put his internship in his bag and showed it to the interviewer at the start of the meeting.", "ok": false },
+						{ "answer": "The internship was very comfortable and had excellent facilities for the permanent members of staff.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "job description",
+					"summary": "A written document that explains the duties, responsibilities and requirements of a particular job or position.",
+					"explain": {
+						"entryId": "job description",
+						"headword": "job description",
+						"pronunciation": { "display": "job dis-KRIP-shun", "ipaUK": "/ˈdʒɒb dɪˈskrɪp.ʃən/", "ipaUS": "/ˈdʒɑːb dɪˈskrɪp.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "job description",
+								"inflectionsLine": "job descriptions",
+								"synonyms": ["role profile", "position summary", "job spec"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a formal document outlining the responsibilities, duties and requirements of a specific job or position",
+										"examples": [
+											"She read the job description carefully before deciding whether to apply for the position."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The job description listed strong communication skills and five years of experience as essential requirements.", "ok": true },
+						{ "answer": "He showed great job description in explaining his role clearly to the new members of the team.", "ok": false },
+						{ "answer": "She wore the job description to the interview and made an excellent first impression on the panel.", "ok": false },
+						{ "answer": "The job description was very comfortable and offered an excellent view of the park from the window.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "negotiation",
+					"summary": "A formal discussion between two or more parties aimed at reaching an agreement; also the process of navigating through or past something.",
+					"explain": {
+						"entryId": "negotiation",
+						"headword": "negotiation",
+						"pronunciation": { "display": "nih-goh-shee-AY-shun", "ipaUK": "/nɪˌɡəʊ.ʃiˈeɪ.ʃən/", "ipaUS": "/nɪˌɡoʊ.ʃiˈeɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "negotiation",
+								"inflectionsLine": "negotiations",
+								"synonyms": ["discussion", "bargaining", "mediation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a formal discussion between people or groups who are trying to reach an agreement",
+										"examples": [
+											"After a week of intensive negotiation, the two companies finally agreed on the terms of the contract."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Skilled negotiation helped her secure a salary that was fifteen percent higher than the initial offer.", "ok": true },
+						{ "answer": "She felt great negotiation when the company finally accepted her request for a pay rise.", "ok": false },
+						{ "answer": "He packed his negotiation into his briefcase before heading to the important client meeting.", "ok": false },
+						{ "answer": "The negotiation was very comfortable and had a beautiful view of the river from the meeting room.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "profession",
+					"summary": "A type of paid work that requires a high level of education or specialist training; also all the people who work in a particular field.",
+					"explain": {
+						"entryId": "profession",
+						"headword": "profession",
+						"pronunciation": { "display": "pruh-FESH-un", "ipaUK": "/prəˈfeʃ.ən/", "ipaUS": "/prəˈfeʃ.ən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "profession",
+								"inflectionsLine": "professions",
+								"synonyms": ["career", "occupation", "vocation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a type of job that requires advanced education or specialist training, such as medicine, law or teaching",
+										"examples": [
+											"Teaching is a demanding profession that requires both academic knowledge and strong people skills."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "all the people who work in a particular profession as a group",
+										"examples": [
+											"The medical profession has called for greater investment in mental health services."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She chose nursing as her profession because she wanted to make a real difference to people's lives.", "ok": true },
+						{ "answer": "She showed great profession throughout the project, always communicating clearly and meeting every deadline.", "ok": false },
+						{ "answer": "He wore his best profession to the annual company awards ceremony at the end of the year.", "ok": false },
+						{ "answer": "The profession was very comfortable and had an excellent view from the corner office window.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "recruitment",
+					"summary": "The process of finding and hiring new people to work for a company or organisation.",
+					"explain": {
+						"entryId": "recruitment",
+						"headword": "recruitment",
+						"pronunciation": { "display": "rih-KROOT-ment", "ipaUK": "/rɪˈkruːt.mənt/", "ipaUS": "/rɪˈkruːt.mənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "recruitment",
+								"inflectionsLine": null,
+								"synonyms": ["hiring", "selection", "talent acquisition"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of finding, selecting and hiring people for jobs or positions within an organisation",
+										"examples": [
+											"The company launched a major recruitment drive to hire fifty new engineers by the end of the year."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The human resources team is responsible for all recruitment within the organisation.", "ok": true },
+						{ "answer": "She attended the recruitment every morning to improve her fitness before the summer holidays.", "ok": false },
+						{ "answer": "He put the recruitment in his briefcase and brought it to the early morning meeting with the director.", "ok": false },
+						{ "answer": "The recruitment was very comfortable and offered a beautiful view of the park from the window.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "resignation",
+					"summary": "The act of formally leaving a job or position; also a feeling of calm acceptance of something difficult or unavoidable.",
+					"explain": {
+						"entryId": "resignation",
+						"headword": "resignation",
+						"pronunciation": { "display": "rez-ig-NAY-shun", "ipaUK": "/ˌrez.ɪɡˈneɪ.ʃən/", "ipaUS": "/ˌrez.ɪɡˈneɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "resignation",
+								"inflectionsLine": "resignations",
+								"synonyms": ["departure", "notice", "withdrawal"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the act of formally giving up a job or position",
+										"examples": [
+											"She handed in her resignation after being offered a senior position at a competing firm."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "calm acceptance of something difficult or unpleasant that cannot be changed",
+										"examples": [
+											"He accepted the news of the restructure with resignation and began to update his CV."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The manager's sudden resignation came as a surprise to the rest of the team.", "ok": true },
+						{ "answer": "She put on her resignation and walked confidently into the boardroom for the final presentation.", "ok": false },
+						{ "answer": "He felt great resignation when his team won the quarterly sales competition for the third time.", "ok": false },
+						{ "answer": "The resignation was very comfortable and had a pleasant view of the company car park below.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

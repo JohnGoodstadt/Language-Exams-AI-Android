@@ -885,15 +885,23 @@ class SettingsViewModel @Inject constructor(
                 val categories = vocabFile.categories
                 var index = 1
                 var totalWordsCount = 0
+                var csv = ""
+                var categoryList = ""
 
                 for (category in categories) {
+                    Timber.i("${csv}")
+                    csv = ""
+                    categoryList = "$categoryList,${category.title}"
                     totalWordsCount = totalWordsCount + category.words.count()
                     var wordCounter = 1
                     Timber.i("WordQuiz${category.title}$index-en count:${category.words.count()}")
 
                     for (word in category.words){
-                        Timber.i("${wordCounter} ${word.word}")
+//                        Timber.i("${wordCounter} ${word.word}")
+                        Timber.i("${word.word},")
+                        csv = "$csv,${word.word}"
                         if (wordCounter > 10){
+
                             index ++
                             wordCounter = 1
                             Timber.i("WordQuiz${category.title}$index-en")
@@ -902,7 +910,9 @@ class SettingsViewModel @Inject constructor(
                         }
                     }
                 }
+                Timber.i("${csv}")
                 Timber.i("total Words ${totalWordsCount}")
+                Timber.i("$categoryList")
             }
             result.onFailure { error ->
                 Timber.e(error)

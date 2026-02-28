@@ -1,0 +1,596 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizRelationships1-en",
+  "title": "Relationships",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Relationships",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "acquaintance",
+          "page": 1,
+          "question": "acquaintance",
+          "summary": "a person that you know but who is not a close friend",
+          "explain": {
+            "entryId": "acquaintance",
+            "headword": "acquaintance",
+            "pronunciation": {
+              "display": "uh-KWAYN-tuns",
+              "ipaUK": "/əˈkweɪntəns/",
+              "ipaUS": "/əˈkweɪntəns/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "acquaintance",
+                "inflectionsLine": "acquaintances",
+                "synonyms": ["contact", "associate", "connection"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a person that you have met and know slightly, but who is not a close friend",
+                    "examples": ["She's not a close friend, just an acquaintance from my evening class.", "I bumped into an old acquaintance at the supermarket yesterday."]
+                  },
+                  {
+                    "senseNumber": 2,
+                    "definition": "knowledge or experience of something or someone",
+                    "examples": ["He had some acquaintance with the subject from his previous job in marketing."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "I ran into an old acquaintance from university at the coffee shop last week.",
+              "ok": true
+            },
+            {
+              "answer": "She was acquaintance with the new company procedures after just one week of training.",
+              "ok": false
+            },
+            {
+              "answer": "They became acquaintance after meeting at the networking event held in the city centre.",
+              "ok": false
+            },
+            {
+              "answer": "He showed great acquaintance by arriving early and helping to set up the conference room.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "bond",
+          "page": 2,
+          "question": "bond",
+          "summary": "a close connection between people based on shared feelings or experiences; to develop a close relationship",
+          "explain": {
+            "entryId": "bond",
+            "headword": "bond",
+            "pronunciation": {
+              "display": "bond",
+              "ipaUK": "/bɒnd/",
+              "ipaUS": "/bɑːnd/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 2",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "bond",
+                "inflectionsLine": "bonds",
+                "synonyms": ["connection", "tie", "link"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a close relationship between people based on shared feelings, interests, or experiences",
+                    "examples": ["The shared experience created a strong bond between the two friends.", "There is a special bond between a parent and a young child."]
+                  }
+                ]
+              },
+              {
+                "ordinal": "2 of 2",
+                "pos": "verb",
+                "grammarType": "intransitive verb",
+                "headwordLine": "bond",
+                "inflectionsLine": "bonds, bonded, bonding",
+                "synonyms": ["connect", "unite", "form a connection"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to develop a close relationship with someone through shared experiences",
+                    "examples": ["The team bonded quickly during the outdoor leadership weekend.", "New parents often bond with their baby in the first few days after the birth."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Growing up in the same street created a strong bond between the two neighbours.",
+              "ok": true
+            },
+            {
+              "answer": "She bonded the contract carefully before signing it at the bottom of each page.",
+              "ok": false
+            },
+            {
+              "answer": "They had a very bond relationship that everyone in the office admired greatly.",
+              "ok": false
+            },
+            {
+              "answer": "He felt a great bond feelings for his colleagues after the challenging project was finished.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "communication",
+          "page": 3,
+          "question": "communication",
+          "summary": "the process of sharing information, ideas, or feelings between people",
+          "explain": {
+            "entryId": "communication",
+            "headword": "communication",
+            "pronunciation": {
+              "display": "kuh-myoo-nih-KAY-shun",
+              "ipaUK": "/kəˌmjuːnɪˈkeɪʃən/",
+              "ipaUS": "/kəˌmjuːnɪˈkeɪʃən/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "communication",
+                "inflectionsLine": null,
+                "synonyms": ["contact", "correspondence", "interaction"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity or process of expressing ideas and feelings or of giving people information",
+                    "examples": ["Good communication is essential in any successful relationship.", "Open communication between team members helps to prevent misunderstandings."]
+                  },
+                  {
+                    "senseNumber": 2,
+                    "definition": "a formal message or letter sent between people or organisations",
+                    "examples": ["The company sent an official communication to all its employees about the restructure."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Open communication between partners is key to resolving disagreements before they escalate.",
+              "ok": true
+            },
+            {
+              "answer": "She showed great communication by finishing the project three days ahead of the deadline.",
+              "ok": false
+            },
+            {
+              "answer": "He communicated a good communication with his team every single morning before work began.",
+              "ok": false
+            },
+            {
+              "answer": "They had many communications about the topic, which helped them understand each other better.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "empathy",
+          "page": 4,
+          "question": "empathy",
+          "summary": "the ability to understand and share the feelings of another person",
+          "explain": {
+            "entryId": "empathy",
+            "headword": "empathy",
+            "pronunciation": {
+              "display": "EM-puh-thee",
+              "ipaUK": "/ˈempəθi/",
+              "ipaUS": "/ˈempəθi/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "empathy",
+                "inflectionsLine": null,
+                "synonyms": ["compassion", "understanding", "sympathy"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the ability to understand and share the feelings of another person, putting yourself in their position",
+                    "examples": ["A good nurse needs to show empathy towards their patients at all times.", "She listened with empathy as her friend described what had happened during the difficult week."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "A good counsellor needs to show empathy towards the people they are helping.",
+              "ok": true
+            },
+            {
+              "answer": "She was very empathy about her colleague's difficult situation at home.",
+              "ok": false
+            },
+            {
+              "answer": "He showed great empathy by winning first prize in the regional public speaking competition.",
+              "ok": false
+            },
+            {
+              "answer": "They felt an empathy feeling when they heard the sad news about their mutual friend.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "interaction",
+          "page": 5,
+          "question": "interaction",
+          "summary": "an occasion when two or more people communicate or react to each other",
+          "explain": {
+            "entryId": "interaction",
+            "headword": "interaction",
+            "pronunciation": {
+              "display": "in-tuh-RAK-shun",
+              "ipaUK": "/ˌɪntərˈækʃən/",
+              "ipaUS": "/ˌɪntərˈækʃən/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "interaction",
+                "inflectionsLine": "interactions",
+                "synonyms": ["communication", "engagement", "exchange"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity of talking to other people, working together with them, or reacting to them",
+                    "examples": ["Regular interaction with colleagues helps build strong working relationships.", "The children's interaction with each other improved their social and language skills significantly."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Daily interaction with native speakers helped her improve her English far more quickly.",
+              "ok": true
+            },
+            {
+              "answer": "He was very interaction with the new students who joined the class in September.",
+              "ok": false
+            },
+            {
+              "answer": "She showed great interaction by submitting all her assignments well before the deadline.",
+              "ok": false
+            },
+            {
+              "answer": "They made an interaction the proposal and the client to try to reach a final agreement.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "negotiation",
+          "page": 6,
+          "question": "negotiation",
+          "summary": "the process of discussing something formally in order to reach an agreement",
+          "explain": {
+            "entryId": "negotiation",
+            "headword": "negotiation",
+            "pronunciation": {
+              "display": "nih-goh-shee-AY-shun",
+              "ipaUK": "/nɪˌɡəʊʃiˈeɪʃən/",
+              "ipaUS": "/nɪˌɡoʊʃiˈeɪʃən/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "negotiation",
+                "inflectionsLine": "negotiations",
+                "synonyms": ["discussion", "bargaining", "mediation"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the process of discussing something formally with someone in order to reach an agreement",
+                    "examples": ["After lengthy negotiation, both parties finally agreed on a fair price.", "Negotiation is an important skill in both professional and personal relationships."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "After several weeks of negotiation, the two companies finally agreed on a new contract.",
+              "ok": true
+            },
+            {
+              "answer": "She showed great negotiation by refusing to listen to anything the other side suggested.",
+              "ok": false
+            },
+            {
+              "answer": "He negotiationed a better deal for his client during the meeting with the main suppliers.",
+              "ok": false
+            },
+            {
+              "answer": "They had a negotiation difficult about the terms of the new working agreement last month.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "networking",
+          "page": 7,
+          "question": "networking",
+          "summary": "the activity of meeting and talking to people who may be useful contacts for your career or business",
+          "explain": {
+            "entryId": "networking",
+            "headword": "networking",
+            "pronunciation": {
+              "display": "NET-wur-king",
+              "ipaUK": "/ˈnetwɜːkɪŋ/",
+              "ipaUS": "/ˈnetwɜːrkɪŋ/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "networking",
+                "inflectionsLine": null,
+                "synonyms": ["connecting", "socialising", "relationship-building"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity of meeting and talking with people who have similar professional interests, especially to find new job opportunities or business contacts",
+                    "examples": ["She attended the conference mainly for the networking opportunities it offered.", "Networking is an important skill for anyone looking to advance their career."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She joined a professional association to improve her networking and meet potential new clients.",
+              "ok": true
+            },
+            {
+              "answer": "He was networked to the industry event by his manager to help him find new business contacts.",
+              "ok": false
+            },
+            {
+              "answer": "The team showed great networking by completing the technical report well ahead of schedule.",
+              "ok": false
+            },
+            {
+              "answer": "She made a networking connection by working more efficiently than all of her colleagues.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "relationship",
+          "page": 8,
+          "question": "relationship",
+          "summary": "the way in which two or more people feel about and behave towards each other",
+          "explain": {
+            "entryId": "relationship",
+            "headword": "relationship",
+            "pronunciation": {
+              "display": "rih-LAY-shun-ship",
+              "ipaUK": "/rɪˈleɪʃənʃɪp/",
+              "ipaUS": "/rɪˈleɪʃənʃɪp/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "relationship",
+                "inflectionsLine": "relationships",
+                "synonyms": ["connection", "bond", "association"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the way in which two or more people feel about and behave towards each other",
+                    "examples": ["She has a very close relationship with her older sister.", "Building a good relationship with your colleagues takes time and effort."]
+                  },
+                  {
+                    "senseNumber": 2,
+                    "definition": "a romantic or sexual friendship between two people",
+                    "examples": ["They have been in a relationship for three years now.", "She ended the relationship because they had completely different goals in life."]
+                  },
+                  {
+                    "senseNumber": 3,
+                    "definition": "the connection or link between two or more things",
+                    "examples": ["There is a clear relationship between regular exercise and improved mental health."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Building a strong relationship with your team makes it easier to work through challenges together.",
+              "ok": true
+            },
+            {
+              "answer": "He was very relationship with his new colleagues after the welcome dinner on his first week.",
+              "ok": false
+            },
+            {
+              "answer": "She showed great relationship by submitting all her work consistently before every deadline.",
+              "ok": false
+            },
+            {
+              "answer": "They relationship well despite the initial difficulties and misunderstandings they faced together.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "social media",
+          "page": 9,
+          "question": "social media",
+          "summary": "websites and applications that allow people to create and share content and connect with others online",
+          "explain": {
+            "entryId": "social media",
+            "headword": "social media",
+            "pronunciation": {
+              "display": "SOH-shul MEE-dee-uh",
+              "ipaUK": "/ˌsəʊʃəl ˈmiːdiə/",
+              "ipaUS": "/ˌsoʊʃəl ˈmiːdiə/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "noun phrase",
+                "headwordLine": "social media",
+                "inflectionsLine": null,
+                "synonyms": ["online platforms", "social networks", "digital media"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "websites and computer programs that allow people to communicate, share content, photographs, and opinions with others on the internet",
+                    "examples": ["She uses social media to stay in touch with friends who live abroad.", "Many businesses now use social media to promote their products and engage with customers."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She uses social media to stay in touch with friends who have moved to other countries.",
+              "ok": true
+            },
+            {
+              "answer": "He social mediated his friends online every evening to share updates from his travels abroad.",
+              "ok": false
+            },
+            {
+              "answer": "The company launched a very social media campaign to try to attract a younger audience.",
+              "ok": false
+            },
+            {
+              "answer": "She posted several social medias about her holiday for all of her followers to see.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "trust",
+          "page": 10,
+          "question": "trust",
+          "summary": "the belief that someone is honest and reliable; to believe in someone's honesty and good intentions",
+          "explain": {
+            "entryId": "trust",
+            "headword": "trust",
+            "pronunciation": {
+              "display": "trust",
+              "ipaUK": "/trʌst/",
+              "ipaUS": "/trʌst/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 2",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "trust",
+                "inflectionsLine": null,
+                "synonyms": ["confidence", "faith", "reliance"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the belief that someone is good, honest, and will not harm or deceive you; confidence in someone",
+                    "examples": ["Building trust in a relationship takes time and consistent honesty.", "She placed her trust in her team and they did not let her down."]
+                  }
+                ]
+              },
+              {
+                "ordinal": "2 of 2",
+                "pos": "verb",
+                "grammarType": "transitive verb",
+                "headwordLine": "trust",
+                "inflectionsLine": "trusts, trusted, trusting",
+                "synonyms": ["believe in", "rely on", "have confidence in"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to believe that someone is honest, reliable, and will not harm or deceive you",
+                    "examples": ["I trust her completely — she has never let me down.", "He didn't trust the information he found online, so he checked several reliable sources."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "It took several months to build trust between the two teams after the disagreement.",
+              "ok": true
+            },
+            {
+              "answer": "She was a very trust employee who always kept her word and met every single deadline.",
+              "ok": false
+            },
+            {
+              "answer": "He showed great trust by finishing the project ahead of schedule without even being asked.",
+              "ok": false
+            },
+            {
+              "answer": "They trusted out of the office early every Friday afternoon to avoid the rush-hour traffic.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

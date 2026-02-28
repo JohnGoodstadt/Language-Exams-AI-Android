@@ -1,0 +1,458 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature1-en",
+	"title": "Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Nature",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "climate change",
+					"summary": "Long-term shifts in global temperatures and weather patterns, largely caused by human activities such as burning fossil fuels.",
+					"explain": {
+						"entryId": "climate change",
+						"headword": "climate change",
+						"pronunciation": { "display": "KLY-mit chaynj", "ipaUK": "/ˈklaɪ.mɪt tʃeɪndʒ/", "ipaUS": "/ˈklaɪ.mɪt tʃeɪndʒ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "climate change",
+								"inflectionsLine": null,
+								"synonyms": ["global warming", "environmental change", "climate crisis"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the long-term shift in global temperatures and weather patterns, primarily caused by human activities such as burning fossil fuels",
+										"examples": [
+											"Scientists warn that climate change is leading to more frequent and severe weather events worldwide."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "more broadly, any significant long-term change in the expected patterns of climate in a region",
+										"examples": [
+											"Governments around the world are being urged to take urgent action to slow the effects of climate change."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The documentary explained how climate change is affecting wildlife habitats across the globe.", "ok": true },
+						{ "answer": "She experienced a climate change when she moved from the UK to Australia and needed time to adjust.", "ok": false },
+						{ "answer": "He needed a climate change from the school library before writing his geography essay.", "ok": false },
+						{ "answer": "The teacher asked every student to bring a climate change to the next lesson for the project.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "conservation",
+					"summary": "The careful protection of natural environments, wildlife and resources to prevent their destruction or waste.",
+					"explain": {
+						"entryId": "conservation",
+						"headword": "conservation",
+						"pronunciation": { "display": "kon-ser-VAY-shun", "ipaUK": "/ˌkɒn.səˈveɪ.ʃən/", "ipaUS": "/ˌkɑːn.sɚˈveɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "conservation",
+								"inflectionsLine": null,
+								"synonyms": ["preservation", "protection", "environmental care"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the protection of natural environments, animals and plants from damage or destruction",
+										"examples": [
+											"Wildlife conservation efforts have helped increase the wild tiger population significantly."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the careful use of resources to avoid unnecessary waste",
+										"examples": [
+											"The government launched a campaign promoting energy conservation in homes and businesses."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Marine conservation programmes have helped protect endangered coral reefs around the world.", "ok": true },
+						{ "answer": "She had a long conservation with her professor after the lecture about the upcoming assignment.", "ok": false },
+						{ "answer": "He filed the conservation carefully into his folder at the end of the lesson.", "ok": false },
+						{ "answer": "The conservation was so interesting that all the students chose to stay behind for fifteen extra minutes.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "deforestation",
+					"summary": "The large-scale cutting down and removal of trees from forested areas, often to use the land for farming or development.",
+					"explain": {
+						"entryId": "deforestation",
+						"headword": "deforestation",
+						"pronunciation": { "display": "dee-for-ih-STAY-shun", "ipaUK": "/ˌdiː.fɒr.ɪˈsteɪ.ʃən/", "ipaUS": "/ˌdiː.fɔːr.ɪˈsteɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "deforestation",
+								"inflectionsLine": null,
+								"synonyms": ["forest clearance", "tree felling", "forest destruction"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of cutting down and removing all the trees from a large area of land, often to use the land for farming, industry or development",
+										"examples": [
+											"Rapid deforestation in the Amazon rainforest is destroying critical habitats for thousands of species."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The report highlighted how deforestation is one of the leading causes of biodiversity loss.", "ok": true },
+						{ "answer": "She studied deforestation to learn the best techniques for planting new trees in urban areas.", "ok": false },
+						{ "answer": "The class visited a deforestation at the weekend to learn about different species of tree.", "ok": false },
+						{ "answer": "He brought a deforestation to class to show the teacher as part of his research project.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "ecosystem",
+					"summary": "All the plants, animals and other living things in an area, together with the non-living parts of their environment, forming a complex system.",
+					"explain": {
+						"entryId": "ecosystem",
+						"headword": "ecosystem",
+						"pronunciation": { "display": "EE-koh-sis-tem", "ipaUK": "/ˈiː.kəʊˌsɪs.təm/", "ipaUS": "/ˈiː.koʊˌsɪs.təm/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "ecosystem",
+								"inflectionsLine": "ecosystems",
+								"synonyms": ["habitat", "ecological community", "natural system"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "all the living organisms in an area together with the non-living parts of their environment, which interact as a system",
+										"examples": [
+											"The coral reef ecosystem supports an extraordinary variety of fish and marine life."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a complex network of interconnected parts that function together as a whole",
+										"examples": [
+											"The tech industry has developed a thriving digital ecosystem around the new platform."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Draining the wetlands would destroy a fragile ecosystem that took thousands of years to develop.", "ok": true },
+						{ "answer": "She bought a new ecosystem from the science supply shop to use in the laboratory experiment.", "ok": false },
+						{ "answer": "He left his ecosystem on the bus and had to borrow one from a classmate for the lesson.", "ok": false },
+						{ "answer": "The students set up an ecosystem at the front of the class to present their survey findings.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "endangered species",
+					"summary": "A type of animal or plant that is at serious risk of becoming extinct because its numbers in the wild have fallen to very low levels.",
+					"explain": {
+						"entryId": "endangered species",
+						"headword": "endangered species",
+						"pronunciation": { "display": "en-DAYN-jerd SPEE-sheez", "ipaUK": "/ɪnˈdeɪn.dʒəd ˈspiː.ʃiːz/", "ipaUS": "/ɪnˈdeɪn.dʒɚd ˈspiː.ʃiːz/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "endangered species",
+								"inflectionsLine": null,
+								"synonyms": ["threatened species", "at-risk species", "vulnerable species"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a type of animal or plant that exists in such small numbers that it is at serious risk of becoming extinct",
+										"examples": [
+											"The mountain gorilla was once considered one of the most critically endangered species on the planet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "New conservation laws have been passed to protect several endangered species from illegal hunting.", "ok": true },
+						{ "answer": "She listed her favourite endangered species of music and discussed each one in her essay.", "ok": false },
+						{ "answer": "The teacher collected the endangered species from every student at the end of the lesson.", "ok": false },
+						{ "answer": "He ordered three endangered species from the internet to use in his school science project.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "environmental protection",
+					"summary": "Actions, laws and policies designed to keep the natural environment safe from damage caused by human activity.",
+					"explain": {
+						"entryId": "environmental protection",
+						"headword": "environmental protection",
+						"pronunciation": { "display": "en-vy-run-MEN-tul pruh-TEK-shun", "ipaUK": "/ɪnˌvaɪ.rən.ˈmen.təl prəˈtek.ʃən/", "ipaUS": "/ɪnˌvaɪ.rən.ˈmen.t̬əl prəˈtek.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "environmental protection",
+								"inflectionsLine": null,
+								"synonyms": ["ecological conservation", "environmental preservation", "green policy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the protection of the natural environment through laws, policies and individual actions that reduce human damage",
+										"examples": [
+											"The new legislation focuses on environmental protection by placing strict limits on industrial emissions."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The government agency is responsible for enforcing environmental protection laws across the country.", "ok": true },
+						{ "answer": "She applied environmental protection to her hands and face before going out into the midday sun.", "ok": false },
+						{ "answer": "He used environmental protection to keep his flat warm and lower his heating bills in winter.", "ok": false },
+						{ "answer": "The school introduced environmental protection for any student who arrived late to class three times.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "pollution",
+					"summary": "Harmful substances that have been introduced into the natural environment, making air, water or land dirty or unsafe.",
+					"explain": {
+						"entryId": "pollution",
+						"headword": "pollution",
+						"pronunciation": { "display": "puh-LOO-shun", "ipaUK": "/pəˈluː.ʃən/", "ipaUS": "/pəˈluː.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "pollution",
+								"inflectionsLine": null,
+								"synonyms": ["contamination", "environmental damage", "toxicity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damage caused to air, water or land by harmful substances or waste",
+										"examples": [
+											"Air pollution in many major cities has reached dangerously high levels during the summer months."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the substances that cause environmental damage",
+										"examples": [
+											"The river was closed to swimmers after high levels of pollution were detected in the water."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The factory was fined heavily for releasing pollution directly into the local river.", "ok": true },
+						{ "answer": "She felt great pollution after cleaning the entire classroom by herself before the inspection.", "ok": false },
+						{ "answer": "He used pollution to heat the water in the science experiment more quickly and efficiently.", "ok": false },
+						{ "answer": "The students completed a pollution together in class to practise their mathematical equations.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "recycling",
+					"summary": "The process of converting used materials or waste into new materials or products so that they can be used again.",
+					"explain": {
+						"entryId": "recycling",
+						"headword": "recycling",
+						"pronunciation": { "display": "ree-SY-kling", "ipaUK": "/ˌriːˈsaɪ.klɪŋ/", "ipaUS": "/ˌriːˈsaɪ.klɪŋ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "recycling",
+								"inflectionsLine": null,
+								"synonyms": ["reprocessing", "reuse", "waste recovery"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of treating used or waste materials so that they can be used again",
+										"examples": [
+											"The school introduced a recycling scheme to reduce the amount of plastic waste it sends to landfill."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "recycle",
+								"inflectionsLine": "recycles, recycled, recycling",
+								"synonyms": ["reprocess", "reuse", "repurpose"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to treat waste materials so that they can be used again",
+										"examples": [
+											"The company recycles over eighty percent of the materials used in its manufacturing process."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The council expanded its recycling programme to include glass, plastic and food waste.", "ok": true },
+						{ "answer": "She put the recycling into the general waste bin so it would not be kept separate from the rubbish.", "ok": false },
+						{ "answer": "He stayed late to finish his recycling and handed it to the teacher before leaving class.", "ok": false },
+						{ "answer": "The students did recycling together the evening before the important geography examination.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "renewable energy",
+					"summary": "Energy produced from natural sources that are constantly replenished and will not run out, such as sunlight, wind, water and geothermal heat.",
+					"explain": {
+						"entryId": "renewable energy",
+						"headword": "renewable energy",
+						"pronunciation": { "display": "rih-NYOO-uh-bul EN-er-jee", "ipaUK": "/rɪˈnjuː.ə.bəl ˈen.ə.dʒi/", "ipaUS": "/rɪˈnuː.ə.bəl ˈen.ɚ.dʒi/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "renewable energy",
+								"inflectionsLine": null,
+								"synonyms": ["clean energy", "green energy", "sustainable energy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "energy from natural sources that are replenished continuously and will not run out, such as the sun, wind and water",
+										"examples": [
+											"Solar panels and wind turbines are among the most widely used sources of renewable energy."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The country has invested heavily in renewable energy and now produces most of its power from wind farms.", "ok": true },
+						{ "answer": "She drank renewable energy before the long examination to help her stay focused and alert.", "ok": false },
+						{ "answer": "He bought renewable energy from the local shop to use as a power source in his experiment.", "ok": false },
+						{ "answer": "The students showed great renewable energy by volunteering to stay behind and tidy the laboratory.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "sustainability",
+					"summary": "The ability to be maintained over the long term without causing permanent damage to the environment or depleting natural resources.",
+					"explain": {
+						"entryId": "sustainability",
+						"headword": "sustainability",
+						"pronunciation": { "display": "suh-stay-nuh-BIL-ih-tee", "ipaUK": "/səˌsteɪ.nəˈbɪl.ɪ.ti/", "ipaUS": "/səˌsteɪ.nəˈbɪl.ɪ.ti/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "sustainability",
+								"inflectionsLine": null,
+								"synonyms": ["environmental responsibility", "eco-friendliness", "long-term viability"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the quality of being able to continue over a long period without harming the environment or using up natural resources",
+										"examples": [
+											"The company made sustainability a central part of its long-term business strategy."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the ability of a process or situation to be maintained at a certain level without causing damage or decline",
+										"examples": [
+											"Economists are questioning the sustainability of the country's rapid economic growth."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The report assessed the sustainability of current fishing levels in the North Atlantic.", "ok": true },
+						{ "answer": "She demonstrated great sustainability by completing all her assignments well before every single deadline.", "ok": false },
+						{ "answer": "He carried his sustainability to school every day in his backpack throughout the entire project.", "ok": false },
+						{ "answer": "The teacher gave each student a sustainability to work through quietly during the afternoon session.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

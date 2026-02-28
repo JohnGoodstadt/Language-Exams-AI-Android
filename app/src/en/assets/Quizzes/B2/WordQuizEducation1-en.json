@@ -1,0 +1,461 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizEducation1-en",
+  "title": "Education",
+  "updatedDate": 0,
+  "data": [
+	{
+	  "title": "Choose the sentence that uses the word correctly.",
+	  "description": "Education & work basics",
+	  "sortorder": 1,
+	  "sections": [
+		{
+		  "title": "",
+		  "page": 1,
+		  "question": "academic",
+		  "summary": "related to studying or education, especially at college or university",
+		  "explain": {
+			"entryId": "academic",
+			"headword": "academic",
+			"pronunciation": { "display": "AK-uh-DEM-ik", "ipaUK": "/ˌækəˈdemɪk/", "ipaUS": "/ˌækəˈdemɪk/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "academic",
+				"inflectionsLine": null,
+				"synonyms": ["scholarly", "educational"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "related to studying or education, especially at a university",
+					"examples": ["She is doing academic research at university."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "academic",
+				"inflectionsLine": "academics",
+				"synonyms": ["scholar", "lecturer"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a person who teaches or studies at a university",
+					"examples": ["The conference was attended by academics from around the world."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She received awards for her academic achievements.", "ok": true },
+			{ "answer": "She received awards for her academic achievementes.", "ok": false },
+			{ "answer": "She received an academic for her achievements.", "ok": false },
+			{ "answer": "She academic achieved awards last year.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 2,
+		  "question": "curriculum",
+		  "summary": "the subjects a school or course teaches",
+		  "explain": {
+			"entryId": "curriculum",
+			"headword": "curriculum",
+			"pronunciation": { "display": "kuh-RIK-yuh-lum", "ipaUK": "/kəˈrɪkjʊləm/", "ipaUS": "/kəˈrɪkjələm/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "curriculum",
+				"inflectionsLine": "curricula, curriculums",
+				"synonyms": ["syllabus", "course plan"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "the subjects and skills that are taught in a school or course",
+					"examples": ["Maths is a core part of the school curriculum."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "The new curriculum includes more science lessons.", "ok": true },
+			{ "answer": "The new curriculum include more science lessons.", "ok": false },
+			{ "answer": "The new curriculum is include more science lessons.", "ok": false },
+			{ "answer": "She curriculumed more science into the lessons.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 3,
+		  "question": "diploma",
+		  "summary": "an official certificate showing you completed a course",
+		  "explain": {
+			"entryId": "diploma",
+			"headword": "diploma",
+			"pronunciation": { "display": "di-PLOH-muh", "ipaUK": "/dɪˈpləʊmə/", "ipaUS": "/dɪˈploʊmə/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "diploma",
+				"inflectionsLine": "diplomas",
+				"synonyms": ["certificate", "qualification"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "an official document showing that you have completed a course of study",
+					"examples": ["He earned a diploma in business management."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She received a diploma after finishing the course.", "ok": true },
+			{ "answer": "She received diploma after finishing the course.", "ok": false },
+			{ "answer": "She diplomaed after finishing the course.", "ok": false },
+			{ "answer": "A diploma is the place where you study.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 4,
+		  "question": "elective",
+		  "summary": "a class you choose to take, not a required one",
+		  "explain": {
+			"entryId": "elective",
+			"headword": "elective",
+			"pronunciation": { "display": "ih-LEK-tiv", "ipaUK": "/ɪˈlektɪv/", "ipaUS": "/ɪˈlektɪv/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "elective",
+				"inflectionsLine": null,
+				"synonyms": ["optional", "choice"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "optional; chosen rather than required",
+					"examples": ["Photography is an elective subject this term."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "elective",
+				"inflectionsLine": "electives",
+				"synonyms": ["optional class"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a class or subject that a student chooses to take",
+					"examples": ["I picked French as my elective."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I chose psychology as an elective this semester.", "ok": true },
+			{ "answer": "I chose psychology as elective this semester.", "ok": false },
+			{ "answer": "I elected psychology as an elective in to semester.", "ok": false },
+			{ "answer": "An elective is a compulsory exam.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 5,
+		  "question": "enrollment",
+		  "summary": "the process of officially joining a course or school",
+		  "explain": {
+			"entryId": "enrollment",
+			"headword": "enrollment",
+			"pronunciation": { "display": "en-ROHL-ment", "ipaUK": "/ɪnˈrəʊlmənt/", "ipaUS": "/ɪnˈroʊlmənt/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "enrollment",
+				"inflectionsLine": null,
+				"synonyms": ["registration", "sign-up"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "the act of officially joining a school, course, or programme",
+					"examples": ["Enrollment for the course closes on Friday."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "Online enrollment is open until the end of the month.", "ok": true },
+			{ "answer": "Online enrollment are open until the end of the month.", "ok": false },
+			{ "answer": "Online enrollment opens until the end of the month.", "ok": false },
+			{ "answer": "She enrollmented for the course yesterday.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 6,
+		  "question": "faculty",
+		  "summary": "the teachers and professors at a school or university",
+		  "explain": {
+			"entryId": "faculty",
+			"headword": "faculty",
+			"pronunciation": { "display": "FAK-uhl-tee", "ipaUK": "/ˈfækəlti/", "ipaUS": "/ˈfækəlti/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "faculty",
+				"inflectionsLine": "faculties",
+				"synonyms": ["teaching staff", "staff"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "the teachers and professors working at a university or school",
+					"examples": ["The faculty supported the new teaching plan."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "faculty",
+				"inflectionsLine": "faculties",
+				"synonyms": ["department"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a department or group within a university, such as the faculty of law",
+					"examples": ["She studied in the faculty of engineering."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "The faculty met to discuss the new curriculum.", "ok": true },
+			{ "answer": "The faculty meet to discuss the new curriculum.", "ok": false },
+			{ "answer": "The faculties was met to discuss the new curriculum.", "ok": false },
+			{ "answer": "Faculty is a type of student exam.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 7,
+		  "question": "lecture",
+		  "summary": "a talk given to students to teach a subject",
+		  "explain": {
+			"entryId": "lecture",
+			"headword": "lecture",
+			"pronunciation": { "display": "LEK-chuh", "ipaUK": "/ˈlektʃə/", "ipaUS": "/ˈlektʃər/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "lecture",
+				"inflectionsLine": "lectures",
+				"synonyms": ["talk", "class"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a talk or class where a teacher explains a subject to a group of students",
+					"examples": ["We had a lecture on climate change."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "lecture",
+				"inflectionsLine": "lectures, lecturing, lectured",
+				"synonyms": ["teach", "scold"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to give a talk to teach people about a subject",
+					"examples": ["She lectures in history at the university."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "We listened to a lecture on modern history.", "ok": true },
+			{ "answer": "We listened to lecture on modern history.", "ok": false },
+			{ "answer": "We listened a lecture about modern history.", "ok": false },
+			{ "answer": "Lecture is the paper you write at the end of a course.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 8,
+		  "question": "prerequisite",
+		  "summary": "something you must have or do before you can do something else",
+		  "explain": {
+			"entryId": "prerequisite",
+			"headword": "prerequisite",
+			"pronunciation": { "display": "pree-REK-wuh-zit", "ipaUK": "/ˌpriːˈrekwəzɪt/", "ipaUS": "/ˌpriːˈrɛkwəzɪt/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "prerequisite",
+				"inflectionsLine": "prerequisites",
+				"synonyms": ["requirement", "condition"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "something that is required before you can do something else",
+					"examples": ["A basic maths course is a prerequisite for physics."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "prerequisite",
+				"inflectionsLine": null,
+				"synonyms": ["required", "necessary"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "needed or required before something can happen",
+					"examples": ["Language skills are prerequisite for the role."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "Passing the entry test is a prerequisite for this course.", "ok": true },
+			{ "answer": "Passing the entry test is prerequisite for this course.", "ok": false },
+			{ "answer": "Passing the entry test is a prerequisite to this course.", "ok": false },
+			{ "answer": "A prerequisite is the final project you write.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 9,
+		  "question": "scholarship",
+		  "summary": "money given to a student to help pay for education",
+		  "explain": {
+			"entryId": "scholarship",
+			"headword": "scholarship",
+			"pronunciation": { "display": "SKOL-uh-ship", "ipaUK": "/ˈskɒləʃɪp/", "ipaUS": "/ˈskɑːlərʃɪp/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "scholarship",
+				"inflectionsLine": "scholarships",
+				"synonyms": ["grant", "award"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "money given to a student to help pay for education, usually because of ability or need",
+					"examples": ["She won a scholarship to study abroad."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "He applied for a scholarship to cover tuition fees.", "ok": true },
+			{ "answer": "He applied for scholarship to cover tuition fees.", "ok": false },
+			{ "answer": "He applied a scholarship to cover tuition fees.", "ok": false },
+			{ "answer": "A scholarship is a school timetable.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 10,
+		  "question": "thesis",
+		  "summary": "a long piece of writing for a university degree",
+		  "explain": {
+			"entryId": "thesis",
+			"headword": "thesis",
+			"pronunciation": { "display": "THEE-sis", "ipaUK": "/ˈθiːsɪs/", "ipaUS": "/ˈθiːsɪs/" },
+			"labels": ["B2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "thesis",
+				"inflectionsLine": "theses",
+				"synonyms": ["dissertation", "research paper"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a long piece of writing based on research, written for a university degree",
+					"examples": ["He is writing his thesis on renewable energy."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She spent months researching and writing her thesis.", "ok": true },
+			{ "answer": "She spent months researching and writing thesis.", "ok": false },
+			{ "answer": "She thesis wrote for months about research.", "ok": false },
+			{ "answer": "A thesis is a short class discussion.", "ok": false }
+		  ]
+		}
+	  ]
+	}
+  ]
+}

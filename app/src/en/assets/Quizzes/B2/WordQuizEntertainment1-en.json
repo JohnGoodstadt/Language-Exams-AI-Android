@@ -1,0 +1,462 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEntertainment1-en",
+	"title": "Entertainment",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Entertainment",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "activity",
+					"summary": "Something that you do for enjoyment, exercise or a specific purpose; also the state in which a lot of things are happening.",
+					"explain": {
+						"entryId": "activity",
+						"headword": "activity",
+						"pronunciation": { "display": "ak-TIV-ih-tee", "ipaUK": "/ækˈtɪv.ɪ.ti/", "ipaUS": "/ækˈtɪv.ɪ.ti/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "activity",
+								"inflectionsLine": "activities",
+								"synonyms": ["pursuit", "pastime", "exercise"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "something that you do for interest or pleasure, or as part of your job or daily life",
+										"examples": [
+											"Swimming is an excellent physical activity that benefits both your body and your mental health."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the situation in which a lot of things are happening or people are moving around",
+										"examples": [
+											"There was a great deal of activity in the school corridor between lessons."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The sports centre offers a wide range of activities for all ages, from yoga to rock climbing.", "ok": true },
+						{ "answer": "She showed great activity in solving the maths problem on the board without any assistance.", "ok": false },
+						{ "answer": "He had a lot of activity in his school bag that he carried to every afternoon lesson.", "ok": false },
+						{ "answer": "The activity was very soft and warm, making it perfect to use in the bedroom during winter.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "concert",
+					"summary": "A live performance of music played in front of an audience, usually at a specific venue.",
+					"explain": {
+						"entryId": "concert",
+						"headword": "concert",
+						"pronunciation": { "display": "KON-sert", "ipaUK": "/ˈkɒn.sət/", "ipaUS": "/ˈkɑːn.sɚt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "concert",
+								"inflectionsLine": "concerts",
+								"synonyms": ["performance", "show", "gig"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a live performance of music in front of an audience",
+										"examples": [
+											"She bought tickets to a concert by her favourite band almost six months in advance."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "used in the phrase 'in concert' meaning working together or performing live",
+										"examples": [
+											"The two companies acted in concert to reduce their environmental impact."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The outdoor concert attracted over twenty thousand people despite the cold weather.", "ok": true },
+						{ "answer": "He had a long concert with his manager to discuss the details of the new project.", "ok": false },
+						{ "answer": "She showed great concert in completing all her assignments well ahead of each deadline.", "ok": false },
+						{ "answer": "The concert was so heavy that it took three people to lift it onto the stage.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "entertainment",
+					"summary": "Shows, performances, films or other activities that people enjoy watching or taking part in; also the act of keeping people entertained or hosting guests.",
+					"explain": {
+						"entryId": "entertainment",
+						"headword": "entertainment",
+						"pronunciation": { "display": "en-ter-TAYN-ment", "ipaUK": "/ˌen.təˈteɪn.mənt/", "ipaUS": "/ˌen.t̬ɚˈteɪn.mənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "entertainment",
+								"inflectionsLine": null,
+								"synonyms": ["amusement", "enjoyment", "recreation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "shows, performances or activities that people enjoy watching or participating in",
+										"examples": [
+											"The festival offered a wide variety of entertainment, including live music, comedy and dance."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the act of hosting guests and making them feel welcome",
+										"examples": [
+											"The company provided entertainment for its clients at the annual summer dinner."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The theme park offers entertainment for the whole family, from rides to live shows.", "ok": true },
+						{ "answer": "She showed great entertainment in completing all the exercises before the end of the lesson.", "ok": false },
+						{ "answer": "He had entertainment in his school bag to keep him occupied on the long coach journey.", "ok": false },
+						{ "answer": "The entertainment was very soft and warm, making everyone feel comfortable and relaxed.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "hobby",
+					"summary": "An activity that you enjoy doing regularly in your free time, not as your main job.",
+					"explain": {
+						"entryId": "hobby",
+						"headword": "hobby",
+						"pronunciation": { "display": "HOB-ee", "ipaUK": "/ˈhɒb.i/", "ipaUS": "/ˈhɑː.bi/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "hobby",
+								"inflectionsLine": "hobbies",
+								"synonyms": ["pastime", "interest", "pursuit"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an activity that you enjoy doing regularly in your spare time, outside of work",
+										"examples": [
+											"Photography became her hobby after she received a camera as a birthday present."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He took up running as a hobby and eventually completed his first half-marathon last spring.", "ok": true },
+						{ "answer": "She had great hobby for mathematics and always arrived early to every lesson without fail.", "ok": false },
+						{ "answer": "He put the hobby in his bag and brought it to the afternoon lesson to show the teacher.", "ok": false },
+						{ "answer": "The class showed great hobby in finishing the group project several days before the deadline.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "leisure",
+					"summary": "Free time when you are not working and can do activities you enjoy; also used as an adjective to describe relaxed, unhurried activities or spaces.",
+					"explain": {
+						"entryId": "leisure",
+						"headword": "leisure",
+						"pronunciation": { "display": "LEZH-er (UK) / LEE-zher (US)", "ipaUK": "/ˈleʒ.ə/", "ipaUS": "/ˈliː.ʒɚ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "leisure",
+								"inflectionsLine": null,
+								"synonyms": ["free time", "spare time", "relaxation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "time when you are free from work or other duties and can relax or do things you enjoy",
+										"examples": [
+											"She spends her leisure time reading, painting and visiting art galleries across the city."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "used to describe activities or facilities designed for enjoyment and relaxation",
+										"examples": [
+											"The new leisure centre has a swimming pool, gym and indoor climbing wall."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "At leisure, she enjoys gardening, walking in the countryside and learning new languages.", "ok": true },
+						{ "answer": "He showed great leisure in completing the difficult assignment well before the submission deadline.", "ok": false },
+						{ "answer": "She packed her leisure carefully into her suitcase for the two-week holiday in the south of France.", "ok": false },
+						{ "answer": "The leisure was very informative and helped the students understand a particularly difficult topic.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "museum",
+					"summary": "A building where interesting and important historical, scientific or artistic objects are collected, kept and displayed for the public to see.",
+					"explain": {
+						"entryId": "museum",
+						"headword": "museum",
+						"pronunciation": { "display": "myoo-ZEE-um", "ipaUK": "/mjuˈziː.əm/", "ipaUS": "/mjuˈziː.əm/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "museum",
+								"inflectionsLine": "museums",
+								"synonyms": ["gallery", "exhibition", "collection"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building in which objects of historical, scientific or artistic importance are collected, kept and put on display for the public",
+										"examples": [
+											"The class visited a natural history museum to study prehistoric animals and fossils."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The city's science museum attracts over a million visitors from around the world each year.", "ok": true },
+						{ "answer": "She watched a museum on television about the history of ancient Egypt on Saturday evening.", "ok": false },
+						{ "answer": "He kept a small museum in his school bag that he referred to during every history lesson.", "ok": false },
+						{ "answer": "The museum was very tasty and all the students thoroughly enjoyed it at the end-of-term party.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "performance",
+					"summary": "The act of performing a play, concert, dance or other show in front of an audience; also how well a person or thing does something.",
+					"explain": {
+						"entryId": "performance",
+						"headword": "performance",
+						"pronunciation": { "display": "per-FOR-mens", "ipaUK": "/pəˈfɔː.məns/", "ipaUS": "/pɚˈfɔːr.məns/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "performance",
+								"inflectionsLine": "performances",
+								"synonyms": ["show", "production", "presentation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the act of performing a play, concert or other entertainment in front of an audience",
+										"examples": [
+											"The audience gave the cast a standing ovation at the end of the final performance."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "how well or badly a person, machine or organisation does something",
+										"examples": [
+											"The manager reviewed each team member's performance at the end of the financial year."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The evening performance of the ballet was sold out weeks before opening night.", "ok": true },
+						{ "answer": "She had a long performance with her teacher about the essay she had submitted a week late.", "ok": false },
+						{ "answer": "He packed his performance carefully into his bag and handed it to the director before leaving.", "ok": false },
+						{ "answer": "The performance was very soft and comfortable and helped everyone relax after the long working day.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "recreation",
+					"summary": "Activities done for enjoyment and relaxation when not working; leisure activities that refresh the body or mind.",
+					"explain": {
+						"entryId": "recreation",
+						"headword": "recreation",
+						"pronunciation": { "display": "rek-ree-AY-shun", "ipaUK": "/ˌrek.riˈeɪ.ʃən/", "ipaUS": "/ˌrek.riˈeɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "recreation",
+								"inflectionsLine": null,
+								"synonyms": ["leisure", "relaxation", "pastime"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "activities that people do for enjoyment when they are not working",
+										"examples": [
+											"The park provides excellent facilities for outdoor recreation, including walking trails and sports courts."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The town built a new recreation centre with a swimming pool, gym and indoor sports hall.", "ok": true },
+						{ "answer": "The class did a careful recreation of the experiment to verify that the original results were accurate.", "ok": false },
+						{ "answer": "She showed great recreation in solving the problem on the board and explaining it to the class.", "ok": false },
+						{ "answer": "He had a lot of recreation in his backpack that he used during the afternoon science lesson.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "theatre",
+					"summary": "A building where plays and other live performances are staged; also the art of writing and performing plays; also used to refer to an operating theatre in a hospital.",
+					"explain": {
+						"entryId": "theatre",
+						"headword": "theatre",
+						"pronunciation": { "display": "THEE-uh-ter", "ipaUK": "/ˈθɪə.tər/", "ipaUS": "/ˈθiː.ə.t̬ɚ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "theatre",
+								"inflectionsLine": "theatres",
+								"synonyms": ["playhouse", "auditorium", "stage"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building with a stage where plays, musicals and other live performances are presented to an audience",
+										"examples": [
+											"She has loved going to the theatre ever since she saw her first play at the age of eight."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "plays and other dramatic works as an art form",
+										"examples": [
+											"He studied theatre at drama school before beginning his career as an actor."
+										]
+									},
+									{
+										"senseNumber": 3,
+										"definition": "(UK) a room in a hospital where surgical operations are performed",
+										"examples": [
+											"The patient was taken to theatre early in the morning for the operation."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The local theatre is staging a new production of Hamlet every evening throughout October.", "ok": true },
+						{ "answer": "He watched a theatre on television about the history of the Second World War last night.", "ok": false },
+						{ "answer": "She bought a theatre from the supermarket and prepared it carefully for the family dinner.", "ok": false },
+						{ "answer": "He was very theatre at the school play, performing his role with total confidence on stage.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "tourism",
+					"summary": "The activity of travelling to places for pleasure or interest; also the business of providing services for people who travel.",
+					"explain": {
+						"entryId": "tourism",
+						"headword": "tourism",
+						"pronunciation": { "display": "TOOR-iz-um", "ipaUK": "/ˈtʊə.rɪ.zəm/", "ipaUS": "/ˈtʊr.ɪ.zəm/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "tourism",
+								"inflectionsLine": null,
+								"synonyms": ["travel", "sightseeing", "hospitality industry"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the activity of travelling to places away from home for pleasure or interest",
+										"examples": [
+											"Tourism is one of the most important industries in many coastal regions of the world."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the business of organising and providing services for tourists",
+										"examples": [
+											"The country invested heavily in tourism after a report showed its potential for economic growth."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The region depends heavily on tourism, with millions of visitors arriving each summer.", "ok": true },
+						{ "answer": "She showed great tourism during the geography lesson and answered every question correctly.", "ok": false },
+						{ "answer": "He had tourism in his school bag that he used to plan the route to the national museum.", "ok": false },
+						{ "answer": "The class did a tourism together after the geography exam to celebrate the end of term.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

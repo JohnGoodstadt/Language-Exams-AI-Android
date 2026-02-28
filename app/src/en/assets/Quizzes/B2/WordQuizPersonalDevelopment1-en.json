@@ -1,0 +1,246 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonalDevelopment1-en",
+	"title": "Personal Development",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Personal Development",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "achievement",
+					"summary": "Something accomplished successfully, especially through effort, skill or courage; also the act of accomplishing something successfully.",
+					"explain": {
+						"entryId": "achievement",
+						"headword": "achievement",
+						"pronunciation": { "display": "uh-CHEEV-ment", "ipaUK": "/əˈtʃiːv.mənt/", "ipaUS": "/əˈtʃiːv.mənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "achievement",
+								"inflectionsLine": "achievements",
+								"synonyms": ["accomplishment", "success", "attainment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "something successfully accomplished, especially through effort, skill or determination",
+										"examples": [
+											"Winning the national championship was the greatest achievement of her sporting career."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the process of successfully completing something difficult or reaching an important goal",
+										"examples": [
+											"The achievement of her goals required years of dedication and hard work."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Publishing her first novel at the age of twenty-five was a remarkable personal achievement.", "ok": true },
+						{ "answer": "He showed great achievement in carrying all the heavy boxes up to the third floor by himself.", "ok": false },
+						{ "answer": "She had an achievement in her school bag that she took to the careers adviser every week.", "ok": false },
+						{ "answer": "The achievement was very comfortable and offered a wonderful view from the corner office window.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "commitment",
+					"summary": "A strong sense of dedication to a cause, activity or person; also a promise or obligation to do something.",
+					"explain": {
+						"entryId": "commitment",
+						"headword": "commitment",
+						"pronunciation": { "display": "kuh-MIT-ment", "ipaUK": "/kəˈmɪt.mənt/", "ipaUS": "/kəˈmɪt.mənt/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "commitment",
+								"inflectionsLine": "commitments",
+								"synonyms": ["dedication", "devotion", "loyalty"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the willingness to give a lot of your time and energy to something you believe in",
+										"examples": [
+											"Her commitment to the project was evident from the long hours she put in every single week."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a promise or firm decision to do something",
+										"examples": [
+											"The company made a public commitment to reduce its carbon emissions by fifty percent."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her commitment to improving her skills led her to study every evening for over a year.", "ok": true },
+						{ "answer": "She felt great commitment when the difficult project was finally completed and delivered on time.", "ok": false },
+						{ "answer": "He put his commitment in an envelope and handed it to the manager before leaving the office.", "ok": false },
+						{ "answer": "The commitment was very comfortable and had an excellent view of the city from the window.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "dedication",
+					"summary": "The quality of being fully committed to a task or purpose; the willingness to put in sustained effort over time.",
+					"explain": {
+						"entryId": "dedication",
+						"headword": "dedication",
+						"pronunciation": { "display": "ded-ih-KAY-shun", "ipaUK": "/ˌded.ɪˈkeɪ.ʃən/", "ipaUS": "/ˌded.ɪˈkeɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "dedication",
+								"inflectionsLine": "dedications",
+								"synonyms": ["commitment", "devotion", "perseverance"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "great commitment and effort given to a particular task, cause or person over a sustained period",
+										"examples": [
+											"Her dedication to learning new skills made her one of the most valued members of the team."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a message at the beginning of a book, piece of music or work of art, expressing who it was made for",
+										"examples": [
+											"The dedication in his first novel read: 'For my mother, who always believed in me.'"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "It was through sheer dedication and years of practice that she became a concert pianist.", "ok": true },
+						{ "answer": "She wore her dedication to every interview and always created an excellent first impression.", "ok": false },
+						{ "answer": "He had a lot of dedication in his briefcase that he presented to the potential investors.", "ok": false },
+						{ "answer": "The dedication was very tasty and all the guests enjoyed it at the end-of-year awards dinner.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "leadership",
+					"summary": "The ability to guide, inspire and direct a group of people towards a common goal; also the position of being the leader of a group or organisation.",
+					"explain": {
+						"entryId": "leadership",
+						"headword": "leadership",
+						"pronunciation": { "display": "LEE-der-ship", "ipaUK": "/ˈliː.də.ʃɪp/", "ipaUS": "/ˈliː.dɚ.ʃɪp/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "leadership",
+								"inflectionsLine": null,
+								"synonyms": ["guidance", "direction", "management"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the ability to guide, motivate and direct others towards a shared goal",
+										"examples": [
+											"Her leadership skills were praised by the entire team after the project's successful completion."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the position or state of being the leader of a group, party or organisation",
+										"examples": [
+											"He took over the leadership of the department after the previous director retired."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her strong leadership kept the team focused and motivated throughout the most difficult phase of the project.", "ok": true },
+						{ "answer": "He showed great leadership in carrying all the heavy equipment up to the conference room alone.", "ok": false },
+						{ "answer": "She wore her leadership to the annual staff ceremony and received many compliments on the evening.", "ok": false },
+						{ "answer": "The leadership was very comfortable and offered a beautiful view of the surrounding countryside.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "motivation",
+					"summary": "The desire or drive to do or achieve something; also the reason or reasons behind a person's actions or behaviour.",
+					"explain": {
+						"entryId": "motivation",
+						"headword": "motivation",
+						"pronunciation": { "display": "moh-tih-VAY-shun", "ipaUK": "/ˌməʊ.tɪˈveɪ.ʃən/", "ipaUS": "/ˌmoʊ.tɪˈveɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "motivation",
+								"inflectionsLine": "motivations",
+								"synonyms": ["drive", "incentive", "inspiration"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "enthusiasm and determination to do or achieve something",
+										"examples": [
+											"His motivation to succeed came from a strong desire to provide a better life for his family."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the reason or reasons that cause someone to act in a particular way",
+										"examples": [
+											"The detective tried to understand the motivation behind the suspect's actions."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She struggled to find the motivation to study after a long and exhausting week at work.", "ok": true },
+						{ "answer": "He felt great motivation after eating a large meal and decided to take a short rest on the sofa.", "ok": false },
+						{ "answer": "She put her motivation in her bag and used it every morning before she started her daily tasks.", "ok": false },
+						{ "answer": "The motivation was very comfortable and had an excellent view of the surrounding hills and fields.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

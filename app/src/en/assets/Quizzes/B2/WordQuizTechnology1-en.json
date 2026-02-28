@@ -1,0 +1,479 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology1-en",
+	"title": "Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Technology",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "application",
+					"summary": "A computer program designed to perform a specific task on a device; also a formal request, or the act of putting something into practice.",
+					"explain": {
+						"entryId": "application",
+						"headword": "application",
+						"pronunciation": { "display": "ap-lih-KAY-shun", "ipaUK": "/ˌæp.lɪˈkeɪ.ʃən/", "ipaUS": "/ˌæp.lɪˈkeɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "application",
+								"inflectionsLine": "applications",
+								"synonyms": ["app", "program", "software"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a computer program or piece of software designed to fulfil a specific purpose on a phone, tablet or computer",
+										"examples": [
+											"She downloaded a new application on her smartphone to help manage her daily tasks and schedule."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a formal written request for something, such as a job or a place on a course",
+										"examples": [
+											"He submitted his application to the university three months before the closing date."
+										]
+									},
+									{
+										"senseNumber": 3,
+										"definition": "the practical use of a theory, skill or idea in a particular situation",
+										"examples": [
+											"The application of artificial intelligence in medicine is growing rapidly."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The new application allows users to translate text into over fifty languages instantly.", "ok": true },
+						{ "answer": "He felt great application when the teacher announced that the test had been postponed.", "ok": false },
+						{ "answer": "She kept some application in her bag to fix the poster to the classroom wall.", "ok": false },
+						{ "answer": "The application was very warm and comfortable to wear during the cold winter months.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "artificial intelligence",
+					"summary": "The development of computer systems that can perform tasks which normally require human intelligence, such as understanding language, recognising images or making decisions.",
+					"explain": {
+						"entryId": "artificial intelligence",
+						"headword": "artificial intelligence",
+						"pronunciation": { "display": "ar-tih-FISH-ul in-TEL-ih-jens", "ipaUK": "/ˌɑː.tɪˈfɪʃ.əl ɪnˈtel.ɪ.dʒəns/", "ipaUS": "/ˌɑːr.t̬ɪˈfɪʃ.əl ɪnˈtel.ɪ.dʒəns/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "artificial intelligence",
+								"inflectionsLine": null,
+								"synonyms": ["AI", "machine intelligence", "machine learning"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the development of computer systems that can perform tasks which normally require human intelligence, such as speech recognition, decision-making and visual perception",
+										"examples": [
+											"Artificial intelligence is increasingly being used to help doctors diagnose diseases more accurately."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the field of computer science focused on building intelligent machines capable of human-like behaviour",
+										"examples": [
+											"She decided to study artificial intelligence at university after reading about its impact on the job market."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The company uses artificial intelligence to recommend products based on customers' previous purchases.", "ok": true },
+						{ "answer": "She showed great artificial intelligence by solving the complex equation entirely in her head.", "ok": false },
+						{ "answer": "He bought some artificial intelligence from the technology shop to upgrade his old computer.", "ok": false },
+						{ "answer": "The artificial intelligence was very light and easy to carry between classrooms each day.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "digital",
+					"summary": "Relating to or using computer technology, especially the internet; also describing systems that use data as numbers rather than as physical signals.",
+					"explain": {
+						"entryId": "digital",
+						"headword": "digital",
+						"pronunciation": { "display": "DIJ-ih-tul", "ipaUK": "/ˈdɪdʒ.ɪ.təl/", "ipaUS": "/ˈdɪdʒ.ɪ.t̬əl/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "digital",
+								"inflectionsLine": null,
+								"synonyms": ["electronic", "computerised", "online"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "relating to or using computer technology, the internet, or electronic devices",
+										"examples": [
+											"The school moved to a digital system for recording student attendance each morning."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "using a system that represents data as a series of the numbers 0 and 1",
+										"examples": [
+											"Digital cameras store images as data rather than on traditional film."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "digital",
+								"inflectionsLine": null,
+								"synonyms": ["online world", "digital space", "tech sector"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the area of digital or online technology (informal use)",
+										"examples": [
+											"Many traditional businesses are now moving into the digital to reach wider audiences."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The museum replaced all its paper guides with a digital version that visitors could download.", "ok": true },
+						{ "answer": "She used digital to paint the walls of her bedroom a bright shade of blue at the weekend.", "ok": false },
+						{ "answer": "He felt very digital after spending the whole afternoon working in the school computer lab.", "ok": false },
+						{ "answer": "The digital weather made it completely impossible to hold the outdoor sports day as planned.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "innovation",
+					"summary": "A new idea, method or product that has been introduced; also the process of creating and introducing new ideas or methods.",
+					"explain": {
+						"entryId": "innovation",
+						"headword": "innovation",
+						"pronunciation": { "display": "in-uh-VAY-shun", "ipaUK": "/ˌɪn.əˈveɪ.ʃən/", "ipaUS": "/ˌɪn.əˈveɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "innovation",
+								"inflectionsLine": "innovations",
+								"synonyms": ["invention", "breakthrough", "advance"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a new idea, method or product that has never been used or done before",
+										"examples": [
+											"The touchscreen was a major innovation that transformed how people interact with their devices."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the process of creating and introducing new ideas, methods or products",
+										"examples": [
+											"The company encourages innovation by giving its engineers time each week to develop their own ideas."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The company is widely admired for its innovation, having launched several ground-breaking products.", "ok": true },
+						{ "answer": "She showed great innovation in finishing all her classwork well before the deadline each week.", "ok": false },
+						{ "answer": "He kept his innovation carefully in his school bag and showed it to the teacher after class.", "ok": false },
+						{ "answer": "The teacher gave the class an innovation to research and present before the end of the term.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "invention",
+					"summary": "Something that has been designed or created for the first time; also the process of creating something new.",
+					"explain": {
+						"entryId": "invention",
+						"headword": "invention",
+						"pronunciation": { "display": "in-VEN-shun", "ipaUK": "/ɪnˈven.ʃən/", "ipaUS": "/ɪnˈven.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "invention",
+								"inflectionsLine": "inventions",
+								"synonyms": ["creation", "discovery", "innovation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a thing that has been made or designed for the first time by someone",
+										"examples": [
+											"The telephone is often described as one of the greatest inventions of the nineteenth century."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the act of creating or designing something that has never existed before",
+										"examples": [
+											"The invention of the internet changed the world more rapidly than almost any technology before it."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The printing press is considered one of the most important inventions in all of human history.", "ok": true },
+						{ "answer": "She wore her most impressive invention to the school fashion show at the end of the autumn term.", "ok": false },
+						{ "answer": "He felt great invention when he discovered that his science project had won first prize.", "ok": false },
+						{ "answer": "The teacher handed each student an invention to complete and submit before the following Friday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "programming",
+					"summary": "The process of writing instructions for a computer in a programming language so that it can perform specific tasks.",
+					"explain": {
+						"entryId": "programming",
+						"headword": "programming",
+						"pronunciation": { "display": "PROH-gram-ing", "ipaUK": "/ˈprəʊ.ɡræm.ɪŋ/", "ipaUS": "/ˈproʊ.ɡræm.ɪŋ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "programming",
+								"inflectionsLine": null,
+								"synonyms": ["coding", "software development", "scripting"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the process of writing a set of instructions, in a programming language, that tells a computer what to do",
+										"examples": [
+											"She taught herself programming by following free online tutorials every evening for six months."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the activity of planning and scheduling content for television or radio",
+										"examples": [
+											"The channel changed its programming to include more educational content for younger viewers."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The school now offers programming as part of its core curriculum from the age of eleven.", "ok": true },
+						{ "answer": "He showed incredible programming at the school sports day and finished first in three races.", "ok": false },
+						{ "answer": "She had programming in her pencil case that she used during every afternoon technology class.", "ok": false },
+						{ "answer": "The teacher gave each student programming to complete and hand in by the end of the week.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "software",
+					"summary": "The programs and operating information used by a computer, as opposed to the physical hardware components.",
+					"explain": {
+						"entryId": "software",
+						"headword": "software",
+						"pronunciation": { "display": "SOFT-wair", "ipaUK": "/ˈsɒft.weər/", "ipaUS": "/ˈsɑːft.wer/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "software",
+								"inflectionsLine": null,
+								"synonyms": ["program", "application", "system"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "programs used to operate a computer or to perform specific tasks, as opposed to the physical components of the machine",
+										"examples": [
+											"The school purchased new educational software to help students improve their reading and maths skills."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The design software allows users to create professional graphics without any specialist training.", "ok": true },
+						{ "answer": "She put the software carefully into her bag before leaving the technology classroom after lunch.", "ok": false },
+						{ "answer": "He wrote the software neatly in his exercise book and handed it to the teacher for marking.", "ok": false },
+						{ "answer": "The software was so heavy that two members of staff were needed to carry it upstairs.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "technology",
+					"summary": "The application of scientific knowledge to create tools, machines and systems that solve practical problems; also refers to the machines and devices themselves.",
+					"explain": {
+						"entryId": "technology",
+						"headword": "technology",
+						"pronunciation": { "display": "tek-NOL-uh-jee", "ipaUK": "/tekˈnɒl.ə.dʒi/", "ipaUS": "/tekˈnɑː.lə.dʒi/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "technology",
+								"inflectionsLine": "technologies",
+								"synonyms": ["innovation", "engineering", "science"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the application of scientific knowledge for practical purposes, especially in industry and everyday life",
+										"examples": [
+											"Modern technology has completely transformed the way we communicate and access information."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the machinery and equipment developed from scientific knowledge",
+										"examples": [
+											"The hospital invested in the latest technology to improve patient diagnosis and treatment."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The school has invested in new technology to improve the quality of teaching in every classroom.", "ok": true },
+						{ "answer": "She showed great technology in solving the difficult maths problem without any help from the teacher.", "ok": false },
+						{ "answer": "He felt very technology after spending the whole evening working alone in the computer lab.", "ok": false },
+						{ "answer": "The teacher gave each student some technology to eat during the lunch break as a special treat.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "user interface",
+					"summary": "The point of interaction between a person and a computer or device, including all the menus, buttons and features that allow the user to control and communicate with it.",
+					"explain": {
+						"entryId": "user interface",
+						"headword": "user interface",
+						"pronunciation": { "display": "YOO-zer IN-ter-fays", "ipaUK": "/ˈjuː.zə ˈɪn.tə.feɪs/", "ipaUS": "/ˈjuː.zɚ ˈɪn.t̬ɚ.feɪs/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "user interface",
+								"inflectionsLine": "user interfaces",
+								"synonyms": ["UI", "interface", "front end"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the visual layout and controls through which a person interacts with a computer program or device, including menus, buttons and icons",
+										"examples": [
+											"The new app has a very clean user interface that makes it easy for anyone to navigate."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The designers spent months perfecting the user interface to make the app as simple as possible.", "ok": true },
+						{ "answer": "She had excellent user interface skills and was always friendly and polite to everyone she met.", "ok": false },
+						{ "answer": "He printed out the user interface and distributed one copy to every student in the class.", "ok": false },
+						{ "answer": "The user interface was very comfortable to wear throughout the virtual reality demonstration.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "virtual reality",
+					"summary": "A computer-generated simulation of a three-dimensional environment that a person can explore and interact with using special equipment such as a headset.",
+					"explain": {
+						"entryId": "virtual reality",
+						"headword": "virtual reality",
+						"pronunciation": { "display": "VER-choo-ul ree-AL-ih-tee", "ipaUK": "/ˈvɜː.tʃu.əl riˈæl.ɪ.ti/", "ipaUS": "/ˈvɜːr.tʃu.əl riˈæl.ɪ.ti/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "virtual reality",
+								"inflectionsLine": null,
+								"synonyms": ["VR", "immersive technology", "simulated environment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a computer-generated, three-dimensional environment that can be explored and interacted with using special equipment such as a headset and gloves",
+										"examples": [
+											"The museum uses virtual reality to allow visitors to experience life in ancient Rome first-hand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Students used virtual reality headsets to explore the surface of Mars during the science lesson.", "ok": true },
+						{ "answer": "She showed great virtual reality in completing all the tasks the teacher had set for the week.", "ok": false },
+						{ "answer": "He wrote a virtual reality for his history class describing what ancient Rome must have looked like.", "ok": false },
+						{ "answer": "She showed great virtual reality when she imagined the ancient city from the painting on the wall.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

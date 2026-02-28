@@ -1,0 +1,441 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel1-en",
+	"title": "Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Travel",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "accommodation",
+					"summary": "A place where someone lives or stays, especially temporarily; the rooms, buildings or other spaces provided for someone to sleep and live in.",
+					"explain": {
+						"entryId": "accommodation",
+						"headword": "accommodation",
+						"pronunciation": { "display": "uh-kom-uh-DAY-shun", "ipaUK": "/əˌkɒm.əˈdeɪ.ʃən/", "ipaUS": "/əˌkɑː.məˈdeɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "accommodation",
+								"inflectionsLine": null,
+								"synonyms": ["lodging", "housing", "quarters"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a place where someone stays or lives temporarily, such as a hotel, hostel or rented flat",
+										"examples": [
+											"We booked our accommodation online several weeks before flying out to the island."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a convenient arrangement or compromise reached between two people or groups",
+										"examples": [
+											"After lengthy discussions, the two sides finally reached an accommodation that both found acceptable."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The travel package includes return flights, accommodation and a guided city tour.", "ok": true },
+						{ "answer": "She showed great accommodation in solving the navigation problem the tour guide had presented.", "ok": false },
+						{ "answer": "He put the accommodation carefully into his suitcase before leaving for the airport.", "ok": false },
+						{ "answer": "The accommodation arrived exactly on time at the station and took them to the hotel.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "itinerary",
+					"summary": "A detailed plan or route for a journey, listing the places to be visited, activities to be done and times of travel.",
+					"explain": {
+						"entryId": "itinerary",
+						"headword": "itinerary",
+						"pronunciation": { "display": "eye-TIN-er-air-ee", "ipaUK": "/aɪˈtɪn.ər.ər.i/", "ipaUS": "/aɪˈtɪn.ər.er.i/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "itinerary",
+								"inflectionsLine": "itineraries",
+								"synonyms": ["schedule", "plan", "route"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a detailed plan of a journey, showing the route, places to visit and times of travel or events",
+										"examples": [
+											"The travel agent sent us a detailed itinerary covering every day of our two-week trip."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She printed out the itinerary and shared it with everyone in the travel group.", "ok": true },
+						{ "answer": "He wore his best itinerary to the farewell dinner on the last night of the cruise.", "ok": false },
+						{ "answer": "She ate the itinerary quickly and then went back to the hotel to rest before the evening tour.", "ok": false },
+						{ "answer": "The itinerary was very comfortable and easy to carry around the city on a warm afternoon.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "landmark",
+					"summary": "A well-known and easily recognisable building, structure or feature in a landscape; also an important event or development.",
+					"explain": {
+						"entryId": "landmark",
+						"headword": "landmark",
+						"pronunciation": { "display": "LAND-mark", "ipaUK": "/ˈlænd.mɑːk/", "ipaUS": "/ˈlænd.mɑːrk/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "landmark",
+								"inflectionsLine": "landmarks",
+								"synonyms": ["monument", "point of interest", "feature"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building, structure or place that is easily recognised and often considered an important part of a place's identity",
+										"examples": [
+											"The Eiffel Tower is one of the most recognisable landmarks in the entire world."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "an important event or development that marks a major change or stage",
+										"examples": [
+											"The discovery of penicillin was a landmark in the history of modern medicine."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The ancient cathedral is the most visited landmark in the entire region.", "ok": true },
+						{ "answer": "She felt a great landmark when she finally arrived at the destination after twelve hours of travel.", "ok": false },
+						{ "answer": "He bought a landmark from the local market to take home as a gift for his family.", "ok": false },
+						{ "answer": "The landmark was very delicious and the tourists enjoyed it at the hotel restaurant each evening.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "reservation",
+					"summary": "An arrangement to have something kept for you, such as a table at a restaurant, a room in a hotel or a seat on a flight; also a feeling of doubt or hesitation.",
+					"explain": {
+						"entryId": "reservation",
+						"headword": "reservation",
+						"pronunciation": { "display": "rez-er-VAY-shun", "ipaUK": "/ˌrez.əˈveɪ.ʃən/", "ipaUS": "/ˌrez.ɚˈveɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "reservation",
+								"inflectionsLine": "reservations",
+								"synonyms": ["booking", "appointment", "arrangement"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an arrangement to have a place, room, table or seat kept for you in advance",
+										"examples": [
+											"She made a reservation at the restaurant two weeks in advance to guarantee a table by the window."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a feeling of doubt or uncertainty about something",
+										"examples": [
+											"He agreed to the proposal but had some reservations about the timeline."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She called ahead to make a reservation for four people at the hotel restaurant.", "ok": true },
+						{ "answer": "The reservation was very comfortable and had a spectacular view of the surrounding mountains.", "ok": false },
+						{ "answer": "He showed great reservation in packing his suitcase the night before the early morning flight.", "ok": false },
+						{ "answer": "She felt reservation in her stomach as the plane began to descend towards the destination.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "sightseeing",
+					"summary": "The activity of visiting and looking at interesting or famous places, especially as a tourist.",
+					"explain": {
+						"entryId": "sightseeing",
+						"headword": "sightseeing",
+						"pronunciation": { "display": "SYT-see-ing", "ipaUK": "/ˈsaɪtˌsiː.ɪŋ/", "ipaUS": "/ˈsaɪtˌsiː.ɪŋ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "sightseeing",
+								"inflectionsLine": null,
+								"synonyms": ["touring", "visiting", "exploring"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the activity of visiting famous or interesting places as a tourist",
+										"examples": [
+											"They spent the whole morning sightseeing and visited three museums before stopping for lunch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "After checking in at the hotel, the group went sightseeing around the old town for the afternoon.", "ok": true },
+						{ "answer": "She bought some sightseeing from the gift shop at the airport to send to friends back home.", "ok": false },
+						{ "answer": "He showed great sightseeing in navigating the unfamiliar city streets with only a paper map.", "ok": false },
+						{ "answer": "She put her sightseeing into her bag and took it to the tourist information centre.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "tourist attraction",
+					"summary": "A place, building or event that is popular with tourists because of its beauty, historical significance or entertainment value.",
+					"explain": {
+						"entryId": "tourist attraction",
+						"headword": "tourist attraction",
+						"pronunciation": { "display": "TOOR-ist uh-TRAK-shun", "ipaUK": "/ˈtʊər.ɪst əˈtræk.ʃən/", "ipaUS": "/ˈtʊr.ɪst əˈtræk.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "tourist attraction",
+								"inflectionsLine": "tourist attractions",
+								"synonyms": ["point of interest", "landmark", "sight"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a place or thing that many people visit because it is interesting, beautiful or historically important",
+										"examples": [
+											"The ancient ruins have become one of the country's most visited tourist attractions."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The city's harbour is its most famous tourist attraction, drawing millions of visitors each year.", "ok": true },
+						{ "answer": "He showed great tourist attraction when speaking to the local people in their own language.", "ok": false },
+						{ "answer": "She wrote a tourist attraction in her notebook to remember everything she had seen that day.", "ok": false },
+						{ "answer": "He carried a tourist attraction in his bag to read on the long flight back home.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "travel agency",
+					"summary": "A company or shop that makes travel arrangements for people, such as booking flights, hotels and holiday packages.",
+					"explain": {
+						"entryId": "travel agency",
+						"headword": "travel agency",
+						"pronunciation": { "display": "TRAV-ul AY-jen-see", "ipaUK": "/ˈtræv.əl ˈeɪ.dʒən.si/", "ipaUS": "/ˈtræv.əl ˈeɪ.dʒən.si/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "travel agency",
+								"inflectionsLine": "travel agencies",
+								"synonyms": ["tour operator", "travel agent", "booking service"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a business that arranges travel, accommodation and holidays for customers",
+										"examples": [
+											"She booked the entire holiday through a travel agency rather than organising it herself online."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They visited a travel agency to get advice on the best routes and hotels for their trip.", "ok": true },
+						{ "answer": "He went to the travel agency to buy some sunscreen, a hat and a pair of sunglasses.", "ok": false },
+						{ "answer": "The travel agency was very relaxing and everyone felt calm and refreshed after their visit.", "ok": false },
+						{ "answer": "She showed great travel agency in planning the group trip and booking everything on time.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "traveler",
+					"summary": "A person who is travelling or who travels frequently, especially to different countries or places; UK spelling: traveller.",
+					"explain": {
+						"entryId": "traveler",
+						"headword": "traveler",
+						"pronunciation": { "display": "TRAV-uh-ler", "ipaUK": "/ˈtræv.əl.ər/", "ipaUS": "/ˈtræv.əl.ɚ/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "traveler",
+								"inflectionsLine": "travelers",
+								"synonyms": ["tourist", "voyager", "globetrotter"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is on a journey or who travels frequently, especially to other countries",
+										"examples": [
+											"The experienced traveler always keeps a digital copy of her passport in case of emergencies."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a person who moves from place to place and does not have a permanent home",
+										"examples": [
+											"The campsite was traditionally used by travelers passing through the region in summer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "As an experienced traveler, she always arrived at the airport two hours before departure.", "ok": true },
+						{ "answer": "She bought a traveler from the airport bookshop to read on the long flight to New Zealand.", "ok": false },
+						{ "answer": "He showed great traveler in finding the fastest route through the unfamiliar city streets.", "ok": false },
+						{ "answer": "The traveler was very tasty and the tourists enjoyed it at the hotel buffet each morning.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "vacation",
+					"summary": "A period of time away from work or school, spent resting or travelling for pleasure; used mainly in American English (British English: holiday).",
+					"explain": {
+						"entryId": "vacation",
+						"headword": "vacation",
+						"pronunciation": { "display": "vay-KAY-shun", "ipaUK": "/veɪˈkeɪ.ʃən/", "ipaUS": "/veɪˈkeɪ.ʃən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "vacation",
+								"inflectionsLine": "vacations",
+								"synonyms": ["holiday", "break", "trip"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a period of time when you stop work or school and travel or rest for pleasure (mainly used in American English; British English: holiday)",
+										"examples": [
+											"The family spent their summer vacation exploring the mountains of northern Portugal."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "one of the fixed periods of the year when universities and law courts are officially closed",
+										"examples": [
+											"She used the long summer vacation to complete her research and write her first paper."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They decided to spend their vacation travelling along the coast by bicycle and staying in small guesthouses.", "ok": true },
+						{ "answer": "She showed great vacation in completing all her work reports before the long weekend.", "ok": false },
+						{ "answer": "He put the vacation in his bag and took it to the office to show to his manager.", "ok": false },
+						{ "answer": "The vacation was so heavy that it took two people to carry it to the hotel room.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "visa",
+					"summary": "An official stamp or document placed in a passport allowing the holder to enter, stay in or leave a particular country.",
+					"explain": {
+						"entryId": "visa",
+						"headword": "visa",
+						"pronunciation": { "display": "VEE-zuh", "ipaUK": "/ˈviː.zə/", "ipaUS": "/ˈviː.zə/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "visa",
+								"inflectionsLine": "visas",
+								"synonyms": ["entry permit", "travel permit", "authorisation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official document or stamp in a passport giving permission to enter, stay in or leave a particular country",
+										"examples": [
+											"She applied for a tourist visa three months before her planned trip to the United States."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He was stopped at the border because he did not have the correct visa to enter the country.", "ok": true },
+						{ "answer": "She used her visa to pay for the hotel room and the taxi from the airport on arrival.", "ok": false },
+						{ "answer": "He showed the visa to the waiter and was immediately given the best table in the restaurant.", "ok": false },
+						{ "answer": "The visa was very comfortable and offered a spectacular view of the sea from every room.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

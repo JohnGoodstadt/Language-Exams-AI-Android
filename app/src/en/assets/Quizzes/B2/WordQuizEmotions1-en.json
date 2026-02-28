@@ -1,0 +1,462 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEmotions1-en",
+	"title": "Emotions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Emotions",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "adaptability",
+					"summary": "The ability to change your ideas, behaviour or approach in order to deal successfully with new or different situations.",
+					"explain": {
+						"entryId": "adaptability",
+						"headword": "adaptability",
+						"pronunciation": { "display": "uh-dap-tuh-BIL-ih-tee", "ipaUK": "/əˌdæp.təˈbɪl.ɪ.ti/", "ipaUS": "/əˌdæp.t̬əˈbɪl.ɪ.ti/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "adaptability",
+								"inflectionsLine": null,
+								"synonyms": ["flexibility", "versatility", "resourcefulness"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the ability to change your behaviour or ideas to suit different situations",
+										"examples": [
+											"Her adaptability made her the perfect candidate for a role that required constant change."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the quality of being able to adjust successfully to new environments or challenges",
+										"examples": [
+											"The adaptability of the team allowed them to succeed even when the project changed direction completely."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her adaptability made her an ideal choice for the international position, which changed frequently.", "ok": true },
+						{ "answer": "He showed great adaptability in the maths test and scored the highest mark in the entire class.", "ok": false },
+						{ "answer": "She had a lot of adaptability in her school bag that she used for the science project.", "ok": false },
+						{ "answer": "The adaptability was very comfortable and easy to carry from one classroom to the next.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "ambition",
+					"summary": "A strong desire to achieve something important or be successful; also a particular goal that you want to reach.",
+					"explain": {
+						"entryId": "ambition",
+						"headword": "ambition",
+						"pronunciation": { "display": "am-BISH-un", "ipaUK": "/æmˈbɪʃ.ən/", "ipaUS": "/æmˈbɪʃ.ən/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "ambition",
+								"inflectionsLine": "ambitions",
+								"synonyms": ["drive", "determination", "aspiration"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a strong desire to be successful, powerful or rich",
+										"examples": [
+											"Her ambition to become a doctor drove her to study harder than anyone else in her year."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a particular goal or thing that you want to achieve",
+										"examples": [
+											"One of his lifelong ambitions was to climb to the summit of Mont Blanc."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her ambition to become a journalist pushed her to work harder than anyone in her class.", "ok": true },
+						{ "answer": "He had great ambition in his suitcase for the overnight school trip to the capital city.", "ok": false },
+						{ "answer": "She showed real ambition in her handwriting, which was always perfectly neat and well-formed.", "ok": false },
+						{ "answer": "His ambition was to forget the whole episode as quickly as possible and simply move on.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "anxiety",
+					"summary": "A feeling of worry, nervousness or fear about something that is happening or might happen; also a strong wish to do something.",
+					"explain": {
+						"entryId": "anxiety",
+						"headword": "anxiety",
+						"pronunciation": { "display": "ang-ZY-uh-tee", "ipaUK": "/æŋˈzaɪ.ə.ti/", "ipaUS": "/æŋˈzaɪ.ə.ti/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "anxiety",
+								"inflectionsLine": "anxieties",
+								"synonyms": ["worry", "nervousness", "apprehension"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a feeling of worry and fear, especially about the future or something uncertain",
+										"examples": [
+											"She experienced intense anxiety before her final exams and found it difficult to sleep at night."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a strong wish or desire to do something",
+										"examples": [
+											"His anxiety to please his parents led him to study a subject he had little interest in."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He managed his anxiety by breathing deeply and reminding himself how well he had prepared.", "ok": true },
+						{ "answer": "She felt great anxiety when her team scored the winning goal in the very last minute.", "ok": false },
+						{ "answer": "She had a lot of anxiety after finishing all her work well ahead of the deadline.", "ok": false },
+						{ "answer": "The teacher gave the class an anxiety to complete before the end of the week.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "confidence",
+					"summary": "The feeling of being certain about your own abilities or that something will happen as you expect; also trust in someone or something.",
+					"explain": {
+						"entryId": "confidence",
+						"headword": "confidence",
+						"pronunciation": { "display": "KON-fih-dens", "ipaUK": "/ˈkɒn.fɪ.dəns/", "ipaUS": "/ˈkɑːn.fɪ.dəns/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "confidence",
+								"inflectionsLine": null,
+								"synonyms": ["self-assurance", "self-belief", "assurance"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the belief that you can do things well and that other people respect you",
+										"examples": [
+											"Her confidence grew significantly after she delivered her first successful public presentation."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "a feeling of trust or certainty about someone or something",
+										"examples": [
+											"The team's poor results have reduced public confidence in the manager's ability to lead."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Winning the regional competition gave her the confidence to enter the national championship.", "ok": true },
+						{ "answer": "He had great confidence in his bag, packed with everything he needed for the working day.", "ok": false },
+						{ "answer": "She gained more confidence and decided to stay in bed for another hour that morning.", "ok": false },
+						{ "answer": "The teacher gave a confidence to every student who had worked particularly hard that term.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "curiosity",
+					"summary": "A strong desire to know or learn about something; also something that is interesting because it is unusual or rare.",
+					"explain": {
+						"entryId": "curiosity",
+						"headword": "curiosity",
+						"pronunciation": { "display": "kyoor-ee-OS-ih-tee", "ipaUK": "/ˌkjʊə.riˈɒs.ɪ.ti/", "ipaUS": "/ˌkjʊr.iˈɑː.sɪ.ti/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "curiosity",
+								"inflectionsLine": "curiosities",
+								"synonyms": ["inquisitiveness", "interest", "wonder"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a strong desire to know or find out about something",
+										"examples": [
+											"Her curiosity about the natural world led her to choose biology as her university subject."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "an unusual or rare object or fact that is interesting to people",
+										"examples": [
+											"The museum was full of historical curiosities that fascinated both young and old visitors."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "His natural curiosity about how things work made him an excellent engineering student.", "ok": true },
+						{ "answer": "She showed great curiosity in completing the task as quickly as possible and leaving early.", "ok": false },
+						{ "answer": "He felt strong curiosity after the heavy meal and went straight to bed without studying.", "ok": false },
+						{ "answer": "The teacher handed out a curiosity to each student to investigate and complete at home.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "enthusiasm",
+					"summary": "A feeling of energetic interest in and excitement about something; great eagerness or passion for a subject or activity.",
+					"explain": {
+						"entryId": "enthusiasm",
+						"headword": "enthusiasm",
+						"pronunciation": { "display": "en-THYOO-zee-az-um", "ipaUK": "/ɪnˈθjuː.zi.æz.əm/", "ipaUS": "/ɪnˈθuː.zi.æz.əm/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "enthusiasm",
+								"inflectionsLine": null,
+								"synonyms": ["eagerness", "passion", "excitement"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "great excitement and interest in something, shown in the way you talk or behave",
+										"examples": [
+											"The students' enthusiasm for the drama project was clear from the energy they put into every rehearsal."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The teacher was impressed by the students' enthusiasm for the topic and extended the lesson.", "ok": true },
+						{ "answer": "She showed great enthusiasm after the long and exhausting bus journey home from the museum.", "ok": false },
+						{ "answer": "He had enthusiasm in his pencil case that he always used during Friday afternoon art class.", "ok": false },
+						{ "answer": "The class received an enthusiasm from the teacher at the very start of the new school term.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "gratitude",
+					"summary": "The feeling of being thankful and appreciative towards someone who has helped or done something kind for you.",
+					"explain": {
+						"entryId": "gratitude",
+						"headword": "gratitude",
+						"pronunciation": { "display": "GRAT-ih-tyood", "ipaUK": "/ˈɡræt.ɪ.tjuːd/", "ipaUS": "/ˈɡræt̬.ɪ.tuːd/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "gratitude",
+								"inflectionsLine": null,
+								"synonyms": ["thankfulness", "appreciation", "gratefulness"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the feeling of being grateful and wanting to thank someone for their help or kindness",
+										"examples": [
+											"She wrote a letter to express her gratitude to the mentor who had guided her throughout the year."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He expressed his gratitude to the teacher who had given up her lunch breaks to help him.", "ok": true },
+						{ "answer": "She felt great gratitude when her team scored the winning goal in the final minute of the match.", "ok": false },
+						{ "answer": "He showed his gratitude by shouting at his classmates when they failed to follow the instructions.", "ok": false },
+						{ "answer": "The teacher distributed gratitude to each student at the end of the school year ceremony.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "independence",
+					"summary": "The state of not being controlled by or needing the support of others; also the political freedom of a country from outside rule.",
+					"explain": {
+						"entryId": "independence",
+						"headword": "independence",
+						"pronunciation": { "display": "in-dih-PEN-dens", "ipaUK": "/ˌɪn.dɪˈpen.dəns/", "ipaUS": "/ˌɪn.dɪˈpen.dəns/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "independence",
+								"inflectionsLine": null,
+								"synonyms": ["autonomy", "self-reliance", "freedom"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the state of not needing help or support from other people",
+										"examples": [
+											"Moving abroad for the first time gave her a powerful sense of independence and self-belief."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the political freedom of a country from the control or rule of another country",
+										"examples": [
+											"The country celebrated fifty years of independence with a national public holiday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Studying abroad helped him develop a strong sense of independence for the first time in his life.", "ok": true },
+						{ "answer": "She showed great independence by asking the teacher for help with absolutely every single question.", "ok": false },
+						{ "answer": "He had a lot of independence in his backpack that he needed for the afternoon physics lesson.", "ok": false },
+						{ "answer": "The students felt independence after the long and tiring walk home from the sports centre.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "patience",
+					"summary": "The ability to wait for a long time or to accept problems and difficulties without becoming angry or upset.",
+					"explain": {
+						"entryId": "patience",
+						"headword": "patience",
+						"pronunciation": { "display": "PAY-shens", "ipaUK": "/ˈpeɪ.ʃəns/", "ipaUS": "/ˈpeɪ.ʃəns/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "patience",
+								"inflectionsLine": null,
+								"synonyms": ["tolerance", "composure", "calm"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the ability to stay calm and not become annoyed when dealing with problems or delays",
+										"examples": [
+											"Learning a new language takes a great deal of patience, as progress can often feel slow."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the ability to keep doing something difficult for a long time without giving up",
+										"examples": [
+											"It took years of patience and dedication before she finally published her first novel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Teaching young children requires a great deal of patience as well as creativity and energy.", "ok": true },
+						{ "answer": "She had great patience in completing the task and finished it ten minutes ahead of everyone else.", "ok": false },
+						{ "answer": "He showed incredible patience in running the five-kilometre race and crossed the finish line first.", "ok": false },
+						{ "answer": "The teacher gave the class patience to work through quietly during the afternoon study period.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "resilience",
+					"summary": "The ability to recover quickly from difficult situations or setbacks; also the ability of a material to return to its original shape.",
+					"explain": {
+						"entryId": "resilience",
+						"headword": "resilience",
+						"pronunciation": { "display": "rih-ZIL-ee-ens", "ipaUK": "/rɪˈzɪl.i.əns/", "ipaUS": "/rɪˈzɪl.i.əns/" },
+						"labels": ["B2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "resilience",
+								"inflectionsLine": null,
+								"synonyms": ["toughness", "strength", "durability"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the ability to recover quickly from difficulties, setbacks or trauma",
+										"examples": [
+											"Her resilience throughout the most challenging year of her life showed true strength of character."
+										]
+									},
+									{
+										"senseNumber": 2,
+										"definition": "the ability of a substance or material to return to its original shape after being bent or stretched",
+										"examples": [
+											"The resilience of the material makes it ideal for use in products that are frequently under pressure."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Despite failing the exam twice, his resilience kept him focused and he passed on the third attempt.", "ok": true },
+						{ "answer": "She showed great resilience by memorising all the vocabulary from the very first lesson perfectly.", "ok": false },
+						{ "answer": "He felt resilience when he heard the good news about the examination being postponed.", "ok": false },
+						{ "answer": "The students demonstrated resilience by finishing the straightforward worksheet in under five minutes.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

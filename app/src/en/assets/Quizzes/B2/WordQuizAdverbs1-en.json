@@ -1,0 +1,551 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizAdverbs1-en",
+  "title": "Adverbs",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Adverbs",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "accordingly",
+          "page": 1,
+          "question": "accordingly",
+          "summary": "in a way that is appropriate to the particular circumstances; as a result or consequence",
+          "explain": {
+            "entryId": "accordingly",
+            "headword": "accordingly",
+            "pronunciation": {
+              "display": "uh-KOR-ding-lee",
+              "ipaUK": "/əˈkɔːdɪŋli/",
+              "ipaUS": "/əˈkɔːrdɪŋli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "accordingly",
+                "inflectionsLine": null,
+                "synonyms": ["consequently", "therefore", "hence"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in a way that is appropriate to the particular situation or circumstances",
+                    "examples": ["She was told the dress code was formal and dressed accordingly."]
+                  },
+                  {
+                    "senseNumber": 2,
+                    "definition": "as a result; therefore",
+                    "examples": ["There was a transport strike; accordingly, the meeting was postponed."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The manager explained the new safety rules and asked everyone to act accordingly.",
+              "ok": true
+            },
+            {
+              "answer": "She accordingly the report before submitting it to the senior management team.",
+              "ok": false
+            },
+            {
+              "answer": "He made an accordingly decision based on all the feedback he received from the team.",
+              "ok": false
+            },
+            {
+              "answer": "The team behaved accordingly to the rules that were set out at the start of the project.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "approximately",
+          "page": 2,
+          "question": "approximately",
+          "summary": "used to show that a number, amount, or description is almost, but not completely, accurate",
+          "explain": {
+            "entryId": "approximately",
+            "headword": "approximately",
+            "pronunciation": {
+              "display": "uh-PROK-si-mit-lee",
+              "ipaUK": "/əˈprɒksɪmətli/",
+              "ipaUS": "/əˈprɑːksɪmətli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "approximately",
+                "inflectionsLine": null,
+                "synonyms": ["roughly", "around", "about"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "used to indicate that a value, quantity, or time is close to but not exactly what is stated",
+                    "examples": ["The journey takes approximately two hours by train.", "Approximately 500 people attended the conference last year."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "There were approximately three hundred people at the outdoor concert last Saturday.",
+              "ok": true
+            },
+            {
+              "answer": "She gave an approximately answer when asked how far the station was from the hotel.",
+              "ok": false
+            },
+            {
+              "answer": "He approximately the total cost of the project before presenting his findings to the board.",
+              "ok": false
+            },
+            {
+              "answer": "The renovation cost approximately of five thousand pounds, including all labour and materials.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "consequently",
+          "page": 3,
+          "question": "consequently",
+          "summary": "as a result of something that has just been mentioned; therefore",
+          "explain": {
+            "entryId": "consequently",
+            "headword": "consequently",
+            "pronunciation": {
+              "display": "KON-si-kwent-lee",
+              "ipaUK": "/ˈkɒnsɪkwəntli/",
+              "ipaUS": "/ˈkɑːnsɪkwəntli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "consequently",
+                "inflectionsLine": null,
+                "synonyms": ["therefore", "as a result", "hence"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "as a result of the situation just mentioned; therefore",
+                    "examples": ["She missed several classes and consequently failed her final exam.", "The factory closed; consequently, hundreds of workers lost their jobs."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He forgot to set his alarm and consequently missed the first session of the conference.",
+              "ok": true
+            },
+            {
+              "answer": "The report showed a consequently increase in profits following the company restructure.",
+              "ok": false
+            },
+            {
+              "answer": "She consequently the plan to ensure it would work within the reduced budget.",
+              "ok": false
+            },
+            {
+              "answer": "The rise in prices was consequently of the global shortage of raw materials.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "deliberately",
+          "page": 4,
+          "question": "deliberately",
+          "summary": "done in a way that was planned or intended, not by accident; on purpose",
+          "explain": {
+            "entryId": "deliberately",
+            "headword": "deliberately",
+            "pronunciation": {
+              "display": "duh-LIB-uh-rut-lee",
+              "ipaUK": "/dɪˈlɪbərətli/",
+              "ipaUS": "/dɪˈlɪbərətli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "deliberately",
+                "inflectionsLine": null,
+                "synonyms": ["intentionally", "purposely", "on purpose"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "done in a way that was planned or intended, not by accident",
+                    "examples": ["She deliberately chose a quiet table at the back of the café to avoid being disturbed.", "He deliberately ignored her messages to avoid having an argument."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She deliberately left the window open so the room would cool down before bedtime.",
+              "ok": true
+            },
+            {
+              "answer": "He made a deliberately mistake in the report to test whether anyone in the team noticed.",
+              "ok": false
+            },
+            {
+              "answer": "They spoke in a deliberately tone to make sure the audience grasped every point clearly.",
+              "ok": false
+            },
+            {
+              "answer": "She showed great deliberately in planning every last detail of the surprise farewell party.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "efficiently",
+          "page": 5,
+          "question": "efficiently",
+          "summary": "in a way that achieves maximum productivity with minimum wasted effort, time, or resources",
+          "explain": {
+            "entryId": "efficiently",
+            "headword": "efficiently",
+            "pronunciation": {
+              "display": "ih-FISH-ent-lee",
+              "ipaUK": "/ɪˈfɪʃəntli/",
+              "ipaUS": "/ɪˈfɪʃəntli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "efficiently",
+                "inflectionsLine": null,
+                "synonyms": ["effectively", "productively", "competently"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in a way that achieves maximum productivity with minimum wasted effort, time, or resources",
+                    "examples": ["The new scheduling software allows the team to work much more efficiently.", "She efficiently organised the department files so that anyone could find what they needed."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The new system allows customer complaints to be processed much more efficiently.",
+              "ok": true
+            },
+            {
+              "answer": "She showed great efficiently by completing all her tasks well before the deadline.",
+              "ok": false
+            },
+            {
+              "answer": "He wrote an efficiently report that greatly impressed the senior management team.",
+              "ok": false
+            },
+            {
+              "answer": "They efficiently to reduce costs across the department without affecting product quality.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "eventually",
+          "page": 6,
+          "question": "eventually",
+          "summary": "in the end, especially after a long time or a lot of effort or problems",
+          "explain": {
+            "entryId": "eventually",
+            "headword": "eventually",
+            "pronunciation": {
+              "display": "ih-VEN-choo-uh-lee",
+              "ipaUK": "/ɪˈventʃuəli/",
+              "ipaUS": "/ɪˈventʃuəli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "eventually",
+                "inflectionsLine": null,
+                "synonyms": ["finally", "ultimately", "in the end"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "at the end of a long period of time or a series of events, especially after difficulties or delays",
+                    "examples": ["After years of hard work, she eventually received the promotion she deserved.", "He searched for over an hour and eventually found his keys in his coat pocket."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "After several failed attempts, she eventually learned to drive and passed her test.",
+              "ok": true
+            },
+            {
+              "answer": "She was an eventually candidate for the role of team leader after her colleague retired.",
+              "ok": false
+            },
+            {
+              "answer": "They showed great eventually in completing the project despite all the setbacks they faced.",
+              "ok": false
+            },
+            {
+              "answer": "He eventually the final report and emailed it to the director just before the deadline.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "fortunately",
+          "page": 7,
+          "question": "fortunately",
+          "summary": "used to say that a particular situation or outcome is good or lucky",
+          "explain": {
+            "entryId": "fortunately",
+            "headword": "fortunately",
+            "pronunciation": {
+              "display": "FOR-chuh-nit-lee",
+              "ipaUK": "/ˈfɔːtʃənətli/",
+              "ipaUS": "/ˈfɔːrtʃənətli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "fortunately",
+                "inflectionsLine": null,
+                "synonyms": ["luckily", "thankfully", "happily"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "used to express relief that something good has happened or that something bad has been avoided",
+                    "examples": ["Fortunately, no one was hurt in the accident.", "I forgot my umbrella, but fortunately it didn't rain during the walk home."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Fortunately, she remembered her passport just before leaving for the airport.",
+              "ok": true
+            },
+            {
+              "answer": "She felt fortunately about the outcome of the interview and expected to receive a job offer.",
+              "ok": false
+            },
+            {
+              "answer": "The fortunately result was that the storm passed before the outdoor event had to begin.",
+              "ok": false
+            },
+            {
+              "answer": "He showed great fortunately when he heard that he had passed all his final exams.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "frequently",
+          "page": 8,
+          "question": "frequently",
+          "summary": "often; happening many times at short intervals",
+          "explain": {
+            "entryId": "frequently",
+            "headword": "frequently",
+            "pronunciation": {
+              "display": "FREE-kwent-lee",
+              "ipaUK": "/ˈfriːkwəntli/",
+              "ipaUS": "/ˈfriːkwəntli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "frequently",
+                "inflectionsLine": null,
+                "synonyms": ["often", "regularly", "repeatedly"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "happening or occurring often; many times at short intervals",
+                    "examples": ["She frequently visits her parents at the weekend.", "Buses run frequently on this route during the morning rush hour."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He frequently checks his messages throughout the day to stay on top of his workload.",
+              "ok": true
+            },
+            {
+              "answer": "They go on frequently business trips to meet their international clients in person.",
+              "ok": false
+            },
+            {
+              "answer": "She showed great frequently in attending every optional training session that was offered.",
+              "ok": false
+            },
+            {
+              "answer": "The team frequently their working methods each month to try to improve overall results.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "significantly",
+          "page": 9,
+          "question": "significantly",
+          "summary": "in a way that is important or large enough to have a noticeable effect on a situation",
+          "explain": {
+            "entryId": "significantly",
+            "headword": "significantly",
+            "pronunciation": {
+              "display": "sig-NIF-ih-kunt-lee",
+              "ipaUK": "/sɪɡˈnɪfɪkəntli/",
+              "ipaUS": "/sɪɡˈnɪfɪkəntli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "significantly",
+                "inflectionsLine": null,
+                "synonyms": ["considerably", "substantially", "markedly"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in a way that is large or important enough to have a clear effect on a situation or to be easily noticed",
+                    "examples": ["Prices have increased significantly over the past two years.", "The new treatment significantly reduced the patient's recovery time."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The new training programme has significantly improved the performance of the entire team.",
+              "ok": true
+            },
+            {
+              "answer": "The results showed a significantly improvement in overall customer satisfaction scores.",
+              "ok": false
+            },
+            {
+              "answer": "She showed great significantly in her research findings and was praised by her supervisor.",
+              "ok": false
+            },
+            {
+              "answer": "He significantly his position on the matter to avoid further conflict with the management.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "typically",
+          "page": 10,
+          "question": "typically",
+          "summary": "in a way that is usual or expected; used to describe what normally happens in a particular situation",
+          "explain": {
+            "entryId": "typically",
+            "headword": "typically",
+            "pronunciation": {
+              "display": "TIP-ih-klee",
+              "ipaUK": "/ˈtɪpɪkli/",
+              "ipaUS": "/ˈtɪpɪkli/"
+            },
+            "labels": ["B2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adverb",
+                "grammarType": "adverb",
+                "headwordLine": "typically",
+                "inflectionsLine": null,
+                "synonyms": ["usually", "generally", "normally"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "in a way that shows the usual or expected qualities of a particular person, thing, or group",
+                    "examples": ["British weather is typically unpredictable throughout the spring months.", "A full-time position typically involves working around forty hours per week."]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "British people typically queue politely and wait their turn without complaint.",
+              "ok": true
+            },
+            {
+              "answer": "She showed a typically enthusiasm for the new project that greatly impressed her manager.",
+              "ok": false
+            },
+            {
+              "answer": "He felt typically about the changes introduced by the new senior management team.",
+              "ok": false
+            },
+            {
+              "answer": "The manager typically the weekly schedule to ensure all workloads were evenly balanced.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
