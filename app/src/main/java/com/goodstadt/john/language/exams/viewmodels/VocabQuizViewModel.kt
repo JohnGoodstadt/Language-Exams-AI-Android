@@ -229,7 +229,7 @@ class VocabQuizViewModel @Inject constructor(
 
     val quizStatistics = mutableStateOf(
         VocabQuizStatistics(
-            skillLevel = VocabQuizLevels.PERSONAL.description,
+            skillLevel = VocabQuizLevels.PERSONAL.description, //TODO: Wrong
             quizNumber = 1,
             title = "Quiz 1"
         )
@@ -311,7 +311,7 @@ class VocabQuizViewModel @Inject constructor(
          //   val level = userPreferencesRepository.selectedSkillLevelFlow.first()
 
             // 1. Sanitize Title
-            val noB1Title = categoryTitle.replace(" (B1)", "") //personal title
+            val noB1Title = categoryTitle.replace(" (B1)", "").replace(" (B2)", "")  //personal title
             val cleanTitle = noB1Title.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
             currentSectionTitle = cleanTitle
             val baseFilenamePrefix = "WordQuiz${cleanTitle}" // e.g. "WordQuizTravel"
@@ -1183,7 +1183,8 @@ class VocabQuizViewModel @Inject constructor(
             }
 
             // 2. Save to Repo
-            vocabQuizRepository.recordResult(word, outcome,currentSectionTitle)
+//            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
+            vocabQuizRepository.recordResult(word, outcome,currentSectionTitle,currentSkillLevel)
 
             // 3. Award XP (Ideas)
             awardXP(outcome)
@@ -1196,6 +1197,9 @@ class VocabQuizViewModel @Inject constructor(
         }
     }
 
+    fun getSectionTitle():String {
+        return currentSectionTitle
+    }
     private fun awardXP(outcome: VocabQuizOutcome) {
         when (outcome) {
             VocabQuizOutcome.FLAWLESS -> xpManager.registerAction(XpActionType.PerfectWord, count = 5) // High Reward

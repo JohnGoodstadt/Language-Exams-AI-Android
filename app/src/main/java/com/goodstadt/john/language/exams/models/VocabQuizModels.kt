@@ -44,6 +44,8 @@ data class VocabLearningState(
 
     @SerializedName("cat") var sourceCategory: String = "",
 
+    @SerializedName("lvl_src") var sourceLevel: String = "", //ee.g. B1,A2...
+
     @SerializedName("lvl") var masteryLevel: WordMasteryLevel = WordMasteryLevel.New,
 
     @SerializedName("streak") var correctStreak: Int = 0, // Consecutive first-try successes

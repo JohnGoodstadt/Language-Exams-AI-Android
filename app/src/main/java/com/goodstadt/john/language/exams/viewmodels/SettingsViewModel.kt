@@ -880,7 +880,12 @@ class SettingsViewModel @Inject constructor(
     fun printWords() {
 
         viewModelScope.launch {
-            val result = vocabRepository.getFormat0Data("vocab_data_b2")
+
+            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
+
+            Timber.i("============ ${level} ============")
+
+            val result = vocabRepository.getFormat0Data("vocab_data_${level.lowercase()}")
             result.onSuccess { vocabFile ->
                 val categories = vocabFile.categories
                 var index = 1
@@ -898,7 +903,7 @@ class SettingsViewModel @Inject constructor(
 
                     for (word in category.words){
 //                        Timber.i("${wordCounter} ${word.word}")
-                        Timber.i("${word.word},")
+                        //Timber.i("${word.word},")
                         csv = "$csv,${word.word}"
                         if (wordCounter > 10){
 

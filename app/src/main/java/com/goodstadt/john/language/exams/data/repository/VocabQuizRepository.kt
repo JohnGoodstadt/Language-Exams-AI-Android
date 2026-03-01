@@ -60,14 +60,15 @@ class VocabQuizRepository @Inject constructor(
      * @param word The word (e.g. "acquire")
      * @param tries How many attempts it took (1 = Perfect)
      */
-    fun recordResult(word: String, outcome: VocabQuizOutcome, categoryTitle: String ) {
+    fun recordResult(word: String, outcome: VocabQuizOutcome, categoryTitle: String,level:String ) {
 
         scope.launch {
             val state = wordStates.getOrPut(word) {
                 VocabLearningState(word = word, sourceCategory = categoryTitle)
             }
+            state.sourceCategory = categoryTitle
             state.lastOutcome = outcome
-
+            state.sourceLevel = level
             // 1. Create History Entry
             // We store the outcome enum directly now, or map it to tries if you prefer
             // Assuming you updated WordQuizAttempt to store 'outcome' or we map it here:
@@ -367,6 +368,8 @@ class VocabQuizRepository @Inject constructor(
 
     // MARK: - Debugging
 
+    // MARK: - Debugging
+
     fun debugPrintAllWordStates() {
         val now = System.currentTimeMillis()
         val tag = "VocabRepo"
@@ -379,37 +382,52 @@ class VocabQuizRepository @Inject constructor(
             return
         }
 
-        // 1. Summary Counts
-        val counts = wordStates.values.groupingBy { it.masteryLevel }.eachCount()
-        Timber.tag(tag).d("📊 SUMMARY:")
-        Timber.tag(tag).d("   🆕 New:        ${counts[WordMasteryLevel.New] ?: 0}")
-        Timber.tag(tag).d("   🟠 Learning:   ${counts[WordMasteryLevel.Learning] ?: 0}")
-        Timber.tag(tag).d("   🔵 Review:     ${counts[WordMasteryLevel.Review] ?: 0}")
-        Timber.tag(tag).d("   🔴 Struggling: ${counts[WordMasteryLevel.Struggling] ?: 0}")
-        Timber.tag(tag).d("   🟢 Mastered:   ${counts[WordMasteryLevel.Mastered] ?: 0}")
+        // 1. Group by Source Level (e.g. "B1", "A2")
+        // Use "Unknown" if the data is old and doesn't have a level yet
+        val groupedByLevel = wordStates.values.groupBy { it.sourceLevel.ifEmpty { "Unknown" } }
 
-        Timber.tag(tag).d("--------------------------------------------------------------------------------")
-        Timber.tag(tag).d("   LVL | WORD             | STRK | LAST OUTCOME | DUE IN | CATEGORY")
-        Timber.tag(tag).d("--------------------------------------------------------------------------------")
+        // 2. Iterate through levels (Sorted alphabetically A1 -> B2)
+        groupedByLevel.toSortedMap().forEach { (level, states) ->
 
-        // 2. Sort by Next Review Time (Overdue first)
-        val sortedList = wordStates.values.sortedBy { it.nextReviewTime }
+            Timber.tag(tag).d("\n📂 === LEVEL: $level ===")
 
-        // 3. Print Rows
-        sortedList.forEach { state ->
-            val icon = getStatusIcon(state.masteryLevel)
-            val word = state.word.take(16).padEnd(16) // Padding for alignment
-            val streak = state.correctStreak.toString().padEnd(4)
-            val outcome = (state.lastOutcome?.name ?: "-").take(12).padEnd(12)
-            val due = getTimeString(state.nextReviewTime, now)
-            val cat = state.sourceCategory
+            // Level Summary
+            val mastered = states.count { it.masteryLevel == WordMasteryLevel.Mastered }
+            val struggling = states.count { it.masteryLevel == WordMasteryLevel.Struggling }
+            val due = states.count { it.nextReviewTime <= now && it.masteryLevel != WordMasteryLevel.Mastered }
 
-            Timber.tag(tag).d("   $icon | $word | $streak | $outcome | $due | $cat"  )
+            Timber.tag(tag).d("   Total: ${states.size} | Mastered: $mastered | Struggling: $struggling | Due Now: $due")
+
+            Timber.tag(tag).d("   ------------------------------------------------------------------------------------------------")
+            // Adjusted padding for headers
+            Timber.tag(tag).d("   ST | WORD             | STRK | OUTCOME      | DUE IN       | CATEGORY")
+            Timber.tag(tag).d("   ------------------------------------------------------------------------------------------------")
+
+            // Sort by Due Date (Overdue first)
+            val sortedList = states.sortedBy { it.nextReviewTime }
+
+            // Print Rows
+            // Limit to 50 items per level to keep Logcat readable
+            sortedList.take(50).forEach { state ->
+                val icon = getStatusIcon(state.masteryLevel)
+                val word = state.word.take(16).padEnd(16)
+                val streak = state.correctStreak.toString().padEnd(4)
+                val outcome = (state.lastOutcome?.name ?: "-").take(12).padEnd(12)
+
+                // Fixed width for Time column so Category lines up
+                val due = getTimeString(state.nextReviewTime, now).take(12).padEnd(12)
+                val cat = state.sourceCategory
+
+                Timber.tag(tag).d("   $icon | $word | $streak | $outcome | $due | $cat")
+            }
+
+            if (states.size > 50) {
+                Timber.tag(tag).d("   ... and ${states.size - 50} more.")
+            }
         }
 
-        Timber.tag(tag).d("================================================================================\n")
+        Timber.tag(tag).d("\n================================================================================\n")
     }
-
     // MARK: - Debug Helpers
 
     private fun getStatusIcon(level: WordMasteryLevel): String {

@@ -188,10 +188,10 @@ fun VocabQuizScreen(
             } else { //TODO: This could be deleted if file is only Section Quiz
                 // If only 1 quiz, maybe just show the title
                 Text(
-                    text = quizStatistics.title, // "Quiz 1"
+                    text = viewModel.getSectionTitle(),// quizStatistics.title, // "Quiz 1"
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.primary,
+                    color = orangeLight, //MaterialTheme.colorScheme.primary,
                     modifier = Modifier.padding(vertical = 8.dp)
                 )
                 HorizontalDivider()
