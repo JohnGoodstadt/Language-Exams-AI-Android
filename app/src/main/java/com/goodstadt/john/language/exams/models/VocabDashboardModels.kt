@@ -16,6 +16,7 @@ data class DashboardUiState(
     val isLoading: Boolean = true,
     val isColdStart: Boolean = true, // No quizzes ever taken
     val wordsDueCount: Int = 0,
+    val wordsDueList: List<String> = listOf(),
     val totalMastered: Int = 0,
     val categoryStats: List<CategoryMasteryStats> = emptyList()
 )

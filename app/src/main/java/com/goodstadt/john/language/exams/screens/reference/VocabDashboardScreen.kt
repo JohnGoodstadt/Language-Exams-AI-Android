@@ -40,9 +40,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.CategoryMasteryStats
@@ -138,6 +140,7 @@ fun VocabQuizActiveView(
                 modifier = Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(modifier = Modifier.weight(1f)) {
+                    val label = if (state.wordsDueCount == 1) "word" else "words"
                     Text(
                         "${state.wordsDueCount}",
                         style = MaterialTheme.typography.displayMedium,
@@ -145,8 +148,18 @@ fun VocabQuizActiveView(
                         color = MaterialTheme.colorScheme.onPrimaryContainer
                     )
                     Text(
-                        "words due for review",
+                        text = "$label due for review",
                         style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
+                    Text(
+                        state.wordsDueList.joinToString(",").take(30),
+                        style = MaterialTheme.typography.bodySmall.copy(
+                            fontStyle = FontStyle.Italic,
+                            fontWeight = FontWeight.Normal,
+                            // Explicitly set a smaller size if bodySmall is still too big
+                            fontSize = 12.sp
+                        ),
                         color = MaterialTheme.colorScheme.onPrimaryContainer
                     )
                 }
@@ -157,8 +170,8 @@ fun VocabQuizActiveView(
                 ) {
                     Text("Review Now")
                 }
-                if (BuildConfig.DEBUG) {
-//                if (false) {
+//                if (BuildConfig.DEBUG) {
+                if (false) {
                     Button(
                         onClick = {
                             onDebugClick()
@@ -173,8 +186,9 @@ fun VocabQuizActiveView(
 
         // 2. Breakdown Title
         Text(
-            "Category Progress",
-            style = MaterialTheme.typography.titleMedium,
+            "Progress",
+            style = MaterialTheme.typography.titleLarge,
+            color = MaterialTheme.colorScheme.primary,
             fontWeight = FontWeight.Bold
         )
 

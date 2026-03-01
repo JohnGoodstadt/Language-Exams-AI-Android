@@ -1,0 +1,452 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonal1-en",
+	"title": "Personal",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Personal",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "address",
+					"page": 1,
+					"question": "address",
+					"summary": "the details of where someone lives or works",
+					"explain": {
+						"entryId": "address",
+						"headword": "address",
+						"pronunciation": { "display": "uh-DRES", "ipaUK": "/əˈdres/", "ipaUS": "/ˈædres/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "address",
+								"inflectionsLine": "addresses",
+								"synonyms": ["location", "residence", "home"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the details of the house or flat, street, and town where someone lives or works",
+										"examples": [
+											"She wrote her name and address on the form to receive the newsletter.",
+											"Can you give me your address so I can send you the invitation?"
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "address",
+								"inflectionsLine": "addresses, addressing, addressed",
+								"synonyms": ["speak to", "write to", "direct"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to speak or write to someone directly",
+										"examples": [
+											"She addressed the letter to her grandmother.",
+											"He addressed the audience at the beginning of the meeting."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wrote her name and address on the form to receive the newsletter.", "ok": true },
+						{ "answer": "He cooked his address for dinner and served it with rice.", "ok": false },
+						{ "answer": "She drove her address to the office and left it at the desk.", "ok": false },
+						{ "answer": "They planted an address in the garden and watered it each morning.", "ok": false }
+					]
+				},
+				{
+					"title": "age",
+					"page": 2,
+					"question": "age",
+					"summary": "how many years someone has lived; how old someone is",
+					"explain": {
+						"entryId": "age",
+						"headword": "age",
+						"pronunciation": { "display": "AYJ", "ipaUK": "/eɪdʒ/", "ipaUS": "/eɪdʒ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "age",
+								"inflectionsLine": "ages",
+								"synonyms": ["years", "maturity", "stage of life"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number of years that someone has lived or that something has existed",
+										"examples": [
+											"The form asked for her name, date of birth, and age.",
+											"At the age of eighteen, she moved to a new city to study."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The form asked for her name, date of birth, and age.", "ok": true },
+						{ "answer": "He cooked his age in a large pot for Sunday dinner.", "ok": false },
+						{ "answer": "She drove her age to the supermarket every Saturday.", "ok": false },
+						{ "answer": "They planted their age in the garden and watered it daily.", "ok": false }
+					]
+				},
+				{
+					"title": "birthday",
+					"page": 3,
+					"question": "birthday",
+					"summary": "the anniversary of the day when someone was born",
+					"explain": {
+						"entryId": "birthday",
+						"headword": "birthday",
+						"pronunciation": { "display": "BURTH-day", "ipaUK": "/ˈbɜːθdeɪ/", "ipaUS": "/ˈbɜːrθdeɪ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "birthday",
+								"inflectionsLine": "birthdays",
+								"synonyms": ["anniversary", "date of birth", "special day"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the anniversary of the day when someone was born, often celebrated with a party or gifts",
+										"examples": [
+											"She celebrated her birthday with her family at a restaurant.",
+											"He sent her a card and flowers on her birthday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She celebrated her birthday with her family at a restaurant.", "ok": true },
+						{ "answer": "He cooked a birthday for dinner every Tuesday evening.", "ok": false },
+						{ "answer": "She drove her birthday to work and parked it outside.", "ok": false },
+						{ "answer": "They planted a birthday in the garden and watered it daily.", "ok": false }
+					]
+				},
+				{
+					"title": "brush teeth",
+					"page": 4,
+					"question": "brush teeth",
+					"summary": "to clean your teeth by moving a toothbrush backwards and forwards over them",
+					"explain": {
+						"entryId": "brush teeth",
+						"headword": "brush teeth",
+						"pronunciation": { "display": "BRUSH TEETH", "ipaUK": "/brʌʃ tiːθ/", "ipaUS": "/brʌʃ tiːθ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb phrase",
+								"headwordLine": "brush teeth",
+								"inflectionsLine": "brushes teeth, brushing teeth, brushed teeth",
+								"synonyms": ["clean teeth", "use a toothbrush"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to clean your teeth by moving a toothbrush over them, usually with toothpaste",
+										"examples": [
+											"She brushes her teeth twice a day to keep them clean and healthy.",
+											"He always brushes his teeth after breakfast before going to school."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She brushes her teeth twice a day to keep them clean and healthy.", "ok": true },
+						{ "answer": "He brushes his teeth with a fork and a spoon after dinner.", "ok": false },
+						{ "answer": "She brushes her teeth to go shopping at the mall.", "ok": false },
+						{ "answer": "They brush their teeth in order to cook dinner in the kitchen.", "ok": false }
+					]
+				},
+				{
+					"title": "email",
+					"page": 5,
+					"question": "email",
+					"summary": "a message sent electronically from one person to another via the internet",
+					"explain": {
+						"entryId": "email",
+						"headword": "email",
+						"pronunciation": { "display": "EE-mayl", "ipaUK": "/ˈiːmeɪl/", "ipaUS": "/ˈiːmeɪl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "email",
+								"inflectionsLine": "emails",
+								"synonyms": ["message", "e-mail", "electronic mail"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a message sent electronically from one person to another via the internet; also, the system used to send these messages",
+										"examples": [
+											"She gave her email address so they could send her the confirmation.",
+											"He checks his email every morning when he arrives at the office."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "email",
+								"inflectionsLine": "emails, emailing, emailed",
+								"synonyms": ["message", "contact", "write to"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to send a message to someone using the internet",
+										"examples": [
+											"She emailed her manager to say she would be late.",
+											"Please email me the details when you have a moment."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She gave her email address so they could send her the confirmation.", "ok": true },
+						{ "answer": "He cooked an email for dinner and served it with salad.", "ok": false },
+						{ "answer": "She wore her email to the party and everyone admired it.", "ok": false },
+						{ "answer": "They planted an email in the garden near the flowers.", "ok": false }
+					]
+				},
+				{
+					"title": "gender",
+					"page": 6,
+					"question": "gender",
+					"summary": "whether a person is male or female",
+					"explain": {
+						"entryId": "gender",
+						"headword": "gender",
+						"pronunciation": { "display": "JEN-dur", "ipaUK": "/ˈdʒendə/", "ipaUS": "/ˈdʒendər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "uncountable noun",
+								"headwordLine": "gender",
+								"inflectionsLine": "",
+								"synonyms": ["sex", "identity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the fact of being male or female; the social and cultural characteristics associated with being male or female",
+										"examples": [
+											"The form asked for her name, nationality, and gender.",
+											"The survey included questions about age, gender, and occupation."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The form asked for her name, nationality, and gender.", "ok": true },
+						{ "answer": "He cooked the gender for dinner and served it with rice.", "ok": false },
+						{ "answer": "She drove her gender to work every morning.", "ok": false },
+						{ "answer": "They planted the gender in the garden and watered it daily.", "ok": false }
+					]
+				},
+				{
+					"title": "go to work",
+					"page": 7,
+					"question": "go to work",
+					"summary": "to travel to the place where you do your job",
+					"explain": {
+						"entryId": "go to work",
+						"headword": "go to work",
+						"pronunciation": { "display": "GOH tuh WURK", "ipaUK": "/ɡəʊ tə wɜːk/", "ipaUS": "/ɡoʊ tə wɜːrk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb phrase",
+								"headwordLine": "go to work",
+								"inflectionsLine": "goes to work, going to work, went to work",
+								"synonyms": ["commute", "travel to work", "head to work"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to travel from your home to the place where you do your job",
+										"examples": [
+											"She goes to work by bicycle every morning because she lives nearby.",
+											"He goes to work at eight o'clock and comes home at six."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to work by bicycle every morning because she lives nearby.", "ok": true },
+						{ "answer": "He goes to work at the swimming pool to play football.", "ok": false },
+						{ "answer": "She goes to work at the supermarket to cook dinner.", "ok": false },
+						{ "answer": "They go to work at the park to eat breakfast outside.", "ok": false }
+					]
+				},
+				{
+					"title": "have breakfast",
+					"page": 8,
+					"question": "have breakfast",
+					"summary": "to eat your first meal of the day",
+					"explain": {
+						"entryId": "have breakfast",
+						"headword": "have breakfast",
+						"pronunciation": { "display": "HAV BREK-fust", "ipaUK": "/hæv ˈbrekfəst/", "ipaUS": "/hæv ˈbrekfəst/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb phrase",
+								"headwordLine": "have breakfast",
+								"inflectionsLine": "has breakfast, having breakfast, had breakfast",
+								"synonyms": ["eat breakfast", "take breakfast"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to eat the first meal of the day, usually in the morning",
+										"examples": [
+											"She always has breakfast before leaving the house in the morning.",
+											"He had breakfast at a café near the office before his meeting."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She always has breakfast before leaving the house in the morning.", "ok": true },
+						{ "answer": "He has breakfast at the swimming pool while doing laps.", "ok": false },
+						{ "answer": "She has breakfast on her bicycle on the way to work.", "ok": false },
+						{ "answer": "They have breakfast in the garden in order to water the plants.", "ok": false }
+					]
+				},
+				{
+					"title": "language",
+					"page": 9,
+					"question": "language",
+					"summary": "a system of words and grammar used by people of a particular country or group",
+					"explain": {
+						"entryId": "language",
+						"headword": "language",
+						"pronunciation": { "display": "LANG-gwij", "ipaUK": "/ˈlæŋɡwɪdʒ/", "ipaUS": "/ˈlæŋɡwɪdʒ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "language",
+								"inflectionsLine": "languages",
+								"synonyms": ["tongue", "speech", "dialect"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a system of words and grammar used by the people of a particular country or group to communicate",
+										"examples": [
+											"She is studying a new language to help her find a job abroad.",
+											"English is the most widely spoken language in the world."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is studying a new language to help her find a job abroad.", "ok": true },
+						{ "answer": "He cooked a language for dinner on Sunday evening.", "ok": false },
+						{ "answer": "She drove her language to school every morning.", "ok": false },
+						{ "answer": "They planted a language in the garden near the gate.", "ok": false }
+					]
+				},
+				{
+					"title": "marital status",
+					"page": 10,
+					"question": "marital status",
+					"summary": "whether someone is married, single, divorced, or widowed",
+					"explain": {
+						"entryId": "marital status",
+						"headword": "marital status",
+						"pronunciation": { "display": "MAR-i-tul STAY-tus", "ipaUK": "/ˈmærɪtl ˈsteɪtəs/", "ipaUS": "/ˈmærɪtl ˈsteɪtəs/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "marital status",
+								"inflectionsLine": "",
+								"synonyms": ["relationship status", "civil status"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "whether a person is single, married, divorced, or widowed",
+										"examples": [
+											"The form asked for her name, age, address, and marital status.",
+											"He wrote 'married' in the marital status box on the application form."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The form asked for her name, age, address, and marital status.", "ok": true },
+						{ "answer": "He cooked the marital status for dinner and served it hot.", "ok": false },
+						{ "answer": "She drove her marital status to the office every day.", "ok": false },
+						{ "answer": "They planted marital status in the garden and watered it daily.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -456,11 +456,8 @@ class SettingsViewModel @Inject constructor(
                         userPreferencesRepository.saveSelectedFileName(selectedExam.json)
                         userPreferencesRepository.saveSelectedSkillLevel(selectedExam.skillLevel)
                         userPreferencesRepository.updateExamName(selectedExam.json) //this will be used on TAB1,2,3
-                        // --- THIS IS THE NEW, CRITICAL PART ---
-                        // 2. Tell the shared manager to load the recalled items for the NEW exam
-                        Timber.d("New exam selected. Reloading recalled items for key: ${selectedExam.json}")
 
-//                        recallingItemsManager.load(selectedExam.json)
+
 
                     }
 
@@ -881,6 +878,43 @@ class SettingsViewModel @Inject constructor(
 
         viewModelScope.launch {
 
+
+            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
+
+            Timber.i("============ ${level} ============")
+
+            val result = vocabRepository.getFormat0Data("vocab_data_${level.lowercase()}")
+            result.onSuccess { vocabFile ->
+                var categoryList = ""
+                vocabFile.categories.forEach { category ->
+                    val catTitle = category.title.replace(" ","").replace(",","")
+                    categoryList = "$categoryList,$catTitle"
+//                    println("--- Category: ${catTitle} ---")
+                    println(" ")
+                    println("WordQuiz${catTitle}1-en count:${category.words.count()}")
+                    // 2. Extract just the word strings, chunk them, and print
+                    category.words
+                        .map { it.word } // Convert List<Format0Word> to List<String>
+                        .chunked(10)     // Split into lists of 10 items max
+                        .forEach { chunk ->
+                            // Join the chunk into a single CSV string
+                            println(chunk.joinToString(", "))
+                        }
+
+                }
+                println(".")
+                Timber.i("$categoryList")
+            }
+            result.onFailure { error ->
+                Timber.e(error)
+            }
+        }
+    }
+
+    fun printWordsObsolete() {
+
+        viewModelScope.launch {
+
             val level = userPreferencesRepository.selectedSkillLevelFlow.first()
 
             Timber.i("============ ${level} ============")
@@ -894,28 +928,41 @@ class SettingsViewModel @Inject constructor(
                 var categoryList = ""
 
                 for (category in categories) {
+                    val catTitle = category.title.replace(" ","")
                     Timber.i("${csv}")
-                    csv = ""
-                    categoryList = "$categoryList,${category.title}"
+                    csv = "" //reset
+                    categoryList = "$categoryList,$catTitle"
                     totalWordsCount = totalWordsCount + category.words.count()
                     var wordCounter = 1
-                    Timber.i("WordQuiz${category.title}$index-en count:${category.words.count()}")
+                    Timber.i("WordQuiz${catTitle}$index-en count:${category.words.count()}")
 
-                    for (word in category.words){
+                    for (word in category.words) {
 //                        Timber.i("${wordCounter} ${word.word}")
                         //Timber.i("${word.word},")
-                        csv = "$csv,${word.word}"
-                        if (wordCounter > 10){
+//                        if (csv != "") {
+                            csv = "$csv,${word.word}"
+//                        }
+                        if (wordCounter > 50){
 
                             index ++
                             wordCounter = 1
-                            Timber.i("WordQuiz${category.title}$index-en")
+                            Timber.i("WordQuiz${catTitle}$index-en")
                         }else{
                             wordCounter++
                         }
                     }
-                }
+
+                    val words = csv.split(",")
+                    val groups = words.chunked(10)
+                    groups.forEachIndexed { index, group ->
+                        println("${index+1} ${group.joinToString(",")}")
+                    }
+                    println()
+
+                } //category
                 Timber.i("${csv}")
+
+
                 Timber.i("total Words ${totalWordsCount}")
                 Timber.i("$categoryList")
             }

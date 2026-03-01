@@ -1,0 +1,306 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "",
+	"title": "",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Dr.",
+					"summary": "a title used for a doctor",
+					"explain": {
+						"entryId": "Dr.",
+						"headword": "Dr.",
+						"pronunciation": { "display": "DOK-ter", "ipaUK": "/ˈdɒktə/", "ipaUS": "/ˈdɑːktər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "title",
+								"grammarType": "noun",
+								"headwordLine": "Dr.",
+								"inflectionsLine": null,
+								"synonyms": ["Doctor"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a title used before the name of a doctor",
+										"examples": ["Dr. Smith will see you now."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Dr. Brown is my dentist.", "ok": true },
+						{ "answer": "Dr Brown is my dentist.", "ok": false },
+						{ "answer": "Doctor. Brown is my dentist.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "I",
+					"summary": "used when talking about yourself",
+					"explain": {
+						"entryId": "I",
+						"headword": "I",
+						"pronunciation": { "display": "EYE", "ipaUK": "/aɪ/", "ipaUS": "/aɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "pronoun",
+								"grammarType": "subject pronoun",
+								"headwordLine": "I",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used by a person to talk about himself or herself",
+										"examples": ["I am happy to meet you."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I am happy to meet you.", "ok": true },
+						{ "answer": "Me am happy to meet you.", "ok": false },
+						{ "answer": "My am happy to meet you.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Madam",
+					"summary": "a polite word used to address a woman",
+					"explain": {
+						"entryId": "Madam",
+						"headword": "Madam",
+						"pronunciation": { "display": "MAD-um", "ipaUK": "/ˈmædəm/", "ipaUS": "/ˈmædəm/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "form of address",
+								"headwordLine": "Madam",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a polite word used when speaking to a woman",
+										"examples": ["Excuse me, Madam, you dropped your bag."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Excuse me, Madam, you dropped your bag.", "ok": true },
+						{ "answer": "Excuse me Madam you dropped your bag.", "ok": false },
+						{ "answer": "Excuse Madam, me you dropped your bag.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Miss",
+					"summary": "a title used for an unmarried woman",
+					"explain": {
+						"entryId": "Miss",
+						"headword": "Miss",
+						"pronunciation": { "display": "MIS", "ipaUK": "/mɪs/", "ipaUS": "/mɪs/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "title",
+								"grammarType": "noun",
+								"headwordLine": "Miss",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a title used before the name of an unmarried woman",
+										"examples": ["Miss Green is our teacher."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Miss Green is our teacher.", "ok": true },
+						{ "answer": "Miss. Green is our teacher.", "ok": false },
+						{ "answer": "Miss is Green our teacher.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Mr.",
+					"summary": "a title used for a man",
+					"explain": {
+						"entryId": "Mr.",
+						"headword": "Mr.",
+						"pronunciation": { "display": "MIS-ter", "ipaUK": "/ˈmɪstə/", "ipaUS": "/ˈmɪstər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "title",
+								"grammarType": "noun",
+								"headwordLine": "Mr.",
+								"inflectionsLine": null,
+								"synonyms": ["Mister"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a title used before the name of a man",
+										"examples": ["Mr. Lee is waiting outside."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Mr. Lee is waiting outside.", "ok": true },
+						{ "answer": "Mr Lee is waiting outside.", "ok": false },
+						{ "answer": "Mister. Lee is waiting outside.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Mrs.",
+					"summary": "a title used for a married woman",
+					"explain": {
+						"entryId": "Mrs.",
+						"headword": "Mrs.",
+						"pronunciation": { "display": "MIS-iz", "ipaUK": "/ˈmɪsɪz/", "ipaUS": "/ˈmɪsɪz/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "title",
+								"grammarType": "noun",
+								"headwordLine": "Mrs.",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a title used before the name of a married woman",
+										"examples": ["Mrs. Adams teaches English."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Mrs. Adams teaches English.", "ok": true },
+						{ "answer": "Mrs Adams teaches English.", "ok": false },
+						{ "answer": "Mrs. teaches Adams English.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Ms.",
+					"summary": "a title used for a woman (married or not)",
+					"explain": {
+						"entryId": "Ms.",
+						"headword": "Ms.",
+						"pronunciation": { "display": "MIZ", "ipaUK": "/mɪz/", "ipaUS": "/mɪz/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "title",
+								"grammarType": "noun",
+								"headwordLine": "Ms.",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a title used before the name of a woman, whether married or not",
+										"examples": ["Ms. Taylor will help you."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Ms. Taylor will help you.", "ok": true },
+						{ "answer": "Ms Taylor will help you.", "ok": false },
+						{ "answer": "Ms. will Taylor help you.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Title",
+					"summary": "a word used before a name, like Mr. or Dr.",
+					"explain": {
+						"entryId": "Title",
+						"headword": "Title",
+						"pronunciation": { "display": "TY-tuhl", "ipaUK": "/ˈtaɪtl/", "ipaUS": "/ˈtaɪtl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "title",
+								"inflectionsLine": "titles",
+								"synonyms": ["name"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a word used before a name, such as Mr. or Dr.",
+										"examples": ["Mr. is a common title for a man."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Mr. is a common title for a man.", "ok": true },
+						{ "answer": "Mr. is a common titled for a man.", "ok": false },
+						{ "answer": "Title is Mr. common a for man.", "ok": false }
+					]
+				}
+			]
+
+
+		}
+	]
+}

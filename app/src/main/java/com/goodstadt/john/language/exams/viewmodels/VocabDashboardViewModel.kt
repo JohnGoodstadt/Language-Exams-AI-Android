@@ -12,6 +12,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -38,25 +39,35 @@ class VocabDashboardViewModel @Inject constructor(
     val showSmartReviewSheet = _showSmartReviewSheet.asStateFlow()
 
     init {
-        loadDashboard()
+       // loadDashboard()
 
-        // 2. ✅ NEW: Listen for updates from the Repository
+        // 1. LISTEN FOR EXAM CHANGES (Settings -> Dashboard)
+        // This acts as BOTH the "Initial Load" (it emits immediately)
+        // AND the "Settings Changed" listener.
+        viewModelScope.launch {
+            userPreferencesRepository.selectedExamNameFlow.distinctUntilChanged().collect { newExamName ->
+                Timber.d("VocabDashboard: Exam changed to $newExamName. Reloading.")
+                loadDashboard(examNameOverride = newExamName)
+            }
+        }
+
+        // 2. LISTEN FOR QUIZ RESULTS (Quiz -> Dashboard)
         viewModelScope.launch {
             vocabQuizRepository.dataUpdateEvents.collect {
-                // When repo says "I saved new data", we reload the stats
-                Timber.d("VocabDashboard: Repository updated, refreshing UI...")
+                // When repo says "I saved new data", we reload.
+                // Note: We don't pass an override here; loadDashboard will fetch the current name.
+                Timber.d("VocabDashboard: Data updated. Refreshing.")
                 loadDashboard()
             }
         }
     }
 
-    fun loadDashboard() {
+    fun loadDashboard(examNameOverride: String? = null) {
         viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true) }
 
             // 1. Get Exam Data (Structure)
-            val examName = userPreferencesRepository.selectedExamNameFlow.first()
-//            val vocabResult = contentRepository.getVocabData(examName)
+            val examName = examNameOverride ?: userPreferencesRepository.selectedExamNameFlow.first()
             val vocabResult = contentRepository.getFormat0Data(examName)
 
             // 2. Get User Progress (State)
@@ -107,6 +118,7 @@ class VocabDashboardViewModel @Inject constructor(
                     isLoading = false,
                     isColdStart = false,
                     wordsDueCount = dueWords.size,
+                    wordsDueList = dueWords,
                     totalMastered = totalMastered,
                     categoryStats = statsList
                 )

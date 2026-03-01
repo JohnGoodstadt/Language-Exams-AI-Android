@@ -1,0 +1,395 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizHello2-en",
+  "title": "Hello",
+  "updatedDate": 0,
+  "data": [
+	{
+	  "title": "Choose the sentence that uses the word correctly.",
+	  "description": "Hello & introductions",
+	  "sortorder": 1,
+	  "sections": [
+		{
+		  "title": "",
+		  "page": 1,
+		  "question": "call",
+		  "summary": "to say someone’s name; or to phone someone",
+		  "explain": {
+			"entryId": "call",
+			"headword": "call",
+			"pronunciation": { "display": "KAWL", "ipaUK": "/kɔːl/", "ipaUS": "/kɔːl/" },
+			"labels": ["A1"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "call",
+				"inflectionsLine": "calls, calling, called",
+				"synonyms": ["phone", "name"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to use a name for someone or something",
+					"examples": ["My friends call me Sam."]
+				  },
+				  {
+					"senseNumber": 2,
+					"definition": "to phone someone",
+					"examples": ["I will call you later."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "call",
+				"inflectionsLine": "calls",
+				"synonyms": ["phone call"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a phone conversation",
+					"examples": ["I received a call from my sister."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "Please call me Anna.", "ok": true },
+			{ "answer": "Please call I Anna.", "ok": false },
+			{ "answer": "Please called me Anna.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 2,
+		  "question": "greet",
+		  "summary": "to say hello to someone",
+		  "explain": {
+			"entryId": "greet",
+			"headword": "greet",
+			"pronunciation": { "display": "GREET", "ipaUK": "/ɡriːt/", "ipaUS": "/ɡriːt/" },
+			"labels": ["A1"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "greet",
+				"inflectionsLine": "greets, greeting, greeted",
+				"synonyms": ["welcome", "say hello to"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to say hello to someone",
+					"examples": ["I greeted my neighbour in the street."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She greeted the teacher with a smile.", "ok": true },
+			{ "answer": "She greet the teacher with a smile.", "ok": false },
+			{ "answer": "She greeted to the teacher with a smile.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 3,
+		  "question": "hello",
+		  "summary": "a word you say when you meet someone",
+		  "explain": {
+			"entryId": "hello",
+			"headword": "hello",
+			"pronunciation": { "display": "heh-LOH", "ipaUK": "/həˈləʊ/", "ipaUS": "/həˈloʊ/" },
+			"labels": ["A1"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "interjection",
+				"grammarType": "interjection",
+				"headwordLine": "hello",
+				"inflectionsLine": null,
+				"synonyms": ["hi"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "used when meeting or speaking to someone",
+					"examples": ["Hello! How are you?"]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I said hello to my new neighbour.", "ok": true },
+			{ "answer": "I said a hello to my new neighbour.", "ok": false },
+			{ "answer": "I hello said to my new neighbour.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 4,
+		  "question": "last",
+		  "summary": "the final one; or the most recent",
+		  "explain": {
+			"entryId": "last",
+			"headword": "last",
+			"pronunciation": { "display": "LAST", "ipaUK": "/lɑːst/", "ipaUS": "/læst/" },
+			"labels": ["A1"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "last",
+				"inflectionsLine": null,
+				"synonyms": ["final"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "the final one in a series",
+					"examples": ["This is my last day at work."]
+				  },
+				  {
+					"senseNumber": 2,
+					"definition": "most recent",
+					"examples": ["I saw her last week."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "last",
+				"inflectionsLine": "lasts, lasting, lasted",
+				"synonyms": ["continue"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to continue for a period of time",
+					"examples": ["The meeting lasted one hour."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "What is your last name?", "ok": true },
+			{ "answer": "What is your name last?", "ok": false },
+			{ "answer": "What are your last name?", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 5,
+		  "question": "name",
+		  "summary": "the word people use to identify a person or thing",
+		  "explain": {
+			"entryId": "name",
+			"headword": "name",
+			"pronunciation": { "display": "NAYM", "ipaUK": "/neɪm/", "ipaUS": "/neɪm/" },
+			"labels": ["A1"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "name",
+				"inflectionsLine": "names",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "the word used to identify a person or thing",
+					"examples": ["My name is Maria."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "name",
+				"inflectionsLine": "names, naming, named",
+				"synonyms": ["call"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to give someone or something a name",
+					"examples": ["They named the baby Leo."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "My name is Ali.", "ok": true },
+			{ "answer": "My name are Ali.", "ok": false },
+			{ "answer": "My is name Ali.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 6,
+		  "question": "nice",
+		  "summary": "pleasant and kind",
+		  "explain": {
+			"entryId": "nice",
+			"headword": "nice",
+			"pronunciation": { "display": "NYSS", "ipaUK": "/naɪs/", "ipaUS": "/naɪs/" },
+			"labels": ["A1"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "nice",
+				"inflectionsLine": "nicer, nicest",
+				"synonyms": ["kind", "pleasant"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "pleasant; kind",
+					"examples": ["She is a nice person."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "It is nice to meet you.", "ok": true },
+			{ "answer": "It is nicely to meet you.", "ok": false },
+			{ "answer": "It nice is to meet you.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 7,
+		  "question": "pleased",
+		  "summary": "happy and satisfied",
+		  "explain": {
+			"entryId": "pleased",
+			"headword": "pleased",
+			"pronunciation": { "display": "PLEEZD", "ipaUK": "/pliːzd/", "ipaUS": "/pliːzd/" },
+			"labels": ["A1"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "pleased",
+				"inflectionsLine": null,
+				"synonyms": ["happy", "glad"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "happy and satisfied",
+					"examples": ["I’m pleased to meet you."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I’m pleased to meet you.", "ok": true },
+			{ "answer": "I’m please to meet you.", "ok": false },
+			{ "answer": "I’m pleased meet you.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 8,
+		  "question": "they",
+		  "summary": "used to talk about two or more people or things",
+		  "explain": {
+			"entryId": "they",
+			"headword": "they",
+			"pronunciation": { "display": "THAY", "ipaUK": "/ðeɪ/", "ipaUS": "/ðeɪ/" },
+			"labels": ["A1"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "pronoun",
+				"grammarType": "subject pronoun",
+				"headwordLine": "they",
+				"inflectionsLine": null,
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "used for two or more people or things",
+					"examples": ["They are my friends."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "They are my new neighbours.", "ok": true },
+			{ "answer": "They is my new neighbours.", "ok": false },
+			{ "answer": "Them are my new neighbours.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 9,
+		  "question": "we",
+		  "summary": "used when you and other people do something together",
+		  "explain": {
+			"entryId": "we",
+			"headword": "we",
+			"pronunciation": { "display": "WEE", "ipaUK": "/wiː/", "ipaUS": "/wiː/" },
+			"labels": ["A1"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "pronoun",
+				"grammarType": "subject pronoun",
+				"headwordLine": "we",
+				"inflectionsLine": null,
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "used to talk about you and at least one other person",
+					"examples": ["We are from London."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "We are from Spain.", "ok": true },
+			{ "answer": "We is from Spain.", "ok": false },
+			{ "answer": "Us are from Spain.", "ok": false }
+		  ]
+		}
+	  ]
+	}
+  ]
+}

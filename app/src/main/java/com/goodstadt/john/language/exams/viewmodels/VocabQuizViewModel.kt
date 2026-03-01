@@ -311,7 +311,7 @@ class VocabQuizViewModel @Inject constructor(
          //   val level = userPreferencesRepository.selectedSkillLevelFlow.first()
 
             // 1. Sanitize Title
-            val noB1Title = categoryTitle.replace(" (B1)", "").replace(" (B2)", "")  //personal title
+            val noB1Title = categoryTitle.replace(" (B1)", "").replace(" (B2)", "").replace(" (A2)", "").replace(" (A1)", "")  //personal title  //personal title  //personal title
             val cleanTitle = noB1Title.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
             currentSectionTitle = cleanTitle
             val baseFilenamePrefix = "WordQuiz${cleanTitle}" // e.g. "WordQuizTravel"
@@ -367,6 +367,9 @@ class VocabQuizViewModel @Inject constructor(
 //            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
             currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
             // 1. Get Due Items
+            //val dueWordsTest = vocabQuizRepository.getDueWords(limit = 10)
+            //Timber.i("${dueWordsTest}")
+
             val dueItems = vocabQuizRepository.getDueItems(limit = 10)
 
             if (dueItems.isEmpty()) {

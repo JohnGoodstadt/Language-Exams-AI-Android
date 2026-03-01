@@ -1,0 +1,314 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonal2-en",
+	"title": "Personal",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Personal",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "name",
+					"page": 1,
+					"question": "name",
+					"summary": "the word or words by which a person, place, or thing is known",
+					"explain": {
+						"entryId": "name",
+						"headword": "name",
+						"pronunciation": { "display": "NAYM", "ipaUK": "/neɪm/", "ipaUS": "/neɪm/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "name",
+								"inflectionsLine": "names",
+								"synonyms": ["first name", "surname", "title"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the word or words that a person, place, or thing is known by",
+										"examples": [
+											"She wrote her name at the top of the application form.",
+											"What is your name? My name is Maria."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "name",
+								"inflectionsLine": "names, naming, named",
+								"synonyms": ["call", "title", "label"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to give someone or something a name",
+										"examples": [
+											"They named their daughter after her grandmother.",
+											"The street was named after a famous local scientist."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wrote her name at the top of the application form.", "ok": true },
+						{ "answer": "He cooked the name for dinner and served it with vegetables.", "ok": false },
+						{ "answer": "She drove her name to work and parked it outside the office.", "ok": false },
+						{ "answer": "They planted a name in the garden and watered it every day.", "ok": false }
+					]
+				},
+				{
+					"title": "nationality",
+					"page": 2,
+					"question": "nationality",
+					"summary": "the status of belonging to a particular country as a citizen",
+					"explain": {
+						"entryId": "nationality",
+						"headword": "nationality",
+						"pronunciation": { "display": "nash-uh-NAL-i-tee", "ipaUK": "/ˌnæʃəˈnælɪti/", "ipaUS": "/ˌnæʃəˈnælɪti/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable and uncountable noun",
+								"headwordLine": "nationality",
+								"inflectionsLine": "nationalities",
+								"synonyms": ["citizenship", "origin", "background"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the status of being a citizen of a particular country",
+										"examples": [
+											"The form asked for her name, date of birth, and nationality.",
+											"He has dual nationality because his mother is French and his father is British."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The form asked for her name, date of birth, and nationality.", "ok": true },
+						{ "answer": "He cooked his nationality for dinner and served it with bread.", "ok": false },
+						{ "answer": "She drove her nationality to work every morning.", "ok": false },
+						{ "answer": "They planted a nationality in the garden and watered it daily.", "ok": false }
+					]
+				},
+				{
+					"title": "passport",
+					"page": 3,
+					"question": "passport",
+					"summary": "an official document that proves your identity and allows you to travel to other countries",
+					"explain": {
+						"entryId": "passport",
+						"headword": "passport",
+						"pronunciation": { "display": "PAS-port", "ipaUK": "/ˈpɑːspɔːt/", "ipaUS": "/ˈpæspɔːrt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "passport",
+								"inflectionsLine": "passports",
+								"synonyms": ["travel document", "ID", "identity document"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official document issued by a government that proves your identity and allows you to travel to other countries",
+										"examples": [
+											"She showed her passport at the border and the officer waved her through.",
+											"He lost his passport on holiday and had to contact the embassy."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She showed her passport at the border and the officer waved her through.", "ok": true },
+						{ "answer": "He cooked his passport in the oven for dinner on Sunday.", "ok": false },
+						{ "answer": "She wore her passport on her head to the beach.", "ok": false },
+						{ "answer": "They planted a passport in the garden near the gate.", "ok": false }
+					]
+				},
+				{
+					"title": "phone number",
+					"page": 4,
+					"question": "phone number",
+					"summary": "a sequence of digits used to call someone on a telephone",
+					"explain": {
+						"entryId": "phone number",
+						"headword": "phone number",
+						"pronunciation": { "display": "FOHN NUM-bur", "ipaUK": "/fəʊn ˈnʌmbə/", "ipaUS": "/foʊn ˈnʌmbər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "phone number",
+								"inflectionsLine": "phone numbers",
+								"synonyms": ["telephone number", "contact number", "mobile number"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a sequence of numbers that you dial to call someone on the telephone",
+										"examples": [
+											"She wrote her phone number on the form so they could contact her.",
+											"Can I have your phone number in case I need to reach you?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wrote her phone number on the form so they could contact her.", "ok": true },
+						{ "answer": "He ate his phone number for breakfast with a glass of juice.", "ok": false },
+						{ "answer": "She drove her phone number to the office every morning.", "ok": false },
+						{ "answer": "They planted a phone number in the garden and watered it daily.", "ok": false }
+					]
+				},
+				{
+					"title": "take a shower",
+					"page": 5,
+					"question": "take a shower",
+					"summary": "to wash your body by standing under running water",
+					"explain": {
+						"entryId": "take a shower",
+						"headword": "take a shower",
+						"pronunciation": { "display": "TAYK uh SHOW-ur", "ipaUK": "/teɪk ə ˈʃaʊə/", "ipaUS": "/teɪk ə ˈʃaʊər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb phrase",
+								"headwordLine": "take a shower",
+								"inflectionsLine": "takes a shower, taking a shower, took a shower",
+								"synonyms": ["have a shower", "shower", "wash"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to wash your whole body while standing under a shower",
+										"examples": [
+											"She takes a shower every morning before going to work.",
+											"He took a shower after his run to cool down and clean up."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She takes a shower every morning before going to work.", "ok": true },
+						{ "answer": "He takes a shower at the supermarket to buy food.", "ok": false },
+						{ "answer": "She took a shower in the kitchen in order to cook dinner.", "ok": false },
+						{ "answer": "They take a shower at the library to borrow books.", "ok": false }
+					]
+				},
+				{
+					"title": "wake up",
+					"page": 6,
+					"question": "wake up",
+					"summary": "to stop sleeping and become conscious",
+					"explain": {
+						"entryId": "wake up",
+						"headword": "wake up",
+						"pronunciation": { "display": "WAYK UP", "ipaUK": "/weɪk ʌp/", "ipaUS": "/weɪk ʌp/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb phrase",
+								"headwordLine": "wake up",
+								"inflectionsLine": "wakes up, waking up, woke up",
+								"synonyms": ["get up", "rise", "stir"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to stop sleeping; to become conscious after sleeping",
+										"examples": [
+											"She wakes up early every morning and makes a cup of coffee.",
+											"He woke up at six o'clock and immediately got ready for work."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wakes up early every morning and makes a cup of coffee.", "ok": true },
+						{ "answer": "He woke up his bicycle and rode it to school.", "ok": false },
+						{ "answer": "She wakes up dinner at seven o'clock every evening.", "ok": false },
+						{ "answer": "They wake up to the supermarket every Saturday morning.", "ok": false }
+					]
+				},
+				{
+					"title": "occupation",
+					"page": 7,
+					"question": "occupation",
+					"summary": "a person's job or profession",
+					"explain": {
+						"entryId": "occupation",
+						"headword": "occupation",
+						"pronunciation": { "display": "ok-yuh-PAY-shun", "ipaUK": "/ˌɒkjʊˈpeɪʃn/", "ipaUS": "/ˌɑːkjʊˈpeɪʃn/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "occupation",
+								"inflectionsLine": "occupations",
+								"synonyms": ["job", "profession", "career"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person's job or profession, especially as stated on an official form",
+										"examples": [
+											"The form asked for her name, address, and occupation.",
+											"Under occupation, he wrote 'teacher' on the application form."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The form asked for her name, address, and occupation.", "ok": true },
+						{ "answer": "He cooked the occupation for dinner and served it with vegetables.", "ok": false },
+						{ "answer": "She drove her occupation to work and parked it outside.", "ok": false },
+						{ "answer": "They planted an occupation in the garden and watered it every day.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}
