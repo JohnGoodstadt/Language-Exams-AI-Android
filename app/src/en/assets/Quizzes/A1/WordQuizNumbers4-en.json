@@ -1,0 +1,216 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNumbers1-en",
+	"title": "Numbers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Numbers",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "nine",
+					"page": 31,
+					"question": "9",
+					"summary": "the number 9; one more than eight",
+					"explain": {
+						"entryId": "nine",
+						"headword": "nine",
+						"pronunciation": { "display": "NYN", "ipaUK": "/naɪn/", "ipaUS": "/naɪn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "nine",
+								"inflectionsLine": "",
+								"synonyms": ["three times three", "a triple three", "nine"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 9; one more than eight",
+										"examples": [
+											"She has nine books on her shelf at home.",
+											"He counts nine birds on the roof."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has nine books on her shelf at home.", "ok": true },
+						{ "answer": "There are nine days in a week.", "ok": false },
+						{ "answer": "Nine comes after ten when you count.", "ok": false },
+						{ "answer": "Four plus six equals nine.", "ok": false }
+					]
+				},
+				{
+					"title": "ninety",
+					"page": 32,
+					"question": "90",
+					"summary": "the number 90; nine times ten",
+					"explain": {
+						"entryId": "ninety",
+						"headword": "ninety",
+						"pronunciation": { "display": "NYN-tee", "ipaUK": "/ˈnaɪnti/", "ipaUS": "/ˈnaɪnti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "ninety",
+								"inflectionsLine": "",
+								"synonyms": ["nine tens", "a right angle", "ninety"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 90; nine times ten",
+										"examples": [
+											"She scores ninety marks out of one hundred in the test.",
+											"A football match lasts ninety minutes."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She scores ninety marks out of one hundred in the test.", "ok": true },
+						{ "answer": "Ninety comes before eighty when you count.", "ok": false },
+						{ "answer": "Forty plus forty equals ninety.", "ok": false },
+						{ "answer": "Nine times eleven equals ninety.", "ok": false }
+					]
+				},
+				{
+					"title": "nine hundred and ninety-nine",
+					"page": 33,
+					"question": "999",
+					"summary": "the number 999; one less than one thousand",
+					"explain": {
+						"entryId": "nine hundred and ninety-nine",
+						"headword": "nine hundred and ninety-nine",
+						"pronunciation": { "display": "nyn HUN-drud und NYN-tee-NYN", "ipaUK": "/naɪn ˈhʌndrəd ənd ˌnaɪntiˈnaɪn/", "ipaUS": "/naɪn ˈhʌndrəd ænd ˌnaɪntiˈnaɪn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "nine hundred and ninety-nine",
+								"inflectionsLine": "",
+								"synonyms": ["999", "one less than a thousand", "triple nine"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 999; one less than one thousand",
+										"examples": [
+											"The online store has nine hundred and ninety-nine products to choose from.",
+											"She counts nine hundred and ninety-nine steps to the top of the hill."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The online store has nine hundred and ninety-nine products to choose from.", "ok": true },
+						{ "answer": "Nine hundred and ninety-nine is the same as one thousand.", "ok": false },
+						{ "answer": "Nine hundred plus ninety equals nine hundred and ninety-nine.", "ok": false },
+						{ "answer": "Nine hundred and ninety-nine comes after one thousand when you count.", "ok": false }
+					]
+				},
+				{
+					"title": "ten",
+					"page": 34,
+					"question": "10",
+					"summary": "the number 10; one more than nine",
+					"explain": {
+						"entryId": "ten",
+						"headword": "ten",
+						"pronunciation": { "display": "TEN", "ipaUK": "/ten/", "ipaUS": "/ten/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "ten",
+								"inflectionsLine": "",
+								"synonyms": ["a decade", "double five", "two fives"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 10; one more than nine",
+										"examples": [
+											"There are ten fingers on two hands.",
+											"She counts to ten before starting the game."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are ten fingers on two hands.", "ok": true },
+						{ "answer": "A week has ten days.", "ok": false },
+						{ "answer": "Ten comes after eleven when you count.", "ok": false },
+						{ "answer": "Five plus six equals ten.", "ok": false }
+					]
+				},
+				{
+					"title": "one",
+					"page": 35,
+					"question": "1",
+					"summary": "the number 1; a single unit or thing",
+					"explain": {
+						"entryId": "one",
+						"headword": "one",
+						"pronunciation": { "display": "WUN", "ipaUK": "/wʌn/", "ipaUS": "/wʌn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "one",
+								"inflectionsLine": "",
+								"synonyms": ["single", "sole", "unity"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 1; a single unit or thing",
+										"examples": [
+											"She eats one apple and one banana for lunch.",
+											"He has one brother and two sisters."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She eats one apple and one banana for lunch.", "ok": true },
+						{ "answer": "There is one day in a week.", "ok": false },
+						{ "answer": "One comes after two when you count.", "ok": false },
+						{ "answer": "Zero plus zero equals one.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

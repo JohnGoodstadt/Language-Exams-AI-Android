@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs1-en",
+	"title": "Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Verbs",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "drink",
+					"page": 1,
+					"question": "drink",
+					"summary": "to take liquid into your mouth and swallow it",
+					"explain": {
+						"entryId": "drink",
+						"headword": "drink",
+						"pronunciation": { "display": "DRINK", "ipaUK": "/drɪŋk/", "ipaUS": "/drɪŋk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive and intransitive verb",
+								"headwordLine": "drink",
+								"inflectionsLine": "drinks, drinking, drank, drunk",
+								"synonyms": ["sip", "swallow", "gulp"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to take liquid into your mouth and swallow it",
+										"examples": [
+											"She drinks a glass of water every morning.",
+											"He drinks coffee before going to work."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She drinks a glass of water every morning.", "ok": true },
+						{ "answer": "He drinks a sandwich for lunch every day.", "ok": false },
+						{ "answer": "She has a big drink of bread for breakfast.", "ok": false },
+						{ "answer": "The water is very drink today.", "ok": false }
+					]
+				},
+				{
+					"title": "eat",
+					"page": 2,
+					"question": "eat",
+					"summary": "to put food in your mouth, chew it, and swallow it",
+					"explain": {
+						"entryId": "eat",
+						"headword": "eat",
+						"pronunciation": { "display": "EET", "ipaUK": "/iːt/", "ipaUS": "/iːt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive and intransitive verb",
+								"headwordLine": "eat",
+								"inflectionsLine": "eats, eating, ate, eaten",
+								"synonyms": ["consume", "have", "feed on"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to put food in your mouth, chew it, and swallow it",
+										"examples": [
+											"She eats breakfast every morning before school.",
+											"He eats an apple as a snack."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She eats breakfast every morning before school.", "ok": true },
+						{ "answer": "He eats a glass of orange juice for breakfast.", "ok": false },
+						{ "answer": "She has an eat of water before going to bed.", "ok": false },
+						{ "answer": "The food is very eat and tasty.", "ok": false }
+					]
+				},
+				{
+					"title": "listen",
+					"page": 3,
+					"question": "listen",
+					"summary": "to pay attention to a sound or to what someone is saying",
+					"explain": {
+						"entryId": "listen",
+						"headword": "listen",
+						"pronunciation": { "display": "LIS-un", "ipaUK": "/ˈlɪsn/", "ipaUS": "/ˈlɪsn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "listen",
+								"inflectionsLine": "listens, listening, listened",
+								"synonyms": ["hear", "pay attention", "tune in"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to pay attention to a sound or to what someone is saying",
+										"examples": [
+											"She listens to music on her way to school.",
+											"He listens carefully to the teacher in class."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She listens to music on her way to school.", "ok": true },
+						{ "answer": "He listens to a sandwich for lunch every day.", "ok": false },
+						{ "answer": "She has a long listen of bread before school.", "ok": false },
+						{ "answer": "The music is very listen and loud today.", "ok": false }
+					]
+				},
+				{
+					"title": "look",
+					"page": 4,
+					"question": "look",
+					"summary": "to turn your eyes towards something in order to see it",
+					"explain": {
+						"entryId": "look",
+						"headword": "look",
+						"pronunciation": { "display": "LOOK", "ipaUK": "/lʊk/", "ipaUS": "/lʊk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "look",
+								"inflectionsLine": "looks, looking, looked",
+								"synonyms": ["see", "watch", "observe"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to turn your eyes towards something in order to see it",
+										"examples": [
+											"She looks out of the window at the garden.",
+											"He looks at the map to find the street."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She looks out of the window at the garden.", "ok": true },
+						{ "answer": "He looks his breakfast before going to school.", "ok": false },
+						{ "answer": "She drinks a look of water every morning.", "ok": false },
+						{ "answer": "The view is very look and beautiful today.", "ok": false }
+					]
+				},
+				{
+					"title": "run",
+					"page": 5,
+					"question": "run",
+					"summary": "to move quickly using your legs, faster than a walk",
+					"explain": {
+						"entryId": "run",
+						"headword": "run",
+						"pronunciation": { "display": "RUN", "ipaUK": "/rʌn/", "ipaUS": "/rʌn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "run",
+								"inflectionsLine": "runs, running, ran, run",
+								"synonyms": ["sprint", "jog", "dash"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to move quickly using your legs, faster than a walk",
+										"examples": [
+											"She runs to school when she is late.",
+											"He runs five kilometres every morning for exercise."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She runs to school when she is late.", "ok": true },
+						{ "answer": "He runs his breakfast every morning before school.", "ok": false },
+						{ "answer": "She drinks a run of water before school each day.", "ok": false },
+						{ "answer": "The exercise is very run and tiring.", "ok": false }
+					]
+				},
+				{
+					"title": "sit",
+					"page": 6,
+					"question": "sit",
+					"summary": "to rest your body with your weight on your bottom",
+					"explain": {
+						"entryId": "sit",
+						"headword": "sit",
+						"pronunciation": { "display": "SIT", "ipaUK": "/sɪt/", "ipaUS": "/sɪt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "sit",
+								"inflectionsLine": "sits, sitting, sat",
+								"synonyms": ["be seated", "take a seat", "rest"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to rest your body in a chair or on a surface, with your back upright",
+										"examples": [
+											"She sits in her chair and reads a book.",
+											"He sits on the bench in the park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She sits in her chair and reads a book.", "ok": true },
+						{ "answer": "He sits his dinner before going to bed.", "ok": false },
+						{ "answer": "She eats a sit every morning for breakfast.", "ok": false },
+						{ "answer": "The chair is very sit and comfortable.", "ok": false }
+					]
+				},
+				{
+					"title": "sleep",
+					"page": 7,
+					"question": "sleep",
+					"summary": "to rest with your eyes closed and your mind and body not active",
+					"explain": {
+						"entryId": "sleep",
+						"headword": "sleep",
+						"pronunciation": { "display": "SLEEP", "ipaUK": "/sliːp/", "ipaUS": "/sliːp/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "sleep",
+								"inflectionsLine": "sleeps, sleeping, slept",
+								"synonyms": ["rest", "doze", "slumber"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to rest with your eyes closed and your mind and body not active",
+										"examples": [
+											"She sleeps for eight hours every night.",
+											"He sleeps in his bed after a long day."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She sleeps for eight hours every night.", "ok": true },
+						{ "answer": "He sleeps his breakfast before going to school.", "ok": false },
+						{ "answer": "She drinks a sleep every morning before school.", "ok": false },
+						{ "answer": "The bed is very sleep and comfortable.", "ok": false }
+					]
+				},
+				{
+					"title": "stand",
+					"page": 8,
+					"question": "stand",
+					"summary": "to be in an upright position with your weight on your feet",
+					"explain": {
+						"entryId": "stand",
+						"headword": "stand",
+						"pronunciation": { "display": "STAND", "ipaUK": "/stænd/", "ipaUS": "/stænd/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "stand",
+								"inflectionsLine": "stands, standing, stood",
+								"synonyms": ["be upright", "be on your feet", "rise"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to be in an upright position with your weight on your feet",
+										"examples": [
+											"She stands at the bus stop and waits for the bus.",
+											"He stands in the queue at the shop."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She stands at the bus stop and waits for the bus.", "ok": true },
+						{ "answer": "He stands his dinner before going to bed.", "ok": false },
+						{ "answer": "She eats a stand every morning for breakfast.", "ok": false },
+						{ "answer": "The building is very stand and tall.", "ok": false }
+					]
+				},
+				{
+					"title": "talk",
+					"page": 9,
+					"question": "talk",
+					"summary": "to say words; to speak to someone",
+					"explain": {
+						"entryId": "talk",
+						"headword": "talk",
+						"pronunciation": { "display": "TAWK", "ipaUK": "/tɔːk/", "ipaUS": "/tɔːk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "talk",
+								"inflectionsLine": "talks, talking, talked",
+								"synonyms": ["speak", "chat", "say"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to say words; to speak to someone",
+										"examples": [
+											"She talks to her friends on the phone every evening.",
+											"He talks to the teacher after class."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She talks to her friends on the phone every evening.", "ok": true },
+						{ "answer": "He talks his breakfast before going to school.", "ok": false },
+						{ "answer": "She eats a talk every morning with her coffee.", "ok": false },
+						{ "answer": "The conversation is very talk and interesting.", "ok": false }
+					]
+				},
+				{
+					"title": "walk",
+					"page": 10,
+					"question": "walk",
+					"summary": "to move forward by putting one foot in front of the other at a normal speed",
+					"explain": {
+						"entryId": "walk",
+						"headword": "walk",
+						"pronunciation": { "display": "WAWK", "ipaUK": "/wɔːk/", "ipaUS": "/wɔːk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "walk",
+								"inflectionsLine": "walks, walking, walked",
+								"synonyms": ["stroll", "stride", "march"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to move forward by putting one foot in front of the other at a normal speed",
+										"examples": [
+											"She walks to school every morning.",
+											"He walks his dog in the park after dinner."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She walks to school every morning.", "ok": true },
+						{ "answer": "He walks his dinner before going to bed.", "ok": false },
+						{ "answer": "She drinks a walk every morning before school.", "ok": false },
+						{ "answer": "The path is very walk and long.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

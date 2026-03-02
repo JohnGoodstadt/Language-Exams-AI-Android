@@ -1,0 +1,216 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFamily2-en",
+	"title": "Family",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Family",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "grandmother",
+					"page": 7,
+					"question": "grandmother",
+					"summary": "the mother of your father or mother",
+					"explain": {
+						"entryId": "grandmother",
+						"headword": "grandmother",
+						"pronunciation": { "display": "GRAN-muth-ur", "ipaUK": "/ˈɡrænmʌðə/", "ipaUS": "/ˈɡrænmʌðər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "grandmother",
+								"inflectionsLine": "grandmothers",
+								"synonyms": ["grandma", "granny", "nan"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the mother of your father or mother",
+										"examples": [
+											"Her grandmother is her mother's mother.",
+											"She calls her grandmother every Sunday evening."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her grandmother is her mother's mother.", "ok": true },
+						{ "answer": "His grandmother is his sister's daughter.", "ok": false },
+						{ "answer": "Her grandmother is a man.", "ok": false },
+						{ "answer": "He drinks a grandmother every morning before school.", "ok": false }
+					]
+				},
+				{
+					"title": "mother",
+					"page": 8,
+					"question": "mother",
+					"summary": "a female parent; a woman who has a child",
+					"explain": {
+						"entryId": "mother",
+						"headword": "mother",
+						"pronunciation": { "display": "MUTH-ur", "ipaUK": "/ˈmʌðə/", "ipaUS": "/ˈmʌðər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "mother",
+								"inflectionsLine": "mothers",
+								"synonyms": ["mum", "mummy", "mama"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a female parent; a woman who has a child",
+										"examples": [
+											"Her mother makes breakfast for the family every morning.",
+											"She looks a lot like her mother."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her mother makes breakfast for the family every morning.", "ok": true },
+						{ "answer": "His mother is his father's son.", "ok": false },
+						{ "answer": "His mother is a man.", "ok": false },
+						{ "answer": "She eats her mother for breakfast every morning.", "ok": false }
+					]
+				},
+				{
+					"title": "sister",
+					"page": 9,
+					"question": "sister",
+					"summary": "a girl or woman who has the same parents as you",
+					"explain": {
+						"entryId": "sister",
+						"headword": "sister",
+						"pronunciation": { "display": "SIS-tur", "ipaUK": "/ˈsɪstə/", "ipaUS": "/ˈsɪstər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "sister",
+								"inflectionsLine": "sisters",
+								"synonyms": ["sibling", "sis", "female sibling"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a girl or woman who has the same mother and father as you",
+										"examples": [
+											"She has two sisters and one brother.",
+											"Her sister is one year younger than her."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has two sisters and one brother.", "ok": true },
+						{ "answer": "His sister is his parent's son.", "ok": false },
+						{ "answer": "Her sister is the same as her brother.", "ok": false },
+						{ "answer": "He drinks his sister every morning before school.", "ok": false }
+					]
+				},
+				{
+					"title": "son",
+					"page": 10,
+					"question": "son",
+					"summary": "a male child in relation to his parents",
+					"explain": {
+						"entryId": "son",
+						"headword": "son",
+						"pronunciation": { "display": "SUN", "ipaUK": "/sʌn/", "ipaUS": "/sʌn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "son",
+								"inflectionsLine": "sons",
+								"synonyms": ["boy", "child", "male child"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a male child in relation to his parents",
+										"examples": [
+											"Their son is eight years old and goes to school.",
+											"She has one son and two daughters."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Their son is eight years old and goes to school.", "ok": true },
+						{ "answer": "Their son is a girl.", "ok": false },
+						{ "answer": "Her son is her parent, not her child.", "ok": false },
+						{ "answer": "She eats a son for breakfast every morning.", "ok": false }
+					]
+				},
+				{
+					"title": "uncle",
+					"page": 11,
+					"question": "uncle",
+					"summary": "the brother of your father or mother; also the husband of your aunt",
+					"explain": {
+						"entryId": "uncle",
+						"headword": "uncle",
+						"pronunciation": { "display": "UNG-kul", "ipaUK": "/ˈʌŋkl/", "ipaUS": "/ˈʌŋkl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "uncle",
+								"inflectionsLine": "uncles",
+								"synonyms": ["paternal uncle", "maternal uncle", "great uncle"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the brother of your father or mother, or the husband of your aunt",
+										"examples": [
+											"Her uncle is her father's brother.",
+											"He visits his uncle every Christmas."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her uncle is her father's brother.", "ok": true },
+						{ "answer": "His uncle is his mother's sister.", "ok": false },
+						{ "answer": "Her uncle is a woman.", "ok": false },
+						{ "answer": "He drinks his uncle every morning before school.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

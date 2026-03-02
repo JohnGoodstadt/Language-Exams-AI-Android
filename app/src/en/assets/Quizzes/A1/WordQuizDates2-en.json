@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizDates2-en",
+	"title": "Dates",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Dates",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "Monday",
+					"page": 11,
+					"question": "Monday",
+					"summary": "the first day of the working week, between Sunday and Tuesday",
+					"explain": {
+						"entryId": "Monday",
+						"headword": "Monday",
+						"pronunciation": { "display": "MUN-day", "ipaUK": "/ˈmʌndeɪ/", "ipaUS": "/ˈmʌndeɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "Monday",
+								"inflectionsLine": "",
+								"synonyms": ["Mon", "first weekday", "start of the week"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the first day of the working week, coming after Sunday and before Tuesday",
+										"examples": [
+											"She goes back to school on Monday.",
+											"He starts his new job on Monday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes back to school on Monday.", "ok": true },
+						{ "answer": "Monday is the last day of the working week.", "ok": false },
+						{ "answer": "Monday comes after Tuesday.", "ok": false },
+						{ "answer": "Monday is a weekend day.", "ok": false }
+					]
+				},
+				{
+					"title": "November",
+					"page": 12,
+					"question": "November",
+					"summary": "the eleventh month of the year, between October and December",
+					"explain": {
+						"entryId": "November",
+						"headword": "November",
+						"pronunciation": { "display": "noh-VEM-bur", "ipaUK": "/nəʊˈvembə/", "ipaUS": "/noʊˈvembər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "November",
+								"inflectionsLine": "",
+								"synonyms": ["Nov", "eleventh month", "autumn month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the eleventh month of the year, coming after October and before December",
+										"examples": [
+											"It is cold and rainy in November.",
+											"He has a birthday in November."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "It is cold and rainy in November.", "ok": true },
+						{ "answer": "November is the first month of the year.", "ok": false },
+						{ "answer": "November comes before October.", "ok": false },
+						{ "answer": "November is a summer month.", "ok": false }
+					]
+				},
+				{
+					"title": "October",
+					"page": 13,
+					"question": "October",
+					"summary": "the tenth month of the year, between September and November",
+					"explain": {
+						"entryId": "October",
+						"headword": "October",
+						"pronunciation": { "display": "ok-TOH-bur", "ipaUK": "/ɒkˈtəʊbə/", "ipaUS": "/ɑːkˈtoʊbər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "October",
+								"inflectionsLine": "",
+								"synonyms": ["Oct", "tenth month", "autumn month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the tenth month of the year, coming after September and before November",
+										"examples": [
+											"Halloween is on the thirty-first of October.",
+											"The leaves fall from the trees in October."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Halloween is on the thirty-first of October.", "ok": true },
+						{ "answer": "October is the first month of the year.", "ok": false },
+						{ "answer": "October comes after November.", "ok": false },
+						{ "answer": "October is a summer month.", "ok": false }
+					]
+				},
+				{
+					"title": "Saturday",
+					"page": 14,
+					"question": "Saturday",
+					"summary": "the day after Friday and before Sunday; the first day of the weekend",
+					"explain": {
+						"entryId": "Saturday",
+						"headword": "Saturday",
+						"pronunciation": { "display": "SAT-ur-day", "ipaUK": "/ˈsætədeɪ/", "ipaUS": "/ˈsætərdeɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "Saturday",
+								"inflectionsLine": "",
+								"synonyms": ["Sat", "weekend day", "sixth day"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the day of the week after Friday and before Sunday; the first day of the weekend",
+										"examples": [
+											"She goes shopping on Saturday morning.",
+											"He plays football on Saturday afternoon."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes shopping on Saturday morning.", "ok": true },
+						{ "answer": "Saturday is a school day for most children.", "ok": false },
+						{ "answer": "Saturday comes before Friday.", "ok": false },
+						{ "answer": "Saturday comes after Sunday.", "ok": false }
+					]
+				},
+				{
+					"title": "September",
+					"page": 15,
+					"question": "September",
+					"summary": "the ninth month of the year, between August and October",
+					"explain": {
+						"entryId": "September",
+						"headword": "September",
+						"pronunciation": { "display": "sep-TEM-bur", "ipaUK": "/sepˈtembə/", "ipaUS": "/sepˈtembər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "September",
+								"inflectionsLine": "",
+								"synonyms": ["Sep", "ninth month", "autumn month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the ninth month of the year, coming after August and before October",
+										"examples": [
+											"School goes back in September.",
+											"Her birthday is in September."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "School goes back in September.", "ok": true },
+						{ "answer": "September is the first month of the year.", "ok": false },
+						{ "answer": "September comes after October.", "ok": false },
+						{ "answer": "September is a winter month.", "ok": false }
+					]
+				},
+				{
+					"title": "Sunday",
+					"page": 16,
+					"question": "Sunday",
+					"summary": "the last day of the week, after Saturday; the second day of the weekend",
+					"explain": {
+						"entryId": "Sunday",
+						"headword": "Sunday",
+						"pronunciation": { "display": "SUN-day", "ipaUK": "/ˈsʌndeɪ/", "ipaUS": "/ˈsʌndeɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "Sunday",
+								"inflectionsLine": "",
+								"synonyms": ["Sun", "weekend day", "seventh day"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the last day of the week, coming after Saturday; the second day of the weekend",
+										"examples": [
+											"He has a big family lunch on Sunday.",
+											"She goes for a walk on Sunday afternoon."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He has a big family lunch on Sunday.", "ok": true },
+						{ "answer": "Sunday is the first day of the working week.", "ok": false },
+						{ "answer": "Sunday comes before Saturday.", "ok": false },
+						{ "answer": "Sunday is between Monday and Tuesday.", "ok": false }
+					]
+				},
+				{
+					"title": "Thursday",
+					"page": 17,
+					"question": "Thursday",
+					"summary": "the fourth day of the working week, between Wednesday and Friday",
+					"explain": {
+						"entryId": "Thursday",
+						"headword": "Thursday",
+						"pronunciation": { "display": "THURZ-day", "ipaUK": "/ˈθɜːzdeɪ/", "ipaUS": "/ˈθɜːrzdeɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "Thursday",
+								"inflectionsLine": "",
+								"synonyms": ["Thu", "fourth weekday", "fourth working day"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the day of the week after Wednesday and before Friday",
+										"examples": [
+											"She has her English class on Thursday.",
+											"He plays tennis every Thursday evening."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has her English class on Thursday.", "ok": true },
+						{ "answer": "Thursday is the last day of the working week.", "ok": false },
+						{ "answer": "Thursday comes after Friday.", "ok": false },
+						{ "answer": "Thursday is between Monday and Tuesday.", "ok": false }
+					]
+				},
+				{
+					"title": "Tuesday",
+					"page": 18,
+					"question": "Tuesday",
+					"summary": "the second day of the working week, between Monday and Wednesday",
+					"explain": {
+						"entryId": "Tuesday",
+						"headword": "Tuesday",
+						"pronunciation": { "display": "TYOOZ-day", "ipaUK": "/ˈtjuːzdeɪ/", "ipaUS": "/ˈtuːzdeɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "Tuesday",
+								"inflectionsLine": "",
+								"synonyms": ["Tue", "second weekday", "second working day"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the day of the week after Monday and before Wednesday",
+										"examples": [
+											"She goes to the gym every Tuesday.",
+											"He has a meeting at work on Tuesday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to the gym every Tuesday.", "ok": true },
+						{ "answer": "Tuesday is the last day of the working week.", "ok": false },
+						{ "answer": "Tuesday comes after Wednesday.", "ok": false },
+						{ "answer": "Tuesday is between Thursday and Friday.", "ok": false }
+					]
+				},
+				{
+					"title": "Wednesday",
+					"page": 19,
+					"question": "Wednesday",
+					"summary": "the third day of the working week, between Tuesday and Thursday",
+					"explain": {
+						"entryId": "Wednesday",
+						"headword": "Wednesday",
+						"pronunciation": { "display": "WEN-z-day", "ipaUK": "/ˈwenzdeɪ/", "ipaUS": "/ˈwenzdeɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "Wednesday",
+								"inflectionsLine": "",
+								"synonyms": ["Wed", "third weekday", "midweek"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the day of the week after Tuesday and before Thursday; the middle of the working week",
+										"examples": [
+											"She has a dentist appointment on Wednesday.",
+											"He works from home every Wednesday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has a dentist appointment on Wednesday.", "ok": true },
+						{ "answer": "Wednesday is the last day of the working week.", "ok": false },
+						{ "answer": "Wednesday comes after Thursday.", "ok": false },
+						{ "answer": "Wednesday is between Monday and Tuesday.", "ok": false }
+					]
+				},
+				{
+					"title": "afternoon",
+					"page": 20,
+					"question": "afternoon",
+					"summary": "the part of the day between 12 o'clock and the evening",
+					"explain": {
+						"entryId": "afternoon",
+						"headword": "afternoon",
+						"pronunciation": { "display": "af-ter-NOON", "ipaUK": "/ˌɑːftəˈnuːn/", "ipaUS": "/ˌæftərˈnuːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "afternoon",
+								"inflectionsLine": "afternoons",
+								"synonyms": ["midday time", "p.m.", "after lunch"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the part of the day between 12 o'clock (midday) and the time when it starts to get dark",
+										"examples": [
+											"She goes for a walk in the afternoon.",
+											"He finishes work at five in the afternoon."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes for a walk in the afternoon.", "ok": true },
+						{ "answer": "The afternoon is the part of the day before 12 o'clock.", "ok": false },
+						{ "answer": "Afternoon comes after evening.", "ok": false },
+						{ "answer": "The afternoon starts at midnight.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

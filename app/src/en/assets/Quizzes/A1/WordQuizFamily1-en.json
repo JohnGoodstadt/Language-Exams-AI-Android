@@ -1,0 +1,256 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFamily1-en",
+	"title": "Family",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Family",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "aunt",
+					"page": 1,
+					"question": "aunt",
+					"summary": "the sister of your father or mother; also the wife of your uncle",
+					"explain": {
+						"entryId": "aunt",
+						"headword": "aunt",
+						"pronunciation": { "display": "ANT", "ipaUK": "/ɑːnt/", "ipaUS": "/ænt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "aunt",
+								"inflectionsLine": "aunts",
+								"synonyms": ["auntie", "maternal aunt", "paternal aunt"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the sister of your father or mother, or the wife of your uncle",
+										"examples": [
+											"Her aunt is her mother's sister.",
+											"She visits her aunt every Sunday afternoon."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her aunt is her mother's sister.", "ok": true },
+						{ "answer": "His aunt is his father's brother.", "ok": false },
+						{ "answer": "She has an aunt and he is very tall.", "ok": false },
+						{ "answer": "His aunt is his son's mother.", "ok": false }
+					]
+				},
+				{
+					"title": "brother",
+					"page": 2,
+					"question": "brother",
+					"summary": "a boy or man who has the same parents as you",
+					"explain": {
+						"entryId": "brother",
+						"headword": "brother",
+						"pronunciation": { "display": "BRUTH-ur", "ipaUK": "/ˈbrʌðə/", "ipaUS": "/ˈbrʌðər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "brother",
+								"inflectionsLine": "brothers",
+								"synonyms": ["sibling", "bro", "male sibling"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a boy or man who has the same mother and father as you",
+										"examples": [
+											"She has one brother and two sisters.",
+											"Her brother is three years older than her."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has one brother and two sisters.", "ok": true },
+						{ "answer": "His brother is his parent's daughter.", "ok": false },
+						{ "answer": "Her brother is the same as her sister.", "ok": false },
+						{ "answer": "He drinks his brother every morning before school.", "ok": false }
+					]
+				},
+				{
+					"title": "daughter",
+					"page": 3,
+					"question": "daughter",
+					"summary": "a female child in relation to her parents",
+					"explain": {
+						"entryId": "daughter",
+						"headword": "daughter",
+						"pronunciation": { "display": "DAW-tur", "ipaUK": "/ˈdɔːtə/", "ipaUS": "/ˈdɔːtər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "daughter",
+								"inflectionsLine": "daughters",
+								"synonyms": ["girl", "child", "female child"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a female child in relation to her parents",
+										"examples": [
+											"Their daughter is five years old and goes to nursery school.",
+											"She has two daughters and one son."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Their daughter is five years old and goes to nursery school.", "ok": true },
+						{ "answer": "Their daughter is a boy.", "ok": false },
+						{ "answer": "Her daughter is her mother, not her child.", "ok": false },
+						{ "answer": "He eats a daughter for breakfast every morning.", "ok": false }
+					]
+				},
+				{
+					"title": "family",
+					"page": 4,
+					"question": "family",
+					"summary": "a group of people who are related to each other, especially parents and their children",
+					"explain": {
+						"entryId": "family",
+						"headword": "family",
+						"pronunciation": { "display": "FAM-uh-lee", "ipaUK": "/ˈfæməli/", "ipaUS": "/ˈfæməli/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "family",
+								"inflectionsLine": "families",
+								"synonyms": ["relatives", "household", "kin"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a group of people who are related to each other, especially parents and their children",
+										"examples": [
+											"She has a big family with four brothers and two sisters.",
+											"They have dinner together as a family every evening."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has a big family with four brothers and two sisters.", "ok": true },
+						{ "answer": "He eats his family for breakfast every morning.", "ok": false },
+						{ "answer": "A family is a type of colour that you can see in a rainbow.", "ok": false },
+						{ "answer": "Her family is a flat shape with three sides and three corners.", "ok": false }
+					]
+				},
+				{
+					"title": "father",
+					"page": 5,
+					"question": "father",
+					"summary": "a male parent; a man who has a child",
+					"explain": {
+						"entryId": "father",
+						"headword": "father",
+						"pronunciation": { "display": "FAH-thur", "ipaUK": "/ˈfɑːðə/", "ipaUS": "/ˈfɑːðər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "father",
+								"inflectionsLine": "fathers",
+								"synonyms": ["dad", "daddy", "papa"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a male parent; a man who has a child",
+										"examples": [
+											"Her father is a doctor who works in the city hospital.",
+											"He looks like his father."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her father is a doctor who works in the city hospital.", "ok": true },
+						{ "answer": "His father is his grandmother's husband.", "ok": false },
+						{ "answer": "His father is a woman.", "ok": false },
+						{ "answer": "She drinks her father every morning before school.", "ok": false }
+					]
+				},
+				{
+					"title": "grandfather",
+					"page": 6,
+					"question": "grandfather",
+					"summary": "the father of your father or mother",
+					"explain": {
+						"entryId": "grandfather",
+						"headword": "grandfather",
+						"pronunciation": { "display": "GRAN-fah-thur", "ipaUK": "/ˈɡrænfɑːðə/", "ipaUS": "/ˈɡrænfɑːðər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "grandfather",
+								"inflectionsLine": "grandfathers",
+								"synonyms": ["grandpa", "granddad", "grandad"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the father of your father or mother",
+										"examples": [
+											"Her grandfather is her father's father.",
+											"He visits his grandfather every weekend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her grandfather is her father's father.", "ok": true },
+						{ "answer": "His grandfather is his brother's son.", "ok": false },
+						{ "answer": "Her grandfather is a woman.", "ok": false },
+						{ "answer": "He eats a grandfather for breakfast every morning.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

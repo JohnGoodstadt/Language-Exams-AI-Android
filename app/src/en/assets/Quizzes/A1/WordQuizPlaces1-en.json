@@ -1,0 +1,456 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPlaces1-en",
+	"title": "Places",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Places",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "bank",
+					"page": 1,
+					"question": "bank",
+					"summary": "a place where people keep their money and can also borrow money",
+					"explain": {
+						"entryId": "bank",
+						"headword": "bank",
+						"pronunciation": { "display": "BANK", "ipaUK": "/bæŋk/", "ipaUS": "/bæŋk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "bank",
+								"inflectionsLine": "banks",
+								"synonyms": ["financial institution", "savings bank", "building society"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a place where people keep their money and can also borrow money",
+										"examples": [
+											"She goes to the bank to take out some money.",
+											"He works at a bank in the city centre."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to the bank to take out some money.", "ok": true },
+						{ "answer": "He goes to the bank to watch a film on a big screen.", "ok": false },
+						{ "answer": "She eats a bank for breakfast every morning.", "ok": false },
+						{ "answer": "A bank is a place where you go to borrow books to read.", "ok": false }
+					]
+				},
+				{
+					"title": "beach",
+					"page": 2,
+					"question": "beach",
+					"summary": "an area of sand or small stones beside the sea or a lake",
+					"explain": {
+						"entryId": "beach",
+						"headword": "beach",
+						"pronunciation": { "display": "BEECH", "ipaUK": "/biːtʃ/", "ipaUS": "/biːtʃ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "beach",
+								"inflectionsLine": "beaches",
+								"synonyms": ["seaside", "shore", "coast"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an area of sand or small stones beside the sea or a lake",
+										"examples": [
+											"They go to the beach to swim in the sea.",
+											"She collects shells on the beach in summer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They go to the beach to swim in the sea.", "ok": true },
+						{ "answer": "He goes to the beach to borrow books and study quietly.", "ok": false },
+						{ "answer": "She eats a beach for breakfast every morning.", "ok": false },
+						{ "answer": "A beach is a place where doctors care for sick people.", "ok": false }
+					]
+				},
+				{
+					"title": "cinema",
+					"page": 3,
+					"question": "cinema",
+					"summary": "a building where you go to watch films on a large screen",
+					"explain": {
+						"entryId": "cinema",
+						"headword": "cinema",
+						"pronunciation": { "display": "SIN-uh-muh", "ipaUK": "/ˈsɪnəmə/", "ipaUS": "/ˈsɪnəmə/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "cinema",
+								"inflectionsLine": "cinemas",
+								"synonyms": ["movie theatre", "film theatre", "picture house"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building where you go to watch films on a large screen",
+										"examples": [
+											"They go to the cinema to watch a new film.",
+											"She buys popcorn at the cinema."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They go to the cinema to watch a new film.", "ok": true },
+						{ "answer": "He goes to the cinema to buy food and clean his house.", "ok": false },
+						{ "answer": "She eats a cinema for breakfast every morning.", "ok": false },
+						{ "answer": "A cinema is a place where children go to learn and study.", "ok": false }
+					]
+				},
+				{
+					"title": "city",
+					"page": 4,
+					"question": "city",
+					"summary": "a large and important town where many people live and work",
+					"explain": {
+						"entryId": "city",
+						"headword": "city",
+						"pronunciation": { "display": "SIT-ee", "ipaUK": "/ˈsɪti/", "ipaUS": "/ˈsɪti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "city",
+								"inflectionsLine": "cities",
+								"synonyms": ["metropolis", "town", "urban area"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large and important town where many people live and work",
+										"examples": [
+											"She lives in a big city with many shops and restaurants.",
+											"He travels to the city by train every day for work."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She lives in a big city with many shops and restaurants.", "ok": true },
+						{ "answer": "A city is a small area of still water surrounded by land.", "ok": false },
+						{ "answer": "He eats a city for breakfast every morning.", "ok": false },
+						{ "answer": "She drives to the city to collect shells on the sand by the sea.", "ok": false }
+					]
+				},
+				{
+					"title": "desert",
+					"page": 5,
+					"question": "desert",
+					"summary": "a large area of land that is very dry, has very little rain, and very few plants",
+					"explain": {
+						"entryId": "desert",
+						"headword": "desert",
+						"pronunciation": { "display": "DEZ-urt", "ipaUK": "/ˈdezət/", "ipaUS": "/ˈdezərt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "desert",
+								"inflectionsLine": "deserts",
+								"synonyms": ["wasteland", "arid land", "dry land"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large area of land that is very dry, has very little rain, and very few plants",
+										"examples": [
+											"The desert is very hot and dry during the day.",
+											"Camels can live in the desert without much water."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The desert is very hot and dry during the day.", "ok": true },
+						{ "answer": "A desert is a large area of land covered with many tall trees.", "ok": false },
+						{ "answer": "He eats a desert for breakfast every morning.", "ok": false },
+						{ "answer": "The desert gets a lot of rain and has many rivers and lakes.", "ok": false }
+					]
+				},
+				{
+					"title": "forest",
+					"page": 6,
+					"question": "forest",
+					"summary": "a large area of land covered with many trees and plants",
+					"explain": {
+						"entryId": "forest",
+						"headword": "forest",
+						"pronunciation": { "display": "FOR-ist", "ipaUK": "/ˈfɒrɪst/", "ipaUS": "/ˈfɔːrɪst/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "forest",
+								"inflectionsLine": "forests",
+								"synonyms": ["wood", "woodland", "jungle"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large area of land covered with many trees and plants",
+										"examples": [
+											"They walk through the forest and see many birds and animals.",
+											"The forest is full of tall trees and green plants."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They walk through the forest and see many birds and animals.", "ok": true },
+						{ "answer": "A forest is a large dry area of land with very few plants.", "ok": false },
+						{ "answer": "She eats a forest for breakfast every morning.", "ok": false },
+						{ "answer": "He goes to the forest to borrow books and use a computer.", "ok": false }
+					]
+				},
+				{
+					"title": "garden",
+					"page": 7,
+					"question": "garden",
+					"summary": "a piece of ground next to a house where you can grow flowers or vegetables",
+					"explain": {
+						"entryId": "garden",
+						"headword": "garden",
+						"pronunciation": { "display": "GAR-dun", "ipaUK": "/ˈɡɑːdn/", "ipaUS": "/ˈɡɑːrdn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "garden",
+								"inflectionsLine": "gardens",
+								"synonyms": ["yard", "grounds", "plot"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a piece of ground next to a house where you can grow flowers, vegetables, or grass",
+										"examples": [
+											"She grows flowers and vegetables in her garden.",
+											"He sits in the garden and reads a book in the sunshine."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She grows flowers and vegetables in her garden.", "ok": true },
+						{ "answer": "He goes to the garden to watch films on a big screen.", "ok": false },
+						{ "answer": "She eats a garden for breakfast every morning.", "ok": false },
+						{ "answer": "A garden is a piece of land in the sea surrounded by water on all sides.", "ok": false }
+					]
+				},
+				{
+					"title": "hill",
+					"page": 8,
+					"question": "hill",
+					"summary": "a raised area of land that is smaller and less steep than a mountain",
+					"explain": {
+						"entryId": "hill",
+						"headword": "hill",
+						"pronunciation": { "display": "HIL", "ipaUK": "/hɪl/", "ipaUS": "/hɪl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "hill",
+								"inflectionsLine": "hills",
+								"synonyms": ["slope", "rise", "mound"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a raised area of land that is smaller and less steep than a mountain",
+										"examples": [
+											"They climb the hill and enjoy the view from the top.",
+											"She can see the hills in the distance from her window."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They climb the hill and enjoy the view from the top.", "ok": true },
+						{ "answer": "A hill is a flat sandy area next to the sea where people swim.", "ok": false },
+						{ "answer": "He drinks a hill every morning before going to work.", "ok": false },
+						{ "answer": "She goes to the hill to buy food, clothes, and other things.", "ok": false }
+					]
+				},
+				{
+					"title": "home",
+					"page": 9,
+					"question": "home",
+					"summary": "the place where you live, especially with your family",
+					"explain": {
+						"entryId": "home",
+						"headword": "home",
+						"pronunciation": { "display": "HOHM", "ipaUK": "/həʊm/", "ipaUS": "/hoʊm/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "home",
+								"inflectionsLine": "homes",
+								"synonyms": ["house", "residence", "dwelling"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the place where you live, especially with your family",
+										"examples": [
+											"She goes home after school to have dinner with her family.",
+											"His home is a small house near the park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes home after school to have dinner with her family.", "ok": true },
+						{ "answer": "He goes to his home to see wild animals in cages.", "ok": false },
+						{ "answer": "She eats a home for breakfast every morning.", "ok": false },
+						{ "answer": "A home is a large building where sick people receive medical care.", "ok": false }
+					]
+				},
+				{
+					"title": "hospital",
+					"page": 10,
+					"question": "hospital",
+					"summary": "a building where people who are ill or injured go to receive medical care",
+					"explain": {
+						"entryId": "hospital",
+						"headword": "hospital",
+						"pronunciation": { "display": "HOS-pit-ul", "ipaUK": "/ˈhɒspɪtl/", "ipaUS": "/ˈhɑːspɪtl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "hospital",
+								"inflectionsLine": "hospitals",
+								"synonyms": ["medical centre", "clinic", "infirmary"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building where people who are ill or injured go to receive medical care",
+										"examples": [
+											"She goes to the hospital to see a doctor about her leg.",
+											"He works as a nurse at the local hospital."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to the hospital to see a doctor about her leg.", "ok": true },
+						{ "answer": "He goes to the hospital to buy food and groceries.", "ok": false },
+						{ "answer": "She eats a hospital for breakfast every morning.", "ok": false },
+						{ "answer": "A hospital is a place where children go to study and learn.", "ok": false }
+					]
+				},
+				{
+					"title": "island",
+					"page": 11,
+					"question": "island",
+					"summary": "a piece of land that has water all around it",
+					"explain": {
+						"entryId": "island",
+						"headword": "island",
+						"pronunciation": { "display": "EYE-lund", "ipaUK": "/ˈaɪlənd/", "ipaUS": "/ˈaɪlənd/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "island",
+								"inflectionsLine": "islands",
+								"synonyms": ["isle", "islet", "atoll"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a piece of land that has water all around it",
+										"examples": [
+											"They sail to the island and spend the day on the beach.",
+											"The island is very small and has only a few houses."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They sail to the island and spend the day on the beach.", "ok": true },
+						{ "answer": "An island is a large area of land covered with many tall trees.", "ok": false },
+						{ "answer": "He eats an island for breakfast every morning.", "ok": false },
+						{ "answer": "An island is a place where you go to borrow books to read.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

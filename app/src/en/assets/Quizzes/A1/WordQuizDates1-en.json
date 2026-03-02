@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizDates1-en",
+	"title": "Dates",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Dates",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "April",
+					"page": 1,
+					"question": "April",
+					"summary": "the fourth month of the year, between March and May",
+					"explain": {
+						"entryId": "April",
+						"headword": "April",
+						"pronunciation": { "display": "AY-prul", "ipaUK": "/ˈeɪprəl/", "ipaUS": "/ˈeɪprəl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "April",
+								"inflectionsLine": "",
+								"synonyms": ["Apr", "fourth month", "spring month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the fourth month of the year, coming after March and before May",
+										"examples": [
+											"Her birthday is in April.",
+											"Spring flowers grow in April."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her birthday is in April.", "ok": true },
+						{ "answer": "April is the last month of the year.", "ok": false },
+						{ "answer": "April comes after May.", "ok": false },
+						{ "answer": "April is a winter month.", "ok": false }
+					]
+				},
+				{
+					"title": "August",
+					"page": 2,
+					"question": "August",
+					"summary": "the eighth month of the year, between July and September",
+					"explain": {
+						"entryId": "August",
+						"headword": "August",
+						"pronunciation": { "display": "AW-gust", "ipaUK": "/ˈɔːɡəst/", "ipaUS": "/ˈɔːɡəst/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "August",
+								"inflectionsLine": "",
+								"synonyms": ["Aug", "eighth month", "summer month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the eighth month of the year, coming after July and before September",
+										"examples": [
+											"They go on holiday to Spain every August.",
+											"August is a hot summer month."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They go on holiday to Spain every August.", "ok": true },
+						{ "answer": "August is the first month of the year.", "ok": false },
+						{ "answer": "August comes before July.", "ok": false },
+						{ "answer": "August is a winter month in the UK.", "ok": false }
+					]
+				},
+				{
+					"title": "December",
+					"page": 3,
+					"question": "December",
+					"summary": "the twelfth and last month of the year, between November and January",
+					"explain": {
+						"entryId": "December",
+						"headword": "December",
+						"pronunciation": { "display": "di-SEM-bur", "ipaUK": "/dɪˈsembə/", "ipaUS": "/dɪˈsembər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "December",
+								"inflectionsLine": "",
+								"synonyms": ["Dec", "twelfth month", "Christmas month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the twelfth and last month of the year, coming after November",
+										"examples": [
+											"Christmas is in December.",
+											"It is often cold in December."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Christmas is in December.", "ok": true },
+						{ "answer": "December is the first month of the year.", "ok": false },
+						{ "answer": "December comes before November.", "ok": false },
+						{ "answer": "December is a summer month in the UK.", "ok": false }
+					]
+				},
+				{
+					"title": "February",
+					"page": 4,
+					"question": "February",
+					"summary": "the second month of the year, between January and March",
+					"explain": {
+						"entryId": "February",
+						"headword": "February",
+						"pronunciation": { "display": "FEB-roo-er-ee", "ipaUK": "/ˈfebrʊəri/", "ipaUS": "/ˈfebrʊeri/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "February",
+								"inflectionsLine": "",
+								"synonyms": ["Feb", "second month", "Valentine's month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the second month of the year, coming after January and before March",
+										"examples": [
+											"Valentine's Day is in February.",
+											"February is the shortest month of the year."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Valentine's Day is in February.", "ok": true },
+						{ "answer": "February is the last month of the year.", "ok": false },
+						{ "answer": "February comes after March.", "ok": false },
+						{ "answer": "February is a summer month.", "ok": false }
+					]
+				},
+				{
+					"title": "Friday",
+					"page": 5,
+					"question": "Friday",
+					"summary": "the fifth day of the working week, between Thursday and Saturday",
+					"explain": {
+						"entryId": "Friday",
+						"headword": "Friday",
+						"pronunciation": { "display": "FRY-day", "ipaUK": "/ˈfraɪdeɪ/", "ipaUS": "/ˈfraɪdeɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "Friday",
+								"inflectionsLine": "",
+								"synonyms": ["Fri", "fifth weekday", "end of the working week"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the day of the week after Thursday and before Saturday; the last day of the working week",
+										"examples": [
+											"She finishes work early on Friday.",
+											"He goes to the cinema every Friday evening."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She finishes work early on Friday.", "ok": true },
+						{ "answer": "Friday is the first day of the working week.", "ok": false },
+						{ "answer": "Friday comes after Saturday.", "ok": false },
+						{ "answer": "Friday is between Wednesday and Thursday.", "ok": false }
+					]
+				},
+				{
+					"title": "January",
+					"page": 6,
+					"question": "January",
+					"summary": "the first month of the year, before February",
+					"explain": {
+						"entryId": "January",
+						"headword": "January",
+						"pronunciation": { "display": "JAN-yoo-er-ee", "ipaUK": "/ˈdʒænjʊəri/", "ipaUS": "/ˈdʒænjʊeri/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "January",
+								"inflectionsLine": "",
+								"synonyms": ["Jan", "first month", "New Year month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the first month of the year, coming before February",
+										"examples": [
+											"New Year's Day is on the first of January.",
+											"January is a cold winter month."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "New Year's Day is on the first of January.", "ok": true },
+						{ "answer": "January is the last month of the year.", "ok": false },
+						{ "answer": "January comes after February.", "ok": false },
+						{ "answer": "January is a summer month.", "ok": false }
+					]
+				},
+				{
+					"title": "July",
+					"page": 7,
+					"question": "July",
+					"summary": "the seventh month of the year, between June and August",
+					"explain": {
+						"entryId": "July",
+						"headword": "July",
+						"pronunciation": { "display": "joo-LY", "ipaUK": "/dʒʊˈlaɪ/", "ipaUS": "/dʒʊˈlaɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "July",
+								"inflectionsLine": "",
+								"synonyms": ["Jul", "seventh month", "summer month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the seventh month of the year, coming after June and before August",
+										"examples": [
+											"She goes to the beach every July.",
+											"July is a hot summer month."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to the beach every July.", "ok": true },
+						{ "answer": "July is the last month of the year.", "ok": false },
+						{ "answer": "July comes before June.", "ok": false },
+						{ "answer": "July is a winter month in the UK.", "ok": false }
+					]
+				},
+				{
+					"title": "June",
+					"page": 8,
+					"question": "June",
+					"summary": "the sixth month of the year, between May and July",
+					"explain": {
+						"entryId": "June",
+						"headword": "June",
+						"pronunciation": { "display": "JOON", "ipaUK": "/dʒuːn/", "ipaUS": "/dʒuːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "June",
+								"inflectionsLine": "",
+								"synonyms": ["Jun", "sixth month", "summer month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the sixth month of the year, coming after May and before July",
+										"examples": [
+											"School finishes in June.",
+											"Her wedding is in June."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "School finishes in June.", "ok": true },
+						{ "answer": "June is the last month of the year.", "ok": false },
+						{ "answer": "June comes after July.", "ok": false },
+						{ "answer": "June is a winter month.", "ok": false }
+					]
+				},
+				{
+					"title": "March",
+					"page": 9,
+					"question": "March",
+					"summary": "the third month of the year, between February and April",
+					"explain": {
+						"entryId": "March",
+						"headword": "March",
+						"pronunciation": { "display": "MARCH", "ipaUK": "/mɑːtʃ/", "ipaUS": "/mɑːrtʃ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "March",
+								"inflectionsLine": "",
+								"synonyms": ["Mar", "third month", "spring month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the third month of the year, coming after February and before April",
+										"examples": [
+											"Spring begins in March.",
+											"His birthday is on the fifteenth of March."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Spring begins in March.", "ok": true },
+						{ "answer": "March is the last month of the year.", "ok": false },
+						{ "answer": "March comes after April.", "ok": false },
+						{ "answer": "March is a summer month.", "ok": false }
+					]
+				},
+				{
+					"title": "May",
+					"page": 10,
+					"question": "May",
+					"summary": "the fifth month of the year, between April and June",
+					"explain": {
+						"entryId": "May",
+						"headword": "May",
+						"pronunciation": { "display": "MAY", "ipaUK": "/meɪ/", "ipaUS": "/meɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "May",
+								"inflectionsLine": "",
+								"synonyms": ["fifth month", "spring month", "May Day month"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the fifth month of the year, coming after April and before June",
+										"examples": [
+											"The flowers come out in May.",
+											"They have a bank holiday in May."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The flowers come out in May.", "ok": true },
+						{ "answer": "May is the last month of the year.", "ok": false },
+						{ "answer": "May comes after June.", "ok": false },
+						{ "answer": "May is a winter month.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

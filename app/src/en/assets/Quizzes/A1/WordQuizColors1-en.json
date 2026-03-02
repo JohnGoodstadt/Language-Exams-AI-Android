@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizColors1-en",
+	"title": "Colors",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Colors",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "black",
+					"page": 1,
+					"question": "black",
+					"summary": "having the darkest colour, like the night sky or coal",
+					"explain": {
+						"entryId": "black",
+						"headword": "black",
+						"pronunciation": { "display": "blak", "ipaUK": "/blæk/", "ipaUS": "/blæk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "black",
+								"inflectionsLine": "blacker, blackest",
+								"synonyms": ["dark", "jet-black", "ebony"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having the darkest colour possible, like the night sky or coal",
+										"examples": [
+											"She wears a black coat in winter.",
+											"The cat has black and white fur."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wears a black coat in winter.", "ok": true },
+						{ "answer": "He drinks a black every morning before going to work.", "ok": false },
+						{ "answer": "The snow is black after a heavy snowfall in winter.", "ok": false },
+						{ "answer": "She blacks her homework before going to bed.", "ok": false }
+					]
+				},
+				{
+					"title": "blue",
+					"page": 2,
+					"question": "blue",
+					"summary": "having the colour of the sky on a clear sunny day",
+					"explain": {
+						"entryId": "blue",
+						"headword": "blue",
+						"pronunciation": { "display": "bloo", "ipaUK": "/bluː/", "ipaUS": "/bluː/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "blue",
+								"inflectionsLine": "bluer, bluest",
+								"synonyms": ["sky-blue", "navy", "azure"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having the colour of the sky on a clear day",
+										"examples": [
+											"She wears a blue dress to the party.",
+											"The sky is blue today."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wears a blue dress to the party.", "ok": true },
+						{ "answer": "He eats a blue for breakfast every morning.", "ok": false },
+						{ "answer": "The grass in the garden is blue.", "ok": false },
+						{ "answer": "She blues her shoes before going out.", "ok": false }
+					]
+				},
+				{
+					"title": "circle",
+					"page": 3,
+					"question": "circle",
+					"summary": "a perfectly round flat shape",
+					"explain": {
+						"entryId": "circle",
+						"headword": "circle",
+						"pronunciation": { "display": "SUR-kul", "ipaUK": "/ˈsɜːkl/", "ipaUS": "/ˈsɜːrkl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "circle",
+								"inflectionsLine": "circles",
+								"synonyms": ["ring", "loop", "round shape"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a perfectly round flat shape with no corners or straight sides",
+										"examples": [
+											"She draws a circle on the paper.",
+											"The children sit in a circle on the floor."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She draws a circle on the paper.", "ok": true },
+						{ "answer": "He eats a circle for breakfast every morning.", "ok": false },
+						{ "answer": "A circle has four corners and four straight sides.", "ok": false },
+						{ "answer": "A circle is the same shape as a triangle.", "ok": false }
+					]
+				},
+				{
+					"title": "green",
+					"page": 4,
+					"question": "green",
+					"summary": "having the colour of grass or leaves",
+					"explain": {
+						"entryId": "green",
+						"headword": "green",
+						"pronunciation": { "display": "GREEN", "ipaUK": "/ɡriːn/", "ipaUS": "/ɡriːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "green",
+								"inflectionsLine": "greener, greenest",
+								"synonyms": ["olive", "emerald", "lime"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having the colour of grass or leaves",
+										"examples": [
+											"The grass in the garden is green.",
+											"She wears a green jacket to the park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The grass in the garden is green.", "ok": true },
+						{ "answer": "He drinks a green every morning before school.", "ok": false },
+						{ "answer": "The sky on a clear sunny day is green.", "ok": false },
+						{ "answer": "She greens her homework before going to bed.", "ok": false }
+					]
+				},
+				{
+					"title": "rectangle",
+					"page": 5,
+					"question": "rectangle",
+					"summary": "a flat shape with four straight sides and four corners, where two sides are longer than the other two",
+					"explain": {
+						"entryId": "rectangle",
+						"headword": "rectangle",
+						"pronunciation": { "display": "REK-tang-gul", "ipaUK": "/ˈrektæŋɡl/", "ipaUS": "/ˈrektæŋɡl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "rectangle",
+								"inflectionsLine": "rectangles",
+								"synonyms": ["oblong", "quadrilateral", "four-sided shape"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a flat shape with four straight sides and four corners, where two sides are longer than the other two",
+										"examples": [
+											"A door is the shape of a rectangle.",
+											"She draws a rectangle on the paper."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "A door is the shape of a rectangle.", "ok": true },
+						{ "answer": "He eats a rectangle for breakfast every morning.", "ok": false },
+						{ "answer": "A rectangle has three sides and three corners.", "ok": false },
+						{ "answer": "A rectangle is the same shape as a circle.", "ok": false }
+					]
+				},
+				{
+					"title": "red",
+					"page": 6,
+					"question": "red",
+					"summary": "having the colour of blood or fire",
+					"explain": {
+						"entryId": "red",
+						"headword": "red",
+						"pronunciation": { "display": "red", "ipaUK": "/red/", "ipaUS": "/red/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "red",
+								"inflectionsLine": "redder, reddest",
+								"synonyms": ["crimson", "scarlet", "cherry"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having the colour of blood or fire",
+										"examples": [
+											"She has a red apple in her lunchbox.",
+											"He drives a red car."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has a red apple in her lunchbox.", "ok": true },
+						{ "answer": "He drinks a red every morning before school.", "ok": false },
+						{ "answer": "The snow is red after a heavy snowfall in winter.", "ok": false },
+						{ "answer": "She reds her homework before going to bed.", "ok": false }
+					]
+				},
+				{
+					"title": "square",
+					"page": 7,
+					"question": "square",
+					"summary": "a flat shape with four equal straight sides and four corners",
+					"explain": {
+						"entryId": "square",
+						"headword": "square",
+						"pronunciation": { "display": "SKWAIR", "ipaUK": "/skweə/", "ipaUS": "/skwer/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "square",
+								"inflectionsLine": "squares",
+								"synonyms": ["quadrilateral", "four-sided shape", "box shape"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a flat shape with four straight sides of equal length and four corners",
+										"examples": [
+											"She draws a square on the paper.",
+											"A chess board has many small squares."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She draws a square on the paper.", "ok": true },
+						{ "answer": "He eats a square for breakfast every morning.", "ok": false },
+						{ "answer": "A square has three sides and three corners.", "ok": false },
+						{ "answer": "A square has sides of different lengths.", "ok": false }
+					]
+				},
+				{
+					"title": "triangle",
+					"page": 8,
+					"question": "triangle",
+					"summary": "a flat shape with three straight sides and three corners",
+					"explain": {
+						"entryId": "triangle",
+						"headword": "triangle",
+						"pronunciation": { "display": "TRY-ang-gul", "ipaUK": "/ˈtraɪæŋɡl/", "ipaUS": "/ˈtraɪæŋɡl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "triangle",
+								"inflectionsLine": "triangles",
+								"synonyms": ["three-sided shape", "delta", "wedge"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a flat shape with three straight sides and three corners",
+										"examples": [
+											"A slice of pizza is shaped like a triangle.",
+											"She draws a triangle on the paper."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "A slice of pizza is shaped like a triangle.", "ok": true },
+						{ "answer": "He eats a triangle for breakfast every morning.", "ok": false },
+						{ "answer": "A triangle has four sides and four corners.", "ok": false },
+						{ "answer": "A triangle is the same shape as a circle.", "ok": false }
+					]
+				},
+				{
+					"title": "white",
+					"page": 9,
+					"question": "white",
+					"summary": "having the lightest colour, like snow or milk",
+					"explain": {
+						"entryId": "white",
+						"headword": "white",
+						"pronunciation": { "display": "wyt", "ipaUK": "/waɪt/", "ipaUS": "/waɪt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "white",
+								"inflectionsLine": "whiter, whitest",
+								"synonyms": ["pale", "ivory", "snowy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having the lightest colour possible, like snow or milk",
+										"examples": [
+											"The snow outside is white.",
+											"She wears a white shirt to school."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The snow outside is white.", "ok": true },
+						{ "answer": "He drinks a white every morning before going to work.", "ok": false },
+						{ "answer": "The night sky is white because it has no light.", "ok": false },
+						{ "answer": "She whites her homework before going to bed.", "ok": false }
+					]
+				},
+				{
+					"title": "yellow",
+					"page": 10,
+					"question": "yellow",
+					"summary": "having the colour of the sun or a lemon",
+					"explain": {
+						"entryId": "yellow",
+						"headword": "yellow",
+						"pronunciation": { "display": "YEL-oh", "ipaUK": "/ˈjeləʊ/", "ipaUS": "/ˈjeloʊ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "yellow",
+								"inflectionsLine": "yellower, yellowest",
+								"synonyms": ["golden", "lemon", "amber"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having the colour of the sun or a lemon",
+										"examples": [
+											"She picks a yellow banana from the fruit bowl.",
+											"The sun looks yellow in the sky."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She picks a yellow banana from the fruit bowl.", "ok": true },
+						{ "answer": "He eats a yellow for breakfast every morning.", "ok": false },
+						{ "answer": "The sky is yellow at night when it is very dark.", "ok": false },
+						{ "answer": "She yellows her homework before going to bed.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

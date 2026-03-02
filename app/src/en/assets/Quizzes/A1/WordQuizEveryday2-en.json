@@ -1,0 +1,434 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEveryday2-en",
+	"title": "Everyday",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Everyday",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "fork",
+					"page": 11,
+					"question": "fork",
+					"summary": "a small tool with three or four points used for eating food",
+					"explain": {
+						"entryId": "fork",
+						"headword": "fork",
+						"pronunciation": { "display": "fork", "ipaUK": "/fɔːk/", "ipaUS": "/fɔːrk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "fork",
+								"inflectionsLine": "forks",
+								"synonyms": ["cutlery", "utensil", "prongs"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small tool with three or four sharp points that you use to pick up and eat food",
+										"examples": [
+											"She uses a fork to eat her pasta.",
+											"He puts the fork next to the plate."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She uses a fork to eat her pasta.", "ok": true },
+						{ "answer": "He drinks his fork in the morning.", "ok": false },
+						{ "answer": "She wears a fork on her head.", "ok": false },
+						{ "answer": "They plant a fork in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "hat",
+					"page": 12,
+					"question": "hat",
+					"summary": "a covering that you wear on your head",
+					"explain": {
+						"entryId": "hat",
+						"headword": "hat",
+						"pronunciation": { "display": "hat", "ipaUK": "/hæt/", "ipaUS": "/hæt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "hat",
+								"inflectionsLine": "hats",
+								"synonyms": ["cap", "beret", "headwear"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a covering that you wear on your head, often to keep warm or protect you from the sun",
+										"examples": [
+											"She wears a hat because it is cold outside.",
+											"He puts on his hat before going out."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wears a hat because it is cold outside.", "ok": true },
+						{ "answer": "He eats his hat for lunch.", "ok": false },
+						{ "answer": "She drinks a hat in the morning.", "ok": false },
+						{ "answer": "They plant a hat in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "headphones",
+					"page": 13,
+					"question": "headphones",
+					"summary": "a device you wear over your ears to listen to music or sound",
+					"explain": {
+						"entryId": "headphones",
+						"headword": "headphones",
+						"pronunciation": { "display": "HED-fohnz", "ipaUK": "/ˈhedfəʊnz/", "ipaUS": "/ˈhedfоʊnz/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "plural noun",
+								"headwordLine": "headphones",
+								"inflectionsLine": "",
+								"synonyms": ["earphones", "earbuds", "headset"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a device with two small speakers that you wear over your ears to listen to music or other sounds",
+										"examples": [
+											"She listens to music with her headphones on the bus.",
+											"He uses headphones to watch videos on his phone."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She listens to music with her headphones on the bus.", "ok": true },
+						{ "answer": "He eats his headphones for breakfast.", "ok": false },
+						{ "answer": "She cooks headphones for dinner.", "ok": false },
+						{ "answer": "They plant headphones in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "key",
+					"page": 14,
+					"question": "key",
+					"summary": "a small metal object used to open a lock",
+					"explain": {
+						"entryId": "key",
+						"headword": "key",
+						"pronunciation": { "display": "kee", "ipaUK": "/kiː/", "ipaUS": "/kiː/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "key",
+								"inflectionsLine": "keys",
+								"synonyms": ["opener", "latchkey", "house key"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small metal object that you put in a lock to open or close a door or box",
+										"examples": [
+											"She uses a key to open the door.",
+											"He puts his key in his pocket."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She uses a key to open the door.", "ok": true },
+						{ "answer": "He drinks his key in the morning.", "ok": false },
+						{ "answer": "She eats a key for breakfast.", "ok": false },
+						{ "answer": "They plant a key in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "knife",
+					"page": 15,
+					"question": "knife",
+					"summary": "a tool with a handle and a sharp blade used for cutting food",
+					"explain": {
+						"entryId": "knife",
+						"headword": "knife",
+						"pronunciation": { "display": "nyf", "ipaUK": "/naɪf/", "ipaUS": "/naɪf/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "knife",
+								"inflectionsLine": "knives",
+								"synonyms": ["blade", "cutter", "penknife"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a tool with a handle and a sharp blade that you use for cutting food",
+										"examples": [
+											"She uses a knife to cut the bread.",
+											"He puts the knife on the table next to the plate."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She uses a knife to cut the bread.", "ok": true },
+						{ "answer": "He drinks his knife in the morning.", "ok": false },
+						{ "answer": "She wears a knife on her head.", "ok": false },
+						{ "answer": "They plant a knife in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "mobile",
+					"page": 16,
+					"question": "mobile",
+					"summary": "a small telephone that you can carry with you",
+					"explain": {
+						"entryId": "mobile",
+						"headword": "mobile",
+						"pronunciation": { "display": "MOH-byl", "ipaUK": "/ˈməʊbaɪl/", "ipaUS": "/ˈmoʊbl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "mobile",
+								"inflectionsLine": "mobiles",
+								"synonyms": ["smartphone", "mobile phone", "cell phone"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small telephone without wires that you can carry with you and use anywhere",
+										"examples": [
+											"She calls her friend on her mobile.",
+											"He leaves his mobile on the table."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She calls her friend on her mobile.", "ok": true },
+						{ "answer": "He eats his mobile for breakfast.", "ok": false },
+						{ "answer": "She plants a mobile in the garden.", "ok": false },
+						{ "answer": "They cook a mobile for dinner.", "ok": false }
+					]
+				},
+				{
+					"title": "passport",
+					"page": 17,
+					"question": "passport",
+					"summary": "an official document that lets you travel to other countries",
+					"explain": {
+						"entryId": "passport",
+						"headword": "passport",
+						"pronunciation": { "display": "PAS-port", "ipaUK": "/ˈpɑːspɔːt/", "ipaUS": "/ˈpæspɔːrt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "passport",
+								"inflectionsLine": "passports",
+								"synonyms": ["travel document", "ID", "travel papers"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official document with your photo and name that you need to travel to other countries",
+										"examples": [
+											"She shows her passport at the airport.",
+											"He puts his passport in his bag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She shows her passport at the airport.", "ok": true },
+						{ "answer": "He drinks his passport in the morning.", "ok": false },
+						{ "answer": "She eats a passport for lunch.", "ok": false },
+						{ "answer": "They plant a passport in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "pen",
+					"page": 18,
+					"question": "pen",
+					"summary": "a long thin tool that you use for writing with ink",
+					"explain": {
+						"entryId": "pen",
+						"headword": "pen",
+						"pronunciation": { "display": "pen", "ipaUK": "/pen/", "ipaUS": "/pen/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "pen",
+								"inflectionsLine": "pens",
+								"synonyms": ["ballpoint", "biro", "marker"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a long thin tool that you use for writing or drawing with ink",
+										"examples": [
+											"She writes with a pen in her notebook.",
+											"He puts his pen in his bag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She writes with a pen in her notebook.", "ok": true },
+						{ "answer": "He eats his pen for breakfast.", "ok": false },
+						{ "answer": "She drinks a pen in the morning.", "ok": false },
+						{ "answer": "They plant a pen in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "phone",
+					"page": 19,
+					"question": "phone",
+					"summary": "a device used to speak to people in other places; also to call someone by telephone",
+					"explain": {
+						"entryId": "phone",
+						"headword": "phone",
+						"pronunciation": { "display": "fohn", "ipaUK": "/fəʊn/", "ipaUS": "/foʊn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "phone",
+								"inflectionsLine": "phones",
+								"synonyms": ["telephone", "mobile", "handset"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a device that you use to speak to someone in another place",
+										"examples": [
+											"She uses her phone to call her mother.",
+											"He leaves his phone on the table."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "phone",
+								"inflectionsLine": "phones, phoning, phoned",
+								"synonyms": ["call", "ring", "telephone"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to call someone using a telephone",
+										"examples": [
+											"She phones her grandmother every Sunday.",
+											"He phoned the doctor to make an appointment."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She uses her phone to call her mother.", "ok": true },
+						{ "answer": "He eats his phone for breakfast.", "ok": false },
+						{ "answer": "She cooks a phone for dinner.", "ok": false },
+						{ "answer": "They plant a phone in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "plate",
+					"page": 20,
+					"question": "plate",
+					"summary": "a flat round dish that you put food on to eat",
+					"explain": {
+						"entryId": "plate",
+						"headword": "plate",
+						"pronunciation": { "display": "playt", "ipaUK": "/pleɪt/", "ipaUS": "/pleɪt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "plate",
+								"inflectionsLine": "plates",
+								"synonyms": ["dish", "bowl", "platter"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a flat round dish that you put food on to eat",
+										"examples": [
+											"She puts her pasta on a plate.",
+											"He washes the plates after dinner."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She puts her pasta on a plate.", "ok": true },
+						{ "answer": "He drinks his plate in the morning.", "ok": false },
+						{ "answer": "She wears a plate on her head.", "ok": false },
+						{ "answer": "They plant a plate in the garden.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

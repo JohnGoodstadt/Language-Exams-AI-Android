@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNumbers1-en",
+	"title": "Numbers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Numbers",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "zero",
+					"page": 1,
+					"question": "0",
+					"summary": "the number 0; representing none or nothing",
+					"explain": {
+						"entryId": "zero",
+						"headword": "zero",
+						"pronunciation": { "display": "ZIR-oh", "ipaUK": "/ˈzɪərəʊ/", "ipaUS": "/ˈzɪroʊ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "zero",
+								"inflectionsLine": "",
+								"synonyms": ["nought", "nil", "nothing"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 0; representing none or nothing",
+										"examples": [
+											"The temperature outside is zero degrees today.",
+											"She scores zero in the test because she gets no answers right."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The temperature outside is zero degrees today.", "ok": true },
+						{ "answer": "A triangle has zero sides.", "ok": false },
+						{ "answer": "Zero comes after one when you count.", "ok": false },
+						{ "answer": "Zero plus one equals zero.", "ok": false }
+					]
+				},
+				{
+					"title": "one hundred",
+					"page": 2,
+					"question": "100",
+					"summary": "the number 100; ten times ten",
+					"explain": {
+						"entryId": "one hundred",
+						"headword": "one hundred",
+						"pronunciation": { "display": "wun HUN-drud", "ipaUK": "/wʌn ˈhʌndrəd/", "ipaUS": "/wʌn ˈhʌndrəd/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "one hundred",
+								"inflectionsLine": "",
+								"synonyms": ["a hundred", "ten tens", "a century"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 100; the result of ten times ten",
+										"examples": [
+											"There are one hundred centimetres in one metre.",
+											"She saves one hundred pounds in her bank account."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are one hundred centimetres in one metre.", "ok": true },
+						{ "answer": "A year has one hundred months.", "ok": false },
+						{ "answer": "One hundred comes after one thousand when you count.", "ok": false },
+						{ "answer": "Ten times ten equals one hundred and ten.", "ok": false }
+					]
+				},
+				{
+					"title": "one thousand",
+					"page": 3,
+					"question": "1000",
+					"summary": "the number 1,000; ten times one hundred",
+					"explain": {
+						"entryId": "one thousand",
+						"headword": "one thousand",
+						"pronunciation": { "display": "wun THOW-zund", "ipaUK": "/wʌn ˈθaʊznd/", "ipaUS": "/wʌn ˈθaʊznd/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "one thousand",
+								"inflectionsLine": "",
+								"synonyms": ["a thousand", "ten hundreds", "a grand"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 1,000; the result of ten times one hundred",
+										"examples": [
+											"There are one thousand metres in one kilometre.",
+											"She reads one thousand words every day to improve her English."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are one thousand metres in one kilometre.", "ok": true },
+						{ "answer": "One thousand is smaller than one hundred.", "ok": false },
+						{ "answer": "Ten times ten equals one thousand.", "ok": false },
+						{ "answer": "A year has one thousand days.", "ok": false }
+					]
+				},
+				{
+					"title": "one hundred and one",
+					"page": 4,
+					"question": "101",
+					"summary": "the number 101; one more than one hundred",
+					"explain": {
+						"entryId": "one hundred and one",
+						"headword": "one hundred and one",
+						"pronunciation": { "display": "wun HUN-drud und WUN", "ipaUK": "/wʌn ˈhʌndrəd ənd wʌn/", "ipaUS": "/wʌn ˈhʌndrəd ænd wʌn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "one hundred and one",
+								"inflectionsLine": "",
+								"synonyms": ["a hundred and one", "101", "one above one hundred"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 101; one more than one hundred",
+										"examples": [
+											"The school has one hundred and one students this year.",
+											"She counts one hundred and one sheep before she falls asleep."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The school has one hundred and one students this year.", "ok": true },
+						{ "answer": "One hundred and one is smaller than one hundred.", "ok": false },
+						{ "answer": "One hundred and one equals one hundred minus one.", "ok": false },
+						{ "answer": "One hundred and one comes between ninety and one hundred.", "ok": false }
+					]
+				},
+				{
+					"title": "eleven",
+					"page": 5,
+					"question": "11",
+					"summary": "the number 11; one more than ten",
+					"explain": {
+						"entryId": "eleven",
+						"headword": "eleven",
+						"pronunciation": { "display": "ih-LEV-un", "ipaUK": "/ɪˈlevn/", "ipaUS": "/ɪˈlevn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "eleven",
+								"inflectionsLine": "",
+								"synonyms": ["one more than ten", "elevenses", "a football team"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 11; one more than ten",
+										"examples": [
+											"A football team has eleven players on the field.",
+											"She wakes up at eleven o'clock on Saturday mornings."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "A football team has eleven players on the field.", "ok": true },
+						{ "answer": "Eleven comes between nine and ten when you count.", "ok": false },
+						{ "answer": "There are eleven months in a year.", "ok": false },
+						{ "answer": "Ten plus two equals eleven.", "ok": false }
+					]
+				},
+				{
+					"title": "twelve",
+					"page": 6,
+					"question": "12",
+					"summary": "the number 12; one more than eleven",
+					"explain": {
+						"entryId": "twelve",
+						"headword": "twelve",
+						"pronunciation": { "display": "TWELV", "ipaUK": "/twelv/", "ipaUS": "/twelv/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "twelve",
+								"inflectionsLine": "",
+								"synonyms": ["a dozen", "two sixes", "noon and midnight hours"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 12; one more than eleven",
+										"examples": [
+											"There are twelve months in a year.",
+											"She buys twelve eggs at the store."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are twelve months in a year.", "ok": true },
+						{ "answer": "Twelve comes before eleven when you count.", "ok": false },
+						{ "answer": "Ten plus three equals twelve.", "ok": false },
+						{ "answer": "A year has twelve weeks.", "ok": false }
+					]
+				},
+				{
+					"title": "thirteen",
+					"page": 7,
+					"question": "13",
+					"summary": "the number 13; one more than twelve",
+					"explain": {
+						"entryId": "thirteen",
+						"headword": "thirteen",
+						"pronunciation": { "display": "thur-TEEN", "ipaUK": "/ˌθɜːˈtiːn/", "ipaUS": "/ˌθɜːrˈtiːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "thirteen",
+								"inflectionsLine": "",
+								"synonyms": ["three plus ten", "a baker's dozen", "thirteen"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 13; one more than twelve",
+										"examples": [
+											"She is thirteen years old and goes to secondary school.",
+											"He counts thirteen birds sitting on the wall."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is thirteen years old and goes to secondary school.", "ok": true },
+						{ "answer": "Thirteen comes between eleven and twelve when you count.", "ok": false },
+						{ "answer": "Ten plus four equals thirteen.", "ok": false },
+						{ "answer": "Thirteen is less than twelve.", "ok": false }
+					]
+				},
+				{
+					"title": "fourteen",
+					"page": 8,
+					"question": "14",
+					"summary": "the number 14; one more than thirteen",
+					"explain": {
+						"entryId": "fourteen",
+						"headword": "fourteen",
+						"pronunciation": { "display": "for-TEEN", "ipaUK": "/ˌfɔːˈtiːn/", "ipaUS": "/ˌfɔːrˈtiːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "fourteen",
+								"inflectionsLine": "",
+								"synonyms": ["four plus ten", "two weeks", "fourteen"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 14; one more than thirteen",
+										"examples": [
+											"There are fourteen days in two weeks.",
+											"She has fourteen books on her shelf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are fourteen days in two weeks.", "ok": true },
+						{ "answer": "Fourteen comes before thirteen when you count.", "ok": false },
+						{ "answer": "Ten plus five equals fourteen.", "ok": false },
+						{ "answer": "There are fourteen months in a year.", "ok": false }
+					]
+				},
+				{
+					"title": "fifteen",
+					"page": 9,
+					"question": "15",
+					"summary": "the number 15; one more than fourteen",
+					"explain": {
+						"entryId": "fifteen",
+						"headword": "fifteen",
+						"pronunciation": { "display": "fif-TEEN", "ipaUK": "/ˌfɪfˈtiːn/", "ipaUS": "/ˌfɪfˈtiːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "fifteen",
+								"inflectionsLine": "",
+								"synonyms": ["five plus ten", "a quarter hour", "fifteen"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 15; one more than fourteen",
+										"examples": [
+											"There are fifteen students in the class today.",
+											"She finishes her homework in fifteen minutes."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are fifteen students in the class today.", "ok": true },
+						{ "answer": "Ten plus six equals fifteen.", "ok": false },
+						{ "answer": "Fifteen comes between thirteen and fourteen when you count.", "ok": false },
+						{ "answer": "Fifteen is the same as twelve plus four.", "ok": false }
+					]
+				},
+				{
+					"title": "sixteen",
+					"page": 10,
+					"question": "16",
+					"summary": "the number 16; one more than fifteen",
+					"explain": {
+						"entryId": "sixteen",
+						"headword": "sixteen",
+						"pronunciation": { "display": "siks-TEEN", "ipaUK": "/ˌsɪkˈstiːn/", "ipaUS": "/ˌsɪkˈstiːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "sixteen",
+								"inflectionsLine": "",
+								"synonyms": ["six plus ten", "four fours", "sixteen"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 16; one more than fifteen",
+										"examples": [
+											"She turns sixteen years old on her birthday next week.",
+											"He counts sixteen cars in the car park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She turns sixteen years old on her birthday next week.", "ok": true },
+						{ "answer": "Ten plus five equals sixteen.", "ok": false },
+						{ "answer": "Sixteen comes before fifteen when you count.", "ok": false },
+						{ "answer": "There are sixteen hours in a day.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,456 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPlaces2-en",
+	"title": "Places",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Places",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "lake",
+					"page": 12,
+					"question": "lake",
+					"summary": "a large area of water that has land all around it",
+					"explain": {
+						"entryId": "lake",
+						"headword": "lake",
+						"pronunciation": { "display": "LAYK", "ipaUK": "/leɪk/", "ipaUS": "/leɪk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "lake",
+								"inflectionsLine": "lakes",
+								"synonyms": ["loch", "pond", "reservoir"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large area of water that has land all around it",
+										"examples": [
+											"She goes swimming in the lake in summer.",
+											"They go fishing in the lake near their home."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes swimming in the lake in summer.", "ok": true },
+						{ "answer": "A lake is a large dry area of land with very little rain or water.", "ok": false },
+						{ "answer": "He eats a lake for breakfast every morning.", "ok": false },
+						{ "answer": "She goes to the lake to buy clothes and food.", "ok": false }
+					]
+				},
+				{
+					"title": "library",
+					"page": 13,
+					"question": "library",
+					"summary": "a building or room that has a collection of books that people can borrow to read",
+					"explain": {
+						"entryId": "library",
+						"headword": "library",
+						"pronunciation": { "display": "LY-bruh-ree", "ipaUK": "/ˈlaɪbrəri/", "ipaUS": "/ˈlaɪbreri/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "library",
+								"inflectionsLine": "libraries",
+								"synonyms": ["book collection", "reading room", "archives"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building or room that has a collection of books that people can borrow to read",
+										"examples": [
+											"She borrows three books from the library every week.",
+											"He goes to the library to study for his exam."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She borrows three books from the library every week.", "ok": true },
+						{ "answer": "He goes to the library to eat a meal and drink coffee.", "ok": false },
+						{ "answer": "She eats a library for breakfast every morning.", "ok": false },
+						{ "answer": "A library is a place where wild animals are kept for people to see.", "ok": false }
+					]
+				},
+				{
+					"title": "mountain",
+					"page": 14,
+					"question": "mountain",
+					"summary": "a very high area of land with steep sides that is much higher than the land around it",
+					"explain": {
+						"entryId": "mountain",
+						"headword": "mountain",
+						"pronunciation": { "display": "MOWN-tin", "ipaUK": "/ˈmaʊntɪn/", "ipaUS": "/ˈmaʊntn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "mountain",
+								"inflectionsLine": "mountains",
+								"synonyms": ["peak", "summit", "ridge"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a very high area of land with steep sides that is much higher than the land around it",
+										"examples": [
+											"They climb the mountain and reach the top by midday.",
+											"She can see snow on the mountain from her window."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They climb the mountain and reach the top by midday.", "ok": true },
+						{ "answer": "A mountain is a flat sandy area next to the sea.", "ok": false },
+						{ "answer": "He drinks a mountain every morning before going to work.", "ok": false },
+						{ "answer": "She goes to the mountain to keep her money safe.", "ok": false }
+					]
+				},
+				{
+					"title": "ocean",
+					"page": 15,
+					"question": "ocean",
+					"summary": "a very large area of salt water that covers most of the Earth's surface",
+					"explain": {
+						"entryId": "ocean",
+						"headword": "ocean",
+						"pronunciation": { "display": "OH-shun", "ipaUK": "/ˈəʊʃn/", "ipaUS": "/ˈoʊʃn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "ocean",
+								"inflectionsLine": "oceans",
+								"synonyms": ["sea", "deep water", "open sea"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a very large area of salt water that covers most of the Earth's surface",
+										"examples": [
+											"The ocean is very deep and covers most of the Earth.",
+											"She swims in the ocean on her holiday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The ocean is very deep and covers most of the Earth.", "ok": true },
+						{ "answer": "An ocean is a large area of land covered with many tall trees.", "ok": false },
+						{ "answer": "He eats an ocean for breakfast every morning.", "ok": false },
+						{ "answer": "The ocean is a dry area of land with very little rain or water.", "ok": false }
+					]
+				},
+				{
+					"title": "office",
+					"page": 16,
+					"question": "office",
+					"summary": "a room or building where people work, usually at desks and computers",
+					"explain": {
+						"entryId": "office",
+						"headword": "office",
+						"pronunciation": { "display": "OF-is", "ipaUK": "/ˈɒfɪs/", "ipaUS": "/ˈɔːfɪs/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "office",
+								"inflectionsLine": "offices",
+								"synonyms": ["workplace", "workspace", "work room"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a room or building where people work, usually at desks and computers",
+										"examples": [
+											"She works in an office in the city centre.",
+											"He goes to his office at nine o'clock every morning."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She works in an office in the city centre.", "ok": true },
+						{ "answer": "He goes to the office to swim and play sports with friends.", "ok": false },
+						{ "answer": "She eats an office for breakfast every morning.", "ok": false },
+						{ "answer": "An office is a place beside the sea where you collect shells on the sand.", "ok": false }
+					]
+				},
+				{
+					"title": "park",
+					"page": 17,
+					"question": "park",
+					"summary": "a large open area in a town or city with grass and trees where people can relax",
+					"explain": {
+						"entryId": "park",
+						"headword": "park",
+						"pronunciation": { "display": "PARK", "ipaUK": "/pɑːk/", "ipaUS": "/pɑːrk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "park",
+								"inflectionsLine": "parks",
+								"synonyms": ["green", "public garden", "recreation ground"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large open area in a town or city with grass and trees where people can relax",
+										"examples": [
+											"She walks her dog in the park every morning.",
+											"They have a picnic in the park on sunny days."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She walks her dog in the park every morning.", "ok": true },
+						{ "answer": "He goes to the park to borrow books and study quietly.", "ok": false },
+						{ "answer": "She eats a park for breakfast every morning.", "ok": false },
+						{ "answer": "A park is a building where people keep and borrow money.", "ok": false }
+					]
+				},
+				{
+					"title": "restaurant",
+					"page": 18,
+					"question": "restaurant",
+					"summary": "a place where you can pay to eat meals that are cooked and served to you",
+					"explain": {
+						"entryId": "restaurant",
+						"headword": "restaurant",
+						"pronunciation": { "display": "RES-tuh-ront", "ipaUK": "/ˈrestrɒnt/", "ipaUS": "/ˈrestərɑːnt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "restaurant",
+								"inflectionsLine": "restaurants",
+								"synonyms": ["eatery", "café", "dining room"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a place where you can pay to eat meals that are cooked and served to you",
+										"examples": [
+											"They go to a restaurant for dinner on Friday evenings.",
+											"She works as a chef in a popular restaurant."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They go to a restaurant for dinner on Friday evenings.", "ok": true },
+						{ "answer": "He goes to the restaurant to put out fires and rescue people.", "ok": false },
+						{ "answer": "She eats a restaurant for breakfast every morning.", "ok": false },
+						{ "answer": "A restaurant is a place where wild animals are kept for visitors to see.", "ok": false }
+					]
+				},
+				{
+					"title": "river",
+					"page": 19,
+					"question": "river",
+					"summary": "a long natural flow of water that moves across the land towards the sea or a lake",
+					"explain": {
+						"entryId": "river",
+						"headword": "river",
+						"pronunciation": { "display": "RIV-ur", "ipaUK": "/ˈrɪvə/", "ipaUS": "/ˈrɪvər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "river",
+								"inflectionsLine": "rivers",
+								"synonyms": ["stream", "waterway", "tributary"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a long natural flow of water that moves across the land towards the sea or a lake",
+										"examples": [
+											"They go fishing in the river near their village.",
+											"She swims across the river to reach the other side."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They go fishing in the river near their village.", "ok": true },
+						{ "answer": "A river is a large dry area of land with very little rain or water.", "ok": false },
+						{ "answer": "He eats a river for breakfast every morning.", "ok": false },
+						{ "answer": "She goes to the river to borrow books and study for her exams.", "ok": false }
+					]
+				},
+				{
+					"title": "school",
+					"page": 20,
+					"question": "school",
+					"summary": "a place where children go to be taught and to learn",
+					"explain": {
+						"entryId": "school",
+						"headword": "school",
+						"pronunciation": { "display": "SKOOL", "ipaUK": "/skuːl/", "ipaUS": "/skuːl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "school",
+								"inflectionsLine": "schools",
+								"synonyms": ["academy", "institute", "college"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a place where children go to be taught and to learn",
+										"examples": [
+											"She goes to school every day from Monday to Friday.",
+											"He teaches science at a secondary school."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to school every day from Monday to Friday.", "ok": true },
+						{ "answer": "He goes to school to keep his money safe in an account.", "ok": false },
+						{ "answer": "She eats a school for breakfast every morning.", "ok": false },
+						{ "answer": "A school is a place where you go to watch films on a big screen.", "ok": false }
+					]
+				},
+				{
+					"title": "store",
+					"page": 21,
+					"question": "store",
+					"summary": "a building where you can buy a wide variety of goods",
+					"explain": {
+						"entryId": "store",
+						"headword": "store",
+						"pronunciation": { "display": "STOR", "ipaUK": "/stɔː/", "ipaUS": "/stɔːr/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "store",
+								"inflectionsLine": "stores",
+								"synonyms": ["shop", "market", "retail outlet"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building where you can buy a wide variety of goods",
+										"examples": [
+											"She goes to the store to buy food and cleaning products.",
+											"He works in a big store in the city centre."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to the store to buy food and cleaning products.", "ok": true },
+						{ "answer": "He goes to the store to swim in the sea and collect shells.", "ok": false },
+						{ "answer": "She eats a store for breakfast every morning.", "ok": false },
+						{ "answer": "A store is a place where you go to see wild animals.", "ok": false }
+					]
+				},
+				{
+					"title": "zoo",
+					"page": 22,
+					"question": "zoo",
+					"summary": "a place where wild animals are kept so that people can go and see them",
+					"explain": {
+						"entryId": "zoo",
+						"headword": "zoo",
+						"pronunciation": { "display": "ZOO", "ipaUK": "/zuː/", "ipaUS": "/zuː/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "zoo",
+								"inflectionsLine": "zoos",
+								"synonyms": ["wildlife park", "animal park", "safari park"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a place where wild animals are kept so that people can go and see them",
+										"examples": [
+											"She takes her children to the zoo to see the elephants.",
+											"He saw lions and tigers at the zoo."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She takes her children to the zoo to see the elephants.", "ok": true },
+						{ "answer": "He goes to the zoo to borrow books and use a computer.", "ok": false },
+						{ "answer": "She eats a zoo for breakfast every morning.", "ok": false },
+						{ "answer": "A zoo is a building where people work at desks and computers all day.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

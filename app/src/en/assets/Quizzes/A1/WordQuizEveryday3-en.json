@@ -1,0 +1,274 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEveryday1-en",
+	"title": "Everyday",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Everyday",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "spoon",
+					"page": 21,
+					"question": "spoon",
+					"summary": "a tool with a round part and a handle used for eating soup or mixing food",
+					"explain": {
+						"entryId": "spoon",
+						"headword": "spoon",
+						"pronunciation": { "display": "spoon", "ipaUK": "/spuːn/", "ipaUS": "/spuːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "spoon",
+								"inflectionsLine": "spoons",
+								"synonyms": ["ladle", "utensil", "teaspoon"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a tool with a round bowl-shaped part and a long handle that you use to eat or mix food",
+										"examples": [
+											"She uses a spoon to eat her soup.",
+											"He puts a spoon in the cup to mix the sugar."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She uses a spoon to eat her soup.", "ok": true },
+						{ "answer": "He drinks his spoon in the morning.", "ok": false },
+						{ "answer": "She wears a spoon on her head.", "ok": false },
+						{ "answer": "They plant a spoon in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "table",
+					"page": 22,
+					"question": "table",
+					"summary": "a piece of furniture with a flat top and legs that you put things on",
+					"explain": {
+						"entryId": "table",
+						"headword": "table",
+						"pronunciation": { "display": "TAY-bul", "ipaUK": "/ˈteɪbl/", "ipaUS": "/ˈteɪbl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "table",
+								"inflectionsLine": "tables",
+								"synonyms": ["desk", "counter", "surface"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a piece of furniture with a flat top and four legs that you put things on or sit at to eat",
+										"examples": [
+											"She puts her cup on the table.",
+											"He sits at the table to eat dinner."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She puts her cup on the table.", "ok": true },
+						{ "answer": "He drinks his table in the morning.", "ok": false },
+						{ "answer": "She eats a table for lunch.", "ok": false },
+						{ "answer": "They plant a table in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "television",
+					"page": 23,
+					"question": "television",
+					"summary": "a device with a screen that shows moving pictures and sound",
+					"explain": {
+						"entryId": "television",
+						"headword": "television",
+						"pronunciation": { "display": "TEL-uh-vizh-un", "ipaUK": "/ˈtelɪvɪʒən/", "ipaUS": "/ˈtelɪvɪʒən/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "television",
+								"inflectionsLine": "televisions",
+								"synonyms": ["TV", "screen", "telly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a device with a screen that shows moving pictures and sound for watching news, films, and other programmes",
+										"examples": [
+											"She watches television in the evening.",
+											"He turns on the television to watch the news."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She watches television in the evening.", "ok": true },
+						{ "answer": "He drinks his television in the morning.", "ok": false },
+						{ "answer": "She eats television for breakfast.", "ok": false },
+						{ "answer": "They plant a television in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "umbrella",
+					"page": 24,
+					"question": "umbrella",
+					"summary": "a device with a long handle that you hold over your head to stay dry in the rain",
+					"explain": {
+						"entryId": "umbrella",
+						"headword": "umbrella",
+						"pronunciation": { "display": "um-BREL-uh", "ipaUK": "/ʌmˈbrelə/", "ipaUS": "/ʌmˈbrelə/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "umbrella",
+								"inflectionsLine": "umbrellas",
+								"synonyms": ["brolly", "parasol", "sunshade"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a device with a long handle and a round cover that you hold over your head to stay dry when it rains",
+										"examples": [
+											"She takes her umbrella because it is raining.",
+											"He opens his umbrella when it starts to rain."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She takes her umbrella because it is raining.", "ok": true },
+						{ "answer": "He eats his umbrella for lunch.", "ok": false },
+						{ "answer": "She drinks an umbrella in the morning.", "ok": false },
+						{ "answer": "They plant an umbrella in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "wallet",
+					"page": 25,
+					"question": "wallet",
+					"summary": "a small flat case for keeping money and cards",
+					"explain": {
+						"entryId": "wallet",
+						"headword": "wallet",
+						"pronunciation": { "display": "WOL-it", "ipaUK": "/ˈwɒlɪt/", "ipaUS": "/ˈwɑːlɪt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "wallet",
+								"inflectionsLine": "wallets",
+								"synonyms": ["purse", "billfold", "money holder"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small flat case, usually made of leather, that you keep your money and cards in",
+										"examples": [
+											"He puts his money and cards in his wallet.",
+											"She takes her wallet out to pay."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He puts his money and cards in his wallet.", "ok": true },
+						{ "answer": "She drinks her wallet in the morning.", "ok": false },
+						{ "answer": "He eats his wallet for breakfast.", "ok": false },
+						{ "answer": "They plant a wallet in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "watch",
+					"page": 26,
+					"question": "watch",
+					"summary": "a small clock that you wear on your wrist; also to look at something for a period of time",
+					"explain": {
+						"entryId": "watch",
+						"headword": "watch",
+						"pronunciation": { "display": "woch", "ipaUK": "/wɒtʃ/", "ipaUS": "/wɑːtʃ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "watch",
+								"inflectionsLine": "watches",
+								"synonyms": ["wristwatch", "timepiece", "timekeeper"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small clock that you wear on your wrist to tell the time",
+										"examples": [
+											"She looks at her watch to see what time it is.",
+											"He wears a watch on his left wrist."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "watch",
+								"inflectionsLine": "watches, watching, watched",
+								"synonyms": ["look at", "view", "observe"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to look at something for a period of time and pay attention to what happens",
+										"examples": [
+											"She watches television every evening.",
+											"He watches football on his phone."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She looks at her watch to see what time it is.", "ok": true },
+						{ "answer": "He drinks his watch in the morning.", "ok": false },
+						{ "answer": "She eats her watch for breakfast.", "ok": false },
+						{ "answer": "They plant a watch in the garden.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,296 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizDates3-en",
+	"title": "Dates",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Dates",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "date",
+					"page": 21,
+					"question": "date",
+					"summary": "a specific day of the month or year when something happens",
+					"explain": {
+						"entryId": "date",
+						"headword": "date",
+						"pronunciation": { "display": "DAYT", "ipaUK": "/deɪt/", "ipaUS": "/deɪt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "date",
+								"inflectionsLine": "dates",
+								"synonyms": ["day", "time", "occasion"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a specific day of the month or year, written or said as a number or words",
+										"examples": [
+											"She writes the date at the top of her homework.",
+											"What is today's date?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She writes the date at the top of her homework.", "ok": true },
+						{ "answer": "A date tells you how hot or cold it is outside.", "ok": false },
+						{ "answer": "He listens to the date on the radio to hear music.", "ok": false },
+						{ "answer": "A date is a colour of the sky.", "ok": false }
+					]
+				},
+				{
+					"title": "evening",
+					"page": 22,
+					"question": "evening",
+					"summary": "the part of the day between the afternoon and the time you go to bed",
+					"explain": {
+						"entryId": "evening",
+						"headword": "evening",
+						"pronunciation": { "display": "EEV-ning", "ipaUK": "/ˈiːvnɪŋ/", "ipaUS": "/ˈiːvnɪŋ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "evening",
+								"inflectionsLine": "evenings",
+								"synonyms": ["dusk", "nightfall", "late afternoon"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the part of the day between the afternoon and the time you go to sleep",
+										"examples": [
+											"She watches television in the evening.",
+											"He cooks dinner every evening."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She watches television in the evening.", "ok": true },
+						{ "answer": "The evening is the part of the day before 12 o'clock.", "ok": false },
+						{ "answer": "Evening comes before the afternoon.", "ok": false },
+						{ "answer": "The evening and the morning are the same part of the day.", "ok": false }
+					]
+				},
+				{
+					"title": "morning",
+					"page": 23,
+					"question": "morning",
+					"summary": "the part of the day from when you wake up until 12 o'clock",
+					"explain": {
+						"entryId": "morning",
+						"headword": "morning",
+						"pronunciation": { "display": "MOR-ning", "ipaUK": "/ˈmɔːnɪŋ/", "ipaUS": "/ˈmɔːrnɪŋ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "morning",
+								"inflectionsLine": "mornings",
+								"synonyms": ["a.m.", "early day", "before noon"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the part of the day from when you wake up until 12 o'clock (midday)",
+										"examples": [
+											"She has breakfast every morning.",
+											"He goes for a run in the morning."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has breakfast every morning.", "ok": true },
+						{ "answer": "The morning is the part of the day after 12 o'clock.", "ok": false },
+						{ "answer": "Morning comes after the evening of the same day.", "ok": false },
+						{ "answer": "The morning and the afternoon are the same time of day.", "ok": false }
+					]
+				},
+				{
+					"title": "night",
+					"page": 24,
+					"question": "night",
+					"summary": "the dark part of the day when most people sleep",
+					"explain": {
+						"entryId": "night",
+						"headword": "night",
+						"pronunciation": { "display": "nyt", "ipaUK": "/naɪt/", "ipaUS": "/naɪt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "night",
+								"inflectionsLine": "nights",
+								"synonyms": ["nighttime", "darkness", "after dark"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the part of the day when it is dark and most people are asleep",
+										"examples": [
+											"She reads a book before she sleeps at night.",
+											"He works at night and sleeps during the day."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She reads a book before she sleeps at night.", "ok": true },
+						{ "answer": "Night is the brightest part of the day.", "ok": false },
+						{ "answer": "Night is between the morning and the afternoon.", "ok": false },
+						{ "answer": "Night is the same time as midday.", "ok": false }
+					]
+				},
+				{
+					"title": "today",
+					"page": 25,
+					"question": "today",
+					"summary": "on this day; the day that is happening now",
+					"explain": {
+						"entryId": "today",
+						"headword": "today",
+						"pronunciation": { "display": "tuh-DAY", "ipaUK": "/təˈdeɪ/", "ipaUS": "/təˈdeɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "today",
+								"inflectionsLine": "",
+								"synonyms": ["this day", "the present day", "now"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "on this day; used to talk about the day that is happening now",
+										"examples": [
+											"She has a test today at school.",
+											"What day is it today?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has a test today at school.", "ok": true },
+						{ "answer": "Today means the day before yesterday.", "ok": false },
+						{ "answer": "Today is the same as tomorrow.", "ok": false },
+						{ "answer": "Today means next week.", "ok": false }
+					]
+				},
+				{
+					"title": "tomorrow",
+					"page": 26,
+					"question": "tomorrow",
+					"summary": "the day after today",
+					"explain": {
+						"entryId": "tomorrow",
+						"headword": "tomorrow",
+						"pronunciation": { "display": "tuh-MOR-oh", "ipaUK": "/təˈmɒrəʊ/", "ipaUS": "/təˈmɑːroʊ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "tomorrow",
+								"inflectionsLine": "",
+								"synonyms": ["next day", "the following day", "the day after"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "on the day after today",
+										"examples": [
+											"She has a dentist appointment tomorrow.",
+											"Tomorrow is Tuesday, so today is Monday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has a dentist appointment tomorrow.", "ok": true },
+						{ "answer": "Tomorrow means the day before today.", "ok": false },
+						{ "answer": "Tomorrow is the same day as today.", "ok": false },
+						{ "answer": "Tomorrow means last week.", "ok": false }
+					]
+				},
+				{
+					"title": "yesterday",
+					"page": 27,
+					"question": "yesterday",
+					"summary": "the day before today",
+					"explain": {
+						"entryId": "yesterday",
+						"headword": "yesterday",
+						"pronunciation": { "display": "YES-tur-day", "ipaUK": "/ˈjestədeɪ/", "ipaUS": "/ˈjestərdeɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "yesterday",
+								"inflectionsLine": "",
+								"synonyms": ["the day before", "the previous day", "last day"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "on the day before today",
+										"examples": [
+											"She was ill yesterday and did not go to school.",
+											"Yesterday was Monday, so today is Tuesday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She was ill yesterday and did not go to school.", "ok": true },
+						{ "answer": "Yesterday means the day after today.", "ok": false },
+						{ "answer": "Yesterday is the same as today.", "ok": false },
+						{ "answer": "Yesterday means next week.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,336 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizupinonatby2-en",
+	"title": "Prepositions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Prepositions",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "off",
+					"page": 11,
+					"question": "off",
+					"summary": "away from a surface or place; no longer attached or connected to something",
+					"explain": {
+						"entryId": "off",
+						"headword": "off",
+						"pronunciation": { "display": "OF", "ipaUK": "/ɒf/", "ipaUS": "/ɔːf/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "off",
+								"inflectionsLine": "",
+								"synonyms": ["away from", "not on", "removed from"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "away from a surface or place; no longer attached or connected to something",
+										"examples": [
+											"She takes off her coat when she gets home.",
+											"He jumps off the wall and lands on the ground."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She takes off her coat when she gets home.", "ok": true },
+						{ "answer": "She takes off her coat and it goes onto her body.", "ok": false },
+						{ "answer": "He offs his shoes before entering the house.", "ok": false },
+						{ "answer": "An off is a type of building where people work.", "ok": false }
+					]
+				},
+				{
+					"title": "on",
+					"page": 12,
+					"question": "on",
+					"summary": "touching or supported by the surface of something",
+					"explain": {
+						"entryId": "on",
+						"headword": "on",
+						"pronunciation": { "display": "ON", "ipaUK": "/ɒn/", "ipaUS": "/ɑːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "on",
+								"inflectionsLine": "",
+								"synonyms": ["upon", "on top of", "above"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "touching or supported by the surface of something",
+										"examples": [
+											"She puts her book on the table.",
+											"He sits on the chair and reads his newspaper."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She puts her book on the table.", "ok": true },
+						{ "answer": "She sits on the sky and watches the clouds below her.", "ok": false },
+						{ "answer": "He ons his shoes before going to bed at night.", "ok": false },
+						{ "answer": "An on is something you eat for breakfast with eggs and toast.", "ok": false }
+					]
+				},
+				{
+					"title": "out",
+					"page": 13,
+					"question": "out",
+					"summary": "away from the inside of a place; outside",
+					"explain": {
+						"entryId": "out",
+						"headword": "out",
+						"pronunciation": { "display": "OWT", "ipaUK": "/aʊt/", "ipaUS": "/aʊt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "out",
+								"inflectionsLine": "",
+								"synonyms": ["outside", "away from inside", "beyond"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "away from the inside of a place; outside",
+										"examples": [
+											"She takes the books out of her bag.",
+											"He goes out to buy some food from the store."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She takes the books out of her bag.", "ok": true },
+						{ "answer": "He goes out of the house and stays inside all day.", "ok": false },
+						{ "answer": "She outs her homework before going to school in the morning.", "ok": false },
+						{ "answer": "An out is a type of sport played in a big stadium.", "ok": false }
+					]
+				},
+				{
+					"title": "over",
+					"page": 14,
+					"question": "over",
+					"summary": "above or higher than something; across the top of something",
+					"explain": {
+						"entryId": "over",
+						"headword": "over",
+						"pronunciation": { "display": "OH-vur", "ipaUK": "/ˈəʊvə/", "ipaUS": "/ˈoʊvər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "over",
+								"inflectionsLine": "",
+								"synonyms": ["above", "across", "higher than"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "above or higher than something; directly covering or across something",
+										"examples": [
+											"She hangs a picture over the fireplace.",
+											"He jumps over the small fence in the garden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She hangs a picture over the fireplace.", "ok": true },
+						{ "answer": "He digs a hole over the ground to plant some seeds in it.", "ok": false },
+						{ "answer": "She overs her homework before going to sleep at night.", "ok": false },
+						{ "answer": "An over is a type of food you eat at a restaurant for dinner.", "ok": false }
+					]
+				},
+				{
+					"title": "to",
+					"page": 15,
+					"question": "to",
+					"summary": "used to show movement in the direction of a place or person",
+					"explain": {
+						"entryId": "to",
+						"headword": "to",
+						"pronunciation": { "display": "TOO", "ipaUK": "/tuː/", "ipaUS": "/tuː/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "to",
+								"inflectionsLine": "",
+								"synonyms": ["toward", "in the direction of", "as far as"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to show movement in the direction of a place or person",
+										"examples": [
+											"She walks to school every morning.",
+											"He gives the book to his friend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She walks to school every morning.", "ok": true },
+						{ "answer": "He travels to his home to leave it and go somewhere else.", "ok": false },
+						{ "answer": "She tos her homework before going to bed each night.", "ok": false },
+						{ "answer": "A to is a type of animal that lives in the ocean.", "ok": false }
+					]
+				},
+				{
+					"title": "under",
+					"page": 16,
+					"question": "under",
+					"summary": "in or to a position that is below or beneath something",
+					"explain": {
+						"entryId": "under",
+						"headword": "under",
+						"pronunciation": { "display": "UN-dur", "ipaUK": "/ˈʌndə/", "ipaUS": "/ˈʌndər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "under",
+								"inflectionsLine": "",
+								"synonyms": ["beneath", "below", "underneath"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in or to a position that is below or beneath something",
+										"examples": [
+											"She hides the present under her bed.",
+											"He finds his shoe under the sofa."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She hides the present under her bed.", "ok": true },
+						{ "answer": "He puts the picture under the wall to hang it high up.", "ok": false },
+						{ "answer": "She unders her coat before going outside in winter.", "ok": false },
+						{ "answer": "An under is a type of colour you can see in a rainbow.", "ok": false }
+					]
+				},
+				{
+					"title": "up",
+					"page": 17,
+					"question": "up",
+					"summary": "towards a higher position or place; in an upward direction",
+					"explain": {
+						"entryId": "up",
+						"headword": "up",
+						"pronunciation": { "display": "UP", "ipaUK": "/ʌp/", "ipaUS": "/ʌp/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "up",
+								"inflectionsLine": "",
+								"synonyms": ["upward", "towards the top", "higher"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "towards a higher position or place; in an upward direction",
+										"examples": [
+											"She climbs up the ladder to paint the ceiling.",
+											"He walks up the hill to enjoy the view."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She climbs up the ladder to paint the ceiling.", "ok": true },
+						{ "answer": "He walks up the hill and goes down to the top of it.", "ok": false },
+						{ "answer": "She ups her shoes before going to school each morning.", "ok": false },
+						{ "answer": "An up is a type of fruit that grows on trees in summer.", "ok": false }
+					]
+				},
+				{
+					"title": "with",
+					"page": 18,
+					"question": "with",
+					"summary": "accompanied by someone; having or using something",
+					"explain": {
+						"entryId": "with",
+						"headword": "with",
+						"pronunciation": { "display": "WITH", "ipaUK": "/wɪð/", "ipaUS": "/wɪð/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "with",
+								"inflectionsLine": "",
+								"synonyms": ["together with", "alongside", "in the company of"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "accompanied by someone; having or using something",
+										"examples": [
+											"She goes to the park with her friends.",
+											"He drinks his tea with a little milk."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to the park with her friends.", "ok": true },
+						{ "answer": "He goes to the park with alone and meets nobody there.", "ok": false },
+						{ "answer": "She withs her homework before going to bed at night.", "ok": false },
+						{ "answer": "A with is a type of building in the middle of a busy city.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

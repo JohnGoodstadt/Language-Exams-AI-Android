@@ -1,0 +1,376 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizOccupations1-en",
+	"title": "Occupations",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Occupations",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "artist",
+					"page": 1,
+					"question": "artist",
+					"summary": "a person who creates paintings, drawings, or other works of art",
+					"explain": {
+						"entryId": "artist",
+						"headword": "artist",
+						"pronunciation": { "display": "AR-tist", "ipaUK": "/ˈɑːtɪst/", "ipaUS": "/ˈɑːrtɪst/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "artist",
+								"inflectionsLine": "artists",
+								"synonyms": ["painter", "creator", "illustrator"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who creates paintings, drawings, or other works of art",
+										"examples": [
+											"She is an artist who paints pictures of nature.",
+											"He works as an artist in a big city."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is an artist who paints pictures of nature.", "ok": true },
+						{ "answer": "The artist works at a farm and grows vegetables.", "ok": false },
+						{ "answer": "He drinks an artist every morning before going to work.", "ok": false },
+						{ "answer": "An artist is a person who teaches children in a school.", "ok": false }
+					]
+				},
+				{
+					"title": "chef",
+					"page": 2,
+					"question": "chef",
+					"summary": "a professional cook who works in a restaurant or hotel kitchen",
+					"explain": {
+						"entryId": "chef",
+						"headword": "chef",
+						"pronunciation": { "display": "SHEF", "ipaUK": "/ʃef/", "ipaUS": "/ʃef/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "chef",
+								"inflectionsLine": "chefs",
+								"synonyms": ["cook", "head cook", "kitchen chef"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a professional cook who works in a restaurant or hotel kitchen",
+										"examples": [
+											"The chef cooks delicious meals in the restaurant.",
+											"She trained as a chef for three years."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The chef cooks delicious meals in the restaurant.", "ok": true },
+						{ "answer": "The chef works in a library and reads books to children.", "ok": false },
+						{ "answer": "He eats a chef for breakfast every morning.", "ok": false },
+						{ "answer": "A chef is a person who puts out fires in burning buildings.", "ok": false }
+					]
+				},
+				{
+					"title": "doctor",
+					"page": 3,
+					"question": "doctor",
+					"summary": "a person who has a medical degree and treats people who are ill or injured",
+					"explain": {
+						"entryId": "doctor",
+						"headword": "doctor",
+						"pronunciation": { "display": "DOK-tur", "ipaUK": "/ˈdɒktə/", "ipaUS": "/ˈdɑːktər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "doctor",
+								"inflectionsLine": "doctors",
+								"synonyms": ["physician", "GP", "medical doctor"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who has a medical degree and treats people who are ill or injured",
+										"examples": [
+											"The doctor examined the patient at the hospital.",
+											"She went to see her doctor because she felt ill."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The doctor examined the patient at the hospital.", "ok": true },
+						{ "answer": "The doctor works on a farm and grows vegetables.", "ok": false },
+						{ "answer": "He eats a doctor for breakfast every morning.", "ok": false },
+						{ "answer": "A doctor is a person who teaches students in a school.", "ok": false }
+					]
+				},
+				{
+					"title": "engineer",
+					"page": 4,
+					"question": "engineer",
+					"summary": "a person who designs, builds, or repairs engines, machines, or structures",
+					"explain": {
+						"entryId": "engineer",
+						"headword": "engineer",
+						"pronunciation": { "display": "en-jih-NEER", "ipaUK": "/ˌendʒɪˈnɪə/", "ipaUS": "/ˌendʒɪˈnɪr/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "engineer",
+								"inflectionsLine": "engineers",
+								"synonyms": ["technician", "designer", "builder"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who designs, builds, or repairs engines, machines, or structures",
+										"examples": [
+											"The engineer designed a new bridge for the city.",
+											"He works as an engineer at a technology company."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The engineer designed a new bridge for the city.", "ok": true },
+						{ "answer": "The engineer works in a kitchen and cooks meals for customers.", "ok": false },
+						{ "answer": "She drinks an engineer every morning before school.", "ok": false },
+						{ "answer": "An engineer is a person who cares for sick people in a hospital.", "ok": false }
+					]
+				},
+				{
+					"title": "farmer",
+					"page": 5,
+					"question": "farmer",
+					"summary": "a person who owns or manages a farm and grows crops or keeps animals",
+					"explain": {
+						"entryId": "farmer",
+						"headword": "farmer",
+						"pronunciation": { "display": "FAR-mur", "ipaUK": "/ˈfɑːmə/", "ipaUS": "/ˈfɑːrmər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "farmer",
+								"inflectionsLine": "farmers",
+								"synonyms": ["grower", "agriculturalist", "farm worker"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who owns or manages a farm and grows crops or keeps animals",
+										"examples": [
+											"The farmer grows vegetables and keeps animals on his land.",
+											"She is a farmer who sells fruit at the market."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The farmer grows vegetables and keeps animals on his land.", "ok": true },
+						{ "answer": "The farmer works in an office and uses a computer all day.", "ok": false },
+						{ "answer": "He eats a farmer for breakfast every morning.", "ok": false },
+						{ "answer": "A farmer is a person who paints pictures and creates works of art.", "ok": false }
+					]
+				},
+				{
+					"title": "firefighter",
+					"page": 6,
+					"question": "firefighter",
+					"summary": "a person whose job is to put out fires and rescue people from danger",
+					"explain": {
+						"entryId": "firefighter",
+						"headword": "firefighter",
+						"pronunciation": { "display": "FYR-fy-tur", "ipaUK": "/ˈfaɪəfaɪtə/", "ipaUS": "/ˈfaɪərfaɪtər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "firefighter",
+								"inflectionsLine": "firefighters",
+								"synonyms": ["fireman", "fire officer", "rescue worker"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person whose job is to put out fires and rescue people from danger",
+										"examples": [
+											"The firefighter put out the fire in the building.",
+											"She is a brave firefighter who helps people in emergencies."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The firefighter put out the fire in the building.", "ok": true },
+						{ "answer": "The firefighter works in a restaurant and cooks meals for customers.", "ok": false },
+						{ "answer": "He drinks a firefighter every morning before going to work.", "ok": false },
+						{ "answer": "A firefighter is a person who designs and builds new machines.", "ok": false }
+					]
+				},
+				{
+					"title": "nurse",
+					"page": 7,
+					"question": "nurse",
+					"summary": "a person who is trained to care for sick or injured people in a hospital",
+					"explain": {
+						"entryId": "nurse",
+						"headword": "nurse",
+						"pronunciation": { "display": "NURS", "ipaUK": "/nɜːs/", "ipaUS": "/nɜːrs/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "nurse",
+								"inflectionsLine": "nurses",
+								"synonyms": ["carer", "medical nurse", "healthcare worker"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is trained to care for sick or injured people in a hospital",
+										"examples": [
+											"The nurse checked the patient's temperature in the hospital.",
+											"He works as a nurse in the children's ward."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The nurse checked the patient's temperature in the hospital.", "ok": true },
+						{ "answer": "The nurse works on a farm and grows food for people.", "ok": false },
+						{ "answer": "She eats a nurse for breakfast every morning.", "ok": false },
+						{ "answer": "A nurse is a person who designs buildings and bridges.", "ok": false }
+					]
+				},
+				{
+					"title": "scientist",
+					"page": 8,
+					"question": "scientist",
+					"summary": "a person who studies one or more of the natural sciences and carries out research",
+					"explain": {
+						"entryId": "scientist",
+						"headword": "scientist",
+						"pronunciation": { "display": "SY-un-tist", "ipaUK": "/ˈsaɪəntɪst/", "ipaUS": "/ˈsaɪəntɪst/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "scientist",
+								"inflectionsLine": "scientists",
+								"synonyms": ["researcher", "academic", "expert"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who studies one or more of the natural sciences and carries out research",
+										"examples": [
+											"The scientist discovered a new kind of plant in the forest.",
+											"She works as a scientist in a research laboratory."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The scientist discovered a new kind of plant in the forest.", "ok": true },
+						{ "answer": "The scientist works in a restaurant and cooks food for customers.", "ok": false },
+						{ "answer": "He drinks a scientist every morning before going to work.", "ok": false },
+						{ "answer": "A scientist is a person who puts out fires and rescues people.", "ok": false }
+					]
+				},
+				{
+					"title": "teacher",
+					"page": 9,
+					"question": "teacher",
+					"summary": "a person whose job is to teach students, especially in a school",
+					"explain": {
+						"entryId": "teacher",
+						"headword": "teacher",
+						"pronunciation": { "display": "TEE-chur", "ipaUK": "/ˈtiːtʃə/", "ipaUS": "/ˈtiːtʃər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "teacher",
+								"inflectionsLine": "teachers",
+								"synonyms": ["educator", "instructor", "school teacher"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person whose job is to teach students, especially in a school",
+										"examples": [
+											"The teacher explains the lesson to the class.",
+											"She is a teacher who works at a primary school."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The teacher explains the lesson to the class.", "ok": true },
+						{ "answer": "The teacher works in a hospital and cares for sick patients.", "ok": false },
+						{ "answer": "He eats a teacher for breakfast every morning.", "ok": false },
+						{ "answer": "A teacher is a person who grows crops and keeps animals on a farm.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNumbers3-en",
+	"title": "Numbers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Numbers",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "five",
+					"page": 21,
+					"question": "5",
+					"summary": "the number 5; one more than four",
+					"explain": {
+						"entryId": "five",
+						"headword": "five",
+						"pronunciation": { "display": "FYV", "ipaUK": "/faɪv/", "ipaUS": "/faɪv/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "five",
+								"inflectionsLine": "",
+								"synonyms": ["half of ten", "a handful", "a quintet"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 5; one more than four",
+										"examples": [
+											"She has five fingers on each hand.",
+											"He waits five minutes for the bus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has five fingers on each hand.", "ok": true },
+						{ "answer": "A year has five months.", "ok": false },
+						{ "answer": "Five comes after six when you count.", "ok": false },
+						{ "answer": "Two plus four equals five.", "ok": false }
+					]
+				},
+				{
+					"title": "fifty",
+					"page": 22,
+					"question": "50",
+					"summary": "the number 50; five times ten",
+					"explain": {
+						"entryId": "fifty",
+						"headword": "fifty",
+						"pronunciation": { "display": "FIF-tee", "ipaUK": "/ˈfɪfti/", "ipaUS": "/ˈfɪfti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "fifty",
+								"inflectionsLine": "",
+								"synonyms": ["half a hundred", "five tens", "fifty"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 50; five times ten",
+										"examples": [
+											"She walks fifty metres to reach the school gate.",
+											"He reads fifty pages of his book in one evening."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She walks fifty metres to reach the school gate.", "ok": true },
+						{ "answer": "Fifty comes before forty when you count.", "ok": false },
+						{ "answer": "Twenty-five plus twenty-six equals fifty.", "ok": false },
+						{ "answer": "Fifty is the same as five times eleven.", "ok": false }
+					]
+				},
+				{
+					"title": "five hundred",
+					"page": 23,
+					"question": "500",
+					"summary": "the number 500; five times one hundred",
+					"explain": {
+						"entryId": "five hundred",
+						"headword": "five hundred",
+						"pronunciation": { "display": "fyv HUN-drud", "ipaUK": "/faɪv ˈhʌndrəd/", "ipaUS": "/faɪv ˈhʌndrəd/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "five hundred",
+								"inflectionsLine": "",
+								"synonyms": ["half a thousand", "five centuries", "five hundred"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 500; five times one hundred",
+										"examples": [
+											"There are five hundred seats in the theatre.",
+											"She saves five hundred pounds for her holiday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are five hundred seats in the theatre.", "ok": true },
+						{ "answer": "Five hundred is smaller than one hundred.", "ok": false },
+						{ "answer": "Five times ten equals five hundred.", "ok": false },
+						{ "answer": "A year has five hundred days.", "ok": false }
+					]
+				},
+				{
+					"title": "five hundred and one",
+					"page": 24,
+					"question": "501",
+					"summary": "the number 501; one more than five hundred",
+					"explain": {
+						"entryId": "five hundred and one",
+						"headword": "five hundred and one",
+						"pronunciation": { "display": "fyv HUN-drud und WUN", "ipaUK": "/faɪv ˈhʌndrəd ənd wʌn/", "ipaUS": "/faɪv ˈhʌndrəd ænd wʌn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "five hundred and one",
+								"inflectionsLine": "",
+								"synonyms": ["501", "one more than five hundred", "five hundred plus one"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 501; one more than five hundred",
+										"examples": [
+											"The new library has five hundred and one books on its shelves.",
+											"She counts five hundred and one tiles on the floor."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The new library has five hundred and one books on its shelves.", "ok": true },
+						{ "answer": "Five hundred and one is smaller than five hundred.", "ok": false },
+						{ "answer": "Five hundred plus two equals five hundred and one.", "ok": false },
+						{ "answer": "Five hundred and one comes before five hundred when you count.", "ok": false }
+					]
+				},
+				{
+					"title": "six",
+					"page": 25,
+					"question": "6",
+					"summary": "the number 6; one more than five",
+					"explain": {
+						"entryId": "six",
+						"headword": "six",
+						"pronunciation": { "display": "SIKS", "ipaUK": "/sɪks/", "ipaUS": "/sɪks/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "six",
+								"inflectionsLine": "",
+								"synonyms": ["half a dozen", "a sextet", "six"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 6; one more than five",
+										"examples": [
+											"There are six eggs left in the box.",
+											"An insect has six legs."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are six eggs left in the box.", "ok": true },
+						{ "answer": "There are six months in a year.", "ok": false },
+						{ "answer": "Six comes after seven when you count.", "ok": false },
+						{ "answer": "Three plus four equals six.", "ok": false }
+					]
+				},
+				{
+					"title": "sixty",
+					"page": 26,
+					"question": "60",
+					"summary": "the number 60; six times ten",
+					"explain": {
+						"entryId": "sixty",
+						"headword": "sixty",
+						"pronunciation": { "display": "SIKS-tee", "ipaUK": "/ˈsɪksti/", "ipaUS": "/ˈsɪksti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "sixty",
+								"inflectionsLine": "",
+								"synonyms": ["six tens", "a minute", "sixty"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 60; six times ten",
+										"examples": [
+											"There are sixty minutes in one hour.",
+											"She runs sixty metres in the race."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are sixty minutes in one hour.", "ok": true },
+						{ "answer": "Sixty comes before fifty when you count.", "ok": false },
+						{ "answer": "Thirty plus twenty equals sixty.", "ok": false },
+						{ "answer": "Six times eleven equals sixty.", "ok": false }
+					]
+				},
+				{
+					"title": "seven",
+					"page": 27,
+					"question": "7",
+					"summary": "the number 7; one more than six",
+					"explain": {
+						"entryId": "seven",
+						"headword": "seven",
+						"pronunciation": { "display": "SEV-un", "ipaUK": "/ˈsevn/", "ipaUS": "/ˈsevn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "seven",
+								"inflectionsLine": "",
+								"synonyms": ["a septet", "lucky seven", "seven"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 7; one more than six",
+										"examples": [
+											"There are seven days in a week.",
+											"She has seven books in her school bag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are seven days in a week.", "ok": true },
+						{ "answer": "A year has seven months.", "ok": false },
+						{ "answer": "Seven comes after eight when you count.", "ok": false },
+						{ "answer": "Three plus five equals seven.", "ok": false }
+					]
+				},
+				{
+					"title": "seventy",
+					"page": 28,
+					"question": "70",
+					"summary": "the number 70; seven times ten",
+					"explain": {
+						"entryId": "seventy",
+						"headword": "seventy",
+						"pronunciation": { "display": "SEV-un-tee", "ipaUK": "/ˈsevnti/", "ipaUS": "/ˈsevnti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "seventy",
+								"inflectionsLine": "",
+								"synonyms": ["seven tens", "three score and ten", "seventy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 70; seven times ten",
+										"examples": [
+											"She runs seventy metres in the race.",
+											"He drives at seventy kilometres per hour on the road."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She runs seventy metres in the race.", "ok": true },
+						{ "answer": "Seventy comes before sixty when you count.", "ok": false },
+						{ "answer": "Thirty plus thirty equals seventy.", "ok": false },
+						{ "answer": "Seven times eleven equals seventy.", "ok": false }
+					]
+				},
+				{
+					"title": "eight",
+					"page": 29,
+					"question": "8",
+					"summary": "the number 8; one more than seven",
+					"explain": {
+						"entryId": "eight",
+						"headword": "eight",
+						"pronunciation": { "display": "AYT", "ipaUK": "/eɪt/", "ipaUS": "/eɪt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "eight",
+								"inflectionsLine": "",
+								"synonyms": ["an octet", "two cubed", "double four"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 8; one more than seven",
+										"examples": [
+											"A spider has eight legs.",
+											"She sleeps for eight hours every night."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "A spider has eight legs.", "ok": true },
+						{ "answer": "There are eight days in a week.", "ok": false },
+						{ "answer": "Eight comes after nine when you count.", "ok": false },
+						{ "answer": "Four plus five equals eight.", "ok": false }
+					]
+				},
+				{
+					"title": "eighty",
+					"page": 30,
+					"question": "80",
+					"summary": "the number 80; eight times ten",
+					"explain": {
+						"entryId": "eighty",
+						"headword": "eighty",
+						"pronunciation": { "display": "AY-tee", "ipaUK": "/ˈeɪti/", "ipaUS": "/ˈeɪti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "eighty",
+								"inflectionsLine": "",
+								"synonyms": ["four score", "eight tens", "eighty"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 80; eight times ten",
+										"examples": [
+											"She reads eighty pages of her book in one day.",
+											"He runs eighty metres before stopping to rest."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She reads eighty pages of her book in one day.", "ok": true },
+						{ "answer": "Eighty comes before seventy when you count.", "ok": false },
+						{ "answer": "Forty plus thirty equals eighty.", "ok": false },
+						{ "answer": "Eight times eleven equals eighty.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

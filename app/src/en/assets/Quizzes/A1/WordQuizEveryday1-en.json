@@ -1,0 +1,434 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEveryday1-en",
+	"title": "Everyday",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Everyday",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "backpack",
+					"page": 1,
+					"question": "backpack",
+					"summary": "a bag that you carry on your back",
+					"explain": {
+						"entryId": "backpack",
+						"headword": "backpack",
+						"pronunciation": { "display": "BAK-pak", "ipaUK": "/ˈbækpæk/", "ipaUS": "/ˈbækpæk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "backpack",
+								"inflectionsLine": "backpacks",
+								"synonyms": ["rucksack", "bag", "schoolbag"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large bag that you carry on your back, used for school, travel, or walking",
+										"examples": [
+											"She puts her books and lunch in her backpack every morning.",
+											"He carries his backpack to school every day."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She puts her books in her backpack before going to school.", "ok": true },
+						{ "answer": "He eats his backpack for breakfast every morning.", "ok": false },
+						{ "answer": "She drives her backpack to work because the office is far away.", "ok": false },
+						{ "answer": "They plant a backpack in the garden every spring.", "ok": false }
+					]
+				},
+				{
+					"title": "bag",
+					"page": 2,
+					"question": "bag",
+					"summary": "a container made of cloth, paper, or leather for carrying things",
+					"explain": {
+						"entryId": "bag",
+						"headword": "bag",
+						"pronunciation": { "display": "bag", "ipaUK": "/bæɡ/", "ipaUS": "/bæɡ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "bag",
+								"inflectionsLine": "bags",
+								"synonyms": ["sack", "carrier", "tote"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a container made of cloth, leather, or plastic that you use to carry things",
+										"examples": [
+											"She puts her phone and keys in her bag.",
+											"He carries a bag to the supermarket."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She puts her phone and keys in her bag.", "ok": true },
+						{ "answer": "He cooks his bag in the oven for dinner.", "ok": false },
+						{ "answer": "She drinks a bag of water every morning.", "ok": false },
+						{ "answer": "They plant a bag in the garden to grow food.", "ok": false }
+					]
+				},
+				{
+					"title": "bed",
+					"page": 3,
+					"question": "bed",
+					"summary": "a piece of furniture that you sleep on",
+					"explain": {
+						"entryId": "bed",
+						"headword": "bed",
+						"pronunciation": { "display": "bed", "ipaUK": "/bed/", "ipaUS": "/bed/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "bed",
+								"inflectionsLine": "beds",
+								"synonyms": ["cot", "bunk", "mattress"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a piece of furniture that you lie on to sleep",
+										"examples": [
+											"She goes to bed at ten o'clock every night.",
+											"He makes his bed every morning before school."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to bed at ten o'clock every night.", "ok": true },
+						{ "answer": "He drinks his bed in the morning before school.", "ok": false },
+						{ "answer": "She wears her bed to work every day.", "ok": false },
+						{ "answer": "They cook a bed for dinner on Sundays.", "ok": false }
+					]
+				},
+				{
+					"title": "bike",
+					"page": 4,
+					"question": "bike",
+					"summary": "a vehicle with two wheels that you ride by pushing pedals",
+					"explain": {
+						"entryId": "bike",
+						"headword": "bike",
+						"pronunciation": { "display": "byk", "ipaUK": "/baɪk/", "ipaUS": "/baɪk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "bike",
+								"inflectionsLine": "bikes",
+								"synonyms": ["bicycle", "cycle", "pushbike"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a vehicle with two wheels that you ride by pushing the pedals with your feet",
+										"examples": [
+											"He rides his bike to school every morning.",
+											"She has a red bike in the garage."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He rides his bike to school every morning.", "ok": true },
+						{ "answer": "She drinks her bike after lunch.", "ok": false },
+						{ "answer": "He cooks his bike for dinner.", "ok": false },
+						{ "answer": "They plant a bike in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "book",
+					"page": 5,
+					"question": "book",
+					"summary": "a set of printed pages with a cover that you read; also to arrange something in advance",
+					"explain": {
+						"entryId": "book",
+						"headword": "book",
+						"pronunciation": { "display": "buk", "ipaUK": "/bʊk/", "ipaUS": "/bʊk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "book",
+								"inflectionsLine": "books",
+								"synonyms": ["novel", "text", "publication"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a set of printed pages held together inside a cover that you read",
+										"examples": [
+											"She reads a book before she goes to sleep.",
+											"He has many books on his shelf."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "book",
+								"inflectionsLine": "books, booking, booked",
+								"synonyms": ["reserve", "arrange", "order"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to arrange to have or use something at a future time",
+										"examples": [
+											"She booked a table at the restaurant for her birthday.",
+											"He books his train tickets online."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She reads a book before she goes to sleep.", "ok": true },
+						{ "answer": "He drinks his book in the morning.", "ok": false },
+						{ "answer": "She wears a book on her head.", "ok": false },
+						{ "answer": "They cook a book for dinner.", "ok": false }
+					]
+				},
+				{
+					"title": "bottle",
+					"page": 6,
+					"question": "bottle",
+					"summary": "a glass or plastic container with a narrow top for storing liquids",
+					"explain": {
+						"entryId": "bottle",
+						"headword": "bottle",
+						"pronunciation": { "display": "BOT-ul", "ipaUK": "/ˈbɒtl/", "ipaUS": "/ˈbɑːtl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "bottle",
+								"inflectionsLine": "bottles",
+								"synonyms": ["flask", "container", "jar"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a container made of glass or plastic with a narrow top, used for storing liquids",
+										"examples": [
+											"She drinks water from a plastic bottle.",
+											"He puts the juice in a bottle."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She drinks water from a plastic bottle.", "ok": true },
+						{ "answer": "He wears a bottle on his head.", "ok": false },
+						{ "answer": "She rides a bottle to school every day.", "ok": false },
+						{ "answer": "They plant a bottle in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "chair",
+					"page": 7,
+					"question": "chair",
+					"summary": "a piece of furniture with a back for one person to sit on",
+					"explain": {
+						"entryId": "chair",
+						"headword": "chair",
+						"pronunciation": { "display": "CHAIR", "ipaUK": "/tʃeə/", "ipaUS": "/tʃer/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "chair",
+								"inflectionsLine": "chairs",
+								"synonyms": ["seat", "stool", "armchair"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a piece of furniture with four legs and a back that one person sits on",
+										"examples": [
+											"She sits on a chair at the table to eat dinner.",
+											"He puts his bag on the chair next to his desk."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She sits on a chair at the table to eat dinner.", "ok": true },
+						{ "answer": "He drinks his chair in the morning.", "ok": false },
+						{ "answer": "She eats a chair for lunch.", "ok": false },
+						{ "answer": "They plant a chair in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "clock",
+					"page": 8,
+					"question": "clock",
+					"summary": "a device on a wall or shelf that shows the time",
+					"explain": {
+						"entryId": "clock",
+						"headword": "clock",
+						"pronunciation": { "display": "klok", "ipaUK": "/klɒk/", "ipaUS": "/klɑːk/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "clock",
+								"inflectionsLine": "clocks",
+								"synonyms": ["timepiece", "timer", "wall clock"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a device that shows the time, usually fixed on a wall or standing on a shelf",
+										"examples": [
+											"She looks at the clock to see what time it is.",
+											"The clock on the wall says it is three o'clock."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She looks at the clock to see what time it is.", "ok": true },
+						{ "answer": "He eats his clock for breakfast.", "ok": false },
+						{ "answer": "She drinks her clock in the morning.", "ok": false },
+						{ "answer": "They plant a clock in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "computer",
+					"page": 9,
+					"question": "computer",
+					"summary": "an electronic machine used for writing, reading, and working",
+					"explain": {
+						"entryId": "computer",
+						"headword": "computer",
+						"pronunciation": { "display": "kum-PYOO-tur", "ipaUK": "/kəmˈpjuːtə/", "ipaUS": "/kəmˈpjuːtər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "computer",
+								"inflectionsLine": "computers",
+								"synonyms": ["PC", "laptop", "device"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an electronic machine that people use to write, find information, and do work",
+										"examples": [
+											"She uses a computer to do her homework.",
+											"He works on his computer every day."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She uses a computer to do her homework.", "ok": true },
+						{ "answer": "He eats his computer for breakfast.", "ok": false },
+						{ "answer": "She drinks her computer in the morning.", "ok": false },
+						{ "answer": "They plant a computer in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "cup",
+					"page": 10,
+					"question": "cup",
+					"summary": "a small round container with a handle for hot drinks",
+					"explain": {
+						"entryId": "cup",
+						"headword": "cup",
+						"pronunciation": { "display": "kup", "ipaUK": "/kʌp/", "ipaUS": "/kʌp/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "cup",
+								"inflectionsLine": "cups",
+								"synonyms": ["mug", "beaker", "glass"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small round container with a handle that you use for hot drinks such as tea or coffee",
+										"examples": [
+											"She drinks a cup of tea every morning.",
+											"He puts his cup on the table."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She drinks a cup of tea every morning.", "ok": true },
+						{ "answer": "He wears a cup on his foot.", "ok": false },
+						{ "answer": "She rides her cup to school every day.", "ok": false },
+						{ "answer": "They plant a cup in the garden.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

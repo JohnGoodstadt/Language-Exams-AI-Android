@@ -1,0 +1,336 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives1-en",
+	"title": "Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Adjectives",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "bad",
+					"page": 1,
+					"question": "bad",
+					"summary": "not good; of low quality or not pleasant",
+					"explain": {
+						"entryId": "bad",
+						"headword": "bad",
+						"pronunciation": { "display": "bad", "ipaUK": "/bæd/", "ipaUS": "/bæd/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "bad",
+								"inflectionsLine": "worse, worst",
+								"synonyms": ["awful", "terrible", "poor"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not good; of low quality or not pleasant",
+										"examples": [
+											"The weather is bad today so she takes an umbrella.",
+											"He got a bad mark in his exam."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The weather is bad today so she takes an umbrella.", "ok": true },
+						{ "answer": "He orders a bad at the café and drinks it for breakfast.", "ok": false },
+						{ "answer": "She loves the food at the restaurant because it tastes very bad.", "ok": false },
+						{ "answer": "He bads his shoes before leaving the house.", "ok": false }
+					]
+				},
+				{
+					"title": "big",
+					"page": 2,
+					"question": "big",
+					"summary": "large in size; not small",
+					"explain": {
+						"entryId": "big",
+						"headword": "big",
+						"pronunciation": { "display": "big", "ipaUK": "/bɪɡ/", "ipaUS": "/bɪɡ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "big",
+								"inflectionsLine": "bigger, biggest",
+								"synonyms": ["large", "great", "huge"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "large in size; taking up a lot of space",
+										"examples": [
+											"She lives in a big house with a large garden.",
+											"He has a big dog that needs a lot of exercise."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She lives in a big house with a large garden.", "ok": true },
+						{ "answer": "He drinks a big every morning to give him energy.", "ok": false },
+						{ "answer": "The mouse is bigger than the elephant in the zoo.", "ok": false },
+						{ "answer": "She bigs her schoolbag and puts it on her back.", "ok": false }
+					]
+				},
+				{
+					"title": "clean",
+					"page": 3,
+					"question": "clean",
+					"summary": "free from dirt or marks; not dirty",
+					"explain": {
+						"entryId": "clean",
+						"headword": "clean",
+						"pronunciation": { "display": "KLEEN", "ipaUK": "/kliːn/", "ipaUS": "/kliːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "clean",
+								"inflectionsLine": "cleaner, cleanest",
+								"synonyms": ["tidy", "spotless", "fresh"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "free from dirt or marks; not dirty",
+										"examples": [
+											"She puts on a clean shirt after her shower.",
+											"He washes his hands to keep them clean."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She puts on a clean shirt after her shower.", "ok": true },
+						{ "answer": "He drinks a clean every morning before going to school.", "ok": false },
+						{ "answer": "The dirty floor looks very clean because it is full of mud.", "ok": false },
+						{ "answer": "She puts her hands in the mud to make them clean.", "ok": false }
+					]
+				},
+				{
+					"title": "cold",
+					"page": 4,
+					"question": "cold",
+					"summary": "having a low temperature; not warm or hot",
+					"explain": {
+						"entryId": "cold",
+						"headword": "cold",
+						"pronunciation": { "display": "KOHLD", "ipaUK": "/kəʊld/", "ipaUS": "/koʊld/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "cold",
+								"inflectionsLine": "colder, coldest",
+								"synonyms": ["chilly", "freezing", "icy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having a low temperature; not warm or hot",
+										"examples": [
+											"She puts on a coat because it is cold outside.",
+											"The water in the pool is very cold."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She puts on a coat because it is cold outside.", "ok": true },
+						{ "answer": "He eats a cold for breakfast every morning.", "ok": false },
+						{ "answer": "She takes off her coat because it is cold outside and she is too warm.", "ok": false },
+						{ "answer": "The fire is very cold so they sit next to it to warm up.", "ok": false }
+					]
+				},
+				{
+					"title": "dirty",
+					"page": 5,
+					"question": "dirty",
+					"summary": "covered in dirt or marks; not clean",
+					"explain": {
+						"entryId": "dirty",
+						"headword": "dirty",
+						"pronunciation": { "display": "DUR-tee", "ipaUK": "/ˈdɜːti/", "ipaUS": "/ˈdɜːrti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "dirty",
+								"inflectionsLine": "dirtier, dirtiest",
+								"synonyms": ["muddy", "filthy", "messy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "covered in dirt or marks; not clean",
+										"examples": [
+											"His shoes are dirty because he walked in the mud.",
+											"She washes her dirty clothes every weekend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "His shoes are dirty because he walked in the mud.", "ok": true },
+						{ "answer": "She drinks a dirty every morning before school.", "ok": false },
+						{ "answer": "The cup is very dirty so she drinks from it straightaway.", "ok": false },
+						{ "answer": "He dirtys his hands before eating his lunch.", "ok": false }
+					]
+				},
+				{
+					"title": "fast",
+					"page": 6,
+					"question": "fast",
+					"summary": "able to move or happen at great speed; not slow",
+					"explain": {
+						"entryId": "fast",
+						"headword": "fast",
+						"pronunciation": { "display": "fast", "ipaUK": "/fɑːst/", "ipaUS": "/fæst/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "fast",
+								"inflectionsLine": "faster, fastest",
+								"synonyms": ["quick", "rapid", "speedy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "able to move or happen at great speed; not slow",
+										"examples": [
+											"She is a fast runner and wins every race.",
+											"The fast train arrives in twenty minutes."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is a fast runner and wins every race.", "ok": true },
+						{ "answer": "He eats a fast for breakfast every morning.", "ok": false },
+						{ "answer": "The slow turtle wins every race because it is the fastest animal.", "ok": false },
+						{ "answer": "She walks very fast and arrives at school after two hours.", "ok": false }
+					]
+				},
+				{
+					"title": "good",
+					"page": 7,
+					"question": "good",
+					"summary": "of a high quality or standard; pleasant or enjoyable",
+					"explain": {
+						"entryId": "good",
+						"headword": "good",
+						"pronunciation": { "display": "good", "ipaUK": "/ɡʊd/", "ipaUS": "/ɡʊd/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "good",
+								"inflectionsLine": "better, best",
+								"synonyms": ["great", "excellent", "fine"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "of a high quality or standard; pleasant or enjoyable",
+										"examples": [
+											"She is a good student and always does her homework.",
+											"The food at the restaurant was very good."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is a good student and always does her homework.", "ok": true },
+						{ "answer": "He drinks a good every morning before going to work.", "ok": false },
+						{ "answer": "The food tastes very good so nobody in the family wants to eat it.", "ok": false },
+						{ "answer": "She goods her homework before going to bed.", "ok": false }
+					]
+				},
+				{
+					"title": "hot",
+					"page": 8,
+					"question": "hot",
+					"summary": "having a high temperature; not cold",
+					"explain": {
+						"entryId": "hot",
+						"headword": "hot",
+						"pronunciation": { "display": "hot", "ipaUK": "/hɒt/", "ipaUS": "/hɑːt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "hot",
+								"inflectionsLine": "hotter, hottest",
+								"synonyms": ["warm", "burning", "boiling"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having a high temperature; very warm",
+										"examples": [
+											"She drinks a cup of hot tea every morning.",
+											"It is very hot outside so she wears shorts."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She drinks a cup of hot tea every morning.", "ok": true },
+						{ "answer": "He puts on a big coat because it is very hot outside.", "ok": false },
+						{ "answer": "She eats a hot for lunch at school every day.", "ok": false },
+						{ "answer": "The ice is very hot so she puts it in her drink to warm it up.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

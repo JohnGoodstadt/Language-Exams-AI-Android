@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNumbers2-en",
+	"title": "Numbers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Numbers",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "seventeen",
+					"page": 11,
+					"question": "17",
+					"summary": "the number 17; one more than sixteen",
+					"explain": {
+						"entryId": "seventeen",
+						"headword": "seventeen",
+						"pronunciation": { "display": "SEV-un-teen", "ipaUK": "/ˌsevnˈtiːn/", "ipaUS": "/ˌsevnˈtiːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "seventeen",
+								"inflectionsLine": "",
+								"synonyms": ["seven plus ten", "a prime number", "seventeen"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 17; one more than sixteen",
+										"examples": [
+											"He reads seventeen pages of his book before going to sleep.",
+											"There are seventeen children at the birthday party."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He reads seventeen pages of his book before going to sleep.", "ok": true },
+						{ "answer": "Ten plus eight equals seventeen.", "ok": false },
+						{ "answer": "Seventeen comes between fifteen and sixteen when you count.", "ok": false },
+						{ "answer": "Seventeen is less than sixteen.", "ok": false }
+					]
+				},
+				{
+					"title": "eighteen",
+					"page": 12,
+					"question": "18",
+					"summary": "the number 18; one more than seventeen",
+					"explain": {
+						"entryId": "eighteen",
+						"headword": "eighteen",
+						"pronunciation": { "display": "ay-TEEN", "ipaUK": "/ˌeɪˈtiːn/", "ipaUS": "/ˌeɪˈtiːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "eighteen",
+								"inflectionsLine": "",
+								"synonyms": ["eight plus ten", "a score minus two", "eighteen"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 18; one more than seventeen",
+										"examples": [
+											"There are eighteen eggs in the box.",
+											"She saves eighteen pounds to buy a new book."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are eighteen eggs in the box.", "ok": true },
+						{ "answer": "Ten plus nine equals eighteen.", "ok": false },
+						{ "answer": "Eighteen comes before seventeen when you count.", "ok": false },
+						{ "answer": "Eighteen is the same as twenty minus three.", "ok": false }
+					]
+				},
+				{
+					"title": "nineteen",
+					"page": 13,
+					"question": "19",
+					"summary": "the number 19; one more than eighteen",
+					"explain": {
+						"entryId": "nineteen",
+						"headword": "nineteen",
+						"pronunciation": { "display": "nyn-TEEN", "ipaUK": "/ˌnaɪnˈtiːn/", "ipaUS": "/ˌnaɪnˈtiːn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "nineteen",
+								"inflectionsLine": "",
+								"synonyms": ["nine plus ten", "teens", "nineteen"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 19; one more than eighteen",
+										"examples": [
+											"She has nineteen friends in her class at school.",
+											"He counts nineteen steps to reach the top of the stairs."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has nineteen friends in her class at school.", "ok": true },
+						{ "answer": "Ten plus ten equals nineteen.", "ok": false },
+						{ "answer": "Nineteen comes between seventeen and eighteen when you count.", "ok": false },
+						{ "answer": "Nineteen is less than eighteen.", "ok": false }
+					]
+				},
+				{
+					"title": "two",
+					"page": 14,
+					"question": "2",
+					"summary": "the number 2; one more than one",
+					"explain": {
+						"entryId": "two",
+						"headword": "two",
+						"pronunciation": { "display": "TOO", "ipaUK": "/tuː/", "ipaUS": "/tuː/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "two",
+								"inflectionsLine": "",
+								"synonyms": ["a pair", "a couple", "both"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 2; one more than one",
+										"examples": [
+											"She has two hands and uses them to write.",
+											"There are two wheels on a bicycle."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has two hands and uses them to write.", "ok": true },
+						{ "answer": "There are two days in a week.", "ok": false },
+						{ "answer": "Two comes after three when you count.", "ok": false },
+						{ "answer": "One plus two equals two.", "ok": false }
+					]
+				},
+				{
+					"title": "twenty",
+					"page": 15,
+					"question": "20",
+					"summary": "the number 20; two times ten",
+					"explain": {
+						"entryId": "twenty",
+						"headword": "twenty",
+						"pronunciation": { "display": "TWEN-tee", "ipaUK": "/ˈtwenti/", "ipaUS": "/ˈtwenti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "twenty",
+								"inflectionsLine": "",
+								"synonyms": ["a score", "two tens", "twenty"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 20; two times ten",
+										"examples": [
+											"There are twenty students in the class.",
+											"She walks twenty minutes to reach the school."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are twenty students in the class.", "ok": true },
+						{ "answer": "Twenty comes before nineteen when you count.", "ok": false },
+						{ "answer": "Ten plus eleven equals twenty.", "ok": false },
+						{ "answer": "A year has twenty months.", "ok": false }
+					]
+				},
+				{
+					"title": "twenty-one",
+					"page": 16,
+					"question": "21",
+					"summary": "the number 21; one more than twenty",
+					"explain": {
+						"entryId": "twenty-one",
+						"headword": "twenty-one",
+						"pronunciation": { "display": "TWEN-tee-WUN", "ipaUK": "/ˌtwentiˈwʌn/", "ipaUS": "/ˌtwentiˈwʌn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "twenty-one",
+								"inflectionsLine": "",
+								"synonyms": ["twenty and one", "three sevens", "blackjack"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 21; one more than twenty",
+										"examples": [
+											"He saves twenty-one pounds to buy a new book.",
+											"There are twenty-one children at the school party."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He saves twenty-one pounds to buy a new book.", "ok": true },
+						{ "answer": "Twenty-one comes before twenty when you count.", "ok": false },
+						{ "answer": "Twenty plus two equals twenty-one.", "ok": false },
+						{ "answer": "Twenty-one is smaller than twenty.", "ok": false }
+					]
+				},
+				{
+					"title": "three",
+					"page": 17,
+					"question": "3",
+					"summary": "the number 3; one more than two",
+					"explain": {
+						"entryId": "three",
+						"headword": "three",
+						"pronunciation": { "display": "THREE", "ipaUK": "/θriː/", "ipaUS": "/θriː/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "three",
+								"inflectionsLine": "",
+								"synonyms": ["a trio", "triple", "treble"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 3; one more than two",
+										"examples": [
+											"A triangle has three sides and three corners.",
+											"She has three cats at home."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "A triangle has three sides and three corners.", "ok": true },
+						{ "answer": "A week has three days.", "ok": false },
+						{ "answer": "Three comes after four when you count.", "ok": false },
+						{ "answer": "One plus one equals three.", "ok": false }
+					]
+				},
+				{
+					"title": "thirty",
+					"page": 18,
+					"question": "30",
+					"summary": "the number 30; three times ten",
+					"explain": {
+						"entryId": "thirty",
+						"headword": "thirty",
+						"pronunciation": { "display": "THUR-tee", "ipaUK": "/ˈθɜːti/", "ipaUS": "/ˈθɜːrti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "thirty",
+								"inflectionsLine": "",
+								"synonyms": ["three tens", "thirty", "a month's days"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 30; three times ten",
+										"examples": [
+											"She saves thirty pounds to buy a new coat.",
+											"He runs thirty minutes every morning."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She saves thirty pounds to buy a new coat.", "ok": true },
+						{ "answer": "There are thirty hours in a day.", "ok": false },
+						{ "answer": "Thirty comes before twenty when you count.", "ok": false },
+						{ "answer": "Twenty plus twenty equals thirty.", "ok": false }
+					]
+				},
+				{
+					"title": "four",
+					"page": 19,
+					"question": "4",
+					"summary": "the number 4; one more than three",
+					"explain": {
+						"entryId": "four",
+						"headword": "four",
+						"pronunciation": { "display": "FOR", "ipaUK": "/fɔː/", "ipaUS": "/fɔːr/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "four",
+								"inflectionsLine": "",
+								"synonyms": ["a quartet", "a foursome", "double two"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 4; one more than three",
+										"examples": [
+											"A cat has four legs and a long tail.",
+											"She waits four minutes for the bus to arrive."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "A cat has four legs and a long tail.", "ok": true },
+						{ "answer": "A triangle has four sides.", "ok": false },
+						{ "answer": "Four comes after five when you count.", "ok": false },
+						{ "answer": "Two plus three equals four.", "ok": false }
+					]
+				},
+				{
+					"title": "forty",
+					"page": 20,
+					"question": "40",
+					"summary": "the number 40; four times ten",
+					"explain": {
+						"entryId": "forty",
+						"headword": "forty",
+						"pronunciation": { "display": "FOR-tee", "ipaUK": "/ˈfɔːti/", "ipaUS": "/ˈfɔːrti/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "number",
+								"grammarType": "cardinal number",
+								"headwordLine": "forty",
+								"inflectionsLine": "",
+								"synonyms": ["four tens", "two score", "forty"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the number 40; four times ten",
+										"examples": [
+											"There are forty students in the school library today.",
+											"She spends forty minutes doing her homework."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "There are forty students in the school library today.", "ok": true },
+						{ "answer": "Forty comes before thirty when you count.", "ok": false },
+						{ "answer": "Twenty plus twenty-five equals forty.", "ok": false },
+						{ "answer": "Forty is the same as four times nine.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

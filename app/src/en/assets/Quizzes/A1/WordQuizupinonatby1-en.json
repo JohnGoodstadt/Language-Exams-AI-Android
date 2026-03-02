@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizupinonatby1-en",
+	"title": "Prepositions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Prepositions",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "about",
+					"page": 1,
+					"question": "about",
+					"summary": "on the subject of someone or something; concerning",
+					"explain": {
+						"entryId": "about",
+						"headword": "about",
+						"pronunciation": { "display": "uh-BOWT", "ipaUK": "/əˈbaʊt/", "ipaUS": "/əˈbaʊt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "about",
+								"inflectionsLine": "",
+								"synonyms": ["concerning", "regarding", "on the subject of"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "on the subject of someone or something; concerning",
+										"examples": [
+											"She reads a book about animals.",
+											"He talks about his holiday with his friends."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She reads a book about animals.", "ok": true },
+						{ "answer": "He puts his book about the desk when he finishes reading.", "ok": false },
+						{ "answer": "She abouts her homework every evening before dinner.", "ok": false },
+						{ "answer": "An about is a type of food you can eat for lunch.", "ok": false }
+					]
+				},
+				{
+					"title": "after",
+					"page": 2,
+					"question": "after",
+					"summary": "later in time than something; following something",
+					"explain": {
+						"entryId": "after",
+						"headword": "after",
+						"pronunciation": { "display": "AF-tur", "ipaUK": "/ˈɑːftə/", "ipaUS": "/ˈæftər/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "after",
+								"inflectionsLine": "",
+								"synonyms": ["following", "subsequent to", "later than"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "later in time than something; following something",
+										"examples": [
+											"She goes to bed after dinner.",
+											"He feels happy after his walk in the park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to bed after dinner.", "ok": true },
+						{ "answer": "She leaves for school after she arrives home in the evening.", "ok": false },
+						{ "answer": "He afters his breakfast every morning before leaving the house.", "ok": false },
+						{ "answer": "An after is something you find inside a kitchen or bedroom.", "ok": false }
+					]
+				},
+				{
+					"title": "at",
+					"page": 3,
+					"question": "at",
+					"summary": "used to show the place where someone or something is",
+					"explain": {
+						"entryId": "at",
+						"headword": "at",
+						"pronunciation": { "display": "AT", "ipaUK": "/æt/", "ipaUS": "/æt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "at",
+								"inflectionsLine": "",
+								"synonyms": ["in", "located in", "present in"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to show the place or time where someone or something is",
+										"examples": [
+											"She arrives at school at nine o'clock.",
+											"He sits at his desk and works."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She arrives at school at nine o'clock.", "ok": true },
+						{ "answer": "She swims at her breakfast before going to school.", "ok": false },
+						{ "answer": "He ats to work every day by bus and train.", "ok": false },
+						{ "answer": "An at is a large building in the middle of a busy city.", "ok": false }
+					]
+				},
+				{
+					"title": "before",
+					"page": 4,
+					"question": "before",
+					"summary": "earlier in time than something; in front of something",
+					"explain": {
+						"entryId": "before",
+						"headword": "before",
+						"pronunciation": { "display": "bih-FOR", "ipaUK": "/bɪˈfɔː/", "ipaUS": "/bɪˈfɔːr/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "before",
+								"inflectionsLine": "",
+								"synonyms": ["prior to", "earlier than", "in front of"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "earlier in time than something; in front of something",
+										"examples": [
+											"She washes her hands before eating dinner.",
+											"He brushes his teeth before going to bed."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She washes her hands before eating dinner.", "ok": true },
+						{ "answer": "He eats his breakfast before he wakes up in the morning.", "ok": false },
+						{ "answer": "She befores her shoes every morning before school.", "ok": false },
+						{ "answer": "A before is a type of colour you can see in a rainbow.", "ok": false }
+					]
+				},
+				{
+					"title": "by",
+					"page": 5,
+					"question": "by",
+					"summary": "next to or beside something; using a particular method of transport",
+					"explain": {
+						"entryId": "by",
+						"headword": "by",
+						"pronunciation": { "display": "BY", "ipaUK": "/baɪ/", "ipaUS": "/baɪ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "by",
+								"inflectionsLine": "",
+								"synonyms": ["near", "beside", "next to"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "next to or beside something; using a particular method of transport or action",
+										"examples": [
+											"She travels to work by bus every day.",
+											"He sits by the window and looks outside."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She travels to work by bus every day.", "ok": true },
+						{ "answer": "He stands by the car to drive away from it as fast as possible.", "ok": false },
+						{ "answer": "She bys her homework every evening after dinner.", "ok": false },
+						{ "answer": "A by is a type of food you can eat for breakfast.", "ok": false }
+					]
+				},
+				{
+					"title": "down",
+					"page": 6,
+					"question": "down",
+					"summary": "towards a lower position or place; in a downward direction",
+					"explain": {
+						"entryId": "down",
+						"headword": "down",
+						"pronunciation": { "display": "DOWN", "ipaUK": "/daʊn/", "ipaUS": "/daʊn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "down",
+								"inflectionsLine": "",
+								"synonyms": ["downward", "towards the bottom", "below"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "towards a lower position or place; in a downward direction",
+										"examples": [
+											"He walks down the stairs slowly and carefully.",
+											"She rolls the ball down the hill."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He walks down the stairs slowly and carefully.", "ok": true },
+						{ "answer": "She jumps down and her body flies up to the ceiling above her.", "ok": false },
+						{ "answer": "He downs his homework every evening before going to sleep.", "ok": false },
+						{ "answer": "A down is a type of food you eat at a restaurant for dinner.", "ok": false }
+					]
+				},
+				{
+					"title": "for",
+					"page": 7,
+					"question": "for",
+					"summary": "used to show the purpose or reason for something; intended to help someone",
+					"explain": {
+						"entryId": "for",
+						"headword": "for",
+						"pronunciation": { "display": "FOR", "ipaUK": "/fɔː/", "ipaUS": "/fɔːr/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "for",
+								"inflectionsLine": "",
+								"synonyms": ["in order to", "intended for", "in favour of"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to show the purpose or reason for something; intended to help or belong to someone",
+										"examples": [
+											"She buys a present for her mother's birthday.",
+											"He waits for the bus outside the school."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She buys a present for her mother's birthday.", "ok": true },
+						{ "answer": "He runs very fast in the race for to lose it and come last.", "ok": false },
+						{ "answer": "She fors her shoes every morning before leaving the house.", "ok": false },
+						{ "answer": "A for is a type of animal that lives in a forest.", "ok": false }
+					]
+				},
+				{
+					"title": "from",
+					"page": 8,
+					"question": "from",
+					"summary": "used to show where someone or something starts, or where they come from",
+					"explain": {
+						"entryId": "from",
+						"headword": "from",
+						"pronunciation": { "display": "FROM", "ipaUK": "/frɒm/", "ipaUS": "/frɑːm/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "from",
+								"inflectionsLine": "",
+								"synonyms": ["away from", "out of", "originating in"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to show where someone or something starts, or where they come from",
+										"examples": [
+											"She comes from a small town in the north.",
+											"He takes a book from the shelf to read."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She comes from a small town in the north.", "ok": true },
+						{ "answer": "He travels from London and arrives back in London.", "ok": false },
+						{ "answer": "She froms to school every day by bus in the morning.", "ok": false },
+						{ "answer": "A from is something you eat for dinner at a restaurant.", "ok": false }
+					]
+				},
+				{
+					"title": "in",
+					"page": 9,
+					"question": "in",
+					"summary": "inside or within a place, area, or container",
+					"explain": {
+						"entryId": "in",
+						"headword": "in",
+						"pronunciation": { "display": "IN", "ipaUK": "/ɪn/", "ipaUS": "/ɪn/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "in",
+								"inflectionsLine": "",
+								"synonyms": ["inside", "within", "during"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "inside or within a place, area, or container",
+										"examples": [
+											"She lives in a small house in the city.",
+											"He puts the book in his bag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She lives in a small house in the city.", "ok": true },
+						{ "answer": "He swims in the mountain every weekend with his friends.", "ok": false },
+						{ "answer": "She ins her coat before going outside in winter.", "ok": false },
+						{ "answer": "An in is a type of sport you play at the park.", "ok": false }
+					]
+				},
+				{
+					"title": "into",
+					"page": 10,
+					"question": "into",
+					"summary": "used to show movement towards the inside of a place or container",
+					"explain": {
+						"entryId": "into",
+						"headword": "into",
+						"pronunciation": { "display": "IN-too", "ipaUK": "/ˈɪntə/", "ipaUS": "/ˈɪntə/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "into",
+								"inflectionsLine": "",
+								"synonyms": ["toward the inside of", "entering", "going inside"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to show movement towards the inside of a place or container",
+										"examples": [
+											"She walks into the room and sits down.",
+											"He puts the key into the lock."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She walks into the room and sits down.", "ok": true },
+						{ "answer": "He walks into the house to leave it and go outside.", "ok": false },
+						{ "answer": "She intos her homework before going to school.", "ok": false },
+						{ "answer": "An into is a type of fruit you eat in summer.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,296 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives2-en",
+	"title": "Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Adjectives",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "new",
+					"page": 9,
+					"question": "new",
+					"summary": "made or bought recently; not old",
+					"explain": {
+						"entryId": "new",
+						"headword": "new",
+						"pronunciation": { "display": "NYOO", "ipaUK": "/njuː/", "ipaUS": "/nuː/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "new",
+								"inflectionsLine": "newer, newest",
+								"synonyms": ["fresh", "recent", "modern"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "made, bought, or seen for the first time; not old",
+										"examples": [
+											"She bought a new dress for the party.",
+											"He got a new phone for his birthday."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She bought a new dress for the party.", "ok": true },
+						{ "answer": "He drinks a new every morning before going to work.", "ok": false },
+						{ "answer": "The very old car is brand new and was made one hundred years ago.", "ok": false },
+						{ "answer": "She news her homework before going to school.", "ok": false }
+					]
+				},
+				{
+					"title": "old",
+					"page": 10,
+					"question": "old",
+					"summary": "having existed or lived for a long time; not new or young",
+					"explain": {
+						"entryId": "old",
+						"headword": "old",
+						"pronunciation": { "display": "OHLD", "ipaUK": "/əʊld/", "ipaUS": "/oʊld/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "old",
+								"inflectionsLine": "older, oldest",
+								"synonyms": ["aged", "ancient", "elderly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having existed or lived for a long time; not new or young",
+										"examples": [
+											"She lives in a very old house that is one hundred years old.",
+											"He has an old car that needs a lot of repairs."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She lives in a very old house that is one hundred years old.", "ok": true },
+						{ "answer": "He drinks an old every morning before going to school.", "ok": false },
+						{ "answer": "The new baby is very old.", "ok": false },
+						{ "answer": "She olds her coat before going outside in the cold.", "ok": false }
+					]
+				},
+				{
+					"title": "short",
+					"page": 11,
+					"question": "short",
+					"summary": "not tall or not long; small in height or length",
+					"explain": {
+						"entryId": "short",
+						"headword": "short",
+						"pronunciation": { "display": "SHORT", "ipaUK": "/ʃɔːt/", "ipaUS": "/ʃɔːrt/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "short",
+								"inflectionsLine": "shorter, shortest",
+								"synonyms": ["small", "brief", "little"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not tall or long in size; small in height or length",
+										"examples": [
+											"She is short so she cannot reach the top shelf.",
+											"He has short hair that does not need much cutting."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is short so she cannot reach the top shelf.", "ok": true },
+						{ "answer": "He drinks a short every morning before school.", "ok": false },
+						{ "answer": "The very tall man is the shortest person in the room.", "ok": false },
+						{ "answer": "She shorts her hair before going to the party.", "ok": false }
+					]
+				},
+				{
+					"title": "slow",
+					"page": 12,
+					"question": "slow",
+					"summary": "not fast; taking a long time to move or happen",
+					"explain": {
+						"entryId": "slow",
+						"headword": "slow",
+						"pronunciation": { "display": "SLOH", "ipaUK": "/sləʊ/", "ipaUS": "/sloʊ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "slow",
+								"inflectionsLine": "slower, slowest",
+								"synonyms": ["unhurried", "leisurely", "gradual"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not moving or happening quickly; taking a long time",
+										"examples": [
+											"The old car is very slow and cannot go fast.",
+											"She is a slow reader but she understands everything."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The old car is very slow and cannot go fast.", "ok": true },
+						{ "answer": "He eats a slow for breakfast every morning.", "ok": false },
+						{ "answer": "She runs very slowly and easily wins the race against all the fast runners.", "ok": false },
+						{ "answer": "He slows his shoes before going for a walk.", "ok": false }
+					]
+				},
+				{
+					"title": "small",
+					"page": 13,
+					"question": "small",
+					"summary": "little in size; not big or large",
+					"explain": {
+						"entryId": "small",
+						"headword": "small",
+						"pronunciation": { "display": "SMAWL", "ipaUK": "/smɔːl/", "ipaUS": "/smɔːl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "small",
+								"inflectionsLine": "smaller, smallest",
+								"synonyms": ["little", "tiny", "miniature"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "little in size; not large",
+										"examples": [
+											"She has a small dog that fits in her bag.",
+											"He lives in a small flat in the city centre."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She has a small dog that fits in her bag.", "ok": true },
+						{ "answer": "He drinks a small every morning before going to work.", "ok": false },
+						{ "answer": "The elephant is the smallest animal in the zoo.", "ok": false },
+						{ "answer": "She smalls her house to make it bigger inside.", "ok": false }
+					]
+				},
+				{
+					"title": "tall",
+					"page": 14,
+					"question": "tall",
+					"summary": "having a greater than average height; not short",
+					"explain": {
+						"entryId": "tall",
+						"headword": "tall",
+						"pronunciation": { "display": "TAWL", "ipaUK": "/tɔːl/", "ipaUS": "/tɔːl/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "tall",
+								"inflectionsLine": "taller, tallest",
+								"synonyms": ["high", "lofty", "towering"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "of greater than average height; not short",
+										"examples": [
+											"He is very tall and can reach the top shelf easily.",
+											"She is the tallest student in her class."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He is very tall and can reach the top shelf easily.", "ok": true },
+						{ "answer": "She eats a tall for breakfast every morning.", "ok": false },
+						{ "answer": "The very short building is the tallest in the whole city.", "ok": false },
+						{ "answer": "He talls his chair so he can sit more comfortably.", "ok": false }
+					]
+				},
+				{
+					"title": "young",
+					"page": 15,
+					"question": "young",
+					"summary": "having lived for a short time; not old",
+					"explain": {
+						"entryId": "young",
+						"headword": "young",
+						"pronunciation": { "display": "yung", "ipaUK": "/jʌŋ/", "ipaUS": "/jʌŋ/" },
+						"labels": ["A1"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "young",
+								"inflectionsLine": "younger, youngest",
+								"synonyms": ["youthful", "juvenile", "new"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having lived for only a short time; not old",
+										"examples": [
+											"She is young and still goes to school.",
+											"He has a very young cat that is only three months old."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is young and still goes to school.", "ok": true },
+						{ "answer": "He drinks a young every morning before school.", "ok": false },
+						{ "answer": "The very old man is the youngest person in the whole family.", "ok": false },
+						{ "answer": "She youngs her homework before going to bed.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}
