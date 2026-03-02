@@ -89,10 +89,11 @@ class VocabQuizRepository @Inject constructor(
         }
     }
     // Updated Getter
-    fun getDueItems(limit: Int = 20): List<DueItem> {
+    fun getDueItems(limit: Int = 20, levelFilter: String): List<DueItem> {
         val now = System.currentTimeMillis()
 
         return wordStates.values
+            .filter { it.sourceLevel == levelFilter }
             .filter { it.masteryLevel != WordMasteryLevel.Mastered }
             .filter { it.nextReviewTime <= now }
             .sortedBy { it.nextReviewTime }
@@ -104,10 +105,11 @@ class VocabQuizRepository @Inject constructor(
      * Returns a list of words that need to be quizzed right now.
      * Filters out "Mastered" words and words scheduled for the future.
      */
-    fun getDueWords(limit: Int = 10): List<String> {
+    fun getDueWords(limit: Int = 10, levelFilter: String): List<String> {
         val now = System.currentTimeMillis()
 
         return wordStates.values
+            .filter { it.sourceLevel == levelFilter }
             .filter { it.masteryLevel != WordMasteryLevel.Mastered } // Ignore Mastered
             .filter { it.nextReviewTime <= now } // Only show if due
             .sortedBy { it.nextReviewTime } // Show most overdue first
@@ -328,7 +330,7 @@ class VocabQuizRepository @Inject constructor(
     }
     // MARK: - Debugging
 
-    fun debugPrintStatus() {
+    fun debugPrintStatusObsolete() {
         val now = System.currentTimeMillis()
 
         // Sort: Overdue/Due first, then future, Mastered last

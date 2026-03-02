@@ -46,9 +46,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.CategoryMasteryStats
 import com.goodstadt.john.language.exams.models.DashboardUiState
@@ -104,15 +106,20 @@ fun VocabDashboardScreen(
             }
         }
         if (showSmartReview) {
+            var isSessionDirty by remember { mutableStateOf(false) }
             ModalBottomSheet(
                 onDismissRequest = {
-                    viewModel.closeSmartReview()
+                    viewModel.closeSmartReview(isDirty = isSessionDirty)
                 },
                 sheetState = smartReviewSheetState,
                 containerColor = MaterialTheme.colorScheme.surface
             ) {
                 // Call the container we created in Step 2
-                SmartReviewContainer()
+                SmartReviewContainer(
+                    onInteraction = { dirty ->
+                        isSessionDirty = dirty
+                    }
+                )
             }
         }
 
@@ -140,51 +147,54 @@ fun VocabQuizActiveView(
             shape = RoundedCornerShape(16.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
-            Row(
-                modifier = Modifier.padding(20.dp), verticalAlignment = Alignment.CenterVertically
-            ) {
-                Column(modifier = Modifier.weight(1f)) {
-                    val label = if (state.wordsDueCount == 1) "word" else "words"
-                    Text(
-                        "${state.wordsDueCount}",
-                        style = MaterialTheme.typography.displayMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer
-                    )
-                    Text(
-                        text = "$label due for review",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onPrimaryContainer
-                    )
-                    Text(
-                        state.wordsDueList.joinToString(",").take(30),
-                        style = MaterialTheme.typography.bodySmall.copy(
-                            fontStyle = FontStyle.Italic,
-                            fontWeight = FontWeight.Normal,
-                            // Explicitly set a smaller size if bodySmall is still too big
-                            fontSize = 12.sp
-                        ),
-                        color = MaterialTheme.colorScheme.onPrimaryContainer
-                    )
-                }
+            // Outer Column to stack the top section and the bottom list
+            Column(modifier = Modifier.padding(20.dp)) {
 
-                Button(
-                    onClick = onStartReview,
-                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+                // Top Section: Number + "Review Now" Button
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text("Review Now")
-                }
-//                if (BuildConfig.DEBUG) {
-                if (false) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        val label = if (state.wordsDueCount == 1) "word" else "words"
+                        Text(
+                            "${state.wordsDueCount}",
+                            style = MaterialTheme.typography.displayMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onPrimaryContainer
+                        )
+                        Text(
+                            text = "$label due for review",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onPrimaryContainer
+                        )
+                    }
+
                     Button(
-                        onClick = {
-                            onDebugClick()
-                        },
+                        onClick = onStartReview,
                         colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
                     ) {
-                        Text("Reset (D)")
+                        Text("Review Now")
                     }
                 }
+
+                // Bottom Section: The sorted list of words
+                Spacer(modifier = Modifier.height(12.dp)) // Add some breathing room
+
+                Text(
+                    text = "${state.wordsDueList
+                        .sortedBy { it.length }
+                        .joinToString(", ").take(55)}...",
+                    // We can now remove .take(60) if you want to show more!
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis,
+                    style = MaterialTheme.typography.bodySmall.copy(
+                        fontStyle = FontStyle.Italic,
+                        fontWeight = FontWeight.Normal,
+                        fontSize = 12.sp
+                    ),
+                    color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
+                )
             }
         }
 
@@ -351,11 +361,17 @@ fun SuggestionButton(title: String, onClick: () -> Unit) {
 
 @Composable
 fun SmartReviewContainer(
-    viewModel: VocabQuizViewModel = hiltViewModel()
+    viewModel: VocabQuizViewModel = hiltViewModel(),
+    onInteraction: (Boolean) -> Unit
 ) {
     // 1. Trigger the specific logic for Smart Review
     LaunchedEffect(Unit) {
         viewModel.loadSmartReviewQuiz()
+    }
+
+    val isDirty by viewModel.isDirty.collectAsStateWithLifecycle()
+    LaunchedEffect(isDirty) {
+        onInteraction(isDirty)
     }
 
     // 2. Render the Quiz Screen

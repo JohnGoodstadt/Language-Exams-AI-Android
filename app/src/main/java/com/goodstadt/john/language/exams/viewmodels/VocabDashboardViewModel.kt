@@ -70,9 +70,8 @@ class VocabDashboardViewModel @Inject constructor(
             val examName = examNameOverride ?: userPreferencesRepository.selectedExamNameFlow.first()
             val vocabResult = contentRepository.getFormat0Data(examName)
 
-            // 2. Get User Progress (State)
-            // (Assumes repo exposes a way to get all states, or we just rely on getDueWords)
-            val dueWords = vocabQuizRepository.getDueWords(limit = 10)
+            val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+            val dueWords = vocabQuizRepository.getDueWords(limit = 10,currentSkillLevel)
             val allWordStates = vocabQuizRepository.getAllStates() // You need to add this accessor to Repo
 
             vocabResult.onSuccess { vocabFile ->
@@ -125,30 +124,6 @@ class VocabDashboardViewModel @Inject constructor(
             }
         }
     }
-    fun onStartSmartReview(onProceed: () -> Unit) {
-        viewModelScope.launch(Dispatchers.IO) {
-            // 1. Ask Repo for the words that are due
-            // (Limit matches whatever your Quiz logic will use, e.g., 20 or 50)
-            val dueWords = vocabQuizRepository.getDueWords(limit = 10)
-
-            // 2. Log them
-            Timber.tag("SmartReview").i("\n📋 ===== SMART REVIEW PREVIEW =====")
-            if (dueWords.isEmpty()) {
-                Timber.tag("SmartReview").i("   (No words strictly due. Quiz will likely fill with randoms.)")
-            } else {
-                Timber.tag("SmartReview").i("   Found ${dueWords.size} words due for review:")
-                dueWords.forEachIndexed { index, word ->
-                    Timber.tag("SmartReview").i("   ${index + 1}. $word")
-                }
-            }
-            Timber.tag("SmartReview").i("===================================\n")
-
-            // 3. Continue to Navigation (Main Thread)
-            withContext(Dispatchers.Main) {
-                onProceed()
-            }
-        }
-    }
 
     fun openQuizForCategory(title: String) {
         _currentQuizTitle.value = title
@@ -161,17 +136,17 @@ class VocabDashboardViewModel @Inject constructor(
         }
     }
     fun openSmartReview() {
-        vocabQuizRepository.debugPrintStatus()
+//        vocabQuizRepository.debugPrintStatus()
         vocabQuizRepository.debugPrintAllWordStates()
         _showSmartReviewSheet.value = true
     }
 
     // 3. Action: Close the sheet
-    fun closeSmartReview() {
+    fun closeSmartReview(isDirty:Boolean) {
         _showSmartReviewSheet.value = false
-        // Optional: Reload dashboard stats when closing quiz to show updated progress
-//        loadDashboard()
-        vocabQuizRepository.updateEvents()
+        if(isDirty) {
+            vocabQuizRepository.updateEvents()
+        }
     }
     fun debugResetVocabProgress() {
         viewModelScope.launch {

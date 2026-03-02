@@ -311,7 +311,7 @@ class VocabQuizViewModel @Inject constructor(
             }
         }
 
-        vocabQuizRepository.debugPrintStatus()
+        vocabQuizRepository.debugPrintAllWordStates()
     }
     /**
      * Loads a quiz specifically for a Category Section (e.g. "Personal Information")
@@ -382,7 +382,7 @@ class VocabQuizViewModel @Inject constructor(
             //val dueWordsTest = vocabQuizRepository.getDueWords(limit = 10)
             //Timber.i("${dueWordsTest}")
 
-            val dueItems = vocabQuizRepository.getDueItems(limit = 10)
+            val dueItems = vocabQuizRepository.getDueItems(limit = 10,currentSkillLevel)
 
             if (dueItems.isEmpty()) {
                 // Fallback: Just load random questions from current level?
@@ -392,35 +392,62 @@ class VocabQuizViewModel @Inject constructor(
                 return@launch
             }
 
+            Timber.i("${dueItems}")
+
             // 2. Group by Category to minimize file reads
             // Map: "Personal Information" -> List<"Name", "Age">
             val itemsByCategory = dueItems.groupBy { it.category }
+            Timber.i("${itemsByCategory}")
 
             val compiledQuestions = mutableListOf<WordQuizQuestion>()
 
             // 3. Iterate Categories and Load Files
             for ((categoryTitle, items) in itemsByCategory) {
-                // Skip if category is missing (old data)
                 if (categoryTitle.isEmpty()) continue
 
-                // Generate Filename
                 val cleanTitle = categoryTitle.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
-                val filename = "WordQuiz${cleanTitle}1-en" // Assuming "1" for now
 
-                // Read File
-                val testData = readWordQuizDataFromAssets(application, filename,currentSkillLevel) ?: continue
+                // Track words we still need to find questions for in this category
+                val wordsToFind = items.map { it.word }.toMutableSet()
 
-                // 4. Extract ONLY the questions for the due words
-                val allQuestionsInFile = generateQuestionsFromData(testData)
+                // 🔄 LOOP through File Indexes (1, 2, 3...)
+                var fileIndex = 1
+                var fileExists = true
 
-                val targetWords = items.map { it.word }.toSet()
+                while (fileExists && wordsToFind.isNotEmpty()) {
 
-                // Filter: Keep question if the Word is contained in the target words
-                val matchingQuestions = allQuestionsInFile.filter { question ->
-                    targetWords.contains(question.question)
+                    // Construct filename: "WordQuizPersonal1-en", "WordQuizPersonal2-en"...
+                    val filename = "WordQuiz${cleanTitle}${fileIndex}-en"
+
+                    // Try to load
+                    val testData = readWordQuizDataFromAssets(application, filename, currentSkillLevel)
+
+                    if (testData != null) {
+                        // File exists, generate questions
+                        val questionsInFile = generateQuestionsFromData(testData)
+
+                        // Find matches
+                        val matches = questionsInFile.filter { question ->
+                            wordsToFind.contains(question.question) // OR question.question depending on your model mapping
+                            // Note: In your previous code you used 'question.question'.
+                            // Ensure this matches the WORD string exactly.
+                        }
+
+                        compiledQuestions.addAll(matches)
+
+                        // Remove found words from the "To Find" list so we stop early if done
+                        matches.forEach { wordsToFind.remove(it.title) /* or it.question */ }
+
+                        // Move to next file (1 -> 2)
+                        fileIndex++
+                    } else {
+                        // File returned null (e.g. File 4 doesn't exist), stop looking for this category
+                        fileExists = false
+                    }
+
+                    // Safety break (unlikely to have > 10 files per category)
+                    if (fileIndex > 10) fileExists = false
                 }
-
-                compiledQuestions.addAll(matchingQuestions)
             }
 
             // 5. Update UI
@@ -685,30 +712,7 @@ class VocabQuizViewModel @Inject constructor(
 
     private fun generateQuestionsFromData(testData: WordQuizRoot): List<WordQuizQuestion> {
 
-        if (testData.fileFormat == quizQandA) {
-            currentFileFormat.value = quizQandA
-        } else if (testData.fileFormat == quizDefinitions) {
-            currentFileFormat.value = quizDefinitions
-        } else if (testData.fileFormat == quizMultipleChoice) {
-            currentFileFormat.value = quizMultipleChoice
-        } else if (testData.fileFormat == quizWordDefinition) {
-            currentFileFormat.value = quizWordDefinition
-        } else {
-            currentFileFormat.value = quizFillInTheBlanks
-        }
-
-        val a = when (testData.fileFormat) {
-            quizQandA -> quizQandA
-            quizDefinitions -> quizDefinitions
-            quizMultipleChoice -> quizMultipleChoice
-            else -> quizFillInTheBlanks
-
-        }
-
-        //because spellings should follow each other
-//        if (testData.fileFormat == quizFillInTheBlanks)
-        //testData.shuffleLists()
-
+        currentFileFormat.value = quizWordDefinition
 
         return testData.data.flatMap { section ->
             section.sections.map { quizSection ->
