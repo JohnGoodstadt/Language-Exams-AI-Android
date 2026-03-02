@@ -154,9 +154,11 @@ class VocabDashboardViewModel @Inject constructor(
         _currentQuizTitle.value = title
     }
 
-    fun closeQuizSheet() {
+    fun closeQuizSheet(isDirty:Boolean) {
         _currentQuizTitle.value = null
-        vocabQuizRepository.updateEvents()
+        if(isDirty) {
+            vocabQuizRepository.updateEvents()
+        }
     }
     fun openSmartReview() {
         vocabQuizRepository.debugPrintStatus()

@@ -397,6 +397,7 @@ fun VocabQuizScreen(
                             viewModel.updateAnswer(isOptionCorrect)
                             viewModel.vocabQuizAttemptStats(isOptionCorrect,question.question)
 
+
                             if (isOptionCorrect) {
 
                                 var sentenceToSpeak = ""

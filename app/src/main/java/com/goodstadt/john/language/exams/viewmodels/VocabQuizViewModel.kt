@@ -5,6 +5,7 @@ import android.app.Application
 import android.content.Context
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -43,10 +44,12 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -269,6 +272,15 @@ class VocabQuizViewModel @Inject constructor(
 //    private var currentQuestionAttempts = 0
     private val _showInfoSheet = MutableStateFlow(false)
     val showInfoSheet = _showInfoSheet.asStateFlow()
+
+    // ✅ Helper flow to tell UI if data changed
+    // We map userAnswers map size. If > 0, it's dirty.
+//    val isDirty: StateFlow<Boolean> = snapshotFlow {
+//        userAnswers.value.isNotEmpty()
+//    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(), false)
+
+    private val _isDirty = MutableStateFlow(false)
+    val isDirty = _isDirty.asStateFlow()
 
     /**
      * A simple data class to hold the metadata for a single quiz.
@@ -745,6 +757,8 @@ class VocabQuizViewModel @Inject constructor(
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
 
+        //TODO: Do I need this?
+        //_isDirty.value = false
 
     }
 
@@ -805,6 +819,7 @@ class VocabQuizViewModel @Inject constructor(
     }
 
     fun updateAnswer(isCorrect: Boolean) {
+        _isDirty.value = true
         userAnswers.value[currentQuestionIndex.value] = isCorrect
         quizStatistics.value = quizStatistics.value.copy(
             answered = userAnswers.value.size,

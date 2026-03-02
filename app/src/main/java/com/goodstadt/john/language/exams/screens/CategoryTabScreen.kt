@@ -774,13 +774,20 @@ fun String.removeContentInBracketsAndTrim(): String = this.replace(Regex("\\(.*?
 @Composable
 fun SectionQuizContainer(
     categoryTitle: String,
-    viewModel: VocabQuizViewModel = hiltViewModel()
+    viewModel: VocabQuizViewModel = hiltViewModel(),
+    onInteraction: (Boolean) -> Unit = {}
 ) {
     // Trigger load when this view appears
     LaunchedEffect(categoryTitle) {
         viewModel.loadSectionQuiz(categoryTitle)
     }
 
+    // 2. ✅ Observe Dirtiness
+    // Whenever the internal VM state changes to dirty, notify the parent
+    val isDirty by viewModel.isDirty.collectAsStateWithLifecycle()
+    LaunchedEffect(isDirty) {
+        onInteraction(isDirty)
+    }
     // Render the existing screen
     Box(modifier = Modifier.fillMaxHeight(0.9f)) {
         VocabQuizScreen(viewModel = viewModel)

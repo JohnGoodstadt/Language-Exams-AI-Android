@@ -36,6 +36,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -86,17 +89,18 @@ fun VocabDashboardScreen(
         )
 
         if (currentQuizTitle != null) {
+            var isQuizDirty by remember { mutableStateOf(false) }
             ModalBottomSheet(
                 onDismissRequest = {
-                    viewModel.closeQuizSheet()
-//                    viewModel.loadDashboard()
+                    viewModel.closeQuizSheet(isDirty = isQuizDirty)
                 },
                 sheetState = quizSheetState,
                 containerColor = MaterialTheme.colorScheme.surface
             ) {
                 // Wrapper to initialize the specific quiz
                 // We reuse the exact same container from CategoryTabScreen
-                SectionQuizContainer(categoryTitle = currentQuizTitle!!)
+                SectionQuizContainer(categoryTitle = currentQuizTitle!!,  // ✅ Update local state when user answers inside
+                    onInteraction = { dirty -> isQuizDirty = dirty })
             }
         }
         if (showSmartReview) {
