@@ -78,14 +78,7 @@ fun QuizScreen(
     viewModel: QuizViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
-//    val options = listOf(
-//        "Quiz 1",
-//        "Quiz 2 - Word Pairs",
-//        "Quiz 3 - Word Order",
-//        "Quiz 4 - Spelling 1",
-//        "Quiz 5 - Spelling 2",
-//        "Quiz 6 - Definitions"
-//    )
+
     var infoDisabled by remember { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
 

@@ -91,8 +91,109 @@ data class QuizStatistics(
     fun update(answered: Int, correct: Int, tries: Int) =
         copy(answered = answered, correct = correct, tries = tries)
 }
-
 enum class QuizLevels(val quizzes: List<QuizDetail>) {
+    ELEMENTARY(
+        quizzes = listOf(
+            QuizDetail(
+                id = 1,
+                baseName = "UsageQuiz1A1-en",
+                title = "Quiz 1"
+            ),
+            QuizDetail(
+                id = 2,
+                baseName = "UsageQuiz12A1-en",
+                title = "Quiz 2"
+            ),
+            QuizDetail(
+                id = 3,
+                baseName = "UsageQuiz13A1-en",
+                title = "Quiz 3"
+            ),
+            QuizDetail(
+                id = 4,
+                baseName = "UsageQuiz14A1-en",
+                title = "Quiz 4"
+            ),
+            QuizDetail(
+                id = 5,
+                baseName = "UsageQuiz15A1-en",
+                title = "Quiz 5"
+            ),
+            QuizDetail(
+                id = 6,
+                baseName = "UsageQuiz16A1-en",
+                title = "Quiz 6"
+            )
+        )
+    ),
+    INTER(
+        quizzes = listOf(
+            QuizDetail(
+                id = 1,
+                baseName = "UsageQuiz1A2-en",
+                title = "Quiz 1"
+            ),
+            QuizDetail(
+                id = 2,
+                baseName = "UsageQuiz22A2",
+                title = "Quiz 2"
+            ),
+            QuizDetail(3, "UsageQuiz3A2", "Quiz 2"),
+            QuizDetail(4, "UsageQuiz4A2", "Quiz 3"),
+            QuizDetail(5, "UsageQuiz5A2", "Quiz 4"),
+            QuizDetail(6, "UsageQuiz6A2", "Quiz 5"),
+        )
+    ),
+    UPPER(
+        quizzes = listOf(
+            QuizDetail(id = 1, baseName = "UsageQuiz1B1", title = "Quiz 1 - Tenses"),
+            QuizDetail(
+                id = 2,
+                baseName = "UsageQuiz2B1",
+                title = "Quiz 2"
+            ),
+            QuizDetail(
+                id = 3,
+                baseName = "UsageQuiz3B1",
+                title = "Quiz 3"
+            ),
+            QuizDetail(
+                id = 4,
+                baseName = "UsageQuiz4B1",
+                title = "Quiz 4"
+            ),
+            QuizDetail(
+                id = 5,
+                baseName = "UsageQuiz5B1",
+                title = "Quiz 5"
+            ),
+            QuizDetail(6, "UsageQuiz6B1", "Quiz 6"),
+        )
+    ),
+    ADVANCED(
+        quizzes = listOf(
+            QuizDetail(id = 1, baseName = "UsageQuiz1B2", title = "Quiz 1"),
+            QuizDetail(
+                id = 2,
+                baseName = "UsageQuiz2B2",
+                title = "Quiz 2"
+            ),
+            QuizDetail(3, "UsageQuiz3B2", "Quiz 3"),
+            QuizDetail(4, "UsageQuiz4B2", "Quiz 4"),
+            QuizDetail(5, "UsageQuiz5B2", "Quiz 5"),
+            QuizDetail(6, "UsageQuiz6B2", "Quiz 6 ")
+        )
+    );
+
+    val description: String
+        get() = when(this) {
+            ELEMENTARY -> "Elementary"
+            INTER -> "Inter" // Explicitly string match if needed
+            UPPER -> "Upper"
+            ADVANCED -> "Advanced"
+        }
+}
+enum class QuizLevelsOriginal(val quizzes: List<QuizDetail>) {
     ELEMENTARY(
         quizzes = listOf(
             QuizDetail(
@@ -187,9 +288,6 @@ enum class QuizLevels(val quizzes: List<QuizDetail>) {
         )
     );
 
-    // This description property remains the same and is correct.
-//    val description: String
-//        get() = name.lowercase().replaceFirstChar { it.uppercase() }
     val description: String
         get() = when(this) {
             ELEMENTARY -> "Elementary"
@@ -199,10 +297,10 @@ enum class QuizLevels(val quizzes: List<QuizDetail>) {
         }
 }
 
-data class WordOK(
-    val word: String,
-    val ok: Boolean
-)
+//data class WordOK(
+//    val word: String,
+//    val ok: Boolean
+//)
 
 data class QuizQuestion(
     val sentence: String,
@@ -216,7 +314,6 @@ data class QuizQuestion(
 sealed interface QuizUiState {
     object Loading : QuizUiState
     data class Success(
-        //val categories: List<Category>,
         val selectedVoiceName: String = "" // Add a default empty value
     ) : QuizUiState
 
@@ -339,7 +436,6 @@ class QuizViewModel @Inject constructor(
         _showRateLimitSheet.value = false
     }
     fun handleTap(sentence: String) {
-       // if (_playbackState.value is PlaybackState.Playing) return
 
         audioPlaybackRepository.stopPlayback()
 
@@ -387,94 +483,6 @@ class QuizViewModel @Inject constructor(
 
         }
     }
-    fun playTrack(sentence: String) {
-
-        if (_playbackState.value is PlaybackState.Playing) return
-
-        if (!connectivityRepository.isCurrentlyOnline()) {
-            _playbackState.value = PlaybackState.Idle
-            return
-        }
-
-        viewModelScope.launch {
-//            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPremiumUser.value) { //if premium user don't check credits
-                if (rateLimiter.doIForbidCall()) {
-                    val failType = rateLimiter.canMakeCallWithResult()
-                    Timber.v("${failType.canICallAPI}")
-                    Timber.v("${failType.failReason}")
-                    Timber.v("${failType.timeLeftToWait}")
-                    if (!failType.canICallAPI) {
-                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
-                            _showRateDailyLimitSheet.value = true
-                            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statRateLimiterDayForbidCount)
-                        } else {
-                            _showRateHourlyLimitSheet.value = true
-                            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statRateLimiterHourForbidCount)
-                        }
-                    } else {
-                        _showRateLimitSheet.value = true
-                    }
-                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statRateLimiterForbidCount)
-                    return@launch
-                }
-            }
-
-
-
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val uniqueSentenceId = generateUniqueSentenceId(sentence, currentVoiceName)
-
-            //  _playbackState.value = PlaybackState.Playing(uniqueSentenceId)
-
-            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
-            if (played) {//short cut so user cna play cached sentences with no Internet connection
-                _playbackState.value = PlaybackState.Idle
-                ttsStatsRepository.updateTTSStatsWithoutCosts()
-                return@launch
-            }
-
-
-            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
-
-            val result = vocabRepository.playTextToSpeech(
-                text = sentence,
-                uniqueSentenceId = uniqueSentenceId,
-                voiceName = currentVoiceName,
-                languageCode = currentLanguageCode
-            )
-
-            when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {
-//                    if (todayIsNotAFreePassDay){
-                        rateLimiter.recordCall()
-//                    }
-                    Timber.v(rateLimiter.printCurrentStatus)
-                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-                }
-
-                is PlaybackResult.PlayedFromLocalCache -> {
-                    ttsStatsRepository.updateTTSStatsWithoutCosts()
-                }
-
-                is PlaybackResult.Failure -> {
-                    _playbackState.value =
-                        PlaybackState.Error(result.exception.message ?: "Playback failed")
-                }
-
-                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
-            }
-            _playbackState.value = PlaybackState.Idle
-
-            //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
-            if (ttsStatsRepository.isFebOrMarch2026()) {
-                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
-                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
-            }
-
-        }
-
-    }
 
     fun loadQuestions() {
         viewModelScope.launch {
@@ -491,22 +499,14 @@ class QuizViewModel @Inject constructor(
                 return@launch
             }
 
-
-
-           // val loadedTitle = testData.data.firstOrNull()?.title ?: quizDetail.title
-
             if (testData.title?.isNotEmpty() == true){
                 Timber.i("Sheet title is ${testData.title} ")
-//                quizStatistics.value = quizStatistics.value.copy(
-//                    title = testData.title
-//                )
             }
             quizStatistics.value = quizStatistics.value.copy(
                 title = quizDetail.title
             )
 
             _questions.value = generateQuestionsFromData(testData)
-
 
             Timber.v("${_questions.value.count()}")
 
@@ -517,12 +517,6 @@ class QuizViewModel @Inject constructor(
     }
 
     // A new function for the UI to call when a different level is picked.
-    fun onLevelSelectedObsolete(level: QuizLevels) {
-        selectedLevel.value = level
-        // When the level changes, reset the selected quiz to the first one of the new level.
-        selectedQuiz.value = level.quizzes.firstOrNull()
-        loadQuestions()
-    }
     fun onLevelSelected(level: QuizLevels) {
         selectedLevel.value = level
 
@@ -539,52 +533,6 @@ class QuizViewModel @Inject constructor(
     fun onQuizSelected(quizDetail: QuizDetail) {
         selectedQuiz.value = quizDetail
         loadQuestions()
-    }
-    private fun generateQuestionsFromJson(context: Context, fileName: String): List<QuizQuestion> {
-        val testData = readTestMyselfDataFromAssets(context, fileName)
-
-        if (testData == null) {
-            Timber.wtf("Failed to parse JSON file: $fileName")
-            return emptyList()
-        }
-
-        if (testData.title?.isNotEmpty() == true){
-            Timber.i("Sheet title is ${testData.title}")
-        }
-
-        if (testData.fileFormat == quizQandA) {
-            currentFileFormat.value = quizQandA
-        }else if (testData.fileFormat == quizDefinitions) {
-            currentFileFormat.value = quizDefinitions
-        }else if (testData.fileFormat == quizMultipleChoice) {
-            currentFileFormat.value = quizMultipleChoice
-        } else {
-            currentFileFormat.value = quizFillInTheBlanks
-        }
-
-        val a  = when (testData.fileFormat) {
-            quizQandA -> quizQandA
-            quizDefinitions -> quizDefinitions
-            quizMultipleChoice -> quizMultipleChoice
-            else -> quizFillInTheBlanks
-
-        }
-
-        //because spellings should follow each other
-        if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
-
-
-        return testData.data.flatMap { section ->
-            section.sections.map { quizSection ->
-                val shuffledWords = quizSection.words.shuffled()
-                val words = shuffledWords.map { it.word }
-                val correctOption = quizSection.words.firstOrNull { it.ok }?.word ?: ""
-                val summary = quizSection.summary
-                val explain = quizSection.explain
-                val title = quizSection.title
-                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title)
-            }
-        }
     }
     private fun generateQuestionsFromData(testData: TestMyselfListRoot): List<QuizQuestion> {
 
@@ -728,7 +676,7 @@ class QuizViewModel @Inject constructor(
         return try {
            // Timber.v("reading json: $fileName")
 
-            val jsonString = context.assets.open("Quizzes/$fileName")
+            val jsonString = context.assets.open("Quizzes/UsageQuiz/$fileName")
                 .bufferedReader()
                 .use { it.readText() }
 
@@ -922,8 +870,9 @@ class QuizViewModel @Inject constructor(
         val currentCode = java.util.Locale.getDefault().language
 
         // 2. Construct the localized filename
-        val localizedName = "$baseName-$currentCode.json"
-        val defaultName = "$baseName-en.json"
+//        val localizedName = "$baseName-$currentCode.json"
+        val localizedName = "$baseName.json"
+        val defaultName = "$baseName.json"
 
         // 3. Check if the localized file exists in Assets
         // We list files in the "Quizzes" folder to check existence efficiently
