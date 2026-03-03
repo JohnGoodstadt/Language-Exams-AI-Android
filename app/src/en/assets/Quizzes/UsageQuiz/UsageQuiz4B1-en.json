@@ -1,10 +1,136 @@
 {
 	"fileformat": 10,
 	"location": 0,
-	"sheetname": "UsageQuiz1A1-en",
-	"title": "Sentence Structure",
+	"sheetname": "UsageQuiz4B1-en",
+	"title": "Reporting & Communication",
 	"updatedDate": 0,
 	"data": [
-
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Reported speech and communication structures",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Choose the correct sentence.",
+					"summary": "Backshift present simple to past simple in reported speech.",
+					"explain": "In reported speech, present simple usually changes to past simple.",
+					"answers": [
+						{ "answer": "She said she worked in a hospital.", "ok": true },
+						{ "answer": "She said she works in a hospital.", "ok": false },
+						{ "answer": "She said she is work in a hospital.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Choose the correct sentence.",
+					"summary": "Backshift 'will' to 'would'.",
+					"explain": "In reported speech, 'will' usually changes to 'would'.",
+					"answers": [
+						{ "answer": "He said he would apply for the job.", "ok": true },
+						{ "answer": "He said he will apply for the job.", "ok": false },
+						{ "answer": "He said he would applied for the job.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'told' with an object.",
+					"explain": "'Told' requires a person: told me, told her, etc.",
+					"answers": [
+						{ "answer": "She told me she was tired.", "ok": true },
+						{ "answer": "She told that she was tired.", "ok": false },
+						{ "answer": "She said me she was tired.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'said that' without an object.",
+					"explain": "'Said' does not take a direct object without a preposition.",
+					"answers": [
+						{ "answer": "He said that the meeting was cancelled.", "ok": true },
+						{ "answer": "He said me that the meeting was cancelled.", "ok": false },
+						{ "answer": "He told that the meeting was cancelled.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Choose the correct sentence.",
+					"summary": "Backshift past continuous correctly.",
+					"explain": "Past continuous usually remains past continuous in reporting.",
+					"answers": [
+						{ "answer": "She said she was studying when I called.", "ok": true },
+						{ "answer": "She said she is studying when I called.", "ok": false },
+						{ "answer": "She said she studies when I called.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Choose the correct sentence.",
+					"summary": "Backshift present perfect to past perfect.",
+					"explain": "Present perfect often changes to past perfect in reported speech.",
+					"answers": [
+						{ "answer": "He said he had finished the report.", "ok": true },
+						{ "answer": "He said he has finished the report.", "ok": false },
+						{ "answer": "He said he finished the report already.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Choose the correct sentence.",
+					"summary": "Report yes/no questions using 'if' or 'whether'.",
+					"explain": "Reported yes/no questions use 'if' or 'whether' and statement word order.",
+					"answers": [
+						{ "answer": "She asked if I was available.", "ok": true },
+						{ "answer": "She asked was I available.", "ok": false },
+						{ "answer": "She asked if was I available.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Choose the correct sentence.",
+					"summary": "Report wh-questions using statement word order.",
+					"explain": "Reported wh-questions use statement word order, not question order.",
+					"answers": [
+						{ "answer": "He asked where I lived.", "ok": true },
+						{ "answer": "He asked where did I live.", "ok": false },
+						{ "answer": "He asked where I live.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Choose the correct sentence.",
+					"summary": "Backshift 'can' to 'could'.",
+					"explain": "In reported speech, 'can' usually becomes 'could'.",
+					"answers": [
+						{ "answer": "She said she could help us.", "ok": true },
+						{ "answer": "She said she can help us.", "ok": false },
+						{ "answer": "She said she will can help us.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Choose the correct sentence.",
+					"summary": "Time expression shift in reported speech.",
+					"explain": "Time expressions often change (e.g., today → that day).",
+					"answers": [
+						{ "answer": "He said he would start the project the next day.", "ok": true },
+						{ "answer": "He said he will start the project tomorrow.", "ok": false },
+						{ "answer": "He said he would start the project tomorrow.", "ok": false }
+					]
+				}
+			]
+		}
 	]
 }

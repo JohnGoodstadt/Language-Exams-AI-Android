@@ -1,10 +1,136 @@
 {
 	"fileformat": 10,
 	"location": 0,
-	"sheetname": "UsageQuiz1A1-en",
-	"title": "Sentence Structure",
+	"sheetname": "UsageQuiz6B1-en",
+	"title": "Functional Fluency",
 	"updatedDate": 0,
 	"data": [
-
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Opinion, advice, politeness and modal nuance",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'should' for advice.",
+					"explain": "'Should' is commonly used to give advice.",
+					"answers": [
+						{ "answer": "You should prepare carefully for the interview.", "ok": true },
+						{ "answer": "You must prepare carefully for the interview (advice context).", "ok": false },
+						{ "answer": "You should to prepare carefully.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'might' for possibility.",
+					"explain": "'Might' expresses uncertainty or possibility.",
+					"answers": [
+						{ "answer": "The results might improve next year.", "ok": true },
+						{ "answer": "The results must improve next year (certainty).", "ok": false },
+						{ "answer": "The results might improves next year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Choose the correct sentence.",
+					"summary": "Polite requests using 'could'.",
+					"explain": "'Could you…?' is a polite request form.",
+					"answers": [
+						{ "answer": "Could you send me the report, please?", "ok": true },
+						{ "answer": "Can you send me the report immediately?", "ok": false },
+						{ "answer": "You could send me the report?", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Choose the correct sentence.",
+					"summary": "Expressing opinion formally.",
+					"explain": "'In my opinion' is commonly used to express a personal view.",
+					"answers": [
+						{ "answer": "In my opinion, education is essential for success.", "ok": true },
+						{ "answer": "In my opinion education essential success.", "ok": false },
+						{ "answer": "My opinion education is essential.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'have to' for external obligation.",
+					"explain": "'Have to' expresses obligation from rules or necessity.",
+					"answers": [
+						{ "answer": "Employees have to follow company policies.", "ok": true },
+						{ "answer": "Employees must to follow company policies.", "ok": false },
+						{ "answer": "Employees have follow company policies.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Choose the correct sentence.",
+					"summary": "Expressing regret using 'should have'.",
+					"explain": "'Should have + past participle' expresses regret about the past.",
+					"answers": [
+						{ "answer": "I should have studied harder for the exam.", "ok": true },
+						{ "answer": "I should studied harder for the exam.", "ok": false },
+						{ "answer": "I should have study harder.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Choose the correct sentence.",
+					"summary": "Softening statements using 'It seems that…'.",
+					"explain": "'It seems that' softens a statement and sounds less direct.",
+					"answers": [
+						{ "answer": "It seems that the project will take longer than expected.", "ok": true },
+						{ "answer": "It seems the project will take longer than expected.", "ok": false },
+						{ "answer": "Seems that the project will take longer.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Choose the correct sentence.",
+					"summary": "Polite suggestion using 'would you mind'.",
+					"explain": "'Would you mind + -ing form' is used for polite requests.",
+					"answers": [
+						{ "answer": "Would you mind closing the window?", "ok": true },
+						{ "answer": "Would you mind to close the window?", "ok": false },
+						{ "answer": "Would you mind close the window?", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Choose the correct sentence.",
+					"summary": "Using 'could' for possibility.",
+					"explain": "'Could' expresses possible outcomes.",
+					"answers": [
+						{ "answer": "This decision could affect many employees.", "ok": true },
+						{ "answer": "This decision could affects many employees.", "ok": false },
+						{ "answer": "This decision must affect many employees (certainty).", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Choose the correct sentence.",
+					"summary": "Balanced opinion with modal nuance.",
+					"explain": "Using modal verbs carefully expresses balanced opinion.",
+					"answers": [
+						{ "answer": "While the plan may be expensive, it could bring long-term benefits.", "ok": true },
+						{ "answer": "While the plan is expensive but it could bring benefits.", "ok": false },
+						{ "answer": "While the plan may be expensive it will bring benefits certainly.", "ok": false }
+					]
+				}
+			]
+		}
 	]
 }

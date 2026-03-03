@@ -1,10 +1,136 @@
 {
 	"fileformat": 10,
 	"location": 0,
-	"sheetname": "UsageQuiz1A1-en",
-	"title": "Sentence Structure",
+	"sheetname": "UsageQuiz1B1-en",
+	"title": "Tense Mastery",
 	"updatedDate": 0,
 	"data": [
-
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Present perfect, past simple, and tense contrast",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Choose the correct sentence.",
+					"summary": "Use present perfect for life experience without specific time.",
+					"explain": "Present perfect is used for experiences when no specific past time is mentioned.",
+					"answers": [
+						{ "answer": "She has visited London several times.", "ok": true },
+						{ "answer": "She visited London several times last year.", "ok": false },
+						{ "answer": "She has visited London last year.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Choose the correct sentence.",
+					"summary": "Use past simple with finished time expressions.",
+					"explain": "Past simple is required with specific past time such as 'yesterday'.",
+					"answers": [
+						{ "answer": "He finished the project yesterday.", "ok": true },
+						{ "answer": "He has finished the project yesterday.", "ok": false },
+						{ "answer": "He has finish the project yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Choose the correct sentence.",
+					"summary": "Use present perfect with 'since'.",
+					"explain": "'Since' is used with present perfect to show starting point in the past.",
+					"answers": [
+						{ "answer": "She has worked here since 2020.", "ok": true },
+						{ "answer": "She works here since 2020.", "ok": false },
+						{ "answer": "She worked here since 2020.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Choose the correct sentence.",
+					"summary": "Use present perfect with 'for' to show duration.",
+					"explain": "'For' expresses duration and requires present perfect for ongoing situations.",
+					"answers": [
+						{ "answer": "They have lived here for five years.", "ok": true },
+						{ "answer": "They lived here for five years and still live here.", "ok": false },
+						{ "answer": "They are living here for five years.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'already' with present perfect.",
+					"explain": "'Already' commonly appears in present perfect sentences.",
+					"answers": [
+						{ "answer": "I have already sent the email.", "ok": true },
+						{ "answer": "I already sent the email.", "ok": false },
+						{ "answer": "I have send already the email.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'yet' in present perfect negative or questions.",
+					"explain": "'Yet' is used in present perfect questions and negatives.",
+					"answers": [
+						{ "answer": "She hasn't finished her homework yet.", "ok": true },
+						{ "answer": "She didn't finish her homework yet.", "ok": false },
+						{ "answer": "She hasn't finished yet her homework.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Choose the correct sentence.",
+					"summary": "Use past continuous for interrupted actions.",
+					"explain": "Past continuous describes an action in progress interrupted by past simple.",
+					"answers": [
+						{ "answer": "I was studying when the phone rang.", "ok": true },
+						{ "answer": "I studied when the phone was ringing.", "ok": false },
+						{ "answer": "I was study when the phone rang.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Choose the correct sentence.",
+					"summary": "Use present perfect for recent actions with 'just'.",
+					"explain": "'Just' is commonly used with present perfect for recent actions.",
+					"answers": [
+						{ "answer": "He has just arrived at the airport.", "ok": true },
+						{ "answer": "He just arrived at the airport.", "ok": false },
+						{ "answer": "He has arrive just at the airport.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Choose the correct sentence.",
+					"summary": "Use present perfect for actions with present relevance.",
+					"explain": "Present perfect connects past actions to the present.",
+					"answers": [
+						{ "answer": "She has lost her passport, so she cannot travel.", "ok": true },
+						{ "answer": "She lost her passport, so she cannot travel.", "ok": false },
+						{ "answer": "She has lose her passport, so she cannot travel.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Choose the correct sentence.",
+					"summary": "Contrast past simple with completed past time and present perfect with ongoing impact.",
+					"explain": "Past simple is used with finished time; present perfect connects to now.",
+					"answers": [
+						{ "answer": "I finished university in 2022, and I have worked in this company since then.", "ok": true },
+						{ "answer": "I have finished university in 2022, and I work here since then.", "ok": false },
+						{ "answer": "I finished university in 2022, and I worked here since then.", "ok": false }
+					]
+				}
+			]
+		}
 	]
 }

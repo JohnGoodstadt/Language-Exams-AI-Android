@@ -1,10 +1,136 @@
 {
 	"fileformat": 10,
 	"location": 0,
-	"sheetname": "UsageQuiz1A1-en",
-	"title": "Sentence Structure",
+	"sheetname": "UsageQuiz5B1-en",
+	"title": "Structured Arguments",
 	"updatedDate": 0,
 	"data": [
-
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Logical connectors and formal linking language",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'although' to introduce contrast within one sentence.",
+					"explain": "'Although' introduces a contrast clause and does not require 'but'.",
+					"answers": [
+						{ "answer": "Although the exam was difficult, most students passed.", "ok": true },
+						{ "answer": "Although the exam was difficult but most students passed.", "ok": false },
+						{ "answer": "Although was difficult the exam, most students passed.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'however' to contrast two sentences.",
+					"explain": "'However' is used between two independent clauses and usually follows a period or semicolon.",
+					"answers": [
+						{ "answer": "The project was expensive. However, it was successful.", "ok": true },
+						{ "answer": "The project was expensive however it was successful.", "ok": false },
+						{ "answer": "However the project was expensive, it was successful.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'therefore' to show result.",
+					"explain": "'Therefore' introduces a logical result.",
+					"answers": [
+						{ "answer": "The company reduced costs; therefore, profits increased.", "ok": true },
+						{ "answer": "The company reduced costs because profits increased.", "ok": false },
+						{ "answer": "Therefore the company reduced costs profits increased.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'despite' with a noun phrase.",
+					"explain": "'Despite' is followed by a noun or -ing form, not a full clause.",
+					"answers": [
+						{ "answer": "Despite the rain, the event continued.", "ok": true },
+						{ "answer": "Despite it was raining, the event continued.", "ok": false },
+						{ "answer": "Despite was raining, the event continued.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'in spite of' similarly to 'despite'.",
+					"explain": "'In spite of' is followed by a noun phrase or -ing form.",
+					"answers": [
+						{ "answer": "In spite of the delay, the train arrived safely.", "ok": true },
+						{ "answer": "In spite the delay, the train arrived safely.", "ok": false },
+						{ "answer": "In spite of it was delayed, the train arrived safely.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'whereas' to compare contrasting ideas.",
+					"explain": "'Whereas' connects two contrasting clauses in a formal context.",
+					"answers": [
+						{ "answer": "The first proposal was accepted, whereas the second was rejected.", "ok": true },
+						{ "answer": "The first proposal was accepted whereas but the second was rejected.", "ok": false },
+						{ "answer": "Whereas the first proposal was accepted the second was rejected.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'as a result' to introduce consequence.",
+					"explain": "'As a result' introduces the outcome of a previous statement.",
+					"answers": [
+						{ "answer": "Sales declined. As a result, the company reduced staff.", "ok": true },
+						{ "answer": "Sales declined because as a result the company reduced staff.", "ok": false },
+						{ "answer": "As a result sales declined the company reduced staff.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'in addition' to add information.",
+					"explain": "'In addition' introduces additional supporting information.",
+					"answers": [
+						{ "answer": "The course is affordable. In addition, it is highly rated.", "ok": true },
+						{ "answer": "The course is affordable in addition it is highly rated.", "ok": false },
+						{ "answer": "In addition the course is affordable it is highly rated.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Choose the correct sentence.",
+					"summary": "Use 'on the other hand' to present contrast.",
+					"explain": "'On the other hand' introduces an alternative viewpoint.",
+					"answers": [
+						{ "answer": "Living in the city is exciting. On the other hand, it can be stressful.", "ok": true },
+						{ "answer": "Living in the city is exciting on the other hand it can be stressful.", "ok": false },
+						{ "answer": "On the other hand living in the city is exciting it can be stressful.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Choose the correct sentence.",
+					"summary": "Combine contrast and result logically.",
+					"explain": "Correct logical connectors ensure clarity in argument structure.",
+					"answers": [
+						{ "answer": "Although the plan was risky, it was carefully designed; therefore, investors supported it.", "ok": true },
+						{ "answer": "Although the plan was risky but therefore investors supported it.", "ok": false },
+						{ "answer": "Although the plan was risky, however investors supported it.", "ok": false }
+					]
+				}
+			]
+		}
 	]
 }
