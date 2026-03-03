@@ -1,0 +1,136 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz3B2-en",
+	"title": "Formal Structural Control",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Advanced passive structures and causative forms",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Choose the correct sentence.",
+					"summary": "Passive with reporting verb structure.",
+					"explain": "Formal reporting uses 'It is believed that…' structure.",
+					"answers": [
+						{ "answer": "It is believed that the policy will improve public health.", "ok": true },
+						{ "answer": "It believes that the policy will improve public health.", "ok": false },
+						{ "answer": "It is believing that the policy will improve public health.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Choose the correct sentence.",
+					"summary": "Alternative reporting passive structure.",
+					"explain": "Structure: Subject + is said to + base verb.",
+					"answers": [
+						{ "answer": "The company is said to be expanding internationally.", "ok": true },
+						{ "answer": "The company is said that it is expanding internationally.", "ok": false },
+						{ "answer": "The company said to be expanding internationally.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Choose the correct sentence.",
+					"summary": "Causative structure using 'have'.",
+					"explain": "Causative: have + object + past participle.",
+					"answers": [
+						{ "answer": "She had her car repaired last week.", "ok": true },
+						{ "answer": "She had repaired her car last week (no causative meaning).", "ok": false },
+						{ "answer": "She had her car repair last week.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Choose the correct sentence.",
+					"summary": "Get-passive for informal emphasis.",
+					"explain": "'Get' passive often implies unexpected or negative events.",
+					"answers": [
+						{ "answer": "He got promoted after the evaluation.", "ok": true },
+						{ "answer": "He got promote after the evaluation.", "ok": false },
+						{ "answer": "He was get promoted after the evaluation.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Choose the correct sentence.",
+					"summary": "Passive infinitive after modal verbs.",
+					"explain": "Structure: modal + be + past participle.",
+					"answers": [
+						{ "answer": "The proposal must be approved before implementation.", "ok": true },
+						{ "answer": "The proposal must approved before implementation.", "ok": false },
+						{ "answer": "The proposal must be approve before implementation.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Choose the correct sentence.",
+					"summary": "Perfect passive infinitive.",
+					"explain": "Structure: modal + have been + past participle.",
+					"answers": [
+						{ "answer": "The issue may have been resolved already.", "ok": true },
+						{ "answer": "The issue may have resolved already.", "ok": false },
+						{ "answer": "The issue may been resolved already.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Choose the correct sentence.",
+					"summary": "Formal impersonal passive construction.",
+					"explain": "'It is expected that…' is common in academic writing.",
+					"answers": [
+						{ "answer": "It is expected that the results will vary.", "ok": true },
+						{ "answer": "It expects that the results will vary.", "ok": false },
+						{ "answer": "It is expecting that the results will vary.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Choose the correct sentence.",
+					"summary": "Reduced passive clause structure.",
+					"explain": "Past participle clauses can replace full passive clauses.",
+					"answers": [
+						{ "answer": "The data collected during the study were carefully analysed.", "ok": true },
+						{ "answer": "The data collect during the study were carefully analysed.", "ok": false },
+						{ "answer": "The data were collected during the study carefully analysed.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Choose the correct sentence.",
+					"summary": "Causative with future reference.",
+					"explain": "Structure: will have + object + past participle.",
+					"answers": [
+						{ "answer": "She will have her presentation reviewed before submission.", "ok": true },
+						{ "answer": "She will have reviewed her presentation before submission (no causative).", "ok": false },
+						{ "answer": "She will have her presentation review before submission.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Choose the correct sentence.",
+					"summary": "Passive reporting with past reference.",
+					"explain": "Structure: was reported to have + past participle.",
+					"answers": [
+						{ "answer": "The minister was reported to have resigned.", "ok": true },
+						{ "answer": "The minister was reported that he resigned.", "ok": false },
+						{ "answer": "The minister was report to have resigned.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

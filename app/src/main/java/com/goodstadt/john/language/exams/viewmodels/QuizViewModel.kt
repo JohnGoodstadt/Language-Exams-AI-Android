@@ -33,7 +33,6 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
@@ -41,10 +40,7 @@ import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
-import com.goodstadt.john.language.exams.utils.calcIsTodayFreePassDay
-import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
-import com.goodstadt.john.language.exams.utils.isTodayInstallDay
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -96,7 +92,7 @@ data class QuizStatistics(
         copy(answered = answered, correct = correct, tries = tries)
 }
 
-enum class QuizLevelsNew(val quizzes: List<QuizDetail>) {
+enum class QuizLevels(val quizzes: List<QuizDetail>) {
     ELEMENTARY(
         quizzes = listOf(
             QuizDetail(
@@ -283,9 +279,9 @@ class QuizViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        QuizStatistics(skillLevel = QuizLevelsNew.UPPER.description, quizNumber = 1, title = "Quiz 1")
+        QuizStatistics(skillLevel = QuizLevels.UPPER.description, quizNumber = 1, title = "Quiz 1")
     )
-    val selectedLevel = mutableStateOf(QuizLevelsNew.UPPER)
+    val selectedLevel = mutableStateOf(QuizLevels.UPPER)
 
     val selectedQuiz = mutableStateOf<QuizDetail?>(null)
 
@@ -305,11 +301,11 @@ class QuizViewModel @Inject constructor(
 
     // ✅ NEW (Dynamic):
     // This starts with the default English titles, but we can overwrite them later
-    private val _availableQuizzes = MutableStateFlow<List<QuizDetail>>(QuizLevelsNew.UPPER.quizzes)
+    private val _availableQuizzes = MutableStateFlow<List<QuizDetail>>(QuizLevels.UPPER.quizzes)
     val availableQuizzes = _availableQuizzes.asStateFlow()
 
     // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized QuizDetails
-    private val quizTitleCache = mutableMapOf<QuizLevelsNew, List<QuizDetail>>()
+    private val quizTitleCache = mutableMapOf<QuizLevels, List<QuizDetail>>()
 
 
 
@@ -521,13 +517,13 @@ class QuizViewModel @Inject constructor(
     }
 
     // A new function for the UI to call when a different level is picked.
-    fun onLevelSelectedObsolete(level: QuizLevelsNew) {
+    fun onLevelSelectedObsolete(level: QuizLevels) {
         selectedLevel.value = level
         // When the level changes, reset the selected quiz to the first one of the new level.
         selectedQuiz.value = level.quizzes.firstOrNull()
         loadQuestions()
     }
-    fun onLevelSelected(level: QuizLevelsNew) {
+    fun onLevelSelected(level: QuizLevels) {
         selectedLevel.value = level
 
         // 1. Update the list of quizzes (Async)
@@ -745,7 +741,7 @@ class QuizViewModel @Inject constructor(
     }
 
     // Call this whenever the Level changes (e.g. from Elementary to Inter)
-    private fun refreshQuizTitlesForLevel(level: QuizLevelsNew) {
+    private fun refreshQuizTitlesForLevel(level: QuizLevels) {
         viewModelScope.launch {
 
             // 1. Get the list of default quizzes for this level
@@ -793,7 +789,7 @@ class QuizViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
 
             // Loop through all Enum Levels (Elementary, Inter, etc.)
-            QuizLevelsNew.entries.forEach { level ->
+            QuizLevels.entries.forEach { level ->
 
                 // Map the default quizzes to their localized versions
                 val localizedList = level.quizzes.map { quizDetail ->
@@ -844,7 +840,7 @@ class QuizViewModel @Inject constructor(
             }
         }
     }
-    private fun updateAvailableQuizzesFor(level: QuizLevelsNew) {
+    private fun updateAvailableQuizzesFor(level: QuizLevels) {
         // If cache is ready, use it. If not (still loading), use default English list.
         _availableQuizzes.value = quizTitleCache[level] ?: level.quizzes
     }

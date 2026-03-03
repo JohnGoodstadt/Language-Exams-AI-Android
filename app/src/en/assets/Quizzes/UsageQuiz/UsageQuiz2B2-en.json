@@ -1,0 +1,136 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz2B2-en",
+	"title": "Hypothetical Reasoning",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Mixed conditionals, third conditionals, and modal nuance",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Choose the correct sentence.",
+					"summary": "Third conditional for unreal past situations.",
+					"explain": "Third conditional structure: If + past perfect, would have + past participle.",
+					"answers": [
+						{ "answer": "If she had studied harder, she would have passed the exam.", "ok": true },
+						{ "answer": "If she would have studied harder, she had passed the exam.", "ok": false },
+						{ "answer": "If she studied harder, she would have passed the exam.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Choose the correct sentence.",
+					"summary": "Mixed conditional (past condition, present result).",
+					"explain": "Mixed conditional: If + past perfect, would + base verb (present result).",
+					"answers": [
+						{ "answer": "If I had accepted the offer, I would be working abroad now.", "ok": true },
+						{ "answer": "If I accepted the offer, I would have been working abroad now.", "ok": false },
+						{ "answer": "If I had accepted the offer, I would have worked abroad now.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Choose the correct sentence.",
+					"summary": "Second conditional for hypothetical present.",
+					"explain": "Second conditional uses past simple + would + base verb.",
+					"answers": [
+						{ "answer": "If the company invested more, it would grow faster.", "ok": true },
+						{ "answer": "If the company would invest more, it grew faster.", "ok": false },
+						{ "answer": "If the company invested more, it would have grown faster.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Choose the correct sentence.",
+					"summary": "Modal perfect for possibility in the past.",
+					"explain": "'Might have' expresses past possibility.",
+					"answers": [
+						{ "answer": "She might have missed the meeting due to traffic.", "ok": true },
+						{ "answer": "She might missed the meeting due to traffic.", "ok": false },
+						{ "answer": "She might has missed the meeting.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Choose the correct sentence.",
+					"summary": "Modal perfect for unrealised ability.",
+					"explain": "'Could have' expresses past ability or possibility that did not happen.",
+					"answers": [
+						{ "answer": "They could have solved the problem earlier.", "ok": true },
+						{ "answer": "They could solved the problem earlier.", "ok": false },
+						{ "answer": "They could have solve the problem earlier.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Choose the correct sentence.",
+					"summary": "Inverted third conditional (formal style).",
+					"explain": "Formal inversion removes 'if': Had + subject + past participle.",
+					"answers": [
+						{ "answer": "Had I known about the delay, I would have left earlier.", "ok": true },
+						{ "answer": "Had I knew about the delay, I would have left earlier.", "ok": false },
+						{ "answer": "Had I known about the delay, I would leave earlier.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Choose the correct sentence.",
+					"summary": "Mixed conditional (present condition, past result).",
+					"explain": "If + past simple (present unreal), would have + past participle (past result).",
+					"answers": [
+						{ "answer": "If he were more organised, he would have finished the project on time.", "ok": true },
+						{ "answer": "If he was more organised, he would finish the project on time.", "ok": false },
+						{ "answer": "If he had been more organised, he would finish the project on time.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Choose the correct sentence.",
+					"summary": "Third conditional with 'unless' alternative.",
+					"explain": "'Unless' replaces 'if not' in conditional structures.",
+					"answers": [
+						{ "answer": "Unless they had acted quickly, the damage would have been worse.", "ok": true },
+						{ "answer": "Unless they acted quickly, the damage would have been worse.", "ok": false },
+						{ "answer": "Unless they had acted quickly, the damage would be worse.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Choose the correct sentence.",
+					"summary": "Second conditional with modal variation.",
+					"explain": "'Might' can replace 'would' to express uncertainty.",
+					"answers": [
+						{ "answer": "If she applied, she might get the position.", "ok": true },
+						{ "answer": "If she would apply, she might get the position.", "ok": false },
+						{ "answer": "If she applied, she might got the position.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Choose the correct sentence.",
+					"summary": "Third conditional for regret and reflection.",
+					"explain": "Third conditional expresses regret about past events.",
+					"answers": [
+						{ "answer": "If we had planned more carefully, we would not have encountered these problems.", "ok": true },
+						{ "answer": "If we planned more carefully, we would not have encountered these problems.", "ok": false },
+						{ "answer": "If we had planned more carefully, we would not encounter these problems.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

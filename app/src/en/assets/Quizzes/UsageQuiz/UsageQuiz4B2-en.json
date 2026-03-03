@@ -1,0 +1,136 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz4B2-en",
+	"title": "Academic Expression",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Nominalisation and academic transformation",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Choose the more formal sentence.",
+					"summary": "Nominalisation replaces verbs with nouns for formal tone.",
+					"explain": "'Decision' is a nominalised form of 'decide', creating academic tone.",
+					"answers": [
+						{ "answer": "The government's decision to increase funding was controversial.", "ok": true },
+						{ "answer": "The government decided to increase funding, and it was controversial.", "ok": false },
+						{ "answer": "The government deciding to increase funding was controversial.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Choose the more academic sentence.",
+					"summary": "Use noun phrases instead of clauses.",
+					"explain": "'Failure' replaces the clause 'failed' to create formal expression.",
+					"answers": [
+						{ "answer": "The company's failure to meet targets resulted in financial losses.", "ok": true },
+						{ "answer": "The company failed to meet targets, and it lost money.", "ok": false },
+						{ "answer": "The company failing to meet targets resulted in losing money.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Choose the correct formal transformation.",
+					"summary": "Cause expressed using 'due to'.",
+					"explain": "'Due to' is used with noun phrases, not clauses.",
+					"answers": [
+						{ "answer": "The cancellation was due to technical difficulties.", "ok": true },
+						{ "answer": "The cancellation was due to there were technical difficulties.", "ok": false },
+						{ "answer": "The cancellation was because technical difficulties.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Choose the more formal sentence.",
+					"summary": "Replace informal connectors with academic alternatives.",
+					"explain": "'Consequently' is more formal than 'so'.",
+					"answers": [
+						{ "answer": "The data were incomplete; consequently, the results were inconclusive.", "ok": true },
+						{ "answer": "The data were incomplete, so the results were unclear.", "ok": false },
+						{ "answer": "The data incomplete so results unclear.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Choose the correct academic structure.",
+					"summary": "Abstract nouns improve formal tone.",
+					"explain": "'Implementation' replaces the verb 'implement'.",
+					"answers": [
+						{ "answer": "The implementation of the policy improved efficiency.", "ok": true },
+						{ "answer": "They implemented the policy and it improved efficiency.", "ok": false },
+						{ "answer": "The implement of the policy improved efficiency.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Choose the correct academic form.",
+					"summary": "Using noun phrases for emphasis.",
+					"explain": "'The rapid expansion of the company' compresses the clause structure.",
+					"answers": [
+						{ "answer": "The rapid expansion of the company created new opportunities.", "ok": true },
+						{ "answer": "The company expanded rapidly and it created new opportunities.", "ok": false },
+						{ "answer": "The company rapid expansion created new opportunities.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Choose the more academic sentence.",
+					"summary": "Nominalisation in research contexts.",
+					"explain": "'Analysis' replaces the verb 'analysed'.",
+					"answers": [
+						{ "answer": "The analysis of the results revealed significant trends.", "ok": true },
+						{ "answer": "They analysed the results and found significant trends.", "ok": false },
+						{ "answer": "The analyse of the results revealed significant trends.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Choose the correct formal expression.",
+					"summary": "Using 'in response to' for formal cause.",
+					"explain": "'In response to' is a formal prepositional phrase.",
+					"answers": [
+						{ "answer": "The policy was revised in response to public concern.", "ok": true },
+						{ "answer": "The policy was revised because the public was concerned.", "ok": false },
+						{ "answer": "The policy revised in response public concern.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Choose the more academic sentence.",
+					"summary": "Using 'increase in' rather than verb-heavy structure.",
+					"explain": "'An increase in' is a formal noun phrase.",
+					"answers": [
+						{ "answer": "There has been a significant increase in demand.", "ok": true },
+						{ "answer": "Demand has increased a lot.", "ok": false },
+						{ "answer": "There has been demand increased significantly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Choose the correct formal structure.",
+					"summary": "Using abstract nouns for evaluation.",
+					"explain": "'Evaluation' replaces the clause 'evaluated it'.",
+					"answers": [
+						{ "answer": "The evaluation of the proposal took several weeks.", "ok": true },
+						{ "answer": "They evaluated the proposal and it took several weeks.", "ok": false },
+						{ "answer": "The evaluate of the proposal took several weeks.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

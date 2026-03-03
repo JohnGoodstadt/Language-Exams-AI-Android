@@ -68,7 +68,7 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.viewmodels.QuizLevelsNew
+import com.goodstadt.john.language.exams.viewmodels.QuizLevels
 import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
@@ -142,10 +142,10 @@ fun QuizScreen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         HorizontalLevelPicker(
-            options = QuizLevelsNew.entries.map { it.description },
+            options = QuizLevels.entries.map { it.description },
             selectedOption = selectedLevel.description,
             onOptionSelected = { newLevel ->
-                val level = QuizLevelsNew.entries.first { it.description == newLevel }
+                val level = QuizLevels.entries.first { it.description == newLevel }
 //                    viewModel.selectedLevel.value = level
                 viewModel.onLevelSelected(level)
                 viewModel.loadQuestions()
