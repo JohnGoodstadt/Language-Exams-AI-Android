@@ -1,0 +1,639 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizShopping1-en",
+  "title": "Shopping",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Shopping",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "buy",
+          "page": 1,
+          "question": "buy",
+          "summary": "to get something by paying money for it",
+          "explain": {
+            "entryId": "buy",
+            "headword": "buy",
+            "pronunciation": {
+              "display": "by",
+              "ipaUK": "/baɪ/",
+              "ipaUS": "/baɪ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "transitive verb",
+                "headwordLine": "buy",
+                "inflectionsLine": "buys, bought, buying",
+                "synonyms": ["purchase", "acquire", "pay for"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to get something by paying money for it",
+                    "examples": [
+                      "She went to the shop to buy some milk and bread.",
+                      "He bought a new jacket at the department store on Saturday."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She went to the supermarket to buy food for the whole week.",
+              "ok": true
+            },
+            {
+              "answer": "He went to the library to buy a new book for his daughter.",
+              "ok": false
+            },
+            {
+              "answer": "She tried to buy some fresh air at the park near her house.",
+              "ok": false
+            },
+            {
+              "answer": "He used his card to buy the table at the restaurant for the meal.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "cashier",
+          "page": 2,
+          "question": "cashier",
+          "summary": "a person whose job is to take payments from customers in a shop or bank",
+          "explain": {
+            "entryId": "cashier",
+            "headword": "cashier",
+            "pronunciation": {
+              "display": "ka-SHEER",
+              "ipaUK": "/kæˈʃɪə/",
+              "ipaUS": "/kæˈʃɪr/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "cashier",
+                "inflectionsLine": "cashiers",
+                "synonyms": ["checkout operator", "teller", "clerk"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a person whose job is to receive and pay out money in a shop, bank, or hotel",
+                    "examples": [
+                      "She paid for her shopping at the cashier near the exit.",
+                      "The cashier gave her the wrong change, so she asked for a receipt."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She paid for her shopping at the cashier near the exit of the supermarket.",
+              "ok": true
+            },
+            {
+              "answer": "He asked the cashier to fix his broken laptop at the shopping centre.",
+              "ok": false
+            },
+            {
+              "answer": "She went to the cashier to get a new passport for her holiday abroad.",
+              "ok": false
+            },
+            {
+              "answer": "He asked the cashier to cook his dinner and bring it to his table.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "credit card",
+          "page": 3,
+          "question": "credit card",
+          "summary": "a small plastic card that lets you buy things and pay for them later",
+          "explain": {
+            "entryId": "credit card",
+            "headword": "credit card",
+            "pronunciation": {
+              "display": "KRED-it kard",
+              "ipaUK": "/ˈkrɛdɪt kɑːd/",
+              "ipaUS": "/ˈkrɛdɪt kɑːrd/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "noun phrase",
+                "headwordLine": "credit card",
+                "inflectionsLine": "credit cards",
+                "synonyms": ["bank card", "payment card", "charge card"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a small plastic card that allows you to buy things and pay for them later",
+                    "examples": [
+                      "She used her credit card to pay for the new television online.",
+                      "He always pays by credit card when he shops online."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She used her credit card to pay for the new sofa at the furniture shop.",
+              "ok": true
+            },
+            {
+              "answer": "He showed his credit card to the police officer to prove his identity.",
+              "ok": false
+            },
+            {
+              "answer": "She ate her sandwich with her credit card because she forgot a fork.",
+              "ok": false
+            },
+            {
+              "answer": "He planted his credit card in the garden to grow more money for the future.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "discount",
+          "page": 4,
+          "question": "discount",
+          "summary": "a reduction in the usual price of something",
+          "explain": {
+            "entryId": "discount",
+            "headword": "discount",
+            "pronunciation": {
+              "display": "DIS-kownt",
+              "ipaUK": "/ˈdɪskaʊnt/",
+              "ipaUS": "/ˈdɪskaʊnt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "discount",
+                "inflectionsLine": "discounts",
+                "synonyms": ["reduction", "saving", "deal"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a reduction in the usual price of something",
+                    "examples": [
+                      "She got a ten percent discount because she had a student card.",
+                      "The shop gave a big discount on all winter coats in January."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She got a twenty percent discount on the jacket because she had a student card.",
+              "ok": true
+            },
+            {
+              "answer": "He asked for a discount at the restaurant to make his food taste hotter.",
+              "ok": false
+            },
+            {
+              "answer": "She applied a discount to her hair to make it look shiny and clean.",
+              "ok": false
+            },
+            {
+              "answer": "He wore a discount badge on his shirt to show he worked at the store.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "mall",
+          "page": 5,
+          "question": "mall",
+          "summary": "a large building containing many shops, restaurants, and other businesses",
+          "explain": {
+            "entryId": "mall",
+            "headword": "mall",
+            "pronunciation": {
+              "display": "mawl",
+              "ipaUK": "/mɔːl/",
+              "ipaUS": "/mɔːl/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "mall",
+                "inflectionsLine": "malls",
+                "synonyms": ["shopping centre", "retail park", "arcade"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a large enclosed building containing many shops, restaurants, cafés, and other businesses",
+                    "examples": [
+                      "She spent the whole afternoon at the mall buying clothes and shoes.",
+                      "The new mall in the city centre has over a hundred shops inside."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She spent the whole afternoon at the mall looking for a new pair of shoes.",
+              "ok": true
+            },
+            {
+              "answer": "He went to the mall to swim twenty lengths before breakfast.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked Sunday dinner at the mall for the whole family.",
+              "ok": false
+            },
+            {
+              "answer": "He slept at the mall every night because it was close to his work.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "money",
+          "page": 6,
+          "question": "money",
+          "summary": "coins and banknotes used to buy things; the total amount you have to spend",
+          "explain": {
+            "entryId": "money",
+            "headword": "money",
+            "pronunciation": {
+              "display": "MUN-ee",
+              "ipaUK": "/ˈmʌni/",
+              "ipaUS": "/ˈmʌni/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "money",
+                "inflectionsLine": null,
+                "synonyms": ["cash", "funds", "currency"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "coins and banknotes used to pay for things; the amount you have available to spend",
+                    "examples": [
+                      "She saved enough money to buy a new bicycle for her birthday.",
+                      "He didn't have enough money to pay for the meal."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She saved her money for three months to buy a new laptop.",
+              "ok": true
+            },
+            {
+              "answer": "He drank all his money at the café and had nothing left to eat.",
+              "ok": false
+            },
+            {
+              "answer": "She wore all her money to the party because she wanted to look rich.",
+              "ok": false
+            },
+            {
+              "answer": "He ate his money quickly at the restaurant because he was very hungry.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "price",
+          "page": 7,
+          "question": "price",
+          "summary": "the amount of money you need to pay to buy something",
+          "explain": {
+            "entryId": "price",
+            "headword": "price",
+            "pronunciation": {
+              "display": "pryce",
+              "ipaUK": "/praɪs/",
+              "ipaUS": "/praɪs/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "price",
+                "inflectionsLine": "prices",
+                "synonyms": ["cost", "charge", "fee"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the amount of money that you must pay in order to buy something",
+                    "examples": [
+                      "The price of the jacket was fifty pounds, which was too expensive for her.",
+                      "She always checks the price before buying anything online."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She checked the price of the shoes before deciding to buy them.",
+              "ok": true
+            },
+            {
+              "answer": "He ate the price of his meal at the restaurant without any complaint.",
+              "ok": false
+            },
+            {
+              "answer": "She wore the price tag on her new coat because she liked how it looked.",
+              "ok": false
+            },
+            {
+              "answer": "He cooked the price at home every week to try to save more money.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "receipt",
+          "page": 8,
+          "question": "receipt",
+          "summary": "a piece of paper that shows you have paid for something",
+          "explain": {
+            "entryId": "receipt",
+            "headword": "receipt",
+            "pronunciation": {
+              "display": "rih-SEET",
+              "ipaUK": "/rɪˈsiːt/",
+              "ipaUS": "/rɪˈsiːt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "receipt",
+                "inflectionsLine": "receipts",
+                "synonyms": ["proof of purchase", "invoice", "bill"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a piece of paper that proves you have received goods or paid for something",
+                    "examples": [
+                      "She kept the receipt in case she wanted to return the shoes later.",
+                      "He asked the cashier for a receipt after paying for his shopping."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She kept the receipt so she could return the jacket if it did not fit.",
+              "ok": true
+            },
+            {
+              "answer": "He drank the receipt to show the waiter that he had already paid for the meal.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked the receipt in the oven to make it easier to read.",
+              "ok": false
+            },
+            {
+              "answer": "He planted the receipt in his garden because the paper was very good quality.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "sale",
+          "page": 9,
+          "question": "sale",
+          "summary": "a time when a shop sells goods at reduced prices",
+          "explain": {
+            "entryId": "sale",
+            "headword": "sale",
+            "pronunciation": {
+              "display": "sayl",
+              "ipaUK": "/seɪl/",
+              "ipaUS": "/seɪl/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "sale",
+                "inflectionsLine": "sales",
+                "synonyms": ["reduction", "deal", "special offer"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a period when a shop sells goods at reduced prices",
+                    "examples": [
+                      "She bought three new dresses during the summer sale.",
+                      "The January sale is the best time to buy a new television."
+                    ]
+                  },
+                  {
+                    "senseNumber": 2,
+                    "definition": "the act of selling something",
+                    "examples": [
+                      "The sale of the house took three months to complete."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She waited for the January sale to buy a new coat at a lower price.",
+              "ok": true
+            },
+            {
+              "answer": "He drank a big glass of cold sale after his morning run in the park.",
+              "ok": false
+            },
+            {
+              "answer": "She added a pinch of sale to the soup to give it a better flavour.",
+              "ok": false
+            },
+            {
+              "answer": "He planted sale in his garden to grow flowers for the spring.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "sell",
+          "page": 10,
+          "question": "sell",
+          "summary": "to give something to someone in exchange for money",
+          "explain": {
+            "entryId": "sell",
+            "headword": "sell",
+            "pronunciation": {
+              "display": "sell",
+              "ipaUK": "/sɛl/",
+              "ipaUS": "/sɛl/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "transitive and intransitive verb",
+                "headwordLine": "sell",
+                "inflectionsLine": "sells, sold, selling",
+                "synonyms": ["trade", "vend", "offer for sale"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to give something to someone else in exchange for money",
+                    "examples": [
+                      "She decided to sell her old bicycle because she had bought a new one.",
+                      "He sells handmade cards at the market every Saturday morning."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He sells handmade cards at the market every Saturday morning.",
+              "ok": true
+            },
+            {
+              "answer": "She went to the bakery to sell a fresh loaf of bread for her lunch.",
+              "ok": false
+            },
+            {
+              "answer": "He tried to sell the rain to the farmers so their crops would grow.",
+              "ok": false
+            },
+            {
+              "answer": "She tried to sell her homework to her teacher at the end of the lesson.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "supermarket",
+          "page": 11,
+          "question": "supermarket",
+          "summary": "a large shop that sells food, drink, and household goods",
+          "explain": {
+            "entryId": "supermarket",
+            "headword": "supermarket",
+            "pronunciation": {
+              "display": "SOO-puh-mar-kit",
+              "ipaUK": "/ˈsuːpəmɑːkɪt/",
+              "ipaUS": "/ˈsuːpərˌmɑːrkɪt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "supermarket",
+                "inflectionsLine": "supermarkets",
+                "synonyms": ["grocery store", "food store", "hypermarket"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a large shop that sells food, drink, and household products",
+                    "examples": [
+                      "She goes to the supermarket every Saturday to buy food for the week.",
+                      "The new supermarket near our house is open until midnight."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She goes to the supermarket every Saturday to buy food for the week.",
+              "ok": true
+            },
+            {
+              "answer": "He went to the supermarket to see the doctor about his sore throat.",
+              "ok": false
+            },
+            {
+              "answer": "She studied for her exam at the supermarket because it was very quiet.",
+              "ok": false
+            },
+            {
+              "answer": "He swam thirty laps in the supermarket before doing his weekly shopping.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

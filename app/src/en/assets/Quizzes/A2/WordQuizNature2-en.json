@@ -1,0 +1,136 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature2-en",
+	"title": "Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Nature",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "river",
+					"page": 1,
+					"question": "river",
+					"summary": "a large natural flow of fresh water that moves towards the sea or a lake",
+					"explain": {
+						"entryId": "river",
+						"headword": "river",
+						"pronunciation": { "display": "RIV-ur", "ipaUK": "/ˈrɪvə/", "ipaUS": "/ˈrɪvər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "river",
+								"inflectionsLine": "rivers",
+								"synonyms": ["stream", "waterway", "tributary"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large natural flow of fresh water that moves continuously in one direction towards the sea, a lake, or another river",
+										"examples": [
+											"They swam in the river on hot summer afternoons.",
+											"The river flooded the fields after several days of heavy rain."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They swam in the river on hot summer afternoons.", "ok": true },
+						{ "answer": "She drank a bowl of hot river with bread for her lunch.", "ok": false },
+						{ "answer": "He drove his river to work every morning through the city traffic.", "ok": false },
+						{ "answer": "She planted a river in her garden and watered it every day.", "ok": false }
+					]
+				},
+				{
+					"title": "social media",
+					"page": 2,
+					"question": "social media",
+					"summary": "websites and apps that allow people to share content and communicate with others online",
+					"explain": {
+						"entryId": "social media",
+						"headword": "social media",
+						"pronunciation": { "display": "SOH-shul MEE-dee-uh", "ipaUK": "/ˈsəʊʃl ˈmiːdiə/", "ipaUS": "/ˈsoʊʃl ˈmiːdiə/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "noun phrase",
+								"headwordLine": "social media",
+								"inflectionsLine": "",
+								"synonyms": ["online platforms", "social networks", "digital networks"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "websites and applications that allow people to create, share, and view content and to communicate and connect with other people online",
+										"examples": [
+											"She uses social media to stay in touch with friends and family around the world.",
+											"He spends too much time on social media and does not read enough books."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She uses social media to stay in touch with friends and family around the world.", "ok": true },
+						{ "answer": "He cooked social media for dinner and served it to the whole family.", "ok": false },
+						{ "answer": "She planted social media in the garden to make it look more colourful.", "ok": false },
+						{ "answer": "He drove his social media to work every morning and parked it outside.", "ok": false }
+					]
+				},
+				{
+					"title": "tree",
+					"page": 3,
+					"question": "tree",
+					"summary": "a tall plant with a thick wooden trunk, branches, and leaves that lives for many years",
+					"explain": {
+						"entryId": "tree",
+						"headword": "tree",
+						"pronunciation": { "display": "TREE", "ipaUK": "/triː/", "ipaUS": "/triː/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "tree",
+								"inflectionsLine": "trees",
+								"synonyms": ["plant", "oak", "shrub"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a tall plant with a thick wooden trunk, branches, and leaves that lives for many years and grows much taller than other plants",
+										"examples": [
+											"The children climbed the old tree in the garden.",
+											"They planted a tree in the park to celebrate the new year."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The children climbed the old tree in the garden and sat in the branches.", "ok": true },
+						{ "answer": "She drank a hot tree every morning before going to school.", "ok": false },
+						{ "answer": "He drove his tree to work every day because the office was very far away.", "ok": false },
+						{ "answer": "She cooked a tree in the oven for Sunday dinner.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

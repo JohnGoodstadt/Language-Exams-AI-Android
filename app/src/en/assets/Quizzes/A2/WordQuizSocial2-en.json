@@ -1,0 +1,96 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial2-en",
+	"title": "Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Social",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "suggest",
+					"page": 1,
+					"question": "suggest",
+					"summary": "to mention an idea or plan for someone to think about or consider",
+					"explain": {
+						"entryId": "suggest",
+						"headword": "suggest",
+						"pronunciation": { "display": "suh-JEST", "ipaUK": "/səˈdʒest/", "ipaUS": "/səɡˈdʒest/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "suggest",
+								"inflectionsLine": "suggests, suggesting, suggested",
+								"synonyms": ["recommend", "propose", "advise"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to mention an idea or plan for someone to think about or consider",
+										"examples": [
+											"She suggested meeting for coffee on Saturday morning.",
+											"He suggested taking the bus instead of walking to the station in the rain."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She suggested meeting for coffee on Saturday morning.", "ok": true },
+						{ "answer": "He suggested the soup with salt and pepper before serving it.", "ok": false },
+						{ "answer": "She suggested the door shut because the noise from outside was too loud.", "ok": false },
+						{ "answer": "They suggested their bags on the floor and sat down at the table.", "ok": false }
+					]
+				},
+				{
+					"title": "thank",
+					"page": 2,
+					"question": "thank",
+					"summary": "to tell someone that you are grateful for something they have done",
+					"explain": {
+						"entryId": "thank",
+						"headword": "thank",
+						"pronunciation": { "display": "THANK", "ipaUK": "/θæŋk/", "ipaUS": "/θæŋk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "thank",
+								"inflectionsLine": "thanks, thanking, thanked",
+								"synonyms": ["express gratitude", "show appreciation", "acknowledge"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to tell someone that you are grateful because they have helped you or done something kind",
+										"examples": [
+											"She thanked her teacher for all the help with her project.",
+											"He thanked his neighbour for looking after the cat while he was away."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She thanked her teacher for all the help with her project.", "ok": true },
+						{ "answer": "He thanked his car after the long journey.", "ok": false },
+						{ "answer": "She thanked her coat because it kept her warm in the cold.", "ok": false },
+						{ "answer": "They thanked the television and turned it off before going to bed.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

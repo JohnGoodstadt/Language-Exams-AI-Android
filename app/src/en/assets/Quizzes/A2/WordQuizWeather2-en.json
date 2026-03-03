@@ -1,0 +1,96 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizWeather2-en",
+	"title": "Weather",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Weather",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "windy",
+					"page": 1,
+					"question": "windy",
+					"summary": "with a lot of wind blowing",
+					"explain": {
+						"entryId": "windy",
+						"headword": "windy",
+						"pronunciation": { "display": "WIN-dee", "ipaUK": "/ˈwɪndi/", "ipaUS": "/ˈwɪndi/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "windy",
+								"inflectionsLine": "windier, windiest",
+								"synonyms": ["blustery", "breezy", "gusty"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "with a lot of wind blowing; used to describe weather when there is a strong wind",
+										"examples": [
+											"It was so windy that her umbrella blew inside out on the walk to school.",
+											"The windy weather made it difficult to cycle along the seafront."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "It was so windy that her umbrella blew inside out on the walk to school.", "ok": true },
+						{ "answer": "He ordered a windy at the café and drank it slowly.", "ok": false },
+						{ "answer": "She put the windy in her bag before leaving the house.", "ok": false },
+						{ "answer": "They cooked the windy in a large pot for dinner.", "ok": false }
+					]
+				},
+				{
+					"title": "winter",
+					"page": 2,
+					"question": "winter",
+					"summary": "the coldest season of the year, between autumn and spring",
+					"explain": {
+						"entryId": "winter",
+						"headword": "winter",
+						"pronunciation": { "display": "WIN-tur", "ipaUK": "/ˈwɪntə/", "ipaUS": "/ˈwɪntər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable and uncountable noun",
+								"headwordLine": "winter",
+								"inflectionsLine": "winters",
+								"synonyms": ["wintertime", "cold season", "midwinter"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the coldest season of the year, coming after autumn and before spring, when the weather is cold and the days are short",
+										"examples": [
+											"She wears a heavy coat and scarf in winter to stay warm.",
+											"In winter the temperature often drops below zero and sometimes it snows."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wears a heavy coat and scarf in winter to stay warm.", "ok": true },
+						{ "answer": "She goes to the beach to swim in the sea every day in winter because it is so hot.", "ok": false },
+						{ "answer": "He wears shorts and a t-shirt in winter because the sun is very strong.", "ok": false },
+						{ "answer": "They spend every winter at the outdoor pool because the water is so warm.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

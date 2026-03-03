@@ -1,0 +1,389 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizinandbigquickly1-en",
+	"title": "in and big quickly",
+	"updatedDate": 0,
+	"data": [
+		{
+			"sheetname": "WordQuizinandbigquickly2-en",
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "big",
+					"summary": "large in size",
+					"explain": {
+						"entryId": "big",
+						"headword": "big",
+						"pronunciation": { "display": "BIG", "ipaUK": "/bɪɡ/", "ipaUS": "/bɪɡ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "big",
+								"inflectionsLine": "bigger, biggest",
+								"synonyms": ["large", "huge"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "large in size",
+										"examples": ["They live in a big house."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "They live in a big house.", "ok": true },
+						{ "answer": "They live in big a house.", "ok": false },
+						{ "answer": "They big live in a house.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "but",
+					"summary": "used to show a difference or opposite idea",
+					"explain": {
+						"entryId": "but",
+						"headword": "but",
+						"pronunciation": { "display": "BUT", "ipaUK": "/bʌt/", "ipaUS": "/bʌt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "but",
+								"inflectionsLine": null,
+								"synonyms": ["however"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to connect two ideas that are different",
+										"examples": ["I like tea, but I don’t like coffee."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I like tea, but I don’t like coffee.", "ok": true },
+						{ "answer": "I like tea but, I don’t like coffee.", "ok": false },
+						{ "answer": "I like tea, but I don’t like a coffee.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "cold",
+					"summary": "not warm; having a low temperature",
+					"explain": {
+						"entryId": "cold",
+						"headword": "cold",
+						"pronunciation": { "display": "KOHLD", "ipaUK": "/kəʊld/", "ipaUS": "/koʊld/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "cold",
+								"inflectionsLine": "colder, coldest",
+								"synonyms": ["chilly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not warm; having a low temperature",
+										"examples": ["It’s cold today, so wear a jacket."]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "noun",
+								"headwordLine": "cold",
+								"inflectionsLine": "colds",
+								"synonyms": ["illness"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a common illness that makes you cough and sneeze",
+										"examples": ["I can’t go to work because I have a cold."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "It’s cold today, so wear a jacket.", "ok": true },
+						{ "answer": "It’s cold today, so wear jacket a.", "ok": false },
+						{ "answer": "It’s cold today, so you cold wear a jacket.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "happily",
+					"summary": "in a happy way",
+					"explain": {
+						"entryId": "happily",
+						"headword": "happily",
+						"pronunciation": { "display": "HAP-uh-lee", "ipaUK": "/ˈhæpɪli/", "ipaUS": "/ˈhæpəli/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "happily",
+								"inflectionsLine": null,
+								"synonyms": ["joyfully", "gladly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in a happy way",
+										"examples": ["The children played happily in the park."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The children played happily in the park.", "ok": true },
+						{ "answer": "The children played happy in the park.", "ok": false },
+						{ "answer": "The children happily played in the parkly.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "happy",
+					"summary": "feeling good and pleased",
+					"explain": {
+						"entryId": "happy",
+						"headword": "happy",
+						"pronunciation": { "display": "HAP-ee", "ipaUK": "/ˈhæpi/", "ipaUS": "/ˈhæpi/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "happy",
+								"inflectionsLine": "happier, happiest",
+								"synonyms": ["glad", "pleased"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "feeling good and pleased",
+										"examples": ["I’m happy because it’s my birthday."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I’m happy because it’s my birthday.", "ok": true },
+						{ "answer": "I’m happily because it’s my birthday.", "ok": false },
+						{ "answer": "I’m happy because is my birthday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "hot",
+					"summary": "having a high temperature",
+					"explain": {
+						"entryId": "hot",
+						"headword": "hot",
+						"pronunciation": { "display": "HOT", "ipaUK": "/hɒt/", "ipaUS": "/hɑːt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "hot",
+								"inflectionsLine": "hotter, hottest",
+								"synonyms": ["warm"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having a high temperature",
+										"examples": ["The coffee is too hot to drink."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The coffee is too hot to drink.", "ok": true },
+						{ "answer": "The coffee is too hot for drink.", "ok": false },
+						{ "answer": "The coffee is too hot to drinking.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "if",
+					"summary": "used to say a condition (something must happen first)",
+					"explain": {
+						"entryId": "if",
+						"headword": "if",
+						"pronunciation": { "display": "IF", "ipaUK": "/ɪf/", "ipaUS": "/ɪf/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "if",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to talk about a possible situation or condition",
+										"examples": ["If it rains, we will stay at home."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "If it rains, we will stay at home.", "ok": true },
+						{ "answer": "If it will rains, we stay at home.", "ok": false },
+						{ "answer": "If rains it, we will stay at home.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "in",
+					"summary": "inside a place",
+					"explain": {
+						"entryId": "in",
+						"headword": "in",
+						"pronunciation": { "display": "IN", "ipaUK": "/ɪn/", "ipaUS": "/ɪn/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "in",
+								"inflectionsLine": null,
+								"synonyms": ["inside"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "inside a place",
+										"examples": ["My keys are in my bag."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "My keys are in my bag.", "ok": true },
+						{ "answer": "My keys are on my bag.", "ok": false },
+						{ "answer": "My keys are in the my bag.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "in front of",
+					"summary": "in the position before something",
+					"explain": {
+						"entryId": "in front of",
+						"headword": "in front of",
+						"pronunciation": { "display": "in FRUNT uhv", "ipaUK": "/ɪn ˈfrʌnt əv/", "ipaUS": "/ɪn ˈfrʌnt əv/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "in front of",
+								"inflectionsLine": null,
+								"synonyms": ["before"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in the position before something",
+										"examples": ["The bus stop is in front of the bank."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The bus stop is in front of the bank.", "ok": true },
+						{ "answer": "The bus stop is in front the bank.", "ok": false },
+						{ "answer": "The bus stop is in the front of bank.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "into",
+					"summary": "to the inside of a place",
+					"explain": {
+						"entryId": "into",
+						"headword": "into",
+						"pronunciation": { "display": "IN-too", "ipaUK": "/ˈɪntuː/", "ipaUS": "/ˈɪntuː/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "into",
+								"inflectionsLine": null,
+								"synonyms": ["inside"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to the inside of a place",
+										"examples": ["She walked into the room quietly."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She walked into the room quietly.", "ok": true },
+						{ "answer": "She walked in the room quietly.", "ok": false },
+						{ "answer": "She walked into to the room quietly.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

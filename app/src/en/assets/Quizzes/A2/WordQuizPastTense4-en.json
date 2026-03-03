@@ -1,0 +1,277 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizPastTense4-en",
+  "title": "Past Tense",
+  "updatedDate": 0,
+  "data": [
+	{
+	  "title": "Choose the sentence that uses the word correctly.",
+	  "description": "Past tense forms",
+	  "sortorder": 1,
+	  "sections": [
+		{
+		  "title": "",
+		  "page": 1,
+		  "question": "went",
+		  "summary": "past tense of go",
+		  "explain": {
+			"entryId": "went",
+			"headword": "went",
+			"pronunciation": { "display": "WENT", "ipaUK": "/went/", "ipaUS": "/went/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "past tense",
+				"headwordLine": "went",
+				"inflectionsLine": "past of go",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "past tense of go",
+					"examples": ["We went to the cinema last night."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "We went to the cinema last night.", "ok": true },
+			{ "answer": "We go to the cinema last night.", "ok": false },
+			{ "answer": "We gone to the cinema last night.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 2,
+		  "question": "will",
+		  "summary": "used to talk about the future",
+		  "explain": {
+			"entryId": "will",
+			"headword": "will",
+			"pronunciation": { "display": "WIL", "ipaUK": "/wɪl/", "ipaUS": "/wɪl/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "modal verb",
+				"grammarType": "modal",
+				"headwordLine": "will",
+				"inflectionsLine": null,
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "used to talk about future actions",
+					"examples": ["I will call you tomorrow."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "will",
+				"inflectionsLine": "wills",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a legal document that says who gets your money after you die",
+					"examples": ["He wrote his will last year."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I will call you tomorrow.", "ok": true },
+			{ "answer": "I will called you tomorrow.", "ok": false },
+			{ "answer": "I will calling you tomorrow.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 3,
+		  "question": "wish",
+		  "summary": "to want something to happen",
+		  "explain": {
+			"entryId": "wish",
+			"headword": "wish",
+			"pronunciation": { "display": "WISH", "ipaUK": "/wɪʃ/", "ipaUS": "/wɪʃ/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "wish",
+				"inflectionsLine": "wishes, wishing, wished",
+				"synonyms": ["hope"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to want something to happen",
+					"examples": ["I wish you a happy birthday."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "wish",
+				"inflectionsLine": "wishes",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a desire for something to happen",
+					"examples": ["She made a wish on her birthday."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I wish you a happy birthday.", "ok": true },
+			{ "answer": "I wishing you a happy birthday.", "ok": false },
+			{ "answer": "I wished you a happy birthday tomorrow.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 4,
+		  "question": "work",
+		  "summary": "to do a job or activity",
+		  "explain": {
+			"entryId": "work",
+			"headword": "work",
+			"pronunciation": { "display": "WERK", "ipaUK": "/wɜːk/", "ipaUS": "/wɜːrk/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "work",
+				"inflectionsLine": "works, working, worked",
+				"synonyms": ["do a job"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to do a job or activity",
+					"examples": ["She worked late yesterday."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "work",
+				"inflectionsLine": "work",
+				"synonyms": ["job"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a job or task",
+					"examples": ["I have a lot of work today."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She worked late yesterday.", "ok": true },
+			{ "answer": "She work late yesterday.", "ok": false },
+			{ "answer": "She working late yesterday.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 5,
+		  "question": "write",
+		  "summary": "to make words on paper or a screen",
+		  "explain": {
+			"entryId": "write",
+			"headword": "write",
+			"pronunciation": { "display": "RYT", "ipaUK": "/raɪt/", "ipaUS": "/raɪt/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "write",
+				"inflectionsLine": "writes, writing, wrote, written",
+				"synonyms": ["record"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to make words on paper or a screen",
+					"examples": ["I wrote an email yesterday."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I wrote an email yesterday.", "ok": true },
+			{ "answer": "I write an email yesterday.", "ok": false },
+			{ "answer": "I written an email yesterday.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 6,
+		  "question": "wrote",
+		  "summary": "past tense of write",
+		  "explain": {
+			"entryId": "wrote",
+			"headword": "wrote",
+			"pronunciation": { "display": "ROHT", "ipaUK": "/rəʊt/", "ipaUS": "/roʊt/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "past tense",
+				"headwordLine": "wrote",
+				"inflectionsLine": "past of write",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "past tense of write",
+					"examples": ["She wrote a letter last week."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She wrote a letter last week.", "ok": true },
+			{ "answer": "She write a letter last week.", "ok": false },
+			{ "answer": "She written a letter last week.", "ok": false }
+		  ]
+		}
+	  ]
+	}
+  ]
+}

@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.reference
+package com.goodstadt.john.language.exams.screens.reference.VocabQuiz
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -63,6 +63,9 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.reference.InfoButtonRow
+import com.goodstadt.john.language.exams.screens.reference.WordQuizInfoBottomSheetView
+import com.goodstadt.john.language.exams.screens.reference.dotColor
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor

@@ -13,11 +13,11 @@
         {
           "title": "",
           "page": 1,
-          "question": "RL",
+          "question": "URL",
           "summary": "short for “real life”, used in online conversations",
           "explain": {
-            "entryId": "rl",
-            "headword": "RL",
+            "entryId": "url",
+            "headword": "URL",
             "pronunciation": {
               "display": "",
               "ipaUK": null,
@@ -34,14 +34,14 @@
                 "headwordLine": null,
                 "inflectionsLine": null,
                 "synonyms": [
-                  "real life"
+                  "Universal Resource Locator"
                 ],
                 "senses": [
                   {
                     "senseNumber": 1,
-                    "definition": "short for “real life”, used in online conversations",
+                    "definition": "The address of a webpage or other resource on the internet.",
                     "examples": [
-                      "RL stands for 'real life' in online conversations."
+                      "Did I copy the URL and paste it into the chat?"
                     ]
                   }
                 ]

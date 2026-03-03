@@ -1,0 +1,584 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizFoodandDrink1-en",
+  "title": "Food and Drink",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Food and Drink",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "bread",
+          "page": 1,
+          "question": "bread",
+          "summary": "a food made from flour, water, and yeast, mixed and baked in an oven",
+          "explain": {
+            "entryId": "bread",
+            "headword": "bread",
+            "pronunciation": {
+              "display": "bred",
+              "ipaUK": "/brɛd/",
+              "ipaUS": "/brɛd/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "bread",
+                "inflectionsLine": null,
+                "synonyms": ["loaf", "roll", "baguette"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a common food made from flour, water, and usually yeast mixed together and then baked",
+                    "examples": [
+                      "She bought a fresh loaf of bread from the bakery this morning.",
+                      "He eats bread and butter for breakfast every day."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She bought a fresh loaf of bread from the bakery this morning.",
+              "ok": true
+            },
+            {
+              "answer": "He drank a warm cup of bread before going to bed.",
+              "ok": false
+            },
+            {
+              "answer": "She poured the bread into a glass and drank it quickly.",
+              "ok": false
+            },
+            {
+              "answer": "He grew bread in his garden all summer long.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "breakfast",
+          "page": 2,
+          "question": "breakfast",
+          "summary": "the first meal of the day, eaten in the morning",
+          "explain": {
+            "entryId": "breakfast",
+            "headword": "breakfast",
+            "pronunciation": {
+              "display": "BREK-fust",
+              "ipaUK": "/ˈbrɛkfəst/",
+              "ipaUS": "/ˈbrɛkfəst/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "breakfast",
+                "inflectionsLine": "breakfasts",
+                "synonyms": ["morning meal", "first meal", "brunch"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the first meal of the day, eaten in the morning",
+                    "examples": [
+                      "She always has a bowl of cereal for breakfast before going to school.",
+                      "He cooked eggs and toast for breakfast on Saturday morning."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She has a bowl of cereal and a glass of juice for breakfast every morning.",
+              "ok": true
+            },
+            {
+              "answer": "He had breakfast at midnight when he came home very late.",
+              "ok": false
+            },
+            {
+              "answer": "She made breakfast in the bathroom before leaving for work.",
+              "ok": false
+            },
+            {
+              "answer": "The restaurant served breakfast at three o'clock in the afternoon.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "coffee",
+          "page": 3,
+          "question": "coffee",
+          "summary": "a hot drink made from roasted coffee beans, or a cup of this drink",
+          "explain": {
+            "entryId": "coffee",
+            "headword": "coffee",
+            "pronunciation": {
+              "display": "KOF-ee",
+              "ipaUK": "/ˈkɒfi/",
+              "ipaUS": "/ˈkɔːfi/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "coffee",
+                "inflectionsLine": "coffees",
+                "synonyms": ["espresso", "latte", "brew"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a hot drink made from ground roasted coffee beans, or a cup of this drink",
+                    "examples": [
+                      "She drinks two cups of coffee every morning to help her wake up.",
+                      "He ordered a coffee and a sandwich at the café."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She made a cup of coffee and sat down to read the newspaper.",
+              "ok": true
+            },
+            {
+              "answer": "He ate a large bowl of hot coffee for his breakfast.",
+              "ok": false
+            },
+            {
+              "answer": "She put coffee on her toast every morning instead of butter.",
+              "ok": false
+            },
+            {
+              "answer": "He cooked the coffee in the oven for thirty minutes at 200 degrees.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "dinner",
+          "page": 4,
+          "question": "dinner",
+          "summary": "the main meal of the day, usually eaten in the evening",
+          "explain": {
+            "entryId": "dinner",
+            "headword": "dinner",
+            "pronunciation": {
+              "display": "DIN-uh",
+              "ipaUK": "/ˈdɪnə/",
+              "ipaUS": "/ˈdɪnər/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "dinner",
+                "inflectionsLine": "dinners",
+                "synonyms": ["supper", "evening meal", "main meal"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the main meal of the day, usually eaten in the evening",
+                    "examples": [
+                      "The family sat down together for dinner at seven o'clock.",
+                      "She cooked a big dinner for all the family on Sunday."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The family sat down together for dinner at seven o'clock in the evening.",
+              "ok": true
+            },
+            {
+              "answer": "She ate dinner at six o'clock in the morning before going to school.",
+              "ok": false
+            },
+            {
+              "answer": "He cooked dinner in the bathroom while his wife set the table.",
+              "ok": false
+            },
+            {
+              "answer": "She had dinner in a glass with some ice and a straw.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "fish",
+          "page": 5,
+          "question": "fish",
+          "summary": "an animal that lives in water, or the flesh of this animal used as food",
+          "explain": {
+            "entryId": "fish",
+            "headword": "fish",
+            "pronunciation": {
+              "display": "fish",
+              "ipaUK": "/fɪʃ/",
+              "ipaUS": "/fɪʃ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "fish",
+                "inflectionsLine": "fish",
+                "synonyms": ["seafood", "fillet", "catch"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an animal that lives and swims in water and breathes through gills",
+                    "examples": [
+                      "She saw many colourful fish swimming in the sea.",
+                      "He keeps tropical fish in a large tank in his living room."
+                    ]
+                  },
+                  {
+                    "senseNumber": 2,
+                    "definition": "the flesh of a fish used as food",
+                    "examples": [
+                      "She cooked fish and vegetables for dinner on Friday evening.",
+                      "He ordered grilled fish and chips at the restaurant."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She cooked fish and vegetables for dinner on Friday evening.",
+              "ok": true
+            },
+            {
+              "answer": "He drank a cold glass of fresh fish after his long run.",
+              "ok": false
+            },
+            {
+              "answer": "She put fish in her coffee to make it taste better.",
+              "ok": false
+            },
+            {
+              "answer": "He planted fish in the garden to grow food for the winter.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "fruit",
+          "page": 6,
+          "question": "fruit",
+          "summary": "the sweet part of a plant that contains seeds and can be eaten",
+          "explain": {
+            "entryId": "fruit",
+            "headword": "fruit",
+            "pronunciation": {
+              "display": "froot",
+              "ipaUK": "/fruːt/",
+              "ipaUS": "/fruːt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "fruit",
+                "inflectionsLine": "fruit",
+                "synonyms": ["produce", "berries", "crop"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the part of a plant that contains seeds and can be eaten, usually sweet",
+                    "examples": [
+                      "She eats a piece of fruit every day to stay healthy.",
+                      "Apples, bananas, and oranges are all types of fruit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She eats fresh fruit every day to stay healthy.",
+              "ok": true
+            },
+            {
+              "answer": "He drinks fresh fruit every morning instead of cereal.",
+              "ok": false
+            },
+            {
+              "answer": "She poured fruit into the kettle to make a hot drink.",
+              "ok": false
+            },
+            {
+              "answer": "He grew fruit in a glass of water on the kitchen table.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "juice",
+          "page": 7,
+          "question": "juice",
+          "summary": "the liquid that comes from fruit or vegetables",
+          "explain": {
+            "entryId": "juice",
+            "headword": "juice",
+            "pronunciation": {
+              "display": "joos",
+              "ipaUK": "/dʒuːs/",
+              "ipaUS": "/dʒuːs/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "juice",
+                "inflectionsLine": "juices",
+                "synonyms": ["drink", "nectar", "beverage"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the liquid that comes from fruit or vegetables, or a glass of this",
+                    "examples": [
+                      "She drank a glass of orange juice with her breakfast.",
+                      "He makes fresh juice every morning using apples and carrots."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She drank a glass of orange juice with her breakfast.",
+              "ok": true
+            },
+            {
+              "answer": "He ate a large plate of juice for lunch with some bread.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked juice in the oven for twenty minutes until it was ready.",
+              "ok": false
+            },
+            {
+              "answer": "He spread juice on his toast every morning instead of jam.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "lunch",
+          "page": 8,
+          "question": "lunch",
+          "summary": "a meal eaten in the middle of the day",
+          "explain": {
+            "entryId": "lunch",
+            "headword": "lunch",
+            "pronunciation": {
+              "display": "luntch",
+              "ipaUK": "/lʌntʃ/",
+              "ipaUS": "/lʌntʃ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "lunch",
+                "inflectionsLine": "lunches",
+                "synonyms": ["midday meal", "luncheon", "noon meal"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a meal eaten in the middle of the day",
+                    "examples": [
+                      "She usually has a sandwich and some fruit for lunch at work.",
+                      "He met his friend for lunch at a café in the city centre."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She usually has a sandwich and some fruit for lunch at work.",
+              "ok": true
+            },
+            {
+              "answer": "He ate lunch at midnight when he came home from the party.",
+              "ok": false
+            },
+            {
+              "answer": "She made lunch in the bathroom before going to the office.",
+              "ok": false
+            },
+            {
+              "answer": "He drank his lunch from a big mug and added two spoons of sugar.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "meat",
+          "page": 9,
+          "question": "meat",
+          "summary": "the flesh of an animal or bird eaten as food",
+          "explain": {
+            "entryId": "meat",
+            "headword": "meat",
+            "pronunciation": {
+              "display": "meet",
+              "ipaUK": "/miːt/",
+              "ipaUS": "/miːt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "meat",
+                "inflectionsLine": null,
+                "synonyms": ["flesh", "protein", "poultry"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the flesh of an animal or bird that is eaten as food",
+                    "examples": [
+                      "She cooked meat and potatoes for dinner on Sunday.",
+                      "He doesn't eat meat because he is a vegetarian."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She cooked meat and vegetables for the family on Sunday afternoon.",
+              "ok": true
+            },
+            {
+              "answer": "He poured meat into his coffee cup to make a warm morning drink.",
+              "ok": false
+            },
+            {
+              "answer": "She drank a large bowl of cold meat after her swimming lesson.",
+              "ok": false
+            },
+            {
+              "answer": "He grew meat in his garden next to the carrots and tomatoes.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "milk",
+          "page": 10,
+          "question": "milk",
+          "summary": "a white liquid produced by cows or other animals that people drink and use in cooking",
+          "explain": {
+            "entryId": "milk",
+            "headword": "milk",
+            "pronunciation": {
+              "display": "milk",
+              "ipaUK": "/mɪlk/",
+              "ipaUS": "/mɪlk/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "milk",
+                "inflectionsLine": null,
+                "synonyms": ["dairy", "cream", "whole milk"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a white liquid produced by cows, goats, and other animals that people drink and use in cooking",
+                    "examples": [
+                      "She pours milk into her cereal every morning before school.",
+                      "He adds milk and sugar to his tea."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She pours milk over her cereal every morning before going to school.",
+              "ok": true
+            },
+            {
+              "answer": "He ate a large piece of cold milk for his afternoon snack.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked milk in the oven for an hour until it turned golden brown.",
+              "ok": false
+            },
+            {
+              "answer": "He spread cold milk on his toast every morning instead of butter.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

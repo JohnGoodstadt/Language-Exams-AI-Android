@@ -1,0 +1,474 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology1-en",
+	"title": "Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Technology",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "camera",
+					"page": 1,
+					"question": "camera",
+					"summary": "a device for taking photographs or recording videos",
+					"explain": {
+						"entryId": "camera",
+						"headword": "camera",
+						"pronunciation": { "display": "KAM-uh-ruh", "ipaUK": "/ˈkæmərə/", "ipaUS": "/ˈkæmərə/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "camera",
+								"inflectionsLine": "cameras",
+								"synonyms": ["camcorder", "digicam", "recorder"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a device for taking photographs or recording films and videos",
+										"examples": [
+											"She bought a new camera to take photos on her trip.",
+											"He used his camera to film the school play."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She used her camera to take photos at the beach.", "ok": true },
+						{ "answer": "He ate his camera for breakfast before going to school.", "ok": false },
+						{ "answer": "She drove her camera to work every morning.", "ok": false },
+						{ "answer": "They planted a camera in the garden to help the flowers grow.", "ok": false }
+					]
+				},
+				{
+					"title": "charger",
+					"page": 2,
+					"question": "charger",
+					"summary": "a device used to put electricity back into a battery",
+					"explain": {
+						"entryId": "charger",
+						"headword": "charger",
+						"pronunciation": { "display": "CHAR-jur", "ipaUK": "/ˈtʃɑːdʒə/", "ipaUS": "/ˈtʃɑːrdʒər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "charger",
+								"inflectionsLine": "chargers",
+								"synonyms": ["power adapter", "charging cable", "power lead"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a device used to put electricity back into the battery of a phone or other electronic device",
+										"examples": [
+											"I forgot my charger, so my phone battery is almost empty.",
+											"She keeps a spare charger at the office."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He plugged his charger into the wall to charge his phone.", "ok": true },
+						{ "answer": "She made a soup with the charger and some vegetables.", "ok": false },
+						{ "answer": "He planted a charger in the garden near the roses.", "ok": false },
+						{ "answer": "They drove a charger to the airport to catch their flight.", "ok": false }
+					]
+				},
+				{
+					"title": "computer",
+					"page": 3,
+					"question": "computer",
+					"summary": "an electronic machine that can store, find, and process information",
+					"explain": {
+						"entryId": "computer",
+						"headword": "computer",
+						"pronunciation": { "display": "kum-PYOO-tur", "ipaUK": "/kəmˈpjuːtə/", "ipaUS": "/kəmˈpjuːtər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "computer",
+								"inflectionsLine": "computers",
+								"synonyms": ["PC", "desktop", "machine"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an electronic machine that can store, find, and process large amounts of information very quickly",
+										"examples": [
+											"She writes all her reports on the computer at her desk.",
+											"The school has a room full of computers for students to use."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She uses a computer at work to write emails and prepare reports.", "ok": true },
+						{ "answer": "He cooked the computer in the oven for dinner.", "ok": false },
+						{ "answer": "She watered the computer every morning to keep it healthy.", "ok": false },
+						{ "answer": "They swam across the computer to reach the other side.", "ok": false }
+					]
+				},
+				{
+					"title": "email",
+					"page": 4,
+					"question": "email",
+					"summary": "a message sent electronically from one person to another via the internet",
+					"explain": {
+						"entryId": "email",
+						"headword": "email",
+						"pronunciation": { "display": "EE-mayl", "ipaUK": "/ˈiːmeɪl/", "ipaUS": "/ˈiːmeɪl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "email",
+								"inflectionsLine": "emails",
+								"synonyms": ["message", "e-mail", "electronic mail"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a message sent electronically from one person to another via the internet",
+										"examples": [
+											"She sent an email to her colleague about the meeting.",
+											"Did you get my email about the new project?"
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "email",
+								"inflectionsLine": "emails, emailing, emailed",
+								"synonyms": ["message", "contact", "write to"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to send a message to someone using the internet",
+										"examples": [
+											"Please email me the report when it is ready.",
+											"He emailed his teacher to ask about the homework."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She sent an email to her manager with the finished report.", "ok": true },
+						{ "answer": "He cooked an email in the kitchen for his family.", "ok": false },
+						{ "answer": "She wore an email to the office party.", "ok": false },
+						{ "answer": "They planted an email in the garden next to the flowers.", "ok": false }
+					]
+				},
+				{
+					"title": "internet",
+					"page": 5,
+					"question": "internet",
+					"summary": "a global system of connected computers used to find information and communicate",
+					"explain": {
+						"entryId": "internet",
+						"headword": "internet",
+						"pronunciation": { "display": "IN-tur-net", "ipaUK": "/ˈɪntənet/", "ipaUS": "/ˈɪntərnet/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "uncountable noun",
+								"headwordLine": "the internet",
+								"inflectionsLine": "",
+								"synonyms": ["the web", "the net", "online"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a global system of connected computers that allows people to find information, communicate, and share files",
+										"examples": [
+											"She searches for recipes on the internet when she wants to try something new.",
+											"He uses the internet to video call his family abroad."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She uses the internet to search for information and watch videos.", "ok": true },
+						{ "answer": "He drinks the internet every morning with his breakfast.", "ok": false },
+						{ "answer": "She cooked the internet in a pot on the stove.", "ok": false },
+						{ "answer": "They planted the internet in the garden to help the plants grow.", "ok": false }
+					]
+				},
+				{
+					"title": "keyboard",
+					"page": 6,
+					"question": "keyboard",
+					"summary": "a set of keys on a computer used to type text and enter commands",
+					"explain": {
+						"entryId": "keyboard",
+						"headword": "keyboard",
+						"pronunciation": { "display": "KEE-bord", "ipaUK": "/ˈkiːbɔːd/", "ipaUS": "/ˈkiːbɔːrd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "keyboard",
+								"inflectionsLine": "keyboards",
+								"synonyms": ["keypad", "keys"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a set of keys on a computer or other device that you press to type text or enter commands",
+										"examples": [
+											"She types on her keyboard very quickly.",
+											"He spilled coffee on his keyboard and had to buy a new one."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She typed the report using her keyboard at her desk.", "ok": true },
+						{ "answer": "He drank a cup of keyboard with milk and sugar.", "ok": false },
+						{ "answer": "She planted a keyboard in the garden next to the tomatoes.", "ok": false },
+						{ "answer": "They cooked a keyboard in the oven for thirty minutes.", "ok": false }
+					]
+				},
+				{
+					"title": "mouse",
+					"page": 7,
+					"question": "mouse",
+					"summary": "a small device you move on a flat surface to control the cursor on a computer screen",
+					"explain": {
+						"entryId": "mouse",
+						"headword": "mouse",
+						"pronunciation": { "display": "MOWS", "ipaUK": "/maʊs/", "ipaUS": "/maʊs/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "mouse",
+								"inflectionsLine": "mice",
+								"synonyms": ["pointer device", "trackpad"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small device connected to a computer that you move across a flat surface to control what happens on the screen",
+										"examples": [
+											"He moved the mouse to click on the link.",
+											"Her mouse stopped working, so she used the touchpad instead."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He moved the mouse to click on the button on the screen.", "ok": true },
+						{ "answer": "She cooked the mouse in a pan with butter and garlic.", "ok": false },
+						{ "answer": "He swam across the mouse at the local sports centre.", "ok": false },
+						{ "answer": "They planted a mouse in the garden beside the roses.", "ok": false }
+					]
+				},
+				{
+					"title": "smartphone",
+					"page": 8,
+					"question": "smartphone",
+					"summary": "a mobile phone that can connect to the internet and has many computer functions",
+					"explain": {
+						"entryId": "smartphone",
+						"headword": "smartphone",
+						"pronunciation": { "display": "SMART-fohn", "ipaUK": "/ˈsmɑːtfəʊn/", "ipaUS": "/ˈsmɑːrtoʊn/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "smartphone",
+								"inflectionsLine": "smartphones",
+								"synonyms": ["mobile phone", "cell phone", "handset"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a mobile phone that can connect to the internet and perform many of the functions of a computer",
+										"examples": [
+											"She uses her smartphone to check emails and browse social media.",
+											"He downloaded a new app on his smartphone."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She used her smartphone to search the internet on the bus.", "ok": true },
+						{ "answer": "He ate his smartphone for breakfast with toast and eggs.", "ok": false },
+						{ "answer": "She planted her smartphone in the garden to charge it.", "ok": false },
+						{ "answer": "They cooked a smartphone in the microwave for five minutes.", "ok": false }
+					]
+				},
+				{
+					"title": "software",
+					"page": 9,
+					"question": "software",
+					"summary": "programs used by a computer to perform specific tasks",
+					"explain": {
+						"entryId": "software",
+						"headword": "software",
+						"pronunciation": { "display": "SOFT-wair", "ipaUK": "/ˈsɒftweə/", "ipaUS": "/ˈsɔːftweər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "uncountable noun",
+								"headwordLine": "software",
+								"inflectionsLine": "",
+								"synonyms": ["program", "application", "app"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the programs and other operating information used by a computer to perform specific tasks",
+										"examples": [
+											"The company uses special software to manage its accounts.",
+											"You need to update your software to fix the problem."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She installed new software on her computer to edit photos.", "ok": true },
+						{ "answer": "He ate the software for lunch with a glass of water.", "ok": false },
+						{ "answer": "She planted the software in the garden near the fence.", "ok": false },
+						{ "answer": "They cooked the software for dinner and served it with rice.", "ok": false }
+					]
+				},
+				{
+					"title": "tablet",
+					"page": 10,
+					"question": "tablet",
+					"summary": "a small flat portable computer that you control by touching the screen",
+					"explain": {
+						"entryId": "tablet",
+						"headword": "tablet",
+						"pronunciation": { "display": "TAB-lit", "ipaUK": "/ˈtæblɪt/", "ipaUS": "/ˈtæblɪt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "tablet",
+								"inflectionsLine": "tablets",
+								"synonyms": ["iPad", "touchscreen device", "pad"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small flat portable computer that you operate by touching the screen with your fingers",
+										"examples": [
+											"She reads books on her tablet before going to sleep.",
+											"He uses a tablet to watch videos and play games."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She draws and takes notes on her tablet in her art class.", "ok": true },
+						{ "answer": "He swam across the tablet at the community pool.", "ok": false },
+						{ "answer": "She planted a tablet in the garden to grow vegetables.", "ok": false },
+						{ "answer": "They cooked a tablet in the oven for the school lunch.", "ok": false }
+					]
+				},
+				{
+					"title": "website",
+					"page": 11,
+					"question": "website",
+					"summary": "a set of pages of information available on the internet about a particular subject",
+					"explain": {
+						"entryId": "website",
+						"headword": "website",
+						"pronunciation": { "display": "WEB-syt", "ipaUK": "/ˈwebsaɪt/", "ipaUS": "/ˈwebsaɪt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "website",
+								"inflectionsLine": "websites",
+								"synonyms": ["web page", "site", "page"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a set of pages of information available on the internet about a particular subject or organisation",
+										"examples": [
+											"She found the address of the museum on its website.",
+											"The company has a new website where customers can order online."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She visited the company's website to find information about the job.", "ok": true },
+						{ "answer": "He cooked a website for dinner and served it with salad.", "ok": false },
+						{ "answer": "She wore a website to the office party last Friday.", "ok": false },
+						{ "answer": "They planted a website in the garden and watered it every day.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

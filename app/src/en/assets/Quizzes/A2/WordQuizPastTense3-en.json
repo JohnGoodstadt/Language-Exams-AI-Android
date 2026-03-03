@@ -1,0 +1,376 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizPastTense3-en",
+  "title": "Past Tense",
+  "updatedDate": 0,
+  "data": [
+	{
+	  "title": "Choose the sentence that uses the word correctly.",
+	  "description": "Past tense forms",
+	  "sortorder": 1,
+	  "sections": [
+		{
+		  "title": "",
+		  "page": 1,
+		  "question": "plan",
+		  "summary": "to decide what you will do in the future",
+		  "explain": {
+			"entryId": "plan",
+			"headword": "plan",
+			"pronunciation": { "display": "PLAN", "ipaUK": "/plæn/", "ipaUS": "/plæn/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "plan",
+				"inflectionsLine": "plans, planning, planned",
+				"synonyms": ["prepare", "organise"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to decide in advance what you will do",
+					"examples": ["We planned our holiday last month."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "We planned our holiday last month.", "ok": true },
+			{ "answer": "We plan our holiday last month.", "ok": false },
+			{ "answer": "We planning our holiday last month.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 2,
+		  "question": "promise",
+		  "summary": "to say you will definitely do something",
+		  "explain": {
+			"entryId": "promise",
+			"headword": "promise",
+			"pronunciation": { "display": "PROM-is", "ipaUK": "/ˈprɒmɪs/", "ipaUS": "/ˈprɑːmɪs/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "promise",
+				"inflectionsLine": "promises, promising, promised",
+				"synonyms": ["swear"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to tell someone you will certainly do something",
+					"examples": ["She promised to call me yesterday."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She promised to call me yesterday.", "ok": true },
+			{ "answer": "She promise to call me yesterday.", "ok": false },
+			{ "answer": "She promising to call me yesterday.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 3,
+		  "question": "read",
+		  "summary": "to look at words and understand them",
+		  "explain": {
+			"entryId": "read",
+			"headword": "read",
+			"pronunciation": { "display": "RED (past)", "ipaUK": "/red/", "ipaUS": "/red/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "read",
+				"inflectionsLine": "reads, reading, read, read",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to look at words and understand them",
+					"examples": ["I read the book last night."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I read the book last night.", "ok": true },
+			{ "answer": "I readed the book last night.", "ok": false },
+			{ "answer": "I read the book tomorrow.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 4,
+		  "question": "run",
+		  "summary": "to move quickly on your feet",
+		  "explain": {
+			"entryId": "run",
+			"headword": "run",
+			"pronunciation": { "display": "RAN (past)", "ipaUK": "/ræn/", "ipaUS": "/ræn/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "run",
+				"inflectionsLine": "runs, running, ran, run",
+				"synonyms": ["jog"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to move quickly using your legs",
+					"examples": ["He ran to school yesterday."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "He ran to school yesterday.", "ok": true },
+			{ "answer": "He run to school yesterday.", "ok": false },
+			{ "answer": "He running to school yesterday.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 5,
+		  "question": "said",
+		  "summary": "past tense of say",
+		  "explain": {
+			"entryId": "said",
+			"headword": "said",
+			"pronunciation": { "display": "SED", "ipaUK": "/sed/", "ipaUS": "/sed/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "past tense",
+				"headwordLine": "said",
+				"inflectionsLine": "past of say",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "past tense of say",
+					"examples": ["She said she was tired."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She said she was tired.", "ok": true },
+			{ "answer": "She say she was tired.", "ok": false },
+			{ "answer": "She saying she was tired.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 6,
+		  "question": "saw",
+		  "summary": "past tense of see",
+		  "explain": {
+			"entryId": "saw",
+			"headword": "saw",
+			"pronunciation": { "display": "SAW", "ipaUK": "/sɔː/", "ipaUS": "/sɔː/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "past tense",
+				"headwordLine": "saw",
+				"inflectionsLine": "past of see",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "past tense of see",
+					"examples": ["I saw him at the station."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I saw him at the station.", "ok": true },
+			{ "answer": "I see him at the station yesterday.", "ok": false },
+			{ "answer": "I seen him at the station.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 7,
+		  "question": "shall",
+		  "summary": "a modal verb used for suggestions or future plans",
+		  "explain": {
+			"entryId": "shall",
+			"headword": "shall",
+			"pronunciation": { "display": "SHAL", "ipaUK": "/ʃæl/", "ipaUS": "/ʃæl/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "modal verb",
+				"grammarType": "modal",
+				"headwordLine": "shall",
+				"inflectionsLine": null,
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "used for suggestions or future actions (formal)",
+					"examples": ["Shall we go home now?"]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "Shall we go home now?", "ok": true },
+			{ "answer": "Shall we went home now?", "ok": false },
+			{ "answer": "Shall we going home now?", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 8,
+		  "question": "study",
+		  "summary": "to spend time learning about something",
+		  "explain": {
+			"entryId": "study",
+			"headword": "study",
+			"pronunciation": { "display": "STUD-ee", "ipaUK": "/ˈstʌdi/", "ipaUS": "/ˈstʌdi/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "study",
+				"inflectionsLine": "studies, studying, studied",
+				"synonyms": ["learn"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to spend time learning about a subject",
+					"examples": ["She studied English last year."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She studied English last year.", "ok": true },
+			{ "answer": "She study English last year.", "ok": false },
+			{ "answer": "She studying English last year.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 9,
+		  "question": "took",
+		  "summary": "past tense of take",
+		  "explain": {
+			"entryId": "took",
+			"headword": "took",
+			"pronunciation": { "display": "TOOK", "ipaUK": "/tʊk/", "ipaUS": "/tʊk/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "past tense",
+				"headwordLine": "took",
+				"inflectionsLine": "past of take",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "past tense of take",
+					"examples": ["He took the bus yesterday."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "He took the bus yesterday.", "ok": true },
+			{ "answer": "He take the bus yesterday.", "ok": false },
+			{ "answer": "He taken the bus yesterday.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 10,
+		  "question": "was",
+		  "summary": "past tense of am and is",
+		  "explain": {
+			"entryId": "was",
+			"headword": "was",
+			"pronunciation": { "display": "WOZ", "ipaUK": "/wɒz/", "ipaUS": "/wʌz/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "past tense",
+				"headwordLine": "was",
+				"inflectionsLine": "past of am/is",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "past tense of am and is (for I/he/she/it)",
+					"examples": ["She was at home yesterday."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She was at home yesterday.", "ok": true },
+			{ "answer": "She were at home yesterday.", "ok": false },
+			{ "answer": "She is at home yesterday.", "ok": false }
+		  ]
+		}
+	  ]
+	}
+  ]
+}

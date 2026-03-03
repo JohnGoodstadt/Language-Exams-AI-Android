@@ -1,0 +1,576 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizNature1-en",
+  "title": "Nature",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Nature",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "animal",
+          "page": 1,
+          "question": "animal",
+          "summary": "a living creature that can move and feel, such as a dog, cat, or horse",
+          "explain": {
+            "entryId": "animal",
+            "headword": "animal",
+            "pronunciation": {
+              "display": "AN-ih-mul",
+              "ipaUK": "/ˈænɪməl/",
+              "ipaUS": "/ˈænɪməl/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "animal",
+                "inflectionsLine": "animals",
+                "synonyms": ["creature", "beast", "wildlife"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a living creature that can move and feel, not a plant or a human being",
+                    "examples": [
+                      "A dog is a popular animal that many people keep as a pet.",
+                      "They saw many different animals at the safari park."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "A dog is a popular animal that many families keep as a pet.",
+              "ok": true
+            },
+            {
+              "answer": "She drinks an animal every morning before going to school.",
+              "ok": false
+            },
+            {
+              "answer": "He planted an animal in his garden to grow food for the winter.",
+              "ok": false
+            },
+            {
+              "answer": "She drove her animal to work every day because the office was very far away.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "beach",
+          "page": 2,
+          "question": "beach",
+          "summary": "a flat area of sand or small stones next to the sea or a lake",
+          "explain": {
+            "entryId": "beach",
+            "headword": "beach",
+            "pronunciation": {
+              "display": "beech",
+              "ipaUK": "/biːtʃ/",
+              "ipaUS": "/biːtʃ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "beach",
+                "inflectionsLine": "beaches",
+                "synonyms": ["seaside", "shore", "coast"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a flat area of sand or small stones next to the sea or a lake, where people sit and relax",
+                    "examples": [
+                      "They spent the whole day at the beach swimming and playing in the sand.",
+                      "She loves going to the beach in summer to sunbathe and swim in the sea."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They spent the whole day at the beach swimming and building sandcastles.",
+              "ok": true
+            },
+            {
+              "answer": "She cooks all her meals at the beach because it has the best kitchen in town.",
+              "ok": false
+            },
+            {
+              "answer": "He goes to the beach every morning to buy fresh vegetables for dinner.",
+              "ok": false
+            },
+            {
+              "answer": "She uses the beach to travel quickly between cities for her work.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "bird",
+          "page": 3,
+          "question": "bird",
+          "summary": "an animal with wings and feathers that usually can fly",
+          "explain": {
+            "entryId": "bird",
+            "headword": "bird",
+            "pronunciation": {
+              "display": "burd",
+              "ipaUK": "/bɜːd/",
+              "ipaUS": "/bɜːrd/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "bird",
+                "inflectionsLine": "birds",
+                "synonyms": ["creature", "fowl", "feathered animal"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "an animal with wings, feathers, and a beak that usually can fly",
+                    "examples": [
+                      "She saw a beautiful bird sitting in the tree outside her window.",
+                      "Many birds fly south to warmer countries in winter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She saw a beautiful bird sitting in the tree outside her bedroom window.",
+              "ok": true
+            },
+            {
+              "answer": "He drank a cold bird before going to bed each evening.",
+              "ok": false
+            },
+            {
+              "answer": "She drove her bird to work every morning through the city traffic.",
+              "ok": false
+            },
+            {
+              "answer": "He planted a bird in the garden to grow food for the family.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "climate",
+          "page": 4,
+          "question": "climate",
+          "summary": "the typical weather conditions in a particular area or country",
+          "explain": {
+            "entryId": "climate",
+            "headword": "climate",
+            "pronunciation": {
+              "display": "KLY-mit",
+              "ipaUK": "/ˈklaɪmɪt/",
+              "ipaUS": "/ˈklaɪmɪt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "climate",
+                "inflectionsLine": "climates",
+                "synonyms": ["weather", "conditions", "atmosphere"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the typical weather conditions in a particular region or country",
+                    "examples": [
+                      "The climate in Spain is warm and sunny for most of the year.",
+                      "She moved to a warmer climate because she hated cold winters."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The climate in Spain is warm and sunny for most of the year.",
+              "ok": true
+            },
+            {
+              "answer": "She drank the climate before going out for her morning walk.",
+              "ok": false
+            },
+            {
+              "answer": "He cooked the climate in the oven to make the house feel warmer.",
+              "ok": false
+            },
+            {
+              "answer": "She wore the climate on her head to protect herself from the rain.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "flower",
+          "page": 5,
+          "question": "flower",
+          "summary": "the colourful part of a plant, or a plant that produces colourful blooms",
+          "explain": {
+            "entryId": "flower",
+            "headword": "flower",
+            "pronunciation": {
+              "display": "FLOW-uh",
+              "ipaUK": "/ˈflaʊə/",
+              "ipaUS": "/ˈflaʊər/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "flower",
+                "inflectionsLine": "flowers",
+                "synonyms": ["bloom", "blossom", "plant"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the colourful part of a plant that attracts insects, or the plant itself",
+                    "examples": [
+                      "She picked some flowers from the garden to put in a vase on the table.",
+                      "The park is full of beautiful flowers in the spring."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She picked some flowers from the garden to put in a vase on the table.",
+              "ok": true
+            },
+            {
+              "answer": "He drank a big cup of flowers before going to bed each night.",
+              "ok": false
+            },
+            {
+              "answer": "She drove her flowers to work because they were too heavy to carry.",
+              "ok": false
+            },
+            {
+              "answer": "He parked his flowers outside the office every morning before starting work.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "forest",
+          "page": 6,
+          "question": "forest",
+          "summary": "a large area of land covered with many trees",
+          "explain": {
+            "entryId": "forest",
+            "headword": "forest",
+            "pronunciation": {
+              "display": "FOR-ist",
+              "ipaUK": "/ˈfɒrɪst/",
+              "ipaUS": "/ˈfɔːrɪst/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "forest",
+                "inflectionsLine": "forests",
+                "synonyms": ["woods", "woodland", "jungle"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a large area of land covered with a thick growth of trees",
+                    "examples": [
+                      "They went for a long walk through the forest on Sunday afternoon.",
+                      "The forest is home to many animals, including deer and foxes."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They went for a long walk through the forest and saw many wild animals.",
+              "ok": true
+            },
+            {
+              "answer": "She cooks her meals in the forest every day because it has the best kitchen.",
+              "ok": false
+            },
+            {
+              "answer": "He takes the forest to work every morning instead of the bus.",
+              "ok": false
+            },
+            {
+              "answer": "She drinks the forest every morning to stay fit and healthy.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "mountain",
+          "page": 7,
+          "question": "mountain",
+          "summary": "a very high area of land with steep sides",
+          "explain": {
+            "entryId": "mountain",
+            "headword": "mountain",
+            "pronunciation": {
+              "display": "MOWN-tin",
+              "ipaUK": "/ˈmaʊntɪn/",
+              "ipaUS": "/ˈmaʊntən/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "mountain",
+                "inflectionsLine": "mountains",
+                "synonyms": ["hill", "peak", "summit"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a very high area of land with steep sides, higher than a hill",
+                    "examples": [
+                      "They climbed to the top of the mountain and had a beautiful view of the valley.",
+                      "She loves skiing in the mountains every winter."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They climbed to the top of the mountain and saw a beautiful view of the valley.",
+              "ok": true
+            },
+            {
+              "answer": "She drinks a mountain every morning before going to school.",
+              "ok": false
+            },
+            {
+              "answer": "He cooks a mountain for the family every Sunday evening for dinner.",
+              "ok": false
+            },
+            {
+              "answer": "She drove her mountain to the office every morning through the city.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "nature",
+          "page": 8,
+          "question": "nature",
+          "summary": "the physical world including plants, animals, land, and weather",
+          "explain": {
+            "entryId": "nature",
+            "headword": "nature",
+            "pronunciation": {
+              "display": "NAY-chuh",
+              "ipaUK": "/ˈneɪtʃə/",
+              "ipaUS": "/ˈneɪtʃər/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "nature",
+                "inflectionsLine": null,
+                "synonyms": ["environment", "wildlife", "natural world"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "all the plants, animals, land, and weather in the world that has not been made or changed by people",
+                    "examples": [
+                      "She loves nature and often goes for walks in the countryside.",
+                      "He took many beautiful photographs of nature on his holiday."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She loves nature and often goes for long walks in the countryside.",
+              "ok": true
+            },
+            {
+              "answer": "He drank nature every morning to give him more energy for the day.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked nature in the kitchen for the whole family on Sunday.",
+              "ok": false
+            },
+            {
+              "answer": "He drives nature to work every day because it is faster than walking.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "pollution",
+          "page": 9,
+          "question": "pollution",
+          "summary": "harmful substances that damage the air, water, or land",
+          "explain": {
+            "entryId": "pollution",
+            "headword": "pollution",
+            "pronunciation": {
+              "display": "puh-LOO-shun",
+              "ipaUK": "/pəˈluːʃən/",
+              "ipaUS": "/pəˈluːʃən/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "pollution",
+                "inflectionsLine": null,
+                "synonyms": ["contamination", "smog", "waste"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "harmful chemicals or other substances that damage the air, water, or land",
+                    "examples": [
+                      "Air pollution in the city is getting worse because of all the cars.",
+                      "The government is trying to reduce pollution by encouraging people to use public transport."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "Air pollution in the city is getting worse because of all the cars.",
+              "ok": true
+            },
+            {
+              "answer": "She drinks pollution every morning because it gives her energy.",
+              "ok": false
+            },
+            {
+              "answer": "He eats pollution for dinner because it is very good for his health.",
+              "ok": false
+            },
+            {
+              "answer": "She grows pollution in her garden because it looks very beautiful.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "recycling",
+          "page": 10,
+          "question": "recycling",
+          "summary": "the process of treating used materials so they can be used again",
+          "explain": {
+            "entryId": "recycling",
+            "headword": "recycling",
+            "pronunciation": {
+              "display": "ree-SY-kling",
+              "ipaUK": "/riːˈsaɪklɪŋ/",
+              "ipaUS": "/riːˈsaɪklɪŋ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "recycling",
+                "inflectionsLine": null,
+                "synonyms": ["reusing", "repurposing", "waste management"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the process of collecting and treating used materials such as glass, paper, and plastic so that they can be used again",
+                    "examples": [
+                      "She does recycling every week by putting glass, paper, and plastic in separate bins.",
+                      "Recycling is important because it helps reduce the amount of waste we produce."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She does recycling every week and puts glass, paper, and plastic in different bins.",
+              "ok": true
+            },
+            {
+              "answer": "He drinks recycling every morning to stay fit and full of energy.",
+              "ok": false
+            },
+            {
+              "answer": "She cooks recycling in the kitchen for her family every Sunday lunchtime.",
+              "ok": false
+            },
+            {
+              "answer": "He drives his recycling to work every morning instead of taking the bus.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

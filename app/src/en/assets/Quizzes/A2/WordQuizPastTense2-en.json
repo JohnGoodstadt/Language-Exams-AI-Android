@@ -1,0 +1,383 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPastTense2-en",
+	"title": "Past Tense",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Past Tense",
+			"sortorder": 1,
+
+
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "gave",
+					"summary": "past tense of give",
+					"explain": {
+						"entryId": "gave",
+						"headword": "gave",
+						"pronunciation": { "display": "GAYV", "ipaUK": "/ɡeɪv/", "ipaUS": "/ɡeɪv/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "past tense of give",
+								"headwordLine": "gave",
+								"inflectionsLine": null,
+								"synonyms": ["handed", "offered"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "past form of give",
+										"examples": ["She gave me a present for my birthday."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She gave me a present for my birthday.", "ok": true },
+						{ "answer": "She gived me a present for my birthday.", "ok": false },
+						{ "answer": "She has gave me a present yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "go",
+					"summary": "to move or travel somewhere",
+					"explain": {
+						"entryId": "go",
+						"headword": "go",
+						"pronunciation": { "display": "GOH", "ipaUK": "/ɡəʊ/", "ipaUS": "/ɡoʊ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "go",
+								"inflectionsLine": "goes, going, went, gone",
+								"synonyms": ["travel", "move"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to move or travel somewhere",
+										"examples": ["I go to school by bus."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I go to school by bus.", "ok": true },
+						{ "answer": "I goes to school by bus.", "ok": false },
+						{ "answer": "I am go to school by bus.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "going to",
+					"summary": "used to talk about future plans",
+					"explain": {
+						"entryId": "going to",
+						"headword": "going to",
+						"pronunciation": { "display": "GOH-ing too", "ipaUK": "/ˈɡəʊɪŋ tuː/", "ipaUS": "/ˈɡoʊɪŋ tuː/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb phrase",
+								"grammarType": "future form",
+								"headwordLine": "be going to",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to talk about future plans or intentions",
+										"examples": ["She is going to visit her grandmother tomorrow."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is going to visit her grandmother tomorrow.", "ok": true },
+						{ "answer": "She going to visit her grandmother tomorrow.", "ok": false },
+						{ "answer": "She is going visit her grandmother tomorrow.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "had",
+					"summary": "past tense of have",
+					"explain": {
+						"entryId": "had",
+						"headword": "had",
+						"pronunciation": { "display": "HAD", "ipaUK": "/hæd/", "ipaUS": "/hæd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "past tense of have",
+								"headwordLine": "had",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "past form of have",
+										"examples": ["We had dinner at six."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "We had dinner at six.", "ok": true },
+						{ "answer": "We haved dinner at six.", "ok": false },
+						{ "answer": "We have had dinner at six yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "have",
+					"summary": "to own or possess something",
+					"explain": {
+						"entryId": "have",
+						"headword": "have",
+						"pronunciation": { "display": "HAV", "ipaUK": "/hæv/", "ipaUS": "/hæv/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "have",
+								"inflectionsLine": "has, having, had",
+								"synonyms": ["own", "possess"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to own or possess something",
+										"examples": ["I have a new bicycle."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I have a new bicycle.", "ok": true },
+						{ "answer": "I has a new bicycle.", "ok": false },
+						{ "answer": "I am have a new bicycle.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "hope",
+					"summary": "to want something good to happen",
+					"explain": {
+						"entryId": "hope",
+						"headword": "hope",
+						"pronunciation": { "display": "HOHP", "ipaUK": "/həʊp/", "ipaUS": "/hoʊp/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "hope",
+								"inflectionsLine": "hopes, hoping, hoped",
+								"synonyms": ["wish"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to want something good to happen",
+										"examples": ["I hope you feel better soon."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I hope you feel better soon.", "ok": true },
+						{ "answer": "I am hope you feel better soon.", "ok": false },
+						{ "answer": "I hope that you will feels better soon.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "intend",
+					"summary": "to plan or mean to do something",
+					"explain": {
+						"entryId": "intend",
+						"headword": "intend",
+						"pronunciation": { "display": "in-TEND", "ipaUK": "/ɪnˈtend/", "ipaUS": "/ɪnˈtend/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "intend",
+								"inflectionsLine": "intends, intending, intended",
+								"synonyms": ["plan", "mean"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to plan or mean to do something",
+										"examples": ["I intend to finish my homework tonight."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I intend to finish my homework tonight.", "ok": true },
+						{ "answer": "I intend finish my homework tonight.", "ok": false },
+						{ "answer": "I intended to finish my homework tonight yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "is",
+					"summary": "third person form of be",
+					"explain": {
+						"entryId": "is",
+						"headword": "is",
+						"pronunciation": { "display": "IZ", "ipaUK": "/ɪz/", "ipaUS": "/ɪz/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "present tense of be",
+								"headwordLine": "is",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used with he, she, or it in the present tense",
+										"examples": ["She is very happy today."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is very happy today.", "ok": true },
+						{ "answer": "She are very happy today.", "ok": false },
+						{ "answer": "She be very happy today.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "like",
+					"summary": "to enjoy or prefer something",
+					"explain": {
+						"entryId": "like",
+						"headword": "like",
+						"pronunciation": { "display": "LYK", "ipaUK": "/laɪk/", "ipaUS": "/laɪk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "like",
+								"inflectionsLine": "likes, liking, liked",
+								"synonyms": ["enjoy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to enjoy or prefer something",
+										"examples": ["I like chocolate ice cream."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I like chocolate ice cream.", "ok": true },
+						{ "answer": "I likes chocolate ice cream.", "ok": false },
+						{ "answer": "I am like chocolate ice cream.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "made",
+					"summary": "past tense of make",
+					"explain": {
+						"entryId": "made",
+						"headword": "made",
+						"pronunciation": { "display": "MAYD", "ipaUK": "/meɪd/", "ipaUS": "/meɪd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "past tense of make",
+								"headwordLine": "made",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "past form of make",
+										"examples": ["She made a cake for the party."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She made a cake for the party.", "ok": true },
+						{ "answer": "She maked a cake for the party.", "ok": false },
+						{ "answer": "She has made a cake yesterday.", "ok": false }
+					]
+				}
+			]
+
+
+
+
+
+		}
+	]
+}

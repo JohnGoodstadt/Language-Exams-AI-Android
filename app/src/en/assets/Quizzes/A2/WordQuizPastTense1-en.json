@@ -1,0 +1,452 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPastTense1-en",
+	"title": "Past Tense",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Past Tense",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "aim",
+					"page": 1,
+					"question": "aim",
+					"summary": "a goal or purpose; to try to achieve something",
+					"explain": {
+						"entryId": "aim",
+						"headword": "aim",
+						"pronunciation": { "display": "AYM", "ipaUK": "/eɪm/", "ipaUS": "/eɪm/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "aim",
+								"inflectionsLine": "aims",
+								"synonyms": ["goal", "objective", "purpose"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "something you want to achieve; a goal or purpose",
+										"examples": [
+											"Her aim is to pass all her exams with high marks this year.",
+											"The aim of the course is to improve your English."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "aim",
+								"inflectionsLine": "aims, aiming, aimed",
+								"synonyms": ["intend", "plan", "try"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to try to achieve something; to have something as a goal",
+										"examples": [
+											"She aims to finish the project before the deadline.",
+											"He aimed to arrive at the office before nine o'clock."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her aim is to pass all her exams with high marks this year.", "ok": true },
+						{ "answer": "He cooked an aim for dinner and served it with bread.", "ok": false },
+						{ "answer": "She bought two aims at the supermarket on Friday.", "ok": false },
+						{ "answer": "They planted an aim in the garden and watered it every day.", "ok": false }
+					]
+				},
+				{
+					"title": "am",
+					"page": 2,
+					"question": "am",
+					"summary": "the first person singular present form of the verb 'be', used after 'I'",
+					"explain": {
+						"entryId": "am",
+						"headword": "am",
+						"pronunciation": { "display": "AM", "ipaUK": "/æm/", "ipaUS": "/æm/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "am",
+								"inflectionsLine": "",
+								"synonyms": ["be", "exist"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the first person singular present tense form of 'be'; used only after the subject 'I'",
+										"examples": [
+											"I am very happy because today is my birthday.",
+											"I am a student at the local university."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I am very happy because today is my birthday.", "ok": true },
+						{ "answer": "She am very tired after the long train journey.", "ok": false },
+						{ "answer": "We am going to the cinema together tonight.", "ok": false },
+						{ "answer": "They am very talented students in the class.", "ok": false }
+					]
+				},
+				{
+					"title": "are",
+					"page": 3,
+					"question": "are",
+					"summary": "the second person and plural present form of the verb 'be'",
+					"explain": {
+						"entryId": "are",
+						"headword": "are",
+						"pronunciation": { "display": "AR", "ipaUK": "/ɑː/", "ipaUS": "/ɑːr/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb",
+								"headwordLine": "are",
+								"inflectionsLine": "",
+								"synonyms": ["be", "exist"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the present tense form of 'be', used after 'you', 'we', 'they', and plural nouns",
+										"examples": [
+											"You are very good at speaking English.",
+											"The students are working hard because the exam is tomorrow."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The students are working hard because the exam is tomorrow.", "ok": true },
+						{ "answer": "I are very excited about the school trip.", "ok": false },
+						{ "answer": "She are a student at the local university.", "ok": false },
+						{ "answer": "He are my best friend from primary school.", "ok": false }
+					]
+				},
+				{
+					"title": "ate",
+					"page": 4,
+					"question": "ate",
+					"summary": "past tense of eat; took food into the mouth and swallowed it",
+					"explain": {
+						"entryId": "ate",
+						"headword": "ate",
+						"pronunciation": { "display": "EHT", "ipaUK": "/et/", "ipaUS": "/eɪt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "ate (past tense of eat)",
+								"inflectionsLine": "",
+								"synonyms": ["consumed", "had", "swallowed"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "past tense of 'eat'; put food in the mouth and swallowed it",
+										"examples": [
+											"She ate a big bowl of soup for lunch yesterday.",
+											"He ate all his dinner and asked for more."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She ate a big bowl of soup for lunch yesterday.", "ok": true },
+						{ "answer": "He ate his bicycle to school this morning.", "ok": false },
+						{ "answer": "She ate to the park and played football with her friends.", "ok": false },
+						{ "answer": "They ate very loudly through the city centre.", "ok": false }
+					]
+				},
+				{
+					"title": "bought",
+					"page": 5,
+					"question": "bought",
+					"summary": "past tense of buy; paid money to get something",
+					"explain": {
+						"entryId": "bought",
+						"headword": "bought",
+						"pronunciation": { "display": "BAWT", "ipaUK": "/bɔːt/", "ipaUS": "/bɔːt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "bought (past tense of buy)",
+								"inflectionsLine": "",
+								"synonyms": ["purchased", "paid for", "acquired"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "past tense of 'buy'; obtained something by paying money for it",
+										"examples": [
+											"He bought some flowers for his mother on her birthday.",
+											"She bought a new coat because the weather was getting cold."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He bought some flowers for his mother on her birthday.", "ok": true },
+						{ "answer": "She bought to work by bus yesterday morning.", "ok": false },
+						{ "answer": "He bought very fast along the road to the station.", "ok": false },
+						{ "answer": "They bought in the swimming pool for an hour.", "ok": false }
+					]
+				},
+				{
+					"title": "decide",
+					"page": 6,
+					"question": "decide",
+					"summary": "to make a choice between two or more possibilities",
+					"explain": {
+						"entryId": "decide",
+						"headword": "decide",
+						"pronunciation": { "display": "dih-SYD", "ipaUK": "/dɪˈsaɪd/", "ipaUS": "/dɪˈsaɪd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "decide",
+								"inflectionsLine": "decides, deciding, decided",
+								"synonyms": ["choose", "determine", "resolve"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to think carefully about the different possibilities and choose one of them",
+										"examples": [
+											"She decided to study abroad to improve her English.",
+											"He decided to leave early because the traffic was very bad."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She decided to study abroad to improve her English.", "ok": true },
+						{ "answer": "He decided his car to the school every morning.", "ok": false },
+						{ "answer": "She decided very quickly along the road to the market.", "ok": false },
+						{ "answer": "They decided their dinner with a knife and fork.", "ok": false }
+					]
+				},
+				{
+					"title": "dream",
+					"page": 7,
+					"question": "dream",
+					"summary": "to have thoughts or images in your mind while sleeping; to wish for something",
+					"explain": {
+						"entryId": "dream",
+						"headword": "dream",
+						"pronunciation": { "display": "DREEM", "ipaUK": "/driːm/", "ipaUS": "/driːm/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "dream",
+								"inflectionsLine": "dreams, dreaming, dreamed/dreamt",
+								"synonyms": ["imagine", "wish", "fantasise"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to have a series of thoughts and images in your mind while sleeping; to hope for or wish for something",
+										"examples": [
+											"She dreams of travelling around the world one day.",
+											"He dreamed about being a pilot when he was a child."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "dream",
+								"inflectionsLine": "dreams",
+								"synonyms": ["wish", "ambition", "vision"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a series of events or images that your mind creates while you sleep; something you hope for",
+										"examples": [
+											"She had a very strange dream last night.",
+											"His dream is to become a professional footballer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She dreams of becoming a doctor and helping people one day.", "ok": true },
+						{ "answer": "He dreamed his bicycle to school last Tuesday morning.", "ok": false },
+						{ "answer": "She dreams the weather outside every morning.", "ok": false },
+						{ "answer": "They dreamed dinner at home every evening.", "ok": false }
+					]
+				},
+				{
+					"title": "drove",
+					"page": 8,
+					"question": "drove",
+					"summary": "past tense of drive; operated a vehicle and controlled its direction",
+					"explain": {
+						"entryId": "drove",
+						"headword": "drove",
+						"pronunciation": { "display": "DROHV", "ipaUK": "/drəʊv/", "ipaUS": "/droʊv/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "drove (past tense of drive)",
+								"inflectionsLine": "",
+								"synonyms": ["travelled by car", "operated", "steered"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "past tense of 'drive'; operated a vehicle and controlled its direction and speed",
+										"examples": [
+											"She drove her children to school because it was raining.",
+											"He drove to the airport early in the morning to catch his flight."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She drove her children to school because it was raining.", "ok": true },
+						{ "answer": "He drove a big dinner in the kitchen last night.", "ok": false },
+						{ "answer": "She drove very loudly at the party on Saturday evening.", "ok": false },
+						{ "answer": "They drove their homework before going to school.", "ok": false }
+					]
+				},
+				{
+					"title": "eat",
+					"page": 9,
+					"question": "eat",
+					"summary": "to put food in your mouth, chew it, and swallow it",
+					"explain": {
+						"entryId": "eat",
+						"headword": "eat",
+						"pronunciation": { "display": "EET", "ipaUK": "/iːt/", "ipaUS": "/iːt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "eat",
+								"inflectionsLine": "eats, eating, ate, eaten",
+								"synonyms": ["have", "consume", "feed on"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to put food into your mouth, chew it, and swallow it",
+										"examples": [
+											"She likes to eat fresh fruit and vegetables every day.",
+											"He eats lunch at his desk because he is very busy."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She likes to eat fresh fruit and vegetables every day.", "ok": true },
+						{ "answer": "He eats his car to school every morning.", "ok": false },
+						{ "answer": "She eats very fast to the market on Saturday afternoon.", "ok": false },
+						{ "answer": "They eat the music every evening at the concert.", "ok": false }
+					]
+				},
+				{
+					"title": "expect",
+					"page": 10,
+					"question": "expect",
+					"summary": "to think that something is likely to happen or that someone is likely to do something",
+					"explain": {
+						"entryId": "expect",
+						"headword": "expect",
+						"pronunciation": { "display": "ik-SPEKT", "ipaUK": "/ɪkˈspekt/", "ipaUS": "/ɪkˈspekt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "expect",
+								"inflectionsLine": "expects, expecting, expected",
+								"synonyms": ["anticipate", "predict", "think likely"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to think that something is likely to happen or that someone will do something",
+										"examples": [
+											"She expects to receive her exam results next week.",
+											"He expected the meeting to finish by lunchtime."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She expects to receive her exam results next week.", "ok": true },
+						{ "answer": "He expected his lunch with a fork and a knife.", "ok": false },
+						{ "answer": "She expects to school very quickly every morning.", "ok": false },
+						{ "answer": "They expected very loudly at the concert last night.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,114 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFoodandDrink2-en",
+	"title": "Food and Drink",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Food and Drink",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "vegetables",
+					"page": 1,
+					"question": "vegetables",
+					"summary": "plants or parts of plants that are eaten as food",
+					"explain": {
+						"entryId": "vegetables",
+						"headword": "vegetables",
+						"pronunciation": { "display": "VEJ-tuh-bulz", "ipaUK": "/ˈvedʒtəblz/", "ipaUS": "/ˈvedʒtəblz/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "vegetable",
+								"inflectionsLine": "vegetables",
+								"synonyms": ["greens", "produce", "veg"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "plants or parts of plants, such as carrots, potatoes, or onions, that are eaten as food",
+										"examples": [
+											"She cooked fresh vegetables for dinner and served them with rice.",
+											"Eating vegetables every day is very good for your health."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She cooked fresh vegetables for dinner and served them with rice.", "ok": true },
+						{ "answer": "He drank a hot cup of vegetables every morning before school.", "ok": false },
+						{ "answer": "She poured the vegetables into her glass and added some ice.", "ok": false },
+						{ "answer": "They spread vegetables on their toast instead of butter and jam.", "ok": false }
+					]
+				},
+				{
+					"title": "water",
+					"page": 2,
+					"question": "water",
+					"summary": "the clear liquid that falls as rain and is essential for all living things",
+					"explain": {
+						"entryId": "water",
+						"headword": "water",
+						"pronunciation": { "display": "WAW-tur", "ipaUK": "/ˈwɔːtə/", "ipaUS": "/ˈwɔːtər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "uncountable noun",
+								"headwordLine": "water",
+								"inflectionsLine": "",
+								"synonyms": ["liquid", "H₂O", "fluid"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a clear, colourless liquid with no smell or taste that falls as rain and is essential for all living things",
+										"examples": [
+											"She drank a glass of water because she was very thirsty.",
+											"He drinks eight glasses of water every day to stay healthy."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "water",
+								"inflectionsLine": "waters, watering, watered",
+								"synonyms": ["irrigate", "sprinkle", "moisten"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to pour water onto plants to help them grow",
+										"examples": [
+											"She waters the plants in her garden every morning.",
+											"He forgot to water the flowers and they died."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She drank a glass of water because she was very thirsty after her run.", "ok": true },
+						{ "answer": "He ate a large plate of cold water for his lunch.", "ok": false },
+						{ "answer": "She spread water on her toast every morning instead of butter.", "ok": false },
+						{ "answer": "He grew water in his garden to use for cooking dinner.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

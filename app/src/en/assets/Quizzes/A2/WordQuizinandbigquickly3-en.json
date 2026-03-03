@@ -1,0 +1,393 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizinandbigquickly3-en",
+	"title": "in and big quickly",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "in and big quickly",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "loudly",
+					"summary": "in a loud way",
+					"explain": {
+						"entryId": "loudly",
+						"headword": "loudly",
+						"pronunciation": { "display": "LOWD-lee", "ipaUK": "/ˈlaʊdli/", "ipaUS": "/ˈlaʊdli/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "loudly",
+								"inflectionsLine": null,
+								"synonyms": ["noisily"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in a loud way",
+										"examples": ["The music was playing loudly."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The music was playing loudly.", "ok": true },
+						{ "answer": "The music was playing loud.", "ok": false },
+						{ "answer": "The music loudly was playing.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "never",
+					"summary": "at no time; not ever",
+					"explain": {
+						"entryId": "never",
+						"headword": "never",
+						"pronunciation": { "display": "NEV-er", "ipaUK": "/ˈnevə/", "ipaUS": "/ˈnevər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "never",
+								"inflectionsLine": null,
+								"synonyms": ["not ever"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "at no time; not ever",
+										"examples": ["I never drink coffee at night."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I never drink coffee at night.", "ok": true },
+						{ "answer": "I don’t never drink coffee at night.", "ok": false },
+						{ "answer": "I never drink at night coffee.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "new",
+					"summary": "recently made or not used before",
+					"explain": {
+						"entryId": "new",
+						"headword": "new",
+						"pronunciation": { "display": "NYOO", "ipaUK": "/njuː/", "ipaUS": "/nuː/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "new",
+								"inflectionsLine": "newer, newest",
+								"synonyms": ["recent", "fresh"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "recently made or not used before",
+										"examples": ["I bought a new phone yesterday."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "I bought a new phone yesterday.", "ok": true },
+						{ "answer": "I bought new a phone yesterday.", "ok": false },
+						{ "answer": "I bought a news phone yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "next to",
+					"summary": "beside; very close to something",
+					"explain": {
+						"entryId": "next to",
+						"headword": "next to",
+						"pronunciation": { "display": "NEKST too", "ipaUK": "/ˌnekst ˈtuː/", "ipaUS": "/ˌnekst ˈtuː/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "next to",
+								"inflectionsLine": null,
+								"synonyms": ["beside", "near"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "beside; very close to something",
+										"examples": ["The pharmacy is next to the supermarket."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The pharmacy is next to the supermarket.", "ok": true },
+						{ "answer": "The pharmacy is next the supermarket.", "ok": false },
+						{ "answer": "The pharmacy is next to supermarket the.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "often",
+					"summary": "many times; regularly",
+					"explain": {
+						"entryId": "often",
+						"headword": "often",
+						"pronunciation": { "display": "OFF-en", "ipaUK": "/ˈɒf(ə)n/", "ipaUS": "/ˈɔːf(ə)n/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "often",
+								"inflectionsLine": null,
+								"synonyms": ["frequently", "regularly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "many times; regularly",
+										"examples": ["We often eat dinner at seven."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "We often eat dinner at seven.", "ok": true },
+						{ "answer": "We eat often dinner at seven.", "ok": false },
+						{ "answer": "We often eats dinner at seven.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "old",
+					"summary": "not new; having existed for a long time",
+					"explain": {
+						"entryId": "old",
+						"headword": "old",
+						"pronunciation": { "display": "OHLD", "ipaUK": "/əʊld/", "ipaUS": "/oʊld/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "old",
+								"inflectionsLine": "older, oldest",
+								"synonyms": ["not new", "aged"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not new; having existed for a long time",
+										"examples": ["This is an old photo of my grandparents."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "This is an old photo of my grandparents.", "ok": true },
+						{ "answer": "This is a old photo of my grandparents.", "ok": false },
+						{ "answer": "This is an old photos of my grandparents.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "on",
+					"summary": "touching the top surface of something",
+					"explain": {
+						"entryId": "on",
+						"headword": "on",
+						"pronunciation": { "display": "ON", "ipaUK": "/ɒn/", "ipaUS": "/ɑːn/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "on",
+								"inflectionsLine": null,
+								"synonyms": ["on top of"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "touching the top surface of something",
+										"examples": ["Your phone is on the table."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Your phone is on the table.", "ok": true },
+						{ "answer": "Your phone is in the table.", "ok": false },
+						{ "answer": "Your phone is on table the.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "or",
+					"summary": "used to give a choice between two things",
+					"explain": {
+						"entryId": "or",
+						"headword": "or",
+						"pronunciation": { "display": "OR", "ipaUK": "/ɔː/", "ipaUS": "/ɔːr/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "or",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to connect two options or choices",
+										"examples": ["Do you want tea or coffee?"]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Do you want tea or coffee?", "ok": true },
+						{ "answer": "Do you want tea but coffee?", "ok": false },
+						{ "answer": "Do you want tea or a coffee or?", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "out of",
+					"summary": "from inside something to the outside",
+					"explain": {
+						"entryId": "out of",
+						"headword": "out of",
+						"pronunciation": { "display": "OWT uhv", "ipaUK": "/ˈaʊt əv/", "ipaUS": "/ˈaʊt əv/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "out of",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "from inside something to the outside",
+										"examples": ["He took the keys out of his pocket."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He took the keys out of his pocket.", "ok": true },
+						{ "answer": "He took the keys out from his pocket.", "ok": false },
+						{ "answer": "He took out of the keys his pocket.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "over",
+					"summary": "above something or across it",
+					"explain": {
+						"entryId": "over",
+						"headword": "over",
+						"pronunciation": { "display": "OH-ver", "ipaUK": "/ˈəʊvə/", "ipaUS": "/ˈoʊvər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "over",
+								"inflectionsLine": null,
+								"synonyms": ["above", "across"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "above or across something",
+										"examples": ["The plane flew over the city."]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "over",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "finished",
+										"examples": ["The game is over now."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The plane flew over the city.", "ok": true },
+						{ "answer": "The plane flew above of the city.", "ok": false },
+						{ "answer": "The plane over flew the city.", "ok": false }
+					]
+				}
+			]
+
+
+		}
+	]
+}

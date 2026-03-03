@@ -1,0 +1,600 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizWeather1-en",
+  "title": "Weather",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Weather",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "autumn",
+          "page": 1,
+          "question": "autumn",
+          "summary": "the season after summer and before winter, when leaves fall from trees",
+          "explain": {
+            "entryId": "autumn",
+            "headword": "autumn",
+            "pronunciation": {
+              "display": "AW-tum",
+              "ipaUK": "/ˈɔːtəm/",
+              "ipaUS": "/ˈɔːtəm/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "autumn",
+                "inflectionsLine": "autumns",
+                "synonyms": ["fall", "harvest season", "fall season"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the season after summer and before winter, when the weather gets cooler and leaves fall from the trees",
+                    "examples": [
+                      "The leaves turn red and orange in autumn.",
+                      "She loves autumn because of the beautiful colours in the park."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The leaves turn red, yellow, and orange in autumn.",
+              "ok": true
+            },
+            {
+              "answer": "She wears a swimsuit every day in autumn because the weather is so hot.",
+              "ok": false
+            },
+            {
+              "answer": "He goes skiing every autumn because there is deep snow everywhere.",
+              "ok": false
+            },
+            {
+              "answer": "They spend every autumn on the beach because the days are long and warm.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "cloudy",
+          "page": 2,
+          "question": "cloudy",
+          "summary": "having a lot of clouds in the sky",
+          "explain": {
+            "entryId": "cloudy",
+            "headword": "cloudy",
+            "pronunciation": {
+              "display": "KLOW-dee",
+              "ipaUK": "/ˈklaʊdi/",
+              "ipaUS": "/ˈklaʊdi/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": "adjective",
+                "headwordLine": "cloudy",
+                "inflectionsLine": null,
+                "synonyms": ["overcast", "grey", "dull"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "with a lot of clouds in the sky so that the sun cannot be seen clearly",
+                    "examples": [
+                      "It was cloudy all day so they could not see the sun.",
+                      "The sky is very cloudy today, so it might rain later."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "It was cloudy all day so they stayed inside and watched a film.",
+              "ok": true
+            },
+            {
+              "answer": "She went sunbathing in the garden because it was such a lovely cloudy day.",
+              "ok": false
+            },
+            {
+              "answer": "He put on his sunglasses because it was very cloudy and bright outside.",
+              "ok": false
+            },
+            {
+              "answer": "They had a perfect day at the beach because it was cloudy and warm all day.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "cold",
+          "page": 3,
+          "question": "cold",
+          "summary": "having a low temperature; not warm",
+          "explain": {
+            "entryId": "cold",
+            "headword": "cold",
+            "pronunciation": {
+              "display": "kohld",
+              "ipaUK": "/kəʊld/",
+              "ipaUS": "/koʊld/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 2",
+                "pos": "adjective",
+                "grammarType": "adjective",
+                "headwordLine": "cold",
+                "inflectionsLine": null,
+                "synonyms": ["chilly", "freezing", "cool"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "having a low temperature; not warm",
+                    "examples": [
+                      "It was so cold outside that she wore her winter coat.",
+                      "The water in the lake was very cold, so nobody went swimming."
+                    ]
+                  }
+                ]
+              },
+              {
+                "ordinal": "2 of 2",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "cold",
+                "inflectionsLine": "colds",
+                "synonyms": ["illness", "chill", "flu"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a common illness that makes you sneeze and have a sore throat",
+                    "examples": [
+                      "She caught a cold after walking in the rain without a coat."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "It was so cold outside that she put on her hat, scarf, and gloves.",
+              "ok": true
+            },
+            {
+              "answer": "She wore a bikini to the beach because it was cold and perfect for sunbathing.",
+              "ok": false
+            },
+            {
+              "answer": "He turned on the fan because it was too cold in the room.",
+              "ok": false
+            },
+            {
+              "answer": "They opened all the windows because the room was cold and they wanted fresh air.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "hot",
+          "page": 4,
+          "question": "hot",
+          "summary": "having a high temperature; very warm",
+          "explain": {
+            "entryId": "hot",
+            "headword": "hot",
+            "pronunciation": {
+              "display": "hot",
+              "ipaUK": "/hɒt/",
+              "ipaUS": "/hɑːt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": "adjective",
+                "headwordLine": "hot",
+                "inflectionsLine": null,
+                "synonyms": ["warm", "scorching", "boiling"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "having a high temperature; feeling very warm",
+                    "examples": [
+                      "It was so hot that they went to the beach to cool down.",
+                      "The weather was hot and sunny all week during the summer holidays."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "It was so hot that they went to the beach to cool down.",
+              "ok": true
+            },
+            {
+              "answer": "She put on her thickest winter coat because it was so hot outside.",
+              "ok": false
+            },
+            {
+              "answer": "He turned on the heating because the room was too hot.",
+              "ok": false
+            },
+            {
+              "answer": "She wore her scarf and gloves because it was hot and she felt cold.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "rainy",
+          "page": 5,
+          "question": "rainy",
+          "summary": "having a lot of rain",
+          "explain": {
+            "entryId": "rainy",
+            "headword": "rainy",
+            "pronunciation": {
+              "display": "RAY-nee",
+              "ipaUK": "/ˈreɪni/",
+              "ipaUS": "/ˈreɪni/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": "adjective",
+                "headwordLine": "rainy",
+                "inflectionsLine": null,
+                "synonyms": ["wet", "showery", "drizzly"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "having a lot of rain",
+                    "examples": [
+                      "It was a rainy afternoon so they stayed inside and played board games.",
+                      "November is usually the rainiest month of the year in England."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "It was a rainy afternoon so they stayed inside and watched a film.",
+              "ok": true
+            },
+            {
+              "answer": "She wore her sunglasses because it was such a rainy, bright day.",
+              "ok": false
+            },
+            {
+              "answer": "They decided to have a picnic in the park because it was a rainy day.",
+              "ok": false
+            },
+            {
+              "answer": "He went sunbathing in the garden because it was a beautiful rainy day.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "snowy",
+          "page": 6,
+          "question": "snowy",
+          "summary": "covered with snow; having a lot of snow",
+          "explain": {
+            "entryId": "snowy",
+            "headword": "snowy",
+            "pronunciation": {
+              "display": "SNOH-ee",
+              "ipaUK": "/ˈsnəʊi/",
+              "ipaUS": "/ˈsnoʊi/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": "adjective",
+                "headwordLine": "snowy",
+                "inflectionsLine": null,
+                "synonyms": ["wintry", "white", "icy"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "covered with snow or having a lot of snow falling",
+                    "examples": [
+                      "The children were happy because it was a snowy day and they could build a snowman.",
+                      "The roads were dangerous because of the snowy conditions."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The children played outside all day because it was snowy and they built a snowman.",
+              "ok": true
+            },
+            {
+              "answer": "She wore her swimsuit to the beach because it was a perfect snowy summer day.",
+              "ok": false
+            },
+            {
+              "answer": "He went cycling in shorts and a t-shirt because it was snowy and warm.",
+              "ok": false
+            },
+            {
+              "answer": "They had a picnic in the garden because it was a beautiful snowy day.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "spring",
+          "page": 7,
+          "question": "spring",
+          "summary": "the season after winter and before summer, when plants begin to grow",
+          "explain": {
+            "entryId": "spring",
+            "headword": "spring",
+            "pronunciation": {
+              "display": "spring",
+              "ipaUK": "/sprɪŋ/",
+              "ipaUS": "/sprɪŋ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "spring",
+                "inflectionsLine": "springs",
+                "synonyms": ["springtime", "growing season", "blossom season"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the season after winter and before summer, when the weather gets warmer and plants start to grow",
+                    "examples": [
+                      "Flowers begin to bloom and the weather gets warmer in spring.",
+                      "She plants new flowers in her garden every spring."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The flowers begin to bloom and the days grow longer in spring.",
+              "ok": true
+            },
+            {
+              "answer": "She goes skiing every spring because there is so much fresh snow.",
+              "ok": false
+            },
+            {
+              "answer": "He wears his thick winter coat all through spring because it is bitterly cold.",
+              "ok": false
+            },
+            {
+              "answer": "They love spring because the days are very short and it gets dark at four o'clock.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "summer",
+          "page": 8,
+          "question": "summer",
+          "summary": "the hottest season of the year, between spring and autumn",
+          "explain": {
+            "entryId": "summer",
+            "headword": "summer",
+            "pronunciation": {
+              "display": "SUM-uh",
+              "ipaUK": "/ˈsʌmə/",
+              "ipaUS": "/ˈsʌmər/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "summer",
+                "inflectionsLine": "summers",
+                "synonyms": ["summertime", "holiday season", "warm season"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the hottest season of the year, between spring and autumn",
+                    "examples": [
+                      "They went to the beach every weekend in summer because the weather was so warm.",
+                      "She loves summer because of the long days and warm evenings."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They went to the beach every weekend in summer because the weather was so warm.",
+              "ok": true
+            },
+            {
+              "answer": "She puts on her thickest winter coat every summer because it is so cold outside.",
+              "ok": false
+            },
+            {
+              "answer": "He loves summer because the days are very short and it gets dark very early.",
+              "ok": false
+            },
+            {
+              "answer": "They go skiing in the mountains every summer because there is so much fresh snow.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "sunny",
+          "page": 9,
+          "question": "sunny",
+          "summary": "having a lot of bright light from the sun; not cloudy",
+          "explain": {
+            "entryId": "sunny",
+            "headword": "sunny",
+            "pronunciation": {
+              "display": "SUN-ee",
+              "ipaUK": "/ˈsʌni/",
+              "ipaUS": "/ˈsʌni/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "adjective",
+                "grammarType": "adjective",
+                "headwordLine": "sunny",
+                "inflectionsLine": null,
+                "synonyms": ["bright", "clear", "fine"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "having a lot of bright light from the sun; not cloudy or rainy",
+                    "examples": [
+                      "It was a beautiful sunny day so they had a picnic in the park.",
+                      "The forecast says it will be sunny and warm all weekend."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "It was a beautiful sunny day so they had a picnic in the park.",
+              "ok": true
+            },
+            {
+              "answer": "She took her umbrella because it was such a sunny day.",
+              "ok": false
+            },
+            {
+              "answer": "He wore his raincoat because it was very sunny and he did not want to get wet.",
+              "ok": false
+            },
+            {
+              "answer": "They stayed inside all day because the weather was too sunny and wet.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "temperature",
+          "page": 10,
+          "question": "temperature",
+          "summary": "a measure of how hot or cold something is, usually in degrees",
+          "explain": {
+            "entryId": "temperature",
+            "headword": "temperature",
+            "pronunciation": {
+              "display": "TEM-pruh-chuh",
+              "ipaUK": "/ˈtɛmprɪtʃə/",
+              "ipaUS": "/ˈtɛmprɪtʃər/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable and uncountable noun",
+                "headwordLine": "temperature",
+                "inflectionsLine": "temperatures",
+                "synonyms": ["heat", "degree", "warmth"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a measure of how hot or cold something is, expressed in degrees",
+                    "examples": [
+                      "The temperature was thirty degrees, so they stayed in the shade.",
+                      "Temperatures are expected to drop below zero tonight."
+                    ]
+                  },
+                  {
+                    "senseNumber": 2,
+                    "definition": "the level of heat in a person's body, used to check if they are ill",
+                    "examples": [
+                      "The nurse took his temperature and said he had a fever."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The temperature dropped to minus five degrees overnight and everything froze.",
+              "ok": true
+            },
+            {
+              "answer": "She drank the temperature to cool down on a very hot summer afternoon.",
+              "ok": false
+            },
+            {
+              "answer": "He wore the temperature on his head to keep warm in the cold winter weather.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked the temperature in the oven to make the room feel warmer.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

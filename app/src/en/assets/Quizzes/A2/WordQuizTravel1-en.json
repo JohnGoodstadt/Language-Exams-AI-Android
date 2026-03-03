@@ -1,0 +1,576 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizTravel1-en",
+  "title": "Travel",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Travel",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "airplane",
+          "page": 1,
+          "question": "airplane",
+          "summary": "a vehicle with wings and engines that flies through the air",
+          "explain": {
+            "entryId": "airplane",
+            "headword": "airplane",
+            "pronunciation": {
+              "display": "AIR-playn",
+              "ipaUK": "/ˈɛəpleɪn/",
+              "ipaUS": "/ˈɛrpleɪn/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "airplane",
+                "inflectionsLine": "airplanes",
+                "synonyms": ["plane", "aircraft", "jet"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a vehicle with wings and one or more engines that flies through the air carrying passengers or goods",
+                    "examples": [
+                      "She took an airplane from London to New York for her holiday.",
+                      "The airplane landed safely at the airport after a seven-hour flight."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She took an airplane from London to New York for her holiday.",
+              "ok": true
+            },
+            {
+              "answer": "He uses an airplane to go to the supermarket every Saturday morning.",
+              "ok": false
+            },
+            {
+              "answer": "She caught an airplane to cross the road to get to the park.",
+              "ok": false
+            },
+            {
+              "answer": "He parked his airplane outside his house every evening after work.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "airport",
+          "page": 2,
+          "question": "airport",
+          "summary": "a place where airplanes take off and land, with buildings for passengers",
+          "explain": {
+            "entryId": "airport",
+            "headword": "airport",
+            "pronunciation": {
+              "display": "AIR-port",
+              "ipaUK": "/ˈɛəpɔːt/",
+              "ipaUS": "/ˈɛrpɔːrt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "airport",
+                "inflectionsLine": "airports",
+                "synonyms": ["airfield", "terminal", "aerodrome"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a place where aeroplanes take off and land, with buildings where passengers wait",
+                    "examples": [
+                      "She arrived at the airport two hours before her flight.",
+                      "The airport was very busy because of the school holidays."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She arrived at the airport two hours before her flight departed.",
+              "ok": true
+            },
+            {
+              "answer": "He goes to the airport to buy fresh vegetables for dinner every week.",
+              "ok": false
+            },
+            {
+              "answer": "She goes to the airport to see the doctor about her sore throat.",
+              "ok": false
+            },
+            {
+              "answer": "He swims twenty laps at the airport every morning to keep fit.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "bicycle",
+          "page": 3,
+          "question": "bicycle",
+          "summary": "a vehicle with two wheels that you ride by pushing pedals with your feet",
+          "explain": {
+            "entryId": "bicycle",
+            "headword": "bicycle",
+            "pronunciation": {
+              "display": "BY-si-kul",
+              "ipaUK": "/ˈbaɪsɪkl/",
+              "ipaUS": "/ˈbaɪsɪkl/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "bicycle",
+                "inflectionsLine": "bicycles",
+                "synonyms": ["bike", "cycle", "pushbike"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a vehicle with two wheels that you ride by pushing the pedals with your feet",
+                    "examples": [
+                      "She rides her bicycle to work every morning because she lives close to the office.",
+                      "He bought a new bicycle to cycle along the river path at weekends."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She rides her bicycle to work every morning because she lives close to the office.",
+              "ok": true
+            },
+            {
+              "answer": "He uses his bicycle to fly to Paris for a business meeting.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked dinner on her bicycle while riding home from work.",
+              "ok": false
+            },
+            {
+              "answer": "He swims across the lake on his bicycle every summer weekend.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "bus",
+          "page": 4,
+          "question": "bus",
+          "summary": "a large road vehicle that carries passengers along a fixed route",
+          "explain": {
+            "entryId": "bus",
+            "headword": "bus",
+            "pronunciation": {
+              "display": "buss",
+              "ipaUK": "/bʌs/",
+              "ipaUS": "/bʌs/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "bus",
+                "inflectionsLine": "buses",
+                "synonyms": ["coach", "minibus", "double-decker"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a large road vehicle that carries passengers along a fixed route and stops at fixed places",
+                    "examples": [
+                      "She takes the bus to school every morning because she does not have a car.",
+                      "He missed the last bus and had to walk home in the rain."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She takes the bus to school every morning because she does not have a car.",
+              "ok": true
+            },
+            {
+              "answer": "He swims in the bus every morning to keep fit and stay healthy.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked the family dinner in the bus because it has the biggest kitchen.",
+              "ok": false
+            },
+            {
+              "answer": "He plants flowers in the bus to make his garden look more beautiful.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "car",
+          "page": 5,
+          "question": "car",
+          "summary": "a road vehicle with an engine, usually four wheels, for carrying a few people",
+          "explain": {
+            "entryId": "car",
+            "headword": "car",
+            "pronunciation": {
+              "display": "kar",
+              "ipaUK": "/kɑː/",
+              "ipaUS": "/kɑːr/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "car",
+                "inflectionsLine": "cars",
+                "synonyms": ["vehicle", "automobile", "motor"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a road vehicle with an engine and usually four wheels, used to carry a small number of people",
+                    "examples": [
+                      "She drives her car to work every day because the office is far from her house.",
+                      "He bought a second-hand car for five hundred pounds."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She drives her car to work every day because the office is far from her house.",
+              "ok": true
+            },
+            {
+              "answer": "He swims to work in his car every morning before breakfast.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked a big meal in her car for the whole family on Sunday.",
+              "ok": false
+            },
+            {
+              "answer": "He planted vegetables in his car because it had the most space.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "journey",
+          "page": 6,
+          "question": "journey",
+          "summary": "the act of travelling from one place to another",
+          "explain": {
+            "entryId": "journey",
+            "headword": "journey",
+            "pronunciation": {
+              "display": "JUR-nee",
+              "ipaUK": "/ˈdʒɜːni/",
+              "ipaUS": "/ˈdʒɜːrni/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "journey",
+                "inflectionsLine": "journeys",
+                "synonyms": ["trip", "travel", "voyage"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the act of travelling from one place to another, especially over a long distance",
+                    "examples": [
+                      "The journey from London to Edinburgh by train takes about four hours.",
+                      "She read a book during the long journey to keep herself busy."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The journey from London to Edinburgh by train takes about four hours.",
+              "ok": true
+            },
+            {
+              "answer": "She ate a big journey for lunch before going back to the office.",
+              "ok": false
+            },
+            {
+              "answer": "He drank his journey quickly before leaving the house that morning.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked a journey in the kitchen for the whole family on Sunday.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "luggage",
+          "page": 7,
+          "question": "luggage",
+          "summary": "the bags and suitcases you take with you when you travel",
+          "explain": {
+            "entryId": "luggage",
+            "headword": "luggage",
+            "pronunciation": {
+              "display": "LUG-ij",
+              "ipaUK": "/ˈlʌɡɪdʒ/",
+              "ipaUS": "/ˈlʌɡɪdʒ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "luggage",
+                "inflectionsLine": null,
+                "synonyms": ["baggage", "bags", "suitcases"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "bags, suitcases, and other containers that you take with you when you travel",
+                    "examples": [
+                      "She packed her luggage the night before her early morning flight.",
+                      "He had so much luggage that he needed help to carry it all."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She packed her luggage the night before her flight to make sure she had everything.",
+              "ok": true
+            },
+            {
+              "answer": "He drank his luggage quickly at the café before getting on the train.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked her luggage in the oven before leaving for the airport.",
+              "ok": false
+            },
+            {
+              "answer": "He grew luggage in his garden over the summer to prepare for his trip.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "map",
+          "page": 8,
+          "question": "map",
+          "summary": "a drawing that shows the features of an area, town, or country",
+          "explain": {
+            "entryId": "map",
+            "headword": "map",
+            "pronunciation": {
+              "display": "map",
+              "ipaUK": "/mæp/",
+              "ipaUS": "/mæp/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "map",
+                "inflectionsLine": "maps",
+                "synonyms": ["chart", "atlas", "guide"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a drawing or diagram that shows the roads, rivers, towns, and other features of an area",
+                    "examples": [
+                      "She used a map to find the way to the museum in the city.",
+                      "He looked at the map to plan the best route for the road trip."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She used a map to find her way to the museum in the city centre.",
+              "ok": true
+            },
+            {
+              "answer": "He drank his map before getting on the train to stay warm.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked the map in the oven for twenty minutes before dinner.",
+              "ok": false
+            },
+            {
+              "answer": "He ate his map at lunchtime because he was very hungry after the walk.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "station",
+          "page": 9,
+          "question": "station",
+          "summary": "a place where trains or buses stop to let passengers get on or off",
+          "explain": {
+            "entryId": "station",
+            "headword": "station",
+            "pronunciation": {
+              "display": "STAY-shun",
+              "ipaUK": "/ˈsteɪʃən/",
+              "ipaUS": "/ˈsteɪʃən/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "station",
+                "inflectionsLine": "stations",
+                "synonyms": ["terminal", "stop", "depot"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a place where trains or buses stop regularly so that passengers can get on or off",
+                    "examples": [
+                      "She went to the station to catch the eight o'clock train to London.",
+                      "He waited at the station for twenty minutes before the train arrived."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She went to the station to catch the eight o'clock train to London.",
+              "ok": true
+            },
+            {
+              "answer": "He goes to the station every Saturday to buy fresh vegetables for the week.",
+              "ok": false
+            },
+            {
+              "answer": "She swims in the station every morning to stay fit and healthy.",
+              "ok": false
+            },
+            {
+              "answer": "He cooks dinner at the station because it has the best kitchen in the area.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "taxi",
+          "page": 10,
+          "question": "taxi",
+          "summary": "a car with a driver that you pay to take you to a place",
+          "explain": {
+            "entryId": "taxi",
+            "headword": "taxi",
+            "pronunciation": {
+              "display": "TAK-see",
+              "ipaUK": "/ˈtæksi/",
+              "ipaUS": "/ˈtæksi/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "taxi",
+                "inflectionsLine": "taxis",
+                "synonyms": ["cab", "minicab", "ride"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a car with a driver that you pay to take you to a place you want to go",
+                    "examples": [
+                      "She took a taxi to the hotel because she had too much luggage to walk.",
+                      "He called a taxi because he missed the last bus home."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She took a taxi to the hotel because she had too much luggage to walk.",
+              "ok": true
+            },
+            {
+              "answer": "He went fishing in a taxi at the lake near his house on Sunday.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked dinner in a taxi for the whole family on a rainy evening.",
+              "ok": false
+            },
+            {
+              "answer": "He planted flowers in a taxi to make his garden look more beautiful.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

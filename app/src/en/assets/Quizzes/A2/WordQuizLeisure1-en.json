@@ -1,0 +1,593 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizLeisure1-en",
+  "title": "Leisure",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Leisure",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "cooking",
+          "page": 1,
+          "question": "cooking",
+          "summary": "the activity or skill of preparing and making food",
+          "explain": {
+            "entryId": "cooking",
+            "headword": "cooking",
+            "pronunciation": {
+              "display": "KOO-king",
+              "ipaUK": "/ˈkʊkɪŋ/",
+              "ipaUS": "/ˈkʊkɪŋ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "cooking",
+                "inflectionsLine": null,
+                "synonyms": ["food preparation", "cuisine", "baking"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity or skill of preparing and making food",
+                    "examples": [
+                      "She loves cooking and often tries new recipes at the weekend.",
+                      "He is very good at cooking and makes all the meals in the house."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She loves cooking and often tries new recipes at the weekend.",
+              "ok": true
+            },
+            {
+              "answer": "He does cooking every morning to keep fit and build strong muscles.",
+              "ok": false
+            },
+            {
+              "answer": "She went cooking in the mountains last weekend with her friends.",
+              "ok": false
+            },
+            {
+              "answer": "He uses cooking to travel from his house to the office every morning.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "dancing",
+          "page": 2,
+          "question": "dancing",
+          "summary": "the activity of moving your body to music in a rhythmic way",
+          "explain": {
+            "entryId": "dancing",
+            "headword": "dancing",
+            "pronunciation": {
+              "display": "DAHN-sing",
+              "ipaUK": "/ˈdɑːnsɪŋ/",
+              "ipaUS": "/ˈdænsɪŋ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "dancing",
+                "inflectionsLine": null,
+                "synonyms": ["movement", "choreography", "ballet"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity of moving your body in a rhythmic way, usually to music",
+                    "examples": [
+                      "She loves dancing and goes to salsa classes every Tuesday evening.",
+                      "Dancing is a great way to keep fit and have fun at the same time."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She loves dancing and goes to salsa classes every Tuesday evening.",
+              "ok": true
+            },
+            {
+              "answer": "He uses dancing to travel quickly between cities for his work.",
+              "ok": false
+            },
+            {
+              "answer": "She goes dancing at the river to catch fish at the weekends.",
+              "ok": false
+            },
+            {
+              "answer": "He does dancing in his garden every Sunday morning to grow vegetables.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "fishing",
+          "page": 3,
+          "question": "fishing",
+          "summary": "the sport or activity of trying to catch fish",
+          "explain": {
+            "entryId": "fishing",
+            "headword": "fishing",
+            "pronunciation": {
+              "display": "FISH-ing",
+              "ipaUK": "/ˈfɪʃɪŋ/",
+              "ipaUS": "/ˈfɪʃɪŋ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "fishing",
+                "inflectionsLine": null,
+                "synonyms": ["angling", "catching fish", "rod fishing"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the sport or activity of trying to catch fish, usually using a rod and line",
+                    "examples": [
+                      "He goes fishing at the river every Sunday morning with his father.",
+                      "Fishing is a very popular hobby in this part of the country."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He goes fishing at the river every Sunday morning with his father.",
+              "ok": true
+            },
+            {
+              "answer": "She goes fishing at the shopping centre every Saturday afternoon.",
+              "ok": false
+            },
+            {
+              "answer": "He does fishing every day to keep fit and build strong muscles.",
+              "ok": false
+            },
+            {
+              "answer": "She uses fishing to travel from her house to the office every day.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "gardening",
+          "page": 4,
+          "question": "gardening",
+          "summary": "the activity of growing and looking after plants in a garden",
+          "explain": {
+            "entryId": "gardening",
+            "headword": "gardening",
+            "pronunciation": {
+              "display": "GAR-dn-ing",
+              "ipaUK": "/ˈɡɑːdnɪŋ/",
+              "ipaUS": "/ˈɡɑːrdnɪŋ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "gardening",
+                "inflectionsLine": null,
+                "synonyms": ["growing", "planting", "horticulture"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity of growing flowers, vegetables, and other plants in a garden",
+                    "examples": [
+                      "She spends most of her weekends gardening and has beautiful flowers in her garden.",
+                      "He finds gardening very relaxing after a busy week at work."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She spends most of her weekends gardening and has beautiful flowers in her garden.",
+              "ok": true
+            },
+            {
+              "answer": "He goes gardening in the swimming pool every Saturday morning.",
+              "ok": false
+            },
+            {
+              "answer": "She does gardening every morning to build strong muscles and keep fit.",
+              "ok": false
+            },
+            {
+              "answer": "He uses gardening to travel to his office in the city every day.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "hiking",
+          "page": 5,
+          "question": "hiking",
+          "summary": "the activity of going for long walks in the countryside or mountains",
+          "explain": {
+            "entryId": "hiking",
+            "headword": "hiking",
+            "pronunciation": {
+              "display": "HYE-king",
+              "ipaUK": "/ˈhaɪkɪŋ/",
+              "ipaUS": "/ˈhaɪkɪŋ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "hiking",
+                "inflectionsLine": null,
+                "synonyms": ["trekking", "walking", "rambling"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity of going for long walks in the countryside, hills, or mountains",
+                    "examples": [
+                      "They love hiking and often walk in the mountains at the weekend.",
+                      "She bought special boots for hiking in the national park."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They love hiking and often walk in the mountains at the weekend.",
+              "ok": true
+            },
+            {
+              "answer": "She goes hiking in the swimming pool every morning before breakfast.",
+              "ok": false
+            },
+            {
+              "answer": "He does hiking at the river to catch fish on Sunday mornings.",
+              "ok": false
+            },
+            {
+              "answer": "She goes hiking in her kitchen every evening after dinner.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "music",
+          "page": 6,
+          "question": "music",
+          "summary": "sounds arranged in a pleasant way, or the activity of creating or performing these sounds",
+          "explain": {
+            "entryId": "music",
+            "headword": "music",
+            "pronunciation": {
+              "display": "MYOO-zik",
+              "ipaUK": "/ˈmjuːzɪk/",
+              "ipaUS": "/ˈmjuːzɪk/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "music",
+                "inflectionsLine": null,
+                "synonyms": ["melody", "song", "tune"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "sounds arranged in a pleasant or interesting way, or the activity of creating and performing these sounds",
+                    "examples": [
+                      "She listens to music every evening while she cooks dinner.",
+                      "He plays music in a band and performs at local concerts."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She listens to music every evening while she cooks dinner.",
+              "ok": true
+            },
+            {
+              "answer": "He eats music for breakfast every morning before school.",
+              "ok": false
+            },
+            {
+              "answer": "She drives to work in her music every morning.",
+              "ok": false
+            },
+            {
+              "answer": "He plants music in his garden to help his flowers grow better.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "painting",
+          "page": 7,
+          "question": "painting",
+          "summary": "the activity of creating pictures using paint; also a picture made with paint",
+          "explain": {
+            "entryId": "painting",
+            "headword": "painting",
+            "pronunciation": {
+              "display": "PAYN-ting",
+              "ipaUK": "/ˈpeɪntɪŋ/",
+              "ipaUS": "/ˈpeɪntɪŋ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 2",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "painting",
+                "inflectionsLine": null,
+                "synonyms": ["art", "drawing", "artwork"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity of creating pictures or covering surfaces using paint",
+                    "examples": [
+                      "She enjoys painting and has many pictures on the walls of her house.",
+                      "He takes a painting class every Saturday morning at the art school."
+                    ]
+                  }
+                ]
+              },
+              {
+                "ordinal": "2 of 2",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "painting",
+                "inflectionsLine": "paintings",
+                "synonyms": ["picture", "canvas", "artwork"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a picture that someone has made using paint",
+                    "examples": [
+                      "She has a beautiful painting of the sea on the wall of her bedroom."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She enjoys painting and takes art classes at the local community centre.",
+              "ok": true
+            },
+            {
+              "answer": "He uses painting to travel quickly to other countries for his holidays.",
+              "ok": false
+            },
+            {
+              "answer": "She goes painting in the swimming pool every Saturday morning.",
+              "ok": false
+            },
+            {
+              "answer": "He eats painting every day because it keeps him fit and healthy.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "photography",
+          "page": 8,
+          "question": "photography",
+          "summary": "the activity or art of taking photographs",
+          "explain": {
+            "entryId": "photography",
+            "headword": "photography",
+            "pronunciation": {
+              "display": "fuh-TOG-ruh-fee",
+              "ipaUK": "/fəˈtɒɡrəfi/",
+              "ipaUS": "/fəˈtɑːɡrəfi/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "photography",
+                "inflectionsLine": null,
+                "synonyms": ["picture-taking", "photo art", "snapping"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity or art of taking and producing photographs",
+                    "examples": [
+                      "She loves photography and always takes her camera on holiday.",
+                      "He studied photography at college and now works for a magazine."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She loves photography and always takes her camera on holiday.",
+              "ok": true
+            },
+            {
+              "answer": "He eats photography every morning before school to give him energy.",
+              "ok": false
+            },
+            {
+              "answer": "She uses photography to travel to other countries instead of taking a plane.",
+              "ok": false
+            },
+            {
+              "answer": "He plants photography in his garden to make it look more colourful.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "reading",
+          "page": 9,
+          "question": "reading",
+          "summary": "the activity of looking at and understanding written words",
+          "explain": {
+            "entryId": "reading",
+            "headword": "reading",
+            "pronunciation": {
+              "display": "REE-ding",
+              "ipaUK": "/ˈriːdɪŋ/",
+              "ipaUS": "/ˈriːdɪŋ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "uncountable noun",
+                "headwordLine": "reading",
+                "inflectionsLine": null,
+                "synonyms": ["studying", "browsing", "literature"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the activity of looking at and understanding written words in books, articles, or other texts",
+                    "examples": [
+                      "She loves reading and finishes a new book every week.",
+                      "He does a lot of reading in the evenings to help him relax."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She loves reading and finishes a new book every week.",
+              "ok": true
+            },
+            {
+              "answer": "He goes reading in the lake every summer with his fishing rod.",
+              "ok": false
+            },
+            {
+              "answer": "She uses reading to travel quickly between cities for her job.",
+              "ok": false
+            },
+            {
+              "answer": "He eats reading for breakfast every morning before going to school.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "sports",
+          "page": 10,
+          "question": "sports",
+          "summary": "physical activities or games with rules, done for exercise or competition",
+          "explain": {
+            "entryId": "sports",
+            "headword": "sports",
+            "pronunciation": {
+              "display": "sports",
+              "ipaUK": "/spɔːts/",
+              "ipaUS": "/spɔːrts/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "plural noun",
+                "headwordLine": "sports",
+                "inflectionsLine": null,
+                "synonyms": ["athletics", "games", "exercise"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "physical activities or games that people do for exercise, competition, or enjoyment",
+                    "examples": [
+                      "He loves sports and plays football and tennis every week.",
+                      "She tries to do sports at least three times a week to keep fit."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He loves sports and plays football and tennis every week.",
+              "ok": true
+            },
+            {
+              "answer": "She eats sports every morning to stay fit and full of energy.",
+              "ok": false
+            },
+            {
+              "answer": "He drives to work in his sports every single morning.",
+              "ok": false
+            },
+            {
+              "answer": "She puts sports in her soup to make it taste better.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

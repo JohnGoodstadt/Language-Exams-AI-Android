@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizJobs1-en",
+	"title": "Jobs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Jobs",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "career",
+					"page": 1,
+					"question": "career",
+					"summary": "the series of jobs a person has in their working life",
+					"explain": {
+						"entryId": "career",
+						"headword": "career",
+						"pronunciation": { "display": "kuh-REER", "ipaUK": "/kəˈrɪə/", "ipaUS": "/kəˈrɪr/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "career",
+								"inflectionsLine": "careers",
+								"synonyms": ["profession", "vocation", "working life"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the series of jobs that someone has during their working life, especially in one area of work",
+										"examples": [
+											"She chose a career in medicine because she wanted to help people.",
+											"He has had a long career in teaching."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She built a successful career in nursing over twenty years.", "ok": true },
+						{ "answer": "He cooked a career for dinner and served it with vegetables.", "ok": false },
+						{ "answer": "She planted her career in the garden and watered it each morning.", "ok": false },
+						{ "answer": "They drove the career to the airport and left it in the car park.", "ok": false }
+					]
+				},
+				{
+					"title": "colleague",
+					"page": 2,
+					"question": "colleague",
+					"summary": "a person who works with you in the same organisation",
+					"explain": {
+						"entryId": "colleague",
+						"headword": "colleague",
+						"pronunciation": { "display": "KOL-eeg", "ipaUK": "/ˈkɒliːɡ/", "ipaUS": "/ˈkɑːliːɡ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "colleague",
+								"inflectionsLine": "colleagues",
+								"synonyms": ["co-worker", "workmate", "associate"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who works with you in the same organisation or department",
+										"examples": [
+											"She had lunch with her colleague from the sales department.",
+											"He asked a colleague to help him with the new project."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She sent an email to her colleague about the project deadline.", "ok": true },
+						{ "answer": "He ordered a colleague from an online shop and waited for delivery.", "ok": false },
+						{ "answer": "She put her colleague on the shelf next to the books.", "ok": false },
+						{ "answer": "They cooked a colleague in the kitchen and served it with salad.", "ok": false }
+					]
+				},
+				{
+					"title": "company",
+					"page": 3,
+					"question": "company",
+					"summary": "a business organisation that sells goods or services",
+					"explain": {
+						"entryId": "company",
+						"headword": "company",
+						"pronunciation": { "display": "KUM-puh-nee", "ipaUK": "/ˈkʌmpəni/", "ipaUS": "/ˈkʌmpəni/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "company",
+								"inflectionsLine": "companies",
+								"synonyms": ["business", "firm", "organisation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a business organisation that makes or sells goods or provides a service",
+										"examples": [
+											"She works for a technology company in the city centre.",
+											"The company employs over five hundred people."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She works for a large company that makes computers and software.", "ok": true },
+						{ "answer": "He ate a company for lunch with some bread and cheese.", "ok": false },
+						{ "answer": "She planted the company in the garden and watered it every day.", "ok": false },
+						{ "answer": "They drove the company to the airport and put it on the plane.", "ok": false }
+					]
+				},
+				{
+					"title": "employment",
+					"page": 4,
+					"question": "employment",
+					"summary": "the fact of having a paid job",
+					"explain": {
+						"entryId": "employment",
+						"headword": "employment",
+						"pronunciation": { "display": "im-PLOY-munt", "ipaUK": "/ɪmˈplɔɪmənt/", "ipaUS": "/ɪmˈplɔɪmənt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "uncountable noun",
+								"headwordLine": "employment",
+								"inflectionsLine": "",
+								"synonyms": ["work", "a job", "occupation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the state of having a paid job, or the activity of giving people jobs",
+										"examples": [
+											"She found employment as a nurse after finishing her studies.",
+											"The new factory will bring employment to the area."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She found employment as a teacher after she graduated from university.", "ok": true },
+						{ "answer": "He cooked the employment for dinner and served it with rice.", "ok": false },
+						{ "answer": "She planted employment in the garden near the fence.", "ok": false },
+						{ "answer": "They drove the employment to the office and left it at the desk.", "ok": false }
+					]
+				},
+				{
+					"title": "interview",
+					"page": 5,
+					"question": "interview",
+					"summary": "a meeting where someone asks you questions to see if you are right for a job",
+					"explain": {
+						"entryId": "interview",
+						"headword": "interview",
+						"pronunciation": { "display": "IN-tur-vyoo", "ipaUK": "/ˈɪntəvjuː/", "ipaUS": "/ˈɪntərvjuː/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "interview",
+								"inflectionsLine": "interviews",
+								"synonyms": ["meeting", "assessment", "selection meeting"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a formal meeting in which someone asks you questions to find out if you are suitable for a job or course",
+										"examples": [
+											"She prepared carefully for her job interview the next morning.",
+											"He was very nervous before the interview, but it went well."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wore smart clothes and practised her answers before the interview.", "ok": true },
+						{ "answer": "He ate the interview for lunch at his desk.", "ok": false },
+						{ "answer": "She cooked the interview in the oven and served it hot.", "ok": false },
+						{ "answer": "They planted an interview in the garden and waited for it to grow.", "ok": false }
+					]
+				},
+				{
+					"title": "job",
+					"page": 6,
+					"question": "job",
+					"summary": "the regular work that you do to earn money",
+					"explain": {
+						"entryId": "job",
+						"headword": "job",
+						"pronunciation": { "display": "JOB", "ipaUK": "/dʒɒb/", "ipaUS": "/dʒɑːb/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "job",
+								"inflectionsLine": "jobs",
+								"synonyms": ["work", "position", "post"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the regular work that a person does to earn money",
+										"examples": [
+											"She found a new job as a receptionist at a large hotel.",
+											"He has a job at the supermarket on weekday evenings."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She found a new job as a receptionist at a hotel in the city.", "ok": true },
+						{ "answer": "He cooked a job for dinner and served it with salad.", "ok": false },
+						{ "answer": "She planted a job in the garden next to the rose bush.", "ok": false },
+						{ "answer": "They drank a glass of job every morning before work.", "ok": false }
+					]
+				},
+				{
+					"title": "manager",
+					"page": 7,
+					"question": "manager",
+					"summary": "a person who is responsible for running a business, team, or department",
+					"explain": {
+						"entryId": "manager",
+						"headword": "manager",
+						"pronunciation": { "display": "MAN-uh-jur", "ipaUK": "/ˈmænɪdʒə/", "ipaUS": "/ˈmænɪdʒər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "manager",
+								"inflectionsLine": "managers",
+								"synonyms": ["director", "supervisor", "head"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is responsible for running a business, team, or department",
+										"examples": [
+											"She reported the problem to her manager at the office.",
+											"He was promoted to manager after five years with the company."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She asked her manager for permission to take a day off work.", "ok": true },
+						{ "answer": "He parked his manager next to his bicycle outside the office.", "ok": false },
+						{ "answer": "She put the manager in the oven and cooked it for an hour.", "ok": false },
+						{ "answer": "They watered the manager with a garden hose every morning.", "ok": false }
+					]
+				},
+				{
+					"title": "meeting",
+					"page": 8,
+					"question": "meeting",
+					"summary": "an occasion when people come together to discuss something",
+					"explain": {
+						"entryId": "meeting",
+						"headword": "meeting",
+						"pronunciation": { "display": "MEE-ting", "ipaUK": "/ˈmiːtɪŋ/", "ipaUS": "/ˈmiːtɪŋ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "meeting",
+								"inflectionsLine": "meetings",
+								"synonyms": ["discussion", "conference", "session"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an occasion when people come together to talk about or decide something",
+										"examples": [
+											"She arrived early to prepare for the morning meeting.",
+											"The manager called a meeting to discuss the new project."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She printed the report before the meeting so everyone could read it.", "ok": true },
+						{ "answer": "He cooked a meeting in the kitchen for the whole team.", "ok": false },
+						{ "answer": "She planted a meeting in the garden and watered it twice a week.", "ok": false },
+						{ "answer": "They drank a meeting every morning before starting work.", "ok": false }
+					]
+				},
+				{
+					"title": "office",
+					"page": 9,
+					"question": "office",
+					"summary": "a room or building where people work at desks",
+					"explain": {
+						"entryId": "office",
+						"headword": "office",
+						"pronunciation": { "display": "OF-is", "ipaUK": "/ˈɒfɪs/", "ipaUS": "/ˈɑːfɪs/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "office",
+								"inflectionsLine": "offices",
+								"synonyms": ["workplace", "work room", "business premises"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a room or building where people work, usually at desks in front of computers",
+										"examples": [
+											"She spends most of her day in the office writing reports.",
+											"He goes to the office five days a week."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to the office every day and answers emails at her desk.", "ok": true },
+						{ "answer": "He goes to the office to buy fresh vegetables every Saturday.", "ok": false },
+						{ "answer": "She swam across the office because it was a warm afternoon.", "ok": false },
+						{ "answer": "They drove the office to the station and left it on the platform.", "ok": false }
+					]
+				},
+				{
+					"title": "profession",
+					"page": 10,
+					"question": "profession",
+					"summary": "a type of job that requires special training or education",
+					"explain": {
+						"entryId": "profession",
+						"headword": "profession",
+						"pronunciation": { "display": "pruh-FESH-un", "ipaUK": "/prəˈfeʃn/", "ipaUS": "/prəˈfeʃn/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "profession",
+								"inflectionsLine": "professions",
+								"synonyms": ["career", "vocation", "occupation"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a type of job that requires special training or education, such as medicine, law, or teaching",
+										"examples": [
+											"Medicine is a challenging profession that requires many years of study.",
+											"She entered the teaching profession after university."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Teaching is a profession that requires patience and good communication skills.", "ok": true },
+						{ "answer": "He cooked a profession for dinner and served it with bread.", "ok": false },
+						{ "answer": "She planted her profession in the garden and waited for it to grow.", "ok": false },
+						{ "answer": "They drove the profession to the airport and checked it in as luggage.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

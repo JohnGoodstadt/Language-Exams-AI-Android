@@ -1,0 +1,416 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation1-en",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Education",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "classroom",
+					"page": 1,
+					"question": "classroom",
+					"summary": "a room in a school where lessons take place",
+					"explain": {
+						"entryId": "classroom",
+						"headword": "classroom",
+						"pronunciation": { "display": "KLAS-room", "ipaUK": "/ˈklɑːsruːm/", "ipaUS": "/ˈklæsruːm/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "classroom",
+								"inflectionsLine": "classrooms",
+								"synonyms": ["class", "room", "teaching room"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a room in a school or college where a group of students are taught",
+										"examples": [
+											"The students sat down in the classroom and waited for the teacher.",
+											"There are thirty desks in the classroom."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The students opened their books and worked quietly in the classroom.", "ok": true },
+						{ "answer": "She swam in the classroom after school on Fridays.", "ok": false },
+						{ "answer": "He cooked lunch in the classroom every day.", "ok": false },
+						{ "answer": "They parked their cars inside the classroom.", "ok": false }
+					]
+				},
+				{
+					"title": "exam",
+					"page": 2,
+					"question": "exam",
+					"summary": "an official test of your knowledge or ability",
+					"explain": {
+						"entryId": "exam",
+						"headword": "exam",
+						"pronunciation": { "display": "ig-ZAM", "ipaUK": "/ɪɡˈzæm/", "ipaUS": "/ɪɡˈzæm/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "exam",
+								"inflectionsLine": "exams",
+								"synonyms": ["test", "examination", "assessment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an official test of knowledge or ability, usually taken at school or university",
+										"examples": [
+											"She studied hard for her maths exam.",
+											"He passed all his exams and got excellent grades."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She stayed up late studying because she had an important exam the next day.", "ok": true },
+						{ "answer": "He ate the exam for breakfast before going to school.", "ok": false },
+						{ "answer": "She drove her exam to school and parked outside.", "ok": false },
+						{ "answer": "They planted an exam in the garden to see what would grow.", "ok": false }
+					]
+				},
+				{
+					"title": "homework",
+					"page": 3,
+					"question": "homework",
+					"summary": "schoolwork that students do at home rather than at school",
+					"explain": {
+						"entryId": "homework",
+						"headword": "homework",
+						"pronunciation": { "display": "HOHM-wurk", "ipaUK": "/ˈhəʊmwɜːk/", "ipaUS": "/ˈhoʊmwɜːrk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "uncountable noun",
+								"headwordLine": "homework",
+								"inflectionsLine": "",
+								"synonyms": ["assignment", "schoolwork", "task"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "work or study that a student does at home, set by their teacher",
+										"examples": [
+											"She finished her homework before watching television.",
+											"The teacher gave the class homework to do over the weekend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She finished her homework at the kitchen table before dinner.", "ok": true },
+						{ "answer": "He cooked his homework in the oven for twenty minutes.", "ok": false },
+						{ "answer": "She wore her homework to school on Monday morning.", "ok": false },
+						{ "answer": "They planted the homework in the garden and watered it daily.", "ok": false }
+					]
+				},
+				{
+					"title": "lesson",
+					"page": 4,
+					"question": "lesson",
+					"summary": "a period of time when a teacher teaches a student or class",
+					"explain": {
+						"entryId": "lesson",
+						"headword": "lesson",
+						"pronunciation": { "display": "LES-un", "ipaUK": "/ˈlesn/", "ipaUS": "/ˈlesn/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "lesson",
+								"inflectionsLine": "lessons",
+								"synonyms": ["class", "session", "period"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a period of time when a teacher teaches a person or group about a particular subject",
+										"examples": [
+											"She enjoyed the English lesson because the teacher told funny stories.",
+											"He has a piano lesson every Tuesday afternoon."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She paid attention during the science lesson and learnt a lot.", "ok": true },
+						{ "answer": "He ate the lesson for lunch at his desk.", "ok": false },
+						{ "answer": "She parked her lesson outside the school gate.", "ok": false },
+						{ "answer": "They cooked a lesson for dinner and served it with salad.", "ok": false }
+					]
+				},
+				{
+					"title": "library",
+					"page": 5,
+					"question": "library",
+					"summary": "a building or room where books are kept for people to read or borrow",
+					"explain": {
+						"entryId": "library",
+						"headword": "library",
+						"pronunciation": { "display": "LY-brair-ee", "ipaUK": "/ˈlaɪbrəri/", "ipaUS": "/ˈlaɪbreri/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "library",
+								"inflectionsLine": "libraries",
+								"synonyms": ["reading room", "archive", "book room"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building or room that contains a collection of books and other materials that people can read or borrow",
+										"examples": [
+											"She borrowed two books from the library.",
+											"He spent the afternoon studying in the school library."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She went to the library to borrow some books for her project.", "ok": true },
+						{ "answer": "He ordered a meal at the library and sat down to eat.", "ok": false },
+						{ "answer": "She swam at the library every weekend with her friends.", "ok": false },
+						{ "answer": "They cooked dinner in the library for the whole class.", "ok": false }
+					]
+				},
+				{
+					"title": "notebook",
+					"page": 6,
+					"question": "notebook",
+					"summary": "a small book with blank or lined pages for writing notes",
+					"explain": {
+						"entryId": "notebook",
+						"headword": "notebook",
+						"pronunciation": { "display": "NOHT-book", "ipaUK": "/ˈnəʊtbʊk/", "ipaUS": "/ˈnoʊtbʊk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "notebook",
+								"inflectionsLine": "notebooks",
+								"synonyms": ["notepad", "exercise book", "jotter"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small book with blank or lined pages that you use for writing notes",
+										"examples": [
+											"She wrote the new vocabulary words in her notebook.",
+											"He always brings his notebook to class to take notes."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wrote down the new words in her notebook during class.", "ok": true },
+						{ "answer": "He ate his notebook for breakfast before the exam.", "ok": false },
+						{ "answer": "She drove her notebook to the park and left it on a bench.", "ok": false },
+						{ "answer": "They planted a notebook in the garden to grow flowers.", "ok": false }
+					]
+				},
+				{
+					"title": "school",
+					"page": 7,
+					"question": "school",
+					"summary": "a place where children go to be taught",
+					"explain": {
+						"entryId": "school",
+						"headword": "school",
+						"pronunciation": { "display": "SKOOL", "ipaUK": "/skuːl/", "ipaUS": "/skuːl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "school",
+								"inflectionsLine": "schools",
+								"synonyms": ["academy", "college", "institution"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a place where children go to learn and be taught by teachers",
+										"examples": [
+											"She walks to school every morning with her friends.",
+											"The school has a large playground and a library."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She arrives at school at eight o'clock every morning.", "ok": true },
+						{ "answer": "He cooked school for dinner and served it with vegetables.", "ok": false },
+						{ "answer": "She drank a large glass of school with her breakfast.", "ok": false },
+						{ "answer": "They planted school in the garden and watered it every day.", "ok": false }
+					]
+				},
+				{
+					"title": "student",
+					"page": 8,
+					"question": "student",
+					"summary": "a person who is studying, especially at a school or university",
+					"explain": {
+						"entryId": "student",
+						"headword": "student",
+						"pronunciation": { "display": "STYOO-dunt", "ipaUK": "/ˈstjuːdnt/", "ipaUS": "/ˈstuːdnt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "student",
+								"inflectionsLine": "students",
+								"synonyms": ["pupil", "learner", "scholar"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is studying at a school, college, or university",
+										"examples": [
+											"She is a student at the local university studying science.",
+											"The teacher asked all the students to open their books."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She is a student at the university and studies three days a week.", "ok": true },
+						{ "answer": "He ordered a student from the menu at the restaurant.", "ok": false },
+						{ "answer": "She parked her student outside the library.", "ok": false },
+						{ "answer": "They cooked a student for dinner and ate it with bread.", "ok": false }
+					]
+				},
+				{
+					"title": "subject",
+					"page": 9,
+					"question": "subject",
+					"summary": "a branch of knowledge studied or taught at school",
+					"explain": {
+						"entryId": "subject",
+						"headword": "subject",
+						"pronunciation": { "display": "SUB-jikt", "ipaUK": "/ˈsʌbdʒɪkt/", "ipaUS": "/ˈsʌbdʒɪkt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "subject",
+								"inflectionsLine": "subjects",
+								"synonyms": ["topic", "course", "discipline"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a branch of knowledge that is studied or taught in a school, college, or university",
+										"examples": [
+											"Her favourite subject at school is history.",
+											"He studies four subjects this term, including maths and science."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Her favourite subject at school is history because she loves learning about the past.", "ok": true },
+						{ "answer": "He drove his subject to the park after class.", "ok": false },
+						{ "answer": "She cooked a subject for lunch and ate it at her desk.", "ok": false },
+						{ "answer": "They planted a subject in the garden and watered it every evening.", "ok": false }
+					]
+				},
+				{
+					"title": "teacher",
+					"page": 10,
+					"question": "teacher",
+					"summary": "a person whose job is to teach, especially in a school",
+					"explain": {
+						"entryId": "teacher",
+						"headword": "teacher",
+						"pronunciation": { "display": "TEE-chur", "ipaUK": "/ˈtiːtʃə/", "ipaUS": "/ˈtiːtʃər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "teacher",
+								"inflectionsLine": "teachers",
+								"synonyms": ["instructor", "tutor", "educator"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person whose job is to teach students, especially in a school",
+										"examples": [
+											"The teacher explained the new grammar rules to the class.",
+											"She wants to become a teacher because she loves working with children."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The teacher asked the students to write a short story for homework.", "ok": true },
+						{ "answer": "She cooked the teacher for dinner and served it with rice.", "ok": false },
+						{ "answer": "He parked his teacher outside the school gate every morning.", "ok": false },
+						{ "answer": "They planted a teacher in the garden to help the flowers grow.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

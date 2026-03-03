@@ -1,0 +1,96 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation2-en",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Education",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "textbook",
+					"page": 1,
+					"question": "textbook",
+					"summary": "a book used for studying a particular subject at school or university",
+					"explain": {
+						"entryId": "textbook",
+						"headword": "textbook",
+						"pronunciation": { "display": "TEKST-buk", "ipaUK": "/ˈtekstbʊk/", "ipaUS": "/ˈtekstbʊk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "textbook",
+								"inflectionsLine": "textbooks",
+								"synonyms": ["coursebook", "study book", "manual"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a book that contains information about a particular subject and is used by students for studying at school or university",
+										"examples": [
+											"She bought a new textbook for her history class at the start of term.",
+											"He left his textbook at school and could not do his homework."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She bought a new textbook for her history class at the start of term.", "ok": true },
+						{ "answer": "He drank a hot textbook at the café before going to class.", "ok": false },
+						{ "answer": "She cooked the textbook in the oven and served it for dinner.", "ok": false },
+						{ "answer": "They planted a textbook in the garden and watered it every day.", "ok": false }
+					]
+				},
+				{
+					"title": "university",
+					"page": 2,
+					"question": "university",
+					"summary": "a place of higher education where students study for degrees",
+					"explain": {
+						"entryId": "university",
+						"headword": "university",
+						"pronunciation": { "display": "yoo-ni-VUR-si-tee", "ipaUK": "/ˌjuːnɪˈvɜːsɪti/", "ipaUS": "/ˌjuːnɪˈvɜːrsɪti/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "university",
+								"inflectionsLine": "universities",
+								"synonyms": ["college", "institute", "academy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an institution of higher education where students study for degrees and where academic research is carried out",
+										"examples": [
+											"She studies medicine at the university in the city centre.",
+											"He applied to three universities and was accepted by all of them."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She studies medicine at the university in the city centre.", "ok": true },
+						{ "answer": "He swims in the university every morning to keep fit and healthy.", "ok": false },
+						{ "answer": "She cooked dinner in the university because it had the best kitchen.", "ok": false },
+						{ "answer": "He ate a hot university for lunch before going back to his office.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,114 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth2-en",
+	"title": "Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Health",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "nurse",
+					"page": 1,
+					"question": "nurse",
+					"summary": "a person trained to look after sick or injured people; also to care for someone who is ill",
+					"explain": {
+						"entryId": "nurse",
+						"headword": "nurse",
+						"pronunciation": { "display": "NURS", "ipaUK": "/nɜːs/", "ipaUS": "/nɜːrs/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "nurse",
+								"inflectionsLine": "nurses",
+								"synonyms": ["carer", "healthcare worker", "medical professional"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who is trained to look after sick or injured people, usually working in a hospital or clinic",
+										"examples": [
+											"The nurse checked his temperature and gave him his medicine.",
+											"She wants to become a nurse because she enjoys helping people."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "nurse",
+								"inflectionsLine": "nurses, nursing, nursed",
+								"synonyms": ["care for", "look after", "tend to"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to look after someone who is sick or injured and help them to get better",
+										"examples": [
+											"She nursed her mother back to health after the operation.",
+											"He stayed home to nurse his cold for two days."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The nurse checked his temperature and gave him his medicine.", "ok": true },
+						{ "answer": "He cooked a nurse for dinner and served it with vegetables.", "ok": false },
+						{ "answer": "She drove her nurse to school every morning and parked outside.", "ok": false },
+						{ "answer": "They planted a nurse in the garden and watered it every day.", "ok": false }
+					]
+				},
+				{
+					"title": "sick",
+					"page": 2,
+					"question": "sick",
+					"summary": "suffering from an illness or disease; not feeling well",
+					"explain": {
+						"entryId": "sick",
+						"headword": "sick",
+						"pronunciation": { "display": "SIK", "ipaUK": "/sɪk/", "ipaUS": "/sɪk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "sick",
+								"inflectionsLine": "sicker, sickest",
+								"synonyms": ["ill", "unwell", "poorly"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "physically unwell; suffering from an illness or disease and not feeling well",
+										"examples": [
+											"She felt sick all morning and could not eat her breakfast.",
+											"He stayed at home because he was too sick to go to work."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He stayed at home because he was too sick to go to work.", "ok": true },
+						{ "answer": "She ordered a sick at the café and drank it slowly.", "ok": false },
+						{ "answer": "He planted a sick in the garden and watered it every day.", "ok": false },
+						{ "answer": "They cooked the sick in the oven for an hour until it was ready.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

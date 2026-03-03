@@ -1,0 +1,411 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizPatterns2-en",
+  "title": "Patterns",
+  "updatedDate": 0,
+  "data": [
+	{
+	  "title": "Choose the sentence that uses the word correctly.",
+	  "description": "Common verb patterns",
+	  "sortorder": 1,
+	  "sections": [
+		{
+		  "title": "",
+		  "page": 1,
+		  "question": "insist",
+		  "summary": "to say strongly that something is true or must happen",
+		  "explain": {
+			"entryId": "insist",
+			"headword": "insist",
+			"pronunciation": { "display": "in-SIST", "ipaUK": "/ɪnˈsɪst/", "ipaUS": "/ɪnˈsɪst/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "insist",
+				"inflectionsLine": "insists, insisting, insisted",
+				"synonyms": ["demand", "say firmly"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to say something firmly and not change your opinion",
+					"examples": ["He insisted on paying for the meal."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "He insisted on paying for the meal.", "ok": true },
+			{ "answer": "He insisted to pay for the meal.", "ok": false },
+			{ "answer": "He insist on paying for the meal.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 2,
+		  "question": "listen",
+		  "summary": "to pay attention to sound",
+		  "explain": {
+			"entryId": "listen",
+			"headword": "listen",
+			"pronunciation": { "display": "LIS-en", "ipaUK": "/ˈlɪs(ə)n/", "ipaUS": "/ˈlɪs(ə)n/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "listen",
+				"inflectionsLine": "listens, listening, listened",
+				"synonyms": ["hear", "pay attention"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to pay attention to what you hear",
+					"examples": ["Please listen to the teacher."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "Please listen to the teacher.", "ok": true },
+			{ "answer": "Please listen the teacher.", "ok": false },
+			{ "answer": "Please listen at the teacher.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 3,
+		  "question": "necessary",
+		  "summary": "needed; something you must have or do",
+		  "explain": {
+			"entryId": "necessary",
+			"headword": "necessary",
+			"pronunciation": { "display": "NES-uh-ser-ee", "ipaUK": "/ˈnesəs(ə)ri/", "ipaUS": "/ˈnesəseri/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "necessary",
+				"inflectionsLine": null,
+				"synonyms": ["needed", "required"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "needed; required",
+					"examples": ["It is necessary to show your ID."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "It is necessary to show your ID.", "ok": true },
+			{ "answer": "It is necessary show your ID.", "ok": false },
+			{ "answer": "It is necessaried to show your ID.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 4,
+		  "question": "play",
+		  "summary": "to do a game or sport; or to make music",
+		  "explain": {
+			"entryId": "play",
+			"headword": "play",
+			"pronunciation": { "display": "PLAY", "ipaUK": "/pleɪ/", "ipaUS": "/pleɪ/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "play",
+				"inflectionsLine": "plays, playing, played",
+				"synonyms": ["take part", "perform"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to do a game or sport",
+					"examples": ["They play football after school."]
+				  },
+				  {
+					"senseNumber": 2,
+					"definition": "to make music on an instrument",
+					"examples": ["She can play the piano."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "play",
+				"inflectionsLine": "plays",
+				"synonyms": ["game"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a story acted in a theatre",
+					"examples": ["We watched a play last night."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "They play football after school.", "ok": true },
+			{ "answer": "They play to football after school.", "ok": false },
+			{ "answer": "They are play football after school.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 5,
+		  "question": "read",
+		  "summary": "to look at words and understand them",
+		  "explain": {
+			"entryId": "read",
+			"headword": "read",
+			"pronunciation": { "display": "REED", "ipaUK": "/riːd/", "ipaUS": "/riːd/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "read",
+				"inflectionsLine": "reads, reading, read",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to look at words and understand them",
+					"examples": ["I read a book every week."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I read a book every week.", "ok": true },
+			{ "answer": "I readed a book every week.", "ok": false },
+			{ "answer": "I read to a book every week.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 6,
+		  "question": "recommend",
+		  "summary": "to say something is good and you should try it",
+		  "explain": {
+			"entryId": "recommend",
+			"headword": "recommend",
+			"pronunciation": { "display": "rek-uh-MEND", "ipaUK": "/ˌrekəˈmend/", "ipaUS": "/ˌrekəˈmend/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "recommend",
+				"inflectionsLine": "recommends, recommending, recommended",
+				"synonyms": ["suggest"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to say that something is good and should be used or tried",
+					"examples": ["I recommend this restaurant."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I recommend this restaurant.", "ok": true },
+			{ "answer": "I recommend to this restaurant.", "ok": false },
+			{ "answer": "I recommended this restaurant yesterday every day.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 7,
+		  "question": "run",
+		  "summary": "to move fast on your feet",
+		  "explain": {
+			"entryId": "run",
+			"headword": "run",
+			"pronunciation": { "display": "RUN", "ipaUK": "/rʌn/", "ipaUS": "/rʌn/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "run",
+				"inflectionsLine": "runs, running, ran, run",
+				"synonyms": ["jog"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to move quickly using your legs",
+					"examples": ["He ran to catch the bus."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "He ran to catch the bus.", "ok": true },
+			{ "answer": "He run to catch the bus.", "ok": false },
+			{ "answer": "He ran catch to the bus.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 8,
+		  "question": "start",
+		  "summary": "to begin something",
+		  "explain": {
+			"entryId": "start",
+			"headword": "start",
+			"pronunciation": { "display": "START", "ipaUK": "/stɑːt/", "ipaUS": "/stɑːrt/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "start",
+				"inflectionsLine": "starts, starting, started",
+				"synonyms": ["begin"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to begin",
+					"examples": ["The class starts at nine."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "The class starts at nine.", "ok": true },
+			{ "answer": "The class start at nine.", "ok": false },
+			{ "answer": "The class is start at nine.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 9,
+		  "question": "study",
+		  "summary": "to learn by reading and practising",
+		  "explain": {
+			"entryId": "study",
+			"headword": "study",
+			"pronunciation": { "display": "STUD-ee", "ipaUK": "/ˈstʌdi/", "ipaUS": "/ˈstʌdi/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "study",
+				"inflectionsLine": "studies, studying, studied",
+				"synonyms": ["learn"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to spend time learning about a subject",
+					"examples": ["I study English every day."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "study",
+				"inflectionsLine": "studies",
+				"synonyms": ["research"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a piece of research to find out about something",
+					"examples": ["The study showed good results."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I study English every day.", "ok": true },
+			{ "answer": "I study to English every day.", "ok": false },
+			{ "answer": "I am study English every day.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 10,
+		  "question": "suggest",
+		  "summary": "to give an idea or advice",
+		  "explain": {
+			"entryId": "suggest",
+			"headword": "suggest",
+			"pronunciation": { "display": "suh-JEST", "ipaUK": "/səˈdʒest/", "ipaUS": "/səˈdʒest/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "suggest",
+				"inflectionsLine": "suggests, suggesting, suggested",
+				"synonyms": ["recommend"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to give an idea or advice",
+					"examples": ["She suggested taking the earlier train."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She suggested taking the earlier train.", "ok": true },
+			{ "answer": "She suggested to take the earlier train.", "ok": false },
+			{ "answer": "She suggest taking the earlier train.", "ok": false }
+		  ]
+		}
+	  ]
+	}
+  ]
+}

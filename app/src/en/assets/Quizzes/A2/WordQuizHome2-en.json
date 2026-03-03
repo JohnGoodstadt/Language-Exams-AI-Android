@@ -1,0 +1,154 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHome2-en",
+	"title": "Home",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Home",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "roof",
+					"page": 1,
+					"question": "roof",
+					"summary": "the structure that covers and protects the top of a building",
+					"explain": {
+						"entryId": "roof",
+						"headword": "roof",
+						"pronunciation": { "display": "ROOF", "ipaUK": "/ruːf/", "ipaUS": "/ruːf/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "roof",
+								"inflectionsLine": "roofs",
+								"synonyms": ["top", "covering", "canopy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the structure that covers and protects the top of a building, vehicle, or other object",
+										"examples": [
+											"The rain leaked through the roof and made a wet patch on the ceiling.",
+											"The workers spent two days repairing the old roof after the storm."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The rain leaked through the roof and made a wet patch on the ceiling.", "ok": true },
+						{ "answer": "She swam laps across the roof every morning to keep fit.", "ok": false },
+						{ "answer": "He made a hot drink with some roof and boiling water.", "ok": false },
+						{ "answer": "They held their cooking class in the roof every Tuesday evening.", "ok": false }
+					]
+				},
+				{
+					"title": "store",
+					"page": 2,
+					"question": "store",
+					"summary": "a place where things are sold; also, to keep things somewhere for future use",
+					"explain": {
+						"entryId": "store",
+						"headword": "store",
+						"pronunciation": { "display": "STOR", "ipaUK": "/stɔː/", "ipaUS": "/stɔːr/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "store",
+								"inflectionsLine": "stores",
+								"synonyms": ["shop", "outlet", "retailer"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a place where goods are sold; a shop, often a large one",
+										"examples": [
+											"She went to the store to buy some bread and milk.",
+											"The department store on the high street sells clothes, food, and furniture."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "store",
+								"inflectionsLine": "stores, storing, stored",
+								"synonyms": ["keep", "save", "put away"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to put things somewhere and keep them there for future use",
+										"examples": [
+											"She stores her winter clothes in boxes under the bed.",
+											"He stores all his important documents in a folder on the shelf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She went to the store to buy some bread and milk for the weekend.", "ok": true },
+						{ "answer": "He swam in the store every morning to keep himself fit.", "ok": false },
+						{ "answer": "She drank a glass of cold store after her run in the park.", "ok": false },
+						{ "answer": "They cooked the store in the oven for an hour until it was ready.", "ok": false }
+					]
+				},
+				{
+					"title": "window",
+					"page": 3,
+					"question": "window",
+					"summary": "an opening in a wall, usually filled with glass, that lets in light and air",
+					"explain": {
+						"entryId": "window",
+						"headword": "window",
+						"pronunciation": { "display": "WIN-doh", "ipaUK": "/ˈwɪndəʊ/", "ipaUS": "/ˈwɪndoʊ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "window",
+								"inflectionsLine": "windows",
+								"synonyms": ["pane", "glass panel", "opening"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an opening in the wall of a building or vehicle, usually covered with glass, that lets in light and air",
+										"examples": [
+											"She looked out of the window and saw that it was raining.",
+											"He opened the window to let some fresh air into the warm room."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She looked out of the window and saw that it was raining outside.", "ok": true },
+						{ "answer": "He slept on the window every night because it was the most comfortable.", "ok": false },
+						{ "answer": "She cooked dinner in the window and served it to the family.", "ok": false },
+						{ "answer": "They parked their bicycles inside the window to keep them dry.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

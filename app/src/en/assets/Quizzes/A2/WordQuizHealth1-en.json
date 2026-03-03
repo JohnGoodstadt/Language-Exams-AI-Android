@@ -1,0 +1,452 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth1-en",
+	"title": "Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Health",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "body",
+					"page": 1,
+					"question": "body",
+					"summary": "the whole physical structure of a person or animal",
+					"explain": {
+						"entryId": "body",
+						"headword": "body",
+						"pronunciation": { "display": "BOD-ee", "ipaUK": "/ˈbɒdi/", "ipaUS": "/ˈbɑːdi/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "body",
+								"inflectionsLine": "bodies",
+								"synonyms": ["physique", "figure", "frame"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the whole physical structure of a person or animal, including bones, flesh, and organs",
+										"examples": [
+											"Exercise is good for your body and your mind.",
+											"The human body needs water, food, and sleep to stay healthy."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She exercises every day to keep her body strong and healthy.", "ok": true },
+						{ "answer": "He drives his body to the office and parks it outside.", "ok": false },
+						{ "answer": "She bought a new body at the shopping centre last weekend.", "ok": false },
+						{ "answer": "They planted a body in the garden and watered it every morning.", "ok": false }
+					]
+				},
+				{
+					"title": "clinic",
+					"page": 2,
+					"question": "clinic",
+					"summary": "a place where people go to receive medical treatment or advice",
+					"explain": {
+						"entryId": "clinic",
+						"headword": "clinic",
+						"pronunciation": { "display": "KLIN-ik", "ipaUK": "/ˈklɪnɪk/", "ipaUS": "/ˈklɪnɪk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "clinic",
+								"inflectionsLine": "clinics",
+								"synonyms": ["surgery", "health centre", "medical centre"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a building or part of a hospital where people go to receive medical treatment or advice",
+										"examples": [
+											"She went to the clinic because she had a bad cough.",
+											"There is a dental clinic near the school."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She made an appointment at the clinic to see the nurse.", "ok": true },
+						{ "answer": "He bought fresh bread and vegetables at the clinic every week.", "ok": false },
+						{ "answer": "She went to the clinic to swim and use the gym.", "ok": false },
+						{ "answer": "They opened a clinic on the high street to sell clothes and shoes.", "ok": false }
+					]
+				},
+				{
+					"title": "cough",
+					"page": 3,
+					"question": "cough",
+					"summary": "to push air out of your throat with a short loud sound, often because you are ill",
+					"explain": {
+						"entryId": "cough",
+						"headword": "cough",
+						"pronunciation": { "display": "KOF", "ipaUK": "/kɒf/", "ipaUS": "/kɔːf/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "cough",
+								"inflectionsLine": "coughs, coughing, coughed",
+								"synonyms": ["splutter", "hack"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to suddenly force air out of your throat with a short loud sound, especially when you are ill or something is irritating your throat",
+										"examples": [
+											"He started to cough because of the dust in the old room.",
+											"She coughed loudly during the meeting."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "cough",
+								"inflectionsLine": "coughs",
+								"synonyms": ["hack", "splutter"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an act of coughing, or an illness that causes you to cough a lot",
+										"examples": [
+											"She has a bad cough and needs to rest.",
+											"He bought some medicine for his cough."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He coughed loudly because he had a cold and a sore throat.", "ok": true },
+						{ "answer": "She coughed her bag onto the table and sat down.", "ok": false },
+						{ "answer": "He coughed the window and looked outside at the rain.", "ok": false },
+						{ "answer": "They coughed dinner at seven o'clock every evening.", "ok": false }
+					]
+				},
+				{
+					"title": "doctor",
+					"page": 4,
+					"question": "doctor",
+					"summary": "a person who has been trained to treat people who are sick or injured",
+					"explain": {
+						"entryId": "doctor",
+						"headword": "doctor",
+						"pronunciation": { "display": "DOK-tur", "ipaUK": "/ˈdɒktə/", "ipaUS": "/ˈdɑːktər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "doctor",
+								"inflectionsLine": "doctors",
+								"synonyms": ["physician", "GP", "medic"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a person who has studied medicine and is trained to treat people who are sick or injured",
+										"examples": [
+											"She visited the doctor because she had a very high temperature.",
+											"The doctor told him to rest and drink plenty of water."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She made an appointment with the doctor about her sore throat.", "ok": true },
+						{ "answer": "He ordered a doctor from the menu at the restaurant.", "ok": false },
+						{ "answer": "She bought a new doctor at the supermarket on Saturday.", "ok": false },
+						{ "answer": "They parked their doctor outside the school and walked in.", "ok": false }
+					]
+				},
+				{
+					"title": "exercise",
+					"page": 5,
+					"question": "exercise",
+					"summary": "physical activity that you do to stay healthy and strong",
+					"explain": {
+						"entryId": "exercise",
+						"headword": "exercise",
+						"pronunciation": { "display": "EK-sur-syz", "ipaUK": "/ˈeksəsaɪz/", "ipaUS": "/ˈeksərsaɪz/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "uncountable noun",
+								"headwordLine": "exercise",
+								"inflectionsLine": "",
+								"synonyms": ["physical activity", "workout", "training"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "physical activity that you do in order to stay healthy and keep your body strong",
+										"examples": [
+											"Regular exercise is very important for good health.",
+											"She does an hour of exercise at the gym every morning."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "exercise",
+								"inflectionsLine": "exercises, exercising, exercised",
+								"synonyms": ["work out", "train", "keep fit"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to do physical activities in order to stay healthy and keep your body strong",
+										"examples": [
+											"She exercises for thirty minutes every day.",
+											"He exercises at the gym three times a week."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She does exercise every morning to stay fit and healthy.", "ok": true },
+						{ "answer": "He ate the exercise for breakfast before going to work.", "ok": false },
+						{ "answer": "She drove her exercise to the park and left it there.", "ok": false },
+						{ "answer": "They cooked exercise in a big pan and served it for lunch.", "ok": false }
+					]
+				},
+				{
+					"title": "fever",
+					"page": 6,
+					"question": "fever",
+					"summary": "a higher than normal body temperature, usually because you are ill",
+					"explain": {
+						"entryId": "fever",
+						"headword": "fever",
+						"pronunciation": { "display": "FEE-vur", "ipaUK": "/ˈfiːvə/", "ipaUS": "/ˈfiːvər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "fever",
+								"inflectionsLine": "fevers",
+								"synonyms": ["high temperature", "temperature"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a medical condition in which your body temperature is higher than normal, usually because you are ill",
+										"examples": [
+											"She stayed in bed all day because she had a high fever.",
+											"The doctor said the fever would go down in a day or two."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He stayed home from school because he had a fever.", "ok": true },
+						{ "answer": "She cooked a fever for dinner and served it with bread.", "ok": false },
+						{ "answer": "He drove his fever to the supermarket to buy food.", "ok": false },
+						{ "answer": "They planted a fever in the garden and watered it each day.", "ok": false }
+					]
+				},
+				{
+					"title": "headache",
+					"page": 7,
+					"question": "headache",
+					"summary": "a continuous pain that you feel inside your head",
+					"explain": {
+						"entryId": "headache",
+						"headword": "headache",
+						"pronunciation": { "display": "HED-ayk", "ipaUK": "/ˈhedeɪk/", "ipaUS": "/ˈhedeɪk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "headache",
+								"inflectionsLine": "headaches",
+								"synonyms": ["migraine", "head pain"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a continuous pain that you feel in your head",
+										"examples": [
+											"She took some medicine for her headache.",
+											"He often gets a headache when he spends too long looking at a screen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She took some medicine because she had a bad headache.", "ok": true },
+						{ "answer": "He ate a headache for lunch with a glass of water.", "ok": false },
+						{ "answer": "She drove her headache to work and parked outside.", "ok": false },
+						{ "answer": "They bought a headache at the supermarket for five euros.", "ok": false }
+					]
+				},
+				{
+					"title": "healthy",
+					"page": 8,
+					"question": "healthy",
+					"summary": "in good physical condition; not sick",
+					"explain": {
+						"entryId": "healthy",
+						"headword": "healthy",
+						"pronunciation": { "display": "HEL-thee", "ipaUK": "/ˈhelθi/", "ipaUS": "/ˈhelθi/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "healthy",
+								"inflectionsLine": "healthier, healthiest",
+								"synonyms": ["well", "fit", "strong"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in good physical condition; not ill or injured",
+										"examples": [
+											"She feels healthy because she eats well and exercises regularly.",
+											"A healthy diet includes plenty of vegetables and fruit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She eats fresh fruit and vegetables every day to stay healthy.", "ok": true },
+						{ "answer": "He locked the healthy in a drawer and forgot about it.", "ok": false },
+						{ "answer": "She drove her healthy to the office every morning.", "ok": false },
+						{ "answer": "They planted a healthy in the garden and watered it daily.", "ok": false }
+					]
+				},
+				{
+					"title": "hospital",
+					"page": 9,
+					"question": "hospital",
+					"summary": "a large building where sick or injured people receive medical treatment",
+					"explain": {
+						"entryId": "hospital",
+						"headword": "hospital",
+						"pronunciation": { "display": "HOS-pi-tul", "ipaUK": "/ˈhɒspɪtl/", "ipaUS": "/ˈhɑːspɪtl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "hospital",
+								"inflectionsLine": "hospitals",
+								"synonyms": ["infirmary", "medical centre", "health centre"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a large building where people who are ill or injured go to receive medical treatment and care",
+										"examples": [
+											"She was taken to hospital after the accident.",
+											"He spent three days in hospital after his operation."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She was taken to hospital after she broke her arm.", "ok": true },
+						{ "answer": "He goes to the hospital every Saturday to buy fresh bread.", "ok": false },
+						{ "answer": "She visits the hospital each week to play tennis and swim.", "ok": false },
+						{ "answer": "They opened a new hospital to sell furniture and home goods.", "ok": false }
+					]
+				},
+				{
+					"title": "medicine",
+					"page": 10,
+					"question": "medicine",
+					"summary": "a substance you take to treat an illness or reduce pain",
+					"explain": {
+						"entryId": "medicine",
+						"headword": "medicine",
+						"pronunciation": { "display": "MED-uh-sin", "ipaUK": "/ˈmedsɪn/", "ipaUS": "/ˈmedɪsɪn/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "uncountable noun",
+								"headwordLine": "medicine",
+								"inflectionsLine": "",
+								"synonyms": ["medication", "drug", "treatment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a substance that you take to treat an illness or reduce pain",
+										"examples": [
+											"The doctor gave her some medicine for her cold.",
+											"He takes medicine every morning for his blood pressure."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The doctor gave him some medicine to help with his fever.", "ok": true },
+						{ "answer": "She cooked the medicine in a pan and served it for dinner.", "ok": false },
+						{ "answer": "He drove the medicine to work and used it as a desk.", "ok": false },
+						{ "answer": "They planted medicine in the garden and watered it every day.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

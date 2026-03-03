@@ -1,0 +1,349 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizPatterns3-en",
+  "title": "Patterns",
+  "updatedDate": 0,
+  "data": [
+	{
+	  "title": "Choose the sentence that uses the word correctly.",
+	  "description": "Common verb patterns",
+	  "sortorder": 1,
+	  "sections": [
+		{
+		  "title": "",
+		  "page": 1,
+		  "question": "teach",
+		  "summary": "to help someone learn something",
+		  "explain": {
+			"entryId": "teach",
+			"headword": "teach",
+			"pronunciation": { "display": "TEECH", "ipaUK": "/tiːtʃ/", "ipaUS": "/tiːtʃ/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "teach",
+				"inflectionsLine": "teaches, teaching, taught, taught",
+				"synonyms": ["educate"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to help someone learn by giving lessons",
+					"examples": ["She teaches English at a local school."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She teaches English at a local school.", "ok": true },
+			{ "answer": "She teach English at a local school.", "ok": false },
+			{ "answer": "She is teach English at a local school.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 2,
+		  "question": "travel",
+		  "summary": "to go from one place to another",
+		  "explain": {
+			"entryId": "travel",
+			"headword": "travel",
+			"pronunciation": { "display": "TRAV-uhl", "ipaUK": "/ˈtræv(ə)l/", "ipaUS": "/ˈtrævəl/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "travel",
+				"inflectionsLine": "travels, travelling, travelled",
+				"synonyms": ["journey"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to go from one place to another",
+					"examples": ["They travel by train every summer."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "They travel by train every summer.", "ok": true },
+			{ "answer": "They travel with train every summer.", "ok": false },
+			{ "answer": "They are travel by train every summer.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 3,
+		  "question": "visit",
+		  "summary": "to go to see a person or place",
+		  "explain": {
+			"entryId": "visit",
+			"headword": "visit",
+			"pronunciation": { "display": "VIZ-it", "ipaUK": "/ˈvɪzɪt/", "ipaUS": "/ˈvɪzɪt/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "visit",
+				"inflectionsLine": "visits, visiting, visited",
+				"synonyms": ["go to see"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to go to see a person or place",
+					"examples": ["We visited our grandparents last weekend."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "We visited our grandparents last weekend.", "ok": true },
+			{ "answer": "We visited to our grandparents last weekend.", "ok": false },
+			{ "answer": "We are visit our grandparents last weekend.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 4,
+		  "question": "walk",
+		  "summary": "to move on your feet at a normal speed",
+		  "explain": {
+			"entryId": "walk",
+			"headword": "walk",
+			"pronunciation": { "display": "WAWK", "ipaUK": "/wɔːk/", "ipaUS": "/wɔːk/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "walk",
+				"inflectionsLine": "walks, walking, walked",
+				"synonyms": ["go on foot"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to move forward on your feet",
+					"examples": ["She walks to work every day."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "walk",
+				"inflectionsLine": "walks",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a journey on foot",
+					"examples": ["We went for a walk in the park."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She walks to work every day.", "ok": true },
+			{ "answer": "She walks at work every day.", "ok": false },
+			{ "answer": "She is walk to work every day.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 5,
+		  "question": "watch",
+		  "summary": "to look at something carefully",
+		  "explain": {
+			"entryId": "watch",
+			"headword": "watch",
+			"pronunciation": { "display": "WOCH", "ipaUK": "/wɒtʃ/", "ipaUS": "/wɑːtʃ/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "watch",
+				"inflectionsLine": "watches, watching, watched",
+				"synonyms": ["look at"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to look at something for a time",
+					"examples": ["They watch TV in the evening."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "watch",
+				"inflectionsLine": "watches",
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a small clock you wear on your wrist",
+					"examples": ["He bought a new watch."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "They watch TV in the evening.", "ok": true },
+			{ "answer": "They watch to TV in the evening.", "ok": false },
+			{ "answer": "They are watch TV in the evening.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 6,
+		  "question": "when",
+		  "summary": "at the time that",
+		  "explain": {
+			"entryId": "when",
+			"headword": "when",
+			"pronunciation": { "display": "WEN", "ipaUK": "/wen/", "ipaUS": "/wen/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "conjunction",
+				"grammarType": "conjunction",
+				"headwordLine": "when",
+				"inflectionsLine": null,
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "at the time that something happens",
+					"examples": ["Call me when you arrive."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "Call me when you arrive.", "ok": true },
+			{ "answer": "Call me when you will arrive.", "ok": false },
+			{ "answer": "Call me arrive when you.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 7,
+		  "question": "work",
+		  "summary": "to do a job; or an activity that needs effort",
+		  "explain": {
+			"entryId": "work",
+			"headword": "work",
+			"pronunciation": { "display": "WERK", "ipaUK": "/wɜːk/", "ipaUS": "/wɜːrk/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "work",
+				"inflectionsLine": "works, working, worked",
+				"synonyms": ["do a job"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to do a job or activity",
+					"examples": ["She works in a hospital."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "work",
+				"inflectionsLine": "work",
+				"synonyms": ["job"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a job or activity that needs effort",
+					"examples": ["I have a lot of work today."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She works in a hospital.", "ok": true },
+			{ "answer": "She works at a hospitaled.", "ok": false },
+			{ "answer": "She is work in a hospital.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 8,
+		  "question": "write",
+		  "summary": "to make letters or words on paper or a screen",
+		  "explain": {
+			"entryId": "write",
+			"headword": "write",
+			"pronunciation": { "display": "RYT", "ipaUK": "/raɪt/", "ipaUS": "/raɪt/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "verb",
+				"grammarType": "verb",
+				"headwordLine": "write",
+				"inflectionsLine": "writes, writing, wrote, written",
+				"synonyms": ["record"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "to make words on paper or a screen",
+					"examples": ["Please write your name here."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "Please write your name here.", "ok": true },
+			{ "answer": "Please write to your name here.", "ok": false },
+			{ "answer": "Please wrote your name here.", "ok": false }
+		  ]
+		}
+	  ]
+	}
+  ]
+}

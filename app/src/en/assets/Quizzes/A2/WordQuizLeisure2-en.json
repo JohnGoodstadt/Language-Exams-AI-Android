@@ -1,0 +1,96 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizLeisure2-en",
+	"title": "Leisure",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Leisure",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "traveling",
+					"page": 1,
+					"question": "traveling",
+					"summary": "the activity of going to different places, especially in other countries",
+					"explain": {
+						"entryId": "traveling",
+						"headword": "traveling",
+						"pronunciation": { "display": "TRAV-ul-ing", "ipaUK": "/ˈtrævəlɪŋ/", "ipaUS": "/ˈtrævəlɪŋ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "uncountable noun",
+								"headwordLine": "traveling",
+								"inflectionsLine": "",
+								"synonyms": ["travel", "journeying", "touring"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the activity of going from one place to another, especially to different countries or regions, for pleasure or interest",
+										"examples": [
+											"She loves traveling and has visited more than twenty countries around the world.",
+											"He saves money every month because he enjoys traveling to new destinations."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She loves traveling and has visited more than twenty countries around the world.", "ok": true },
+						{ "answer": "He eats traveling every morning to give him energy for the day.", "ok": false },
+						{ "answer": "She drives her traveling to work every morning because the office is very far away.", "ok": false },
+						{ "answer": "They planted traveling in the garden to make it look more beautiful.", "ok": false }
+					]
+				},
+				{
+					"title": "watching movies",
+					"page": 2,
+					"question": "watching movies",
+					"summary": "the activity of viewing films at a cinema or on a screen for entertainment",
+					"explain": {
+						"entryId": "watching movies",
+						"headword": "watching movies",
+						"pronunciation": { "display": "WOCH-ing MOO-veez", "ipaUK": "/ˈwɒtʃɪŋ ˈmuːvɪz/", "ipaUS": "/ˈwɑːtʃɪŋ ˈmuːvɪz/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "verb phrase",
+								"headwordLine": "watching movies",
+								"inflectionsLine": "watches movies, watched movies",
+								"synonyms": ["going to the cinema", "film-watching", "viewing films"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "the activity of viewing films or movies as a form of entertainment, either at a cinema or on a screen at home",
+										"examples": [
+											"She enjoys watching movies at home on Friday evenings with her family.",
+											"He loves watching movies and goes to the cinema almost every weekend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She enjoys watching movies at home on Friday evenings with her family.", "ok": true },
+						{ "answer": "He goes watching movies in the swimming pool every morning to stay fit.", "ok": false },
+						{ "answer": "She uses watching movies to travel quickly between cities for her job.", "ok": false },
+						{ "answer": "He does watching movies in his garden every day to help his plants grow.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

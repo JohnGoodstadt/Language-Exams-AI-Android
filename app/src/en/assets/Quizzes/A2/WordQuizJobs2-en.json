@@ -1,0 +1,88 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizJobs2-en",
+  "title": "Jobs",
+  "updatedDate": 0,
+  "data": [
+	{
+	  "title": "Choose the sentence that uses the word correctly.",
+	  "description": "Jobs & work",
+	  "sortorder": 1,
+	  "sections": [
+		{
+		  "title": "",
+		  "page": 1,
+		  "question": "resume",
+		  "summary": "a document that lists your education and work experience",
+		  "explain": {
+			"entryId": "resume",
+			"headword": "resume",
+			"pronunciation": { "display": "REZ-oo-may", "ipaUK": "/ˈrezjuːmeɪ/", "ipaUS": "/ˈrezəmeɪ/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "résumé (resume)",
+				"inflectionsLine": "resumes",
+				"synonyms": ["CV"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "a document that gives details about your education and work experience when you apply for a job",
+					"examples": ["She sent her resume to the company."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She updated her resume before applying for the job.", "ok": true },
+			{ "answer": "She resume the meeting at nine o’clock.", "ok": false },
+			{ "answer": "She wrote her salary on her resume yesterdayed.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 2,
+		  "question": "salary",
+		  "summary": "the money you receive for your job",
+		  "explain": {
+			"entryId": "salary",
+			"headword": "salary",
+			"pronunciation": { "display": "SAL-uh-ree", "ipaUK": "/ˈsæləri/", "ipaUS": "/ˈsæləri/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "noun",
+				"grammarType": "noun",
+				"headwordLine": "salary",
+				"inflectionsLine": "salaries",
+				"synonyms": ["pay", "income"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "the money you receive regularly for doing your job",
+					"examples": ["He earns a good salary at his new job."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She asked about the salary during the interview.", "ok": true },
+			{ "answer": "She salaried about the interview yesterday.", "ok": false },
+			{ "answer": "She received a resume every month from her company.", "ok": false }
+		  ]
+		}
+	  ]
+	}
+  ]
+}

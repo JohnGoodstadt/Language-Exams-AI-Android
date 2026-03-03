@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens.reference
+package com.goodstadt.john.language.exams.screens.reference.VocabQuiz
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -51,7 +51,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.CategoryMasteryStats
 import com.goodstadt.john.language.exams.models.DashboardUiState
 import com.goodstadt.john.language.exams.screens.SectionQuizContainer

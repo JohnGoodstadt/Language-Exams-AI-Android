@@ -350,7 +350,7 @@ class AppConfigRepository @Inject constructor(
        {
          "sheetRegistry": {
            "quiz": {
-             "title": "Quiz",
+             "title": "Usage Quiz",
              "sheetDataType": "fixed",
              "screenType": "FixedScreen"
            },

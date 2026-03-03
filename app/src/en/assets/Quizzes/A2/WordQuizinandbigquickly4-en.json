@@ -1,0 +1,391 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizinandbigquickly4-en",
+  "title": "Common adjectives, adverbs and linkers",
+  "updatedDate": 0,
+  "data": [
+	{
+	  "title": "Choose the sentence that uses the word correctly.",
+	  "description": "Common adjectives, adverbs and linkers",
+	  "sortorder": 1,
+	  "sections": [
+		{
+		  "title": "",
+		  "page": 1,
+		  "question": "quickly",
+		  "summary": "in a fast way",
+		  "explain": {
+			"entryId": "quickly",
+			"headword": "quickly",
+			"pronunciation": { "display": "KWIK-lee", "ipaUK": "/ˈkwɪkli/", "ipaUS": "/ˈkwɪkli/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adverb",
+				"grammarType": "adverb",
+				"headwordLine": "quickly",
+				"inflectionsLine": null,
+				"synonyms": ["fast"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "in a fast way",
+					"examples": ["She finished her homework quickly."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She finished her homework quickly.", "ok": true },
+			{ "answer": "She quickly finished her homeworked.", "ok": false },
+			{ "answer": "She finished quickly her homework.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 2,
+		  "question": "quietly",
+		  "summary": "in a quiet way; without noise",
+		  "explain": {
+			"entryId": "quietly",
+			"headword": "quietly",
+			"pronunciation": { "display": "KWY-et-lee", "ipaUK": "/ˈkwaɪətli/", "ipaUS": "/ˈkwaɪətli/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adverb",
+				"grammarType": "adverb",
+				"headwordLine": "quietly",
+				"inflectionsLine": null,
+				"synonyms": ["silently"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "in a quiet way without making noise",
+					"examples": ["The baby was sleeping quietly."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "The baby was sleeping quietly.", "ok": true },
+			{ "answer": "The baby quietly was sleepinged.", "ok": false },
+			{ "answer": "The baby was sleeping quiet.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 3,
+		  "question": "rarely",
+		  "summary": "not often",
+		  "explain": {
+			"entryId": "rarely",
+			"headword": "rarely",
+			"pronunciation": { "display": "RAIR-lee", "ipaUK": "/ˈreəli/", "ipaUS": "/ˈrerli/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adverb",
+				"grammarType": "adverb",
+				"headwordLine": "rarely",
+				"inflectionsLine": null,
+				"synonyms": ["seldom"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "not often",
+					"examples": ["He rarely eats fast food."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "He rarely eats fast food.", "ok": true },
+			{ "answer": "He rare eats fast food.", "ok": false },
+			{ "answer": "He rarely eat fast food.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 4,
+		  "question": "sad",
+		  "summary": "feeling unhappy",
+		  "explain": {
+			"entryId": "sad",
+			"headword": "sad",
+			"pronunciation": { "display": "SAD", "ipaUK": "/sæd/", "ipaUS": "/sæd/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "sad",
+				"inflectionsLine": null,
+				"synonyms": ["unhappy"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "feeling unhappy",
+					"examples": ["She felt sad after the movie."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She felt sad after the movie.", "ok": true },
+			{ "answer": "She felt sadly after the movie.", "ok": false },
+			{ "answer": "She was saded after the movie.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 5,
+		  "question": "sadly",
+		  "summary": "in a sad way",
+		  "explain": {
+			"entryId": "sadly",
+			"headword": "sadly",
+			"pronunciation": { "display": "SAD-lee", "ipaUK": "/ˈsædli/", "ipaUS": "/ˈsædli/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adverb",
+				"grammarType": "adverb",
+				"headwordLine": "sadly",
+				"inflectionsLine": null,
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "in a sad way",
+					"examples": ["He looked sadly at the broken toy."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "He looked sadly at the broken toy.", "ok": true },
+			{ "answer": "He looked sad at the broken toy.", "ok": false },
+			{ "answer": "He sadly lookeded at the broken toy.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 6,
+		  "question": "short",
+		  "summary": "not long; small in height or length",
+		  "explain": {
+			"entryId": "short",
+			"headword": "short",
+			"pronunciation": { "display": "SHORT", "ipaUK": "/ʃɔːt/", "ipaUS": "/ʃɔːrt/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "short",
+				"inflectionsLine": null,
+				"synonyms": ["not long"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "not long in time or length",
+					"examples": ["It was a short meeting."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "It was a short meeting.", "ok": true },
+			{ "answer": "It was a shortly meeting.", "ok": false },
+			{ "answer": "It was shorted meeting.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 7,
+		  "question": "since",
+		  "summary": "from a time in the past until now",
+		  "explain": {
+			"entryId": "since",
+			"headword": "since",
+			"pronunciation": { "display": "SINS", "ipaUK": "/sɪns/", "ipaUS": "/sɪns/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 2",
+				"pos": "preposition",
+				"grammarType": "preposition",
+				"headwordLine": "since",
+				"inflectionsLine": null,
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "from a time in the past until now",
+					"examples": ["I have lived here since 2010."]
+				  }
+				]
+			  },
+			  {
+				"ordinal": "2 of 2",
+				"pos": "conjunction",
+				"grammarType": "conjunction",
+				"headwordLine": "since",
+				"inflectionsLine": null,
+				"synonyms": ["because"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "because",
+					"examples": ["Since it was raining, we stayed inside."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "I have lived here since 2010.", "ok": true },
+			{ "answer": "I live here since 2010.", "ok": false },
+			{ "answer": "I have lived here from 2010.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 8,
+		  "question": "slowly",
+		  "summary": "in a slow way",
+		  "explain": {
+			"entryId": "slowly",
+			"headword": "slowly",
+			"pronunciation": { "display": "SLOH-lee", "ipaUK": "/ˈsləʊli/", "ipaUS": "/ˈsloʊli/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adverb",
+				"grammarType": "adverb",
+				"headwordLine": "slowly",
+				"inflectionsLine": null,
+				"synonyms": ["not quickly"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "in a slow way",
+					"examples": ["He walked slowly across the street."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "He walked slowly across the street.", "ok": true },
+			{ "answer": "He walked slow across the street.", "ok": false },
+			{ "answer": "He slowly walkeded across the street.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 9,
+		  "question": "small",
+		  "summary": "not big",
+		  "explain": {
+			"entryId": "small",
+			"headword": "small",
+			"pronunciation": { "display": "SMAWL", "ipaUK": "/smɔːl/", "ipaUS": "/smɔːl/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "adjective",
+				"grammarType": "adjective",
+				"headwordLine": "small",
+				"inflectionsLine": null,
+				"synonyms": ["little"],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "not big in size",
+					"examples": ["She lives in a small house."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "She lives in a small house.", "ok": true },
+			{ "answer": "She lives in a smallly house.", "ok": false },
+			{ "answer": "She live in a small house.", "ok": false }
+		  ]
+		},
+		{
+		  "title": "",
+		  "page": 10,
+		  "question": "so",
+		  "summary": "used to show result or reason",
+		  "explain": {
+			"entryId": "so",
+			"headword": "so",
+			"pronunciation": { "display": "SOH", "ipaUK": "/səʊ/", "ipaUS": "/soʊ/" },
+			"labels": ["A2"],
+			"partsOfSpeech": [
+			  {
+				"ordinal": "1 of 1",
+				"pos": "conjunction",
+				"grammarType": "conjunction",
+				"headwordLine": "so",
+				"inflectionsLine": null,
+				"synonyms": [],
+				"senses": [
+				  {
+					"senseNumber": 1,
+					"definition": "used to show a result",
+					"examples": ["It was raining, so we stayed inside."]
+				  }
+				]
+			  }
+			],
+			"version": 1,
+			"updatedDate": 0
+		  },
+		  "answers": [
+			{ "answer": "It was raining, so we stayed inside.", "ok": true },
+			{ "answer": "It was raining so we stay inside.", "ok": false },
+			{ "answer": "It raining so we stayed inside.", "ok": false }
+		  ]
+		}
+	  ]
+	}
+  ]
+}

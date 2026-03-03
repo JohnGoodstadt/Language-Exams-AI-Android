@@ -1,0 +1,335 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizinandbigquickly1-en",
+	"title": "in and big quickly",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "in and big quickly",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "tall",
+					"summary": "having a great height",
+					"explain": {
+						"entryId": "tall",
+						"headword": "tall",
+						"pronunciation": { "display": "TAWL", "ipaUK": "/tɔːl/", "ipaUS": "/tɔːl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "tall",
+								"inflectionsLine": "taller, tallest",
+								"synonyms": ["high"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having a great height",
+										"examples": ["He is very tall for his age."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He is very tall for his age.", "ok": true },
+						{ "answer": "He is very taller for his age.", "ok": false },
+						{ "answer": "He tall is very for his age.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "though",
+					"summary": "despite the fact that; however",
+					"explain": {
+						"entryId": "though",
+						"headword": "though",
+						"pronunciation": { "display": "THOH", "ipaUK": "/ðəʊ/", "ipaUS": "/ðoʊ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "though",
+								"inflectionsLine": null,
+								"synonyms": ["although"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "despite the fact that",
+										"examples": ["Though it was raining, we went outside."]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "though",
+								"inflectionsLine": null,
+								"synonyms": ["however"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "however; but",
+										"examples": ["I didn’t like it. It was cheap, though."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Though it was raining, we went outside.", "ok": true },
+						{ "answer": "Though it was raining but we went outside.", "ok": false },
+						{ "answer": "Though was raining, we went outside.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "under",
+					"summary": "below something; in a lower position",
+					"explain": {
+						"entryId": "under",
+						"headword": "under",
+						"pronunciation": { "display": "UN-der", "ipaUK": "/ˈʌndə/", "ipaUS": "/ˈʌndər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "under",
+								"inflectionsLine": null,
+								"synonyms": ["below"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "below something; in a lower position",
+										"examples": ["The cat is sleeping under the table."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "The cat is sleeping under the table.", "ok": true },
+						{ "answer": "The cat is sleeping below the table under.", "ok": false },
+						{ "answer": "The cat sleeping under the table is.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "until",
+					"summary": "up to the time when something happens",
+					"explain": {
+						"entryId": "until",
+						"headword": "until",
+						"pronunciation": { "display": "un-TIL", "ipaUK": "/ʌnˈtɪl/", "ipaUS": "/ʌnˈtɪl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "until",
+								"inflectionsLine": null,
+								"synonyms": ["till"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "up to the time when something happens",
+										"examples": ["We waited until the bus arrived."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "We waited until the bus arrived.", "ok": true },
+						{ "answer": "We waited until the bus will arrive.", "ok": false },
+						{ "answer": "We waited until arrived the bus.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "well",
+					"summary": "in a good way",
+					"explain": {
+						"entryId": "well",
+						"headword": "well",
+						"pronunciation": { "display": "WEL", "ipaUK": "/wel/", "ipaUS": "/wel/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "well",
+								"inflectionsLine": null,
+								"synonyms": ["nicely"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in a good way",
+										"examples": ["She speaks English very well."]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "well",
+								"inflectionsLine": null,
+								"synonyms": ["healthy"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "healthy; not ill",
+										"examples": ["I don’t feel well today."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She speaks English very well.", "ok": true },
+						{ "answer": "She speaks English very good.", "ok": false },
+						{ "answer": "She well speaks English very.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "when",
+					"summary": "at the time that",
+					"explain": {
+						"entryId": "when",
+						"headword": "when",
+						"pronunciation": { "display": "WEN", "ipaUK": "/wen/", "ipaUS": "/wen/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "when",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "at the time that",
+										"examples": ["Call me when you arrive."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Call me when you arrive.", "ok": true },
+						{ "answer": "Call me when you will arrive.", "ok": false },
+						{ "answer": "Call me arrive when you.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "while",
+					"summary": "during the time that",
+					"explain": {
+						"entryId": "while",
+						"headword": "while",
+						"pronunciation": { "display": "WYL", "ipaUK": "/waɪl/", "ipaUS": "/waɪl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "while",
+								"inflectionsLine": null,
+								"synonyms": ["during"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "during the time that",
+										"examples": ["She was listening to music while studying."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She was listening to music while studying.", "ok": true },
+						{ "answer": "She was listening music while studying.", "ok": false },
+						{ "answer": "She while was listening to music studying.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "young",
+					"summary": "not old; in the early part of life",
+					"explain": {
+						"entryId": "young",
+						"headword": "young",
+						"pronunciation": { "display": "YUNG", "ipaUK": "/jʌŋ/", "ipaUS": "/jʌŋ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "young",
+								"inflectionsLine": "younger, youngest",
+								"synonyms": ["not old"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "not old; in the early part of life",
+										"examples": ["He is too young to drive."]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He is too young to drive.", "ok": true },
+						{ "answer": "He is too young for drive.", "ok": false },
+						{ "answer": "He young is too to drive.", "ok": false }
+					]
+				}
+			]
+
+		}
+	]
+}

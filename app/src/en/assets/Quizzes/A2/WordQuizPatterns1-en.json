@@ -1,0 +1,452 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPatterns1-en",
+	"title": "Patterns",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Patterns",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "after",
+					"page": 1,
+					"question": "after",
+					"summary": "following in time; later than something else",
+					"explain": {
+						"entryId": "after",
+						"headword": "after",
+						"pronunciation": { "display": "AF-tur", "ipaUK": "/ˈɑːftə/", "ipaUS": "/ˈæftər/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "after",
+								"inflectionsLine": "",
+								"synonyms": ["once", "when", "following"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to show that one event or action happens later than another",
+										"examples": [
+											"She went to bed after she had finished all her homework.",
+											"He called his mother after he arrived at the hotel."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "after",
+								"inflectionsLine": "",
+								"synonyms": ["following", "past", "subsequent to"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "at a time later than; following in position or order",
+										"examples": [
+											"She went to the gym after work.",
+											"He arrived after dinner and missed the food."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She went to bed after she had finished all her homework.", "ok": true },
+						{ "answer": "He bought three afters at the market for his children.", "ok": false },
+						{ "answer": "She cooked the after in a big pot for Sunday dinner.", "ok": false },
+						{ "answer": "They planted an after in the garden and watered it daily.", "ok": false }
+					]
+				},
+				{
+					"title": "although",
+					"page": 2,
+					"question": "although",
+					"summary": "despite the fact that; even though",
+					"explain": {
+						"entryId": "although",
+						"headword": "although",
+						"pronunciation": { "display": "awl-DHOH", "ipaUK": "/ɔːlˈðəʊ/", "ipaUS": "/ɔːlˈðoʊ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "although",
+								"inflectionsLine": "",
+								"synonyms": ["even though", "though", "while"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a statement that makes the main statement surprising or unexpected",
+										"examples": [
+											"Although it was raining, she decided to walk to the park.",
+											"She passed the exam although she had not studied very much."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Although it was raining, she decided to walk to the park.", "ok": true },
+						{ "answer": "He bought two althoughs at the supermarket on Saturday.", "ok": false },
+						{ "answer": "She cooked the although in a large pan for dinner.", "ok": false },
+						{ "answer": "They planted an although in the garden last spring.", "ok": false }
+					]
+				},
+				{
+					"title": "because",
+					"page": 3,
+					"question": "because",
+					"summary": "for the reason that; since",
+					"explain": {
+						"entryId": "because",
+						"headword": "because",
+						"pronunciation": { "display": "bi-KOZ", "ipaUK": "/bɪˈkɒz/", "ipaUS": "/bɪˈkɔːz/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "because",
+								"inflectionsLine": "",
+								"synonyms": ["since", "as", "given that"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce the reason for something",
+										"examples": [
+											"She wore a warm coat because it was very cold outside.",
+											"He was tired because he had worked all day without a break."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wore a warm coat because it was very cold outside.", "ok": true },
+						{ "answer": "He bought a because at the market and took it home.", "ok": false },
+						{ "answer": "She cooked the because in the oven for Sunday dinner.", "ok": false },
+						{ "answer": "They planted a because in the garden near the gate.", "ok": false }
+					]
+				},
+				{
+					"title": "buy",
+					"page": 4,
+					"question": "buy",
+					"summary": "to get something by paying money for it",
+					"explain": {
+						"entryId": "buy",
+						"headword": "buy",
+						"pronunciation": { "display": "BY", "ipaUK": "/baɪ/", "ipaUS": "/baɪ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "buy",
+								"inflectionsLine": "buys, buying, bought",
+								"synonyms": ["purchase", "pay for", "get"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to get something by paying money for it",
+										"examples": [
+											"She went to the market to buy some fruit and vegetables.",
+											"He bought a new jacket because the old one was too small."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She went to the market to buy some fruit and vegetables.", "ok": true },
+						{ "answer": "He wants to buy the sun because he needs more light.", "ok": false },
+						{ "answer": "She tried to buy Thursday because she needed more time.", "ok": false },
+						{ "answer": "They went to buy sleep at the pharmacy for the baby.", "ok": false }
+					]
+				},
+				{
+					"title": "drink",
+					"page": 5,
+					"question": "drink",
+					"summary": "to take liquid into your mouth and swallow it",
+					"explain": {
+						"entryId": "drink",
+						"headword": "drink",
+						"pronunciation": { "display": "DRINK", "ipaUK": "/drɪŋk/", "ipaUS": "/drɪŋk/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "drink",
+								"inflectionsLine": "drinks, drinking, drank, drunk",
+								"synonyms": ["sip", "swallow", "consume"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to take a liquid into your mouth and swallow it",
+										"examples": [
+											"She drinks a large glass of water every morning when she wakes up.",
+											"He drank two cups of coffee before going to work."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "drink",
+								"inflectionsLine": "drinks",
+								"synonyms": ["beverage", "liquid", "refreshment"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an amount of liquid that you drink",
+										"examples": [
+											"Would you like a drink of water?",
+											"She ordered a cold drink at the café."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She drinks a large glass of water every morning when she wakes up.", "ok": true },
+						{ "answer": "He drinks his bicycle to school every morning.", "ok": false },
+						{ "answer": "She drank the classroom before the lesson started.", "ok": false },
+						{ "answer": "They drink their homework every evening before bed.", "ok": false }
+					]
+				},
+				{
+					"title": "drive",
+					"page": 6,
+					"question": "drive",
+					"summary": "to operate a vehicle and control its movement",
+					"explain": {
+						"entryId": "drive",
+						"headword": "drive",
+						"pronunciation": { "display": "DRYV", "ipaUK": "/draɪv/", "ipaUS": "/draɪv/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "drive",
+								"inflectionsLine": "drives, driving, drove, driven",
+								"synonyms": ["operate", "steer", "travel by car"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to operate a vehicle and control its direction and speed",
+										"examples": [
+											"He drives to work every day because his office is far from home.",
+											"She drives her children to school when it rains."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He drives to work every day because his office is far from home.", "ok": true },
+						{ "answer": "She drives her breakfast every morning before school.", "ok": false },
+						{ "answer": "He drives the music very loudly in the kitchen.", "ok": false },
+						{ "answer": "They drive their homework every evening after dinner.", "ok": false }
+					]
+				},
+				{
+					"title": "eat",
+					"page": 7,
+					"question": "eat",
+					"summary": "to put food in your mouth, chew it, and swallow it",
+					"explain": {
+						"entryId": "eat",
+						"headword": "eat",
+						"pronunciation": { "display": "EET", "ipaUK": "/iːt/", "ipaUS": "/iːt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "eat",
+								"inflectionsLine": "eats, eating, ate, eaten",
+								"synonyms": ["have", "consume", "feed on"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to put food into your mouth, chew it, and swallow it",
+										"examples": [
+											"She eats a healthy breakfast before going to school every morning.",
+											"He ate a big bowl of soup for lunch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She eats a healthy breakfast before going to school every morning.", "ok": true },
+						{ "answer": "He eats his car to school every day.", "ok": false },
+						{ "answer": "She eats very quickly to the market on Saturday.", "ok": false },
+						{ "answer": "They eat the weather outside in the garden.", "ok": false }
+					]
+				},
+				{
+					"title": "go",
+					"page": 8,
+					"question": "go",
+					"summary": "to move from one place to another",
+					"explain": {
+						"entryId": "go",
+						"headword": "go",
+						"pronunciation": { "display": "GOH", "ipaUK": "/ɡəʊ/", "ipaUS": "/ɡoʊ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "verb",
+								"grammarType": "intransitive verb",
+								"headwordLine": "go",
+								"inflectionsLine": "goes, going, went, gone",
+								"synonyms": ["travel", "move", "head"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to move or travel from one place to another",
+										"examples": [
+											"She goes to the library every Thursday after school.",
+											"He went to the market to buy some vegetables."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She goes to the library every Thursday after school.", "ok": true },
+						{ "answer": "He goes his coffee before work every morning.", "ok": false },
+						{ "answer": "She went the letter to the post office on Friday.", "ok": false },
+						{ "answer": "They go the weather at the park every weekend.", "ok": false }
+					]
+				},
+				{
+					"title": "if",
+					"page": 9,
+					"question": "if",
+					"summary": "on the condition that; used to talk about a possibility",
+					"explain": {
+						"entryId": "if",
+						"headword": "if",
+						"pronunciation": { "display": "IF", "ipaUK": "/ɪf/", "ipaUS": "/ɪf/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "if",
+								"inflectionsLine": "",
+								"synonyms": ["provided that", "on condition that", "supposing"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to talk about a condition or a possible situation, and what happens or might happen as a result",
+										"examples": [
+											"She will bring an umbrella if it rains tomorrow.",
+											"He will call you if he is going to be late."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She will bring an umbrella if it rains tomorrow.", "ok": true },
+						{ "answer": "He bought three ifs at the supermarket last Saturday.", "ok": false },
+						{ "answer": "She cooked the if in the kitchen for dinner on Sunday.", "ok": false },
+						{ "answer": "They planted an if in the garden near the flowers.", "ok": false }
+					]
+				},
+				{
+					"title": "important",
+					"page": 10,
+					"question": "important",
+					"summary": "having great value or significance; necessary",
+					"explain": {
+						"entryId": "important",
+						"headword": "important",
+						"pronunciation": { "display": "im-POR-tunt", "ipaUK": "/ɪmˈpɔːtnt/", "ipaUS": "/ɪmˈpɔːrtnt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "important",
+								"inflectionsLine": "more important, most important",
+								"synonyms": ["significant", "essential", "key"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "having great value, meaning, or effect; necessary to pay attention to",
+										"examples": [
+											"It is important to eat well and exercise regularly to stay healthy.",
+											"She has an important meeting at work tomorrow morning."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "It is important to eat well and exercise regularly to stay healthy.", "ok": true },
+						{ "answer": "He bought an important at the shopping mall on Saturday.", "ok": false },
+						{ "answer": "She drove her important to the office every morning.", "ok": false },
+						{ "answer": "They cooked the important and served it with vegetables.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

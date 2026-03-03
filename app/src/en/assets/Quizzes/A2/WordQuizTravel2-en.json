@@ -1,0 +1,114 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel2-en",
+	"title": "Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Travel",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "ticket",
+					"page": 1,
+					"question": "ticket",
+					"summary": "a small piece of paper or card that shows you have paid to travel or enter somewhere",
+					"explain": {
+						"entryId": "ticket",
+						"headword": "ticket",
+						"pronunciation": { "display": "TIK-it", "ipaUK": "/ˈtɪkɪt/", "ipaUS": "/ˈtɪkɪt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "ticket",
+								"inflectionsLine": "tickets",
+								"synonyms": ["pass", "voucher", "token"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a small piece of paper or card that shows you have paid to travel on a form of transport or to enter a place such as a cinema or concert",
+										"examples": [
+											"She bought a ticket for the train to London at the station.",
+											"He lost his ticket and could not get into the concert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She bought a ticket for the train to London at the station.", "ok": true },
+						{ "answer": "He drank a hot ticket at the café before boarding the bus.", "ok": false },
+						{ "answer": "She cooked a ticket in the pan and served it for dinner.", "ok": false },
+						{ "answer": "They planted tickets in the garden and watered them every morning.", "ok": false }
+					]
+				},
+				{
+					"title": "train",
+					"page": 2,
+					"question": "train",
+					"summary": "a vehicle that travels along railway tracks; also to teach someone a skill through practice",
+					"explain": {
+						"entryId": "train",
+						"headword": "train",
+						"pronunciation": { "display": "TRAYN", "ipaUK": "/treɪn/", "ipaUS": "/treɪn/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "noun",
+								"grammarType": "countable noun",
+								"headwordLine": "train",
+								"inflectionsLine": "trains",
+								"synonyms": ["railway", "locomotive", "rail service"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "a long vehicle that travels along railway tracks, with an engine pulling a series of carriages carrying passengers or goods",
+										"examples": [
+											"He took the train to work because the buses were on strike.",
+											"The train arrived at the platform ten minutes late."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "verb",
+								"grammarType": "transitive verb",
+								"headwordLine": "train",
+								"inflectionsLine": "trains, training, trained",
+								"synonyms": ["coach", "teach", "prepare"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "to teach someone the skills they need for a particular job or activity, especially through repeated practice",
+										"examples": [
+											"She is training to become a nurse at the local hospital.",
+											"He trains at the gym three times a week to prepare for the race."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He took the train to work because the buses were on strike.", "ok": true },
+						{ "answer": "She cooked the train for dinner and served it with vegetables.", "ok": false },
+						{ "answer": "He planted a train in his garden to grow food for the winter.", "ok": false },
+						{ "answer": "She drank a cold train after her run in the park.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

@@ -71,7 +71,7 @@ import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.Format0Word
 import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.screens.reference.VocabQuizScreen
+import com.goodstadt.john.language.exams.screens.reference.VocabQuiz.VocabQuizScreen
 import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.CacheProgressBar
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet

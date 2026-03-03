@@ -1,0 +1,593 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizSocial1-en",
+  "title": "Social",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Social",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "advise",
+          "page": 1,
+          "question": "advise",
+          "summary": "to tell someone what you think they should do",
+          "explain": {
+            "entryId": "advise",
+            "headword": "advise",
+            "pronunciation": {
+              "display": "ad-VIZE",
+              "ipaUK": "/ədˈvaɪz/",
+              "ipaUS": "/ədˈvaɪz/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "transitive verb",
+                "headwordLine": "advise",
+                "inflectionsLine": "advises, advised, advising",
+                "synonyms": ["recommend", "suggest", "counsel"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to tell someone what you think they should do in a particular situation",
+                    "examples": [
+                      "The doctor advised her to rest for a week and drink plenty of water.",
+                      "He advised his friend to look for a new job."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The doctor advised her to rest for a week and drink plenty of water.",
+              "ok": true
+            },
+            {
+              "answer": "He advised his new shirt with the blue trousers to look smart.",
+              "ok": false
+            },
+            {
+              "answer": "She advised the front door shut because the room was getting too cold.",
+              "ok": false
+            },
+            {
+              "answer": "He advised his lunch quickly because he only had fifteen minutes to eat.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "agree",
+          "page": 2,
+          "question": "agree",
+          "summary": "to have the same opinion as someone; to say yes to something",
+          "explain": {
+            "entryId": "agree",
+            "headword": "agree",
+            "pronunciation": {
+              "display": "uh-GREE",
+              "ipaUK": "/əˈɡriː/",
+              "ipaUS": "/əˈɡriː/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "intransitive verb",
+                "headwordLine": "agree",
+                "inflectionsLine": "agrees, agreed, agreeing",
+                "synonyms": ["consent", "accept", "concur"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to have the same opinion as someone else, or to say yes to something",
+                    "examples": [
+                      "She agreed with her friend that the new restaurant was excellent.",
+                      "They agreed to meet at the café at three o'clock."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She agreed with her friend that the new restaurant was excellent.",
+              "ok": true
+            },
+            {
+              "answer": "He agreed his coat on the chair and sat down for the meeting.",
+              "ok": false
+            },
+            {
+              "answer": "She agreed the window open to let some fresh air into the warm room.",
+              "ok": false
+            },
+            {
+              "answer": "He agreed his lunch in the kitchen every morning before going to school.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "apologize",
+          "page": 3,
+          "question": "apologize",
+          "summary": "to tell someone that you are sorry for doing something wrong",
+          "explain": {
+            "entryId": "apologize",
+            "headword": "apologize",
+            "pronunciation": {
+              "display": "uh-POL-uh-jize",
+              "ipaUK": "/əˈpɒlədʒaɪz/",
+              "ipaUS": "/əˈpɑːlədʒaɪz/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "intransitive verb",
+                "headwordLine": "apologize",
+                "inflectionsLine": "apologizes, apologized, apologizing",
+                "synonyms": ["say sorry", "express regret", "make amends"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to tell someone that you are sorry for something wrong you have done",
+                    "examples": [
+                      "She apologized to her friend for arriving late to the birthday party.",
+                      "He apologized for the mistake and promised it would not happen again."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He apologized to his sister for forgetting her birthday last week.",
+              "ok": true
+            },
+            {
+              "answer": "She apologized her keys on the table before going upstairs to bed.",
+              "ok": false
+            },
+            {
+              "answer": "He apologized the television when he walked into the sitting room.",
+              "ok": false
+            },
+            {
+              "answer": "She apologized her new shoes to see if they felt comfortable on her feet.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "ask",
+          "page": 4,
+          "question": "ask",
+          "summary": "to say something to someone as a question to get information or a response",
+          "explain": {
+            "entryId": "ask",
+            "headword": "ask",
+            "pronunciation": {
+              "display": "ahsk",
+              "ipaUK": "/ɑːsk/",
+              "ipaUS": "/æsk/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "transitive and intransitive verb",
+                "headwordLine": "ask",
+                "inflectionsLine": "asks, asked, asking",
+                "synonyms": ["inquire", "question", "query"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to say or write something to someone to get information or a reply",
+                    "examples": [
+                      "She asked the teacher to explain the homework one more time.",
+                      "He asked his friend if she wanted to come to the party."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She asked the teacher to explain the homework question one more time.",
+              "ok": true
+            },
+            {
+              "answer": "He asked the soup before adding more salt and pepper to it.",
+              "ok": false
+            },
+            {
+              "answer": "She asked the door to find out if anyone was waiting inside the room.",
+              "ok": false
+            },
+            {
+              "answer": "He asked his shoes on carefully before leaving the house for school.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "compliment",
+          "page": 5,
+          "question": "compliment",
+          "summary": "to say something nice to someone about their appearance, work, or behaviour",
+          "explain": {
+            "entryId": "compliment",
+            "headword": "compliment",
+            "pronunciation": {
+              "display": "KOM-plih-ment",
+              "ipaUK": "/ˈkɒmplɪmɛnt/",
+              "ipaUS": "/ˈkɑːmplɪmɛnt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 2",
+                "pos": "verb",
+                "grammarType": "transitive verb",
+                "headwordLine": "compliment",
+                "inflectionsLine": "compliments, complimented, complimenting",
+                "synonyms": ["praise", "flatter", "admire"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to say something nice to someone about their appearance, work, or behaviour",
+                    "examples": [
+                      "She complimented her colleague on the excellent presentation he gave.",
+                      "He complimented his sister on her beautiful new dress."
+                    ]
+                  }
+                ]
+              },
+              {
+                "ordinal": "2 of 2",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "compliment",
+                "inflectionsLine": "compliments",
+                "synonyms": ["praise", "kind remark", "flattery"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a remark that expresses praise or admiration",
+                    "examples": [
+                      "She was very happy when her boss paid her a compliment about her work."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She complimented her colleague on the excellent presentation he gave to the team.",
+              "ok": true
+            },
+            {
+              "answer": "He complimented the soup by adding more salt and pepper before serving it.",
+              "ok": false
+            },
+            {
+              "answer": "She complimented the door shut because the music next door was too loud.",
+              "ok": false
+            },
+            {
+              "answer": "He complimented his keys into his bag before leaving the house for work.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "congratulate",
+          "page": 6,
+          "question": "congratulate",
+          "summary": "to tell someone you are pleased about their success or good news",
+          "explain": {
+            "entryId": "congratulate",
+            "headword": "congratulate",
+            "pronunciation": {
+              "display": "kun-GRACH-uh-layt",
+              "ipaUK": "/kənˈɡrætʃʊleɪt/",
+              "ipaUS": "/kənˈɡrætʃʊleɪt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "transitive verb",
+                "headwordLine": "congratulate",
+                "inflectionsLine": "congratulates, congratulated, congratulating",
+                "synonyms": ["praise", "applaud", "commend"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to tell someone that you are pleased because they have done something well or something good has happened to them",
+                    "examples": [
+                      "She congratulated her sister on passing her driving test.",
+                      "His friends congratulated him on getting a new job."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She congratulated her sister on passing her driving test first time.",
+              "ok": true
+            },
+            {
+              "answer": "He congratulated the pasta for ten minutes until it was perfectly cooked.",
+              "ok": false
+            },
+            {
+              "answer": "She congratulated the window to let some cool air into the hot room.",
+              "ok": false
+            },
+            {
+              "answer": "He congratulated his homework and handed it to the teacher at the start of class.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "disagree",
+          "page": 7,
+          "question": "disagree",
+          "summary": "to have a different opinion from someone else",
+          "explain": {
+            "entryId": "disagree",
+            "headword": "disagree",
+            "pronunciation": {
+              "display": "dis-uh-GREE",
+              "ipaUK": "/ˌdɪsəˈɡriː/",
+              "ipaUS": "/ˌdɪsəˈɡriː/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "intransitive verb",
+                "headwordLine": "disagree",
+                "inflectionsLine": "disagrees, disagreed, disagreeing",
+                "synonyms": ["differ", "object", "dispute"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to have a different opinion from someone else and not be able to agree",
+                    "examples": [
+                      "She disagreed with her brother about which film to watch that evening.",
+                      "The two teachers disagreed about the best way to teach grammar."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She disagreed with her brother about which film to watch that evening.",
+              "ok": true
+            },
+            {
+              "answer": "He disagreed the door and walked into the empty room on his own.",
+              "ok": false
+            },
+            {
+              "answer": "She disagreed the table before everyone sat down for the dinner party.",
+              "ok": false
+            },
+            {
+              "answer": "He disagreed his coat and hung it carefully by the front door.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "greet",
+          "page": 8,
+          "question": "greet",
+          "summary": "to welcome someone with words or actions when you first meet them",
+          "explain": {
+            "entryId": "greet",
+            "headword": "greet",
+            "pronunciation": {
+              "display": "greet",
+              "ipaUK": "/ɡriːt/",
+              "ipaUS": "/ɡriːt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "transitive verb",
+                "headwordLine": "greet",
+                "inflectionsLine": "greets, greeted, greeting",
+                "synonyms": ["welcome", "say hello", "receive"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to welcome someone with words or actions when you meet them",
+                    "examples": [
+                      "She greeted her guests at the door with a big smile and a warm hello.",
+                      "He greeted his old friend with a hug when she arrived at the station."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She greeted her old friend with a big hug when she arrived at the station.",
+              "ok": true
+            },
+            {
+              "answer": "He greeted a cup of coffee and read the newspaper all morning.",
+              "ok": false
+            },
+            {
+              "answer": "She greeted the table with a white cloth before the dinner party started.",
+              "ok": false
+            },
+            {
+              "answer": "He greeted the window to see if it was raining outside.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "introduce",
+          "page": 9,
+          "question": "introduce",
+          "summary": "to tell someone another person's name when they meet for the first time",
+          "explain": {
+            "entryId": "introduce",
+            "headword": "introduce",
+            "pronunciation": {
+              "display": "in-truh-DYOOS",
+              "ipaUK": "/ˌɪntrəˈdjuːs/",
+              "ipaUS": "/ˌɪntrəˈduːs/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "transitive verb",
+                "headwordLine": "introduce",
+                "inflectionsLine": "introduces, introduced, introducing",
+                "synonyms": ["present", "make known", "acquaint"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to tell someone another person's name when they meet for the first time",
+                    "examples": [
+                      "She introduced her new boyfriend to her parents at the family dinner.",
+                      "He introduced himself to his new colleagues on the first day at work."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She introduced her new boyfriend to her parents at the family dinner.",
+              "ok": true
+            },
+            {
+              "answer": "He introduced his coat and gloves when he got home from the cold walk.",
+              "ok": false
+            },
+            {
+              "answer": "She introduced the kettle and waited for it to boil before making tea.",
+              "ok": false
+            },
+            {
+              "answer": "He introduced his bag on the table and sat down to look at the menu.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "invite",
+          "page": 10,
+          "question": "invite",
+          "summary": "to ask someone to come to an event or to do something with you",
+          "explain": {
+            "entryId": "invite",
+            "headword": "invite",
+            "pronunciation": {
+              "display": "in-VITE",
+              "ipaUK": "/ɪnˈvaɪt/",
+              "ipaUS": "/ɪnˈvaɪt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "verb",
+                "grammarType": "transitive verb",
+                "headwordLine": "invite",
+                "inflectionsLine": "invites, invited, inviting",
+                "synonyms": ["ask", "call", "request"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "to ask someone to come to an event or to do something with you",
+                    "examples": [
+                      "She invited all her friends to her birthday party on Saturday evening.",
+                      "He was invited to speak at the school about his job as a doctor."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She invited all her neighbours to the party and they all said yes.",
+              "ok": true
+            },
+            {
+              "answer": "He invited his homework quickly so he could watch television.",
+              "ok": false
+            },
+            {
+              "answer": "She invited her coat and scarf because the weather was very cold outside.",
+              "ok": false
+            },
+            {
+              "answer": "He invited the window to get some fresh air into the warm room.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

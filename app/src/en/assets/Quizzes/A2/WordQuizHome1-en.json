@@ -1,0 +1,583 @@
+{
+  "fileformat": 13,
+  "location": 0,
+  "sheetname": "WordQuizHome1-en",
+  "title": "Home",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the sentence that uses the word correctly.",
+      "description": "Home",
+      "sortorder": 1,
+      "sections": [
+        {
+          "title": "apartment",
+          "page": 1,
+          "question": "apartment",
+          "summary": "a set of rooms for living in, usually on one floor of a large building",
+          "explain": {
+            "entryId": "apartment",
+            "headword": "apartment",
+            "pronunciation": {
+              "display": "uh-PART-munt",
+              "ipaUK": "/əˈpɑːtmənt/",
+              "ipaUS": "/əˈpɑːrtmənt/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "apartment",
+                "inflectionsLine": "apartments",
+                "synonyms": ["flat", "unit", "residence"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a set of rooms for living in, usually on one floor of a large building",
+                    "examples": [
+                      "She rents a small apartment on the third floor of the building.",
+                      "They moved into a new apartment in the city centre last month."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She rents a small apartment on the third floor of the building.",
+              "ok": true
+            },
+            {
+              "answer": "He swims in his apartment every morning to keep fit.",
+              "ok": false
+            },
+            {
+              "answer": "She goes to the apartment to buy fresh vegetables for dinner.",
+              "ok": false
+            },
+            {
+              "answer": "They parked both cars inside the apartment to keep them safe.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "bathroom",
+          "page": 2,
+          "question": "bathroom",
+          "summary": "a room containing a bath or shower, a washbasin, and often a toilet",
+          "explain": {
+            "entryId": "bathroom",
+            "headword": "bathroom",
+            "pronunciation": {
+              "display": "BATH-room",
+              "ipaUK": "/ˈbɑːθruːm/",
+              "ipaUS": "/ˈbæθruːm/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "bathroom",
+                "inflectionsLine": "bathrooms",
+                "synonyms": ["washroom", "shower room", "lavatory"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a room in a house containing a bath or shower, a basin, and often a toilet",
+                    "examples": [
+                      "She went to the bathroom to have a shower before breakfast.",
+                      "The apartment has two bathrooms, one on each floor."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He went to the bathroom to brush his teeth before going to bed.",
+              "ok": true
+            },
+            {
+              "answer": "She made a cup of tea in the bathroom every morning before work.",
+              "ok": false
+            },
+            {
+              "answer": "They eat dinner together in the bathroom every evening.",
+              "ok": false
+            },
+            {
+              "answer": "He watches his favourite TV programme in the bathroom after dinner.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "bedroom",
+          "page": 3,
+          "question": "bedroom",
+          "summary": "a room used mainly for sleeping",
+          "explain": {
+            "entryId": "bedroom",
+            "headword": "bedroom",
+            "pronunciation": {
+              "display": "BED-room",
+              "ipaUK": "/ˈbɛdruːm/",
+              "ipaUS": "/ˈbɛdruːm/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "bedroom",
+                "inflectionsLine": "bedrooms",
+                "synonyms": ["room", "sleeping room", "chamber"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a room in a house or flat used mainly for sleeping",
+                    "examples": [
+                      "She has a comfortable bedroom with a large window and a double bed.",
+                      "The children share a bedroom at the top of the house."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She has a comfortable bedroom with a big window and a double bed.",
+              "ok": true
+            },
+            {
+              "answer": "He cooks breakfast in the bedroom every morning before school.",
+              "ok": false
+            },
+            {
+              "answer": "They park the car in the bedroom at the end of each day.",
+              "ok": false
+            },
+            {
+              "answer": "She washes the dirty dishes in the bedroom after every meal.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "dining room",
+          "page": 4,
+          "question": "dining room",
+          "summary": "a room in a house used for eating meals",
+          "explain": {
+            "entryId": "dining room",
+            "headword": "dining room",
+            "pronunciation": {
+              "display": "DY-ning room",
+              "ipaUK": "/ˈdaɪnɪŋ ruːm/",
+              "ipaUS": "/ˈdaɪnɪŋ ruːm/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "noun phrase",
+                "headwordLine": "dining room",
+                "inflectionsLine": "dining rooms",
+                "synonyms": ["eating area", "dinner room", "breakfast room"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a room in a house or hotel where meals are eaten",
+                    "examples": [
+                      "The family always eats Sunday lunch together in the dining room.",
+                      "The dining room has a big table with six chairs around it."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The whole family sits together in the dining room for dinner every evening.",
+              "ok": true
+            },
+            {
+              "answer": "She has a bath in the dining room every Sunday morning.",
+              "ok": false
+            },
+            {
+              "answer": "He keeps his car in the dining room to protect it from the rain.",
+              "ok": false
+            },
+            {
+              "answer": "They sleep in the dining room because it is the warmest room in the house.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "door",
+          "page": 5,
+          "question": "door",
+          "summary": "a flat object that opens and closes to allow entry into a building, room, or vehicle",
+          "explain": {
+            "entryId": "door",
+            "headword": "door",
+            "pronunciation": {
+              "display": "dor",
+              "ipaUK": "/dɔː/",
+              "ipaUS": "/dɔːr/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "door",
+                "inflectionsLine": "doors",
+                "synonyms": ["entrance", "entry", "gateway"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a flat object, usually made of wood or glass, that you open and close to enter or leave a room, building, or vehicle",
+                    "examples": [
+                      "She knocked on the door and waited for someone to answer.",
+                      "He opened the door to let his friend into the house."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She opened the door and walked into the warm house.",
+              "ok": true
+            },
+            {
+              "answer": "He sat on the door and watched television all evening.",
+              "ok": false
+            },
+            {
+              "answer": "She cooked the chicken in the door for two hours until it was ready.",
+              "ok": false
+            },
+            {
+              "answer": "He slept on top of the door because it was the most comfortable place.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "garage",
+          "page": 6,
+          "question": "garage",
+          "summary": "a building where a car is kept; also a place where cars are repaired",
+          "explain": {
+            "entryId": "garage",
+            "headword": "garage",
+            "pronunciation": {
+              "display": "GA-rahj",
+              "ipaUK": "/ˈɡærɑːʒ/",
+              "ipaUS": "/ɡəˈrɑːʒ/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "garage",
+                "inflectionsLine": "garages",
+                "synonyms": ["carport", "workshop", "car shelter"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a building where a car is kept, usually next to or part of a house",
+                    "examples": [
+                      "He put the car in the garage before the storm started.",
+                      "Their house has a garage big enough for two cars."
+                    ]
+                  },
+                  {
+                    "senseNumber": 2,
+                    "definition": "a place where cars are repaired or where petrol is sold",
+                    "examples": [
+                      "She took her car to the garage because the engine was making a strange noise."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "He drove the car into the garage and closed the door behind him.",
+              "ok": true
+            },
+            {
+              "answer": "She cooked a big dinner in the garage for the whole family.",
+              "ok": false
+            },
+            {
+              "answer": "He brushes his teeth in the garage every morning and evening.",
+              "ok": false
+            },
+            {
+              "answer": "They sleep in the garage because it has the most space in the house.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "garden",
+          "page": 7,
+          "question": "garden",
+          "summary": "a piece of land next to a house where flowers, grass, and plants grow",
+          "explain": {
+            "entryId": "garden",
+            "headword": "garden",
+            "pronunciation": {
+              "display": "GAR-dun",
+              "ipaUK": "/ˈɡɑːdn/",
+              "ipaUS": "/ˈɡɑːrdn/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "garden",
+                "inflectionsLine": "gardens",
+                "synonyms": ["yard", "grounds", "lawn"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a piece of land next to a house where flowers, grass, trees, and vegetables can grow",
+                    "examples": [
+                      "She spent the afternoon planting flowers in the garden.",
+                      "The children played in the garden all day in the sunshine."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She grows tomatoes and sunflowers in her garden every summer.",
+              "ok": true
+            },
+            {
+              "answer": "He had a long hot shower in the garden after his morning run.",
+              "ok": false
+            },
+            {
+              "answer": "She washed all the dirty dishes in the garden after the dinner party.",
+              "ok": false
+            },
+            {
+              "answer": "He watches the news in the garden on his big sofa every evening.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "house",
+          "page": 8,
+          "question": "house",
+          "summary": "a building where people, usually one family, live",
+          "explain": {
+            "entryId": "house",
+            "headword": "house",
+            "pronunciation": {
+              "display": "howss",
+              "ipaUK": "/haʊs/",
+              "ipaUS": "/haʊs/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "house",
+                "inflectionsLine": "houses",
+                "synonyms": ["home", "dwelling", "residence"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a building where people, usually one family, live",
+                    "examples": [
+                      "They bought a new house with three bedrooms and a large garden.",
+                      "She grew up in a small house in the countryside."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "They bought a new house with three bedrooms and a large garden.",
+              "ok": true
+            },
+            {
+              "answer": "She went to the house to buy bread and milk for breakfast.",
+              "ok": false
+            },
+            {
+              "answer": "He swam twenty laps in the house every morning to keep fit.",
+              "ok": false
+            },
+            {
+              "answer": "She parked her car inside the house before going upstairs.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "kitchen",
+          "page": 9,
+          "question": "kitchen",
+          "summary": "a room where food is prepared and cooked",
+          "explain": {
+            "entryId": "kitchen",
+            "headword": "kitchen",
+            "pronunciation": {
+              "display": "KIT-chin",
+              "ipaUK": "/ˈkɪtʃɪn/",
+              "ipaUS": "/ˈkɪtʃɪn/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "countable noun",
+                "headwordLine": "kitchen",
+                "inflectionsLine": "kitchens",
+                "synonyms": ["cooking room", "galley", "cookhouse"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "a room where food is prepared and cooked",
+                    "examples": [
+                      "She made a fresh pot of soup in the kitchen for lunch.",
+                      "He spent an hour in the kitchen preparing dinner for the guests."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "She cooked a delicious pasta dish in the kitchen for the whole family.",
+              "ok": true
+            },
+            {
+              "answer": "He had a long hot bath in the kitchen after a tiring day at work.",
+              "ok": false
+            },
+            {
+              "answer": "She sleeps in the kitchen because it is the warmest room in winter.",
+              "ok": false
+            },
+            {
+              "answer": "They park both their cars in the kitchen every night.",
+              "ok": false
+            }
+          ]
+        },
+        {
+          "title": "living room",
+          "page": 10,
+          "question": "living room",
+          "summary": "the main room in a house where people relax, watch television, and spend time together",
+          "explain": {
+            "entryId": "living room",
+            "headword": "living room",
+            "pronunciation": {
+              "display": "LIV-ing room",
+              "ipaUK": "/ˈlɪvɪŋ ruːm/",
+              "ipaUS": "/ˈlɪvɪŋ ruːm/"
+            },
+            "labels": ["A2"],
+            "partsOfSpeech": [
+              {
+                "ordinal": "1 of 1",
+                "pos": "noun",
+                "grammarType": "noun phrase",
+                "headwordLine": "living room",
+                "inflectionsLine": "living rooms",
+                "synonyms": ["lounge", "sitting room", "front room"],
+                "senses": [
+                  {
+                    "senseNumber": 1,
+                    "definition": "the main room in a house where people sit, relax, and watch television",
+                    "examples": [
+                      "The family sat together in the living room to watch a film after dinner.",
+                      "She reads books in the living room every evening before bed."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "version": 1,
+            "updatedDate": 0
+          },
+          "answers": [
+            {
+              "answer": "The family sat in the living room to watch a film after dinner.",
+              "ok": true
+            },
+            {
+              "answer": "She cooked a big meal in the living room for all her guests.",
+              "ok": false
+            },
+            {
+              "answer": "He parked his motorbike in the living room to keep it safe from the rain.",
+              "ok": false
+            },
+            {
+              "answer": "They had a bath in the living room before going to bed each night.",
+              "ok": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

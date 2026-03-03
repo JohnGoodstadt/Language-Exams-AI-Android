@@ -1,0 +1,452 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizinandbigquickly1-en",
+	"title": "in and big quickly",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "in and big quickly",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "although",
+					"page": 1,
+					"question": "although",
+					"summary": "despite the fact that; even though",
+					"explain": {
+						"entryId": "although",
+						"headword": "although",
+						"pronunciation": { "display": "awl-DHOH", "ipaUK": "/ɔːlˈðəʊ/", "ipaUS": "/ɔːlˈðoʊ/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "although",
+								"inflectionsLine": "",
+								"synonyms": ["even though", "though", "while"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce a statement that makes the main statement surprising or unexpected",
+										"examples": [
+											"Although she was tired, she finished all of her homework.",
+											"He enjoyed the film although it was very long."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "Although she was tired, she finished all of her homework.", "ok": true },
+						{ "answer": "He bought two althoughs at the supermarket on Saturday.", "ok": false },
+						{ "answer": "She cooked the although in a large pan for dinner.", "ok": false },
+						{ "answer": "They planted an although in the garden last spring.", "ok": false }
+					]
+				},
+				{
+					"title": "always",
+					"page": 2,
+					"question": "always",
+					"summary": "at all times; every time; on every occasion",
+					"explain": {
+						"entryId": "always",
+						"headword": "always",
+						"pronunciation": { "display": "AWL-wayz", "ipaUK": "/ˈɔːlweɪz/", "ipaUS": "/ˈɔːlweɪz/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "always",
+								"inflectionsLine": "",
+								"synonyms": ["every time", "constantly", "at all times"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "at all times; on every occasion; in every situation",
+										"examples": [
+											"She always has a glass of water before going to bed.",
+											"He always arrives at school on time."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She always has a glass of water before going to bed.", "ok": true },
+						{ "answer": "He bought an always at the supermarket on Friday.", "ok": false },
+						{ "answer": "She put the always in her bag before leaving the house.", "ok": false },
+						{ "answer": "They planted an always in the garden and watered it every morning.", "ok": false }
+					]
+				},
+				{
+					"title": "and",
+					"page": 3,
+					"question": "and",
+					"summary": "used to connect words, phrases, or sentences together",
+					"explain": {
+						"entryId": "and",
+						"headword": "and",
+						"pronunciation": { "display": "AND", "ipaUK": "/ænd/", "ipaUS": "/ænd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "and",
+								"inflectionsLine": "",
+								"synonyms": ["plus", "as well as", "together with"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to connect two words, phrases, or parts of a sentence",
+										"examples": [
+											"She bought milk and bread at the supermarket after work.",
+											"He is tall and very good at playing basketball."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She bought milk and bread at the supermarket after work.", "ok": true },
+						{ "answer": "He drove three ands to the airport on Saturday morning.", "ok": false },
+						{ "answer": "She cooked the and in a large pot for dinner.", "ok": false },
+						{ "answer": "They planted an and in the garden near the roses.", "ok": false }
+					]
+				},
+				{
+					"title": "around",
+					"page": 4,
+					"question": "around",
+					"summary": "on all sides of something; in a circular direction",
+					"explain": {
+						"entryId": "around",
+						"headword": "around",
+						"pronunciation": { "display": "uh-ROWND", "ipaUK": "/əˈraʊnd/", "ipaUS": "/əˈraʊnd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "around",
+								"inflectionsLine": "",
+								"synonyms": ["round", "surrounding", "encircling"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "on all sides of something; in a circular direction; near or in the area of",
+										"examples": [
+											"She put a scarf around her neck because it was cold.",
+											"He walked around the park twice to get some exercise."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "around",
+								"inflectionsLine": "",
+								"synonyms": ["nearby", "in the area", "approximately"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in various directions; in the surrounding area; approximately",
+										"examples": [
+											"She looked around but could not find her keys.",
+											"He arrived around three o'clock in the afternoon."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She put a scarf around her neck because it was cold.", "ok": true },
+						{ "answer": "He bought two arounds at the sports shop on Sunday.", "ok": false },
+						{ "answer": "She cooked an around in the oven for an hour.", "ok": false },
+						{ "answer": "They planted an around in the garden near the wall.", "ok": false }
+					]
+				},
+				{
+					"title": "at",
+					"page": 5,
+					"question": "at",
+					"summary": "used to show a place, position, or point in time",
+					"explain": {
+						"entryId": "at",
+						"headword": "at",
+						"pronunciation": { "display": "AT", "ipaUK": "/æt/", "ipaUS": "/æt/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "at",
+								"inflectionsLine": "",
+								"synonyms": ["in", "by", "near"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to show a particular place, position, or point in time",
+										"examples": [
+											"She met her friend at the coffee shop after school.",
+											"He arrives at the office at eight o'clock every morning."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She met her friend at the coffee shop after school.", "ok": true },
+						{ "answer": "He bought two ats at the supermarket on Saturday morning.", "ok": false },
+						{ "answer": "She put an at in her bag before leaving the house.", "ok": false },
+						{ "answer": "They planted an at in the garden and watered it daily.", "ok": false }
+					]
+				},
+				{
+					"title": "badly",
+					"page": 6,
+					"question": "badly",
+					"summary": "in a way that is poor or unsatisfactory; to a serious degree",
+					"explain": {
+						"entryId": "badly",
+						"headword": "badly",
+						"pronunciation": { "display": "BAD-lee", "ipaUK": "/ˈbædli/", "ipaUS": "/ˈbædli/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "badly",
+								"inflectionsLine": "worse, worst",
+								"synonyms": ["poorly", "not well", "unsatisfactorily"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in a way that is not good or satisfactory; to a serious or severe degree",
+										"examples": [
+											"He played badly in the match because he had not slept well.",
+											"She did badly in the exam because she did not study enough."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "He played badly in the match because he had not slept well.", "ok": true },
+						{ "answer": "She bought a badly at the supermarket on Friday afternoon.", "ok": false },
+						{ "answer": "He put the badly in his bag and walked to school.", "ok": false },
+						{ "answer": "They planted a badly in the garden and watered it each morning.", "ok": false }
+					]
+				},
+				{
+					"title": "beautiful",
+					"page": 7,
+					"question": "beautiful",
+					"summary": "very attractive or pleasing; giving great pleasure to the senses",
+					"explain": {
+						"entryId": "beautiful",
+						"headword": "beautiful",
+						"pronunciation": { "display": "BYOO-ti-ful", "ipaUK": "/ˈbjuːtɪfl/", "ipaUS": "/ˈbjuːtɪfl/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "adjective",
+								"grammarType": "adjective",
+								"headwordLine": "beautiful",
+								"inflectionsLine": "more beautiful, most beautiful",
+								"synonyms": ["lovely", "stunning", "gorgeous"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "very attractive or pleasing to look at; giving great pleasure",
+										"examples": [
+											"She wore a beautiful dress to the party and everyone noticed.",
+											"The garden looked beautiful in the summer sunshine."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She wore a beautiful dress to the party and everyone noticed.", "ok": true },
+						{ "answer": "He bought a beautiful at the shop and brought it home.", "ok": false },
+						{ "answer": "She cooked the beautiful in the oven for Sunday dinner.", "ok": false },
+						{ "answer": "They drove the beautiful to the airport on Friday morning.", "ok": false }
+					]
+				},
+				{
+					"title": "because",
+					"page": 8,
+					"question": "because",
+					"summary": "for the reason that; since",
+					"explain": {
+						"entryId": "because",
+						"headword": "because",
+						"pronunciation": { "display": "bi-KOZ", "ipaUK": "/bɪˈkɒz/", "ipaUS": "/bɪˈkɔːz/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "conjunction",
+								"grammarType": "conjunction",
+								"headwordLine": "because",
+								"inflectionsLine": "",
+								"synonyms": ["since", "as", "given that"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "used to introduce the reason for something that has been said or done",
+										"examples": [
+											"She was happy because she passed all her exams.",
+											"He stayed at home because he had a bad cold."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She was happy because she passed all her exams.", "ok": true },
+						{ "answer": "He bought a because at the market and took it home.", "ok": false },
+						{ "answer": "She cooked the because in the oven for Sunday dinner.", "ok": false },
+						{ "answer": "They planted a because in the garden near the fence.", "ok": false }
+					]
+				},
+				{
+					"title": "behind",
+					"page": 9,
+					"question": "behind",
+					"summary": "at the back of something or someone; further back than",
+					"explain": {
+						"entryId": "behind",
+						"headword": "behind",
+						"pronunciation": { "display": "bi-HYND", "ipaUK": "/bɪˈhaɪnd/", "ipaUS": "/bɪˈhaɪnd/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 2",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "behind",
+								"inflectionsLine": "",
+								"synonyms": ["at the back of", "after", "to the rear of"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "at or towards the back of something or someone",
+										"examples": [
+											"She hid the birthday present behind the sofa in the living room.",
+											"He stood behind his sister in the queue."
+										]
+									}
+								]
+							},
+							{
+								"ordinal": "2 of 2",
+								"pos": "adverb",
+								"grammarType": "adverb",
+								"headwordLine": "behind",
+								"inflectionsLine": "",
+								"synonyms": ["in the rear", "at the back", "following"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in or towards the back; further back; less advanced than expected",
+										"examples": [
+											"She looked behind and saw her friend running to catch up.",
+											"He fell behind with his homework because he was ill."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She hid the birthday present behind the sofa in the living room.", "ok": true },
+						{ "answer": "He bought two behinds at the shop on Saturday afternoon.", "ok": false },
+						{ "answer": "She cooked a behind for dinner on Sunday evening.", "ok": false },
+						{ "answer": "They planted a behind in the garden near the flowers.", "ok": false }
+					]
+				},
+				{
+					"title": "between",
+					"page": 10,
+					"question": "between",
+					"summary": "in the space or time that separates two things or people",
+					"explain": {
+						"entryId": "between",
+						"headword": "between",
+						"pronunciation": { "display": "bi-TWEEN", "ipaUK": "/bɪˈtwiːn/", "ipaUS": "/bɪˈtwiːn/" },
+						"labels": ["A2"],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "preposition",
+								"grammarType": "preposition",
+								"headwordLine": "between",
+								"inflectionsLine": "",
+								"synonyms": ["in the middle of", "among", "separating"],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in or into the space or time that separates two things, places, people, or periods",
+										"examples": [
+											"She sat between her mother and her sister on the long train journey.",
+											"He placed the vase between the two windows."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{ "answer": "She sat between her mother and her sister on the long train journey.", "ok": true },
+						{ "answer": "He bought three betweens at the market last Saturday.", "ok": false },
+						{ "answer": "She cooked a between for dinner and served it with salad.", "ok": false },
+						{ "answer": "They planted a between in the garden and watered it every day.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}
