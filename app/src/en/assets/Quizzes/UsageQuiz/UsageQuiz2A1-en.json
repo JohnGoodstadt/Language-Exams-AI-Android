@@ -9,125 +9,222 @@
 			"title": "Choose the correct answer for each question.",
 			"description": "Present simple tense",
 			"sortorder": 1,
+			"learningTitle": "Why this quiz works",
+			"learningPoints": [
+				"Practises present simple for routines and facts.",
+				"Focuses on correct verb forms (I work / he works).",
+				"Includes negatives and questions (don’t/doesn’t, Do/Does).",
+				"Builds everyday speaking accuracy (daily life, habits)."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple with third person singular (verb + s).",
 					"explain": "'She' requires verb + s in the present simple. Correct form: 'She works in a hospital.'",
-					"answers": [
-						{ "answer": "She works in a hospital.", "ok": true },
-						{ "answer": "She work in a hospital.", "ok": false },
-						{ "answer": "She working in a hospital.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She works in a hospital."
+						},
+						{
+							"ok": false,
+							"word": "She work in a hospital."
+						},
+						{
+							"ok": false,
+							"word": "She working in a hospital."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 2,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple with plural subject (base verb).",
 					"explain": "'They' uses the base verb form. 'They live in the city.' is correct.",
-					"answers": [
-						{ "answer": "They live in the city.", "ok": true },
-						{ "answer": "They lives in the city.", "ok": false },
-						{ "answer": "They living in the city.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "They live in the city."
+						},
+						{
+							"ok": false,
+							"word": "They lives in the city."
+						},
+						{
+							"ok": false,
+							"word": "They living in the city."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 3,
-					"question": "Choose the correct question.",
 					"summary": "Do/Does in present simple questions.",
 					"explain": "With 'she', we use 'Does' + base verb. Correct form: 'Does she work on Monday?'",
-					"answers": [
-						{ "answer": "Does she work on Monday?", "ok": true },
-						{ "answer": "Does she works on Monday?", "ok": false },
-						{ "answer": "Do she work on Monday?", "ok": false }
+					"sentence": "Choose the correct question.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Does she work on Monday?"
+						},
+						{
+							"ok": false,
+							"word": "Does she works on Monday?"
+						},
+						{
+							"ok": false,
+							"word": "Do she work on Monday?"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 4,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple negative with don't.",
 					"explain": "After 'don't', we use the base verb. Correct: 'I don't eat meat.'",
-					"answers": [
-						{ "answer": "I don't eat meat.", "ok": true },
-						{ "answer": "I don't eats meat.", "ok": false },
-						{ "answer": "I not eat meat.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "I don't eat meat."
+						},
+						{
+							"ok": false,
+							"word": "I don't eats meat."
+						},
+						{
+							"ok": false,
+							"word": "I not eat meat."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple negative with doesn't.",
 					"explain": "After 'doesn't', we use the base verb. Correct: 'He doesn't play football.'",
-					"answers": [
-						{ "answer": "He doesn't play football.", "ok": true },
-						{ "answer": "He doesn't plays football.", "ok": false },
-						{ "answer": "He don't play football.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "He doesn't play football."
+						},
+						{
+							"ok": false,
+							"word": "He doesn't plays football."
+						},
+						{
+							"ok": false,
+							"word": "He don't play football."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
-					"question": "Choose the correct sentence.",
 					"summary": "Using frequency adverbs in present simple.",
 					"explain": "Adverbs like 'always' usually come before the main verb. 'She always drinks coffee.' is correct.",
-					"answers": [
-						{ "answer": "She always drinks coffee.", "ok": true },
-						{ "answer": "She drinks always coffee.", "ok": false },
-						{ "answer": "She always drink coffee.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She always drinks coffee."
+						},
+						{
+							"ok": false,
+							"word": "She drinks always coffee."
+						},
+						{
+							"ok": false,
+							"word": "She always drink coffee."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 7,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple for daily routines.",
 					"explain": "Correct structure: Subject + verb + time phrase. 'We walk to school every day.'",
-					"answers": [
-						{ "answer": "We walk to school every day.", "ok": true },
-						{ "answer": "We walks to school every day.", "ok": false },
-						{ "answer": "We are walk to school every day.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "We walk to school every day."
+						},
+						{
+							"ok": false,
+							"word": "We walks to school every day."
+						},
+						{
+							"ok": false,
+							"word": "We are walk to school every day."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 8,
-					"question": "Choose the correct question.",
 					"summary": "Present simple yes/no questions with 'do'.",
 					"explain": "With 'you', use 'Do' + base verb. Correct: 'Do you work in an office?'",
-					"answers": [
-						{ "answer": "Do you work in an office?", "ok": true },
-						{ "answer": "Do you works in an office?", "ok": false },
-						{ "answer": "Are you work in an office?", "ok": false }
+					"sentence": "Choose the correct question.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Do you work in an office?"
+						},
+						{
+							"ok": false,
+							"word": "Do you works in an office?"
+						},
+						{
+							"ok": false,
+							"word": "Are you work in an office?"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 9,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple with time expressions (on Monday).",
 					"explain": "We use present simple for schedules and routines. 'She studies on Monday.'",
-					"answers": [
-						{ "answer": "She studies on Monday.", "ok": true },
-						{ "answer": "She study on Monday.", "ok": false },
-						{ "answer": "She studying on Monday.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She studies on Monday."
+						},
+						{
+							"ok": false,
+							"word": "She study on Monday."
+						},
+						{
+							"ok": false,
+							"word": "She studying on Monday."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 10,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple for general facts.",
 					"explain": "Use present simple for facts. 'The sun rises in the morning.' follows subject + verb + place/time.",
-					"answers": [
-						{ "answer": "The sun rises in the morning.", "ok": true },
-						{ "answer": "The sun rise in the morning.", "ok": false },
-						{ "answer": "The sun is rise in the morning.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The sun rises in the morning."
+						},
+						{
+							"ok": false,
+							"word": "The sun rise in the morning."
+						},
+						{
+							"ok": false,
+							"word": "The sun is rise in the morning."
+						}
 					]
 				}
 			]

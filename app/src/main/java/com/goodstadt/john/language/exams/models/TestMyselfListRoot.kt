@@ -20,6 +20,8 @@ data class TestMyselfList(
     val title: String,
     val description: String,
     val sortorder: Int,
+    val learningTitle: String? = null,
+    val learningPoints: List<String> = emptyList(),
     var sections: List<TestMyselfSections>
 )
 @Serializable

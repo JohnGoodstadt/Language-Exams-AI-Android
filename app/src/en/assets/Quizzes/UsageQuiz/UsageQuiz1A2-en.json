@@ -9,125 +9,222 @@
 			"title": "Choose the correct answer for each question.",
 			"description": "Going to vs will",
 			"sortorder": 1,
+			"learningTitle": "Why this quiz works",
+			"learningPoints": [
+				"Practises present continuous for actions happening now.",
+				"Builds contrast between present simple and present continuous.",
+				"Improves accuracy with am/is/are + -ing forms.",
+				"Strengthens real-time speaking confidence."
+			]
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'going to' for planned actions.",
 					"explain": "'Going to' is used for plans decided before now.",
-					"answers": [
-						{ "answer": "She is going to travel to Spain in summer.", "ok": true },
-						{ "answer": "She will going to travel to Spain in summer.", "ok": false },
-						{ "answer": "She going to will travel to Spain.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She is going to travel to Spain in summer."
+						},
+						{
+							"ok": false,
+							"word": "She will going to travel to Spain in summer."
+						},
+						{
+							"ok": false,
+							"word": "She going to will travel to Spain."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 2,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'will' for decisions made at the moment.",
 					"explain": "'Will' is used when we decide something now.",
-					"answers": [
-						{ "answer": "I'm tired. I will take a taxi.", "ok": true },
-						{ "answer": "I'm tired. I am going to take a taxi every day.", "ok": false },
-						{ "answer": "I'm tired. I taking a taxi.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "I'm tired. I will take a taxi."
+						},
+						{
+							"ok": false,
+							"word": "I'm tired. I am going to take a taxi every day."
+						},
+						{
+							"ok": false,
+							"word": "I'm tired. I taking a taxi."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 3,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'will' for promises.",
 					"explain": "'Will' is often used to make promises.",
-					"answers": [
-						{ "answer": "I will help you with your homework.", "ok": true },
-						{ "answer": "I am going to helped you with your homework.", "ok": false },
-						{ "answer": "I will helping you with your homework.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "I will help you with your homework."
+						},
+						{
+							"ok": false,
+							"word": "I am going to helped you with your homework."
+						},
+						{
+							"ok": false,
+							"word": "I will helping you with your homework."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 4,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'going to' for future plans.",
 					"explain": "'Going to' expresses a plan already decided.",
-					"answers": [
-						{ "answer": "They are going to buy a new apartment.", "ok": true },
-						{ "answer": "They will buying a new apartment.", "ok": false },
-						{ "answer": "They are going buy a new apartment.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "They are going to buy a new apartment."
+						},
+						{
+							"ok": false,
+							"word": "They will buying a new apartment."
+						},
+						{
+							"ok": false,
+							"word": "They are going buy a new apartment."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'will' for predictions.",
 					"explain": "'Will' can express predictions about the future.",
-					"answers": [
-						{ "answer": "I think it will be sunny tomorrow.", "ok": true },
-						{ "answer": "I think it is going be sunny tomorrow.", "ok": false },
-						{ "answer": "I think it going to sunny tomorrow.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "I think it will be sunny tomorrow."
+						},
+						{
+							"ok": false,
+							"word": "I think it is going be sunny tomorrow."
+						},
+						{
+							"ok": false,
+							"word": "I think it going to sunny tomorrow."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
-					"question": "Choose the correct sentence.",
 					"summary": "Negative form of 'going to'.",
 					"explain": "Negative structure: am/is/are + not + going to + base verb.",
-					"answers": [
-						{ "answer": "She is not going to attend the meeting.", "ok": true },
-						{ "answer": "She not going to attend the meeting.", "ok": false },
-						{ "answer": "She will not going to attend the meeting.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She is not going to attend the meeting."
+						},
+						{
+							"ok": false,
+							"word": "She not going to attend the meeting."
+						},
+						{
+							"ok": false,
+							"word": "She will not going to attend the meeting."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 7,
-					"question": "Choose the correct sentence.",
 					"summary": "Question form with 'will'.",
 					"explain": "Future questions with 'will' invert subject and auxiliary.",
-					"answers": [
-						{ "answer": "Will you visit the museum tomorrow?", "ok": true },
-						{ "answer": "Do you will visit the museum tomorrow?", "ok": false },
-						{ "answer": "Will you visiting the museum tomorrow?", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Will you visit the museum tomorrow?"
+						},
+						{
+							"ok": false,
+							"word": "Do you will visit the museum tomorrow?"
+						},
+						{
+							"ok": false,
+							"word": "Will you visiting the museum tomorrow?"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 8,
-					"question": "Choose the correct sentence.",
 					"summary": "Question form with 'going to'.",
 					"explain": "Structure: Am/Is/Are + subject + going to + base verb.",
-					"answers": [
-						{ "answer": "Are they going to study tonight?", "ok": true },
-						{ "answer": "Do they going to study tonight?", "ok": false },
-						{ "answer": "Are they going study tonight?", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Are they going to study tonight?"
+						},
+						{
+							"ok": false,
+							"word": "Do they going to study tonight?"
+						},
+						{
+							"ok": false,
+							"word": "Are they going study tonight?"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 9,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'will' for spontaneous offers.",
 					"explain": "'Will' is used for offers made at the moment of speaking.",
-					"answers": [
-						{ "answer": "I will carry your luggage.", "ok": true },
-						{ "answer": "I am going carry your luggage.", "ok": false },
-						{ "answer": "I will carrying your luggage.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "I will carry your luggage."
+						},
+						{
+							"ok": false,
+							"word": "I am going carry your luggage."
+						},
+						{
+							"ok": false,
+							"word": "I will carrying your luggage."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 10,
-					"question": "Choose the correct sentence.",
 					"summary": "Contrast between plan and decision.",
 					"explain": "Use 'going to' for prior plans and 'will' for decisions made now.",
-					"answers": [
-						{ "answer": "She is going to start a new job next month.", "ok": true },
-						{ "answer": "She will starting a new job next month.", "ok": false },
-						{ "answer": "She going to will start a new job next month.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She is going to start a new job next month."
+						},
+						{
+							"ok": false,
+							"word": "She will starting a new job next month."
+						},
+						{
+							"ok": false,
+							"word": "She going to will start a new job next month."
+						}
 					]
 				}
 			]

@@ -9,125 +9,223 @@
 			"title": "Choose the correct answer for each question.",
 			"description": "Opinion, advice, politeness and modal nuance",
 			"sortorder": 1,
+			"learningTitle": "Why this quiz matters for exams",
+			"learningPoints": [
+				"Develops nuanced use of modal verbs for advice and probability.",
+				"Improves polite and professional communication.",
+				"Strengthens opinion expression in speaking tests.",
+				"Builds confidence in interview-style responses.",
+				"Prepares you for real-world English use beyond the classroom."
+			]
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'should' for advice.",
 					"explain": "'Should' is commonly used to give advice.",
-					"answers": [
-						{ "answer": "You should prepare carefully for the interview.", "ok": true },
-						{ "answer": "You must prepare carefully for the interview (advice context).", "ok": false },
-						{ "answer": "You should to prepare carefully.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "You should prepare carefully for the interview."
+						},
+						{
+							"ok": false,
+							"word": "You must prepare carefully for the interview (advice context)."
+						},
+						{
+							"ok": false,
+							"word": "You should to prepare carefully."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 2,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'might' for possibility.",
 					"explain": "'Might' expresses uncertainty or possibility.",
-					"answers": [
-						{ "answer": "The results might improve next year.", "ok": true },
-						{ "answer": "The results must improve next year (certainty).", "ok": false },
-						{ "answer": "The results might improves next year.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The results might improve next year."
+						},
+						{
+							"ok": false,
+							"word": "The results must improve next year (certainty)."
+						},
+						{
+							"ok": false,
+							"word": "The results might improves next year."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 3,
-					"question": "Choose the correct sentence.",
 					"summary": "Polite requests using 'could'.",
 					"explain": "'Could you…?' is a polite request form.",
-					"answers": [
-						{ "answer": "Could you send me the report, please?", "ok": true },
-						{ "answer": "Can you send me the report immediately?", "ok": false },
-						{ "answer": "You could send me the report?", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Could you send me the report, please?"
+						},
+						{
+							"ok": false,
+							"word": "Can you send me the report immediately?"
+						},
+						{
+							"ok": false,
+							"word": "You could send me the report?"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 4,
-					"question": "Choose the correct sentence.",
 					"summary": "Expressing opinion formally.",
 					"explain": "'In my opinion' is commonly used to express a personal view.",
-					"answers": [
-						{ "answer": "In my opinion, education is essential for success.", "ok": true },
-						{ "answer": "In my opinion education essential success.", "ok": false },
-						{ "answer": "My opinion education is essential.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "In my opinion, education is essential for success."
+						},
+						{
+							"ok": false,
+							"word": "In my opinion education essential success."
+						},
+						{
+							"ok": false,
+							"word": "My opinion education is essential."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'have to' for external obligation.",
 					"explain": "'Have to' expresses obligation from rules or necessity.",
-					"answers": [
-						{ "answer": "Employees have to follow company policies.", "ok": true },
-						{ "answer": "Employees must to follow company policies.", "ok": false },
-						{ "answer": "Employees have follow company policies.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Employees have to follow company policies."
+						},
+						{
+							"ok": false,
+							"word": "Employees must to follow company policies."
+						},
+						{
+							"ok": false,
+							"word": "Employees have follow company policies."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
-					"question": "Choose the correct sentence.",
 					"summary": "Expressing regret using 'should have'.",
 					"explain": "'Should have + past participle' expresses regret about the past.",
-					"answers": [
-						{ "answer": "I should have studied harder for the exam.", "ok": true },
-						{ "answer": "I should studied harder for the exam.", "ok": false },
-						{ "answer": "I should have study harder.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "I should have studied harder for the exam."
+						},
+						{
+							"ok": false,
+							"word": "I should studied harder for the exam."
+						},
+						{
+							"ok": false,
+							"word": "I should have study harder."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 7,
-					"question": "Choose the correct sentence.",
 					"summary": "Softening statements using 'It seems that…'.",
 					"explain": "'It seems that' softens a statement and sounds less direct.",
-					"answers": [
-						{ "answer": "It seems that the project will take longer than expected.", "ok": true },
-						{ "answer": "It seems the project will take longer than expected.", "ok": false },
-						{ "answer": "Seems that the project will take longer.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "It seems that the project will take longer than expected."
+						},
+						{
+							"ok": false,
+							"word": "It seems the project will take longer than expected."
+						},
+						{
+							"ok": false,
+							"word": "Seems that the project will take longer."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 8,
-					"question": "Choose the correct sentence.",
 					"summary": "Polite suggestion using 'would you mind'.",
 					"explain": "'Would you mind + -ing form' is used for polite requests.",
-					"answers": [
-						{ "answer": "Would you mind closing the window?", "ok": true },
-						{ "answer": "Would you mind to close the window?", "ok": false },
-						{ "answer": "Would you mind close the window?", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Would you mind closing the window?"
+						},
+						{
+							"ok": false,
+							"word": "Would you mind to close the window?"
+						},
+						{
+							"ok": false,
+							"word": "Would you mind close the window?"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 9,
-					"question": "Choose the correct sentence.",
 					"summary": "Using 'could' for possibility.",
 					"explain": "'Could' expresses possible outcomes.",
-					"answers": [
-						{ "answer": "This decision could affect many employees.", "ok": true },
-						{ "answer": "This decision could affects many employees.", "ok": false },
-						{ "answer": "This decision must affect many employees (certainty).", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "This decision could affect many employees."
+						},
+						{
+							"ok": false,
+							"word": "This decision could affects many employees."
+						},
+						{
+							"ok": false,
+							"word": "This decision must affect many employees (certainty)."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 10,
-					"question": "Choose the correct sentence.",
 					"summary": "Balanced opinion with modal nuance.",
 					"explain": "Using modal verbs carefully expresses balanced opinion.",
-					"answers": [
-						{ "answer": "While the plan may be expensive, it could bring long-term benefits.", "ok": true },
-						{ "answer": "While the plan is expensive but it could bring benefits.", "ok": false },
-						{ "answer": "While the plan may be expensive it will bring benefits certainly.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "While the plan may be expensive, it could bring long-term benefits."
+						},
+						{
+							"ok": false,
+							"word": "While the plan is expensive but it could bring benefits."
+						},
+						{
+							"ok": false,
+							"word": "While the plan may be expensive it will bring benefits certainly."
+						}
 					]
 				}
 			]

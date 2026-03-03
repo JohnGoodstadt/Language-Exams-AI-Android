@@ -1,136 +1,233 @@
 {
-	"fileformat": 7,
-	"location": 0,
-	"sheetname": "UsageQuiz5A1-en",
-	"title": "Prepositions",
-	"updatedDate": 0,
-	"data": [
-		{
-			"title": "Choose the correct answer for each question.",
-			"description": "Prepositions of place, time and movement",
-			"sortorder": 1,
-			"sections": [
-				{
-					"title": "",
-					"page": 1,
-					"question": "The book is ___ the table.",
-					"summary": "Prepositions of place: 'on' for surfaces.",
-					"explain": "'On' is used for something touching a surface. Correct: 'The book is on the table.'",
-					"answers": [
-						{ "answer": "on", "ok": true },
-						{ "answer": "in", "ok": false },
-						{ "answer": "under", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 2,
-					"question": "The bag is ___ the chair.",
-					"summary": "Prepositions of place: 'under' for lower position.",
-					"explain": "'Under' means below something. Correct: 'The bag is under the chair.'",
-					"answers": [
-						{ "answer": "under", "ok": true },
-						{ "answer": "on", "ok": false },
-						{ "answer": "between", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 3,
-					"question": "She is ___ the hospital.",
-					"summary": "Prepositions of place: 'in' for buildings and enclosed spaces.",
-					"explain": "'In' is used for enclosed spaces like buildings. Correct: 'She is in the hospital.'",
-					"answers": [
-						{ "answer": "in", "ok": true },
-						{ "answer": "on", "ok": false },
-						{ "answer": "at the top of", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 4,
-					"question": "The chair is ___ the table and the bed.",
-					"summary": "Prepositions of place: 'between' for two things.",
-					"explain": "'Between' is used for something in the middle of two objects.",
-					"answers": [
-						{ "answer": "between", "ok": true },
-						{ "answer": "under", "ok": false },
-						{ "answer": "into", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 5,
-					"question": "We have English ___ Monday.",
-					"summary": "Prepositions of time: 'on' for days.",
-					"explain": "'On' is used with days of the week. Correct: 'on Monday.'",
-					"answers": [
-						{ "answer": "on", "ok": true },
-						{ "answer": "in", "ok": false },
-						{ "answer": "at", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 6,
-					"question": "My birthday is ___ July.",
-					"summary": "Prepositions of time: 'in' for months.",
-					"explain": "'In' is used for months. Correct: 'in July.'",
-					"answers": [
-						{ "answer": "in", "ok": true },
-						{ "answer": "on", "ok": false },
-						{ "answer": "at", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 7,
-					"question": "The class starts ___ 9:00.",
-					"summary": "Prepositions of time: 'at' for clock time.",
-					"explain": "'At' is used for specific clock times. Correct: 'at 9:00.'",
-					"answers": [
-						{ "answer": "at", "ok": true },
-						{ "answer": "on", "ok": false },
-						{ "answer": "in", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 8,
-					"question": "He walked ___ the room.",
-					"summary": "Prepositions of movement: 'into' for movement inside.",
-					"explain": "'Into' shows movement from outside to inside.",
-					"answers": [
-						{ "answer": "into", "ok": true },
-						{ "answer": "in", "ok": false },
-						{ "answer": "under", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 9,
-					"question": "She comes ___ Spain.",
-					"summary": "Prepositions of origin: 'from'.",
-					"explain": "'From' is used to show origin. Correct: 'She comes from Spain.'",
-					"answers": [
-						{ "answer": "from", "ok": true },
-						{ "answer": "to", "ok": false },
-						{ "answer": "into", "ok": false }
-					]
-				},
-				{
-					"title": "",
-					"page": 10,
-					"question": "They walked ___ the park.",
-					"summary": "Prepositions of movement: 'to' for direction.",
-					"explain": "'To' shows direction or destination. Correct: 'They walked to the park.'",
-					"answers": [
-						{ "answer": "to", "ok": true },
-						{ "answer": "from", "ok": false },
-						{ "answer": "between", "ok": false }
-					]
-				}
-			]
-		}
-	]
+  "fileformat": 7,
+  "location": 0,
+  "sheetname": "UsageQuiz5A1-en",
+  "title": "Prepositions",
+  "updatedDate": 0,
+  "data": [
+    {
+      "title": "Choose the correct answer for each question.",
+      "description": "Prepositions of place, time and movement",
+      "sortorder": 1,
+		"learningTitle": "Why this quiz works",
+		"learningPoints": [
+			"Practises core prepositions of place (in, on, under, between, next to).",
+			"Practises time prepositions (at 9:00, on Monday, in July).",
+			"Builds movement accuracy (to, from, into).",
+			"Targets the most common A1 errors with simple, high-frequency patterns."
+		],
+      "sections": [
+        {
+          "title": "",
+          "page": 1,
+          "summary": "Prepositions of place: 'on' for surfaces.",
+          "explain": "'On' is used for something touching a surface. Correct: 'The book is on the table.'",
+          "sentence": "The book is ___ the table.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "under"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 2,
+          "summary": "Prepositions of place: 'under' for lower position.",
+          "explain": "'Under' means below something. Correct: 'The bag is under the chair.'",
+          "sentence": "The bag is ___ the chair.",
+          "words": [
+            {
+              "ok": true,
+              "word": "under"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "between"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 3,
+          "summary": "Prepositions of place: 'in' for buildings and enclosed spaces.",
+          "explain": "'In' is used for enclosed spaces like buildings. Correct: 'She is in the hospital.'",
+          "sentence": "She is ___ the hospital.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at the top of"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 4,
+          "summary": "Prepositions of place: 'between' for two things.",
+          "explain": "'Between' is used for something in the middle of two objects.",
+          "sentence": "The chair is ___ the table and the bed.",
+          "words": [
+            {
+              "ok": true,
+              "word": "between"
+            },
+            {
+              "ok": false,
+              "word": "under"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 5,
+          "summary": "Prepositions of time: 'on' for days.",
+          "explain": "'On' is used with days of the week. Correct: 'on Monday.'",
+          "sentence": "We have English ___ Monday.",
+          "words": [
+            {
+              "ok": true,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 6,
+          "summary": "Prepositions of time: 'in' for months.",
+          "explain": "'In' is used for months. Correct: 'in July.'",
+          "sentence": "My birthday is ___ July.",
+          "words": [
+            {
+              "ok": true,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "at"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 7,
+          "summary": "Prepositions of time: 'at' for clock time.",
+          "explain": "'At' is used for specific clock times. Correct: 'at 9:00.'",
+          "sentence": "The class starts ___ 9:00.",
+          "words": [
+            {
+              "ok": true,
+              "word": "at"
+            },
+            {
+              "ok": false,
+              "word": "on"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 8,
+          "summary": "Prepositions of movement: 'into' for movement inside.",
+          "explain": "'Into' shows movement from outside to inside.",
+          "sentence": "He walked ___ the room.",
+          "words": [
+            {
+              "ok": true,
+              "word": "into"
+            },
+            {
+              "ok": false,
+              "word": "in"
+            },
+            {
+              "ok": false,
+              "word": "under"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 9,
+          "summary": "Prepositions of origin: 'from'.",
+          "explain": "'From' is used to show origin. Correct: 'She comes from Spain.'",
+          "sentence": "She comes ___ Spain.",
+          "words": [
+            {
+              "ok": true,
+              "word": "from"
+            },
+            {
+              "ok": false,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "into"
+            }
+          ]
+        },
+        {
+          "title": "",
+          "page": 10,
+          "summary": "Prepositions of movement: 'to' for direction.",
+          "explain": "'To' shows direction or destination. Correct: 'They walked to the park.'",
+          "sentence": "They walked ___ the park.",
+          "words": [
+            {
+              "ok": true,
+              "word": "to"
+            },
+            {
+              "ok": false,
+              "word": "from"
+            },
+            {
+              "ok": false,
+              "word": "between"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

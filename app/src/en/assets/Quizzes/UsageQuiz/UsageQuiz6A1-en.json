@@ -9,125 +9,222 @@
 			"title": "Choose the correct answer for each question.",
 			"description": "Basic connectors (and, but, because, so, when)",
 			"sortorder": 1,
+			"learningTitle": "Why this quiz works",
+			"learningPoints": [
+				"Practises basic linking words for clear sentences (and, but, because, so).",
+				"Builds cause-and-result thinking (because/so).",
+				"Introduces simple time links (when, before, after).",
+				"Helps you combine short sentences into more natural speech."
+			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"question": "I have a brother ___ a sister.",
 					"summary": "Using 'and' to add information.",
 					"explain": "'And' connects two similar ideas. Correct: 'I have a brother and a sister.'",
-					"answers": [
-						{ "answer": "and", "ok": true },
-						{ "answer": "but", "ok": false },
-						{ "answer": "because", "ok": false }
+					"sentence": "I have a brother ___ a sister.",
+					"words": [
+						{
+							"ok": true,
+							"word": "and"
+						},
+						{
+							"ok": false,
+							"word": "but"
+						},
+						{
+							"ok": false,
+							"word": "because"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 2,
-					"question": "She is small ___ she is strong.",
 					"summary": "Using 'but' to show contrast.",
 					"explain": "'But' connects opposite or contrasting ideas.",
-					"answers": [
-						{ "answer": "but", "ok": true },
-						{ "answer": "and", "ok": false },
-						{ "answer": "so", "ok": false }
+					"sentence": "She is small ___ she is strong.",
+					"words": [
+						{
+							"ok": true,
+							"word": "but"
+						},
+						{
+							"ok": false,
+							"word": "and"
+						},
+						{
+							"ok": false,
+							"word": "so"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 3,
-					"question": "I stayed home ___ I was tired.",
 					"summary": "Using 'because' to give a reason.",
 					"explain": "'Because' explains why something happens.",
-					"answers": [
-						{ "answer": "because", "ok": true },
-						{ "answer": "so", "ok": false },
-						{ "answer": "but", "ok": false }
+					"sentence": "I stayed home ___ I was tired.",
+					"words": [
+						{
+							"ok": true,
+							"word": "because"
+						},
+						{
+							"ok": false,
+							"word": "so"
+						},
+						{
+							"ok": false,
+							"word": "but"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 4,
-					"question": "It was raining, ___ we stayed inside.",
 					"summary": "Using 'so' to show a result.",
 					"explain": "'So' shows the result of something.",
-					"answers": [
-						{ "answer": "so", "ok": true },
-						{ "answer": "because", "ok": false },
-						{ "answer": "and", "ok": false }
+					"sentence": "It was raining, ___ we stayed inside.",
+					"words": [
+						{
+							"ok": true,
+							"word": "so"
+						},
+						{
+							"ok": false,
+							"word": "because"
+						},
+						{
+							"ok": false,
+							"word": "and"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
-					"question": "Call me ___ you arrive.",
 					"summary": "Using 'when' to show time.",
 					"explain": "'When' connects actions happening at the same time or in sequence.",
-					"answers": [
-						{ "answer": "when", "ok": true },
-						{ "answer": "because", "ok": false },
-						{ "answer": "but", "ok": false }
+					"sentence": "Call me ___ you arrive.",
+					"words": [
+						{
+							"ok": true,
+							"word": "when"
+						},
+						{
+							"ok": false,
+							"word": "because"
+						},
+						{
+							"ok": false,
+							"word": "but"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
-					"question": "She washed her hands ___ dinner.",
 					"summary": "Using 'before' to show sequence.",
 					"explain": "'Before' shows that one action happens earlier.",
-					"answers": [
-						{ "answer": "before", "ok": true },
-						{ "answer": "after", "ok": false },
-						{ "answer": "so", "ok": false }
+					"sentence": "She washed her hands ___ dinner.",
+					"words": [
+						{
+							"ok": true,
+							"word": "before"
+						},
+						{
+							"ok": false,
+							"word": "after"
+						},
+						{
+							"ok": false,
+							"word": "so"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 7,
-					"question": "He went to bed ___ he finished his homework.",
 					"summary": "Using 'after' to show sequence.",
 					"explain": "'After' shows that one action happens later.",
-					"answers": [
-						{ "answer": "after", "ok": true },
-						{ "answer": "before", "ok": false },
-						{ "answer": "because", "ok": false }
+					"sentence": "He went to bed ___ he finished his homework.",
+					"words": [
+						{
+							"ok": true,
+							"word": "after"
+						},
+						{
+							"ok": false,
+							"word": "before"
+						},
+						{
+							"ok": false,
+							"word": "because"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 8,
-					"question": "I like coffee ___ I don't like tea.",
 					"summary": "Using 'but' to contrast two ideas.",
 					"explain": "'But' connects two opposite ideas.",
-					"answers": [
-						{ "answer": "but", "ok": true },
-						{ "answer": "and", "ok": false },
-						{ "answer": "so", "ok": false }
+					"sentence": "I like coffee ___ I don't like tea.",
+					"words": [
+						{
+							"ok": true,
+							"word": "but"
+						},
+						{
+							"ok": false,
+							"word": "and"
+						},
+						{
+							"ok": false,
+							"word": "so"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 9,
-					"question": "She studied hard, ___ she passed the test.",
 					"summary": "Using 'so' to show a result.",
 					"explain": "'So' introduces the result of the first clause.",
-					"answers": [
-						{ "answer": "so", "ok": true },
-						{ "answer": "because", "ok": false },
-						{ "answer": "but", "ok": false }
+					"sentence": "She studied hard, ___ she passed the test.",
+					"words": [
+						{
+							"ok": true,
+							"word": "so"
+						},
+						{
+							"ok": false,
+							"word": "because"
+						},
+						{
+							"ok": false,
+							"word": "but"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 10,
-					"question": "We went to the park ___ we played football.",
 					"summary": "Using 'and' to connect two actions.",
 					"explain": "'And' connects two actions that both happened.",
-					"answers": [
-						{ "answer": "and", "ok": true },
-						{ "answer": "because", "ok": false },
-						{ "answer": "when", "ok": false }
+					"sentence": "We went to the park ___ we played football.",
+					"words": [
+						{
+							"ok": true,
+							"word": "and"
+						},
+						{
+							"ok": false,
+							"word": "because"
+						},
+						{
+							"ok": false,
+							"word": "when"
+						}
 					]
 				}
 			]

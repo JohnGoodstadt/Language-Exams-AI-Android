@@ -101,27 +101,27 @@ enum class QuizLevels(val quizzes: List<QuizDetail>) {
             ),
             QuizDetail(
                 id = 2,
-                baseName = "UsageQuiz12A1-en",
+                baseName = "UsageQuiz2A1-en",
                 title = "Quiz 2"
             ),
             QuizDetail(
                 id = 3,
-                baseName = "UsageQuiz13A1-en",
+                baseName = "UsageQuiz3A1-en",
                 title = "Quiz 3"
             ),
             QuizDetail(
                 id = 4,
-                baseName = "UsageQuiz14A1-en",
+                baseName = "UsageQuiz4A1-en",
                 title = "Quiz 4"
             ),
             QuizDetail(
                 id = 5,
-                baseName = "UsageQuiz15A1-en",
+                baseName = "UsageQuiz5A1-en",
                 title = "Quiz 5"
             ),
             QuizDetail(
                 id = 6,
-                baseName = "UsageQuiz16A1-en",
+                baseName = "UsageQuiz6A1-en",
                 title = "Quiz 6"
             )
         )
@@ -131,57 +131,57 @@ enum class QuizLevels(val quizzes: List<QuizDetail>) {
             QuizDetail(
                 id = 1,
                 baseName = "UsageQuiz1A2-en",
-                title = "Quiz 1"
+                title = "Sentence Structure"
             ),
             QuizDetail(
                 id = 2,
-                baseName = "UsageQuiz22A2",
-                title = "Quiz 2"
+                baseName = "UsageQuiz2A2-en",
+                title = "Present Simple"
             ),
-            QuizDetail(3, "UsageQuiz3A2", "Quiz 2"),
-            QuizDetail(4, "UsageQuiz4A2", "Quiz 3"),
-            QuizDetail(5, "UsageQuiz5A2", "Quiz 4"),
-            QuizDetail(6, "UsageQuiz6A2", "Quiz 5"),
+            QuizDetail(3, "UsageQuiz3A2-en", "Quiz 2"),
+            QuizDetail(4, "UsageQuiz4A2-en", "Quiz 3"),
+            QuizDetail(5, "UsageQuiz5A2-en", "Quiz 4"),
+            QuizDetail(6, "UsageQuiz6A2-en", "Quiz 5"),
         )
     ),
     UPPER(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "UsageQuiz1B1", title = "Quiz 1 - Tenses"),
+            QuizDetail(id = 1, baseName = "UsageQuiz1B1-en", title = "Quiz 1 - Tenses"),
             QuizDetail(
                 id = 2,
-                baseName = "UsageQuiz2B1",
+                baseName = "UsageQuiz2B1-en",
                 title = "Quiz 2"
             ),
             QuizDetail(
                 id = 3,
-                baseName = "UsageQuiz3B1",
+                baseName = "UsageQuiz3B1-en",
                 title = "Quiz 3"
             ),
             QuizDetail(
                 id = 4,
-                baseName = "UsageQuiz4B1",
+                baseName = "UsageQuiz4B1-en",
                 title = "Quiz 4"
             ),
             QuizDetail(
                 id = 5,
-                baseName = "UsageQuiz5B1",
+                baseName = "UsageQuiz5B1-en",
                 title = "Quiz 5"
             ),
-            QuizDetail(6, "UsageQuiz6B1", "Quiz 6"),
+            QuizDetail(6, "UsageQuiz6B1-en", "Quiz 6"),
         )
     ),
     ADVANCED(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "UsageQuiz1B2", title = "Quiz 1"),
+            QuizDetail(id = 1, baseName = "UsageQuiz1B2-en", title = "Quiz 1"),
             QuizDetail(
                 id = 2,
-                baseName = "UsageQuiz2B2",
+                baseName = "UsageQuiz2B2-en",
                 title = "Quiz 2"
             ),
-            QuizDetail(3, "UsageQuiz3B2", "Quiz 3"),
-            QuizDetail(4, "UsageQuiz4B2", "Quiz 4"),
-            QuizDetail(5, "UsageQuiz5B2", "Quiz 5"),
-            QuizDetail(6, "UsageQuiz6B2", "Quiz 6 ")
+            QuizDetail(3, "UsageQuiz3B2-en", "Quiz 3"),
+            QuizDetail(4, "UsageQuiz4B2-en", "Quiz 4"),
+            QuizDetail(5, "UsageQuiz5B2-en", "Quiz 5"),
+            QuizDetail(6, "UsageQuiz6B2-en", "Quiz 6 ")
         )
     );
 

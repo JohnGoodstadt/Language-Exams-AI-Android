@@ -9,125 +9,222 @@
 			"title": "Choose the correct answer for each question.",
 			"description": "Present continuous and present simple contrast",
 			"sortorder": 1,
+			"learningTitle": "Why this quiz works",
+			"learningPoints": [
+				"Practises 'going to' for plans and intentions.",
+				"Builds control of 'will' for decisions and promises.",
+				"Strengthens future time expressions.",
+				"Prepares you for practical test scenarios about plans and predictions."
+			]
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"question": "Choose the correct sentence.",
 					"summary": "Present continuous for actions happening now.",
 					"explain": "Present continuous uses am/is/are + verb + ing for actions happening now.",
-					"answers": [
-						{ "answer": "She is cooking dinner now.", "ok": true },
-						{ "answer": "She cooks dinner now.", "ok": false },
-						{ "answer": "She cooking dinner now.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She is cooking dinner now."
+						},
+						{
+							"ok": false,
+							"word": "She cooks dinner now."
+						},
+						{
+							"ok": false,
+							"word": "She cooking dinner now."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 2,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple for daily routines.",
 					"explain": "Present simple is used for habits and routines. 'He goes to work every day.'",
-					"answers": [
-						{ "answer": "He goes to work every day.", "ok": true },
-						{ "answer": "He is going to work every day.", "ok": false },
-						{ "answer": "He go to work every day.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "He goes to work every day."
+						},
+						{
+							"ok": false,
+							"word": "He is going to work every day."
+						},
+						{
+							"ok": false,
+							"word": "He go to work every day."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 3,
-					"question": "Choose the correct sentence.",
 					"summary": "Present continuous with time marker 'now'.",
 					"explain": "'Now' signals present continuous: 'They are studying now.'",
-					"answers": [
-						{ "answer": "They are studying now.", "ok": true },
-						{ "answer": "They study now.", "ok": false },
-						{ "answer": "They studying now.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "They are studying now."
+						},
+						{
+							"ok": false,
+							"word": "They study now."
+						},
+						{
+							"ok": false,
+							"word": "They studying now."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 4,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple with frequency adverbs.",
 					"explain": "Frequency words like 'always' are used with present simple.",
-					"answers": [
-						{ "answer": "She always drinks coffee.", "ok": true },
-						{ "answer": "She is always drinking coffee every day.", "ok": false },
-						{ "answer": "She always drink coffee.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She always drinks coffee."
+						},
+						{
+							"ok": false,
+							"word": "She is always drinking coffee every day."
+						},
+						{
+							"ok": false,
+							"word": "She always drink coffee."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
-					"question": "Choose the correct sentence.",
 					"summary": "Present continuous for temporary actions.",
 					"explain": "Temporary actions happening today use present continuous.",
-					"answers": [
-						{ "answer": "I am working at home today.", "ok": true },
-						{ "answer": "I work at home today.", "ok": false },
-						{ "answer": "I am work at home today.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "I am working at home today."
+						},
+						{
+							"ok": false,
+							"word": "I work at home today."
+						},
+						{
+							"ok": false,
+							"word": "I am work at home today."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple for general facts.",
 					"explain": "General facts use present simple.",
-					"answers": [
-						{ "answer": "Water boils at 100 degrees.", "ok": true },
-						{ "answer": "Water is boiling at 100 degrees.", "ok": false },
-						{ "answer": "Water boil at 100 degrees.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Water boils at 100 degrees."
+						},
+						{
+							"ok": false,
+							"word": "Water is boiling at 100 degrees."
+						},
+						{
+							"ok": false,
+							"word": "Water boil at 100 degrees."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 7,
-					"question": "Choose the correct sentence.",
 					"summary": "Present continuous negative form.",
 					"explain": "Negative present continuous: am/is/are + not + verb + ing.",
-					"answers": [
-						{ "answer": "She is not watching television.", "ok": true },
-						{ "answer": "She not watching television.", "ok": false },
-						{ "answer": "She does not watching television.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She is not watching television."
+						},
+						{
+							"ok": false,
+							"word": "She not watching television."
+						},
+						{
+							"ok": false,
+							"word": "She does not watching television."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 8,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple negative form.",
 					"explain": "Present simple negative uses don't/doesn't + base verb.",
-					"answers": [
-						{ "answer": "He doesn't drive to work.", "ok": true },
-						{ "answer": "He isn't drive to work.", "ok": false },
-						{ "answer": "He doesn't drives to work.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "He doesn't drive to work."
+						},
+						{
+							"ok": false,
+							"word": "He isn't drive to work."
+						},
+						{
+							"ok": false,
+							"word": "He doesn't drives to work."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 9,
-					"question": "Choose the correct sentence.",
 					"summary": "Present continuous question form.",
 					"explain": "Questions invert be verb: 'Are they studying?'",
-					"answers": [
-						{ "answer": "Are they studying?", "ok": true },
-						{ "answer": "Do they studying?", "ok": false },
-						{ "answer": "They are studying?", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Are they studying?"
+						},
+						{
+							"ok": false,
+							"word": "Do they studying?"
+						},
+						{
+							"ok": false,
+							"word": "They are studying?"
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 10,
-					"question": "Choose the correct sentence.",
 					"summary": "Contrast between routine and action happening now.",
 					"explain": "Use present simple for routine and present continuous for current action.",
-					"answers": [
-						{ "answer": "She works in an office, but today she is working at home.", "ok": true },
-						{ "answer": "She is working in an office every day.", "ok": false },
-						{ "answer": "She works at home now every day.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She works in an office, but today she is working at home."
+						},
+						{
+							"ok": false,
+							"word": "She is working in an office every day."
+						},
+						{
+							"ok": false,
+							"word": "She works at home now every day."
+						}
 					]
 				}
 			]

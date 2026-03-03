@@ -9,125 +9,223 @@
 			"title": "Choose the correct answer for each question.",
 			"description": "Conditionals and hypothetical reasoning",
 			"sortorder": 1,
+			"learningTitle": "Why this quiz matters for exams",
+			"learningPoints": [
+				"Builds accurate use of first, second, and zero conditionals.",
+				"Develops reasoning skills for real and hypothetical situations.",
+				"Strengthens problem-solving language for interviews and tests.",
+				"Improves logical thinking in speaking and writing tasks.",
+				"Prepares you for opinion and consequence-based exam questions."
+			]
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"question": "Choose the correct sentence.",
 					"summary": "Zero conditional for general truths.",
 					"explain": "Zero conditional uses present simple in both clauses for general facts.",
-					"answers": [
-						{ "answer": "If you heat water, it boils.", "ok": true },
-						{ "answer": "If you will heat water, it boils.", "ok": false },
-						{ "answer": "If you heated water, it will boil.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "If you heat water, it boils."
+						},
+						{
+							"ok": false,
+							"word": "If you will heat water, it boils."
+						},
+						{
+							"ok": false,
+							"word": "If you heated water, it will boil."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 2,
-					"question": "Choose the correct sentence.",
 					"summary": "First conditional for real future possibilities.",
 					"explain": "Structure: If + present simple, will + base verb.",
-					"answers": [
-						{ "answer": "If I pass the exam, I will apply for the job.", "ok": true },
-						{ "answer": "If I will pass the exam, I apply for the job.", "ok": false },
-						{ "answer": "If I passed the exam, I will apply for the job.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "If I pass the exam, I will apply for the job."
+						},
+						{
+							"ok": false,
+							"word": "If I will pass the exam, I apply for the job."
+						},
+						{
+							"ok": false,
+							"word": "If I passed the exam, I will apply for the job."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 3,
-					"question": "Choose the correct sentence.",
 					"summary": "Second conditional for hypothetical situations.",
 					"explain": "Second conditional uses past simple + would + base verb.",
-					"answers": [
-						{ "answer": "If I had more time, I would travel more.", "ok": true },
-						{ "answer": "If I have more time, I would travel more.", "ok": false },
-						{ "answer": "If I would have more time, I travel more.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "If I had more time, I would travel more."
+						},
+						{
+							"ok": false,
+							"word": "If I have more time, I would travel more."
+						},
+						{
+							"ok": false,
+							"word": "If I would have more time, I travel more."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 4,
-					"question": "Choose the correct sentence.",
 					"summary": "First conditional with clause order variation.",
 					"explain": "Main clause can come first: will + verb + if + present simple.",
-					"answers": [
-						{ "answer": "We will miss the train if we leave late.", "ok": true },
-						{ "answer": "We will miss the train if we will leave late.", "ok": false },
-						{ "answer": "We would miss the train if we leave late.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "We will miss the train if we leave late."
+						},
+						{
+							"ok": false,
+							"word": "We will miss the train if we will leave late."
+						},
+						{
+							"ok": false,
+							"word": "We would miss the train if we leave late."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
-					"question": "Choose the correct sentence.",
 					"summary": "Second conditional for unreal present.",
 					"explain": "Use past simple after 'if' even for present unreal situations.",
-					"answers": [
-						{ "answer": "If she knew the answer, she would tell us.", "ok": true },
-						{ "answer": "If she knows the answer, she would tell us.", "ok": false },
-						{ "answer": "If she would know the answer, she tells us.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "If she knew the answer, she would tell us."
+						},
+						{
+							"ok": false,
+							"word": "If she knows the answer, she would tell us."
+						},
+						{
+							"ok": false,
+							"word": "If she would know the answer, she tells us."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
-					"question": "Choose the correct sentence.",
 					"summary": "Use 'when' for certain future events.",
 					"explain": "'When' is used instead of 'if' for events that are certain.",
-					"answers": [
-						{ "answer": "When I arrive, I will call you.", "ok": true },
-						{ "answer": "When I will arrive, I call you.", "ok": false },
-						{ "answer": "When I arrived, I will call you.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "When I arrive, I will call you."
+						},
+						{
+							"ok": false,
+							"word": "When I will arrive, I call you."
+						},
+						{
+							"ok": false,
+							"word": "When I arrived, I will call you."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 7,
-					"question": "Choose the correct sentence.",
 					"summary": "Second conditional with advice nuance.",
 					"explain": "Second conditional expresses hypothetical advice.",
-					"answers": [
-						{ "answer": "If I were you, I would accept the offer.", "ok": true },
-						{ "answer": "If I was you, I will accept the offer.", "ok": false },
-						{ "answer": "If I am you, I would accept the offer.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "If I were you, I would accept the offer."
+						},
+						{
+							"ok": false,
+							"word": "If I was you, I will accept the offer."
+						},
+						{
+							"ok": false,
+							"word": "If I am you, I would accept the offer."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 8,
-					"question": "Choose the correct sentence.",
 					"summary": "First conditional with modal variation.",
 					"explain": "First conditional can use modals like 'might' instead of 'will'.",
-					"answers": [
-						{ "answer": "If it rains, we might stay home.", "ok": true },
-						{ "answer": "If it will rain, we might stay home.", "ok": false },
-						{ "answer": "If it rained, we might stayed home.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "If it rains, we might stay home."
+						},
+						{
+							"ok": false,
+							"word": "If it will rain, we might stay home."
+						},
+						{
+							"ok": false,
+							"word": "If it rained, we might stayed home."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 9,
-					"question": "Choose the correct sentence.",
 					"summary": "Zero conditional for rules and instructions.",
 					"explain": "Zero conditional is used for instructions and general rules.",
-					"answers": [
-						{ "answer": "If you press this button, the machine starts.", "ok": true },
-						{ "answer": "If you will press this button, the machine starts.", "ok": false },
-						{ "answer": "If you pressed this button, the machine starts.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "If you press this button, the machine starts."
+						},
+						{
+							"ok": false,
+							"word": "If you will press this button, the machine starts."
+						},
+						{
+							"ok": false,
+							"word": "If you pressed this button, the machine starts."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 10,
-					"question": "Choose the correct sentence.",
 					"summary": "Contrast between first and second conditional.",
 					"explain": "Use first conditional for real future; second conditional for unreal situations.",
-					"answers": [
-						{ "answer": "If she studies hard, she will pass; if she studied harder, she would get a scholarship.", "ok": true },
-						{ "answer": "If she studies hard, she would pass; if she studied harder, she will get a scholarship.", "ok": false },
-						{ "answer": "If she will study hard, she will pass; if she studied harder, she would get a scholarship.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "If she studies hard, she will pass; if she studied harder, she would get a scholarship."
+						},
+						{
+							"ok": false,
+							"word": "If she studies hard, she would pass; if she studied harder, she will get a scholarship."
+						},
+						{
+							"ok": false,
+							"word": "If she will study hard, she will pass; if she studied harder, she would get a scholarship."
+						}
 					]
 				}
 			]

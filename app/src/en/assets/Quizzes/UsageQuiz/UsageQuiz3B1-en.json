@@ -9,125 +9,223 @@
 			"title": "Choose the correct answer for each question.",
 			"description": "Passive voice in formal contexts",
 			"sortorder": 1,
+			"learningTitle": "Why this quiz matters for exams",
+			"learningPoints": [
+				"Builds control of passive voice in formal contexts.",
+				"Improves understanding of institutional and official language.",
+				"Strengthens grammar commonly used in news and government texts.",
+				"Prepares you for reading comprehension in formal documents.",
+				"Develops professional written communication skills."
+			]
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"question": "Choose the correct sentence.",
 					"summary": "Present simple passive for general facts.",
 					"explain": "Present passive structure: am/is/are + past participle.",
-					"answers": [
-						{ "answer": "English is spoken in many countries.", "ok": true },
-						{ "answer": "English speaks in many countries.", "ok": false },
-						{ "answer": "English is speak in many countries.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "English is spoken in many countries."
+						},
+						{
+							"ok": false,
+							"word": "English speaks in many countries."
+						},
+						{
+							"ok": false,
+							"word": "English is speak in many countries."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 2,
-					"question": "Choose the correct sentence.",
 					"summary": "Past simple passive for completed actions.",
 					"explain": "Past passive structure: was/were + past participle.",
-					"answers": [
-						{ "answer": "The law was introduced in 2015.", "ok": true },
-						{ "answer": "The law introduced in 2015.", "ok": false },
-						{ "answer": "The law was introduce in 2015.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The law was introduced in 2015."
+						},
+						{
+							"ok": false,
+							"word": "The law introduced in 2015."
+						},
+						{
+							"ok": false,
+							"word": "The law was introduce in 2015."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 3,
-					"question": "Choose the correct sentence.",
 					"summary": "Present perfect passive for recent formal updates.",
 					"explain": "Structure: has/have been + past participle.",
-					"answers": [
-						{ "answer": "The report has been completed.", "ok": true },
-						{ "answer": "The report has completed.", "ok": false },
-						{ "answer": "The report has been complete.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The report has been completed."
+						},
+						{
+							"ok": false,
+							"word": "The report has completed."
+						},
+						{
+							"ok": false,
+							"word": "The report has been complete."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 4,
-					"question": "Choose the correct sentence.",
 					"summary": "Passive voice to focus on the action, not the person.",
 					"explain": "Passive voice emphasizes the action rather than the subject.",
-					"answers": [
-						{ "answer": "The building was damaged during the storm.", "ok": true },
-						{ "answer": "The storm damaged was the building.", "ok": false },
-						{ "answer": "The building damaged during the storm.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The building was damaged during the storm."
+						},
+						{
+							"ok": false,
+							"word": "The storm damaged was the building."
+						},
+						{
+							"ok": false,
+							"word": "The building damaged during the storm."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
-					"question": "Choose the correct sentence.",
 					"summary": "Using 'by' to include the agent.",
 					"explain": "The agent can be included using 'by' in passive sentences.",
-					"answers": [
-						{ "answer": "The decision was made by the manager.", "ok": true },
-						{ "answer": "The decision made by the manager.", "ok": false },
-						{ "answer": "The decision was make by the manager.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The decision was made by the manager."
+						},
+						{
+							"ok": false,
+							"word": "The decision made by the manager."
+						},
+						{
+							"ok": false,
+							"word": "The decision was make by the manager."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
-					"question": "Choose the correct sentence.",
 					"summary": "Present passive in official rules.",
 					"explain": "Passive voice is common in official instructions.",
-					"answers": [
-						{ "answer": "Applications are processed within five days.", "ok": true },
-						{ "answer": "Applications process within five days.", "ok": false },
-						{ "answer": "Applications are process within five days.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Applications are processed within five days."
+						},
+						{
+							"ok": false,
+							"word": "Applications process within five days."
+						},
+						{
+							"ok": false,
+							"word": "Applications are process within five days."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 7,
-					"question": "Choose the correct sentence.",
 					"summary": "Past passive with plural subjects.",
 					"explain": "Plural subjects use 'were' in past passive.",
-					"answers": [
-						{ "answer": "The documents were sent yesterday.", "ok": true },
-						{ "answer": "The documents was sent yesterday.", "ok": false },
-						{ "answer": "The documents were send yesterday.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The documents were sent yesterday."
+						},
+						{
+							"ok": false,
+							"word": "The documents was sent yesterday."
+						},
+						{
+							"ok": false,
+							"word": "The documents were send yesterday."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 8,
-					"question": "Choose the correct sentence.",
 					"summary": "Passive voice in academic writing.",
 					"explain": "Passive voice is frequently used in formal academic texts.",
-					"answers": [
-						{ "answer": "The results were analyzed carefully.", "ok": true },
-						{ "answer": "The results analyzed carefully.", "ok": false },
-						{ "answer": "The results were analyze carefully.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The results were analyzed carefully."
+						},
+						{
+							"ok": false,
+							"word": "The results analyzed carefully."
+						},
+						{
+							"ok": false,
+							"word": "The results were analyze carefully."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 9,
-					"question": "Choose the correct sentence.",
 					"summary": "Present perfect passive for ongoing relevance.",
 					"explain": "Use present perfect passive for actions with present importance.",
-					"answers": [
-						{ "answer": "The policy has been updated recently.", "ok": true },
-						{ "answer": "The policy has updated recently.", "ok": false },
-						{ "answer": "The policy has been update recently.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The policy has been updated recently."
+						},
+						{
+							"ok": false,
+							"word": "The policy has updated recently."
+						},
+						{
+							"ok": false,
+							"word": "The policy has been update recently."
+						}
 					]
 				},
 				{
 					"title": "",
 					"page": 10,
-					"question": "Choose the correct sentence.",
 					"summary": "Passive voice for formal announcements.",
 					"explain": "Formal announcements often use passive constructions.",
-					"answers": [
-						{ "answer": "The meeting was postponed due to bad weather.", "ok": true },
-						{ "answer": "The meeting postponed due to bad weather.", "ok": false },
-						{ "answer": "The meeting was postpone due to bad weather.", "ok": false }
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The meeting was postponed due to bad weather."
+						},
+						{
+							"ok": false,
+							"word": "The meeting postponed due to bad weather."
+						},
+						{
+							"ok": false,
+							"word": "The meeting was postpone due to bad weather."
+						}
 					]
 				}
 			]
