@@ -1,0 +1,136 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz4A1-en",
+	"title": "Questions & Short Answers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Forming questions and short answers",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Do you work in an office?",
+					"summary": "Short answers in the present simple with 'do'.",
+					"explain": "For 'you', the short answer is: Yes, I do. / No, I don't.",
+					"answers": [
+						{ "answer": "Yes, I do.", "ok": true },
+						{ "answer": "Yes, I work.", "ok": false },
+						{ "answer": "Yes, I am.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Does she live in the city?",
+					"summary": "Short answers in the present simple with 'does'.",
+					"explain": "For 'she', we use: Yes, she does. / No, she doesn't.",
+					"answers": [
+						{ "answer": "Yes, she does.", "ok": true },
+						{ "answer": "Yes, she lives.", "ok": false },
+						{ "answer": "Yes, she do.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Did they visit the zoo yesterday?",
+					"summary": "Short answers in the past simple with 'did'.",
+					"explain": "Past simple short answers use 'did'. Correct form: Yes, they did.",
+					"answers": [
+						{ "answer": "Yes, they did.", "ok": true },
+						{ "answer": "Yes, they visited.", "ok": false },
+						{ "answer": "Yes, they do.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Is he a teacher?",
+					"summary": "Short answers with the verb 'to be' (present).",
+					"explain": "With 'is', the short answer is: Yes, he is. / No, he isn't.",
+					"answers": [
+						{ "answer": "Yes, he is.", "ok": true },
+						{ "answer": "Yes, he does.", "ok": false },
+						{ "answer": "Yes, he be.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Are they at home?",
+					"summary": "Short answers with 'are'.",
+					"explain": "With 'are', use: Yes, they are. / No, they aren't.",
+					"answers": [
+						{ "answer": "No, they aren't.", "ok": true },
+						{ "answer": "No, they don't.", "ok": false },
+						{ "answer": "No, they not.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Was she at school yesterday?",
+					"summary": "Short answers with 'was' in the past.",
+					"explain": "With 'was', the short answer is: Yes, she was. / No, she wasn't.",
+					"answers": [
+						{ "answer": "Yes, she was.", "ok": true },
+						{ "answer": "Yes, she did.", "ok": false },
+						{ "answer": "Yes, she is.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Do they walk to school?",
+					"summary": "Yes/No questions with 'do' and plural subjects.",
+					"explain": "With 'they', use 'Do' + base verb. Short answer: Yes, they do.",
+					"answers": [
+						{ "answer": "Yes, they do.", "ok": true },
+						{ "answer": "Yes, they does.", "ok": false },
+						{ "answer": "Yes, they are.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Did he run yesterday?",
+					"summary": "Past simple questions use 'Did' + base verb.",
+					"explain": "After 'Did', we use the base verb. Short answer: Yes, he did.",
+					"answers": [
+						{ "answer": "Yes, he did.", "ok": true },
+						{ "answer": "Yes, he ran.", "ok": false },
+						{ "answer": "Yes, he does.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Is the bag under the table?",
+					"summary": "Yes/No questions with 'is'.",
+					"explain": "Be verb questions invert subject and verb. Short answer: Yes, it is.",
+					"answers": [
+						{ "answer": "Yes, it is.", "ok": true },
+						{ "answer": "Yes, it does.", "ok": false },
+						{ "answer": "Yes, it be.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Do you like coffee?",
+					"summary": "Short answers with 'do' in present simple.",
+					"explain": "Present simple questions with 'you' use 'Do'. Short answer: No, I don't.",
+					"answers": [
+						{ "answer": "No, I don't.", "ok": true },
+						{ "answer": "No, I am not.", "ok": false },
+						{ "answer": "No, I not.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

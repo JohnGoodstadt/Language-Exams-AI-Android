@@ -1,0 +1,136 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz3A1-en",
+	"title": "Past Simple",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Past simple tense",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Choose the correct sentence.",
+					"summary": "Past simple of regular verbs (verb + ed).",
+					"explain": "Regular verbs form the past with -ed. 'She walked to school yesterday.' is correct.",
+					"answers": [
+						{ "answer": "She walked to school yesterday.", "ok": true },
+						{ "answer": "She walk to school yesterday.", "ok": false },
+						{ "answer": "She walking to school yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Choose the correct sentence.",
+					"summary": "Past simple of irregular verb 'go'.",
+					"explain": "The past of 'go' is 'went'. 'They went to the park.' is correct.",
+					"answers": [
+						{ "answer": "They went to the park.", "ok": true },
+						{ "answer": "They goed to the park.", "ok": false },
+						{ "answer": "They go to the park yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Choose the correct sentence.",
+					"summary": "Past simple of 'be' (was).",
+					"explain": "For 'I/he/she/it', the past of 'be' is 'was'. 'She was at home yesterday.' is correct.",
+					"answers": [
+						{ "answer": "She was at home yesterday.", "ok": true },
+						{ "answer": "She were at home yesterday.", "ok": false },
+						{ "answer": "She is at home yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Choose the correct sentence.",
+					"summary": "Past simple of irregular verb 'see'.",
+					"explain": "The past of 'see' is 'saw'. 'I saw a movie last night.' is correct.",
+					"answers": [
+						{ "answer": "I saw a movie last night.", "ok": true },
+						{ "answer": "I seen a movie last night.", "ok": false },
+						{ "answer": "I see a movie last night.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Choose the correct sentence.",
+					"summary": "Past simple negative with 'didn't'.",
+					"explain": "After 'didn't', we use the base verb. 'We didn't eat at the restaurant.' is correct.",
+					"answers": [
+						{ "answer": "We didn't eat at the restaurant.", "ok": true },
+						{ "answer": "We didn't ate at the restaurant.", "ok": false },
+						{ "answer": "We not eat at the restaurant.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Choose the correct question.",
+					"summary": "Past simple questions with 'Did'.",
+					"explain": "Past simple questions use 'Did' + subject + base verb. 'Did you visit the zoo?' is correct.",
+					"answers": [
+						{ "answer": "Did you visit the zoo?", "ok": true },
+						{ "answer": "Did you visited the zoo?", "ok": false },
+						{ "answer": "Do you visit the zoo yesterday?", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Choose the correct sentence.",
+					"summary": "Past simple of irregular verb 'take'.",
+					"explain": "The past of 'take' is 'took'. 'He took the bus yesterday.' is correct.",
+					"answers": [
+						{ "answer": "He took the bus yesterday.", "ok": true },
+						{ "answer": "He taked the bus yesterday.", "ok": false },
+						{ "answer": "He take the bus yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Choose the correct sentence.",
+					"summary": "Past simple with time marker 'last night'.",
+					"explain": "Past time expressions like 'last night' require past tense. 'She watched television last night.' is correct.",
+					"answers": [
+						{ "answer": "She watched television last night.", "ok": true },
+						{ "answer": "She watch television last night.", "ok": false },
+						{ "answer": "She watching television last night.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Choose the correct sentence.",
+					"summary": "Past simple of irregular verb 'run'.",
+					"explain": "The past of 'run' is 'ran'. 'He ran in the park yesterday.' is correct.",
+					"answers": [
+						{ "answer": "He ran in the park yesterday.", "ok": true },
+						{ "answer": "He run in the park yesterday.", "ok": false },
+						{ "answer": "He running in the park yesterday.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Choose the correct sentence.",
+					"summary": "Past simple of regular verbs with -ed.",
+					"explain": "Regular verbs add -ed in the past. 'They studied English yesterday.' is correct.",
+					"answers": [
+						{ "answer": "They studied English yesterday.", "ok": true },
+						{ "answer": "They study English yesterday.", "ok": false },
+						{ "answer": "They studying English yesterday.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

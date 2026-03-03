@@ -1,0 +1,136 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "UsageQuiz6A1-en",
+	"title": "Connectors",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Basic connectors (and, but, because, so, when)",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "I have a brother ___ a sister.",
+					"summary": "Using 'and' to add information.",
+					"explain": "'And' connects two similar ideas. Correct: 'I have a brother and a sister.'",
+					"answers": [
+						{ "answer": "and", "ok": true },
+						{ "answer": "but", "ok": false },
+						{ "answer": "because", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "She is small ___ she is strong.",
+					"summary": "Using 'but' to show contrast.",
+					"explain": "'But' connects opposite or contrasting ideas.",
+					"answers": [
+						{ "answer": "but", "ok": true },
+						{ "answer": "and", "ok": false },
+						{ "answer": "so", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "I stayed home ___ I was tired.",
+					"summary": "Using 'because' to give a reason.",
+					"explain": "'Because' explains why something happens.",
+					"answers": [
+						{ "answer": "because", "ok": true },
+						{ "answer": "so", "ok": false },
+						{ "answer": "but", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "It was raining, ___ we stayed inside.",
+					"summary": "Using 'so' to show a result.",
+					"explain": "'So' shows the result of something.",
+					"answers": [
+						{ "answer": "so", "ok": true },
+						{ "answer": "because", "ok": false },
+						{ "answer": "and", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Call me ___ you arrive.",
+					"summary": "Using 'when' to show time.",
+					"explain": "'When' connects actions happening at the same time or in sequence.",
+					"answers": [
+						{ "answer": "when", "ok": true },
+						{ "answer": "because", "ok": false },
+						{ "answer": "but", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "She washed her hands ___ dinner.",
+					"summary": "Using 'before' to show sequence.",
+					"explain": "'Before' shows that one action happens earlier.",
+					"answers": [
+						{ "answer": "before", "ok": true },
+						{ "answer": "after", "ok": false },
+						{ "answer": "so", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "He went to bed ___ he finished his homework.",
+					"summary": "Using 'after' to show sequence.",
+					"explain": "'After' shows that one action happens later.",
+					"answers": [
+						{ "answer": "after", "ok": true },
+						{ "answer": "before", "ok": false },
+						{ "answer": "because", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "I like coffee ___ I don't like tea.",
+					"summary": "Using 'but' to contrast two ideas.",
+					"explain": "'But' connects two opposite ideas.",
+					"answers": [
+						{ "answer": "but", "ok": true },
+						{ "answer": "and", "ok": false },
+						{ "answer": "so", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "She studied hard, ___ she passed the test.",
+					"summary": "Using 'so' to show a result.",
+					"explain": "'So' introduces the result of the first clause.",
+					"answers": [
+						{ "answer": "so", "ok": true },
+						{ "answer": "because", "ok": false },
+						{ "answer": "but", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "We went to the park ___ we played football.",
+					"summary": "Using 'and' to connect two actions.",
+					"explain": "'And' connects two actions that both happened.",
+					"answers": [
+						{ "answer": "and", "ok": true },
+						{ "answer": "because", "ok": false },
+						{ "answer": "when", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}

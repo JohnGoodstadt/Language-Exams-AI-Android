@@ -29,6 +29,7 @@ import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
+import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -883,6 +884,8 @@ class SettingsViewModel @Inject constructor(
 
             Timber.i("============ ${level} ============")
 
+            val allWordList = kotlin.collections.mutableListOf<String>()//MutableList<String> = emptyList(),
+
             val result = vocabRepository.getFormat0Data("vocab_data_${level.lowercase()}")
             result.onSuccess { vocabFile ->
                 var categoryList = ""
@@ -901,9 +904,18 @@ class SettingsViewModel @Inject constructor(
                             println(chunk.joinToString(", "))
                         }
 
+                    category.words
+                        .map { it.word } // Convert List<Format0Word> to List<String>
+                        .forEach { word ->
+//                            println(allWordList.joinToString(", "))
+                            allWordList.add(word)
+                        }
+
                 }
                 println(".")
                 Timber.i("$categoryList")
+                val wl = allWordList.joinToString(",")
+                Timber.i("$wl")
             }
             result.onFailure { error ->
                 Timber.e(error)

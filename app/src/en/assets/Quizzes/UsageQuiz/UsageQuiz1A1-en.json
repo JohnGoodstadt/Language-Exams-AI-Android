@@ -1,0 +1,136 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz1A1-en",
+	"title": "Sentence Structure",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Basic sentence structure",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Choose the correct sentence.",
+					"summary": "Basic word order in simple present sentences (Subject + Verb + Place).",
+					"explain": "English basic structure: Subject + Verb + Place. 'I eat at home.' follows correct order.",
+					"answers": [
+						{ "answer": "I eat at home.", "ok": true },
+						{ "answer": "Eat I at home.", "ok": false },
+						{ "answer": "I at home eat.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Choose the correct sentence.",
+					"summary": "Using the verb 'to be' with a job (Subject + be + article + noun).",
+					"explain": "Structure: Subject + am/is/are + a/an + job noun. 'She is a doctor.' is correct.",
+					"answers": [
+						{ "answer": "She is a doctor.", "ok": true },
+						{ "answer": "She doctor is a.", "ok": false },
+						{ "answer": "She is doctor.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Choose the correct sentence.",
+					"summary": "Present simple with plural subject (Subject + base verb).",
+					"explain": "'They' uses the base verb form. 'They walk to school.' is correct.",
+					"answers": [
+						{ "answer": "They walk to school.", "ok": true },
+						{ "answer": "They walks to school.", "ok": false },
+						{ "answer": "Walk they to school.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Choose the correct sentence.",
+					"summary": "Prepositions of place with 'be' (Subject + be + place phrase).",
+					"explain": "Structure: Subject + is + preposition + object. 'The book is on the table.' is correct.",
+					"answers": [
+						{ "answer": "The book is on the table.", "ok": true },
+						{ "answer": "The book on the table is.", "ok": false },
+						{ "answer": "The book is the table on.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Choose the correct sentence.",
+					"summary": "Adjective position before a noun.",
+					"explain": "Adjective + noun order: 'small house', not 'house small'.",
+					"answers": [
+						{ "answer": "It is a small house.", "ok": true },
+						{ "answer": "It is a house small.", "ok": false },
+						{ "answer": "It small is a house.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Choose the correct sentence.",
+					"summary": "Verb patterns with common verbs (listen + to).",
+					"explain": "'Listen' requires the preposition 'to'. Correct structure: 'We listen to music.'",
+					"answers": [
+						{ "answer": "We listen to music.", "ok": true },
+						{ "answer": "We listen music.", "ok": false },
+						{ "answer": "We listen at music.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Choose the correct sentence.",
+					"summary": "Prepositions of place (under, on, in).",
+					"explain": "Correct structure: Subject + is + under + object. 'The bag is under the chair.'",
+					"answers": [
+						{ "answer": "The bag is under the chair.", "ok": true },
+						{ "answer": "The bag under the chair is.", "ok": false },
+						{ "answer": "The bag is the chair under.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Choose the correct sentence.",
+					"summary": "Third person singular in present simple (verb + s).",
+					"explain": "'He' requires verb + s in present simple. 'He runs in the park.' is correct.",
+					"answers": [
+						{ "answer": "He runs in the park.", "ok": true },
+						{ "answer": "He run in the park.", "ok": false },
+						{ "answer": "He running in the park.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Choose the correct sentence.",
+					"summary": "Preposition 'in' for enclosed spaces.",
+					"explain": "Correct structure: Subject + is + in + object. 'The mobile is in the bag.'",
+					"answers": [
+						{ "answer": "The mobile is in the bag.", "ok": true },
+						{ "answer": "The mobile is at the bag.", "ok": false },
+						{ "answer": "The mobile in the bag is.", "ok": false }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Choose the correct sentence.",
+					"summary": "Subject pronoun + verb agreement.",
+					"explain": "'We' uses the base verb form. 'We walk to school.' is correct.",
+					"answers": [
+						{ "answer": "We walk to school.", "ok": true },
+						{ "answer": "We walks to school.", "ok": false },
+						{ "answer": "Walk we to school.", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}
