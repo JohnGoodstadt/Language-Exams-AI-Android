@@ -26,6 +26,7 @@ import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
+import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
@@ -49,6 +50,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
@@ -311,8 +313,10 @@ data class QuizQuestion(
     val title: String,
 )
 
+//TODO: Do I need this?
 sealed interface QuizUiState {
     object Loading : QuizUiState
+
     data class Success(
         val selectedVoiceName: String = "" // Add a default empty value
     ) : QuizUiState
@@ -320,7 +324,9 @@ sealed interface QuizUiState {
     data class Error(val message: String) : QuizUiState
     object NotAvailable : QuizUiState // For flavors like 'zh'
 }
-
+data class UsageQuizUiState(
+    val testMyselfListRoot:TestMyselfListRoot? = null
+)
 @HiltViewModel
 class QuizViewModel @Inject constructor(
     private val application: Application,
@@ -338,8 +344,14 @@ class QuizViewModel @Inject constructor(
     ) : ViewModel() {
     private val appContext: Context = application.applicationContext
 
+    //Real uiState
+    private val _uiState = MutableStateFlow(UsageQuizUiState())
+    val uiState = _uiState.asStateFlow()
+
     private val _uiState99 = MutableStateFlow<QuizUiState>(QuizUiState.Loading)
     val uiState99 = _uiState99.asStateFlow()
+
+
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
     val playbackState = _playbackState.asStateFlow()
 
@@ -505,6 +517,9 @@ class QuizViewModel @Inject constructor(
             quizStatistics.value = quizStatistics.value.copy(
                 title = quizDetail.title
             )
+
+            _uiState.update { it.copy(testMyselfListRoot = testData)}
+
 
             _questions.value = generateQuestionsFromData(testData)
 

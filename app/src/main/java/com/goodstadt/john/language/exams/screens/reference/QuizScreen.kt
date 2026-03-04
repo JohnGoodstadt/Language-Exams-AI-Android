@@ -1,5 +1,6 @@
 package com.goodstadt.john.language.exams.screens.reference
 
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -38,6 +39,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -79,6 +81,7 @@ fun QuizScreen(
 ) {
     val context = LocalContext.current
 
+    val uiState by viewModel.uiState.collectAsState()
     var infoDisabled by remember { mutableStateOf(false) }
     var showInfoBottomSheet by remember { mutableStateOf(false) }
 
@@ -109,6 +112,8 @@ fun QuizScreen(
     } else {
         "Choose the correct answer"
     }
+
+    var isLearningExpanded by rememberSaveable { mutableStateOf(false) }
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
@@ -163,6 +168,78 @@ fun QuizScreen(
                 viewModel.onQuizSelected(quizDetail)
             }
         )
+
+        // --- Quiz-level learning points (stays the same for all 10 questions) ---
+
+        val fred = selectedQuiz
+        print(fred)
+
+        val learningTitleData = uiState.testMyselfListRoot?.data?.first()
+        val learningTitle = learningTitleData?.learningTitle ?: "Why this quiz works"
+        val learningPoints = learningTitleData?.learningPoints.orEmpty()
+
+
+        if (learningPoints.isNotEmpty()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 6.dp)
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = learningTitle,
+                        style = MaterialTheme.typography.titleSmall,
+                        color = Color.White
+                    )
+
+                    Text(
+                        text = if (isLearningExpanded) "Less" else "More…",
+                        style = MaterialTheme.typography.labelMedium,
+                        color = orangeLight,
+                        modifier = Modifier
+                            .clickable { isLearningExpanded = !isLearningExpanded }
+                            .padding(8.dp)
+                    )
+                }
+
+                AnimatedVisibility(visible = isLearningExpanded) {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(top = 6.dp, bottom = 8.dp)
+                    ) {
+                        learningPoints.forEach { point ->
+                            Row(
+                                modifier = Modifier.padding(vertical = 2.dp),
+                                verticalAlignment = Alignment.Top
+                            ) {
+                                Text(text = "• ", color = orangeLight)
+                                Text(
+                                    text = point,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = Color.White,
+                                    modifier = Modifier.weight(1f)
+                                )
+                            }
+                        }
+                    }
+                }
+
+//                HorizontalDivider(
+//                    modifier = Modifier
+//                        .fillMaxWidth()
+//                        .padding(top = 6.dp),
+//                    thickness = 1.dp,
+//                    color = greyLight2
+//                )
+            }//: Column
+        }//:learningPoints
+
+
 
         HorizontalDivider(
             modifier = Modifier.fillMaxWidth(),
@@ -319,11 +396,11 @@ fun QuizScreen(
 
                                 var sentenceToSpeak = ""
                                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                    val sentence = question.sentence.replace("_", option)
+                                    val sentence = question.sentence.replace(Regex("_+"), option)
 //                                        val sentenceToStyle = option
                                     displayedSentence = viewModel.highlightWordInSentence(
-                                        sentence = option,
-                                        wordToHighlight = sentence,
+                                        sentence = sentence,
+                                        wordToHighlight = option,
                                         highlightColor = Color.Green
                                     )
                                     sentenceToSpeak = sentence
