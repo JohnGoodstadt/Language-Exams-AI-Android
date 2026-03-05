@@ -42,7 +42,14 @@ android {
             "TTS_API_KEY",
             secretsProperties.getProperty("TTS_API_KEY")
         )
+/*
+🔵 SECURITY / BUILD CONCERNS
+19. API keys in BuildConfig are extractable
+File: build.gradle.kts lines 42–56
+TTS_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY are injected into BuildConfig. These get compiled into the APK and can be trivially extracted with apktool or jadx.
 
+Fix: For production, proxy these API calls through your own backend server so keys never ship in the app.
+ */
         buildConfigField(
             "String",
             "OPENAI_API_KEY",
@@ -117,6 +124,16 @@ android {
         }
     }
 
+    /*
+    20. CLAUDE Hardcoded absolute keystore path
+File: build.gradle.kts line 122
+
+storeFile = file("/Users/johngoodstadt/Library/Mobile Documents/...")
+
+This breaks on CI/CD or any other machine.
+
+Fix: Use a relative path or an environment variable: storeFile = file(System.getenv("KEYSTORE_PATH") ?: "...")
+     */
     signingConfigs {
         create("release") {
             storeFile = file("/Users/johngoodstadt/Library/Mobile Documents/com~apple~CloudDocs/keystore/android_memorize_law_demo")
