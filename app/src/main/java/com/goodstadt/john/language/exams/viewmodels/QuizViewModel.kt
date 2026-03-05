@@ -468,14 +468,6 @@ class QuizViewModel @Inject constructor(
             currentFileFormat.value = quizFillInTheBlanks
         }
 
-//        val a  = when (testData.fileFormat) {
-//            quizQandA -> quizQandA
-//            quizDefinitions -> quizDefinitions
-//            quizMultipleChoice -> quizMultipleChoice
-//            else -> quizFillInTheBlanks
-//
-//        }
-
         //because spellings should follow each other
         if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
 
@@ -640,25 +632,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     private fun refreshQuizTitlesForLevel(level: QuizLevels) {
         viewModelScope.launch {
 
-            // 1. Get the list of default quizzes for this level
-            val defaultQuizzes = level.quizzes
 
-            // 2. Map them to potentially new titles by peeking at the JSON files
-//            val updatedQuizzes = defaultQuizzes.map { quizDetail ->
-//
-//                // A. Resolve Filename (e.g. "...-hi.json")
-//                val filename = "${quizDetail.baseName}.json"// getLocalizedFileName(appContext, quizDetail.baseName)
-//
-//                // B. Peek at the JSON to get the title
-//                // Note: This needs to be fast. If reading the whole file is too slow,
-//                // you might want to cache this or use a lighter "Metadata" read.
-//                val title = peekTitleFromJson(filename) ?: quizDetail.title
-//
-//                // C. Return updated object
-//                quizDetail.copy(title = title)
-//            }
-
-            // 3. Publish the new list to the UI
             _availableQuizzes.value =  level.quizzes//.updatedQuizzes
 
             // 4. Also ensure the currently selected quiz object is updated if needed
@@ -670,11 +644,9 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     }
 
 
-    private fun refreshQuizTitlesForLevelNew(level: QuizLevels) {
 
-    }
     // Helper to read just the title
-    private fun peekTitleFromJson(filename: String): String? {
+    private fun peekTitleFromJsonObsolete(filename: String): String? {
         return try {
             // Reusing your existing reader logic, but maybe we can optimize later
             val data = readTestMyselfDataFromAssets(appContext, filename)
@@ -685,7 +657,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
     }
 
-    private fun preloadLocalizedTitles() {
+    private fun preloadLocalizedTitlesObsolete() {
         viewModelScope.launch(Dispatchers.IO) {
 
             // Loop through all Enum Levels (Elementary, Inter, etc.)

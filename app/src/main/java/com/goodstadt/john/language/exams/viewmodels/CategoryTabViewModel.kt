@@ -364,7 +364,9 @@ class CategoryTabViewModel @Inject constructor(
 
 
                     if (!wasAlreadyHeard) {
-                        checkSectionCompletionAfterNewSentence(category, sentence)
+                        viewModelScope.launch {
+                            checkSectionCompletionAfterNewSentence(category, sentence)
+                        }
                         _uiState.update { currentState ->
                             if (currentState is CategoryTabUiState.Success) {
                                 currentState.copy(
@@ -791,7 +793,7 @@ Fix: Make the function suspend and use withContext(Dispatchers.Main), or cache t
 
     Fix: Make the function suspend and use withContext(Dispatchers.Main), or cache the examName in a class variable when it's loaded.
     */
-    private fun checkSectionCompletionAfterNewSentence(
+    private suspend fun checkSectionCompletionAfterNewSentence(
         category: Category,
         justPlayedSentence: String
     ) {

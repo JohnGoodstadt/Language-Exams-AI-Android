@@ -783,8 +783,12 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun isItMe(): Boolean {
-        val uid = authRepository.fsCurrentUID() //new id when new install
-        return uid == "SkmfAlqdG6hj216UC2DTkIIvaUx1" || uid == "TECvYwk9i7RJcyLhFver15Ywbp93" || uid == "98rrtKmAASbXGr6DTqZWWu38Z4m1"
+        if (BuildConfig.DEBUG ) {
+            val uid = authRepository.fsCurrentUID() //new id when new install
+            return uid == "SkmfAlqdG6hj216UC2DTkIIvaUx1" || uid == "TECvYwk9i7RJcyLhFver15Ywbp93" || uid == "98rrtKmAASbXGr6DTqZWWu38Z4m1"
+        }else{
+            return false
+        }
     }
 
     fun onDebugCrashlyitcs() {

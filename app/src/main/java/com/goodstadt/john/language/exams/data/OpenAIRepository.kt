@@ -7,7 +7,6 @@ import com.goodstadt.john.language.exams.BuildConfig.OPENAI_API_KEY
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import okhttp3.OkHttpClient
 
 
 import io.ktor.client.*
@@ -100,8 +99,8 @@ data class RequestMessage(
 class OpenAIRepository @Inject constructor() {
 
     // A single, shared instance of the HTTP client
-    private val client = OkHttpClient()
-    private val client99 = HttpClient(CIO) {
+//    private val client = OkHttpClient()
+    private val client = HttpClient(CIO) {
         install(ContentNegotiation) {
             json(Json {
                 prettyPrint = true
@@ -132,7 +131,7 @@ class OpenAIRepository @Inject constructor() {
             )
         )
 
-        val response: OpenAIResponse = client99.post(OPENAI_URL) {
+        val response: OpenAIResponse = client.post(OPENAI_URL) {
             headers {
                 append(HttpHeaders.Authorization, "Bearer $OPENAI_API_KEY")
                 append(HttpHeaders.ContentType, Json)

@@ -176,7 +176,9 @@ class FirestoreRepository @Inject constructor(
     fun isUserFullyLoggedIn(): Boolean {
         return isUserLoggedIn() && isUserAnonymous() == false
     }
-
+    fun getFirebaseAuth (): FirebaseAuth {
+        return FirebaseAuth.getInstance()
+    }
     fun isUserLoggedIn(): Boolean {
         val auth = FirebaseAuth.getInstance()
         return auth.currentUser != null

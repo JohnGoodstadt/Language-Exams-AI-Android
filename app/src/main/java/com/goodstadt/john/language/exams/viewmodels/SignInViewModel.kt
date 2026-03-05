@@ -28,8 +28,14 @@ class SignInViewModel @Inject constructor(
     private val firestoreRepository: FirestoreRepository
 ) : ViewModel() {
 
-    private val auth = FirebaseAuth.getInstance()
+    private val auth = firestoreRepository.getFirebaseAuth()//FirebaseAuth.getInstance()
+/*
+22. CLAUDE SignInViewModel bypasses Hilt DI for FirebaseAuth
+File: SignInViewModel.kt line 31
+FirebaseAuth.getInstance() is called directly despite FirebaseModule already providing it via Hilt. This creates a second instance and bypasses any future testing/mocking.
 
+Fix: Inject FirebaseAuth via the constructor like your other ViewModels.
+ */
     // UI State
     private val _isUserLoggedIn = MutableStateFlow(auth.currentUser?.isAnonymous == false)
     val isUserLoggedIn = _isUserLoggedIn.asStateFlow()

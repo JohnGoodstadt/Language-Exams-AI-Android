@@ -7,6 +7,7 @@ import com.goodstadt.john.language.exams.models.Format3Category
 import com.goodstadt.john.language.exams.models.Format3File
 import com.goodstadt.john.language.exams.models.Format3Sentence
 import com.goodstadt.john.language.exams.utils.Format3AssetLoader
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -14,6 +15,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
+import javax.inject.Inject
 
 data class Format3UiState(
     val isLoading: Boolean = false,
@@ -21,8 +23,9 @@ data class Format3UiState(
     val errorMessage: String? = null
 )
 
-class Format3FileViewModel(
-    private val loader: Format3AssetLoader = Format3AssetLoader()
+@HiltViewModel
+class Format3FileViewModel @Inject constructor(
+    private val loader: Format3AssetLoader// = Format3AssetLoader()
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(Format3UiState())

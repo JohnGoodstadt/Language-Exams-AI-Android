@@ -44,6 +44,13 @@ class GeminiRepository @Inject constructor() {
             Result.failure(e)
         }
     }
+    /*
+    11. CLAUDE New GenerativeModel created on every Gemini call
+File: GeminiRepository.kt line 27
+A new GenerativeModel is instantiated for every API call. This involves setting up the model configuration repeatedly.
+
+Fix: Cache GenerativeModel instances by model name in a Map.
+     */
     data class GeminiCallCost(
         val inputTokens: Int,
         val outputTokens: Int,

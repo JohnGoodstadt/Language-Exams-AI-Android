@@ -104,17 +104,13 @@ Fix: Move billingRepository.connect() into its own viewModelScope.launch { } blo
             userPreferencesRepository.selectedVoiceNameFlow.collect { voiceName ->
                 _uiState.update { it.copy(selectedVoiceName = voiceName) }
             }
-            billingRepository.connect()//pre warm up for price
         }
 
-//        viewModelScope.launch {
-//            // This creates a permanent subscription. Whenever the BillingRepository
-//            // updates the premium status, this block will run.
-//            billingRepository.isPremiumUser.collect { isPremium ->
-//                // Update the global UI state with the new value.
-//                _uiState.update { it.copy(isPremiumUser = isPremium) }
-//            }
-//        }
+        // Task B: Pre-warm Billing (Runs independently)
+        viewModelScope.launch {
+            billingRepository.connect()
+        }
+
 
         loadInitialRecalledItems()
 

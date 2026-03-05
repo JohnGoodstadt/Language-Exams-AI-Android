@@ -6,6 +6,7 @@ import com.goodstadt.john.language.exams.data.AudioPlayerService
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.api.GoogleCloudTTS
+import com.goodstadt.john.language.exams.utils.Format3AssetLoader
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -83,5 +84,10 @@ object AppModule {
         @Provides
         @Singleton
         fun provideApplicationScope(): CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
+    }
+
+    @Provides
+    fun provideFormat3AssetLoader(): Format3AssetLoader {
+        return Format3AssetLoader()
     }
 }
