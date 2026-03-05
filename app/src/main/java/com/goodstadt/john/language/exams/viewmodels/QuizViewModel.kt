@@ -34,6 +34,7 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
+import com.goodstadt.john.language.exams.data.repository.UsageQuizRepository
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
@@ -74,7 +75,9 @@ data class QuizStatistics(
     val title:String,
     var answered: Int = 0,
     var correct: Int = 0,
-    var tries: Int = 0
+    var tries: Int = 0,
+    var page: Int = 1, //held for Dashboard
+    var filename:String = "" //held for Dashboard
 
 ) {
     override fun toString(): String {
@@ -99,32 +102,32 @@ enum class QuizLevels(val quizzes: List<QuizDetail>) {
             QuizDetail(
                 id = 1,
                 baseName = "UsageQuiz1A1-en",
-                title = "Quiz 1"
+                title = "Sentence Structure"
             ),
             QuizDetail(
                 id = 2,
                 baseName = "UsageQuiz2A1-en",
-                title = "Quiz 2"
+                title = "Present Simple"
             ),
             QuizDetail(
                 id = 3,
                 baseName = "UsageQuiz3A1-en",
-                title = "Quiz 3"
+                title = "Past Simple"
             ),
             QuizDetail(
                 id = 4,
                 baseName = "UsageQuiz4A1-en",
-                title = "Quiz 4"
+                title = "Questions & Short Answers"
             ),
             QuizDetail(
                 id = 5,
                 baseName = "UsageQuiz5A1-en",
-                title = "Quiz 5"
+                title = "Prepositions"
             ),
             QuizDetail(
                 id = 6,
                 baseName = "UsageQuiz6A1-en",
-                title = "Quiz 6"
+                title = "Connectors"
             )
         )
     ),
@@ -133,160 +136,57 @@ enum class QuizLevels(val quizzes: List<QuizDetail>) {
             QuizDetail(
                 id = 1,
                 baseName = "UsageQuiz1A2-en",
-                title = "Sentence Structure"
+                title = "Future Forms"
             ),
             QuizDetail(
                 id = 2,
                 baseName = "UsageQuiz2A2-en",
-                title = "Present Simple"
+                title = "Present Continuous"
             ),
-            QuizDetail(3, "UsageQuiz3A2-en", "Quiz 2"),
-            QuizDetail(4, "UsageQuiz4A2-en", "Quiz 3"),
-            QuizDetail(5, "UsageQuiz5A2-en", "Quiz 4"),
-            QuizDetail(6, "UsageQuiz6A2-en", "Quiz 5"),
+            QuizDetail(3, "UsageQuiz3A2-en", "Comparatives & Superlatives"),
+            QuizDetail(4, "UsageQuiz4A2-en", "Modal Verbs"),
+            QuizDetail(5, "UsageQuiz5A2-en", "Verb Patterns"),
+            QuizDetail(6, "UsageQuiz6A2-en", "Linking Words & If Clauses"),
         )
     ),
     UPPER(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "UsageQuiz1B1-en", title = "Quiz 1 - Tenses"),
+            QuizDetail(id = 1, baseName = "UsageQuiz1B1-en", title = "Tense Mastery"),
             QuizDetail(
                 id = 2,
                 baseName = "UsageQuiz2B1-en",
-                title = "Quiz 2"
+                title = "Real & Hypothetical Situations"
             ),
             QuizDetail(
                 id = 3,
                 baseName = "UsageQuiz3B1-en",
-                title = "Quiz 3"
+                title = "Formal & Official Language"
             ),
             QuizDetail(
                 id = 4,
                 baseName = "UsageQuiz4B1-en",
-                title = "Quiz 4"
+                title = "Reporting & Communication",
             ),
             QuizDetail(
                 id = 5,
                 baseName = "UsageQuiz5B1-en",
-                title = "Quiz 5"
+                title = "Structured Arguments"
             ),
-            QuizDetail(6, "UsageQuiz6B1-en", "Quiz 6"),
+            QuizDetail(6, "UsageQuiz6B1-en", "Functional Fluency")
         )
     ),
     ADVANCED(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "UsageQuiz1B2-en", title = "Quiz 1"),
+            QuizDetail(id = 1, baseName = "UsageQuiz1B2-en", title = "Aspect & Time Control"),
             QuizDetail(
                 id = 2,
                 baseName = "UsageQuiz2B2-en",
-                title = "Quiz 2"
+                title = "Hypothetical Reasoning"
             ),
-            QuizDetail(3, "UsageQuiz3B2-en", "Quiz 3"),
-            QuizDetail(4, "UsageQuiz4B2-en", "Quiz 4"),
-            QuizDetail(5, "UsageQuiz5B2-en", "Quiz 5"),
-            QuizDetail(6, "UsageQuiz6B2-en", "Quiz 6 ")
-        )
-    );
-
-    val description: String
-        get() = when(this) {
-            ELEMENTARY -> "Elementary"
-            INTER -> "Inter" // Explicitly string match if needed
-            UPPER -> "Upper"
-            ADVANCED -> "Advanced"
-        }
-}
-enum class QuizLevelsOriginal(val quizzes: List<QuizDetail>) {
-    ELEMENTARY(
-        quizzes = listOf(
-            QuizDetail(
-                id = 1,
-                baseName = "Quiz1Elementary",
-                title = "Quiz 1 - Simple Tenses"
-            ),
-            QuizDetail(
-                id = 2,
-                baseName = "Quiz2Elementary",
-                title = "Quiz 2 - Word Pairs"
-            ),
-            QuizDetail(
-                id = 3,
-                baseName = "Quiz3Elementary",
-                title = "Quiz 3 - Word Order"
-            ),
-            QuizDetail(
-                id = 4,
-                baseName = "Quiz4Elementary",
-                title = "Quiz 4 - Spelling 1"
-            ),
-            QuizDetail(
-                id = 5,
-                baseName = "Quiz5Elementary",
-                title = "Quiz 5 - Spelling 2"
-            ),
-            QuizDetail(
-                id = 6,
-                baseName = "Quiz6Elementary",
-                title = "Quiz 6 - A vs An"
-            )
-        )
-    ),
-    INTER(
-        quizzes = listOf(
-            QuizDetail(
-                id = 1,
-                baseName = "Quiz1Inter",
-                title = "Quiz 1 - Simple Tenses"
-            ),
-            QuizDetail(
-                id = 2,
-                baseName = "Quiz2Inter",
-                title = "Quiz 2 - Word Pairs"
-            ),
-            QuizDetail(2, "Quiz2Inter", "Quiz 2 - Word Pairs"),
-            QuizDetail(3, "Quiz3Inter", "Quiz 3 - Word Order"),
-            QuizDetail(4, "Quiz4Inter", "Quiz 4 - Spelling 1"),
-            QuizDetail(5, "Quiz5Inter", "Quiz 5 - Spelling 2"),
-//					QuizDetail(id: 6, sheetName: "Quiz6Inter", title: "Quiz 6 - Superlatives"),
-        )
-    ),
-    UPPER(
-        quizzes = listOf(
-            QuizDetail(id = 1, baseName = "Quiz1Upper", title = "Quiz 1 - Tenses"),
-            QuizDetail(
-                id = 2,
-                baseName = "Quiz2Upper",
-                title = "Quiz 2 - Word Pairs"
-            ),
-            QuizDetail(
-                id = 3,
-                baseName = "Quiz3Upper",
-                title = "Quiz 3 - Word Order"
-            ),
-            QuizDetail(
-                id = 4,
-                baseName = "Quiz4Upper",
-                title = "Quiz 4 - Spelling 1"
-            ),
-            QuizDetail(
-                id = 5,
-                baseName = "Quiz5Upper",
-                title = "Quiz 5 - Spelling 2"
-            ),
-            QuizDetail(6, "Quiz6Upper", "Quiz 6 - Pronounce 'the'"),
-        )
-    ),
-    ADVANCED(
-        quizzes = listOf(
-            QuizDetail(id = 1, baseName = "Quiz1Advanced", title = "Quiz 1 - Tenses"),
-            QuizDetail(
-                id = 2,
-                baseName = "Quiz2Advanced",
-                title = "Quiz 2 - Word Pairs"
-            ),
-            QuizDetail(3, "Quiz3Advanced", "Quiz 3 - Word Order"),
-            QuizDetail(4, "Quiz4Advanced", "Quiz 4 - Spelling 1"),
-            QuizDetail(5, "Quiz5Advanced", "Quiz 5 - Spelling 2"),
-            QuizDetail(6, "Quiz6Advanced", "Quiz 6 - Adv. Words"),
+            QuizDetail(3, "UsageQuiz3B2-en", "Formal Structural Control"),
+            QuizDetail(4, "UsageQuiz4B2-en", "Academic Expression"),
+            QuizDetail(5, "UsageQuiz5B2-en", "Argument Development"),
+            QuizDetail(6, "UsageQuiz6B2-en", "Precision & Nuance")
         )
     );
 
@@ -311,6 +211,7 @@ data class QuizQuestion(
     val summary: String,
     val explain: String,
     val title: String,
+    val page:Int
 )
 
 //TODO: Do I need this?
@@ -340,6 +241,7 @@ class QuizViewModel @Inject constructor(
     private val quizHistoryManager: QuizHistoryManager,
     private val xpManager: XPManager,
     private val audioPlaybackRepository: AudioPlaybackRepository,
+    private val usageQuizRepository:UsageQuizRepository
 
     ) : ViewModel() {
     private val appContext: Context = application.applicationContext
@@ -415,14 +317,14 @@ class QuizViewModel @Inject constructor(
 
     // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized QuizDetails
     private val quizTitleCache = mutableMapOf<QuizLevels, List<QuizDetail>>()
-
+    private var infoUsedForCurrentQuestion = false // ✅ Track hint usage for the CURRENT question
 
 
 
 
     init {
         // 1. Start background loading
-        preloadLocalizedTitles()
+      //  preloadLocalizedTitles()
 
         selectedQuiz.value = selectedLevel.value.quizzes.firstOrNull()
         loadQuestions()
@@ -502,7 +404,7 @@ class QuizViewModel @Inject constructor(
             val quizDetail = selectedQuiz.value ?: selectedLevel.value.quizzes.first()
             val baseName = quizDetail.baseName//(selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
 
-            val finalFilename = getLocalizedFileName(appContext, baseName)
+            val finalFilename = "$baseName.json" //getLocalizedFileName(appContext, baseName)
 
             val testData = readTestMyselfDataFromAssets(appContext, finalFilename)
 
@@ -515,7 +417,7 @@ class QuizViewModel @Inject constructor(
                 Timber.i("Sheet title is ${testData.title} ")
             }
             quizStatistics.value = quizStatistics.value.copy(
-                title = quizDetail.title
+                title = quizDetail.title, filename = baseName,page = 1
             )
 
             _uiState.update { it.copy(testMyselfListRoot = testData)}
@@ -533,6 +435,9 @@ class QuizViewModel @Inject constructor(
 
     // A new function for the UI to call when a different level is picked.
     fun onLevelSelected(level: QuizLevels) {
+        if (level == selectedLevel.value){
+            return // already selected
+        }
         selectedLevel.value = level
 
         // 1. Update the list of quizzes (Async)
@@ -544,6 +449,8 @@ class QuizViewModel @Inject constructor(
 
         loadQuestions()
     }
+
+
     // A new function for the UI to call when a different quiz is picked from the dropdown.
     fun onQuizSelected(quizDetail: QuizDetail) {
         selectedQuiz.value = quizDetail
@@ -561,13 +468,13 @@ class QuizViewModel @Inject constructor(
             currentFileFormat.value = quizFillInTheBlanks
         }
 
-        val a  = when (testData.fileFormat) {
-            quizQandA -> quizQandA
-            quizDefinitions -> quizDefinitions
-            quizMultipleChoice -> quizMultipleChoice
-            else -> quizFillInTheBlanks
-
-        }
+//        val a  = when (testData.fileFormat) {
+//            quizQandA -> quizQandA
+//            quizDefinitions -> quizDefinitions
+//            quizMultipleChoice -> quizMultipleChoice
+//            else -> quizFillInTheBlanks
+//
+//        }
 
         //because spellings should follow each other
         if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
@@ -581,7 +488,8 @@ class QuizViewModel @Inject constructor(
                 val summary = quizSection.summary
                 val explain = quizSection.explain
                 val title = quizSection.title
-                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title)
+                val page = quizSection.page
+                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page)
             }
         }
     }
@@ -615,13 +523,25 @@ class QuizViewModel @Inject constructor(
 
     }
 
+    /*
+    6. CLAUDE Mutable data class mutation won't trigger recomposition
+File: QuizViewModel.kt line 629
+
+quizStatistics.value.state = QuizState.COMPLETED
+
+This directly mutates a property on the data class held in mutableStateOf. Compose won't detect this change because the object reference hasn't changed. Recomposition won't fire.
+
+Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED)
+
+
+     */
     private fun saveQuizState() {
         if (quizStatistics.value.state != QuizState.NOT_STARTED) {
             //save stats from previous quiz try
 
             if (userAnswers.value.count() == _questions.value.count()) {
-                quizStatistics.value.state = QuizState.COMPLETED
-
+//                quizStatistics.value.state = QuizState.COMPLETED
+                quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED)
             }
         }
     }
@@ -666,11 +586,15 @@ class QuizViewModel @Inject constructor(
 
     fun updateAnswer(isCorrect: Boolean) {
         userAnswers.value[currentQuestionIndex.value] = isCorrect
+
+        val currentTries = quizStatistics.value.tries + 1
         quizStatistics.value = quizStatistics.value.copy(
             answered = userAnswers.value.size,
             correct = userAnswers.value.count { it.value },
-            tries = quizStatistics.value.tries + 1
+            tries = currentTries
         )
+
+
         if (quizStatistics.value.state == QuizState.NOT_STARTED) {
             quizStatistics.value = quizStatistics.value.copy(state = QuizState.IN_PROGRESS)
         }
@@ -681,15 +605,24 @@ class QuizViewModel @Inject constructor(
             quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED, title = quizStatistics.value.title)
 
             onQuizFinished()
-            val fieldValue =
-                "${quizStatistics.value.quizNumber}:${quizStatistics.value.answered}:${quizStatistics.value.correct}:${quizStatistics.value.tries}"
+            val fieldValue =  "${quizStatistics.value.quizNumber}:${quizStatistics.value.answered}:${quizStatistics.value.correct}:${quizStatistics.value.tries}"
+
         }
+
+        val page = quizStatistics.value.page
+        val currentQuizFileName = quizStatistics.value.filename
+        usageQuizRepository.recordQuestionResult(
+            quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
+            pageNumber = page,      // e.g. 5
+            attemptsTaken = currentTries,
+            infoUsedForCurrentQuestion
+        )
 
     }
 
     fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyselfListRoot? {
         return try {
-           // Timber.v("reading json: $fileName")
+
 
             val jsonString = context.assets.open("Quizzes/UsageQuiz/$fileName")
                 .bufferedReader()
@@ -711,31 +644,35 @@ class QuizViewModel @Inject constructor(
             val defaultQuizzes = level.quizzes
 
             // 2. Map them to potentially new titles by peeking at the JSON files
-            val updatedQuizzes = defaultQuizzes.map { quizDetail ->
-
-                // A. Resolve Filename (e.g. "...-hi.json")
-                val filename = getLocalizedFileName(appContext, quizDetail.baseName)
-
-                // B. Peek at the JSON to get the title
-                // Note: This needs to be fast. If reading the whole file is too slow,
-                // you might want to cache this or use a lighter "Metadata" read.
-                val title = peekTitleFromJson(filename) ?: quizDetail.title
-
-                // C. Return updated object
-                quizDetail.copy(title = title)
-            }
+//            val updatedQuizzes = defaultQuizzes.map { quizDetail ->
+//
+//                // A. Resolve Filename (e.g. "...-hi.json")
+//                val filename = "${quizDetail.baseName}.json"// getLocalizedFileName(appContext, quizDetail.baseName)
+//
+//                // B. Peek at the JSON to get the title
+//                // Note: This needs to be fast. If reading the whole file is too slow,
+//                // you might want to cache this or use a lighter "Metadata" read.
+//                val title = peekTitleFromJson(filename) ?: quizDetail.title
+//
+//                // C. Return updated object
+//                quizDetail.copy(title = title)
+//            }
 
             // 3. Publish the new list to the UI
-            _availableQuizzes.value = updatedQuizzes
+            _availableQuizzes.value =  level.quizzes//.updatedQuizzes
 
             // 4. Also ensure the currently selected quiz object is updated if needed
             val currentId = selectedQuiz.value?.id
             if (currentId != null) {
-                selectedQuiz.value = updatedQuizzes.find { it.id == currentId }
+                selectedQuiz.value = level.quizzes.find { it.id == currentId }
             }
         }
     }
 
+
+    private fun refreshQuizTitlesForLevelNew(level: QuizLevels) {
+
+    }
     // Helper to read just the title
     private fun peekTitleFromJson(filename: String): String? {
         return try {
@@ -960,6 +897,11 @@ class QuizViewModel @Inject constructor(
         }
 
     }
-
-
+    // 1. Call this when user taps the "i" button
+    fun onInfoButtonTapped() {
+        infoUsedForCurrentQuestion = true
+    }
+    fun resetInfoButtonTapped() {
+        infoUsedForCurrentQuestion = false
+    }
 }

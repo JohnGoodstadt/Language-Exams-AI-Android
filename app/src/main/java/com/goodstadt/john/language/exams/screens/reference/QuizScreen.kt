@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.screens.reference
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -21,6 +22,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -44,6 +46,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -107,10 +110,11 @@ fun QuizScreen(
     val availableQuizzes by viewModel.availableQuizzes.collectAsState()
 
     val selectedQuiz by viewModel.selectedQuiz
+
     val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-        "Hear, and then choose the correct answer"
+        "Hear, and then choose the best answer"
     } else {
-        "Choose the correct answer"
+        "Choose the best answer"
     }
 
     var isLearningExpanded by rememberSaveable { mutableStateOf(false) }
@@ -144,16 +148,17 @@ fun QuizScreen(
             selectedOption = selectedLevel.description,
             onOptionSelected = { newLevel ->
                 val level = QuizLevels.entries.first { it.description == newLevel }
-//                    viewModel.selectedLevel.value = level
-                viewModel.onLevelSelected(level)
-                viewModel.loadQuestions()
+                if (level != selectedLevel){
+                    viewModel.onLevelSelected(level)
+                    viewModel.loadQuestions()
 
-                if (viewModel.doIHaveCurrentQuestionInfo()) {
-                    infoDisabled = false
-                } else {
-                    infoDisabled = true
+                    if (viewModel.doIHaveCurrentQuestionInfo()) {
+                        infoDisabled = false
+                    } else {
+                        infoDisabled = true
+                    }
                 }
-            }//,
+            }
             //fontSize = 16.sp
         )
 
@@ -197,7 +202,7 @@ fun QuizScreen(
                     )
 
                     Text(
-                        text = if (isLearningExpanded) "Less" else "More…",
+                        text = if (isLearningExpanded) "less" else "more…",
                         style = MaterialTheme.typography.labelMedium,
                         color = orangeLight,
                         modifier = Modifier
@@ -391,9 +396,6 @@ fun QuizScreen(
 
                             if (isOptionCorrect) {
 
-                                // val wordToHilight: String
-                                //val sentenceToStyle: String
-
                                 var sentenceToSpeak = ""
                                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                     val sentence = question.sentence.replace(Regex("_+"), option)
@@ -421,7 +423,7 @@ fun QuizScreen(
                                     sentenceToSpeak = option
                                     displayedSentence = viewModel.highlightWordInSentence(
                                         sentence = option,
-                                        wordToHighlight = question.sentence,
+                                        wordToHighlight = option,//question.sentence,
                                         highlightColor = Color.Green
                                     )
                                 }
@@ -447,33 +449,33 @@ fun QuizScreen(
             }
 
             Spacer(Modifier.height(4.dp))
+            //expand to teh bottom of the screen
+            Spacer(modifier = Modifier.weight(1f))
+//            Row(
+//                horizontalArrangement = Arrangement.SpaceBetween,
+//                modifier = Modifier.fillMaxWidth()
+//            ) {
+//                InfoButtonRow(infoDisabled = infoDisabled,
+//                    onClick = {
+//
+//                        if (infoDisabled == false) {
+//                            showInfoBottomSheet = true
+//                        }
+//                    })
+//            }// row
 
             Row(
-                horizontalArrangement = Arrangement.SpaceBetween,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                InfoButtonRow(infoDisabled = infoDisabled,
-                    onClick = {
 
-                        if (infoDisabled == false) {
-                            showInfoBottomSheet = true
-                        }
-                    })
-            }// row
-
-            Row(
-                horizontalArrangement = Arrangement.SpaceBetween,
-                modifier = Modifier.fillMaxWidth()
-            ) {
+                // 🔹 Previous
                 IconButton(
                     onClick = {
                         if (currentQuestionIndex > 0) {
                             viewModel.currentQuestionIndex.value -= 1
-                            if (viewModel.doIHaveCurrentQuestionInfo()) {
-                                infoDisabled = false
-                            } else {
-                                infoDisabled = true
-                            }
+                            infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
+                            viewModel.resetInfoButtonTapped()
                         }
                     },
                     enabled = currentQuestionIndex > 0
@@ -481,29 +483,43 @@ fun QuizScreen(
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Previous",
-                        tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor, // Conditional color
+                        tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor,
                         modifier = Modifier.size(36.dp)
                     )
                 }
 
+                // 🔹 Expanding space left
+                Spacer(modifier = Modifier.weight(1f))
+
+                // 🔹 Info Button (centered)
+                InfoButtonRow(
+                    infoDisabled = infoDisabled,
+                    onClick = {
+                        if (!infoDisabled) {
+                            showInfoBottomSheet = true
+                            viewModel.onInfoButtonTapped() //mark user getting help
+                        }
+                    }
+                )
+
+                // 🔹 Expanding space right
+                Spacer(modifier = Modifier.weight(1f))
+
+                // 🔹 Next
                 IconButton(
                     onClick = {
                         if (currentQuestionIndex < questions.lastIndex) {
                             viewModel.currentQuestionIndex.value += 1
-                            if (viewModel.doIHaveCurrentQuestionInfo()) {
-                                infoDisabled = false
-                            } else {
-                                infoDisabled = true
-                            }
+                            infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
+                            viewModel.resetInfoButtonTapped()
                         }
                     },
                     enabled = currentQuestionIndex < questions.lastIndex
-
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                         contentDescription = "Next",
-                        tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor, // Conditional color
+                        tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor,
                         modifier = Modifier.size(36.dp)
                     )
                 }
@@ -604,7 +620,7 @@ fun QuizScreen(
 } //:QuizScreen
 
 @Composable
-fun DropdownMenuBox(
+fun DropdownMenuBoxObsolete(
     options: List<String>,
     selectedOption: String,
     onOptionSelected: (String) -> Unit
@@ -665,8 +681,68 @@ fun DropdownMenuBox(
         }
     }
 }
+@Composable
+fun DropdownMenuBox(
+    options: List<String>,
+    selectedOption: String,
+    onOptionSelected: (String) -> Unit
+) {
+    var expanded by remember { mutableStateOf(false) }
 
+    Box(
+        modifier = Modifier.fillMaxWidth(),
+        contentAlignment = Alignment.Center
+    ) {
+        // A simple Row that acts as the trigger
+        Row(
+            modifier = Modifier
+                .clip(RoundedCornerShape(8.dp)) // Optional: rounds the ripple effect
+                .clickable { expanded = true }
+                .padding(vertical = 12.dp, horizontal = 16.dp), // Generous tap target
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.Center
+        ) {
+            Text(
+                text = selectedOption,
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.White
+            )
 
+            Spacer(modifier = Modifier.width(4.dp))
+
+            // The Arrow is the "Hero" here—it signals interactivity perfectly
+            Icon(
+                imageVector = Icons.Default.ArrowDropDown,
+                contentDescription = "Select Option",
+                tint = Color.White.copy(alpha = 0.7f),
+                modifier = Modifier.size(24.dp)
+            )
+        }
+
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+            modifier = Modifier
+                .background(nonSelectedBackground)
+                .border(1.dp, Color.White.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+        ) {
+            options.forEach { option ->
+                DropdownMenuItem(
+                    text = {
+                        Text(
+                            text = option,
+                            color = if (option == selectedOption) orangeLight else Color.White
+                        )
+                    },
+                    onClick = {
+                        onOptionSelected(option)
+                        expanded = false
+                    }
+                )
+            }
+        }
+    }
+}
 @Composable
 fun dotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
 
@@ -678,23 +754,19 @@ fun dotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
 }
 
 @Composable
-fun InfoButtonRow(infoDisabled: Boolean, onClick: () -> Unit) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween, // Equivalent to Spacer() on both sides
-        verticalAlignment = Alignment.CenterVertically
+fun InfoButtonRow(
+    infoDisabled: Boolean,
+    onClick: () -> Unit
+) {
+    IconButton(
+        onClick = onClick,
+        enabled = !infoDisabled
     ) {
-        Spacer(modifier = Modifier.weight(1f)) // Pushes the icon to the right
         Icon(
-            imageVector = Icons.Outlined.Info, // Use a built-in Material icon
-            contentDescription = "Info", // Accessibility description
-            modifier = Modifier
-                .size(32.dp)
-                .clickable(enabled = !infoDisabled, onClick = onClick)
-                .padding(start = 4.dp),
+            imageVector = Icons.Outlined.Info,
+            contentDescription = "Info",
+            modifier = Modifier.size(32.dp),
             tint = if (infoDisabled) Color.Gray else buttonColor
-//                tint = Color.White
         )
-        Spacer(modifier = Modifier.weight(1f)) // Pushes the icon to the left
     }
 }

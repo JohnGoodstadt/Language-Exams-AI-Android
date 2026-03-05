@@ -46,7 +46,7 @@ fun ChooseEnglishAndExamSheet(
             fontWeight = FontWeight.Light
         )
         Spacer(modifier = Modifier.height(8.dp))
-        LazyColumn() {
+        LazyColumn(modifier = Modifier.weight(1f)) {
             items(uiState.availableLanguages, key = { it.code }) { language ->
                 LanguageSelectionRow(
                     language = language,
@@ -67,7 +67,7 @@ fun ChooseEnglishAndExamSheet(
             fontWeight = FontWeight.Light
         )
         Spacer(modifier = Modifier.height(8.dp))
-        LazyColumn() {
+        LazyColumn(modifier = Modifier.weight(1f)) {
             items(uiState.availableExams, key = { it.json }) { exam ->
                 ExamSelectionRow(
                     exam = exam,
@@ -76,7 +76,15 @@ fun ChooseEnglishAndExamSheet(
                 )
             }
         }
+        /*
+        5. CLAUDE Two LazyColumn without height constraints — layout crash
+File: ChooseEnglishAndExamSheet.kt lines 49, 70
+Two LazyColumn composables are stacked inside a Column without Modifier.weight() or fixed height. Both try to take infinite height, which causes layout issues — only one list will be scrollable or visible.
 
+Fix: Add Modifier.weight(1f) to each LazyColumn, e.g.:
+
+LazyColumn(modifier = Modifier.weight(1f)) { ... }
+         */
         Spacer(modifier = Modifier.height(8.dp))
 //        Spacer(modifier = Modifier.weight(1f))
         Row(

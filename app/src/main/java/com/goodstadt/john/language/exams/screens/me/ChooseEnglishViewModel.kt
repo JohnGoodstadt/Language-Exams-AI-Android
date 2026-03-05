@@ -46,7 +46,7 @@ class ChooseEnglishViewModel  @Inject constructor(
         loadInitialData()
     }
 
-    private fun loadInitialData() {
+    private fun loadInitialDataObsolete() {
         viewModelScope.launch {
             val currentLanguageCode = controlRepository.getCurrentLanguageCode()
             currentLanguageCode.onSuccess { languageCode ->
@@ -67,7 +67,38 @@ class ChooseEnglishViewModel  @Inject constructor(
             }
         }
     }
+    private fun loadInitialData() {
+        viewModelScope.launch {
+            // We start with the first result
+            controlRepository.getCurrentLanguageCode()
+                .mapCatching {
+                    // Zip the two subsequent requests together
+                    val details = controlRepository.getActiveLanguageDetails().getOrThrow()
+                    val languages = controlRepository.getAllEnglishLanguageList().getOrThrow()
+                    details to languages
+                }
+                .onSuccess { (details, languages) ->
+                    _uiState.update {
+                        it.copy(
+                            availableExams = details.exams,
+                            availableLanguages = languages
+                        )
+                    }
+                }
+                .onFailure { error ->
+                    // This will catch an error from ANY of the 3 repository calls
+                   // _uiState.update { it.copy(availableExams = details.exams, errorMessage = error.message) }
+                    Timber.e("Data Load Failed", error)
+                }
+        }
+    }
+/*
+8. ChooseEnglishViewModel.loadInitialData() silently swallows errors
+File: ChooseEnglishViewModel.kt lines 49–68
+Deeply nested onSuccess calls with zero onFailure handlers. If any of the three chained calls fail, the UI shows empty lists with no error message to the user.
 
+Fix: Add onFailure handlers at each level, or restructure with try/catch + a single error state.
+ */
     fun onPendingLanguageSelect(language: LanguageCodeDetails) {
         _uiState.update { it.copy(pendingSelectedLanguage = language) }
     }

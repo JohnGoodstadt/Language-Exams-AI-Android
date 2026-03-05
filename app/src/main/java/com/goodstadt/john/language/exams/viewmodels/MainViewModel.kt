@@ -87,7 +87,14 @@ class MainViewModel @Inject constructor(
     )
 
     val startDestination = appConfigRepository.startDestination
+/*
+🔴 CLAUDE BUGS (Likely causing real problems)
+1. Unreachable billingRepository.connect() in MainViewModel
+File: MainViewModel.kt lines 96–101
+flow.collect {} is a terminal suspending operator that never completes. The billingRepository.connect() on line 100 is placed after the collect call inside the same launch block — it will never execute.
 
+Fix: Move billingRepository.connect() into its own viewModelScope.launch { } block.
+ */
     init {
         // 1. Initialize the user session (as before).
         initializeAppSession()

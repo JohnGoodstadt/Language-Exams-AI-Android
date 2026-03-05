@@ -10,6 +10,7 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statWOTDBackHitCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statWOTDForwardHitCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statWOTDHitCount
+import com.goodstadt.john.language.exams.screens.reference.ContentState
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -17,6 +18,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.time.Instant
@@ -55,11 +58,24 @@ class DictionaryEntryBrowserViewModel(
     private var maxBrowseDaysBack: Int = 7
     private var todayIndex: Int = 0
     private var scheduledIndex: Int = 0
+/*
+7. CLAUDE DictionaryEntryBrowserViewModel exposes mutable StateFlow publicly
+File: DictionaryEntryBrowserViewModel.kt line 59
 
-    val uiState = MutableStateFlow(BrowserUiState())
+val uiState = MutableStateFlow(BrowserUiState())
+
+The MutableStateFlow is public, meaning any composable or code can set viewModel.uiState.value = ..., bypassing the ViewModel's control.
+
+Fix: Use the standard private/public pattern: private val _uiState + val uiState = _uiState.asStateFlow().
+ */
+
+//    val uiState = MutableStateFlow(BrowserUiState())
+    private val _uiState = MutableStateFlow(BrowserUiState())
+    val uiState = _uiState.asStateFlow()
 
     fun load() {
-        uiState.value = uiState.value.copy(isLoading = true, error = null)
+        //uiState.value = uiState.value.copy(isLoading = true, error = null)
+        _uiState.update { it.copy(isLoading = true, error = null) }
 
         viewModelScope.launch {
             try {
@@ -107,10 +123,11 @@ class DictionaryEntryBrowserViewModel(
 
                 publishState()
             } catch (e: Exception) {
-                uiState.value = BrowserUiState(
-                    isLoading = false,
-                    error = e.message ?: "Unknown error"
-                )
+                _uiState.update { it.copy(isLoading = false, error = e.message ?: "Unknown error") }
+//                uiState.value = BrowserUiState(
+//                    isLoading = false,
+//                    error = e.message ?: "Unknown error"
+//                )
             }
         }
     }
@@ -119,15 +136,24 @@ class DictionaryEntryBrowserViewModel(
         val currentAssignment = schedule.getOrNull(scheduledIndex)
         val entry = currentAssignment?.let { entryById[it.entryId] }
 
-        uiState.value = uiState.value.copy(
+//        uiState.value = uiState.value.copy(
+//            isLoading = false,
+//            error = null,
+//            currentEntry = entry,
+//            currentDateLabel = currentAssignment?.label,
+//            canGoBack = scheduledIndex > 0,
+//            canGoForward = scheduledIndex < todayIndex, // forward locked at today
+//            isViewingToday = scheduledIndex == todayIndex
+//        )
+        _uiState.update { it.copy(
             isLoading = false,
             error = null,
             currentEntry = entry,
             currentDateLabel = currentAssignment?.label,
             canGoBack = scheduledIndex > 0,
             canGoForward = scheduledIndex < todayIndex, // forward locked at today
-            isViewingToday = scheduledIndex == todayIndex
-        )
+        ) }
+
     }
 
     fun goBack() {

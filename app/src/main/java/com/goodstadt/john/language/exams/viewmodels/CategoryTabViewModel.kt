@@ -719,6 +719,17 @@ class CategoryTabViewModel @Inject constructor(
 
     // MARK: - Completion Logic (Ported from iOS)
 
+    /*
+    4. runBlocking on main thread → ANR risk
+File: CategoryTabViewModel.kt lines 726, 777
+Both checkSectionCompletionAfterNewSentence methods call:
+
+val examName = runBlocking { userPreferencesRepository.selectedExamNameFlow.first() }
+
+runBlocking on the main thread blocks the UI until the preference is read. This can cause ANR (Application Not Responding) dialogs.
+
+Fix: Make the function suspend and use withContext(Dispatchers.Main), or cache the examName in a class variable when it's loaded.
+     */
     private fun checkSectionCompletionAfterNewSentenceObsolete(
         category: Category,
         justPlayedSentence: String
@@ -769,7 +780,17 @@ class CategoryTabViewModel @Inject constructor(
             checkSheetCompletionIfNeeded(examName)
         }
     }
+/*
+    4. CLAUDE runBlocking on main thread → ANR risk
+    File: CategoryTabViewModel.kt lines 726, 777
+    Both checkSectionCompletionAfterNewSentence methods call:
 
+    val examName = runBlocking { userPreferencesRepository.selectedExamNameFlow.first() }
+
+    runBlocking on the main thread blocks the UI until the preference is read. This can cause ANR (Application Not Responding) dialogs.
+
+    Fix: Make the function suspend and use withContext(Dispatchers.Main), or cache the examName in a class variable when it's loaded.
+    */
     private fun checkSectionCompletionAfterNewSentence(
         category: Category,
         justPlayedSentence: String
@@ -816,14 +837,24 @@ class CategoryTabViewModel @Inject constructor(
         if (anyUnheardItem != null) {
             Timber.d("🧐 Section '${category.title}' incomplete. Found unheard word: '${anyUnheardItem.word}'")
         }
+/*
+🔴 2. CLAUDE Double XP award on section completion
+File: CategoryTabViewModel.kt lines 825–859
+In checkSectionCompletionAfterNewSentence(), when a section is completed, these are called twice:
 
+userPreferencesRepository.addCompletedSection(examName, sectionKey) (lines 825 & 856)
+xpManager.registerAction(XpActionType.CompleteSection) (lines 826 & 859)
+Users get double XP and the section gets marked as complete twice redundantly.
+
+Fix: Remove the duplicate calls at lines 856 and 859.
+ */
         // 3. IF NOTHING IS UNHEARD -> COMPLETE!
         if (anyUnheardItem == null) {
             Timber.i("🏆 Section Completed: ${category.title}")
 
             // 1. Mark Complete
             userPreferencesRepository.addCompletedSection(examName, sectionKey)
-            xpManager.registerAction(XpActionType.CompleteSection)
+           // xpManager.registerAction(XpActionType.CompleteSection) double counting
 
             // 2. ✅ CALCULATE LEVEL PROGRESS
             // We need the full list of categories for this Exam to know the Total.
