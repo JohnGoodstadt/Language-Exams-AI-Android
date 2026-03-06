@@ -1,0 +1,118 @@
+package com.goodstadt.john.language.exams.viewmodels
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.repository.UsageQuizRepository
+import com.goodstadt.john.language.exams.models.UsageLevelSummary
+import com.goodstadt.john.language.exams.models.UsageMastery
+import com.goodstadt.john.language.exams.models.UsageQuizOverviewItem
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+@HiltViewModel
+class UsageDashboardViewModel @Inject constructor(
+    private val usageQuizRepository: UsageQuizRepository,
+    private val userPreferencesRepository: UserPreferencesRepository
+) : ViewModel() {
+
+    // UI State
+    sealed interface UiState {
+        object Loading : UiState
+        data class ColdStart(val levelName: String) : UiState
+        data class Active(val summary: UsageLevelSummary) : UiState
+    }
+
+    private val _uiState = MutableStateFlow<UiState>(UiState.Loading)
+    val uiState = _uiState.asStateFlow()
+
+    init {
+        loadData()
+
+        // Listen for updates (e.g. if user goes back and finishes a quiz)
+        viewModelScope.launch {
+            usageQuizRepository.dataUpdateEvents.collect {
+                loadData()
+            }
+        }
+    }
+
+    fun loadData() {
+        viewModelScope.launch {
+            // 1. Get Current Level (e.g. "Elementary")
+            // We assume the Enum has a description string matching the UI
+            val levelName = userPreferencesRepository.selectedSkillLevelFlow.first()
+            val levelEnum = mapStringToEnum(levelName) // Helper to get QuizLevelsNew.ELEMENTARY
+
+            // 2. Build the List
+            val quizItems = levelEnum.quizzes.map { quizDetail ->
+                // Construct ID: "UsageQuiz1A1" (or whatever your naming convention is)
+                // Assuming "UsageQuiz" + ID + Level
+                // You might need to adjust this key generation to match your UsageQuizViewModel exactly
+                val cleanLevel = levelName.replace(" ", "")
+                val quizKey = "UsageQuiz${cleanLevel}${quizDetail.id}"
+
+                val stats = usageQuizRepository.getStatsForQuiz(quizKey)
+
+                // Build Question Mastery Map (1..10)
+                val masteryMap = mutableMapOf<Int, UsageMastery>()
+                if (stats != null) {
+                    // Iterate 1 to 10 (assuming 10 questions fixed)
+                    for (i in 1..10) {
+                        masteryMap[i] = stats.questions[i]?.mastery ?: UsageMastery.NotStarted
+                    }
+                }
+
+                UsageQuizOverviewItem(
+                    id = quizDetail.id,
+                    title = quizDetail.title,
+                    bestScore = stats?.bestScore ?: 0,
+                    timesCompleted = stats?.timesCompleted ?: 0,
+                    isLocked = false,
+                    questionMastery = masteryMap
+                )
+            }
+
+            // 3. Determine State
+            val completedCount = quizItems.count { it.isStarted }
+
+            if (completedCount == 0) {
+                _uiState.value = UiState.ColdStart(levelName)
+            } else {
+                val totalStars = quizItems.sumOf { calculateStars(it.bestScore) }
+
+                val summary = UsageLevelSummary(
+                    levelName = levelName,
+                    totalQuizzes = quizItems.size,
+                    completedQuizzes = completedCount,
+                    totalStars = totalStars,
+                    items = quizItems
+                )
+                _uiState.value = UiState.Active(summary)
+            }
+        }
+    }
+
+    // Helpers
+    private fun mapStringToEnum(level: String): QuizLevels {
+        return QuizLevels.entries.find { it.description == level } ?: QuizLevels.ELEMENTARY
+    }
+
+    private fun calculateStars(score: Int): Int {
+        return when {
+            score == 10 -> 3
+            score >= 8 -> 2
+            score >= 5 -> 1
+            else -> 0
+        }
+    }
+
+    // Debug
+    fun debugResetLevel() {
+        // Logic to clear specific level stats
+    }
+}

@@ -39,3 +39,25 @@ data class UsageQuizStat(
     var timesCompleted: Int = 0,
     var bestScore: Int = 0
 )
+
+data class UsageLevelSummary(
+    val levelName: String,
+    val totalQuizzes: Int,
+    val completedQuizzes: Int,
+    val totalStars: Int, // 10/10 = 3 stars, 8/10 = 2 stars, etc.
+    val items: List<UsageQuizOverviewItem>
+)
+
+data class UsageQuizOverviewItem(
+    val id: Int,
+    val title: String,
+    val bestScore: Int,      // 0-10
+    val timesCompleted: Int,
+    val isLocked: Boolean,   // Optional: Lock quiz 2 until quiz 1 is done? (We'll keep all open for now)
+
+    // The granular question data (Index 1..10 -> Mastery)
+    val questionMastery: Map<Int, UsageMastery>
+) {
+    val isStarted: Boolean get() = timesCompleted > 0
+    val isPerfect: Boolean get() = bestScore == 10
+}

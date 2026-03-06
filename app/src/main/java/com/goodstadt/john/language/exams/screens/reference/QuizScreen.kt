@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -23,18 +24,22 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -78,6 +83,7 @@ import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun QuizScreen(
     viewModel: QuizViewModel = hiltViewModel()
@@ -118,6 +124,9 @@ fun QuizScreen(
     }
 
     var isLearningExpanded by rememberSaveable { mutableStateOf(false) }
+    var showDashboardSheet by remember { mutableStateOf(false) }
+    val dashboardSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
@@ -163,21 +172,54 @@ fun QuizScreen(
         )
 
         // Quiz Number Picker
-        DropdownMenuBox(
-            options = availableQuizzes.map { it.title },
-            selectedOption = selectedQuiz?.title ?: "Select a Quiz",
-            onOptionSelected = { newQuizTitle ->
-                // Find the QuizDetail object that matches the selected title
-                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
-                // Call the new ViewModel function
-                viewModel.onQuizSelected(quizDetail)
+//        DropdownMenuBox(
+//            options = availableQuizzes.map { it.title },
+//            selectedOption = selectedQuiz?.title ?: "Select a Quiz",
+//            onOptionSelected = { newQuizTitle ->
+//                // Find the QuizDetail object that matches the selected title
+//                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
+//                // Call the new ViewModel function
+//                viewModel.onQuizSelected(quizDetail)
+//            }
+//        )
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                // Optional: Add horizontal padding to keep icon off the very edge
+                .padding(horizontal = 4.dp)
+        ) {
+
+            // 1. The Dropdown (Centered)
+            // We wrap it to ensure it aligns to the Box's center, not the Column's
+            Box(modifier = Modifier.align(Alignment.Center)) {
+                DropdownMenuBox(
+                    options = availableQuizzes.map { it.title },
+                    selectedOption = selectedQuiz?.title ?: "Select a Quiz",
+                    onOptionSelected = { newQuizTitle ->
+                        val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
+                        viewModel.onQuizSelected(quizDetail)
+                    }
+                )
             }
-        )
+
+            // 2. The Icon (Right Aligned)
+            IconButton(
+                onClick = {  showDashboardSheet = true },
+                modifier = Modifier.align(Alignment.CenterEnd) // 👈 Locks to right
+            ) {
+                Icon(
+                    imageVector = Icons.Default.WorkspacePremium, // Or Insight/Chart icon
+                    contentDescription = "Stats",
+                    tint = Color(0xFFFF9800)
+                )
+            }
+        }
 
         // --- Quiz-level learning points (stays the same for all 10 questions) ---
 
-        val fred = selectedQuiz
-        print(fred)
+//        val fred = selectedQuiz
+//        print(fred)
 
         val learningTitleData = uiState.testMyselfListRoot?.data?.first()
         val learningTitle = learningTitleData?.learningTitle ?: "Why this quiz works"
@@ -616,6 +658,31 @@ fun QuizScreen(
             questions[currentQuestionIndex].explain,
             onCloseSheet = { showInfoBottomSheet = false }
         )
+    }
+    if (showDashboardSheet) {
+        ModalBottomSheet(
+            onDismissRequest = { showDashboardSheet = false },
+            sheetState = dashboardSheetState,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = MaterialTheme.colorScheme.onSurface
+        ) {
+            // Constrain height to 90% of screen for a "Full Sheet" feel
+            Box(modifier = Modifier.fillMaxHeight(0.9f)) {
+
+                // We reuse the UsageDashboardScreen directly.
+                // Hilt will automatically inject UsageDashboardViewModel inside it.
+                UsageDashboardScreen(
+                    onStartQuiz = { quizId ->
+                        // 1. Close the sheet
+                        showDashboardSheet = false
+
+                        // 2. (Optional) Auto-select the quiz
+                        // You can ask the ViewModel to switch to this quiz ID immediately
+                        // viewModel.selectQuizById(quizId)
+                    }
+                )
+            }
+        }
     }
 } //:QuizScreen
 
