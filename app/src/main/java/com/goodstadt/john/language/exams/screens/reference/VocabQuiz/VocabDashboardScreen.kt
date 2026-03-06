@@ -163,7 +163,7 @@ fun VocabQuizActiveView(
                             color = MaterialTheme.colorScheme.onPrimaryContainer
                         )
                         Text(
-                            text = "$label due for review",
+                            text = "$label due for review yet",
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onPrimaryContainer
                         )
@@ -171,7 +171,12 @@ fun VocabQuizActiveView(
 
                     Button(
                         onClick = onStartReview,
-                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
+                        enabled = state.wordsDueCount != 0,
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.primary,
+                            // Optional: You can also explicitly set disabled colors if you want
+                            disabledContainerColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.12f)
+                        )
                     ) {
                         Text("Review Now")
                     }
@@ -179,21 +184,29 @@ fun VocabQuizActiveView(
 
                 // Bottom Section: The sorted list of words
                 Spacer(modifier = Modifier.height(12.dp)) // Add some breathing room
+                if (state.wordsDueCount != 0) {
+                    Text(
+                        text = "${state.wordsDueList
+                            .sortedBy { it.length }
+                            .joinToString(", ").take(55)}...",
+                        // We can now remove .take(60) if you want to show more!
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis,
+                        style = MaterialTheme.typography.bodySmall.copy(
+                            fontStyle = FontStyle.Italic,
+                            fontWeight = FontWeight.Normal,
+                            fontSize = 12.sp
+                        ),
+                        color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
+                    )
+                }else{
+                    Text(
+                        text = "Tap on a section below to start quizzing yourself",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
+                }
 
-                Text(
-                    text = "${state.wordsDueList
-                        .sortedBy { it.length }
-                        .joinToString(", ").take(55)}...",
-                    // We can now remove .take(60) if you want to show more!
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                    style = MaterialTheme.typography.bodySmall.copy(
-                        fontStyle = FontStyle.Italic,
-                        fontWeight = FontWeight.Normal,
-                        fontSize = 12.sp
-                    ),
-                    color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
-                )
             }
         }
 

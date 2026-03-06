@@ -190,12 +190,26 @@ enum class QuizLevels(val quizzes: List<QuizDetail>) {
         )
     );
 
-    val description: String
+    val descriptionObsolete: String
         get() = when(this) {
             ELEMENTARY -> "Elementary"
             INTER -> "Inter" // Explicitly string match if needed
             UPPER -> "Upper"
             ADVANCED -> "Advanced"
+        }
+    val description: String
+        get() = when(this) {
+            ELEMENTARY -> "Beginner"
+            INTER -> "Elementary" // Explicitly string match if needed
+            UPPER -> "Inter"
+            ADVANCED -> "Advanced"
+        }
+    val ESOL: String
+        get() = when(this) {
+            ELEMENTARY -> "A1"
+            INTER -> "A2"
+            UPPER -> "B1"
+            ADVANCED -> "B2"
         }
 }
 
@@ -573,6 +587,12 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                 }
             }
 
+            val currentQuizFileName = quizStatistics.value.filename
+            usageQuizRepository.finishQuiz(
+                quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
+                finalScore = qs.value.correct
+
+            )
         }
     }
 

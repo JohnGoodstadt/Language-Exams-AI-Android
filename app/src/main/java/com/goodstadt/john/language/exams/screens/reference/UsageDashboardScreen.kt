@@ -36,6 +36,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -45,7 +46,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -55,15 +55,21 @@ import com.goodstadt.john.language.exams.models.UsageQuizOverviewItem
 import com.goodstadt.john.language.exams.viewmodels.UsageDashboardViewModel
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.ui.theme.orangeLight
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun UsageDashboardScreen(
     viewModel: UsageDashboardViewModel = hiltViewModel(),
+    targetLevel: String,
     onStartQuiz: (Int) -> Unit // Pass back Quiz ID to start
 ) {
     val uiState by viewModel.uiState.collectAsState()
 
+    LaunchedEffect(targetLevel) {
+        viewModel.loadData(targetLevel)
+    }
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(title = { Text("Grammar Progress") })
@@ -77,14 +83,18 @@ fun UsageDashboardScreen(
                 }
                 is UsageDashboardViewModel.UiState.ColdStart -> {
                     UsageColdStartView(
-                        levelName = state.levelName,
+                        title =  viewModel.getLevelTitle(state.levelName),
+                        subTitle = viewModel.getLevelSubtitle(state.levelName),
                         onStartFirst = { onStartQuiz(1) } // Start Quiz 1
                     )
                 }
                 is UsageDashboardViewModel.UiState.Active -> {
                     UsageActiveView(
                         summary = state.summary,
-                        onStartQuiz = onStartQuiz
+                        onStartQuiz = onStartQuiz,
+                        onDebugReset = {
+                            viewModel.debugResetLevel()
+                        }
                     )
                 }
             }
@@ -94,7 +104,7 @@ fun UsageDashboardScreen(
 
 // MARK: - Cold Start View
 @Composable
-fun UsageColdStartView(levelName: String, onStartFirst: () -> Unit) {
+fun UsageColdStartView(title: String, subTitle:String, onStartFirst: () -> Unit) {
     Column(
         modifier = Modifier.fillMaxSize().padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -107,7 +117,14 @@ fun UsageColdStartView(levelName: String, onStartFirst: () -> Unit) {
             tint = MaterialTheme.colorScheme.primary
         )
         Spacer(Modifier.height(16.dp))
-        Text("Start $levelName Grammar", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+        Text(title, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+        Text(
+            subTitle,
+            style = MaterialTheme.typography.bodyLarge,
+            textAlign = TextAlign.Center,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.padding(vertical = 16.dp)
+        )
         Text(
             "Test your knowledge of syntax and usage. Complete quizzes to earn stars and track your mastery of specific rules.",
             style = MaterialTheme.typography.bodyLarge,
@@ -116,14 +133,14 @@ fun UsageColdStartView(levelName: String, onStartFirst: () -> Unit) {
             modifier = Modifier.padding(vertical = 16.dp)
         )
         Button(onClick = onStartFirst) {
-            Text("Start Quiz 1")
+            Text("Start Quiz 1", color = orangeLight)
         }
     }
 }
 
 // MARK: - Active View
 @Composable
-fun UsageActiveView(summary: UsageLevelSummary, onStartQuiz: (Int) -> Unit) {
+fun UsageActiveView(summary: UsageLevelSummary, onStartQuiz: (Int) -> Unit,onDebugReset: () -> Unit) {
     LazyColumn(
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -151,6 +168,18 @@ fun UsageActiveView(summary: UsageLevelSummary, onStartQuiz: (Int) -> Unit) {
                 UsageQuizRow(item = nextUp, isNextUp = true, onClick = { onStartQuiz(nextUp.id) })
             }
         }
+        if (BuildConfig.DEBUG) {
+            item {
+                Button(
+                    onClick = { onDebugReset() },
+                    modifier = Modifier.height(32.dp),
+                    contentPadding = PaddingValues(horizontal = 12.dp)
+                ) {
+                    Text("Reset (D)")
+                }
+            }
+        }
+
 
         // 3. All Quizzes
         item {

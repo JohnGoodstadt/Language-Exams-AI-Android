@@ -51,7 +51,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -669,12 +668,16 @@ fun QuizScreen(
             // Constrain height to 90% of screen for a "Full Sheet" feel
             Box(modifier = Modifier.fillMaxHeight(0.9f)) {
 
+                val level = selectedLevel.description
                 // We reuse the UsageDashboardScreen directly.
                 // Hilt will automatically inject UsageDashboardViewModel inside it.
                 UsageDashboardScreen(
+                    targetLevel = level,
                     onStartQuiz = { quizId ->
                         // 1. Close the sheet
                         showDashboardSheet = false
+
+                        //TODO: for now just hide
 
                         // 2. (Optional) Auto-select the quiz
                         // You can ask the ViewModel to switch to this quiz ID immediately

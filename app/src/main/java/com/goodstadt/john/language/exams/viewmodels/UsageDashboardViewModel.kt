@@ -29,32 +29,41 @@ class UsageDashboardViewModel @Inject constructor(
 
     private val _uiState = MutableStateFlow<UiState>(UiState.Loading)
     val uiState = _uiState.asStateFlow()
+    private var currentLevelFilter: String = ""
 
     init {
-        loadData()
-
-        // Listen for updates (e.g. if user goes back and finishes a quiz)
+//        loadData()
+//
+//        // Listen for updates (e.g. if user goes back and finishes a quiz)
+//        viewModelScope.launch {
+//            usageQuizRepository.dataUpdateEvents.collect {
+//                loadData()
+//            }
+//        }
         viewModelScope.launch {
             usageQuizRepository.dataUpdateEvents.collect {
-                loadData()
+                // Refresh whatever level is currently active
+                if (currentLevelFilter.isNotEmpty()) {
+                    loadData(currentLevelFilter)
+                }
             }
         }
     }
 
-    fun loadData() {
+    fun loadData(levelName: String) {
         viewModelScope.launch {
             // 1. Get Current Level (e.g. "Elementary")
             // We assume the Enum has a description string matching the UI
-            val levelName = userPreferencesRepository.selectedSkillLevelFlow.first()
+          //  val levelName = userPreferencesRepository.selectedSkillLevelFlow.first()
             val levelEnum = mapStringToEnum(levelName) // Helper to get QuizLevelsNew.ELEMENTARY
-
+            val ESOLLevel = levelEnum.ESOL
             // 2. Build the List
             val quizItems = levelEnum.quizzes.map { quizDetail ->
                 // Construct ID: "UsageQuiz1A1" (or whatever your naming convention is)
                 // Assuming "UsageQuiz" + ID + Level
                 // You might need to adjust this key generation to match your UsageQuizViewModel exactly
                 val cleanLevel = levelName.replace(" ", "")
-                val quizKey = "UsageQuiz${cleanLevel}${quizDetail.id}"
+                val quizKey = "UsageQuiz${quizDetail.id}${ESOLLevel}-en"
 
                 val stats = usageQuizRepository.getStatsForQuiz(quizKey)
 
@@ -95,6 +104,7 @@ class UsageDashboardViewModel @Inject constructor(
                 _uiState.value = UiState.Active(summary)
             }
         }
+        usageQuizRepository.debugPrint()
     }
 
     // Helpers
@@ -114,5 +124,25 @@ class UsageDashboardViewModel @Inject constructor(
     // Debug
     fun debugResetLevel() {
         // Logic to clear specific level stats
+//        usageQuizRepository.clearStatsForQuiz(currentLevelFilter)
+        usageQuizRepository.clearAll()
+    }
+    fun getLevelTitle(level: String): String {
+        return when (level.lowercase()) {
+            "beginner" -> "Start Basic Grammar"
+            "elementary" -> "Start Elementary Grammar"
+            "inter" -> "Start Intermediate Grammar"
+            "advanced" -> "Start Advanced Grammar"
+            else -> ""
+        }
+    }
+    fun getLevelSubtitle(level: String): String {
+        return when (level.lowercase()) {
+            "beginner" -> "Pre-IELTS / Cambridge Starters / ESOL A1"
+            "elementary" -> "IELTS 3.0 / TOEFL 31 / KET / ESOL A2"
+            "inter" -> "IELTS 4.5 / TOEFL 57 / PET / ESOL B1"
+            "advanced" -> "Target Professional: IELTS 6.0 / TOEFL 80 / FCE / ESOL B2"
+            else -> ""
+        }
     }
 }
