@@ -25,6 +25,7 @@ import com.goodstadt.john.language.exams.data.VoiceOption
 import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
+import com.goodstadt.john.language.exams.data.repository.UsageQuizRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.BannerManager
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
@@ -101,7 +102,6 @@ class SettingsViewModel @Inject constructor(
     private val voiceRepository: VoiceRepository,
     private val vocabRepository: ContentRepository,
     private val ttsStatsRepository: TTSStatsRepository,
-    private val recallingItemsManager: RecallingItems,
     private val googleTtsInfoRepository: GoogleTTSInfoRepository,
     private val firestoreRepository: FirestoreRepository,
     private val billingRepository: BillingRepository,
@@ -116,6 +116,7 @@ class SettingsViewModel @Inject constructor(
     private val audioCacheManager: AudioCacheManager,
     private val globalLoadingManager: GlobalLoadingManager,
     private val bannerManager: BannerManager,
+    private val usageQuizRepository: UsageQuizRepository,
 ) : ViewModel() {
 
 
@@ -1009,5 +1010,9 @@ class SettingsViewModel @Inject constructor(
     }
     fun playSuccessSound() {
         globalLoadingManager.playSuccessSound(context)
+    }
+
+    fun debugUsageQuizRepository() {
+        usageQuizRepository.debugPrint()
     }
 }

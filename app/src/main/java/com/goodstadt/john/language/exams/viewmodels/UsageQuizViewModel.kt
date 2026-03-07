@@ -53,6 +53,8 @@ import timber.log.Timber
 import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
 
 enum class QuizState(val description: String) {
     NOT_STARTED("Not Started"),
@@ -253,6 +255,7 @@ class UsageQuizViewModel @Inject constructor(
     private val bannerManager: BannerManager,
 
     ) : ViewModel() {
+
     private val appContext: Context = application.applicationContext
 
     //Real uiState
@@ -328,7 +331,12 @@ class UsageQuizViewModel @Inject constructor(
     private val quizTitleCache = mutableMapOf<QuizLevels, List<QuizDetail>>()
     private var infoUsedForCurrentQuestion = false // ✅ Track hint usage for the CURRENT question
 
+//    private val _quizFluency = mutableStateOf(UsageQuizRepository.QuizFluency.NEVER_DONE)
+//    val quizFluency: State<UsageQuizRepository.QuizFluency> = _quizFluency
 
+    private val _fluency = mutableStateOf(UsageQuizRepository.QuizFluency.NEVER_DONE)
+    // Explicitly define the type to avoid ambiguity with other 'State' classes
+    val fluency: State<UsageQuizRepository.QuizFluency> = _fluency
 
 
     init {
@@ -422,6 +430,11 @@ class UsageQuizViewModel @Inject constructor(
                 return@launch
             }
 
+            val stats = usageQuizRepository.getStatsForQuiz(baseName)
+
+            _fluency.value = usageQuizRepository.getFluencyStatus(baseName)
+
+            Timber.v(stats.toString())
             if (testData.title?.isNotEmpty() == true){
                 Timber.i("Sheet title is ${testData.title} ")
             }
@@ -435,6 +448,7 @@ class UsageQuizViewModel @Inject constructor(
             _questions.value = generateQuestionsFromData(testData)
 
             Timber.v("${_questions.value.count()}")
+
 
 
             resetQuiz()
@@ -564,7 +578,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                 xpManager.registerAction(XpActionType.CompleteQuiz)
                 bannerManager.showBanner(
                     title = "Almost Perfect",
-                    subtitle = "Not quite. Try again to get a perfect score. No info looking",
+                    subtitle = "Not quite. Try again for a perfect score. Don't look at the Info first",
                     seconds = 8 //so they can read it
                 )
             } else {

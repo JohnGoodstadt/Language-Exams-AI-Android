@@ -866,9 +866,10 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Debug Something",
-                    currentValue = "Showo Celebration (D)",
+                    currentValue = "UsageQuizRepository (D)",
                     onClick = {
-                        viewModel.showCelebtation()
+                        viewModel.debugUsageQuizRepository()
+//                        viewModel.showCelebtation()
 //                        showTryOutVoicesSheet = true
 //                            viewModel.onDebugCrashlyitcs()
 //                            viewModel.userPreferences()

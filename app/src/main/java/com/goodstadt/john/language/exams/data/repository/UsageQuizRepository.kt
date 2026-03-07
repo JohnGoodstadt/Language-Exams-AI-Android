@@ -1,6 +1,7 @@
 package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
+import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.models.UsageQuestionStat
 import com.goodstadt.john.language.exams.models.UsageQuizStat
 import com.google.gson.Gson
@@ -141,6 +142,52 @@ class UsageQuizRepository @Inject constructor(
         }
     }
 
+    // In UsageQuizRepository.kt
+    fun getQuizStatus(quizId: String): QuizFluency {
+        // 1. Get the score/stars for this specific key
+        val stats = getStatsForQuiz(quizId)
+
+        return QuizFluency.FLUENT
+
+
+//        val score = getScoreForQuiz(quizId) // Replace with your internal storage call
+//        val attempts = getAttemptsForQuiz(quizId)
+//
+//        // 2. Determine the label logic
+//        return when {
+//            attempts == 0 -> QuizFluency.NEVER_DONE
+//            score >= 9 -> QuizFluency.FLUENT
+//            score >= 7 -> QuizFluency.GOOD
+//            else -> QuizFluency.NEEDS_ATTENTION
+//        }
+    }
+    fun getFluencyStatus(quizId: String): QuizFluency {
+        // Replace these with your actual data fetching logic from your storage
+        val stats = getStatsForQuiz(quizId)
+
+        val correct = stats?.bestScore ?: 0//getCorrectCount(quizId)
+        val total = stats?.timesCompleted ?: 0// getTotalAttempts(quizId)
+
+        if (total == 0) return QuizFluency.NEVER_DONE //never looked at
+
+        if (correct > 0) return QuizFluency.FLUENT //at least 1 perfect run through
+
+        if (total > 0) return QuizFluency.LEARNING //tried at least once - but not perfect
+
+        val percentage = (correct.toFloat() / total.toFloat()) * 100
+
+        return when {
+            percentage >= 90 -> QuizFluency.FLUENT
+            percentage < 60 -> QuizFluency.CAREFUL
+            else -> QuizFluency.LEARNING
+        }
+    }
+    enum class QuizFluency(val label: String, val color: Color) {
+        NEVER_DONE("", Color.Gray), //don't show "Not started"
+        FLUENT("Fluent", Color(0xFF4CAF50)),
+        CAREFUL("Be careful", Color(0xFFFF5252)),
+        LEARNING("In progress...", Color(0xFFFF9500))
+    }
     // MARK: - DEBUG
 
     fun debugPrint() {

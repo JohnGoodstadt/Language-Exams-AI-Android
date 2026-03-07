@@ -125,7 +125,7 @@ fun UsageQuizScreen(
     var isLearningExpanded by rememberSaveable { mutableStateOf(false) }
     var showDashboardSheet by remember { mutableStateOf(false) }
     val dashboardSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
-
+    val fluency by viewModel.fluency
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
@@ -167,20 +167,7 @@ fun UsageQuizScreen(
                     }
                 }
             }
-            //fontSize = 16.sp
         )
-
-        // Quiz Number Picker
-//        DropdownMenuBox(
-//            options = availableQuizzes.map { it.title },
-//            selectedOption = selectedQuiz?.title ?: "Select a Quiz",
-//            onOptionSelected = { newQuizTitle ->
-//                // Find the QuizDetail object that matches the selected title
-//                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
-//                // Call the new ViewModel function
-//                viewModel.onQuizSelected(quizDetail)
-//            }
-//        )
 
         Box(
             modifier = Modifier
@@ -188,6 +175,16 @@ fun UsageQuizScreen(
                 // Optional: Add horizontal padding to keep icon off the very edge
                 .padding(horizontal = 4.dp)
         ) {
+
+            Text(
+                text = fluency.label,
+                color = fluency.color,
+                style = MaterialTheme.typography.labelMedium,
+                modifier = Modifier
+                    .background(fluency.color.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+                    .align(Alignment.CenterStart)
+//                    .padding(horizontal = 8.dp, vertical = 1.dp)
+            )
 
             // 1. The Dropdown (Centered)
             // We wrap it to ensure it aligns to the Box's center, not the Column's

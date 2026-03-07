@@ -800,7 +800,7 @@ class VocabSectionQuizViewModel @Inject constructor(
                 xpManager.registerAction(XpActionType.CompleteQuiz)
                 bannerManager.showBanner(
                     title = "Almost Perfect",
-                    subtitle = "Not quite. Try again to get a perfect score. No info looking"
+                    subtitle = "Not quite. Try again for a perfect score. Don't look at the Info first",
                 )
             } else {
                 // Perfect Score
