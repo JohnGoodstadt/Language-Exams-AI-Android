@@ -73,7 +73,6 @@ import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.viewmodels.VocabQuizLevels
-import com.goodstadt.john.language.exams.viewmodels.VocabQuizViewModel
 import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
@@ -436,7 +435,7 @@ fun VocabQuizScreen(
             }
 
             Spacer(Modifier.height(4.dp))
-
+            Spacer(modifier = Modifier.weight(1f))//push the reset to teh bottom
 //            Row(
 //                horizontalArrangement = Arrangement.SpaceBetween,
 //                modifier = Modifier.fillMaxWidth()

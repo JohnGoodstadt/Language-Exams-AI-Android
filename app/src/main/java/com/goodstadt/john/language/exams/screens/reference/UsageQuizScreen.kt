@@ -78,14 +78,14 @@ import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.viewmodels.QuizLevels
-import com.goodstadt.john.language.exams.viewmodels.VocabQuizViewModel
+import com.goodstadt.john.language.exams.viewmodels.UsageQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun VocabQuizScreen(
-    viewModel: VocabQuizViewModel = hiltViewModel()
+fun UsageQuizScreen(
+    viewModel: UsageQuizViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
 
@@ -491,7 +491,7 @@ fun VocabQuizScreen(
 
             Spacer(Modifier.height(4.dp))
             //expand to teh bottom of the screen
-            Spacer(modifier = Modifier.weight(1f))
+            Spacer(modifier = Modifier.weight(1f))//push the reset to teh bottom
 //            Row(
 //                horizontalArrangement = Arrangement.SpaceBetween,
 //                modifier = Modifier.fillMaxWidth()

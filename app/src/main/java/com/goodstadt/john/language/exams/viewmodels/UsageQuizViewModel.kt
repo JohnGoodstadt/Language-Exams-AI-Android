@@ -237,7 +237,7 @@ data class UsageQuizUiState(
     val testMyselfListRoot:TestMyselfListRoot? = null
 )
 @HiltViewModel
-class VocabQuizViewModel @Inject constructor(
+class UsageQuizViewModel @Inject constructor(
     private val application: Application,
     private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
