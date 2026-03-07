@@ -23,7 +23,7 @@ import java.util.Calendar
 
  */
 @Singleton
-class VocabQuizRepository @Inject constructor(
+class VocabQuizRepositoryDuplicate @Inject constructor(
     @ApplicationContext private val context: Context
 ) {
     private val gson = Gson()

@@ -26,6 +26,7 @@ import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
 import com.goodstadt.john.language.exams.data.repository.UsageQuizRepository
+import com.goodstadt.john.language.exams.data.repository.VocabQuizRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.BannerManager
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
@@ -117,7 +118,9 @@ class SettingsViewModel @Inject constructor(
     private val globalLoadingManager: GlobalLoadingManager,
     private val bannerManager: BannerManager,
     private val usageQuizRepository: UsageQuizRepository,
-) : ViewModel() {
+    private val vocabQuizRepository: VocabQuizRepository,
+
+    ) : ViewModel() {
 
 
     val isPurchased = billingRepository.isPurchased
@@ -1014,5 +1017,8 @@ class SettingsViewModel @Inject constructor(
 
     fun debugUsageQuizRepository() {
         usageQuizRepository.debugPrint()
+    }
+    fun debugVocabQuizRepository() {
+        vocabQuizRepository.debugPrintAllWordStates()
     }
 }

@@ -1,6 +1,8 @@
 package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
+import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.VocabLearningState
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
@@ -119,100 +121,7 @@ class VocabQuizRepository @Inject constructor(
 
     // MARK: - The "Brain" Logic
 
-    private fun updateMasteryLogicOriginal(state: VocabLearningState, tries: Int) {
-        val oneDay = 24 * 60 * 60 * 1000L
 
-        if (tries == 1) {
-            // --- SUCCESS (First Try) ---
-            state.correctStreak++
-
-            when {
-                // If they were struggling, move them to Learning
-                state.masteryLevel == WordMasteryLevel.Struggling -> {
-                    state.masteryLevel = WordMasteryLevel.Learning
-                    state.nextReviewTime = System.currentTimeMillis() + (oneDay * 1) // Review tomorrow
-                }
-                // If they hit a streak of 3, mark Mastered
-                state.correctStreak >= 3 -> {
-                    state.masteryLevel = WordMasteryLevel.Mastered
-                    state.nextReviewTime = Long.MAX_VALUE // Never again
-                }
-                // Standard progression
-                else -> {
-                    state.masteryLevel = WordMasteryLevel.Review
-                    // Spaced Repetition: Delay grows with streak (1 day, 3 days, 7 days...)
-                    state.nextReviewTime = System.currentTimeMillis() + (oneDay * state.correctStreak)
-                }
-            }
-        } else {
-            // --- FAILURE (Multiple Tries) ---
-            state.correctStreak = 0 // Reset streak
-
-            if (tries >= 3) {
-                // Severe struggle
-                state.masteryLevel = WordMasteryLevel.Struggling
-                state.nextReviewTime = System.currentTimeMillis() + (10 * 60 * 1000L) // Review in 10 minutes (Next session)
-            } else {
-                // Mild struggle (2 tries)
-                state.masteryLevel = WordMasteryLevel.Learning
-                state.nextReviewTime = System.currentTimeMillis() + (oneDay / 2) // Review in 12 hours
-            }
-        }
-
-        Timber.d("Quiz: Updated '${state.word}' to ${state.masteryLevel}. Next review in ${(state.nextReviewTime - System.currentTimeMillis()) / 1000}s")
-    }
-    private fun updateMasteryLogicNextOriginal(state: VocabLearningState, tries: Int) {
-        val now = System.currentTimeMillis()
-
-        if (tries == 1) {
-            // --- SUCCESS (First Try) ---
-
-            // 🛑 ANTI-CRAMMING CHECK
-            if (state.nextReviewTime > now && state.masteryLevel != WordMasteryLevel.Struggling) {
-                Timber.d("Quiz: User reviewed '${state.word}' too early (Cramming). Keeping existing schedule.")
-                return
-            }
-
-            state.correctStreak++
-
-            when {
-                // Escaping "Struggling" -> Review Tomorrow Morning (6 AM)
-                state.masteryLevel == WordMasteryLevel.Struggling -> {
-                    state.masteryLevel = WordMasteryLevel.Learning
-                    state.nextReviewTime = getFutureMorningTime(1)
-                }
-                // Graduation -> Done
-                state.correctStreak >= 3 -> {
-                    state.masteryLevel = WordMasteryLevel.Mastered
-                    state.nextReviewTime = Long.MAX_VALUE
-                }
-                // Normal Progression -> Review in X Mornings
-                else -> {
-                    state.masteryLevel = WordMasteryLevel.Review
-                    // Streak 1 = Tomorrow 6am
-                    // Streak 2 = 2 days from now 6am
-                    state.nextReviewTime = getFutureMorningTime(state.correctStreak)
-                }
-            }
-        } else {
-            // --- FAILURE (Multiple Tries) ---
-
-            state.correctStreak = 0 // Reset streak
-
-            if (tries >= 3) {
-                // Hard Fail: Review in 10 mins (Immediate repair)
-                state.masteryLevel = WordMasteryLevel.Struggling
-                state.nextReviewTime = now + (10 * 60 * 1000L)
-            } else {
-                // Soft Fail: Review Tomorrow Morning
-                // (Even a soft fail usually benefits from a sleep cycle)
-                state.masteryLevel = WordMasteryLevel.Learning
-                state.nextReviewTime = getFutureMorningTime(1)
-            }
-        }
-
-        Timber.d("Quiz: Updated '${state.word}' to ${state.masteryLevel}. New time: ${java.util.Date(state.nextReviewTime)}")
-    }
     // Requires: import java.time.*
     private fun updateMasteryLogic(state: VocabLearningState, outcome: VocabQuizOutcome) {
         val now = System.currentTimeMillis()
@@ -328,51 +237,14 @@ class VocabQuizRepository @Inject constructor(
             }
         }
     }
-    // MARK: - Debugging
-
-    fun debugPrintStatusObsolete() {
-        val now = System.currentTimeMillis()
-
-        // Sort: Overdue/Due first, then future, Mastered last
-        val sortedList = wordStates.values.sortedBy { it.nextReviewTime }
-
-        val dueCount = sortedList.count { it.nextReviewTime <= now && it.masteryLevel != WordMasteryLevel.Mastered }
-        val masteredCount = sortedList.count { it.masteryLevel == WordMasteryLevel.Mastered }
-
-        Timber.tag("VocabBrain").d("\n🧠 ===== VOCAB BRAIN REPORT =====")
-        Timber.tag("VocabBrain").d("   Total Tracked: ${wordStates.size}")
-        Timber.tag("VocabBrain").d("   🔥 Due Now:      $dueCount")
-        Timber.tag("VocabBrain").d("   🎓 Mastered:     $masteredCount")
-        Timber.tag("VocabBrain").d("----------------------------------------------------------------")
-        Timber.tag("VocabBrain").d("   STATUS | WORD             | STREAK | DUE IN")
-        Timber.tag("VocabBrain").d("----------------------------------------------------------------")
-
-        if (sortedList.isEmpty()) {
-            Timber.tag("VocabBrain").d("   (No data yet)")
-        }
-
-        // Print top 20 items (to avoid flooding logs if list is huge)
-        sortedList.take(30).forEach { state ->
-            val timeString = getTimeString(state.nextReviewTime, now)
-            val icon = getStatusIcon(state.masteryLevel)
-
-            // Padding for clean columns
-            val wordPad = state.word.take(16).padEnd(16)
-
-            Timber.tag("VocabBrain").d("   $icon     | $wordPad |   ${state.correctStreak}    | $timeString")
-        }
-
-        if (sortedList.size > 30) {
-            Timber.tag("VocabBrain").d("   ... and ${sortedList.size - 30} more.")
-        }
-        Timber.tag("VocabBrain").d("================================================================\n")
-    }
-
-    // MARK: - Debugging
 
     // MARK: - Debugging
 
     fun debugPrintAllWordStates() {
+
+        if (!BuildConfig.DEBUG){
+            return
+        }
         val now = System.currentTimeMillis()
         val tag = "VocabRepo"
 
@@ -469,7 +341,25 @@ class VocabQuizRepository @Inject constructor(
         return wordStates.toMap()
     }
     // MARK: - Debug / Reset
+// In VocabQuizRepository.kt
 
+    fun getWordStats(word: String): VocabLearningState {
+        // Return the existing state if we have it,
+        // otherwise return a 'New' state so the UI has something to show
+        return wordStates[word.lowercase()] ?: VocabLearningState(
+            word = word,
+            masteryLevel = WordMasteryLevel.New
+        )
+    }
+    fun getFluencyDisplay(level: WordMasteryLevel): Pair<String, Color> {
+        return when (level) {
+            WordMasteryLevel.New -> "" to Color.Gray //"New Word"
+            WordMasteryLevel.Struggling -> "Be careful" to Color.Red
+            WordMasteryLevel.Learning -> "Learning" to Color.LightGray// Orange
+            WordMasteryLevel.Review -> "Not Quite Fluent (3 correct streaks for fluency)" to Color.Cyan
+            WordMasteryLevel.Mastered -> "Mastered" to Color(0xFF4CAF50) // Green
+        }
+    }
     /**
      * 🚨 DEBUG: Wipes all vocabulary mastery progress.
      * Simulates a fresh install for the Vocab Quiz feature.
@@ -496,4 +386,8 @@ class VocabQuizRepository @Inject constructor(
             Timber.w("🚨 VOCAB QUIZ MEMORY CLEARED (Simulating new user)")
         }
     }
+
+//    fun getFormattedNextReviewTime(word: String): String {
+//        return  getFormattedNextReviewTime(word)
+//    }
 }

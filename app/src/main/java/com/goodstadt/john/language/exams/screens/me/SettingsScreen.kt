@@ -868,7 +868,7 @@ fun SettingsScreen(
                     title = "Debug Something",
                     currentValue = "UsageQuizRepository (D)",
                     onClick = {
-                        viewModel.debugUsageQuizRepository()
+                        viewModel.debugVocabQuizRepository()
 //                        viewModel.showCelebtation()
 //                        showTryOutVoicesSheet = true
 //                            viewModel.onDebugCrashlyitcs()

@@ -75,6 +75,7 @@ import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.viewmodels.VocabQuizLevels
 import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+import timber.log.Timber
 
 
 @Composable
@@ -120,7 +121,9 @@ fun VocabQuizScreen(
     val isSectionMode by viewModel.isSectionMode.collectAsState()
     val availableIndices by viewModel.availableSectionIndices.collectAsState()
     val currentIndex by viewModel.currentSectionIndex.collectAsState()
-    val showInfoSheet by viewModel.showInfoSheet.collectAsState()
+    //val showInfoSheet by viewModel.showInfoSheet.collectAsState()
+
+
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
@@ -226,26 +229,6 @@ fun VocabQuizScreen(
         }
 
 
-
-
-        // Quiz Number Picker
-//        DropdownMenuBox(
-//            options = availableQuizzes.map { it.title },
-//            selectedOption = selectedQuiz?.title ?: "Select a Quiz",
-//            onOptionSelected = { newQuizTitle ->
-//                // Find the QuizDetail object that matches the selected title
-//                val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
-//                // Call the new ViewModel function
-//                viewModel.onQuizSelected(quizDetail)
-//            }
-//        )
-//
-//        HorizontalDivider(
-//            modifier = Modifier.fillMaxWidth(),
-//            thickness = 1.dp,
-//            color = greyLight2
-//        )
-
         if (currentQuestionIndex == 0) {
             Text(
                 text = displayText,
@@ -277,14 +260,7 @@ fun VocabQuizScreen(
                         // --- SUCCESS STATE ---
 
                         append(displayedSentence)
-//                                withStyle(
-//                                    style = SpanStyle(
-//                                        color = Color.Green,
-//                                        fontWeight = FontWeight.Bold
-//                                    )
-//                                ) {
-//                                    append(displayedSentence) // Append the correct word in green
-//                                }
+
 
                     } else {
                         // --- QUESTION STATE ---
@@ -320,8 +296,47 @@ fun VocabQuizScreen(
                 )
             }
 
+            val fluency = viewModel.fluencyStats(annotatedQuestionText.text)
+            val stats = viewModel.getWordStats(annotatedQuestionText.text)
+            Column {
 
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        // Optional: Add horizontal padding to keep icon off the very edge
+                        .padding(horizontal = 2.dp)
 
+                ) {
+                    Timber.v(stats.toString())
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 2.dp),
+                        // This spreads items out: one at the start, one in the middle (if 3), one at the end
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                       // Text("Status: ${fluency.first}", color = fluency.second, fontWeight = FontWeight.Bold)
+//                    Text("Current Streak: ${stats.correctStreak}🔥")
+
+                        Text(
+                            text = fluency.first,
+                            color = fluency.second,
+                            style = MaterialTheme.typography.labelMedium,
+                            modifier = Modifier
+                                .background(fluency.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+//                                .align(Alignment.CenterStart)
+//                    .padding(horizontal = 8.dp, vertical = 1.dp)
+                        )
+
+//                if (stats.nextReviewTime > 0) {
+//                    Text("Next review: ${viewModel.getFormattedNextReviewTime(stats.word)}")
+//                }
+                    }
+
+                }
+
+            }//: Column
 
 
             question.answers.forEach { option ->
@@ -436,19 +451,7 @@ fun VocabQuizScreen(
 
             Spacer(Modifier.height(4.dp))
             Spacer(modifier = Modifier.weight(1f))//push the reset to teh bottom
-//            Row(
-//                horizontalArrangement = Arrangement.SpaceBetween,
-//                modifier = Modifier.fillMaxWidth()
-//            ) {
-//                InfoButtonRow(infoDisabled = infoDisabled,
-//                    onClick = {
-//
-//                        if (infoDisabled == false) {
-//                            showInfoBottomSheet = true
-//                            viewModel.onInfoClicked()
-//                        }
-//                    })
-//            }// row
+
 
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,

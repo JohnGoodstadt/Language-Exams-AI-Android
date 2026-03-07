@@ -34,6 +34,7 @@ import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
+import com.goodstadt.john.language.exams.models.VocabLearningState
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
@@ -1246,4 +1247,27 @@ class VocabSectionQuizViewModel @Inject constructor(
             VocabQuizOutcome.FAILED -> { /* No XP, try again later */ }
         }
     }
+
+    fun fluencyStats(word:String): Pair<String, Color> {
+
+        val stats = vocabQuizRepository.getWordStats(word)
+        Timber.v(stats.toString())
+
+        return  vocabQuizRepository.getFluencyDisplay(stats.masteryLevel)
+
+    }
+
+    fun getWordStats(word: String): VocabLearningState {
+        return vocabQuizRepository.getWordStats(word)
+    }
+
+//    fun getFormattedNextReviewTime(word: String): String {
+//        val stats = vocabQuizRepository.getWordStats(word)
+//
+//        return if (stats.nextReviewTime > 0) {
+//            vocabQuizRepository.getFormattedNextReviewTime(stats.word)
+//        }else{
+//            ""
+//        }
+//    }
 }
