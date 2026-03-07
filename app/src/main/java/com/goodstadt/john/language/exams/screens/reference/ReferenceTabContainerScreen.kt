@@ -229,7 +229,9 @@ fun ReferenceTabContainerScreen(viewModel: ReferenceViewModel = hiltViewModel())
 
                 ) {
 
-                    composable(RefScreen.Quiz.route) { QuizScreen() }//Existing Quiz
+                    composable(RefScreen.Quiz.route) {
+                        VocabQuizScreen()
+                    }//Existing Quiz
 
 
                     composable(

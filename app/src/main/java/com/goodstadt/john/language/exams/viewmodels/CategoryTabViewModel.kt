@@ -14,6 +14,7 @@ import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.RecallingRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.BannerManager
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -86,6 +87,7 @@ class CategoryTabViewModel @Inject constructor(
     private val billingRepository: BillingRepository,
     private val playbackEventBus: PlaybackEventBus,
     private val globalLoadingManager: GlobalLoadingManager,
+    private val bannerManager: BannerManager,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<CategoryTabUiState>(CategoryTabUiState.Loading)
@@ -714,8 +716,8 @@ class CategoryTabViewModel @Inject constructor(
     }
 
     // UI State for Fireworks
-    private val _showCelebration = MutableStateFlow(false)
-    val showCelebration = _showCelebration.asStateFlow()
+//    private val _showCelebration = MutableStateFlow(false)
+//    val showCelebration = _showCelebration.asStateFlow()
 
     // ...
 
@@ -774,7 +776,11 @@ Fix: Make the function suspend and use withContext(Dispatchers.Main), or cache t
             xpManager.registerAction(XpActionType.CompleteSection)
 
             // C. Trigger Firework UI
-            triggerCelebration()
+           // triggerCelebration()
+            bannerManager.showBanner(
+                title = celebrationTitle.value,
+                subtitle = celebrationSubtitle.value
+            )
 
             Timber.i("🏆 Section Completed: ${category.title}")
 
@@ -892,7 +898,11 @@ Fix: Remove the duplicate calls at lines 856 and 859.
             xpManager.registerAction(XpActionType.CompleteSection)
 
             // C. Trigger Firework UI
-            triggerCelebration()
+//            triggerCelebration()
+            bannerManager.showBanner(
+                title = celebrationTitle.value,
+                subtitle = celebrationSubtitle.value
+            )
 
             // D. Check Whole Sheet
             checkSheetCompletionIfNeeded(examName)
@@ -916,14 +926,14 @@ Fix: Remove the duplicate calls at lines 856 and 859.
         }
     }
 
-    private fun triggerCelebration() {
-        viewModelScope.launch {
-            _showCelebration.value = true
-            // Auto-hide handled in UI or via delay here
-            kotlinx.coroutines.delay(4000)
-            _showCelebration.value = false
-        }
-    }
+//    private fun triggerCelebration() {
+//        viewModelScope.launch {
+//            _showCelebration.value = true
+//            // Auto-hide handled in UI or via delay here
+//            kotlinx.coroutines.delay(4000)
+//            _showCelebration.value = false
+//        }
+//    }
 
     fun playSuccessSound() {
         globalLoadingManager.playSuccessSound(context)

@@ -86,7 +86,7 @@ import com.goodstadt.john.language.exams.utils.buildSentenceParts
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabUiState
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.viewmodels.UiEvent
-import com.goodstadt.john.language.exams.viewmodels.VocabQuizViewModel
+import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
@@ -140,7 +140,7 @@ fun CategoryTabScreen(
     val quizSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
 
     // ✅ Watch for celebration trigger
-    val showCelebration by viewModel.showCelebration.collectAsState()
+//    val showCelebration by viewModel.showCelebration.collectAsState()
     val bannerTitle by viewModel.celebrationTitle.collectAsState()
     val bannerSubtitle by viewModel.celebrationSubtitle.collectAsState()
     val currentExamName by viewModel.currentExamName.collectAsStateWithLifecycle()
@@ -504,23 +504,23 @@ fun CategoryTabScreen(
 
             } //: Column
             // ✅ Overlay on top
-            if (showCelebration) {
-                viewModel.playSuccessSound()
-                Box(
-                    modifier = Modifier
-                        .align(Alignment.TopCenter) // This is now valid!
-                        .zIndex(10f) // Ensures it floats above the list headers
-                ) {
-                    AchievementBanner(
-                        isVisible = showCelebration,
-                        title = bannerTitle,       // ✅ Pass Dynamic Title
-                        subtitle = bannerSubtitle, // ✅ Pass Dynamic Subtitle
-                        onDismiss = {
-                            Timber.i("User did dismiss")
-                        }
-                    )
-                }
-            }
+//            if (showCelebration) {
+//                viewModel.playSuccessSound()
+//                Box(
+//                    modifier = Modifier
+//                        .align(Alignment.TopCenter) // This is now valid!
+//                        .zIndex(10f) // Ensures it floats above the list headers
+//                ) {
+//                    AchievementBanner(
+//                        isVisible = showCelebration,
+//                        title = bannerTitle,       // ✅ Pass Dynamic Title
+//                        subtitle = bannerSubtitle, // ✅ Pass Dynamic Subtitle
+//                        onDismiss = {
+//                            Timber.i("User did dismiss")
+//                        }
+//                    )
+//                }
+//            }
 
 
             // --- Sheets & Overlays ---
@@ -774,7 +774,7 @@ fun String.removeContentInBracketsAndTrim(): String = this.replace(Regex("\\(.*?
 @Composable
 fun SectionQuizContainer(
     categoryTitle: String,
-    viewModel: VocabQuizViewModel = hiltViewModel(),
+    viewModel: VocabSectionQuizViewModel = hiltViewModel(),
     onInteraction: (Boolean) -> Unit = {}
 ) {
     // Trigger load when this view appears

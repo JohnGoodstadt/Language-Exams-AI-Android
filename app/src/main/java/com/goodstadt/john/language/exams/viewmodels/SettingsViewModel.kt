@@ -26,6 +26,8 @@ import com.goodstadt.john.language.exams.data.VoiceRepository
 import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.BannerManager
+import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
@@ -111,7 +113,9 @@ class SettingsViewModel @Inject constructor(
     private val history: HistorySyncManager,
     private val xpManager: XPManager,
     private val quizHistoryManager: QuizHistoryManager,
-    private val audioCacheManager: AudioCacheManager
+    private val audioCacheManager: AudioCacheManager,
+    private val globalLoadingManager: GlobalLoadingManager,
+    private val bannerManager: BannerManager,
 ) : ViewModel() {
 
 
@@ -140,6 +144,10 @@ class SettingsViewModel @Inject constructor(
     val showRateDailyLimitSheet = _showRateDailyLimitSheet.asStateFlow()
     private val _showRateHourlyLimitSheet = MutableStateFlow(false)
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
+
+    private val _showCelebrationSheet = MutableStateFlow(false)
+    val showCelebrationSheet = _showCelebrationSheet.asStateFlow()
+
 
     fun initObsolete() {
 
@@ -986,5 +994,20 @@ class SettingsViewModel @Inject constructor(
                 Timber.e(error)
             }
         }
+    }
+
+    fun showCelebtation() {
+//        _showCelebrationSheet.value = true
+        bannerManager.showBanner(
+            title = "Grammar Master!",
+            subtitle = "You finished the A1 Quiz"
+        )
+    }
+
+    fun onDismissCelebration() {
+//        _showCelebrationSheet.value = false
+    }
+    fun playSuccessSound() {
+        globalLoadingManager.playSuccessSound(context)
     }
 }

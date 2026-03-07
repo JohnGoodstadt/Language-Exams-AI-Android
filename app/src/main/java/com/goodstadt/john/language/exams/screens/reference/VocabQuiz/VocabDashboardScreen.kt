@@ -55,7 +55,7 @@ import com.goodstadt.john.language.exams.models.CategoryMasteryStats
 import com.goodstadt.john.language.exams.models.DashboardUiState
 import com.goodstadt.john.language.exams.screens.SectionQuizContainer
 import com.goodstadt.john.language.exams.viewmodels.VocabDashboardViewModel
-import com.goodstadt.john.language.exams.viewmodels.VocabQuizViewModel
+import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
 import timber.log.Timber
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -156,6 +156,7 @@ fun VocabQuizActiveView(
                 ) {
                     Column(modifier = Modifier.weight(1f)) {
                         val label = if (state.wordsDueCount == 1) "word" else "words"
+                        val yet = if (state.wordsDueCount == 0) "yet." else ""
                         Text(
                             "${state.wordsDueCount}",
                             style = MaterialTheme.typography.displayMedium,
@@ -163,7 +164,7 @@ fun VocabQuizActiveView(
                             color = MaterialTheme.colorScheme.onPrimaryContainer
                         )
                         Text(
-                            text = "$label due for review yet",
+                            text = "$label due for review $yet",
                             style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onPrimaryContainer
                         )
@@ -373,7 +374,7 @@ fun SuggestionButton(title: String, onClick: () -> Unit) {
 
 @Composable
 fun SmartReviewContainer(
-    viewModel: VocabQuizViewModel = hiltViewModel(),
+    viewModel: VocabSectionQuizViewModel = hiltViewModel(),
     onInteraction: (Boolean) -> Unit
 ) {
     // 1. Trigger the specific logic for Smart Review

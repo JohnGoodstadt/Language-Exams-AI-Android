@@ -1,11 +1,14 @@
 package com.goodstadt.john.language.exams.viewmodels
 
+//import android.graphics.Color
+//import com.goodstadt.john.language.exams.managers.RateLimiterManager
+//import com.google.gson.Gson
+
 import android.app.Activity
 import android.app.Application
 import android.content.Context
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
@@ -15,61 +18,60 @@ import androidx.compose.ui.text.withStyle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
-import com.goodstadt.john.language.exams.data.UserPreferencesRepository
-import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
-import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
-import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizNotOKCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizOkCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
-import com.goodstadt.john.language.exams.data.repository.VocabQuizRepository
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
+import com.goodstadt.john.language.exams.data.UserStatsRepository
+import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizTotalCount
+import com.goodstadt.john.language.exams.data.repository.UsageQuizRepository
+import com.goodstadt.john.language.exams.managers.BannerManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
-import com.goodstadt.john.language.exams.models.VocabQuizOutcome
-import com.goodstadt.john.language.exams.models.WordQuizRoot
-import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
+import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
-import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import timber.log.Timber
-import java.io.File
-import java.io.FileNotFoundException
 import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
 
-data class VocabQuizStatistics(
+enum class QuizState(val description: String) {
+    NOT_STARTED("Not Started"),
+    STARTED("Started"),
+    IN_PROGRESS("In Progress"),
+    COMPLETED("Completed")
+}
+
+data class QuizStatistics(
     val timestamp: Date = Date(),
     var state: QuizState = QuizState.NOT_STARTED,
     val skillLevel: String,
     val quizNumber: Int,
-    val title: String,
+    val title:String,
     var answered: Int = 0,
     var correct: Int = 0,
-    var tries: Int = 0
+    var tries: Int = 0,
+    var page: Int = 1, //held for Dashboard
+    var filename:String = "" //held for Dashboard
 
 ) {
     override fun toString(): String {
@@ -78,101 +80,188 @@ data class VocabQuizStatistics(
         return "${dateFormatter.format(timestamp)} '${state.description}' '$skillLevel' level:$quizNumber answered:$answered tries:$tries correct:$correct"
     }
 
+    val readyForDB: String
+        get() {
+            val dateFormatter =
+                java.text.SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.getDefault())
+            return "${dateFormatter.format(timestamp)}:${state.description}:$skillLevel:$quizNumber:$answered:$tries:$correct"
+        }
 
     fun update(answered: Int, correct: Int, tries: Int) =
         copy(answered = answered, correct = correct, tries = tries)
 }
-
-enum class VocabQuizLevels(val quizzes: List<QuizDetail>) {
-    PERSONAL(
+enum class QuizLevels(val quizzes: List<QuizDetail>) {
+    ELEMENTARY(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "WordQuizPersonal1", title = "1. Personal"),
-            QuizDetail(id = 2, baseName = "WordQuizPersonal2", title = "2. Personal"),
-            QuizDetail(id = 3, baseName = "WordQuizPersonal3", title = "3. Personal"),
-
-
+            QuizDetail(
+                id = 1,
+                baseName = "UsageQuiz1A1-en",
+                title = "Sentence Structure"
+            ),
+            QuizDetail(
+                id = 2,
+                baseName = "UsageQuiz2A1-en",
+                title = "Present Simple"
+            ),
+            QuizDetail(
+                id = 3,
+                baseName = "UsageQuiz3A1-en",
+                title = "Past Simple"
+            ),
+            QuizDetail(
+                id = 4,
+                baseName = "UsageQuiz4A1-en",
+                title = "Questions & Short Answers"
+            ),
+            QuizDetail(
+                id = 5,
+                baseName = "UsageQuiz5A1-en",
+                title = "Prepositions"
+            ),
+            QuizDetail(
+                id = 6,
+                baseName = "UsageQuiz6A1-en",
+                title = "Connectors"
+            )
         )
     ),
-    EDUCATION(
+    INTER(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "WordQuizEducation1", title = "Education 1"),
-            QuizDetail(id = 2, baseName = "WordQuizEducation2", title = "Education 2"),
-            QuizDetail(id = 3, baseName = "WordQuizEducation3", title = "Education 3")
+            QuizDetail(
+                id = 1,
+                baseName = "UsageQuiz1A2-en",
+                title = "Future Forms"
+            ),
+            QuizDetail(
+                id = 2,
+                baseName = "UsageQuiz2A2-en",
+                title = "Present Continuous"
+            ),
+            QuizDetail(3, "UsageQuiz3A2-en", "Comparatives & Superlatives"),
+            QuizDetail(4, "UsageQuiz4A2-en", "Modal Verbs"),
+            QuizDetail(5, "UsageQuiz5A2-en", "Verb Patterns"),
+            QuizDetail(6, "UsageQuiz6A2-en", "Linking Words & If Clauses"),
         )
     ),
-
-    ADJECTIVES(
+    UPPER(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "WordQuizAdjectives1", title = "Adjectives 1"),
-            QuizDetail(id = 2, baseName = "WordQuizAdjectives2", title = "Adjectives 2"),
-            QuizDetail(id = 3, baseName = "WordQuizAdjectives3", title = "Adjectives 3")
+            QuizDetail(id = 1, baseName = "UsageQuiz1B1-en", title = "Tense Mastery"),
+            QuizDetail(
+                id = 2,
+                baseName = "UsageQuiz2B1-en",
+                title = "Real & Hypothetical Situations"
+            ),
+            QuizDetail(
+                id = 3,
+                baseName = "UsageQuiz3B1-en",
+                title = "Formal & Official Language"
+            ),
+            QuizDetail(
+                id = 4,
+                baseName = "UsageQuiz4B1-en",
+                title = "Reporting & Communication",
+            ),
+            QuizDetail(
+                id = 5,
+                baseName = "UsageQuiz5B1-en",
+                title = "Structured Arguments"
+            ),
+            QuizDetail(6, "UsageQuiz6B1-en", "Functional Fluency")
         )
     ),
-    HEALTH(
+    ADVANCED(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "WordQuizHealth1", title = "Health 1"),
-            QuizDetail(id = 2, baseName = "WordQuizHealth2", title = "Health 2"),
-            QuizDetail(id = 3, baseName = "WordQuizHealth3", title = "Health 3")
-        )
-    ),
-    LEISURE(
-        quizzes = listOf(
-            QuizDetail(id = 1, baseName = "WordQuizLeisure1", title = "1. Leisure"),
-            QuizDetail(id = 2, baseName = "WordQuizLeisure2", title = "2. Leisure"),
-            QuizDetail(id = 3, baseName = "WordQuizLeisure3", title = "3. Leisure")
+            QuizDetail(id = 1, baseName = "UsageQuiz1B2-en", title = "Aspect & Time Control"),
+            QuizDetail(
+                id = 2,
+                baseName = "UsageQuiz2B2-en",
+                title = "Hypothetical Reasoning"
+            ),
+            QuizDetail(3, "UsageQuiz3B2-en", "Formal Structural Control"),
+            QuizDetail(4, "UsageQuiz4B2-en", "Academic Expression"),
+            QuizDetail(5, "UsageQuiz5B2-en", "Argument Development"),
+            QuizDetail(6, "UsageQuiz6B2-en", "Precision & Nuance")
         )
     );
 
+    val descriptionObsolete: String
+        get() = when(this) {
+            ELEMENTARY -> "Elementary"
+            INTER -> "Inter" // Explicitly string match if needed
+            UPPER -> "Upper"
+            ADVANCED -> "Advanced"
+        }
     val description: String
-        get() = when (this) {
-            PERSONAL -> "Personal"
-            EDUCATION -> "Education"
-            ADJECTIVES -> "Adjectives"
-            HEALTH -> "Health"
-            LEISURE -> "Leisure"
+        get() = when(this) {
+            ELEMENTARY -> "Beginner"
+            INTER -> "Elementary" // Explicitly string match if needed
+            UPPER -> "Inter"
+            ADVANCED -> "Advanced"
+        }
+    val ESOL: String
+        get() = when(this) {
+            ELEMENTARY -> "A1"
+            INTER -> "A2"
+            UPPER -> "B1"
+            ADVANCED -> "B2"
         }
 }
 
+//data class WordOK(
+//    val word: String,
+//    val ok: Boolean
+//)
 
-data class WordQuizQuestion(
-    val question: String,
-    val answers: List<String>,
+data class QuizQuestion(
+    val sentence: String,
+    val words: List<String>,
     val correctOption: String,
     val summary: String,
-    val explain: DictionaryEntry?,
+    val explain: String,
     val title: String,
+    val page:Int
 )
 
-sealed interface VocabQuizUiState {
-    object Loading : VocabQuizUiState
+//TODO: Do I need this?
+sealed interface QuizUiState {
+    object Loading : QuizUiState
+
     data class Success(
-        //val categories: List<Category>,
         val selectedVoiceName: String = "" // Add a default empty value
-    ) : VocabQuizUiState
+    ) : QuizUiState
 
-    data class Error(val message: String) : VocabQuizUiState
-    object NotAvailable : VocabQuizUiState // For flavors like 'zh'
+    data class Error(val message: String) : QuizUiState
+    object NotAvailable : QuizUiState // For flavors like 'zh'
 }
-
+data class UsageQuizUiState(
+    val testMyselfListRoot:TestMyselfListRoot? = null
+)
 @HiltViewModel
 class VocabQuizViewModel @Inject constructor(
     private val application: Application,
     private val vocabRepository: ContentRepository,
     private val userPreferencesRepository: UserPreferencesRepository,
+    private val userStatsRepository: UserStatsRepository,
     private val ttsStatsRepository: TTSStatsRepository,
     private val billingRepository: BillingRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val connectivityRepository: ConnectivityRepository,
     private val quizHistoryManager: QuizHistoryManager,
     private val xpManager: XPManager,
-    private val vocabQuizRepository: VocabQuizRepository,
-    private val audioPlaybackRepository: AudioPlaybackRepository
+    private val audioPlaybackRepository: AudioPlaybackRepository,
+    private val usageQuizRepository:UsageQuizRepository,
+    private val bannerManager: BannerManager,
 
     ) : ViewModel() {
     private val appContext: Context = application.applicationContext
 
-    private val _uiState99 = MutableStateFlow<VocabQuizUiState>(VocabQuizUiState.Loading)
+    //Real uiState
+    private val _uiState = MutableStateFlow(UsageQuizUiState())
+    val uiState = _uiState.asStateFlow()
+
+    private val _uiState99 = MutableStateFlow<QuizUiState>(QuizUiState.Loading)
     val uiState99 = _uiState99.asStateFlow()
+
 
     private val _playbackState = MutableStateFlow<PlaybackState>(PlaybackState.Idle)
     val playbackState = _playbackState.asStateFlow()
@@ -181,8 +270,8 @@ class VocabQuizViewModel @Inject constructor(
     val isPremiumUser = _isPremiumUser.asStateFlow()
 
     // region State FLow
-    private val _questions = MutableStateFlow<List<WordQuizQuestion>>(emptyList())
-    val questions: StateFlow<List<WordQuizQuestion>> get() = _questions
+    private val _questions = MutableStateFlow<List<QuizQuestion>>(emptyList())
+    val questions: StateFlow<List<QuizQuestion>> get() = _questions
 
 
     private val _showUpgradeAppSheet = MutableStateFlow(false)
@@ -203,27 +292,6 @@ class VocabQuizViewModel @Inject constructor(
     private val _showRateHourlyLimitSheet = MutableStateFlow(false)
     val showRateHourlyLimitSheet = _showRateHourlyLimitSheet.asStateFlow()
 
-    private val _isSectionMode = MutableStateFlow(false)
-    val isSectionMode = _isSectionMode.asStateFlow()
-    private val _availableSectionIndices = MutableStateFlow<List<Int>>(emptyList())
-    val availableSectionIndices = _availableSectionIndices.asStateFlow()
-
-    private val _currentSectionIndex = MutableStateFlow(1)
-    val currentSectionIndex = _currentSectionIndex.asStateFlow()
-
-    // Store the cleaned base name (e.g. "WordQuizTravel") so we can switch numbers easily
-    private var currentSectionBaseName: String = ""
-    private var currentSectionTitle: String = ""
-    private var currentSkillLevel: String = "B1" // Default
-
-    // 2. This is what the BottomSheet observes.
-    // This is purely local memory (not saved to disk yet).
-    private val _sessionCorrectAnswers = MutableStateFlow(0)
-    val sessionCorrectAnswers = _sessionCorrectAnswers.asStateFlow()
-
-    // Keep a list of word IDs mastered during this specific session
-    private val masteredInThisSession = mutableListOf<String>()
-
     private val jsonParser = Json {
         ignoreUnknownKeys = true
         coerceInputValues = true
@@ -231,13 +299,9 @@ class VocabQuizViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        VocabQuizStatistics(
-            skillLevel = VocabQuizLevels.PERSONAL.description, //TODO: Wrong
-            quizNumber = 1,
-            title = "Quiz 1"
-        )
+        QuizStatistics(skillLevel = QuizLevels.UPPER.description, quizNumber = 1, title = "Quiz 1")
     )
-    val selectedLevel = mutableStateOf(VocabQuizLevels.PERSONAL)
+    val selectedLevel = mutableStateOf(QuizLevels.UPPER)
 
     val selectedQuiz = mutableStateOf<QuizDetail?>(null)
 
@@ -250,58 +314,29 @@ class VocabQuizViewModel @Inject constructor(
     val quizQandA = 10
     val quizMultipleChoice = 11
     val quizDefinitions = 12
-    val quizWordDefinition = 13
-    val currentFileFormat =
-        mutableStateOf(quizFillInTheBlanks) //either 7 (fill in the blank) or 10 (Multiple choice)
+    val currentFileFormat = mutableStateOf(quizFillInTheBlanks) //either 7 (fill in the blank) or 10 (Multiple choice)
 
     // ❌ OLD (Static):
     val availableQuizzesObsolete = derivedStateOf { selectedLevel.value.quizzes }
 
     // ✅ NEW (Dynamic):
     // This starts with the default English titles, but we can overwrite them later
-    private val _availableQuizzes =
-        MutableStateFlow<List<QuizDetail>>(VocabQuizLevels.PERSONAL.quizzes)
+    private val _availableQuizzes = MutableStateFlow<List<QuizDetail>>(QuizLevels.UPPER.quizzes)
     val availableQuizzes = _availableQuizzes.asStateFlow()
 
-    // 1. The Cache: Maps a Level (e.g. PERSONAL) to its list of localized QuizDetails
-    private val quizTitleCache = mutableMapOf<VocabQuizLevels, List<QuizDetail>>()
+    // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized QuizDetails
+    private val quizTitleCache = mutableMapOf<QuizLevels, List<QuizDetail>>()
+    private var infoUsedForCurrentQuestion = false // ✅ Track hint usage for the CURRENT question
 
-    private var _currentQuestionAttempts = 0
 
-    private var infoUsedForCurrentQuestion = false
-//    private var currentQuestionAttempts = 0
-    private val _showInfoSheet = MutableStateFlow(false)
-    val showInfoSheet = _showInfoSheet.asStateFlow()
-
-    // ✅ Helper flow to tell UI if data changed
-    // We map userAnswers map size. If > 0, it's dirty.
-//    val isDirty: StateFlow<Boolean> = snapshotFlow {
-//        userAnswers.value.isNotEmpty()
-//    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(), false)
-
-    private val _isDirty = MutableStateFlow(false)
-    val isDirty = _isDirty.asStateFlow()
-
-    /**
-     * A simple data class to hold the metadata for a single quiz.
-     *
-     * @param id A unique identifier for the quiz within its level (e.g., 1, 2, 3...).
-     * @param baseName The name of the JSON asset file for this quiz.
-     * @param title The human-readable display name for this quiz (e.g., "Quiz 1 - Simple Tenses").
-     */
-//    data class QuizDetail(
-//        val id: Int,
-//        val baseName: String, //e.g. "Quiz1Elementary-en"
-//        val title: String
-//    )
 
 
     init {
         // 1. Start background loading
-        //preloadLocalizedTitles()
+      //  preloadLocalizedTitles()
 
         selectedQuiz.value = selectedLevel.value.quizzes.firstOrNull()
-       // loadQuestions()
+        loadQuestions()
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
                 _isPremiumUser.value = purchasedStatus
@@ -310,194 +345,8 @@ class VocabQuizViewModel @Inject constructor(
                 }
             }
         }
-
-        vocabQuizRepository.debugPrintAllWordStates()
-    }
-    /**
-     * Loads a quiz specifically for a Category Section (e.g. "Personal Information")
-     */
-    fun loadSectionQuiz(categoryTitle: String) {
-        viewModelScope.launch(Dispatchers.IO) {
-            _isSectionMode.value = true
-
-         //   val level = userPreferencesRepository.selectedSkillLevelFlow.first()
-
-            // 1. Sanitize Title
-            val noB1Title = categoryTitle.replace(" (B1)", "").replace(" (B2)", "").replace(" (A2)", "").replace(" (A1)", "")  //personal title  //personal title  //personal title
-            val cleanTitle = noB1Title.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
-            currentSectionTitle = cleanTitle
-            val baseFilenamePrefix = "WordQuiz${cleanTitle}" // e.g. "WordQuizTravel"
-            currentSectionBaseName = baseFilenamePrefix
-            currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-
-//            val folderPath = "$level/$baseFilenamePrefix"
-
-            // 5. Save the prefix for pagination: "B1/WordQuizPersonal"
-           // val currentPathPrefix = "$folderPath/$fileBase"
-
-            // 2. Scan Assets to find how many exist
-            // We look for "WordQuizTravel1-en.json", "WordQuizTravel2-en.json", etc.
-            val foundIndices = mutableListOf<Int>()
-
-            try {
-                // List files inside "Quizzes/B1"
-                // The AssetManager path separator is always "/"
-                val assetFolder = "Quizzes/$currentSkillLevel"
-                val filesInFolder = application.assets.list(assetFolder)?.toList() ?: emptyList()
-
-                // Look for: "WordQuizPersonal1-en.json", "WordQuizPersonal2-en.json"
-                for (i in 1..10) {
-                    val targetFile = "${baseFilenamePrefix}${i}-en.json"
-                    if (filesInFolder.contains(targetFile)) {
-                        foundIndices.add(i)
-                    }else{
-                        break //will start at 1 and inc up
-                    }
-                }
-            } catch (e: Exception) {
-                Timber.e("Error scanning assets for section quizzes")
-            }
-
-            _availableSectionIndices.value = foundIndices
-
-            // 3. Load the first one (Default)
-            if (foundIndices.isNotEmpty()) {
-                loadSpecificSectionIndex(foundIndices.first())
-            } else {
-                // Handle empty case
-                //TODO: Give message to user
-                //TODO: Raise Fault
-                _questions.value = emptyList()
-            }
-        }
-    }
-    // Call this when "Rev iew Now" is tapped
-    fun loadSmartReviewQuiz() {
-        viewModelScope.launch(Dispatchers.IO) {
-            _isSectionMode.value = true // Hide pickers
-
-//            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
-            currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-            // 1. Get Due Items
-            //val dueWordsTest = vocabQuizRepository.getDueWords(limit = 10)
-            //Timber.i("${dueWordsTest}")
-
-            val dueItems = vocabQuizRepository.getDueItems(limit = 10,currentSkillLevel)
-
-            if (dueItems.isEmpty()) {
-                // Fallback: Just load random questions from current level?
-                // Or show "Nothing due!" message.
-//                _uiState99.update { it.copy(error = "No words due for review!") }
-                Timber.w("No words due for review!")
-                return@launch
-            }
-
-            Timber.i("${dueItems}")
-
-            // 2. Group by Category to minimize file reads
-            // Map: "Personal Information" -> List<"Name", "Age">
-            val itemsByCategory = dueItems.groupBy { it.category }
-            Timber.i("${itemsByCategory}")
-
-            val compiledQuestions = mutableListOf<WordQuizQuestion>()
-
-            // 3. Iterate Categories and Load Files
-            for ((categoryTitle, items) in itemsByCategory) {
-                if (categoryTitle.isEmpty()) continue
-
-                val cleanTitle = categoryTitle.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
-
-                // Track words we still need to find questions for in this category
-                val wordsToFind = items.map { it.word }.toMutableSet()
-
-                // 🔄 LOOP through File Indexes (1, 2, 3...)
-                var fileIndex = 1
-                var fileExists = true
-
-                while (fileExists && wordsToFind.isNotEmpty()) {
-
-                    // Construct filename: "WordQuizPersonal1-en", "WordQuizPersonal2-en"...
-                    val filename = "WordQuiz${cleanTitle}${fileIndex}-en"
-
-                    // Try to load
-                    val testData = readWordQuizDataFromAssets(application, filename, currentSkillLevel)
-
-                    if (testData != null) {
-                        // File exists, generate questions
-                        val questionsInFile = generateQuestionsFromData(testData)
-
-                        // Find matches
-                        val matches = questionsInFile.filter { question ->
-                            wordsToFind.contains(question.question) // OR question.question depending on your model mapping
-                            // Note: In your previous code you used 'question.question'.
-                            // Ensure this matches the WORD string exactly.
-                        }
-
-                        compiledQuestions.addAll(matches)
-
-                        // Remove found words from the "To Find" list so we stop early if done
-                        matches.forEach { wordsToFind.remove(it.title) /* or it.question */ }
-
-                        // Move to next file (1 -> 2)
-                        fileIndex++
-                    } else {
-                        // File returned null (e.g. File 4 doesn't exist), stop looking for this category
-                        fileExists = false
-                    }
-
-                    // Safety break (unlikely to have > 10 files per category)
-                    if (fileIndex > 10) fileExists = false
-                }
-            }
-
-            // 5. Update UI
-            if (compiledQuestions.isNotEmpty()) {
-                _questions.value = compiledQuestions.shuffled()
-
-                quizStatistics.value = quizStatistics.value.copy(
-                    title = "Smart Review (${compiledQuestions.size} words)",
-                    skillLevel = "Mixed Review"
-                )
-
-                resetQuiz()
-            } else {
-//                _uiState99.update { it.copy(error = "Could not find questions for review items.") }
-                Timber.w("No words due for review!")
-            }
-        }
-    }
-    // ✅ NEW: Switch between 1, 2, 3
-    fun onSectionIndexSelected(index: Int) {
-        if (_currentSectionIndex.value == index) return
-        loadSpecificSectionIndex(index)
     }
 
-    private fun loadSpecificSectionIndex(index: Int) {
-        viewModelScope.launch {
-            _currentSectionIndex.value = index
-
-            // Construct filename: "WordQuizTravel" + "2" + "-en"
-            // (You should use your getLocalizedFileName helper here if you want translation support)
-            val filename = "${currentSectionBaseName}${index}-en"
-
-//            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
-            currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-
-            val testData = readWordQuizDataFromAssets(application, filename, currentSkillLevel)
-
-            if (testData != null) {
-                _questions.value = generateQuestionsFromData(testData)
-
-                // Update title to show which number we are on
-                quizStatistics.value = quizStatistics.value.copy(
-                    title = "Quiz $index", // or fetch title from JSON
-                    skillLevel = "Section Practice"
-                )
-
-                resetQuiz()
-            }
-        }
-    }
     fun hideDailyRateLimitSheet() {
         _showRateDailyLimitSheet.value = false
     }
@@ -510,7 +359,6 @@ class VocabQuizViewModel @Inject constructor(
         _showRateLimitSheet.value = false
     }
     fun handleTap(sentence: String) {
-        // if (_playbackState.value is PlaybackState.Playing) return
 
         audioPlaybackRepository.stopPlayback()
 
@@ -558,121 +406,33 @@ class VocabQuizViewModel @Inject constructor(
 
         }
     }
-    fun playTrack(sentence: String) {
-
-        if (_playbackState.value is PlaybackState.Playing) return
-
-        if (!connectivityRepository.isCurrentlyOnline()) {
-            _playbackState.value = PlaybackState.Idle
-            return
-        }
-
-        viewModelScope.launch {
-            //AI Recommends ignore install day free
-//            val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
-            if (!isPremiumUser.value) { //if premium user don't check credits or is on day 1
-                if (rateLimiter.doIForbidCall()) {
-                    val failType = rateLimiter.canMakeCallWithResult()
-                    Timber.v("${failType.canICallAPI}")
-                    Timber.v("${failType.failReason}")
-                    Timber.v("${failType.timeLeftToWait}")
-                    if (!failType.canICallAPI) {
-                        if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) {
-                            _showRateDailyLimitSheet.value = true
-                            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statRateLimiterDayForbidCount)
-                        } else {
-                            _showRateHourlyLimitSheet.value = true
-                            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterHourForbidCount)
-                        }
-                    } else {
-                        _showRateLimitSheet.value = true
-                    }
-                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statRateLimiterForbidCount)
-                    return@launch
-                }
-            }
-
-
-            val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
-            val uniqueSentenceId = generateUniqueSentenceId(sentence, currentVoiceName)
-
-            val played = vocabRepository.playFromCacheIfFound(uniqueSentenceId)
-            if (played) {//short cut so user cna play cached sentences with no Internet connection
-                _playbackState.value = PlaybackState.Idle
-                ttsStatsRepository.updateTTSStatsWithoutCosts()
-                return@launch
-            }
-
-
-            val currentLanguageCode = userPreferencesRepository.selectedLanguageCodeFlow.first()
-
-            val result = vocabRepository.playTextToSpeech(
-                text = sentence,
-                uniqueSentenceId = uniqueSentenceId,
-                voiceName = currentVoiceName,
-                languageCode = currentLanguageCode
-            )
-
-            when (result) {
-                is PlaybackResult.PlayedFromNetworkAndCached -> {
-//                    if (todayIsNotAFreePassDay) {
-                        rateLimiter.recordCall()
-//                    }
-                    Timber.v(rateLimiter.printCurrentStatus)
-                    ttsStatsRepository.updateTTSStatsWithCosts(sentence, currentVoiceName)
-                }
-
-                is PlaybackResult.PlayedFromLocalCache -> {
-                    ttsStatsRepository.updateTTSStatsWithoutCosts()
-                }
-
-                is PlaybackResult.Failure -> {
-                    _playbackState.value =
-                        PlaybackState.Error(result.exception.message ?: "Playback failed")
-                }
-
-                PlaybackResult.CacheNotFound -> Timber.e("Cache found to exist but not played")
-            }
-            _playbackState.value = PlaybackState.Idle
-        }
-
-    }
 
     fun loadQuestions() {
         viewModelScope.launch {
 
-            //val level = userPreferencesRepository.selectedSkillLevelFlow.first()
-            currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-
-
             val quizDetail = selectedQuiz.value ?: selectedLevel.value.quizzes.first()
-            val baseName =
-                (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
+            val baseName = quizDetail.baseName//(selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
 
-            val finalFilename = getLocalizedFileName(appContext, baseName)
+            val finalFilename = "$baseName.json" //getLocalizedFileName(appContext, baseName)
 
-            val testData = readWordQuizDataFromAssets(appContext, finalFilename,currentSkillLevel)
+            val testData = readTestMyselfDataFromAssets(appContext, finalFilename)
 
             if (testData == null) {
                 Timber.wtf("Failed to parse JSON file: $finalFilename")
                 return@launch
             }
 
-
-            // val loadedTitle = testData.data.firstOrNull()?.title ?: quizDetail.title
-
-            if (testData.title?.isNotEmpty() == true) {
+            if (testData.title?.isNotEmpty() == true){
                 Timber.i("Sheet title is ${testData.title} ")
-//                quizStatistics.value = quizStatistics.value.copy(
-//                    title = testData.title
-//                )
             }
             quizStatistics.value = quizStatistics.value.copy(
-                title = quizDetail.title
+                title = quizDetail.title, filename = baseName,page = 1
             )
 
-            _questions.value = generateQuestionsFromData(testData)
+            _uiState.update { it.copy(testMyselfListRoot = testData)}
 
+
+            _questions.value = generateQuestionsFromData(testData)
 
             Timber.v("${_questions.value.count()}")
 
@@ -683,14 +443,10 @@ class VocabQuizViewModel @Inject constructor(
     }
 
     // A new function for the UI to call when a different level is picked.
-    fun onLevelSelectedObsolete(level: VocabQuizLevels) {
-        selectedLevel.value = level
-        // When the level changes, reset the selected quiz to the first one of the new level.
-        selectedQuiz.value = level.quizzes.firstOrNull()
-        loadQuestions()
-    }
-
-    fun onLevelSelected(level: VocabQuizLevels) {
+    fun onLevelSelected(level: QuizLevels) {
+        if (level == selectedLevel.value){
+            return // already selected
+        }
         selectedLevel.value = level
 
         // 1. Update the list of quizzes (Async)
@@ -703,33 +459,38 @@ class VocabQuizViewModel @Inject constructor(
         loadQuestions()
     }
 
+
     // A new function for the UI to call when a different quiz is picked from the dropdown.
     fun onQuizSelected(quizDetail: QuizDetail) {
         selectedQuiz.value = quizDetail
         loadQuestions()
     }
+    private fun generateQuestionsFromData(testData: TestMyselfListRoot): List<QuizQuestion> {
 
+        if (testData.fileFormat == quizQandA) {
+            currentFileFormat.value = quizQandA
+        }else if (testData.fileFormat == quizDefinitions) {
+            currentFileFormat.value = quizDefinitions
+        }else if (testData.fileFormat == quizMultipleChoice) {
+            currentFileFormat.value = quizMultipleChoice
+        } else {
+            currentFileFormat.value = quizFillInTheBlanks
+        }
 
-    private fun generateQuestionsFromData(testData: WordQuizRoot): List<WordQuizQuestion> {
+        //because spellings should follow each other
+        if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
 
-        currentFileFormat.value = quizWordDefinition
 
         return testData.data.flatMap { section ->
             section.sections.map { quizSection ->
-                val shuffledWords = quizSection.answers.shuffled()
-                val words = shuffledWords.map { it.answer }
-                val correctOption = quizSection.answers.firstOrNull { it.ok }?.answer ?: ""
+                val shuffledWords = quizSection.words.shuffled()
+                val words = shuffledWords.map { it.word }
+                val correctOption = quizSection.words.firstOrNull { it.ok }?.word ?: ""
                 val summary = quizSection.summary
-                val explain = quizSection.explain ?: DictionaryEntry()
+                val explain = quizSection.explain
                 val title = quizSection.title
-                WordQuizQuestion(
-                    quizSection.question,
-                    words,
-                    correctOption,
-                    summary,
-                    explain,
-                    title
-                )
+                val page = quizSection.page
+                QuizQuestion(quizSection.sentence, words, correctOption, summary,explain,title,page)
             }
         }
     }
@@ -743,7 +504,6 @@ class VocabQuizViewModel @Inject constructor(
         // Use the selectedQuiz for the ID (e.g. 6), fallback to 1 if null
         val currentQuizId = selectedQuiz.value?.id ?: 1
         val currentTitle = selectedQuiz.value?.title ?: "Quiz $currentQuizId"
-        _currentQuestionAttempts = 0
 
         quizStatistics.value = quizStatistics.value.copy(
             state = QuizState.NOT_STARTED,
@@ -761,18 +521,28 @@ class VocabQuizViewModel @Inject constructor(
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
 
-        //TODO: Do I need this?
-        //_isDirty.value = false
 
     }
 
+    /*
+    6. CLAUDE Mutable data class mutation won't trigger recomposition
+File: QuizViewModel.kt line 629
+
+quizStatistics.value.state = QuizState.COMPLETED
+
+This directly mutates a property on the data class held in mutableStateOf. Compose won't detect this change because the object reference hasn't changed. Recomposition won't fire.
+
+Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED)
+
+
+     */
     private fun saveQuizState() {
         if (quizStatistics.value.state != QuizState.NOT_STARTED) {
             //save stats from previous quiz try
 
             if (userAnswers.value.count() == _questions.value.count()) {
-                quizStatistics.value.state = QuizState.COMPLETED
-
+//                quizStatistics.value.state = QuizState.COMPLETED
+                quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED)
             }
         }
     }
@@ -783,22 +553,20 @@ class VocabQuizViewModel @Inject constructor(
         val now = System.currentTimeMillis()
 
         // 1. Check History BEFORE saving
-        val lastAttempt =
-            quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)
+        val lastAttempt = quizHistoryManager.getLastAttempt(qs.value.skillLevel, qs.value.quizNumber)
 
         viewModelScope.launch {
 
-            quizHistoryManager.saveAttempt(
-                qs.value.skillLevel,
-                qs.value.quizNumber,
-                qs.value.title,
-                qs.value.correct,
-                qs.value.tries
-            )
+            quizHistoryManager.saveAttempt(qs.value.skillLevel, qs.value.quizNumber, qs.value.title, qs.value.correct, qs.value.tries)
 
             // 3. Logic
             if (qs.value.correct < qs.value.tries) {
                 xpManager.registerAction(XpActionType.CompleteQuiz)
+                bannerManager.showBanner(
+                    title = "Almost Perfect",
+                    subtitle = "Not quite. Try again to get a perfect score. No info looking",
+                    seconds = 8 //so they can read it
+                )
             } else {
                 // Perfect Score
                 if (lastAttempt != null) {
@@ -808,28 +576,51 @@ class VocabQuizViewModel @Inject constructor(
                     if (diff > oneDayMillis) {
                         // ✅ Memory Boost
                         xpManager.registerAction(XpActionType.MemoryBoost)
+                        bannerManager.showBanner(
+                            title = "Master!",
+                            subtitle = "You finally finished it perfectly. You are fluent",
+                        )
                     } else {
                         // ⚠️ Grinding
                         // Maybe just give 5 XP?
                         xpManager.registerAction(XpActionType.ReplaySentence) // Re-use low value or make new one
+                        bannerManager.showBanner(
+                            title = "Too Early for Mastery",
+                            subtitle = "Too early for a perfect score. Wait till tomorrow to try again",
+                            seconds = 8
+                        )
                     }
+
                 } else {
                     // First Time Perfect
                     xpManager.registerAction(XpActionType.PerfectQuiz)
+                    bannerManager.showBanner(
+                        title = "Section Master!",
+                        subtitle = "You finished it perfectly. You are fluent",
+                    )
                 }
             }
 
+            val currentQuizFileName = quizStatistics.value.filename
+            usageQuizRepository.finishQuiz(
+                quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
+                finalScore = qs.value.correct
+
+            )
         }
     }
 
     fun updateAnswer(isCorrect: Boolean) {
-        _isDirty.value = true
         userAnswers.value[currentQuestionIndex.value] = isCorrect
+
+        val currentTries = quizStatistics.value.tries + 1
         quizStatistics.value = quizStatistics.value.copy(
             answered = userAnswers.value.size,
             correct = userAnswers.value.count { it.value },
-            tries = quizStatistics.value.tries + 1
+            tries = currentTries
         )
+
+
         if (quizStatistics.value.state == QuizState.NOT_STARTED) {
             quizStatistics.value = quizStatistics.value.copy(state = QuizState.IN_PROGRESS)
         }
@@ -837,100 +628,62 @@ class VocabQuizViewModel @Inject constructor(
 
         val currentQuestion = currentQuestionIndex.value + 1 // one based
         if (currentQuestion >= _questions.value.count()) { //completed
-            quizStatistics.value = quizStatistics.value.copy(
-                state = QuizState.COMPLETED,
-                title = quizStatistics.value.title
-            )
+            quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED, title = quizStatistics.value.title)
 
             onQuizFinished()
+            val fieldValue =  "${quizStatistics.value.quizNumber}:${quizStatistics.value.answered}:${quizStatistics.value.correct}:${quizStatistics.value.tries}"
+
         }
+
+        val page = quizStatistics.value.page
+        val currentQuizFileName = quizStatistics.value.filename
+        usageQuizRepository.recordQuestionResult(
+            quizId = currentQuizFileName, // e.g. "UsageQuiz1A1"
+            pageNumber = page,      // e.g. 5
+            attemptsTaken = currentTries,
+            infoUsedForCurrentQuestion
+        )
 
     }
 
-    fun readWordQuizDataFromAssetsObsolete(context: Context, fileName: String): WordQuizRoot? {
+    fun readTestMyselfDataFromAssets(context: Context, fileName: String): TestMyselfListRoot? {
         return try {
-            // Timber.v("reading json: $fileName")
 
-            val finalFilename = "$fileName.json"
-            val jsonString = context.assets.open("Quizzes/$finalFilename")
+
+            val jsonString = context.assets.open("Quizzes/UsageQuiz/$fileName")
                 .bufferedReader()
                 .use { it.readText() }
 
-            return jsonParser.decodeFromString<WordQuizRoot>(jsonString)
+            return jsonParser.decodeFromString<TestMyselfListRoot>(jsonString)
 
         } catch (e: Exception) {
             e.printStackTrace()
             null
         }
     }
-    fun readWordQuizDataFromAssets(context: Context, fileName: String, level:String): WordQuizRoot? {
-        // 1. Sanitize input: Remove folder prefix if passed, handle extension
-        val cleanName = File(fileName).name // Removes "Quizzes/" if passed accidentally
-        val finalName = if (cleanName.endsWith(".json")) cleanName else "$cleanName.json"
-        val fullPath = "Quizzes/$level/$finalName" //e.g. Quizzes/B1/WordQuizPersonal1-en.json
 
-        return try {
-            // 2. Read
-            val jsonString = context.assets.open(fullPath)
-                .bufferedReader()
-                .use { it.readText() }
-
-            // 3. Decode
-            jsonParser.decodeFromString<WordQuizRoot>(jsonString)
-
-        } catch (e: FileNotFoundException) {
-            Timber.e("❌ FILE NOT FOUND: '$fullPath'. (Check folder 'Quizzes' and case sensitivity)")
-
-            // Debug aid: List what IS there to help you fix it
-            val actualFiles = context.assets.list("Quizzes")?.joinToString() ?: "Empty/Missing Folder"
-            Timber.e("   -> Available files: $actualFiles")
-            null
-        } catch (e: Exception) {
-            Timber.e(e, "❌ Error parsing JSON in '$fullPath'")
-            null
-        }
-    }
     // Call this whenever the Level changes (e.g. from Elementary to Inter)
-    //TODO: I dont think I need this.
-    private fun refreshQuizTitlesForLevel(level: VocabQuizLevels) {
+    private fun refreshQuizTitlesForLevel(level: QuizLevels) {
         viewModelScope.launch {
 
-            val skillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
-            // 1. Get the list of default quizzes for this level
-            val defaultQuizzes = level.quizzes
 
-            // 2. Map them to potentially new titles by peeking at the JSON files
-            val updatedQuizzes = defaultQuizzes.map { quizDetail ->
-
-                // A. Resolve Filename (e.g. "...-hi.json")
-                val filename = getLocalizedFileName(appContext, quizDetail.baseName)
-
-                // B. Peek at the JSON to get the title
-                // Note: This needs to be fast. If reading the whole file is too slow,
-                // you might want to cache this or use a lighter "Metadata" read.
-                val title = peekTitleFromJson(filename,skillLevel) ?: quizDetail.title
-
-                // C. Return updated object
-                quizDetail.copy(title = title)
-            }
-
-            // 3. Publish the new list to the UI
-            _availableQuizzes.value = updatedQuizzes
+            _availableQuizzes.value =  level.quizzes//.updatedQuizzes
 
             // 4. Also ensure the currently selected quiz object is updated if needed
             val currentId = selectedQuiz.value?.id
             if (currentId != null) {
-                selectedQuiz.value = updatedQuizzes.find { it.id == currentId }
+                selectedQuiz.value = level.quizzes.find { it.id == currentId }
             }
         }
     }
 
+
+
     // Helper to read just the title
-    private fun peekTitleFromJson(filename: String, level:String): String? {
+    private fun peekTitleFromJsonObsolete(filename: String): String? {
         return try {
             // Reusing your existing reader logic, but maybe we can optimize later
-
-            val data = readWordQuizDataFromAssets(appContext, filename,level)
+            val data = readTestMyselfDataFromAssets(appContext, filename)
             // Get the title from the root object if you added it there, or the first section
             data?.title // Assuming you added 'val title: String' to TestMyselfListRoot
         } catch (e: Exception) {
@@ -938,11 +691,11 @@ class VocabQuizViewModel @Inject constructor(
         }
     }
 
-    private fun preloadLocalizedTitles() {
+    private fun preloadLocalizedTitlesObsolete() {
         viewModelScope.launch(Dispatchers.IO) {
 
             // Loop through all Enum Levels (Elementary, Inter, etc.)
-            VocabQuizLevels.entries.forEach { level ->
+            QuizLevels.entries.forEach { level ->
 
                 // Map the default quizzes to their localized versions
                 val localizedList = level.quizzes.map { quizDetail ->
@@ -953,7 +706,7 @@ class VocabQuizViewModel @Inject constructor(
                     // B. Peek at the JSON to get the title
                     // Note: We catch errors here so one bad file doesn't break the whole loop
                     val newTitle = try {
-                        val data = readWordQuizDataFromAssets(appContext, finalFileName,"B1")
+                        val data = readTestMyselfDataFromAssets(appContext, finalFileName)
                         // If file has a title, use it. Else fall back to Enum default.
                         data?.title ?: quizDetail.title
                     } catch (e: Exception) {
@@ -993,17 +746,15 @@ class VocabQuizViewModel @Inject constructor(
             }
         }
     }
-
-    private fun updateAvailableQuizzesFor(level: VocabQuizLevels) {
+    private fun updateAvailableQuizzesFor(level: QuizLevels) {
         // If cache is ready, use it. If not (still loading), use default English list.
         _availableQuizzes.value = quizTitleCache[level] ?: level.quizzes
     }
-
-    fun WordQuizRoot.shuffleLists() {
-        data.forEach { WordQuizList ->
-            WordQuizList.sections = WordQuizList.sections.shuffled() // Shuffle sections
-            WordQuizList.sections.forEach { section ->
-                section.answers = section.answers.shuffled() // Shuffle words within each section
+    fun TestMyselfListRoot.shuffleLists() {
+        data.forEach { testMyselfList ->
+            testMyselfList.sections = testMyselfList.sections.shuffled() // Shuffle sections
+            testMyselfList.sections.forEach { section ->
+                section.words = section.words.shuffled() // Shuffle words within each section
             }
         }
     }
@@ -1069,7 +820,6 @@ class VocabQuizViewModel @Inject constructor(
             append(sentence.substring(endIndex))
         }
     }
-
     // In QuizViewModel.kt
     private fun getLocalizedFileName(context: Context, baseName: String): String {
         // 1. Get current language code (e.g., "hi", "es", "zh")
@@ -1078,28 +828,27 @@ class VocabQuizViewModel @Inject constructor(
         val currentCode = java.util.Locale.getDefault().language
 
         // 2. Construct the localized filename
-        val localizedName = "$baseName-$currentCode.json"
-        val defaultName = "$baseName-en.json"
+//        val localizedName = "$baseName-$currentCode.json"
+        val localizedName = "$baseName.json"
+        val defaultName = "$baseName.json"
 
         // 3. Check if the localized file exists in Assets
         // We list files in the "Quizzes" folder to check existence efficiently
         val filesInAssets = try {
             context.assets.list("Quizzes")?.toList() ?: emptyList()
         } catch (e: IOException) {
-            Timber.e("⚠️ val filesInAssets Error: $defaultName")
             return defaultName
         }
 
         // 4. Return localized if found, otherwise default
         return if (filesInAssets.contains(localizedName)) {
-            // Timber.i("✅ Found localized quiz: $localizedName")
+           // Timber.i("✅ Found localized quiz: $localizedName")
             localizedName
         } else {
-            Timber.e("⚠️ Localized quiz not found, falling back to: $defaultName")
+            Timber.i("⚠️ Localized quiz not found, falling back to: $defaultName")
             defaultName
         }
     }
-
     private fun getLocalizedName(context: Context, baseName: String): String {
         // 1. Get current language code (e.g., "hi", "es", "zh")
         // Use your UserPreferences or system default
@@ -1127,23 +876,22 @@ class VocabQuizViewModel @Inject constructor(
             defaultName
         }
     }
+    fun incQuizStat(success:Boolean = true) {
 
-    fun incQuizStat(success: Boolean = true) {
+        val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName
+        val finalName = getLocalizedName(appContext, baseName) //no json
 
-//        val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName
-        val sectionName = currentSectionTitle//getLocalizedName(appContext, baseName) //no json
+        Timber.v(finalName)
 
-//        Timber.v(finalName)
-
-        val statName = if (success) "${statVocabQuizOkCount}_${currentSkillLevel}$sectionName" else "${statVocabQuizNotOKCount}_${currentSkillLevel}$sectionName"
+        val statName = if (success ) "${statQuizOkCount}_$finalName" else "${statQuizNotOKCount}_$finalName"
 
         //individual totals
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statName)
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statName)
 
         //Grand Totals
-        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statVocabQuizTotalCount)
-        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statVocabQuizTotalCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statQuizTotalCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statQuizTotalCount)
 
 
         viewModelScope.launch {
@@ -1155,79 +903,18 @@ class VocabQuizViewModel @Inject constructor(
         }
 
     }
-
-    fun vocabQuizAttemptStats(isCorrect: Boolean, word: String) {
-
-        //if this is called then an attempt has been made -- either OK or not OK
-
-        //
-
-
-        if (isCorrect) {
-            // If they got it right on try #1, tries = 1.
-            // If they got it right after 2 fails, tries = 3.
-
-            // Note: You need to track 'triesForCurrentQuestion' locally in VM
-            // because quizStatistics.value.tries might be total for the whole quiz.
-            _currentQuestionAttempts++
-            Timber.v("vocabQuizAttemptStats()  correct:$isCorrect word:$word  tries:$_currentQuestionAttempts")
-
-
-           // vocabQuizRepository.recordResult(word, _currentQuestionAttempts)
-        } else {
-            _currentQuestionAttempts++
-            Timber.v("vocabQuizAttemptStats()  correct:$isCorrect word:$word  tries:$_currentQuestionAttempts")
-
-        }
-    }
-
-    fun resetCurrentQuestionAttempts() {
-        _currentQuestionAttempts = 0
-    }
-
-    fun onInfoClicked() {
-//        _showInfoSheet.value = true
+    // 1. Call this when user taps the "i" button
+    fun onInfoButtonTapped() {
         infoUsedForCurrentQuestion = true
     }
-
-    fun markAnswerSelected(word: String,isCorrect:Boolean) {
-        val tries = _currentQuestionAttempts // You need to track attempts count per word
-
-        // ... Check if correct ...
-        if (isCorrect) {
-
-            // 1. Calculate Outcome
-            val outcome = when {
-                tries == 1 && !infoUsedForCurrentQuestion -> VocabQuizOutcome.FLAWLESS
-                tries == 1 && infoUsedForCurrentQuestion -> VocabQuizOutcome.ASSISTED
-                tries == 2 -> VocabQuizOutcome.STUMBLED
-                else -> VocabQuizOutcome.FAILED
-            }
-
-            // 2. Save to Repo
-//            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
-            vocabQuizRepository.recordResult(word, outcome,currentSectionTitle,currentSkillLevel)
-
-            // 3. Award XP (Ideas)
-            awardXP(outcome)
-
-            // Reset for next question
-            infoUsedForCurrentQuestion = false
-            _currentQuestionAttempts = 0
-        } else {
-            _currentQuestionAttempts++
-        }
+    fun resetInfoButtonTapped() {
+        infoUsedForCurrentQuestion = false
     }
 
-    fun getSectionTitle():String {
-        return currentSectionTitle
-    }
-    private fun awardXP(outcome: VocabQuizOutcome) {
-        when (outcome) {
-            VocabQuizOutcome.FLAWLESS -> xpManager.registerAction(XpActionType.PerfectWord, count = 5) // High Reward
-            VocabQuizOutcome.ASSISTED -> xpManager.registerAction(XpActionType.MasterWord, count = 2) // Small Reward
-            VocabQuizOutcome.STUMBLED -> xpManager.registerAction(XpActionType.MasterWord, count = 1) // Token Reward
-            VocabQuizOutcome.FAILED -> { /* No XP, try again later */ }
+    fun selectQuizById(quizId: Int) {
+        viewModelScope.launch {
+            val quizDetail = availableQuizzes.value.first { it.id == quizId }
+            onQuizSelected(quizDetail)
         }
     }
 }

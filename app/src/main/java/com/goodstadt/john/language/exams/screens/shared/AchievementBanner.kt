@@ -17,6 +17,7 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.goodstadt.john.language.exams.ui.theme.orangeLight
 
 @Composable
 fun AchievementBanner(
@@ -89,7 +90,7 @@ fun AchievementBanner(
                         Text(
                             text = subtitle,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.primary
+                            color = orangeLight//MaterialTheme.colorScheme.primary
                         )
                     }
                 }

@@ -133,7 +133,7 @@ fun UsageColdStartView(title: String, subTitle:String, onStartFirst: () -> Unit)
             modifier = Modifier.padding(vertical = 16.dp)
         )
         Button(onClick = onStartFirst) {
-            Text("Start Quiz 1", color = orangeLight)
+            Text("Start Quiz", color = orangeLight)
         }
     }
 }

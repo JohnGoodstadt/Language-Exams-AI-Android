@@ -78,14 +78,14 @@ import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.viewmodels.QuizLevels
-import com.goodstadt.john.language.exams.viewmodels.QuizViewModel
+import com.goodstadt.john.language.exams.viewmodels.VocabQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun QuizScreen(
-    viewModel: QuizViewModel = hiltViewModel()
+fun VocabQuizScreen(
+    viewModel: VocabQuizViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
 
@@ -677,11 +677,14 @@ fun QuizScreen(
                         // 1. Close the sheet
                         showDashboardSheet = false
 
-                        //TODO: for now just hide
+
+
+//                        val quizDetail = availableQuizzes.first { it.id == quizId }
+//                        viewModel.onQuizSelected(quizDetail)                        //TODO: for now just hide
 
                         // 2. (Optional) Auto-select the quiz
                         // You can ask the ViewModel to switch to this quiz ID immediately
-                        // viewModel.selectQuizById(quizId)
+                         viewModel.selectQuizById(quizId)
                     }
                 )
             }

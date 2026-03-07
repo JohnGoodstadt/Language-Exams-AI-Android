@@ -3,6 +3,10 @@ package com.goodstadt.john.language.exams.screens.me
 //import com.goodstadt.john.language.exams.data.PremiumStatus
 import androidx.activity.ComponentActivity
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -51,7 +55,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
+//import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -60,7 +64,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.zIndex
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.Gender
@@ -70,6 +76,7 @@ import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntr
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.shared.AchievementBanner
 import com.goodstadt.john.language.exams.screens.shared.HelpInfoSheet
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceCategoryDropdownHeader
 import com.goodstadt.john.language.exams.screens.shared.speakerSelection.VoiceSelectionRow
@@ -79,6 +86,8 @@ import com.goodstadt.john.language.exams.utils.AnalyticsHelper
 import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
 import timber.log.Timber
+import androidx.compose.ui.Alignment
+import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -103,6 +112,7 @@ fun SettingsScreen(
 
     val showHelpSheet by viewModel.showHelpSheet.collectAsState()
     val helpSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    val showCelebration by viewModel.showCelebrationSheet.collectAsStateWithLifecycle()
 
     var showSignInSheet by remember { mutableStateOf(false) }
     val isDailyRateLimitingSheetVisible by viewModel.showRateDailyLimitSheet.collectAsState()
@@ -558,6 +568,44 @@ fun SettingsScreen(
             }
         }
     }
+//    if (showCelebration) {
+
+// 1. Move the visibility logic inside AnimatedVisibility
+//        AnimatedVisibility(
+//            visible = showCelebration,
+//            enter = slideInVertically(
+//                initialOffsetY = { -it } // Start from above the screen (-height)
+//            ) + fadeIn(),
+//            exit = slideOutVertically(
+//                targetOffsetY = { -it } // Slide back up to hidden
+//            ) + fadeOut()
+//        ) {
+//            // 2. Sound and Timer logic
+//            LaunchedEffect(Unit) {
+//                viewModel.playSuccessSound()
+//                delay(5000L)
+//                viewModel.onDismissCelebration()
+//            }
+//
+//            // 3. The Layout (Note: BoxScope is provided by the parent or a surrounding Box)
+//            Box(modifier = Modifier.fillMaxSize()) {
+//                Box(
+//                    modifier = Modifier
+//                        .align(Alignment.TopCenter)
+//                        .zIndex(10f)
+//                        .padding(top = 16.dp) // Give it some breathing room from the status bar
+//                ) {
+//                    AchievementBanner(
+//                        isVisible = true, // Always true here because AnimatedVisibility handles the alpha
+//                        title = "Grammar Master!",
+//                        subtitle = "You've unlocked a new milestone",
+//                        onDismiss = { viewModel.onDismissCelebration() }
+//                    )
+//                }
+//            }
+//        }
+//    }
+
     if (showSignInSheet) {
         SignInBottomSheet(
             onDismiss = { showSignInSheet = false }//,
@@ -818,9 +866,9 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Debug Something",
-                    currentValue = "Print Vocab (D)",
+                    currentValue = "Showo Celebration (D)",
                     onClick = {
-                        viewModel.printWords()
+                        viewModel.showCelebtation()
 //                        showTryOutVoicesSheet = true
 //                            viewModel.onDebugCrashlyitcs()
 //                            viewModel.userPreferences()
@@ -914,8 +962,6 @@ fun SettingsScreen(
     }
 
 }
-
-
 
 @Composable
 fun IAPCancelled() {

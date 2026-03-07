@@ -21,15 +21,23 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.goodstadt.john.language.exams.managers.BannerManager
+import com.goodstadt.john.language.exams.managers.GlobalBannerWrapper
+import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.screens.MainScreen
 import com.goodstadt.john.language.exams.screens.shared.LoadingOverlay
 import com.goodstadt.john.language.exams.ui.theme.LanguageExamsAITheme
 import com.goodstadt.john.language.exams.viewmodels.MainViewModel
 import com.google.android.material.progressindicator.CircularProgressIndicator
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+    @Inject
+    lateinit var bannerManager: BannerManager
+    @Inject lateinit var globalLoadingManager: GlobalLoadingManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -45,9 +53,11 @@ class MainActivity : ComponentActivity() {
                         modifier = Modifier.fillMaxSize(),
                         color = MaterialTheme.colorScheme.background
                 ) {
-                    MainScreen()
-                    if (isLoading) {
-                        LoadingOverlay()
+                    GlobalBannerWrapper(bannerManager = bannerManager,globalLoadingManager = globalLoadingManager) {
+                        MainScreen()
+                        if (isLoading) {
+                            LoadingOverlay()
+                        }
                     }
                 }
             }

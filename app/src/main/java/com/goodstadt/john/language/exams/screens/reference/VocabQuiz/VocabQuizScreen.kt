@@ -74,12 +74,14 @@ import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.viewmodels.VocabQuizLevels
 import com.goodstadt.john.language.exams.viewmodels.VocabQuizViewModel
+import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
 @Composable
 fun VocabQuizScreen(
-    viewModel: VocabQuizViewModel = hiltViewModel(),
+    viewModel: VocabSectionQuizViewModel = hiltViewModel(),
+//    viewModel: VocabQuizViewModel = hiltViewModel(),
     autoLoad: Boolean = true
 ) {
     val context = LocalContext.current
@@ -435,19 +437,19 @@ fun VocabQuizScreen(
 
             Spacer(Modifier.height(4.dp))
 
-            Row(
-                horizontalArrangement = Arrangement.SpaceBetween,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                InfoButtonRow(infoDisabled = infoDisabled,
-                    onClick = {
-
-                        if (infoDisabled == false) {
-                            showInfoBottomSheet = true
-                            viewModel.onInfoClicked()
-                        }
-                    })
-            }// row
+//            Row(
+//                horizontalArrangement = Arrangement.SpaceBetween,
+//                modifier = Modifier.fillMaxWidth()
+//            ) {
+//                InfoButtonRow(infoDisabled = infoDisabled,
+//                    onClick = {
+//
+//                        if (infoDisabled == false) {
+//                            showInfoBottomSheet = true
+//                            viewModel.onInfoClicked()
+//                        }
+//                    })
+//            }// row
 
             Row(
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -474,6 +476,15 @@ fun VocabQuizScreen(
                         modifier = Modifier.size(36.dp)
                     )
                 }
+
+                InfoButtonRow(infoDisabled = infoDisabled,
+                    onClick = {
+
+                        if (infoDisabled == false) {
+                            showInfoBottomSheet = true
+                            viewModel.onInfoClicked()
+                        }
+                    })
 
                 IconButton(
                     onClick = {
