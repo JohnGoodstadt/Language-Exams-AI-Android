@@ -306,7 +306,7 @@ class AppConfigRepository @Inject constructor(
      *
      * @return The parsed AppUIManifest, or a default/empty manifest on failure.
      */
-    fun getAppUiManifestLive(): AppUIManifest {
+    fun getAppUiManifest(): AppUIManifest {
         val crashlytics = FirebaseCrashlytics.getInstance()
 
         // Get the single manifest JSON string from Remote Config
@@ -339,7 +339,7 @@ class AppConfigRepository @Inject constructor(
             parseDefaultManifest()
         }
     }
-    fun getAppUiManifest(): AppUIManifest {
+    fun getAppUiManifestDEBUG(): AppUIManifest {
         val crashlytics = FirebaseCrashlytics.getInstance()
 
         // 1. Determine which JSON string to use
