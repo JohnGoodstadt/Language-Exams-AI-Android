@@ -1,6 +1,8 @@
 package com.goodstadt.john.language.exams.viewmodels
 
 import android.app.Activity
+import androidx.lifecycle.DefaultLifecycleObserver
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
@@ -11,8 +13,10 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBoughtCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPDailyHitCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPGoUnlimitedOnClickCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPHourlyHitCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPSheetDisplayedCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPWaitForResetOnClickCount
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.google.firebase.crashlytics.FirebaseCrashlytics
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -37,7 +41,7 @@ class RateLimitSheetViewModel  @Inject constructor(
     private val ttsStatsRepository : TTSStatsRepository,
     private val rateLimiter: SimpleRateLimiter,
     private val billingRepository: BillingRepository
-): ViewModel() {
+): ViewModel(), DefaultLifecycleObserver {
 
     private val _uiState = MutableStateFlow(RateLimitUiState())
     val uiState = _uiState.asStateFlow()
@@ -88,4 +92,25 @@ class RateLimitSheetViewModel  @Inject constructor(
             )
         }
     }
+
+    fun flushStats() {
+        if (ttsStatsRepository.isFebOrMarch2026()) {
+            viewModelScope.launch {
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
+                ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
+            }
+        }
+    }
+
+    fun incGoUnlimited() {
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPGoUnlimitedOnClickCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPGoUnlimitedOnClickCount)
+    }
+    fun incWaitForReset() {
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPWaitForResetOnClickCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPWaitForResetOnClickCount)
+    }
+
+
+
 }

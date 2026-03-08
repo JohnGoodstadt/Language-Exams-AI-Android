@@ -22,9 +22,12 @@ import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.repository.ContentRepository
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizTotalCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizNotOKCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
@@ -1158,10 +1161,24 @@ class VocabSectionQuizViewModel @Inject constructor(
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statName)
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statName)
 
-        //Grand Totals
-        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statVocabQuizTotalCount)
-        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statVocabQuizTotalCount)
+        if (success) { //Vocab totals
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statVocabQuizOkCount)
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statVocabQuizOkCount)
+        }else{
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statVocabQuizNotOKCount)
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statVocabQuizNotOKCount)
+        }
 
+        //Vocab totals
+        if (success) { //Only show success Usage totals -- 1 per question
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statVocabQuizTotalCount)
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statVocabQuizTotalCount)
+        }
+        //Global Totals
+        if (success) { //Only show success totals -- 1 per question
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statQuizTotalCount)
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statQuizTotalCount)
+        }
 
         viewModelScope.launch {
             //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats

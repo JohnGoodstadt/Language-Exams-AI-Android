@@ -25,6 +25,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -39,6 +40,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.screens.rateLlmit.LimitRow
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
@@ -71,6 +75,25 @@ fun RateLimitDailyPaywallBottomSheet (
 
     LaunchedEffect(true) {
         viewModel.incStatForDaily()
+    }
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+// 2. Use DisposableEffect to manage the observer
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            // You can react to specific events here if needed
+            if (event == Lifecycle.Event.ON_STOP) { }
+        }
+
+        lifecycleOwner.lifecycle.addObserver(observer)
+
+        onDispose {
+            // 3. THIS IS THE KEY:
+            // This runs the moment the BottomSheet is removed from the UI.
+            // We call the cleanup logic directly in the ViewModel.
+            viewModel.flushStats()
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
     }
 
     // ModalBottomSheet in Material 3
@@ -152,6 +175,7 @@ fun RateLimitDailyPaywallBottomSheet (
                     scope.launch {
                         AnalyticsHelper.logPaywallResponse(context, "accepted", "limit_daily")
                         sheetState.hide()
+                        viewModel.incGoUnlimited()
                         onBuyPremiumButtonPressed()
                         onCloseSheet() // Remove after animation
                     }
@@ -169,6 +193,7 @@ fun RateLimitDailyPaywallBottomSheet (
                 onClick = {
                     scope.launch {
                         AnalyticsHelper.logPaywallResponse(context, "rejected", "limit_daily")
+                        viewModel.incWaitForReset()
                         sheetState.hide()
                         onCloseSheet() // Remove after animation
                     }

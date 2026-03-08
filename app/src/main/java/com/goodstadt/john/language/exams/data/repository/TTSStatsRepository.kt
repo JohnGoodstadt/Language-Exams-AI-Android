@@ -202,7 +202,10 @@ class TTSStatsRepository @Inject constructor(
         const val statVocabQuizOkCount = "statVocabQuizOkCount"
         const val statVocabQuizNotOKCount = "statVocabQuizNotOKCount"
         const val statVocabQuizTotalCount = "statVocabQuizTotalCount"
-
+        //Usage Quiz Screen
+        const val statUsageQuizOkCount = "statUsageQuizOkCount"
+        const val statUsageQuizNotOKCount = "statUsageQuizNotOKCount"
+        const val statUsageQuizTotalCount = "statUsageQuizTotalCount"
 
         //IAP
         const val statIAPSheetDisplayedCount = "statIAPSheetDisplayedCount"
@@ -213,6 +216,13 @@ class TTSStatsRepository @Inject constructor(
         const val statIAPUnavailableCount = "statIAPUnavailableCount"
         const val statIAPNotReadyCount = "statIAPNotReadyCount"
         const val statIAPFailedCount = "statIAPFailedCount"
+        const val statIAPGoUnlimitedOnClickCount = "statIAPGoUnlimitedOnClickCount"
+        const val statIAPWaitForResetOnClickCount = "statIAPWaitForResetOnClickCount"
+        const val statIAPLaunchPurchaseCount = "statIAPLaunchPurchaseCount"
+        const val statIAPProcessPurchaseCount = "statIAPProcessPurchaseCount"
+        const val statIAPAlreadyPurchasedCount = "statIAPAlreadyPurchasedCount"
+        const val statIAPPurchaseExceptionCount = "statIAPPurchaseExceptionCount"
+        const val statIAPNoPremiumPurchaseCount = "statIAPNoPremiumPurchaseCount"
 
         //word of the day
         const val statWOTDHitCount = "statWOTDHitCount"
@@ -506,8 +516,8 @@ class TTSStatsRepository @Inject constructor(
         inc(fsDOC.USER, MP3PlayedCount)
         inc(fsDOC.GlobalStats, MP3PlayedCount)
     }
-    fun incUserStatCount(fieldNamw:String,value:Int = 1) {
-        inc(fsDOC.USER, fieldNamw,value)
+    fun incUserStatCount(fieldName:String,value:Int = 1) {
+        inc(fsDOC.USER, fieldName,value)
     }
     fun incUserOpenAITotalTokenCount(count:Int) {
         inc(fsDOC.USER, OpenAICallCount)

@@ -55,6 +55,10 @@ import java.util.Date
 import javax.inject.Inject
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizNotOKCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizOkCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizTotalCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
 
 enum class QuizState(val description: String) {
     NOT_STARTED("Not Started"),
@@ -492,8 +496,8 @@ class UsageQuizViewModel @Inject constructor(
         }
 
         //because spellings should follow each other
-        if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
-
+//        if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
+        testData.shuffleLists()
 
         return testData.data.flatMap { section ->
             section.sections.map { quizSection ->
@@ -705,61 +709,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
     }
 
-    private fun preloadLocalizedTitlesObsolete() {
-        viewModelScope.launch(Dispatchers.IO) {
 
-            // Loop through all Enum Levels (Elementary, Inter, etc.)
-            QuizLevels.entries.forEach { level ->
-
-                // Map the default quizzes to their localized versions
-                val localizedList = level.quizzes.map { quizDetail ->
-
-                    // A. Resolve Filename (e.g. "...-hi.json")
-                    val finalFileName = getLocalizedFileName(appContext, quizDetail.baseName)
-
-                    // B. Peek at the JSON to get the title
-                    // Note: We catch errors here so one bad file doesn't break the whole loop
-                    val newTitle = try {
-                        val data = readTestMyselfDataFromAssets(appContext, finalFileName)
-                        // If file has a title, use it. Else fall back to Enum default.
-                        data?.title ?: quizDetail.title
-                    } catch (e: Exception) {
-                        quizDetail.title
-                    }
-
-                    // Return the updated QuizDetail object
-                    quizDetail.copy(title = newTitle)
-                }
-
-                // Save to Cache
-                quizTitleCache[level] = localizedList
-            }
-
-            // ✅ UPDATE UI: Once loading is done, refresh the *currently* displayed list
-            // so the user sees the change if they are already looking at the screen.
-            withContext(Dispatchers.Main) {
-                updateAvailableQuizzesFor(selectedLevel.value)
-
-                // 2. FIX: Refresh the currently selected quiz text
-                // We take the ID of the current selection (e.g. ID: 1, Title: "Simple Tenses")
-                // And find its "Twin" in the new localized list (e.g. ID: 1, Title: "Tenses (Hindi)")
-                val current = selectedQuiz.value
-
-                if (current != null) {
-                    val updatedVersion = _availableQuizzes.value.find { it.id == current.id }
-
-                    if (updatedVersion != null) {
-                        // This triggers the Dropdown to redraw with the new title
-                        selectedQuiz.value = updatedVersion
-
-                        // Optional: Update stats title to match if needed
-                        // quizStatistics.value = quizStatistics.value.copy(title = updatedVersion.title)
-                    }
-                }
-
-            }
-        }
-    }
     private fun updateAvailableQuizzesFor(level: QuizLevels) {
         // If cache is ready, use it. If not (still loading), use default English list.
         _availableQuizzes.value = quizTitleCache[level] ?: level.quizzes
@@ -893,20 +843,35 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     fun incQuizStat(success:Boolean = true) {
 
         val baseName = (selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName
-        val finalName = getLocalizedName(appContext, baseName) //no json
+        //val finalName = getLocalizedName(appContext, baseName) //no json
 
-        Timber.v(finalName)
+      //  Timber.v(finalName)
 
-        val statName = if (success ) "${statQuizOkCount}_$finalName" else "${statQuizNotOKCount}_$finalName"
+        val statName = if (success ) "${statQuizOkCount}_$baseName" else "${statQuizNotOKCount}_$baseName"
 
         //individual totals
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statName)
         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statName)
 
-        //Grand Totals
-        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statQuizTotalCount)
-        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statQuizTotalCount)
+        if (success) { //Usage totals
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statUsageQuizOkCount)
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statUsageQuizOkCount)
+        }else{
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statUsageQuizNotOKCount)
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statUsageQuizNotOKCount)
+        }
 
+        //Usage totals
+        if (success) { //Only show success Usage totals -- 1 per question
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statUsageQuizTotalCount)
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statUsageQuizTotalCount)
+        }
+
+        //Global Totals
+        if (success) { //Only show success totals -- 1 per question
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statQuizTotalCount)
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statQuizTotalCount)
+        }
 
         viewModelScope.launch {
             //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats

@@ -25,6 +25,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableStateOf
@@ -42,6 +43,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.goodstadt.john.language.exams.screens.rateLlmit.LimitRow
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.AnalyticsHelper
@@ -80,6 +84,24 @@ fun RateLimitHourlyPaywallBottomSheet(
 
     }
 
+    val lifecycleOwner = LocalLifecycleOwner.current
+// 2. Use DisposableEffect to manage the observer
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            // You can react to specific events here if needed
+            if (event == Lifecycle.Event.ON_STOP) { }
+        }
+
+        lifecycleOwner.lifecycle.addObserver(observer)
+
+        onDispose {
+            // 3. THIS IS THE KEY:
+            // This runs the moment the BottomSheet is removed from the UI.
+            // We call the cleanup logic directly in the ViewModel.
+            viewModel.flushStats()
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
+    }
     // ModalBottomSheet in Material 3
     @OptIn(ExperimentalMaterial3Api::class) //
     ModalBottomSheet(
@@ -123,8 +145,13 @@ fun RateLimitHourlyPaywallBottomSheet(
 
 
             HorizontalDivider(modifier = Modifier.padding(vertical = 8.dp))
+            val message = if (limitMessage != null){
+                "Credits refill in: $limitMessage"
+            }else{
+                "You've reached your rate limit. Please try again later"
+            }
             Text(
-                text = "Credits refill in: $limitMessage",
+                text = message,//"Credits refill in: $limitMessage",
                 color = Color(0xFFFF9800), // Orange
                 fontWeight = FontWeight.Bold
             )
@@ -149,6 +176,7 @@ fun RateLimitHourlyPaywallBottomSheet(
                         coroutineScope.launch {
                             sheetState.hide() // Slide out animation
                             AnalyticsHelper.logPaywallResponse(context,"accepted", "limit_hourly")
+                            viewModel.incGoUnlimited()
                             onBuyPremiumButtonPressed()
                             onCloseSheet()
                         }
@@ -170,6 +198,7 @@ fun RateLimitHourlyPaywallBottomSheet(
                     viewModel.incIAPCancel()
                     coroutineScope.launch {
                         AnalyticsHelper.logPaywallResponse(context, "rejected", "limit_hourly")
+                        viewModel.incWaitForReset()
                         sheetState.hide()
                         onCloseSheet()
                     }

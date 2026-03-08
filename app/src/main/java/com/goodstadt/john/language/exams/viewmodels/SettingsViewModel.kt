@@ -760,9 +760,16 @@ class SettingsViewModel @Inject constructor(
         }
     }
 
+    fun resetRateLimits(){
+        if (BuildConfig.DEBUG) {
+            Timber.i(rateLimiter.printableStatus())
+            rateLimiter.resetRateLimits()
+            Timber.i(rateLimiter.printableStatus())
+        }
+    }
     fun debugAppRateLimiting(){
 
-        if (isItMe()) { //JG onSamsung phone
+        if (true || isItMe()) { //JG onSamsung phone
             Timber.i(rateLimiter.printableStatus())
 //            return rateLimiter.printableStatus()
         }

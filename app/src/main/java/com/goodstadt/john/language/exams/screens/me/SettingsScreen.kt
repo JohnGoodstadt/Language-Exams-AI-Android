@@ -447,7 +447,8 @@ fun SettingsScreen(
         }
     }
 
-    if (uiState.showIAPBottomSheet) {
+    // if (uiState.showIAPBottomSheet) {
+    if (false) {
         ModalBottomSheet(
             onDismissRequest = { viewModel.onBottomSheetDismissed() },
             sheetState = sheetStateIAP,
@@ -485,16 +486,16 @@ fun SettingsScreen(
 
                 Spacer(modifier = Modifier.height(24.dp))
 
-                // 2. Value Proposition (Instead of just limits)
-                Column(
-                    verticalArrangement = Arrangement.spacedBy(12.dp),
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    BenefitRow("Unlimited AI Pronunciation", "No more ${uiState.hourlyLimit} per hour limits")
-                    BenefitRow("Complete A1-B2 Vocabulary", "All 3,000+ official exam words")
-                    BenefitRow("Lifetime Access", "One-time payment. No subscriptions.")
-                    BenefitRow("Pass Your Exam", "Focus on the words that actually matter")
-                }
+//                // 2. Value Proposition (Instead of just limits)
+//                Column(
+//                    verticalArrangement = Arrangement.spacedBy(12.dp),
+//                    modifier = Modifier.fillMaxWidth()
+//                ) {
+//                    BenefitRow("Unlimited AI Pronunciation", "No more ${uiState.hourlyLimit} per hour limits")
+//                    BenefitRow("Complete A1-B2 Vocabulary", "All 3,000+ official exam words")
+//                    BenefitRow("Lifetime Access", "One-time payment. No subscriptions.")
+//                    BenefitRow("Pass Your Exam", "Focus on the words that actually matter")
+//                }
 
                 Spacer(modifier = Modifier.height(32.dp))
 
@@ -551,7 +552,13 @@ fun SettingsScreen(
         }
     }
 
-
+    if (uiState.showIAPBottomSheet) {
+        PremiumUpgradeSheet(
+            onDismiss = {
+                viewModel.onBottomSheetDismissed()
+            }
+        )
+    }
 
     if (showHelpSheet) {
         ModalBottomSheet(
@@ -866,9 +873,11 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Debug Something",
-                    currentValue = "UsageQuizRepository (D)",
+                    currentValue = "Rate Limiting (D)",
                     onClick = {
-                        viewModel.debugVocabQuizRepository()
+                        viewModel.resetRateLimits()
+//                        viewModel.debugAppRateLimiting()
+//                        viewModel.debugVocabQuizRepository()
 //                        viewModel.showCelebtation()
 //                        showTryOutVoicesSheet = true
 //                            viewModel.onDebugCrashlyitcs()
@@ -972,7 +981,7 @@ fun IAPCancelled() {
 
 // Helper component for the benefit list
 @Composable
-fun BenefitRow(title: String, subtitle: String) {
+fun BenefitRowMoved(title: String, subtitle: String) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Icon(
             imageVector = Icons.Default.CheckCircle,

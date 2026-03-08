@@ -20,9 +20,14 @@ import com.android.billingclient.api.QueryPurchasesParams
 import com.android.billingclient.api.queryProductDetails
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.FirestoreRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPAlreadyPurchasedCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBoughtCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPFailedCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPLaunchPurchaseCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPNoPremiumPurchaseCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPNotReadyCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPProcessPurchaseCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPPurchaseExceptionCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPUnavailableCount
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.GoogleApiAvailability
@@ -237,6 +242,8 @@ class BillingRepository @Inject constructor(
      */
     fun launchPurchase(activity: Activity) {
         Timber.w("BillingRepository.launchPurchase()")
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPLaunchPurchaseCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPLaunchPurchaseCount)
         if (!billingClient.isReady) {
             _billingError.value = "Cannot make purchase. Billing service not connected."
             Timber.e("launchPurchase failed: BillingClient not ready.")
@@ -264,6 +271,8 @@ class BillingRepository @Inject constructor(
      */
     private suspend fun processPurchases(purchases: List<Purchase>) {
         val premiumPurchase = purchases.firstOrNull { it.products.contains(PRODUCT_ID) }
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPProcessPurchaseCount)
+        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPProcessPurchaseCount)
 
         if (premiumPurchase != null && premiumPurchase.purchaseState == Purchase.PurchaseState.PURCHASED) {
             if (!premiumPurchase.isAcknowledged) {
@@ -292,28 +301,36 @@ class BillingRepository @Inject constructor(
                         val product:String = premiumPurchase.products.first()
                         firestoreRepository.fbUpdateUsePurchasedProperty(premiumPurchase.purchaseToken,orderId, product)
                         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPBoughtCount)
+                        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPBoughtCount)
                         Timber.i("✅ Purchase acknowledged and user status set to premium.")
                     } else {
                         _billingError.value = "Failed to acknowledge purchase: ${ackResult.debugMessage}"
                         firestoreRepository.fbUpdateUseFailedPurchasedProperty(ackResult.debugMessage)
                         ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPFailedCount)
+                        ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPFailedCount)
                         Timber.e("Acknowledgment failed. Code: ${ackResult.responseCode}")
                     }
                 } catch (e: Exception) {
                     // Catch any exceptions from the coroutine bridge itself
                     _billingError.value = "An error occurred during purchase acknowledgment: ${e.message}"
                     firestoreRepository.fbUpdateUseFailedPurchasedProperty(e.message.toString())
-                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPFailedCount)
+                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPPurchaseExceptionCount)
+                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPPurchaseExceptionCount)
                     Timber.e(e, "Exception during acknowledgePurchase.")
                 }
                 // --- END OF CORRECTION ---
 
             } else {
                 // Existing, already acknowledged purchase. User is premium.
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPAlreadyPurchasedCount)
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPAlreadyPurchasedCount)
+
                 _isPurchased.value = true
                 Timber.d("Existing premium purchase found.")
             }
         } else {
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPNoPremiumPurchaseCount)
+            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPNoPremiumPurchaseCount)
             // No valid, purchased premium item found. User is not premium.
             _isPurchased.value = false
         }
