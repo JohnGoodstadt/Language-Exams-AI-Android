@@ -1,142 +1,142 @@
 {
 	"fileformat": 10,
 	"location": 0,
-	"sheetname": "UsageQuiz2B1-tr",
+	"sheetname": "UsageQuiz1B1-tr",
 	"title": "Common Usage Corrections",
 	"updatedDate": 0,
 	"data": [
 		{
 			"title": "Choose the correct answer for each question.",
-			"description": "Common grammar patterns for Vietnamese learners",
+			"description": "Common grammar patterns for Turkish learners",
 			"sortorder": 1,
 			"learningTitle": "Refining Global English Usage",
 			"learningPoints": [
-				"Focuses on grammar patterns commonly influenced by Vietnamese language structure.",
-				"Improves control of adjective forms such as interested vs interesting.",
-				"Builds accuracy with articles, plurals, and prepositions.",
-				"Strengthens sentence structure for professional and academic communication.",
-				"Helps avoid common mistakes in international English contexts.",
+				"Focuses on grammar patterns commonly influenced by Turkish sentence structure.",
+				"Improves control of prepositions and auxiliary verbs.",
+				"Builds accuracy with articles, verb forms, and natural phrasing.",
+				"Strengthens sentence structure for international communication.",
+				"Helps avoid frequent mistakes in professional and academic English.",
 				"ESOL B1–B2 and aligns with IELTS 5.5–6.5 and TOEFL iBT 60–94 score ranges."
 			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"summary": "Use '-ed' adjectives to describe feelings.",
-					"explain": "Adjectives ending in '-ed' describe how a person feels.",
+					"summary": "Use the correct preposition after 'married'.",
+					"explain": "In English we say 'married to someone', not 'married with someone'.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "I am very interested in music." },
-						{ "ok": false, "word": "I am very interesting in music." },
-						{ "ok": false, "word": "I very interested in music." }
+						{ "ok": true, "word": "He is married to her." },
+						{ "ok": false, "word": "He is married with her." },
+						{ "ok": false, "word": "He married with her." }
 					]
 				},
 				{
 					"title": "",
 					"page": 2,
-					"summary": "Use articles with singular countable nouns.",
-					"explain": "Singular countable nouns require an article such as 'a' or 'the'.",
+					"summary": "Use articles with singular nouns.",
+					"explain": "English requires an article before singular countable nouns.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "She bought a new laptop yesterday." },
-						{ "ok": false, "word": "She bought new laptop yesterday." },
-						{ "ok": false, "word": "She bought the new laptop yesterday one." }
+						{ "ok": true, "word": "I bought a new car yesterday." },
+						{ "ok": false, "word": "I bought new car yesterday." },
+						{ "ok": false, "word": "I bought the new car yesterday one." }
 					]
 				},
 				{
 					"title": "",
 					"page": 3,
-					"summary": "Use plural forms for countable nouns.",
-					"explain": "Plural nouns require the '-s' ending when referring to more than one.",
+					"summary": "Avoid unnecessary prepositions.",
+					"explain": "The verb 'discuss' does not require the word 'about'.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "Many students study English here." },
-						{ "ok": false, "word": "Many student study English here." },
-						{ "ok": false, "word": "Many students studies English here." }
+						{ "ok": true, "word": "We discussed the problem yesterday." },
+						{ "ok": false, "word": "We discussed about the problem yesterday." },
+						{ "ok": false, "word": "We discussed on the problem yesterday." }
 					]
 				},
 				{
 					"title": "",
 					"page": 4,
-					"summary": "Use correct verb form after 'to'.",
-					"explain": "After 'to', the base form of the verb should be used.",
+					"summary": "Use auxiliary verbs in questions.",
+					"explain": "Questions in English require 'do/does/did'.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "I want to improve my English skills." },
-						{ "ok": false, "word": "I want improve my English skills." },
-						{ "ok": false, "word": "I want to improving my English skills." }
+						{ "ok": true, "word": "Do you understand the instructions?" },
+						{ "ok": false, "word": "You understand the instructions?" },
+						{ "ok": false, "word": "Understand you the instructions?" }
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
-					"summary": "Use correct prepositions with common verbs.",
-					"explain": "The verb 'listen' is followed by the preposition 'to'.",
+					"summary": "Use present simple for general habits.",
+					"explain": "Present continuous should not be used for general habits.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "She listens to music every day." },
-						{ "ok": false, "word": "She listens music every day." },
-						{ "ok": false, "word": "She listen to music every day." }
+						{ "ok": true, "word": "She drinks coffee every morning." },
+						{ "ok": false, "word": "She is drinking coffee every morning." },
+						{ "ok": false, "word": "She drink coffee every morning." }
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
-					"summary": "Use 'there is/there are' for existence.",
-					"explain": "'There are' is used when referring to plural objects.",
+					"summary": "Use correct verb forms after 'want to'.",
+					"explain": "After 'to', the base form of the verb is required.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "There are many restaurants in this area." },
-						{ "ok": false, "word": "Have many restaurants in this area." },
-						{ "ok": false, "word": "There have many restaurants in this area." }
+						{ "ok": true, "word": "I want to learn English." },
+						{ "ok": false, "word": "I want learn English." },
+						{ "ok": false, "word": "I want to learning English." }
 					]
 				},
 				{
 					"title": "",
 					"page": 7,
-					"summary": "Use correct past tense forms.",
-					"explain": "Past actions require past tense verbs such as 'went'.",
+					"summary": "Use correct expressions for lights.",
+					"explain": "In English we say 'turn on' or 'turn off' the light.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "We went to the beach last weekend." },
-						{ "ok": false, "word": "We go to the beach last weekend." },
-						{ "ok": false, "word": "We gone to the beach last weekend." }
+						{ "ok": true, "word": "Please turn on the light." },
+						{ "ok": false, "word": "Please open the light." },
+						{ "ok": false, "word": "Please make open the light." }
 					]
 				},
 				{
 					"title": "",
 					"page": 8,
-					"summary": "Use 'be' verbs in sentences.",
-					"explain": "English sentences usually require a form of the verb 'to be'.",
+					"summary": "Use correct plural forms.",
+					"explain": "Plural nouns require '-s'.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "She is very happy today." },
-						{ "ok": false, "word": "She very happy today." },
-						{ "ok": false, "word": "She be very happy today." }
+						{ "ok": true, "word": "Many people work in this company." },
+						{ "ok": false, "word": "Many person work in this company." },
+						{ "ok": false, "word": "Many peoples work in this company." }
 					]
 				},
 				{
 					"title": "",
 					"page": 9,
-					"summary": "Use correct word order in questions.",
-					"explain": "Questions require auxiliary verbs such as 'do' or 'does'.",
+					"summary": "Use correct past tense forms.",
+					"explain": "Past actions require past tense verbs.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "Do you like Vietnamese food?" },
-						{ "ok": false, "word": "You like Vietnamese food?" },
-						{ "ok": false, "word": "Like you Vietnamese food?" }
+						{ "ok": true, "word": "She went to the meeting yesterday." },
+						{ "ok": false, "word": "She go to the meeting yesterday." },
+						{ "ok": false, "word": "She gone to the meeting yesterday." }
 					]
 				},
 				{
 					"title": "",
 					"page": 10,
-					"summary": "Use natural English expressions instead of translated structures.",
-					"explain": "English commonly uses 'make a decision' rather than 'do a decision'.",
+					"summary": "Use natural English word order.",
+					"explain": "English word order is Subject–Verb–Object.",
 					"sentence": "Choose the correct sentence.",
 					"words": [
-						{ "ok": true, "word": "She made an important decision yesterday." },
-						{ "ok": false, "word": "She did an important decision yesterday." },
-						{ "ok": false, "word": "She make an important decision yesterday." }
+						{ "ok": true, "word": "I finished the report yesterday." },
+						{ "ok": false, "word": "Yesterday finished I the report." },
+						{ "ok": false, "word": "I yesterday the report finished." }
 					]
 				}
 			]

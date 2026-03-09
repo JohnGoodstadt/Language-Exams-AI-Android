@@ -59,6 +59,7 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizTotalCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
+import java.util.Locale
 
 enum class QuizState(val description: String) {
     NOT_STARTED("Not Started"),
@@ -424,8 +425,12 @@ class UsageQuizViewModel @Inject constructor(
 
             val quizDetail = selectedQuiz.value ?: selectedLevel.value.quizzes.first()
             val baseName = quizDetail.baseName//(selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
+            val regionCode = Locale.getDefault().country
+            val localizedBaseName = resolveLocalizedBaseName(baseName, regionCode)
+            val finalFilename = "$localizedBaseName.json"
 
-            val finalFilename = "$baseName.json" //getLocalizedFileName(appContext, baseName)
+            Timber.v("region $regionCode filename $finalFilename")
+            //val finalFilename = "$baseName.json" //getLocalizedFileName(appContext, baseName)
 
             val testData = readTestMyselfDataFromAssets(appContext, finalFilename)
 
@@ -497,7 +502,8 @@ class UsageQuizViewModel @Inject constructor(
 
         //because spellings should follow each other
 //        if (testData.fileFormat == quizFillInTheBlanks) testData.shuffleLists()
-        testData.shuffleLists()
+        //TODO: for 1B1 quiz want the first question to be the same - to match ads manager
+       // testData.shuffleLists()
 
         return testData.data.flatMap { section ->
             section.sections.map { quizSection ->
@@ -894,6 +900,40 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         viewModelScope.launch {
             val quizDetail = availableQuizzes.value.first { it.id == quizId }
             onQuizSelected(quizDetail)
+        }
+    }
+    private fun resolveLocalizedBaseName(baseName: String, regionCode: String?): String {
+        // If no region or it's already English, stick to base
+        if (regionCode.isNullOrBlank() || regionCode.lowercase() == "gb" || regionCode.lowercase() == "us") {
+            return baseName
+        }
+
+        // Only attempt swap if the filename follows the "-en" pattern
+        if (baseName.endsWith("-en")) {
+            val countrySuffix = regionCode.lowercase() // "vn", "in", etc.
+            val candidateName = baseName.replace("-en", "-$countrySuffix")
+
+            // Check if the file "candidateName.json" actually exists in Assets
+            return if (assetExists("Quizzes/UsageQuiz/$candidateName.json")) {
+                candidateName // Found specialized file!
+            } else {
+                baseName // Fallback to English
+            }
+        }
+
+        return baseName
+    }
+
+    /**
+     * Helper to check if a file exists in the assets folder
+     */
+    private fun assetExists(fileName: String): Boolean {
+        return try {
+            val stream = appContext.assets.open(fileName)
+            stream.close()
+            true
+        } catch (e: Exception) {
+            false
         }
     }
 }
