@@ -1,0 +1,145 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz1B1-eg",
+	"title": "Common Usage Corrections",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Common grammar patterns for Egyptian learners",
+			"sortorder": 1,
+			"learningTitle": "Refining Global English Usage",
+			"learningPoints": [
+				"Focuses on grammar patterns commonly influenced by Arabic sentence structure.",
+				"Improves control of present perfect and past time expressions.",
+				"Builds accuracy with articles, prepositions, and auxiliary verbs.",
+				"Strengthens sentence structure for professional and academic communication.",
+				"Helps avoid frequent mistakes in international English contexts.",
+				"ESOL B1–B2 and aligns with IELTS 5.5–6.5 and TOEFL iBT 60–94 score ranges."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Use present perfect with 'for' to show duration.",
+					"explain": "Present perfect is used for actions that started in the past and continue to the present.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "I have lived here for five years." },
+						{ "ok": false, "word": "I live here since five years." },
+						{ "ok": false, "word": "I am living here since five years." }
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Use correct prepositions after verbs.",
+					"explain": "The verb 'listen' requires the preposition 'to'.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "She listens to music every day." },
+						{ "ok": false, "word": "She listens music every day." },
+						{ "ok": false, "word": "She listen to music every day." }
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Avoid unnecessary prepositions after certain verbs.",
+					"explain": "The verb 'discuss' does not require 'about'.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "We discussed the problem yesterday." },
+						{ "ok": false, "word": "We discussed about the problem yesterday." },
+						{ "ok": false, "word": "We discussed on the problem yesterday." }
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Use correct auxiliary verbs in questions.",
+					"explain": "Questions in English require auxiliary verbs such as 'do' or 'does'.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "Do you understand the lesson?" },
+						{ "ok": false, "word": "You understand the lesson?" },
+						{ "ok": false, "word": "Understand you the lesson?" }
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Use correct verb forms after 'to'.",
+					"explain": "After 'to', the base form of the verb should be used.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "I want to improve my English." },
+						{ "ok": false, "word": "I want improve my English." },
+						{ "ok": false, "word": "I want to improving my English." }
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Use correct expressions for taking photos.",
+					"explain": "In English we say 'take a photo', not 'make a photo'.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "She took a photo of the beach." },
+						{ "ok": false, "word": "She made a photo of the beach." },
+						{ "ok": false, "word": "She did a photo of the beach." }
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Use correct expressions with electronic devices.",
+					"explain": "In English we say 'turn on the TV', not 'open the TV'.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "Please turn on the TV." },
+						{ "ok": false, "word": "Please open the TV." },
+						{ "ok": false, "word": "Please make open the TV." }
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Use correct plural forms.",
+					"explain": "Plural nouns require '-s'.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "Many people work in this office." },
+						{ "ok": false, "word": "Many person work in this office." },
+						{ "ok": false, "word": "Many peoples work in this office." }
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Use articles with singular nouns.",
+					"explain": "Singular countable nouns require an article such as 'a' or 'the'.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "He bought a new phone yesterday." },
+						{ "ok": false, "word": "He bought new phone yesterday." },
+						{ "ok": false, "word": "He bought the new phone yesterday one." }
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Use correct adjective forms.",
+					"explain": "'Bored' describes a person's feeling; 'boring' describes something that causes boredom.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{ "ok": true, "word": "I am bored because the movie is boring." },
+						{ "ok": false, "word": "I am boring because the movie is bored." },
+						{ "ok": false, "word": "I boring because the movie boring." }
+					]
+				}
+			]
+		}
+	]
+}
