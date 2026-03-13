@@ -378,7 +378,6 @@ class TTSStatsRepository @Inject constructor(
         }
     }
     fun isFebOrMarch2026() : Boolean {
-//        val now = LocalDate.now()
         val now = LocalDate.now()
 
         return when {

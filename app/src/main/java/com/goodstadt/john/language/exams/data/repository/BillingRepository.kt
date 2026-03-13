@@ -333,6 +333,19 @@ class BillingRepository @Inject constructor(
             ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPNoPremiumPurchaseCount)
             // No valid, purchased premium item found. User is not premium.
             _isPurchased.value = false
+
+            // Gemini extra code to stop statIAPNoPremiumPurchaseCount incrementing when not necessary
+            // ONLY increment the "Error/Missing" count if the list wasn't empty.
+            // If the list is empty, it just means they are a normal free user.
+            if (purchases.isNotEmpty() && premiumPurchase == null) {
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statIAPNoPremiumPurchaseCount)
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statIAPNoPremiumPurchaseCount)
+                Timber.w("User has other purchases, but NOT the Premium SKU.")
+            } else {
+                // This is a normal free user.
+                // Do not increment an "Error" counter here.
+                Timber.d("Normal free user: No purchases found.")
+            }
         }
     }
 

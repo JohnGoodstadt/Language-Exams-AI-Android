@@ -191,13 +191,7 @@ enum class QuizLevels(val quizzes: List<QuizDetail>) {
         )
     );
 
-    val descriptionObsolete: String
-        get() = when(this) {
-            ELEMENTARY -> "Elementary"
-            INTER -> "Inter" // Explicitly string match if needed
-            UPPER -> "Upper"
-            ADVANCED -> "Advanced"
-        }
+
     val description: String
         get() = when(this) {
             ELEMENTARY -> "Beginner"
@@ -869,7 +863,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
         //Usage totals
         if (success) { //Only show success Usage totals -- 1 per question
-            ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statUsageQuizTotalCount)
+                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.USER, statUsageQuizTotalCount)
             ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats, statUsageQuizTotalCount)
         }
 
