@@ -419,11 +419,11 @@ class UsageQuizViewModel @Inject constructor(
 
             val quizDetail = selectedQuiz.value ?: selectedLevel.value.quizzes.first()
             val baseName = quizDetail.baseName//(selectedQuiz.value ?: selectedLevel.value.quizzes.first()).baseName //+ ".json"
-            val regionCode = Locale.getDefault().country
-            val localizedBaseName = resolveLocalizedBaseName(baseName, regionCode)
+//            val regionCode = "IN"//Locale.getDefault().country
+            val localizedBaseName = resolveLocalizedBaseName(baseName)
             val finalFilename = "$localizedBaseName.json"
 
-            Timber.v("region $regionCode filename $finalFilename")
+            Timber.v("filename $finalFilename")
             //val finalFilename = "$baseName.json" //getLocalizedFileName(appContext, baseName)
 
             val testData = readTestMyselfDataFromAssets(appContext, finalFilename)
@@ -896,7 +896,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             onQuizSelected(quizDetail)
         }
     }
-    private fun resolveLocalizedBaseName(baseName: String, regionCode: String?): String {
+    private fun resolveLocalizedBaseNameoriginal(baseName: String, regionCode: String?): String {
         // If no region or it's already English, stick to base
         if (regionCode.isNullOrBlank() || regionCode.lowercase() == "gb" || regionCode.lowercase() == "us") {
             return baseName
@@ -927,6 +927,46 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             stream.close()
             true
         } catch (e: Exception) {
+            false
+        }
+    }
+    private fun resolveLocalizedBaseName(baseName: String): String {
+        val locale = Locale.getDefault()
+        val regionCode = "in"// locale.country.lowercase() // returns "in", "vn", "tr", etc.
+
+        // 1. If no region or it's a standard English region, stick to baseName
+        val englishDefaults = listOf("gb", "us", "au", "ca")
+        if (regionCode.isBlank() || englishDefaults.contains(regionCode)) {
+            return baseName
+        }
+
+        // 2. Only attempt swap if the filename follows the "-en" pattern
+        if (baseName.endsWith("-en")) {
+            // Construct the candidate (e.g., "UsageQuiz1A1-in")
+            val candidateName = baseName.replace("-en", "-$regionCode")
+
+            // 3. Check if the file "candidateName.json" actually exists in Assets
+            // Adjust the path to match your specific folder structure
+            val assetPath = "Quizzes/UsageQuiz/$candidateName.json"
+
+            return if (assetExists(assetPath)) {
+                candidateName // Found tailored region file!
+            } else {
+                baseName // Fallback to standard English
+            }
+        }
+
+        return baseName
+    }
+
+    /**
+     * Helper to check if a file exists in the Assets folder
+     */
+    private fun assetExistsContext(path: String): Boolean {
+        return try {
+            // We attempt to open the stream; if it succeeds, the file exists.
+            appContext.assets.open(path).use { true }
+        } catch (e: IOException) {
             false
         }
     }
