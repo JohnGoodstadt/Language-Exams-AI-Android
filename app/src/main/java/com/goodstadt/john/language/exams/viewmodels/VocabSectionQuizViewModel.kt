@@ -191,7 +191,13 @@ class VocabSectionQuizViewModel @Inject constructor(
     private var _allQuestions: List<WordQuizQuestion> = emptyList()
     private val _activeFilters = MutableStateFlow<Set<WordMasteryLevel>>(emptySet())
     val activeFilters: StateFlow<Set<WordMasteryLevel>> = _activeFilters.asStateFlow()
-    val totalQuestionCount: Int get() = _allQuestions.size
+    val totalQuestionCount: Int get() = if (_allSectionQuestions.isNotEmpty()) _allSectionQuestions.size else _allQuestions.size
+
+    // Section-wide questions (all JSON files combined) and pagination
+    private var _allSectionQuestions: List<WordQuizQuestion> = emptyList()
+    private var _paginatedQuestions: List<List<WordQuizQuestion>> = emptyList()
+    private val pageSize = 10
+    val filteredQuestionCount: Int get() = _paginatedQuestions.sumOf { it.size }
 
 
     private val _showUpgradeAppSheet = MutableStateFlow(false)
@@ -330,54 +336,52 @@ class VocabSectionQuizViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             _isSectionMode.value = true
 
-         //   val level = userPreferencesRepository.selectedSkillLevelFlow.first()
-
             // 1. Sanitize Title
-            val noB1Title = categoryTitle.replace(" (B1)", "").replace(" (B2)", "").replace(" (A2)", "").replace(" (A1)", "")  //personal title  //personal title  //personal title
+            val noB1Title = categoryTitle.replace(" (B1)", "").replace(" (B2)", "").replace(" (A2)", "").replace(" (A1)", "")
             val cleanTitle = noB1Title.replace(" ", "").replace(Regex("[^A-Za-z0-9]"), "")
             currentSectionTitle = cleanTitle
             val baseFilenamePrefix = "WordQuiz${cleanTitle}" // e.g. "WordQuizTravel"
             currentSectionBaseName = baseFilenamePrefix
             currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
 
-//            val folderPath = "$level/$baseFilenamePrefix"
-
-            // 5. Save the prefix for pagination: "B1/WordQuizPersonal"
-           // val currentPathPrefix = "$folderPath/$fileBase"
-
-            // 2. Scan Assets to find how many exist
-            // We look for "WordQuizTravel1-en.json", "WordQuizTravel2-en.json", etc.
-            val foundIndices = mutableListOf<Int>()
+            // 2. Load ALL JSON files into a single combined list
+            val allQuestions = mutableListOf<WordQuizQuestion>()
 
             try {
-                // List files inside "Quizzes/B1"
-                // The AssetManager path separator is always "/"
                 val assetFolder = "Quizzes/$currentSkillLevel"
                 val filesInFolder = application.assets.list(assetFolder)?.toList() ?: emptyList()
 
-                // Look for: "WordQuizPersonal1-en.json", "WordQuizPersonal2-en.json"
                 for (i in 1..10) {
                     val targetFile = "${baseFilenamePrefix}${i}-en.json"
                     if (filesInFolder.contains(targetFile)) {
-                        foundIndices.add(i)
-                    }else{
-                        break //will start at 1 and inc up
+                        val filename = "${baseFilenamePrefix}${i}-en"
+                        val testData = readWordQuizDataFromAssets(application, filename, currentSkillLevel)
+                        if (testData != null) {
+                            allQuestions.addAll(generateQuestionsFromData(testData))
+                        }
+                    } else {
+                        break
                     }
                 }
             } catch (e: Exception) {
-                Timber.e("Error scanning assets for section quizzes")
+                Timber.e("Error scanning/loading assets for section quizzes")
             }
 
-            _availableSectionIndices.value = foundIndices
+            _allSectionQuestions = allQuestions
 
-            // 3. Load the first one (Default)
-            if (foundIndices.isNotEmpty()) {
-                loadSpecificSectionIndex(foundIndices.first())
+            // 3. Paginate and display
+            if (allQuestions.isNotEmpty()) {
+                withContext(Dispatchers.Main) {
+                    applyFiltersAndPaginate()
+
+                    quizStatistics.value = quizStatistics.value.copy(
+                        title = "Quiz 1",
+                        skillLevel = "Section Practice"
+                    )
+                }
             } else {
-                // Handle empty case
-                //TODO: Give message to user
-                //TODO: Raise Fault
                 _questions.value = emptyList()
+                _availableSectionIndices.value = emptyList()
             }
         }
     }
@@ -385,6 +389,7 @@ class VocabSectionQuizViewModel @Inject constructor(
     fun loadSmartReviewQuiz() {
         viewModelScope.launch(Dispatchers.IO) {
             _isSectionMode.value = true // Hide pickers
+            _allSectionQuestions = emptyList() // Not a section quiz, don't use pagination
 
 //            val level = userPreferencesRepository.selectedSkillLevelFlow.first()
             currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
@@ -480,7 +485,28 @@ class VocabSectionQuizViewModel @Inject constructor(
     // ✅ NEW: Switch between 1, 2, 3
     fun onSectionIndexSelected(index: Int) {
         if (_currentSectionIndex.value == index) return
-        loadSpecificSectionIndex(index)
+
+        // If we have section-wide paginated data, use it directly
+        if (_allSectionQuestions.isNotEmpty()) {
+            _currentSectionIndex.value = index
+            val pageIndex = index - 1 // Convert 1-based to 0-based
+            _allQuestions = if (pageIndex in _paginatedQuestions.indices) {
+                _paginatedQuestions[pageIndex]
+            } else {
+                emptyList()
+            }
+            _questions.value = _allQuestions
+            currentQuestionIndex.value = 0
+            userAnswers.value.clear()
+
+            quizStatistics.value = quizStatistics.value.copy(
+                title = "Quiz $index",
+                skillLevel = "Section Practice"
+            )
+        } else {
+            // Fallback to file-based loading (non-section mode)
+            loadSpecificSectionIndex(index)
+        }
     }
 
     private fun loadSpecificSectionIndex(index: Int) {
@@ -773,6 +799,7 @@ class VocabSectionQuizViewModel @Inject constructor(
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
         _activeFilters.value = emptySet()
+        _paginatedQuestions = emptyList()
 
         //TODO: Do I need this?
         //_isDirty.value = false
@@ -789,12 +816,20 @@ class VocabSectionQuizViewModel @Inject constructor(
             current.add(level)
         }
         _activeFilters.value = current
-        applyFilters()
+        if (_allSectionQuestions.isNotEmpty()) {
+            applyFiltersAndPaginate()
+        } else {
+            applyFilters()
+        }
     }
 
     fun selectAllFilters() {
         _activeFilters.value = emptySet()
-        applyFilters()
+        if (_allSectionQuestions.isNotEmpty()) {
+            applyFiltersAndPaginate()
+        } else {
+            applyFilters()
+        }
     }
 
     private fun applyFilters() {
@@ -808,6 +843,38 @@ class VocabSectionQuizViewModel @Inject constructor(
             }
         }
         currentQuestionIndex.value = 0
+    }
+
+    /**
+     * Filters all section questions by mastery level, then re-paginates into pages of [pageSize].
+     * Updates availableSectionIndices so the UI shows the correct number of page buttons.
+     */
+    private fun applyFiltersAndPaginate() {
+        val filters = _activeFilters.value
+        val filtered = if (filters.isEmpty()) {
+            _allSectionQuestions
+        } else {
+            _allSectionQuestions.filter { q ->
+                val mastery = vocabQuizRepository.getWordStats(q.question).masteryLevel
+                filters.contains(mastery)
+            }
+        }
+
+        // Paginate into chunks of pageSize (10)
+        _paginatedQuestions = filtered.chunked(pageSize)
+
+        // Update available page indices (1-based)
+        _availableSectionIndices.value = (1.._paginatedQuestions.size).toList()
+
+        // Reset to first page
+        _currentSectionIndex.value = if (_paginatedQuestions.isNotEmpty()) 1 else 0
+
+        // Set current page questions
+        _allQuestions = if (_paginatedQuestions.isNotEmpty()) _paginatedQuestions[0] else emptyList()
+        _questions.value = _allQuestions
+
+        currentQuestionIndex.value = 0
+        userAnswers.value.clear()
     }
 
     private fun saveQuizState() {

@@ -243,9 +243,10 @@ fun VocabQuizScreen(
 
             // Question counter with filter info
             if (activeFilters.isNotEmpty()) {
-                if (questions.isNotEmpty()) {
+                val filteredTotal = viewModel.filteredQuestionCount
+                if (filteredTotal > 0) {
                     Text(
-                        text = "Showing ${questions.size} of ${viewModel.totalQuestionCount}",
+                        text = "Showing $filteredTotal of ${viewModel.totalQuestionCount}",
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.padding(bottom = 4.dp)
