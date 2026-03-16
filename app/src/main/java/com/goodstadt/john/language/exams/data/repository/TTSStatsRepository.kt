@@ -377,12 +377,12 @@ class TTSStatsRepository @Inject constructor(
 
         }
     }
-    fun isFebOrMarch2026() : Boolean {
+    fun isMarchOrApril2026() : Boolean {
         val now = LocalDate.now()
 
         return when {
             // Execute code for Feb/March 2026
-            now.year == 2026 && now.month in listOf(Month.FEBRUARY, Month.MARCH) -> {
+            now.year == 2026 && now.month in listOf(Month.MARCH, Month.APRIL) -> {
                 true
             }
             else -> {

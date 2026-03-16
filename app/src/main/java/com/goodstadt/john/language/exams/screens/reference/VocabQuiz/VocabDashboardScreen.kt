@@ -20,13 +20,16 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Psychology
+import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedButton
@@ -211,13 +214,32 @@ fun VocabQuizActiveView(
             }
         }
 
-        // 2. Breakdown Title
-        Text(
-            "Progress",
-            style = MaterialTheme.typography.titleLarge,
-            color = MaterialTheme.colorScheme.primary,
-            fontWeight = FontWeight.Bold
-        )
+        // 2. Breakdown Title + Info Button
+        var showScoringInfo by remember { mutableStateOf(false) }
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                "Progress",
+                style = MaterialTheme.typography.titleLarge,
+                color = MaterialTheme.colorScheme.primary,
+                fontWeight = FontWeight.Bold
+            )
+            IconButton(onClick = { showScoringInfo = true }) {
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = "How scoring works",
+                    tint = MaterialTheme.colorScheme.primary
+                )
+            }
+        }
+
+        if (showScoringInfo) {
+            ScoringInfoBottomSheet(onDismiss = { showScoringInfo = false })
+        }
 
         // 3. Category List
         state.categoryStats.forEach { stat ->
@@ -369,6 +391,106 @@ fun SuggestionButton(title: String, onClick: () -> Unit) {
         Text(title)
         Spacer(Modifier.width(8.dp))
         Icon(Icons.Default.ArrowForward, null, modifier = Modifier.size(16.dp))
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun ScoringInfoBottomSheet(onDismiss: () -> Unit) {
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = sheetState,
+        containerColor = MaterialTheme.colorScheme.surface
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp, vertical = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            Text(
+                "How Scoring Works",
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold
+            )
+
+            // How Each Answer Is Marked
+            Text(
+                "How Each Answer Is Marked",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold
+            )
+            ScoringRow(emoji = "\u2B50", title = "Flawless", description = "You picked the right answer on your first try.")
+            ScoringRow(emoji = "\uD83D\uDCA1", title = "Assisted", description = "You got it right, but used the hint button.")
+            ScoringRow(emoji = "\uD83D\uDD04", title = "Stumbled", description = "You picked a wrong answer first, then got it right.")
+            ScoringRow(emoji = "\u274C", title = "Failed", description = "You gave up or skipped the question.")
+
+            HorizontalDivider()
+
+            // Your Progress Levels
+            Text(
+                "Your Progress Levels",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold
+            )
+            LevelRow(emoji = "\uD83C\uDD95", title = "New", description = "You haven't been quizzed on this word yet.", schedule = "Appears in your next quiz")
+            LevelRow(emoji = "\uD83D\uDD34", title = "Struggling", description = "You couldn't get this one right \u2014 don't worry, it happens!", schedule = "Comes back in 10 minutes")
+            LevelRow(emoji = "\uD83D\uDFE0", title = "Learning", description = "You got there in the end, but needed a few tries.", schedule = "Comes back in 6 hours")
+            LevelRow(emoji = "\uD83D\uDFE1", title = "Review", description = "You got it right \u2014 nice work! Now let's make sure it sticks.", schedule = "Comes back tomorrow morning")
+            LevelRow(emoji = "\uD83D\uDFE2", title = "Mastered", description = "You got it right 3 times in a row \u2014 you really know this one!", schedule = "Done! Won't come back unless you reset")
+
+            HorizontalDivider()
+
+            // Tip
+            Card(
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                shape = RoundedCornerShape(10.dp),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Row(modifier = Modifier.padding(12.dp)) {
+                    Text("\uD83D\uDCA1 ", style = MaterialTheme.typography.bodyLarge)
+                    Text(
+                        "Don't cram! If a word isn't due yet, answering it again won't advance your progress. Spacing out your practice helps you remember for longer.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+
+            Spacer(Modifier.height(24.dp))
+        }
+    }
+}
+
+@Composable
+private fun ScoringRow(emoji: String, title: String, description: String) {
+    Row(
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Text(emoji, style = MaterialTheme.typography.titleMedium)
+        Column {
+            Text(title, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.SemiBold)
+            Text(description, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+    }
+}
+
+@Composable
+private fun LevelRow(emoji: String, title: String, description: String, schedule: String) {
+    Row(
+        horizontalArrangement = Arrangement.spacedBy(12.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Text(emoji, style = MaterialTheme.typography.titleMedium)
+        Column {
+            Text(title, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.SemiBold)
+            Text(description, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(schedule, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary)
+        }
     }
 }
 

@@ -10,7 +10,6 @@ import android.content.Context
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -416,7 +415,7 @@ class ReferenceGenericViewModel @Inject constructor(
         // We use appScope to ensure this save operation completes even if the
         // viewModelScope is paused or cancelled as the user navigates away.
         //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
-        if (ttsStatsRepository.isFebOrMarch2026()) {
+        if (ttsStatsRepository.isMarchOrApril2026()) {
             appScope.launch {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)

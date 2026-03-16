@@ -39,7 +39,6 @@ import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.Sentence
 import com.goodstadt.john.language.exams.models.Format0File
 import com.goodstadt.john.language.exams.models.calculateCallCost
-import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import com.google.ai.client.generativeai.type.GenerateContentResponse
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -795,7 +794,7 @@ class ParagraphViewModel @Inject constructor(
     fun saveDataOnExit() {
             appScope.launch {
                 //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
-                if (ttsStatsRepository.isFebOrMarch2026()) {
+                if (ttsStatsRepository.isMarchOrApril2026()) {
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                 }

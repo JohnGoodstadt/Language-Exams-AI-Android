@@ -7,7 +7,6 @@ import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
-import com.goodstadt.john.language.exams.data.repository.PlaybackResult
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
@@ -19,10 +18,6 @@ import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.Category
-import com.goodstadt.john.language.exams.models.Sentence
-import com.goodstadt.john.language.exams.models.Format0Word
-import com.goodstadt.john.language.exams.utils.calcIsTodayNotAFreePassDay
-import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -163,7 +158,7 @@ class ConjugationsViewModel @Inject constructor(
         if (false) {
             appScope.launch {
                 //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
-                if (ttsStatsRepository.isFebOrMarch2026()) {
+                if (ttsStatsRepository.isMarchOrApril2026()) {
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                     ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                 }

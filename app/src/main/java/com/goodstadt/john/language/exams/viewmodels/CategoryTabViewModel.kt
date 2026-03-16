@@ -380,7 +380,7 @@ class CategoryTabViewModel @Inject constructor(
                     checkHelpTrigger()
 
                     //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
-                    if (ttsStatsRepository.isFebOrMarch2026()) {
+                    if (ttsStatsRepository.isMarchOrApril2026()) {
                         ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                         ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
                     }

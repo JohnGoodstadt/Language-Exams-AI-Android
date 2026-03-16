@@ -72,8 +72,11 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.viewmodels.VocabQuizLevels
 import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
 
@@ -121,6 +124,7 @@ fun VocabQuizScreen(
     val isSectionMode by viewModel.isSectionMode.collectAsState()
     val availableIndices by viewModel.availableSectionIndices.collectAsState()
     val currentIndex by viewModel.currentSectionIndex.collectAsState()
+    val activeFilters by viewModel.activeFilters.collectAsState()
     //val showInfoSheet by viewModel.showInfoSheet.collectAsState()
 
 
@@ -229,18 +233,60 @@ fun VocabQuizScreen(
         }
 
 
-        if (currentQuestionIndex == 0) {
+        // Mastery Filter Chips
+        if (isSectionMode) {
+            MasteryFilterChips(
+                activeFilters = activeFilters,
+                onToggle = { viewModel.toggleFilter(it) },
+                onSelectAll = { viewModel.selectAllFilters() }
+            )
+
+            // Question counter with filter info
+            if (activeFilters.isNotEmpty()) {
+                if (questions.isNotEmpty()) {
+                    Text(
+                        text = "Showing ${questions.size} of ${viewModel.totalQuestionCount}",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(bottom = 4.dp)
+                    )
+                }
+            }
+        }
+
+        // Filtered-empty state: filters active but no matching questions
+        if (questions.isEmpty() && activeFilters.isNotEmpty()) {
+            val filterNames = activeFilters.joinToString(", ") { it.name }
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 48.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Text(
+                    text = "No $filterNames questions to show.",
+                    style = MaterialTheme.typography.bodyLarge,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Text(
+                    text = "Select All to see more.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                )
+            }
+        } else if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
             Text(
                 text = displayText,
                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    // ✅ THE FIX: Add vertical padding.
-                    // This will add 16.dp of space on the top AND 16.dp on the bottom.
                     .padding(vertical = 32.dp)
             )
-        } else {
+        } else if (questions.isNotEmpty()) {
             Text( //still keep the space
                 text = "",
                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
@@ -678,6 +724,72 @@ fun WorddotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
     }
 
     return Color.LightGray
+}
+
+@Composable
+fun MasteryFilterChips(
+    activeFilters: Set<WordMasteryLevel>,
+    onToggle: (WordMasteryLevel) -> Unit,
+    onSelectAll: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .horizontalScroll(rememberScrollState())
+            .padding(horizontal = 8.dp, vertical = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        // "All" chip
+        MasteryChip(
+            label = "All",
+            isSelected = activeFilters.isEmpty(),
+            chipColor = MaterialTheme.colorScheme.primary,
+            onClick = onSelectAll
+        )
+
+        // Per-level chips
+        WordMasteryLevel.entries.forEach { level ->
+            MasteryChip(
+                label = level.name,
+                isSelected = activeFilters.contains(level),
+                chipColor = masteryChipColor(level),
+                onClick = { onToggle(level) }
+            )
+        }
+    }
+}
+
+@Composable
+fun MasteryChip(
+    label: String,
+    isSelected: Boolean,
+    chipColor: Color,
+    onClick: () -> Unit
+) {
+    Box(
+        modifier = Modifier
+            .clip(RoundedCornerShape(16.dp))
+            .background(if (isSelected) chipColor else MaterialTheme.colorScheme.surfaceVariant)
+            .clickable { onClick() }
+            .padding(horizontal = 12.dp, vertical = 6.dp)
+    ) {
+        Text(
+            text = label,
+            style = MaterialTheme.typography.labelMedium,
+            fontWeight = FontWeight.Medium,
+            color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant
+        )
+    }
+}
+
+fun masteryChipColor(level: WordMasteryLevel): Color {
+    return when (level) {
+        WordMasteryLevel.New -> Color.Gray
+        WordMasteryLevel.Struggling -> Color.Red
+        WordMasteryLevel.Learning -> Color(0xFFFF9800) // Orange
+        WordMasteryLevel.Review -> Color(0xFF2196F3) // Blue
+        WordMasteryLevel.Mastered -> Color(0xFF4CAF50) // Green
+    }
 }
 
 @Composable

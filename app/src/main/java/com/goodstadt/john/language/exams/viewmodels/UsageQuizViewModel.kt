@@ -39,7 +39,6 @@ import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -47,18 +46,15 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
 import androidx.compose.runtime.State
-import androidx.compose.runtime.mutableStateOf
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizTotalCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
 import java.util.Locale
 
 enum class QuizState(val description: String) {
@@ -406,7 +402,7 @@ class UsageQuizViewModel @Inject constructor(
                 }
             }
             //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
-            if (ttsStatsRepository.isFebOrMarch2026()) {
+            if (ttsStatsRepository.isMarchOrApril2026()) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
@@ -875,7 +871,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
         viewModelScope.launch {
             //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
-            if (ttsStatsRepository.isFebOrMarch2026()) {
+            if (ttsStatsRepository.isMarchOrApril2026()) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }

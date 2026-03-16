@@ -26,8 +26,6 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizNotOKCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statVocabQuizTotalCount
@@ -39,6 +37,7 @@ import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
 import com.goodstadt.john.language.exams.models.VocabLearningState
 import com.goodstadt.john.language.exams.models.VocabQuizOutcome
+import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.models.WordQuizRoot
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntry
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
@@ -188,6 +187,12 @@ class VocabSectionQuizViewModel @Inject constructor(
     private val _questions = MutableStateFlow<List<WordQuizQuestion>>(emptyList())
     val questions: StateFlow<List<WordQuizQuestion>> get() = _questions
 
+    // Mastery Filter
+    private var _allQuestions: List<WordQuizQuestion> = emptyList()
+    private val _activeFilters = MutableStateFlow<Set<WordMasteryLevel>>(emptySet())
+    val activeFilters: StateFlow<Set<WordMasteryLevel>> = _activeFilters.asStateFlow()
+    val totalQuestionCount: Int get() = _allQuestions.size
+
 
     private val _showUpgradeAppSheet = MutableStateFlow(false)
     val showUpgradeAppSheet = _showUpgradeAppSheet.asStateFlow()
@@ -271,6 +276,7 @@ class VocabSectionQuizViewModel @Inject constructor(
     private val quizTitleCache = mutableMapOf<VocabQuizLevels, List<QuizDetail>>()
 
     private var _currentQuestionAttempts = 0
+    private var _currentQuestionWord: String? = null
 
     private var infoUsedForCurrentQuestion = false
 //    private var currentQuestionAttempts = 0
@@ -456,7 +462,8 @@ class VocabSectionQuizViewModel @Inject constructor(
 
             // 5. Update UI
             if (compiledQuestions.isNotEmpty()) {
-                _questions.value = compiledQuestions.shuffled()
+                _allQuestions = compiledQuestions.shuffled()
+                applyFilters()
 
                 quizStatistics.value = quizStatistics.value.copy(
                     title = "Smart Review (${compiledQuestions.size} words)",
@@ -490,7 +497,8 @@ class VocabSectionQuizViewModel @Inject constructor(
             val testData = readWordQuizDataFromAssets(application, filename, currentSkillLevel)
 
             if (testData != null) {
-                _questions.value = generateQuestionsFromData(testData)
+                _allQuestions = generateQuestionsFromData(testData)
+                applyFilters()
 
                 // Update title to show which number we are on
                 quizStatistics.value = quizStatistics.value.copy(
@@ -555,7 +563,7 @@ class VocabSectionQuizViewModel @Inject constructor(
                 }
             }
             //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
-            if (ttsStatsRepository.isFebOrMarch2026()) {
+            if (ttsStatsRepository.isMarchOrApril2026()) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
@@ -764,10 +772,42 @@ class VocabSectionQuizViewModel @Inject constructor(
 
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
+        _activeFilters.value = emptySet()
 
         //TODO: Do I need this?
         //_isDirty.value = false
 
+    }
+
+    // MARK: - Mastery Filter
+
+    fun toggleFilter(level: WordMasteryLevel) {
+        val current = _activeFilters.value.toMutableSet()
+        if (current.contains(level)) {
+            current.remove(level)
+        } else {
+            current.add(level)
+        }
+        _activeFilters.value = current
+        applyFilters()
+    }
+
+    fun selectAllFilters() {
+        _activeFilters.value = emptySet()
+        applyFilters()
+    }
+
+    private fun applyFilters() {
+        val filters = _activeFilters.value
+        if (filters.isEmpty()) {
+            _questions.value = _allQuestions
+        } else {
+            _questions.value = _allQuestions.filter { q ->
+                val mastery = vocabQuizRepository.getWordStats(q.question).masteryLevel
+                filters.contains(mastery)
+            }
+        }
+        currentQuestionIndex.value = 0
     }
 
     private fun saveQuizState() {
@@ -1182,7 +1222,7 @@ class VocabSectionQuizViewModel @Inject constructor(
 
         viewModelScope.launch {
             //TODO: for 1 month feb/march 2026, facebook ads manager campaign. see stats
-            if (ttsStatsRepository.isFebOrMarch2026()) {
+            if (ttsStatsRepository.isMarchOrApril2026()) {
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.GlobalStats)
                 ttsStatsRepository.flushStats(TTSStatsRepository.fsDOC.USER)
             }
@@ -1216,7 +1256,15 @@ class VocabSectionQuizViewModel @Inject constructor(
     }
 
     fun resetCurrentQuestionAttempts() {
+        // If the user navigated away with wrong attempts but never got it right,
+        // record as FAILED so the word moves to Struggling
+        if (_currentQuestionAttempts > 0 && _currentQuestionWord != null) {
+            Timber.i("resetCurrentQuestionAttempts: recording FAILED for '${_currentQuestionWord}' (navigated away after $_currentQuestionAttempts wrong attempts)")
+            vocabQuizRepository.recordResult(_currentQuestionWord!!, VocabQuizOutcome.FAILED, currentSectionTitle, currentSkillLevel)
+        }
         _currentQuestionAttempts = 0
+        _currentQuestionWord = null
+        infoUsedForCurrentQuestion = false
     }
 
     fun onInfoClicked() {
@@ -1225,6 +1273,7 @@ class VocabSectionQuizViewModel @Inject constructor(
     }
 
     fun markAnswerSelected(word: String,isCorrect:Boolean) {
+        _currentQuestionWord = word
         val tries = _currentQuestionAttempts // You need to track attempts count per word
 
         // ... Check if correct ...
@@ -1248,9 +1297,12 @@ class VocabSectionQuizViewModel @Inject constructor(
             // Reset for next question
             infoUsedForCurrentQuestion = false
             _currentQuestionAttempts = 0
+            _currentQuestionWord = null
         } else {
             _currentQuestionAttempts++
         }
+        Timber.i("markAnswerSelected()")
+        vocabQuizRepository.debugPrintAllWordStates()
     }
 
     fun getSectionTitle():String {
