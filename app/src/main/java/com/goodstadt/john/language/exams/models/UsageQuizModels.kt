@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 @Keep
 enum class UsageMastery {
-    NotStarted,
+    New,
     Struggling, // Many tries, low accuracy
     Learning,   // Getting there, but not perfect every time
     Fluent      // Consistent first-time success
@@ -21,7 +21,7 @@ data class UsageQuestionStat(
     // Computed property to help UI decide color (Red/Orange/Green)
     val mastery: UsageMastery
         get() {
-            if (triesCount == 0) return UsageMastery.NotStarted
+            if (triesCount == 0) return UsageMastery.New
             if (streak >= 3) return UsageMastery.Fluent
             // If accuracy is > 80%
             if (correctCount.toDouble() / triesCount.toDouble() > 0.8) return UsageMastery.Learning

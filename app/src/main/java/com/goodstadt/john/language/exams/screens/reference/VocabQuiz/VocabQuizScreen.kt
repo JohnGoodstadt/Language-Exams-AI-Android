@@ -75,6 +75,7 @@ import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.viewmodels.VocabQuizLevels
 import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
@@ -738,13 +739,13 @@ fun MasteryFilterChips(
             .fillMaxWidth()
             .horizontalScroll(rememberScrollState())
             .padding(horizontal = 8.dp, vertical = 4.dp),
-        horizontalArrangement = Arrangement.spacedBy(8.dp)
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         // "All" chip
         MasteryChip(
             label = "All",
             isSelected = activeFilters.isEmpty(),
-            chipColor = MaterialTheme.colorScheme.primary,
+            dotColor = MaterialTheme.colorScheme.primary,
             onClick = onSelectAll
         )
 
@@ -753,7 +754,7 @@ fun MasteryFilterChips(
             MasteryChip(
                 label = level.name,
                 isSelected = activeFilters.contains(level),
-                chipColor = masteryChipColor(level),
+                dotColor = masteryChipColor(level),
                 onClick = { onToggle(level) }
             )
         }
@@ -764,22 +765,45 @@ fun MasteryFilterChips(
 fun MasteryChip(
     label: String,
     isSelected: Boolean,
-    chipColor: Color,
+    dotColor: Color,
     onClick: () -> Unit
 ) {
-    Box(
+    val surfaceVariant = MaterialTheme.colorScheme.surfaceVariant
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
+            .animateContentSize()
             .clip(RoundedCornerShape(16.dp))
-            .background(if (isSelected) chipColor else MaterialTheme.colorScheme.surfaceVariant)
+            .background(if (isSelected) dotColor.copy(alpha = 0.15f) else surfaceVariant)
+            .then(
+                if (isSelected) Modifier.border(1.5.dp, dotColor, RoundedCornerShape(16.dp))
+                else Modifier
+            )
             .clickable { onClick() }
-            .padding(horizontal = 12.dp, vertical = 6.dp)
+            .padding(
+                horizontal = if (isSelected) 10.dp else 8.dp,
+                vertical = 6.dp
+            )
     ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.labelMedium,
-            fontWeight = FontWeight.Medium,
-            color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant
+        // Colored dot
+        Box(
+            modifier = Modifier
+                .size(10.dp)
+                .clip(CircleShape)
+                .background(dotColor)
         )
+
+        // Label only when selected
+        if (isSelected) {
+            Spacer(modifier = Modifier.width(5.dp))
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.SemiBold,
+                color = dotColor
+            )
+        }
     }
 }
 

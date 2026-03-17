@@ -77,8 +77,12 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
+import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.viewmodels.QuizLevels
 import com.goodstadt.john.language.exams.viewmodels.UsageQuizViewModel
+import androidx.compose.animation.animateContentSize
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
@@ -126,6 +130,7 @@ fun UsageQuizScreen(
     var showDashboardSheet by remember { mutableStateOf(false) }
     val dashboardSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val fluency by viewModel.fluency
+    val activeFilters by viewModel.activeFilters.collectAsState()
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
@@ -290,18 +295,56 @@ fun UsageQuizScreen(
             color = greyLight2
         )
 
-        if (currentQuestionIndex == 0) {
+        // Mastery Filter Chips
+        UsageMasteryFilterChips(
+            activeFilters = activeFilters,
+            onToggle = { viewModel.toggleFilter(it) },
+            onSelectAll = { viewModel.selectAllFilters() }
+        )
+
+        // Question counter with filter info
+        if (activeFilters.isNotEmpty() && questions.isNotEmpty()) {
+            Text(
+                text = "Showing ${questions.size} of ${viewModel.totalQuestionCount}",
+                style = MaterialTheme.typography.labelSmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                modifier = Modifier.padding(bottom = 4.dp)
+            )
+        }
+
+        // Filtered-empty state
+        if (questions.isEmpty() && activeFilters.isNotEmpty()) {
+            val filterNames = activeFilters.joinToString(", ") { it.name }
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 48.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Text(
+                    text = "No $filterNames questions to show.",
+                    style = MaterialTheme.typography.bodyLarge,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Text(
+                    text = "Select All to see more.",
+                    style = MaterialTheme.typography.bodyMedium,
+                    textAlign = TextAlign.Center,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
+                )
+            }
+        } else if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
             Text(
                 text = displayText,
                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    // ✅ THE FIX: Add vertical padding.
-                    // This will add 16.dp of space on the top AND 16.dp on the bottom.
                     .padding(vertical = 16.dp)
             )
-        } else {
+        } else if (questions.isNotEmpty()) {
             Text( //still keep the space
                 text = "",
                 style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
@@ -355,6 +398,23 @@ fun UsageQuizScreen(
                 color = orangeLight,
             )
 
+            // Per-question mastery badge
+            val masteryDisplay = viewModel.getQuestionMasteryDisplay(question.page)
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 2.dp, vertical = 2.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(
+                    text = masteryDisplay.first,
+                    color = masteryDisplay.second,
+                    style = MaterialTheme.typography.labelMedium,
+                    modifier = Modifier
+                        .background(masteryDisplay.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+                )
+            }
 
             question.words.forEach { option ->
                 val isOptionCorrect =
@@ -821,6 +881,94 @@ fun dotColor(index: Int, scores: MutableMap<Int, Boolean>): Color {
     }
 
     return Color.LightGray
+}
+
+@Composable
+fun UsageMasteryFilterChips(
+    activeFilters: Set<UsageMastery>,
+    onToggle: (UsageMastery) -> Unit,
+    onSelectAll: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .horizontalScroll(rememberScrollState())
+            .padding(horizontal = 8.dp, vertical = 4.dp),
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
+    ) {
+        // "All" chip
+        UsageMasteryChip(
+            label = "All",
+            isSelected = activeFilters.isEmpty(),
+            dotColor = MaterialTheme.colorScheme.primary,
+            onClick = onSelectAll
+        )
+
+        // Per-level chips
+        UsageMastery.entries.forEach { level ->
+            UsageMasteryChip(
+                label = level.name,
+                isSelected = activeFilters.contains(level),
+                dotColor = usageMasteryChipColor(level),
+                onClick = { onToggle(level) }
+            )
+        }
+    }
+}
+
+@Composable
+fun UsageMasteryChip(
+    label: String,
+    isSelected: Boolean,
+    dotColor: Color,
+    onClick: () -> Unit
+) {
+    val surfaceVariant = MaterialTheme.colorScheme.surfaceVariant
+
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .animateContentSize()
+            .clip(RoundedCornerShape(16.dp))
+            .background(if (isSelected) dotColor.copy(alpha = 0.15f) else surfaceVariant)
+            .then(
+                if (isSelected) Modifier.border(1.5.dp, dotColor, RoundedCornerShape(16.dp))
+                else Modifier
+            )
+            .clickable { onClick() }
+            .padding(
+                horizontal = if (isSelected) 10.dp else 8.dp,
+                vertical = 6.dp
+            )
+    ) {
+        // Colored dot
+        Box(
+            modifier = Modifier
+                .size(10.dp)
+                .clip(CircleShape)
+                .background(dotColor)
+        )
+
+        // Label only when selected
+        if (isSelected) {
+            Spacer(modifier = Modifier.width(5.dp))
+            Text(
+                text = label,
+                style = MaterialTheme.typography.labelMedium,
+                fontWeight = FontWeight.SemiBold,
+                color = dotColor
+            )
+        }
+    }
+}
+
+fun usageMasteryChipColor(level: UsageMastery): Color {
+    return when (level) {
+        UsageMastery.New -> Color.Gray
+        UsageMastery.Struggling -> Color.Red
+        UsageMastery.Learning -> Color(0xFFFF9800) // Orange
+        UsageMastery.Fluent -> Color(0xFF4CAF50) // Green
+    }
 }
 
 @Composable

@@ -35,6 +35,7 @@ import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
+import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
@@ -271,6 +272,11 @@ class UsageQuizViewModel @Inject constructor(
     private val _questions = MutableStateFlow<List<QuizQuestion>>(emptyList())
     val questions: StateFlow<List<QuizQuestion>> get() = _questions
 
+    // Mastery Filter
+    private var _allQuestions: List<QuizQuestion> = emptyList()
+    private val _activeFilters = MutableStateFlow<Set<UsageMastery>>(emptySet())
+    val activeFilters: StateFlow<Set<UsageMastery>> = _activeFilters.asStateFlow()
+    val totalQuestionCount: Int get() = _allQuestions.size
 
     private val _showUpgradeAppSheet = MutableStateFlow(false)
     val showUpgradeAppSheet = _showUpgradeAppSheet.asStateFlow()
@@ -443,12 +449,10 @@ class UsageQuizViewModel @Inject constructor(
 
             _uiState.update { it.copy(testMyselfListRoot = testData)}
 
-
-            _questions.value = generateQuestionsFromData(testData)
+            _allQuestions = generateQuestionsFromData(testData)
+            applyFilters()
 
             Timber.v("${_questions.value.count()}")
-
-
 
             resetQuiz()
 
@@ -534,8 +538,45 @@ class UsageQuizViewModel @Inject constructor(
 
         currentQuestionIndex.value = 0
         userAnswers.value.clear()
+        _activeFilters.value = emptySet()
 
+    }
 
+    // MARK: - Mastery Filter
+
+    fun toggleFilter(level: UsageMastery) {
+        val current = _activeFilters.value.toMutableSet()
+        if (current.contains(level)) current.remove(level) else current.add(level)
+        _activeFilters.value = current
+        applyFilters()
+    }
+
+    fun selectAllFilters() {
+        _activeFilters.value = emptySet()
+        applyFilters()
+    }
+
+    private fun applyFilters() {
+        val filters = _activeFilters.value
+        val currentQuizFileName = quizStatistics.value.filename
+        if (filters.isEmpty()) {
+            _questions.value = _allQuestions
+        } else {
+            _questions.value = _allQuestions.filter { q ->
+                val mastery = usageQuizRepository.getQuestionMastery(currentQuizFileName, q.page)
+                filters.contains(mastery)
+            }
+        }
+        currentQuestionIndex.value = 0
+    }
+
+    /**
+     * Returns the mastery display (label, color) for the current question.
+     */
+    fun getQuestionMasteryDisplay(page: Int): Pair<String, Color> {
+        val currentQuizFileName = quizStatistics.value.filename
+        val mastery = usageQuizRepository.getQuestionMastery(currentQuizFileName, page)
+        return usageQuizRepository.getMasteryDisplay(mastery)
     }
 
     /*

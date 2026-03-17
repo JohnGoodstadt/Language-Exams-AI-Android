@@ -72,7 +72,7 @@ class UsageDashboardViewModel @Inject constructor(
                 if (stats != null) {
                     // Iterate 1 to 10 (assuming 10 questions fixed)
                     for (i in 1..10) {
-                        masteryMap[i] = stats.questions[i]?.mastery ?: UsageMastery.NotStarted
+                        masteryMap[i] = stats.questions[i]?.mastery ?: UsageMastery.New
                     }
                 }
 

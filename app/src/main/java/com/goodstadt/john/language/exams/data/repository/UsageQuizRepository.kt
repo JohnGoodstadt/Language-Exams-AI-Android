@@ -2,6 +2,7 @@ package com.goodstadt.john.language.exams.data.repository
 
 import android.content.Context
 import androidx.compose.ui.graphics.Color
+import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.UsageQuestionStat
 import com.goodstadt.john.language.exams.models.UsageQuizStat
 import com.google.gson.Gson
@@ -188,6 +189,27 @@ class UsageQuizRepository @Inject constructor(
         CAREFUL("Be careful", Color(0xFFFF5252)),
         LEARNING("In progress...", Color(0xFFFF9500))
     }
+    // MARK: - MASTERY HELPERS
+
+    /**
+     * Returns the mastery level for a specific question.
+     */
+    fun getQuestionMastery(quizId: String, pageNumber: Int): UsageMastery {
+        return quizStates[quizId]?.questions?.get(pageNumber)?.mastery ?: UsageMastery.New
+    }
+
+    /**
+     * Returns display label + color for a given UsageMastery level.
+     */
+    fun getMasteryDisplay(mastery: UsageMastery): Pair<String, Color> {
+        return when (mastery) {
+            UsageMastery.New -> "New" to Color.Gray
+            UsageMastery.Struggling -> "Struggling" to Color.Red
+            UsageMastery.Learning -> "Learning" to Color(0xFFFF9800) // Orange
+            UsageMastery.Fluent -> "Fluent" to Color(0xFF4CAF50) // Green
+        }
+    }
+
     // MARK: - DEBUG
 
     fun debugPrint() {
