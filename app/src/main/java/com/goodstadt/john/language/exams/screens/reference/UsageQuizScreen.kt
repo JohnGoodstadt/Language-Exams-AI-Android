@@ -937,7 +937,7 @@ fun UsageMasteryChip(
             )
             .clickable { onClick() }
             .padding(
-                horizontal = if (isSelected) 10.dp else 8.dp,
+                horizontal = if (isSelected || label == "All") 10.dp else 8.dp,
                 vertical = 6.dp
             )
     ) {
@@ -949,8 +949,8 @@ fun UsageMasteryChip(
                 .background(dotColor)
         )
 
-        // Label only when selected
-        if (isSelected) {
+        // Label when selected, or always for "All"
+        if (isSelected || label == "All") {
             Spacer(modifier = Modifier.width(5.dp))
             Text(
                 text = label,
