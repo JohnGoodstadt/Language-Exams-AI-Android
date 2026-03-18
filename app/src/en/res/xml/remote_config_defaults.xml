@@ -2,11 +2,11 @@
 <defaultsMap>
     <entry>
         <key>android_minimum_version_code</key>
-        <value>87</value> <!-- Lowest number we will support -->
+        <value>110</value> <!-- Lowest number we will support -->
     </entry>
     <entry>
         <key>android_recommended_version_code</key>
-        <value>89</value> <!-- A safe, low default, usually the current version -->
+        <value>113</value> <!-- A safe, low default, usually the current version -->
     </entry>
     <entry>
         <key>update_message_optional</key>

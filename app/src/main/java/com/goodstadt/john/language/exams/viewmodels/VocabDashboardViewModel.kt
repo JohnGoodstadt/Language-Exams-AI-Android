@@ -66,21 +66,21 @@ class VocabDashboardViewModel @Inject constructor(
         viewModelScope.launch {
             _uiState.update { it.copy(isLoading = true) }
 
-            // 1. Get Exam Data (Structure)
+            // 0. Fast cold-start check — no network needed for onboarding view
+            val allWordStates = vocabQuizRepository.getAllStates()
+            if (allWordStates.isEmpty()) {
+                _uiState.value = DashboardUiState(isLoading = false, isColdStart = true)
+                return@launch
+            }
+
+            // 1. Get Exam Data (Structure) — only needed for active dashboard
             val examName = examNameOverride ?: userPreferencesRepository.selectedExamNameFlow.first()
             val vocabResult = contentRepository.getFormat0Data(examName)
 
             val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
             val dueWords = vocabQuizRepository.getDueWords(limit = 10,currentSkillLevel)
-            val allWordStates = vocabQuizRepository.getAllStates() // You need to add this accessor to Repo
 
             vocabResult.onSuccess { vocabFile ->
-
-                // 3. Check for Cold Start
-                if (allWordStates.isEmpty()) {
-                    _uiState.value = DashboardUiState(isLoading = false, isColdStart = true)
-                    return@launch
-                }
 
                 // 4. Aggregate Stats per Category
                 val statsList = vocabFile.categories.map { category ->

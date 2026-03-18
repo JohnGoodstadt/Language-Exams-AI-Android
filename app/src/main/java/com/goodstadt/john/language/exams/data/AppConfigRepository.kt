@@ -112,7 +112,7 @@ class AppConfigRepository @Inject constructor(
             }
             // 3. Otherwise, no update is needed
             else -> {
-                Timber.v("AppConfigRepository.NoUpdateNeeded()")
+              //  Timber.v("AppConfigRepository.NoUpdateNeeded()")
                 UpdateState.NoUpdateNeeded
             }
         }
