@@ -83,6 +83,9 @@ import com.goodstadt.john.language.exams.viewmodels.UsageQuizViewModel
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import android.content.res.Configuration
+import androidx.compose.ui.platform.LocalConfiguration
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
@@ -156,11 +159,15 @@ fun UsageQuizScreen(
         verticalArrangement = Arrangement.spacedBy(6.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // Use full labels on wider screens (≥ 380dp), short on small devices
+        val useFullLabels = LocalConfiguration.current.screenWidthDp >= 380
+        val labelFor: (QuizLevels) -> String = { if (useFullLabels) it.description else it.shortLabel }
+
         HorizontalLevelPicker(
-            options = QuizLevels.entries.map { it.description },
-            selectedOption = selectedLevel.description,
-            onOptionSelected = { newLevel ->
-                val level = QuizLevels.entries.first { it.description == newLevel }
+            options = QuizLevels.entries.map { labelFor(it) },
+            selectedOption = labelFor(selectedLevel),
+            onOptionSelected = { newLabel ->
+                val level = QuizLevels.entries.first { labelFor(it) == newLabel }
                 if (level != selectedLevel){
                     viewModel.onLevelSelected(level)
                     viewModel.loadQuestions()
@@ -338,217 +345,195 @@ fun UsageQuizScreen(
         } else if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
             Text(
                 text = displayText,
-                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
+                style = MaterialTheme.typography.bodyMedium,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 16.dp)
-            )
-        } else if (questions.isNotEmpty()) {
-            Text( //still keep the space
-                text = "",
-                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 16.dp)
+                    .padding(vertical = 6.dp)
             )
         }
 
+        // Scrollable question + answers area (fills remaining space)
         if (questions.isNotEmpty()) {
             val question = questions[currentQuestionIndex]
+            val scrollState = rememberScrollState()
 
-            val annotatedQuestionText =
-                if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                    AnnotatedString(question.title)
-                } else {
-                    buildAnnotatedString {
-                        if (isCurrentAnswerCorrect == true && selectedOption != null) {
-                            // --- SUCCESS STATE ---
-                            // The user has answered correctly.
-                            val parts = question.sentence.split("_")
-                            if (parts.size == 2) {
-                                append(parts[0]) // Append part before the blank
-                                withStyle(
-                                    style = SpanStyle(
-                                        color = Color.Green,
-                                        fontWeight = FontWeight.Bold
-                                    )
-                                ) {
-                                    append(selectedOption!!) // Append the correct word in green
-                                }
-                                append(parts[1]) // Append part after the blank
-                            } else {
-                                // Fallback for complex sentences
-                                append(displayedSentence)
-                            }
-                        } else {
-                            // --- QUESTION STATE ---
-                            // Not answered yet, or answered incorrectly.
-                            append(displayedSentence)
-                        }
-                    }
-                }
-
-            Text(
-                text = annotatedQuestionText,
-                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 18.sp),
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth(),
-                color = orangeLight,
-            )
-
-            // Per-question mastery badge
-            val masteryDisplay = viewModel.getQuestionMasteryDisplay(question.page)
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 2.dp, vertical = 2.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = masteryDisplay.first,
-                    color = masteryDisplay.second,
-                    style = MaterialTheme.typography.labelMedium,
-                    modifier = Modifier
-                        .background(masteryDisplay.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
-                )
+            // Reset scroll when question changes
+            LaunchedEffect(currentQuestionIndex) {
+                scrollState.scrollTo(0)
             }
 
-            question.words.forEach { option ->
-                val isOptionCorrect =
-                    option == question.correctOption // Determine if option is correct
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .weight(1f)
+                    .verticalScroll(scrollState)
+                    .padding(horizontal = 4.dp),
+                verticalArrangement = Arrangement.spacedBy(2.dp)
+            ) {
 
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(
-                            modifier = Modifier.clickable {
-                                //Timber.v(" ${ question.sentence.replace("_", option)}")
-                                val isCorrect = option == question.correctOption
-                                viewModel.updateAnswer(isCorrect)
-
-                                val fullSentence =
-                                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                        question.sentence.replace("_", option)
-                                    } else {
-                                        if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                                            option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                                .trim()//remove ()
-                                        } else {
-                                            option
-                                        }
+                val annotatedQuestionText =
+                    if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                        AnnotatedString(question.title)
+                    } else {
+                        buildAnnotatedString {
+                            if (isCurrentAnswerCorrect == true && selectedOption != null) {
+                                val parts = question.sentence.split("_")
+                                if (parts.size == 2) {
+                                    append(parts[0])
+                                    withStyle(
+                                        style = SpanStyle(
+                                            color = Color.Green,
+                                            fontWeight = FontWeight.Bold
+                                        )
+                                    ) {
+                                        append(selectedOption!!)
                                     }
-//                                viewModel.playTrack(fullSentence)
-                                viewModel.handleTap(fullSentence)
+                                    append(parts[1])
+                                } else {
+                                    append(displayedSentence)
+                                }
+                            } else {
+                                append(displayedSentence)
+                            }
+                        }
+                    }
 
-                            },
-//                            painter = painterResource(R.drawable.ic_speaker),
-                            imageVector = Icons.AutoMirrored.Filled.VolumeUp,
-                            contentDescription = "Speak ${question.sentence.replace("_", option)}",
-                            tint = Color.White
-                        )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(
-                            text = option,
-                            color = orangeLight,
-                            style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
-                            modifier = Modifier
-                                .padding(vertical = 4.dp)
-                                .clickable {
-                                    // val fullSentence = question.sentence.replace("_", option)
-                                    // Timber.v(fullSentence)
+                Text(
+                    text = annotatedQuestionText,
+                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth(),
+                    color = orangeLight,
+                )
+
+                // Per-question mastery badge
+                val masteryDisplay = viewModel.getQuestionMasteryDisplay(question.page)
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 2.dp, vertical = 1.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = masteryDisplay.first,
+                        color = masteryDisplay.second,
+                        style = MaterialTheme.typography.labelMedium,
+                        modifier = Modifier
+                            .background(masteryDisplay.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
+                    )
+                }
+
+                question.words.forEach { option ->
+                    val isOptionCorrect = option == question.correctOption
+
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(
+                                modifier = Modifier.clickable {
+                                    val isCorrect = option == question.correctOption
+                                    viewModel.updateAnswer(isCorrect)
+
                                     val fullSentence =
                                         if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                             question.sentence.replace("_", option)
                                         } else {
-                                            if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                            if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
                                                 option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                                    .trim()//remove ()
+                                                    .trim()
                                             } else {
                                                 option
                                             }
                                         }
-
-                                    val isCorrect = option == question.correctOption
-                                    viewModel.updateAnswer(isCorrect)
-
-//                                    viewModel.playTrack(fullSentence)
                                     viewModel.handleTap(fullSentence)
+                                },
+                                imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                                contentDescription = "Speak ${question.sentence.replace("_", option)}",
+                                tint = Color.White
+                            )
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = option,
+                                color = orangeLight,
+                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
+                                modifier = Modifier
+                                    .padding(vertical = 2.dp)
+                                    .clickable {
+                                        val fullSentence =
+                                            if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                                                question.sentence.replace("_", option)
+                                            } else {
+                                                if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                                    option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
+                                                        .trim()
+                                                } else {
+                                                    option
+                                                }
+                                            }
 
+                                        val isCorrect = option == question.correctOption
+                                        viewModel.updateAnswer(isCorrect)
+                                        viewModel.handleTap(fullSentence)
+                                    }
+                            )
+                        }
+
+                        // Radio button on the far right
+                        RadioButton(
+                            selected = selectedOption == option && isOptionCorrect,
+                            onClick = {
+                                selectedOption = option
+                                isCurrentAnswerCorrect = isOptionCorrect
+                                viewModel.updateAnswer(isOptionCorrect)
+
+                                if (isOptionCorrect) {
+                                    var sentenceToSpeak = ""
+                                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                                        val sentence = question.sentence.replace(Regex("_+"), option)
+                                        displayedSentence = viewModel.highlightWordInSentence(
+                                            sentence = sentence,
+                                            wordToHighlight = option,
+                                            highlightColor = Color.Green
+                                        )
+                                        sentenceToSpeak = sentence
+                                    } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                                        displayedSentence = AnnotatedString(question.title)
+                                        sentenceToSpeak =
+                                            "${question.title}:${option}:${question.sentence}"
+                                    } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                        displayedSentence = AnnotatedString(option)
+                                        val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
+                                            .trim()
+                                        sentenceToSpeak = cleaned
+                                    } else {
+                                        sentenceToSpeak = option
+                                        displayedSentence = viewModel.highlightWordInSentence(
+                                            sentence = option,
+                                            wordToHighlight = option,
+                                            highlightColor = Color.Green
+                                        )
+                                    }
+
+                                    viewModel.handleTap(sentenceToSpeak)
+                                    viewModel.incQuizStat()
+                                } else {
+                                    viewModel.incQuizStat(false)
                                 }
+                            },
+                            colors = RadioButtonDefaults.colors(
+                                selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
+                                unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
+                            ),
+                            modifier = Modifier.semantics { contentDescription = option }
                         )
-                    }
-
-                    // Radio button on the far right
-                    RadioButton(
-                        selected = selectedOption == option && isOptionCorrect, // Select only if correct
-                        onClick = {
-                            selectedOption = option
-                            isCurrentAnswerCorrect = isOptionCorrect
-                            viewModel.updateAnswer(isOptionCorrect)
-
-                            if (isOptionCorrect) {
-
-                                var sentenceToSpeak = ""
-                                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                    val sentence = question.sentence.replace(Regex("_+"), option)
-//                                        val sentenceToStyle = option
-                                    displayedSentence = viewModel.highlightWordInSentence(
-                                        sentence = sentence,
-                                        wordToHighlight = option,
-                                        highlightColor = Color.Green
-                                    )
-                                    sentenceToSpeak = sentence
-                                } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-//                                        val wordToHilight = question.title
-//                                        val sentence = "${wordToHilight}:${question.sentence}"
-                                    displayedSentence = AnnotatedString(question.title)
-                                    sentenceToSpeak =
-                                        "${question.title}:${option}:${question.sentence}"
-                                } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
-                                    displayedSentence = AnnotatedString(option)
-                                    val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                        .trim()//remove ()
-                                    sentenceToSpeak = cleaned
-                                } else { // Multiple Choice
-                                    // val wordToHilight = question.sentence
-                                    //val sentenceToStyle = option
-                                    sentenceToSpeak = option
-                                    displayedSentence = viewModel.highlightWordInSentence(
-                                        sentence = option,
-                                        wordToHighlight = option,//question.sentence,
-                                        highlightColor = Color.Green
-                                    )
-                                }
-
-//                                viewModel.playTrack(sentenceToSpeak)
-                                viewModel.handleTap(sentenceToSpeak)
-                                viewModel.incQuizStat()
-
-                            }
-                            else{ //incorrect
-                                viewModel.incQuizStat(false)
-                            }
-
-
-                        },
-                        colors = RadioButtonDefaults.colors(
-                            selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red, // Conditional color
-                            unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified // Conditional color
-                        ),
-                        modifier = Modifier.semantics { contentDescription = option }
-                    )
-                } // Row
-            }
-
-            Spacer(Modifier.height(4.dp))
-            //expand to teh bottom of the screen
-            Spacer(modifier = Modifier.weight(1f))//push the reset to teh bottom
+                    } // Row
+                }
+            } // Scrollable Column
 //            Row(
 //                horizontalArrangement = Arrangement.SpaceBetween,
 //                modifier = Modifier.fillMaxWidth()

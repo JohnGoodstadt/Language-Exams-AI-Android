@@ -196,6 +196,14 @@ enum class QuizLevels(val quizzes: List<QuizDetail>) {
             UPPER -> "Inter"
             ADVANCED -> "Advanced"
         }
+    /** Compact label for tight horizontal pickers on small screens */
+    val shortLabel: String
+        get() = when(this) {
+            ELEMENTARY -> "Begin."
+            INTER -> "Elem."
+            UPPER -> "Inter."
+            ADVANCED -> "Adv."
+        }
     val ESOL: String
         get() = when(this) {
             ELEMENTARY -> "A1"

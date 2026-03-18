@@ -31,7 +31,12 @@ val LightSurfaceVariant = Color(0xFFF2F2F7) // A nice light gray for containers
 
 // -- Dark Theme Colors --
 // Define your dark theme colors here
-val DarkPrimary = Color(0xFF6650a4)
+val DarkPrimary =  Color(0xFFD4A373)//Color(0xFF6650a4)
+
+val SecondaryHighlight = Color(0xFF8E9AAF)
+val SecondaryHighlight2 = Color(0xFF78A083)
+val SecondaryHighlight3 = Color(0xFFD4A373)
+//val DarkPrimary = Color(0xFF2C3E50) //Gemini suggestion
 val DarkOnPrimary = Color(0xFFffffff)
 val DarkPrimaryContainer = Color(0xFF4a378b)
 val DarkSecondary = Color(0xFFb0c4de)

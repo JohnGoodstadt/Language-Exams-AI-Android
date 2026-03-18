@@ -79,8 +79,10 @@ fun VocabDashboardScreen(
             Modifier.fillMaxSize(), contentAlignment = Alignment.Center
         ) { CircularProgressIndicator() }
     } else if (uiState.isColdStart) {
-        // STATE A: Cold Start
-        VocabQuizOnboardingView(onStartSuggestion = onNavigateToQuiz)
+        // STATE A: Cold Start — suggestion buttons open the quiz sheet directly
+        VocabQuizOnboardingView(onStartSuggestion = { title ->
+            viewModel.openQuizForCategory(title)
+        })
     } else {
         // STATE B: Active Dashboard
         VocabQuizActiveView(
@@ -91,41 +93,37 @@ fun VocabDashboardScreen(
             onCategoryClick = { title -> viewModel.openQuizForCategory(title) },
             onDebugClick = { viewModel.debugResetVocabProgress() }
         )
+    }
 
-        if (currentQuizTitle != null) {
-            var isQuizDirty by remember { mutableStateOf(false) }
-            ModalBottomSheet(
-                onDismissRequest = {
-                    viewModel.closeQuizSheet(isDirty = isQuizDirty)
-                },
-                sheetState = quizSheetState,
-                containerColor = MaterialTheme.colorScheme.surface
-            ) {
-                // Wrapper to initialize the specific quiz
-                // We reuse the exact same container from CategoryTabScreen
-                SectionQuizContainer(categoryTitle = currentQuizTitle!!,  // ✅ Update local state when user answers inside
-                    onInteraction = { dirty -> isQuizDirty = dirty })
-            }
+    // Bottom sheets live outside the if/else so they work from both onboarding and active states
+    if (currentQuizTitle != null) {
+        var isQuizDirty by remember { mutableStateOf(false) }
+        ModalBottomSheet(
+            onDismissRequest = {
+                viewModel.closeQuizSheet(isDirty = isQuizDirty)
+            },
+            sheetState = quizSheetState,
+            containerColor = MaterialTheme.colorScheme.surface
+        ) {
+            SectionQuizContainer(categoryTitle = currentQuizTitle!!,
+                onInteraction = { dirty -> isQuizDirty = dirty })
         }
-        if (showSmartReview) {
-            var isSessionDirty by remember { mutableStateOf(false) }
-            ModalBottomSheet(
-                onDismissRequest = {
-                    viewModel.closeSmartReview(isDirty = isSessionDirty)
-                },
-                sheetState = smartReviewSheetState,
-                containerColor = MaterialTheme.colorScheme.surface
-            ) {
-                // Call the container we created in Step 2
-                SmartReviewContainer(
-                    onInteraction = { dirty ->
-                        isSessionDirty = dirty
-                    }
-                )
-            }
+    }
+    if (showSmartReview) {
+        var isSessionDirty by remember { mutableStateOf(false) }
+        ModalBottomSheet(
+            onDismissRequest = {
+                viewModel.closeSmartReview(isDirty = isSessionDirty)
+            },
+            sheetState = smartReviewSheetState,
+            containerColor = MaterialTheme.colorScheme.surface
+        ) {
+            SmartReviewContainer(
+                onInteraction = { dirty ->
+                    isSessionDirty = dirty
+                }
+            )
         }
-
-
     }
 }
 
@@ -376,7 +374,7 @@ fun VocabQuizOnboardingView(onStartSuggestion: (String) -> Unit) {
         Spacer(Modifier.height(12.dp))
 
         // Suggestions
-        SuggestionButton("Personal Information") { onStartSuggestion("Personal Information") }
+        SuggestionButton("Personal Information") { onStartSuggestion("Personal (B1)") }
         SuggestionButton("Education") { onStartSuggestion("Education") }
     }
 }

@@ -87,6 +87,9 @@ class VocabQuizRepository @Inject constructor(
             // 3. Save
             saveToDisk()
 
+            // 4. Notify listeners (e.g. dashboard) so they refresh
+            _dataUpdateEvents.tryEmit(Unit)
+
             debugPrintAllWordStates()
         }
     }
