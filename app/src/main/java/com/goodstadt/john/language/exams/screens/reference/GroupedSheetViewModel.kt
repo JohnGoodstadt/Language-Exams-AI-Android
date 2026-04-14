@@ -204,18 +204,8 @@ class GroupedSheetViewModel @Inject constructor(
             }
 
             try {
-                // --- VERSION CHECK LOGIC ---
-                // 1. Get all remote versions.
-                val remoteVersions = appConfigRepository.getRemoteSheetVersions()
-                val remoteVersion = remoteVersions[sheetName] ?: 1
-                val localVersion = appConfigRepository.getLocalVersion(sheetName)
-                val forceRefresh = remoteVersion > localVersion
-                Timber.d("GroupedVM: Sheet '$sheetName' -> Remote v$remoteVersion, Local v$localVersion, Force refresh: $forceRefresh")
-
-                // 5. Fetch from the repository with the forceRefresh flag.
-
+                // Version checking + disk/network/bundle fallback is handled inside getFormat0Data()
                 Timber.i("GroupedSheetViewModel: Attempting to fetch generic vocab for '$sheetName'...")
-//                val result = examSheetRepository.getVocabSheet(sheetName, forceRefresh = forceRefresh)
                 val result = vocabRepository.getFormat0Data(sheetName)
                 result.onSuccess { vocabFile ->
                     val categories = vocabFile.categories
@@ -228,12 +218,6 @@ class GroupedSheetViewModel @Inject constructor(
                         .map { it.sentence }
 
                     audioCacheManager.recalculateReferenceStats(sheetName, allSentences)
-
-
-                    // 6. If we refreshed, update the local version.
-                    if (forceRefresh) {
-                        appConfigRepository.updateLocalVersion(sheetName, remoteVersion)
-                    }
                 }
                 result.onFailure { error ->
                     _uiState.update {
