@@ -516,9 +516,9 @@ class ParagraphViewModel @Inject constructor(
 
                             }
                             result.onFailure { e ->
-                                Timber.e("Error onFailure 1")
+                                Timber.e("Error onFailure Gemini") //may be "API key expired. Please renew the API key."
                                 Timber.e(e.localizedMessage)
-                                val rawMessage = e.localizedMessage ?: ""
+                                val rawMessage = e.localizedMessage ?: "An unknown error occurred." //maybe "API key expired. Please renew the API key."
                                 val gptMessage : String = if (rawMessage.contains("The model is overloaded"))
                                     "The model is overloaded. Please try again later"
                                 else
