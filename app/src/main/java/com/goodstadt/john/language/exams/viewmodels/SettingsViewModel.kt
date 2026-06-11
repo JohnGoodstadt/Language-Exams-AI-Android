@@ -1035,7 +1035,7 @@ class SettingsViewModel @Inject constructor(
     }
     fun onGenerateClicked() {
         val wordList = "ashamed, device, apprenticeship, faith, memoir, reduce"
-        val currentModel = "gemini-2.5-flash-lite" // From Remote Config
+        val currentModel = "gemini-2.5-flash" // From Remote Config
 
         viewModelScope.launch {
             val aiManager = AIManager()

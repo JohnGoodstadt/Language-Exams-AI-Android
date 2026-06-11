@@ -56,11 +56,11 @@ Fix: For production, proxy these API calls through your own backend server so ke
             secretsProperties.getProperty("OPENAI_API_KEY")
         )
 
-        buildConfigField(
-            "String",
-            "GEMINI_API_KEY",
-            secretsProperties.getProperty("GEMINI_API_KEY")
-        )
+//        buildConfigField(
+//            "String",
+//            "GEMINI_API_KEY",
+//            secretsProperties.getProperty("GEMINI_API_KEY")
+//        )
 
         buildConfigField(
             "String",

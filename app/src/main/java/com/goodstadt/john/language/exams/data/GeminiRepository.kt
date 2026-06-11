@@ -17,7 +17,7 @@ class GeminiRepository @Inject constructor() {
      * allowing the model name to be dynamic.
      *
      * @param prompt The text prompt to send to the model.
-     * @param modelName The official ID of the Gemini model to use (e.g., "gemini-1.5-flash-latest").
+     * @param modelName The official ID of the Gemini model to use (e.g., "gemini-2.5-flash-latest").
      * @return A [Result] containing the full [GenerateContentResponse] on success,
      *         or an [Exception] on failure.
      */
@@ -26,7 +26,7 @@ class GeminiRepository @Inject constructor() {
             // 1. Create the GenerativeModel instance on-demand with the specified model name.
             val generativeModel = GenerativeModel(
                 modelName = modelName,
-                apiKey = BuildConfig.GEMINI_API_KEY
+                apiKey = "INVALID_KEY"//BuildConfig.GEMINI_API_KEY
             )
 
             Timber.d("Generating content with model: $modelName")

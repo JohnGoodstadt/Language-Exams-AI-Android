@@ -19,7 +19,7 @@ data class GeminiUiState(
 )
 
 @HiltViewModel
-class GeminiViewModel @Inject constructor() : ViewModel() {
+class GeminiViewModelNotUsed @Inject constructor() : ViewModel() {
 
     private val _uiState = MutableStateFlow(GeminiUiState())
     val uiState = _uiState.asStateFlow()
@@ -29,8 +29,8 @@ class GeminiViewModel @Inject constructor() : ViewModel() {
     init {
         // Initialize the GenerativeModel with the API key from BuildConfig
         generativeModel = GenerativeModel(
-            modelName = "gemini-1.5-flash", // Use a fast and efficient model
-            apiKey = BuildConfig.GEMINI_API_KEY
+            modelName = "gemini-2.5-flash", // Use a fast and efficient model
+            apiKey =  "INVALID_KEY"//BuildConfig.GEMINI_API_KEY
         )
     }
 

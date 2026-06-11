@@ -583,9 +583,9 @@ class ParagraphViewModel @Inject constructor(
         viewModelScope.launch {
             val currentState = _uiState.value
 
-//            val providerToUse = providerManager.getNextProviderAndIncrement()
+            val providerToUse = providerManager.getNextProviderAndIncrement()
             //TDOO: 1 day
-            val providerToUse  = LLMProvider.Gemini
+//            val providerToUse  = LLMProvider.Gemini
             Timber.w("providerToUse:$providerToUse")
 
             /*
@@ -789,7 +789,6 @@ class ParagraphViewModel @Inject constructor(
                                         val totalTokenCount = response.usage?.get("totalTokens") ?: 0
                                         val inputTokens = response.usage?.get("inputTokens") ?: 0
                                         val outputTokens = response.usage?.get("outputTokens") ?: 0
-
 
 //
                                         Timber.d("Input Tokens: $inputTokens, Output Tokens: $outputTokens totalTokenCount: $totalTokenCount")
