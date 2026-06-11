@@ -43,6 +43,9 @@ facebook = "17.0.0"
 androidx-credentials = "1.2.2"
 googleid = "1.1.1"
 foundationLayoutAndroid = "1.6.6"
+firebaseFunctions = "21.0.0"
+firebaseAuth = "23.1.0"
+
 
 [libraries]
 # Core & AppCompat
@@ -87,6 +90,8 @@ firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
 firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
 firebase-crashlyticsKtx = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+firebase-functions = { group = "com.google.firebase", name = "firebase-functions-ktx", version.ref = "firebaseFunctions" }
+#firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebaseAuth" }
 
 # Unit Testing
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -129,6 +134,7 @@ androidx-credentials = { group = "androidx.credentials", name = "credentials", v
 androidx-credentials-play-services-auth = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "androidx-credentials" }
 googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 androidx-foundation-layout-android = { group = "androidx.compose.foundation", name = "foundation-layout-android", version.ref = "foundationLayoutAndroid" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

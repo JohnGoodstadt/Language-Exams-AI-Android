@@ -27,6 +27,7 @@ import com.goodstadt.john.language.exams.data.repository.FirebaseAudioService
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statIAPBuyCancelledCount
 import com.goodstadt.john.language.exams.data.repository.UsageQuizRepository
 import com.goodstadt.john.language.exams.data.repository.VocabQuizRepository
+import com.goodstadt.john.language.exams.managers.AIManager
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 import com.goodstadt.john.language.exams.managers.BannerManager
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
@@ -1028,4 +1029,22 @@ class SettingsViewModel @Inject constructor(
     fun debugVocabQuizRepository() {
         vocabQuizRepository.debugPrintAllWordStates()
     }
-}
+
+    fun callGoogleFunction() {
+        onGenerateClicked()
+    }
+    fun onGenerateClicked() {
+        val wordList = "ashamed, device, apprenticeship, faith, memoir, reduce"
+        val currentModel = "gemini-2.5-flash-lite" // From Remote Config
+
+        viewModelScope.launch {
+            val aiManager = AIManager()
+            val paragraph = aiManager.getTeacherParagraph(wordList, currentModel)
+
+            if (paragraph != null) {
+                println(paragraph)
+//                _uiState.update { it.copy(paragraphText = paragraph) }
+                // Now trigger your TTS as usual...
+            }
+        }
+    }}

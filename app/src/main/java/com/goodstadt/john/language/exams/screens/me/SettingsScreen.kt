@@ -875,7 +875,8 @@ fun SettingsScreen(
                     title = "Debug Something",
                     currentValue = "Rate Limiting (D)",
                     onClick = {
-                        viewModel.resetRateLimits()
+                            viewModel.callGoogleFunction()
+//                        viewModel.resetRateLimits()
 //                        viewModel.debugAppRateLimiting()
 //                        viewModel.debugVocabQuizRepository()
 //                        viewModel.showCelebtation()

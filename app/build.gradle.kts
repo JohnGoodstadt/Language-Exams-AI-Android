@@ -251,7 +251,8 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics-ktx") // If you have it
     implementation(libs.firebase.crashlyticsKtx)
     implementation(libs.firebase.storage)
-
+    implementation(libs.firebase.functions)
+//    implementation(libs.firebase.auth)
     // This library is NOT part of the Firebase BOM, so it needs its own version.
     // Ensure this is defined correctly in your TOML file.
 
