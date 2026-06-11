@@ -32,6 +32,7 @@ import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Comp
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterDayForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterForbidCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statRateLimiterHourForbidCount
+import com.goodstadt.john.language.exams.managers.AIManager
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
@@ -244,7 +245,7 @@ class ParagraphViewModel @Inject constructor(
         }
     }
 
-    fun generateNewParagraph() {
+    fun generateNewParagraphOriginal() {
 
         vocabRepository.stopPlayback()
 
@@ -256,7 +257,9 @@ class ParagraphViewModel @Inject constructor(
         viewModelScope.launch {
             val currentState = _uiState.value
 
-            val providerToUse = providerManager.getNextProviderAndIncrement()
+//            val providerToUse = providerManager.getNextProviderAndIncrement()
+            //TDOO: 1 day
+            val providerToUse  = LLMProvider.Gemini
             Timber.w("providerToUse:$providerToUse")
 
 /*
@@ -534,6 +537,435 @@ class ParagraphViewModel @Inject constructor(
                                 FirebaseCrashlytics.getInstance().recordException(e)
                                 FirebaseCrashlytics.getInstance().log("GoogleCloudTTS.GenerateParagraph().onFailure ${e.localizedMessage}")
                             }
+
+
+
+                        } catch (e: Exception) {
+                            // Update the state with the error message
+                            Timber.e("Error catch 2")
+                            _uiState.update {
+                                it.copy(
+                                    isLoading = false,
+                                    error = e.localizedMessage ?: "An unknown error occurred."
+                                )
+                            }
+                            e.printStackTrace()
+                            FirebaseCrashlytics.getInstance().recordException(Exception("ParagraphViewModel.generateNewParagraph() Gemini generate call"))
+                        }
+                    }
+                }
+
+
+
+            } catch (e: Exception) {
+                Timber.e("Error catch 3")
+                e.printStackTrace()
+//                _uiState.update { it.copy(isLoading = false, error = e.message) }
+                Timber.e("Error in call to openAI")
+                Timber.e(e.localizedMessage)
+                val fileName = userPreferencesRepository.selectedFileNameFlow.first()
+
+                FirebaseCrashlytics.getInstance().recordException(Exception("ParagraphViewModel.generateNewParagraph() getFormat0Data for ${fileName }}"))
+                _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.") }
+//                _uiState.update { it.copy(isLoading = false, error = "LLM call failed. Please try again.${e.localizedMessage}") }
+            }
+        }
+    }
+    fun generateNewParagraph() {
+
+        vocabRepository.stopPlayback()
+
+        if (!connectivityRepository.isCurrentlyOnline()) {
+            _uiState.update { it.copy(error = "No internet connection. Please check your network and try again." ) }
+            return
+        }
+
+        viewModelScope.launch {
+            val currentState = _uiState.value
+
+//            val providerToUse = providerManager.getNextProviderAndIncrement()
+            //TDOO: 1 day
+            val providerToUse  = LLMProvider.Gemini
+            Timber.w("providerToUse:$providerToUse")
+
+            /*
+                        val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
+                        if (!isPremiumUser.value && todayIsNotAFreePassDay) { //if premium user don't check credits or is on day 1
+             */
+            //val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)  //AI Reccommends ignore install day free
+            if (!isPurchased.value){ //if premium user don't check credits or is on day 1
+                // --- THE NEW, ROBUST CHECK ---
+                // 1. Wait until credits are initialized.
+                // 2. Then check if the count is zero or less.
+                if (currentState.areCreditsInitialized && currentState.userCredits.current <= 0) {
+                    Timber.w("User is out of credits. Showing sheet.")
+                    _uiState.update { it.copy(waitingForCredits = true,generatedSentence = "") }
+                    return@launch
+                }
+
+                // Optionally, you can prevent generation if credits aren't initialized yet,
+                // though the user would have to be incredibly fast to tap the button.
+                if (!currentState.areCreditsInitialized) {
+                    _uiState.update { it.copy(error = "Initializing credits, please wait...") }
+                    return@launch
+                }
+
+                val currentCredits = _uiState.value.userCredits.current
+
+                if (currentCredits <= 0) {
+                    Timber.w("User is out of credits. Showing sheet.")
+                    _uiState.update { it.copy(waitingForCredits = true,generatedSentence = "") }
+                    return@launch
+                }
+            }else{
+                Timber.w("User is a Premium user")
+            }
+
+
+            val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow.first()
+
+            _uiState.update { it.copy(isLoading = true, error = null) }
+
+            try {
+                // Phase 1: Get words from local data
+                val fileName = userPreferencesRepository.selectedFileNameFlow.first()
+                val vocabFile = vocabRepository.getFormat0Data(fileName).getOrNull()
+                    ?: throw Exception("Could not load vocabulary file.")
+
+
+
+                _uiState.update { it.copy(isLoading = true, error = null) }
+
+
+                //TODO: no
+                when(providerToUse) {
+                    LLMProvider.OpenAI -> { /* ... */
+
+                        Timber.e("Using OpenAi")
+
+                        val wordsToHighlight = getLanguageSpecificWords(vocabFile,currentSkillLevel)
+                        val wordsForPrompt = wordsToHighlight.joinToString(", ")
+                        Timber.w("wordsToHighlight:$wordsToHighlight")
+                        // Phase 2: Call the OpenAI API via the repository
+//                val systemMessage = "You are a helpful language teacher..." // Define your system message
+                        val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
+                        val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
+
+                        Timber.w(systemMessage)
+                        Timber.w(userQuestion)
+
+                        val openAIModel = _uiState.value.currentOpenAIModel
+                        val llmEngine =  _uiState.value.currentOpenAIModel?.id ?: DEFAULT_GPT
+                        Timber.w("$llmEngine skill:$currentSkillLevel")
+                        _uiState.update { it.copy(lastUsedLLMModel = openAIModel?.title ?: "Unknown Open AI Model") }
+
+                        val llmResponse = openAIRepository.fetchOpenAIData(
+                            llmEngine = llmEngine,
+                            systemMessage = systemMessage,
+                            userQuestion = userQuestion
+                        )
+
+                        Timber.w(llmResponse.content)
+                        val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
+                        val totalCostUSD = result.totalCostUSD
+
+                        if (DEBUG) {
+                            Timber.d(llmResponse.content)
+                            Timber.v("Total tokens: ${result.totalTokens}")
+                            Timber.v("Estimated characters (for TTS): ${result.estimatedCharacters}")
+                            Timber.v("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
+                            Timber.v("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
+                            Timber.v("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
+                            Timber.v("Total cost: $${"%.6f".format(totalCostUSD)}")
+                        }
+
+
+                        val totalTokensUsed = llmResponse.totalTokensUsed
+                        ttsStatsRepository.incUserOpenAITotalTokenCount(totalTokensUsed)
+                        ttsStatsRepository.incUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
+
+                        ttsStatsRepository.incGlobalOpenAITotalTokenCount(totalTokensUsed)
+                        ttsStatsRepository.incGlobalStatDouble(OpenAIEstCostUSD, totalCostUSD)
+
+
+                        val modelFieldName = "${llmModel_}${openAIModel?.title}" //e.g. llmModel_gemini-2.5-flash
+                        ttsStatsRepository.updateUserStatField(modelFieldName)
+                        audioCacheManager.incrementAIParagraphCount()
+
+                        if (!isPurchased.value) {
+                            creditsRepository.decrementCredit(
+                                llmResponse.promptTokens,
+                                llmResponse.completionTokens,
+                                totalTokensUsed
+                            )
+
+                            Timber.w("current credits: ${_uiState.value.userCredits.current} out of ${_uiState.value.userCredits.total}")
+                            if (_uiState.value.userCredits.current <= 0){
+                                _uiState.update { it.copy(generatedSentence = "") } //spare space ty show messages
+                                Timber.w("seconds to go: ${secondsRemaining()}")
+                            }
+
+                        }else{
+                            ttsStatsRepository.updateUserStatField(OpenAIPremiumCallCount)
+                        }
+
+
+
+                        // Phase 3: Update the UI with the response
+                        // Simple parsing, you can make this more robust
+                        // Sometimes LLM returns words surrounded by **
+                        val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("*", "")
+
+                        if (DEBUG){
+                            Timber.i(sentence)
+                        }
+                        if(DEBUG) {
+                            ttsStatsRepository.updateParagraph(sentence, openAIModel?.title ?: "Unknown Open AI Model", currentSkillLevel )
+                        }
+
+                        // --- CHANGE 2: Pass the highlightedWords to the state ---
+                        _uiState.update {
+                            it.copy(
+                                isLoading = false,
+                                generatedSentence = sentence.ifBlank { "Could not parse sentence." },
+                                translation = "",//translation.ifBlank { "Could not parse translation." },
+                                highlightedWords = wordsToHighlight.toSet(),
+                                waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
+                            )
+                        }
+                    } //: OpenAI call
+                    LLMProvider.Gemini -> { /* ... */
+
+                        try {
+
+                            Timber.e("Using Gemini")
+                            val selectedModel = _uiState.value.currentGeminiModel ?: return@launch
+
+                            Timber.w("$selectedModel skill:$currentSkillLevel")
+
+                            _uiState.update { it.copy(isLoading = true,lastUsedLLMModel = selectedModel.title) }
+
+                            //val prompt = promptForLLM(vocabFile,currentSkillLevel)
+                            val wordsToHighlight = getLanguageSpecificWords(vocabFile,currentSkillLevel)
+                            val wordsForPrompt = wordsToHighlight.joinToString(", ")
+                            Timber.w("wordsToHighlight:$wordsToHighlight")
+                            val userQuestion =  "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
+                            val systemMessage =  LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
+                            val prompt = "$systemMessage$userQuestion"
+
+
+                            if (true ) {
+                                val aiManager = AIManager()
+                                val response =  aiManager.getTeacherParagraph(prompt, "gemini-2.5-flash")
+
+//                                var errorMessage = "Something went wrong. Please try again"
+                                when (response.error) {
+                                    AIManager.AIError.BUSY -> {
+                                        _uiState.update { it.copy( isLoading = false,error = "The AI teacher is busy. Retrying...") }
+//                                        errorMessage = "The AI teacher is busy. Retrying..."
+                                        // Optional: delay(2000) and call generateAIPart again
+                                    }
+
+                                    AIManager.AIError.LIMIT_REACHED -> {
+                                        _uiState.update { it.copy(isLoading = false,error = "Daily limit reached. Upgrade to Mastery.") }
+//                                        errorMessage = "Daily limit reached. Upgrade to Mastery."
+                                    }
+
+                                    AIManager.AIError.UNAUTHENTICATED -> {
+                                        _uiState.update { it.copy(isLoading = false,error = "Please sign in to use AI features.") }
+//                                        errorMessage = "Please sign in to use AI features.")
+
+                                    }
+                                    AIManager.AIError.UNKNOWN -> {
+                                        _uiState.update { it.copy(error = "Something went wrong. Please try again") }
+//                                        errorMessage = "Please sign in to use AI features.")
+
+                                    }
+
+                                    null -> {
+                                        // SUCCESS
+                                        val generatedText = response.text ?: "No text was generated due to safety filters or an error."
+
+                                        val totalTokenCount = response.usage?.get("totalTokens") ?: 0
+                                        val inputTokens = response.usage?.get("inputTokens") ?: 0
+                                        val outputTokens = response.usage?.get("outputTokens") ?: 0
+
+
+//
+                                        Timber.d("Input Tokens: $inputTokens, Output Tokens: $outputTokens totalTokenCount: $totalTokenCount")
+
+                                        val cost = geminiRepository.calculateGeminiCallCost(
+                                            inputTokens = inputTokens,
+                                            outputTokens = outputTokens,
+                                            inputPricePerMillion = uiState.value.currentGeminiModel?.inputPrice ?: 0.0F,
+                                            outputPricePerMillion = uiState.value.currentGeminiModel?.outputPrice ?: 0.0F
+                                        )
+
+                                        if (DEBUG) {
+                                            Timber.v("Total tokens: ${cost.totalTokens}")
+                                            Timber.v("Input tokens: ${cost.inputTokens}")
+                                            Timber.v("Output tokens: ${cost.outputTokens}")
+                                            Timber.v("GPT input cost: $${"%.6f".format(cost.gptInputCostUSD)}")
+                                            Timber.v("GPT output cost: $${"%.6f".format(cost.gptOutputCostUSD)}")
+                                            Timber.v("Total cost: $${"%.6f".format(cost.totalCostUSD)}")
+                                        }
+
+                                        val modelFieldName = "${llmModel_}${selectedModel.title}" //e.g. llmModel_gemini-2.5-flash
+                                        ttsStatsRepository.updateUserStatField(modelFieldName)
+
+                                        ttsStatsRepository.incUserGeminiTotalTokenCount(totalTokenCount)
+                                        ttsStatsRepository.incUserStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
+
+                                        ttsStatsRepository.incGlobalGeminiTotalTokenCount(totalTokenCount)
+                                        ttsStatsRepository.incGlobalStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
+
+
+                                        audioCacheManager.incrementAIParagraphCount()
+
+                                        if (!isPurchased.value) {
+                                            creditsRepository.decrementCredit(
+                                                inputTokens,
+                                                outputTokens,
+                                                totalTokenCount
+                                            )
+
+                                            Timber.w("current credits: ${_uiState.value.userCredits.current} out of ${_uiState.value.userCredits.total}")
+                                            if (_uiState.value.userCredits.current <= 0){
+                                                _uiState.update { it.copy(generatedSentence = "") }
+                                                Timber.w("seconds to go: ${secondsRemaining()}")
+                                            }
+                                        }else{
+                                            ttsStatsRepository.updateUserStatField(GeminiPremiumCallCount)
+                                        }
+
+                                        val sentence = generatedText.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("*", "")
+
+                                        _uiState.update {
+                                            it.copy(
+                                                isLoading = false,
+                                                generatedSentence = sentence, //"No text was generated.",
+                                                translation = "",//translation.ifBlank { "Could not parse translation." },
+                                                highlightedWords = wordsToHighlight.toSet(),
+                                                waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
+                                            )
+                                        }
+
+                                        if(DEBUG) {
+                                            ttsStatsRepository.updateParagraph(sentence,modelFieldName,currentSkillLevel)
+                                        }
+
+                                    }
+
+                                }
+                            }else{
+                                val result = geminiRepository.generateContent(prompt, selectedModel.id)
+
+                                result.onSuccess { response: GenerateContentResponse ->
+                                    val generatedText = response.text ?: "No text was generated due to safety filters or an error."
+
+                                    val usageMetadata = response.usageMetadata
+                                    if (usageMetadata != null) {
+                                        val inputTokens = usageMetadata.promptTokenCount
+                                        val outputTokens = usageMetadata.candidatesTokenCount
+                                        val totalTokenCount = usageMetadata.totalTokenCount
+
+                                        Timber.d("Input Tokens: $inputTokens, Output Tokens: $outputTokens totalTokenCount: $totalTokenCount")
+
+                                        val cost = geminiRepository.calculateGeminiCallCost(
+                                            inputTokens = inputTokens,
+                                            outputTokens = outputTokens,
+                                            inputPricePerMillion = uiState.value.currentGeminiModel?.inputPrice ?: 0.0F,
+                                            outputPricePerMillion = uiState.value.currentGeminiModel?.outputPrice ?: 0.0F
+                                        )
+
+                                        if (DEBUG) {
+                                            Timber.v("Total tokens: ${cost.totalTokens}")
+                                            Timber.v("Input tokens: ${cost.inputTokens}")
+                                            Timber.v("Output tokens: ${cost.outputTokens}")
+                                            Timber.v("GPT input cost: $${"%.6f".format(cost.gptInputCostUSD)}")
+                                            Timber.v("GPT output cost: $${"%.6f".format(cost.gptOutputCostUSD)}")
+                                            Timber.v("Total cost: $${"%.6f".format(cost.totalCostUSD)}")
+                                        }
+
+                                        val modelFieldName = "${llmModel_}${selectedModel.title}" //e.g. llmModel_gemini-2.5-flash
+                                        ttsStatsRepository.updateUserStatField(modelFieldName)
+
+                                        ttsStatsRepository.incUserGeminiTotalTokenCount(totalTokenCount)
+                                        ttsStatsRepository.incUserStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
+
+                                        ttsStatsRepository.incGlobalGeminiTotalTokenCount(totalTokenCount)
+                                        ttsStatsRepository.incGlobalStatDouble(GeminiEstCostUSD, cost.totalCostUSD.toDouble())
+
+
+                                        audioCacheManager.incrementAIParagraphCount()
+
+                                        if (!isPurchased.value) {
+                                            creditsRepository.decrementCredit(
+                                                inputTokens,
+                                                outputTokens,
+                                                totalTokenCount
+                                            )
+
+                                            Timber.w("current credits: ${_uiState.value.userCredits.current} out of ${_uiState.value.userCredits.total}")
+                                            if (_uiState.value.userCredits.current <= 0){
+                                                _uiState.update { it.copy(generatedSentence = "") }
+                                                Timber.w("seconds to go: ${secondsRemaining()}")
+                                            }
+                                        }else{
+                                            ttsStatsRepository.updateUserStatField(GeminiPremiumCallCount)
+                                        }
+
+                                        val sentence = generatedText.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("*", "")
+
+                                        _uiState.update {
+                                            it.copy(
+                                                isLoading = false,
+                                                generatedSentence = sentence, //"No text was generated.",
+                                                translation = "",//translation.ifBlank { "Could not parse translation." },
+                                                highlightedWords = wordsToHighlight.toSet(),
+                                                waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
+                                            )
+                                        }
+
+                                        if(DEBUG) {
+                                            ttsStatsRepository.updateParagraph(sentence,modelFieldName,currentSkillLevel)
+                                        }
+
+                                    }
+                                    else{ //should not happen
+                                        Timber.w("Usage metadata was null in the response.")
+                                        _uiState.update {
+                                            it.copy(
+                                                isLoading = false,
+                                                generatedSentence = generatedText
+                                            )
+                                        }
+                                    }
+                                    // Update the state with the successful response
+
+                                }
+                                result.onFailure { e ->
+                                    Timber.e("Error onFailure Gemini") //may be "API key expired. Please renew the API key."
+                                    Timber.e(e.localizedMessage)
+                                    val rawMessage = e.localizedMessage ?: "An unknown error occurred." //maybe "API key expired. Please renew the API key."
+                                    val gptMessage : String = if (rawMessage.contains("The model is overloaded"))
+                                        "The model is overloaded. Please try again later"
+                                    else
+                                        rawMessage
+
+                                    _uiState.update {
+                                        it.copy(
+                                            isLoading = false,
+                                            error = gptMessage ?: "An unknown error occurred."
+                                        )
+                                    }
+                                    e.printStackTrace()
+                                    FirebaseCrashlytics.getInstance().recordException(e)
+                                    FirebaseCrashlytics.getInstance().log("GoogleCloudTTS.GenerateParagraph().onFailure ${e.localizedMessage}")
+                                }
+
+                            }
+
 
 
 
