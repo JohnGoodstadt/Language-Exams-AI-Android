@@ -21,7 +21,7 @@ class AIManager {
 
     enum class AIError { BUSY, LIMIT_REACHED, UNAUTHENTICATED, UNKNOWN }
 
-    suspend fun getTeacherParagraph(skillLevelPrompt: String, modelName: String): AIResponse {
+    suspend fun getTeacherParagraphGemini(skillLevelPrompt: String, modelName: String): AIResponse {
 
         // 2. Auth Check
         if (FirebaseAuth.getInstance().currentUser == null) {
@@ -72,4 +72,45 @@ class AIManager {
             }
         }
     }
+    suspend fun getTeacherParagraphOpenAICloudFunction(systemPrompt: String, userPrompt: String, model: String): AIResponse {
+        val data = hashMapOf(
+            "systemPrompt" to systemPrompt,
+            "userPrompt" to userPrompt,
+            "model" to model
+        )
+
+        return try {
+            val result = functions.getHttpsCallable("callOpenAIProxy").call(data).await()
+            val res = result.data as Map<*, *>
+            AIResponse(
+                text = res["text"] as? String,
+                usage = res["usage"] as? Map<String, Int>
+            )
+        } catch (e: Exception) {
+            // 5. Handle Specific Firebase Errors
+            if (e is FirebaseFunctionsException) {
+                val code = e.code
+                val message = e.message
+
+                Timber.e("❌ Function Error: [$code] $message")
+
+                when (code) {
+                    FirebaseFunctionsException.Code.UNAVAILABLE -> {
+                        // Mapped from Gemini 503 in index.js
+                        AIResponse(error = AIError.BUSY)
+                    }
+                    FirebaseFunctionsException.Code.RESOURCE_EXHAUSTED -> {
+                        // Mapped from Gemini 429 in index.js
+                        AIResponse(error = AIError.LIMIT_REACHED)
+                    }
+                    else -> AIResponse(error = AIError.UNKNOWN)
+                }
+            } else {
+                Timber.e(e, "❌ General Network Error")
+                AIResponse(error = AIError.UNKNOWN)
+            }
+        }
+    }
+
+
 }

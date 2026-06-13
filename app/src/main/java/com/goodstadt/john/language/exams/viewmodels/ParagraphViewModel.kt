@@ -259,7 +259,7 @@ class ParagraphViewModel @Inject constructor(
 
 //            val providerToUse = providerManager.getNextProviderAndIncrement()
             //TDOO: 1 day
-            val providerToUse  = LLMProvider.Gemini
+            val providerToUse  = LLMProvider.OpenAI
             Timber.w("providerToUse:$providerToUse")
 
 /*
@@ -585,7 +585,7 @@ class ParagraphViewModel @Inject constructor(
 
             val providerToUse = providerManager.getNextProviderAndIncrement()
             //TDOO: 1 day
-//            val providerToUse  = LLMProvider.Gemini
+//            val providerToUse  = LLMProvider.OpenAI
             Timber.w("providerToUse:$providerToUse")
 
             /*
@@ -641,98 +641,239 @@ class ParagraphViewModel @Inject constructor(
                 when(providerToUse) {
                     LLMProvider.OpenAI -> { /* ... */
 
-                        Timber.e("Using OpenAi")
+                        if (true) {
+                            Timber.e("Using OpenAi - Cloud Function")
 
-                        val wordsToHighlight = getLanguageSpecificWords(vocabFile,currentSkillLevel)
-                        val wordsForPrompt = wordsToHighlight.joinToString(", ")
-                        Timber.w("wordsToHighlight:$wordsToHighlight")
-                        // Phase 2: Call the OpenAI API via the repository
+                            val wordsToHighlight = getLanguageSpecificWords(vocabFile,currentSkillLevel)
+                            val wordsForPrompt = wordsToHighlight.joinToString(", ")
+                            Timber.w("wordsToHighlight:$wordsToHighlight")
+                            // Phase 2: Call the OpenAI API via the repository
 //                val systemMessage = "You are a helpful language teacher..." // Define your system message
-                        val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
-                        val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
+                            val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
+                            val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
 
-                        Timber.w(systemMessage)
-                        Timber.w(userQuestion)
+                            Timber.w(systemMessage)
+                            Timber.w(userQuestion)
 
-                        val openAIModel = _uiState.value.currentOpenAIModel
-                        val llmEngine =  _uiState.value.currentOpenAIModel?.id ?: DEFAULT_GPT
-                        Timber.w("$llmEngine skill:$currentSkillLevel")
-                        _uiState.update { it.copy(lastUsedLLMModel = openAIModel?.title ?: "Unknown Open AI Model") }
+                            val openAIModel = _uiState.value.currentOpenAIModel
+                            val llmEngine =  _uiState.value.currentOpenAIModel?.id ?: DEFAULT_GPT
+                            Timber.w("$llmEngine skill:$currentSkillLevel")
+                            _uiState.update { it.copy(lastUsedLLMModel = openAIModel?.title ?: "Unknown Open AI Model") }
 
-                        val llmResponse = openAIRepository.fetchOpenAIData(
-                            llmEngine = llmEngine,
-                            systemMessage = systemMessage,
-                            userQuestion = userQuestion
-                        )
+                            val aiManager = AIManager()
+                            val response =  aiManager.getTeacherParagraphOpenAICloudFunction(systemMessage, userQuestion,llmEngine)
 
-                        Timber.w(llmResponse.content)
-                        val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
-                        val totalCostUSD = result.totalCostUSD
+                            when (response.error) {
+                                AIManager.AIError.BUSY -> {
+                                    _uiState.update {
+                                        it.copy(
+                                            isLoading = false,
+                                            error = "The AI is busy. Retrying..."
+                                        )
+                                    }
+                                }
 
-                        if (DEBUG) {
-                            Timber.d(llmResponse.content)
-                            Timber.v("Total tokens: ${result.totalTokens}")
-                            Timber.v("Estimated characters (for TTS): ${result.estimatedCharacters}")
-                            Timber.v("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
-                            Timber.v("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
-                            Timber.v("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
-                            Timber.v("Total cost: $${"%.6f".format(totalCostUSD)}")
-                        }
+                                AIManager.AIError.LIMIT_REACHED -> {
+                                    _uiState.update {
+                                        it.copy(
+                                            isLoading = false,
+                                            error = "Daily limit reached. Upgrade to Mastery."
+                                        )
+                                    }
+                                }
+
+                                AIManager.AIError.UNAUTHENTICATED -> {
+                                    _uiState.update {
+                                        it.copy(
+                                            isLoading = false,
+                                            error = "Please sign in to use AI features."
+                                        )
+                                    }
+                                }
+
+                                AIManager.AIError.UNKNOWN -> {
+                                    _uiState.update { it.copy(error = "Something went wrong. Please try again", isLoading = false) }
+//                                        errorMessage = "Please sign in to use AI features.")
+
+                                }
+
+                                null -> {
+                                    // SUCCESS
+
+                                    response.text?.let { content ->
+
+                                        response.usage?.let { usage ->
+                                            val promptTokens = usage["inputTokens"] ?: 0
+                                            val output = usage["outputTokens"] ?: 0
+                                            val totalTokens = usage["totalTokens"] ?: 0
+
+                                            val result = calculateCallCost(promptTokens, totalTokens)
+                                            val totalCostUSD = result.totalCostUSD
+
+                                            if (DEBUG) {
+                                                Timber.d(content)
+                                                Timber.v("Total tokens: ${result.totalTokens}")
+                                                Timber.v("Estimated characters (for TTS): ${result.estimatedCharacters}")
+                                                Timber.v("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
+                                                Timber.v("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
+                                                Timber.v("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
+                                                Timber.v("Total cost: $${"%.6f".format(totalCostUSD)}")
+                                            }
 
 
-                        val totalTokensUsed = llmResponse.totalTokensUsed
-                        ttsStatsRepository.incUserOpenAITotalTokenCount(totalTokensUsed)
-                        ttsStatsRepository.incUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
+                                            val totalTokensUsed = totalTokens
+                                            ttsStatsRepository.incUserOpenAITotalTokenCount(totalTokensUsed)
+                                            ttsStatsRepository.incUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
 
-                        ttsStatsRepository.incGlobalOpenAITotalTokenCount(totalTokensUsed)
-                        ttsStatsRepository.incGlobalStatDouble(OpenAIEstCostUSD, totalCostUSD)
+                                            ttsStatsRepository.incGlobalOpenAITotalTokenCount(totalTokensUsed)
+                                            ttsStatsRepository.incGlobalStatDouble(OpenAIEstCostUSD, totalCostUSD)
 
 
-                        val modelFieldName = "${llmModel_}${openAIModel?.title}" //e.g. llmModel_gemini-2.5-flash
-                        ttsStatsRepository.updateUserStatField(modelFieldName)
-                        audioCacheManager.incrementAIParagraphCount()
+                                            val modelFieldName = "${llmModel_}${openAIModel?.title}" //e.g. llmModel_gemini-2.5-flash
+                                            ttsStatsRepository.updateUserStatField(modelFieldName)
+                                            audioCacheManager.incrementAIParagraphCount()
 
-                        if (!isPurchased.value) {
-                            creditsRepository.decrementCredit(
-                                llmResponse.promptTokens,
-                                llmResponse.completionTokens,
-                                totalTokensUsed
+                                            if (!isPurchased.value) {
+                                                creditsRepository.decrementCredit(
+                                                    promptTokens,
+                                                    totalTokens,
+                                                    totalTokens
+                                                )
+
+                                                Timber.w("current credits: ${_uiState.value.userCredits.current} out of ${_uiState.value.userCredits.total}")
+                                                if (_uiState.value.userCredits.current <= 0){
+                                                    _uiState.update { it.copy(generatedSentence = "") } //spare space ty show messages
+                                                    Timber.w("seconds to go: ${secondsRemaining()}")
+                                                }
+
+                                            }else{
+                                                ttsStatsRepository.updateUserStatField(OpenAIPremiumCallCount)
+                                            }
+                                        }
+
+                                        // Phase 3: Update the UI with the response
+                                        // Simple parsing, you can make this more robust
+                                        // Sometimes LLM returns words surrounded by **
+                                        val sentence = content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("*", "")
+
+                                        if (DEBUG){
+                                            Timber.i(sentence)
+                                        }
+                                        if(DEBUG) {
+                                            ttsStatsRepository.updateParagraph(sentence, openAIModel?.title ?: "Unknown Open AI Model", currentSkillLevel )
+                                        }
+
+                                        // --- CHANGE 2: Pass the highlightedWords to the state ---
+                                        _uiState.update {
+                                            it.copy(
+                                                isLoading = false,
+                                                generatedSentence = sentence.ifBlank { "Could not parse sentence." },
+                                                translation = "",//translation.ifBlank { "Could not parse translation." },
+                                                highlightedWords = wordsToHighlight.toSet(),
+                                                waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
+                                            )
+                                        }
+
+                                    }
+
+                                }
+                            }
+                         }else{
+                            Timber.e("Using OpenAi")
+
+                            val wordsToHighlight = getLanguageSpecificWords(vocabFile,currentSkillLevel)
+                            val wordsForPrompt = wordsToHighlight.joinToString(", ")
+                            Timber.w("wordsToHighlight:$wordsToHighlight")
+                            // Phase 2: Call the OpenAI API via the repository
+//                val systemMessage = "You are a helpful language teacher..." // Define your system message
+                            val userQuestion = "Here is the comma delimited list of words surrounded by angled brackets <$wordsForPrompt.>"
+                            val systemMessage = LanguageConfig.LLMSystemText.replace("<skilllevel>", currentSkillLevel)
+
+                            Timber.w(systemMessage)
+                            Timber.w(userQuestion)
+
+                            val openAIModel = _uiState.value.currentOpenAIModel
+                            val llmEngine =  _uiState.value.currentOpenAIModel?.id ?: DEFAULT_GPT
+                            Timber.w("$llmEngine skill:$currentSkillLevel")
+                            _uiState.update { it.copy(lastUsedLLMModel = openAIModel?.title ?: "Unknown Open AI Model") }
+
+                            val llmResponse = openAIRepository.fetchOpenAIData(
+                                llmEngine = llmEngine,
+                                systemMessage = systemMessage,
+                                userQuestion = userQuestion
                             )
 
-                            Timber.w("current credits: ${_uiState.value.userCredits.current} out of ${_uiState.value.userCredits.total}")
-                            if (_uiState.value.userCredits.current <= 0){
-                                _uiState.update { it.copy(generatedSentence = "") } //spare space ty show messages
-                                Timber.w("seconds to go: ${secondsRemaining()}")
+                            Timber.w(llmResponse.content)
+                            val result = calculateCallCost(llmResponse.promptTokens, llmResponse.completionTokens)
+                            val totalCostUSD = result.totalCostUSD
+
+                            if (DEBUG) {
+                                Timber.d(llmResponse.content)
+                                Timber.v("Total tokens: ${result.totalTokens}")
+                                Timber.v("Estimated characters (for TTS): ${result.estimatedCharacters}")
+                                Timber.v("LLM cost: $${"%.6f".format(result.gptEstCallCostUSD)}")
+                                Timber.v("GPT input cost: $${"%.6f".format(result.gptInputCostUSD)}")
+                                Timber.v("GPT output cost: $${"%.6f".format(result.gptOutputCostUSD)}")
+                                Timber.v("Total cost: $${"%.6f".format(totalCostUSD)}")
                             }
 
-                        }else{
-                            ttsStatsRepository.updateUserStatField(OpenAIPremiumCallCount)
+
+                            val totalTokensUsed = llmResponse.totalTokensUsed
+                            ttsStatsRepository.incUserOpenAITotalTokenCount(totalTokensUsed)
+                            ttsStatsRepository.incUserStatDouble(OpenAIEstCostUSD,totalCostUSD)
+
+                            ttsStatsRepository.incGlobalOpenAITotalTokenCount(totalTokensUsed)
+                            ttsStatsRepository.incGlobalStatDouble(OpenAIEstCostUSD, totalCostUSD)
+
+
+                            val modelFieldName = "${llmModel_}${openAIModel?.title}" //e.g. llmModel_gemini-2.5-flash
+                            ttsStatsRepository.updateUserStatField(modelFieldName)
+                            audioCacheManager.incrementAIParagraphCount()
+
+                            if (!isPurchased.value) {
+                                creditsRepository.decrementCredit(
+                                    llmResponse.promptTokens,
+                                    llmResponse.completionTokens,
+                                    totalTokensUsed
+                                )
+
+                                Timber.w("current credits: ${_uiState.value.userCredits.current} out of ${_uiState.value.userCredits.total}")
+                                if (_uiState.value.userCredits.current <= 0){
+                                    _uiState.update { it.copy(generatedSentence = "") } //spare space ty show messages
+                                    Timber.w("seconds to go: ${secondsRemaining()}")
+                                }
+
+                            }else{
+                                ttsStatsRepository.updateUserStatField(OpenAIPremiumCallCount)
+                            }
+
+
+
+                            // Phase 3: Update the UI with the response
+                            // Simple parsing, you can make this more robust
+                            // Sometimes LLM returns words surrounded by **
+                            val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("*", "")
+
+                            if (DEBUG){
+                                Timber.i(sentence)
+                            }
+                            if(DEBUG) {
+                                ttsStatsRepository.updateParagraph(sentence, openAIModel?.title ?: "Unknown Open AI Model", currentSkillLevel )
+                            }
+
+                            // --- CHANGE 2: Pass the highlightedWords to the state ---
+                            _uiState.update {
+                                it.copy(
+                                    isLoading = false,
+                                    generatedSentence = sentence.ifBlank { "Could not parse sentence." },
+                                    translation = "",//translation.ifBlank { "Could not parse translation." },
+                                    highlightedWords = wordsToHighlight.toSet(),
+                                    waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
+                                )
+                            }
                         }
 
 
-
-                        // Phase 3: Update the UI with the response
-                        // Simple parsing, you can make this more robust
-                        // Sometimes LLM returns words surrounded by **
-                        val sentence = llmResponse.content.substringAfter("[").substringBefore("]").replace(Regex("[<>]"), "").replace("*", "")
-
-                        if (DEBUG){
-                            Timber.i(sentence)
-                        }
-                        if(DEBUG) {
-                            ttsStatsRepository.updateParagraph(sentence, openAIModel?.title ?: "Unknown Open AI Model", currentSkillLevel )
-                        }
-
-                        // --- CHANGE 2: Pass the highlightedWords to the state ---
-                        _uiState.update {
-                            it.copy(
-                                isLoading = false,
-                                generatedSentence = sentence.ifBlank { "Could not parse sentence." },
-                                translation = "",//translation.ifBlank { "Could not parse translation." },
-                                highlightedWords = wordsToHighlight.toSet(),
-                                waitingForCredits = uiState.value.userCredits.current <= 0 //trigger countdown
-                            )
-                        }
                     } //: OpenAI call
                     LLMProvider.Gemini -> { /* ... */
 
@@ -756,7 +897,7 @@ class ParagraphViewModel @Inject constructor(
 
                             if (true ) {
                                 val aiManager = AIManager()
-                                val response =  aiManager.getTeacherParagraph(prompt, "gemini-2.5-flash")
+                                val response =  aiManager.getTeacherParagraphGemini(prompt, "gemini-2.5-flash")
 
 //                                var errorMessage = "Something went wrong. Please try again"
                                 when (response.error) {

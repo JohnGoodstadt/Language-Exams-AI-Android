@@ -17,7 +17,6 @@ import com.goodstadt.john.language.exams.data.FirestoreRepository
 import com.goodstadt.john.language.exams.data.GoogleTTSInfoRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.repository.PlaybackResult
-import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.currentGoogleVoiceName
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
@@ -34,7 +33,6 @@ import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.managers.HistorySyncManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
-import com.goodstadt.john.language.exams.models.Category
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import com.goodstadt.john.language.exams.utils.generateUniqueSentenceId
@@ -1039,7 +1037,7 @@ class SettingsViewModel @Inject constructor(
 
         viewModelScope.launch {
             val aiManager = AIManager()
-            val paragraph = aiManager.getTeacherParagraph(wordList, currentModel)
+            val paragraph = aiManager.getTeacherParagraphGemini(wordList, currentModel)
 
             if (paragraph != null) {
                 println(paragraph)
