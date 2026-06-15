@@ -113,4 +113,65 @@ class AIManager {
     }
 
 
+    /**
+     * Android version of AIManager.getTeacherParagraphDeepSeek
+     *
+     * Returns:
+     * - String? (The AI Paragraph)
+     * - Map<String, Int>? (The usage stats: inputTokens, outputTokens, totalTokens)
+     * - Exception? (The error, if any)
+     */
+    suspend fun getTeacherParagraphDeepSeek(
+        systemPrompt: String,
+        userPrompt: String,
+        model: String
+    ): Triple<String?, Map<String, Int>?, Exception?> {
+
+        // 1. Initialize pointing to your London server
+        val functions = Firebase.functions("europe-west2")
+
+        // 2. Prepare the parameters
+        val data = hashMapOf(
+            "systemPrompt" to systemPrompt,
+            "userPrompt" to userPrompt,
+            "model" to model
+        )
+
+        return try {
+            // 3. Call the Cloud Function
+            val result = functions
+                .getHttpsCallable("callDeepSeekProxy")
+                .call(data)
+                .await()
+
+            // 4. Parse the result (Cast from Any?)
+            val responseMap = result.data as? Map<*, *>
+            val aiText = responseMap?.get("text") as? String
+
+            // DeepSeek usage mapping (standardized by our Node.js script)
+            val usage = responseMap?.get("usage") as? Map<String, Int>
+
+            // Return: (Text, Stats, Error=null)
+            Triple(aiText, usage, null)
+
+        } catch (e: Exception) {
+            // 5. Error Handling
+            if (e is FirebaseFunctionsException) {
+                val code = e.code
+                val message = e.message
+
+                // Log exactly like we did in Swift for debugging
+                Timber.e("❌ DeepSeek Proxy Error: [$code] $message")
+
+                // Check for specific DeepSeek issues passed through index.js
+                if (message?.contains("insufficient_balance") == true) {
+                    Timber.e("💸 DEEPSEEK ALERT: Account balance empty!")
+                }
+            }
+
+            // Return: (null, null, Exception)
+            Triple(null, null, e)
+        }
+    }
+
 }

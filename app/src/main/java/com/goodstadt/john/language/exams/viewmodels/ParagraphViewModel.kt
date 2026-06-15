@@ -636,7 +636,6 @@ class ParagraphViewModel @Inject constructor(
 
                 _uiState.update { it.copy(isLoading = true, error = null) }
 
-
                 //TODO: no
                 when(providerToUse) {
                     LLMProvider.OpenAI -> { /* ... */
