@@ -37,9 +37,9 @@ import javax.inject.Singleton
 //}
 
 object CreditSystemConfig {
-    val FREE_TIER_CREDITS = if (BuildConfig.DEBUG) 4 else 20
+    val FREE_TIER_CREDITS = if (BuildConfig.DEBUG) 12 else 20
     val BOUGHT_TIER_CREDITS = if (BuildConfig.DEBUG) 4 else 10
-    val WAIT_PERIOD_MINUTES = if (BuildConfig.DEBUG) 3L else 20L
+    val WAIT_PERIOD_MINUTES = if (BuildConfig.DEBUG) 2L else 20L
 }
 
 data class UserCredits(

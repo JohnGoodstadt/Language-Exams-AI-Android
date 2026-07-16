@@ -115,8 +115,14 @@ class TTSStatsRepository @Inject constructor(
         const val GeminiCallCount = "geminiCallCount"
         const val GeminiEstCostUSD = "geminiEstCostUSD"
 
+        const val DeepSeekTotalTokenCount = "deepSeekTotalTokenCount"
+        const val DeepSeekCallCount = "deepSeekCallCount"
+        const val DeepSeekEstCostUSD = "deepSeekEstCostUSD"
+
         const val GeminiPremiumCallCount = "geminiPremiumCallCount"
         const val OpenAIPremiumCallCount = "openAIPremiumCallCount"
+        const val DeepSeekPremiumCallCount = "deepSeekPremiumCallCount"
+
 
         const val CloudStorageUploadCount = "CloudStorageUploadCount"
         const val CloudStorageDownloadCount = "CloudStorageDownloadCount"
@@ -521,6 +527,14 @@ class TTSStatsRepository @Inject constructor(
     fun incUserOpenAITotalTokenCount(count:Int) {
         inc(fsDOC.USER, OpenAICallCount)
         inc(fsDOC.USER, OpenAITotalTokenCount,count)
+    }
+    fun incUserDeepSeekTotalTokenCount(count:Int) {
+        inc(fsDOC.USER, DeepSeekCallCount)
+        inc(fsDOC.USER, DeepSeekTotalTokenCount,count)
+    }
+    fun incGlobalDeepSeekTotalTokenCount(count:Int) {
+        inc(fsDOC.GlobalStats, DeepSeekCallCount)
+        inc(fsDOC.GlobalStats, DeepSeekTotalTokenCount,count)
     }
     fun incGlobalOpenAITotalTokenCount(count:Int) {
         inc(fsDOC.GlobalStats, OpenAICallCount)

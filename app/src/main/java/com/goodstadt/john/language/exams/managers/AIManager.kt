@@ -125,10 +125,18 @@ class AIManager {
         systemPrompt: String,
         userPrompt: String,
         model: String
-    ): Triple<String?, Map<String, Int>?, Exception?> {
+    ): AIResponse {
+
+        //guard
+        if (FirebaseAuth.getInstance().currentUser == null) {
+            return AIResponse(error = AIError.UNAUTHENTICATED)
+        }
 
         // 1. Initialize pointing to your London server
         val functions = Firebase.functions("europe-west2")
+
+
+
 
         // 2. Prepare the parameters
         val data = hashMapOf(
@@ -137,41 +145,38 @@ class AIManager {
             "model" to model
         )
 
+
         return try {
-            // 3. Call the Cloud Function
             val result = functions
                 .getHttpsCallable("callDeepSeekProxy")
                 .call(data)
                 .await()
 
-            // 4. Parse the result (Cast from Any?)
             val responseMap = result.data as? Map<*, *>
             val aiText = responseMap?.get("text") as? String
-
-            // DeepSeek usage mapping (standardized by our Node.js script)
             val usage = responseMap?.get("usage") as? Map<String, Int>
 
-            // Return: (Text, Stats, Error=null)
-            Triple(aiText, usage, null)
+            // Success
+            AIResponse(text = aiText, usage = usage)
 
         } catch (e: Exception) {
-            // 5. Error Handling
             if (e is FirebaseFunctionsException) {
-                val code = e.code
-                val message = e.message
+                Timber.e("❌ DeepSeek Function Error: [${e.code}] ${e.message}")
 
-                // Log exactly like we did in Swift for debugging
-                Timber.e("❌ DeepSeek Proxy Error: [$code] $message")
-
-                // Check for specific DeepSeek issues passed through index.js
-                if (message?.contains("insufficient_balance") == true) {
-                    Timber.e("💸 DEEPSEEK ALERT: Account balance empty!")
+                // 2. Map Firebase Codes to your standard AIError enums
+                when (e.code) {
+                    FirebaseFunctionsException.Code.UNAVAILABLE -> AIResponse(error = AIError.BUSY)
+                    FirebaseFunctionsException.Code.RESOURCE_EXHAUSTED -> AIResponse(error = AIError.LIMIT_REACHED)
+                    FirebaseFunctionsException.Code.UNAUTHENTICATED -> AIResponse(error = AIError.UNAUTHENTICATED)
+                    // DeepSeek specifically: if balance is low, it might throw INTERNAL or PERMISSION_DENIED
+                    else -> AIResponse(error = AIError.UNKNOWN)
                 }
+            } else {
+                Timber.e(e, "❌ General Network Error during DeepSeek call")
+                AIResponse(error = AIError.UNKNOWN)
             }
-
-            // Return: (null, null, Exception)
-            Triple(null, null, e)
         }
+
     }
 
 }

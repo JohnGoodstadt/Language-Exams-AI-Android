@@ -49,6 +49,14 @@ class AppConfigRepository @Inject constructor(
             outputPrice = 0.4F
         )
     )
+    private val defaultDeepSeekModels = listOf(
+        //parsedDeepSeekIModels = [DeepSeekModelInfo(id: "deepseek-chat", title: "DeepSeek Chat", pricePerMillionInputTokens: 0.14, inputPrice:0.14 , outputPrice:0.28, isDefault: true)]
+        LlmModelInfo(
+            "deepseek-chat", "Deepseek- Chat", 0.14f, isDefault = true,
+            inputPrice = 0.14F,
+            outputPrice = 0.28F
+        )
+    )
 
     /**
      * Determines where the user should land on app launch.
@@ -175,6 +183,36 @@ class AppConfigRepository @Inject constructor(
         } else {
             // If the remote value is empty, return the safe default
             defaultModels
+        }
+    }
+    suspend fun getAvailableDeepSeekModels(): List<LlmModelInfo> {
+        // Ensure the latest values are fetched and activated
+        try {
+            remoteConfig.fetchAndActivate().await()
+        } catch (e: Exception) {
+            e.printStackTrace() // Log the error, but proceed with cached/default values
+        }
+
+        val jsonString = remoteConfig.getString("deepseek_models_config")
+
+        return if (jsonString.isNotBlank()) {
+            try {
+                // Try to parse the JSON string from Remote Config
+                Json.decodeFromString<List<LlmModelInfo>>(jsonString)
+            } catch (e: Exception) {
+                // If parsing fails (e.g., malformed JSON in the console), return the safe default
+                Timber.e("Failed to parse LLM DeepSeek models JSON", e)
+                TimberFault.f(
+                    message = "Failed to parse LLM DeepSeek models JSON",
+                    localizedMessage = e.localizedMessage ?: "null localizedMessage",
+                    secondaryText = jsonString,
+                    area = "AppConfigRepository.getAvailableDeepSeekiModels()"
+                )
+                defaultDeepSeekModels
+            }
+        } else {
+            // If the remote value is empty, return the safe default
+            defaultDeepSeekModels
         }
     }
     fun getPrepositionsDataVersion(): Int {
