@@ -46,3 +46,9 @@ val DarkSurface = Color(0xFF1c1b1f)
 val DarkOnSurface = Color(0xFFe6e1e5)
 //val DarkSurfaceVariant = Color(28, 28, 30) // The specific dark gray you wanted
 val DarkSurfaceVariant = Color(38, 38, 40) // The specific dark gray you wanted
+
+// --- Diagnostic System Colors ---
+private val DarkBG = Color(0xFF121212)      // Main background
+val CardBG = Color(0xFF1C1C1E)      // Secondary background for buttons/cards
+private val AccentOrange = Color(0xFFFF9500) // Your primary brand color
+private val SuccessGreen = Color(0xFF4CAF50) // For high scores

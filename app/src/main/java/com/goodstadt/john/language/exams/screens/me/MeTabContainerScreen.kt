@@ -36,10 +36,12 @@ import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
+import com.goodstadt.john.language.exams.screens.DiagnosticScreen
 import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 /**
  * This is the main container for the entire "Me" tab. It sets up the persistent
@@ -132,7 +134,7 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
             }
             // All the screen destinations remain the same
             //composable(MeScreen.Focusing.route) { RecallScreen() }
-            composable(MeScreen.Settings.route) { SettingsScreen() }
+            composable(MeScreen.Settings.route) { SettingsScreen(navController = meTabNavController) }
             composable(MeScreen.Search.route) { SearchScreen() }
             composable(MeScreen.Progress.route) {
                 MyProgressScreen(
@@ -148,6 +150,15 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
                 DictionaryEntryBrowserScreen(
                     modifier = Modifier.fillMaxSize(),
                     viewModel = vm
+                )
+            }
+            composable("diagnostic_test") {
+                DiagnosticScreen(
+                    onFinished = {
+                        // When the user finishes or skips, take them back to Settings
+                        //navController.popBackStack()
+                        Timber.e("popBackStack")
+                    }
                 )
             }
            // composable(MeScreen..route) { WordQuizScreen() }

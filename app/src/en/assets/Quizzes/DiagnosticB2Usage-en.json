@@ -1,0 +1,136 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "DiagnosticB2Usage-en",
+	"title": "B2 Mastery Check",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "B2 Proficiency: Grammar & Logic",
+			"description": "This diagnostic identifies subtle errors in complex sentence structures and formal usage required for B2 exams.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Choose the correct formal sentence.",
+					"summary": "Reduced Relative Clauses.",
+					"explain": "When reducing a relative clause, the relative pronoun (who/that) and 'to be' are omitted. 'The man talking' is correct; 'The man is talking' creates a double verb error.",
+					"words": [
+						{"word": "The woman talking to the manager is the new director.", "ok": true},
+						{"word": "The woman is talking to the manager is the new director.", "ok": false},
+						{"word": "The woman that talking to the manager is the new director.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "Identify the correct hypothetical structure.",
+					"summary": "Mixed Conditionals.",
+					"explain": "Mixed conditionals connect a past action with a present result. 'If I hadn't missed' (past) ... 'I would be' (present).",
+					"words": [
+						{"word": "If I hadn't missed the train, I would be home now.", "ok": true},
+						{"word": "If I didn't miss the train, I would be home now.", "ok": false},
+						{"word": "If I hadn't missed the train, I would have been home now.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "Which sentence uses correct formal inversion?",
+					"summary": "Negative Inversion.",
+					"explain": "When starting a sentence with a limiting adverb like 'Rarely', the subject and auxiliary verb must invert (Rarely have I...).",
+					"words": [
+						{"word": "Rarely have I seen such a beautiful view.", "ok": true},
+						{"word": "Rarely I have seen such a beautiful view.", "ok": false},
+						{"word": "Rarely have I see such a beautiful view.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "Choose the correct past speculation.",
+					"summary": "Modals of Deduction (Past).",
+					"explain": "To speculate about the past, use 'Must have' + Past Participle. 'Must forgot' is a common but incorrect shortcut.",
+					"words": [
+						{"word": "She must have forgotten her keys at the office.", "ok": true},
+						{"word": "She must forgot her keys at the office.", "ok": false},
+						{"word": "She must has forgotten her keys at the office.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "Which verb pattern is used correctly?",
+					"summary": "Regret + Gerund vs Infinitive.",
+					"explain": "Regret + -ing refers to a past action. Regret + infinitive is used to give bad news (formal).",
+					"words": [
+						{"word": "I regret telling him the secret now.", "ok": true},
+						{"word": "I regret to tell him the secret now.", "ok": false},
+						{"word": "I regret for telling him the secret now.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "Choose the correct reporting structure.",
+					"summary": "Impersonal Passive.",
+					"explain": "Structure: It + passive verb + that clause. 'It is believed' uses a dummy subject to show general opinion.",
+					"words": [
+						{"word": "It is believed that the company is expanding.", "ok": true},
+						{"word": "Is believed that the company is expanding.", "ok": false},
+						{"word": "It believes that the company is expanding.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "Which sentence describes a current habit?",
+					"summary": "Be used to + Gerund.",
+					"explain": "'Be used to' (meaning familiar with) must be followed by a noun or gerund (-ing). 'Used to' (without 'be') is for past habits.",
+					"words": [
+						{"word": "I am used to getting up early for work.", "ok": true},
+						{"word": "I am used to get up early for work.", "ok": false},
+						{"word": "I used to getting up early for work.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "Which sentence uses a correct cleft structure?",
+					"summary": "Cleft Sentences for Emphasis.",
+					"explain": "Cleft sentences use 'It was...' to focus on a specific person or object. It emphasizes 'John' as the subject.",
+					"words": [
+						{"word": "It was John who broke the window.", "ok": true},
+						{"word": "What broke the window was John.", "ok": false},
+						{"word": "Was John who broke the window.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "Choose the correct future state.",
+					"summary": "Future Continuous.",
+					"explain": "Use 'will be' + -ing to describe an action that will be in progress at a specific time in the future.",
+					"words": [
+						{"word": "This time tomorrow, I will be flying to London.", "ok": true},
+						{"word": "This time tomorrow, I will fly to London.", "ok": false},
+						{"word": "This time tomorrow, I will be fly to London.", "ok": false}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "Identify the correct wish for the past.",
+					"summary": "Wishes about the Past.",
+					"explain": "To express regret about the past, use 'Wish' + Past Perfect. 'Would have' is never used immediately after 'wish'.",
+					"words": [
+						{"word": "I wish I had studied harder for the exam.", "ok": true},
+						{"word": "I wish I studied harder for the exam.", "ok": false},
+						{"word": "I wish I would have studied harder for the exam.", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}

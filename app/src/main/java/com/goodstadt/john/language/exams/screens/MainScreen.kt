@@ -317,7 +317,14 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             composable(Screen.Tab5.route) {
                 MeTabContainerScreen()
             }
-
+            composable("diagnostic_test") {
+                DiagnosticScreen(
+                    onFinished = {
+                        // When the user finishes or skips, take them back to Settings
+                        navController.popBackStack()
+                    }
+                )
+            }
 
         }
     } //: Scaffold

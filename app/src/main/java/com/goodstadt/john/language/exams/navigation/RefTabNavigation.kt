@@ -35,6 +35,7 @@ const val QUIZ_DETAIL_ROUTE = "quiz_detail/{categoryId}"
 sealed class RefScreen(val route: String) {
     // These are for your FIXED screens
     object Quiz : RefScreen("quiz")
+    object ReadinessAudit : RefScreen("readinessaudit")
 
     // 2. NEW: This represents the sub-screen (The List of Sets)
     object QuizDetail : RefScreen("quiz_detail/{categoryId}") {

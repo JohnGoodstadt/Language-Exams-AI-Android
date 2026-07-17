@@ -87,12 +87,13 @@ import com.goodstadt.john.language.exams.viewmodels.SettingsViewModel
 import com.goodstadt.john.language.exams.viewmodels.SheetContent
 import timber.log.Timber
 import androidx.compose.ui.Alignment
+import androidx.navigation.NavHostController
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
-
+    navController: NavHostController,
     viewModel: SettingsViewModel = hiltViewModel()
 ) {
 
@@ -873,9 +874,10 @@ fun SettingsScreen(
                 SettingsActionItem(
                     icon = Icons.Default.Info,
                     title = "Debug Something",
-                    currentValue = "Rate Limiting (D)",
+                    currentValue = "Run the onboarding level check manually (D)",
                     onClick = {
-                            viewModel.callGoogleFunction()
+                        navController.navigate("diagnostic_test")
+//                            viewModel.callGoogleFunction()
 //                        viewModel.resetRateLimits()
 //                        viewModel.debugAppRateLimiting()
 //                        viewModel.debugVocabQuizRepository()
@@ -1123,5 +1125,6 @@ fun LanguageSelectionRow(
         }
     }
 }
+
 
 
