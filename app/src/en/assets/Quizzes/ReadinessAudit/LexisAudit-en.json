@@ -1,0 +1,106 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "LexisAudit-en",
+	"title": "Part 3: Lexical Range",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Advanced Vocabulary Scan",
+			"description": "Verifying your command of the high-impact words required for Band 7.5+ scores.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "", "page": 1, "sentence": "Which word best completes the formal sentence?", "summary": "Substantial.",
+					"explain": "'Substantial' means large in size or importance. A professional alternative to 'big'.",
+					"words": [
+						{"word": "There has been a substantial increase in prices.", "ok": true},
+						{"word": "There has been a massive big increase in prices.", "ok": false},
+						{"word": "There has been an extensive high increase in prices.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 2, "sentence": "Choose the best academic term for 'reduce'.", "summary": "Mitigate.",
+					"explain": "'Mitigate' means to make a problem or situation less severe or serious.",
+					"words": [
+						{"word": "We must mitigate the risks of climate change.", "ok": true},
+						{"word": "We must middle the risks of climate change.", "ok": false},
+						{"word": "We must moderate down the risks of climate change.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 3, "sentence": "Identify the word meaning 'not optional'.", "summary": "Compulsory.",
+					"explain": "If something is 'compulsory', you must do it by law or because of a rule.",
+					"words": [
+						{"word": "English is a compulsory subject in this school.", "ok": true},
+						{"word": "English is a necessary must subject in this school.", "ok": false},
+						{"word": "English is an enforcing subject in this school.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 4, "sentence": "Which word describes something 'everywhere'?", "summary": "Ubiquitous.",
+					"explain": "'Ubiquitous' describes something that is present or found everywhere.",
+					"words": [
+						{"word": "Mobile phones are now ubiquitous in society.", "ok": true},
+						{"word": "Mobile phones are now universal-wide in society.", "ok": false},
+						{"word": "Mobile phones are now all-around in society.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 5, "sentence": "Choose the word for 'strong and successful'.", "summary": "Robust.",
+					"explain": "'Robust' describes a system or organization that is strong and unlikely to fail.",
+					"words": [
+						{"word": "The company reported a robust growth this year.", "ok": true},
+						{"word": "The company reported a rigid growth this year.", "ok": false},
+						{"word": "The company reported a heavy-duty growth this year.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 6, "sentence": "Identify the word for 'possible and practical'.", "summary": "Feasible.",
+					"explain": "'Feasible' means able to be made, done, or achieved with success.",
+					"words": [
+						{"word": "Building a new airport is not financially feasible.", "ok": true},
+						{"word": "Building a new airport is not financially do-able.", "ok": false},
+						{"word": "Building a new airport is not financially possible-easy.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 7, "sentence": "Choose the word for 'likely to cause harm'.", "summary": "Detrimental.",
+					"explain": "'Detrimental' is a formal synonym for 'harmful' or 'damaging'.",
+					"words": [
+						{"word": "Smoking is detrimental to your health.", "ok": true},
+						{"word": "Smoking is damageable to your health.", "ok": false},
+						{"word": "Smoking is destructional to your health.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 8, "sentence": "Identify the word for 'strong desire to succeed'.", "summary": "Ambitious.",
+					"explain": "'Ambitious' describes a person determined to be successful or powerful.",
+					"words": [
+						{"word": "She is an ambitious student with big goals.", "ok": true},
+						{"word": "She is an achieving student with big goals.", "ok": false},
+						{"word": "She is an aimful student with big goals.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 9, "sentence": "Which word describes 'constant change'?", "summary": "Volatile.",
+					"explain": "'Volatile' describes a situation that can change suddenly or unexpectedly.",
+					"words": [
+						{"word": "The stock market has been very volatile recently.", "ok": true},
+						{"word": "The stock market has been very moving-fast recently.", "ok": false},
+						{"word": "The stock market has been very unstable-hot recently.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 10, "sentence": "Identify the word for 'able to recover quickly'.", "summary": "Resilient.",
+					"explain": "'Resilient' describes a person or system able to recover from difficulties.",
+					"words": [
+						{"word": "The local economy proved to be resilient.", "ok": true},
+						{"word": "The local economy proved to be bounce-back.", "ok": false},
+						{"word": "The local economy proved to be strong-again.", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}

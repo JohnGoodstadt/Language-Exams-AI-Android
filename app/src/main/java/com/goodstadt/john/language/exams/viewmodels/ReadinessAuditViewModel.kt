@@ -53,139 +53,114 @@ import java.io.IOException
 import java.util.Date
 import javax.inject.Inject
 import androidx.compose.runtime.State
+import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizTotalCount
+import com.goodstadt.john.language.exams.managers.AuditEngine
 import com.goodstadt.john.language.exams.screens.reference.shared.ReadinessAuditDetail
 import java.util.Locale
 
-//enum class QuizState(val description: String) {
-//    NOT_STARTED("Not Started"),
-//    STARTED("Started"),
-//    IN_PROGRESS("In Progress"),
-//    COMPLETED("Completed")
-//}
-//
-//data class QuizStatistics(
-//    val timestamp: Date = Date(),
-//    var state: QuizState = QuizState.NOT_STARTED,
-//    val skillLevel: String,
-//    val quizNumber: Int,
-//    val title:String,
-//    var answered: Int = 0,
-//    var correct: Int = 0,
-//    var tries: Int = 0,
-//    var page: Int = 1, //held for Dashboard
-//    var filename:String = "" //held for Dashboard
-//
-//) {
-//    override fun toString(): String {
-//        val dateFormatter =
-//            java.text.SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.getDefault())
-//        return "${dateFormatter.format(timestamp)} '${state.description}' '$skillLevel' level:$quizNumber answered:$answered tries:$tries correct:$correct"
-//    }
-//
-//    val readyForDB: String
-//        get() {
-//            val dateFormatter =
-//                java.text.SimpleDateFormat("yyyy-MM-dd HH:mm", java.util.Locale.getDefault())
-//            return "${dateFormatter.format(timestamp)}:${state.description}:$skillLevel:$quizNumber:$answered:$tries:$correct"
-//        }
-//
-//    fun update(answered: Int, correct: Int, tries: Int) =
-//        copy(answered = answered, correct = correct, tries = tries)
-//}
+data class AuditStats(
+    val confidence: Int = 0,
+    val readiness: Int = 0
+)
+
 enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
     ELEMENTARY(
         quizzes = listOf(
             ReadinessAuditDetail(
                 id = 1,
-                baseName = "UsageQuiz1A1-en",
+                baseName = "BaselineAudit-en",
                 title = "Sentence Structure"
             ),
-            ReadinessAuditDetail(
-                id = 2,
-                baseName = "UsageQuiz2A1-en",
-                title = "Present Simple"
-            ),
-            ReadinessAuditDetail(
-                id = 3,
-                baseName = "UsageQuiz3A1-en",
-                title = "Past Simple"
-            ),
-            ReadinessAuditDetail(
-                id = 4,
-                baseName = "UsageQuiz4A1-en",
-                title = "Questions & Short Answers"
-            ),
-            ReadinessAuditDetail(
-                id = 5,
-                baseName = "UsageQuiz5A1-en",
-                title = "Prepositions"
-            ),
-            ReadinessAuditDetail(
-                id = 6,
-                baseName = "UsageQuiz6A1-en",
-                title = "Connectors"
-            )
+//            ReadinessAuditDetail(
+//                id = 2,
+//                baseName = "LogicAudit-en",
+//                title = "Present Simple"
+//            ),
+//            ReadinessAuditDetail(
+//                id = 3,
+//                baseName = "LexisAudit-en",
+//                title = "Past Simple"
+//            ),
+//            ReadinessAuditDetail(
+//                id = 4,
+//                baseName = "CoreAudit-en",
+//                title = "Questions & Short Answers"
+//            )
         )
     ),
     INTER(
         quizzes = listOf(
-            ReadinessAuditDetail(
-                id = 1,
-                baseName = "UsageQuiz1A2-en",
-                title = "Future Forms"
-            ),
+//            ReadinessAuditDetail(
+//                id = 1,
+//                baseName = "BaselineAudit-en",
+//                title = "Sentence Structure"
+//            ),
             ReadinessAuditDetail(
                 id = 2,
-                baseName = "UsageQuiz2A2-en",
-                title = "Present Continuous"
+                baseName = "LogicAudit-en",
+                title = "Present Simple"
             ),
-            ReadinessAuditDetail(3, "UsageQuiz3A2-en", "Comparatives & Superlatives"),
-            ReadinessAuditDetail(4, "UsageQuiz4A2-en", "Modal Verbs"),
-            ReadinessAuditDetail(5, "UsageQuiz5A2-en", "Verb Patterns"),
-            ReadinessAuditDetail(6, "UsageQuiz6A2-en", "Linking Words & If Clauses"),
+//            ReadinessAuditDetail(
+//                id = 3,
+//                baseName = "LexisAudit-en",
+//                title = "Past Simple"
+//            ),
+//            ReadinessAuditDetail(
+//                id = 4,
+//                baseName = "CoreAudit-en",
+//                title = "Questions & Short Answers"
+//            )
         )
     ),
     UPPER(
         quizzes = listOf(
-            ReadinessAuditDetail(id = 1, baseName = "UsageQuiz1B1-en", title = "Tense Mastery"),
-            ReadinessAuditDetail(
-                id = 2,
-                baseName = "UsageQuiz2B1-en",
-                title = "Real & Hypothetical Situations"
-            ),
+//            ReadinessAuditDetail(
+//                id = 1,
+//                baseName = "BaselineAudit-en",
+//                title = "Sentence Structure"
+//            ),
+//            ReadinessAuditDetail(
+//                id = 2,
+//                baseName = "LogicAudit-en",
+//                title = "Present Simple"
+//            ),
             ReadinessAuditDetail(
                 id = 3,
-                baseName = "UsageQuiz3B1-en",
-                title = "Formal & Official Language"
+                baseName = "LexisAudit-en",
+                title = "Past Simple"
             ),
-            ReadinessAuditDetail(
-                id = 4,
-                baseName = "UsageQuiz4B1-en",
-                title = "Reporting & Communication",
-            ),
-            ReadinessAuditDetail(
-                id = 5,
-                baseName = "UsageQuiz5B1-en",
-                title = "Structured Arguments"
-            ),
-            ReadinessAuditDetail(6, "UsageQuiz6B1-en", "Functional Fluency")
+//            ReadinessAuditDetail(
+//                id = 4,
+//                baseName = "CoreAudit-en",
+//                title = "Questions & Short Answers"
+//            )
         )
     ),
     ADVANCED(
         quizzes = listOf(
-            ReadinessAuditDetail(id = 1, baseName = "UsageQuiz1B2-en", title = "Aspect & Time Control"),
+//            ReadinessAuditDetail(
+//                id = 1,
+//                baseName = "BaselineAudit-en",
+//                title = "Sentence Structure"
+//            ),
+//            ReadinessAuditDetail(
+//                id = 2,
+//                baseName = "LogicAudit-en",
+//                title = "Present Simple"
+//            ),
+//            ReadinessAuditDetail(
+//                id = 3,
+//                baseName = "LexisAudit-en",
+//                title = "Past Simple"
+//            ),
             ReadinessAuditDetail(
-                id = 2,
-                baseName = "UsageQuiz2B2-en",
-                title = "Hypothetical Reasoning"
-            ),
-            ReadinessAuditDetail(3, "UsageQuiz3B2-en", "Formal Structural Control"),
-            ReadinessAuditDetail(4, "UsageQuiz4B2-en", "Academic Expression"),
-            ReadinessAuditDetail(5, "UsageQuiz5B2-en", "Argument Development"),
-            ReadinessAuditDetail(6, "UsageQuiz6B2-en", "Precision & Nuance")
+                id = 4,
+                baseName = "CoreAudit-en",
+                title = "Questions & Short Answers"
+            )
         )
     );
 
@@ -258,8 +233,9 @@ class ReadinessAuditViewModel @Inject constructor(
     private val audioPlaybackRepository: AudioPlaybackRepository,
     private val usageQuizRepository:UsageQuizRepository,
     private val bannerManager: BannerManager,
+    private val auditRepository: ReadinessAuditRepository
 
-    ) : ViewModel() {
+) : ViewModel() {
 
     private val appContext: Context = application.applicationContext
 
@@ -312,9 +288,9 @@ class ReadinessAuditViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        QuizStatistics(skillLevel = ReadinessAuditLevels.UPPER.description, quizNumber = 1, title = "Quiz 1")
+        QuizStatistics(skillLevel = ReadinessAuditLevels.ELEMENTARY.description, quizNumber = 1, title = "Quiz 1")
     )
-    val selectedLevel = mutableStateOf(ReadinessAuditLevels.UPPER)
+    val selectedLevel = mutableStateOf(ReadinessAuditLevels.ELEMENTARY)
     val selectedQuiz = mutableStateOf<ReadinessAuditDetail?>(null)
 
     val selectedQuizNumber = mutableStateOf(1)
@@ -333,7 +309,7 @@ class ReadinessAuditViewModel @Inject constructor(
 
     // ✅ NEW (Dynamic):
     // This starts with the default English titles, but we can overwrite them later
-    private val _availableQuizzes = MutableStateFlow<List<ReadinessAuditDetail>>(ReadinessAuditLevels.UPPER.quizzes)
+    private val _availableQuizzes = MutableStateFlow<List<ReadinessAuditDetail>>(ReadinessAuditLevels.ELEMENTARY.quizzes)
     val availableQuizzes = _availableQuizzes.asStateFlow()
 
     // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized ReadinessAuditDetails
@@ -346,6 +322,10 @@ class ReadinessAuditViewModel @Inject constructor(
     private val _fluency = mutableStateOf(UsageQuizRepository.QuizFluency.NEVER_DONE)
     // Explicitly define the type to avoid ambiguity with other 'State' classes
     val fluency: State<UsageQuizRepository.QuizFluency> = _fluency
+
+    // 1. We create a StateFlow that the UI will listen to
+    private val _auditStats = MutableStateFlow(AuditStats())
+    val auditStats: StateFlow<AuditStats> = _auditStats.asStateFlow()
 
 
     init {
@@ -362,6 +342,7 @@ class ReadinessAuditViewModel @Inject constructor(
                 }
             }
         }
+        loadCurrentAuditStats()
     }
 
     fun hideDailyRateLimitSheet() {
@@ -713,7 +694,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         return try {
 
 
-            val jsonString = context.assets.open("Quizzes/UsageQuiz/$fileName")
+            val jsonString = context.assets.open("Quizzes/ReadinessAudit/$fileName")
                 .bufferedReader()
                 .use { it.readText() }
 
@@ -953,7 +934,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             val candidateName = baseName.replace("-en", "-$countrySuffix")
 
             // Check if the file "candidateName.json" actually exists in Assets
-            return if (assetExists("Quizzes/UsageQuiz/$candidateName.json")) {
+            return if (assetExists("Quizzes/ReadinessAudit/$candidateName.json")) {
                 candidateName // Found specialized file!
             } else {
                 baseName // Fallback to English
@@ -992,7 +973,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
             // 3. Check if the file "candidateName.json" actually exists in Assets
             // Adjust the path to match your specific folder structure
-            val assetPath = "Quizzes/UsageQuiz/$candidateName.json"
+            val assetPath = "Quizzes/ReadinessAudit/$candidateName.json"
 
             return if (assetExists(assetPath)) {
                 candidateName // Found tailored region file!
@@ -1013,6 +994,41 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             appContext.assets.open(path).use { true }
         } catch (e: IOException) {
             false
+        }
+    }
+    fun getConfidenceLabel(confidence: Int): String {
+        return when (confidence) {
+            0 -> "Not Started"
+            in 1..40 -> "Preliminary"
+            in 41..84 -> "Calibrating"
+            else -> "High Precision"
+        }
+    }
+    fun loadCurrentAuditStats() {
+        viewModelScope.launch {
+            // 2. Get the scores from your repository
+            // (Assuming repository returns Map<Int, Int> e.g., {1: 8, 2: 7})
+            val scores = auditRepository.getAuditScores()
+
+            // 3. Use the Engine we built to calculate the report
+            val report = AuditEngine.calculate(scores)
+
+            // 4. Update the StateFlow
+            _auditStats.value = AuditStats(
+                confidence = report.confidence,
+                readiness = report.readiness
+            )
+        }
+    }
+    // Helper for the UI text we added in the previous step
+    fun getAuditorVerdictText(): String {
+        val readiness = _auditStats.value.readiness
+        return when (readiness) {
+            0 -> "Audit Required"
+            in 1..35 -> "Foundational Work Needed"
+            in 36..55 -> "Borderline B1 Candidate"
+            in 56..85 -> "B1/B2 Ready"
+            else -> "Elite Performance"
         }
     }
 }

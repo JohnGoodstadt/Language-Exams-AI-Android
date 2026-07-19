@@ -84,6 +84,8 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import android.content.res.Configuration
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.platform.LocalConfiguration
 import com.goodstadt.john.language.exams.viewmodels.ReadinessAuditLevels
 import com.goodstadt.john.language.exams.viewmodels.ReadinessAuditViewModel
@@ -135,6 +137,7 @@ fun ReadinessAuditScreen(
     val dashboardSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val fluency by viewModel.fluency
    // val activeFilters by viewModel.activeFilters.collectAsState()
+    val stats by viewModel.auditStats.collectAsState()
 
     LaunchedEffect(currentQuestionIndex, questions) {
         if (questions.isNotEmpty()) {
@@ -182,48 +185,98 @@ fun ReadinessAuditScreen(
             }
         )
 
-        Box(
+
+
+        Column(
             modifier = Modifier
                 .fillMaxWidth()
-                // Optional: Add horizontal padding to keep icon off the very edge
-                .padding(horizontal = 4.dp)
+                .padding(horizontal = 8.dp)
         ) {
-
+            // 1. Main Introductory Text
             Text(
-                text = fluency.label,
-                color = fluency.color,
-                style = MaterialTheme.typography.labelMedium,
-                modifier = Modifier
-                    .background(fluency.color.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
-                    .align(Alignment.CenterStart)
-//                    .padding(horizontal = 8.dp, vertical = 1.dp)
+                // ✅ FIX 2: Use 'stats' (the collected state), not 'viewModel.auditStats.value'
+                text = if (stats.confidence == 0) {
+                    "To provide an accurate roadmap for your exam success, we must first verify your current skills. Part 1: Baseline Verification is the minimum requirement to generate your initial profile."
+                } else {
+                    "Baseline established. Complete the remaining modules (Logic, Lexis, Core) to increase Audit Confidence and identify specific exam risks."
+                },
+                style = MaterialTheme.typography.bodyMedium,
+                color = Color.LightGray,
+                lineHeight = 20.sp,
+                modifier = Modifier.padding(bottom = 24.dp)
             )
 
-            // 1. The Dropdown (Centered)
-            // We wrap it to ensure it aligns to the Box's center, not the Column's
-            Box(modifier = Modifier.align(Alignment.Center)) {
-                DropdownMenuBox(
-                    options = availableQuizzes.map { it.title },
-                    selectedOption = selectedQuiz?.title ?: "Select a Quiz",
-                    onOptionSelected = { newQuizTitle ->
-                        val quizDetail = availableQuizzes.first { it.title == newQuizTitle }
-                        viewModel.onQuizSelected(quizDetail)
-                    }
-                )
-            }
-
-            // 2. The Icon (Right Aligned)
-            IconButton(
-                onClick = {  showDashboardSheet = true },
-                modifier = Modifier.align(Alignment.CenterEnd) // 👈 Locks to right
+            Card(
+                colors = CardDefaults.cardColors(
+                    containerColor = Color(0xFF1C1C1E),
+                    contentColor = Color.White
+                ),
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier.fillMaxWidth()
             ) {
-                Icon(
-                    imageVector = Icons.Default.WorkspacePremium, // Or Insight/Chart icon
-                    contentDescription = "Stats",
-                    tint = Color(0xFFFF9800)
-                )
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(
+                        text = "AUDIT STATUS",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = Color.Gray,
+                        letterSpacing = 1.sp
+                    )
+
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        AuditStatItem(
+                            label = "Audit Confidence",
+                            value = "${stats.confidence}%",
+                            // ✅ FIX 3: Call the now-public function
+                            subValue = viewModel.getConfidenceLabel(stats.confidence)
+                        )
+
+                        Box(modifier = Modifier.width(1.dp).height(40.dp).background(Color.DarkGray))
+
+                        AuditStatItem(
+                            label = "Exam Readiness",
+                            value = "${stats.readiness}%",
+                            subValue = "B1 Level"
+                        )
+                    }
+
+                    Spacer(modifier = Modifier.height(16.dp))
+                    HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
+                    Spacer(modifier = Modifier.height(12.dp))
+
+                    Text(
+                        text = "AUDITOR’S VERDICT",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = Color.Gray,
+                        letterSpacing = 1.sp
+                    )
+                    Text(
+                        text = viewModel.getAuditorVerdictText(),
+                        style = MaterialTheme.typography.titleMedium,
+                        color = Color(0xFFFF9500),
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(top = 4.dp)
+                    )
+                }
             }
         }
+
+            // 2. The Icon (Right Aligned)
+//            IconButton(
+//                onClick = {  showDashboardSheet = true },
+//                modifier = Modifier.align(Alignment.CenterEnd) // 👈 Locks to right
+//            ) {
+//                Icon(
+//                    imageVector = Icons.Default.WorkspacePremium, // Or Insight/Chart icon
+//                    contentDescription = "Stats",
+//                    tint = Color(0xFFFF9800)
+//                )
+//            }
+//        }
 
         // --- Quiz-level learning points (stays the same for all 10 questions) ---
 
@@ -313,7 +366,7 @@ fun ReadinessAuditScreen(
         // Question counter with filter info
         if (questions.isNotEmpty()) {
             Text(
-                text = "Showing ${questions.size} of ${viewModel.totalQuestionCount}",
+                text = "Showing ${currentQuestionIndex + 1} of ${viewModel.totalQuestionCount}",
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(bottom = 4.dp)
@@ -555,15 +608,15 @@ fun ReadinessAuditScreen(
                 Spacer(modifier = Modifier.weight(1f))
 
                 // 🔹 Info Button (centered)
-                InfoButtonRow(
-                    infoDisabled = infoDisabled,
-                    onClick = {
-                        if (!infoDisabled) {
-                            showInfoBottomSheet = true
-                            viewModel.onInfoButtonTapped() //mark user getting help
-                        }
-                    }
-                )
+//                InfoButtonRow(
+//                    infoDisabled = infoDisabled,
+//                    onClick = {
+//                        if (!infoDisabled) {
+//                            showInfoBottomSheet = true
+//                            viewModel.onInfoButtonTapped() //mark user getting help
+//                        }
+//                    }
+//                )
 
                 // 🔹 Expanding space right
                 Spacer(modifier = Modifier.weight(1f))
@@ -774,5 +827,13 @@ fun DropdownMenuBoxObsolete2(
                 )
             }
         }
+    }
+}
+@Composable
+private fun AuditStatItem(label: String, value: String, subValue: String) {
+    Column {
+        Text(text = label, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+        Text(text = value, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+        Text(text = subValue, style = MaterialTheme.typography.labelSmall, color = Color.LightGray)
     }
 }

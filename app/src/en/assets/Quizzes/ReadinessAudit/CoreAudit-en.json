@@ -1,0 +1,106 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "CoreAudit-en",
+	"title": "Part 4: Core Accuracy",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "The Grammar Engine",
+			"description": "High-precision calibration of irregular forms and fixed prepositional phrases.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "", "page": 1, "sentence": "Identify the correct fixed phrase.", "summary": "Adjective + Preposition.",
+					"explain": "You are 'interested IN' something. Never 'on' or 'at'.",
+					"words": [
+						{"word": "I am very interested in learning Italian.", "ok": true},
+						{"word": "I am very interested at learning Italian.", "ok": false},
+						{"word": "I am very interested on learning Italian.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 2, "sentence": "Choose the correct skill preposition.", "summary": "Good + Preposition.",
+					"explain": "In English, you are 'good AT' a skill or activity.",
+					"words": [
+						{"word": "He is very good at playing the piano.", "ok": true},
+						{"word": "He is very good in playing the piano.", "ok": false},
+						{"word": "He is very good for playing the piano.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 3, "sentence": "Identify the correct relationship status.", "summary": "Married + Preposition.",
+					"explain": "You are married 'TO' someone. 'Married with' is a direct translation error.",
+					"words": [
+						{"word": "She has been married to him for ten years.", "ok": true},
+						{"word": "She has been married with him for ten years.", "ok": false},
+						{"word": "She has been married by him for ten years.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 4, "sentence": "Which verb requires a preposition?", "summary": "Listen + Preposition.",
+					"explain": "'Listen' must be followed by 'to' when there is an object.",
+					"words": [
+						{"word": "I like to listen to classical music.", "ok": true},
+						{"word": "I like to listen classical music.", "ok": false},
+						{"word": "I like to listen at classical music.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 5, "sentence": "Identify the correct past participle.", "summary": "Irregular Verbs (Past Participle).",
+					"explain": "The past participle of 'fly' is 'flown'.",
+					"words": [
+						{"word": "I have never flown in a private jet.", "ok": true},
+						{"word": "I have never flew in a private jet.", "ok": false},
+						{"word": "I have never flyed in a private jet.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 6, "sentence": "Which verb pattern is correct?", "summary": "Avoid + Gerund.",
+					"explain": "The verb 'avoid' must be followed by the -ing form (gerund).",
+					"words": [
+						{"word": "You should avoid eating too much sugar.", "ok": true},
+						{"word": "You should avoid to eat too much sugar.", "ok": false},
+						{"word": "You should avoid eat too much sugar.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 7, "sentence": "Identify the correct decision pattern.", "summary": "Decide + Infinitive.",
+					"explain": "The verb 'decide' is followed by 'to' + infinitive.",
+					"words": [
+						{"word": "We decided to go to the beach.", "ok": true},
+						{"word": "We decided going to the beach.", "ok": false},
+						{"word": "We decided for go to the beach.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 8, "sentence": "Choose the correct past participle.", "summary": "Irregular Verbs (Throw).",
+					"explain": "The past participle of 'throw' is 'thrown'.",
+					"words": [
+						{"word": "He has thrown the ball over the fence.", "ok": true},
+						{"word": "He has threw the ball over the fence.", "ok": false},
+						{"word": "He has throwed the ball over the fence.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 9, "sentence": "Which sentence describes a regret correctly?", "summary": "Wish + Past Perfect.",
+					"explain": "To express regret about the past, use 'wish' + 'had' + past participle.",
+					"words": [
+						{"word": "I wish I had studied more for the test.", "ok": true},
+						{"word": "I wish I studied more for the test.", "ok": false},
+						{"word": "I wish I would have studied more for the test.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 10, "sentence": "Identify the correct future intent.", "summary": "Looking forward to + Gerund.",
+					"explain": "The phrase 'looking forward to' is always followed by -ing.",
+					"words": [
+						{"word": "I am looking forward to meeting you.", "ok": true},
+						{"word": "I am looking forward to meet you.", "ok": false},
+						{"word": "I am looking forward for meeting you.", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}

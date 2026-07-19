@@ -1,0 +1,106 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "BaselineAudit-en",
+	"title": "Part 1: Baseline Verification",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Initial Level Placement",
+			"description": "A high-level scan to establish your current CEFR baseline (A2-B2).",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "", "page": 1, "sentence": "Choose the correct past action.", "summary": "A2: Irregular Verbs.",
+					"explain": "The past simple of 'go' is 'went'. 'Gone' is the past participle.",
+					"words": [
+						{"word": "Last night, I went to the cinema.", "ok": true},
+						{"word": "Last night, I gone to the cinema.", "ok": false},
+						{"word": "Last night, I was go to the cinema.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 2, "sentence": "Identify the correct possessive.", "summary": "A2: Possessive Adjectives.",
+					"explain": "'Their' is used for possession. 'There' is a place; 'They're' is 'they are'.",
+					"words": [
+						{"word": "The children left their bags at school.", "ok": true},
+						{"word": "The children left there bags at school.", "ok": false},
+						{"word": "The children left they're bags at school.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 3, "sentence": "Choose the correct daily habit.", "summary": "A2: Present Simple.",
+					"explain": "Third-person singular (he/she/it) requires an 's' on the verb.",
+					"words": [
+						{"word": "She works in a bank in London.", "ok": true},
+						{"word": "She work in a bank in London.", "ok": false},
+						{"word": "She is work in a bank in London.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 4, "sentence": "Select the correct duration.", "summary": "B1: Present Perfect + For.",
+					"explain": "Use 'for' for a period of time (duration) and 'since' for a point in time.",
+					"words": [
+						{"word": "I have lived in this city for five years.", "ok": true},
+						{"word": "I have lived in this city since five years.", "ok": false},
+						{"word": "I live in this city for five years.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 5, "sentence": "Choose the correct ability modal.", "summary": "B1: Modals of Ability.",
+					"explain": "'Managed to' describes succeeding in a specific, difficult past task.",
+					"words": [
+						{"word": "The test was hard, but I managed to pass.", "ok": true},
+						{"word": "The test was hard, but I could to pass.", "ok": false},
+						{"word": "The test was hard, but I was able pass.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 6, "sentence": "Identify the correct comparison.", "summary": "B1: Comparatives.",
+					"explain": "Long adjectives (3+ syllables) use 'more' + adjective + 'than'.",
+					"words": [
+						{"word": "Tokyo is more expensive than Berlin.", "ok": true},
+						{"word": "Tokyo is expensiver than Berlin.", "ok": false},
+						{"word": "Tokyo is most expensive than Berlin.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 7, "sentence": "Choose the correct connector.", "summary": "B1: Contrast Connectors.",
+					"explain": "'Although' connects two contrasting clauses within one sentence.",
+					"words": [
+						{"word": "Although it was cold, we went swimming.", "ok": true},
+						{"word": "Despite it was cold, we went swimming.", "ok": false},
+						{"word": "However it was cold, we went swimming.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 8, "sentence": "Identify the correct hypothetical.", "summary": "B2: Second Conditional.",
+					"explain": "For hypothetical 'unreal' states, use 'were' for all subjects (I/He/She).",
+					"words": [
+						{"word": "If I were you, I would take the job.", "ok": true},
+						{"word": "If I was you, I would take the job.", "ok": false},
+						{"word": "If I am you, I will take the job.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 9, "sentence": "Choose the correct formal structure.", "summary": "B2: Passive Reporting.",
+					"explain": "Structure: Subject + is said + to have + past participle.",
+					"words": [
+						{"word": "He is said to have escaped the prison.", "ok": true},
+						{"word": "He is said he escaped the prison.", "ok": false},
+						{"word": "He said to have escaped the prison.", "ok": false}
+					]
+				},
+				{
+					"title": "", "page": 10, "sentence": "Identify the correct formal emphasis.", "summary": "B2: Inversion.",
+					"explain": "Limiting adverbs (Never/Rarely) at the start require auxiliary inversion.",
+					"words": [
+						{"word": "Never have I seen such a huge building.", "ok": true},
+						{"word": "Never I have seen such a huge building.", "ok": false},
+						{"word": "Never have I see such a huge building.", "ok": false}
+					]
+				}
+			]
+		}
+	]
+}
