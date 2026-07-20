@@ -54,12 +54,14 @@ import java.util.Date
 import javax.inject.Inject
 import androidx.compose.runtime.State
 import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
+import com.goodstadt.john.language.exams.data.ReadinessQuizAttemptState
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizTotalCount
 import com.goodstadt.john.language.exams.managers.AuditEngine
 import com.goodstadt.john.language.exams.screens.reference.shared.ReadinessAuditDetail
 import java.util.Locale
+import kotlin.math.roundToInt
 
 data class AuditStats(
     val confidence: Int = 0,
@@ -327,12 +329,27 @@ class ReadinessAuditViewModel @Inject constructor(
     private val _auditStats = MutableStateFlow(AuditStats())
     val auditStats: StateFlow<AuditStats> = _auditStats.asStateFlow()
 
+    // Question index -> the option the user locked in for the CURRENT quiz. Once present, that
+    // question is answered for good (read-only); once every question is present the quiz is done.
+    private val _lockedAnswers = MutableStateFlow<Map<Int, String>>(emptyMap())
+    val lockedAnswers: StateFlow<Map<Int, String>> = _lockedAnswers.asStateFlow()
+
+    // True once the current quiz has been fully completed today - locked (read-only) until tomorrow.
+    private val _isQuizLockedForToday = MutableStateFlow(false)
+    val isQuizLockedForToday: StateFlow<Boolean> = _isQuizLockedForToday.asStateFlow()
+
+    // Levels the user is currently allowed to attempt. Levels must be cleared in order:
+    // ELEMENTARY -> INTER -> UPPER -> ADVANCED.
+    private val _unlockedLevels = MutableStateFlow<Set<ReadinessAuditLevels>>(setOf(ReadinessAuditLevels.ELEMENTARY))
+    val unlockedLevels: StateFlow<Set<ReadinessAuditLevels>> = _unlockedLevels.asStateFlow()
+
 
     init {
         // 1. Start background loading
       //  preloadLocalizedTitles()
 
         selectedQuiz.value = selectedLevel.value.quizzes.firstOrNull()
+        refreshUnlockedLevels()
         loadQuestions()
         viewModelScope.launch {
             billingRepository.isPurchased.collect { purchasedStatus ->
@@ -340,6 +357,11 @@ class ReadinessAuditViewModel @Inject constructor(
                 if (DEBUG) {
                     billingRepository.logCurrentStatus()
                 }
+            }
+        }
+        viewModelScope.launch {
+            quizHistoryManager.historyUpdates.collect {
+                refreshUnlockedLevels()
             }
         }
         loadCurrentAuditStats()
@@ -444,6 +466,7 @@ class ReadinessAuditViewModel @Inject constructor(
             Timber.v("${_questions.value.count()}")
 
             resetQuiz()
+            restorePersistedAttemptState()
 
         }
     }
@@ -453,6 +476,15 @@ class ReadinessAuditViewModel @Inject constructor(
         if (level == selectedLevel.value){
             return // already selected
         }
+
+        if (!isLevelUnlocked(level)) {
+            val previousLevel = ReadinessAuditLevels.entries[level.ordinal - 1]
+            viewModelScope.launch {
+                _uiEvent.emit(UiEvent.ShowToast("Complete the ${previousLevel.description} test first"))
+            }
+            return
+        }
+
         selectedLevel.value = level
 
         // 1. Update the list of quizzes (Async)
@@ -463,6 +495,29 @@ class ReadinessAuditViewModel @Inject constructor(
         selectedQuiz.value = _availableQuizzes.value.firstOrNull()
 
         loadQuestions()
+    }
+
+    /** Whether [level] may currently be attempted - levels must be cleared in order. */
+    fun isLevelUnlocked(level: ReadinessAuditLevels): Boolean = _unlockedLevels.value.contains(level)
+
+    /**
+     * Recomputes which levels are unlocked. A level unlocks once every quiz in the previous
+     * level has at least one completed attempt on record.
+     */
+    private fun refreshUnlockedLevels() {
+        val levels = ReadinessAuditLevels.entries
+        val unlocked = mutableSetOf(levels.first())
+
+        for (i in 1 until levels.size) {
+            val previousLevel = levels[i - 1]
+            val previousCompleted = previousLevel.quizzes.all { quiz ->
+                quizHistoryManager.getLastAttempt(previousLevel.description, quiz.id) != null
+            }
+            if (!previousCompleted) break // levels must be completed in order
+            unlocked.add(levels[i])
+        }
+
+        _unlockedLevels.value = unlocked
     }
 
 
@@ -529,6 +584,93 @@ class ReadinessAuditViewModel @Inject constructor(
         userAnswers.value.clear()
         _activeFilters.value = emptySet()
 
+    }
+
+    // MARK: - Answer locking (order enforcement / once-per-day / one-shot answers)
+
+    private fun quizAttemptKey(level: ReadinessAuditLevels, quiz: ReadinessAuditDetail): String =
+        "${level.name}_${quiz.id}"
+
+    // Maps a level onto the 1-4 "part index" the AuditEngine/ReadinessAuditRepository score by.
+    private fun partIndexFor(level: ReadinessAuditLevels): Int = level.ordinal + 1
+
+    /** True once [index] already has a locked-in answer - it can be read but not changed. */
+    fun isQuestionLocked(index: Int): Boolean = _lockedAnswers.value.containsKey(index)
+
+    /**
+     * Restores locked answers for the current level/quiz from disk so a question that was
+     * already answered (today, or an earlier unfinished session) stays locked and reviewable.
+     * If the quiz was completed on a previous day, the attempt is cleared so a fresh run begins.
+     */
+    private suspend fun restorePersistedAttemptState() {
+        val level = selectedLevel.value
+        val quiz = selectedQuiz.value ?: return
+        val key = quizAttemptKey(level, quiz)
+
+        var state = auditRepository.getQuizAttemptState(key)
+        val completedAt = state.completedAt
+        if (completedAt != null && !auditRepository.isSameDay(completedAt, System.currentTimeMillis())) {
+            auditRepository.clearQuizAttempt(key)
+            state = ReadinessQuizAttemptState()
+        }
+
+        _lockedAnswers.value = state.answers
+        _isQuizLockedForToday.value = state.completedAt != null
+
+        val questionsList = _questions.value
+        val rebuiltAnswers = mutableMapOf<Int, Boolean>()
+        state.answers.forEach { (index, option) ->
+            questionsList.getOrNull(index)?.let { question ->
+                rebuiltAnswers[index] = (option == question.correctOption)
+            }
+        }
+        userAnswers.value = rebuiltAnswers
+
+        val answeredCount = rebuiltAnswers.size
+        val quizState = when {
+            questionsList.isNotEmpty() && answeredCount >= questionsList.size -> QuizState.COMPLETED
+            answeredCount > 0 -> QuizState.IN_PROGRESS
+            else -> QuizState.NOT_STARTED
+        }
+        quizStatistics.value = quizStatistics.value.copy(
+            state = quizState,
+            answered = answeredCount,
+            correct = rebuiltAnswers.count { it.value },
+            tries = answeredCount
+        )
+
+        // Resume at the first unanswered question, or review from the start if fully complete.
+        currentQuestionIndex.value = if (answeredCount in 1 until questionsList.size) {
+            (0 until questionsList.size).firstOrNull { it !in rebuiltAnswers } ?: 0
+        } else {
+            0
+        }
+    }
+
+    /**
+     * DEBUG-only: wipes all audit scores and unlocks every quiz (clears the "locked until
+     * tomorrow" state and every locked-in answer) so the readiness audit can be re-tested
+     * without waiting for a new day. No-op in release builds.
+     */
+    fun resetAuditForDebug() {
+        if (!DEBUG) return
+
+        viewModelScope.launch {
+            auditRepository.resetAll()
+
+            _lockedAnswers.value = emptyMap()
+            _isQuizLockedForToday.value = false
+            quizStatistics.value = quizStatistics.value.copy(
+                state = QuizState.NOT_STARTED,
+                answered = 0,
+                correct = 0,
+                tries = 0
+            )
+            currentQuestionIndex.value = 0
+            userAnswers.value.clear()
+
+            loadCurrentAuditStats()
+        }
     }
 
     // MARK: - Mastery Filter
@@ -654,8 +796,11 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
     }
 
-    fun updateAnswer(isCorrect: Boolean) {
-        userAnswers.value[currentQuestionIndex.value] = isCorrect
+    fun updateAnswer(selectedOption: String, isCorrect: Boolean) {
+        val index = currentQuestionIndex.value
+        if (isQuestionLocked(index)) return // one attempt per question - already locked in
+
+        userAnswers.value[index] = isCorrect
 
         val currentTries = quizStatistics.value.tries + 1
         quizStatistics.value = quizStatistics.value.copy(
@@ -669,14 +814,36 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             quizStatistics.value = quizStatistics.value.copy(state = QuizState.IN_PROGRESS)
         }
 
+        _lockedAnswers.value = _lockedAnswers.value + (index to selectedOption)
 
-        val currentQuestion = currentQuestionIndex.value + 1 // one based
-        if (currentQuestion >= _questions.value.count()) { //completed
+        val level = selectedLevel.value
+        val quiz = selectedQuiz.value
+        val currentQuestion = index + 1 // one based
+        val isLastQuestion = currentQuestion >= _questions.value.count()
+
+        if (quiz != null) {
+            val key = quizAttemptKey(level, quiz)
+            val partIndex = partIndexFor(level)
+            val runningScoreOutOf10 = ((userAnswers.value.count { it.value }.toDouble() / userAnswers.value.size) * 10)
+                .roundToInt()
+                .coerceIn(0, 10)
+
+            viewModelScope.launch {
+                auditRepository.saveAnswer(key, index, selectedOption)
+                auditRepository.saveScore(partIndex, runningScoreOutOf10)
+                loadCurrentAuditStats() // refresh Audit Confidence / Exam Readiness right away
+
+                if (isLastQuestion) {
+                    auditRepository.markQuizCompleted(key)
+                    _isQuizLockedForToday.value = true
+                }
+            }
+        }
+
+        if (isLastQuestion) { //completed
             quizStatistics.value = quizStatistics.value.copy(state = QuizState.COMPLETED, title = quizStatistics.value.title)
 
             onQuizFinished()
-            val fieldValue =  "${quizStatistics.value.quizNumber}:${quizStatistics.value.answered}:${quizStatistics.value.correct}:${quizStatistics.value.tries}"
-
         }
 
         val page = quizStatistics.value.page

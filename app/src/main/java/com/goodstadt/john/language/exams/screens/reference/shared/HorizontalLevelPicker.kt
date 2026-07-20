@@ -2,11 +2,17 @@ package com.goodstadt.john.language.exams.screens.reference.shared
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,7 +30,8 @@ import com.goodstadt.john.language.exams.ui.theme.selectedBackground
 fun HorizontalLevelPicker(
     options: List<String>,
     selectedOption: String,
-    onOptionSelected: (String) -> Unit
+    onOptionSelected: (String) -> Unit,
+    lockedOptions: Set<String> = emptySet()
 ) {
     Row(
         modifier = Modifier
@@ -36,6 +43,7 @@ fun HorizontalLevelPicker(
     ) {
         options.forEach { option ->
             val isSelected = selectedOption == option
+            val isLocked = option in lockedOptions
             Button(
                 onClick = { onOptionSelected(option) },
                 colors = ButtonDefaults.buttonColors(
@@ -45,9 +53,18 @@ fun HorizontalLevelPicker(
                 shape = RoundedCornerShape(8.dp),
                 modifier = Modifier.padding(horizontal = 1.dp)
             ) {
+                if (isLocked) {
+                    Icon(
+                        imageVector = Icons.Filled.Lock,
+                        contentDescription = "Locked - complete the previous level first",
+                        tint = Color.Gray,
+                        modifier = Modifier.size(12.dp)
+                    )
+                    Spacer(modifier = Modifier.width(4.dp))
+                }
                 Text(
                     text = option,
-                    color =  if (isSelected) accentColor else Color.LightGray,
+                    color = if (isLocked) Color.Gray else if (isSelected) accentColor else Color.LightGray,
                     maxLines = 1,
                     fontSize = 12.sp,
                     textAlign = TextAlign.Center

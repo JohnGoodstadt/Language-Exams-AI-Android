@@ -7,6 +7,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -89,7 +90,10 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.ui.platform.LocalConfiguration
 import com.goodstadt.john.language.exams.viewmodels.ReadinessAuditLevels
 import com.goodstadt.john.language.exams.viewmodels.ReadinessAuditViewModel
+import com.goodstadt.john.language.exams.storage.UiEvent
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
+import android.widget.Toast
+import com.goodstadt.john.language.exams.BuildConfig
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -139,20 +143,60 @@ fun ReadinessAuditScreen(
    // val activeFilters by viewModel.activeFilters.collectAsState()
     val stats by viewModel.auditStats.collectAsState()
 
-    LaunchedEffect(currentQuestionIndex, questions) {
+    val lockedAnswers by viewModel.lockedAnswers.collectAsState()
+    val isQuizLockedForToday by viewModel.isQuizLockedForToday.collectAsState()
+    val unlockedLevels by viewModel.unlockedLevels.collectAsState()
+    val isCurrentQuestionLocked = lockedAnswers.containsKey(currentQuestionIndex)
+
+    LaunchedEffect(Unit) {
+        viewModel.uiEvent.collect { event ->
+            when (event) {
+                is UiEvent.ShowToast -> Toast.makeText(context, event.message, Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    LaunchedEffect(currentQuestionIndex, questions, lockedAnswers) {
         if (questions.isNotEmpty()) {
             val question = questions[currentQuestionIndex]
-
             val questionText =
                 if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                     question.sentence.replace("_", "___")
                 } else {
                     ""//question.sentence
                 }
-            displayedSentence = AnnotatedString(questionText)
-            // Reset the selection state for the new question
-            selectedOption = null
-            isCurrentAnswerCorrect = null
+            val lockedOption = lockedAnswers[currentQuestionIndex]
+
+            if (lockedOption != null) {
+                // Already answered - restore a read-only view of what was chosen.
+                val wasCorrect = lockedOption == question.correctOption
+                selectedOption = lockedOption
+                isCurrentAnswerCorrect = wasCorrect
+
+                displayedSentence = if (wasCorrect) {
+                    when (viewModel.currentFileFormat.value) {
+                        viewModel.quizFillInTheBlanks -> viewModel.highlightWordInSentence(
+                            sentence = question.sentence.replace(Regex("_+"), lockedOption),
+                            wordToHighlight = lockedOption,
+                            highlightColor = Color.Green
+                        )
+                        viewModel.quizDefinitions -> AnnotatedString(question.title)
+                        viewModel.quizMultipleChoice -> AnnotatedString(lockedOption)
+                        else -> viewModel.highlightWordInSentence(
+                            sentence = lockedOption,
+                            wordToHighlight = lockedOption,
+                            highlightColor = Color.Green
+                        )
+                    }
+                } else {
+                    AnnotatedString(questionText)
+                }
+            } else {
+                displayedSentence = AnnotatedString(questionText)
+                // Reset the selection state for the new question
+                selectedOption = null
+                isCurrentAnswerCorrect = null
+            }
         }
     }
 
@@ -170,11 +214,14 @@ fun ReadinessAuditScreen(
         HorizontalLevelPicker(
             options = ReadinessAuditLevels.entries.map { labelFor(it) },
             selectedOption = labelFor(selectedLevel),
+            lockedOptions = ReadinessAuditLevels.entries
+                .filterNot { unlockedLevels.contains(it) }
+                .map { labelFor(it) }
+                .toSet(),
             onOptionSelected = { newLabel ->
                 val level = ReadinessAuditLevels.entries.first { labelFor(it) == newLabel }
                 if (level != selectedLevel){
                     viewModel.onLevelSelected(level)
-                    viewModel.loadQuestions()
 
                     if (viewModel.doIHaveCurrentQuestionInfo()) {
                         infoDisabled = false
@@ -261,6 +308,18 @@ fun ReadinessAuditScreen(
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(top = 4.dp)
                     )
+                }
+            }
+
+            if (BuildConfig.DEBUG) {
+                Button(
+                    onClick = { viewModel.resetAuditForDebug() },
+                    modifier = Modifier
+                        .padding(top = 8.dp)
+                        .height(32.dp),
+                    contentPadding = PaddingValues(horizontal = 12.dp)
+                ) {
+                    Text("Reset Audit (D)")
                 }
             }
         }
@@ -373,6 +432,18 @@ fun ReadinessAuditScreen(
             )
         }
 
+        if (isQuizLockedForToday) {
+            Text(
+                text = "You've completed this test today. You can review your answers below - come back tomorrow to retake it.",
+                style = MaterialTheme.typography.labelSmall,
+                color = orangeLight,
+                textAlign = TextAlign.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 6.dp)
+            )
+        }
+
         // Filtered-empty state
 
         if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
@@ -469,9 +540,6 @@ fun ReadinessAuditScreen(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Icon(
                                 modifier = Modifier.clickable {
-                                    val isCorrect = option == question.correctOption
-                                    viewModel.updateAnswer(isCorrect)
-
                                     val fullSentence =
                                         if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                             question.sentence.replace("_", option)
@@ -483,6 +551,11 @@ fun ReadinessAuditScreen(
                                                 option
                                             }
                                         }
+                                    // Locked questions can still be heard (read), just not re-answered.
+                                    if (!isCurrentQuestionLocked) {
+                                        val isCorrect = option == question.correctOption
+                                        viewModel.updateAnswer(option, isCorrect)
+                                    }
                                     viewModel.handleTap(fullSentence)
                                 },
                                 imageVector = Icons.AutoMirrored.Filled.VolumeUp,
@@ -509,8 +582,10 @@ fun ReadinessAuditScreen(
                                                 }
                                             }
 
-                                        val isCorrect = option == question.correctOption
-                                        viewModel.updateAnswer(isCorrect)
+                                        if (!isCurrentQuestionLocked) {
+                                            val isCorrect = option == question.correctOption
+                                            viewModel.updateAnswer(option, isCorrect)
+                                        }
                                         viewModel.handleTap(fullSentence)
                                     }
                             )
@@ -519,10 +594,11 @@ fun ReadinessAuditScreen(
                         // Radio button on the far right
                         RadioButton(
                             selected = selectedOption == option && isOptionCorrect,
+                            enabled = !isCurrentQuestionLocked,
                             onClick = {
                                 selectedOption = option
                                 isCurrentAnswerCorrect = isOptionCorrect
-                                viewModel.updateAnswer(isOptionCorrect)
+                                viewModel.updateAnswer(option, isOptionCorrect)
 
                                 if (isOptionCorrect) {
                                     var sentenceToSpeak = ""
