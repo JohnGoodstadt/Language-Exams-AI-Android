@@ -20,6 +20,9 @@ object AuditEngine {
     /**
      * Calculates Confidence and Readiness based on performance.
      * @param testScores Map of PartIndex (1-4) to Score (0-10), used for Readiness (accuracy).
+     *   A part with no entry counts as a score of 0 - it still occupies its full weight in the
+     *   denominator, so Readiness can't run ahead of how much of the exam has actually been
+     *   demonstrated (e.g. acing 1 of 10 questions in Part 1 should not read as "exam ready").
      * @param partProgress Map of PartIndex (1-4) to fraction (0f-1f) of that part's questions
      *   answered so far, used for Confidence (coverage). A part with no entry counts as 0.
      */
@@ -31,22 +34,18 @@ object AuditEngine {
         }
         val confidence = ((totalProgress / TOTAL_PARTS) * 100).roundToInt().coerceIn(0, 100)
 
-        if (testScores.isEmpty()) return AuditReport(confidence = confidence, readiness = 0)
-
+        // Readiness: weighted accuracy prorated across ALL 4 parts, not just the ones touched
+        // so far. An untouched (or barely-started) part contributes little/no earned score but
+        // still counts its full weight below the line.
         var totalEarnedWeighted = 0f
         var totalPossibleWeighted = 0f
-        val completedParts = testScores.keys.filter { it in 1..4 }
-
-        // Sum weighted scores for attempted parts
-        completedParts.forEach { partIndex ->
-            val score = testScores[partIndex]?.coerceIn(0, 10) ?: 0
+        for (partIndex in 1..TOTAL_PARTS) {
             val weight = weights[partIndex] ?: 1.0f
-
-            totalEarnedWeighted += (score * weight)
-            totalPossibleWeighted += (10 * weight)
+            val score = testScores[partIndex]?.coerceIn(0, 10) ?: 0
+            totalEarnedWeighted += score * weight
+            totalPossibleWeighted += 10 * weight
         }
 
-        // Calculate readiness based on accuracy
         var readinessRaw = if (totalPossibleWeighted > 0) (totalEarnedWeighted / totalPossibleWeighted) * 100 else 0f
 
         // Apply "Engine Penalty": -5% if Part 4 is completed but score is < 6
@@ -62,5 +61,26 @@ object AuditEngine {
             confidence = confidence,
             readiness = finalReadiness
         )
+    }
+
+    /** Descriptive sub-label shown under the Confidence percentage. */
+    fun getConfidenceLabel(confidence: Int): String {
+        return when (confidence) {
+            0 -> "Not Started"
+            in 1..40 -> "Getting Started"
+            in 41..84 -> "In Progress"
+            else -> "Nearly Complete"
+        }
+    }
+
+    /** Verdict tier shown under Exam Readiness. */
+    fun getReadinessVerdict(readiness: Int): String {
+        return when (readiness) {
+            0 -> "Let's Get Started"
+            in 1..35 -> "Foundational Work Needed"
+            in 36..55 -> "Borderline B1 Candidate"
+            in 56..85 -> "B1/B2 Ready"
+            else -> "Elite Performance"
+        }
     }
 }

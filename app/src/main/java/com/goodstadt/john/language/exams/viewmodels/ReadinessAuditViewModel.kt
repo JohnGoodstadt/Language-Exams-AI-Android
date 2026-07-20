@@ -831,7 +831,9 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         if (quiz != null) {
             val key = quizAttemptKey(level, quiz)
             val partIndex = partIndexFor(level)
-            val runningScoreOutOf10 = ((userAnswers.value.count { it.value }.toDouble() / userAnswers.value.size) * 10)
+            // Divide by the TOTAL questions in this part, not just how many have been answered
+            // so far - otherwise 1 correct answer out of 1 attempted reads as a perfect 10/10.
+            val runningScoreOutOf10 = ((userAnswers.value.count { it.value }.toDouble() / _questions.value.size) * 10)
                 .roundToInt()
                 .coerceIn(0, 10)
 
@@ -1171,14 +1173,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             false
         }
     }
-    fun getConfidenceLabel(confidence: Int): String {
-        return when (confidence) {
-            0 -> "Not Started"
-            in 1..40 -> "Getting Started"
-            in 41..84 -> "In Progress"
-            else -> "Nearly Complete"
-        }
-    }
+    fun getConfidenceLabel(confidence: Int): String = AuditEngine.getConfidenceLabel(confidence)
 
     /**
      * Fraction (0f-1f) of each part's questions answered so far, keyed by part index (1-4).
@@ -1229,13 +1224,6 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     }
     // Helper for the UI text we added in the previous step
     fun getAuditorVerdictText(): String {
-        val readiness = _auditStats.value.readiness
-        return when (readiness) {
-            0 -> "Let's Get Started"
-            in 1..35 -> "Foundational Work Needed"
-            in 36..55 -> "Borderline B1 Candidate"
-            in 56..85 -> "B1/B2 Ready"
-            else -> "Elite Performance"
-        }
+        return AuditEngine.getReadinessVerdict(_auditStats.value.readiness)
     }
 }
