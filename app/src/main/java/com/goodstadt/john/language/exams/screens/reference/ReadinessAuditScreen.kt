@@ -247,7 +247,7 @@ fun ReadinessAuditScreen(
                 text = if (!unlockedLevels.contains(ReadinessAuditLevels.INTER)) {
                     "To build an accurate roadmap for your exam success, let's start with a quick check of your current skills. Completing all four quizzes - Baseline, Logic, Lexis and Core - gives you the highest confidence score."
                 } else {
-                    "Baseline established. Complete the remaining quizzes (Logic, Lexis, Core) to raise your Progress score - finishing all four gives you the highest confidence score."
+                    "Baseline established. Complete the remaining quizzes (Logic, Lexis, Core) to raise your Confidence score - finishing all four gives you the highest confidence score."
                 },
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color.LightGray,
@@ -265,7 +265,7 @@ fun ReadinessAuditScreen(
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(
-                        text = "YOUR PROGRESS",
+                        text = "YOUR STATUS",
                         style = MaterialTheme.typography.labelSmall,
                         color = Color.Gray,
                         letterSpacing = 1.sp
@@ -278,7 +278,7 @@ fun ReadinessAuditScreen(
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
                         AuditStatItem(
-                            label = "Progress",
+                            label = "Confidence",
                             value = "${stats.confidence}%",
                             // ✅ FIX 3: Call the now-public function
                             subValue = viewModel.getConfidenceLabel(stats.confidence)
