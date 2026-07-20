@@ -468,6 +468,10 @@ class ReadinessAuditViewModel @Inject constructor(
             resetQuiz()
             restorePersistedAttemptState()
 
+            // Record how many questions this quiz has so Confidence can be computed for every
+            // part, even ones not currently loaded.
+            auditRepository.saveTotalQuestions(quizAttemptKey(selectedLevel.value, quizDetail), _allQuestions.size)
+            loadCurrentAuditStats()
         }
     }
 
@@ -648,15 +652,18 @@ class ReadinessAuditViewModel @Inject constructor(
     }
 
     /**
-     * DEBUG-only: wipes all audit scores and unlocks every quiz (clears the "locked until
-     * tomorrow" state and every locked-in answer) so the readiness audit can be re-tested
-     * without waiting for a new day. No-op in release builds.
+     * DEBUG-only: wipes all audit scores, unlocks every quiz (clears the "locked until
+     * tomorrow" state and every locked-in answer), AND clears the Readiness Audit's completion
+     * history so level order-locking (Baseline -> Logic -> Lexis -> Core) resets to a true
+     * first-time-user state. Only this feature's history is cleared - other quiz features'
+     * history/stats are untouched. No-op in release builds.
      */
     fun resetAuditForDebug() {
         if (!DEBUG) return
 
         viewModelScope.launch {
             auditRepository.resetAll()
+            quizHistoryManager.clearHistoryForSkillLevels(ReadinessAuditLevels.entries.map { it.description })
 
             _lockedAnswers.value = emptyMap()
             _isQuizLockedForToday.value = false
@@ -831,7 +838,8 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
             viewModelScope.launch {
                 auditRepository.saveAnswer(key, index, selectedOption)
                 auditRepository.saveScore(partIndex, runningScoreOutOf10)
-                loadCurrentAuditStats() // refresh Audit Confidence / Exam Readiness right away
+                auditRepository.saveTotalQuestions(key, _questions.value.size)
+                loadCurrentAuditStats() // refresh Progress / Exam Readiness right away
 
                 if (isLastQuestion) {
                     auditRepository.markQuizCompleted(key)
@@ -1166,19 +1174,51 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     fun getConfidenceLabel(confidence: Int): String {
         return when (confidence) {
             0 -> "Not Started"
-            in 1..40 -> "Preliminary"
-            in 41..84 -> "Calibrating"
-            else -> "High Precision"
+            in 1..40 -> "Getting Started"
+            in 41..84 -> "In Progress"
+            else -> "Nearly Complete"
         }
     }
+
+    /**
+     * Fraction (0f-1f) of each part's questions answered so far, keyed by part index (1-4).
+     * Drives Confidence - unlike Score, it doesn't care whether answers were correct, only how
+     * much of the audit has been covered.
+     *
+     * A part that has ever been fully completed (per QuizHistoryManager) always counts as 1f,
+     * even if its daily answer-lock has since cleared for a new attempt - otherwise Confidence
+     * would dip every time a finished part becomes retakeable the next day.
+     */
+    private suspend fun computeConfidenceProgress(): Map<Int, Float> {
+        val progress = mutableMapOf<Int, Float>()
+        ReadinessAuditLevels.entries.forEach { level ->
+            val quiz = level.quizzes.firstOrNull() ?: return@forEach
+            val partIndex = partIndexFor(level)
+            val everCompleted = quizHistoryManager.getLastAttempt(level.description, quiz.id) != null
+
+            if (everCompleted) {
+                progress[partIndex] = 1f
+                return@forEach
+            }
+
+            val state = auditRepository.getQuizAttemptState(quizAttemptKey(level, quiz))
+            val total = state.totalQuestions
+            if (total != null && total > 0) {
+                progress[partIndex] = state.answers.size.toFloat() / total
+            }
+        }
+        return progress
+    }
+
     fun loadCurrentAuditStats() {
         viewModelScope.launch {
             // 2. Get the scores from your repository
             // (Assuming repository returns Map<Int, Int> e.g., {1: 8, 2: 7})
             val scores = auditRepository.getAuditScores()
+            val progress = computeConfidenceProgress()
 
             // 3. Use the Engine we built to calculate the report
-            val report = AuditEngine.calculate(scores)
+            val report = AuditEngine.calculate(scores, progress)
 
             // 4. Update the StateFlow
             _auditStats.value = AuditStats(
@@ -1191,7 +1231,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     fun getAuditorVerdictText(): String {
         val readiness = _auditStats.value.readiness
         return when (readiness) {
-            0 -> "Audit Required"
+            0 -> "Let's Get Started"
             in 1..35 -> "Foundational Work Needed"
             in 36..55 -> "Borderline B1 Candidate"
             in 56..85 -> "B1/B2 Ready"

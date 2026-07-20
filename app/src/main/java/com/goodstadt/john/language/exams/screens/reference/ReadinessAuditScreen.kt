@@ -241,11 +241,13 @@ fun ReadinessAuditScreen(
         ) {
             // 1. Main Introductory Text
             Text(
-                // ✅ FIX 2: Use 'stats' (the collected state), not 'viewModel.auditStats.value'
-                text = if (stats.confidence == 0) {
-                    "To provide an accurate roadmap for your exam success, we must first verify your current skills. Part 1: Baseline Verification is the minimum requirement to generate your initial profile."
+                // Gate on Baseline actually being complete (Logic unlocked), not just
+                // confidence > 0, since confidence now also rises from partial progress
+                // within Baseline itself.
+                text = if (!unlockedLevels.contains(ReadinessAuditLevels.INTER)) {
+                    "To build an accurate roadmap for your exam success, let's start with a quick check of your current skills. Completing all four quizzes - Baseline, Logic, Lexis and Core - gives you the highest confidence score."
                 } else {
-                    "Baseline established. Complete the remaining modules (Logic, Lexis, Core) to increase Audit Confidence and identify specific exam risks."
+                    "Baseline established. Complete the remaining quizzes (Logic, Lexis, Core) to raise your Progress score - finishing all four gives you the highest confidence score."
                 },
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color.LightGray,
@@ -263,7 +265,7 @@ fun ReadinessAuditScreen(
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(
-                        text = "AUDIT STATUS",
+                        text = "YOUR PROGRESS",
                         style = MaterialTheme.typography.labelSmall,
                         color = Color.Gray,
                         letterSpacing = 1.sp
@@ -276,7 +278,7 @@ fun ReadinessAuditScreen(
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
                         AuditStatItem(
-                            label = "Audit Confidence",
+                            label = "Progress",
                             value = "${stats.confidence}%",
                             // ✅ FIX 3: Call the now-public function
                             subValue = viewModel.getConfidenceLabel(stats.confidence)
@@ -296,7 +298,7 @@ fun ReadinessAuditScreen(
                     Spacer(modifier = Modifier.height(12.dp))
 
                     Text(
-                        text = "AUDITOR’S VERDICT",
+                        text = "SUMMARY",
                         style = MaterialTheme.typography.labelSmall,
                         color = Color.Gray,
                         letterSpacing = 1.sp
@@ -636,7 +638,12 @@ fun ReadinessAuditScreen(
                             },
                             colors = RadioButtonDefaults.colors(
                                 selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
-                                unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
+                                unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified,
+                                // Keep the correct/incorrect tint visible once the question locks -
+                                // otherwise Material3's default disabled colors hide which option
+                                // the user picked.
+                                disabledSelectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
+                                disabledUnselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
                             ),
                             modifier = Modifier.semantics { contentDescription = option }
                         )

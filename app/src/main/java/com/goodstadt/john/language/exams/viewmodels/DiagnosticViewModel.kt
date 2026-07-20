@@ -59,7 +59,7 @@ class DiagnosticViewModel @Inject constructor(
     }
     // Example: {1: 8, 2: 7}
     fun updateUI(currentScores: Map<Int, Int>) {
-        val report = AuditEngine.calculate(currentScores)
+        val report = AuditEngine.calculate(currentScores, partProgress = emptyMap())
 
         // This 'report' object now tells you exactly what to show the user
         // report.confidence -> "Audit Confidence: 65%"

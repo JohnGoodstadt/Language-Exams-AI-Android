@@ -98,4 +98,26 @@ class AuditEngineTest {
         assertEquals(0, result.confidence)
         assertEquals(0, result.readiness)
     }
+    @Test
+    fun `Test first question of first quiz - confidence should be 4 percent`() {
+        // No completed tests, Part 1, 1 question answered, 1 correct
+        val result = AuditEngine.calculate(emptyMap(), 1, 1, 1)
+        assertEquals(4, result.confidence)
+        assertEquals(98, result.readiness) // 1/1 is perfect
+    }
+
+    @Test
+    fun `Test mid-way through second quiz - confidence should be 53 percent`() {
+        // Part 1 complete (40%), Part 2 has 5 questions done (5 * 2.5 = 12.5)
+        // 40 + 12.5 = 52.5 -> 53%
+        val result = AuditEngine.calculate(mapOf(1 to 10), 2, 5, 5)
+        assertEquals(53, result.confidence)
+    }
+
+    @Test
+    fun `Test start of fourth quiz - confidence should be 85 percent`() {
+        // 3 tests complete. 40 + 25 + 20 = 85%
+        val result = AuditEngine.calculate(mapOf(1 to 10, 2 to 10, 3 to 10), 4, 0, 0)
+        assertEquals(85, result.confidence)
+    }
 }

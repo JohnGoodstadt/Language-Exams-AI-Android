@@ -25,7 +25,8 @@ private val Context.auditDataStore by preferencesDataStore(name = "readiness_aud
  */
 data class ReadinessQuizAttemptState(
     val answers: Map<Int, String> = emptyMap(),
-    val completedAt: Long? = null
+    val completedAt: Long? = null,
+    val totalQuestions: Int? = null
 )
 
 @Singleton
@@ -73,16 +74,30 @@ class ReadinessAuditRepository @Inject constructor(
 
     private fun answersKey(quizKey: String) = stringPreferencesKey("audit_answers_$quizKey")
     private fun completedAtKey(quizKey: String) = longPreferencesKey("audit_completed_at_$quizKey")
+    private fun totalQuestionsKey(quizKey: String) = intPreferencesKey("audit_total_$quizKey")
 
     /**
-     * Returns the persisted attempt (locked-in answers + completion time) for a given quiz.
+     * Returns the persisted attempt (locked-in answers + completion time + question count) for
+     * a given quiz.
      * @param quizKey Unique key per level+quiz, e.g. "ELEMENTARY_1".
      */
     suspend fun getQuizAttemptState(quizKey: String): ReadinessQuizAttemptState {
         val prefs = context.auditDataStore.data.first()
         val answers = prefs[answersKey(quizKey)]?.let { decodeAnswers(it) } ?: emptyMap()
         val completedAt = prefs[completedAtKey(quizKey)]
-        return ReadinessQuizAttemptState(answers = answers, completedAt = completedAt)
+        val totalQuestions = prefs[totalQuestionsKey(quizKey)]
+        return ReadinessQuizAttemptState(answers = answers, completedAt = completedAt, totalQuestions = totalQuestions)
+    }
+
+    /**
+     * Records how many questions this quiz has, so Confidence can be computed as a fraction of
+     * questions answered even for parts other than the one currently loaded. Safe to call
+     * repeatedly - always just overwrites with the latest known count.
+     */
+    suspend fun saveTotalQuestions(quizKey: String, total: Int) {
+        context.auditDataStore.edit { prefs ->
+            prefs[totalQuestionsKey(quizKey)] = total
+        }
     }
 
     /**

@@ -251,6 +251,21 @@ class QuizHistoryManager @Inject constructor(
 
     // MARK: - Debug
 
+    /**
+     * Removes history for the given skill levels only, leaving every other level/feature's
+     * history untouched. Used by feature-scoped debug reset tools.
+     */
+    fun clearHistoryForSkillLevels(skillLevels: Collection<String>) {
+        var changed = false
+        skillLevels.forEach { level ->
+            if (history.remove(level) != null) changed = true
+        }
+        if (changed) {
+            saveHistory()
+            _historyUpdates.value = System.currentTimeMillis()
+        }
+    }
+
     fun clearHistory() {
         history.clear()
         val file = File(context.filesDir, fileName)
