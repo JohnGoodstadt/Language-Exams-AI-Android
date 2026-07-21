@@ -757,7 +757,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
                 xpManager.registerAction(XpActionType.CompleteQuiz)
                 bannerManager.showBanner(
                     title = "Almost Perfect",
-                    subtitle = "Not quite. Try again for a perfect score. Don't look at the Info first",
+                    subtitle = "Not quite. Try again for a perfect score. But you can try the next one",
                     seconds = 8 //so they can read it
                 )
             } else {
