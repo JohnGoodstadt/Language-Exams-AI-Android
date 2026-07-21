@@ -51,6 +51,7 @@ class UserPreferencesRepository @Inject constructor(
         val EXAM_NAME = stringPreferencesKey("currentExamJSONName")
         val HAS_SEEN_HELP_SHEET = booleanPreferencesKey("has_seen_help_sheet_v1")
         val HAS_SEEN_VOICE_HELP = booleanPreferencesKey("has_seen_voice_help")
+        val HAS_SEEN_READINESS_AUDIT_INTRO = booleanPreferencesKey("has_seen_readiness_audit_intro")
     }
 
     /**
@@ -73,6 +74,19 @@ class UserPreferencesRepository @Inject constructor(
     suspend fun setHasSeenHelpSheet(hasSeen: Boolean) {
         context.dataStore.edit { preferences ->
             preferences[PreferenceKeys.HAS_SEEN_HELP_SHEET] = hasSeen
+        }
+    }
+
+    // Whether the first-launch Readiness Audit intro sheet has already been shown/dismissed.
+    val hasSeenReadinessAuditIntroFlow: Flow<Boolean> = context.dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { preferences ->
+            preferences[PreferenceKeys.HAS_SEEN_READINESS_AUDIT_INTRO] ?: false
+        }
+
+    suspend fun setHasSeenReadinessAuditIntro(hasSeen: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferenceKeys.HAS_SEEN_READINESS_AUDIT_INTRO] = hasSeen
         }
     }
 

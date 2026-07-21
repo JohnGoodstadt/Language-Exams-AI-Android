@@ -13,6 +13,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -51,6 +56,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.screens.me.ChooseEnglishAndExamSheet
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
+import com.goodstadt.john.language.exams.screens.reference.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.screens.reference.ReferenceTabContainerScreen
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.utils.findActivity
@@ -346,6 +352,63 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
 
         }
     }
+
+    if (globalUiState.showReadinessAuditIntroSheet) {
+        var showCloseWarning by remember { mutableStateOf(false) }
+        val introSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+        val coroutineScope = rememberCoroutineScope()
+
+        // By the time onDismissRequest fires (swipe, scrim tap, or back press), Material3 has
+        // already finished animating the sheet to Hidden - re-showing it (rather than just
+        // suppressing the boolean that controls composing it) is what makes it "bounce back"
+        // when the user isn't allowed to close yet.
+        fun reopenIntroSheet() {
+            coroutineScope.launch { introSheetState.show() }
+        }
+
+        ModalBottomSheet(
+            onDismissRequest = {
+                if (mainViewModel.isReadinessAuditBaselineComplete()) {
+                    mainViewModel.dismissReadinessAuditIntroSheet()
+                } else {
+                    // Don't close yet - ask for confirmation first.
+                    showCloseWarning = true
+                }
+            },
+            sheetState = introSheetState,
+            modifier = Modifier.fillMaxHeight(0.92f)
+        ) {
+            ReadinessAuditScreen()
+        }
+
+        if (showCloseWarning) {
+            AlertDialog(
+                onDismissRequest = {
+                    showCloseWarning = false
+                    reopenIntroSheet()
+                },
+                title = { Text("Skip the English check?") },
+                text = { Text("Completing the first quiz helps me set up the app accurately for you. Are you sure you want to close before finishing it?") },
+                confirmButton = {
+                    TextButton(onClick = {
+                        showCloseWarning = false
+                        mainViewModel.dismissReadinessAuditIntroSheet()
+                    }) {
+                        Text("Close Anyway")
+                    }
+                },
+                dismissButton = {
+                    TextButton(onClick = {
+                        showCloseWarning = false
+                        reopenIntroSheet()
+                    }) {
+                        Text("Continue Test")
+                    }
+                }
+            )
+        }
+    }
+
     if (false) {
         // A semi-transparent black background that blocks clicks
         Box(

@@ -446,6 +446,8 @@ class ReadinessAuditViewModel @Inject constructor(
                 return@launch
             }
 
+            Timber.v("data $testData")
+
             val stats = usageQuizRepository.getStatsForQuiz(baseName)
 
             _fluency.value = usageQuizRepository.getFluencyStatus(baseName)
@@ -653,9 +655,10 @@ class ReadinessAuditViewModel @Inject constructor(
 
     /**
      * DEBUG-only: wipes all audit scores, unlocks every quiz (clears the "locked until
-     * tomorrow" state and every locked-in answer), AND clears the Readiness Audit's completion
-     * history so level order-locking (Baseline -> Logic -> Lexis -> Core) resets to a true
-     * first-time-user state. Only this feature's history is cleared - other quiz features'
+     * tomorrow" state and every locked-in answer), clears the Readiness Audit's completion
+     * history so level order-locking (Baseline -> Logic -> Lexis -> Core) resets, AND clears the
+     * "has seen the first-launch intro sheet" flag so the app behaves like a brand new install
+     * on the next cold start. Only this feature's history is cleared - other quiz features'
      * history/stats are untouched. No-op in release builds.
      */
     fun resetAuditForDebug() {
@@ -664,6 +667,7 @@ class ReadinessAuditViewModel @Inject constructor(
         viewModelScope.launch {
             auditRepository.resetAll()
             quizHistoryManager.clearHistoryForSkillLevels(ReadinessAuditLevels.entries.map { it.description })
+            userPreferencesRepository.setHasSeenReadinessAuditIntro(false)
 
             _lockedAnswers.value = emptyMap()
             _isQuizLockedForToday.value = false

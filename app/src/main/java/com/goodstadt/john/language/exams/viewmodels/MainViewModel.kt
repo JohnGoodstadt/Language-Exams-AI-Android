@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AppConfigRepository
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
+import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.RecallingItems
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UpdateState
@@ -15,6 +16,7 @@ import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.utils.AppLifecycleObserver
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.first
@@ -32,7 +34,8 @@ data class GlobalUiState(
     val selectedVoiceName: String = "",
     val badgeCounts: Map<String, Int> = emptyMap(),
     val isPremiumUser: Boolean = false,
-    val showEnglishChoiceSheet: Boolean = false
+    val showEnglishChoiceSheet: Boolean = false,
+    val showReadinessAuditIntroSheet: Boolean = false
 )
 
 // The AuthUiState can remain as it was.
@@ -51,7 +54,8 @@ class MainViewModel @Inject constructor(
     private val appConfigRepository: AppConfigRepository,
     private val connectivityRepository: ConnectivityRepository,
     private val loadingManager: GlobalLoadingManager,
-    private val billingRepository: BillingRepository
+    private val billingRepository: BillingRepository,
+    private val quizHistoryManager: QuizHistoryManager
 
 //    private val billingRepository: BillingRepository,
 ) : ViewModel() {
@@ -118,8 +122,45 @@ Fix: Move billingRepository.connect() into its own viewModelScope.launch { } blo
 
         checkForAppUpdate()
 
+        // Note: checkForEnglishHasBeenChosen() triggers the Readiness Audit intro check itself
+        // once it's safe to do so - the two onboarding sheets must never show at once.
         checkForEnglishHasBeenChosen()
     }
+
+    private fun checkForReadinessAuditIntro() {
+        viewModelScope.launch {
+            val hasSeen = userPreferencesRepository.hasSeenReadinessAuditIntroFlow.first()
+            if (!hasSeen) {
+                // Small pause so this never pops up while another sheet's close animation is
+                // still settling - keeps the two onboarding sheets from ever visually clashing.
+                delay(400)
+                _uiState.update { it.copy(showReadinessAuditIntroSheet = true) }
+            }
+        }
+    }
+
+    /**
+     * True once the Baseline (first) Readiness Audit quiz has been completed at least once.
+     * Used to decide whether dismissing the first-launch intro sheet needs a confirmation.
+     */
+    fun isReadinessAuditBaselineComplete(): Boolean {
+        val level = ReadinessAuditLevels.ELEMENTARY
+        val quiz = level.quizzes.firstOrNull() ?: return false
+        return quizHistoryManager.getLastAttempt(level.description, quiz.id) != null
+    }
+
+    /**
+     * Called when the user closes the first-launch intro sheet, whether by completing quizzes
+     * and swiping away, or by confirming the "close anyway" warning. Marks it seen so it won't
+     * automatically show again - the user can still open the Readiness Audit from Reference.
+     */
+    fun dismissReadinessAuditIntroSheet() {
+        viewModelScope.launch {
+            userPreferencesRepository.setHasSeenReadinessAuditIntro(true)
+            _uiState.update { it.copy(showReadinessAuditIntroSheet = false) }
+        }
+    }
+
     private fun checkForEnglishHasBeenChosen(){
 
         viewModelScope.launch {
@@ -133,6 +174,10 @@ Fix: Move billingRepository.connect() into its own viewModelScope.launch { } blo
                 // If the user has NOT chosen, update the state to show the sheet.
 //                _uiState.update { it.copy(showEnglishChoiceSheet = true) }
                 _uiState.update { it.copy(showEnglishChoiceSheet = true)}
+            } else {
+                // Already chosen in a previous session - it's safe to check the Readiness
+                // Audit intro right away since the English sheet won't be shown this time.
+                checkForReadinessAuditIntro()
             }
         }
     }
@@ -260,5 +305,8 @@ Fix: Move billingRepository.connect() into its own viewModelScope.launch { } blo
 
     fun onEnglishChoiceDismissed() {
         _uiState.update { it.copy(showEnglishChoiceSheet = false) }
+        // Only now that the English-choice sheet has actually closed is it safe to show the
+        // Readiness Audit intro sheet - the two must never overlap.
+        checkForReadinessAuditIntro()
     }
 }
