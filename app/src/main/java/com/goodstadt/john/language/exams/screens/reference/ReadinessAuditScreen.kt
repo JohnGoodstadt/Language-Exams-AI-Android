@@ -93,7 +93,12 @@ import com.goodstadt.john.language.exams.viewmodels.ReadinessAuditViewModel
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import android.widget.Toast
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.unit.Dp
 import com.goodstadt.john.language.exams.BuildConfig
+import com.goodstadt.john.language.exams.utils.HeightClass
+import com.goodstadt.john.language.exams.utils.rememberHeightClass
+import timber.log.Timber
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -130,11 +135,6 @@ fun ReadinessAuditScreen(
 
     val selectedQuiz by viewModel.selectedQuiz
 
-    val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-        "Hear, and then choose the best answer"
-    } else {
-        "Choose the best answer"
-    }
 
     var isLearningExpanded by rememberSaveable { mutableStateOf(false) }
     var showDashboardSheet by remember { mutableStateOf(false) }
@@ -148,6 +148,31 @@ fun ReadinessAuditScreen(
     val unlockedLevels by viewModel.unlockedLevels.collectAsState()
     val isCurrentQuestionLocked = lockedAnswers.containsKey(currentQuestionIndex)
 
+    val heightClass = rememberHeightClass()
+// 2. Derive dynamic spacing & padding values based on screen height
+    val verticalPadding: Dp = when (heightClass) {
+        HeightClass.COMPACT -> 0.dp   // Less padding on short screens (e.g. 360x640dp)
+        HeightClass.MEDIUM -> 6.dp    // Balanced padding on standard screens
+        HeightClass.EXPANDED -> 16.dp // Generous padding on tall screens
+    }
+
+    val rowVerticalPadding = when (heightClass) {
+        HeightClass.COMPACT -> 0.dp  // Eliminate inner vertical padding on short screens
+        HeightClass.MEDIUM -> 2.dp
+        HeightClass.EXPANDED -> 8.dp
+    }
+
+    val questionTextPadding = when (heightClass) {
+        HeightClass.COMPACT -> 1.dp
+        else -> 4.dp
+    }
+
+    val iconSize: Dp = when (heightClass) {
+        HeightClass.COMPACT -> 20.dp
+        HeightClass.MEDIUM -> 24.dp
+        HeightClass.EXPANDED -> 32.dp
+    }
+
     LaunchedEffect(Unit) {
         viewModel.uiEvent.collect { event ->
             when (event) {
@@ -157,6 +182,7 @@ fun ReadinessAuditScreen(
     }
 
     LaunchedEffect(currentQuestionIndex, questions, lockedAnswers) {
+        Timber.w("Screen height ${heightClass}")
         if (questions.isNotEmpty()) {
             val question = questions[currentQuestionIndex]
             val questionText =
@@ -203,7 +229,7 @@ fun ReadinessAuditScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(10.dp),
+            .padding(vertical = verticalPadding),
         verticalArrangement = Arrangement.spacedBy(6.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -239,89 +265,142 @@ fun ReadinessAuditScreen(
                 .fillMaxWidth()
                 .padding(horizontal = 8.dp)
         ) {
-            // 1. Main Introductory Text
-            Text(
-                // Gate on Baseline actually being complete (Logic unlocked), not just
-                // confidence > 0, since confidence now also rises from partial progress
-                // within Baseline itself.
-                text = if (!unlockedLevels.contains(ReadinessAuditLevels.INTER)) {
-                    "To build an accurate roadmap for your exam success, let's start with a quick check of your current skills. Completing all four quizzes - Baseline, Logic, Lexis and Core - gives you the highest confidence score."
-                } else {
-                    "Baseline established. Complete the remaining quizzes (Logic, Lexis, Core) to raise your Confidence score - finishing all four gives you the highest confidence score."
-                },
-                style = MaterialTheme.typography.bodyMedium,
-                color = Color.LightGray,
-                lineHeight = 20.sp,
-                modifier = Modifier.padding(bottom = 24.dp)
-            )
+            // Collapsed by default so the quiz itself (question + answers + nav) gets priority
+            // vertical space on small screens - this whole block can be long once expanded.
+            var isStatusExpanded by rememberSaveable { mutableStateOf(true) }
 
-            Card(
-                colors = CardDefaults.cardColors(
-                    containerColor = Color(0xFF1C1C1E),
-                    contentColor = Color.White
-                ),
-                shape = RoundedCornerShape(12.dp),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+//            Row(
+//                modifier = Modifier
+//                    .fillMaxWidth()
+//                    .clickable { isStatusExpanded = !isStatusExpanded }
+//                    .padding(vertical = 6.dp),
+//                horizontalArrangement = Arrangement.SpaceBetween,
+//                verticalAlignment = Alignment.CenterVertically
+//            ) {
+//                Text(
+//                    text = "Confidence ${stats.confidence}% · Readiness ${stats.readiness}%",
+//                    style = MaterialTheme.typography.labelMedium,
+//                    color = Color(0xFFFF9500),
+////                    color = Color.LightGray
+//                )
+//                Text(
+//                    text = if (isStatusExpanded) "Hide ▲" else "Details ▼",
+//                    style = MaterialTheme.typography.labelMedium,
+//                    color = orangeLight
+//                )
+//            }
+
+            AnimatedVisibility(visible = isStatusExpanded) {
+                Column {
+                    // 1. Main Introductory Text
                     Text(
-                        text = "YOUR STATUS",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = Color.Gray,
-                        letterSpacing = 1.sp
+                        // Gate on Baseline actually being complete (Logic unlocked), not just
+                        // confidence > 0, since confidence now also rises from partial progress
+                        // within Baseline itself.
+                        text = if (unlockedLevels.contains(ReadinessAuditLevels.ELEMENTARY)) {
+                            if (heightClass == HeightClass.COMPACT) {
+                                //"Let's start with a quick check of your current skills. Completing at least the Baseline gives us an indication of how to adjust the screens."
+                                "Let's start with a quick check of your current skills."
+                            }else{
+                                "To build an accurate roadmap for your exam success, let's start with a quick check of your current skills. Completing at least the Baseline gives us a rough indication of how we adjust the screens."
+                            }
+
+                        } else {
+
+                            if (heightClass == HeightClass.COMPACT) {
+                                "Baseline established. Complete the remaining quizzes. Finishing all 4 gives us the highest confidence."
+                            }else{
+                                "Baseline established. Complete the remaining quizzes (Logic, Lexis, Core) to raise OUR Confidence score - finishing all 4 gives us the highest confidence."
+                            }
+                        },
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = Color.LightGray,
+                        lineHeight = 20.sp,
+                        modifier = Modifier.padding(top = 4.dp, bottom = 16.dp)
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
+                    Card(
+                        colors = CardDefaults.cardColors(
+                            containerColor = Color(0xFF1C1C1E),
+                            contentColor = Color.White
+                        ),
+                        shape = RoundedCornerShape(12.dp),
+                        modifier = Modifier.fillMaxWidth()
                     ) {
-                        AuditStatItem(
-                            label = "Confidence",
-                            value = "${stats.confidence}%",
-                            // ✅ FIX 3: Call the now-public function
-                            subValue = viewModel.getConfidenceLabel(stats.confidence)
-                        )
+                        Column(modifier = Modifier.padding(16.dp)) {
+//                            Text(
+//                                text = "YOUR STATUS",
+//                                style = MaterialTheme.typography.labelSmall,
+//                                color = Color.Gray,
+//                                letterSpacing = 1.sp
+//                            )
 
-                        Box(modifier = Modifier.width(1.dp).height(40.dp).background(Color.DarkGray))
+                            Spacer(modifier = Modifier.height(12.dp))
 
-                        AuditStatItem(
-                            label = "Exam Readiness",
-                            value = "${stats.readiness}%",
-                            subValue = "B1 Level"
-                        )
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                AuditStatItem(
+                                    label = "Our Confidence",
+                                    value = "${stats.confidence}%",
+                                    // ✅ FIX 3: Call the now-public function
+                                    subValue = viewModel.getConfidenceLabel(stats.confidence)
+                                )
+
+                                Box(modifier = Modifier.width(1.dp).height(40.dp).background(Color.DarkGray))
+
+                                AuditStatItem(
+                                    label = "Your Exam Readiness",
+                                    value = "${stats.readiness}%",
+                                    subValue = "B1 Level"
+                                )
+                            }
+
+                            Spacer(modifier = Modifier.height(4.dp))
+                            HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
+                            Spacer(modifier = Modifier.height(4.dp))
+
+//                            Text(
+//                                text = "SUMMARY",
+//                                style = MaterialTheme.typography.labelSmall,
+//                                color = Color.Gray,
+//                                letterSpacing = 1.sp
+//                            )
+                            //if (currentQuestionIndex == questions.lastIndex && viewModel.isQuizComplete()) {
+                            if (viewModel.isQuizComplete()) {
+                                Text(
+                                    text = viewModel.getAuditorVerdictText(),
+                                    style = MaterialTheme.typography.titleMedium,
+                                    color = Color(0xFFFF9500),
+                                    fontWeight = FontWeight.Normal,
+                                    modifier = Modifier.padding(top = 4.dp)
+                                )
+                            }
+                        }
                     }
 
-                    Spacer(modifier = Modifier.height(16.dp))
-                    HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
-                    Spacer(modifier = Modifier.height(12.dp))
+                    if (false && BuildConfig.DEBUG) {
+                        Button(
+                            onClick = { viewModel.resetAuditForDebug() },
+                            modifier = Modifier
+                                .padding(top = 8.dp)
+                                .height(32.dp),
+                            contentPadding = PaddingValues(horizontal = 12.dp)
+                        ) {
+                            Text("Reset Audit (D)")
+                        }
 
-                    Text(
-                        text = "SUMMARY",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = Color.Gray,
-                        letterSpacing = 1.sp
-                    )
-                    Text(
-                        text = viewModel.getAuditorVerdictText(),
-                        style = MaterialTheme.typography.titleMedium,
-                        color = Color(0xFFFF9500),
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.padding(top = 4.dp)
-                    )
-                }
-            }
-
-            if (BuildConfig.DEBUG) {
-                Button(
-                    onClick = { viewModel.resetAuditForDebug() },
-                    modifier = Modifier
-                        .padding(top = 8.dp)
-                        .height(32.dp),
-                    contentPadding = PaddingValues(horizontal = 12.dp)
-                ) {
-                    Text("Reset Audit (D)")
+                        Text(
+                            text = "Height ${heightClass} (D)",
+                            style = MaterialTheme.typography.bodySmall,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier
+                                .fillMaxWidth()
+//                                .padding(top = 8.dp)
+                                .padding(vertical = verticalPadding)
+                        )
+                    }
                 }
             }
         }
@@ -384,7 +463,8 @@ fun ReadinessAuditScreen(
                     ) {
                         learningPoints.forEach { point ->
                             Row(
-                                modifier = Modifier.padding(vertical = 2.dp),
+                                modifier = Modifier.//padding(vertical = 2.dp),
+                                padding(vertical = verticalPadding),
                                 verticalAlignment = Alignment.Top
                             ) {
                                 Text(text = "• ", color = orangeLight)
@@ -425,37 +505,91 @@ fun ReadinessAuditScreen(
 //        )
 
         // Question counter with filter info
-        if (questions.isNotEmpty()) {
-            Text(
-                text = "Showing ${currentQuestionIndex + 1} of ${viewModel.totalQuestionCount}",
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.padding(bottom = 4.dp)
-            )
+//        if (questions.isNotEmpty()) {
+//            Text(
+//                text = "Showing ${currentQuestionIndex + 1} of ${viewModel.totalQuestionCount}",
+//                style = MaterialTheme.typography.labelSmall,
+//                color = MaterialTheme.colorScheme.onSurfaceVariant,
+//                modifier = Modifier.padding(bottom = 4.dp)
+//            )
+//        }
+        // Paging control (dots)
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = verticalPadding),
+            horizontalArrangement = Arrangement.Center // Center the dots horizontally
+        ) {
+            for (index in 0 until questions.size) { // Iterate through the questions
+                Box(
+                    modifier = Modifier
+                        .size(10.dp) // Set size of the dot
+                        .clip(CircleShape) // Make it a circle
+                        .background(
+                            if (index == currentQuestionIndex) blueBright2 else dotColor(
+                                index,
+                                userAnswers
+                            )
+                        ) // Set color based on current page
+                )
+                Spacer(modifier = Modifier.width(8.dp)) // Add spacing between dots
+            }
         }
-
         if (isQuizLockedForToday) {
             Text(
                 text = "You've completed this test today. You can review your answers below - come back tomorrow to retake it.",
-                style = MaterialTheme.typography.labelSmall,
+                style = MaterialTheme.typography.labelMedium,
                 color = orangeLight,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 6.dp)
+                    .padding(bottom = 12.dp)
             )
+            // Determine if a "Next" tab exists
+            val currentIndex = ReadinessAuditLevels.entries.indexOf(selectedLevel)
+            val hasNextTab = currentIndex in 0 until (ReadinessAuditLevels.entries.size - 1)
+            if (hasNextTab) {
+                Text(
+                    text = "Please do the next 10 questions. We will more accurately know your level.",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = orangeLight,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 12.dp)
+                )
+                Button(
+                    onClick = {
+                        if (hasNextTab) {
+                            val nextLevel = ReadinessAuditLevels.entries[currentIndex + 1]
+                            viewModel.onLevelSelected(nextLevel)
+
+                            // Update infoDisabled state just like in the picker callback
+                            infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
+                        }
+                    },
+                    enabled = hasNextTab,
+                    modifier = Modifier
+                        .padding(top = 8.dp)
+                        .height(32.dp),
+                    contentPadding = PaddingValues(horizontal = 12.dp)
+                ) {
+                    Text("Go to next 10 questions")
+                }
+            }
         }
 
         // Filtered-empty state
-
-        if (currentQuestionIndex == 0 && questions.isNotEmpty()) {
+        //hide if compact height class
+        if ( currentQuestionIndex == 0 || (heightClass != HeightClass.COMPACT  && questions.isNotEmpty())) {
             Text(
-                text = displayText,
+                text = "Choose the best answer",
                 style = MaterialTheme.typography.bodyMedium,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 6.dp)
+//                    .padding(top = 8.dp)
+                    .padding(vertical = verticalPadding)
             )
         }
 
@@ -507,37 +641,22 @@ fun ReadinessAuditScreen(
 
                 Text(
                     text = annotatedQuestionText,
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
+//                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
+                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = if (heightClass == HeightClass.COMPACT) 15.sp else 16.sp),
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = questionTextPadding),
                     color = orangeLight,
                 )
 
-                // Per-question mastery badge
-                val masteryDisplay = viewModel.getQuestionMasteryDisplay(question.page)
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 2.dp, vertical = 1.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = masteryDisplay.first,
-                        color = masteryDisplay.second,
-                        style = MaterialTheme.typography.labelMedium,
-                        modifier = Modifier
-                            .background(masteryDisplay.second.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
-                    )
-                }
 
+                //A row for each question
                 question.words.forEach { option ->
                     val isOptionCorrect = option == question.correctOption
 
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceBetween,
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier.fillMaxWidth().padding(vertical = rowVerticalPadding)
                     ) {
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Icon(
@@ -568,9 +687,13 @@ fun ReadinessAuditScreen(
                             Text(
                                 text = option,
                                 color = orangeLight,
-                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
+//                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
+                                style = MaterialTheme.typography.bodyLarge.copy(
+                                    fontSize = if (heightClass == HeightClass.COMPACT) 13.sp else 14.sp
+                                ),
                                 modifier = Modifier
-                                    .padding(vertical = 2.dp)
+//                                    .padding(vertical = 2.dp)
+                                    .padding(vertical = verticalPadding)
                                     .clickable {
                                         val fullSentence =
                                             if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
@@ -645,23 +768,14 @@ fun ReadinessAuditScreen(
                                 disabledSelectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
                                 disabledUnselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
                             ),
-                            modifier = Modifier.semantics { contentDescription = option }
+                            modifier = Modifier
+                                .scale(if (heightClass == HeightClass.COMPACT) 0.85f else 1.0f) // Slightly scale down radio button on compact
+                                .semantics { contentDescription = option }
                         )
                     } // Row
                 }
             } // Scrollable Column
-//            Row(
-//                horizontalArrangement = Arrangement.SpaceBetween,
-//                modifier = Modifier.fillMaxWidth()
-//            ) {
-//                InfoButtonRow(infoDisabled = infoDisabled,
-//                    onClick = {
-//
-//                        if (infoDisabled == false) {
-//                            showInfoBottomSheet = true
-//                        }
-//                    })
-//            }// row
+
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -677,30 +791,32 @@ fun ReadinessAuditScreen(
                             viewModel.resetInfoButtonTapped()
                         }
                     },
-                    enabled = currentQuestionIndex > 0
+                    enabled = currentQuestionIndex > 0,
+                    modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 36.dp else 48.dp)
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Previous",
                         tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor,
-                        modifier = Modifier.size(36.dp)
+                        modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 28.dp else 36.dp)
                     )
                 }
 
                 // 🔹 Expanding space left
                 Spacer(modifier = Modifier.weight(1f))
 
-                // 🔹 Info Button (centered)
-//                InfoButtonRow(
-//                    infoDisabled = infoDisabled,
-//                    onClick = {
-//                        if (!infoDisabled) {
-//                            showInfoBottomSheet = true
-//                            viewModel.onInfoButtonTapped() //mark user getting help
-//                        }
-//                    }
-//                )
-
+                if (BuildConfig.DEBUG) {
+                    Button(
+                        onClick = { viewModel.resetAuditForDebug() },
+                        modifier = Modifier
+                            .padding(top = 8.dp)
+                            .height(24.dp),
+                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                    ) {
+                        Text("Reset Audit (D)")
+                    }
+//
+                }
                 // 🔹 Expanding space right
                 Spacer(modifier = Modifier.weight(1f))
 
@@ -713,13 +829,14 @@ fun ReadinessAuditScreen(
                             viewModel.resetInfoButtonTapped()
                         }
                     },
-                    enabled = currentQuestionIndex < questions.lastIndex
+                    enabled = currentQuestionIndex < questions.lastIndex,
+                    modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 36.dp else 48.dp)
                 ) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowForward,
                         contentDescription = "Next",
                         tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor,
-                        modifier = Modifier.size(36.dp)
+                        modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 28.dp else 36.dp)
                     )
                 }
             }
@@ -741,10 +858,22 @@ fun ReadinessAuditScreen(
                     fontSize = 16.sp,
                     color = Color.Green
                 ),
+                textAlign = TextAlign.Start,
                 modifier = Modifier
                     .weight(1f)
                     .padding(start = 16.dp) // Add padding to the start
             )
+
+//            Text(
+//                text = "${heightClass} (D)",
+//                style = MaterialTheme.typography.bodySmall,
+//                textAlign = TextAlign.Center,
+//                modifier = Modifier
+//                    .fillMaxWidth()
+//                    .padding(top = 8.dp)
+//                    .padding(vertical = verticalPadding)
+//            )
+
             Text(
                 text = "Tries: ${quizStatistics.tries}",
                 style = MaterialTheme.typography.bodyLarge.copy(
@@ -758,27 +887,27 @@ fun ReadinessAuditScreen(
             )
         }
         // Paging control (dots)
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(top = 8.dp),
-            horizontalArrangement = Arrangement.Center // Center the dots horizontally
-        ) {
-            for (index in 0 until questions.size) { // Iterate through the questions
-                Box(
-                    modifier = Modifier
-                        .size(10.dp) // Set size of the dot
-                        .clip(CircleShape) // Make it a circle
-                        .background(
-                            if (index == currentQuestionIndex) blueBright2 else dotColor(
-                                index,
-                                userAnswers
-                            )
-                        ) // Set color based on current page
-                )
-                Spacer(modifier = Modifier.width(4.dp)) // Add spacing between dots
-            }
-        }
+//        Row(
+//            modifier = Modifier
+//                .fillMaxWidth()
+//                .padding(top = 8.dp),
+//            horizontalArrangement = Arrangement.Center // Center the dots horizontally
+//        ) {
+//            for (index in 0 until questions.size) { // Iterate through the questions
+//                Box(
+//                    modifier = Modifier
+//                        .size(10.dp) // Set size of the dot
+//                        .clip(CircleShape) // Make it a circle
+//                        .background(
+//                            if (index == currentQuestionIndex) blueBright2 else dotColor(
+//                                index,
+//                                userAnswers
+//                            )
+//                        ) // Set color based on current page
+//                )
+//                Spacer(modifier = Modifier.width(4.dp)) // Add spacing between dots
+//            }
+//        }
     }
     if (isRateLimitingSheetVisible) {
         RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
@@ -915,7 +1044,7 @@ fun DropdownMenuBoxObsolete2(
 @Composable
 private fun AuditStatItem(label: String, value: String, subValue: String) {
     Column {
-        Text(text = label, style = MaterialTheme.typography.bodySmall, color = Color.Gray)
+        Text(text = label, style = MaterialTheme.typography.bodySmall,  color = Color(0xFFFF9500),)
         Text(text = value, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
         Text(text = subValue, style = MaterialTheme.typography.labelSmall, color = Color.LightGray)
     }

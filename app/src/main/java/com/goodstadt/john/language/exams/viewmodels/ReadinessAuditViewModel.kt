@@ -592,6 +592,9 @@ class ReadinessAuditViewModel @Inject constructor(
 
     }
 
+    fun isQuizComplete(): Boolean {
+        return quizStatistics.value.state == QuizState.COMPLETED
+    }
     // MARK: - Answer locking (order enforcement / once-per-day / one-shot answers)
 
     private fun quizAttemptKey(level: ReadinessAuditLevels, quiz: ReadinessAuditDetail): String =
