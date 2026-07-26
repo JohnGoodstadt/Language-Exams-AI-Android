@@ -7,6 +7,7 @@ package com.goodstadt.john.language.exams.viewmodels
 import android.app.Activity
 import android.app.Application
 import android.content.Context
+import androidx.compose.runtime.State
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.graphics.Color
@@ -18,26 +19,32 @@ import androidx.compose.ui.text.withStyle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
-import com.goodstadt.john.language.exams.data.repository.BillingRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
-import com.goodstadt.john.language.exams.data.repository.ContentRepository
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
+import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
+import com.goodstadt.john.language.exams.data.ReadinessQuizAttemptState
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.UserStatsRepository
 import com.goodstadt.john.language.exams.data.repository.AudioPlaybackRepository
+import com.goodstadt.john.language.exams.data.repository.BillingRepository
+import com.goodstadt.john.language.exams.data.repository.ContentRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizNotOKCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizOkCount
 import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statQuizTotalCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizNotOKCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizOkCount
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizTotalCount
 import com.goodstadt.john.language.exams.data.repository.UsageQuizRepository
+import com.goodstadt.john.language.exams.managers.AuditEngine
 import com.goodstadt.john.language.exams.managers.BannerManager
 import com.goodstadt.john.language.exams.managers.SimpleRateLimiter
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpActionType
 import com.goodstadt.john.language.exams.models.AudioPlaybackStatus
-import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.TestMyselfListRoot
-import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
+import com.goodstadt.john.language.exams.models.UsageMastery
+import com.goodstadt.john.language.exams.screens.reference.shared.ReadinessAuditDetail
 import com.goodstadt.john.language.exams.storage.UiEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -50,17 +57,8 @@ import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.io.IOException
-import java.util.Date
-import javax.inject.Inject
-import androidx.compose.runtime.State
-import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
-import com.goodstadt.john.language.exams.data.ReadinessQuizAttemptState
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizNotOKCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizOkCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statUsageQuizTotalCount
-import com.goodstadt.john.language.exams.managers.AuditEngine
-import com.goodstadt.john.language.exams.screens.reference.shared.ReadinessAuditDetail
 import java.util.Locale
+import javax.inject.Inject
 import kotlin.math.roundToInt
 
 data class AuditStats(
@@ -76,88 +74,28 @@ enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
                 baseName = "BaselineAudit-en",
                 title = "Sentence Structure"
             ),
-//            ReadinessAuditDetail(
-//                id = 2,
-//                baseName = "LogicAudit-en",
-//                title = "Present Simple"
-//            ),
-//            ReadinessAuditDetail(
-//                id = 3,
-//                baseName = "LexisAudit-en",
-//                title = "Past Simple"
-//            ),
-//            ReadinessAuditDetail(
-//                id = 4,
-//                baseName = "CoreAudit-en",
-//                title = "Questions & Short Answers"
-//            )
         )
     ),
     INTER(
         quizzes = listOf(
-//            ReadinessAuditDetail(
-//                id = 1,
-//                baseName = "BaselineAudit-en",
-//                title = "Sentence Structure"
-//            ),
             ReadinessAuditDetail(
                 id = 2,
                 baseName = "LogicAudit-en",
                 title = "Present Simple"
             ),
-//            ReadinessAuditDetail(
-//                id = 3,
-//                baseName = "LexisAudit-en",
-//                title = "Past Simple"
-//            ),
-//            ReadinessAuditDetail(
-//                id = 4,
-//                baseName = "CoreAudit-en",
-//                title = "Questions & Short Answers"
-//            )
         )
     ),
     UPPER(
         quizzes = listOf(
-//            ReadinessAuditDetail(
-//                id = 1,
-//                baseName = "BaselineAudit-en",
-//                title = "Sentence Structure"
-//            ),
-//            ReadinessAuditDetail(
-//                id = 2,
-//                baseName = "LogicAudit-en",
-//                title = "Present Simple"
-//            ),
             ReadinessAuditDetail(
                 id = 3,
                 baseName = "LexisAudit-en",
                 title = "Past Simple"
             ),
-//            ReadinessAuditDetail(
-//                id = 4,
-//                baseName = "CoreAudit-en",
-//                title = "Questions & Short Answers"
-//            )
         )
     ),
     ADVANCED(
         quizzes = listOf(
-//            ReadinessAuditDetail(
-//                id = 1,
-//                baseName = "BaselineAudit-en",
-//                title = "Sentence Structure"
-//            ),
-//            ReadinessAuditDetail(
-//                id = 2,
-//                baseName = "LogicAudit-en",
-//                title = "Present Simple"
-//            ),
-//            ReadinessAuditDetail(
-//                id = 3,
-//                baseName = "LexisAudit-en",
-//                title = "Past Simple"
-//            ),
             ReadinessAuditDetail(
                 id = 4,
                 baseName = "CoreAudit-en",
@@ -190,36 +128,6 @@ enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
             ADVANCED -> "B2"
         }
 }
-//
-////data class WordOK(
-////    val word: String,
-////    val ok: Boolean
-////)
-//
-//data class QuizQuestion(
-//    val sentence: String,
-//    val words: List<String>,
-//    val correctOption: String,
-//    val summary: String,
-//    val explain: String,
-//    val title: String,
-//    val page:Int
-//)
-//
-////TODO: Do I need this?
-//sealed interface QuizUiState {
-//    object Loading : QuizUiState
-//
-//    data class Success(
-//        val selectedVoiceName: String = "" // Add a default empty value
-//    ) : QuizUiState
-//
-//    data class Error(val message: String) : QuizUiState
-//    object NotAvailable : QuizUiState // For flavors like 'zh'
-//}
-//data class UsageQuizUiState(
-//    val testMyselfListRoot:TestMyselfListRoot? = null
-//)
 @HiltViewModel
 class ReadinessAuditViewModel @Inject constructor(
     private val application: Application,
@@ -1232,5 +1140,34 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     // Helper for the UI text we added in the previous step
     fun getAuditorVerdictText(): String {
         return AuditEngine.getReadinessVerdict(_auditStats.value.readiness)
+    }
+
+    //State Machine for ending Audit readiness
+
+    private val _showSummary = MutableStateFlow(false)
+    val showSummary = _showSummary.asStateFlow()
+
+    fun onAuditStepFinished(isEarlyExit: Boolean = false) {
+        viewModelScope.launch {
+            if (isEarlyExit) {
+                // Path 1: User just wants to get to the app
+//                _uiEvent.emit(UiEvent.NavigateToDashboard)
+                Timber.e("navigate to NavigateToDashboard")
+            } else {
+                // Path 2 & 3: Completed at least Part 1
+                _showSummary.value = true
+            }
+        }
+    }
+
+    fun adjustAppLevel(newLevel: String) {
+        viewModelScope.launch {
+            // Update the main app level setting
+//            userPreferencesRepository.saveSelectedLevel(newLevel)
+            Timber.e("Save new level")
+            _showSummary.value = false
+//            _uiEvent.emit(UiEvent.NavigateToDashboard)
+            Timber.e("navigate to NavigateToDashboard")
+        }
     }
 }

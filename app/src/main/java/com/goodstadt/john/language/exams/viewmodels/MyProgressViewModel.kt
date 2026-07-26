@@ -1,24 +1,25 @@
 package com.goodstadt.john.language.exams.viewmodels
 
-import androidx.compose.runtime.remember
-import com.goodstadt.john.language.exams.data.QuizHistoryManager
-import com.goodstadt.john.language.exams.screens.reference.SideQuestData
-
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.AppConfigRepository
+import com.goodstadt.john.language.exams.data.QuizHistoryManager
+import com.goodstadt.john.language.exams.data.ReadinessAuditRepository
+import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.managers.AudioCacheManager
+import com.goodstadt.john.language.exams.managers.AuditEngine
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpState
 import com.goodstadt.john.language.exams.models.AppUIManifest
+import com.goodstadt.john.language.exams.screens.reference.SideQuestData
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -32,13 +33,68 @@ data class MyProgressUiState(
 )
 
 @HiltViewModel
-class MyProgressViewModel @Inject constructor(
+class MyProgressViewModel @Inject constructor (
     private val xpManager: XPManager,
     private val audioCacheManager: AudioCacheManager,
     private val appConfigRepository: AppConfigRepository,
     val quizManager: QuizHistoryManager,
-
+    private val auditRepository: ReadinessAuditRepository,
+    private val userPreferencesRepository: UserPreferencesRepository,
 ) : ViewModel() {
+
+    val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow
+
+    // 2. Define the reactive Audit Stats Flow
+    // This watches the database and automatically updates the UI rings
+    val auditStats: StateFlow<AuditStats> = auditRepository.auditScores
+        .map { scores ->
+            // 🟢 FIXED CALL SITE
+            val report = AuditEngine.calculate(
+                testScores = scores,      // The Map<Int, Int> from repo
+                partProgress = emptyMap() // On the summary screen, we don't track mid-quiz progress
+            )
+
+            AuditStats(
+                confidence = report.confidence,
+                readiness = report.readiness
+            )
+        }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = AuditStats(0, 0)
+        )
+
+    val unlockedAuditLevels: StateFlow<Set<ReadinessAuditLevels>> = auditRepository.auditScores
+        .map { scores ->
+            val unlocked = mutableSetOf(ReadinessAuditLevels.ELEMENTARY) // Part 1 always open
+
+            // If Part 1 is finished, unlock Part 2
+            if (scores.containsKey(1)) unlocked.add(ReadinessAuditLevels.INTER)
+
+            // If Part 2 is finished, unlock Part 3
+            if (scores.containsKey(2)) unlocked.add(ReadinessAuditLevels.UPPER)
+
+            // If Part 3 is finished, unlock Part 4
+            if (scores.containsKey(3)) unlocked.add(ReadinessAuditLevels.ADVANCED)
+
+            unlocked
+        }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = setOf(ReadinessAuditLevels.ELEMENTARY)
+        )
+
+    // 3. Helper function for the "New Audit" button
+    fun resetAudit() {
+        viewModelScope.launch {
+            auditRepository.resetAll()
+        }
+    }
+    fun getCurrentSkillLevel() : String {
+        return "B1"
+    }
 
     // Combine flows from Managers into one UI State
     val uiState: StateFlow<MyProgressUiState?> = combine(
@@ -93,4 +149,8 @@ class MyProgressViewModel @Inject constructor(
         // This assumes you have a getter in your repository
         return appConfigRepository.getAppUiManifest()
     }
+
+//    fun resetAudit() {
+//        Timber.e("resetAudit TODO")
+//    }
 }

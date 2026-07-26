@@ -8,8 +8,9 @@ import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import dagger.hilt.android.qualifiers.ApplicationContext
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
-import kotlinx.serialization.decodeFromString
+import kotlinx.coroutines.flow.map
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import java.util.Calendar
@@ -40,6 +41,20 @@ class ReadinessAuditRepository @Inject constructor(
     private val KEY_PART_2 = intPreferencesKey("audit_score_2")
     private val KEY_PART_3 = intPreferencesKey("audit_score_3")
     private val KEY_PART_4 = intPreferencesKey("audit_score_4")
+
+    val auditScores: Flow<Map<Int, Int>> = context.auditDataStore.data.map { prefs ->
+        val scores = mutableMapOf<Int, Int>()
+        prefs[KEY_PART_1]?.let { scores[1] = it }
+        prefs[KEY_PART_2]?.let { scores[2] = it }
+        prefs[KEY_PART_3]?.let { scores[3] = it }
+        prefs[KEY_PART_4]?.let { scores[4] = it }
+        scores
+    }
+
+    // And add a reset function if you don't have one
+    suspend fun resetAll() {
+        context.auditDataStore.edit { it.clear() }
+    }
 
     /**
      * Saves the score for a specific part (1-4).
@@ -151,11 +166,4 @@ class ReadinessAuditRepository @Inject constructor(
         }
     }
 
-    /**
-     * Wipes every value this repository owns: the 4 audit scores and every quiz's locked
-     * answers/completion date. Callers are responsible for restricting this to DEBUG builds.
-     */
-    suspend fun resetAll() {
-        context.auditDataStore.edit { prefs -> prefs.clear() }
-    }
 }

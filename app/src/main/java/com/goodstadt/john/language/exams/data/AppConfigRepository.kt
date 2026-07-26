@@ -1,12 +1,10 @@
 package com.goodstadt.john.language.exams.data
 
 import android.content.SharedPreferences
-import android.util.Log
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.models.AppUIManifest
 import com.goodstadt.john.language.exams.models.LlmModelInfo
 import com.goodstadt.john.language.exams.models.TabDefinition
-import com.goodstadt.john.language.exams.models.TabsManifest
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.utils.logging.TimberFault
 import com.google.firebase.crashlytics.FirebaseCrashlytics
@@ -40,7 +38,8 @@ class AppConfigRepository @Inject constructor(
 
     //A key for storing our local versions map
     private val KEY_LOCAL_SHEET_VERSIONS = "local_sheet_versions_cache"
-    private val INITIAL_SCREEN = Screen.Tab4.route //reference TAB
+    //private val INITIAL_SCREEN = Screen.Tab4.route //reference TAB
+    private val INITIAL_SCREEN = Screen.Tab5.route //Me TAB
 
     private val defaultModels = listOf(
         LlmModelInfo(

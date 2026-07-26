@@ -93,6 +93,7 @@ import com.goodstadt.john.language.exams.viewmodels.ReadinessAuditViewModel
 import com.goodstadt.john.language.exams.storage.UiEvent
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import android.widget.Toast
+import androidx.compose.material3.Surface
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.unit.Dp
 import com.goodstadt.john.language.exams.BuildConfig
@@ -104,7 +105,8 @@ import timber.log.Timber
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ReadinessAuditScreen(
-    viewModel: ReadinessAuditViewModel = hiltViewModel()
+    viewModel: ReadinessAuditViewModel = hiltViewModel(),
+    //onFinished: () -> Unit // Existing callback to exit the screen
 ) {
     val context = LocalContext.current
 
@@ -130,7 +132,6 @@ fun ReadinessAuditScreen(
     var displayedSentence by remember { mutableStateOf(AnnotatedString("")) }
 
     //val selectedLevel by viewModel.selectedLevel
-    val availableQuizzesObsolete by viewModel.availableQuizzesObsolete
     val availableQuizzes by viewModel.availableQuizzes.collectAsState()
 
     val selectedQuiz by viewModel.selectedQuiz
@@ -172,6 +173,23 @@ fun ReadinessAuditScreen(
         HeightClass.MEDIUM -> 24.dp
         HeightClass.EXPANDED -> 32.dp
     }
+
+    var showSummaryOverlay by rememberSaveable { mutableStateOf(false) }
+    // Logic to handle the "Adjust Level" button in the summary
+    val handleAdjustLevel: (String) -> Unit = { newLevelLabel ->
+        // Map "A2", "B1", "B2" back to your Enum
+        val newLevel = when(newLevelLabel) {
+            "A2" -> ReadinessAuditLevels.INTER
+            "B1" -> ReadinessAuditLevels.UPPER
+            "B2" -> ReadinessAuditLevels.ADVANCED
+            else -> ReadinessAuditLevels.ELEMENTARY
+        }
+        viewModel.onLevelSelected(newLevel)
+        showSummaryOverlay = false
+        //onFinished() // Exit to dashboard after adjusting
+    }
+
+
 
     LaunchedEffect(Unit) {
         viewModel.uiEvent.collect { event ->
@@ -226,108 +244,103 @@ fun ReadinessAuditScreen(
         }
     }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(vertical = verticalPadding),
-        verticalArrangement = Arrangement.spacedBy(6.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        // Use full labels on wider screens (≥ 380dp), short on small devices
-        val useFullLabels = LocalConfiguration.current.screenWidthDp >= 380
-        val labelFor: (ReadinessAuditLevels) -> String = { if (useFullLabels) it.description else it.shortLabel }
-
-        HorizontalLevelPicker(
-            options = ReadinessAuditLevels.entries.map { labelFor(it) },
-            selectedOption = labelFor(selectedLevel),
-            lockedOptions = ReadinessAuditLevels.entries
-                .filterNot { unlockedLevels.contains(it) }
-                .map { labelFor(it) }
-                .toSet(),
-            onOptionSelected = { newLabel ->
-                val level = ReadinessAuditLevels.entries.first { labelFor(it) == newLabel }
-                if (level != selectedLevel){
-                    viewModel.onLevelSelected(level)
-
-                    if (viewModel.doIHaveCurrentQuestionInfo()) {
-                        infoDisabled = false
-                    } else {
-                        infoDisabled = true
-                    }
+    if (showSummaryOverlay) {
+        // --- THE SUMMARY PATH ---
+        Surface(modifier = Modifier.fillMaxSize(), color = Color(0xFF121212)) {
+            AuditSummaryView(
+                currentSelectedLevel = selectedLevel.description,
+                readinessScore = stats.readiness,
+                confidenceScore = stats.confidence,
+                onAdjustLevel = handleAdjustLevel,
+                onContinue = {
+                    showSummaryOverlay = false
+                    //onFinished()
                 }
-            }
-        )
-
-
-
+            )
+        }
+    }
+    else{
         Column(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 8.dp)
+                .fillMaxSize()
+                .padding(vertical = verticalPadding),
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Collapsed by default so the quiz itself (question + answers + nav) gets priority
-            // vertical space on small screens - this whole block can be long once expanded.
-            var isStatusExpanded by rememberSaveable { mutableStateOf(true) }
+            // Use full labels on wider screens (≥ 380dp), short on small devices
+            val useFullLabels = LocalConfiguration.current.screenWidthDp >= 380
+            val labelFor: (ReadinessAuditLevels) -> String = { if (useFullLabels) it.description else it.shortLabel }
 
-//            Row(
-//                modifier = Modifier
-//                    .fillMaxWidth()
-//                    .clickable { isStatusExpanded = !isStatusExpanded }
-//                    .padding(vertical = 6.dp),
-//                horizontalArrangement = Arrangement.SpaceBetween,
-//                verticalAlignment = Alignment.CenterVertically
-//            ) {
-//                Text(
-//                    text = "Confidence ${stats.confidence}% · Readiness ${stats.readiness}%",
-//                    style = MaterialTheme.typography.labelMedium,
-//                    color = Color(0xFFFF9500),
-////                    color = Color.LightGray
-//                )
-//                Text(
-//                    text = if (isStatusExpanded) "Hide ▲" else "Details ▼",
-//                    style = MaterialTheme.typography.labelMedium,
-//                    color = orangeLight
-//                )
-//            }
+            HorizontalLevelPicker(
+                options = ReadinessAuditLevels.entries.map { labelFor(it) },
+                selectedOption = labelFor(selectedLevel),
+                lockedOptions = ReadinessAuditLevels.entries
+                    .filterNot { unlockedLevels.contains(it) }
+                    .map { labelFor(it) }
+                    .toSet(),
+                onOptionSelected = { newLabel ->
+                    val level = ReadinessAuditLevels.entries.first { labelFor(it) == newLabel }
+                    if (level != selectedLevel){
+                        viewModel.onLevelSelected(level)
 
-            AnimatedVisibility(visible = isStatusExpanded) {
-                Column {
-                    // 1. Main Introductory Text
-                    Text(
-                        // Gate on Baseline actually being complete (Logic unlocked), not just
-                        // confidence > 0, since confidence now also rises from partial progress
-                        // within Baseline itself.
-                        text = if (unlockedLevels.contains(ReadinessAuditLevels.ELEMENTARY)) {
-                            if (heightClass == HeightClass.COMPACT) {
-                                //"Let's start with a quick check of your current skills. Completing at least the Baseline gives us an indication of how to adjust the screens."
-                                "Let's start with a quick check of your current skills."
-                            }else{
-                                "To build an accurate roadmap for your exam success, let's start with a quick check of your current skills. Completing at least the Baseline gives us a rough indication of how we adjust the screens."
-                            }
-
+                        if (viewModel.doIHaveCurrentQuestionInfo()) {
+                            infoDisabled = false
                         } else {
+                            infoDisabled = true
+                        }
+                    }
+                }
+            )
 
-                            if (heightClass == HeightClass.COMPACT) {
-                                "Baseline established. Complete the remaining quizzes. Finishing all 4 gives us the highest confidence."
-                            }else{
-                                "Baseline established. Complete the remaining quizzes (Logic, Lexis, Core) to raise OUR Confidence score - finishing all 4 gives us the highest confidence."
-                            }
-                        },
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = Color.LightGray,
-                        lineHeight = 20.sp,
-                        modifier = Modifier.padding(top = 4.dp, bottom = 16.dp)
-                    )
 
-                    Card(
-                        colors = CardDefaults.cardColors(
-                            containerColor = Color(0xFF1C1C1E),
-                            contentColor = Color.White
-                        ),
-                        shape = RoundedCornerShape(12.dp),
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
+
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 8.dp)
+            ) {
+                // Collapsed by default so the quiz itself (question + answers + nav) gets priority
+                // vertical space on small screens - this whole block can be long once expanded.
+                var isStatusExpanded by rememberSaveable { mutableStateOf(true) }
+
+                AnimatedVisibility(visible = isStatusExpanded) {
+                    Column {
+                        // 1. Main Introductory Text
+                        Text(
+                            // Gate on Baseline actually being complete (Logic unlocked), not just
+                            // confidence > 0, since confidence now also rises from partial progress
+                            // within Baseline itself.
+                            text = if (unlockedLevels.contains(ReadinessAuditLevels.ELEMENTARY)) {
+                                if (heightClass == HeightClass.COMPACT) {
+                                    //"Let's start with a quick check of your current skills. Completing at least the Baseline gives us an indication of how to adjust the screens."
+                                    "Let's start with a quick check of your current skills."
+                                }else{
+                                    "To build an accurate roadmap for your exam success, let's start with a quick check of your current skills. Completing at least the Baseline gives us a rough indication of how we adjust the screens."
+                                }
+
+                            } else {
+
+                                if (heightClass == HeightClass.COMPACT) {
+                                    "Baseline established. Complete the remaining quizzes. Finishing all 4 gives us the highest confidence."
+                                }else{
+                                    "Baseline established. Complete the remaining quizzes (Logic, Lexis, Core) to raise OUR Confidence score - finishing all 4 gives us the highest confidence."
+                                }
+                            },
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = Color.LightGray,
+                            lineHeight = 20.sp,
+                            modifier = Modifier.padding(top = 4.dp, bottom = 16.dp)
+                        )
+
+                        Card(
+                            colors = CardDefaults.cardColors(
+                                containerColor = Color(0xFF1C1C1E),
+                                contentColor = Color.White
+                            ),
+                            shape = RoundedCornerShape(12.dp),
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Column(modifier = Modifier.padding(16.dp)) {
 //                            Text(
 //                                text = "YOUR STATUS",
 //                                style = MaterialTheme.typography.labelSmall,
@@ -335,222 +348,142 @@ fun ReadinessAuditScreen(
 //                                letterSpacing = 1.sp
 //                            )
 
-                            Spacer(modifier = Modifier.height(12.dp))
+                                Spacer(modifier = Modifier.height(12.dp))
 
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween
-                            ) {
-                                AuditStatItem(
-                                    label = "Our Confidence",
-                                    value = "${stats.confidence}%",
-                                    // ✅ FIX 3: Call the now-public function
-                                    subValue = viewModel.getConfidenceLabel(stats.confidence)
-                                )
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.SpaceBetween
+                                ) {
+                                    AuditStatItem(
+                                        label = "Our Confidence",
+                                        value = "${stats.confidence}%",
+                                        // ✅ FIX 3: Call the now-public function
+                                        subValue = viewModel.getConfidenceLabel(stats.confidence)
+                                    )
 
-                                Box(modifier = Modifier.width(1.dp).height(40.dp).background(Color.DarkGray))
+                                    Box(modifier = Modifier.width(1.dp).height(40.dp).background(Color.DarkGray))
 
-                                AuditStatItem(
-                                    label = "Your Exam Readiness",
-                                    value = "${stats.readiness}%",
-                                    subValue = "B1 Level"
-                                )
-                            }
+                                    AuditStatItem(
+                                        label = "Your Exam Readiness",
+                                        value = "${stats.readiness}%",
+                                        subValue = "B1 Level"
+                                    )
+                                }
 
-                            Spacer(modifier = Modifier.height(4.dp))
-                            HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
-                            Spacer(modifier = Modifier.height(4.dp))
+                                Spacer(modifier = Modifier.height(4.dp))
+                                HorizontalDivider(color = Color.DarkGray, thickness = 0.5.dp)
+                                Spacer(modifier = Modifier.height(4.dp))
 
-//                            Text(
-//                                text = "SUMMARY",
-//                                style = MaterialTheme.typography.labelSmall,
-//                                color = Color.Gray,
-//                                letterSpacing = 1.sp
-//                            )
-                            //if (currentQuestionIndex == questions.lastIndex && viewModel.isQuizComplete()) {
-                            if (viewModel.isQuizComplete()) {
-                                Text(
-                                    text = viewModel.getAuditorVerdictText(),
-                                    style = MaterialTheme.typography.titleMedium,
-                                    color = Color(0xFFFF9500),
-                                    fontWeight = FontWeight.Normal,
-                                    modifier = Modifier.padding(top = 4.dp)
-                                )
+                                //if (currentQuestionIndex == questions.lastIndex && viewModel.isQuizComplete()) {
+                                if (viewModel.isQuizComplete()) {
+                                    Text(
+                                        text = viewModel.getAuditorVerdictText(),
+                                        style = MaterialTheme.typography.titleMedium,
+                                        color = Color(0xFFFF9500),
+                                        fontWeight = FontWeight.Normal,
+                                        modifier = Modifier.padding(top = 4.dp)
+                                    )
+                                }
                             }
                         }
                     }
+                }
+            }
 
-                    if (false && BuildConfig.DEBUG) {
-                        Button(
-                            onClick = { viewModel.resetAuditForDebug() },
-                            modifier = Modifier
-                                .padding(top = 8.dp)
-                                .height(32.dp),
-                            contentPadding = PaddingValues(horizontal = 12.dp)
-                        ) {
-                            Text("Reset Audit (D)")
-                        }
+            // --- Quiz-level learning points (stays the same for all 10 questions) ---
+
+            val learningTitleData = uiState.testMyselfListRoot?.data?.first()
+            val learningTitle = learningTitleData?.learningTitle ?: "Why this quiz works"
+            val learningPoints = learningTitleData?.learningPoints.orEmpty()
+
+
+            if (learningPoints.isNotEmpty()) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 6.dp)
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = learningTitle,
+                            style = MaterialTheme.typography.titleSmall,
+                            color = Color.White
+                        )
 
                         Text(
-                            text = "Height ${heightClass} (D)",
-                            style = MaterialTheme.typography.bodySmall,
-                            textAlign = TextAlign.Center,
+                            text = if (isLearningExpanded) "less" else "more…",
+                            style = MaterialTheme.typography.labelMedium,
+                            color = orangeLight,
                             modifier = Modifier
-                                .fillMaxWidth()
-//                                .padding(top = 8.dp)
-                                .padding(vertical = verticalPadding)
+                                .clickable { isLearningExpanded = !isLearningExpanded }
+                                .padding(8.dp)
                         )
                     }
-                }
-            }
-        }
 
-            // 2. The Icon (Right Aligned)
-//            IconButton(
-//                onClick = {  showDashboardSheet = true },
-//                modifier = Modifier.align(Alignment.CenterEnd) // 👈 Locks to right
-//            ) {
-//                Icon(
-//                    imageVector = Icons.Default.WorkspacePremium, // Or Insight/Chart icon
-//                    contentDescription = "Stats",
-//                    tint = Color(0xFFFF9800)
-//                )
-//            }
-//        }
-
-        // --- Quiz-level learning points (stays the same for all 10 questions) ---
-
-//        val fred = selectedQuiz
-//        print(fred)
-
-        val learningTitleData = uiState.testMyselfListRoot?.data?.first()
-        val learningTitle = learningTitleData?.learningTitle ?: "Why this quiz works"
-        val learningPoints = learningTitleData?.learningPoints.orEmpty()
-
-
-        if (learningPoints.isNotEmpty()) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 6.dp)
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = learningTitle,
-                        style = MaterialTheme.typography.titleSmall,
-                        color = Color.White
-                    )
-
-                    Text(
-                        text = if (isLearningExpanded) "less" else "more…",
-                        style = MaterialTheme.typography.labelMedium,
-                        color = orangeLight,
-                        modifier = Modifier
-                            .clickable { isLearningExpanded = !isLearningExpanded }
-                            .padding(8.dp)
-                    )
-                }
-
-                AnimatedVisibility(visible = isLearningExpanded) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(top = 6.dp, bottom = 8.dp)
-                    ) {
-                        learningPoints.forEach { point ->
-                            Row(
-                                modifier = Modifier.//padding(vertical = 2.dp),
-                                padding(vertical = verticalPadding),
-                                verticalAlignment = Alignment.Top
-                            ) {
-                                Text(text = "• ", color = orangeLight)
-                                Text(
-                                    text = point,
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    color = Color.White,
-                                    modifier = Modifier.weight(1f)
-                                )
+                    AnimatedVisibility(visible = isLearningExpanded) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 6.dp, bottom = 8.dp)
+                        ) {
+                            learningPoints.forEach { point ->
+                                Row(
+                                    modifier = Modifier.//padding(vertical = 2.dp),
+                                    padding(vertical = verticalPadding),
+                                    verticalAlignment = Alignment.Top
+                                ) {
+                                    Text(text = "• ", color = orangeLight)
+                                    Text(
+                                        text = point,
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        color = Color.White,
+                                        modifier = Modifier.weight(1f)
+                                    )
+                                }
                             }
                         }
                     }
-                }
 
-//                HorizontalDivider(
-//                    modifier = Modifier
-//                        .fillMaxWidth()
-//                        .padding(top = 6.dp),
-//                    thickness = 1.dp,
-//                    color = greyLight2
-//                )
-            }//: Column
-        }//:learningPoints
+                }//: Column
+            }//:learningPoints
 
 
 
-        HorizontalDivider(
-            modifier = Modifier.fillMaxWidth(),
-            thickness = 1.dp,
-            color = greyLight2
-        )
+            HorizontalDivider(
+                modifier = Modifier.fillMaxWidth(),
+                thickness = 1.dp,
+                color = greyLight2
+            )
 
-        // Mastery Filter Chips
-//        UsageMasteryFilterChips(
-//            activeFilters = activeFilters,
-//            onToggle = { viewModel.toggleFilter(it) },
-//            onSelectAll = { viewModel.selectAllFilters() }
-//        )
-
-        // Question counter with filter info
-//        if (questions.isNotEmpty()) {
-//            Text(
-//                text = "Showing ${currentQuestionIndex + 1} of ${viewModel.totalQuestionCount}",
-//                style = MaterialTheme.typography.labelSmall,
-//                color = MaterialTheme.colorScheme.onSurfaceVariant,
-//                modifier = Modifier.padding(bottom = 4.dp)
-//            )
-//        }
-        // Paging control (dots)
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = verticalPadding),
-            horizontalArrangement = Arrangement.Center // Center the dots horizontally
-        ) {
-            for (index in 0 until questions.size) { // Iterate through the questions
-                Box(
-                    modifier = Modifier
-                        .size(10.dp) // Set size of the dot
-                        .clip(CircleShape) // Make it a circle
-                        .background(
-                            if (index == currentQuestionIndex) blueBright2 else dotColor(
-                                index,
-                                userAnswers
-                            )
-                        ) // Set color based on current page
-                )
-                Spacer(modifier = Modifier.width(8.dp)) // Add spacing between dots
-            }
-        }
-        if (isQuizLockedForToday) {
-            Text(
-                text = "You've completed this test today. You can review your answers below - come back tomorrow to retake it.",
-                style = MaterialTheme.typography.labelMedium,
-                color = orangeLight,
-                textAlign = TextAlign.Center,
+            // Paging control (dots)
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(bottom = 12.dp)
-            )
-            // Determine if a "Next" tab exists
-            val currentIndex = ReadinessAuditLevels.entries.indexOf(selectedLevel)
-            val hasNextTab = currentIndex in 0 until (ReadinessAuditLevels.entries.size - 1)
-            if (hasNextTab) {
+                    .padding(vertical = verticalPadding),
+                horizontalArrangement = Arrangement.Center // Center the dots horizontally
+            ) {
+                for (index in 0 until questions.size) { // Iterate through the questions
+                    Box(
+                        modifier = Modifier
+                            .size(10.dp) // Set size of the dot
+                            .clip(CircleShape) // Make it a circle
+                            .background(
+                                if (index == currentQuestionIndex) blueBright2 else dotColor(
+                                    index,
+                                    userAnswers
+                                )
+                            ) // Set color based on current page
+                    )
+                    Spacer(modifier = Modifier.width(8.dp)) // Add spacing between dots
+                }
+            }
+            if (isQuizLockedForToday) {
                 Text(
-                    text = "Please do the next 10 questions. We will more accurately know your level.",
+                    text = "You've completed this test today. You can review your answers below - come back tomorrow to retake it.",
                     style = MaterialTheme.typography.labelMedium,
                     color = orangeLight,
                     textAlign = TextAlign.Center,
@@ -558,367 +491,379 @@ fun ReadinessAuditScreen(
                         .fillMaxWidth()
                         .padding(bottom = 12.dp)
                 )
-                Button(
-                    onClick = {
-                        if (hasNextTab) {
-                            val nextLevel = ReadinessAuditLevels.entries[currentIndex + 1]
-                            viewModel.onLevelSelected(nextLevel)
+                // Determine if a "Next" tab exists
+                val currentIndex = ReadinessAuditLevels.entries.indexOf(selectedLevel)
+                val hasNextTab = currentIndex in 0 until (ReadinessAuditLevels.entries.size - 1)
 
-                            // Update infoDisabled state just like in the picker callback
-                            infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
-                        }
-                    },
-                    enabled = hasNextTab,
-                    modifier = Modifier
-                        .padding(top = 8.dp)
-                        .height(32.dp),
-                    contentPadding = PaddingValues(horizontal = 12.dp)
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    Text("Go to next 10 questions")
+                    // 1. THE NEW EXIT/SUMMARY BUTTON
+                    Button(
+                        onClick = { showSummaryOverlay = true },
+                        modifier = Modifier.weight(1f).height(36.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.DarkGray)
+                    ) {
+                        Text("View Summary", fontSize = 12.sp)
+                    }
+
+                    // 2. THE EXISTING "NEXT" BUTTON
+                    if (hasNextTab) {
+                        Button(
+                            onClick = {
+                                val nextLevel = ReadinessAuditLevels.entries[currentIndex + 1]
+                                viewModel.onLevelSelected(nextLevel)
+                                infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
+                            },
+                            modifier = Modifier.weight(1f).height(36.dp),
+                            colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
+                        ) {
+                            Text("Next 10 Questions", color = Color.Black, fontSize = 12.sp)
+                        }
+                    }
                 }
-            }
-        }
 
-        // Filtered-empty state
-        //hide if compact height class
-        if ( currentQuestionIndex == 0 || (heightClass != HeightClass.COMPACT  && questions.isNotEmpty())) {
-            Text(
-                text = "Choose the best answer",
-                style = MaterialTheme.typography.bodyMedium,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
+//                if (hasNextTab) {
+//                    Text(
+//                        text = "Please do the next 10 questions. We will more accurately know your level.",
+//                        style = MaterialTheme.typography.labelMedium,
+//                        color = orangeLight,
+//                        textAlign = TextAlign.Center,
+//                        modifier = Modifier
+//                            .fillMaxWidth()
+//                            .padding(bottom = 12.dp)
+//                    )
+//                    Button(
+//                        onClick = {
+//                            if (hasNextTab) {
+//                                val nextLevel = ReadinessAuditLevels.entries[currentIndex + 1]
+//                                viewModel.onLevelSelected(nextLevel)
+//
+//                                // Update infoDisabled state just like in the picker callback
+//                                infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
+//                            }
+//                        },
+//                        enabled = hasNextTab,
+//                        modifier = Modifier
+//                            .padding(top = 8.dp)
+//                            .height(32.dp),
+//                        contentPadding = PaddingValues(horizontal = 12.dp)
+//                    ) {
+//                        Text("Go to next 10 questions")
+//                    }
+//                }
+            }
+
+            // Filtered-empty state
+            //hide if compact height class
+            if ( currentQuestionIndex == 0 || (heightClass != HeightClass.COMPACT  && questions.isNotEmpty())) {
+                Text(
+                    text = "Choose the best answer",
+                    style = MaterialTheme.typography.bodyMedium,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .fillMaxWidth()
 //                    .padding(top = 8.dp)
-                    .padding(vertical = verticalPadding)
-            )
-        }
-
-        // Scrollable question + answers area (fills remaining space)
-        if (questions.isNotEmpty()) {
-            val question = questions[currentQuestionIndex]
-            val scrollState = rememberScrollState()
-
-            // Reset scroll when question changes
-            LaunchedEffect(currentQuestionIndex) {
-                scrollState.scrollTo(0)
+                        .padding(vertical = verticalPadding)
+                )
             }
 
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .weight(1f)
-                    .verticalScroll(scrollState)
-                    .padding(horizontal = 4.dp),
-                verticalArrangement = Arrangement.spacedBy(2.dp)
-            ) {
+            // Scrollable question + answers area (fills remaining space)
+            if (questions.isNotEmpty()) {
+                val question = questions[currentQuestionIndex]
+                val scrollState = rememberScrollState()
 
-                val annotatedQuestionText =
-                    if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                        AnnotatedString(question.title)
-                    } else {
-                        buildAnnotatedString {
-                            if (isCurrentAnswerCorrect == true && selectedOption != null) {
-                                val parts = question.sentence.split("_")
-                                if (parts.size == 2) {
-                                    append(parts[0])
-                                    withStyle(
-                                        style = SpanStyle(
-                                            color = Color.Green,
-                                            fontWeight = FontWeight.Bold
-                                        )
-                                    ) {
-                                        append(selectedOption!!)
+                // Reset scroll when question changes
+                LaunchedEffect(currentQuestionIndex) {
+                    scrollState.scrollTo(0)
+                }
+
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .weight(1f)
+                        .verticalScroll(scrollState)
+                        .padding(horizontal = 4.dp),
+                    verticalArrangement = Arrangement.spacedBy(2.dp)
+                ) {
+
+                    val annotatedQuestionText =
+                        if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                            AnnotatedString(question.title)
+                        } else {
+                            buildAnnotatedString {
+                                if (isCurrentAnswerCorrect == true && selectedOption != null) {
+                                    val parts = question.sentence.split("_")
+                                    if (parts.size == 2) {
+                                        append(parts[0])
+                                        withStyle(
+                                            style = SpanStyle(
+                                                color = Color.Green,
+                                                fontWeight = FontWeight.Bold
+                                            )
+                                        ) {
+                                            append(selectedOption!!)
+                                        }
+                                        append(parts[1])
+                                    } else {
+                                        append(displayedSentence)
                                     }
-                                    append(parts[1])
                                 } else {
                                     append(displayedSentence)
                                 }
-                            } else {
-                                append(displayedSentence)
                             }
                         }
-                    }
 
-                Text(
-                    text = annotatedQuestionText,
+                    Text(
+                        text = annotatedQuestionText,
 //                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = 16.sp),
-                    style = MaterialTheme.typography.bodyLarge.copy(fontSize = if (heightClass == HeightClass.COMPACT) 15.sp else 16.sp),
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.fillMaxWidth().padding(bottom = questionTextPadding),
-                    color = orangeLight,
-                )
+                        style = MaterialTheme.typography.bodyLarge.copy(fontSize = if (heightClass == HeightClass.COMPACT) 15.sp else 16.sp),
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth().padding(bottom = questionTextPadding),
+                        color = orangeLight,
+                    )
 
 
-                //A row for each question
-                question.words.forEach { option ->
-                    val isOptionCorrect = option == question.correctOption
+                    //A row for each question
+                    question.words.forEach { option ->
+                        val isOptionCorrect = option == question.correctOption
 
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        modifier = Modifier.fillMaxWidth().padding(vertical = rowVerticalPadding)
-                    ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(
-                                modifier = Modifier.clickable {
-                                    val fullSentence =
-                                        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                            question.sentence.replace("_", option)
-                                        } else {
-                                            if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                                                option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                                    .trim()
-                                            } else {
-                                                option
-                                            }
-                                        }
-                                    // Locked questions can still be heard (read), just not re-answered.
-                                    if (!isCurrentQuestionLocked) {
-                                        val isCorrect = option == question.correctOption
-                                        viewModel.updateAnswer(option, isCorrect)
-                                    }
-                                    viewModel.handleTap(fullSentence)
-                                },
-                                imageVector = Icons.AutoMirrored.Filled.VolumeUp,
-                                contentDescription = "Speak ${question.sentence.replace("_", option)}",
-                                tint = Color.White
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
-                            Text(
-                                text = option,
-                                color = orangeLight,
-//                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
-                                style = MaterialTheme.typography.bodyLarge.copy(
-                                    fontSize = if (heightClass == HeightClass.COMPACT) 13.sp else 14.sp
-                                ),
-                                modifier = Modifier
-//                                    .padding(vertical = 2.dp)
-                                    .padding(vertical = verticalPadding)
-                                    .clickable {
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            modifier = Modifier.fillMaxWidth().padding(vertical = rowVerticalPadding)
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Icon(
+                                    modifier = Modifier.clickable {
                                         val fullSentence =
                                             if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
                                                 question.sentence.replace("_", option)
                                             } else {
-                                                if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                                if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
                                                     option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
                                                         .trim()
                                                 } else {
                                                     option
                                                 }
                                             }
-
+                                        // Locked questions can still be heard (read), just not re-answered.
                                         if (!isCurrentQuestionLocked) {
                                             val isCorrect = option == question.correctOption
                                             viewModel.updateAnswer(option, isCorrect)
                                         }
                                         viewModel.handleTap(fullSentence)
-                                    }
-                            )
-                        }
+                                    },
+                                    imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                                    contentDescription = "Speak ${question.sentence.replace("_", option)}",
+                                    tint = Color.White
+                                )
+                                Spacer(modifier = Modifier.width(8.dp))
+                                Text(
+                                    text = option,
+                                    color = orangeLight,
+//                                style = MaterialTheme.typography.bodyLarge.copy(fontSize = 14.sp),
+                                    style = MaterialTheme.typography.bodyLarge.copy(
+                                        fontSize = if (heightClass == HeightClass.COMPACT) 13.sp else 14.sp
+                                    ),
+                                    modifier = Modifier
+//                                    .padding(vertical = 2.dp)
+                                        .padding(vertical = verticalPadding)
+                                        .clickable {
+                                            val fullSentence =
+                                                if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                                                    question.sentence.replace("_", option)
+                                                } else {
+                                                    if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                                        option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
+                                                            .trim()
+                                                    } else {
+                                                        option
+                                                    }
+                                                }
 
-                        // Radio button on the far right
-                        RadioButton(
-                            selected = selectedOption == option && isOptionCorrect,
-                            enabled = !isCurrentQuestionLocked,
-                            onClick = {
-                                selectedOption = option
-                                isCurrentAnswerCorrect = isOptionCorrect
-                                viewModel.updateAnswer(option, isOptionCorrect)
+                                            if (!isCurrentQuestionLocked) {
+                                                val isCorrect = option == question.correctOption
+                                                viewModel.updateAnswer(option, isCorrect)
+                                            }
+                                            viewModel.handleTap(fullSentence)
+                                        }
+                                )
+                            }
 
-                                if (isOptionCorrect) {
-                                    var sentenceToSpeak = ""
-                                    if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-                                        val sentence = question.sentence.replace(Regex("_+"), option)
-                                        displayedSentence = viewModel.highlightWordInSentence(
-                                            sentence = sentence,
-                                            wordToHighlight = option,
-                                            highlightColor = Color.Green
-                                        )
-                                        sentenceToSpeak = sentence
-                                    } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
-                                        displayedSentence = AnnotatedString(question.title)
-                                        sentenceToSpeak =
-                                            "${question.title}:${option}:${question.sentence}"
-                                    } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
-                                        displayedSentence = AnnotatedString(option)
-                                        val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
-                                            .trim()
-                                        sentenceToSpeak = cleaned
+                            // Radio button on the far right
+                            RadioButton(
+                                selected = selectedOption == option && isOptionCorrect,
+                                enabled = !isCurrentQuestionLocked,
+                                onClick = {
+                                    selectedOption = option
+                                    isCurrentAnswerCorrect = isOptionCorrect
+                                    viewModel.updateAnswer(option, isOptionCorrect)
+
+                                    if (isOptionCorrect) {
+                                        var sentenceToSpeak = ""
+                                        if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+                                            val sentence = question.sentence.replace(Regex("_+"), option)
+                                            displayedSentence = viewModel.highlightWordInSentence(
+                                                sentence = sentence,
+                                                wordToHighlight = option,
+                                                highlightColor = Color.Green
+                                            )
+                                            sentenceToSpeak = sentence
+                                        } else if (viewModel.currentFileFormat.value == viewModel.quizDefinitions) {
+                                            displayedSentence = AnnotatedString(question.title)
+                                            sentenceToSpeak =
+                                                "${question.title}:${option}:${question.sentence}"
+                                        } else if (viewModel.currentFileFormat.value == viewModel.quizMultipleChoice) {
+                                            displayedSentence = AnnotatedString(option)
+                                            val cleaned = option.replace(Regex("\\s*\\([^)]*\\)\\s*"), " ")
+                                                .trim()
+                                            sentenceToSpeak = cleaned
+                                        } else {
+                                            sentenceToSpeak = option
+                                            displayedSentence = viewModel.highlightWordInSentence(
+                                                sentence = option,
+                                                wordToHighlight = option,
+                                                highlightColor = Color.Green
+                                            )
+                                        }
+
+                                        viewModel.handleTap(sentenceToSpeak)
+                                        viewModel.incQuizStat()
                                     } else {
-                                        sentenceToSpeak = option
-                                        displayedSentence = viewModel.highlightWordInSentence(
-                                            sentence = option,
-                                            wordToHighlight = option,
-                                            highlightColor = Color.Green
-                                        )
+                                        viewModel.incQuizStat(false)
                                     }
-
-                                    viewModel.handleTap(sentenceToSpeak)
-                                    viewModel.incQuizStat()
-                                } else {
-                                    viewModel.incQuizStat(false)
-                                }
-                            },
-                            colors = RadioButtonDefaults.colors(
-                                selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
-                                unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified,
-                                // Keep the correct/incorrect tint visible once the question locks -
-                                // otherwise Material3's default disabled colors hide which option
-                                // the user picked.
-                                disabledSelectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
-                                disabledUnselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
-                            ),
-                            modifier = Modifier
-                                .scale(if (heightClass == HeightClass.COMPACT) 0.85f else 1.0f) // Slightly scale down radio button on compact
-                                .semantics { contentDescription = option }
-                        )
-                    } // Row
-                }
-            } // Scrollable Column
-
-
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-
-                // 🔹 Previous
-                IconButton(
-                    onClick = {
-                        if (currentQuestionIndex > 0) {
-                            viewModel.currentQuestionIndex.value -= 1
-                            infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
-                            viewModel.resetInfoButtonTapped()
-                        }
-                    },
-                    enabled = currentQuestionIndex > 0,
-                    modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 36.dp else 48.dp)
-                ) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = "Previous",
-                        tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor,
-                        modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 28.dp else 36.dp)
-                    )
-                }
-
-                // 🔹 Expanding space left
-                Spacer(modifier = Modifier.weight(1f))
-
-                if (BuildConfig.DEBUG) {
-                    Button(
-                        onClick = { viewModel.resetAuditForDebug() },
-                        modifier = Modifier
-                            .padding(top = 8.dp)
-                            .height(24.dp),
-                        contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
-                    ) {
-                        Text("Reset Audit (D)")
+                                },
+                                colors = RadioButtonDefaults.colors(
+                                    selectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
+                                    unselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified,
+                                    // Keep the correct/incorrect tint visible once the question locks -
+                                    // otherwise Material3's default disabled colors hide which option
+                                    // the user picked.
+                                    disabledSelectedColor = if (isCurrentAnswerCorrect == true) Color.Green else Color.Red,
+                                    disabledUnselectedColor = if (isCurrentAnswerCorrect == false && selectedOption == option) Color.Red else Color.Unspecified
+                                ),
+                                modifier = Modifier
+                                    .scale(if (heightClass == HeightClass.COMPACT) 0.85f else 1.0f) // Slightly scale down radio button on compact
+                                    .semantics { contentDescription = option }
+                            )
+                        } // Row
                     }
-//
-                }
-                // 🔹 Expanding space right
-                Spacer(modifier = Modifier.weight(1f))
+                } // Scrollable Column
 
-                // 🔹 Next
-                IconButton(
-                    onClick = {
-                        if (currentQuestionIndex < questions.lastIndex) {
-                            viewModel.currentQuestionIndex.value += 1
-                            infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
-                            viewModel.resetInfoButtonTapped()
-                        }
-                    },
-                    enabled = currentQuestionIndex < questions.lastIndex,
-                    modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 36.dp else 48.dp)
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                        contentDescription = "Next",
-                        tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor,
-                        modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 28.dp else 36.dp)
-                    )
+
+                    // 🔹 Previous
+                    IconButton(
+                        onClick = {
+                            if (currentQuestionIndex > 0) {
+                                viewModel.currentQuestionIndex.value -= 1
+                                infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
+                                viewModel.resetInfoButtonTapped()
+                            }
+                        },
+                        enabled = currentQuestionIndex > 0,
+                        modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 36.dp else 48.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = "Previous",
+                            tint = if (currentQuestionIndex == 0) Color.Gray else buttonColor,
+                            modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 28.dp else 36.dp)
+                        )
+                    }
+
+                    // 🔹 Expanding space left
+                    Spacer(modifier = Modifier.weight(1f))
+
+                    if (BuildConfig.DEBUG) {
+                        Button(
+                            onClick = { viewModel.resetAuditForDebug() },
+                            modifier = Modifier
+                                .padding(top = 8.dp)
+                                .height(24.dp),
+                            contentPadding = PaddingValues(horizontal = 8.dp, vertical = 0.dp)
+                        ) {
+                            Text("Reset Audit (D)")
+                        }
+//
+                    }
+                    // 🔹 Expanding space right
+                    Spacer(modifier = Modifier.weight(1f))
+
+                    // 🔹 Next
+                    IconButton(
+                        onClick = {
+                            if (currentQuestionIndex < questions.lastIndex) {
+                                viewModel.currentQuestionIndex.value += 1
+                                infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
+                                viewModel.resetInfoButtonTapped()
+                            }
+                        },
+                        enabled = currentQuestionIndex < questions.lastIndex,
+                        modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 36.dp else 48.dp)
+                    ) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                            contentDescription = "Next",
+                            tint = if (currentQuestionIndex == questions.lastIndex) Color.Gray else buttonColor,
+                            modifier = Modifier.size(if (heightClass == HeightClass.COMPACT) 28.dp else 36.dp)
+                        )
+                    }
                 }
             }
-        }
 
-        // Statistics
-        HorizontalDivider(
-            modifier = Modifier.fillMaxWidth(),
-            thickness = 1.dp,
-            color = greyLight2
-        )
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween // Arrange items with space between
-        ) {
-            Text(
-                text = "Correct: ${quizStatistics.correct}",
-                style = MaterialTheme.typography.bodyLarge.copy(
-                    fontSize = 16.sp,
-                    color = Color.Green
-                ),
-                textAlign = TextAlign.Start,
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(start = 16.dp) // Add padding to the start
+            // Statistics
+            HorizontalDivider(
+                modifier = Modifier.fillMaxWidth(),
+                thickness = 1.dp,
+                color = greyLight2
             )
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween // Arrange items with space between
+            ) {
+                Text(
+                    text = "Correct: ${quizStatistics.correct}",
+                    style = MaterialTheme.typography.bodyLarge.copy(
+                        fontSize = 16.sp,
+                        color = Color.Green
+                    ),
+                    textAlign = TextAlign.Start,
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(start = 16.dp) // Add padding to the start
+                )
 
-//            Text(
-//                text = "${heightClass} (D)",
-//                style = MaterialTheme.typography.bodySmall,
-//                textAlign = TextAlign.Center,
-//                modifier = Modifier
-//                    .fillMaxWidth()
-//                    .padding(top = 8.dp)
-//                    .padding(vertical = verticalPadding)
-//            )
+                Text(
+                    text = "Tries: ${quizStatistics.tries}",
+                    style = MaterialTheme.typography.bodyLarge.copy(
+                        fontSize = 16.sp,
+                        color = Color.Red
+                    ),
+                    modifier = Modifier
+                        .weight(1f)
+                        .padding(end = 16.dp), // Add padding to the end
+                    textAlign = TextAlign.End // Align text to the end
+                )
+            }
+            // Paging control (dots)
 
-            Text(
-                text = "Tries: ${quizStatistics.tries}",
-                style = MaterialTheme.typography.bodyLarge.copy(
-                    fontSize = 16.sp,
-                    color = Color.Red
-                ),
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(end = 16.dp), // Add padding to the end
-                textAlign = TextAlign.End // Align text to the end
-            )
         }
-        // Paging control (dots)
-//        Row(
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .padding(top = 8.dp),
-//            horizontalArrangement = Arrangement.Center // Center the dots horizontally
-//        ) {
-//            for (index in 0 until questions.size) { // Iterate through the questions
-//                Box(
-//                    modifier = Modifier
-//                        .size(10.dp) // Set size of the dot
-//                        .clip(CircleShape) // Make it a circle
-//                        .background(
-//                            if (index == currentQuestionIndex) blueBright2 else dotColor(
-//                                index,
-//                                userAnswers
-//                            )
-//                        ) // Set color based on current page
-//                )
-//                Spacer(modifier = Modifier.width(4.dp)) // Add spacing between dots
-//            }
-//        }
     }
+
+
+
     if (isRateLimitingSheetVisible) {
         RateLimitOKReasonsBottomSheet(onCloseSheet = { viewModel.hideRateOKLimitSheet() })
     }
     if (isDailyRateLimitingSheetVisible) {
-//        RateLimitDailyReasonsBottomSheet (onCloseSheet = { viewModel.hideDailyRateLimitSheet() })
         if (context is androidx.activity.ComponentActivity) {
-//            RateLimitDailyReasonsBottomSheet(
-//                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
-//                onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
-//            )
             RateLimitDailyPaywallBottomSheet(
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) },
                 onCloseSheet = { viewModel.hideDailyRateLimitSheet() }
@@ -927,10 +872,6 @@ fun ReadinessAuditScreen(
     }
     if (isHourlyRateLimitingSheetVisible) {
         if (context is androidx.activity.ComponentActivity) {
-//            RateLimitHourlyReasonsBottomSheet(
-//                onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
-//                onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
-//            )
             RateLimitHourlyPaywallBottomSheet(
                 onCloseSheet = { viewModel.hideHourlyRateLimitSheet() },
                 onBuyPremiumButtonPressed = { viewModel.buyPremiumButtonPressed(context) }
@@ -979,73 +920,111 @@ fun ReadinessAuditScreen(
     }
 } //:QuizScreen
 
-@Composable
-fun DropdownMenuBoxObsolete2(
-    options: List<String>,
-    selectedOption: String,
-    onOptionSelected: (String) -> Unit
-) {
-    var expanded by remember { mutableStateOf(false) }
 
-    Box(
-        modifier = Modifier.fillMaxWidth(),
-        contentAlignment = Alignment.Center
-    ) {
-        // A simple Row that acts as the trigger
-        Row(
-            modifier = Modifier
-                .clip(RoundedCornerShape(8.dp)) // Optional: rounds the ripple effect
-                .clickable { expanded = true }
-                .padding(vertical = 12.dp, horizontal = 16.dp), // Generous tap target
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center
-        ) {
-            Text(
-                text = selectedOption,
-                style = MaterialTheme.typography.bodyLarge,
-                color = Color.White
-            )
-
-            Spacer(modifier = Modifier.width(4.dp))
-
-            // The Arrow is the "Hero" here—it signals interactivity perfectly
-            Icon(
-                imageVector = Icons.Default.ArrowDropDown,
-                contentDescription = "Select Option",
-                tint = Color.White.copy(alpha = 0.7f),
-                modifier = Modifier.size(24.dp)
-            )
-        }
-
-        DropdownMenu(
-            expanded = expanded,
-            onDismissRequest = { expanded = false },
-            modifier = Modifier
-                .background(nonSelectedBackground)
-                .border(1.dp, Color.White.copy(alpha = 0.1f), RoundedCornerShape(4.dp))
-        ) {
-            options.forEach { option ->
-                DropdownMenuItem(
-                    text = {
-                        Text(
-                            text = option,
-                            color = if (option == selectedOption) orangeLight else Color.White
-                        )
-                    },
-                    onClick = {
-                        onOptionSelected(option)
-                        expanded = false
-                    }
-                )
-            }
-        }
-    }
-}
 @Composable
 private fun AuditStatItem(label: String, value: String, subValue: String) {
     Column {
         Text(text = label, style = MaterialTheme.typography.bodySmall,  color = Color(0xFFFF9500),)
         Text(text = value, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
         Text(text = subValue, style = MaterialTheme.typography.labelSmall, color = Color.LightGray)
+    }
+}
+@Composable
+fun AuditSummaryView(
+    currentSelectedLevel: String, // e.g., "B2"
+    readinessScore: Int,         // 0-98
+    confidenceScore: Int,        // 0-98
+    onAdjustLevel: (String) -> Unit,
+    onContinue: () -> Unit
+) {
+    // 1. Determine the Audit's calculated level
+    val calculatedLevel = when (readinessScore) {
+        in 0..35 -> "A2"
+        in 36..70 -> "B1"
+        else -> "B2"
+    }
+
+    // 2. Determine the Scenario
+    val isOverEstimated = calculatedLevel < currentSelectedLevel // Simplified string compare for example
+    val isUnderEstimated = calculatedLevel > currentSelectedLevel
+    val isMatch = calculatedLevel == currentSelectedLevel
+
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "Audit Summary",
+            style = MaterialTheme.typography.headlineSmall,
+            fontWeight = FontWeight.Bold,
+            color = Color.White
+        )
+
+        Spacer(Modifier.height(16.dp))
+
+        // Reuse your existing AuditStatItem logic or a simple Row
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+            AuditStatItem(label = "Confidence", value = "$confidenceScore%", subValue = "Calibration")
+            AuditStatItem(label = "Readiness", value = "$readinessScore%", subValue = "Exam Score")
+        }
+
+        Spacer(Modifier.height(24.dp))
+
+        // 3. The Advice Box
+        Card(
+            colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(Modifier.padding(16.dp)) {
+                Text(
+                    text = when {
+                        isOverEstimated -> "⚠️ Level Mismatch Detected"
+                        isUnderEstimated -> "🚀 Higher Potential Detected"
+                        else -> "✅ Level Verified"
+                    },
+                    color = if (isMatch)  Color.Green else orangeLight,
+                    fontWeight = FontWeight.Bold
+                )
+
+                Spacer(Modifier.height(8.dp))
+
+                Text(
+                    text = when {
+                        isOverEstimated -> "You selected $currentSelectedLevel, but the audit suggests $calculatedLevel. Starting with easier content will help you build the foundation needed to pass."
+                        isUnderEstimated -> "Great news! You are currently studying $currentSelectedLevel, but your logic is already at $calculatedLevel. We suggest moving up to save time."
+                        else -> "Your skills are perfectly aligned with the $currentSelectedLevel requirements. Focus on maintaining this level through daily practice."
+                    },
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = Color.LightGray
+                )
+            }
+        }
+
+        Spacer(Modifier.height(32.dp))
+
+        // 4. Action Buttons
+        if (!isMatch) {
+            Button(
+                onClick = { onAdjustLevel(calculatedLevel) },
+                modifier = Modifier.fillMaxWidth(),
+                colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
+            ) {
+                Text("Switch to $calculatedLevel Mastery", color = Color.Black)
+            }
+            Spacer(Modifier.height(8.dp))
+        }
+
+        Button(
+            onClick = onContinue,
+            modifier = Modifier.fillMaxWidth(),
+            colors = ButtonDefaults.buttonColors(containerColor = if (isMatch) orangeLight else Color.DarkGray)
+        ) {
+            Text(if (isMatch) "Go to My Dashboard" else "Keep $currentSelectedLevel for now")
+        }
     }
 }

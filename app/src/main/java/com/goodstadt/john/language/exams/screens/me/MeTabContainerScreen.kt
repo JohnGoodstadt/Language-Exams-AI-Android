@@ -1,7 +1,14 @@
 package com.goodstadt.john.language.exams.screens.me
 
 import androidx.activity.ComponentActivity
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -28,15 +35,15 @@ import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.navigation.MeScreen
 import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
+import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
+import com.goodstadt.john.language.exams.screens.DiagnosticScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.MenuItemChip
 import com.goodstadt.john.language.exams.utils.findActivity
 import com.goodstadt.john.language.exams.viewmodels.CategoryTabViewModel
-import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
-import com.goodstadt.john.language.exams.screens.DiagnosticScreen
 import com.goodstadt.john.language.exams.viewmodels.ReferenceTabViewModel
 import com.google.accompanist.navigation.material.ExperimentalMaterialNavigationApi
 import dagger.hilt.android.EntryPointAccessors
@@ -119,7 +126,8 @@ fun MeTabContainerScreen(viewModel: ReferenceTabViewModel = hiltViewModel()) {
         NavHost(
             navController = meTabNavController,
 //            startDestination = MeScreen.Focusing.route,
-            startDestination = MeScreen.Settings.route,
+            //startDestination = MeScreen.Settings.route,
+            startDestination = MeScreen.Progress.route,
             modifier = Modifier.weight(1f)
         ) {
             composable(MeScreen.MeRoot.route) {

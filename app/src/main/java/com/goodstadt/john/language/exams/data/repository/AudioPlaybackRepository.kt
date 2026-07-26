@@ -58,7 +58,8 @@ class AudioPlaybackRepository @Inject constructor(
         sentence: String,
         level: String,
         sheetName:String = "", //for reference tab - stats for sheet otherwise must be vocab tabs 1,2,3
-        isPremiumUser: Boolean = false
+        isPremiumUser: Boolean = false,
+        useRateLimiting: Boolean = true
     ): AudioPlaybackStatus {
 
         val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
@@ -96,29 +97,31 @@ class AudioPlaybackRepository @Inject constructor(
         //val todayIsNotAFreePassDay = calcIsTodayNotAFreePassDay(userPreferencesRepository)
 
         //if (!isPremiumUser && todayIsNotAFreePassDay) {
-        if (!isPremiumUser) {
-            if (rateLimiter.doIForbidCall()) {
-                val failType = rateLimiter.canMakeCallWithResult()
+        if (useRateLimiting){ //initial quiz does not rate limit
 
-                // Log Analytics
-                val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
-                AnalyticsHelper.logRateLimitHit(context, limitType, 0)
+            if (!isPremiumUser) {
+                if (rateLimiter.doIForbidCall()) {
+                    val failType = rateLimiter.canMakeCallWithResult()
 
-                loadingJob.cancel()
-                loadingManager.hide()
+                    // Log Analytics
+                    val limitType = if (failType.failReason == SimpleRateLimiter.FailReason.DAILY) "daily" else "hourly"
+                    AnalyticsHelper.logRateLimitHit(context, limitType, 0)
 
-                when (failType.failReason) {
-                    SimpleRateLimiter.FailReason.DAILY -> {ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterDayForbidCount)}
-                    SimpleRateLimiter.FailReason.HOURLY -> {ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterHourForbidCount)}
-                    null -> {}
+                    loadingJob.cancel()
+                    loadingManager.hide()
+
+                    when (failType.failReason) {
+                        SimpleRateLimiter.FailReason.DAILY -> {ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterDayForbidCount)}
+                        SimpleRateLimiter.FailReason.HOURLY -> {ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterHourForbidCount)}
+                        null -> {}
+                    }
+                    ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterForbidCount)
+                    ttsStatsRepository.updateTTSStatsWithoutCosts() //MP3PlayedCount
+                    // Return Blocked Status
+                    return AudioPlaybackStatus.RateLimited(failType.failReason ?: SimpleRateLimiter.FailReason.HOURLY)
                 }
-                ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statRateLimiterForbidCount)
-                ttsStatsRepository.updateTTSStatsWithoutCosts() //MP3PlayedCount
-                // Return Blocked Status
-                return AudioPlaybackStatus.RateLimited(failType.failReason ?: SimpleRateLimiter.FailReason.HOURLY)
             }
         }
-
 
         // ---------------------------------------------------------
         // 2. CHECK CLOUD STORAGE (Free-ish)
@@ -165,9 +168,9 @@ class AudioPlaybackRepository @Inject constructor(
                 handleSuccess(sentence, level, sheetName)
 
                 // Record Cost & Usage
-//                if (todayIsNotAFreePassDay) { //AI Reccommends ignore install day free
+                if (!useRateLimiting){ //initial quiz does not rate limit
                     rateLimiter.recordCall()
-//                }
+                }
                 ttsStatsRepository.inc(TTSStatsRepository.fsDOC.GlobalStats,statTTSSuccessCount)
                 val currentVoiceName = userPreferencesRepository.selectedVoiceNameFlow.first()
                 ttsStatsRepository.updateTTSStatsWithCosts(sentence,currentVoiceName) //MP3PlayedCount
