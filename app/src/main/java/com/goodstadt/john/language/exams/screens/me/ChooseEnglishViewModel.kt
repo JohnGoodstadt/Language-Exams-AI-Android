@@ -4,9 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.data.ControlRepository
 import com.goodstadt.john.language.exams.data.RecallingItems
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.VoiceRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -46,27 +46,6 @@ class ChooseEnglishViewModel  @Inject constructor(
         loadInitialData()
     }
 
-    private fun loadInitialDataObsolete() {
-        viewModelScope.launch {
-            val currentLanguageCode = controlRepository.getCurrentLanguageCode()
-            currentLanguageCode.onSuccess { languageCode ->
-                val languageDetailsResult = controlRepository.getActiveLanguageDetails()
-                val languageListResult = controlRepository.getAllEnglishLanguageList()
-
-                languageDetailsResult.onSuccess { details ->
-                    languageListResult.onSuccess { languages ->
-                        _uiState.update {
-                            it.copy(
-                                availableExams = details.exams,
-                                availableLanguages = languages
-                            )
-                        }
-
-                    }
-                }
-            }
-        }
-    }
     private fun loadInitialData() {
         viewModelScope.launch {
             // We start with the first result
@@ -149,13 +128,7 @@ Fix: Add onFailure handlers at each level, or restructure with try/catch + a sin
                 // 2. Tell the shared manager to load the recalled items for the NEW exam
                 Timber.d("New exam selected. Reloading recalled items for key: ${selectedLanguage.code}")
 
-
             }
-
-
-
         }
-
     }
-
 }

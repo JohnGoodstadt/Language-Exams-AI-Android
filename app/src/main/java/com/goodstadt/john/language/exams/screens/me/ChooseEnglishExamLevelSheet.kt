@@ -20,6 +20,8 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -28,8 +30,8 @@ import com.goodstadt.john.language.exams.ui.theme.buttonColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ChooseEnglishAndExamSheet(
-    viewModel: ChooseEnglishViewModel = hiltViewModel(),
+fun ChooseEnglishExamLevelSheet(
+    viewModel: ChooseEnglishViewModel = hiltViewModel(), //Duel use
     onClose: () -> Unit
 ) {
 
@@ -38,6 +40,15 @@ fun ChooseEnglishAndExamSheet(
     Column(
         modifier = Modifier
             .fillMaxWidth()
+            .drawWithContent {
+                drawContent()
+                drawLine(
+                    color = Color.White.copy(alpha = 0.1f),
+                    start = Offset(0f, 0f),
+                    end = Offset(size.width, 0f),
+                    strokeWidth = 1.dp.toPx()
+                )
+            }
             .padding(
                 start = 8.dp,
                 end = 8.dp,
@@ -47,28 +58,6 @@ fun ChooseEnglishAndExamSheet(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
-
-        Text(
-            "Choose an English",
-            style = MaterialTheme.typography.titleLarge,
-            fontWeight = FontWeight.Bold
-        )
-        Text(
-            "You can choose your accent here or on the 'Me/Settings' Tab",
-            style = MaterialTheme.typography.titleSmall,
-            fontWeight = FontWeight.Light
-        )
-        Spacer(modifier = Modifier.height(8.dp))
-        LazyColumn(modifier = Modifier.weight(1f)) {
-            items(uiState.availableLanguages, key = { it.code }) { language ->
-                LanguageSelectionRow(
-                    language = language,
-                    isSelected = uiState.pendingSelectedLanguage?.code == language.code,
-                    onClick = { viewModel.onPendingLanguageSelect(language) }
-                )
-            }
-        }
-        Spacer(modifier = Modifier.height(8.dp))
         Text(
             "Choose an Exam Level",
             style = MaterialTheme.typography.titleLarge,

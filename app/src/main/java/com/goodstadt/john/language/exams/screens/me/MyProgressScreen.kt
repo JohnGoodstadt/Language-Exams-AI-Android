@@ -61,6 +61,7 @@ import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNa
 import com.goodstadt.john.language.exams.screens.shared.gamification.SkillBreakdownView
 import com.goodstadt.john.language.exams.screens.shared.gamification.TopicProgressRow
 import com.goodstadt.john.language.exams.screens.shared.gamification.XPSummaryCard
+import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
 import com.goodstadt.john.language.exams.viewmodels.ActivityChartCard
 import com.goodstadt.john.language.exams.viewmodels.ConsistencyHeatmap
 import com.goodstadt.john.language.exams.viewmodels.LifetimeStatsGrid
@@ -86,6 +87,9 @@ fun MyProgressScreen(
     val unlockedLevels by viewModel.unlockedAuditLevels.collectAsState()
     var showLocalAuditSheet by remember { mutableStateOf(false) }
     val localSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    var showLanguageExamSheet by remember { mutableStateOf(false) }
+    val languageExamSheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+    var auditVersionToLaunch by remember { mutableStateOf(1) }
 
     Scaffold(
         topBar = {
@@ -119,19 +123,16 @@ fun MyProgressScreen(
                     currentLevel = currentSkillLevel,
                     unlockedLevels = unlockedLevels,
                     onNavigateToAudit = {
+                        auditVersionToLaunch = 1 // Standard/Resume
                         showLocalAuditSheet = true
-                        // Use your existing navigation logic to jump to the Audit
-                        //onNavigate(SideQuestNavTarget.Reference)
-                        // Note: You may need a specific target like:
-//                         onNavigate(SideQuestNavTarget.StartAudit)
-//                        mainViewModel.showAuditSheetManual()
-//                        Timber.e("onNavigateToAudit")
                     },
                     onAdjustLevel = {
-                        // Action to trigger level picker
+                        showLanguageExamSheet = true
                     },
-                    onResetAudit = {
-                        viewModel.resetAudit()
+                    onNewAudit = {
+                        auditVersionToLaunch = 2
+                        showLocalAuditSheet = true
+
                     }
                 )
 
@@ -269,13 +270,28 @@ fun MyProgressScreen(
                         sheetState = localSheetState,
                         modifier = Modifier.fillMaxHeight(0.92f),
                         dragHandle = { BottomSheetDefaults.DragHandle() },
-                        containerColor = Color(0xFF121212) // Ensure dark background
+                        containerColor = ElevatedDarkGrey, //Color(0xFF121212) // Ensure dark background
                     ) {
                         // Call your audit screen
                         ReadinessAuditScreen(
+                            initialVersion = auditVersionToLaunch,
                             onFinished = {
                                 // 🟢 Close the sheet when they hit "View Summary" -> "Continue"
                                 showLocalAuditSheet = false
+                            }
+                        )
+                    }
+                }
+                if (showLanguageExamSheet) {
+                    ModalBottomSheet(
+                        onDismissRequest = { showLanguageExamSheet = false },
+                        sheetState = languageExamSheetState,
+                        modifier = Modifier.fillMaxHeight(0.50f),
+                        containerColor = ElevatedDarkGrey//Color(0xFF121212) // Keep it dark
+                    ) {
+                        ChooseEnglishExamLevelSheet(
+                            onClose = {
+                                showLanguageExamSheet = false
                             }
                         )
                     }

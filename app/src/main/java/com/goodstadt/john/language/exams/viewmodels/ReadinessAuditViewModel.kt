@@ -74,6 +74,11 @@ enum class ReadinessAuditLevels(val quizzes: List<ReadinessAuditDetail>) {
                 baseName = "BaselineAudit-en",
                 title = "Sentence Structure"
             ),
+            ReadinessAuditDetail(
+                id = 1,
+                baseName = "BaselineAudit2-en",
+                title = "Another Title"
+            ),
         )
     ),
     INTER(
@@ -251,6 +256,8 @@ class ReadinessAuditViewModel @Inject constructor(
     private val _unlockedLevels = MutableStateFlow<Set<ReadinessAuditLevels>>(setOf(ReadinessAuditLevels.ELEMENTARY))
     val unlockedLevels: StateFlow<Set<ReadinessAuditLevels>> = _unlockedLevels.asStateFlow()
 
+    private val _currentVersion = MutableStateFlow(1)
+    val currentVersion = _currentVersion.asStateFlow()
 
     init {
         // 1. Start background loading
@@ -286,6 +293,25 @@ class ReadinessAuditViewModel @Inject constructor(
     fun hideRateOKLimitSheet() {
         _showRateLimitSheet.value = false
     }
+    fun startNewAuditVersion() {
+        viewModelScope.launch {
+            // Switch to version 2
+            _currentVersion.value = 2
+
+            // Reset the local UI state for a fresh start
+            resetQuiz()
+
+            // Load the new files
+            loadQuestions()
+
+            // Note: You might want to reset the AuditRepository scores
+            // if a "New Audit" should clear the old 40%/65% stats.
+            auditRepository.resetAll()
+        }
+    }
+
+
+
     fun handleTap(sentence: String) {
 
         audioPlaybackRepository.stopPlayback()
@@ -1050,7 +1076,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     }
     private fun resolveLocalizedBaseName(baseName: String): String {
         val locale = Locale.getDefault()
-        val regionCode = "in"// locale.country.lowercase() // returns "in", "vn", "tr", etc.
+        val regionCode = "en"
 
         // 1. If no region or it's a standard English region, stick to baseName
         val englishDefaults = listOf("gb", "us", "au", "ca")
@@ -1061,10 +1087,12 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         // 2. Only attempt swap if the filename follows the "-en" pattern
         if (baseName.endsWith("-en")) {
             // Construct the candidate (e.g., "UsageQuiz1A1-in")
-            val candidateName = baseName.replace("-en", "-$regionCode")
+            val versionSuffix = if (_currentVersion.value == 1) "" else "2"
+            val candidateName = baseName.replace("-en", "$versionSuffix-$regionCode")
 
             // 3. Check if the file "candidateName.json" actually exists in Assets
             // Adjust the path to match your specific folder structure
+            //val assetPath = "Quizzes/ReadinessAudit/${candidateName}$versionSuffix.json"
             val assetPath = "Quizzes/ReadinessAudit/$candidateName.json"
 
             return if (assetExists(assetPath)) {
@@ -1075,6 +1103,19 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
         }
 
         return baseName
+    }
+    // 2. Update the filename resolver logic
+    private fun resolveLocalizedBaseName99(baseName: String): String {
+        val regionCode = "en" // Or your Locale logic
+        val versionSuffix = if (_currentVersion.value == 1) "" else "2"
+
+        // Logic: "BaselineAudit" + "2" + "-" + "en" = "BaselineAudit2-en"
+        val finalBaseName = "$baseName$versionSuffix-$regionCode"
+
+        // Check for localization (your existing logic)
+        // ... check if -in, -vn etc exists, else use finalBaseName
+
+        return finalBaseName
     }
 
     /**

@@ -45,7 +45,7 @@ fun AuditDashboardHeader(
     unlockedLevels: Set<ReadinessAuditLevels>,
     onNavigateToAudit: () -> Unit,
     onAdjustLevel: () -> Unit,
-    onResetAudit: () -> Unit
+    onNewAudit: () -> Unit
 ) {
     // Logic to determine the "Next Step" text
     val nextPartName = when {
@@ -121,7 +121,7 @@ fun AuditDashboardHeader(
                 title = "New Audit",
                 subtitle = "Fresh Questions",
                 icon = Icons.Default.Refresh,
-                onClick = onResetAudit
+                onClick = onNewAudit
             )
         }
     }

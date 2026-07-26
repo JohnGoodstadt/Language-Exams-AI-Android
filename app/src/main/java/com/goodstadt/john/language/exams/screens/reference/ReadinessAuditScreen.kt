@@ -51,7 +51,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.draw.scale
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
@@ -88,6 +90,7 @@ import timber.log.Timber
 @Composable
 fun ReadinessAuditScreen(
     viewModel: ReadinessAuditViewModel = hiltViewModel(),
+    initialVersion: Int = 1,
     onFinished: () -> Unit // Existing callback to exit the screen
 ) {
     val context = LocalContext.current
@@ -181,6 +184,11 @@ fun ReadinessAuditScreen(
         }
     }
 
+    LaunchedEffect(Unit) {
+        if (initialVersion == 2) {
+            viewModel.startNewAuditVersion()
+        }
+    }
     LaunchedEffect(currentQuestionIndex, questions, lockedAnswers) {
         Timber.w("Screen height ${heightClass}")
         if (questions.isNotEmpty()) {
@@ -245,6 +253,15 @@ fun ReadinessAuditScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .drawWithContent {
+                    drawContent()
+                    drawLine(
+                        color = Color.White.copy(alpha = 0.1f),
+                        start = Offset(0f, 0f),
+                        end = Offset(size.width, 0f),
+                        strokeWidth = 1.dp.toPx()
+                    )
+                }
                 .padding(vertical = verticalPadding),
             verticalArrangement = Arrangement.spacedBy(6.dp),
             horizontalAlignment = Alignment.CenterHorizontally
