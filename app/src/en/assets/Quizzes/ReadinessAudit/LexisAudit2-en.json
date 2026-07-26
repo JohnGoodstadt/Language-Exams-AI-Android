@@ -1,0 +1,226 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "LexisAudit-en",
+	"title": "Part 1: Baseline Verification",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Initial Level Placement",
+			"description": "A high-level scan to establish your current CEFR baseline (A2-B2).",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Choose the correct collocation.",
+					"summary": "B1 Lexis: Make and Do.",
+					"explain": "We normally say 'make a decision', not 'do' or 'take' a decision in standard everyday English.",
+					"words": [
+						{
+							"word": "We need to make a decision before Friday.",
+							"ok": true
+						},
+						{
+							"word": "We need to do a decision before Friday.",
+							"ok": false
+						},
+						{
+							"word": "We need to create a decision before Friday.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "Choose the correct verb.",
+					"summary": "B1 Lexis: Borrow and Lend.",
+					"explain": "'Lend' means to give something temporarily; 'borrow' means to receive it temporarily.",
+					"words": [
+						{
+							"word": "Could you borrow me your charger for an hour?",
+							"ok": false
+						},
+						{
+							"word": "Could you lend me your charger for an hour?",
+							"ok": true
+						},
+						{
+							"word": "Could you owe me your charger for an hour?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "Choose the adjective that describes the person's feeling.",
+					"summary": "B1 Lexis: -ed and -ing Adjectives.",
+					"explain": "'Disappointed' describes how a person feels; 'disappointing' describes the thing that causes the feeling.",
+					"words": [
+						{
+							"word": "She was disappointing when the concert was cancelled.",
+							"ok": false
+						},
+						{
+							"word": "She was disappointment when the concert was cancelled.",
+							"ok": false
+						},
+						{
+							"word": "She was disappointed when the concert was cancelled.",
+							"ok": true
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "Choose the correct expression.",
+					"summary": "B1 Lexis: Responsibility.",
+					"explain": "The standard collocation is 'take responsibility for' something.",
+					"words": [
+						{
+							"word": "He refused to take responsibility for the mistake.",
+							"ok": true
+						},
+						{
+							"word": "He refused to make responsibility for the mistake.",
+							"ok": false
+						},
+						{
+							"word": "He refused to carry responsibility of the mistake.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "Choose the phrasal verb that means 'have none left'.",
+					"summary": "B1 Lexis: Phrasal Verbs.",
+					"explain": "'Run out of' means to use all of something so that none remains.",
+					"words": [
+						{
+							"word": "We have turned out of milk.",
+							"ok": false
+						},
+						{
+							"word": "We have run out of milk.",
+							"ok": true
+						},
+						{
+							"word": "We have broken out of milk.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "Choose the correct word.",
+					"summary": "B1 Lexis: Affect and Effect.",
+					"explain": "'Affect' is normally a verb meaning to influence. 'Effect' is normally a noun meaning a result.",
+					"words": [
+						{
+							"word": "The new timetable will effect how often the buses run.",
+							"ok": false
+						},
+						{
+							"word": "The new timetable will result how often the buses run.",
+							"ok": false
+						},
+						{
+							"word": "The new timetable will affect how often the buses run.",
+							"ok": true
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "Choose the word meaning practical and reasonable.",
+					"summary": "B1 Lexis: Sensible and Sensitive.",
+					"explain": "'Sensible' means practical or showing good judgement. 'Sensitive' means easily affected or aware of feelings.",
+					"words": [
+						{
+							"word": "Taking a coat was a sensible decision because it was cold.",
+							"ok": true
+						},
+						{
+							"word": "Taking a coat was a sensitive decision because it was cold.",
+							"ok": false
+						},
+						{
+							"word": "Taking a coat was a sympathetic decision because it was cold.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "Choose the strongest natural collocation.",
+					"summary": "B1 Lexis: Adverb and Adjective Collocations.",
+					"explain": "'Highly unlikely' is a common collocation meaning very improbable.",
+					"words": [
+						{
+							"word": "It is deeply unlikely that the match will continue.",
+							"ok": false
+						},
+						{
+							"word": "It is highly unlikely that the match will continue.",
+							"ok": true
+						},
+						{
+							"word": "It is loudly unlikely that the match will continue.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "Choose the correct verb for introducing a topic or concern.",
+					"summary": "B1 Lexis: Raise an Issue.",
+					"explain": "We 'raise an issue' when we introduce it for discussion.",
+					"words": [
+						{
+							"word": "Several staff raised the issue at the meeting.",
+							"ok": true
+						},
+						{
+							"word": "Several staff lifted the issue at the meeting.",
+							"ok": false
+						},
+						{
+							"word": "Several staff increased the issue at the meeting.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "Choose the sentence in which 'eventually' is used correctly.",
+					"summary": "B1 Lexis: False Friends and Time Adverbs.",
+					"explain": "'Eventually' means 'in the end, after some time', not 'possibly' or 'at the present time'.",
+					"words": [
+						{
+							"word": "Eventually, I am working from home today.",
+							"ok": false
+						},
+						{
+							"word": "The journey was difficult, but we eventually arrived.",
+							"ok": true
+						},
+						{
+							"word": "It will eventually rain tomorrow, but I am not sure.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

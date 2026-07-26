@@ -1,0 +1,226 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "LogicAudit-en",
+	"title": "Part 1: Baseline Verification",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Initial Level Placement",
+			"description": "A high-level scan to establish your current CEFR baseline (A2-B2).",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "Tom is older than Mia. Mia is older than Leo. Who is the youngest?",
+					"summary": "A2 Logic: Comparing Ages.",
+					"explain": "Leo is younger than Mia, and Mia is younger than Tom, so Leo is the youngest.",
+					"words": [
+						{
+							"word": "Tom is the youngest.",
+							"ok": false
+						},
+						{
+							"word": "Leo is the youngest.",
+							"ok": true
+						},
+						{
+							"word": "Mia is the youngest.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "The shop opens at 9:00. Sara arrives at 8:45. What must she do?",
+					"summary": "A2 Logic: Time.",
+					"explain": "Sara arrives fifteen minutes before the shop opens, so she must wait.",
+					"words": [
+						{
+							"word": "She must wait for the shop to open.",
+							"ok": true
+						},
+						{
+							"word": "She can enter the shop immediately.",
+							"ok": false
+						},
+						{
+							"word": "She has arrived after the shop closed.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "Every red box is heavy. This box is red. What can we conclude?",
+					"summary": "A2 Logic: Simple Deduction.",
+					"explain": "If every red box is heavy and this box is red, this box must be heavy.",
+					"words": [
+						{
+							"word": "The box may be empty, so it cannot be heavy.",
+							"ok": false
+						},
+						{
+							"word": "The box is not red.",
+							"ok": false
+						},
+						{
+							"word": "The box is heavy.",
+							"ok": true
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "Anna is standing to the left of Ben. Ben is standing to the left of Carla. Who is in the middle?",
+					"summary": "A2 Logic: Position.",
+					"explain": "The order is Anna, Ben, Carla, so Ben is in the middle.",
+					"words": [
+						{
+							"word": "Ben is in the middle.",
+							"ok": true
+						},
+						{
+							"word": "Anna is in the middle.",
+							"ok": false
+						},
+						{
+							"word": "Carla is in the middle.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "A bus leaves every 20 minutes. One leaves at 10:00. When does the next bus leave?",
+					"summary": "A2 Logic: Time Intervals.",
+					"explain": "Twenty minutes after 10:00 is 10:20.",
+					"words": [
+						{
+							"word": "The next bus leaves at 10:10.",
+							"ok": false
+						},
+						{
+							"word": "The next bus leaves at 10:20.",
+							"ok": true
+						},
+						{
+							"word": "The next bus leaves at 10:30.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "There are twelve apples. Four people receive the same number. How many apples does each person receive?",
+					"summary": "A2 Logic: Equal Groups.",
+					"explain": "Twelve divided equally among four people gives three apples each.",
+					"words": [
+						{
+							"word": "Each person receives four apples.",
+							"ok": false
+						},
+						{
+							"word": "Each person receives two apples.",
+							"ok": false
+						},
+						{
+							"word": "Each person receives three apples.",
+							"ok": true
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "It is raining, and Noah has no umbrella. Which result is most likely?",
+					"summary": "A2 Logic: Cause and Result.",
+					"explain": "A person outside in the rain without an umbrella is likely to get wet.",
+					"words": [
+						{
+							"word": "Noah may get wet.",
+							"ok": true
+						},
+						{
+							"word": "Noah will become warmer because of the rain.",
+							"ok": false
+						},
+						{
+							"word": "The rain will stop because Noah has no umbrella.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "Lena is Mark's sister. Mark is Eva's father. Who is Lena to Eva?",
+					"summary": "A2 Logic: Family Relationships.",
+					"explain": "Lena is the sister of Eva's father, so Lena is Eva's aunt.",
+					"words": [
+						{
+							"word": "Lena is Eva's daughter.",
+							"ok": false
+						},
+						{
+							"word": "Lena is Eva's aunt.",
+							"ok": true
+						},
+						{
+							"word": "Lena is Eva's grandmother.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "The blue book is below the green book. The red book is above the green book. Which book is highest?",
+					"summary": "A2 Logic: Ordering Objects.",
+					"explain": "The red book is above the green book, and the green book is above the blue book.",
+					"words": [
+						{
+							"word": "The blue book is highest.",
+							"ok": false
+						},
+						{
+							"word": "The green book is highest.",
+							"ok": false
+						},
+						{
+							"word": "The red book is highest.",
+							"ok": true
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "Only people with a ticket may enter. Daniel entered the hall. What must be true?",
+					"summary": "A2 Logic: Necessary Conditions.",
+					"explain": "If only ticket holders may enter and Daniel entered, Daniel must have had a ticket.",
+					"words": [
+						{
+							"word": "Daniel had a ticket.",
+							"ok": true
+						},
+						{
+							"word": "Daniel sold all the tickets.",
+							"ok": false
+						},
+						{
+							"word": "Daniel entered before tickets were needed.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
