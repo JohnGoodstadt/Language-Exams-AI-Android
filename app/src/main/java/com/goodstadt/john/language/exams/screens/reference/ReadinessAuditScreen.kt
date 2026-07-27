@@ -535,13 +535,13 @@ fun ReadinessAuditScreen(
                         }
                     }
 
-                    Button(
-                        onClick = onFinished,
-                        modifier = Modifier.fillMaxWidth(),
-                        colors = ButtonDefaults.buttonColors(containerColor = if (isMatch) orangeLight else Color.DarkGray)
-                    ) {
-                        Text(if (isMatch) "Go to My Dashboard" else "Keep $currentSelectedLevel for now")
-                    }
+//                    Button(
+//                        onClick = onFinished,
+//                        modifier = Modifier.fillMaxWidth(),
+//                        colors = ButtonDefaults.buttonColors(containerColor = if (isMatch) orangeLight else Color.DarkGray)
+//                    ) {
+//                        Text(if (isMatch) "Go to My Dashboard" else "Keep $currentSelectedLevel for now")
+//                    }
 
                     // The existing "Next 10 Questions" button
                     if (hasNextTab) {
