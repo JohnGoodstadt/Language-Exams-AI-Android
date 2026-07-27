@@ -37,7 +37,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
@@ -159,7 +158,6 @@ fun ReadinessAuditScreen(
         HeightClass.EXPANDED -> 32.dp
     }
 
-    var showSummaryOverlay by rememberSaveable { mutableStateOf(false) }
     // Logic to handle the "Adjust Level" button in the summary
     val handleAdjustLevel: (String) -> Unit = { newLevelLabel ->
         // Map "A2", "B1", "B2" back to your Enum
@@ -170,7 +168,6 @@ fun ReadinessAuditScreen(
             else -> ReadinessAuditLevels.ELEMENTARY
         }
         viewModel.onLevelSelected(newLevel)
-        showSummaryOverlay = false
         onFinished() // Exit to dashboard after adjusting
     }
 
@@ -234,22 +231,6 @@ fun ReadinessAuditScreen(
         }
     }
 
-    if (showSummaryOverlay) {
-        // --- THE SUMMARY PATH ---
-        Surface(modifier = Modifier.fillMaxSize(), color = Color(0xFF121212)) {
-            AuditSummaryView(
-                currentSelectedLevel = selectedLevel.description,
-                readinessScore = stats.readiness,
-                confidenceScore = stats.confidence,
-                onAdjustLevel = handleAdjustLevel,
-                onContinue = {
-                    showSummaryOverlay = false
-                    onFinished()
-                }
-            )
-        }
-    }
-    else{
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -494,20 +475,75 @@ fun ReadinessAuditScreen(
                 val currentIndex = ReadinessAuditLevels.entries.indexOf(selectedLevel)
                 val hasNextTab = currentIndex in 0 until (ReadinessAuditLevels.entries.size - 1)
 
-                Row(
+                // Inline audit summary (previously reached via the "View Summary"
+                // button, which opened AuditSummaryView). Only the advice Card and
+                // its two action buttons are shown here - the readiness/confidence
+                // figures already appear in the status Card above.
+                val currentSelectedLevel = selectedLevel.description
+                val readinessScore = stats.readiness
+                val calculatedLevel = when (readinessScore) {
+                    in 0..35 -> "A2"
+                    in 36..70 -> "B1"
+                    else -> "B2"
+                }
+                val isOverEstimated = calculatedLevel < currentSelectedLevel
+                val isUnderEstimated = calculatedLevel > currentSelectedLevel
+                val isMatch = calculatedLevel == currentSelectedLevel
+
+                Column(
                     modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    // 1. THE NEW EXIT/SUMMARY BUTTON
-                    Button(
-                        onClick = { showSummaryOverlay = true },
-                        modifier = Modifier.weight(1f).height(36.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color.DarkGray)
+                    // The Advice Box
+                    Card(
+                        colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
+                        modifier = Modifier.fillMaxWidth()
                     ) {
-                        Text("View Summary", fontSize = 12.sp)
+                        Column(Modifier.padding(16.dp)) {
+                            Text(
+                                text = when {
+                                    isOverEstimated -> "⚠️ Level Mismatch Detected"
+                                    isUnderEstimated -> "🚀 Higher Potential Detected"
+                                    else -> "✅ Level Verified"
+                                },
+                                color = if (isMatch) Color.Green else orangeLight,
+                                fontWeight = FontWeight.Bold
+                            )
+
+                            Spacer(Modifier.height(8.dp))
+
+                            Text(
+                                text = when {
+                                    isOverEstimated -> "You selected $currentSelectedLevel, but the audit suggests $calculatedLevel. Starting with easier content will help you build the foundation needed to pass."
+                                    isUnderEstimated -> "Great news! You are currently studying $currentSelectedLevel, but your logic is already at $calculatedLevel. We suggest moving up to save time."
+                                    else -> "Your skills are perfectly aligned with the $currentSelectedLevel requirements. Focus on maintaining this level through daily practice."
+                                },
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = Color.LightGray
+                            )
+                        }
                     }
 
-                    // 2. THE EXISTING "NEXT" BUTTON
+                    // Action buttons
+                    if (!isMatch) {
+                        Button(
+                            onClick = { handleAdjustLevel(calculatedLevel) },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
+                        ) {
+                            Text("Switch to $calculatedLevel Mastery", color = Color.Black)
+                        }
+                    }
+
+                    Button(
+                        onClick = onFinished,
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(containerColor = if (isMatch) orangeLight else Color.DarkGray)
+                    ) {
+                        Text(if (isMatch) "Go to My Dashboard" else "Keep $currentSelectedLevel for now")
+                    }
+
+                    // The existing "Next 10 Questions" button
                     if (hasNextTab) {
                         Button(
                             onClick = {
@@ -515,7 +551,7 @@ fun ReadinessAuditScreen(
                                 viewModel.onLevelSelected(nextLevel)
                                 infoDisabled = !viewModel.doIHaveCurrentQuestionInfo()
                             },
-                            modifier = Modifier.weight(1f).height(36.dp),
+                            modifier = Modifier.fillMaxWidth().height(36.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
                         ) {
                             Text("Next 10 Questions", color = Color.Black, fontSize = 12.sp)
@@ -854,7 +890,6 @@ fun ReadinessAuditScreen(
             // Paging control (dots)
 
         }
-    }
 
 
 
@@ -926,104 +961,5 @@ private fun AuditStatItem(label: String, value: String, subValue: String) {
         Text(text = label, style = MaterialTheme.typography.bodySmall,  color = Color(0xFFFF9500),)
         Text(text = value, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
         Text(text = subValue, style = MaterialTheme.typography.labelSmall, color = Color.LightGray)
-    }
-}
-@Composable
-fun AuditSummaryView(
-    currentSelectedLevel: String, // e.g., "B2"
-    readinessScore: Int,         // 0-98
-    confidenceScore: Int,        // 0-98
-    onAdjustLevel: (String) -> Unit,
-    onContinue: () -> Unit
-) {
-    // 1. Determine the Audit's calculated level
-    val calculatedLevel = when (readinessScore) {
-        in 0..35 -> "A2"
-        in 36..70 -> "B1"
-        else -> "B2"
-    }
-
-    // 2. Determine the Scenario
-    val isOverEstimated = calculatedLevel < currentSelectedLevel // Simplified string compare for example
-    val isUnderEstimated = calculatedLevel > currentSelectedLevel
-    val isMatch = calculatedLevel == currentSelectedLevel
-
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(
-            text = "Audit Summary",
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.Bold,
-            color = Color.White
-        )
-
-        Spacer(Modifier.height(16.dp))
-
-        // Reuse your existing AuditStatItem logic or a simple Row
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceEvenly
-        ) {
-            AuditStatItem(label = "Confidence", value = "$confidenceScore%", subValue = "Calibration")
-            AuditStatItem(label = "Readiness", value = "$readinessScore%", subValue = "Exam Score")
-        }
-
-        Spacer(Modifier.height(24.dp))
-
-        // 3. The Advice Box
-        Card(
-            colors = CardDefaults.cardColors(containerColor = Color(0xFF1C1C1E)),
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Column(Modifier.padding(16.dp)) {
-                Text(
-                    text = when {
-                        isOverEstimated -> "⚠️ Level Mismatch Detected"
-                        isUnderEstimated -> "🚀 Higher Potential Detected"
-                        else -> "✅ Level Verified"
-                    },
-                    color = if (isMatch)  Color.Green else orangeLight,
-                    fontWeight = FontWeight.Bold
-                )
-
-                Spacer(Modifier.height(8.dp))
-
-                Text(
-                    text = when {
-                        isOverEstimated -> "You selected $currentSelectedLevel, but the audit suggests $calculatedLevel. Starting with easier content will help you build the foundation needed to pass."
-                        isUnderEstimated -> "Great news! You are currently studying $currentSelectedLevel, but your logic is already at $calculatedLevel. We suggest moving up to save time."
-                        else -> "Your skills are perfectly aligned with the $currentSelectedLevel requirements. Focus on maintaining this level through daily practice."
-                    },
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = Color.LightGray
-                )
-            }
-        }
-
-        Spacer(Modifier.height(32.dp))
-
-        // 4. Action Buttons
-        if (!isMatch) {
-            Button(
-                onClick = { onAdjustLevel(calculatedLevel) },
-                modifier = Modifier.fillMaxWidth(),
-                colors = ButtonDefaults.buttonColors(containerColor = orangeLight)
-            ) {
-                Text("Switch to $calculatedLevel Mastery", color = Color.Black)
-            }
-            Spacer(Modifier.height(8.dp))
-        }
-
-        Button(
-            onClick = onContinue,
-            modifier = Modifier.fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(containerColor = if (isMatch) orangeLight else Color.DarkGray)
-        ) {
-            Text(if (isMatch) "Go to My Dashboard" else "Keep $currentSelectedLevel for now")
-        }
     }
 }

@@ -489,11 +489,6 @@ class AppConfigRepository @Inject constructor(
                }
              ]
            },
-            "ReadinessAudit": {
-             "title": "Readiness Audit",
-             "sheetDataType": "fixed",
-             "screenType": "FixedScreen"
-           },
            "SpanishLanguage": {
              "title": "Spanish",
              "screenType": "GroupedFormat3Screen",
@@ -534,7 +529,6 @@ class AppConfigRepository @Inject constructor(
                "AdjectivesGroup",
                "EnglishDefinitionsFormat1",
                "PairsGroup",
-               "ReadinessAudit"
              ]
            },
            "meTab": {

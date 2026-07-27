@@ -16,6 +16,7 @@ object AuditEngine {
     private const val TOTAL_PARTS = 4
 
     private val weights = mapOf(1 to WEIGHT_PART_1, 2 to WEIGHT_PART_2, 3 to WEIGHT_PART_3, 4 to WEIGHT_PART_4)
+    private val confidenceCap = mapOf(1 to 40f, 2 to 25f, 3 to 20f, 4 to 13f)
 
     /**
      * Calculates Confidence and Readiness based on performance.
@@ -27,16 +28,26 @@ object AuditEngine {
      *   answered so far, used for Confidence (coverage). A part with no entry counts as 0.
      */
     fun calculate(testScores: Map<Int, Int>, partProgress: Map<Int, Float>): AuditReport {
-        // Confidence: a plain average of how much of each part has been answered - grows
-        // smoothly with every question, rather than jumping in big steps per part touched.
-        val totalProgress = (1..TOTAL_PARTS).sumOf { part ->
-            (partProgress[part] ?: 0f).coerceIn(0f, 1f).toDouble()
-        }
-        val confidence = ((totalProgress / TOTAL_PARTS) * 100).roundToInt().coerceIn(0, 100)
+        var totalConfidence = 0f
 
-        // Readiness: weighted accuracy prorated across ALL 4 parts, not just the ones touched
-        // so far. An untouched (or barely-started) part contributes little/no earned score but
-        // still counts its full weight below the line.
+        // 1. Add confidence for parts that are fully finished (using the caps)
+        testScores.keys.forEach { part ->
+            totalConfidence += confidenceCap[part] ?: 0f
+        }
+
+        // 2. Add confidence for the part currently being played
+        partProgress.forEach { (part, progress) ->
+            if (!testScores.containsKey(part)) {
+                val cap = confidenceCap[part] ?: 0f
+                totalConfidence += (cap * progress)
+            }
+        }
+
+        // ✅ FIX: Use 'totalConfidence' directly.
+        // Do NOT recalculate 'confidence' using totalProgress/TOTAL_PARTS here.
+        val finalConfidence = totalConfidence.roundToInt().coerceIn(0, 98)
+
+        // 3. Calculate Readiness (Weighted Accuracy)
         var totalEarnedWeighted = 0f
         var totalPossibleWeighted = 0f
         for (partIndex in 1..TOTAL_PARTS) {
@@ -48,18 +59,13 @@ object AuditEngine {
 
         var readinessRaw = if (totalPossibleWeighted > 0) (totalEarnedWeighted / totalPossibleWeighted) * 100 else 0f
 
-        // Apply "Engine Penalty": -5% if Part 4 is completed but score is < 6
-        val part4Score = testScores[4]
-        if (part4Score != null && part4Score < 6) {
+        if (testScores[4] != null && testScores[4]!! < 6) {
             readinessRaw -= 5f
         }
 
-        // Apply global constraints: Max readiness is 98%, min is 0%
-        val finalReadiness = readinessRaw.roundToInt().coerceIn(0, 98)
-
         return AuditReport(
-            confidence = confidence,
-            readiness = finalReadiness
+            confidence = finalConfidence,
+            readiness = readinessRaw.roundToInt().coerceIn(0, 98)
         )
     }
 

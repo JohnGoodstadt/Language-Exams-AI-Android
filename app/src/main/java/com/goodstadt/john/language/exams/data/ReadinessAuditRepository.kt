@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.data
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.floatPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
@@ -49,6 +50,37 @@ class ReadinessAuditRepository @Inject constructor(
         prefs[KEY_PART_3]?.let { scores[3] = it }
         prefs[KEY_PART_4]?.let { scores[4] = it }
         scores
+    }
+
+    private val KEY_CURRENT_PART_INDEX = intPreferencesKey("current_part_index")
+    private val KEY_CURRENT_PART_PROGRESS = floatPreferencesKey("current_part_progress")
+
+    // 🟢 THE SOURCE OF TRUTH: One flow that returns both scores and live progress
+    data class AuditData(val scores: Map<Int, Int>, val activeProgress: Map<Int, Float>)
+
+    val currentProgress: Flow<Map<Int, Float>> = context.auditDataStore.data.map { prefs ->
+        val part = prefs[KEY_CURRENT_PART_INDEX] ?: 0
+        val progress = prefs[KEY_CURRENT_PART_PROGRESS] ?: 0f
+        if (part > 0) mapOf(part to progress) else emptyMap()
+    }
+
+    val auditDataFlow: Flow<AuditData> = context.auditDataStore.data.map { prefs ->
+        val scores = mutableMapOf<Int, Int>()
+        prefs[KEY_PART_1]?.let { scores[1] = it }
+        prefs[KEY_PART_2]?.let { scores[2] = it }
+        prefs[KEY_PART_3]?.let { scores[3] = it }
+        prefs[KEY_PART_4]?.let { scores[4] = it }
+
+        val activePart = prefs[KEY_CURRENT_PART_INDEX] ?: 0
+        val progressValue = prefs[KEY_CURRENT_PART_PROGRESS] ?: 0f
+
+        val activeMap = if (activePart > 0 && !scores.containsKey(activePart)) {
+            mapOf(activePart to progressValue)
+        } else {
+            emptyMap()
+        }
+
+        AuditData(scores, activeMap)
     }
 
     // And add a reset function if you don't have one
@@ -127,6 +159,12 @@ class ReadinessAuditRepository @Inject constructor(
             prefs[answersKey(quizKey)] = json.encodeToString(updated)
         }
     }
+    suspend fun saveLiveProgress(partIndex: Int, progress: Float) {
+        context.auditDataStore.edit { prefs ->
+            prefs[KEY_CURRENT_PART_INDEX] = partIndex
+            prefs[KEY_CURRENT_PART_PROGRESS] = progress
+        }
+    }
 
     /**
      * Marks the quiz as fully completed, locking it until the next calendar day.
@@ -134,6 +172,8 @@ class ReadinessAuditRepository @Inject constructor(
     suspend fun markQuizCompleted(quizKey: String, timestamp: Long = System.currentTimeMillis()) {
         context.auditDataStore.edit { prefs ->
             prefs[completedAtKey(quizKey)] = timestamp
+            prefs.remove(KEY_CURRENT_PART_INDEX)
+            prefs.remove(KEY_CURRENT_PART_PROGRESS)
         }
     }
 

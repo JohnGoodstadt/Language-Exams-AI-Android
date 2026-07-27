@@ -52,6 +52,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.serialization.json.Json
@@ -59,7 +60,6 @@ import timber.log.Timber
 import java.io.IOException
 import java.util.Locale
 import javax.inject.Inject
-import kotlin.math.roundToInt
 
 data class AuditStats(
     val confidence: Int = 0,
@@ -764,30 +764,33 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
         _lockedAnswers.value = _lockedAnswers.value + (index to selectedOption)
 
+        val currentPart = selectedLevel.value.ordinal + 1
+        val progress = (index + 1).toFloat() / _questions.value.size.toFloat()
+
         val level = selectedLevel.value
         val quiz = selectedQuiz.value
-        val currentQuestion = index + 1 // one based
-        val isLastQuestion = currentQuestion >= _questions.value.count()
+        val isLastQuestion = (index + 1) >= _questions.value.size
 
         if (quiz != null) {
             val key = quizAttemptKey(level, quiz)
             val partIndex = partIndexFor(level)
-            // Divide by the TOTAL questions in this part, not just how many have been answered
-            // so far - otherwise 1 correct answer out of 1 attempted reads as a perfect 10/10.
-            val runningScoreOutOf10 = ((userAnswers.value.count { it.value }.toDouble() / _questions.value.size) * 10)
-                .roundToInt()
-                .coerceIn(0, 10)
 
             viewModelScope.launch {
+                // 1. Always save the individual answer and the progress fraction (e.g. 0.1, 0.2)
                 auditRepository.saveAnswer(key, index, selectedOption)
-                auditRepository.saveScore(partIndex, runningScoreOutOf10)
-                auditRepository.saveTotalQuestions(key, _questions.value.size)
-                loadCurrentAuditStats() // refresh Progress / Exam Readiness right away
+                auditRepository.saveLiveProgress(currentPart, progress)
 
+                // 2. ONLY save the final score when the 10th question is answered
                 if (isLastQuestion) {
+                    val finalScore = userAnswers.value.count { it.value }
+                    // This marks the part as "Done", jumping confidence to the cap (e.g. 40%)
+                    auditRepository.saveScore(partIndex, finalScore)
                     auditRepository.markQuizCompleted(key)
                     _isQuizLockedForToday.value = true
                 }
+
+                // 3. Refresh stats (this will now see progress for Q1-9 and Score for Q10)
+                loadCurrentAuditStats()
             }
         }
 
@@ -1163,21 +1166,24 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
 
     fun loadCurrentAuditStats() {
         viewModelScope.launch {
-            // 2. Get the scores from your repository
-            // (Assuming repository returns Map<Int, Int> e.g., {1: 8, 2: 7})
-            val scores = auditRepository.getAuditScores()
-            val progress = computeConfidenceProgress()
+            // 1. Pull the combined flow from repo (Scores + Live Progress)
+            // We use .first() to get a one-time snapshot for the current calculation
+            val auditData = auditRepository.auditDataFlow.first()
 
-            // 3. Use the Engine we built to calculate the report
-            val report = AuditEngine.calculate(scores, progress)
+            // 2. Use the corrected Engine
+            val report = AuditEngine.calculate(
+                testScores = auditData.scores,
+                partProgress = auditData.activeProgress
+            )
 
-            // 4. Update the StateFlow
+            // 3. Update the UI StateFlow
             _auditStats.value = AuditStats(
                 confidence = report.confidence,
                 readiness = report.readiness
             )
         }
     }
+
     // Helper for the UI text we added in the previous step
     fun getAuditorVerdictText(): String {
         return AuditEngine.getReadinessVerdict(_auditStats.value.readiness)

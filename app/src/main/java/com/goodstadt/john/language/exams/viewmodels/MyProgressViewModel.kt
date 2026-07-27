@@ -44,16 +44,14 @@ class MyProgressViewModel @Inject constructor (
 
     val currentSkillLevel = userPreferencesRepository.selectedSkillLevelFlow
 
-    // 2. Define the reactive Audit Stats Flow
-    // This watches the database and automatically updates the UI rings
-    val auditStats: StateFlow<AuditStats> = auditRepository.auditScores
-        .map { scores ->
-            // 🟢 FIXED CALL SITE
+    // This is the "Live Connection" between the Bottom Sheet and the Base Screen
+    val auditStats: StateFlow<AuditStats> = auditRepository.auditDataFlow
+        .map { data ->
+            // The engine now sees the live 2/10 questions progress (e.g., 0.2f)
             val report = AuditEngine.calculate(
-                testScores = scores,      // The Map<Int, Int> from repo
-                partProgress = emptyMap() // On the summary screen, we don't track mid-quiz progress
+                testScores = data.scores,
+                partProgress = data.activeProgress
             )
-
             AuditStats(
                 confidence = report.confidence,
                 readiness = report.readiness
@@ -85,6 +83,7 @@ class MyProgressViewModel @Inject constructor (
             started = SharingStarted.WhileSubscribed(5000),
             initialValue = setOf(ReadinessAuditLevels.ELEMENTARY)
         )
+
 
     // 3. Helper function for the "New Audit" button
     fun resetAudit() {
