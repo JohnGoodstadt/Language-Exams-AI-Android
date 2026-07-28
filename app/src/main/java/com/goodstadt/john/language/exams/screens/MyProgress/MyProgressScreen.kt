@@ -1,6 +1,5 @@
 package com.goodstadt.john.language.exams.screens.MyProgress
 import com.goodstadt.john.language.exams.screens.me.ChooseEnglishExamLevelSheet
-import com.goodstadt.john.language.exams.Format1.SideQuestData
 
 
 //import com.goodstadt.john.language.exams.ui.gamification.*
@@ -51,7 +50,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.managers.XPManager
-import com.goodstadt.john.language.exams.ReadinessAudit.ReadinessAuditScreen
+import com.goodstadt.john.language.exams.screens.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.screens.shared.BadgeShowcaseSection
 import com.goodstadt.john.language.exams.screens.shared.gamification.AIWriterCard
 import com.goodstadt.john.language.exams.screens.shared.gamification.AuditDashboardHeader
@@ -64,11 +63,7 @@ import com.goodstadt.john.language.exams.screens.shared.gamification.SkillBreakd
 import com.goodstadt.john.language.exams.screens.shared.gamification.TopicProgressRow
 import com.goodstadt.john.language.exams.screens.shared.gamification.XPSummaryCard
 import com.goodstadt.john.language.exams.ui.theme.ElevatedDarkGrey
-import com.goodstadt.john.language.exams.viewmodels.ActivityChartCard
-import com.goodstadt.john.language.exams.viewmodels.ConsistencyHeatmap
 import com.goodstadt.john.language.exams.viewmodels.LifetimeStatsGrid
-import com.goodstadt.john.language.exams.viewmodels.ProfileHeaderView
-import com.goodstadt.john.language.exams.viewmodels.SectionHeader
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

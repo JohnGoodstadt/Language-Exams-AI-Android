@@ -34,8 +34,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.ReadinessAudit.AuditStats
-import com.goodstadt.john.language.exams.ReadinessAudit.ReadinessAuditLevels
+import com.goodstadt.john.language.exams.screens.ReadinessAudit.AuditStats
+import com.goodstadt.john.language.exams.screens.ReadinessAudit.ReadinessAuditLevels
 
 
 @Composable

@@ -1,19 +1,9 @@
 package com.goodstadt.john.language.exams.packages.dailydictionary
 
 import android.app.Application
-import android.content.Context
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statFBCloudHitCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statWOTDBackHitCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statWOTDForwardHitCount
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository.Companion.statWOTDHitCount
-import com.goodstadt.john.language.exams.screens.reference.ContentState
 import com.google.firebase.firestore.FirebaseFirestore
-import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
@@ -26,7 +16,6 @@ import java.time.Instant
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
-import javax.inject.Inject
 
 data class BrowserUiState(
     val isLoading: Boolean = false,

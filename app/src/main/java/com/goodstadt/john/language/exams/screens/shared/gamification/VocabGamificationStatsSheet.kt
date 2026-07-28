@@ -54,7 +54,7 @@ import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.screens.shared.ExamCountdownCard
 import com.goodstadt.john.language.exams.utils.CategoryProgress
-import com.goodstadt.john.language.exams.viewmodels.ConsistencyHeatmap
+import com.goodstadt.john.language.exams.screens.MyProgress.ConsistencyHeatmap
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

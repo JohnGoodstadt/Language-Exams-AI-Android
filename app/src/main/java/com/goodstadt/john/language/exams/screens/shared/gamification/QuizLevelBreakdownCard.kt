@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 // In QuizLevelBreakdownCard.kt
 
-import com.goodstadt.john.language.exams.viewmodels.QuizLevels
+import com.goodstadt.john.language.exams.screens.UsageQuiz.QuizLevels
 
 // 1. Helper to convert your Enum to the UI Model
 fun getDynamicQuizLevels(): List<LevelConfig> {

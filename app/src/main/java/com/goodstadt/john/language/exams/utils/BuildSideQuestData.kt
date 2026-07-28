@@ -1,6 +1,6 @@
 package com.goodstadt.john.language.exams.uti
 
-import com.goodstadt.john.language.exams.Format1.SideQuestData
+import com.goodstadt.john.language.exams.screens.Format1.SideQuestData
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.CompareArrows

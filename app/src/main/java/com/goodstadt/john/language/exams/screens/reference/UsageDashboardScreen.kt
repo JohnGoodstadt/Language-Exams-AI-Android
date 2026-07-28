@@ -52,7 +52,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.models.UsageLevelSummary
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.models.UsageQuizOverviewItem
-import com.goodstadt.john.language.exams.viewmodels.UsageDashboardViewModel
+import com.goodstadt.john.language.exams.screens.UsageQuiz.UsageDashboardViewModel
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import com.goodstadt.john.language.exams.BuildConfig

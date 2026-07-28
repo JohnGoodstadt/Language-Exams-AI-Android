@@ -24,6 +24,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.screens.Settings.ExamSelectionRow
+import com.goodstadt.john.language.exams.screens.Settings.LanguageSelectionRow
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 
 @OptIn(ExperimentalMaterial3Api::class)
