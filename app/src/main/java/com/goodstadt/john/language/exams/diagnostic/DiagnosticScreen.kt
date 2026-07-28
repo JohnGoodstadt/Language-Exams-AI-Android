@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens
+package com.goodstadt.john.language.exams.diagnostic
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,7 +19,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.viewmodels.DiagnosticViewModel
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.ui.graphics.Color
 import com.goodstadt.john.language.exams.ui.theme.CardBG

@@ -63,10 +63,11 @@ import com.goodstadt.john.language.exams.data.UpdateState
 import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
+import com.goodstadt.john.language.exams.diagnostic.DiagnosticScreen
 import com.goodstadt.john.language.exams.screens.me.ChooseEnglishAndExamSheet
 import com.goodstadt.john.language.exams.screens.me.MeTabContainerScreen
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
-import com.goodstadt.john.language.exams.screens.reference.ReadinessAuditScreen
+import com.goodstadt.john.language.exams.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.screens.reference.ReferenceTabContainerScreen
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary

@@ -1,4 +1,7 @@
-package com.goodstadt.john.language.exams.screens.reference
+package com.goodstadt.john.language.exams.ReadinessAudit
+import com.goodstadt.john.language.exams.screens.reference.dotColor
+import com.goodstadt.john.language.exams.screens.reference.QuizInfoBottomSheetView
+import com.goodstadt.john.language.exams.screens.reference.UsageDashboardScreen
 
 import android.widget.Toast
 import androidx.compose.animation.AnimatedVisibility
@@ -79,8 +82,6 @@ import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
 import com.goodstadt.john.language.exams.utils.HeightClass
 import com.goodstadt.john.language.exams.utils.rememberHeightClass
-import com.goodstadt.john.language.exams.viewmodels.ReadinessAuditLevels
-import com.goodstadt.john.language.exams.viewmodels.ReadinessAuditViewModel
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
 

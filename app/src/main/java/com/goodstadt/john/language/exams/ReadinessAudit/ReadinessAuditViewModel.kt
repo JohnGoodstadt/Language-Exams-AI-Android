@@ -1,4 +1,10 @@
-package com.goodstadt.john.language.exams.viewmodels
+package com.goodstadt.john.language.exams.ReadinessAudit
+import com.goodstadt.john.language.exams.viewmodels.QuizUiState
+import com.goodstadt.john.language.exams.viewmodels.PlaybackState
+import com.goodstadt.john.language.exams.viewmodels.UsageQuizUiState
+import com.goodstadt.john.language.exams.viewmodels.QuizState
+import com.goodstadt.john.language.exams.viewmodels.QuizStatistics
+import com.goodstadt.john.language.exams.viewmodels.QuizQuestion
 
 //import android.graphics.Color
 //import com.goodstadt.john.language.exams.managers.RateLimiterManager

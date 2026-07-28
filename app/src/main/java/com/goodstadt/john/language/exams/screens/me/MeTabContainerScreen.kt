@@ -1,4 +1,5 @@
 package com.goodstadt.john.language.exams.screens.me
+import com.goodstadt.john.language.exams.screens.MyProgress.MyProgressScreen
 
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.Arrangement
@@ -37,7 +38,7 @@ import com.goodstadt.john.language.exams.navigation.getMeScreenRouteFromTitle
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserScreen
 import com.goodstadt.john.language.exams.packages.dailydictionary.DictionaryEntryBrowserViewModel
 import com.goodstadt.john.language.exams.screens.CategoryTabScreen
-import com.goodstadt.john.language.exams.screens.DiagnosticScreen
+import com.goodstadt.john.language.exams.diagnostic.DiagnosticScreen
 import com.goodstadt.john.language.exams.screens.ParagraphScreen
 import com.goodstadt.john.language.exams.screens.StatsSheetEntryPoint
 import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel

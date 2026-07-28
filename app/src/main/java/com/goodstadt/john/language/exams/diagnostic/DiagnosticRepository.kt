@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.data
+package com.goodstadt.john.language.exams.diagnostic
 
 import android.content.Context
 import androidx.datastore.preferences.core.booleanPreferencesKey

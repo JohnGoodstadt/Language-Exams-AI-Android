@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.screens
+package com.goodstadt.john.language.exams.diagnostic
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

@@ -1,4 +1,4 @@
-package com.goodstadt.john.language.exams.models
+package com.goodstadt.john.language.exams.diagnostic
 
 import kotlinx.serialization.Serializable
 

@@ -1,10 +1,8 @@
-package com.goodstadt.john.language.exams.viewmodels
+package com.goodstadt.john.language.exams.diagnostic
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.goodstadt.john.language.exams.data.DiagnosticRepository
 import com.goodstadt.john.language.exams.managers.AuditEngine
-import com.goodstadt.john.language.exams.models.DiagnosticUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch

@@ -1,4 +1,6 @@
-package com.goodstadt.john.language.exams.viewmodels
+package com.goodstadt.john.language.exams.screens.MyProgress
+import com.goodstadt.john.language.exams.ReadinessAudit.ReadinessAuditLevels
+import com.goodstadt.john.language.exams.ReadinessAudit.AuditStats
 
 
 import androidx.lifecycle.ViewModel
@@ -12,7 +14,7 @@ import com.goodstadt.john.language.exams.managers.AuditEngine
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.managers.XpState
 import com.goodstadt.john.language.exams.models.AppUIManifest
-import com.goodstadt.john.language.exams.screens.reference.SideQuestData
+import com.goodstadt.john.language.exams.Format1.SideQuestData
 import com.goodstadt.john.language.exams.uti.buildSideQuestData
 import com.goodstadt.john.language.exams.utils.CategoryProgress
 import dagger.hilt.android.lifecycle.HiltViewModel
