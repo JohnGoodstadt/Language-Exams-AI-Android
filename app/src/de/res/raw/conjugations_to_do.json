@@ -1,0 +1,1101 @@
+{
+  "romanized": false,
+  "native": "",
+  "name": "",
+  "sheetname": "GermanIrregularToDo",
+  "id": "",
+  "location": 0,
+  "googlevoiceprefix": "",
+  "uploaddate": 1747213019.492379,
+  "voicename": "",
+  "nativename": "",
+  "updatedDate": 978307200,
+  "fileformat": 1,
+  "tabtitles": [
+    "Not Used"
+  ],
+  "categories": [
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Präsens",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich mache",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 100,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich mache einen Fehler.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich mache eine Pause.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich mache Fortschritte.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "er macht",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 101,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er macht einen Vorschlag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er macht eine Reise.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er macht Hausaufgaben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "sie macht",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 102,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie macht einen Spaziergang.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie macht eine Ausnahme.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie macht Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "es macht",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 103,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es macht einen Fehler.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es macht eine Pause.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es macht Fortschritte.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "du machst",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 104,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du machst einen Vorschlag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du machst eine Reise.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du machst Hausaufgaben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir machen",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 105,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir machen einen Spaziergang.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir machen eine Ausnahme.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir machen Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr macht",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 106,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr macht einen Fehler.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr macht eine Pause.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr macht Fortschritte.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie machen",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 107,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie machen einen Vorschlag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie machen eine Reise.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie machen Hausaufgaben.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Präteritum",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich machte",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 108,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich machte einen Spaziergang.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich machte eine Ausnahme.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich machte Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "er machte",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 109,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er machte einen Fehler.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er machte eine Pause.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er machte Fortschritte.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "sie machte",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 110,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie machte einen Vorschlag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie machte eine Reise.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie machte Hausaufgaben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "es machte",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 111,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es machte einen Spaziergang.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es machte eine Ausnahme.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es machte Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "du machtest",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 112,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du machtest einen Fehler.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du machtest eine Pause.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du machtest Fortschritte.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir machten",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 113,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir machten einen Vorschlag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir machten eine Reise.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir machten Hausaufgaben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr machtet",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 114,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr machtet einen Spaziergang.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr machtet eine Ausnahme.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr machtet Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie machten",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 115,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie machten einen Fehler.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie machten eine Pause.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie machten Fortschritte.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Konjunktiv II (Gegenwart)",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich würde machen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 116,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich würde einen Vorschlag machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich würde eine Reise machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich würde Hausaufgaben machen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "er würde machen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 117,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er würde einen Spaziergang machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er würde eine Ausnahme machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er würde Pläne machen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "sie würde machen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 118,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie würde einen Fehler machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie würde eine Pause machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie würde Fortschritte machen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "es würde machen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 119,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es würde einen Vorschlag machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es würde eine Reise machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es würde Hausaufgaben machen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "du würdest machen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 120,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du würdest einen Spaziergang machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du würdest eine Ausnahme machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du würdest Pläne machen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir würden machen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 121,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir würden einen Fehler machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir würden eine Pause machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir würden Fortschritte machen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr würdet machen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 122,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr würdet einen Vorschlag machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr würdet eine Reise machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr würdet Hausaufgaben machen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie würden machen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 123,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie würden einen Spaziergang machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie würden eine Ausnahme machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie würden Pläne machen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabNumber": 1,
+      "title": "Konjunktiv II (Vergangenheit)",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich hätte gemacht",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 124,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich hätte einen Fehler gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hätte eine Pause gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hätte Fortschritte gemacht.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "er hätte gemacht",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 125,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hätte einen Vorschlag gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hätte eine Reise gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hätte Hausaufgaben gemacht.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "sie hätte gemacht",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 126,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hätte einen Spaziergang gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätte eine Ausnahme gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätte Pläne gemacht.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "es hätte gemacht",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 127,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hätte einen Fehler gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hätte eine Pause gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hätte Fortschritte gemacht.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "du hättest gemacht",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 128,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hättest einen Vorschlag gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hättest eine Reise gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hättest Hausaufgaben gemacht.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir hätten gemacht",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 129,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir hätten einen Spaziergang gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hätten eine Ausnahme gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hätten Pläne gemacht.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr hättet gemacht",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 130,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr hättet einen Fehler gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hättet eine Pause gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hättet Fortschritte gemacht.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie hätten gemacht",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 131,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hätten einen Vorschlag gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätten eine Reise gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätten Hausaufgaben gemacht.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Futur I",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 300,
+          "word": "ich werde machen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 304,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich werde einen Spaziergang machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde eine Ausnahme machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde Pläne machen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 301,
+          "word": "er wird machen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 305,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wird einen Fehler machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird eine Pause machen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird Fortschritte machen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Perfekt",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 400,
+          "word": "ich habe gemacht",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 400,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich habe einen Vorschlag gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich habe eine Reise gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich habe Hausaufgaben gemacht.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 401,
+          "word": "er hat gemacht",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 401,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hat einen Spaziergang gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hat eine Ausnahme gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hat Pläne gemacht.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabNumber": 1,
+      "title": "Plusquamperfekt",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 400,
+          "word": "ich hatte gemacht",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 406,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich hatte einen Fehler gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hatte eine Pause gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hatte Fortschritte gemacht.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 401,
+          "word": "er hatte gemacht",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 407,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hatte einen Vorschlag gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hatte eine Reise gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hatte Hausaufgaben gemacht.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Futur II",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 500,
+          "word": "ich werde gemacht haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 504,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich werde einen Spaziergang gemacht haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde eine Ausnahme gemacht haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde Pläne gemacht haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 501,
+          "word": "er wird gemacht haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 505,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wird einen Fehler gemacht haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird eine Pause gemacht haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird Fortschritte gemacht haben.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Konjunktiv I",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 600,
+          "word": "ich mache",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 602,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, ich mache einen Vorschlag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, ich mache eine Reise.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, ich mache Hausaufgaben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 601,
+          "word": "er mache",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 603,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, er mache einen Spaziergang.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, er mache eine Ausnahme.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, er mache Pläne.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Konjunktiv II",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 600,
+          "word": "wenn ich machte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 604,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn ich einen Fehler machte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn ich eine Pause machte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn ich Fortschritte machte, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 601,
+          "word": "wenn er machte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 605,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn er einen Vorschlag machte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn er eine Reise machte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn er Hausaufgaben machte, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

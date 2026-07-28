@@ -1,0 +1,1547 @@
+{
+  "romanized": false,
+  "native": "",
+  "name": "",
+  "sheetname": "German to Get",
+  "id": "",
+  "location": 0,
+  "googlevoiceprefix": "",
+  "uploaddate": 1747213019.492379,
+  "voicename": "",
+  "nativename": "",
+  "updatedDate": 978307200,
+  "fileformat": 1,
+  "tabtitles": [
+    "Not Used"
+  ],
+  "categories": [
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Präsens",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich bekomme",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 100,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich bekomme einen Brief.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich bekomme eine Nachricht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich bekomme viele Geschenke.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "du bekommst",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 101,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du bekommst einen Anruf.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bekommst eine Antwort.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bekommst gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "er bekommt",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 102,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er bekommt einen Preis.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er bekommt eine Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er bekommt neue Bücher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "sie bekommt",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 103,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie bekommt einen Brief.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie bekommt eine Nachricht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie bekommt viele Geschenke.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "es bekommt",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 104,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es bekommt einen Anruf.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es bekommt eine Antwort.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es bekommt gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir bekommen",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 105,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir bekommen einen Preis.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir bekommen eine Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir bekommen neue Bücher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr bekommt",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 106,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr bekommt einen Brief.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr bekommt eine Nachricht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr bekommt viele Geschenke.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie bekommen",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 107,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie bekommen einen Anruf.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie bekommen eine Antwort.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie bekommen gute Noten.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Perfekt",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich habe bekommen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 116,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich habe einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich habe eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich habe neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "du hast bekommen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 117,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hast einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hast eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hast viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "er hat bekommen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 118,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hat einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hat eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hat gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "sie hat bekommen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 119,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hat einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hat eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hat neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "es hat bekommen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 120,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hat einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hat eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hat viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir haben bekommen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 121,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir haben einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir haben eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir haben gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr habt bekommen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 122,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr habt einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr habt eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr habt neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie haben bekommen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 123,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie haben einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie haben eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie haben viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Präteritum",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 200,
+          "word": "ich bekam",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 208,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich bekam einen Anruf.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich bekam eine Antwort.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich bekam gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 201,
+          "word": "du bekamst",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 209,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du bekamst einen Preis.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bekamst eine Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bekamst neue Bücher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 202,
+          "word": "er bekam",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 210,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er bekam einen Brief.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er bekam eine Nachricht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er bekam viele Geschenke.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 203,
+          "word": "sie bekam",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 211,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie bekam einen Anruf.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie bekam eine Antwort.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie bekam gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 204,
+          "word": "es bekam",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 212,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es bekam einen Preis.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es bekam eine Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es bekam neue Bücher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 205,
+          "word": "wir bekamen",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 213,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir bekamen einen Brief.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir bekamen eine Nachricht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir bekamen viele Geschenke.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 206,
+          "word": "ihr bekamt",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 214,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr bekamt einen Anruf.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr bekamt eine Antwort.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr bekamt gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 207,
+          "word": "sie bekamen",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 215,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie bekamen einen Preis.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie bekamen eine Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie bekamen neue Bücher.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Plusquamperfekt",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 300,
+          "word": "ich hatte bekommen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 300,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich hatte einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hatte eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hatte viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 301,
+          "word": "du hattest bekommen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 301,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hattest einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hattest eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hattest gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 302,
+          "word": "er hatte bekommen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 302,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hatte einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hatte eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hatte neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 303,
+          "word": "sie hatte bekommen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 303,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hatte einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatte eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatte viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 304,
+          "word": "es hatte bekommen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 304,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hatte einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hatte eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hatte gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 305,
+          "word": "wir hatten bekommen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 305,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir hatten einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hatten eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hatten neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 306,
+          "word": "ihr hattet bekommen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 306,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr hattet einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hattet eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hattet viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 307,
+          "word": "sie hatten bekommen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 307,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hatten einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatten eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatten gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Futur I",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 300,
+          "word": "ich werde bekommen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 316,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich werde einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 301,
+          "word": "du wirst bekommen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 317,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wirst einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 302,
+          "word": "er wird bekommen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 318,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wird einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 303,
+          "word": "sie wird bekommen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 319,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wird einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 304,
+          "word": "es wird bekommen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 320,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wird einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 305,
+          "word": "wir werden bekommen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 321,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir werden einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 306,
+          "word": "ihr werdet bekommen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 322,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr werdet einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr werdet eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr werdet neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 307,
+          "word": "sie werden bekommen",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 323,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie werden einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Futur II",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 400,
+          "word": "ich werde bekommen haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 408,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich werde einen Anruf bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde eine Antwort bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde gute Noten bekommen haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 401,
+          "word": "du wirst bekommen haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 409,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wirst einen Preis bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst eine Chance bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst neue Bücher bekommen haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 402,
+          "word": "er wird bekommen haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 410,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wird einen Brief bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird eine Nachricht bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird viele Geschenke bekommen haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 403,
+          "word": "sie wird bekommen haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 411,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wird einen Anruf bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird eine Antwort bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird gute Noten bekommen haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 404,
+          "word": "es wird bekommen haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 412,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wird einen Preis bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird eine Chance bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird neue Bücher bekommen haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 405,
+          "word": "wir werden bekommen haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 413,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir werden einen Brief bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden eine Nachricht bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden viele Geschenke bekommen haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 406,
+          "word": "ihr werdet bekommen haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 414,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr werdet einen Anruf bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr werdet eine Antwort bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr werdet gute Noten bekommen haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 407,
+          "word": "sie werden bekommen haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 415,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie werden einen Preis bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden eine Chance bekommen haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden neue Bücher bekommen haben.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Konjunktiv II (Gegenwart)",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 500,
+          "word": "ich würde bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 500,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich würde einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich würde eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich würde viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 501,
+          "word": "du würdest bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 501,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du würdest einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du würdest eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du würdest gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 502,
+          "word": "er würde bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 502,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er würde einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er würde eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er würde neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 503,
+          "word": "sie würde bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 503,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie würde einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie würde eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie würde viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 504,
+          "word": "es würde bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 504,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es würde einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es würde eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es würde gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 505,
+          "word": "wir würden bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 505,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir würden einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir würden eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir würden neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 506,
+          "word": "ihr würdet bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 506,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr würdet einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr würdet eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr würdet viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 507,
+          "word": "sie würden bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 507,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie würden einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie würden eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie würden gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Konjunktiv II (Vergangenheit)",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 500,
+          "word": "ich hätte bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 508,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich hätte einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hätte eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hätte neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 501,
+          "word": "du hättest bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 509,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hättest einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hättest eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hättest viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 502,
+          "word": "er hätte bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 510,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hätte einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hätte eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hätte gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 503,
+          "word": "sie hätte bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 511,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hätte einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätte eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätte neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 504,
+          "word": "es hätte bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 512,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hätte einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hätte eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hätte viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 505,
+          "word": "wir hätten bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 513,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir hätten einen Anruf bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hätten eine Antwort bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hätten gute Noten bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 506,
+          "word": "ihr hättet bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 514,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr hättet einen Preis bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hättet eine Chance bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hättet neue Bücher bekommen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 507,
+          "word": "sie hätten bekommen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 515,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hätten einen Brief bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätten eine Nachricht bekommen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätten viele Geschenke bekommen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

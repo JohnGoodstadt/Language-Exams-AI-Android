@@ -16,7 +16,7 @@
 	"categories": [
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Greetings & Introductions",
 			"words": [
 				{
@@ -506,7 +506,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Personal Information",
 			"words": [
 				{
@@ -1342,7 +1342,7 @@
 		
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Family",
 			"words": [
 				{
@@ -1809,7 +1809,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Numbers",
 			"words": [
 				{
@@ -2531,7 +2531,7 @@
 		
 		{
 			"sortOrder": 10,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Days of the Week",
 			"words": [
 				{
@@ -2860,7 +2860,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Months",
 			"words": [
 				{
@@ -3143,7 +3143,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Seasons",
 			"words": [
 				{
@@ -3244,7 +3244,7 @@
 		
 		{
 			"sortOrder": 10,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Time",
 			"words": [
 				{
@@ -3665,7 +3665,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Colors",
 			"words": [
 				{
@@ -3927,7 +3927,7 @@
 		
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Food & Drink",
 			"words": [
 				{
@@ -4811,7 +4811,7 @@
 		
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Common Verbs (in infinitive)",
 			"words": [
 				{
@@ -5901,7 +5901,7 @@
 		
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Objects & Household Items",
 			"words": [
 				{
@@ -6761,7 +6761,7 @@
 		
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Adjectives (Common)",
 			"words": [
 				{
@@ -7573,7 +7573,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Prepositions",
 			"words": [
 				{
@@ -8041,7 +8041,7 @@
 		
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Interrogative Words",
 			"words": [
 				{
@@ -8278,7 +8278,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Common Expressions",
 			"words": [
 				{

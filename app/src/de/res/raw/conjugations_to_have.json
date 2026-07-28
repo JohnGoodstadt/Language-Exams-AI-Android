@@ -1,0 +1,1929 @@
+{
+  "romanized": false,
+  "native": "",
+  "name": "",
+  "sheetname": "GermanIrregularVerb_Have",
+  "id": "",
+  "location": 0,
+  "googlevoiceprefix": "",
+  "uploaddate": 1747213019.492379,
+  "voicename": "",
+  "nativename": "",
+  "updatedDate": 978307200,
+  "fileformat": 1,
+  "tabtitles": [
+    "Not Used"
+  ],
+  "categories": [
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Präsens",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich habe",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 100,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich habe einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich habe eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich habe viele Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "er hat",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 101,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hat einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hat eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hat zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "sie hat",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 102,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hat einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hat eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hat gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "es hat",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 103,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hat einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hat eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hat viele Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "du hast",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 104,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hast einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hast eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hast zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir haben",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 105,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir haben einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir haben eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir haben gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr habt",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 106,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr habt einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr habt eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr habt viele Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie haben",
+          "partOfSpeech": "Verb (Präsens)",
+          "id": 107,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie haben einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie haben eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie haben zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Präteritum",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich hatte",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 108,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich hatte einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hatte eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hatte gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "er hatte",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 109,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hatte einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hatte eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hatte viele Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "sie hatte",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 110,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hatte einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatte eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatte zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "es hatte",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 111,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hatte einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hatte eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hatte gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "du hattest",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 112,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hattest einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hattest eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hattest viele Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir hatten",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 113,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir hatten einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hatten eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hatten zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr hattet",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 114,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr hattet einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hattet eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hattet gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie hatten",
+          "partOfSpeech": "Verb (Präteritum)",
+          "id": 115,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hatten einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatten eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatten viele Ideen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Konjunktiv II (Gegenwart)",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich hätte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 116,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich hätte einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hätte eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hätte zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "er hätte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 117,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hätte einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hätte eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hätte gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "sie hätte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 118,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hätte einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätte eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätte viele Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "es hätte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 119,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hätte einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hätte eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hätte zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "du hättest",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 120,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hättest einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hättest eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hättest gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir hätten",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 121,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir hätten einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hätten eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hätten viele Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr hättet",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 122,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr hättet einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hättet eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hättet zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie hätten",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 123,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hätten einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätten eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätten gute Noten.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 4,
+      "tabNumber": 1,
+      "title": "Konjunktiv II (Vergangenheit)",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 100,
+          "word": "ich hätte gehabt",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 124,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich hätte einen guten Freund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hätte eine gute Idee gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hätte viele Ideen gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 101,
+          "word": "er hätte gehabt",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 125,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hätte einen alten Hund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hätte eine wichtige Frage gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hätte zwei Kinder gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 102,
+          "word": "sie hätte gehabt",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 126,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hätte einen neuen Plan gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätte eine große Chance gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätte gute Noten gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 103,
+          "word": "es hätte gehabt",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 127,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hätte einen guten Freund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hätte eine gute Idee gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hätte viele Ideen gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 104,
+          "word": "du hättest gehabt",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 128,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hättest einen alten Hund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hättest eine wichtige Frage gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hättest zwei Kinder gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 105,
+          "word": "wir hätten gehabt",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 129,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir hätten einen neuen Plan gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hätten eine große Chance gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hätten gute Noten gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 106,
+          "word": "ihr hättet gehabt",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 130,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr hättet einen guten Freund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hättet eine gute Idee gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hättet viele Ideen gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 107,
+          "word": "sie hätten gehabt",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 131,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hätten einen alten Hund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätten eine wichtige Frage gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hätten zwei Kinder gehabt.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Futur I",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 200,
+          "word": "ich werde haben",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 216,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich werde einen neuen Plan haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde eine große Chance haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde gute Noten haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 201,
+          "word": "er wird haben",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 217,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wird einen guten Freund haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird eine gute Idee haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird viele Ideen haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 202,
+          "word": "sie wird haben",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 218,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wird einen alten Hund haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird eine wichtige Frage haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird zwei Kinder haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 203,
+          "word": "es wird haben",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 219,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wird einen neuen Plan haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird eine große Chance haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird gute Noten haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 204,
+          "word": "du wirst haben",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 220,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wirst einen guten Freund haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst eine gute Idee haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst viele Ideen haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 205,
+          "word": "wir werden haben",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 221,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir werden einen alten Hund haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden eine wichtige Frage haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden zwei Kinder haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 206,
+          "word": "ihr werdet haben",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 222,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr werdet einen neuen Plan haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr werdet eine große Chance haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr werdet gute Noten haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 207,
+          "word": "sie werden haben",
+          "partOfSpeech": "Verb (Futur I)",
+          "id": 223,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie werden einen guten Freund haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden eine gute Idee haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden viele Ideen haben.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Perfekt",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 300,
+          "word": "ich habe gehabt",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 300,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich habe einen alten Hund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich habe eine wichtige Frage gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich habe zwei Kinder gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 301,
+          "word": "er hat gehabt",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 301,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hat einen neuen Plan gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hat eine große Chance gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hat gute Noten gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 302,
+          "word": "sie hat gehabt",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 302,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hat einen guten Freund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hat eine gute Idee gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hat viele Ideen gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 303,
+          "word": "es hat gehabt",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 303,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hat einen alten Hund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hat eine wichtige Frage gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hat zwei Kinder gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 304,
+          "word": "du hast gehabt",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 304,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hast einen neuen Plan gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hast eine große Chance gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hast gute Noten gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 305,
+          "word": "wir haben gehabt",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 305,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir haben einen guten Freund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir haben eine gute Idee gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir haben viele Ideen gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 306,
+          "word": "ihr habt gehabt",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 306,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr habt einen alten Hund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr habt eine wichtige Frage gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr habt zwei Kinder gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 307,
+          "word": "sie haben gehabt",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 307,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie haben einen neuen Plan gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie haben eine große Chance gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie haben gute Noten gehabt.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Plusquamperfekt",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 400,
+          "word": "ich hatte gehabt",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 400,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich hatte einen guten Freund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hatte eine gute Idee gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich hatte viele Ideen gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 401,
+          "word": "er hatte gehabt",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 401,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er hatte einen alten Hund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hatte eine wichtige Frage gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er hatte zwei Kinder gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 402,
+          "word": "sie hatte gehabt",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 402,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hatte einen neuen Plan gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatte eine große Chance gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatte gute Noten gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 403,
+          "word": "es hatte gehabt",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 403,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es hatte einen guten Freund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hatte eine gute Idee gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es hatte viele Ideen gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 404,
+          "word": "du hattest gehabt",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 404,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du hattest einen alten Hund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hattest eine wichtige Frage gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du hattest zwei Kinder gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 405,
+          "word": "wir hatten gehabt",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 405,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir hatten einen neuen Plan gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hatten eine große Chance gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir hatten gute Noten gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 406,
+          "word": "ihr hattet gehabt",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 406,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr hattet einen guten Freund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hattet eine gute Idee gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr hattet viele Ideen gehabt.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 407,
+          "word": "sie hatten gehabt",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 407,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie hatten einen alten Hund gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatten eine wichtige Frage gehabt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie hatten zwei Kinder gehabt.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Futur II",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 400,
+          "word": "ich werde gehabt haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 416,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich werde einen neuen Plan gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde eine große Chance gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde gute Noten gehabt haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 401,
+          "word": "er wird gehabt haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 417,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wird einen guten Freund gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird eine gute Idee gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird viele Ideen gehabt haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 402,
+          "word": "sie wird gehabt haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 418,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wird einen alten Hund gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird eine wichtige Frage gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird zwei Kinder gehabt haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 403,
+          "word": "es wird gehabt haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 419,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wird einen neuen Plan gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird eine große Chance gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird gute Noten gehabt haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 404,
+          "word": "du wirst gehabt haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 420,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wirst einen guten Freund gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst eine gute Idee gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst viele Ideen gehabt haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 405,
+          "word": "wir werden gehabt haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 421,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir werden einen alten Hund gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden eine wichtige Frage gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden zwei Kinder gehabt haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 406,
+          "word": "ihr werdet gehabt haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 422,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ihr werdet einen neuen Plan gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr werdet eine große Chance gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ihr werdet gute Noten gehabt haben.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 407,
+          "word": "sie werden gehabt haben",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 423,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie werden einen guten Freund gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden eine gute Idee gehabt haben.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden viele Ideen gehabt haben.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Konjunktiv I",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 500,
+          "word": "ich habe",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 508,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, ich habe einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, ich habe eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, ich habe zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 501,
+          "word": "er habe",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 509,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, er habe einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, er habe eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, er habe gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 502,
+          "word": "sie habe",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 510,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, sie habe einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, sie habe eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, sie habe viele Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 503,
+          "word": "es habe",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 511,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, es habe einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, es habe eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, es habe zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 504,
+          "word": "du habest",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 512,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, du habest einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, du habest eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, du habest gute Noten.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 505,
+          "word": "wir haben",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 513,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, wir haben einen guten Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, wir haben eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, wir haben viele Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 506,
+          "word": "ihr habet",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 514,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, ihr habet einen alten Hund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, ihr habet eine wichtige Frage.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, ihr habet zwei Kinder.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 507,
+          "word": "sie haben",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 515,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, sie haben einen neuen Plan.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, sie haben eine große Chance.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, sie haben gute Noten.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Konjunktiv II",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 500,
+          "word": "wenn ich hätte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 516,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn ich einen guten Freund hätte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn ich eine gute Idee hätte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn ich viele Ideen hätte, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 501,
+          "word": "wenn er hätte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 517,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn er einen alten Hund hätte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn er eine wichtige Frage hätte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn er zwei Kinder hätte, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 502,
+          "word": "wenn sie hätte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 518,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn sie einen neuen Plan hätte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn sie eine große Chance hätte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn sie gute Noten hätte, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 503,
+          "word": "wenn es hätte",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 519,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn es einen guten Freund hätte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn es eine gute Idee hätte, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn es viele Ideen hätte, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 504,
+          "word": "wenn du hättest",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 520,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn du einen alten Hund hättest, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn du eine wichtige Frage hättest, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn du zwei Kinder hättest, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 505,
+          "word": "wenn wir hätten",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 521,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn wir einen neuen Plan hätten, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn wir eine große Chance hätten, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn wir gute Noten hätten, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 506,
+          "word": "wenn ihr hättet",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 522,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn ihr einen guten Freund hättet, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn ihr eine gute Idee hättet, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn ihr viele Ideen hättet, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 507,
+          "word": "wenn sie hätten",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 523,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn sie einen alten Hund hätten, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn sie eine wichtige Frage hätten, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn sie zwei Kinder hätten, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

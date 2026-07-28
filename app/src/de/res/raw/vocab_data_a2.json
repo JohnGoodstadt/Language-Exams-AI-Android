@@ -17,7 +17,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Greetings & Farewells",
 			"words": [
 				{
@@ -415,7 +415,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Personal Information",
 			"words": [
 				{
@@ -1137,7 +1137,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Family",
 			"words": [
 				{
@@ -1650,7 +1650,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Daily Routine & Free Time",
 			"words": [
 				{
@@ -2326,7 +2326,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Family",
 			"words": [
 				{
@@ -2840,7 +2840,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Food & Drink",
 			"words": [
 				{
@@ -3813,7 +3813,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 1,
+			"tabNumber": 1,
 			"title": "Shopping",
 			"words": [
 				{
@@ -4512,7 +4512,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Numbers & Quantities",
 			"words": [
 				{
@@ -5462,7 +5462,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Time & Dates",
 			"words": [
 				{
@@ -6920,7 +6920,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Places & Directions",
 			"words": [
 				{
@@ -8056,7 +8056,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 2,
+			"tabNumber": 2,
 			"title": "Professions & Occupations",
 			"words": [
 				{
@@ -8501,7 +8501,7 @@
 
 		{
 			"sortOrder": 11,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Adjectives",
 			"words": [
 				{
@@ -9132,7 +9132,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Verbs (selection)",
 			"words": [
 				{
@@ -10566,7 +10566,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Common Expressions",
 			"words": [
 				{
@@ -11103,7 +11103,7 @@
 
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Prepositions",
 			"words": [
 				{
@@ -11570,7 +11570,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Conjunctions",
 			"words": [
 				{
@@ -11807,7 +11807,7 @@
 		},
 		{
 			"sortOrder": 10,
-			"tabnumber": 3,
+			"tabNumber": 3,
 			"title": "Pronouns",
 			"words": [
 				{

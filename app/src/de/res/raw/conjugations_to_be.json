@@ -1,0 +1,1906 @@
+{
+  "romanized": false,
+  "native": "",
+  "name": "",
+  "sheetname": "GermanConjugationsToBe",
+  "id": "",
+  "location": 0,
+  "googlevoiceprefix": "",
+  "uploaddate": 1747213019.492379,
+  "voicename": "",
+  "nativename": "",
+  "updatedDate": 978307200,
+  "fileformat": 1,
+  "tabtitles": [
+    "Not Used"
+  ],
+  "categories": [
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Präsens",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 1,
+          "word": "ich bin",
+          "partOfSpeech": "Verb",
+          "id": 1,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich bin ein guter Student.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich bin eine gute Studentin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich bin voller Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 2,
+          "word": "du bist",
+          "partOfSpeech": "Verb",
+          "id": 2,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du bist ein guter Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bist eine gute Freundin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bist voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 3,
+          "word": "er ist",
+          "partOfSpeech": "Verb",
+          "id": 3,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er ist ein guter Lehrer.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er ist ein netter Nachbar.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er ist voller Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 4,
+          "word": "sie ist",
+          "partOfSpeech": "Verb",
+          "id": 4,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie ist eine gute Lehrerin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie ist eine nette Nachbarin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie ist voller Träume.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 5,
+          "word": "es ist",
+          "partOfSpeech": "Verb",
+          "id": 5,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es ist ein langer Tag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es ist eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es ist voller Überraschungen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 6,
+          "word": "wir sind",
+          "partOfSpeech": "Verb",
+          "id": 6,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir sind gute Freunde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir sind nette Nachbarn.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir sind voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 7,
+          "word": "sie sind",
+          "partOfSpeech": "Verb",
+          "id": 7,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie sind beste Freunde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie sind nette Nachbarn.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie sind voller Träume.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 17,
+          "word": "es wird gemacht",
+          "partOfSpeech": "Verb (Passiv)",
+          "id": 17,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Der Tisch wird gedeckt.",
+              "translation": ""
+            },
+            {
+              "sentence": "Die Arbeit wird gemacht.",
+              "translation": ""
+            },
+            {
+              "sentence": "Die Hausaufgaben werden gemacht.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Präteritum",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 8,
+          "word": "ich war",
+          "partOfSpeech": "Verb",
+          "id": 8,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich war ein guter Student.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich war eine gute Studentin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich war voller Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 9,
+          "word": "du warst",
+          "partOfSpeech": "Verb",
+          "id": 9,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du warst ein guter Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du warst eine gute Freundin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du warst voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 10,
+          "word": "er war",
+          "partOfSpeech": "Verb",
+          "id": 10,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er war ein guter Lehrer.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er war ein netter Nachbar.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er war voller Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 11,
+          "word": "sie war",
+          "partOfSpeech": "Verb",
+          "id": 11,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie war eine gute Lehrerin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie war eine nette Nachbarin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie war voller Träume.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 12,
+          "word": "es war",
+          "partOfSpeech": "Verb",
+          "id": 12,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es war ein langer Tag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es war eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es war voller Überraschungen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 13,
+          "word": "wir waren",
+          "partOfSpeech": "Verb",
+          "id": 13,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir waren gute Freunde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir waren nette Nachbarn.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir waren voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 14,
+          "word": "sie waren",
+          "partOfSpeech": "Verb",
+          "id": 14,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie waren beste Freunde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie waren nette Nachbarn.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie waren voller Träume.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Konjunktiv II (Gegenwart)",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 1,
+          "word": "ich wäre",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 200,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich wäre ein guter Student.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich wäre eine gute Studentin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich wäre voller Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 2,
+          "word": "er wäre",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 201,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wäre ein guter Lehrer.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wäre ein netter Nachbar.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wäre voller Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 3,
+          "word": "sie wäre",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 202,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wäre eine gute Lehrerin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wäre eine nette Nachbarin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wäre voller Träume.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 4,
+          "word": "es wäre",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 203,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wäre ein langer Tag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wäre eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wäre voller Überraschungen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 5,
+          "word": "du wärst",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 204,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wärst ein guter Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wärst eine gute Freundin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wärst voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 6,
+          "word": "wir wären",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 205,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir wären gute Freunde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir wären nette Nachbarn.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir wären voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 7,
+          "word": "du wärst",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 206,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wärst ein guter Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wärst eine gute Freundin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wärst voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 8,
+          "word": "sie wären",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 207,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wären beste Freunde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wären nette Nachbarn.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wären voller Träume.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Konjunktiv II (Vergangenheit)",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 1,
+          "word": "ich wäre gewesen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 700,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich wäre ein guter Student gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich wäre eine gute Studentin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich wäre voller Ideen gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 2,
+          "word": "er wäre gewesen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 701,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wäre ein guter Lehrer gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wäre ein netter Nachbar gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wäre voller Ideen gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 3,
+          "word": "sie wäre gewesen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 702,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wäre eine gute Lehrerin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wäre eine nette Nachbarin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wäre voller Träume gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 4,
+          "word": "es wäre gewesen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 703,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wäre ein langer Tag gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wäre eine gute Idee gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wäre voller Überraschungen gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 5,
+          "word": "du wärst gewesen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 704,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wärst ein guter Freund gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wärst eine gute Freundin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wärst voller Pläne gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 6,
+          "word": "wir wären gewesen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 705,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir wären gute Freunde gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir wären nette Nachbarn gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir wären voller Pläne gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 7,
+          "word": "du wärst gewesen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 706,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wärst ein guter Freund gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wärst eine gute Freundin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wärst voller Pläne gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 8,
+          "word": "sie wären gewesen",
+          "partOfSpeech": "Verb (Konjunktiv II Vergangenheit)",
+          "id": 707,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wären beste Freunde gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wären nette Nachbarn gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wären voller Träume gewesen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 3,
+      "tabNumber": 1,
+      "title": "Futur I",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 1,
+          "word": "ich werde sein",
+          "partOfSpeech": "Verb",
+          "id": 100,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich werde ein guter Student sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde eine gute Studentin sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde voller Ideen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 2,
+          "word": "er wird sein",
+          "partOfSpeech": "Verb",
+          "id": 101,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wird ein guter Lehrer sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird ein netter Nachbar sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird voller Ideen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 3,
+          "word": "sie wird sein",
+          "partOfSpeech": "Verb",
+          "id": 102,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wird eine gute Lehrerin sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird eine nette Nachbarin sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird voller Träume sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 4,
+          "word": "es wird sein",
+          "partOfSpeech": "Verb",
+          "id": 103,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wird ein langer Tag sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird eine gute Idee sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird voller Überraschungen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 5,
+          "word": "du wirst sein",
+          "partOfSpeech": "Verb",
+          "id": 104,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wirst ein guter Freund sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst eine gute Freundin sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst voller Pläne sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 6,
+          "word": "wir werden sein",
+          "partOfSpeech": "Verb",
+          "id": 105,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir werden gute Freunde sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden nette Nachbarn sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden voller Pläne sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 7,
+          "word": "du wirst sein",
+          "partOfSpeech": "Verb",
+          "id": 106,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wirst ein guter Freund sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst eine gute Freundin sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst voller Pläne sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 8,
+          "word": "sie werden sein",
+          "partOfSpeech": "Verb",
+          "id": 107,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie werden beste Freunde sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden nette Nachbarn sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden voller Träume sein.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Perfekt",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 1,
+          "word": "ich bin gewesen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 400,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich bin ein guter Student gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich bin eine gute Studentin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich bin voller Ideen gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 2,
+          "word": "er ist gewesen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 401,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er ist ein guter Lehrer gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er ist ein netter Nachbar gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er ist voller Ideen gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 3,
+          "word": "sie ist gewesen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 402,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie ist eine gute Lehrerin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie ist eine nette Nachbarin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie ist voller Träume gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 4,
+          "word": "es ist gewesen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 403,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es ist ein langer Tag gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es ist eine gute Idee gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es ist voller Überraschungen gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 5,
+          "word": "du bist gewesen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 404,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du bist ein guter Freund gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bist eine gute Freundin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bist voller Pläne gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 6,
+          "word": "wir sind gewesen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 405,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir sind gute Freunde gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir sind nette Nachbarn gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir sind voller Pläne gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 7,
+          "word": "du bist gewesen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 406,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du bist ein guter Freund gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bist eine gute Freundin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du bist voller Pläne gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 8,
+          "word": "sie sind gewesen",
+          "partOfSpeech": "Verb (Perfekt)",
+          "id": 407,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie sind beste Freunde gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie sind nette Nachbarn gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie sind voller Träume gewesen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Plusquamperfekt",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 1,
+          "word": "ich war gewesen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 508,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich war ein guter Student gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich war eine gute Studentin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich war voller Ideen gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 2,
+          "word": "er war gewesen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 509,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er war ein guter Lehrer gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er war ein netter Nachbar gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er war voller Ideen gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 3,
+          "word": "sie war gewesen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 510,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie war eine gute Lehrerin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie war eine nette Nachbarin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie war voller Träume gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 4,
+          "word": "es war gewesen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 511,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es war ein langer Tag gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es war eine gute Idee gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es war voller Überraschungen gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 5,
+          "word": "du warst gewesen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 512,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du warst ein guter Freund gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du warst eine gute Freundin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du warst voller Pläne gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 6,
+          "word": "wir waren gewesen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 513,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir waren gute Freunde gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir waren nette Nachbarn gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir waren voller Pläne gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 7,
+          "word": "du warst gewesen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 514,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du warst ein guter Freund gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du warst eine gute Freundin gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du warst voller Pläne gewesen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 8,
+          "word": "sie waren gewesen",
+          "partOfSpeech": "Verb (Plusquamperfekt)",
+          "id": 515,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie waren beste Freunde gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie waren nette Nachbarn gewesen.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie waren voller Träume gewesen.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Futur II",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 1,
+          "word": "ich werde gewesen sein",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 608,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Ich werde ein guter Student gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde eine gute Studentin gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Ich werde voller Ideen gewesen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 2,
+          "word": "er wird gewesen sein",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 609,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er wird ein guter Lehrer gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird ein netter Nachbar gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er wird voller Ideen gewesen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 3,
+          "word": "sie wird gewesen sein",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 610,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie wird eine gute Lehrerin gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird eine nette Nachbarin gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie wird voller Träume gewesen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 4,
+          "word": "es wird gewesen sein",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 611,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Es wird ein langer Tag gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird eine gute Idee gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Es wird voller Überraschungen gewesen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 5,
+          "word": "du wirst gewesen sein",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 612,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wirst ein guter Freund gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst eine gute Freundin gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst voller Pläne gewesen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 6,
+          "word": "wir werden gewesen sein",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 613,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wir werden gute Freunde gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden nette Nachbarn gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wir werden voller Pläne gewesen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 7,
+          "word": "du wirst gewesen sein",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 614,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Du wirst ein guter Freund gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst eine gute Freundin gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Du wirst voller Pläne gewesen sein.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 8,
+          "word": "sie werden gewesen sein",
+          "partOfSpeech": "Verb (Futur II)",
+          "id": 615,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Sie werden beste Freunde gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden nette Nachbarn gewesen sein.",
+              "translation": ""
+            },
+            {
+              "sentence": "Sie werden voller Träume gewesen sein.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 1,
+      "tabNumber": 1,
+      "title": "Konjunktiv I",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 1,
+          "word": "ich sei",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 800,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, ich sei ein guter Student.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, ich sei eine gute Studentin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, ich sei voller Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 2,
+          "word": "er sei",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 801,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, er sei ein guter Lehrer.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, er sei ein netter Nachbar.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, er sei voller Ideen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 3,
+          "word": "sie sei",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 802,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, sie sei eine gute Lehrerin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, sie sei eine nette Nachbarin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, sie sei voller Träume.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 4,
+          "word": "es sei",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 803,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, es sei ein langer Tag.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, es sei eine gute Idee.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, es sei voller Überraschungen.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 5,
+          "word": "du seist",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 804,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, du seist ein guter Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, du seist eine gute Freundin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, du seist voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 6,
+          "word": "wir seien",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 805,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, wir seien gute Freunde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, wir seien nette Nachbarn.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, wir seien voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 7,
+          "word": "du seist",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 806,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, du seist ein guter Freund.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, du seist eine gute Freundin.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, du seist voller Pläne.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 8,
+          "word": "sie seien",
+          "partOfSpeech": "Verb (Konjunktiv I)",
+          "id": 807,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Er sagt, sie seien beste Freunde.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, sie seien nette Nachbarn.",
+              "translation": ""
+            },
+            {
+              "sentence": "Er sagt, sie seien voller Träume.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sortOrder": 2,
+      "tabNumber": 1,
+      "title": "Konjunktiv II",
+      "words": [
+        {
+          "group": "Konjugation",
+          "sortOrder": 1,
+          "word": "wenn ich wäre",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 808,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn ich ein guter Student wäre, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn ich eine gute Studentin wäre, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn ich voller Ideen wäre, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 2,
+          "word": "wenn er wäre",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 809,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn er ein guter Lehrer wäre, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn er ein netter Nachbar wäre, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn er voller Ideen wäre, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 3,
+          "word": "wenn sie wäre",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 810,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn sie eine gute Lehrerin wäre, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn sie eine nette Nachbarin wäre, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn sie voller Träume wäre, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 4,
+          "word": "wenn es wäre",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 811,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn es ein langer Tag wäre, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn es eine gute Idee wäre, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn es voller Überraschungen wäre, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 5,
+          "word": "wenn du wärst",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 812,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn du ein guter Freund wärst, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn du eine gute Freundin wärst, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn du voller Pläne wärst, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 6,
+          "word": "wenn wir wären",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 813,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn wir gute Freunde wären, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn wir nette Nachbarn wären, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn wir voller Pläne wären, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 7,
+          "word": "wenn du wärst",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 814,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn du ein guter Freund wärst, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn du eine gute Freundin wärst, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn du voller Pläne wärst, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        },
+        {
+          "group": "Konjugation",
+          "sortOrder": 8,
+          "word": "wenn sie wären",
+          "partOfSpeech": "Verb (Konjunktiv II)",
+          "id": 815,
+          "romanisation": "",
+          "translation": "",
+          "sentences": [
+            {
+              "sentence": "Wenn sie beste Freunde wären, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn sie nette Nachbarn wären, wäre alles einfacher.",
+              "translation": ""
+            },
+            {
+              "sentence": "Wenn sie voller Träume wären, wäre alles einfacher.",
+              "translation": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
