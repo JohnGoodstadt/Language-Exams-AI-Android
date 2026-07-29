@@ -317,7 +317,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 1,
-          "word": "der Lebenslauf",
+          "word": "Lebenslauf",
           "partOfSpeech": "",
           "id": 16,
           "romanisation": "",
@@ -336,7 +336,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 2,
-          "word": "die Muttersprache",
+          "word": "Muttersprache",
           "partOfSpeech": "",
           "id": 17,
           "romanisation": "",
@@ -355,7 +355,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 3,
-          "word": "die Erfahrung",
+          "word": "Erfahrung",
           "partOfSpeech": "",
           "id": 18,
           "romanisation": "",
@@ -374,7 +374,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 4,
-          "word": "die Herkunft",
+          "word": "Herkunft",
           "partOfSpeech": "",
           "id": 19,
           "romanisation": "",
@@ -393,7 +393,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 5,
-          "word": "der Aufenthalt",
+          "word": "Aufenthalt",
           "partOfSpeech": "",
           "id": 20,
           "romanisation": "",
@@ -412,7 +412,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 6,
-          "word": "die Genehmigung",
+          "word": "Genehmigung",
           "partOfSpeech": "",
           "id": 21,
           "romanisation": "",
@@ -431,7 +431,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 7,
-          "word": "der Wohnsitz",
+          "word": "Wohnsitz",
           "partOfSpeech": "",
           "id": 22,
           "romanisation": "",
@@ -450,7 +450,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 8,
-          "word": "die Ausbildung",
+          "word": "Ausbildung",
           "partOfSpeech": "",
           "id": 23,
           "romanisation": "",
@@ -469,7 +469,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 9,
-          "word": "der Abschluss",
+          "word": "Abschluss",
           "partOfSpeech": "",
           "id": 24,
           "romanisation": "",
@@ -488,7 +488,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 10,
-          "word": "die Bewerbung",
+          "word": "Bewerbung",
           "partOfSpeech": "",
           "id": 25,
           "romanisation": "",
@@ -526,7 +526,7 @@
         {
           "group": "Persönliche Informationen",
           "sortOrder": 12,
-          "word": "die Angaben",
+          "word": "Angaben",
           "partOfSpeech": "",
           "id": 27,
           "romanisation": "",
@@ -609,7 +609,7 @@
         {
           "group": "Familie",
           "sortOrder": 1,
-          "word": "die Beziehung",
+          "word": "Beziehung",
           "partOfSpeech": "",
           "id": 31,
           "romanisation": "",
@@ -628,7 +628,7 @@
         {
           "group": "Familie",
           "sortOrder": 2,
-          "word": "das Verhältnis",
+          "word": "Verhältnis",
           "partOfSpeech": "",
           "id": 32,
           "romanisation": "",
@@ -704,7 +704,7 @@
         {
           "group": "Familie",
           "sortOrder": 6,
-          "word": "die Erziehung",
+          "word": "Erziehung",
           "partOfSpeech": "",
           "id": 36,
           "romanisation": "",
@@ -742,7 +742,7 @@
         {
           "group": "Familie",
           "sortOrder": 8,
-          "word": "die Verantwortung",
+          "word": "Verantwortung",
           "partOfSpeech": "",
           "id": 38,
           "romanisation": "",
@@ -761,7 +761,7 @@
         {
           "group": "Familie",
           "sortOrder": 9,
-          "word": "der Verwandte",
+          "word": "Verwandte",
           "partOfSpeech": "",
           "id": 39,
           "romanisation": "",
@@ -780,7 +780,7 @@
         {
           "group": "Familie",
           "sortOrder": 10,
-          "word": "die Generation",
+          "word": "Generation",
           "partOfSpeech": "",
           "id": 40,
           "romanisation": "",
@@ -818,7 +818,7 @@
         {
           "group": "Familie",
           "sortOrder": 12,
-          "word": "die Scheidung",
+          "word": "Scheidung",
           "partOfSpeech": "",
           "id": 42,
           "romanisation": "",
@@ -837,7 +837,7 @@
         {
           "group": "Familie",
           "sortOrder": 13,
-          "word": "der Zusammenhalt",
+          "word": "Zusammenhalt",
           "partOfSpeech": "",
           "id": 43,
           "romanisation": "",
@@ -875,7 +875,7 @@
         {
           "group": "Familie",
           "sortOrder": 15,
-          "word": "der Haushalt",
+          "word": "Haushalt",
           "partOfSpeech": "",
           "id": 45,
           "romanisation": "",
@@ -901,7 +901,7 @@
         {
           "group": "Zahlen",
           "sortOrder": 1,
-          "word": "die Zahl",
+          "word": "Zahl",
           "partOfSpeech": "",
           "id": 46,
           "romanisation": "",
@@ -920,7 +920,7 @@
         {
           "group": "Zahlen",
           "sortOrder": 2,
-          "word": "die Nummer",
+          "word": "Nummer",
           "partOfSpeech": "",
           "id": 47,
           "romanisation": "",
@@ -939,7 +939,7 @@
         {
           "group": "Zahlen",
           "sortOrder": 3,
-          "word": "die Hälfte",
+          "word": "Hälfte",
           "partOfSpeech": "",
           "id": 48,
           "romanisation": "",
@@ -958,7 +958,7 @@
         {
           "group": "Zahlen",
           "sortOrder": 4,
-          "word": "das Drittel",
+          "word": "Drittel",
           "partOfSpeech": "",
           "id": 49,
           "romanisation": "",
@@ -977,7 +977,7 @@
         {
           "group": "Zahlen",
           "sortOrder": 5,
-          "word": "das Prozent",
+          "word": "Prozent",
           "partOfSpeech": "",
           "id": 50,
           "romanisation": "",
@@ -996,7 +996,7 @@
         {
           "group": "Zahlen",
           "sortOrder": 6,
-          "word": "der Durchschnitt",
+          "word": "Durchschnitt",
           "partOfSpeech": "",
           "id": 51,
           "romanisation": "",
@@ -1091,7 +1091,7 @@
         {
           "group": "Zahlen",
           "sortOrder": 11,
-          "word": "der Erste",
+          "word": "Erste",
           "partOfSpeech": "",
           "id": 56,
           "romanisation": "",
@@ -1110,7 +1110,7 @@
         {
           "group": "Zahlen",
           "sortOrder": 12,
-          "word": "die Mehrheit",
+          "word": "Mehrheit",
           "partOfSpeech": "",
           "id": 57,
           "romanisation": "",
@@ -1129,7 +1129,7 @@
         {
           "group": "Zahlen",
           "sortOrder": 13,
-          "word": "die Menge",
+          "word": "Menge",
           "partOfSpeech": "",
           "id": 58,
           "romanisation": "",
@@ -1212,7 +1212,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 1,
-          "word": "der Montag",
+          "word": "Montag",
           "partOfSpeech": "",
           "id": 62,
           "romanisation": "",
@@ -1231,7 +1231,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 2,
-          "word": "der Dienstag",
+          "word": "Dienstag",
           "partOfSpeech": "",
           "id": 63,
           "romanisation": "",
@@ -1250,7 +1250,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 3,
-          "word": "der Mittwoch",
+          "word": "Mittwoch",
           "partOfSpeech": "",
           "id": 64,
           "romanisation": "",
@@ -1269,7 +1269,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 4,
-          "word": "der Donnerstag",
+          "word": "Donnerstag",
           "partOfSpeech": "",
           "id": 65,
           "romanisation": "",
@@ -1288,7 +1288,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 5,
-          "word": "der Freitag",
+          "word": "Freitag",
           "partOfSpeech": "",
           "id": 66,
           "romanisation": "",
@@ -1307,7 +1307,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 6,
-          "word": "der Samstag",
+          "word": "Samstag",
           "partOfSpeech": "",
           "id": 67,
           "romanisation": "",
@@ -1326,7 +1326,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 7,
-          "word": "der Sonntag",
+          "word": "Sonntag",
           "partOfSpeech": "",
           "id": 68,
           "romanisation": "",
@@ -1345,7 +1345,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 8,
-          "word": "der Werktag",
+          "word": "Werktag",
           "partOfSpeech": "",
           "id": 69,
           "romanisation": "",
@@ -1364,7 +1364,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 9,
-          "word": "der Alltag",
+          "word": "Alltag",
           "partOfSpeech": "",
           "id": 70,
           "romanisation": "",
@@ -1402,7 +1402,7 @@
         {
           "group": "Wochentage",
           "sortOrder": 11,
-          "word": "das Wochenende",
+          "word": "Wochenende",
           "partOfSpeech": "",
           "id": 72,
           "romanisation": "",
@@ -1447,7 +1447,7 @@
         {
           "group": "Monate",
           "sortOrder": 1,
-          "word": "der Januar",
+          "word": "Januar",
           "partOfSpeech": "",
           "id": 74,
           "romanisation": "",
@@ -1466,7 +1466,7 @@
         {
           "group": "Monate",
           "sortOrder": 2,
-          "word": "der Februar",
+          "word": "Februar",
           "partOfSpeech": "",
           "id": 75,
           "romanisation": "",
@@ -1485,7 +1485,7 @@
         {
           "group": "Monate",
           "sortOrder": 3,
-          "word": "der März",
+          "word": "März",
           "partOfSpeech": "",
           "id": 76,
           "romanisation": "",
@@ -1504,7 +1504,7 @@
         {
           "group": "Monate",
           "sortOrder": 4,
-          "word": "der April",
+          "word": "April",
           "partOfSpeech": "",
           "id": 77,
           "romanisation": "",
@@ -1523,7 +1523,7 @@
         {
           "group": "Monate",
           "sortOrder": 5,
-          "word": "der Mai",
+          "word": "Mai",
           "partOfSpeech": "",
           "id": 78,
           "romanisation": "",
@@ -1542,7 +1542,7 @@
         {
           "group": "Monate",
           "sortOrder": 6,
-          "word": "der Juni",
+          "word": "Juni",
           "partOfSpeech": "",
           "id": 79,
           "romanisation": "",
@@ -1561,7 +1561,7 @@
         {
           "group": "Monate",
           "sortOrder": 7,
-          "word": "der Juli",
+          "word": "Juli",
           "partOfSpeech": "",
           "id": 80,
           "romanisation": "",
@@ -1580,7 +1580,7 @@
         {
           "group": "Monate",
           "sortOrder": 8,
-          "word": "der August",
+          "word": "August",
           "partOfSpeech": "",
           "id": 81,
           "romanisation": "",
@@ -1599,7 +1599,7 @@
         {
           "group": "Monate",
           "sortOrder": 9,
-          "word": "der September",
+          "word": "September",
           "partOfSpeech": "",
           "id": 82,
           "romanisation": "",
@@ -1618,7 +1618,7 @@
         {
           "group": "Monate",
           "sortOrder": 10,
-          "word": "der Oktober",
+          "word": "Oktober",
           "partOfSpeech": "",
           "id": 83,
           "romanisation": "",
@@ -1637,7 +1637,7 @@
         {
           "group": "Monate",
           "sortOrder": 11,
-          "word": "der November",
+          "word": "November",
           "partOfSpeech": "",
           "id": 84,
           "romanisation": "",
@@ -1656,7 +1656,7 @@
         {
           "group": "Monate",
           "sortOrder": 12,
-          "word": "der Dezember",
+          "word": "Dezember",
           "partOfSpeech": "",
           "id": 85,
           "romanisation": "",
@@ -1682,7 +1682,7 @@
         {
           "group": "Jahreszeiten",
           "sortOrder": 1,
-          "word": "der Frühling",
+          "word": "Frühling",
           "partOfSpeech": "",
           "id": 86,
           "romanisation": "",
@@ -1701,7 +1701,7 @@
         {
           "group": "Jahreszeiten",
           "sortOrder": 2,
-          "word": "der Sommer",
+          "word": "Sommer",
           "partOfSpeech": "",
           "id": 87,
           "romanisation": "",
@@ -1720,7 +1720,7 @@
         {
           "group": "Jahreszeiten",
           "sortOrder": 3,
-          "word": "der Herbst",
+          "word": "Herbst",
           "partOfSpeech": "",
           "id": 88,
           "romanisation": "",
@@ -1739,7 +1739,7 @@
         {
           "group": "Jahreszeiten",
           "sortOrder": 4,
-          "word": "der Winter",
+          "word": "Winter",
           "partOfSpeech": "",
           "id": 89,
           "romanisation": "",
@@ -1765,7 +1765,7 @@
         {
           "group": "Zeit",
           "sortOrder": 1,
-          "word": "die Vergangenheit",
+          "word": "Vergangenheit",
           "partOfSpeech": "",
           "id": 90,
           "romanisation": "",
@@ -1784,7 +1784,7 @@
         {
           "group": "Zeit",
           "sortOrder": 2,
-          "word": "die Gegenwart",
+          "word": "Gegenwart",
           "partOfSpeech": "",
           "id": 91,
           "romanisation": "",
@@ -1803,7 +1803,7 @@
         {
           "group": "Zeit",
           "sortOrder": 3,
-          "word": "die Zukunft",
+          "word": "Zukunft",
           "partOfSpeech": "",
           "id": 92,
           "romanisation": "",
@@ -1822,7 +1822,7 @@
         {
           "group": "Zeit",
           "sortOrder": 4,
-          "word": "der Zeitpunkt",
+          "word": "Zeitpunkt",
           "partOfSpeech": "",
           "id": 93,
           "romanisation": "",
@@ -1841,7 +1841,7 @@
         {
           "group": "Zeit",
           "sortOrder": 5,
-          "word": "der Zeitraum",
+          "word": "Zeitraum",
           "partOfSpeech": "",
           "id": 94,
           "romanisation": "",
@@ -1860,7 +1860,7 @@
         {
           "group": "Zeit",
           "sortOrder": 6,
-          "word": "die Frist",
+          "word": "Frist",
           "partOfSpeech": "",
           "id": 95,
           "romanisation": "",
@@ -1936,7 +1936,7 @@
         {
           "group": "Zeit",
           "sortOrder": 10,
-          "word": "die Verspätung",
+          "word": "Verspätung",
           "partOfSpeech": "",
           "id": 99,
           "romanisation": "",
@@ -2012,7 +2012,7 @@
         {
           "group": "Zeit",
           "sortOrder": 14,
-          "word": "die Ewigkeit",
+          "word": "Ewigkeit",
           "partOfSpeech": "",
           "id": 103,
           "romanisation": "",
@@ -2031,7 +2031,7 @@
         {
           "group": "Zeit",
           "sortOrder": 15,
-          "word": "der Augenblick",
+          "word": "Augenblick",
           "partOfSpeech": "",
           "id": 104,
           "romanisation": "",
@@ -2050,7 +2050,7 @@
         {
           "group": "Zeit",
           "sortOrder": 16,
-          "word": "die Freizeit",
+          "word": "Freizeit",
           "partOfSpeech": "",
           "id": 105,
           "romanisation": "",
@@ -2076,7 +2076,7 @@
         {
           "group": "Farben",
           "sortOrder": 1,
-          "word": "die Farbe",
+          "word": "Farbe",
           "partOfSpeech": "",
           "id": 106,
           "romanisation": "",
@@ -2311,7 +2311,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 1,
-          "word": "die Ernährung",
+          "word": "Ernährung",
           "partOfSpeech": "",
           "id": 118,
           "romanisation": "",
@@ -2330,7 +2330,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 2,
-          "word": "die Zutat",
+          "word": "Zutat",
           "partOfSpeech": "",
           "id": 119,
           "romanisation": "",
@@ -2349,7 +2349,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 3,
-          "word": "das Rezept",
+          "word": "Rezept",
           "partOfSpeech": "",
           "id": 120,
           "romanisation": "",
@@ -2368,7 +2368,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 4,
-          "word": "der Geschmack",
+          "word": "Geschmack",
           "partOfSpeech": "",
           "id": 121,
           "romanisation": "",
@@ -2406,7 +2406,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 6,
-          "word": "die Mahlzeit",
+          "word": "Mahlzeit",
           "partOfSpeech": "",
           "id": 123,
           "romanisation": "",
@@ -2444,7 +2444,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 8,
-          "word": "der Appetit",
+          "word": "Appetit",
           "partOfSpeech": "",
           "id": 125,
           "romanisation": "",
@@ -2482,7 +2482,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 10,
-          "word": "die Portion",
+          "word": "Portion",
           "partOfSpeech": "",
           "id": 127,
           "romanisation": "",
@@ -2539,7 +2539,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 13,
-          "word": "die Lebensmittel",
+          "word": "Lebensmittel",
           "partOfSpeech": "",
           "id": 130,
           "romanisation": "",
@@ -2558,7 +2558,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 14,
-          "word": "der Nachtisch",
+          "word": "Nachtisch",
           "partOfSpeech": "",
           "id": 131,
           "romanisation": "",
@@ -2577,7 +2577,7 @@
         {
           "group": "Essen & Trinken",
           "sortOrder": 15,
-          "word": "das Getränk",
+          "word": "Getränk",
           "partOfSpeech": "",
           "id": 132,
           "romanisation": "",
@@ -2971,7 +2971,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 1,
-          "word": "das Gerät",
+          "word": "Gerät",
           "partOfSpeech": "",
           "id": 152,
           "romanisation": "",
@@ -2990,7 +2990,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 2,
-          "word": "die Waschmaschine",
+          "word": "Waschmaschine",
           "partOfSpeech": "",
           "id": 153,
           "romanisation": "",
@@ -3009,7 +3009,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 3,
-          "word": "der Staubsauger",
+          "word": "Staubsauger",
           "partOfSpeech": "",
           "id": 154,
           "romanisation": "",
@@ -3028,7 +3028,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 4,
-          "word": "die Steckdose",
+          "word": "Steckdose",
           "partOfSpeech": "",
           "id": 155,
           "romanisation": "",
@@ -3047,7 +3047,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 5,
-          "word": "das Werkzeug",
+          "word": "Werkzeug",
           "partOfSpeech": "",
           "id": 156,
           "romanisation": "",
@@ -3066,7 +3066,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 6,
-          "word": "die Anleitung",
+          "word": "Anleitung",
           "partOfSpeech": "",
           "id": 157,
           "romanisation": "",
@@ -3085,7 +3085,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 7,
-          "word": "der Vorhang",
+          "word": "Vorhang",
           "partOfSpeech": "",
           "id": 158,
           "romanisation": "",
@@ -3104,7 +3104,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 8,
-          "word": "der Teppich",
+          "word": "Teppich",
           "partOfSpeech": "",
           "id": 159,
           "romanisation": "",
@@ -3123,7 +3123,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 9,
-          "word": "das Regal",
+          "word": "Regal",
           "partOfSpeech": "",
           "id": 160,
           "romanisation": "",
@@ -3142,7 +3142,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 10,
-          "word": "die Schublade",
+          "word": "Schublade",
           "partOfSpeech": "",
           "id": 161,
           "romanisation": "",
@@ -3161,7 +3161,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 11,
-          "word": "der Mülleimer",
+          "word": "Mülleimer",
           "partOfSpeech": "",
           "id": 162,
           "romanisation": "",
@@ -3180,7 +3180,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 12,
-          "word": "die Glühbirne",
+          "word": "Glühbirne",
           "partOfSpeech": "",
           "id": 163,
           "romanisation": "",
@@ -3199,7 +3199,7 @@
         {
           "group": "Gegenstände & Haushaltsartikel",
           "sortOrder": 13,
-          "word": "das Ladegerät",
+          "word": "Ladegerät",
           "partOfSpeech": "",
           "id": 164,
           "romanisation": "",
