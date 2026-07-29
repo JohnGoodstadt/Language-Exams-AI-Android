@@ -1,7 +1,5 @@
 package com.goodstadt.john.language.exams.screens.Settings
 
-//import com.goodstadt.john.language.exams.data.PremiumStatus
-//import androidx.compose.ui.Alignment
 import androidx.activity.ComponentActivity
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable

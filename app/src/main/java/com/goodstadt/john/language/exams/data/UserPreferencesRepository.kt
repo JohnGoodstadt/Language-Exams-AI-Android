@@ -2,15 +2,12 @@ package com.goodstadt.john.language.exams.data
 
 import android.content.Context
 import android.util.Log
-import androidx.datastore.core.DataStore
-import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.longPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
-import androidx.datastore.preferences.preferencesDataStore
 import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository.PreferenceKeys.HAS_SEEN_VOICE_HELP
 import com.goodstadt.john.language.exams.models.dataStore
@@ -98,9 +95,13 @@ class UserPreferencesRepository @Inject constructor(
         }
 
     val selectedLanguageCodeFlow: Flow<String> = context.dataStore.data
+
+
+
         .map { preferences ->
             // 1. Try to get the user's saved choice.
             // 2. If it's not set, fall back to the default from the build flavor's LanguageConfig.
+
             preferences[PreferenceKeys.SELECTED_LANGUAGE_CODE] ?: LanguageConfig.languageCode
         }
     /**

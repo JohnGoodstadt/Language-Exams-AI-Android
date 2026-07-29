@@ -3,6 +3,7 @@ package com.goodstadt.john.language.exams.config
 // This object in the 'main' source set will be replaced by the flavor-specific one.
 // It can be empty or provide default values.
 object LanguageConfig {
+    val hasDialectSelection: Boolean = false // 👈 Only nglish needs US/UK/AU choice
     val voiceName: String = "de-DE-Neural2-G" //female
     val languageCode: String = "de-DE"
     val defaultFileName: String = "vocab_data_a1"
@@ -21,7 +22,7 @@ object LanguageConfig {
 
         )
 
-    val conjugationOptions = listOf("To Have", "To Be", "To Do", "To Get")
+    val conjugationOptions = listOf("Haben", "Sein", "Machen", "Bekommen")
     fun getConjugationBundleFileName(title: String): String {
         val jsonFileName = when (title) {
             "To Have" -> "conjugations_to_have"

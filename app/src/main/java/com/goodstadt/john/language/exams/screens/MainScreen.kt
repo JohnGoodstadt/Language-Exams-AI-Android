@@ -59,17 +59,18 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.UpdateState
 import com.goodstadt.john.language.exams.navigation.IconResource
 import com.goodstadt.john.language.exams.navigation.Screen
 import com.goodstadt.john.language.exams.navigation.bottomNavItems
 import com.goodstadt.john.language.exams.screens.CategoryTab.CategoryTabScreen
-import com.goodstadt.john.language.exams.screens.diagnostic.DiagnosticScreen
-import com.goodstadt.john.language.exams.screens.me.ChooseEnglishAndExamSheet
 import com.goodstadt.john.language.exams.screens.MeTabContainer.MeTabContainerScreen
-import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.ReadinessAudit.ReadinessAuditScreen
 import com.goodstadt.john.language.exams.screens.ReferenceTabContainer.ReferenceTabContainerScreen
+import com.goodstadt.john.language.exams.screens.diagnostic.DiagnosticScreen
+import com.goodstadt.john.language.exams.screens.me.ChooseEnglishAndExamSheet
+import com.goodstadt.john.language.exams.screens.reference.NavigationViewModel
 import com.goodstadt.john.language.exams.screens.shared.gamification.SideQuestNavTarget
 import com.goodstadt.john.language.exams.ui.theme.DarkSecondary
 import com.goodstadt.john.language.exams.ui.theme.accentColor
@@ -352,7 +353,7 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
         }
     } //: Scaffold
 
-    if (globalUiState.showEnglishChoiceSheet) {
+    if (globalUiState.showEnglishChoiceSheet && LanguageConfig.hasDialectSelection) {
         ModalBottomSheet(
             // An empty lambda makes the sheet non-dismissible by dragging or tapping outside.
             // The user MUST make a choice.
@@ -360,13 +361,16 @@ fun MainAppContent(navController: NavHostController, selectedVoiceName: String) 
             sheetState = sheetState,
             modifier = Modifier.fillMaxHeight(0.80f) //NOTE: if too low then button off screen
         ) {
-
-            ChooseEnglishAndExamSheet(
-                onClose = {
-                    mainViewModel.onEnglishChoiceDismissed()
-                }
-            )
-
+                // Your existing 2-choice sheet (Dialect + Exam Level)
+                ChooseEnglishAndExamSheet(
+                    onClose = { mainViewModel.onLanguageChoiceDismissed() }
+                )
+//            else if ( false ) { //Do I need this as I am testing user to choose?
+//                // The new 1-choice sheet (Exam Level only)
+//                ChooseExamLevelSheet(
+//                    onClose = { mainViewModel.onLanguageChoiceDismissed() }
+//                )
+//            }
         }
     }
 

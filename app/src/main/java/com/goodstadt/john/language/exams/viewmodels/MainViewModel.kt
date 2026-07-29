@@ -1,5 +1,4 @@
 package com.goodstadt.john.language.exams.viewmodels
-import com.goodstadt.john.language.exams.screens.ReadinessAudit.ReadinessAuditLevels
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModel
@@ -9,12 +8,13 @@ import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.data.RecallingItems
-import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.data.UpdateState
 import com.goodstadt.john.language.exams.data.UserPreferencesRepository
 import com.goodstadt.john.language.exams.data.repository.BillingRepository
+import com.goodstadt.john.language.exams.data.repository.TTSStatsRepository
 import com.goodstadt.john.language.exams.managers.GlobalLoadingManager
 import com.goodstadt.john.language.exams.navigation.Screen
+import com.goodstadt.john.language.exams.screens.ReadinessAudit.ReadinessAuditLevels
 import com.goodstadt.john.language.exams.utils.AppLifecycleObserver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
@@ -104,9 +104,12 @@ Fix: Move billingRepository.connect() into its own viewModelScope.launch { } blo
         // 1. Initialize the user session (as before).
         initializeAppSession()
 
+
+
         // 2. Listen for changes to shared preferences.
         viewModelScope.launch {
             userPreferencesRepository.selectedVoiceNameFlow.collect { voiceName ->
+                val a = voiceName
                 _uiState.update { it.copy(selectedVoiceName = voiceName) }
             }
         }
@@ -304,7 +307,7 @@ Fix: Move billingRepository.connect() into its own viewModelScope.launch { } blo
 //        TODO("Not yet implemented")
 //    }
 
-    fun onEnglishChoiceDismissed() {
+    fun onLanguageChoiceDismissed() {
         _uiState.update { it.copy(showEnglishChoiceSheet = false) }
         // Only now that the English-choice sheet has actually closed is it safe to show the
         // Readiness Audit intro sheet - the two must never overlap.

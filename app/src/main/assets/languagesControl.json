@@ -142,6 +142,16 @@
 					"displayName":"German A2",
 					"json":"vocab_data_a2",
 					"skillLevel":"A2"
+				},
+				{
+					"displayName":"German B1",
+					"json":"vocab_data_b1",
+					"skillLevel":"B1"
+				},
+				{
+					"displayName":"German B2",
+					"json":"vocab_data_b2",
+					"skillLevel":"B2"
 				}
 			]
 		},
