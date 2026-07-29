@@ -107,8 +107,8 @@ class UsageDashboardViewModel @Inject constructor(
     }
 
     // Helpers
-    private fun mapStringToEnum(level: String): QuizLevels {
-        return QuizLevels.entries.find { it.description == level } ?: QuizLevels.ELEMENTARY
+    private fun mapStringToEnum(level: String): UsageQuizLevelsFilename {
+        return UsageQuizLevelsFilename.entries.find { it.description == level } ?: UsageQuizLevelsFilename.ELEMENTARY
     }
 
     private fun calculateStars(score: Int): Int {

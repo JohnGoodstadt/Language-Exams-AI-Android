@@ -880,7 +880,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     }
 
     fun doIHaveCurrentQuestionInfo(): Boolean {
-        return if (_questions.value[currentQuestionIndex.value].summary.isNotEmpty()) {
+        return if (_questions.value.isNotEmpty() && _questions.value[currentQuestionIndex.value].summary.isNotEmpty()) {
             true
         } else {
             false

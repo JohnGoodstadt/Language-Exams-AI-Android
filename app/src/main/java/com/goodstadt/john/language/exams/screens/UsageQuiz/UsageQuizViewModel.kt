@@ -95,7 +95,7 @@ data class QuizStatistics(
     fun update(answered: Int, correct: Int, tries: Int) =
         copy(answered = answered, correct = correct, tries = tries)
 }
-enum class QuizLevels(val quizzes: List<QuizDetail>) {
+enum class UsageQuizLevelsFilenameMoved(val quizzes: List<QuizDetail>) {
     ELEMENTARY(
         quizzes = listOf(
             QuizDetail(
@@ -312,9 +312,9 @@ class UsageQuizViewModel @Inject constructor(
     // endregion
 
     val quizStatistics = mutableStateOf(
-        QuizStatistics(skillLevel = QuizLevels.UPPER.description, quizNumber = 1, title = "Quiz 1")
+        QuizStatistics(skillLevel = UsageQuizLevelsFilename.UPPER.description, quizNumber = 1, title = "Quiz 1")
     )
-    val selectedLevel = mutableStateOf(QuizLevels.UPPER)
+    val selectedLevel = mutableStateOf(UsageQuizLevelsFilename.UPPER)
 
     val selectedQuiz = mutableStateOf<QuizDetail?>(null)
 
@@ -334,11 +334,11 @@ class UsageQuizViewModel @Inject constructor(
 
     // ✅ NEW (Dynamic):
     // This starts with the default English titles, but we can overwrite them later
-    private val _availableQuizzes = MutableStateFlow<List<QuizDetail>>(QuizLevels.UPPER.quizzes)
+    private val _availableQuizzes = MutableStateFlow<List<QuizDetail>>(UsageQuizLevelsFilename.UPPER.quizzes)
     val availableQuizzes = _availableQuizzes.asStateFlow()
 
     // 1. The Cache: Maps a Level (e.g. ELEMENTARY) to its list of localized QuizDetails
-    private val quizTitleCache = mutableMapOf<QuizLevels, List<QuizDetail>>()
+    private val quizTitleCache = mutableMapOf<UsageQuizLevelsFilename, List<QuizDetail>>()
     private var infoUsedForCurrentQuestion = false // ✅ Track hint usage for the CURRENT question
 
 //    private val _quizFluency = mutableStateOf(UsageQuizRepository.QuizFluency.NEVER_DONE)
@@ -469,7 +469,7 @@ class UsageQuizViewModel @Inject constructor(
     }
 
     // A new function for the UI to call when a different level is picked.
-    fun onLevelSelected(level: QuizLevels) {
+    fun onLevelSelected(level: UsageQuizLevelsFilename) {
         if (level == selectedLevel.value){
             return // already selected
         }
@@ -727,7 +727,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     }
 
     // Call this whenever the Level changes (e.g. from Elementary to Inter)
-    private fun refreshQuizTitlesForLevel(level: QuizLevels) {
+    private fun refreshQuizTitlesForLevel(level: UsageQuizLevelsFilename) {
         viewModelScope.launch {
 
 
@@ -756,7 +756,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     }
 
 
-    private fun updateAvailableQuizzesFor(level: QuizLevels) {
+    private fun updateAvailableQuizzesFor(level: UsageQuizLevelsFilename) {
         // If cache is ready, use it. If not (still loading), use default English list.
         _availableQuizzes.value = quizTitleCache[level] ?: level.quizzes
     }
@@ -770,7 +770,7 @@ Fix: Always use .copy(): quizStatistics.value = quizStatistics.value.copy(state 
     }
 
     fun doIHaveCurrentQuestionInfo(): Boolean {
-        return if (_questions.value[currentQuestionIndex.value].summary.isNotEmpty()) {
+        return if (_questions.value.isNotEmpty() && _questions.value[currentQuestionIndex.value].summary.isNotEmpty()) {
             true
         } else {
             false

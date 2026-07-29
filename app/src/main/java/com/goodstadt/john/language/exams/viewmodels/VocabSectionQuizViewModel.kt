@@ -1137,7 +1137,7 @@ class VocabSectionQuizViewModel @Inject constructor(
     }
 
     fun doIHaveCurrentQuestionInfo(): Boolean {
-        return if (_questions.value[currentQuestionIndex.value].summary.isNotEmpty()) {
+        return if (_questions.value.isNotEmpty() && _questions.value[currentQuestionIndex.value].summary.isNotEmpty()) {
             true
         } else {
             false

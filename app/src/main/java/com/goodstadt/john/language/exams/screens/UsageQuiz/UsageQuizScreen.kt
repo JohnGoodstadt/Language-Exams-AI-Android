@@ -1,9 +1,11 @@
 package com.goodstadt.john.language.exams.screens.UsageQuiz
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,8 +18,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
@@ -54,6 +58,7 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInWindow
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
@@ -68,22 +73,17 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
+import com.goodstadt.john.language.exams.screens.reference.QuizInfoBottomSheetView
+import com.goodstadt.john.language.exams.screens.reference.UsageDashboardScreen
 import com.goodstadt.john.language.exams.screens.reference.shared.HorizontalLevelPicker
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.models.UsageMastery
-import androidx.compose.animation.animateContentSize
-import androidx.compose.foundation.horizontalScroll
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.ui.platform.LocalConfiguration
-import com.goodstadt.john.language.exams.screens.reference.QuizInfoBottomSheetView
-import com.goodstadt.john.language.exams.screens.reference.UsageDashboardScreen
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 
 
@@ -159,13 +159,13 @@ fun UsageQuizScreen(
     ) {
         // Use full labels on wider screens (≥ 380dp), short on small devices
         val useFullLabels = LocalConfiguration.current.screenWidthDp >= 380
-        val labelFor: (QuizLevels) -> String = { if (useFullLabels) it.description else it.shortLabel }
+        val labelFor: (UsageQuizLevelsFilename) -> String = { if (useFullLabels) it.description else it.shortLabel }
 
         HorizontalLevelPicker(
-            options = QuizLevels.entries.map { labelFor(it) },
+            options = UsageQuizLevelsFilename.entries.map { labelFor(it) },
             selectedOption = labelFor(selectedLevel),
             onOptionSelected = { newLabel ->
-                val level = QuizLevels.entries.first { labelFor(it) == newLabel }
+                val level = UsageQuizLevelsFilename.entries.first { labelFor(it) == newLabel }
                 if (level != selectedLevel){
                     viewModel.onLevelSelected(level)
                     viewModel.loadQuestions()
