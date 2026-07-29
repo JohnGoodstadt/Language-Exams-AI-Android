@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.goodstadt.john.language.exams.BuildConfig
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.data.AuthRepository
 import com.goodstadt.john.language.exams.data.ConnectivityRepository
 import com.goodstadt.john.language.exams.data.ControlRepository
@@ -406,7 +407,8 @@ class SettingsViewModel @Inject constructor(
         Timber.d("Voice selected: ${voice.friendlyName} google: ${voice.id}")
 
         viewModelScope.launch {
-            val sentence = "Hello, I'm ${voice.friendlyName}. Welcome to 'English Exam Words'."
+            val sentenceOld = "Hello, I'm ${voice.friendlyName}. Welcome to 'English Exam Words'."
+            val sentence = context.getString(R.string.welcome_greeting, voice.friendlyName)
             playTrack(sentence, voice.id)
         }
     }

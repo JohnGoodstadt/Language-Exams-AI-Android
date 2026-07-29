@@ -64,6 +64,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.goodstadt.john.language.exams.BuildConfig.DEBUG
+import com.goodstadt.john.language.exams.config.LanguageConfig
 import com.goodstadt.john.language.exams.data.Gender
 import com.goodstadt.john.language.exams.models.ExamDetails
 import com.goodstadt.john.language.exams.models.LanguageCodeDetails
@@ -658,13 +659,15 @@ fun SettingsScreen(
         contentPadding = PaddingValues(vertical = 16.dp)
     ) {
         item { SectionHeader("Voice & Exam") }
-        item {
-            SettingsActionItem(
-                icon = Icons.Default.RecordVoiceOver,
-                title = "Change English",
-                currentValue = uiState.currentLanguage,
-                onClick = { viewModel.onSettingClicked(SheetContent.LanguageSelection) }
-            )
+        if (LanguageConfig.showLanguageSelectionSetting) {
+            item {
+                SettingsActionItem(
+                    icon = Icons.Default.RecordVoiceOver,
+                    title = "Change English",
+                    currentValue = uiState.currentLanguage,
+                    onClick = { viewModel.onSettingClicked(SheetContent.LanguageSelection) }
+                )
+            }
         }
         item {
             SettingsActionItem(
