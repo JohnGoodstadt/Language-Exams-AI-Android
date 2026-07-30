@@ -1,0 +1,281 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNumbers4-de",
+	"title": "Numbers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "neun",
+					"summary": "die Zahl 9",
+					"explain": {
+						"entryId": "neun",
+						"headword": "neun",
+						"pronunciation": {
+							"display": "noyn",
+							"ipaUK": "/nɔɪ̯n/",
+							"ipaUS": "/nɔɪ̯n/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "neun",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 9",
+										"examples": [
+											"Das Geschäft öffnet um neun Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Geschäft öffnet um neun Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Das Geschäft öffnet um neunte Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Das Geschäft um neun Uhr öffnet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "neunzig",
+					"summary": "die Zahl 90",
+					"explain": {
+						"entryId": "neunzig",
+						"headword": "neunzig",
+						"pronunciation": {
+							"display": "NOYN-tsikh",
+							"ipaUK": "/ˈnɔɪ̯ntsɪç/",
+							"ipaUS": "/ˈnɔɪ̯ntsɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "neunzig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 90",
+										"examples": [
+											"Der Test hat neunzig Fragen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Test hat neunzig Fragen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Test hat neunzigste Fragen.",
+							"ok": false
+						},
+						{
+							"answer": "Der Test neunzig Fragen hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "neunhundertneunundneunzig",
+					"summary": "die Zahl 999",
+					"explain": {
+						"entryId": "neunhundertneunundneunzig",
+						"headword": "neunhundertneunundneunzig",
+						"pronunciation": {
+							"display": "noyn-HOON-dert-noyn-oont-NOYN-tsikh",
+							"ipaUK": "/ˌnɔɪ̯nhʊndɐtˌnɔɪ̯nʊntˈnɔɪ̯ntsɪç/",
+							"ipaUS": "/ˌnɔɪ̯nhʊndɐtˌnɔɪ̯nʊntˈnɔɪ̯ntsɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "neunhundertneunundneunzig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 999",
+										"examples": [
+											"Das Handy kostet neunhundertneunundneunzig Euro."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Handy kostet neunhundertneunundneunzig Euro.",
+							"ok": true
+						},
+						{
+							"answer": "Das Handy kostet neunhundertneunzigundneun Euro.",
+							"ok": false
+						},
+						{
+							"answer": "Das Handy neunhundertneunundneunzig Euro kostet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "zehn",
+					"summary": "die Zahl 10",
+					"explain": {
+						"entryId": "zehn",
+						"headword": "zehn",
+						"pronunciation": {
+							"display": "tsayn",
+							"ipaUK": "/tseːn/",
+							"ipaUS": "/tseːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "zehn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 10",
+										"examples": [
+											"Ich habe zehn Finger."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe zehn Finger.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe zehnte Finger.",
+							"ok": false
+						},
+						{
+							"answer": "Ich zehn Finger habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "eins",
+					"summary": "die Zahl 1",
+					"explain": {
+						"entryId": "eins",
+						"headword": "eins",
+						"pronunciation": {
+							"display": "ynce",
+							"ipaUK": "/aɪ̯ns/",
+							"ipaUS": "/aɪ̯ns/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "eins",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 1",
+										"examples": [
+											"Ich wohne in Zimmer eins."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich wohne in Zimmer eins.",
+							"ok": true
+						},
+						{
+							"answer": "Ich wohne in Zimmer erste.",
+							"ok": false
+						},
+						{
+							"answer": "Ich in Zimmer eins wohne.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

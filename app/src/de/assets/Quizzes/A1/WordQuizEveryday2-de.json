@@ -1,0 +1,553 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEveryday2-de",
+	"title": "Everyday",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Gabel",
+					"summary": "man isst damit",
+					"explain": {
+						"entryId": "Gabel",
+						"headword": "Gabel",
+						"pronunciation": {
+							"display": "GAH-bl",
+							"ipaUK": "/ˈɡaːbl̩/",
+							"ipaUS": "/ˈɡaːbl̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gabel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "man isst damit; sie hat mehrere Zinken",
+										"examples": [
+											"Ich esse mit der Gabel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich esse mit der Gabel.",
+							"ok": true
+						},
+						{
+							"answer": "Ich esse mit dem Gabel.",
+							"ok": false
+						},
+						{
+							"answer": "Ich esse mit der Gabeln.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Hut",
+					"summary": "man trägt ihn auf dem Kopf",
+					"explain": {
+						"entryId": "Hut",
+						"headword": "Hut",
+						"pronunciation": {
+							"display": "hoot",
+							"ipaUK": "/huːt/",
+							"ipaUS": "/huːt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hut",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "man trägt ihn auf dem Kopf",
+										"examples": [
+											"Der Hut ist zu groß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Hut ist zu groß.",
+							"ok": true
+						},
+						{
+							"answer": "Die Hut ist zu groß.",
+							"ok": false
+						},
+						{
+							"answer": "Der Hut zu groß ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Kopfhörer",
+					"summary": "damit hört man Musik",
+					"explain": {
+						"entryId": "Kopfhörer",
+						"headword": "Kopfhörer",
+						"pronunciation": {
+							"display": "KOPF-hö-ruh",
+							"ipaUK": "/ˈkɔpfˌhøːʁɐ/",
+							"ipaUS": "/ˈkɔpfˌhøːʁɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kopfhörer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damit hört man Musik über die Ohren",
+										"examples": [
+											"Ich höre Musik mit dem Kopfhörer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich höre Musik mit dem Kopfhörer.",
+							"ok": true
+						},
+						{
+							"answer": "Ich höre Musik mit der Kopfhörer.",
+							"ok": false
+						},
+						{
+							"answer": "Ich höre Musik mit dem Kopfhörern.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Schlüssel",
+					"summary": "damit öffnet man eine Tür",
+					"explain": {
+						"entryId": "Schlüssel",
+						"headword": "Schlüssel",
+						"pronunciation": {
+							"display": "SHLÜ-sl",
+							"ipaUK": "/ˈʃlʏsl̩/",
+							"ipaUS": "/ˈʃlʏsl̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Schlüssel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damit öffnet man eine Tür",
+										"examples": [
+											"Wo ist mein Schlüssel?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wo ist mein Schlüssel?",
+							"ok": true
+						},
+						{
+							"answer": "Wo ist meine Schlüssel?",
+							"ok": false
+						},
+						{
+							"answer": "Wo mein Schlüssel ist?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Messer",
+					"summary": "damit schneidet man",
+					"explain": {
+						"entryId": "Messer",
+						"headword": "Messer",
+						"pronunciation": {
+							"display": "MES-uh",
+							"ipaUK": "/ˈmɛsɐ/",
+							"ipaUS": "/ˈmɛsɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Messer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damit schneidet man",
+										"examples": [
+											"Das Messer ist scharf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Messer ist scharf.",
+							"ok": true
+						},
+						{
+							"answer": "Der Messer ist scharf.",
+							"ok": false
+						},
+						{
+							"answer": "Das Messer scharf ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Handy",
+					"summary": "ein Telefon für unterwegs",
+					"explain": {
+						"entryId": "Handy",
+						"headword": "Handy",
+						"pronunciation": {
+							"display": "HEN-dee",
+							"ipaUK": "/ˈhɛndi/",
+							"ipaUS": "/ˈhɛndi/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Handy",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Smartphone"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein kleines Telefon für unterwegs",
+										"examples": [
+											"Mein Handy ist kaputt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Handy ist kaputt.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Handy ist kaputt.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Handy kaputt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Reisepass",
+					"summary": "ein Dokument für Auslandsreisen",
+					"explain": {
+						"entryId": "Reisepass",
+						"headword": "Reisepass",
+						"pronunciation": {
+							"display": "RY-zuh-pas",
+							"ipaUK": "/ˈʁaɪ̯zəpas/",
+							"ipaUS": "/ˈʁaɪ̯zəpas/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reisepass",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Pass"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Dokument für Reisen ins Ausland",
+										"examples": [
+											"Ich zeige meinen Reisepass."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich zeige meinen Reisepass.",
+							"ok": true
+						},
+						{
+							"answer": "Ich zeige meine Reisepass.",
+							"ok": false
+						},
+						{
+							"answer": "Ich zeige meinen Reisepässe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Stift",
+					"summary": "damit schreibt man",
+					"explain": {
+						"entryId": "Stift",
+						"headword": "Stift",
+						"pronunciation": {
+							"display": "shtift",
+							"ipaUK": "/ʃtɪft/",
+							"ipaUS": "/ʃtɪft/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Stift",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Kugelschreiber",
+									"Kuli"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damit schreibt oder malt man",
+										"examples": [
+											"Ich schreibe mit einem Stift."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schreibe mit einem Stift.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schreibe mit einer Stift.",
+							"ok": false
+						},
+						{
+							"answer": "Ich schreibe mit einem Stifte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Telefon",
+					"summary": "damit spricht man mit anderen",
+					"explain": {
+						"entryId": "Telefon",
+						"headword": "Telefon",
+						"pronunciation": {
+							"display": "TAY-luh-fohn",
+							"ipaUK": "/ˈteːləfoːn/",
+							"ipaUS": "/ˈteːləfoːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Telefon",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damit spricht man mit anderen",
+										"examples": [
+											"Das Telefon klingelt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Telefon klingelt.",
+							"ok": true
+						},
+						{
+							"answer": "Der Telefon klingelt.",
+							"ok": false
+						},
+						{
+							"answer": "Das Telefon klingelt es.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Teller",
+					"summary": "davon isst man",
+					"explain": {
+						"entryId": "Teller",
+						"headword": "Teller",
+						"pronunciation": {
+							"display": "TEL-uh",
+							"ipaUK": "/ˈtɛlɐ/",
+							"ipaUS": "/ˈtɛlɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Teller",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "davon isst man; er ist flach und rund",
+										"examples": [
+											"Der Teller ist voll."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Teller ist voll.",
+							"ok": true
+						},
+						{
+							"answer": "Das Teller ist voll.",
+							"ok": false
+						},
+						{
+							"answer": "Der Teller voll ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

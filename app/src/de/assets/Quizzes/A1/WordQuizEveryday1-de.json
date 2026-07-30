@@ -1,0 +1,550 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEveryday1-de",
+	"title": "Everyday",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Rucksack",
+					"summary": "eine Tasche für den Rücken",
+					"explain": {
+						"entryId": "Rucksack",
+						"headword": "Rucksack",
+						"pronunciation": {
+							"display": "ROOK-zak",
+							"ipaUK": "/ˈʁʊkzak/",
+							"ipaUS": "/ˈʁʊkzak/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rucksack",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Tasche, die man auf dem Rücken trägt",
+										"examples": [
+											"Der Rucksack ist schwer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Rucksack ist schwer.",
+							"ok": true
+						},
+						{
+							"answer": "Die Rucksack ist schwer.",
+							"ok": false
+						},
+						{
+							"answer": "Der Rucksack schwer ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Tasche",
+					"summary": "man trägt darin Dinge",
+					"explain": {
+						"entryId": "Tasche",
+						"headword": "Tasche",
+						"pronunciation": {
+							"display": "TAH-shuh",
+							"ipaUK": "/ˈtaʃə/",
+							"ipaUS": "/ˈtaʃə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tasche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "darin trägt man Dinge; man hält sie in der Hand",
+										"examples": [
+											"Die Tasche ist neu."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Tasche ist neu.",
+							"ok": true
+						},
+						{
+							"answer": "Der Tasche ist neu.",
+							"ok": false
+						},
+						{
+							"answer": "Die Tasche neu ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Bett",
+					"summary": "darin schläft man",
+					"explain": {
+						"entryId": "Bett",
+						"headword": "Bett",
+						"pronunciation": {
+							"display": "bet",
+							"ipaUK": "/bɛt/",
+							"ipaUS": "/bɛt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bett",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Möbel, in dem man schläft",
+										"examples": [
+											"Das Bett ist sehr bequem."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Bett ist sehr bequem.",
+							"ok": true
+						},
+						{
+							"answer": "Der Bett ist sehr bequem.",
+							"ok": false
+						},
+						{
+							"answer": "Das Bett bequem ist sehr.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Fahrrad",
+					"summary": "ein Fahrzeug mit zwei Rädern",
+					"explain": {
+						"entryId": "Fahrrad",
+						"headword": "Fahrrad",
+						"pronunciation": {
+							"display": "FAR-raht",
+							"ipaUK": "/ˈfaːɐ̯ʁaːt/",
+							"ipaUS": "/ˈfaːɐ̯ʁaːt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fahrrad",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Rad"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Fahrzeug mit zwei Rädern",
+										"examples": [
+											"Ich fahre mit dem Fahrrad."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich fahre mit dem Fahrrad.",
+							"ok": true
+						},
+						{
+							"answer": "Ich fahre mit der Fahrrad.",
+							"ok": false
+						},
+						{
+							"answer": "Ich fahre mit dem Fahrräder.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Buch",
+					"summary": "man liest es",
+					"explain": {
+						"entryId": "Buch",
+						"headword": "Buch",
+						"pronunciation": {
+							"display": "bookh",
+							"ipaUK": "/buːx/",
+							"ipaUS": "/buːx/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Buch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "man liest es; es hat viele Seiten",
+										"examples": [
+											"Das Buch liegt auf dem Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Buch liegt auf dem Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Der Buch liegt auf dem Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Das Buch auf dem Tisch liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Flasche",
+					"summary": "darin ist ein Getränk",
+					"explain": {
+						"entryId": "Flasche",
+						"headword": "Flasche",
+						"pronunciation": {
+							"display": "FLA-shuh",
+							"ipaUK": "/ˈflaʃə/",
+							"ipaUS": "/ˈflaʃə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Flasche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "darin ist meist ein Getränk",
+										"examples": [
+											"Die Flasche ist leer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Flasche ist leer.",
+							"ok": true
+						},
+						{
+							"answer": "Der Flasche ist leer.",
+							"ok": false
+						},
+						{
+							"answer": "Die Flasche leer ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Stuhl",
+					"summary": "darauf sitzt man",
+					"explain": {
+						"entryId": "Stuhl",
+						"headword": "Stuhl",
+						"pronunciation": {
+							"display": "shtool",
+							"ipaUK": "/ʃtuːl/",
+							"ipaUS": "/ʃtuːl/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Stuhl",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Möbel, auf dem man sitzt",
+										"examples": [
+											"Der Stuhl ist bequem."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Stuhl ist bequem.",
+							"ok": true
+						},
+						{
+							"answer": "Das Stuhl ist bequem.",
+							"ok": false
+						},
+						{
+							"answer": "Der Stuhl bequem ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Uhr",
+					"summary": "sie zeigt die Zeit",
+					"explain": {
+						"entryId": "Uhr",
+						"headword": "Uhr",
+						"pronunciation": {
+							"display": "oor",
+							"ipaUK": "/uːɐ̯/",
+							"ipaUS": "/uːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Uhr",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sie zeigt die Zeit",
+										"examples": [
+											"Die Uhr hängt an der Wand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Uhr hängt an der Wand.",
+							"ok": true
+						},
+						{
+							"answer": "Der Uhr hängt an der Wand.",
+							"ok": false
+						},
+						{
+							"answer": "Die Uhr an der Wand hängt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Computer",
+					"summary": "ein Gerät zum Arbeiten",
+					"explain": {
+						"entryId": "Computer",
+						"headword": "Computer",
+						"pronunciation": {
+							"display": "kom-PYOO-tuh",
+							"ipaUK": "/kɔmˈpjuːtɐ/",
+							"ipaUS": "/kɔmˈpjuːtɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Computer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Rechner"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gerät zum Arbeiten und Spielen",
+										"examples": [
+											"Der Computer ist schnell."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Computer ist schnell.",
+							"ok": true
+						},
+						{
+							"answer": "Die Computer ist schnell.",
+							"ok": false
+						},
+						{
+							"answer": "Der Computer schnell ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Tasse",
+					"summary": "daraus trinkt man Kaffee oder Tee",
+					"explain": {
+						"entryId": "Tasse",
+						"headword": "Tasse",
+						"pronunciation": {
+							"display": "TA-suh",
+							"ipaUK": "/ˈtasə/",
+							"ipaUS": "/ˈtasə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tasse",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "daraus trinkt man Kaffee oder Tee",
+										"examples": [
+											"Ich trinke eine Tasse Kaffee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich trinke eine Tasse Kaffee.",
+							"ok": true
+						},
+						{
+							"answer": "Ich trinke einen Tasse Kaffee.",
+							"ok": false
+						},
+						{
+							"answer": "Ich trinke eine Tassen Kaffee.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

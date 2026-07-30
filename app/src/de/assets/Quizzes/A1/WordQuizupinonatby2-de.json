@@ -1,0 +1,440 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizupinonatby2-de",
+	"title": "Prepositions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "aus",
+					"summary": "aus etwas heraus (+ Dativ)",
+					"explain": {
+						"entryId": "aus",
+						"headword": "aus",
+						"pronunciation": {
+							"display": "owss",
+							"ipaUK": "/aʊ̯s/",
+							"ipaUS": "/aʊ̯s/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "aus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "aus einem Raum oder Land heraus (+ Dativ)",
+										"examples": [
+											"Der Hund kommt aus der Küche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Hund kommt aus der Küche.",
+							"ok": true
+						},
+						{
+							"answer": "Der Hund kommt von der Küche.",
+							"ok": false
+						},
+						{
+							"answer": "Der Hund kommt aus die Küche.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "über",
+					"summary": "oberhalb von etwas",
+					"explain": {
+						"entryId": "über",
+						"headword": "über",
+						"pronunciation": {
+							"display": "Ü-buh",
+							"ipaUK": "/ˈyːbɐ/",
+							"ipaUS": "/ˈyːbɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "über",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "höher als etwas; oberhalb",
+										"examples": [
+											"Die Lampe hängt über dem Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Lampe hängt über dem Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lampe hängt auf dem Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Die Lampe hängt über den Tisch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "unter",
+					"summary": "unterhalb von etwas",
+					"explain": {
+						"entryId": "unter",
+						"headword": "unter",
+						"pronunciation": {
+							"display": "OON-tuh",
+							"ipaUK": "/ˈʊntɐ/",
+							"ipaUS": "/ˈʊntɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "unter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "tiefer als etwas; unterhalb",
+										"examples": [
+											"Die Katze liegt unter dem Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Katze liegt unter dem Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Katze liegt auf dem Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Die Katze liegt unter den Tisch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "neben",
+					"summary": "an der Seite von etwas",
+					"explain": {
+						"entryId": "neben",
+						"headword": "neben",
+						"pronunciation": {
+							"display": "NAY-bn",
+							"ipaUK": "/ˈneːbn̩/",
+							"ipaUS": "/ˈneːbn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "neben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "direkt an der Seite von etwas (+ Dativ)",
+										"examples": [
+											"Die Bank steht neben der Post."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Bank steht neben der Post.",
+							"ok": true
+						},
+						{
+							"answer": "Die Bank steht unter der Post.",
+							"ok": false
+						},
+						{
+							"answer": "Die Bank steht neben die Post.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "hinter",
+					"summary": "auf der Rückseite von etwas",
+					"explain": {
+						"entryId": "hinter",
+						"headword": "hinter",
+						"pronunciation": {
+							"display": "HIN-tuh",
+							"ipaUK": "/ˈhɪntɐ/",
+							"ipaUS": "/ˈhɪntɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "hinter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "auf der Rückseite von etwas (+ Dativ)",
+										"examples": [
+											"Der Garten ist hinter dem Haus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Garten ist hinter dem Haus.",
+							"ok": true
+						},
+						{
+							"answer": "Der Garten ist über dem Haus.",
+							"ok": false
+						},
+						{
+							"answer": "Der Garten ist hinter das Haus.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "zwischen",
+					"summary": "in der Mitte von zwei Dingen",
+					"explain": {
+						"entryId": "zwischen",
+						"headword": "zwischen",
+						"pronunciation": {
+							"display": "TSVI-shn",
+							"ipaUK": "/ˈtsvɪʃn̩/",
+							"ipaUS": "/ˈtsvɪʃn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "zwischen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in der Mitte von zwei Dingen (+ Dativ)",
+										"examples": [
+											"Das Café ist zwischen der Bank und der Post."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Café ist zwischen der Bank und der Post.",
+							"ok": true
+						},
+						{
+							"answer": "Das Café ist neben der Bank und der Post.",
+							"ok": false
+						},
+						{
+							"answer": "Das Café ist zwischen die Bank und die Post.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "ohne",
+					"summary": "ohne etwas (+ Akkusativ)",
+					"explain": {
+						"entryId": "ohne",
+						"headword": "ohne",
+						"pronunciation": {
+							"display": "OH-nuh",
+							"ipaUK": "/ˈoːnə/",
+							"ipaUS": "/ˈoːnə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "ohne",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas fehlt; nicht mit etwas (+ Akkusativ)",
+										"examples": [
+											"Er geht ohne seine Jacke."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er geht ohne seine Jacke.",
+							"ok": true
+						},
+						{
+							"answer": "Er geht aus seine Jacke.",
+							"ok": false
+						},
+						{
+							"answer": "Er geht ohne seiner Jacke.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "um",
+					"summary": "bei Uhrzeiten (um … Uhr)",
+					"explain": {
+						"entryId": "um",
+						"headword": "um",
+						"pronunciation": {
+							"display": "oom",
+							"ipaUK": "/ʊm/",
+							"ipaUS": "/ʊm/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "um",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "bei Uhrzeiten; rund um etwas (+ Akkusativ)",
+										"examples": [
+											"Der Film beginnt um acht Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Film beginnt um acht Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Der Film beginnt an acht Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Der Film um acht Uhr beginnt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

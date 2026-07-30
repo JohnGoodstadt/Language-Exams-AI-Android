@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizupinonatby1-de",
+	"title": "Prepositions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "in",
+					"summary": "innerhalb von etwas (+ Dativ)",
+					"explain": {
+						"entryId": "in",
+						"headword": "in",
+						"pronunciation": {
+							"display": "in",
+							"ipaUK": "/ɪn/",
+							"ipaUS": "/ɪn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "in",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "innerhalb von etwas (Wo? + Dativ)",
+										"examples": [
+											"Das Buch ist in der Tasche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Buch ist in der Tasche.",
+							"ok": true
+						},
+						{
+							"answer": "Das Buch ist an der Tasche.",
+							"ok": false
+						},
+						{
+							"answer": "Das Buch ist in die Tasche.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "an",
+					"summary": "direkt an etwas",
+					"explain": {
+						"entryId": "an",
+						"headword": "an",
+						"pronunciation": {
+							"display": "an",
+							"ipaUK": "/an/",
+							"ipaUS": "/an/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "an",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "direkt bei etwas; an einer senkrechten Fläche",
+										"examples": [
+											"Das Bild hängt an der Wand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Bild hängt an der Wand.",
+							"ok": true
+						},
+						{
+							"answer": "Das Bild hängt auf der Wand.",
+							"ok": false
+						},
+						{
+							"answer": "Das Bild hängt an die Wand.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "auf",
+					"summary": "oben auf einer Fläche",
+					"explain": {
+						"entryId": "auf",
+						"headword": "auf",
+						"pronunciation": {
+							"display": "owf",
+							"ipaUK": "/aʊ̯f/",
+							"ipaUS": "/aʊ̯f/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "auf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "oben auf einer Fläche",
+										"examples": [
+											"Das Glas steht auf dem Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Glas steht auf dem Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Das Glas steht an dem Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Das Glas steht auf den Tisch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "mit",
+					"summary": "zusammen mit (+ Dativ)",
+					"explain": {
+						"entryId": "mit",
+						"headword": "mit",
+						"pronunciation": {
+							"display": "mit",
+							"ipaUK": "/mɪt/",
+							"ipaUS": "/mɪt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "mit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zusammen mit; mit einem Mittel (+ Dativ)",
+										"examples": [
+											"Ich fahre mit dem Bus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich fahre mit dem Bus.",
+							"ok": true
+						},
+						{
+							"answer": "Ich fahre bei dem Bus.",
+							"ok": false
+						},
+						{
+							"answer": "Ich fahre mit den Bus.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "für",
+					"summary": "für jemanden (+ Akkusativ)",
+					"explain": {
+						"entryId": "für",
+						"headword": "für",
+						"pronunciation": {
+							"display": "für",
+							"ipaUK": "/fyːɐ̯/",
+							"ipaUS": "/fyːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "für",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "für eine Person oder einen Zweck (+ Akkusativ)",
+										"examples": [
+											"Das Geschenk ist für dich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Geschenk ist für dich.",
+							"ok": true
+						},
+						{
+							"answer": "Das Geschenk ist zu dich.",
+							"ok": false
+						},
+						{
+							"answer": "Das Geschenk ist für dir.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "von",
+					"summary": "von einem Ort weg (+ Dativ)",
+					"explain": {
+						"entryId": "von",
+						"headword": "von",
+						"pronunciation": {
+							"display": "fon",
+							"ipaUK": "/fɔn/",
+							"ipaUS": "/fɔn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "von",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "von einem Ort weg; von jemandem (+ Dativ)",
+										"examples": [
+											"Ich komme gerade von der Arbeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich komme gerade von der Arbeit.",
+							"ok": true
+						},
+						{
+							"answer": "Ich komme gerade zu der Arbeit.",
+							"ok": false
+						},
+						{
+							"answer": "Ich komme gerade von die Arbeit.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "nach",
+					"summary": "danach; Richtung (+ Dativ)",
+					"explain": {
+						"entryId": "nach",
+						"headword": "nach",
+						"pronunciation": {
+							"display": "nakh",
+							"ipaUK": "/naːx/",
+							"ipaUS": "/naːx/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "nach",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zeitlich danach; Richtung zu einem Ort (+ Dativ)",
+										"examples": [
+											"Nach dem Essen trinke ich Tee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Essen trinke ich Tee.",
+							"ok": true
+						},
+						{
+							"answer": "Zu dem Essen trinke ich Tee.",
+							"ok": false
+						},
+						{
+							"answer": "Nach das Essen trinke ich Tee.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "vor",
+					"summary": "davor (räumlich/zeitlich)",
+					"explain": {
+						"entryId": "vor",
+						"headword": "vor",
+						"pronunciation": {
+							"display": "for",
+							"ipaUK": "/foːɐ̯/",
+							"ipaUS": "/foːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "vor",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "räumlich davor; zeitlich früher (+ Dativ)",
+										"examples": [
+											"Wir treffen uns vor dem Kino."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir treffen uns vor dem Kino.",
+							"ok": true
+						},
+						{
+							"answer": "Wir treffen uns vor das Kino.",
+							"ok": false
+						},
+						{
+							"answer": "Wir uns vor dem Kino treffen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "bei",
+					"summary": "bei jemandem (+ Dativ)",
+					"explain": {
+						"entryId": "bei",
+						"headword": "bei",
+						"pronunciation": {
+							"display": "by",
+							"ipaUK": "/baɪ̯/",
+							"ipaUS": "/baɪ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "bei",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in der Nähe von; im Haus von jemandem (+ Dativ)",
+										"examples": [
+											"Ich wohne bei meinen Eltern."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich wohne bei meinen Eltern.",
+							"ok": true
+						},
+						{
+							"answer": "Ich wohne an meinen Eltern.",
+							"ok": false
+						},
+						{
+							"answer": "Ich wohne bei meine Eltern.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "zu",
+					"summary": "Richtung zu jemandem (+ Dativ)",
+					"explain": {
+						"entryId": "zu",
+						"headword": "zu",
+						"pronunciation": {
+							"display": "tsoo",
+							"ipaUK": "/tsuː/",
+							"ipaUS": "/tsuː/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition",
+								"headwordLine": "zu",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Richtung zu einer Person oder einem Ort (+ Dativ)",
+										"examples": [
+											"Ich gehe zu meiner Freundin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich gehe zu meiner Freundin.",
+							"ok": true
+						},
+						{
+							"answer": "Ich gehe nach meiner Freundin.",
+							"ok": false
+						},
+						{
+							"answer": "Ich gehe zu meine Freundin.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,339 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEveryday3-de",
+	"title": "Everyday",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Löffel",
+					"summary": "damit isst man Suppe",
+					"explain": {
+						"entryId": "Löffel",
+						"headword": "Löffel",
+						"pronunciation": {
+							"display": "LÖ-fl",
+							"ipaUK": "/ˈlœfl̩/",
+							"ipaUS": "/ˈlœfl̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Löffel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damit isst man Suppe",
+										"examples": [
+											"Ich esse die Suppe mit dem Löffel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich esse die Suppe mit dem Löffel.",
+							"ok": true
+						},
+						{
+							"answer": "Ich esse die Suppe mit der Löffel.",
+							"ok": false
+						},
+						{
+							"answer": "Ich esse die Suppe mit dem Löffeln.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Tisch",
+					"summary": "ein Möbel mit Platte und Beinen",
+					"explain": {
+						"entryId": "Tisch",
+						"headword": "Tisch",
+						"pronunciation": {
+							"display": "tish",
+							"ipaUK": "/tɪʃ/",
+							"ipaUS": "/tɪʃ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Möbel mit einer Platte und Beinen",
+										"examples": [
+											"Das Essen steht auf dem Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Essen steht auf dem Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Das Essen steht auf der Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Das Essen auf dem Tisch steht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Fernseher",
+					"summary": "darauf sieht man Filme",
+					"explain": {
+						"entryId": "Fernseher",
+						"headword": "Fernseher",
+						"pronunciation": {
+							"display": "FERN-zay-uh",
+							"ipaUK": "/ˈfɛʁnˌzeːɐ/",
+							"ipaUS": "/ˈfɛʁnˌzeːɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fernseher",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "darauf sieht man Filme und Nachrichten",
+										"examples": [
+											"Der Fernseher ist neu."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Fernseher ist neu.",
+							"ok": true
+						},
+						{
+							"answer": "Das Fernseher ist neu.",
+							"ok": false
+						},
+						{
+							"answer": "Der Fernseher neu ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Regenschirm",
+					"summary": "er schützt vor Regen",
+					"explain": {
+						"entryId": "Regenschirm",
+						"headword": "Regenschirm",
+						"pronunciation": {
+							"display": "RAY-gn-shirm",
+							"ipaUK": "/ˈʁeːɡn̩ˌʃɪʁm/",
+							"ipaUS": "/ˈʁeːɡn̩ˌʃɪʁm/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Regenschirm",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Schirm"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "er schützt vor Regen",
+										"examples": [
+											"Bei Regen brauche ich einen Regenschirm."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bei Regen brauche ich einen Regenschirm.",
+							"ok": true
+						},
+						{
+							"answer": "Bei Regen brauche ich eine Regenschirm.",
+							"ok": false
+						},
+						{
+							"answer": "Bei Regen ich brauche einen Regenschirm.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Geldbeutel",
+					"summary": "darin ist das Geld",
+					"explain": {
+						"entryId": "Geldbeutel",
+						"headword": "Geldbeutel",
+						"pronunciation": {
+							"display": "GELT-boy-tl",
+							"ipaUK": "/ˈɡɛltˌbɔɪ̯tl̩/",
+							"ipaUS": "/ˈɡɛltˌbɔɪ̯tl̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Geldbeutel",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Portemonnaie",
+									"Brieftasche"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "darin hat man sein Geld",
+										"examples": [
+											"Mein Geldbeutel ist leer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Geldbeutel ist leer.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Geldbeutel ist leer.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Geldbeutel leer ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Armbanduhr",
+					"summary": "eine Uhr für den Arm",
+					"explain": {
+						"entryId": "Armbanduhr",
+						"headword": "Armbanduhr",
+						"pronunciation": {
+							"display": "ARM-bant-oor",
+							"ipaUK": "/ˈaʁmbantˌʔuːɐ̯/",
+							"ipaUS": "/ˈaʁmbantˌʔuːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Armbanduhr",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Uhr, die man am Arm trägt",
+										"examples": [
+											"Die Armbanduhr zeigt die Zeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Armbanduhr zeigt die Zeit.",
+							"ok": true
+						},
+						{
+							"answer": "Der Armbanduhr zeigt die Zeit.",
+							"ok": false
+						},
+						{
+							"answer": "Die Armbanduhr die Zeit zeigt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

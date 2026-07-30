@@ -1,0 +1,607 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPlaces2-de",
+	"title": "Places",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "See",
+					"summary": "ein großes Wasser im Land",
+					"explain": {
+						"entryId": "See",
+						"headword": "See",
+						"pronunciation": {
+							"display": "zay",
+							"ipaUK": "/zeː/",
+							"ipaUS": "/zeː/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "See",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großes Wasser im Land",
+										"examples": [
+											"Im Sommer schwimmen wir im See."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer schwimmen wir im See.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer schwimmen wir in die See.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer wir schwimmen im See.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Bibliothek",
+					"summary": "dort leiht man Bücher aus",
+					"explain": {
+						"entryId": "Bibliothek",
+						"headword": "Bibliothek",
+						"pronunciation": {
+							"display": "bi-blee-oh-TAYK",
+							"ipaUK": "/biblioˈteːk/",
+							"ipaUS": "/biblioˈteːk/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bibliothek",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Bücherei"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "dort leiht man Bücher aus",
+										"examples": [
+											"In der Bibliothek ist es leise."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Bibliothek ist es leise.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Bibliothek ist es leise.",
+							"ok": false
+						},
+						{
+							"answer": "In der Bibliothek es ist leise.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Berg",
+					"summary": "eine sehr hohe Erhebung",
+					"explain": {
+						"entryId": "Berg",
+						"headword": "Berg",
+						"pronunciation": {
+							"display": "bairk",
+							"ipaUK": "/bɛʁk/",
+							"ipaUS": "/bɛʁk/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Berg",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine sehr hohe Erhebung im Land",
+										"examples": [
+											"Wir wandern auf den Berg."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir wandern auf den Berg.",
+							"ok": true
+						},
+						{
+							"answer": "Wir wandern auf dem Berg.",
+							"ok": false
+						},
+						{
+							"answer": "Wir auf den Berg wandern.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Meer",
+					"summary": "sehr viel Salzwasser",
+					"explain": {
+						"entryId": "Meer",
+						"headword": "Meer",
+						"pronunciation": {
+							"display": "mayr",
+							"ipaUK": "/meːɐ̯/",
+							"ipaUS": "/meːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Meer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Ozean"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sehr viel Salzwasser",
+										"examples": [
+											"Wir fahren ans Meer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir fahren ans Meer.",
+							"ok": true
+						},
+						{
+							"answer": "Wir fahren an die Meer.",
+							"ok": false
+						},
+						{
+							"answer": "Wir ans Meer fahren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Büro",
+					"summary": "dort arbeitet man am Schreibtisch",
+					"explain": {
+						"entryId": "Büro",
+						"headword": "Büro",
+						"pronunciation": {
+							"display": "bü-ROH",
+							"ipaUK": "/byˈʁoː/",
+							"ipaUS": "/byˈʁoː/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Büro",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "dort arbeiten Menschen am Schreibtisch",
+										"examples": [
+											"Ich arbeite in einem Büro."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich arbeite in einem Büro.",
+							"ok": true
+						},
+						{
+							"answer": "Ich arbeite in einer Büro.",
+							"ok": false
+						},
+						{
+							"answer": "Ich in einem Büro arbeite.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Park",
+					"summary": "ein grüner Ort in der Stadt",
+					"explain": {
+						"entryId": "Park",
+						"headword": "Park",
+						"pronunciation": {
+							"display": "park",
+							"ipaUK": "/paʁk/",
+							"ipaUS": "/paʁk/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Park",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein grüner Ort in der Stadt zum Spazieren",
+										"examples": [
+											"Am Sonntag gehen wir in den Park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Sonntag gehen wir in den Park.",
+							"ok": true
+						},
+						{
+							"answer": "Am Sonntag gehen wir in dem Park.",
+							"ok": false
+						},
+						{
+							"answer": "Am Sonntag wir gehen in den Park.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Restaurant",
+					"summary": "dort isst man",
+					"explain": {
+						"entryId": "Restaurant",
+						"headword": "Restaurant",
+						"pronunciation": {
+							"display": "res-toh-RONG",
+							"ipaUK": "/ʁɛstoˈʁãː/",
+							"ipaUS": "/ʁɛstoˈʁãː/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Restaurant",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "dort bestellt und isst man Essen",
+										"examples": [
+											"Wir essen heute in einem Restaurant."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir essen heute in einem Restaurant.",
+							"ok": true
+						},
+						{
+							"answer": "Wir essen heute in einer Restaurant.",
+							"ok": false
+						},
+						{
+							"answer": "Wir heute in einem Restaurant essen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Fluss",
+					"summary": "fließendes Wasser",
+					"explain": {
+						"entryId": "Fluss",
+						"headword": "Fluss",
+						"pronunciation": {
+							"display": "floos",
+							"ipaUK": "/flʊs/",
+							"ipaUS": "/flʊs/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fluss",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "fließendes Wasser im Land",
+										"examples": [
+											"Der Fluss fließt durch die Stadt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Fluss fließt durch die Stadt.",
+							"ok": true
+						},
+						{
+							"answer": "Die Fluss fließt durch die Stadt.",
+							"ok": false
+						},
+						{
+							"answer": "Der Fluss durch die Stadt fließt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Schule",
+					"summary": "dort lernen Kinder",
+					"explain": {
+						"entryId": "Schule",
+						"headword": "Schule",
+						"pronunciation": {
+							"display": "SHOO-luh",
+							"ipaUK": "/ˈʃuːlə/",
+							"ipaUS": "/ˈʃuːlə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Schule",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "dort lernen Kinder",
+										"examples": [
+											"Die Kinder gehen in die Schule."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Kinder gehen in die Schule.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kinder gehen in der Schule.",
+							"ok": false
+						},
+						{
+							"answer": "Die Kinder in die Schule gehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Geschäft",
+					"summary": "dort kauft man Dinge",
+					"explain": {
+						"entryId": "Geschäft",
+						"headword": "Geschäft",
+						"pronunciation": {
+							"display": "guh-SHEFT",
+							"ipaUK": "/ɡəˈʃɛft/",
+							"ipaUS": "/ɡəˈʃɛft/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Geschäft",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Laden"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "dort kauft man Dinge",
+										"examples": [
+											"Das Geschäft ist heute geschlossen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Geschäft ist heute geschlossen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Geschäft ist heute geschlossen.",
+							"ok": false
+						},
+						{
+							"answer": "Das Geschäft heute geschlossen ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "Zoo",
+					"summary": "dort sieht man viele Tiere",
+					"explain": {
+						"entryId": "Zoo",
+						"headword": "Zoo",
+						"pronunciation": {
+							"display": "tsoh",
+							"ipaUK": "/tsoː/",
+							"ipaUS": "/tsoː/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zoo",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Tierpark"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "dort sieht man viele Tiere",
+										"examples": [
+											"Im Zoo sehen wir viele Tiere."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Zoo sehen wir viele Tiere.",
+							"ok": true
+						},
+						{
+							"answer": "In die Zoo sehen wir viele Tiere.",
+							"ok": false
+						},
+						{
+							"answer": "Im Zoo wir sehen viele Tiere.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

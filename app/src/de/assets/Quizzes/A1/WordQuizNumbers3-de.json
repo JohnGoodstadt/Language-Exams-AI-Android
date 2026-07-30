@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNumbers3-de",
+	"title": "Numbers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "fünf",
+					"summary": "die Zahl 5",
+					"explain": {
+						"entryId": "fünf",
+						"headword": "fünf",
+						"pronunciation": {
+							"display": "fünf",
+							"ipaUK": "/fʏnf/",
+							"ipaUS": "/fʏnf/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "fünf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 5",
+										"examples": [
+											"Meine Hand hat fünf Finger."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Hand hat fünf Finger.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Hand hat fünfte Finger.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Hand fünf Finger hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "fünfzig",
+					"summary": "die Zahl 50",
+					"explain": {
+						"entryId": "fünfzig",
+						"headword": "fünfzig",
+						"pronunciation": {
+							"display": "FÜNF-tsikh",
+							"ipaUK": "/ˈfʏnftsɪç/",
+							"ipaUS": "/ˈfʏnftsɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "fünfzig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 50",
+										"examples": [
+											"Mein Opa ist fünfzig Jahre alt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Opa ist fünfzig Jahre alt.",
+							"ok": true
+						},
+						{
+							"answer": "Mein Opa ist fünfzigste Jahre alt.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Opa fünfzig Jahre alt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "fünfhundert",
+					"summary": "die Zahl 500",
+					"explain": {
+						"entryId": "fünfhundert",
+						"headword": "fünfhundert",
+						"pronunciation": {
+							"display": "FÜNF-hoon-dert",
+							"ipaUK": "/ˈfʏnfˌhʊndɐt/",
+							"ipaUS": "/ˈfʏnfˌhʊndɐt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "fünfhundert",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 500",
+										"examples": [
+											"Der Flug kostet fünfhundert Euro."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Flug kostet fünfhundert Euro.",
+							"ok": true
+						},
+						{
+							"answer": "Der Flug kostet fünf hundert Euro.",
+							"ok": false
+						},
+						{
+							"answer": "Der Flug fünfhundert Euro kostet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "fünfhunderteins",
+					"summary": "die Zahl 501",
+					"explain": {
+						"entryId": "fünfhunderteins",
+						"headword": "fünfhunderteins",
+						"pronunciation": {
+							"display": "FÜNF-hoon-dert-ynce",
+							"ipaUK": "/ˈfʏnfhʊndɐtˌʔaɪ̯ns/",
+							"ipaUS": "/ˈfʏnfhʊndɐtˌʔaɪ̯ns/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "fünfhunderteins",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 501",
+										"examples": [
+											"Das Buch hat fünfhunderteins Seiten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Buch hat fünfhunderteins Seiten.",
+							"ok": true
+						},
+						{
+							"answer": "Das Buch hat fünfhundert eins Seiten.",
+							"ok": false
+						},
+						{
+							"answer": "Das Buch fünfhunderteins Seiten hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "sechs",
+					"summary": "die Zahl 6",
+					"explain": {
+						"entryId": "sechs",
+						"headword": "sechs",
+						"pronunciation": {
+							"display": "zeks",
+							"ipaUK": "/zɛks/",
+							"ipaUS": "/zɛks/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "sechs",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 6",
+										"examples": [
+											"Ich stehe um sechs Uhr auf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich stehe um sechs Uhr auf.",
+							"ok": true
+						},
+						{
+							"answer": "Ich stehe um sechste Uhr auf.",
+							"ok": false
+						},
+						{
+							"answer": "Ich stehe um Uhr sechs auf.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "sechzig",
+					"summary": "die Zahl 60",
+					"explain": {
+						"entryId": "sechzig",
+						"headword": "sechzig",
+						"pronunciation": {
+							"display": "ZEKH-tsikh",
+							"ipaUK": "/ˈzɛçtsɪç/",
+							"ipaUS": "/ˈzɛçtsɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "sechzig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 60",
+										"examples": [
+											"Eine Stunde hat sechzig Minuten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eine Stunde hat sechzig Minuten.",
+							"ok": true
+						},
+						{
+							"answer": "Eine Stunde hat sechszig Minuten.",
+							"ok": false
+						},
+						{
+							"answer": "Eine Stunde sechzig Minuten hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "sieben",
+					"summary": "die Zahl 7",
+					"explain": {
+						"entryId": "sieben",
+						"headword": "sieben",
+						"pronunciation": {
+							"display": "ZEE-bn",
+							"ipaUK": "/ˈziːbn̩/",
+							"ipaUS": "/ˈziːbn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "sieben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 7",
+										"examples": [
+											"Eine Woche hat sieben Tage."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eine Woche hat sieben Tage.",
+							"ok": true
+						},
+						{
+							"answer": "Eine Woche hat siebte Tage.",
+							"ok": false
+						},
+						{
+							"answer": "Eine Woche sieben Tage hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "siebzig",
+					"summary": "die Zahl 70",
+					"explain": {
+						"entryId": "siebzig",
+						"headword": "siebzig",
+						"pronunciation": {
+							"display": "ZEEP-tsikh",
+							"ipaUK": "/ˈziːptsɪç/",
+							"ipaUS": "/ˈziːptsɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "siebzig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 70",
+										"examples": [
+											"Meine Oma ist siebzig Jahre alt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Oma ist siebzig Jahre alt.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Oma ist siebzigste Jahre alt.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Oma siebzig Jahre alt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "acht",
+					"summary": "die Zahl 8",
+					"explain": {
+						"entryId": "acht",
+						"headword": "acht",
+						"pronunciation": {
+							"display": "akht",
+							"ipaUK": "/axt/",
+							"ipaUS": "/axt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "acht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 8",
+										"examples": [
+											"Ich schlafe acht Stunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schlafe acht Stunden.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schlafe achte Stunden.",
+							"ok": false
+						},
+						{
+							"answer": "Ich acht Stunden schlafe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "achtzig",
+					"summary": "die Zahl 80",
+					"explain": {
+						"entryId": "achtzig",
+						"headword": "achtzig",
+						"pronunciation": {
+							"display": "AKHT-tsikh",
+							"ipaUK": "/ˈaxtsɪç/",
+							"ipaUS": "/ˈaxtsɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "achtzig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 80",
+										"examples": [
+											"Das Auto fährt achtzig Kilometer pro Stunde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Auto fährt achtzig Kilometer pro Stunde.",
+							"ok": true
+						},
+						{
+							"answer": "Das Auto fährt achtzigste Kilometer pro Stunde.",
+							"ok": false
+						},
+						{
+							"answer": "Das Auto achtzig Kilometer pro Stunde fährt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

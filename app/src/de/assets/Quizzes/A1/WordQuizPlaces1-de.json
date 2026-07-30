@@ -1,0 +1,603 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPlaces1-de",
+	"title": "Places",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Bank",
+					"summary": "dort holt man Geld",
+					"explain": {
+						"entryId": "Bank",
+						"headword": "Bank",
+						"pronunciation": {
+							"display": "bank",
+							"ipaUK": "/baŋk/",
+							"ipaUS": "/baŋk/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bank",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "dort holt man Geld",
+										"examples": [
+											"Ich gehe zur Bank."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich gehe zur Bank.",
+							"ok": true
+						},
+						{
+							"answer": "Ich gehe zum Bank.",
+							"ok": false
+						},
+						{
+							"answer": "Ich gehe zu Bank.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Strand",
+					"summary": "der Sand am Meer",
+					"explain": {
+						"entryId": "Strand",
+						"headword": "Strand",
+						"pronunciation": {
+							"display": "shtrant",
+							"ipaUK": "/ʃtʁant/",
+							"ipaUS": "/ʃtʁant/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Strand",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Sand am Meer",
+										"examples": [
+											"Im Sommer fahren wir an den Strand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer fahren wir an den Strand.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer fahren wir an dem Strand.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer wir fahren an den Strand.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Kino",
+					"summary": "dort sieht man Filme",
+					"explain": {
+						"entryId": "Kino",
+						"headword": "Kino",
+						"pronunciation": {
+							"display": "KEE-no",
+							"ipaUK": "/ˈkiːno/",
+							"ipaUS": "/ˈkiːno/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kino",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "dort sieht man Filme",
+										"examples": [
+											"Wir gehen ins Kino."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir gehen ins Kino.",
+							"ok": true
+						},
+						{
+							"answer": "Wir gehen in die Kino.",
+							"ok": false
+						},
+						{
+							"answer": "Wir ins Kino gehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Stadt",
+					"summary": "ein großer Ort mit vielen Häusern",
+					"explain": {
+						"entryId": "Stadt",
+						"headword": "Stadt",
+						"pronunciation": {
+							"display": "shtat",
+							"ipaUK": "/ʃtat/",
+							"ipaUS": "/ʃtat/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Stadt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großer Ort mit vielen Häusern",
+										"examples": [
+											"Ich wohne in einer großen Stadt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich wohne in einer großen Stadt.",
+							"ok": true
+						},
+						{
+							"answer": "Ich wohne in einem großen Stadt.",
+							"ok": false
+						},
+						{
+							"answer": "Ich in einer großen Stadt wohne.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Wüste",
+					"summary": "ein trockener Ort mit Sand",
+					"explain": {
+						"entryId": "Wüste",
+						"headword": "Wüste",
+						"pronunciation": {
+							"display": "VÜ-stuh",
+							"ipaUK": "/ˈvyːstə/",
+							"ipaUS": "/ˈvyːstə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wüste",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein sehr trockener Ort mit viel Sand",
+										"examples": [
+											"In der Wüste ist es sehr trocken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Wüste ist es sehr trocken.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Wüste ist es sehr trocken.",
+							"ok": false
+						},
+						{
+							"answer": "In der Wüste es ist sehr trocken.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Wald",
+					"summary": "ein Ort mit vielen Bäumen",
+					"explain": {
+						"entryId": "Wald",
+						"headword": "Wald",
+						"pronunciation": {
+							"display": "valt",
+							"ipaUK": "/valt/",
+							"ipaUS": "/valt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wald",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort mit vielen Bäumen",
+										"examples": [
+											"Wir gehen im Wald spazieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir gehen im Wald spazieren.",
+							"ok": true
+						},
+						{
+							"answer": "Wir gehen in der Wald spazieren.",
+							"ok": false
+						},
+						{
+							"answer": "Wir im Wald gehen spazieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Garten",
+					"summary": "Land mit Pflanzen am Haus",
+					"explain": {
+						"entryId": "Garten",
+						"headword": "Garten",
+						"pronunciation": {
+							"display": "GAR-tn",
+							"ipaUK": "/ˈɡaʁtn̩/",
+							"ipaUS": "/ˈɡaʁtn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Garten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Stück Land mit Pflanzen am Haus",
+										"examples": [
+											"Die Kinder spielen im Garten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Kinder spielen im Garten.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kinder spielen in die Garten.",
+							"ok": false
+						},
+						{
+							"answer": "Die Kinder im Garten spielen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Hügel",
+					"summary": "ein kleiner Berg",
+					"explain": {
+						"entryId": "Hügel",
+						"headword": "Hügel",
+						"pronunciation": {
+							"display": "HÜ-gl",
+							"ipaUK": "/ˈhyːɡl̩/",
+							"ipaUS": "/ˈhyːɡl̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hügel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein kleiner Berg",
+										"examples": [
+											"Das Haus steht auf einem Hügel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Haus steht auf einem Hügel.",
+							"ok": true
+						},
+						{
+							"answer": "Das Haus steht auf einer Hügel.",
+							"ok": false
+						},
+						{
+							"answer": "Das Haus auf einem Hügel steht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Zuhause",
+					"summary": "der Ort, an dem man wohnt",
+					"explain": {
+						"entryId": "Zuhause",
+						"headword": "Zuhause",
+						"pronunciation": {
+							"display": "tsoo-HOW-zuh",
+							"ipaUK": "/tsuˈhaʊ̯zə/",
+							"ipaUS": "/tsuˈhaʊ̯zə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zuhause",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Heim"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Ort, an dem man wohnt",
+										"examples": [
+											"Mein Zuhause ist klein, aber gemütlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Zuhause ist klein, aber gemütlich.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Zuhause ist klein, aber gemütlich.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Zuhause klein ist, aber gemütlich.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Krankenhaus",
+					"summary": "dort helfen Ärzte den Kranken",
+					"explain": {
+						"entryId": "Krankenhaus",
+						"headword": "Krankenhaus",
+						"pronunciation": {
+							"display": "KRAN-kn-house",
+							"ipaUK": "/ˈkʁaŋkn̩ˌhaʊ̯s/",
+							"ipaUS": "/ˈkʁaŋkn̩ˌhaʊ̯s/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Krankenhaus",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Klinik"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "dort helfen Ärzte kranken Menschen",
+										"examples": [
+											"Der Arzt arbeitet im Krankenhaus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Arzt arbeitet im Krankenhaus.",
+							"ok": true
+						},
+						{
+							"answer": "Der Arzt arbeitet in die Krankenhaus.",
+							"ok": false
+						},
+						{
+							"answer": "Der Arzt im Krankenhaus arbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "Insel",
+					"summary": "Land, ganz von Wasser umgeben",
+					"explain": {
+						"entryId": "Insel",
+						"headword": "Insel",
+						"pronunciation": {
+							"display": "IN-zl",
+							"ipaUK": "/ˈɪnzl̩/",
+							"ipaUS": "/ˈɪnzl̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Insel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Land, das ganz von Wasser umgeben ist",
+										"examples": [
+											"Wir machen Urlaub auf einer Insel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir machen Urlaub auf einer Insel.",
+							"ok": true
+						},
+						{
+							"answer": "Wir machen Urlaub auf einem Insel.",
+							"ok": false
+						},
+						{
+							"answer": "Wir auf einer Insel machen Urlaub.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

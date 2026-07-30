@@ -1,0 +1,512 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizOccupations1-de",
+	"title": "Occupations",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Künstler",
+					"summary": "eine Person, die Kunst macht",
+					"explain": {
+						"entryId": "Künstler",
+						"headword": "Künstler",
+						"pronunciation": {
+							"display": "KÜNST-luh",
+							"ipaUK": "/ˈkʏnstlɐ/",
+							"ipaUS": "/ˈkʏnstlɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Beruf",
+								"headwordLine": "Künstler",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Künstlerin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die Kunst macht (z. B. malt)",
+										"examples": [
+											"Er ist Künstler von Beruf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er ist Künstler von Beruf.",
+							"ok": true
+						},
+						{
+							"answer": "Er ist Künstlerin von Beruf.",
+							"ok": false
+						},
+						{
+							"answer": "Er von Beruf Künstler ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Koch",
+					"summary": "eine Person, die im Restaurant kocht",
+					"explain": {
+						"entryId": "Koch",
+						"headword": "Koch",
+						"pronunciation": {
+							"display": "kokh",
+							"ipaUK": "/kɔx/",
+							"ipaUS": "/kɔx/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Beruf",
+								"headwordLine": "Koch",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Köchin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die in einem Restaurant kocht",
+										"examples": [
+											"Er ist Koch in einem Restaurant."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er ist Koch in einem Restaurant.",
+							"ok": true
+						},
+						{
+							"answer": "Er ist Köchin in einem Restaurant.",
+							"ok": false
+						},
+						{
+							"answer": "Er in einem Restaurant Koch ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Arzt",
+					"summary": "behandelt kranke Menschen",
+					"explain": {
+						"entryId": "Arzt",
+						"headword": "Arzt",
+						"pronunciation": {
+							"display": "artst",
+							"ipaUK": "/aːɐ̯tst/",
+							"ipaUS": "/aːɐ̯tst/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Beruf",
+								"headwordLine": "Arzt",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Ärztin",
+									"Doktor"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die kranke Menschen behandelt",
+										"examples": [
+											"Mein Bruder ist Arzt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Bruder ist Arzt.",
+							"ok": true
+						},
+						{
+							"answer": "Mein Bruder ist Ärztin.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Bruder Arzt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Ingenieur",
+					"summary": "plant Maschinen oder Gebäude",
+					"explain": {
+						"entryId": "Ingenieur",
+						"headword": "Ingenieur",
+						"pronunciation": {
+							"display": "in-zhe-NYÖR",
+							"ipaUK": "/ɪnʒeˈnjøːɐ̯/",
+							"ipaUS": "/ɪnʒeˈnjøːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Beruf",
+								"headwordLine": "Ingenieur",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Ingenieurin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die Maschinen oder Gebäude plant",
+										"examples": [
+											"Er arbeitet als Ingenieur."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er arbeitet als Ingenieur.",
+							"ok": true
+						},
+						{
+							"answer": "Er arbeitet als Ingenieurin.",
+							"ok": false
+						},
+						{
+							"answer": "Er als Ingenieur arbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Bauer",
+					"summary": "arbeitet auf einem Feld",
+					"explain": {
+						"entryId": "Bauer",
+						"headword": "Bauer",
+						"pronunciation": {
+							"display": "BOW-uh",
+							"ipaUK": "/ˈbaʊ̯ɐ/",
+							"ipaUS": "/ˈbaʊ̯ɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Beruf",
+								"headwordLine": "Bauer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Landwirt"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die auf einem Feld arbeitet",
+										"examples": [
+											"Der Bauer arbeitet auf dem Feld."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Bauer arbeitet auf dem Feld.",
+							"ok": true
+						},
+						{
+							"answer": "Die Bauer arbeitet auf dem Feld.",
+							"ok": false
+						},
+						{
+							"answer": "Der Bauer auf dem Feld arbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Feuerwehrmann",
+					"summary": "löscht Feuer",
+					"explain": {
+						"entryId": "Feuerwehrmann",
+						"headword": "Feuerwehrmann",
+						"pronunciation": {
+							"display": "FOY-uh-vayr-man",
+							"ipaUK": "/ˈfɔɪ̯ɐveːɐ̯man/",
+							"ipaUS": "/ˈfɔɪ̯ɐveːɐ̯man/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Beruf",
+								"headwordLine": "Feuerwehrmann",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Feuerwehrfrau"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die Feuer löscht",
+										"examples": [
+											"Der Feuerwehrmann löscht das Feuer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Feuerwehrmann löscht das Feuer.",
+							"ok": true
+						},
+						{
+							"answer": "Die Feuerwehrmann löscht das Feuer.",
+							"ok": false
+						},
+						{
+							"answer": "Der Feuerwehrmann das Feuer löscht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Krankenpfleger",
+					"summary": "hilft im Krankenhaus",
+					"explain": {
+						"entryId": "Krankenpfleger",
+						"headword": "Krankenpfleger",
+						"pronunciation": {
+							"display": "KRAN-kn-pflay-guh",
+							"ipaUK": "/ˈkʁaŋkn̩ˌpfleːɡɐ/",
+							"ipaUS": "/ˈkʁaŋkn̩ˌpfleːɡɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Beruf",
+								"headwordLine": "Krankenpfleger",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Krankenschwester"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die im Krankenhaus hilft",
+										"examples": [
+											"Der Krankenpfleger hilft den Patienten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Krankenpfleger hilft den Patienten.",
+							"ok": true
+						},
+						{
+							"answer": "Die Krankenpfleger hilft den Patienten.",
+							"ok": false
+						},
+						{
+							"answer": "Der Krankenpfleger den Patienten hilft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Wissenschaftler",
+					"summary": "eine Person, die forscht",
+					"explain": {
+						"entryId": "Wissenschaftler",
+						"headword": "Wissenschaftler",
+						"pronunciation": {
+							"display": "VI-sn-shaft-luh",
+							"ipaUK": "/ˈvɪsn̩ʃaftlɐ/",
+							"ipaUS": "/ˈvɪsn̩ʃaftlɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Beruf",
+								"headwordLine": "Wissenschaftler",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Wissenschaftlerin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die forscht",
+										"examples": [
+											"Der Wissenschaftler macht ein Experiment."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Wissenschaftler macht ein Experiment.",
+							"ok": true
+						},
+						{
+							"answer": "Das Wissenschaftler macht ein Experiment.",
+							"ok": false
+						},
+						{
+							"answer": "Der Wissenschaftler ein Experiment macht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Lehrer",
+					"summary": "unterrichtet in der Schule",
+					"explain": {
+						"entryId": "Lehrer",
+						"headword": "Lehrer",
+						"pronunciation": {
+							"display": "LAY-ruh",
+							"ipaUK": "/ˈleːʁɐ/",
+							"ipaUS": "/ˈleːʁɐ/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Beruf",
+								"headwordLine": "Lehrer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Lehrerin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die in der Schule unterrichtet",
+										"examples": [
+											"Mein Lehrer ist sehr nett."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Lehrer ist sehr nett.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Lehrer ist sehr nett.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Lehrer sehr nett ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

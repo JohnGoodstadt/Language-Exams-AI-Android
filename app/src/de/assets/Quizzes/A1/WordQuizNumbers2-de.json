@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNumbers2-de",
+	"title": "Numbers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "siebzehn",
+					"summary": "die Zahl 17",
+					"explain": {
+						"entryId": "siebzehn",
+						"headword": "siebzehn",
+						"pronunciation": {
+							"display": "ZEEP-tsayn",
+							"ipaUK": "/ˈziːptseːn/",
+							"ipaUS": "/ˈziːptseːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "siebzehn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 17",
+										"examples": [
+											"Er ist siebzehn Jahre alt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er ist siebzehn Jahre alt.",
+							"ok": true
+						},
+						{
+							"answer": "Er ist siebenzehn Jahre alt.",
+							"ok": false
+						},
+						{
+							"answer": "Er siebzehn Jahre alt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "achtzehn",
+					"summary": "die Zahl 18",
+					"explain": {
+						"entryId": "achtzehn",
+						"headword": "achtzehn",
+						"pronunciation": {
+							"display": "AKHT-tsayn",
+							"ipaUK": "/ˈaxtseːn/",
+							"ipaUS": "/ˈaxtseːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "achtzehn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 18",
+										"examples": [
+											"Mit achtzehn ist man volljährig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit achtzehn ist man volljährig.",
+							"ok": true
+						},
+						{
+							"answer": "Mit achtzehnte ist man volljährig.",
+							"ok": false
+						},
+						{
+							"answer": "Mit achtzehn volljährig man ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "neunzehn",
+					"summary": "die Zahl 19",
+					"explain": {
+						"entryId": "neunzehn",
+						"headword": "neunzehn",
+						"pronunciation": {
+							"display": "NOYN-tsayn",
+							"ipaUK": "/ˈnɔɪ̯ntseːn/",
+							"ipaUS": "/ˈnɔɪ̯ntseːn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "neunzehn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 19",
+										"examples": [
+											"Das Zimmer hat die Nummer neunzehn."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Zimmer hat die Nummer neunzehn.",
+							"ok": true
+						},
+						{
+							"answer": "Das Zimmer hat die Nummer neunzehnte.",
+							"ok": false
+						},
+						{
+							"answer": "Das Zimmer die Nummer neunzehn hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "zwei",
+					"summary": "die Zahl 2",
+					"explain": {
+						"entryId": "zwei",
+						"headword": "zwei",
+						"pronunciation": {
+							"display": "tsvy",
+							"ipaUK": "/tsvaɪ̯/",
+							"ipaUS": "/tsvaɪ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "zwei",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 2",
+										"examples": [
+											"Ich habe zwei Brüder."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe zwei Brüder.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe zweite Brüder.",
+							"ok": false
+						},
+						{
+							"answer": "Ich zwei Brüder habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "zwanzig",
+					"summary": "die Zahl 20",
+					"explain": {
+						"entryId": "zwanzig",
+						"headword": "zwanzig",
+						"pronunciation": {
+							"display": "TSVAN-tsikh",
+							"ipaUK": "/ˈtsvantsɪç/",
+							"ipaUS": "/ˈtsvantsɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "zwanzig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 20",
+										"examples": [
+											"Das kostet zwanzig Euro."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das kostet zwanzig Euro.",
+							"ok": true
+						},
+						{
+							"answer": "Das kostet zwanzigste Euro.",
+							"ok": false
+						},
+						{
+							"answer": "Das zwanzig Euro kostet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "einundzwanzig",
+					"summary": "die Zahl 21",
+					"explain": {
+						"entryId": "einundzwanzig",
+						"headword": "einundzwanzig",
+						"pronunciation": {
+							"display": "YNE-oont-tsvan-tsikh",
+							"ipaUK": "/ˈaɪ̯nʊntˌtsvantsɪç/",
+							"ipaUS": "/ˈaɪ̯nʊntˌtsvantsɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "einundzwanzig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 21",
+										"examples": [
+											"Meine Schwester ist einundzwanzig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Schwester ist einundzwanzig.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Schwester ist zwanzigundeins.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Schwester einundzwanzig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "drei",
+					"summary": "die Zahl 3",
+					"explain": {
+						"entryId": "drei",
+						"headword": "drei",
+						"pronunciation": {
+							"display": "dry",
+							"ipaUK": "/dʁaɪ̯/",
+							"ipaUS": "/dʁaɪ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "drei",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 3",
+										"examples": [
+											"Ich trinke drei Tassen Kaffee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich trinke drei Tassen Kaffee.",
+							"ok": true
+						},
+						{
+							"answer": "Ich trinke dritte Tassen Kaffee.",
+							"ok": false
+						},
+						{
+							"answer": "Ich drei Tassen Kaffee trinke.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "dreißig",
+					"summary": "die Zahl 30",
+					"explain": {
+						"entryId": "dreißig",
+						"headword": "dreißig",
+						"pronunciation": {
+							"display": "DRY-sikh",
+							"ipaUK": "/ˈdʁaɪ̯sɪç/",
+							"ipaUS": "/ˈdʁaɪ̯sɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "dreißig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 30",
+										"examples": [
+											"Der Monat hat dreißig Tage."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Monat hat dreißig Tage.",
+							"ok": true
+						},
+						{
+							"answer": "Der Monat hat dreizig Tage.",
+							"ok": false
+						},
+						{
+							"answer": "Der Monat dreißig Tage hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "vier",
+					"summary": "die Zahl 4",
+					"explain": {
+						"entryId": "vier",
+						"headword": "vier",
+						"pronunciation": {
+							"display": "feer",
+							"ipaUK": "/fiːɐ̯/",
+							"ipaUS": "/fiːɐ̯/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "vier",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 4",
+										"examples": [
+											"Ein Auto hat vier Räder."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein Auto hat vier Räder.",
+							"ok": true
+						},
+						{
+							"answer": "Ein Auto hat vierte Räder.",
+							"ok": false
+						},
+						{
+							"answer": "Ein Auto vier Räder hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "vierzig",
+					"summary": "die Zahl 40",
+					"explain": {
+						"entryId": "vierzig",
+						"headword": "vierzig",
+						"pronunciation": {
+							"display": "FEER-tsikh",
+							"ipaUK": "/ˈfɪʁtsɪç/",
+							"ipaUS": "/ˈfɪʁtsɪç/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Zahlwort",
+								"grammarType": "Zahl",
+								"headwordLine": "vierzig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zahl 40",
+										"examples": [
+											"Ich arbeite vierzig Stunden pro Woche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich arbeite vierzig Stunden pro Woche.",
+							"ok": true
+						},
+						{
+							"answer": "Ich arbeite vierzigste Stunden pro Woche.",
+							"ok": false
+						},
+						{
+							"answer": "Ich vierzig Stunden pro Woche arbeite.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,387 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizDates3-de",
+	"title": "Dates",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Datum",
+					"summary": "der Tag im Monat und Jahr",
+					"explain": {
+						"entryId": "Datum",
+						"headword": "Datum",
+						"pronunciation": {
+							"display": "DAH-toom",
+							"ipaUK": "/ˈdaːtʊm/",
+							"ipaUS": "/ˈdaːtʊm/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Datum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Angabe von Tag, Monat und Jahr",
+										"examples": [
+											"Welches Datum haben wir heute?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Welches Datum haben wir heute?",
+							"ok": true
+						},
+						{
+							"answer": "Welche Datum haben wir heute?",
+							"ok": false
+						},
+						{
+							"answer": "Welches Datum wir haben heute?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Abend",
+					"summary": "die Zeit am Ende des Tages",
+					"explain": {
+						"entryId": "Abend",
+						"headword": "Abend",
+						"pronunciation": {
+							"display": "AH-bnt",
+							"ipaUK": "/ˈaːbn̩t/",
+							"ipaUS": "/ˈaːbn̩t/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Tageszeit",
+								"headwordLine": "Abend",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeit am Ende des Tages",
+										"examples": [
+											"Am Abend sehe ich fern."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Abend sehe ich fern.",
+							"ok": true
+						},
+						{
+							"answer": "Im Abend sehe ich fern.",
+							"ok": false
+						},
+						{
+							"answer": "Am Abend ich sehe fern.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Morgen",
+					"summary": "die Zeit am Anfang des Tages",
+					"explain": {
+						"entryId": "Morgen",
+						"headword": "Morgen",
+						"pronunciation": {
+							"display": "MOR-gn",
+							"ipaUK": "/ˈmɔʁɡn̩/",
+							"ipaUS": "/ˈmɔʁɡn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Tageszeit",
+								"headwordLine": "Morgen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeit am Anfang des Tages",
+										"examples": [
+											"Am Morgen trinke ich Tee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Morgen trinke ich Tee.",
+							"ok": true
+						},
+						{
+							"answer": "Im Morgen trinke ich Tee.",
+							"ok": false
+						},
+						{
+							"answer": "Am Morgen ich trinke Tee.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Nacht",
+					"summary": "die dunkle Zeit zum Schlafen",
+					"explain": {
+						"entryId": "Nacht",
+						"headword": "Nacht",
+						"pronunciation": {
+							"display": "nakht",
+							"ipaUK": "/naxt/",
+							"ipaUS": "/naxt/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Tageszeit",
+								"headwordLine": "Nacht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die dunkle Zeit, in der man schläft",
+										"examples": [
+											"In der Nacht schlafen die meisten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Nacht schlafen die meisten.",
+							"ok": true
+						},
+						{
+							"answer": "In die Nacht schlafen die meisten.",
+							"ok": false
+						},
+						{
+							"answer": "In der Nacht die meisten schlafen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "heute",
+					"summary": "an diesem Tag",
+					"explain": {
+						"entryId": "heute",
+						"headword": "heute",
+						"pronunciation": {
+							"display": "HOY-tuh",
+							"ipaUK": "/ˈhɔɪ̯tə/",
+							"ipaUS": "/ˈhɔɪ̯tə/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "heute",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an diesem Tag",
+										"examples": [
+											"Heute ist ein schöner Tag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Heute ist ein schöner Tag.",
+							"ok": true
+						},
+						{
+							"answer": "Heute ein schöner Tag ist.",
+							"ok": false
+						},
+						{
+							"answer": "Heute es ist ein schöner Tag.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "morgen",
+					"summary": "am Tag nach heute",
+					"explain": {
+						"entryId": "morgen",
+						"headword": "morgen",
+						"pronunciation": {
+							"display": "MOR-gn",
+							"ipaUK": "/ˈmɔʁɡn̩/",
+							"ipaUS": "/ˈmɔʁɡn̩/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "morgen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Tag nach heute",
+										"examples": [
+											"Morgen fahre ich nach Berlin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Morgen fahre ich nach Berlin.",
+							"ok": true
+						},
+						{
+							"answer": "Morgen ich fahre nach Berlin.",
+							"ok": false
+						},
+						{
+							"answer": "Morgen ich nach Berlin fahre.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "gestern",
+					"summary": "am Tag vor heute",
+					"explain": {
+						"entryId": "gestern",
+						"headword": "gestern",
+						"pronunciation": {
+							"display": "GES-tuhn",
+							"ipaUK": "/ˈɡɛstɐn/",
+							"ipaUS": "/ˈɡɛstɐn/"
+						},
+						"labels": [
+							"A1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "gestern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Tag vor heute",
+										"examples": [
+											"Gestern habe ich Fußball gespielt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gestern habe ich Fußball gespielt.",
+							"ok": true
+						},
+						{
+							"answer": "Gestern ich habe Fußball gespielt.",
+							"ok": false
+						},
+						{
+							"answer": "Gestern habe ich gespielt Fußball.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
