@@ -4,4 +4,20 @@
     <string name="facebook_app_id">1605775513747047</string>
     <string name="facebook_client_token">e4017ae5a1841e6cef7b6c68db771119</string>
     <string name="welcome_greeting">Hallo, ich bin %1$s. Willkommen bei \\\'English Exam Words\\\'.</string>
+    <string name="quiz_choose_best_answer">Wähle die beste Antwort.</string>
+    <string name="quiz_hear_choose_best_answer">
+        Höre zu und wähle dann die beste Antwort.
+    </string>
+    <string name="quiz_choose_correct_answer">
+        Wähle die richtige Antwort.
+    </string>
+
+    <string name="quiz_listen_choose_correct_answer">
+        Höre zu und wähle dann die richtige Antwort.
+    </string>
+
+    <string name="quiz_choose_word_usage">
+        Wähle den Satz, der das Wort richtig verwendet.
+    </string>
+
 </resources>

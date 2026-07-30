@@ -3,4 +3,19 @@
     <string name="facebook_app_id">1605775513747047</string>
     <string name="facebook_client_token">e4017ae5a1841e6cef7b6c68db771119</string>
     <string name="welcome_greeting">Hello, I\\\'m %1$s. Welcome to \\\'English Exam Words\\\'.</string>
+    <string name="quiz_choose_best_answer">Choose the best answer</string>
+    <string name="quiz_hear_choose_best_answer">
+        Listen, then choose the best answer
+    </string>
+    <string name="quiz_choose_correct_answer">
+        Choose the correct answer
+    </string>
+
+    <string name="quiz_listen_choose_correct_answer">
+        Listen, then choose the correct answer
+    </string>
+
+    <string name="quiz_choose_word_usage">
+        Choose the sentence that uses the word correctly
+    </string>
 </resources>

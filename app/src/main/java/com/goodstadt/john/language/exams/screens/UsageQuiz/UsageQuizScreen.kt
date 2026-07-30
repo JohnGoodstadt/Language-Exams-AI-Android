@@ -61,6 +61,7 @@ import androidx.compose.ui.layout.positionInWindow
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
@@ -73,6 +74,7 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.R
 import com.goodstadt.john.language.exams.models.UsageMastery
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
@@ -121,10 +123,16 @@ fun UsageQuizScreen(
 
     val selectedQuiz by viewModel.selectedQuiz
 
+//    val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+//        "Hear, and then choose the best answer"
+//    } else {
+//        "Choose the best answer"
+//    }
+
     val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-        "Hear, and then choose the best answer"
+        stringResource(R.string.quiz_hear_choose_best_answer)
     } else {
-        "Choose the best answer"
+        stringResource(R.string.quiz_choose_best_answer)
     }
 
     var isLearningExpanded by rememberSaveable { mutableStateOf(false) }

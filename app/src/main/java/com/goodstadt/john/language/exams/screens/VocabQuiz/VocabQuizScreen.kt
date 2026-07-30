@@ -1,8 +1,10 @@
 package com.goodstadt.john.language.exams.screens.VocabQuiz
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,6 +17,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -49,6 +52,7 @@ import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInWindow
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
@@ -61,23 +65,21 @@ import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.goodstadt.john.language.exams.R
+import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.screens.RateLimitDailyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.RateLimitHourlyPaywallBottomSheet
 import com.goodstadt.john.language.exams.screens.UsageQuiz.InfoButtonRow
-import com.goodstadt.john.language.exams.screens.reference.WordQuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.screens.UsageQuiz.dotColor
+import com.goodstadt.john.language.exams.screens.reference.WordQuizInfoBottomSheetView
 import com.goodstadt.john.language.exams.screens.reference.shared.ScrollableHorizontalLevelPicker
 import com.goodstadt.john.language.exams.ui.theme.blueBright2
 import com.goodstadt.john.language.exams.ui.theme.buttonColor
 import com.goodstadt.john.language.exams.ui.theme.greyLight2
 import com.goodstadt.john.language.exams.ui.theme.nonSelectedBackground
 import com.goodstadt.john.language.exams.ui.theme.orangeLight
-import com.goodstadt.john.language.exams.models.WordMasteryLevel
 import com.goodstadt.john.language.exams.viewmodels.VocabQuizLevels
 import com.goodstadt.john.language.exams.viewmodels.VocabSectionQuizViewModel
-import androidx.compose.animation.animateContentSize
-import androidx.compose.foundation.horizontalScroll
-import androidx.compose.foundation.rememberScrollState
 import com.johngoodstadt.memorize.language.ui.screen.RateLimitOKReasonsBottomSheet
 import timber.log.Timber
 
@@ -114,12 +116,23 @@ fun VocabQuizScreen(
 //    val availableQuizzes by viewModel.availableQuizzes.collectAsState()
 
     val selectedQuiz by viewModel.selectedQuiz
-    val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
-        "Hear, and then choose the correct answer"
-    } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
-        "Choose the most suitable usage for the word"
-    } else {
-        "Choose the correct answer"
+//    val displayText = if (viewModel.currentFileFormat.value == viewModel.quizFillInTheBlanks) {
+//        "Listen, and then choose the correct answer"
+//    } else if (viewModel.currentFileFormat.value == viewModel.quizWordDefinition) {
+//        "Choose the most suitable usage for the word"
+//    } else {
+//        "Choose the correct answer"
+//    }
+
+    val displayText = when (viewModel.currentFileFormat.value) {
+        viewModel.quizFillInTheBlanks ->
+            stringResource(R.string.quiz_listen_choose_correct_answer)
+
+        viewModel.quizWordDefinition ->
+            stringResource(R.string.quiz_choose_word_usage)
+
+        else ->
+            stringResource(R.string.quiz_choose_correct_answer)
     }
 
     val isSectionMode by viewModel.isSectionMode.collectAsState()

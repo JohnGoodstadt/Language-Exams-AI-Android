@@ -3,117 +3,98 @@ package com.goodstadt.john.language.exams.screens.UsageQuiz
 import com.goodstadt.john.language.exams.screens.reference.shared.QuizDetail
 
 enum class UsageQuizLevelsFilename(val quizzes: List<QuizDetail>) {
+
     ELEMENTARY(
         quizzes = listOf(
             QuizDetail(
-                id = 1,
-                baseName = "UsageQuiz1A1-de",
-                title = "Sentence Structure"
-            ),
-            QuizDetail(
-                id = 2,
-                baseName = "UsageQuiz2A1-de",
-                title = "Present Simple"
-            ),
-            QuizDetail(
-                id = 3,
-                baseName = "UsageQuiz3A1-de",
-                title = "Past Simple"
-            ),
-            QuizDetail(
-                id = 4,
-                baseName = "UsageQuiz4A1-de",
-                title = "Questions & Short Answers"
-            ),
-            QuizDetail(
-                id = 5,
-                baseName = "UsageQuiz5A1-de",
-                title = "Prepositions"
-            ),
-            QuizDetail(
-                id = 6,
-                baseName = "UsageQuiz6A1-de",
-                title = "Connectors"
+                id = 1, baseName = "UsageQuiz1A1-de", title = "Satzbau"
+            ), QuizDetail(
+                id = 2, baseName = "UsageQuiz2A1-de", title = "Präsens"
+            ), QuizDetail(
+                id = 3, baseName = "UsageQuiz3A1-de", title = "Präteritum"
+            ), QuizDetail(
+                id = 4, baseName = "UsageQuiz4A1-de", title = "Fragen & Kurzantworten"
+            ), QuizDetail(
+                id = 5, baseName = "UsageQuiz5A1-de", title = "Präpositionen"
+            ), QuizDetail(
+                id = 6, baseName = "UsageQuiz6A1-de", title = "Bindewörter"
             )
         )
     ),
+
     INTER(
         quizzes = listOf(
             QuizDetail(
-                id = 1,
-                baseName = "UsageQuiz1A2-de",
-                title = "Future Forms"
-            ),
-            QuizDetail(
-                id = 2,
-                baseName = "UsageQuiz2A2-de",
-                title = "Present Continuous"
-            ),
-            QuizDetail(3, "UsageQuiz3A2-de", "Comparatives & Superlatives"),
-            QuizDetail(4, "UsageQuiz4A2-de", "Modal Verbs"),
-            QuizDetail(5, "UsageQuiz5A2-de", "Verb Patterns"),
-            QuizDetail(6, "UsageQuiz6A2-de", "Linking Words & If Clauses"),
+                id = 1, baseName = "UsageQuiz1A2-de", title = "Zukunftsformen"
+            ), QuizDetail(
+                id = 2, baseName = "UsageQuiz2A2-de", title = "Verlaufsform"
+            ), QuizDetail(
+                id = 3, baseName = "UsageQuiz3A2-de", title = "Komparativ & Superlativ"
+            ), QuizDetail(
+                id = 4, baseName = "UsageQuiz4A2-de", title = "Modalverben"
+            ), QuizDetail(
+                id = 5, baseName = "UsageQuiz5A2-de", title = "Verbmuster"
+            ), QuizDetail(
+                id = 6, baseName = "UsageQuiz6A2-de", title = "Konjunktionen & Konditionalsätze"
+            )
         )
     ),
+
     UPPER(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "UsageQuiz1B1-de", title = "Tense Mastery"),
             QuizDetail(
-                id = 2,
-                baseName = "UsageQuiz2B1-de",
-                title = "Real & Hypothetical Situations"
-            ),
-            QuizDetail(
-                id = 3,
-                baseName = "UsageQuiz3B1-de",
-                title = "Formal & Official Language"
-            ),
-            QuizDetail(
-                id = 4,
-                baseName = "UsageQuiz4B1-de",
-                title = "Reporting & Communication",
-            ),
-            QuizDetail(
-                id = 5,
-                baseName = "UsageQuiz5B1-de",
-                title = "Structured Arguments"
-            ),
-            QuizDetail(6, "UsageQuiz6B1-de", "Functional Fluency")
+                id = 1, baseName = "UsageQuiz1B1-de", title = "Zeitformen"
+            ), QuizDetail(
+                id = 2, baseName = "UsageQuiz2B1-de", title = "Reale & hypothetische Situationen"
+            ), QuizDetail(
+                id = 3, baseName = "UsageQuiz3B1-de", title = "Formelle Sprache"
+            ), QuizDetail(
+                id = 4, baseName = "UsageQuiz4B1-de", title = "Indirekte Rede"
+            ), QuizDetail(
+                id = 5, baseName = "UsageQuiz5B1-de", title = "Argumentation"
+            ), QuizDetail(
+                id = 6, baseName = "UsageQuiz6B1-de", title = "Sprachliche Sicherheit"
+            )
         )
     ),
+
     ADVANCED(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "UsageQuiz1B2-de", title = "Aspect & Time Control"),
             QuizDetail(
-                id = 2,
-                baseName = "UsageQuiz2B2-de",
-                title = "Hypothetical Reasoning"
-            ),
-            QuizDetail(3, "UsageQuiz3B2-de", "Formal Structural Control"),
-            QuizDetail(4, "UsageQuiz4B2-de", "Academic Expression"),
-            QuizDetail(5, "UsageQuiz5B2-de", "Argument Development"),
-            QuizDetail(6, "UsageQuiz6B2-de", "Precision & Nuance")
+                id = 1, baseName = "UsageQuiz1B2-de", title = "Zeitformen & Aspekte"
+            ), QuizDetail(
+                id = 2, baseName = "UsageQuiz2B2-de", title = "Hypothetisches Denken"
+            ), QuizDetail(
+                id = 3, baseName = "UsageQuiz3B2-de", title = "Formale Satzstrukturen"
+            ), QuizDetail(
+                id = 4, baseName = "UsageQuiz4B2-de", title = "Akademisches Schreiben"
+            ), QuizDetail(
+                id = 5, baseName = "UsageQuiz5B2-de", title = "Argumentation"
+            ), QuizDetail(
+                id = 6, baseName = "UsageQuiz6B2-de", title = "Präzision & Nuancen"
+            )
         )
     );
 
-
     val description: String
-        get() = when(this) {
-            ELEMENTARY -> "Beginner"
-            INTER -> "Elementary" // Explicitly string match if needed
-            UPPER -> "Inter"
-            ADVANCED -> "Advanced"
+        get() = when (this) {
+            ELEMENTARY -> "Anfänger"
+            INTER -> "Grundstufe"
+            UPPER -> "Mittelstufe"
+            ADVANCED -> "Fortgeschritten"
         }
+
     /** Compact label for tight horizontal pickers on small screens */
     val shortLabel: String
-        get() = when(this) {
-            ELEMENTARY -> "Begin."
-            INTER -> "Elem."
-            UPPER -> "Inter."
-            ADVANCED -> "Adv."
+        get() = when (this) {
+            ELEMENTARY -> "Anf."
+            INTER -> "Grund."
+            UPPER -> "Mittel."
+            ADVANCED -> "Fortg."
         }
+
     val ESOL: String
-        get() = when(this) {
+        get() = when (this) {
             ELEMENTARY -> "A1"
             INTER -> "A2"
             UPPER -> "B1"
