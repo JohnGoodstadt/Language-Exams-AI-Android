@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEntertainment1-de",
+	"title": "Entertainment",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Aktivität",
+					"summary": "etwas, das man in der Freizeit tut",
+					"explain": {
+						"entryId": "Aktivität",
+						"headword": "Aktivität",
+						"pronunciation": {
+							"display": "ak-ti-vi-TAYT",
+							"ipaUK": "/aktiviˈtɛːt/",
+							"ipaUS": "/aktiviˈtɛːt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Aktivität",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas, das man in der Freizeit tut",
+										"examples": [
+											"Wandern ist eine beliebte Aktivität."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wandern ist eine beliebte Aktivität.",
+							"ok": true
+						},
+						{
+							"answer": "Wandern ist einen beliebten Aktivität.",
+							"ok": false
+						},
+						{
+							"answer": "Wandern eine beliebte Aktivität ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Konzert",
+					"summary": "Musikveranstaltung",
+					"explain": {
+						"entryId": "Konzert",
+						"headword": "Konzert",
+						"pronunciation": {
+							"display": "kon-TSERT",
+							"ipaUK": "/kɔnˈtsɛʁt/",
+							"ipaUS": "/kɔnˈtsɛʁt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Konzert",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Musikveranstaltung",
+										"examples": [
+											"Das Konzert beginnt um acht Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Konzert beginnt um acht Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Der Konzert beginnt um acht Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Das Konzert um acht Uhr beginnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Unterhaltung",
+					"summary": "etwas, das Spaß bringt",
+					"explain": {
+						"entryId": "Unterhaltung",
+						"headword": "Unterhaltung",
+						"pronunciation": {
+							"display": "oon-tuh-HAL-toong",
+							"ipaUK": "/ʊntɐˈhaltʊŋ/",
+							"ipaUS": "/ʊntɐˈhaltʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unterhaltung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas, das Freude und Spaß bringt",
+										"examples": [
+											"Der Abend bot beste Unterhaltung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Abend bot beste Unterhaltung.",
+							"ok": true
+						},
+						{
+							"answer": "Der Abend bot besten Unterhaltung.",
+							"ok": false
+						},
+						{
+							"answer": "Der Abend beste Unterhaltung bot.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Hobby",
+					"summary": "Lieblingsbeschäftigung in der Freizeit",
+					"explain": {
+						"entryId": "Hobby",
+						"headword": "Hobby",
+						"pronunciation": {
+							"display": "HO-bi",
+							"ipaUK": "/ˈhɔbi/",
+							"ipaUS": "/ˈhɔbi/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hobby",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Lieblingsbeschäftigung in der Freizeit",
+										"examples": [
+											"Fotografieren ist mein liebstes Hobby."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Fotografieren ist mein liebstes Hobby.",
+							"ok": true
+						},
+						{
+							"answer": "Fotografieren ist mein liebster Hobby.",
+							"ok": false
+						},
+						{
+							"answer": "Fotografieren mein liebstes Hobby ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Freizeit",
+					"summary": "Zeit ohne Arbeit",
+					"explain": {
+						"entryId": "Freizeit",
+						"headword": "Freizeit",
+						"pronunciation": {
+							"display": "FRY-tsite",
+							"ipaUK": "/ˈfʁaɪ̯ˌtsaɪ̯t/",
+							"ipaUS": "/ˈfʁaɪ̯ˌtsaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Freizeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeit ohne Arbeit oder Pflichten",
+										"examples": [
+											"In meiner Freizeit spiele ich Gitarre."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In meiner Freizeit spiele ich Gitarre.",
+							"ok": true
+						},
+						{
+							"answer": "In meinem Freizeit spiele ich Gitarre.",
+							"ok": false
+						},
+						{
+							"answer": "In meiner Freizeit ich spiele Gitarre.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Museum",
+					"summary": "Ort mit Kunst und Geschichte",
+					"explain": {
+						"entryId": "Museum",
+						"headword": "Museum",
+						"pronunciation": {
+							"display": "moo-ZAY-oom",
+							"ipaUK": "/muˈzeːʊm/",
+							"ipaUS": "/muˈzeːʊm/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Museum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort mit Kunst und Geschichte",
+										"examples": [
+											"Am Sonntag besuchen wir ein Museum."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Sonntag besuchen wir ein Museum.",
+							"ok": true
+						},
+						{
+							"answer": "Am Sonntag besuchen wir einen Museum.",
+							"ok": false
+						},
+						{
+							"answer": "Am Sonntag wir besuchen ein Museum.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Aufführung",
+					"summary": "Vorstellung auf einer Bühne",
+					"explain": {
+						"entryId": "Aufführung",
+						"headword": "Aufführung",
+						"pronunciation": {
+							"display": "OWF-fü-roong",
+							"ipaUK": "/ˈaʊ̯fˌfyːʁʊŋ/",
+							"ipaUS": "/ˈaʊ̯fˌfyːʁʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Aufführung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Vorstellung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Vorstellung auf einer Bühne",
+										"examples": [
+											"Die Aufführung dauerte zwei Stunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Aufführung dauerte zwei Stunden.",
+							"ok": true
+						},
+						{
+							"answer": "Der Aufführung dauerte zwei Stunden.",
+							"ok": false
+						},
+						{
+							"answer": "Die Aufführung zwei Stunden dauerte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Erholung",
+					"summary": "Entspannung in der Freizeit",
+					"explain": {
+						"entryId": "Erholung",
+						"headword": "Erholung",
+						"pronunciation": {
+							"display": "er-HOH-loong",
+							"ipaUK": "/ɛɐ̯ˈhoːlʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈhoːlʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erholung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Entspannung in der Freizeit",
+										"examples": [
+											"Nach dem Stress brauche ich Erholung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Stress brauche ich Erholung.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Stress brauche ich Erholungen.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Stress ich brauche Erholung.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Theater",
+					"summary": "Gebäude für Bühnenaufführungen",
+					"explain": {
+						"entryId": "Theater",
+						"headword": "Theater",
+						"pronunciation": {
+							"display": "te-AH-tuh",
+							"ipaUK": "/teˈaːtɐ/",
+							"ipaUS": "/teˈaːtɐ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Theater",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gebäude für Bühnenaufführungen",
+										"examples": [
+											"Heute Abend gehen wir ins Theater."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Heute Abend gehen wir ins Theater.",
+							"ok": true
+						},
+						{
+							"answer": "Heute Abend gehen wir in die Theater.",
+							"ok": false
+						},
+						{
+							"answer": "Heute Abend wir gehen ins Theater.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Tourismus",
+					"summary": "Reisen als Wirtschaft",
+					"explain": {
+						"entryId": "Tourismus",
+						"headword": "Tourismus",
+						"pronunciation": {
+							"display": "too-RIS-moos",
+							"ipaUK": "/tuˈʁɪsmʊs/",
+							"ipaUS": "/tuˈʁɪsmʊs/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tourismus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Reisen von vielen Menschen als Wirtschaft",
+										"examples": [
+											"Der Tourismus bringt der Stadt viel Geld."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Tourismus bringt der Stadt viel Geld.",
+							"ok": true
+						},
+						{
+							"answer": "Die Tourismus bringt der Stadt viel Geld.",
+							"ok": false
+						},
+						{
+							"answer": "Der Tourismus der Stadt viel Geld bringt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

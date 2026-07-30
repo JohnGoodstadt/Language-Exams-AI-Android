@@ -65,6 +65,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.goodstadt.john.language.exams.BuildConfig.DEBUG
 import com.goodstadt.john.language.exams.data.QuizHistoryManager
 import com.goodstadt.john.language.exams.managers.XPManager
 import com.goodstadt.john.language.exams.models.Category
@@ -418,6 +419,10 @@ fun CategoryTabScreen(
                                                         tint = orangeLight
                                                     )
                                                 }
+                                            }
+                                        }else{
+                                            if (DEBUG){
+                                                println("am i here")
                                             }
                                         }
 

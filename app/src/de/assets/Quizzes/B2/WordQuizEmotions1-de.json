@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEmotions1-de",
+	"title": "Emotions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Anpassungsfähigkeit",
+					"summary": "sich an Neues anpassen können",
+					"explain": {
+						"entryId": "Anpassungsfähigkeit",
+						"headword": "Anpassungsfähigkeit",
+						"pronunciation": {
+							"display": "AN-pas-oongs-fay-ikh-kite",
+							"ipaUK": "/ˈanpasʊŋsˌfɛːɪçkaɪ̯t/",
+							"ipaUS": "/ˈanpasʊŋsˌfɛːɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Anpassungsfähigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Fähigkeit, sich an Neues anzupassen",
+										"examples": [
+											"Ihre Anpassungsfähigkeit ist beeindruckend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihre Anpassungsfähigkeit ist beeindruckend.",
+							"ok": true
+						},
+						{
+							"answer": "Ihr Anpassungsfähigkeit ist beeindruckend.",
+							"ok": false
+						},
+						{
+							"answer": "Ihre Anpassungsfähigkeit beeindruckend ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Ehrgeiz",
+					"summary": "starker Wunsch nach Erfolg",
+					"explain": {
+						"entryId": "Ehrgeiz",
+						"headword": "Ehrgeiz",
+						"pronunciation": {
+							"display": "AIR-guyts",
+							"ipaUK": "/ˈeːɐ̯ɡaɪ̯ts/",
+							"ipaUS": "/ˈeːɐ̯ɡaɪ̯ts/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ehrgeiz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der starke Wunsch, erfolgreich zu sein",
+										"examples": [
+											"Sein großer Ehrgeiz treibt ihn an."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sein großer Ehrgeiz treibt ihn an.",
+							"ok": true
+						},
+						{
+							"answer": "Seine große Ehrgeiz treibt ihn an.",
+							"ok": false
+						},
+						{
+							"answer": "Sein großer Ehrgeiz ihn antreibt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Angst",
+					"summary": "Gefühl von Sorge/Furcht",
+					"explain": {
+						"entryId": "Angst",
+						"headword": "Angst",
+						"pronunciation": {
+							"display": "angst",
+							"ipaUK": "/aŋst/",
+							"ipaUS": "/aŋst/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Angst",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein starkes Gefühl von Sorge oder Furcht",
+										"examples": [
+											"Vor der Prüfung hat er große Angst."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vor der Prüfung hat er große Angst.",
+							"ok": true
+						},
+						{
+							"answer": "Vor der Prüfung hat er großen Angst.",
+							"ok": false
+						},
+						{
+							"answer": "Vor der Prüfung er hat große Angst.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Selbstvertrauen",
+					"summary": "Vertrauen in eigene Fähigkeiten",
+					"explain": {
+						"entryId": "Selbstvertrauen",
+						"headword": "Selbstvertrauen",
+						"pronunciation": {
+							"display": "ZELPST-fer-trow-en",
+							"ipaUK": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/",
+							"ipaUS": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Selbstvertrauen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Vertrauen in die eigenen Fähigkeiten",
+										"examples": [
+											"Durch Erfolg wächst das Selbstvertrauen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Durch Erfolg wächst das Selbstvertrauen.",
+							"ok": true
+						},
+						{
+							"answer": "Durch Erfolg wächst der Selbstvertrauen.",
+							"ok": false
+						},
+						{
+							"answer": "Durch Erfolg das Selbstvertrauen wächst.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Neugier",
+					"summary": "Interesse an Neuem",
+					"explain": {
+						"entryId": "Neugier",
+						"headword": "Neugier",
+						"pronunciation": {
+							"display": "NOY-geer",
+							"ipaUK": "/ˈnɔɪ̯ɡiːɐ̯/",
+							"ipaUS": "/ˈnɔɪ̯ɡiːɐ̯/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Neugier",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das starke Interesse an Neuem",
+										"examples": [
+											"Ihre Neugier bringt sie oft zum Lesen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihre Neugier bringt sie oft zum Lesen.",
+							"ok": true
+						},
+						{
+							"answer": "Ihr Neugier bringt sie oft zum Lesen.",
+							"ok": false
+						},
+						{
+							"answer": "Ihre Neugier sie oft zum Lesen bringt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Begeisterung",
+					"summary": "große Freude an etwas",
+					"explain": {
+						"entryId": "Begeisterung",
+						"headword": "Begeisterung",
+						"pronunciation": {
+							"display": "buh-GUY-stuh-roong",
+							"ipaUK": "/bəˈɡaɪ̯stəʁʊŋ/",
+							"ipaUS": "/bəˈɡaɪ̯stəʁʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Begeisterung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die große Freude an etwas",
+										"examples": [
+											"Die Fans zeigten große Begeisterung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Fans zeigten große Begeisterung.",
+							"ok": true
+						},
+						{
+							"answer": "Die Fans zeigten großen Begeisterung.",
+							"ok": false
+						},
+						{
+							"answer": "Die Fans große Begeisterung zeigten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Dankbarkeit",
+					"summary": "Gefühl, dankbar zu sein",
+					"explain": {
+						"entryId": "Dankbarkeit",
+						"headword": "Dankbarkeit",
+						"pronunciation": {
+							"display": "DANK-bar-kite",
+							"ipaUK": "/ˈdaŋkbaːɐ̯kaɪ̯t/",
+							"ipaUS": "/ˈdaŋkbaːɐ̯kaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dankbarkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Gefühl, dankbar zu sein",
+										"examples": [
+											"Aus Dankbarkeit schenkte sie ihm Blumen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Aus Dankbarkeit schenkte sie ihm Blumen.",
+							"ok": true
+						},
+						{
+							"answer": "Aus Dankbarkeit schenkte sie ihm Blumen ein.",
+							"ok": false
+						},
+						{
+							"answer": "Aus Dankbarkeit sie schenkte ihm Blumen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Unabhängigkeit",
+					"summary": "Freiheit von anderen",
+					"explain": {
+						"entryId": "Unabhängigkeit",
+						"headword": "Unabhängigkeit",
+						"pronunciation": {
+							"display": "OON-ap-heng-ikh-kite",
+							"ipaUK": "/ˈʊnʔapˌhɛŋɪçkaɪ̯t/",
+							"ipaUS": "/ˈʊnʔapˌhɛŋɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unabhängigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Freiheit von anderen; Selbstständigkeit",
+										"examples": [
+											"Junge Leute schätzen ihre Unabhängigkeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Junge Leute schätzen ihre Unabhängigkeit.",
+							"ok": true
+						},
+						{
+							"answer": "Junge Leute schätzen ihren Unabhängigkeit.",
+							"ok": false
+						},
+						{
+							"answer": "Junge Leute ihre Unabhängigkeit schätzen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Geduld",
+					"summary": "ruhig warten können",
+					"explain": {
+						"entryId": "Geduld",
+						"headword": "Geduld",
+						"pronunciation": {
+							"display": "guh-DOOLT",
+							"ipaUK": "/ɡəˈdʊlt/",
+							"ipaUS": "/ɡəˈdʊlt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Geduld",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Fähigkeit, ruhig zu warten",
+										"examples": [
+											"Für diese Arbeit braucht man viel Geduld."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Für diese Arbeit braucht man viel Geduld.",
+							"ok": true
+						},
+						{
+							"answer": "Für diese Arbeit braucht man viele Geduld.",
+							"ok": false
+						},
+						{
+							"answer": "Für diese Arbeit man braucht viel Geduld.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Widerstandsfähigkeit",
+					"summary": "Krisen gut überstehen",
+					"explain": {
+						"entryId": "Widerstandsfähigkeit",
+						"headword": "Widerstandsfähigkeit",
+						"pronunciation": {
+							"display": "VEE-duh-shtants-fay-ikh-kite",
+							"ipaUK": "/ˈviːdɐʃtantsˌfɛːɪçkaɪ̯t/",
+							"ipaUS": "/ˈviːdɐʃtantsˌfɛːɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Widerstandsfähigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Fähigkeit, Krisen gut zu überstehen",
+										"examples": [
+											"Ihre Widerstandsfähigkeit hat allen imponiert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihre Widerstandsfähigkeit hat allen imponiert.",
+							"ok": true
+						},
+						{
+							"answer": "Ihr Widerstandsfähigkeit hat allen imponiert.",
+							"ok": false
+						},
+						{
+							"answer": "Ihre Widerstandsfähigkeit allen imponiert hat.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

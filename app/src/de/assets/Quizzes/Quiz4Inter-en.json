@@ -1,0 +1,188 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "Quiz4Inter-en",
+	"title": "4 - Spelling 1",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "",
+			"sortorder": 1,"sortbypage":true,
+
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "brake",
+					"summary": "Teaching Focus: Homophones (brake/break) \u2014 A2 level.",
+					"explain": "Distinguishing between 'brake' and 'break' in everyday usage.",
+					"words": [
+						{
+							"word": "Use the brake to stop the car.",
+							"ok": true
+						},
+						{
+							"word": "Use the break to stop the car.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "break",
+					"summary": "Teaching Focus: Homophones (brake/break) \u2014 A2 level.",
+					"explain": "Distinguishing between 'break' and 'brake' in everyday usage.",
+					"words": [
+						{
+							"word": "Be careful not to break the glass.",
+							"ok": true
+						},
+						{
+							"word": "Be careful not to brake the glass.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "knight",
+					"summary": "Teaching Focus: Homophones (knight/night) \u2014 A2 level.",
+					"explain": "Distinguishing between 'knight' and 'night' in everyday usage.",
+					"words": [
+						{
+							"word": "The knight wore shining armor.",
+							"ok": true
+						},
+						{
+							"word": "The night wore shining armor.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "night",
+					"summary": "Teaching Focus: Homophones (knight/night) \u2014 A2 level.",
+					"explain": "Distinguishing between 'night' and 'knight' in everyday usage.",
+					"words": [
+						{
+							"word": "It was a dark and cold night.",
+							"ok": true
+						},
+						{
+							"word": "It was a dark and cold knight.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "mail",
+					"summary": "Teaching Focus: Homophones (mail/male) \u2014 A2 level.",
+					"explain": "Distinguishing between 'mail' and 'male' in everyday usage.",
+					"words": [
+						{
+							"word": "I received a letter in the mail.",
+							"ok": true
+						},
+						{
+							"word": "I received a letter in the male.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "male",
+					"summary": "Teaching Focus: Homophones (mail/male) \u2014 A2 level.",
+					"explain": "Distinguishing between 'male' and 'mail' in everyday usage.",
+					"words": [
+						{
+							"word": "Only male students were in the group.",
+							"ok": true
+						},
+						{
+							"word": "Only mail students were in the group.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "pair",
+					"summary": "Teaching Focus: Homophones (pair/pear) \u2014 A2 level.",
+					"explain": "Distinguishing between 'pair' and 'pear' in everyday usage.",
+					"words": [
+						{
+							"word": "I bought a new pair of shoes.",
+							"ok": true
+						},
+						{
+							"word": "I bought a new pear of shoes.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "pear",
+					"summary": "Teaching Focus: Homophones (pair/pear) \u2014 A2 level.",
+					"explain": "Distinguishing between 'pear' and 'pair' in everyday usage.",
+					"words": [
+						{
+							"word": "She ate a juicy pear.",
+							"ok": true
+						},
+						{
+							"word": "She ate a juicy pair.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "right",
+					"summary": "Teaching Focus: Homophones (right/write) \u2014 A2 level.",
+					"explain": "Distinguishing between 'right' and 'write' in everyday usage.",
+					"words": [
+						{
+							"word": "Turn right at the corner.",
+							"ok": true
+						},
+						{
+							"word": "Turn write at the corner.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "write",
+					"summary": "Teaching Focus: Homophones (right/write) \u2014 A2 level.",
+					"explain": "Distinguishing between 'write' and 'right' in everyday usage.",
+					"words": [
+						{
+							"word": "Please write your name here.",
+							"ok": true
+						},
+						{
+							"word": "Please right your name here.",
+							"ok": false
+						}
+					]
+				}
+			]
+
+		}
+	]
+}

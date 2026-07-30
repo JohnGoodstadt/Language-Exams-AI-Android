@@ -1,0 +1,551 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocialIssues1-de",
+	"title": "Social Issues",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "gemeinnützige Arbeit",
+					"summary": "Arbeit zum Wohl der Gemeinschaft",
+					"explain": {
+						"entryId": "gemeinnützige Arbeit",
+						"headword": "gemeinnützige Arbeit",
+						"pronunciation": {
+							"display": "guh-MINE-nüt-si-guh AR-byte",
+							"ipaUK": "/ɡəˈmaɪ̯nˌnʏtsɪɡə ˈaʁbaɪ̯t/",
+							"ipaUS": "/ɡəˈmaɪ̯nˌnʏtsɪɡə ˈaʁbaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "gemeinnützige Arbeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Arbeit zum Wohl der Gemeinschaft, oft freiwillig",
+										"examples": [
+											"Er leistet gemeinnützige Arbeit im Park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er leistet gemeinnützige Arbeit im Park.",
+							"ok": true
+						},
+						{
+							"answer": "Er leistet gemeinnützigen Arbeit im Park.",
+							"ok": false
+						},
+						{
+							"answer": "Er gemeinnützige Arbeit im Park leistet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Gleichheit",
+					"summary": "alle werden gleich behandelt",
+					"explain": {
+						"entryId": "Gleichheit",
+						"headword": "Gleichheit",
+						"pronunciation": {
+							"display": "GLYKH-hite",
+							"ipaUK": "/ˈɡlaɪ̯çhaɪ̯t/",
+							"ipaUS": "/ˈɡlaɪ̯çhaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gleichheit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Zustand, dass alle gleich behandelt werden",
+										"examples": [
+											"Die Verfassung garantiert die Gleichheit aller."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Verfassung garantiert die Gleichheit aller.",
+							"ok": true
+						},
+						{
+							"answer": "Die Verfassung garantiert der Gleichheit aller.",
+							"ok": false
+						},
+						{
+							"answer": "Die Verfassung die Gleichheit aller garantiert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Menschenrechte",
+					"summary": "Grundrechte jedes Menschen (Plural)",
+					"explain": {
+						"entryId": "Menschenrechte",
+						"headword": "Menschenrechte",
+						"pronunciation": {
+							"display": "MEN-shn-rekh-tuh",
+							"ipaUK": "/ˈmɛnʃn̩ˌʁɛçtə/",
+							"ipaUS": "/ˈmɛnʃn̩ˌʁɛçtə/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Menschenrechte",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Grundrechte jedes Menschen (Plural)",
+										"examples": [
+											"Die Menschenrechte gelten für alle."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Menschenrechte gelten für alle.",
+							"ok": true
+						},
+						{
+							"answer": "Die Menschenrecht gelten für alle.",
+							"ok": false
+						},
+						{
+							"answer": "Die Menschenrechte für alle gelten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Gerechtigkeit",
+					"summary": "faires, gerechtes Handeln",
+					"explain": {
+						"entryId": "Gerechtigkeit",
+						"headword": "Gerechtigkeit",
+						"pronunciation": {
+							"display": "guh-REKH-tikh-kite",
+							"ipaUK": "/ɡəˈʁɛçtɪçkaɪ̯t/",
+							"ipaUS": "/ɡəˈʁɛçtɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gerechtigkeit",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Fairness"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "faires und gerechtes Handeln",
+										"examples": [
+											"Die Menschen kämpfen für mehr Gerechtigkeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Menschen kämpfen für mehr Gerechtigkeit.",
+							"ok": true
+						},
+						{
+							"answer": "Die Menschen kämpfen für mehr Gerechtigkeiten.",
+							"ok": false
+						},
+						{
+							"answer": "Die Menschen für mehr Gerechtigkeit kämpfen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Gesetzgebung",
+					"summary": "das Machen von Gesetzen",
+					"explain": {
+						"entryId": "Gesetzgebung",
+						"headword": "Gesetzgebung",
+						"pronunciation": {
+							"display": "guh-ZETS-gay-boong",
+							"ipaUK": "/ɡəˈzɛtsˌɡeːbʊŋ/",
+							"ipaUS": "/ɡəˈzɛtsˌɡeːbʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gesetzgebung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Machen von Gesetzen",
+										"examples": [
+											"Die Gesetzgebung liegt beim Parlament."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Gesetzgebung liegt beim Parlament.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gesetzgebung liegt beim Parlament.",
+							"ok": false
+						},
+						{
+							"answer": "Die Gesetzgebung beim Parlament liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Protest",
+					"summary": "öffentlicher Widerstand",
+					"explain": {
+						"entryId": "Protest",
+						"headword": "Protest",
+						"pronunciation": {
+							"display": "pro-TEST",
+							"ipaUK": "/pʁoˈtɛst/",
+							"ipaUS": "/pʁoˈtɛst/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Protest",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der öffentliche Widerstand gegen etwas",
+										"examples": [
+											"Der Protest gegen das Gesetz war groß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Protest gegen das Gesetz war groß.",
+							"ok": true
+						},
+						{
+							"answer": "Die Protest gegen das Gesetz war groß.",
+							"ok": false
+						},
+						{
+							"answer": "Der Protest gegen das Gesetz groß war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Reform",
+					"summary": "Veränderung zum Besseren",
+					"explain": {
+						"entryId": "Reform",
+						"headword": "Reform",
+						"pronunciation": {
+							"display": "re-FORM",
+							"ipaUK": "/ʁeˈfɔʁm/",
+							"ipaUS": "/ʁeˈfɔʁm/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reform",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine planmäßige Veränderung zum Besseren",
+										"examples": [
+											"Die Regierung plant eine große Reform."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Regierung plant eine große Reform.",
+							"ok": true
+						},
+						{
+							"answer": "Die Regierung plant einen großen Reform.",
+							"ok": false
+						},
+						{
+							"answer": "Die Regierung eine große Reform plant.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "soziale Gerechtigkeit",
+					"summary": "faire Verteilung von Chancen",
+					"explain": {
+						"entryId": "soziale Gerechtigkeit",
+						"headword": "soziale Gerechtigkeit",
+						"pronunciation": {
+							"display": "zo-tsi-AH-luh guh-REKH-tikh-kite",
+							"ipaUK": "/zoˈtsi̯aːlə ɡəˈʁɛçtɪçkaɪ̯t/",
+							"ipaUS": "/zoˈtsi̯aːlə ɡəˈʁɛçtɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "soziale Gerechtigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die faire Verteilung von Chancen in der Gesellschaft",
+										"examples": [
+											"Viele setzen sich für soziale Gerechtigkeit ein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele setzen sich für soziale Gerechtigkeit ein.",
+							"ok": true
+						},
+						{
+							"answer": "Viele setzen sich für sozialen Gerechtigkeit ein.",
+							"ok": false
+						},
+						{
+							"answer": "Viele sich für soziale Gerechtigkeit einsetzen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Helfer",
+					"summary": "Person, die freiwillig hilft",
+					"explain": {
+						"entryId": "Helfer",
+						"headword": "Helfer",
+						"pronunciation": {
+							"display": "HEL-fuh",
+							"ipaUK": "/ˈhɛlfɐ/",
+							"ipaUS": "/ˈhɛlfɐ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Helfer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Freiwilliger",
+									"Ehrenamtlicher"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die freiwillig hilft",
+										"examples": [
+											"Der Helfer verteilt Essen an Bedürftige."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Helfer verteilt Essen an Bedürftige.",
+							"ok": true
+						},
+						{
+							"answer": "Die Helfer verteilt Essen an Bedürftige.",
+							"ok": false
+						},
+						{
+							"answer": "Der Helfer Essen an Bedürftige verteilt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Sozialhilfe",
+					"summary": "staatliche Geldhilfe für Arme",
+					"explain": {
+						"entryId": "Sozialhilfe",
+						"headword": "Sozialhilfe",
+						"pronunciation": {
+							"display": "zo-tsi-AHL-hil-fuh",
+							"ipaUK": "/zoˈtsi̯aːlˌhɪlfə/",
+							"ipaUS": "/zoˈtsi̯aːlˌhɪlfə/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Sozialhilfe",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "staatliche Geldhilfe für arme Menschen",
+										"examples": [
+											"Ohne Arbeit bekommt er Sozialhilfe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ohne Arbeit bekommt er Sozialhilfe.",
+							"ok": true
+						},
+						{
+							"answer": "Ohne Arbeit bekommt er Sozialhilfen.",
+							"ok": false
+						},
+						{
+							"answer": "Ohne Arbeit er bekommt Sozialhilfe.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

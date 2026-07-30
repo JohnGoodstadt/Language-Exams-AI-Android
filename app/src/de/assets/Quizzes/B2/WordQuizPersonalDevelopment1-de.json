@@ -1,0 +1,285 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonalDevelopment1-de",
+	"title": "Personal Development",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Leistung",
+					"summary": "durch Anstrengung erreicht",
+					"explain": {
+						"entryId": "Leistung",
+						"headword": "Leistung",
+						"pronunciation": {
+							"display": "LY-stoong",
+							"ipaUK": "/ˈlaɪ̯stʊŋ/",
+							"ipaUS": "/ˈlaɪ̯stʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Leistung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Erfolg"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas, das man durch Anstrengung erreicht hat",
+										"examples": [
+											"Ihre Leistung im Sport ist beeindruckend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihre Leistung im Sport ist beeindruckend.",
+							"ok": true
+						},
+						{
+							"answer": "Ihre Leistung im Sport ist beeindruckende.",
+							"ok": false
+						},
+						{
+							"answer": "Ihre Leistung im Sport beeindruckend ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Engagement",
+					"summary": "aktiver Einsatz für eine Sache",
+					"explain": {
+						"entryId": "Engagement",
+						"headword": "Engagement",
+						"pronunciation": {
+							"display": "ang-gazh-MAH",
+							"ipaUK": "/ãɡaʒˈmãː/",
+							"ipaUS": "/ãɡaʒˈmãː/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Engagement",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Einsatz"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der aktive Einsatz für eine Sache",
+										"examples": [
+											"Sein Engagement für die Umwelt ist groß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sein Engagement für die Umwelt ist groß.",
+							"ok": true
+						},
+						{
+							"answer": "Seine Engagement für die Umwelt ist groß.",
+							"ok": false
+						},
+						{
+							"answer": "Sein Engagement für die Umwelt groß ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Hingabe",
+					"summary": "volle Leidenschaft für etwas",
+					"explain": {
+						"entryId": "Hingabe",
+						"headword": "Hingabe",
+						"pronunciation": {
+							"display": "HIN-gah-buh",
+							"ipaUK": "/ˈhɪnˌɡaːbə/",
+							"ipaUS": "/ˈhɪnˌɡaːbə/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hingabe",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die volle Konzentration und Leidenschaft für etwas",
+										"examples": [
+											"Sie arbeitet mit großer Hingabe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie arbeitet mit großer Hingabe.",
+							"ok": true
+						},
+						{
+							"answer": "Sie arbeitet mit großem Hingabe.",
+							"ok": false
+						},
+						{
+							"answer": "Sie mit großer Hingabe arbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Führung",
+					"summary": "Leiten einer Gruppe/Firma",
+					"explain": {
+						"entryId": "Führung",
+						"headword": "Führung",
+						"pronunciation": {
+							"display": "FÜ-roong",
+							"ipaUK": "/ˈfyːʁʊŋ/",
+							"ipaUS": "/ˈfyːʁʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Führung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Leiten einer Gruppe oder Firma",
+										"examples": [
+											"Die Führung der Firma liegt bei ihr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Führung der Firma liegt bei ihr.",
+							"ok": true
+						},
+						{
+							"answer": "Der Führung der Firma liegt bei ihr.",
+							"ok": false
+						},
+						{
+							"answer": "Die Führung der Firma bei ihr liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Motivation",
+					"summary": "innerer Antrieb, etwas zu tun",
+					"explain": {
+						"entryId": "Motivation",
+						"headword": "Motivation",
+						"pronunciation": {
+							"display": "mo-ti-va-TSYOHN",
+							"ipaUK": "/motivaˈtsi̯oːn/",
+							"ipaUS": "/motivaˈtsi̯oːn/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Motivation",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der innere Antrieb, etwas zu tun",
+										"examples": [
+											"Ihm fehlt oft die nötige Motivation."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihm fehlt oft die nötige Motivation.",
+							"ok": true
+						},
+						{
+							"answer": "Ihm fehlt oft der nötige Motivation.",
+							"ok": false
+						},
+						{
+							"answer": "Ihm oft die nötige Motivation fehlt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

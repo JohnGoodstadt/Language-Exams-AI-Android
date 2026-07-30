@@ -1,0 +1,554 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology1-de",
+	"title": "Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Anwendung",
+					"summary": "Programm für eine Aufgabe",
+					"explain": {
+						"entryId": "Anwendung",
+						"headword": "Anwendung",
+						"pronunciation": {
+							"display": "AN-ven-doong",
+							"ipaUK": "/ˈanˌvɛndʊŋ/",
+							"ipaUS": "/ˈanˌvɛndʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Anwendung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"App"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Programm für eine bestimmte Aufgabe",
+										"examples": [
+											"Die Anwendung stürzt leider oft ab."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Anwendung stürzt leider oft ab.",
+							"ok": true
+						},
+						{
+							"answer": "Der Anwendung stürzt leider oft ab.",
+							"ok": false
+						},
+						{
+							"answer": "Die Anwendung leider oft abstürzt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "künstliche Intelligenz",
+					"summary": "Computer, die wie Menschen denken",
+					"explain": {
+						"entryId": "künstliche Intelligenz",
+						"headword": "künstliche Intelligenz",
+						"pronunciation": {
+							"display": "KÜNST-likh-uh in-te-li-GENTS",
+							"ipaUK": "/ˈkʏnstlɪçə ʔɪntɛliˈɡɛnts/",
+							"ipaUS": "/ˈkʏnstlɪçə ʔɪntɛliˈɡɛnts/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "künstliche Intelligenz",
+								"inflectionsLine": null,
+								"synonyms": [
+									"KI"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Fähigkeit von Computern, wie Menschen zu denken",
+										"examples": [
+											"Künstliche Intelligenz verändert die Arbeitswelt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Künstliche Intelligenz verändert die Arbeitswelt.",
+							"ok": true
+						},
+						{
+							"answer": "Künstlichen Intelligenz verändert die Arbeitswelt.",
+							"ok": false
+						},
+						{
+							"answer": "Künstliche Intelligenz die Arbeitswelt verändert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "digital",
+					"summary": "Adjektiv: elektronisch, nicht analog",
+					"explain": {
+						"entryId": "digital",
+						"headword": "digital",
+						"pronunciation": {
+							"display": "di-gi-TAHL",
+							"ipaUK": "/diɡiˈtaːl/",
+							"ipaUS": "/diɡiˈtaːl/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "digital",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in elektronischer Form; nicht analog",
+										"examples": [
+											"Heute ist fast alles digital."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Heute ist fast alles digital.",
+							"ok": true
+						},
+						{
+							"answer": "Heute ist fast alles digitale.",
+							"ok": false
+						},
+						{
+							"answer": "Heute fast alles ist digital.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Innovation",
+					"summary": "bedeutende Neuerung",
+					"explain": {
+						"entryId": "Innovation",
+						"headword": "Innovation",
+						"pronunciation": {
+							"display": "i-no-va-TSYOHN",
+							"ipaUK": "/ɪnovaˈtsi̯oːn/",
+							"ipaUS": "/ɪnovaˈtsi̯oːn/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Innovation",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Neuerung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine bedeutende Neuerung",
+										"examples": [
+											"Diese Innovation verändert die Branche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Innovation verändert die Branche.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Innovation verändert die Branche.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Innovation die Branche verändert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Erfindung",
+					"summary": "etwas völlig Neues",
+					"explain": {
+						"entryId": "Erfindung",
+						"headword": "Erfindung",
+						"pronunciation": {
+							"display": "er-FIN-doong",
+							"ipaUK": "/ɛɐ̯ˈfɪndʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈfɪndʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erfindung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas völlig Neues, das jemand erschaffen hat",
+										"examples": [
+											"Das Rad war eine wichtige Erfindung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Rad war eine wichtige Erfindung.",
+							"ok": true
+						},
+						{
+							"answer": "Das Rad war einen wichtigen Erfindung.",
+							"ok": false
+						},
+						{
+							"answer": "Das Rad eine wichtige Erfindung war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Programmierung",
+					"summary": "Schreiben von Programmen",
+					"explain": {
+						"entryId": "Programmierung",
+						"headword": "Programmierung",
+						"pronunciation": {
+							"display": "pro-gra-MEE-roong",
+							"ipaUK": "/pʁoɡʁaˈmiːʁʊŋ/",
+							"ipaUS": "/pʁoɡʁaˈmiːʁʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Programmierung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Schreiben von Computerprogrammen",
+										"examples": [
+											"Die Programmierung der App dauerte Wochen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Programmierung der App dauerte Wochen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Programmierung der App dauerte Wochen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Programmierung der App Wochen dauerte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Software",
+					"summary": "die Programme eines Computers",
+					"explain": {
+						"entryId": "Software",
+						"headword": "Software",
+						"pronunciation": {
+							"display": "SOFT-vair",
+							"ipaUK": "/ˈsɔftvɛːɐ̯/",
+							"ipaUS": "/ˈsɔftvɛːɐ̯/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Software",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Programme auf einem Computer",
+										"examples": [
+											"Diese Software muss man aktualisieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Software muss man aktualisieren.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Software muss man aktualisieren.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Software man muss aktualisieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Technologie",
+					"summary": "Anwendung von technischem Wissen",
+					"explain": {
+						"entryId": "Technologie",
+						"headword": "Technologie",
+						"pronunciation": {
+							"display": "tekh-no-lo-GEE",
+							"ipaUK": "/tɛçnoloˈɡiː/",
+							"ipaUS": "/tɛçnoloˈɡiː/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Technologie",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Technik"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Anwendung von technischem Wissen",
+										"examples": [
+											"Moderne Technologie erleichtert den Alltag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Moderne Technologie erleichtert den Alltag.",
+							"ok": true
+						},
+						{
+							"answer": "Moderner Technologie erleichtert den Alltag.",
+							"ok": false
+						},
+						{
+							"answer": "Moderne Technologie den Alltag erleichtert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Benutzeroberfläche",
+					"summary": "sichtbarer Teil zum Bedienen",
+					"explain": {
+						"entryId": "Benutzeroberfläche",
+						"headword": "Benutzeroberfläche",
+						"pronunciation": {
+							"display": "buh-NOOT-suh-oh-buh-flekh-uh",
+							"ipaUK": "/bəˈnʊtsɐˌʔoːbɐflɛçə/",
+							"ipaUS": "/bəˈnʊtsɐˌʔoːbɐflɛçə/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Benutzeroberfläche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der sichtbare Teil eines Programms zum Bedienen",
+										"examples": [
+											"Die Benutzeroberfläche ist sehr übersichtlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Benutzeroberfläche ist sehr übersichtlich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Benutzeroberfläche ist sehr übersichtlich.",
+							"ok": false
+						},
+						{
+							"answer": "Die Benutzeroberfläche sehr übersichtlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "virtuelle Realität",
+					"summary": "vom Computer erzeugte Scheinwelt",
+					"explain": {
+						"entryId": "virtuelle Realität",
+						"headword": "virtuelle Realität",
+						"pronunciation": {
+							"display": "vir-too-EL-uh re-a-li-TAYT",
+							"ipaUK": "/vɪʁˈtu̯ɛlə ʁealiˈtɛːt/",
+							"ipaUS": "/vɪʁˈtu̯ɛlə ʁealiˈtɛːt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "virtuelle Realität",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine vom Computer erzeugte Scheinwelt",
+										"examples": [
+											"Mit einer Brille taucht man in virtuelle Realität ein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit einer Brille taucht man in virtuelle Realität ein.",
+							"ok": true
+						},
+						{
+							"answer": "Mit einer Brille taucht man in virtueller Realität ein.",
+							"ok": false
+						},
+						{
+							"answer": "Mit einer Brille man taucht in virtuelle Realität ein.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

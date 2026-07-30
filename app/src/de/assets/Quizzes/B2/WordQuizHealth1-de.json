@@ -1,0 +1,550 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth1-de",
+	"title": "Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Allergie",
+					"summary": "Überreaktion auf einen Stoff",
+					"explain": {
+						"entryId": "Allergie",
+						"headword": "Allergie",
+						"pronunciation": {
+							"display": "a-ler-GEE",
+							"ipaUK": "/alɛʁˈɡiː/",
+							"ipaUS": "/alɛʁˈɡiː/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Allergie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Überreaktion des Körpers auf einen Stoff",
+										"examples": [
+											"Er hat eine starke Allergie gegen Pollen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat eine starke Allergie gegen Pollen.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat einen starken Allergie gegen Pollen.",
+							"ok": false
+						},
+						{
+							"answer": "Er eine starke Allergie gegen Pollen hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Diagnose",
+					"summary": "Feststellung einer Krankheit",
+					"explain": {
+						"entryId": "Diagnose",
+						"headword": "Diagnose",
+						"pronunciation": {
+							"display": "di-a-GNOH-zuh",
+							"ipaUK": "/diaˈɡnoːzə/",
+							"ipaUS": "/diaˈɡnoːzə/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Diagnose",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Feststellung einer Krankheit durch den Arzt",
+										"examples": [
+											"Der Arzt stellt eine klare Diagnose."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Arzt stellt eine klare Diagnose.",
+							"ok": true
+						},
+						{
+							"answer": "Der Arzt stellt einen klaren Diagnose.",
+							"ok": false
+						},
+						{
+							"answer": "Der Arzt eine klare Diagnose stellt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Untersuchung",
+					"summary": "ärztliche Kontrolle",
+					"explain": {
+						"entryId": "Untersuchung",
+						"headword": "Untersuchung",
+						"pronunciation": {
+							"display": "oon-tuh-ZOO-khoong",
+							"ipaUK": "/ʊntɐˈzuːxʊŋ/",
+							"ipaUS": "/ʊntɐˈzuːxʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Untersuchung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine ärztliche Kontrolle der Gesundheit",
+										"examples": [
+											"Beim Arzt gab es eine gründliche Untersuchung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Beim Arzt gab es eine gründliche Untersuchung.",
+							"ok": true
+						},
+						{
+							"answer": "Beim Arzt gab es einen gründlichen Untersuchung.",
+							"ok": false
+						},
+						{
+							"answer": "Beim Arzt es gab eine gründliche Untersuchung.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Gesundheitsversorgung",
+					"summary": "medizinische Versorgung",
+					"explain": {
+						"entryId": "Gesundheitsversorgung",
+						"headword": "Gesundheitsversorgung",
+						"pronunciation": {
+							"display": "guh-ZOONT-hites-fer-zor-goong",
+							"ipaUK": "/ɡəˈzʊnthaɪ̯tsfɛɐ̯ˌzɔʁɡʊŋ/",
+							"ipaUS": "/ɡəˈzʊnthaɪ̯tsfɛɐ̯ˌzɔʁɡʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gesundheitsversorgung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die medizinische Versorgung der Menschen",
+										"examples": [
+											"Die Gesundheitsversorgung ist hier sehr gut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Gesundheitsversorgung ist hier sehr gut.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gesundheitsversorgung ist hier sehr gut.",
+							"ok": false
+						},
+						{
+							"answer": "Die Gesundheitsversorgung hier sehr gut ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Immunsystem",
+					"summary": "Abwehr gegen Krankheiten",
+					"explain": {
+						"entryId": "Immunsystem",
+						"headword": "Immunsystem",
+						"pronunciation": {
+							"display": "i-MOON-züs-taym",
+							"ipaUK": "/ʔiˈmuːnzʏsˌteːm/",
+							"ipaUS": "/ʔiˈmuːnzʏsˌteːm/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Immunsystem",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Abwehr des Körpers gegen Krankheiten",
+										"examples": [
+											"Ein gesundes Immunsystem schützt vor Krankheiten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein gesundes Immunsystem schützt vor Krankheiten.",
+							"ok": true
+						},
+						{
+							"answer": "Ein gesunder Immunsystem schützt vor Krankheiten.",
+							"ok": false
+						},
+						{
+							"answer": "Ein gesundes Immunsystem vor Krankheiten schützt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Medikament",
+					"summary": "Mittel gegen Krankheit",
+					"explain": {
+						"entryId": "Medikament",
+						"headword": "Medikament",
+						"pronunciation": {
+							"display": "me-di-ka-MENT",
+							"ipaUK": "/medikaˈmɛnt/",
+							"ipaUS": "/medikaˈmɛnt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Medikament",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Arznei"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Mittel gegen Krankheit",
+										"examples": [
+											"Das Medikament wirkt schnell."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Medikament wirkt schnell.",
+							"ok": true
+						},
+						{
+							"answer": "Der Medikament wirkt schnell.",
+							"ok": false
+						},
+						{
+							"answer": "Das Medikament schnell wirkt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Ernährung",
+					"summary": "die Art, wie man sich ernährt",
+					"explain": {
+						"entryId": "Ernährung",
+						"headword": "Ernährung",
+						"pronunciation": {
+							"display": "er-NAY-roong",
+							"ipaUK": "/ɛɐ̯ˈnɛːʁʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈnɛːʁʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ernährung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Art, wie man sich ernährt",
+										"examples": [
+											"Eine gesunde Ernährung hält fit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eine gesunde Ernährung hält fit.",
+							"ok": true
+						},
+						{
+							"answer": "Ein gesundes Ernährung hält fit.",
+							"ok": false
+						},
+						{
+							"answer": "Eine gesunde Ernährung fit hält.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Rezept",
+					"summary": "Zettel vom Arzt für ein Medikament",
+					"explain": {
+						"entryId": "Rezept",
+						"headword": "Rezept",
+						"pronunciation": {
+							"display": "re-TSEPT",
+							"ipaUK": "/ʁeˈtsɛpt/",
+							"ipaUS": "/ʁeˈtsɛpt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rezept",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Zettel vom Arzt für ein Medikament",
+										"examples": [
+											"Für dieses Medikament braucht man ein Rezept."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Für dieses Medikament braucht man ein Rezept.",
+							"ok": true
+						},
+						{
+							"answer": "Für dieses Medikament braucht man einen Rezept.",
+							"ok": false
+						},
+						{
+							"answer": "Für dieses Medikament man braucht ein Rezept.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Genesung",
+					"summary": "Wiedergesundwerden",
+					"explain": {
+						"entryId": "Genesung",
+						"headword": "Genesung",
+						"pronunciation": {
+							"display": "guh-NAY-zoong",
+							"ipaUK": "/ɡəˈneːzʊŋ/",
+							"ipaUS": "/ɡəˈneːzʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Genesung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Erholung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Wiedergesundwerden nach Krankheit",
+										"examples": [
+											"Wir wünschen dir eine schnelle Genesung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir wünschen dir eine schnelle Genesung.",
+							"ok": true
+						},
+						{
+							"answer": "Wir wünschen dir einen schnellen Genesung.",
+							"ok": false
+						},
+						{
+							"answer": "Wir dir eine schnelle Genesung wünschen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Impfung",
+					"summary": "Schutz durch eine Spritze",
+					"explain": {
+						"entryId": "Impfung",
+						"headword": "Impfung",
+						"pronunciation": {
+							"display": "IMP-foong",
+							"ipaUK": "/ˈɪmpfʊŋ/",
+							"ipaUS": "/ˈɪmpfʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Impfung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Schutz gegen eine Krankheit durch eine Spritze",
+										"examples": [
+											"Die Impfung schützt vor der Grippe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Impfung schützt vor der Grippe.",
+							"ok": true
+						},
+						{
+							"answer": "Der Impfung schützt vor der Grippe.",
+							"ok": false
+						},
+						{
+							"answer": "Die Impfung vor der Grippe schützt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

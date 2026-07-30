@@ -1,0 +1,553 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel1-de",
+	"title": "Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Unterkunft",
+					"summary": "Ort zum Übernachten",
+					"explain": {
+						"entryId": "Unterkunft",
+						"headword": "Unterkunft",
+						"pronunciation": {
+							"display": "OON-tuh-koonft",
+							"ipaUK": "/ˈʊntɐˌkʊnft/",
+							"ipaUS": "/ˈʊntɐˌkʊnft/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unterkunft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort zum Übernachten",
+										"examples": [
+											"Wir suchen eine günstige Unterkunft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir suchen eine günstige Unterkunft.",
+							"ok": true
+						},
+						{
+							"answer": "Wir suchen einen günstigen Unterkunft.",
+							"ok": false
+						},
+						{
+							"answer": "Wir eine günstige Unterkunft suchen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Reiseplan",
+					"summary": "genauer Plan einer Reise",
+					"explain": {
+						"entryId": "Reiseplan",
+						"headword": "Reiseplan",
+						"pronunciation": {
+							"display": "RY-zuh-plahn",
+							"ipaUK": "/ˈʁaɪ̯zəˌplaːn/",
+							"ipaUS": "/ˈʁaɪ̯zəˌplaːn/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reiseplan",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der genaue Plan einer Reise",
+										"examples": [
+											"Unser Reiseplan ist gut durchdacht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Unser Reiseplan ist gut durchdacht.",
+							"ok": true
+						},
+						{
+							"answer": "Unsere Reiseplan ist gut durchdacht.",
+							"ok": false
+						},
+						{
+							"answer": "Unser Reiseplan gut durchdacht ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Wahrzeichen",
+					"summary": "Symbol-Bauwerk einer Stadt",
+					"explain": {
+						"entryId": "Wahrzeichen",
+						"headword": "Wahrzeichen",
+						"pronunciation": {
+							"display": "VAR-tsy-khn",
+							"ipaUK": "/ˈvaːɐ̯ˌtsaɪ̯çn̩/",
+							"ipaUS": "/ˈvaːɐ̯ˌtsaɪ̯çn̩/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wahrzeichen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein berühmtes Bauwerk als Symbol einer Stadt",
+										"examples": [
+											"Der Turm ist das Wahrzeichen der Stadt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Turm ist das Wahrzeichen der Stadt.",
+							"ok": true
+						},
+						{
+							"answer": "Der Turm ist der Wahrzeichen der Stadt.",
+							"ok": false
+						},
+						{
+							"answer": "Der Turm das Wahrzeichen der Stadt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Reservierung",
+					"summary": "festes Vorbestellen",
+					"explain": {
+						"entryId": "Reservierung",
+						"headword": "Reservierung",
+						"pronunciation": {
+							"display": "re-zer-VEE-roong",
+							"ipaUK": "/ʁezɛʁˈviːʁʊŋ/",
+							"ipaUS": "/ʁezɛʁˈviːʁʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reservierung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das feste Vorbestellen (Tisch, Zimmer)",
+										"examples": [
+											"Ich habe eine Reservierung für zwei Personen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe eine Reservierung für zwei Personen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe einen Reservierung für zwei Personen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich eine Reservierung für zwei Personen habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Besichtigung",
+					"summary": "Ansehen von Sehenswürdigkeiten",
+					"explain": {
+						"entryId": "Besichtigung",
+						"headword": "Besichtigung",
+						"pronunciation": {
+							"display": "buh-ZIKH-ti-goong",
+							"ipaUK": "/bəˈzɪçtɪɡʊŋ/",
+							"ipaUS": "/bəˈzɪçtɪɡʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Besichtigung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Ansehen von Sehenswürdigkeiten",
+										"examples": [
+											"Die Besichtigung der Altstadt war schön."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Besichtigung der Altstadt war schön.",
+							"ok": true
+						},
+						{
+							"answer": "Der Besichtigung der Altstadt war schön.",
+							"ok": false
+						},
+						{
+							"answer": "Die Besichtigung der Altstadt schön war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Touristenattraktion",
+					"summary": "beliebtes Ziel für Touristen",
+					"explain": {
+						"entryId": "Touristenattraktion",
+						"headword": "Touristenattraktion",
+						"pronunciation": {
+							"display": "too-RIS-tn-a-trak-tsyohn",
+							"ipaUK": "/tuˈʁɪstn̩ʔatʁakˌtsi̯oːn/",
+							"ipaUS": "/tuˈʁɪstn̩ʔatʁakˌtsi̯oːn/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Touristenattraktion",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Sehenswürdigkeit"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein beliebtes Ziel für Touristen",
+										"examples": [
+											"Das Schloss ist eine große Touristenattraktion."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Schloss ist eine große Touristenattraktion.",
+							"ok": true
+						},
+						{
+							"answer": "Das Schloss ist einen großen Touristenattraktion.",
+							"ok": false
+						},
+						{
+							"answer": "Das Schloss eine große Touristenattraktion ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Reisebüro",
+					"summary": "Geschäft, das Reisen verkauft",
+					"explain": {
+						"entryId": "Reisebüro",
+						"headword": "Reisebüro",
+						"pronunciation": {
+							"display": "RY-zuh-bü-roh",
+							"ipaUK": "/ˈʁaɪ̯zəbyˌʁoː/",
+							"ipaUS": "/ˈʁaɪ̯zəbyˌʁoː/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reisebüro",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Geschäft, das Reisen verkauft",
+										"examples": [
+											"Im Reisebüro buchen wir den Flug."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Reisebüro buchen wir den Flug.",
+							"ok": true
+						},
+						{
+							"answer": "In der Reisebüro buchen wir den Flug.",
+							"ok": false
+						},
+						{
+							"answer": "Im Reisebüro wir buchen den Flug.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Urlauber",
+					"summary": "Person im Urlaub",
+					"explain": {
+						"entryId": "Urlauber",
+						"headword": "Urlauber",
+						"pronunciation": {
+							"display": "OOR-low-buh",
+							"ipaUK": "/ˈuːɐ̯ˌlaʊ̯bɐ/",
+							"ipaUS": "/ˈuːɐ̯ˌlaʊ̯bɐ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Urlauber",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Reisender",
+									"Urlauberin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die eine Reise macht oder im Urlaub ist",
+										"examples": [
+											"Der Urlauber genießt die Sonne am Strand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Urlauber genießt die Sonne am Strand.",
+							"ok": true
+						},
+						{
+							"answer": "Die Urlauber genießt die Sonne am Strand.",
+							"ok": false
+						},
+						{
+							"answer": "Der Urlauber die Sonne am Strand genießt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Urlaub",
+					"summary": "freie Zeit zum Reisen/Erholen",
+					"explain": {
+						"entryId": "Urlaub",
+						"headword": "Urlaub",
+						"pronunciation": {
+							"display": "OOR-lowp",
+							"ipaUK": "/ˈuːɐ̯laʊ̯p/",
+							"ipaUS": "/ˈuːɐ̯laʊ̯p/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Urlaub",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Ferien"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die freie Zeit zum Reisen und Erholen",
+										"examples": [
+											"Im Sommer machen wir Urlaub in Italien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer machen wir Urlaub in Italien.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer machen wir Urlaube in Italien.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer wir machen Urlaub in Italien.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Visum",
+					"summary": "Erlaubnis, in ein Land zu reisen",
+					"explain": {
+						"entryId": "Visum",
+						"headword": "Visum",
+						"pronunciation": {
+							"display": "VEE-zoom",
+							"ipaUK": "/ˈviːzʊm/",
+							"ipaUS": "/ˈviːzʊm/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Visum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine offizielle Erlaubnis, in ein Land zu reisen",
+										"examples": [
+											"Für diese Reise brauche ich ein Visum."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Für diese Reise brauche ich ein Visum.",
+							"ok": true
+						},
+						{
+							"answer": "Für diese Reise brauche ich einen Visum.",
+							"ok": false
+						},
+						{
+							"answer": "Für diese Reise ich brauche ein Visum.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

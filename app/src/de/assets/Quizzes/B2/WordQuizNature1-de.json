@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature1-de",
+	"title": "Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Klimawandel",
+					"summary": "langfristige Veränderung des Klimas",
+					"explain": {
+						"entryId": "Klimawandel",
+						"headword": "Klimawandel",
+						"pronunciation": {
+							"display": "KLEE-ma-van-dl",
+							"ipaUK": "/ˈkliːmaˌvandl̩/",
+							"ipaUS": "/ˈkliːmaˌvandl̩/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klimawandel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die langfristige Veränderung des Klimas",
+										"examples": [
+											"Der Klimawandel bedroht viele Arten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Klimawandel bedroht viele Arten.",
+							"ok": true
+						},
+						{
+							"answer": "Die Klimawandel bedroht viele Arten.",
+							"ok": false
+						},
+						{
+							"answer": "Der Klimawandel viele Arten bedroht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Naturschutz",
+					"summary": "Schutz der Natur",
+					"explain": {
+						"entryId": "Naturschutz",
+						"headword": "Naturschutz",
+						"pronunciation": {
+							"display": "na-TOOR-shoots",
+							"ipaUK": "/naˈtuːɐ̯ˌʃʊts/",
+							"ipaUS": "/naˈtuːɐ̯ˌʃʊts/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Naturschutz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Schutz der Natur und ihrer Arten",
+										"examples": [
+											"Der Naturschutz ist heute sehr wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Naturschutz ist heute sehr wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Die Naturschutz ist heute sehr wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Der Naturschutz heute sehr wichtig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Abholzung",
+					"summary": "Fällen großer Waldflächen",
+					"explain": {
+						"entryId": "Abholzung",
+						"headword": "Abholzung",
+						"pronunciation": {
+							"display": "AP-hol-tsoong",
+							"ipaUK": "/ˈapˌhɔltsʊŋ/",
+							"ipaUS": "/ˈapˌhɔltsʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abholzung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Fällen großer Waldflächen",
+										"examples": [
+											"Die Abholzung zerstört den Regenwald."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Abholzung zerstört den Regenwald.",
+							"ok": true
+						},
+						{
+							"answer": "Der Abholzung zerstört den Regenwald.",
+							"ok": false
+						},
+						{
+							"answer": "Die Abholzung den Regenwald zerstört.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Ökosystem",
+					"summary": "Zusammenspiel von Lebewesen und Umwelt",
+					"explain": {
+						"entryId": "Ökosystem",
+						"headword": "Ökosystem",
+						"pronunciation": {
+							"display": "Ö-ko-züs-taym",
+							"ipaUK": "/ˈøːkozʏsˌteːm/",
+							"ipaUS": "/ˈøːkozʏsˌteːm/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ökosystem",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Zusammenspiel von Lebewesen und Umwelt",
+										"examples": [
+											"Ein Ökosystem ist leicht zu stören."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein Ökosystem ist leicht zu stören.",
+							"ok": true
+						},
+						{
+							"answer": "Eine Ökosystem ist leicht zu stören.",
+							"ok": false
+						},
+						{
+							"answer": "Ein Ökosystem leicht zu stören ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "bedrohte Art",
+					"summary": "Art, die aussterben könnte",
+					"explain": {
+						"entryId": "bedrohte Art",
+						"headword": "bedrohte Art",
+						"pronunciation": {
+							"display": "buh-DROH-tuh art",
+							"ipaUK": "/bəˈdʁoːtə aːɐ̯t/",
+							"ipaUS": "/bəˈdʁoːtə aːɐ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "bedrohte Art",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Tier- oder Pflanzenart, die aussterben könnte",
+										"examples": [
+											"Der Tiger ist eine bedrohte Art."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Tiger ist eine bedrohte Art.",
+							"ok": true
+						},
+						{
+							"answer": "Der Tiger ist einen bedrohten Art.",
+							"ok": false
+						},
+						{
+							"answer": "Der Tiger eine bedrohte Art ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Umweltschutz",
+					"summary": "Schutz der Umwelt vor Schäden",
+					"explain": {
+						"entryId": "Umweltschutz",
+						"headword": "Umweltschutz",
+						"pronunciation": {
+							"display": "OOM-velt-shoots",
+							"ipaUK": "/ˈʊmvɛltˌʃʊts/",
+							"ipaUS": "/ˈʊmvɛltˌʃʊts/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Umweltschutz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Schutz der Umwelt vor Schäden",
+										"examples": [
+											"Der Umweltschutz geht uns alle an."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Umweltschutz geht uns alle an.",
+							"ok": true
+						},
+						{
+							"answer": "Die Umweltschutz geht uns alle an.",
+							"ok": false
+						},
+						{
+							"answer": "Der Umweltschutz uns alle angeht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Umweltverschmutzung",
+					"summary": "Schmutzigmachen der Umwelt",
+					"explain": {
+						"entryId": "Umweltverschmutzung",
+						"headword": "Umweltverschmutzung",
+						"pronunciation": {
+							"display": "OOM-velt-fer-shmoot-soong",
+							"ipaUK": "/ˈʊmvɛltfɛɐ̯ˌʃmʊtsʊŋ/",
+							"ipaUS": "/ˈʊmvɛltfɛɐ̯ˌʃmʊtsʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Umweltverschmutzung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Schmutzigmachen der Umwelt",
+										"examples": [
+											"Die Umweltverschmutzung schadet der Gesundheit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Umweltverschmutzung schadet der Gesundheit.",
+							"ok": true
+						},
+						{
+							"answer": "Der Umweltverschmutzung schadet der Gesundheit.",
+							"ok": false
+						},
+						{
+							"answer": "Die Umweltverschmutzung der Gesundheit schadet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Recycling",
+					"summary": "Wiederverwerten von Abfall",
+					"explain": {
+						"entryId": "Recycling",
+						"headword": "Recycling",
+						"pronunciation": {
+							"display": "ri-SY-kling",
+							"ipaUK": "/ʁiˈsaɪ̯klɪŋ/",
+							"ipaUS": "/ʁiˈsaɪ̯klɪŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Recycling",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Wiederverwertung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Wiederverwerten von Abfall",
+										"examples": [
+											"Durch Recycling sparen wir Rohstoffe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Durch Recycling sparen wir Rohstoffe.",
+							"ok": true
+						},
+						{
+							"answer": "Durch Recyclings sparen wir Rohstoffe.",
+							"ok": false
+						},
+						{
+							"answer": "Durch Recycling wir sparen Rohstoffe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "erneuerbare Energie",
+					"summary": "Energie aus Sonne, Wind, Wasser",
+					"explain": {
+						"entryId": "erneuerbare Energie",
+						"headword": "erneuerbare Energie",
+						"pronunciation": {
+							"display": "er-NOY-uh-bar-uh e-ner-GEE",
+							"ipaUK": "/ɛɐ̯ˈnɔɪ̯ɐbaːʁə enɛʁˈɡiː/",
+							"ipaUS": "/ɛɐ̯ˈnɔɪ̯ɐbaːʁə enɛʁˈɡiː/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "erneuerbare Energie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Energie aus Sonne, Wind oder Wasser",
+										"examples": [
+											"Solarstrom ist eine erneuerbare Energie."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Solarstrom ist eine erneuerbare Energie.",
+							"ok": true
+						},
+						{
+							"answer": "Solarstrom ist einen erneuerbaren Energie.",
+							"ok": false
+						},
+						{
+							"answer": "Solarstrom eine erneuerbare Energie ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Nachhaltigkeit",
+					"summary": "schonendes Nutzen von Ressourcen",
+					"explain": {
+						"entryId": "Nachhaltigkeit",
+						"headword": "Nachhaltigkeit",
+						"pronunciation": {
+							"display": "NAHKH-hal-tikh-kite",
+							"ipaUK": "/ˈnaːxhaltɪçkaɪ̯t/",
+							"ipaUS": "/ˈnaːxhaltɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nachhaltigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das schonende Nutzen von Ressourcen für die Zukunft",
+										"examples": [
+											"Die Firma setzt auf Nachhaltigkeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Firma setzt auf Nachhaltigkeit.",
+							"ok": true
+						},
+						{
+							"answer": "Die Firma setzt auf Nachhaltigkeiten.",
+							"ok": false
+						},
+						{
+							"answer": "Die Firma auf Nachhaltigkeit setzt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

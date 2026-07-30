@@ -1,0 +1,551 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs1-de",
+	"title": "Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "entsprechend",
+					"summary": "Adverb: passend dazu",
+					"explain": {
+						"entryId": "entsprechend",
+						"headword": "entsprechend",
+						"pronunciation": {
+							"display": "ent-SHPRE-khent",
+							"ipaUK": "/ɛntˈʃpʁɛçn̩t/",
+							"ipaUS": "/ɛntˈʃpʁɛçn̩t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "entsprechend",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "so, wie es dazu passt; dementsprechend",
+										"examples": [
+											"Wir planen unsere Reise entsprechend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir planen unsere Reise entsprechend.",
+							"ok": true
+						},
+						{
+							"answer": "Wir planen unsere Reise entsprechende.",
+							"ok": false
+						},
+						{
+							"answer": "Wir unsere Reise entsprechend planen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "ungefähr",
+					"summary": "Adverb: etwa, nicht genau",
+					"explain": {
+						"entryId": "ungefähr",
+						"headword": "ungefähr",
+						"pronunciation": {
+							"display": "OON-guh-fair",
+							"ipaUK": "/ˈʊnɡəˌfɛːɐ̯/",
+							"ipaUS": "/ˈʊnɡəˌfɛːɐ̯/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "ungefähr",
+								"inflectionsLine": null,
+								"synonyms": [
+									"etwa",
+									"circa"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwa; nicht genau",
+										"examples": [
+											"Der Weg dauert ungefähr eine Stunde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Weg dauert ungefähr eine Stunde.",
+							"ok": true
+						},
+						{
+							"answer": "Der Weg dauert ungefähre eine Stunde.",
+							"ok": false
+						},
+						{
+							"answer": "Der Weg ungefähr eine Stunde dauert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "folglich",
+					"summary": "Adverb: als Folge davon",
+					"explain": {
+						"entryId": "folglich",
+						"headword": "folglich",
+						"pronunciation": {
+							"display": "FOLK-likh",
+							"ipaUK": "/ˈfɔlklɪç/",
+							"ipaUS": "/ˈfɔlklɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "folglich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "als Folge davon; deshalb",
+										"examples": [
+											"Er war krank; folglich blieb er zu Hause."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er war krank; folglich blieb er zu Hause.",
+							"ok": true
+						},
+						{
+							"answer": "Er war krank; folgliche blieb er zu Hause.",
+							"ok": false
+						},
+						{
+							"answer": "Er war krank; folglich er blieb zu Hause.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "absichtlich",
+					"summary": "Adverb: mit Absicht",
+					"explain": {
+						"entryId": "absichtlich",
+						"headword": "absichtlich",
+						"pronunciation": {
+							"display": "AP-zikht-likh",
+							"ipaUK": "/ˈapzɪçtlɪç/",
+							"ipaUS": "/ˈapzɪçtlɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "absichtlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit Absicht; extra",
+										"examples": [
+											"Er hat die Tür absichtlich offen gelassen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat die Tür absichtlich offen gelassen.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat die Tür absichtliche offen gelassen.",
+							"ok": false
+						},
+						{
+							"answer": "Er die Tür absichtlich offen gelassen hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "effizient",
+					"summary": "Adverb: mit wenig Aufwand",
+					"explain": {
+						"entryId": "effizient",
+						"headword": "effizient",
+						"pronunciation": {
+							"display": "e-fi-TSYENT",
+							"ipaUK": "/ɛfiˈtsi̯ɛnt/",
+							"ipaUS": "/ɛfiˈtsi̯ɛnt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "effizient",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "auf effiziente Weise; mit wenig Aufwand",
+										"examples": [
+											"Das Team arbeitet sehr effizient."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Team arbeitet sehr effizient.",
+							"ok": true
+						},
+						{
+							"answer": "Das Team arbeitet sehr effiziente.",
+							"ok": false
+						},
+						{
+							"answer": "Das Team sehr effizient arbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "schließlich",
+					"summary": "Adverb: am Ende",
+					"explain": {
+						"entryId": "schließlich",
+						"headword": "schließlich",
+						"pronunciation": {
+							"display": "SHLEES-likh",
+							"ipaUK": "/ˈʃliːslɪç/",
+							"ipaUS": "/ˈʃliːslɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "schließlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "am Ende; nach einiger Zeit",
+										"examples": [
+											"Nach langem Suchen fand er schließlich den Schlüssel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach langem Suchen fand er schließlich den Schlüssel.",
+							"ok": true
+						},
+						{
+							"answer": "Nach langem Suchen fand er schließliche den Schlüssel.",
+							"ok": false
+						},
+						{
+							"answer": "Nach langem Suchen er fand schließlich den Schlüssel.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "glücklicherweise",
+					"summary": "Adverb: zum Glück",
+					"explain": {
+						"entryId": "glücklicherweise",
+						"headword": "glücklicherweise",
+						"pronunciation": {
+							"display": "GLÜK-likh-uh-vy-zuh",
+							"ipaUK": "/ˈɡlʏklɪçɐˌvaɪ̯zə/",
+							"ipaUS": "/ˈɡlʏklɪçɐˌvaɪ̯zə/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "glücklicherweise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zum Glück",
+										"examples": [
+											"Glücklicherweise hat es nicht geregnet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Glücklicherweise hat es nicht geregnet.",
+							"ok": true
+						},
+						{
+							"answer": "Glücklicherweises hat es nicht geregnet.",
+							"ok": false
+						},
+						{
+							"answer": "Glücklicherweise es hat nicht geregnet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "häufig",
+					"summary": "Adverb: oft",
+					"explain": {
+						"entryId": "häufig",
+						"headword": "häufig",
+						"pronunciation": {
+							"display": "HOY-fikh",
+							"ipaUK": "/ˈhɔɪ̯fɪç/",
+							"ipaUS": "/ˈhɔɪ̯fɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "häufig",
+								"inflectionsLine": null,
+								"synonyms": [
+									"oft"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "oft; viele Male",
+										"examples": [
+											"Sie geht häufig ins Fitnessstudio."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie geht häufig ins Fitnessstudio.",
+							"ok": true
+						},
+						{
+							"answer": "Sie geht häufige ins Fitnessstudio.",
+							"ok": false
+						},
+						{
+							"answer": "Sie häufig geht ins Fitnessstudio.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "erheblich",
+					"summary": "Adverb: in großem Maße",
+					"explain": {
+						"entryId": "erheblich",
+						"headword": "erheblich",
+						"pronunciation": {
+							"display": "er-HAYB-likh",
+							"ipaUK": "/ɛɐ̯ˈheːblɪç/",
+							"ipaUS": "/ɛɐ̯ˈheːblɪç/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "erheblich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in großem Maße; deutlich",
+										"examples": [
+											"Die Kosten sind erheblich gestiegen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Kosten sind erheblich gestiegen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kosten sind erhebliche gestiegen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Kosten erheblich gestiegen sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "typischerweise",
+					"summary": "Adverb: normalerweise",
+					"explain": {
+						"entryId": "typischerweise",
+						"headword": "typischerweise",
+						"pronunciation": {
+							"display": "TÜ-pish-uh-vy-zuh",
+							"ipaUK": "/ˈtyːpɪʃɐˌvaɪ̯zə/",
+							"ipaUS": "/ˈtyːpɪʃɐˌvaɪ̯zə/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "typischerweise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "normalerweise; wie üblich",
+										"examples": [
+											"Im Winter schneit es hier typischerweise."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Winter schneit es hier typischerweise.",
+							"ok": true
+						},
+						{
+							"answer": "Im Winter schneit es hier typischerweises.",
+							"ok": false
+						},
+						{
+							"answer": "Im Winter es schneit hier typischerweise.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

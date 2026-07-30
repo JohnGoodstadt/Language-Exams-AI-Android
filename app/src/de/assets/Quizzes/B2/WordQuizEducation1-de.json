@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation1-de",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "akademisch",
+					"summary": "Adjektiv: die Uni betreffend",
+					"explain": {
+						"entryId": "akademisch",
+						"headword": "akademisch",
+						"pronunciation": {
+							"display": "a-ka-DAY-mish",
+							"ipaUK": "/akaˈdeːmɪʃ/",
+							"ipaUS": "/akaˈdeːmɪʃ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "akademisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Universität oder Wissenschaft betreffend",
+										"examples": [
+											"Sie hat eine akademische Ausbildung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat eine akademische Ausbildung.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat eine akademischen Ausbildung.",
+							"ok": false
+						},
+						{
+							"answer": "Sie eine akademische Ausbildung hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Lehrplan",
+					"summary": "Plan, was unterrichtet wird",
+					"explain": {
+						"entryId": "Lehrplan",
+						"headword": "Lehrplan",
+						"pronunciation": {
+							"display": "LAYR-plahn",
+							"ipaUK": "/ˈleːɐ̯ˌplaːn/",
+							"ipaUS": "/ˈleːɐ̯ˌplaːn/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Lehrplan",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Plan, was unterrichtet wird",
+										"examples": [
+											"Der Lehrplan ändert sich jedes Jahr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Lehrplan ändert sich jedes Jahr.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lehrplan ändert sich jedes Jahr.",
+							"ok": false
+						},
+						{
+							"answer": "Der Lehrplan sich jedes Jahr ändert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Diplom",
+					"summary": "Hochschulabschluss",
+					"explain": {
+						"entryId": "Diplom",
+						"headword": "Diplom",
+						"pronunciation": {
+							"display": "di-PLOHM",
+							"ipaUK": "/diˈploːm/",
+							"ipaUS": "/diˈploːm/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Diplom",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Hochschulabschluss oder das Zeugnis darüber",
+										"examples": [
+											"Er hat sein Diplom mit Auszeichnung gemacht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat sein Diplom mit Auszeichnung gemacht.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat seinen Diplom mit Auszeichnung gemacht.",
+							"ok": false
+						},
+						{
+							"answer": "Er sein Diplom mit Auszeichnung gemacht hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Wahlfach",
+					"summary": "freiwillig gewähltes Fach",
+					"explain": {
+						"entryId": "Wahlfach",
+						"headword": "Wahlfach",
+						"pronunciation": {
+							"display": "VAHL-fakh",
+							"ipaUK": "/ˈvaːlˌfax/",
+							"ipaUS": "/ˈvaːlˌfax/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wahlfach",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Fach, das man freiwillig wählt",
+										"examples": [
+											"Ich habe Kunst als Wahlfach gewählt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe Kunst als Wahlfach gewählt.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe Kunst als Wahlfach gewählt ein.",
+							"ok": false
+						},
+						{
+							"answer": "Ich Kunst als Wahlfach gewählt habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Einschreibung",
+					"summary": "Anmeldung an der Uni",
+					"explain": {
+						"entryId": "Einschreibung",
+						"headword": "Einschreibung",
+						"pronunciation": {
+							"display": "INE-shry-boong",
+							"ipaUK": "/ˈaɪ̯nˌʃʁaɪ̯bʊŋ/",
+							"ipaUS": "/ˈaɪ̯nˌʃʁaɪ̯bʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einschreibung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Anmeldung an einer Universität",
+										"examples": [
+											"Die Einschreibung endet nächste Woche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Einschreibung endet nächste Woche.",
+							"ok": true
+						},
+						{
+							"answer": "Der Einschreibung endet nächste Woche.",
+							"ok": false
+						},
+						{
+							"answer": "Die Einschreibung nächste Woche endet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Fakultät",
+					"summary": "großer Fachbereich an der Uni",
+					"explain": {
+						"entryId": "Fakultät",
+						"headword": "Fakultät",
+						"pronunciation": {
+							"display": "fa-kool-TAYT",
+							"ipaUK": "/fakʊlˈtɛːt/",
+							"ipaUS": "/fakʊlˈtɛːt/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fakultät",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großer Fachbereich an der Universität",
+										"examples": [
+											"Die juristische Fakultät ist sehr bekannt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die juristische Fakultät ist sehr bekannt.",
+							"ok": true
+						},
+						{
+							"answer": "Der juristische Fakultät ist sehr bekannt.",
+							"ok": false
+						},
+						{
+							"answer": "Die juristische Fakultät sehr bekannt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Vorlesung",
+					"summary": "Vortrag an der Universität",
+					"explain": {
+						"entryId": "Vorlesung",
+						"headword": "Vorlesung",
+						"pronunciation": {
+							"display": "FOR-lay-zoong",
+							"ipaUK": "/ˈfoːɐ̯ˌleːzʊŋ/",
+							"ipaUS": "/ˈfoːɐ̯ˌleːzʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorlesung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Vortrag an der Universität",
+										"examples": [
+											"Die Vorlesung beginnt um neun Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Vorlesung beginnt um neun Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Der Vorlesung beginnt um neun Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Die Vorlesung um neun Uhr beginnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Voraussetzung",
+					"summary": "etwas, das vorher nötig ist",
+					"explain": {
+						"entryId": "Voraussetzung",
+						"headword": "Voraussetzung",
+						"pronunciation": {
+							"display": "fo-ROWS-zets-oong",
+							"ipaUK": "/foˈʁaʊ̯sˌzɛtsʊŋ/",
+							"ipaUS": "/foˈʁaʊ̯sˌzɛtsʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Voraussetzung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Bedingung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas, das vorher nötig ist",
+										"examples": [
+											"Ein Abitur ist die Voraussetzung für das Studium."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein Abitur ist die Voraussetzung für das Studium.",
+							"ok": true
+						},
+						{
+							"answer": "Ein Abitur ist der Voraussetzung für das Studium.",
+							"ok": false
+						},
+						{
+							"answer": "Ein Abitur die Voraussetzung für das Studium ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Stipendium",
+					"summary": "finanzielle Förderung fürs Studium",
+					"explain": {
+						"entryId": "Stipendium",
+						"headword": "Stipendium",
+						"pronunciation": {
+							"display": "shti-PEN-di-oom",
+							"ipaUK": "/ʃtiˈpɛndi̯ʊm/",
+							"ipaUS": "/ʃtiˈpɛndi̯ʊm/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Stipendium",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "finanzielle Förderung für ein Studium",
+										"examples": [
+											"Sie bekommt ein Stipendium für ihr Studium."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie bekommt ein Stipendium für ihr Studium.",
+							"ok": true
+						},
+						{
+							"answer": "Sie bekommt einen Stipendium für ihr Studium.",
+							"ok": false
+						},
+						{
+							"answer": "Sie ein Stipendium für ihr Studium bekommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Abschlussarbeit",
+					"summary": "große Arbeit am Studienende",
+					"explain": {
+						"entryId": "Abschlussarbeit",
+						"headword": "Abschlussarbeit",
+						"pronunciation": {
+							"display": "AP-shloos-ar-byte",
+							"ipaUK": "/ˈapʃlʊsˌʔaʁbaɪ̯t/",
+							"ipaUS": "/ˈapʃlʊsˌʔaʁbaɪ̯t/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abschlussarbeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine große schriftliche Arbeit am Studienende",
+										"examples": [
+											"Er schreibt gerade seine Abschlussarbeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er schreibt gerade seine Abschlussarbeit.",
+							"ok": true
+						},
+						{
+							"answer": "Er schreibt gerade seinen Abschlussarbeit.",
+							"ok": false
+						},
+						{
+							"answer": "Er seine Abschlussarbeit gerade schreibt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

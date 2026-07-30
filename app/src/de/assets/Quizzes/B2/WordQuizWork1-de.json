@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizWork1-de",
+	"title": "Work",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Bewerbung",
+					"summary": "Schreiben für eine Stelle",
+					"explain": {
+						"entryId": "Bewerbung",
+						"headword": "Bewerbung",
+						"pronunciation": {
+							"display": "buh-VER-boong",
+							"ipaUK": "/bəˈvɛʁbʊŋ/",
+							"ipaUS": "/bəˈvɛʁbʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bewerbung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Schreiben, mit dem man sich um eine Stelle bewirbt",
+										"examples": [
+											"Ich schicke meine Bewerbung per E-Mail."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schicke meine Bewerbung per E-Mail.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schicke meinen Bewerbung per E-Mail.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meine Bewerbung per E-Mail schicke.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Zusatzleistungen",
+					"summary": "Extras zum Gehalt (Plural)",
+					"explain": {
+						"entryId": "Zusatzleistungen",
+						"headword": "Zusatzleistungen",
+						"pronunciation": {
+							"display": "TSOO-zats-ly-stoong-en",
+							"ipaUK": "/ˈtsuːzatsˌlaɪ̯stʊŋən/",
+							"ipaUS": "/ˈtsuːzatsˌlaɪ̯stʊŋən/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zusatzleistungen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "zusätzliche Leistungen zum Gehalt (Plural)",
+										"examples": [
+											"Die Firma bietet gute Zusatzleistungen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Firma bietet gute Zusatzleistungen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Firma bietet guten Zusatzleistungen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Firma gute Zusatzleistungen bietet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Vertrag",
+					"summary": "schriftliche Vereinbarung",
+					"explain": {
+						"entryId": "Vertrag",
+						"headword": "Vertrag",
+						"pronunciation": {
+							"display": "fer-TRAHK",
+							"ipaUK": "/fɛɐ̯ˈtʁaːk/",
+							"ipaUS": "/fɛɐ̯ˈtʁaːk/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vertrag",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine feste schriftliche Vereinbarung",
+										"examples": [
+											"Vor Arbeitsbeginn unterschreibt man den Vertrag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vor Arbeitsbeginn unterschreibt man den Vertrag.",
+							"ok": true
+						},
+						{
+							"answer": "Vor Arbeitsbeginn unterschreibt man das Vertrag.",
+							"ok": false
+						},
+						{
+							"answer": "Vor Arbeitsbeginn man unterschreibt den Vertrag.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Unternehmer",
+					"summary": "gründet und führt eine Firma",
+					"explain": {
+						"entryId": "Unternehmer",
+						"headword": "Unternehmer",
+						"pronunciation": {
+							"display": "oon-tuh-NAY-muh",
+							"ipaUK": "/ʊntɐˈneːmɐ/",
+							"ipaUS": "/ʊntɐˈneːmɐ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unternehmer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Unternehmerin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die eine Firma gründet und führt",
+										"examples": [
+											"Der Unternehmer stellt neue Leute ein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Unternehmer stellt neue Leute ein.",
+							"ok": true
+						},
+						{
+							"answer": "Die Unternehmer stellt neue Leute ein.",
+							"ok": false
+						},
+						{
+							"answer": "Der Unternehmer neue Leute einstellt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Praktikum",
+					"summary": "Beruf praktisch lernen",
+					"explain": {
+						"entryId": "Praktikum",
+						"headword": "Praktikum",
+						"pronunciation": {
+							"display": "PRAK-ti-koom",
+							"ipaUK": "/ˈpʁaktikʊm/",
+							"ipaUS": "/ˈpʁaktikʊm/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Praktikum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Zeit, in der man einen Beruf praktisch lernt",
+										"examples": [
+											"Im Sommer mache ich ein Praktikum bei einer Bank."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer mache ich ein Praktikum bei einer Bank.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer mache ich einen Praktikum bei einer Bank.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer ich mache ein Praktikum bei einer Bank.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Stellenbeschreibung",
+					"summary": "Beschreibung der Aufgaben einer Stelle",
+					"explain": {
+						"entryId": "Stellenbeschreibung",
+						"headword": "Stellenbeschreibung",
+						"pronunciation": {
+							"display": "SHTEL-len-buh-shry-boong",
+							"ipaUK": "/ˈʃtɛlənbəˌʃʁaɪ̯bʊŋ/",
+							"ipaUS": "/ˈʃtɛlənbəˌʃʁaɪ̯bʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Stellenbeschreibung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Beschreibung der Aufgaben einer Stelle",
+										"examples": [
+											"Die Stellenbeschreibung nennt alle Aufgaben."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Stellenbeschreibung nennt alle Aufgaben.",
+							"ok": true
+						},
+						{
+							"answer": "Der Stellenbeschreibung nennt alle Aufgaben.",
+							"ok": false
+						},
+						{
+							"answer": "Die Stellenbeschreibung alle Aufgaben nennt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Verhandlung",
+					"summary": "Gespräch für eine Einigung",
+					"explain": {
+						"entryId": "Verhandlung",
+						"headword": "Verhandlung",
+						"pronunciation": {
+							"display": "fer-HAND-loong",
+							"ipaUK": "/fɛɐ̯ˈhandlʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈhandlʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verhandlung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gespräch, um eine Einigung zu finden",
+										"examples": [
+											"Die Verhandlung über das Gehalt war schwierig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Verhandlung über das Gehalt war schwierig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Verhandlung über das Gehalt war schwierig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Verhandlung über das Gehalt schwierig war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Beruf",
+					"summary": "die gelernte Arbeit",
+					"explain": {
+						"entryId": "Beruf",
+						"headword": "Beruf",
+						"pronunciation": {
+							"display": "buh-ROOF",
+							"ipaUK": "/bəˈʁuːf/",
+							"ipaUS": "/bəˈʁuːf/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Beruf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Arbeit, die man gelernt hat",
+										"examples": [
+											"Sie übt einen interessanten Beruf aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie übt einen interessanten Beruf aus.",
+							"ok": true
+						},
+						{
+							"answer": "Sie übt ein interessantes Beruf aus.",
+							"ok": false
+						},
+						{
+							"answer": "Sie einen interessanten Beruf ausübt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Einstellung",
+					"summary": "Anstellen neuer Mitarbeiter",
+					"explain": {
+						"entryId": "Einstellung",
+						"headword": "Einstellung",
+						"pronunciation": {
+							"display": "INE-shtel-oong",
+							"ipaUK": "/ˈaɪ̯nˌʃtɛlʊŋ/",
+							"ipaUS": "/ˈaɪ̯nˌʃtɛlʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einstellung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Anstellen neuer Mitarbeiter",
+										"examples": [
+											"Die Einstellung neuer Kräfte dauert lange."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Einstellung neuer Kräfte dauert lange.",
+							"ok": true
+						},
+						{
+							"answer": "Der Einstellung neuer Kräfte dauert lange.",
+							"ok": false
+						},
+						{
+							"answer": "Die Einstellung neuer Kräfte lange dauert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Kündigung",
+					"summary": "Beenden eines Arbeitsvertrags",
+					"explain": {
+						"entryId": "Kündigung",
+						"headword": "Kündigung",
+						"pronunciation": {
+							"display": "KÜN-di-goong",
+							"ipaUK": "/ˈkʏndɪɡʊŋ/",
+							"ipaUS": "/ˈkʏndɪɡʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kündigung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Beenden eines Arbeitsvertrags",
+										"examples": [
+											"Er hat gestern seine Kündigung eingereicht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat gestern seine Kündigung eingereicht.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat gestern seinen Kündigung eingereicht.",
+							"ok": false
+						},
+						{
+							"answer": "Er gestern seine Kündigung eingereicht hat.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

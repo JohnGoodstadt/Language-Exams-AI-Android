@@ -1,0 +1,187 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "Quiz4Advanced-en",
+	"title": "4 - Spelling 1",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "",
+			"sortorder": 1,"sortbypage":true,
+
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "aisle",
+					"summary": "Teaching Focus: Homophones (aisle/isle) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'aisle' and 'isle' in everyday usage.",
+					"words": [
+						{
+							"word": "Walk down the aisle.",
+							"ok": true
+						},
+						{
+							"word": "Walk down the isle.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "isle",
+					"summary": "Teaching Focus: Homophones (aisle/isle) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'isle' and 'aisle' in everyday usage.",
+					"words": [
+						{
+							"word": "They sailed to the isle.",
+							"ok": true
+						},
+						{
+							"word": "They sailed to the aisle.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "bail",
+					"summary": "Teaching Focus: Homophones (bail/bale) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'bail' and 'bale' in everyday usage.",
+					"words": [
+						{
+							"word": "He paid the bail to get out of jail.",
+							"ok": true
+						},
+						{
+							"word": "He paid the bale to get out of jail.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "bale",
+					"summary": "Teaching Focus: Homophones (bail/bale) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'bale' and 'bail' in everyday usage.",
+					"words": [
+						{
+							"word": "The hay bale was heavy",
+							"ok": true
+						},
+						{
+							"word": "The hay bail was heavy",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "principle",
+					"summary": "Teaching Focus: Homophones (principle/principal) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'principle' and 'principal' in everyday usage.",
+					"words": [
+						{
+							"word": "Honesty is an important principle",
+							"ok": true
+						},
+						{
+							"word": "Honesty is an important principal",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "principal",
+					"summary": "Teaching Focus: Homophones (principle/principal) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'principal' and 'principle' in everyday usage.",
+					"words": [
+						{
+							"word": "The principal welcomed us.",
+							"ok": true
+						},
+						{
+							"word": "The principle welcomed us.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "scene",
+					"summary": "Teaching Focus: Homophones (scene/seen) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'scene' and 'seen' in everyday usage.",
+					"words": [
+						{
+							"word": "The movie had a dramatic scene.",
+							"ok": true
+						},
+						{
+							"word": "The movie had a dramatic seen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "seen",
+					"summary": "Teaching Focus: Homophones (scene/seen) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'seen' and 'scene' in everyday usage.",
+					"words": [
+						{
+							"word": "I have seen that movie.",
+							"ok": true
+						},
+						{
+							"word": "I have scene that movie.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "seam",
+					"summary": "Teaching Focus: Homophones (seam/seem) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'seam' and 'seem' in everyday usage.",
+					"words": [
+						{
+							"word": "There's a seam in the fabric.",
+							"ok": true
+						},
+						{
+							"word": "There's a seem in the fabric.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "seem",
+					"summary": "Teaching Focus: Homophones (seam/seem) \u2014 C1+ level.",
+					"explain": "Distinguishing between 'seem' and 'seam' in everyday usage.",
+					"words": [
+						{
+							"word": "You seem tired today.",
+							"ok": true
+						},
+						{
+							"word": "You seam tired today.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

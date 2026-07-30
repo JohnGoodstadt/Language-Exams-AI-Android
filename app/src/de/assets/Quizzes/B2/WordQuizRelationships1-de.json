@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizRelationships1-de",
+	"title": "Relationships",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Bekanntschaft",
+					"summary": "Person, die man kennt (kein enger Freund)",
+					"explain": {
+						"entryId": "Bekanntschaft",
+						"headword": "Bekanntschaft",
+						"pronunciation": {
+							"display": "buh-KANT-shaft",
+							"ipaUK": "/bəˈkantʃaft/",
+							"ipaUS": "/bəˈkantʃaft/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bekanntschaft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die man kennt, aber kein enger Freund",
+										"examples": [
+											"Auf der Reise machte ich eine nette Bekanntschaft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf der Reise machte ich eine nette Bekanntschaft.",
+							"ok": true
+						},
+						{
+							"answer": "Auf der Reise machte ich einen netten Bekanntschaft.",
+							"ok": false
+						},
+						{
+							"answer": "Auf der Reise ich machte eine nette Bekanntschaft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Bindung",
+					"summary": "enge Verbindung zwischen Menschen",
+					"explain": {
+						"entryId": "Bindung",
+						"headword": "Bindung",
+						"pronunciation": {
+							"display": "BIN-doong",
+							"ipaUK": "/ˈbɪndʊŋ/",
+							"ipaUS": "/ˈbɪndʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bindung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine enge Verbindung zwischen Menschen",
+										"examples": [
+											"Zwischen ihnen besteht eine enge Bindung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zwischen ihnen besteht eine enge Bindung.",
+							"ok": true
+						},
+						{
+							"answer": "Zwischen ihnen besteht einen engen Bindung.",
+							"ok": false
+						},
+						{
+							"answer": "Zwischen ihnen eine enge Bindung besteht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Kommunikation",
+					"summary": "Austausch von Informationen",
+					"explain": {
+						"entryId": "Kommunikation",
+						"headword": "Kommunikation",
+						"pronunciation": {
+							"display": "ko-moo-ni-ka-TSYOHN",
+							"ipaUK": "/kɔmunikaˈtsi̯oːn/",
+							"ipaUS": "/kɔmunikaˈtsi̯oːn/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kommunikation",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Austausch von Informationen",
+										"examples": [
+											"Gute Kommunikation ist sehr wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gute Kommunikation ist sehr wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Guter Kommunikation ist sehr wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Gute Kommunikation sehr wichtig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Empathie",
+					"summary": "Einfühlen in andere",
+					"explain": {
+						"entryId": "Empathie",
+						"headword": "Empathie",
+						"pronunciation": {
+							"display": "em-pa-TEE",
+							"ipaUK": "/ɛmpaˈtiː/",
+							"ipaUS": "/ɛmpaˈtiː/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Empathie",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Einfühlungsvermögen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Einfühlen in die Gefühle anderer",
+										"examples": [
+											"Ein guter Arzt braucht viel Empathie."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein guter Arzt braucht viel Empathie.",
+							"ok": true
+						},
+						{
+							"answer": "Ein guter Arzt braucht viele Empathie.",
+							"ok": false
+						},
+						{
+							"answer": "Ein guter Arzt viel Empathie braucht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Interaktion",
+					"summary": "gegenseitiges Reagieren",
+					"explain": {
+						"entryId": "Interaktion",
+						"headword": "Interaktion",
+						"pronunciation": {
+							"display": "in-tuh-rak-TSYOHN",
+							"ipaUK": "/ɪntɐʔakˈtsi̯oːn/",
+							"ipaUS": "/ɪntɐʔakˈtsi̯oːn/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Interaktion",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das gegenseitige Aufeinander-Reagieren",
+										"examples": [
+											"Die Interaktion mit Kunden macht ihr Spaß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Interaktion mit Kunden macht ihr Spaß.",
+							"ok": true
+						},
+						{
+							"answer": "Der Interaktion mit Kunden macht ihr Spaß.",
+							"ok": false
+						},
+						{
+							"answer": "Die Interaktion mit Kunden ihr Spaß macht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Verhandlung",
+					"summary": "Gespräch für eine Einigung",
+					"explain": {
+						"entryId": "Verhandlung",
+						"headword": "Verhandlung",
+						"pronunciation": {
+							"display": "fer-HAND-loong",
+							"ipaUK": "/fɛɐ̯ˈhandlʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈhandlʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verhandlung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gespräch, um eine Einigung zu finden",
+										"examples": [
+											"Die Verhandlung dauerte mehrere Stunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Verhandlung dauerte mehrere Stunden.",
+							"ok": true
+						},
+						{
+							"answer": "Der Verhandlung dauerte mehrere Stunden.",
+							"ok": false
+						},
+						{
+							"answer": "Die Verhandlung mehrere Stunden dauerte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Vernetzung",
+					"summary": "Knüpfen von Kontakten",
+					"explain": {
+						"entryId": "Vernetzung",
+						"headword": "Vernetzung",
+						"pronunciation": {
+							"display": "fer-NET-soong",
+							"ipaUK": "/fɛɐ̯ˈnɛtsʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈnɛtsʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vernetzung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Knüpfen von nützlichen Kontakten",
+										"examples": [
+											"Die Vernetzung mit Kollegen ist nützlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Vernetzung mit Kollegen ist nützlich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Vernetzung mit Kollegen ist nützlich.",
+							"ok": false
+						},
+						{
+							"answer": "Die Vernetzung mit Kollegen nützlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Beziehung",
+					"summary": "Verbindung zwischen zwei Menschen",
+					"explain": {
+						"entryId": "Beziehung",
+						"headword": "Beziehung",
+						"pronunciation": {
+							"display": "buh-TSEE-oong",
+							"ipaUK": "/bəˈtsiːʊŋ/",
+							"ipaUS": "/bəˈtsiːʊŋ/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Beziehung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Verbindung zwischen zwei Menschen",
+										"examples": [
+											"Die beiden führen eine glückliche Beziehung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die beiden führen eine glückliche Beziehung.",
+							"ok": true
+						},
+						{
+							"answer": "Die beiden führen einen glücklichen Beziehung.",
+							"ok": false
+						},
+						{
+							"answer": "Die beiden eine glückliche Beziehung führen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "soziale Medien",
+					"summary": "Plattformen wie Instagram",
+					"explain": {
+						"entryId": "soziale Medien",
+						"headword": "soziale Medien",
+						"pronunciation": {
+							"display": "zo-tsi-AH-luh MAY-di-en",
+							"ipaUK": "/zoˈtsi̯aːlə ˈmeːdi̯ən/",
+							"ipaUS": "/zoˈtsi̯aːlə ˈmeːdi̯ən/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
+								"headwordLine": "soziale Medien",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Plattformen im Internet zum Teilen und Chatten",
+										"examples": [
+											"Viele Jugendliche nutzen soziale Medien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele Jugendliche nutzen soziale Medien.",
+							"ok": true
+						},
+						{
+							"answer": "Viele Jugendliche nutzen sozialen Medien.",
+							"ok": false
+						},
+						{
+							"answer": "Viele Jugendliche soziale Medien nutzen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Vertrauen",
+					"summary": "Glaube an die Zuverlässigkeit",
+					"explain": {
+						"entryId": "Vertrauen",
+						"headword": "Vertrauen",
+						"pronunciation": {
+							"display": "fer-TROW-en",
+							"ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
+							"ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
+						},
+						"labels": [
+							"B2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vertrauen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der feste Glaube an die Zuverlässigkeit von jemandem",
+										"examples": [
+											"Ohne Vertrauen funktioniert keine Freundschaft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ohne Vertrauen funktioniert keine Freundschaft.",
+							"ok": true
+						},
+						{
+							"answer": "Ohne Vertrauens funktioniert keine Freundschaft.",
+							"ok": false
+						},
+						{
+							"answer": "Ohne Vertrauen keine Freundschaft funktioniert.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

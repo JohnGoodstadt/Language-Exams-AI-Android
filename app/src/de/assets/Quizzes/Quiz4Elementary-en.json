@@ -1,0 +1,186 @@
+{
+	"fileformat":10,
+	"location": 0,
+	"sheetname": "Quiz4Elementary-en",
+	"title": "4 - Spelling 1",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Spelling",
+			"sortorder": 1,"sortbypage":true,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "bare",
+					"summary": "Teaching Focus: Homophones (bare/bear) \u2014 A1 level.",
+					"explain": "Distinguishing between 'bare' and 'bear' in everyday usage.",
+					"words": [
+						{
+							"word": "He walked with bare feet.",
+							"ok": true
+						},
+						{
+							"word": "He walked with bear feet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"sentence": "bear",
+					"summary": "Teaching Focus: Homophones (bare/bear) \u2014 A1 level.",
+					"explain": "Distinguishing between 'bear' and 'bare' in everyday usage.",
+					"words": [
+						{
+							"word": "I saw a bear in the forest.",
+							"ok": true
+						},
+						{
+							"word": "I saw a bare in the forest.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"sentence": "flour",
+					"summary": "Teaching Focus: Homophones (flour/flower) \u2014 A1 level.",
+					"explain": "Distinguishing between 'flour' and 'flower' in everyday usage.",
+					"words": [
+						{
+							"word": "We need more flour to bake bread.",
+							"ok": true
+						},
+						{
+							"word": "We need more flower to bake bread.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"sentence": "flower",
+					"summary": "Teaching Focus: Homophones (flour/flower) \u2014 A1 level.",
+					"explain": "Distinguishing between 'flower' and 'flour' in everyday usage.",
+					"words": [
+						{
+							"word": "This flower smells nice.",
+							"ok": true
+						},
+						{
+							"word": "This flour smells nice.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"sentence": "sea",
+					"summary": "Teaching Focus: Homophones (sea/see) \u2014 A1 level.",
+					"explain": "Distinguishing between 'sea' and 'see' in everyday usage.",
+					"words": [
+						{
+							"word": "We swam in the sea.",
+							"ok": true
+						},
+						{
+							"word": "We swam in the see.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"sentence": "see",
+					"summary": "Teaching Focus: Homophones (sea/see) \u2014 A1 level.",
+					"explain": "Distinguishing between 'see' and 'sea' in everyday usage.",
+					"words": [
+						{
+							"word": "I see the bird.",
+							"ok": true
+						},
+						{
+							"word": "I sea the bird.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"sentence": "son",
+					"summary": "Teaching Focus: Homophones (son/sun) \u2014 A1 level.",
+					"explain": "Distinguishing between 'son' and 'sun' in everyday usage.",
+					"words": [
+						{
+							"word": "My son is five years old.",
+							"ok": true
+						},
+						{
+							"word": "My sun is five years old.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"sentence": "sun",
+					"summary": "Teaching Focus: Homophones (son/sun) \u2014 A1 level.",
+					"explain": "Distinguishing between 'sun' and 'son' in everyday usage.",
+					"words": [
+						{
+							"word": "The sun is bright today.",
+							"ok": true
+						},
+						{
+							"word": "The son is bright today.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"sentence": "toe",
+					"summary": "Teaching Focus: Homophones (toe/tow) \u2014 A1 level.",
+					"explain": "Distinguishing between 'toe' and 'tow' in everyday usage.",
+					"words": [
+						{
+							"word": "I hurt my toe playing football.",
+							"ok": true
+						},
+						{
+							"word": "I hurt my tow playing football.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"sentence": "tow",
+					"summary": "Teaching Focus: Homophones (toe/tow) \u2014 A1 level.",
+					"explain": "Distinguishing between 'tow' and 'toe' in everyday usage.",
+					"words": [
+						{
+							"word": "They had to tow the car.",
+							"ok": true
+						},
+						{
+							"word": "They had to toe the car.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

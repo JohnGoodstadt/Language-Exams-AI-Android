@@ -1,0 +1,136 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "Quiz1Advanced-hi",
+	"title": "Quiz 1 - Verb Patterns",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question",
+			"description": "Gerund/Infinitive",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"sentence": "She suggested _ earlier to avoid traffic.",
+					"summary": "Teaching Focus: Some verbs are followed by the gerund (-ing), not the infinitive.",
+					"explain": "Key Differences Addressed: Hindi does not clearly distinguish between gerund and infinitive patterns. In English, 'suggest' is followed by an -ing form, not 'to + verb'.",
+					"words": [
+						{ "word": "to leave", "ok": false },
+						{ "word": "leaving", "ok": true },
+						{ "word": "leave", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 2,
+					"sentence": "He refused _ the form without help.",
+					"summary": "Teaching Focus: Some verbs are followed by the infinitive (to + verb).",
+					"explain": "Key Differences Addressed: Learners may incorrectly use -ing after all verbs. 'Refuse' must be followed by the infinitive.",
+					"words": [
+						{ "word": "signing", "ok": false },
+						{ "word": "sign", "ok": false },
+						{ "word": "to sign", "ok": true }
+					]
+				},
+				{
+					"title": "1",
+					"page": 3,
+					"sentence": "I regret _ you that your application was unsuccessful.",
+					"summary": "Teaching Focus: Verb meaning can change depending on gerund or infinitive use.",
+					"explain": "Key Differences Addressed: This is a high-level distinction. 'Regret to inform' refers to bad news now, while 'regret doing' refers to past actions.",
+					"words": [
+						{ "word": "informing", "ok": false },
+						{ "word": "to inform", "ok": true },
+						{ "word": "inform", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 4,
+					"sentence": "She stopped _ when the phone rang.",
+					"summary": "Teaching Focus: 'Stop + -ing' means to stop an action already in progress.",
+					"explain": "Key Differences Addressed: Hindi expresses this meaning differently. In English, 'stop doing' means the action ends, not that the purpose changes.",
+					"words": [
+						{ "word": "to study", "ok": false },
+						{ "word": "study", "ok": false },
+						{ "word": "studying", "ok": true }
+					]
+				},
+				{
+					"title": "1",
+					"page": 5,
+					"sentence": "They decided _ the ceremony until next week.",
+					"summary": "Teaching Focus: Use the infinitive after verbs of decision.",
+					"explain": "Key Differences Addressed: Learners may choose the gerund due to overgeneralisation. 'Decide' is followed by 'to + verb'.",
+					"words": [
+						{ "word": "postponing", "ok": false },
+						{ "word": "to postpone", "ok": true },
+						{ "word": "postpone", "ok": false }
+					]
+				},
+				{
+					"title": "1",
+					"page": 6,
+					"sentence": "I’m used to _ in a multicultural environment.",
+					"summary": "Teaching Focus: 'Be used to' is followed by a noun or gerund, not an infinitive.",
+					"explain": "Key Differences Addressed: Hindi speakers often confuse 'used to' (past habit) with 'be used to' (familiarity). This tests the gerund form after 'to' as a preposition.",
+					"words": [
+						{ "word": "work", "ok": false },
+						{ "word": "to work", "ok": false },
+						{ "word": "working", "ok": true }
+					]
+				},
+				{
+					"title": "1",
+					"page": 7,
+					"sentence": "He promised _ the documents by Friday.",
+					"summary": "Teaching Focus: 'Promise' is followed by the infinitive.",
+					"explain": "Key Differences Addressed: Learners may incorrectly apply gerund rules. In English, 'promise' always takes 'to + verb'.",
+					"words": [
+						{ "word": "sending", "ok": false },
+						{ "word": "send", "ok": false },
+						{ "word": "to send", "ok": true }
+					]
+				},
+				{
+					"title": "1",
+					"page": 8,
+					"sentence": "She avoided _ about her previous visa refusal.",
+					"summary": "Teaching Focus: Some verbs are always followed by the gerund.",
+					"explain": "Key Differences Addressed: Hindi does not mark this distinction clearly. 'Avoid' must be followed by an -ing form, not an infinitive.",
+					"words": [
+						{ "word": "to talk", "ok": false },
+						{ "word": "talk", "ok": false },
+						{ "word": "talking", "ok": true }
+					]
+				},
+				{
+					"title": "1",
+					"page": 9,
+					"sentence": "I remember _ the form online last year.",
+					"summary": "Teaching Focus: 'Remember + -ing' refers to memories of past actions.",
+					"explain": "Key Differences Addressed: This contrasts with 'remember to do' (future obligation). Advanced learners must distinguish meaning, not just form.",
+					"words": [
+						{ "word": "to complete", "ok": false },
+						{ "word": "complete", "ok": false },
+						{ "word": "completing", "ok": true }
+					]
+				},
+				{
+					"title": "1",
+					"page": 10,
+					"sentence": "The officer advised me _ legal advice.",
+					"summary": "Teaching Focus: 'Advise' can be followed by an object + infinitive.",
+					"explain": "Key Differences Addressed: This structure is difficult because Hindi does not mirror it directly. In English, 'advise someone to do something' is the correct pattern.",
+					"words": [
+						{ "word": "getting", "ok": false },
+						{ "word": "to get", "ok": true },
+						{ "word": "get", "ok": false }
+					]
+				}
+			]
+		}
+	]
+}
