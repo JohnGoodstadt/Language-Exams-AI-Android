@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz1A2-de",
+	"title": "Zukunft",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Die Zukunft im Deutschen (Futur I und Präsens)",
+			"sortorder": 1,
+			"learningTitle": "Über die Zukunft sprechen",
+			"learningPoints": [
+				"Übt das Futur I: 'werden' + Infinitiv am Satzende.",
+				"Festigt die Formen von 'werden' (ich werde, du wirst, er wird …).",
+				"Behandelt das Präsens mit Zeitangabe als Ausdruck der Zukunft.",
+				"Trainiert die Satzklammer und die Stellung von 'nicht'.",
+				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Das Futur I bildet man mit 'werden' + Infinitiv; der Infinitiv steht am Ende.",
+					"explain": "Futur I = 'werden' (Position 2) + Infinitiv am Ende: 'Ich werde morgen einen Kuchen backen.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich werde morgen einen Kuchen backen."
+						},
+						{
+							"ok": false,
+							"word": "Ich werde morgen backen einen Kuchen."
+						},
+						{
+							"ok": false,
+							"word": "Ich werde morgen einen Kuchen backe."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "'werden' ist unregelmäßig: ich werde, du wirst, er wird …",
+					"explain": "Bei 'du' heißt es 'wirst': 'Du wirst bald Deutsch sprechen.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Du wirst bald Deutsch sprechen."
+						},
+						{
+							"ok": false,
+							"word": "Du werdest bald Deutsch sprechen."
+						},
+						{
+							"ok": false,
+							"word": "Du wirst bald Deutsch sprichst."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Bei 'er/sie/es' heißt die Form 'wird'.",
+					"explain": "'Er wird nächstes Jahr studieren.' – 'wird' + Infinitiv 'studieren' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er wird nächstes Jahr studieren."
+						},
+						{
+							"ok": false,
+							"word": "Er werd nächstes Jahr studieren."
+						},
+						{
+							"ok": false,
+							"word": "Er wird nächstes Jahr studiert."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Die Zukunft drückt man oft mit dem Präsens + Zeitangabe aus.",
+					"explain": "Mit einer Zeitangabe reicht das Präsens: 'Morgen fahre ich nach München.' Das Verb bleibt an Position 2.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Morgen fahre ich nach München."
+						},
+						{
+							"ok": false,
+							"word": "Morgen ich fahre nach München."
+						},
+						{
+							"ok": false,
+							"word": "Morgen fahre nach München ich."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Auch mit 'wir' gilt: 'werden' + Infinitiv am Ende.",
+					"explain": "'Wir werden im Sommer nach Italien reisen.' – Infinitiv 'reisen' steht am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir werden im Sommer nach Italien reisen."
+						},
+						{
+							"ok": false,
+							"word": "Wir werden im Sommer nach Italien gereist."
+						},
+						{
+							"ok": false,
+							"word": "Wir werden reisen im Sommer nach Italien."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "In Verneinungen steht 'nicht' vor dem Infinitiv am Ende.",
+					"explain": "'nicht' steht direkt vor dem Infinitiv: 'Ich werde das nicht vergessen.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich werde das nicht vergessen."
+						},
+						{
+							"ok": false,
+							"word": "Ich werde das vergessen nicht."
+						},
+						{
+							"ok": false,
+							"word": "Ich werde nicht das vergessen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "In der Ja/Nein-Frage steht 'werden' zuerst, der Infinitiv am Ende.",
+					"explain": "'Wirst du morgen kommen?' – 'wirst' am Anfang, Infinitiv 'kommen' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wirst du morgen kommen?"
+						},
+						{
+							"ok": false,
+							"word": "Du wirst morgen kommen?"
+						},
+						{
+							"ok": false,
+							"word": "Wirst du morgen kommst?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "In W-Fragen steht 'werden' an Position 2, der Infinitiv am Ende.",
+					"explain": "'Was wirst du am Wochenende machen?' – Fragewort + 'wirst' + … + Infinitiv 'machen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Was wirst du am Wochenende machen?"
+						},
+						{
+							"ok": false,
+							"word": "Was du wirst am Wochenende machen?"
+						},
+						{
+							"ok": false,
+							"word": "Was wirst du am Wochenende gemacht?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Bei sicheren Plänen genügt oft das Präsens.",
+					"explain": "Feste Pläne stehen oft im Präsens + Zeitangabe: 'Nächste Woche habe ich Urlaub.' 'werde … Urlaub' ohne Infinitiv ist falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Nächste Woche habe ich Urlaub."
+						},
+						{
+							"ok": false,
+							"word": "Nächste Woche ich habe Urlaub."
+						},
+						{
+							"ok": false,
+							"word": "Nächste Woche werde ich Urlaub."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Auch 'sein' braucht im Futur seinen Infinitiv am Ende.",
+					"explain": "'Es wird bald dunkel sein.' – der Infinitiv 'sein' steht am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Es wird bald dunkel sein."
+						},
+						{
+							"ok": false,
+							"word": "Es wird bald dunkel."
+						},
+						{
+							"ok": false,
+							"word": "Es wird bald sein dunkel."
+						}
+					]
+				}
+			]
+		}
+	]
+}

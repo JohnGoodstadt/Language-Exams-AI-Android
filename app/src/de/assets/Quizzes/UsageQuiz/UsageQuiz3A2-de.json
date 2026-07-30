@@ -1,0 +1,234 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "UsageQuiz3A2-de",
+	"title": "Komparativ & Superlativ",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Die Steigerung der Adjektive im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Adjektive steigern und vergleichen",
+			"learningPoints": [
+				"Übt den Komparativ mit '-er … als' und Gleichheit mit 'so … wie'.",
+				"Festigt den Superlativ 'am …-sten' und 'der/die/das …-ste'.",
+				"Behandelt Umlaute (alt → älter) und unregelmäßige Formen (gut, gern, hoch).",
+				"Trainiert typische A2-Fehler ('wie' statt 'als', fehlende Endung).",
+				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Der Komparativ bildet sich mit '-er' und dem Vergleichswort 'als'.",
+					"explain": "'größer als': 'Mein Bruder ist größer als ich.' 'wie' und 'mehr groß' sind falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Mein Bruder ist größer als ich."
+						},
+						{
+							"ok": false,
+							"word": "Mein Bruder ist größer wie ich."
+						},
+						{
+							"ok": false,
+							"word": "Mein Bruder ist mehr groß als ich."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Gleichheit drückt man mit 'so … wie' aus.",
+					"explain": "'so alt wie': 'Sie ist so alt wie ihr Bruder.' Bei Gleichheit steht 'wie', nicht 'als'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie ist so alt wie ihr Bruder."
+						},
+						{
+							"ok": false,
+							"word": "Sie ist so alt als ihr Bruder."
+						},
+						{
+							"ok": false,
+							"word": "Sie ist as alt wie ihr Bruder."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Viele kurze Adjektive bekommen im Komparativ einen Umlaut (kalt → kälter).",
+					"explain": "'kalt' → 'kälter': 'Heute ist es kälter als gestern.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Heute ist es kälter als gestern."
+						},
+						{
+							"ok": false,
+							"word": "Heute ist es kalter als gestern."
+						},
+						{
+							"ok": false,
+							"word": "Heute ist es kälterer als gestern."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Der Superlativ nach dem Verb heißt 'am …-sten'.",
+					"explain": "'am kältesten': 'Im Winter ist es am kältesten.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Im Winter ist es am kältesten."
+						},
+						{
+							"ok": false,
+							"word": "Im Winter ist es der kälteste."
+						},
+						{
+							"ok": false,
+							"word": "Im Winter ist es am kälteste."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Vor einem Nomen: 'der/die/das …-ste' (mit Adjektivendung).",
+					"explain": "Attributiv: 'der schnellste Zug': 'Das ist der schnellste Zug.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das ist der schnellste Zug."
+						},
+						{
+							"ok": false,
+							"word": "Das ist der schnellsten Zug."
+						},
+						{
+							"ok": false,
+							"word": "Das ist am schnellsten Zug."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "'gut' wird unregelmäßig gesteigert: gut – besser – am besten.",
+					"explain": "'gut' → 'besser': 'Anna spielt besser Tennis als Tom.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Anna spielt besser Tennis als Tom."
+						},
+						{
+							"ok": false,
+							"word": "Anna spielt guter Tennis als Tom."
+						},
+						{
+							"ok": false,
+							"word": "Anna spielt besser Tennis wie Tom."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "'gern' wird unregelmäßig gesteigert: gern – lieber – am liebsten.",
+					"explain": "'gern' → 'lieber': 'Ich trinke lieber Tee als Kaffee.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich trinke lieber Tee als Kaffee."
+						},
+						{
+							"ok": false,
+							"word": "Ich trinke gerner Tee als Kaffee."
+						},
+						{
+							"ok": false,
+							"word": "Ich trinke lieber Tee wie Kaffee."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "'hoch' verliert im Komparativ das 'c': hoch → höher.",
+					"explain": "'hoch' → 'höher': 'Der Berg ist höher als das Haus.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Der Berg ist höher als das Haus."
+						},
+						{
+							"ok": false,
+							"word": "Der Berg ist hocher als das Haus."
+						},
+						{
+							"ok": false,
+							"word": "Der Berg ist mehr hoch als das Haus."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "'teuer' verliert im Komparativ das 'e': teuer → teurer.",
+					"explain": "'teuer' → 'teurer': 'Dieses Auto ist teurer als meins.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Dieses Auto ist teurer als meins."
+						},
+						{
+							"ok": false,
+							"word": "Dieses Auto ist teuerer als meins."
+						},
+						{
+							"ok": false,
+							"word": "Dieses Auto ist teurer wie meins."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Der Komparativ vor einem Nomen braucht eine Adjektivendung (größere).",
+					"explain": "'eine größere Wohnung': 'Wir suchen eine größere Wohnung.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir suchen eine größere Wohnung."
+						},
+						{
+							"ok": false,
+							"word": "Wir suchen eine größer Wohnung."
+						},
+						{
+							"ok": false,
+							"word": "Wir suchen eine mehr große Wohnung."
+						}
+					]
+				}
+			]
+		}
+	]
+}

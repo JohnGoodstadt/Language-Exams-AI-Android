@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz3A1-de",
+	"title": "Vergangenheit",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Die Vergangenheit (Perfekt) im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Über die Vergangenheit sprechen (Perfekt)",
+			"learningPoints": [
+				"Übt das Perfekt mit 'haben' und 'sein' + Partizip II.",
+				"Festigt regelmäßige (ge…t) und unregelmäßige Partizipien (ge…en).",
+				"Behandelt 'war' und 'hatte' als Vergangenheit von 'sein' und 'haben'.",
+				"Trainiert die Satzklammer: Hilfsverb an Position 2, Partizip am Ende.",
+				"Niveau A1; orientiert sich am Goethe-Zertifikat A1 und telc Deutsch A1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Das Perfekt bildet man mit 'haben' + Partizip II; das Partizip steht am Ende.",
+					"explain": "Perfekt = 'haben' + Partizip II am Satzende: 'Ich habe die Hausaufgaben gemacht.' Das Partizip 'gemacht' steht ganz am Schluss.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich habe die Hausaufgaben gemacht."
+						},
+						{
+							"ok": false,
+							"word": "Ich habe die Hausaufgaben machen."
+						},
+						{
+							"ok": false,
+							"word": "Ich habe gemacht die Hausaufgaben."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Das regelmäßige Partizip II bildet man mit 'ge…t'.",
+					"explain": "Regelmäßig: ge- + Stamm + -t. 'kaufen' → 'gekauft': 'Sie hat ein Kleid gekauft.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie hat ein Kleid gekauft."
+						},
+						{
+							"ok": false,
+							"word": "Sie hat ein Kleid kauft."
+						},
+						{
+							"ok": false,
+							"word": "Sie hat ein Kleid gekaufen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Bei Bewegungsverben bildet man das Perfekt mit 'sein'.",
+					"explain": "Verben der Bewegung nehmen 'sein': 'Wir sind nach Hause gegangen.' 'haben' ist hier falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir sind nach Hause gegangen."
+						},
+						{
+							"ok": false,
+							"word": "Wir haben nach Hause gegangen."
+						},
+						{
+							"ok": false,
+							"word": "Wir sind nach Hause gegehen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "'fahren' bildet das Perfekt mit 'sein' (Bewegung).",
+					"explain": "'Er ist mit dem Bus gefahren.' – Bewegung, also 'sein' + 'gefahren'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er ist mit dem Bus gefahren."
+						},
+						{
+							"ok": false,
+							"word": "Er hat mit dem Bus gefahren."
+						},
+						{
+							"ok": false,
+							"word": "Er ist mit dem Bus fahren."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Unregelmäßige Verben haben ein besonderes Partizip auf '-en'.",
+					"explain": "'sehen' → 'gesehen' (unregelmäßig, -en): 'Ich habe den Film gesehen.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich habe den Film gesehen."
+						},
+						{
+							"ok": false,
+							"word": "Ich habe den Film gesehet."
+						},
+						{
+							"ok": false,
+							"word": "Ich habe den Film sehen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Manche Verben ändern im Partizip den Vokal (trinken → getrunken).",
+					"explain": "'trinken' → 'getrunken': 'Du hast Wasser getrunken.' 'getrinkt' ist falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Du hast Wasser getrunken."
+						},
+						{
+							"ok": false,
+							"word": "Du hast Wasser getrinkt."
+						},
+						{
+							"ok": false,
+							"word": "Du hast Wasser trinken."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Die Vergangenheit von 'sein' ist 'war' (Präteritum).",
+					"explain": "'sein' im Präteritum: 'war'. 'Gestern war ich krank.' Das Verb bleibt an Position 2.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Gestern war ich krank."
+						},
+						{
+							"ok": false,
+							"word": "Gestern bin ich krank."
+						},
+						{
+							"ok": false,
+							"word": "Gestern ich war krank."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Die Vergangenheit von 'haben' ist 'hatte' (Präteritum).",
+					"explain": "'haben' im Präteritum: 'hatte(n)'. Bei 'wir' heißt es 'hatten': 'Wir hatten keine Zeit.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir hatten keine Zeit."
+						},
+						{
+							"ok": false,
+							"word": "Wir hatte keine Zeit."
+						},
+						{
+							"ok": false,
+							"word": "Wir haben keine Zeit gehatt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Auch im Perfekt gilt: Hilfsverb an Position 2, Partizip am Ende.",
+					"explain": "Zeitangabe + 'haben' (Position 2) + … + Partizip am Ende: 'Am Wochenende habe ich Fußball gespielt.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Am Wochenende habe ich Fußball gespielt."
+						},
+						{
+							"ok": false,
+							"word": "Am Wochenende ich habe Fußball gespielt."
+						},
+						{
+							"ok": false,
+							"word": "Am Wochenende habe ich gespielt Fußball."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Verben mit Vorsilben wie be-, ver-, er- bilden das Partizip ohne 'ge'.",
+					"explain": "'besuchen' → 'besucht' (kein 'ge-'): 'Ich habe meine Oma besucht.' 'gebesucht' ist falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich habe meine Oma besucht."
+						},
+						{
+							"ok": false,
+							"word": "Ich habe meine Oma gebesucht."
+						},
+						{
+							"ok": false,
+							"word": "Ich habe meine Oma besuchen."
+						}
+					]
+				}
+			]
+		}
+	]
+}

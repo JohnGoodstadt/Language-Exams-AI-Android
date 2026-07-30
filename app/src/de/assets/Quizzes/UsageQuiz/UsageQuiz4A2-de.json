@@ -1,0 +1,234 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "UsageQuiz4A2-de",
+	"title": "Modalverben",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Modalverben im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Modalverben richtig verwenden",
+			"learningPoints": [
+				"Übt können, müssen, dürfen, wollen, sollen und möchten.",
+				"Festigt die Satzklammer: Modalverb an Position 2, Infinitiv am Ende.",
+				"Behandelt die Konjugation (er kann, ohne '-t').",
+				"Trainiert Modalverben in Fragen und mit Verneinung.",
+				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Modalverb an Position 2, der zweite Verb-Infinitiv am Ende.",
+					"explain": "'Ich kann sehr gut schwimmen.' – 'kann' + Infinitiv 'schwimmen' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich kann sehr gut schwimmen."
+						},
+						{
+							"ok": false,
+							"word": "Ich kann schwimmen sehr gut."
+						},
+						{
+							"ok": false,
+							"word": "Ich kann sehr gut schwimme."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "'müssen' ist unregelmäßig: ich muss, du musst, er muss …",
+					"explain": "Bei 'du' heißt es 'musst': 'Du musst heute die Rechnung bezahlen.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Du musst heute die Rechnung bezahlen."
+						},
+						{
+							"ok": false,
+							"word": "Du muss heute die Rechnung bezahlen."
+						},
+						{
+							"ok": false,
+							"word": "Du musst heute die Rechnung bezahlst."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "'dürfen' drückt Erlaubnis aus; 'nicht dürfen' ein Verbot.",
+					"explain": "'Hier darf man nicht rauchen.' – 'darf' an Position 2, Infinitiv 'rauchen' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Hier darf man nicht rauchen."
+						},
+						{
+							"ok": false,
+							"word": "Hier man darf nicht rauchen."
+						},
+						{
+							"ok": false,
+							"word": "Hier darf man nicht raucht."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "'wollen' drückt einen Wunsch/Plan aus (ich will, du willst, wir wollen …).",
+					"explain": "'Wir wollen im Sommer nach Spanien fliegen.' – Infinitiv 'fliegen' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir wollen im Sommer nach Spanien fliegen."
+						},
+						{
+							"ok": false,
+							"word": "Wir wollen im Sommer fliegen nach Spanien."
+						},
+						{
+							"ok": false,
+							"word": "Wir willen im Sommer nach Spanien fliegen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "'sollen' drückt einen Rat oder eine Aufforderung aus.",
+					"explain": "'… ich soll mehr Wasser trinken.' – 'soll' + Infinitiv 'trinken'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Der Arzt sagt, ich soll mehr Wasser trinken."
+						},
+						{
+							"ok": false,
+							"word": "Der Arzt sagt, ich soll mehr Wasser trinke."
+						},
+						{
+							"ok": false,
+							"word": "Der Arzt sagt, ich sollen mehr Wasser trinken."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "'möchten' ist die höfliche Form von 'wollen'.",
+					"explain": "'Ich möchte einen Kaffee bestellen.' – Infinitiv 'bestellen' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich möchte einen Kaffee bestellen."
+						},
+						{
+							"ok": false,
+							"word": "Ich möchte bestellen einen Kaffee."
+						},
+						{
+							"ok": false,
+							"word": "Ich möchte einen Kaffee bestelle."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "In der 3. Person Singular haben Modalverben kein '-t' (er kann, nicht 'kannt').",
+					"explain": "'Sie kann gut Klavier spielen.' – 'kann' (kein '-t'), Infinitiv 'spielen' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie kann gut Klavier spielen."
+						},
+						{
+							"ok": false,
+							"word": "Sie kannt gut Klavier spielen."
+						},
+						{
+							"ok": false,
+							"word": "Sie kann gut Klavier spielt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "In der Frage steht das Modalverb zuerst, der Infinitiv am Ende.",
+					"explain": "'Kannst du mir bitte helfen?' – 'kannst' am Anfang, Infinitiv 'helfen' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Kannst du mir bitte helfen?"
+						},
+						{
+							"ok": false,
+							"word": "Du kannst mir bitte helfen?"
+						},
+						{
+							"ok": false,
+							"word": "Kannst du mir bitte hilfst?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Auch mit 'nicht' bleibt das Modalverb an Position 2 und der Infinitiv am Ende.",
+					"explain": "'Du musst nicht warten.' – 'musst' + 'nicht' + Infinitiv 'warten'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Du musst nicht warten."
+						},
+						{
+							"ok": false,
+							"word": "Du musst nicht warte."
+						},
+						{
+							"ok": false,
+							"word": "Du nicht musst warten."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Mit einem Modalverb bleibt das trennbare Verb als ganzer Infinitiv am Ende.",
+					"explain": "'Ich muss früh aufstehen.' – 'aufstehen' bleibt zusammen am Ende (nicht getrennt).",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich muss früh aufstehen."
+						},
+						{
+							"ok": false,
+							"word": "Ich muss früh auf stehen."
+						},
+						{
+							"ok": false,
+							"word": "Ich muss früh stehe auf."
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -8,31 +8,31 @@ enum class UsageQuizLevelsFilename(val quizzes: List<QuizDetail>) {
             QuizDetail(
                 id = 1,
                 baseName = "UsageQuiz1A1-de",
-                title = "Sentence Structure (DE)"
+                title = "Sentence Structure"
             ),
             QuizDetail(
                 id = 2,
-                baseName = "UsageQuiz2A1-en",
+                baseName = "UsageQuiz2A1-de",
                 title = "Present Simple"
             ),
             QuizDetail(
                 id = 3,
-                baseName = "UsageQuiz3A1-en",
+                baseName = "UsageQuiz3A1-de",
                 title = "Past Simple"
             ),
             QuizDetail(
                 id = 4,
-                baseName = "UsageQuiz4A1-en",
+                baseName = "UsageQuiz4A1-de",
                 title = "Questions & Short Answers"
             ),
             QuizDetail(
                 id = 5,
-                baseName = "UsageQuiz5A1-en",
+                baseName = "UsageQuiz5A1-de",
                 title = "Prepositions"
             ),
             QuizDetail(
                 id = 6,
-                baseName = "UsageQuiz6A1-en",
+                baseName = "UsageQuiz6A1-de",
                 title = "Connectors"
             )
         )
@@ -41,58 +41,58 @@ enum class UsageQuizLevelsFilename(val quizzes: List<QuizDetail>) {
         quizzes = listOf(
             QuizDetail(
                 id = 1,
-                baseName = "UsageQuiz1A2-en",
+                baseName = "UsageQuiz1A2-de",
                 title = "Future Forms"
             ),
             QuizDetail(
                 id = 2,
-                baseName = "UsageQuiz2A2-en",
+                baseName = "UsageQuiz2A2-de",
                 title = "Present Continuous"
             ),
-            QuizDetail(3, "UsageQuiz3A2-en", "Comparatives & Superlatives"),
-            QuizDetail(4, "UsageQuiz4A2-en", "Modal Verbs"),
-            QuizDetail(5, "UsageQuiz5A2-en", "Verb Patterns"),
-            QuizDetail(6, "UsageQuiz6A2-en", "Linking Words & If Clauses"),
+            QuizDetail(3, "UsageQuiz3A2-de", "Comparatives & Superlatives"),
+            QuizDetail(4, "UsageQuiz4A2-de", "Modal Verbs"),
+            QuizDetail(5, "UsageQuiz5A2-de", "Verb Patterns"),
+            QuizDetail(6, "UsageQuiz6A2-de", "Linking Words & If Clauses"),
         )
     ),
     UPPER(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "UsageQuiz1B1-en", title = "Tense Mastery"),
+            QuizDetail(id = 1, baseName = "UsageQuiz1B1-de", title = "Tense Mastery"),
             QuizDetail(
                 id = 2,
-                baseName = "UsageQuiz2B1-en",
+                baseName = "UsageQuiz2B1-de",
                 title = "Real & Hypothetical Situations"
             ),
             QuizDetail(
                 id = 3,
-                baseName = "UsageQuiz3B1-en",
+                baseName = "UsageQuiz3B1-de",
                 title = "Formal & Official Language"
             ),
             QuizDetail(
                 id = 4,
-                baseName = "UsageQuiz4B1-en",
+                baseName = "UsageQuiz4B1-de",
                 title = "Reporting & Communication",
             ),
             QuizDetail(
                 id = 5,
-                baseName = "UsageQuiz5B1-en",
+                baseName = "UsageQuiz5B1-de",
                 title = "Structured Arguments"
             ),
-            QuizDetail(6, "UsageQuiz6B1-en", "Functional Fluency")
+            QuizDetail(6, "UsageQuiz6B1-de", "Functional Fluency")
         )
     ),
     ADVANCED(
         quizzes = listOf(
-            QuizDetail(id = 1, baseName = "UsageQuiz1B2-en", title = "Aspect & Time Control"),
+            QuizDetail(id = 1, baseName = "UsageQuiz1B2-de", title = "Aspect & Time Control"),
             QuizDetail(
                 id = 2,
-                baseName = "UsageQuiz2B2-en",
+                baseName = "UsageQuiz2B2-de",
                 title = "Hypothetical Reasoning"
             ),
-            QuizDetail(3, "UsageQuiz3B2-en", "Formal Structural Control"),
-            QuizDetail(4, "UsageQuiz4B2-en", "Academic Expression"),
-            QuizDetail(5, "UsageQuiz5B2-en", "Argument Development"),
-            QuizDetail(6, "UsageQuiz6B2-en", "Precision & Nuance")
+            QuizDetail(3, "UsageQuiz3B2-de", "Formal Structural Control"),
+            QuizDetail(4, "UsageQuiz4B2-de", "Academic Expression"),
+            QuizDetail(5, "UsageQuiz5B2-de", "Argument Development"),
+            QuizDetail(6, "UsageQuiz6B2-de", "Precision & Nuance")
         )
     );
 

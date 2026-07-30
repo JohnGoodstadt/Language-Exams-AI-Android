@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz6A2-de",
+	"title": "Konnektoren & wenn-Sätze",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Bindewörter und Bedingungssätze im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Sätze verbinden und Bedingungen ausdrücken",
+			"learningPoints": [
+				"Übt Nebensätze mit weil, obwohl, dass und damit (Verb am Ende).",
+				"Festigt Adverbien wie deshalb und trotzdem (Verb an Position 2).",
+				"Behandelt reale Bedingungen mit 'wenn' + Präsens.",
+				"Trainiert 'sondern' nach einer Verneinung.",
+				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Nach 'weil' steht das konjugierte Verb am Ende des Nebensatzes.",
+					"explain": "'…, weil ich krank bin.' – das Verb 'bin' steht am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich bleibe im Bett, weil ich krank bin."
+						},
+						{
+							"ok": false,
+							"word": "Ich bleibe im Bett, weil ich bin krank."
+						},
+						{
+							"ok": false,
+							"word": "Ich bleibe im Bett, weil bin ich krank."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "'obwohl' leitet einen Nebensatz ein; das Verb steht am Ende.",
+					"explain": "'…, obwohl er krank ist.' – 'obwohl' + Verb 'ist' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er geht arbeiten, obwohl er krank ist."
+						},
+						{
+							"ok": false,
+							"word": "Er geht arbeiten, obwohl er ist krank."
+						},
+						{
+							"ok": false,
+							"word": "Er geht arbeiten, obwohl ist er krank."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "'deshalb' ist ein Adverb; danach steht das Verb an Position 2.",
+					"explain": "'…, deshalb bleibe ich zu Hause.' – Verb 'bleibe' vor dem Subjekt.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich bin krank, deshalb bleibe ich zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin krank, deshalb ich bleibe zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin krank, deshalb ich zu Hause bleibe."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "'trotzdem' ist ein Adverb; das Verb folgt an Position 2.",
+					"explain": "'…, trotzdem gehen wir spazieren.' – Verb 'gehen' an Position 2.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Es regnet, trotzdem gehen wir spazieren."
+						},
+						{
+							"ok": false,
+							"word": "Es regnet, trotzdem wir gehen spazieren."
+						},
+						{
+							"ok": false,
+							"word": "Es regnet, trotzdem wir spazieren gehen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Reale Bedingung: 'wenn' + Präsens; nach dem 'wenn'-Satz folgt das Verb (Position 2).",
+					"explain": "'Wenn es morgen regnet, bleiben wir zu Hause.' – der Hauptsatz beginnt mit dem Verb 'bleiben'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wenn es morgen regnet, bleiben wir zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Wenn es morgen regnet, wir bleiben zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Wenn morgen es regnet, bleiben wir zu Hause."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "'wenn' kann auch 'immer wenn' bedeuten; im Nebensatz steht das Verb am Ende.",
+					"explain": "'Wenn ich Zeit habe, gehe ich joggen.' – 'habe' am Ende des 'wenn'-Satzes.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wenn ich Zeit habe, gehe ich joggen."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich Zeit habe, ich gehe joggen."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich habe Zeit, gehe ich joggen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "'damit' nennt einen Zweck; das konjugierte Verb steht am Ende.",
+					"explain": "'…, damit ich reisen kann.' – das Modalverb 'kann' steht am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich spare Geld, damit ich reisen kann."
+						},
+						{
+							"ok": false,
+							"word": "Ich spare Geld, damit ich kann reisen."
+						},
+						{
+							"ok": false,
+							"word": "Ich spare Geld, damit kann ich reisen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Nach 'dass' steht das konjugierte Verb am Ende.",
+					"explain": "'…, dass du bald gesund wirst.' – 'wirst' steht am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich hoffe, dass du bald gesund wirst."
+						},
+						{
+							"ok": false,
+							"word": "Ich hoffe, dass du wirst bald gesund."
+						},
+						{
+							"ok": false,
+							"word": "Ich hoffe, dass wirst du bald gesund."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Der 'wenn'-Satz kann auch hinten stehen; das Verb steht am Ende.",
+					"explain": "'…, wenn ich zu Hause bin.' – 'bin' am Ende des Nebensatzes.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich rufe dich an, wenn ich zu Hause bin."
+						},
+						{
+							"ok": false,
+							"word": "Ich rufe dich an, wenn ich bin zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Ich rufe dich an, wenn bin ich zu Hause."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Nach einer Verneinung steht 'sondern' (nicht 'aber').",
+					"explain": "'nicht … sondern': 'Er kommt nicht heute, sondern morgen.' Nach der Verneinung benutzt man 'sondern'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er kommt nicht heute, sondern morgen."
+						},
+						{
+							"ok": false,
+							"word": "Er kommt nicht heute, aber morgen."
+						},
+						{
+							"ok": false,
+							"word": "Er kommt nicht heute, sondern kommt morgen."
+						}
+					]
+				}
+			]
+		}
+	]
+}

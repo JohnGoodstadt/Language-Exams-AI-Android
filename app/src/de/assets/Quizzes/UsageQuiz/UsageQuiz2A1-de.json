@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz2A1-de",
+	"title": "Präsens",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Das Präsens im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Das Präsens richtig konjugieren",
+			"learningPoints": [
+				"Übt die Präsens-Endungen (-e, -st, -t, -en) für alle Personen.",
+				"Festigt die unregelmäßigen Verben 'sein' und 'haben'.",
+				"Behandelt Verben mit Vokalwechsel (fahren → fährt, essen → isst).",
+				"Trainiert die Zusatz-Endung '-et' nach Stämmen auf -t/-d (arbeiten → arbeitet).",
+				"Niveau A1; orientiert sich am Goethe-Zertifikat A1 und telc Deutsch A1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Im Präsens endet das Verb bei 'ich' auf '-e'.",
+					"explain": "Bei 'ich' bekommt das regelmäßige Verb die Endung '-e': 'Ich spiele Fußball.' '-t' und '-en' sind hier falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich spiele Fußball."
+						},
+						{
+							"ok": false,
+							"word": "Ich spielt Fußball."
+						},
+						{
+							"ok": false,
+							"word": "Ich spielen Fußball."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Bei 'du' endet das Verb auf '-st'.",
+					"explain": "Bei 'du' bekommt das Verb die Endung '-st': 'Du machst die Hausaufgaben.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Du machst die Hausaufgaben."
+						},
+						{
+							"ok": false,
+							"word": "Du macht die Hausaufgaben."
+						},
+						{
+							"ok": false,
+							"word": "Du machen die Hausaufgaben."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Bei 'er/sie/es' endet das Verb auf '-t'.",
+					"explain": "Bei 'er', 'sie' oder 'es' bekommt das Verb die Endung '-t': 'Er wohnt in Hamburg.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er wohnt in Hamburg."
+						},
+						{
+							"ok": false,
+							"word": "Er wohne in Hamburg."
+						},
+						{
+							"ok": false,
+							"word": "Er wohnen in Hamburg."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Bei 'wir' endet das Verb auf '-en'.",
+					"explain": "Bei 'wir' bekommt das Verb die Endung '-en': 'Wir lernen Deutsch.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir lernen Deutsch."
+						},
+						{
+							"ok": false,
+							"word": "Wir lernt Deutsch."
+						},
+						{
+							"ok": false,
+							"word": "Wir lernst Deutsch."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Bei 'ihr' endet das Verb auf '-t'.",
+					"explain": "Bei 'ihr' bekommt das Verb die Endung '-t': 'Ihr trinkt Kaffee.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ihr trinkt Kaffee."
+						},
+						{
+							"ok": false,
+							"word": "Ihr trinken Kaffee."
+						},
+						{
+							"ok": false,
+							"word": "Ihr trinkst Kaffee."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Das Verb 'sein' ist unregelmäßig (ich bin, du bist, wir sind …).",
+					"explain": "'sein' wird unregelmäßig konjugiert. Bei 'wir' heißt es 'sind': 'Wir sind zu Hause.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir sind zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Wir sein zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Wir seid zu Hause."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Das Verb 'haben' ist unregelmäßig (ich habe, du hast, er hat …).",
+					"explain": "'haben' verliert bei 'er/sie/es' das 'b': 'Er hat einen Hund.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er hat einen Hund."
+						},
+						{
+							"ok": false,
+							"word": "Er habt einen Hund."
+						},
+						{
+							"ok": false,
+							"word": "Er haben einen Hund."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Manche Verben ändern bei 'du' und 'er/sie/es' den Vokal (a → ä).",
+					"explain": "'fahren' wird zu 'du fährst' und 'er fährt': 'Er fährt nach Berlin.' Ohne Umlaut ist es falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er fährt nach Berlin."
+						},
+						{
+							"ok": false,
+							"word": "Er fahrt nach Berlin."
+						},
+						{
+							"ok": false,
+							"word": "Er fahren nach Berlin."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Manche Verben ändern bei 'du' und 'er/sie/es' den Vokal (e → i).",
+					"explain": "'essen' wird zu 'du isst' und 'er isst': 'Du isst einen Apfel.' Ohne Vokalwechsel ist es falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Du isst einen Apfel."
+						},
+						{
+							"ok": false,
+							"word": "Du esst einen Apfel."
+						},
+						{
+							"ok": false,
+							"word": "Du essen einen Apfel."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Nach Verbstämmen auf -t oder -d kommt ein zusätzliches '-e' vor der Endung.",
+					"explain": "Der Stamm 'arbeit-' endet auf '-t', deshalb 'er arbeitet' (mit '-e-'): 'Er arbeitet im Büro.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er arbeitet im Büro."
+						},
+						{
+							"ok": false,
+							"word": "Er arbeitt im Büro."
+						},
+						{
+							"ok": false,
+							"word": "Er arbeiten im Büro."
+						}
+					]
+				}
+			]
+		}
+	]
+}

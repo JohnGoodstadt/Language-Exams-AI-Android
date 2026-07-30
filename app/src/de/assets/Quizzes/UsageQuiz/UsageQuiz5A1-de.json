@@ -1,0 +1,234 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "UsageQuiz5A1-de",
+	"title": "Präpositionen",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Präpositionen im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Präpositionen und ihre Fälle",
+			"learningPoints": [
+				"Übt Präpositionen mit Dativ (mit, aus, bei, zu, nach).",
+				"Festigt Präpositionen mit Akkusativ (für, um).",
+				"Behandelt Wechselpräpositionen (in, auf): Wo? → Dativ, Wohin? → Akkusativ.",
+				"Trainiert Zeit- und Ortsangaben (am Montag, um acht Uhr, nach Spanien).",
+				"Niveau A1; orientiert sich am Goethe-Zertifikat A1 und telc Deutsch A1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Bei Ort/Position (Wo?) steht nach 'in' der Dativ.",
+					"explain": "Wo? → Dativ: 'die Stadt' → 'in der Stadt': 'Ich wohne in der Stadt.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich wohne in der Stadt."
+						},
+						{
+							"ok": false,
+							"word": "Ich wohne in die Stadt."
+						},
+						{
+							"ok": false,
+							"word": "Ich wohne in Stadt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Nach 'mit' steht immer der Dativ.",
+					"explain": "'mit' + Dativ: 'der Bus' → 'mit dem Bus': 'Ich fahre mit dem Bus.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich fahre mit dem Bus."
+						},
+						{
+							"ok": false,
+							"word": "Ich fahre mit den Bus."
+						},
+						{
+							"ok": false,
+							"word": "Ich fahre mit der Bus."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Bei Richtung (Wohin?) steht nach 'auf' der Akkusativ.",
+					"explain": "Wohin? → Akkusativ: 'der Tisch' → 'auf den Tisch': 'Ich lege das Buch auf den Tisch.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich lege das Buch auf den Tisch."
+						},
+						{
+							"ok": false,
+							"word": "Ich lege das Buch auf dem Tisch."
+						},
+						{
+							"ok": false,
+							"word": "Ich lege das Buch auf der Tisch."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Nach 'für' steht immer der Akkusativ.",
+					"explain": "'für' + Akkusativ: 'du' → 'dich': 'Das Geschenk ist für dich.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das Geschenk ist für dich."
+						},
+						{
+							"ok": false,
+							"word": "Das Geschenk ist für dir."
+						},
+						{
+							"ok": false,
+							"word": "Das Geschenk ist für du."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Nach 'zu' steht der Dativ; 'zu dem' wird oft zu 'zum'.",
+					"explain": "'zu' + Dativ: 'zu dem Arzt' → 'zum Arzt': 'Ich gehe zum Arzt.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich gehe zum Arzt."
+						},
+						{
+							"ok": false,
+							"word": "Ich gehe zu den Arzt."
+						},
+						{
+							"ok": false,
+							"word": "Ich gehe zu Arzt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Zu Städten und den meisten Ländern benutzt man 'nach' (ohne Artikel).",
+					"explain": "'nach' + Ort ohne Artikel: 'Wir fliegen nach Spanien.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir fliegen nach Spanien."
+						},
+						{
+							"ok": false,
+							"word": "Wir fliegen nach dem Spanien."
+						},
+						{
+							"ok": false,
+							"word": "Wir fliegen zu Spanien."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Herkunft (Land mit Artikel) mit 'aus' + Dativ.",
+					"explain": "'aus' + Dativ: 'die Türkei' → 'aus der Türkei': 'Sie kommt aus der Türkei.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie kommt aus der Türkei."
+						},
+						{
+							"ok": false,
+							"word": "Sie kommt aus die Türkei."
+						},
+						{
+							"ok": false,
+							"word": "Sie kommt von der Türkei."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Nach 'bei' steht der Dativ.",
+					"explain": "'bei' + Dativ: 'meine Freundin' → 'bei meiner Freundin': 'Ich bin bei meiner Freundin.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich bin bei meiner Freundin."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin bei meine Freundin."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin bei meinem Freundin."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Uhrzeiten nennt man mit 'um': um … Uhr.",
+					"explain": "Uhrzeit: 'um acht Uhr': 'Der Film beginnt um acht Uhr.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Der Film beginnt um acht Uhr."
+						},
+						{
+							"ok": false,
+							"word": "Der Film beginnt am acht Uhr."
+						},
+						{
+							"ok": false,
+							"word": "Der Film beginnt in acht Uhr."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Wochentage nennt man mit 'am' (an + dem).",
+					"explain": "Tage: 'am Montag': 'Am Montag habe ich frei.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Am Montag habe ich frei."
+						},
+						{
+							"ok": false,
+							"word": "In Montag habe ich frei."
+						},
+						{
+							"ok": false,
+							"word": "Um Montag habe ich frei."
+						}
+					]
+				}
+			]
+		}
+	]
+}

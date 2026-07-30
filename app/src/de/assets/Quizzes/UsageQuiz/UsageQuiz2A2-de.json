@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz2A2-de",
+	"title": "Verlaufsform",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Laufende Handlungen im Deutschen (Präsens, gerade, am …-en)",
+			"sortorder": 1,
+			"learningTitle": "Ausdrücken, was gerade passiert",
+			"learningPoints": [
+				"Zeigt, dass Deutsch keine -ing-Form hat: laufende Handlungen stehen im Präsens.",
+				"Übt 'gerade' für Handlungen, die genau jetzt passieren.",
+				"Behandelt die umgangssprachliche 'am …-en'-Form (am Kochen).",
+				"Trainiert 'dabei sein, etwas zu tun' und 'beim …'.",
+				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Deutsch hat keine -ing-Form; laufende Handlungen stehen im Präsens (oft mit 'gerade').",
+					"explain": "Eine laufende Handlung steht im Präsens: 'Ich lese gerade ein Buch.' Eine Form mit 'bin + Verb' wie im Englischen gibt es nicht.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich lese gerade ein Buch."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin lese ein Buch."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin lesend ein Buch."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "'gerade' zeigt, dass etwas genau jetzt passiert.",
+					"explain": "'Sie telefoniert gerade.' – Präsens + 'gerade' bedeutet 'genau jetzt'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie telefoniert gerade."
+						},
+						{
+							"ok": false,
+							"word": "Sie ist gerade telefonieren."
+						},
+						{
+							"ok": false,
+							"word": "Sie tut gerade telefonieren."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Umgangssprachlich: 'am' + großgeschriebener Infinitiv (am Kochen).",
+					"explain": "'Ich bin gerade am Kochen.' – der Infinitiv wird zum Nomen und großgeschrieben.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich bin gerade am Kochen."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin gerade am kochen."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin gerade kochen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Sowohl allgemeine als auch aktuelle Handlungen stehen im Präsens.",
+					"explain": "Gegenwart jetzt und allgemein: beides Präsens. 'jetzt trinke ich Kaffee' – kein 'bin … trinken'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Normalerweise trinke ich Tee, aber jetzt trinke ich Kaffee."
+						},
+						{
+							"ok": false,
+							"word": "Normalerweise trinke ich Tee, aber jetzt bin ich Kaffee trinken."
+						},
+						{
+							"ok": false,
+							"word": "Normalerweise ich trinke Tee, aber jetzt trinke ich Kaffee."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "'dabei sein, etwas zu tun' betont eine laufende Handlung.",
+					"explain": "'Wir sind gerade dabei, das Zimmer aufzuräumen.' – 'zu' + Infinitiv am Ende ('aufzuräumen').",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir sind gerade dabei, das Zimmer aufzuräumen."
+						},
+						{
+							"ok": false,
+							"word": "Wir sind gerade dabei, das Zimmer aufräumen."
+						},
+						{
+							"ok": false,
+							"word": "Wir sind gerade dabei, aufzuräumen das Zimmer."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "'gerade' steht meist nach dem Verb (im Mittelfeld).",
+					"explain": "'Er schläft gerade.' – das Verb bleibt an Position 2, 'gerade' folgt.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er schläft gerade."
+						},
+						{
+							"ok": false,
+							"word": "Er gerade schläft."
+						},
+						{
+							"ok": false,
+							"word": "Gerade er schläft."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Auch die Frage nach der laufenden Handlung nutzt das Präsens + 'gerade'.",
+					"explain": "'Was machst du gerade?' – nicht 'Was bist du machen?'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Was machst du gerade?"
+						},
+						{
+							"ok": false,
+							"word": "Was bist du machen?"
+						},
+						{
+							"ok": false,
+							"word": "Was du machst gerade?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "'beim' (= bei dem) + großgeschriebener Infinitiv beschreibt eine gleichzeitige Handlung.",
+					"explain": "'Beim Lesen schläft er oft ein.' – 'beim' + Nomen 'Lesen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Beim Lesen schläft er oft ein."
+						},
+						{
+							"ok": false,
+							"word": "Beim lesen schläft er oft ein."
+						},
+						{
+							"ok": false,
+							"word": "Bei Lesen schläft er oft ein."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "'noch' zeigt, dass eine Handlung weiterhin läuft.",
+					"explain": "'Das Kind spielt noch im Garten.' – Präsens + 'noch', kein 'ist … spielen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das Kind spielt noch im Garten."
+						},
+						{
+							"ok": false,
+							"word": "Das Kind ist noch im Garten spielen."
+						},
+						{
+							"ok": false,
+							"word": "Das Kind noch spielt im Garten."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Laufende Handlungen: Präsens (+ 'gerade'), nicht 'sein' + Verb.",
+					"explain": "'Ich arbeite gerade an einem Projekt.' – Präsens; 'bin … arbeiten' ist falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich arbeite gerade an einem Projekt."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin gerade arbeiten an einem Projekt."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin an einem Projekt arbeitend."
+						}
+					]
+				}
+			]
+		}
+	]
+}

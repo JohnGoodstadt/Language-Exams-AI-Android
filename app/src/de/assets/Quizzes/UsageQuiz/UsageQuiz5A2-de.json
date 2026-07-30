@@ -1,0 +1,234 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "UsageQuiz5A2-de",
+	"title": "Verben mit Ergänzung",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Verben und ihre Ergänzungen (Kasus, Präpositionen, zu-Infinitiv)",
+			"sortorder": 1,
+			"learningTitle": "Verben mit ihren Ergänzungen",
+			"learningPoints": [
+				"Übt Verben mit Dativ (helfen, gefallen) und Akkusativ.",
+				"Festigt Verben mit festen Präpositionen (warten auf, denken an, sich freuen auf).",
+				"Behandelt reflexive Verben und 'zu' + Infinitiv (vergessen, anfangen).",
+				"Trainiert Verben mit zwei Objekten (geben: Dativ + Akkusativ).",
+				"Niveau A2; orientiert sich am Goethe-Zertifikat A2 und telc Deutsch A2."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "'helfen' steht mit dem Dativ.",
+					"explain": "'helfen' + Dativ: 'meine Mutter' → 'meiner Mutter': 'Ich helfe meiner Mutter.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich helfe meiner Mutter."
+						},
+						{
+							"ok": false,
+							"word": "Ich helfe meine Mutter."
+						},
+						{
+							"ok": false,
+							"word": "Ich helfe mit meiner Mutter."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "'warten' verlangt die Präposition 'auf' + Akkusativ.",
+					"explain": "'warten auf' + Akkusativ: 'Wir warten auf den Bus.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir warten auf den Bus."
+						},
+						{
+							"ok": false,
+							"word": "Wir warten für den Bus."
+						},
+						{
+							"ok": false,
+							"word": "Wir warten auf dem Bus."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "'sich freuen auf' braucht das Reflexivpronomen und 'auf' + Akkusativ.",
+					"explain": "'Ich freue mich auf das Wochenende.' – reflexiv 'mich' + 'auf' + Akkusativ.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich freue mich auf das Wochenende."
+						},
+						{
+							"ok": false,
+							"word": "Ich freue mich für das Wochenende."
+						},
+						{
+							"ok": false,
+							"word": "Ich freue auf das Wochenende."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "'denken' verlangt 'an' + Akkusativ.",
+					"explain": "'denken an' + Akkusativ: 'Ich denke oft an dich.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich denke oft an dich."
+						},
+						{
+							"ok": false,
+							"word": "Ich denke oft auf dich."
+						},
+						{
+							"ok": false,
+							"word": "Ich denke oft an dir."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "'gefallen' steht mit dem Dativ (mir gefällt …).",
+					"explain": "'Das Bild gefällt mir.' – die Person steht im Dativ ('mir').",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das Bild gefällt mir."
+						},
+						{
+							"ok": false,
+							"word": "Das Bild gefällt mich."
+						},
+						{
+							"ok": false,
+							"word": "Ich gefalle das Bild."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Viele Verben verlangen 'zu' + Infinitiv; bei trennbaren Verben steht 'zu' in der Mitte (abzuschließen).",
+					"explain": "'…, die Tür abzuschließen.' – 'zu' zwischen Vorsilbe und Verb: 'ab-zu-schließen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Vergiss nicht, die Tür abzuschließen."
+						},
+						{
+							"ok": false,
+							"word": "Vergiss nicht, die Tür abschließen."
+						},
+						{
+							"ok": false,
+							"word": "Vergiss nicht, zu die Tür abschließen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "'anfangen' verlangt 'zu' + Infinitiv.",
+					"explain": "'Es fängt an zu regnen.' – 'zu' + Infinitiv 'regnen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Es fängt an zu regnen."
+						},
+						{
+							"ok": false,
+							"word": "Es fängt an regnen."
+						},
+						{
+							"ok": false,
+							"word": "Es fängt zu an regnen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "'sprechen mit' steht mit dem Dativ.",
+					"explain": "'sprechen mit' + Dativ: 'Ich spreche mit dem Lehrer.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich spreche mit dem Lehrer."
+						},
+						{
+							"ok": false,
+							"word": "Ich spreche zu dem Lehrer."
+						},
+						{
+							"ok": false,
+							"word": "Ich spreche mit den Lehrer."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "'geben' hat zwei Objekte: Person im Dativ, Sache im Akkusativ.",
+					"explain": "'Ich gebe dem Kind einen Apfel.' – 'dem Kind' (Dativ) + 'einen Apfel' (Akkusativ).",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich gebe dem Kind einen Apfel."
+						},
+						{
+							"ok": false,
+							"word": "Ich gebe das Kind einen Apfel."
+						},
+						{
+							"ok": false,
+							"word": "Ich gebe dem Kind ein Apfel."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "'sich interessieren für' + Akkusativ (mit Reflexivpronomen).",
+					"explain": "'Er interessiert sich für Musik.' – reflexiv 'sich' + 'für'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er interessiert sich für Musik."
+						},
+						{
+							"ok": false,
+							"word": "Er interessiert sich an Musik."
+						},
+						{
+							"ok": false,
+							"word": "Er interessiert für Musik."
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -2,229 +2,229 @@
 	"fileformat": 10,
 	"location": 0,
 	"sheetname": "UsageQuiz1A1-de",
-	"title": "Sentence Structure DE",
+	"title": "Satzbau",
 	"updatedDate": 0,
 	"data": [
 		{
-			"title": "Choose the correct answer for each question.DE",
-			"description": "Basic sentence structure",
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Grundlegender Satzbau",
 			"sortorder": 1,
-			"learningTitle": "Mastering Basic Sentence Order",
+			"learningTitle": "Die grundlegende deutsche Satzstellung beherrschen",
 			"learningPoints": [
-				"Practises basic English word order (Subject → Verb → Object).",
-				"Builds accuracy with articles and simple noun phrases.",
-				"Trains you to spot common A1 errors quickly (missing verb, wrong order).",
-				"Improves sentence confidence for speaking and writing.",
-				"ESOL A1–A2 and aligns with IELTS 3.0–4.0 and TOEFL iBT 30–40 score ranges."
+				"Übt die Verbzweitstellung (Verb an Position 2) im Hauptsatz.",
+				"Festigt die Verbendungen im Präsens und die Kongruenz von Subjekt und Verb.",
+				"Behandelt Fragen, Verneinung (nicht / kein) und trennbare Verben.",
+				"Trainiert das schnelle Erkennen typischer A1-Fehler (falsche Verbstellung, falsche Endung).",
+				"Niveau A1; orientiert sich am Goethe-Zertifikat A1 und telc Deutsch A1."
 			],
 			"sections": [
 				{
 					"title": "",
 					"page": 1,
-					"summary": "Basic word order in simple present sentences (Subject + Verb + Place).",
-					"explain": "English basic structure: Subject + Verb + Place. 'I eat at home.' follows correct order.",
-					"sentence": "Choose the correct sentence.",
+					"summary": "Grundlegende deutsche Wortstellung: Das konjugierte Verb steht immer an zweiter Stelle (Subjekt + Verb + Ort).",
+					"explain": "Im deutschen Hauptsatz steht das finite Verb an zweiter Stelle. 'Ich wohne in Berlin.' ist richtig – das Verb 'wohne' steht an Position 2.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "I eat at home."
+							"word": "Ich wohne in Berlin."
 						},
 						{
 							"ok": false,
-							"word": "Eat I at home. (de)"
+							"word": "Ich in Berlin wohne."
 						},
 						{
 							"ok": false,
-							"word": "I at home eat."
+							"word": "In Berlin ich wohne."
 						}
 					]
 				},
 				{
 					"title": "",
 					"page": 2,
-					"summary": "Using the verb 'to be' with a job (Subject + be + article + noun).",
-					"explain": "Structure: Subject + am/is/are + a/an + job noun. 'She is a doctor.' is correct.",
-					"sentence": "Choose the correct sentence.",
+					"summary": "Die Verbendung im Präsens muss zum Subjekt passen (du → -st).",
+					"explain": "Bei 'du' bekommt das Verb die Endung '-st': 'Du kommst aus Italien.' 'kommen' (Infinitiv) und 'kommt' (er/sie-Form) sind hier die falschen Endungen.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "She is a doctor."
+							"word": "Du kommst aus Italien."
 						},
 						{
 							"ok": false,
-							"word": "She doctor is a."
+							"word": "Du kommen aus Italien."
 						},
 						{
 							"ok": false,
-							"word": "She is doctor."
+							"word": "Du kommt aus Italien."
 						}
 					]
 				},
 				{
 					"title": "",
 					"page": 3,
-					"summary": "Present simple with plural subject (Subject + base verb).",
-					"explain": "'They' uses the base verb form. 'They walk to school.' is correct.",
-					"sentence": "Choose the correct sentence.",
+					"summary": "In einer W-Frage steht das Fragewort zuerst und das Verb an zweiter Stelle.",
+					"explain": "In deutschen W-Fragen steht das Verb an Position 2: Fragewort + Verb + Subjekt. 'Wo wohnst du?' ist richtig.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "They walk to school."
+							"word": "Wo wohnst du?"
 						},
 						{
 							"ok": false,
-							"word": "They walks to school."
+							"word": "Wo du wohnst?"
 						},
 						{
 							"ok": false,
-							"word": "Walk they to school."
+							"word": "Wohnst du wo?"
 						}
 					]
 				},
 				{
 					"title": "",
 					"page": 4,
-					"summary": "Prepositions of place with 'be' (Subject + be + place phrase).",
-					"explain": "Structure: Subject + is + preposition + object. 'The book is on the table.' is correct.",
-					"sentence": "Choose the correct sentence.",
+					"summary": "In einer Ja/Nein-Frage steht das konjugierte Verb an erster Stelle.",
+					"explain": "Deutsche Ja/Nein-Fragen beginnen mit dem Verb: Verb + Subjekt. 'Sprichst du Deutsch?' ist richtig; die Aussagestellung ist hier keine korrekte Frage.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "The book is on the table."
+							"word": "Sprichst du Deutsch?"
 						},
 						{
 							"ok": false,
-							"word": "The book on the table is."
+							"word": "Du sprichst Deutsch?"
 						},
 						{
 							"ok": false,
-							"word": "The book is the table on."
+							"word": "Sprichst Deutsch du?"
 						}
 					]
 				},
 				{
 					"title": "",
 					"page": 5,
-					"summary": "Adjective position before a noun.",
-					"explain": "Adjective + noun order: 'small house', not 'house small'.",
-					"sentence": "Choose the correct sentence.",
+					"summary": "'nicht' steht am Satzende, um den ganzen Satz zu verneinen.",
+					"explain": "Um einen einfachen Aussagesatz zu verneinen, steht 'nicht' am Ende: 'Ich verstehe das nicht.' 'nicht' vor dem Verb oder vor dem Objekt zu stellen, ist falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "It is a small house."
+							"word": "Ich verstehe das nicht."
 						},
 						{
 							"ok": false,
-							"word": "It is a house small."
+							"word": "Ich nicht verstehe das."
 						},
 						{
 							"ok": false,
-							"word": "It small is a house."
+							"word": "Ich verstehe nicht das."
 						}
 					]
 				},
 				{
 					"title": "",
 					"page": 6,
-					"summary": "Verb patterns with common verbs (listen + to).",
-					"explain": "'Listen' requires the preposition 'to'. Correct structure: 'We listen to music.'",
-					"sentence": "Choose the correct sentence.",
+					"summary": "Zum Verneinen eines Nomens benutzt man 'kein' (nicht 'nicht'), passend zum Genus des Nomens.",
+					"explain": "Nomen werden mit 'kein-' verneint. 'Zeit' ist feminin, deshalb heißt es 'keine': 'Ich habe keine Zeit.' 'nicht Zeit' und 'kein Zeit' sind falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "We listen to music."
+							"word": "Ich habe keine Zeit."
 						},
 						{
 							"ok": false,
-							"word": "We listen music."
+							"word": "Ich habe nicht Zeit."
 						},
 						{
 							"ok": false,
-							"word": "We listen at music."
+							"word": "Ich habe kein Zeit."
 						}
 					]
 				},
 				{
 					"title": "",
 					"page": 7,
-					"summary": "Prepositions of place (under, on, in).",
-					"explain": "Correct structure: Subject + is + under + object. 'The bag is under the chair.'",
-					"sentence": "Choose the correct sentence.",
+					"summary": "Beginnt ein Satz mit einer Zeitangabe, bleibt das Verb an zweiter Stelle und das Subjekt folgt danach.",
+					"explain": "Steht eine Zeitangabe am Anfang, lautet die Reihenfolge Zeitangabe + Verb + Subjekt: 'Heute lerne ich Deutsch.' Das Verb muss an Position 2 bleiben.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "The bag is under the chair."
+							"word": "Heute lerne ich Deutsch."
 						},
 						{
 							"ok": false,
-							"word": "The bag under the chair is."
+							"word": "Heute ich lerne Deutsch."
 						},
 						{
 							"ok": false,
-							"word": "The bag is the chair under."
+							"word": "Ich heute lerne Deutsch."
 						}
 					]
 				},
 				{
 					"title": "",
 					"page": 8,
-					"summary": "Third person singular in present simple (verb + s).",
-					"explain": "'He' requires verb + s in present simple. 'He runs in the park.' is correct.",
-					"sentence": "Choose the correct sentence.",
+					"summary": "Das Modalverb steht an zweiter Stelle; das zweite Verb steht als Infinitiv am Satzende.",
+					"explain": "Bei Modalverben steht das Hauptverb als Infinitiv am Ende: 'Ich muss heute arbeiten.' Der Infinitiv muss am Schluss stehen und unkonjugiert sein.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "He runs in the park."
+							"word": "Ich muss heute arbeiten."
 						},
 						{
 							"ok": false,
-							"word": "He run in the park."
+							"word": "Ich muss arbeiten heute."
 						},
 						{
 							"ok": false,
-							"word": "He running in the park."
+							"word": "Ich muss heute arbeite."
 						}
 					]
 				},
 				{
 					"title": "",
 					"page": 9,
-					"summary": "Preposition 'in' for enclosed spaces.",
-					"explain": "Correct structure: Subject + is + in + object. 'The mobile is in the bag.'",
-					"sentence": "Choose the correct sentence.",
+					"summary": "Bei einem trennbaren Verb wandert die Vorsilbe ans Satzende.",
+					"explain": "Trennbare Verben werden getrennt: Der konjugierte Teil steht an Position 2 und die Vorsilbe am Ende. In 'Ich stehe um sieben Uhr auf.' steht die Vorsilbe 'auf' ganz am Schluss.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "The mobile is in the bag."
+							"word": "Ich stehe um sieben Uhr auf."
 						},
 						{
 							"ok": false,
-							"word": "The mobile is at the bag."
+							"word": "Ich aufstehe um sieben Uhr."
 						},
 						{
 							"ok": false,
-							"word": "The mobile in the bag is."
+							"word": "Ich stehe auf um sieben Uhr."
 						}
 					]
 				},
 				{
 					"title": "",
 					"page": 10,
-					"summary": "Subject pronoun + verb agreement.",
-					"explain": "'We' uses the base verb form. 'We walk to school.' is correct.",
-					"sentence": "Choose the correct sentence.",
+					"summary": "Ein maskulines Nomen als Akkusativobjekt bekommt im Akkusativ 'einen'.",
+					"explain": "Das direkte Objekt steht im Akkusativ. 'der Bruder' ist maskulin, deshalb wird es zu 'einen Bruder': 'Ich habe einen Bruder.' 'ein' (Nominativ) und 'einem' (Dativ) sind die falschen Fälle.",
+					"sentence": "Wählen Sie den richtigen Satz.",
 					"words": [
 						{
 							"ok": true,
-							"word": "We walk to school."
+							"word": "Ich habe einen Bruder."
 						},
 						{
 							"ok": false,
-							"word": "We walks to school."
+							"word": "Ich habe ein Bruder."
 						},
 						{
 							"ok": false,
-							"word": "Walk we to school."
+							"word": "Ich habe einem Bruder."
 						}
 					]
 				}

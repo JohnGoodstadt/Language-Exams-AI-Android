@@ -1,0 +1,234 @@
+{
+	"fileformat": 7,
+	"location": 0,
+	"sheetname": "UsageQuiz6A1-de",
+	"title": "Konnektoren",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Konnektoren (Bindewörter) im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Sätze mit Konnektoren verbinden",
+			"learningPoints": [
+				"Übt 'und', 'oder', 'aber', 'denn' ohne Änderung der Wortstellung.",
+				"Festigt 'weil' und 'dass': das Verb steht am Ende (Nebensatz).",
+				"Behandelt 'deshalb' und 'wenn' mit ihrer besonderen Wortstellung.",
+				"Trainiert typische A1-Fehler bei der Verbstellung nach Konnektoren.",
+				"Niveau A1; orientiert sich am Goethe-Zertifikat A1 und telc Deutsch A1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "'und' verbindet zwei Sätze ohne Änderung der Wortstellung.",
+					"explain": "Nach 'und' bleibt die normale Wortstellung (Subjekt + Verb): 'Ich trinke Kaffee und ich lese die Zeitung.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich trinke Kaffee und ich lese die Zeitung."
+						},
+						{
+							"ok": false,
+							"word": "Ich trinke Kaffee und lese ich die Zeitung."
+						},
+						{
+							"ok": false,
+							"word": "Ich trinke Kaffee und ich die Zeitung lese."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "'aber' verbindet Gegensätze; die Wortstellung bleibt normal.",
+					"explain": "Nach 'aber' folgt Subjekt + Verb: 'Ich bin müde, aber ich arbeite noch.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich bin müde, aber ich arbeite noch."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin müde, aber arbeite ich noch."
+						},
+						{
+							"ok": false,
+							"word": "Ich bin müde, aber ich noch arbeite."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "'oder' nennt eine Alternative; die Wortstellung bleibt normal.",
+					"explain": "Nach 'oder' folgt Subjekt + Verb: 'Wir gehen ins Kino oder wir bleiben zu Hause.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir gehen ins Kino oder wir bleiben zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Wir gehen ins Kino oder bleiben wir zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Wir gehen ins Kino oder wir zu Hause bleiben."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "'denn' (= weil) verbindet Sätze, aber die Wortstellung bleibt normal.",
+					"explain": "Nach 'denn' folgt Subjekt + Verb: 'Ich bleibe zu Hause, denn ich bin krank.' (kein Verb am Ende)",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich bleibe zu Hause, denn ich bin krank."
+						},
+						{
+							"ok": false,
+							"word": "Ich bleibe zu Hause, denn ich krank bin."
+						},
+						{
+							"ok": false,
+							"word": "Ich bleibe zu Hause, denn bin ich krank."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Nach 'weil' steht das konjugierte Verb am Ende (Nebensatz).",
+					"explain": "'weil' schickt das Verb ans Ende: 'Ich lerne Deutsch, weil ich in Berlin wohne.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich lerne Deutsch, weil ich in Berlin wohne."
+						},
+						{
+							"ok": false,
+							"word": "Ich lerne Deutsch, weil ich wohne in Berlin."
+						},
+						{
+							"ok": false,
+							"word": "Ich lerne Deutsch, weil wohne ich in Berlin."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Nach 'dass' steht das Verb am Ende (Nebensatz).",
+					"explain": "'dass' schickt das Verb ans Ende: 'Ich glaube, dass er recht hat.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich glaube, dass er recht hat."
+						},
+						{
+							"ok": false,
+							"word": "Ich glaube, dass er hat recht."
+						},
+						{
+							"ok": false,
+							"word": "Ich glaube, dass hat er recht."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Nach 'deshalb' steht das Verb an Position 2 (das Subjekt kommt danach).",
+					"explain": "'deshalb' + Verb + Subjekt: 'Es regnet, deshalb bleibe ich zu Hause.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Es regnet, deshalb bleibe ich zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Es regnet, deshalb ich bleibe zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Es regnet, deshalb ich zu Hause bleibe."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Im 'weil'-Satz steht das Verb ganz am Ende.",
+					"explain": "'…, weil er keine Zeit hat.' – das Verb 'hat' steht am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er kommt nicht, weil er keine Zeit hat."
+						},
+						{
+							"ok": false,
+							"word": "Er kommt nicht, weil er hat keine Zeit."
+						},
+						{
+							"ok": false,
+							"word": "Er kommt nicht, weil keine Zeit er hat."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Steht der 'wenn'-Satz zuerst, beginnt der Hauptsatz mit dem Verb.",
+					"explain": "'wenn'-Satz + Hauptsatz mit Verb an Position 2: 'Wenn es regnet, bleibe ich zu Hause.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wenn es regnet, bleibe ich zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Wenn es regnet, ich bleibe zu Hause."
+						},
+						{
+							"ok": false,
+							"word": "Wenn regnet es, bleibe ich zu Hause."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Nach 'dass' steht das konjugierte Verb am Satzende.",
+					"explain": "'…, dass du bald kommst.' – 'kommst' steht am Ende des Nebensatzes.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich hoffe, dass du bald kommst."
+						},
+						{
+							"ok": false,
+							"word": "Ich hoffe, dass du kommst bald."
+						},
+						{
+							"ok": false,
+							"word": "Ich hoffe, dass kommst du bald."
+						}
+					]
+				}
+			]
+		}
+	]
+}

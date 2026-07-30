@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz4A1-de",
+	"title": "Fragen & Kurzantworten",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Fragen und Kurzantworten im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Fragen stellen und kurz antworten",
+			"learningPoints": [
+				"Übt W-Fragen (Fragewort + Verb an Position 2).",
+				"Festigt Ja/Nein-Fragen mit dem Verb an erster Stelle.",
+				"Behandelt kurze Aussagesätze als Antworten (Ja …, Nein …).",
+				"Trainiert typische A1-Fehler bei der Verbstellung in Fragen.",
+				"Niveau A1; orientiert sich am Goethe-Zertifikat A1 und telc Deutsch A1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "In W-Fragen steht das Fragewort zuerst, dann das Verb an Position 2.",
+					"explain": "Fragewort + Verb + Subjekt: 'Wie heißt du?'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wie heißt du?"
+						},
+						{
+							"ok": false,
+							"word": "Wie du heißt?"
+						},
+						{
+							"ok": false,
+							"word": "Heißt wie du?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "'woher' fragt nach der Herkunft; das Verb steht an Position 2.",
+					"explain": "'Woher kommst du?' – Fragewort 'woher', dann das konjugierte Verb 'kommst'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Woher kommst du?"
+						},
+						{
+							"ok": false,
+							"word": "Woher du kommst?"
+						},
+						{
+							"ok": false,
+							"word": "Woher kommen du?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Ja/Nein-Fragen beginnen mit dem konjugierten Verb.",
+					"explain": "Verb + Subjekt: 'Trinkst du Tee?' Die Aussagestellung ist keine richtige Frage.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Trinkst du Tee?"
+						},
+						{
+							"ok": false,
+							"word": "Du trinkst Tee?"
+						},
+						{
+							"ok": false,
+							"word": "Trinkst Tee du?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Auch mit 'sein' steht das Verb in der Ja/Nein-Frage zuerst.",
+					"explain": "'Bist du müde?' – das Verb 'bist' steht am Anfang.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Bist du müde?"
+						},
+						{
+							"ok": false,
+							"word": "Du bist müde?"
+						},
+						{
+							"ok": false,
+							"word": "Bist müde du?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Nach 'Ja' folgt ein normaler Aussagesatz (Subjekt + Verb).",
+					"explain": "Kurzantwort: 'Ja,' + Aussagesatz: 'Ja, ich komme mit.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ja, ich komme mit."
+						},
+						{
+							"ok": false,
+							"word": "Ja, komme ich mit."
+						},
+						{
+							"ok": false,
+							"word": "Ja, ich mitkomme."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Nach 'Nein' verneint man oft mit 'kein' oder 'nicht'.",
+					"explain": "'Nein, ich habe keine Zeit.' – das Nomen 'Zeit' wird mit 'keine' verneint.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Nein, ich habe keine Zeit."
+						},
+						{
+							"ok": false,
+							"word": "Nein, ich habe nicht Zeit."
+						},
+						{
+							"ok": false,
+							"word": "Nein, ich keine Zeit habe."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "'was' fragt nach einer Sache; das Verb steht an Position 2.",
+					"explain": "'Was machst du?' – Fragewort 'was' + Verb 'machst' + Subjekt.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Was machst du?"
+						},
+						{
+							"ok": false,
+							"word": "Was du machst?"
+						},
+						{
+							"ok": false,
+							"word": "Machst was du?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "'wann' fragt nach der Zeit; das Verb steht an Position 2.",
+					"explain": "'Wann kommt der Bus?' – 'der Bus' ist Singular, also 'kommt'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wann kommt der Bus?"
+						},
+						{
+							"ok": false,
+							"word": "Wann der Bus kommt?"
+						},
+						{
+							"ok": false,
+							"word": "Wann kommen der Bus?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Bei zählbaren Dingen im Plural fragt man 'wie viele'.",
+					"explain": "'Kinder' ist zählbar (Plural): 'Wie viele Kinder hast du?' 'wie viel' ist hier falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wie viele Kinder hast du?"
+						},
+						{
+							"ok": false,
+							"word": "Wie viel Kinder hast du?"
+						},
+						{
+							"ok": false,
+							"word": "Wie viele Kinder du hast?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Eine Kurzantwort ist ein einfacher Aussagesatz (Subjekt + Verb).",
+					"explain": "'Ja, das ist richtig.' – Subjekt 'das' + Verb 'ist' an Position 2.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ja, das ist richtig."
+						},
+						{
+							"ok": false,
+							"word": "Ja, das richtig ist."
+						},
+						{
+							"ok": false,
+							"word": "Ja, ist das richtig."
+						}
+					]
+				}
+			]
+		}
+	]
+}
