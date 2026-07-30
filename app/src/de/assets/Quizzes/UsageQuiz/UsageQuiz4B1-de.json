@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz4B1-de",
+	"title": "Indirekte Rede",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Indirekte Rede: berichten, fragen, auffordern",
+			"sortorder": 1,
+			"learningTitle": "Wiedergeben, was andere sagen",
+			"learningPoints": [
+				"Übt indirekte Aussagen mit 'dass' (Verb am Ende).",
+				"Festigt indirekte Fragen mit 'ob' und Fragewörtern.",
+				"Behandelt die Anpassung der Pronomen und den Konjunktiv I (sei, habe).",
+				"Trainiert indirekte Aufforderungen mit 'sollen'.",
+				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Indirekte Aussage mit 'dass': das Verb steht am Ende.",
+					"explain": "'Er sagt, dass er keine Zeit hat.' – 'hat' am Ende des Nebensatzes.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er sagt, dass er keine Zeit hat."
+						},
+						{
+							"ok": false,
+							"word": "Er sagt, dass er hat keine Zeit."
+						},
+						{
+							"ok": false,
+							"word": "Er sagt, dass hat er keine Zeit."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Ohne 'dass' bleibt die normale Wortstellung (Verb an Position 2).",
+					"explain": "'Sie meint, sie kommt später.' – ohne 'dass' steht das Verb an Position 2.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie meint, sie kommt später."
+						},
+						{
+							"ok": false,
+							"word": "Sie meint, sie später kommt."
+						},
+						{
+							"ok": false,
+							"word": "Sie meint, dass sie kommt später."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Eine indirekte Ja/Nein-Frage leitet man mit 'ob' ein; das Verb steht am Ende.",
+					"explain": "'Er fragt, ob ich morgen komme.' – 'ob' + Verb am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er fragt, ob ich morgen komme."
+						},
+						{
+							"ok": false,
+							"word": "Er fragt, ob komme ich morgen."
+						},
+						{
+							"ok": false,
+							"word": "Er fragt, dass ich morgen komme."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Indirekte W-Frage: Fragewort + … + Verb am Ende (keine Inversion).",
+					"explain": "'Sie möchte wissen, wo der Bahnhof ist.' – 'wo' + Verb 'ist' am Ende, nicht 'wo ist der Bahnhof'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie möchte wissen, wo der Bahnhof ist."
+						},
+						{
+							"ok": false,
+							"word": "Sie möchte wissen, wo ist der Bahnhof."
+						},
+						{
+							"ok": false,
+							"word": "Sie möchte wissen, ob der Bahnhof wo ist."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "In der indirekten Rede passt man die Pronomen an (ich → sie/er).",
+					"explain": "Anna spricht über sich: 'Anna sagt, sie sei müde.' – 'ich' wird zu 'sie'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Anna sagt, sie sei müde."
+						},
+						{
+							"ok": false,
+							"word": "Anna sagt, ich sei müde."
+						},
+						{
+							"ok": false,
+							"word": "Anna sagt, sie bin müde."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Konjunktiv I der 3. Person: 'habe', 'sei' (indirekte Rede).",
+					"explain": "'Der Arzt sagt, der Patient habe Fieber.' – Konjunktiv I 'habe'; ohne 'dass' steht das Verb an Position 2.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Der Arzt sagt, der Patient habe Fieber."
+						},
+						{
+							"ok": false,
+							"word": "Der Arzt sagt, der Patient habt Fieber."
+						},
+						{
+							"ok": false,
+							"word": "Der Arzt sagt, der Patient Fieber habe."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Eine indirekte Aufforderung drückt man oft mit 'sollen' aus.",
+					"explain": "'Er sagt, ich soll pünktlich sein.' – 'sollen' + Infinitiv 'sein'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er sagt, ich soll pünktlich sein."
+						},
+						{
+							"ok": false,
+							"word": "Er sagt, ich soll pünktlich bin."
+						},
+						{
+							"ok": false,
+							"word": "Er sagt, dass ich soll pünktlich sein."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Für eine indirekte Ja/Nein-Frage nimmt man 'ob' (nicht 'wenn').",
+					"explain": "'Ich weiß nicht, ob er kommt.' – 'ob', nicht 'wenn'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich weiß nicht, ob er kommt."
+						},
+						{
+							"ok": false,
+							"word": "Ich weiß nicht, wenn er kommt."
+						},
+						{
+							"ok": false,
+							"word": "Ich weiß nicht, ob kommt er."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Im 'dass'-Satz steht das ganze Verb (auch das Hilfsverb) am Ende.",
+					"explain": "'…, dass sie das Buch schon gelesen hat.' – das Hilfsverb 'hat' steht ganz am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie hat gesagt, dass sie das Buch schon gelesen hat."
+						},
+						{
+							"ok": false,
+							"word": "Sie hat gesagt, dass sie das Buch schon gelesen."
+						},
+						{
+							"ok": false,
+							"word": "Sie hat gesagt, dass sie hat das Buch schon gelesen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "In der indirekten Frage mit Modalverb steht das Modalverb am Ende.",
+					"explain": "'Sie fragt, ob du ihr helfen kannst.' – Modalverb 'kannst' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie fragt, ob du ihr helfen kannst."
+						},
+						{
+							"ok": false,
+							"word": "Sie fragt, ob du ihr kannst helfen."
+						},
+						{
+							"ok": false,
+							"word": "Sie fragt, ob kannst du ihr helfen."
+						}
+					]
+				}
+			]
+		}
+	]
+}

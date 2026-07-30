@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz5B1-de",
+	"title": "Relativsätze",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Relativsätze im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Sätze mit Relativsätzen erweitern",
+			"learningPoints": [
+				"Übt die Relativpronomen der/die/das im Nominativ und Akkusativ.",
+				"Festigt den Dativ (dem/der) und Präposition + Relativpronomen (mit dem, in der).",
+				"Behandelt den Genitiv (dessen/deren) und 'was' nach 'alles/etwas/nichts'.",
+				"Trainiert die Wortstellung: das Verb steht im Relativsatz am Ende.",
+				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Das Relativpronomen im Nominativ heißt 'der' (maskulin).",
+					"explain": "'der Mann, der nebenan wohnt' – Subjekt im Relativsatz → 'der'; das Verb 'wohnt' steht am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das ist der Mann, der nebenan wohnt."
+						},
+						{
+							"ok": false,
+							"word": "Das ist der Mann, den nebenan wohnt."
+						},
+						{
+							"ok": false,
+							"word": "Das ist der Mann, der wohnt nebenan."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Ist das Nomen im Relativsatz Objekt, steht der Akkusativ (den).",
+					"explain": "'der Film, den ich gesehen habe' – 'den' ist Akkusativobjekt; das Verb steht am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Der Film, den ich gestern gesehen habe, war spannend."
+						},
+						{
+							"ok": false,
+							"word": "Der Film, der ich gestern gesehen habe, war spannend."
+						},
+						{
+							"ok": false,
+							"word": "Der Film, den ich gestern habe gesehen, war spannend."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Das Relativpronomen 'die' verwendet man für feminine Nomen (und Plural).",
+					"explain": "'die Frau, die dort steht' – feminin, Nominativ → 'die'; Verb 'steht' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Frau, die dort steht, ist meine Lehrerin."
+						},
+						{
+							"ok": false,
+							"word": "Die Frau, der dort steht, ist meine Lehrerin."
+						},
+						{
+							"ok": false,
+							"word": "Die Frau, die steht dort, ist meine Lehrerin."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Das Relativpronomen 'das' (neutrum) schreibt man mit einem 's' (nicht 'dass').",
+					"explain": "'das Buch, das … liegt' – Relativpronomen 'das' (ein 's'); 'dass' wäre eine Konjunktion.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das Buch, das auf dem Tisch liegt, gehört mir."
+						},
+						{
+							"ok": false,
+							"word": "Das Buch, dass auf dem Tisch liegt, gehört mir."
+						},
+						{
+							"ok": false,
+							"word": "Das Buch, das liegt auf dem Tisch, gehört mir."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Verlangt das Verb den Dativ (helfen), steht das Relativpronomen im Dativ (dem).",
+					"explain": "'helfen' + Dativ → 'der Kollege, dem ich geholfen habe'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Der Kollege, dem ich geholfen habe, ist krank."
+						},
+						{
+							"ok": false,
+							"word": "Der Kollege, den ich geholfen habe, ist krank."
+						},
+						{
+							"ok": false,
+							"word": "Der Kollege, dem ich habe geholfen, ist krank."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Eine Präposition steht vor dem Relativpronomen und bestimmt den Fall (mit + Dativ).",
+					"explain": "'der Bus, mit dem ich fahre' – 'mit' + Dativ 'dem'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das ist der Bus, mit dem ich zur Arbeit fahre."
+						},
+						{
+							"ok": false,
+							"word": "Das ist der Bus, mit den ich zur Arbeit fahre."
+						},
+						{
+							"ok": false,
+							"word": "Das ist der Bus, den ich mit zur Arbeit fahre."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Bei Ort (Wo?) steht 'in' + Dativ auch im Relativsatz (in der).",
+					"explain": "'die Stadt, in der ich wohne' – Position (Wo?) → 'in der'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Stadt, in der ich wohne, ist sehr schön."
+						},
+						{
+							"ok": false,
+							"word": "Die Stadt, in die ich wohne, ist sehr schön."
+						},
+						{
+							"ok": false,
+							"word": "Die Stadt, wo ich in wohne, ist sehr schön."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Für Besitz benutzt man 'dessen' (maskulin/neutrum) bzw. 'deren' (feminin/Plural).",
+					"explain": "'der Mann, dessen Auto …' – maskulin → 'dessen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das ist der Mann, dessen Auto gestohlen wurde."
+						},
+						{
+							"ok": false,
+							"word": "Das ist der Mann, deren Auto gestohlen wurde."
+						},
+						{
+							"ok": false,
+							"word": "Das ist der Mann, wessen Auto gestohlen wurde."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Im Plural heißt das Relativpronomen 'die'; das Verb steht im Plural.",
+					"explain": "'die Kinder, die … spielen' – Plural 'die' + Verb 'spielen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Kinder, die im Garten spielen, sind meine Neffen."
+						},
+						{
+							"ok": false,
+							"word": "Die Kinder, das im Garten spielen, sind meine Neffen."
+						},
+						{
+							"ok": false,
+							"word": "Die Kinder, die im Garten spielt, sind meine Neffen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Nach 'alles', 'etwas', 'nichts' benutzt man das Relativpronomen 'was'.",
+					"explain": "'alles, was ich weiß' – nach 'alles' steht 'was'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das ist alles, was ich weiß."
+						},
+						{
+							"ok": false,
+							"word": "Das ist alles, das ich weiß."
+						},
+						{
+							"ok": false,
+							"word": "Das ist alles, was ich weiß es."
+						}
+					]
+				}
+			]
+		}
+	]
+}

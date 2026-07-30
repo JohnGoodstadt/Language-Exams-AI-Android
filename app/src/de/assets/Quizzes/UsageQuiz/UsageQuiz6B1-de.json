@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz6B1-de",
+	"title": "Verben mit Präposition",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Verben mit fester Präposition und die da-/wo-Formen",
+			"sortorder": 1,
+			"learningTitle": "Verben mit Präposition und Pronominaladverbien",
+			"learningPoints": [
+				"Übt Verben mit fester Präposition und dem richtigen Fall (warten auf + Akkusativ).",
+				"Festigt die 'wo(r)-'Fragen für Sachen (worauf, worüber).",
+				"Behandelt die 'da(r)-'Formen als Ersatz für 'Präposition + Sache' (darauf, daran).",
+				"Trainiert den Unterschied zwischen Sachen (wo-/da-) und Personen (an wen …).",
+				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "'warten auf' verlangt den Akkusativ.",
+					"explain": "'Ich warte schon lange auf den Bus.' – 'warten auf' + Akkusativ.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich warte schon lange auf den Bus."
+						},
+						{
+							"ok": false,
+							"word": "Ich warte schon lange für den Bus."
+						},
+						{
+							"ok": false,
+							"word": "Ich warte schon lange auf dem Bus."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Fragt man nach einer Sache, bildet man 'wo(r)' + Präposition (auf → worauf).",
+					"explain": "'warten auf' → Frage nach einer Sache: 'Worauf wartest du?'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Worauf wartest du?"
+						},
+						{
+							"ok": false,
+							"word": "Auf was wartest du?"
+						},
+						{
+							"ok": false,
+							"word": "Wofür wartest du?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Statt 'an + es/das' benutzt man das Pronominaladverb 'daran' (für Sachen).",
+					"explain": "'denken an' → für eine Sache: 'Ich denke oft daran.' (nicht 'an das', nicht 'darauf')",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich denke oft daran."
+						},
+						{
+							"ok": false,
+							"word": "Ich denke oft an das."
+						},
+						{
+							"ok": false,
+							"word": "Ich denke oft darauf."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "'sprechen über' → Frage: 'worüber'.",
+					"explain": "'Worüber sprecht ihr?' – 'über' wird zu 'worüber' (Sache).",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Worüber sprecht ihr?"
+						},
+						{
+							"ok": false,
+							"word": "Über was sprecht ihr?"
+						},
+						{
+							"ok": false,
+							"word": "Worauf sprecht ihr?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Bei Personen benutzt man 'Präposition + wen/wem', nicht 'wo(r)…'.",
+					"explain": "Person: 'An wen denkst du?' (nicht 'woran'); 'denken an' + Akkusativ → 'an wen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "An wen denkst du?"
+						},
+						{
+							"ok": false,
+							"word": "Woran denkst du?"
+						},
+						{
+							"ok": false,
+							"word": "An wem denkst du?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "'sich interessieren für' → 'dafür' (für eine Sache).",
+					"explain": "'Interessierst du dich dafür?' – 'für' + Sache → 'dafür'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Interessierst du dich dafür?"
+						},
+						{
+							"ok": false,
+							"word": "Interessierst du dich für das?"
+						},
+						{
+							"ok": false,
+							"word": "Interessierst du dich darüber?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "'antworten auf' verlangt den Akkusativ.",
+					"explain": "'antworten auf' + Akkusativ: 'Sie hat auf meine E-Mail nicht geantwortet.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie hat auf meine E-Mail nicht geantwortet."
+						},
+						{
+							"ok": false,
+							"word": "Sie hat meine E-Mail nicht geantwortet."
+						},
+						{
+							"ok": false,
+							"word": "Sie hat über meine E-Mail nicht geantwortet."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "'sich ärgern über' → Frage 'worüber'.",
+					"explain": "'Worüber ärgerst du dich?' – 'über' → 'worüber'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Worüber ärgerst du dich?"
+						},
+						{
+							"ok": false,
+							"word": "Woran ärgerst du dich?"
+						},
+						{
+							"ok": false,
+							"word": "Über was ärgerst du dich?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "'teilnehmen an' verlangt den Dativ.",
+					"explain": "'teilnehmen an' + Dativ: 'Er nimmt an einem Deutschkurs teil.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Er nimmt an einem Deutschkurs teil."
+						},
+						{
+							"ok": false,
+							"word": "Er nimmt an einen Deutschkurs teil."
+						},
+						{
+							"ok": false,
+							"word": "Er nimmt auf einem Deutschkurs teil."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "'Angst haben vor' → 'davor' (für eine Sache).",
+					"explain": "'Hast du Angst davor?' – 'vor' + Sache → 'davor'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Hast du Angst davor?"
+						},
+						{
+							"ok": false,
+							"word": "Hast du Angst dafür?"
+						},
+						{
+							"ok": false,
+							"word": "Hast du Angst vor das?"
+						}
+					]
+				}
+			]
+		}
+	]
+}

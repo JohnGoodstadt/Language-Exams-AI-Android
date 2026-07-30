@@ -1,0 +1,235 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz4B2-en",
+	"title": "Academic Expression",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Nominalisation and academic transformation",
+			"sortorder": 1,
+			"learningTitle": "Writing with Academic Precision",
+			"learningPoints": [
+				"Develops nominalisation for formal academic tone.",
+				"Strengthens clause compression and structural transformation.",
+				"Improves clarity through abstract noun phrases.",
+				"Builds the ability to express cause, effect, and evaluation formally.",
+				"Prepares you for essay writing and analytical reporting.",
+				"ESOL C1 and roughly aligns with IELTS 7.0–8.0 and TOEFL iBT 95–110 score ranges."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Nominalisation replaces verbs with nouns for formal tone.",
+					"explain": "'Decision' is a nominalised form of 'decide', creating academic tone.",
+					"sentence": "Choose the more formal sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The government's decision to increase funding was controversial."
+						},
+						{
+							"ok": false,
+							"word": "The government decided to increase funding, and it was controversial."
+						},
+						{
+							"ok": false,
+							"word": "The government deciding to increase funding was controversial."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Use noun phrases instead of clauses.",
+					"explain": "'Failure' replaces the clause 'failed' to create formal expression.",
+					"sentence": "Choose the more academic sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The company's failure to meet targets resulted in financial losses."
+						},
+						{
+							"ok": false,
+							"word": "The company failed to meet targets, and it lost money."
+						},
+						{
+							"ok": false,
+							"word": "The company failing to meet targets resulted in losing money."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Cause expressed using 'due to'.",
+					"explain": "'Due to' is used with noun phrases, not clauses.",
+					"sentence": "Choose the correct formal transformation.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The cancellation was due to technical difficulties."
+						},
+						{
+							"ok": false,
+							"word": "The cancellation was due to there were technical difficulties."
+						},
+						{
+							"ok": false,
+							"word": "The cancellation was because technical difficulties."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Replace informal connectors with academic alternatives.",
+					"explain": "'Consequently' is more formal than 'so'.",
+					"sentence": "Choose the more formal sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The data were incomplete; consequently, the results were inconclusive."
+						},
+						{
+							"ok": false,
+							"word": "The data were incomplete, so the results were unclear."
+						},
+						{
+							"ok": false,
+							"word": "The data incomplete so results unclear."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Abstract nouns improve formal tone.",
+					"explain": "'Implementation' replaces the verb 'implement'.",
+					"sentence": "Choose the correct academic structure.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The implementation of the policy improved efficiency."
+						},
+						{
+							"ok": false,
+							"word": "They implemented the policy and it improved efficiency."
+						},
+						{
+							"ok": false,
+							"word": "The implement of the policy improved efficiency."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Using noun phrases for emphasis.",
+					"explain": "'The rapid expansion of the company' compresses the clause structure.",
+					"sentence": "Choose the correct academic form.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The rapid expansion of the company created new opportunities."
+						},
+						{
+							"ok": false,
+							"word": "The company expanded rapidly and it created new opportunities."
+						},
+						{
+							"ok": false,
+							"word": "The company rapid expansion created new opportunities."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Nominalisation in research contexts.",
+					"explain": "'Analysis' replaces the verb 'analysed'.",
+					"sentence": "Choose the more academic sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The analysis of the results revealed significant trends."
+						},
+						{
+							"ok": false,
+							"word": "They analysed the results and found significant trends."
+						},
+						{
+							"ok": false,
+							"word": "The analyse of the results revealed significant trends."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Using 'in response to' for formal cause.",
+					"explain": "'In response to' is a formal prepositional phrase.",
+					"sentence": "Choose the correct formal expression.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The policy was revised in response to public concern."
+						},
+						{
+							"ok": false,
+							"word": "The policy was revised because the public was concerned."
+						},
+						{
+							"ok": false,
+							"word": "The policy revised in response public concern."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Using 'increase in' rather than verb-heavy structure.",
+					"explain": "'An increase in' is a formal noun phrase.",
+					"sentence": "Choose the more academic sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "There has been a significant increase in demand."
+						},
+						{
+							"ok": false,
+							"word": "Demand has increased a lot."
+						},
+						{
+							"ok": false,
+							"word": "There has been demand increased significantly."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Using abstract nouns for evaluation.",
+					"explain": "'Evaluation' replaces the clause 'evaluated it'.",
+					"sentence": "Choose the correct formal structure.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The evaluation of the proposal took several weeks."
+						},
+						{
+							"ok": false,
+							"word": "They evaluated the proposal and it took several weeks."
+						},
+						{
+							"ok": false,
+							"word": "The evaluate of the proposal took several weeks."
+						}
+					]
+				}
+			]
+		}
+	]
+}

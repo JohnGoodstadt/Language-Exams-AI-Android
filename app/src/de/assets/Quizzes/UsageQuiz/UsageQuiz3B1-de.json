@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz3B1-de",
+	"title": "Passiv",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Das Passiv im Deutschen",
+			"sortorder": 1,
+			"learningTitle": "Das Passiv verwenden",
+			"learningPoints": [
+				"Übt das Vorgangspassiv (werden + Partizip II) im Präsens und Präteritum.",
+				"Festigt das Passiv mit Modalverben ('muss … gemacht werden').",
+				"Behandelt 'von' (Person) und 'durch' (Mittel/Ursache).",
+				"Trainiert das Passiv-Perfekt ('ist … worden').",
+				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Das Vorgangspassiv bildet man mit 'werden' + Partizip II.",
+					"explain": "'Das Haus wird gerade renoviert.' – 'werden' + Partizip 'renoviert'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das Haus wird gerade renoviert."
+						},
+						{
+							"ok": false,
+							"word": "Das Haus ist gerade renoviert."
+						},
+						{
+							"ok": false,
+							"word": "Das Haus wird gerade renovieren."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Der Urheber (Person) steht im Passiv mit 'von' + Dativ.",
+					"explain": "'von der Sekretärin' (von + Dativ): 'Der Brief wird von der Sekretärin geschrieben.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Der Brief wird von der Sekretärin geschrieben."
+						},
+						{
+							"ok": false,
+							"word": "Der Brief wird durch der Sekretärin geschrieben."
+						},
+						{
+							"ok": false,
+							"word": "Der Brief wird von die Sekretärin geschrieben."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Passiv in der Vergangenheit: 'wurde' + Partizip II.",
+					"explain": "'Die Kirche wurde im Mittelalter gebaut.' – 'wurde' (Präteritum von werden) + 'gebaut'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Kirche wurde im Mittelalter gebaut."
+						},
+						{
+							"ok": false,
+							"word": "Die Kirche wird im Mittelalter gebaut."
+						},
+						{
+							"ok": false,
+							"word": "Die Kirche wurde im Mittelalter gebauen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Passiv mit Modalverb: Modalverb + Partizip II + 'werden' (Infinitiv) am Ende.",
+					"explain": "'muss … bezahlt werden': 'Die Rechnung muss bis Freitag bezahlt werden.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Rechnung muss bis Freitag bezahlt werden."
+						},
+						{
+							"ok": false,
+							"word": "Die Rechnung muss bis Freitag bezahlen werden."
+						},
+						{
+							"ok": false,
+							"word": "Die Rechnung muss bis Freitag werden bezahlt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Auch in Fragen gilt: 'werden' (Position 2) + Partizip II am Ende.",
+					"explain": "'Wann wird das Ergebnis bekannt gegeben?' – 'wird' an Position 2, Partizip 'gegeben' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wann wird das Ergebnis bekannt gegeben?"
+						},
+						{
+							"ok": false,
+							"word": "Wann wird das Ergebnis bekannt geben?"
+						},
+						{
+							"ok": false,
+							"word": "Wann das Ergebnis wird bekannt gegeben?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Passiv im Perfekt: 'sein' + Partizip II + 'worden' (nicht 'geworden').",
+					"explain": "'Das Problem ist schon gelöst worden.' – im Passiv-Perfekt heißt es 'worden'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das Problem ist schon gelöst worden."
+						},
+						{
+							"ok": false,
+							"word": "Das Problem ist schon gelöst geworden."
+						},
+						{
+							"ok": false,
+							"word": "Das Problem hat schon gelöst worden."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Das Mittel/die Ursache steht im Passiv mit 'durch' + Akkusativ.",
+					"explain": "'durch ein Erdbeben' (durch + Akkusativ): 'Die Stadt wurde durch ein Erdbeben zerstört.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Stadt wurde durch ein Erdbeben zerstört."
+						},
+						{
+							"ok": false,
+							"word": "Die Stadt wurde von ein Erdbeben zerstört."
+						},
+						{
+							"ok": false,
+							"word": "Die Stadt wurde durch einem Erdbeben zerstört."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Das Passiv kann ohne Urheber stehen (man nennt nicht, wer handelt).",
+					"explain": "'In Deutschland wird viel Kaffee getrunken.' – Passiv ohne 'von …'; Partizip 'getrunken'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "In Deutschland wird viel Kaffee getrunken."
+						},
+						{
+							"ok": false,
+							"word": "In Deutschland wird viel Kaffee getrinkt."
+						},
+						{
+							"ok": false,
+							"word": "In Deutschland wird viel Kaffee trinken."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Das Zustandspassiv (Ergebnis/Zustand) bildet man mit 'sein' + Partizip II.",
+					"explain": "'Das Geschäft ist am Sonntag geschlossen.' – Zustand mit 'sein' + Partizip 'geschlossen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das Geschäft ist am Sonntag geschlossen."
+						},
+						{
+							"ok": false,
+							"word": "Das Geschäft ist am Sonntag geschließen."
+						},
+						{
+							"ok": false,
+							"word": "Das Geschäft ist am Sonntag schließen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Das Passiv-Verb 'werden' passt sich dem Subjekt an (Plural: wurden).",
+					"explain": "'Die Häuser' ist Plural → 'wurden': 'Die Häuser wurden im letzten Jahr gebaut.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Die Häuser wurden im letzten Jahr gebaut."
+						},
+						{
+							"ok": false,
+							"word": "Die Häuser wurde im letzten Jahr gebaut."
+						},
+						{
+							"ok": false,
+							"word": "Die Häuser wurden im letzten Jahr gebaut worden."
+						}
+					]
+				}
+			]
+		}
+	]
+}

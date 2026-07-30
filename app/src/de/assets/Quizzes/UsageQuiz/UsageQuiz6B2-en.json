@@ -1,0 +1,235 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz6B2-en",
+	"title": "Precision & Nuance",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the correct answer for each question.",
+			"description": "Hedging, modality, and evaluative precision",
+			"sortorder": 1,
+			"learningTitle": "Expressing Ideas with Precision and Nuance",
+			"learningPoints": [
+				"Develops hedging and cautious academic language.",
+				"Strengthens nuanced use of modal verbs and probability markers.",
+				"Improves evaluative precision in formal arguments.",
+				"Builds control over degrees of certainty and speculation.",
+				"Prepares you for advanced academic discussion and critical analysis.",
+				"ESOL C1 and roughly aligns with IELTS 7.0–8.0 and TOEFL iBT 95–110 score ranges."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Use hedging to soften claims.",
+					"explain": "'It appears that' softens a statement and avoids absolute certainty.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "It appears that the results are consistent with previous findings."
+						},
+						{
+							"ok": false,
+							"word": "The results are definitely consistent with previous findings."
+						},
+						{
+							"ok": false,
+							"word": "It appears the results are consistent."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Use 'be likely to' for probability.",
+					"explain": "'Be likely to' expresses strong probability.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The policy is likely to affect small businesses."
+						},
+						{
+							"ok": false,
+							"word": "The policy likely to affect small businesses."
+						},
+						{
+							"ok": false,
+							"word": "The policy is likely affecting small businesses."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Use 'may well' for strong possibility.",
+					"explain": "'May well' suggests a high degree of possibility.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The findings may well influence future research."
+						},
+						{
+							"ok": false,
+							"word": "The findings may influence well future research."
+						},
+						{
+							"ok": false,
+							"word": "The findings may influences future research."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Use 'must have' for logical deduction about the past.",
+					"explain": "'Must have + past participle' expresses strong deduction about past events.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She must have misunderstood the instructions."
+						},
+						{
+							"ok": false,
+							"word": "She must misunderstood the instructions."
+						},
+						{
+							"ok": false,
+							"word": "She must have misunderstand the instructions."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Use 'might have' for past possibility.",
+					"explain": "'Might have' expresses uncertain past possibility.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "They might have overlooked an important detail."
+						},
+						{
+							"ok": false,
+							"word": "They might overlooked an important detail."
+						},
+						{
+							"ok": false,
+							"word": "They might have overlook an important detail."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Use 'should have' for criticism or regret.",
+					"explain": "'Should have + past participle' expresses past obligation not fulfilled.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The company should have responded more quickly."
+						},
+						{
+							"ok": false,
+							"word": "The company should responded more quickly."
+						},
+						{
+							"ok": false,
+							"word": "The company should have respond more quickly."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Use 'tend to' for general tendencies.",
+					"explain": "'Tend to' describes patterns or general behaviour.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Consumers tend to prefer affordable options."
+						},
+						{
+							"ok": false,
+							"word": "Consumers tend prefer affordable options."
+						},
+						{
+							"ok": false,
+							"word": "Consumers are tend to prefer affordable options."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Use 'be inclined to' for personal tendency.",
+					"explain": "'Be inclined to' expresses personal disposition.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "She is inclined to support environmentally friendly policies."
+						},
+						{
+							"ok": false,
+							"word": "She inclined to support environmentally friendly policies."
+						},
+						{
+							"ok": false,
+							"word": "She is incline to support environmentally friendly policies."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Use 'be expected to' for predicted outcomes.",
+					"explain": "'Be expected to' expresses anticipated events.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "The economy is expected to recover gradually."
+						},
+						{
+							"ok": false,
+							"word": "The economy expected to recover gradually."
+						},
+						{
+							"ok": false,
+							"word": "The economy is expect to recover gradually."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Balanced evaluation using hedging and modality.",
+					"explain": "Combining hedging and modal verbs allows balanced academic evaluation.",
+					"sentence": "Choose the correct sentence.",
+					"words": [
+						{
+							"ok": true,
+							"word": "While the proposal may be ambitious, it is likely to generate long-term benefits."
+						},
+						{
+							"ok": false,
+							"word": "While the proposal is ambitious but it will generate long-term benefits."
+						},
+						{
+							"ok": false,
+							"word": "While the proposal may ambitious, it likely generate long-term benefits."
+						}
+					]
+				}
+			]
+		}
+	]
+}

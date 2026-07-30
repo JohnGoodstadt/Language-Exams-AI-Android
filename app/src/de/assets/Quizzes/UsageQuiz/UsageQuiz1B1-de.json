@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz1B1-de",
+	"title": "Präteritum & Plusquamperfekt",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Erzählen in der Vergangenheit: Präteritum und Plusquamperfekt",
+			"sortorder": 1,
+			"learningTitle": "Die Vergangenheit erzählen",
+			"learningPoints": [
+				"Übt das Präteritum regelmäßiger und unregelmäßiger Verben.",
+				"Festigt das Präteritum von 'sein', 'haben' und den Modalverben (war, hatte, konnte).",
+				"Behandelt das Plusquamperfekt (hatte/war + Partizip II) für die Vorvergangenheit.",
+				"Trainiert 'nachdem' und 'als' in Erzählungen.",
+				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Das regelmäßige Präteritum bildet man mit '-te' (wohnen → wohnte).",
+					"explain": "Regelmäßig: Stamm + '-te': 'Damals wohnte ich in einer kleinen Stadt.' Das Verb bleibt an Position 2.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Damals wohnte ich in einer kleinen Stadt."
+						},
+						{
+							"ok": false,
+							"word": "Damals wohnte ich in einer kleinen Stadt gewohnt."
+						},
+						{
+							"ok": false,
+							"word": "Damals ich wohnte in einer kleinen Stadt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "Unregelmäßige Verben ändern im Präteritum den Stamm (gehen → ging).",
+					"explain": "'gehen' → 'ging': 'Als Kind ging ich oft ins Schwimmbad.' 'gehte' ist falsch.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Als Kind ging ich oft ins Schwimmbad."
+						},
+						{
+							"ok": false,
+							"word": "Als Kind gehte ich oft ins Schwimmbad."
+						},
+						{
+							"ok": false,
+							"word": "Als Kind ging ich oft ins Schwimmbad gegangen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Modalverben stehen in der Vergangenheit meist im Präteritum (können → konnte).",
+					"explain": "'können' → 'konnte' (ohne Umlaut): 'Früher konnte ich sehr gut Klavier spielen.' 'könnte' ist Konjunktiv II.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Früher konnte ich sehr gut Klavier spielen."
+						},
+						{
+							"ok": false,
+							"word": "Früher könnte ich sehr gut Klavier spielen."
+						},
+						{
+							"ok": false,
+							"word": "Früher konnte ich sehr gut Klavier gespielt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "'sein' und 'haben' benutzt man in der Erzählung im Präteritum (war, hatte).",
+					"explain": "'Es war spät, und ich hatte großen Hunger.' – 'war' und 'hatte' sind die Präteritumformen.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Es war spät, und ich hatte großen Hunger."
+						},
+						{
+							"ok": false,
+							"word": "Es war spät, und ich hattete großen Hunger."
+						},
+						{
+							"ok": false,
+							"word": "Es wart spät, und ich hatte großen Hunger."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Das Plusquamperfekt (hatte/war + Partizip II) beschreibt eine frühere Vergangenheit.",
+					"explain": "Was vorher passierte, steht im Plusquamperfekt: 'Ich hatte schon gegessen, als er kam.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich hatte schon gegessen, als er kam."
+						},
+						{
+							"ok": false,
+							"word": "Ich habe schon gegessen, als er kam."
+						},
+						{
+							"ok": false,
+							"word": "Ich hatte schon gegessen, als er kommt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Nach 'nachdem' steht das Plusquamperfekt, im Hauptsatz das Präteritum.",
+					"explain": "'Nachdem er gegessen hatte, ging er spazieren.' – Nebensatz Plusquamperfekt, Hauptsatz Präteritum.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Nachdem er gegessen hatte, ging er spazieren."
+						},
+						{
+							"ok": false,
+							"word": "Nachdem er gegessen hat, ging er spazieren."
+						},
+						{
+							"ok": false,
+							"word": "Nachdem er gegessen hatte, er ging spazieren."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Bei Bewegungsverben bildet man das Plusquamperfekt mit 'war' + Partizip II.",
+					"explain": "'abfahren' → 'war abgefahren': 'Wir waren schon abgefahren, als der Anruf kam.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wir waren schon abgefahren, als der Anruf kam."
+						},
+						{
+							"ok": false,
+							"word": "Wir hatten schon abgefahren, als der Anruf kam."
+						},
+						{
+							"ok": false,
+							"word": "Wir waren schon abgefahren, als der Anruf kommt."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Viele starke Verben ändern den Vokal (finden → fand).",
+					"explain": "'finden' → 'fand': 'Sie fand die Lösung sofort.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Sie fand die Lösung sofort."
+						},
+						{
+							"ok": false,
+							"word": "Sie findete die Lösung sofort."
+						},
+						{
+							"ok": false,
+							"word": "Sie fand die Lösung sofort gefunden."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Für ein einmaliges Ereignis in der Vergangenheit benutzt man 'als' (nicht 'wenn').",
+					"explain": "Einmalig in der Vergangenheit → 'als': 'Als ich gestern nach Hause kam, war niemand da.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Als ich gestern nach Hause kam, war niemand da."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich gestern nach Hause kam, war niemand da."
+						},
+						{
+							"ok": false,
+							"word": "Als ich gestern nach Hause kam, niemand war da."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "'kommen' hat ein unregelmäßiges Präteritum (kam); nach 'deshalb' folgt das Verb.",
+					"explain": "'kommen' → 'kam': 'Der Zug hatte Verspätung, deshalb kam ich zu spät.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Der Zug hatte Verspätung, deshalb kam ich zu spät."
+						},
+						{
+							"ok": false,
+							"word": "Der Zug hatte Verspätung, deshalb ich kam zu spät."
+						},
+						{
+							"ok": false,
+							"word": "Der Zug hatte Verspätung, deshalb kommte ich zu spät."
+						}
+					]
+				}
+			]
+		}
+	]
+}

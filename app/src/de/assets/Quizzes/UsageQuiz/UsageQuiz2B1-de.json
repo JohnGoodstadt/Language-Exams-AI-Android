@@ -1,0 +1,234 @@
+{
+	"fileformat": 10,
+	"location": 0,
+	"sheetname": "UsageQuiz2B1-de",
+	"title": "Konjunktiv II & irreale Bedingungssätze",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Wählen Sie für jede Frage die richtige Antwort.",
+			"description": "Höflichkeit und irreale Situationen mit dem Konjunktiv II",
+			"sortorder": 1,
+			"learningTitle": "Höflich formulieren und Hypothesen ausdrücken",
+			"learningPoints": [
+				"Übt den Konjunktiv II mit 'würde', 'hätte', 'wäre', 'könnte'.",
+				"Festigt höfliche Bitten ('Könnten Sie …?', 'Ich hätte gern …').",
+				"Behandelt irreale Bedingungssätze ('Wenn ich Zeit hätte, würde ich …').",
+				"Trainiert den Konjunktiv II der Vergangenheit ('Wenn ich das gewusst hätte …').",
+				"Niveau B1; orientiert sich am Goethe-Zertifikat B1 und telc Deutsch B1."
+			],
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"summary": "Konjunktiv II bildet man oft mit 'würde' + Infinitiv.",
+					"explain": "'würde' + Infinitiv am Ende: 'An deiner Stelle würde ich einen Arzt fragen.'",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "An deiner Stelle würde ich einen Arzt fragen."
+						},
+						{
+							"ok": false,
+							"word": "An deiner Stelle werde ich einen Arzt fragen."
+						},
+						{
+							"ok": false,
+							"word": "An deiner Stelle würde ich einen Arzt fragte."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"summary": "'hätte gern' ist eine höfliche Bitte (Konjunktiv II von 'haben').",
+					"explain": "'Ich hätte gern eine Tasse Kaffee.' – höfliche Form mit 'hätte'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Ich hätte gern eine Tasse Kaffee."
+						},
+						{
+							"ok": false,
+							"word": "Ich habe gern eine Tasse Kaffee."
+						},
+						{
+							"ok": false,
+							"word": "Ich würde gern eine Tasse Kaffee."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"summary": "Der Konjunktiv II von 'sein' ist 'wäre'.",
+					"explain": "'sein' → 'wäre': 'Das wäre wirklich super!' Man benutzt 'wäre', nicht 'würde sein'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Das wäre wirklich super!"
+						},
+						{
+							"ok": false,
+							"word": "Das würde wirklich super."
+						},
+						{
+							"ok": false,
+							"word": "Das wäret wirklich super."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"summary": "Höfliche Bitten bildet man mit 'könnte' (Konjunktiv II von 'können').",
+					"explain": "'Könntest du mir bitte helfen?' – 'könntest' (mit Umlaut) ist Konjunktiv II; 'konntest' wäre Vergangenheit.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Könntest du mir bitte helfen?"
+						},
+						{
+							"ok": false,
+							"word": "Konntest du mir bitte helfen?"
+						},
+						{
+							"ok": false,
+							"word": "Könntest du mir bitte hilfst?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"summary": "Irreale Bedingung: 'wenn' + Konjunktiv II, im Hauptsatz oft 'würde' + Infinitiv.",
+					"explain": "'Wenn ich mehr Zeit hätte, würde ich Spanisch lernen.' – Bedingung irreal, also 'hätte' und 'würde'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wenn ich mehr Zeit hätte, würde ich Spanisch lernen."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich mehr Zeit habe, würde ich Spanisch lernen."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich mehr Zeit hätte, ich würde Spanisch lernen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"summary": "Im irrealen Bedingungssatz steht 'wäre'; der Hauptsatz nutzt 'würde' + Infinitiv.",
+					"explain": "'Wenn ich reich wäre, würde ich um die Welt reisen.' – Infinitiv 'reisen' am Ende.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wenn ich reich wäre, würde ich um die Welt reisen."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich reich wäre, würde ich um die Welt reise."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich reich wäre, um die Welt würde ich reisen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"summary": "Irreale Vergangenheit: 'hätte/wäre' + Partizip II.",
+					"explain": "'Wenn ich das gewusst hätte, wäre ich früher gekommen.' – zweimal Konjunktiv II der Vergangenheit.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wenn ich das gewusst hätte, wäre ich früher gekommen."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich das gewusst hätte, würde ich früher gekommen."
+						},
+						{
+							"ok": false,
+							"word": "Wenn ich das gewusst habe, wäre ich früher gekommen."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"summary": "Für einen Rat in der Vergangenheit: 'hätte' + Partizip II.",
+					"explain": "'An seiner Stelle hätte ich das nicht gesagt.' – irreale Vergangenheit mit 'hätte gesagt'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "An seiner Stelle hätte ich das nicht gesagt."
+						},
+						{
+							"ok": false,
+							"word": "An seiner Stelle habe ich das nicht gesagt."
+						},
+						{
+							"ok": false,
+							"word": "An seiner Stelle hätte ich das nicht gesagt hätte."
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"summary": "Sehr höfliche Bitten: 'Würden Sie …?' + Infinitiv.",
+					"explain": "'Würden Sie mir bitte die Tür öffnen?' – 'würden' + Infinitiv 'öffnen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Würden Sie mir bitte die Tür öffnen?"
+						},
+						{
+							"ok": false,
+							"word": "Werden Sie mir bitte die Tür öffnen?"
+						},
+						{
+							"ok": false,
+							"word": "Würden Sie mir bitte die Tür öffnet?"
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"summary": "Manche starke Verben haben eine eigene Konjunktiv-II-Form (kommen → käme).",
+					"explain": "'kommen' → 'käme': 'Wenn er könnte, käme er sofort.' Alternativ: 'würde … kommen'.",
+					"sentence": "Wählen Sie den richtigen Satz.",
+					"words": [
+						{
+							"ok": true,
+							"word": "Wenn er könnte, käme er sofort."
+						},
+						{
+							"ok": false,
+							"word": "Wenn er könnte, kommt er sofort."
+						},
+						{
+							"ok": false,
+							"word": "Wenn er könnte, würde er sofort kommt."
+						}
+					]
+				}
+			]
+		}
+	]
+}
