@@ -1,0 +1,497 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizLeisure3-de",
+	"title": "3. Leisure",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Freizeitbeschäftigung",
+					"summary": "Beschäftigung in der freien Zeit",
+					"explain": {
+						"entryId": "Freizeitbeschäftigung",
+						"headword": "Freizeitbeschäftigung",
+						"pronunciation": {
+							"display": "FRY-tsite-buh-shef-ti-goong",
+							"ipaUK": "/ˈfʁaɪ̯tsaɪ̯tbəˌʃɛftɪɡʊŋ/",
+							"ipaUS": "/ˈfʁaɪ̯tsaɪ̯tbəˌʃɛftɪɡʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Freizeitbeschäftigung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Beschäftigung in der freien Zeit",
+										"examples": [
+											"Lesen ist eine ruhige Freizeitbeschäftigung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Lesen ist eine ruhige Freizeitbeschäftigung.",
+							"ok": true
+						},
+						{
+							"answer": "Lesen ist einen ruhigen Freizeitbeschäftigung.",
+							"ok": false
+						},
+						{
+							"answer": "Lesen eine ruhige Freizeitbeschäftigung ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Entspannung",
+					"summary": "Lockerwerden und Ausruhen",
+					"explain": {
+						"entryId": "Entspannung",
+						"headword": "Entspannung",
+						"pronunciation": {
+							"display": "ent-SHPAN-oong",
+							"ipaUK": "/ɛntˈʃpanʊŋ/",
+							"ipaUS": "/ɛntˈʃpanʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Entspannung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Lockerwerden und Ausruhen",
+										"examples": [
+											"Musik sorgt bei mir für Entspannung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Musik sorgt bei mir für Entspannung.",
+							"ok": true
+						},
+						{
+							"answer": "Musik sorgt bei mir für Entspannungen.",
+							"ok": false
+						},
+						{
+							"answer": "Musik bei mir für Entspannung sorgt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Show",
+					"summary": "unterhaltsame Vorstellung",
+					"explain": {
+						"entryId": "Show",
+						"headword": "Show",
+						"pronunciation": {
+							"display": "show",
+							"ipaUK": "/ʃoː/",
+							"ipaUS": "/ʃoː/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Show",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Vorführung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine unterhaltsame Vorstellung",
+										"examples": [
+											"Die Show im Fernsehen war lustig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Show im Fernsehen war lustig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Show im Fernsehen war lustig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Show im Fernsehen lustig war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Besichtigung",
+					"summary": "Ansehen von Sehenswürdigkeiten",
+					"explain": {
+						"entryId": "Besichtigung",
+						"headword": "Besichtigung",
+						"pronunciation": {
+							"display": "buh-ZIKH-ti-goong",
+							"ipaUK": "/bəˈzɪçtɪɡʊŋ/",
+							"ipaUS": "/bəˈzɪçtɪɡʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Besichtigung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Ansehen von Sehenswürdigkeiten",
+										"examples": [
+											"Die Besichtigung der Burg war interessant."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Besichtigung der Burg war interessant.",
+							"ok": true
+						},
+						{
+							"answer": "Der Besichtigung der Burg war interessant.",
+							"ok": false
+						},
+						{
+							"answer": "Die Besichtigung der Burg interessant war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Sport",
+					"summary": "körperliche Aktivität mit Regeln",
+					"explain": {
+						"entryId": "Sport",
+						"headword": "Sport",
+						"pronunciation": {
+							"display": "shport",
+							"ipaUK": "/ʃpɔʁt/",
+							"ipaUS": "/ʃpɔʁt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Sport",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "körperliche Aktivität mit Regeln",
+										"examples": [
+											"Am Wochenende treibe ich viel Sport."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Wochenende treibe ich viel Sport.",
+							"ok": true
+						},
+						{
+							"answer": "Am Wochenende treibe ich viel Sports.",
+							"ok": false
+						},
+						{
+							"answer": "Am Wochenende ich treibe viel Sport.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Bühne",
+					"summary": "Ort, auf dem Künstler auftreten",
+					"explain": {
+						"entryId": "Bühne",
+						"headword": "Bühne",
+						"pronunciation": {
+							"display": "BÜ-nuh",
+							"ipaUK": "/ˈbyːnə/",
+							"ipaUS": "/ˈbyːnə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bühne",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der erhöhte Ort, auf dem Künstler auftreten",
+										"examples": [
+											"Die Sänger stehen auf der Bühne."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Sänger stehen auf der Bühne.",
+							"ok": true
+						},
+						{
+							"answer": "Die Sänger stehen auf dem Bühne.",
+							"ok": false
+						},
+						{
+							"answer": "Die Sänger auf der Bühne stehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Theater",
+					"summary": "Gebäude für Bühnen-Aufführungen",
+					"explain": {
+						"entryId": "Theater",
+						"headword": "Theater",
+						"pronunciation": {
+							"display": "te-AH-tuh",
+							"ipaUK": "/teˈaːtɐ/",
+							"ipaUS": "/teˈaːtɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Theater",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gebäude für Aufführungen auf der Bühne",
+										"examples": [
+											"Heute Abend gehen wir ins Theater."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Heute Abend gehen wir ins Theater.",
+							"ok": true
+						},
+						{
+							"answer": "Heute Abend gehen wir in die Theater.",
+							"ok": false
+						},
+						{
+							"answer": "Heute Abend wir gehen ins Theater.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Tourismus",
+					"summary": "Reisen als Wirtschaft",
+					"explain": {
+						"entryId": "Tourismus",
+						"headword": "Tourismus",
+						"pronunciation": {
+							"display": "too-RIS-moos",
+							"ipaUK": "/tuˈʁɪsmʊs/",
+							"ipaUS": "/tuˈʁɪsmʊs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tourismus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Reisen von vielen Menschen als Wirtschaft",
+										"examples": [
+											"Der Tourismus bringt der Stadt viel Geld."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Tourismus bringt der Stadt viel Geld.",
+							"ok": true
+						},
+						{
+							"answer": "Die Tourismus bringt der Stadt viel Geld.",
+							"ok": false
+						},
+						{
+							"answer": "Der Tourismus der Stadt viel Geld bringt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Tourist",
+					"summary": "Person, die zum Vergnügen reist",
+					"explain": {
+						"entryId": "Tourist",
+						"headword": "Tourist",
+						"pronunciation": {
+							"display": "too-RIST",
+							"ipaUK": "/tuˈʁɪst/",
+							"ipaUS": "/tuˈʁɪst/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tourist",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Touristin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die zum Vergnügen reist",
+										"examples": [
+											"Der Tourist fotografiert die Kirche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Tourist fotografiert die Kirche.",
+							"ok": true
+						},
+						{
+							"answer": "Die Tourist fotografiert die Kirche.",
+							"ok": false
+						},
+						{
+							"answer": "Der Tourist die Kirche fotografiert.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

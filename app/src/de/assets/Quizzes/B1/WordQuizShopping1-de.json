@@ -1,0 +1,554 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizShopping1-de",
+	"title": "1. Shopping",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "erwerben",
+					"summary": "kaufen/bekommen",
+					"explain": {
+						"entryId": "erwerben",
+						"headword": "erwerben",
+						"pronunciation": {
+							"display": "er-VER-bn",
+							"ipaUK": "/ɛɐ̯ˈvɛʁbn̩/",
+							"ipaUS": "/ɛɐ̯ˈvɛʁbn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "erwerben",
+								"inflectionsLine": null,
+								"synonyms": [
+									"kaufen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas kaufen oder bekommen",
+										"examples": [
+											"Er möchte ein neues Grundstück erwerben."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er möchte ein neues Grundstück erwerben.",
+							"ok": true
+						},
+						{
+							"answer": "Er möchte ein neues Grundstück erwirbt.",
+							"ok": false
+						},
+						{
+							"answer": "Er ein neues Grundstück erwerben möchte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Schnäppchen",
+					"summary": "günstige Ware; guter Kauf",
+					"explain": {
+						"entryId": "Schnäppchen",
+						"headword": "Schnäppchen",
+						"pronunciation": {
+							"display": "SHNEP-khn",
+							"ipaUK": "/ˈʃnɛpçən/",
+							"ipaUS": "/ˈʃnɛpçən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Schnäppchen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine günstige Ware; ein guter Kauf",
+										"examples": [
+											"Im Ausverkauf machte ich ein echtes Schnäppchen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Ausverkauf machte ich ein echtes Schnäppchen.",
+							"ok": true
+						},
+						{
+							"answer": "Im Ausverkauf machte ich einen echten Schnäppchen.",
+							"ok": false
+						},
+						{
+							"answer": "Im Ausverkauf ich machte ein echtes Schnäppchen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Rechnung",
+					"summary": "Papier über den zu zahlenden Betrag",
+					"explain": {
+						"entryId": "Rechnung",
+						"headword": "Rechnung",
+						"pronunciation": {
+							"display": "REKH-noong",
+							"ipaUK": "/ˈʁɛçnʊŋ/",
+							"ipaUS": "/ˈʁɛçnʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rechnung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Papier, das zeigt, was man zahlen muss",
+										"examples": [
+											"Der Kellner bringt uns die Rechnung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kellner bringt uns die Rechnung.",
+							"ok": true
+						},
+						{
+							"answer": "Der Kellner bringt uns den Rechnung.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kellner uns die Rechnung bringt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "kaufen",
+					"summary": "etwas für Geld bekommen",
+					"explain": {
+						"entryId": "kaufen",
+						"headword": "kaufen",
+						"pronunciation": {
+							"display": "KOW-fn",
+							"ipaUK": "/ˈkaʊ̯fn̩/",
+							"ipaUS": "/ˈkaʊ̯fn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "kaufen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas für Geld bekommen",
+										"examples": [
+											"Ich möchte mir ein neues Fahrrad kaufen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich möchte mir ein neues Fahrrad kaufen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich möchte mir ein neues Fahrrad kauft.",
+							"ok": false
+						},
+						{
+							"answer": "Ich mir ein neues Fahrrad kaufen möchte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Kassierer",
+					"summary": "Person an der Kasse",
+					"explain": {
+						"entryId": "Kassierer",
+						"headword": "Kassierer",
+						"pronunciation": {
+							"display": "ka-SEE-ruh",
+							"ipaUK": "/kaˈsiːʁɐ/",
+							"ipaUS": "/kaˈsiːʁɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kassierer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Kassiererin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Person an der Kasse",
+										"examples": [
+											"Der Kassierer gibt mir das Wechselgeld."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kassierer gibt mir das Wechselgeld.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kassierer gibt mir das Wechselgeld.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kassierer mir das Wechselgeld gibt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Kasse",
+					"summary": "Ort zum Bezahlen",
+					"explain": {
+						"entryId": "Kasse",
+						"headword": "Kasse",
+						"pronunciation": {
+							"display": "KAS-suh",
+							"ipaUK": "/ˈkasə/",
+							"ipaUS": "/ˈkasə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kasse",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Ort im Geschäft, wo man bezahlt",
+										"examples": [
+											"An der Kasse bildet sich eine lange Schlange."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "An der Kasse bildet sich eine lange Schlange.",
+							"ok": true
+						},
+						{
+							"answer": "An dem Kasse bildet sich eine lange Schlange.",
+							"ok": false
+						},
+						{
+							"answer": "An der Kasse eine lange Schlange sich bildet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Ausverkauf",
+					"summary": "Verkauf von Restwaren, billig",
+					"explain": {
+						"entryId": "Ausverkauf",
+						"headword": "Ausverkauf",
+						"pronunciation": {
+							"display": "OWS-fer-kowf",
+							"ipaUK": "/ˈaʊ̯sfɛɐ̯ˌkaʊ̯f/",
+							"ipaUS": "/ˈaʊ̯sfɛɐ̯ˌkaʊ̯f/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ausverkauf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Verkauf von Restwaren zu niedrigen Preisen",
+										"examples": [
+											"Im Ausverkauf sind alle Jacken reduziert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Ausverkauf sind alle Jacken reduziert.",
+							"ok": true
+						},
+						{
+							"answer": "In der Ausverkauf sind alle Jacken reduziert.",
+							"ok": false
+						},
+						{
+							"answer": "Im Ausverkauf alle Jacken reduziert sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Verkäufer",
+					"summary": "verkauft im Geschäft",
+					"explain": {
+						"entryId": "Verkäufer",
+						"headword": "Verkäufer",
+						"pronunciation": {
+							"display": "fer-KOY-fuh",
+							"ipaUK": "/fɛɐ̯ˈkɔɪ̯fɐ/",
+							"ipaUS": "/fɛɐ̯ˈkɔɪ̯fɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verkäufer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Verkäuferin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die im Geschäft verkauft",
+										"examples": [
+											"Der Verkäufer berät mich sehr freundlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Verkäufer berät mich sehr freundlich.",
+							"ok": true
+						},
+						{
+							"answer": "Die Verkäufer berät mich sehr freundlich.",
+							"ok": false
+						},
+						{
+							"answer": "Der Verkäufer mich sehr freundlich berät.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Kunde",
+					"summary": "Person, die kauft/nutzt",
+					"explain": {
+						"entryId": "Kunde",
+						"headword": "Kunde",
+						"pronunciation": {
+							"display": "KOON-duh",
+							"ipaUK": "/ˈkʊndə/",
+							"ipaUS": "/ˈkʊndə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kunde",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Kundin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die etwas kauft oder nutzt",
+										"examples": [
+											"Der Kunde beschwert sich über die Ware."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kunde beschwert sich über die Ware.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kunde beschwert sich über die Ware.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kunde sich über die Ware beschwert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Entschädigung",
+					"summary": "Geld als Ausgleich für Schaden",
+					"explain": {
+						"entryId": "Entschädigung",
+						"headword": "Entschädigung",
+						"pronunciation": {
+							"display": "ent-SHAY-di-goong",
+							"ipaUK": "/ɛntˈʃɛːdɪɡʊŋ/",
+							"ipaUS": "/ɛntˈʃɛːdɪɡʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Entschädigung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Geld als Ausgleich für einen Schaden",
+										"examples": [
+											"Die Firma zahlt ihm eine Entschädigung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Firma zahlt ihm eine Entschädigung.",
+							"ok": true
+						},
+						{
+							"answer": "Die Firma zahlt ihm einen Entschädigung.",
+							"ok": false
+						},
+						{
+							"answer": "Die Firma ihm eine Entschädigung zahlt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

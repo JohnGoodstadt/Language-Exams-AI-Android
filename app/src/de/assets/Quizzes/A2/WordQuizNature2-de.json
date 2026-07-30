@@ -1,0 +1,175 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature2-de",
+	"title": "Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Fluss",
+					"summary": "ein langes fließendes Gewässer",
+					"explain": {
+						"entryId": "Fluss",
+						"headword": "Fluss",
+						"pronunciation": {
+							"display": "floos",
+							"ipaUK": "/flʊs/",
+							"ipaUS": "/flʊs/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fluss",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein langes fließendes Gewässer",
+										"examples": [
+											"Der Fluss fließt durch die Stadt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Fluss fließt durch die Stadt.",
+							"ok": true
+						},
+						{
+							"answer": "Die Fluss fließt durch die Stadt.",
+							"ok": false
+						},
+						{
+							"answer": "Der Fluss durch die Stadt fließt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "soziale Medien",
+					"summary": "Plattformen wie Instagram oder TikTok",
+					"explain": {
+						"entryId": "soziale Medien",
+						"headword": "soziale Medien",
+						"pronunciation": {
+							"display": "zo-tsi-AH-luh MAY-di-en",
+							"ipaUK": "/zoˈtsi̯aːlə ˈmeːdi̯ən/",
+							"ipaUS": "/zoˈtsi̯aːlə ˈmeːdi̯ən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
+								"headwordLine": "soziale Medien",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Plattformen im Internet zum Teilen und Chatten",
+										"examples": [
+											"Viele Jugendliche nutzen soziale Medien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele Jugendliche nutzen soziale Medien.",
+							"ok": true
+						},
+						{
+							"answer": "Viele Jugendliche nutzen sozialen Medien.",
+							"ok": false
+						},
+						{
+							"answer": "Viele Jugendliche soziale Medien nutzen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Baum",
+					"summary": "große Pflanze mit Stamm und Ästen",
+					"explain": {
+						"entryId": "Baum",
+						"headword": "Baum",
+						"pronunciation": {
+							"display": "bowm",
+							"ipaUK": "/baʊ̯m/",
+							"ipaUS": "/baʊ̯m/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Baum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine große Pflanze mit Stamm und Ästen",
+										"examples": [
+											"Im Garten steht ein alter Baum."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Garten steht ein alter Baum.",
+							"ok": true
+						},
+						{
+							"answer": "Im Garten steht eine alte Baum.",
+							"ok": false
+						},
+						{
+							"answer": "Im Garten ein alter Baum steht.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

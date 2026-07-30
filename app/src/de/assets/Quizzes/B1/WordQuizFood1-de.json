@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFood1-de",
+	"title": "1. ood",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Vorspeise",
+					"summary": "kleines Gericht vor dem Hauptgang",
+					"explain": {
+						"entryId": "Vorspeise",
+						"headword": "Vorspeise",
+						"pronunciation": {
+							"display": "FOR-shpy-zuh",
+							"ipaUK": "/ˈfoːɐ̯ˌʃpaɪ̯zə/",
+							"ipaUS": "/ˈfoːɐ̯ˌʃpaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorspeise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein kleines Gericht vor dem Hauptgang",
+										"examples": [
+											"Als Vorspeise gab es eine leichte Suppe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Als Vorspeise gab es eine leichte Suppe.",
+							"ok": true
+						},
+						{
+							"answer": "Als Vorspeise gab es einen leichten Suppe.",
+							"ok": false
+						},
+						{
+							"answer": "Als Vorspeise es gab eine leichte Suppe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Getränk",
+					"summary": "etwas, das man trinkt",
+					"explain": {
+						"entryId": "Getränk",
+						"headword": "Getränk",
+						"pronunciation": {
+							"display": "guh-TRENK",
+							"ipaUK": "/ɡəˈtʁɛŋk/",
+							"ipaUS": "/ɡəˈtʁɛŋk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Getränk",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas, das man trinkt",
+										"examples": [
+											"Zum Essen bestelle ich ein kaltes Getränk."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zum Essen bestelle ich ein kaltes Getränk.",
+							"ok": true
+						},
+						{
+							"answer": "Zum Essen bestelle ich einen kalten Getränk.",
+							"ok": false
+						},
+						{
+							"answer": "Zum Essen ich bestelle ein kaltes Getränk.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Bestandteil",
+					"summary": "ein Teil von etwas Größerem",
+					"explain": {
+						"entryId": "Bestandteil",
+						"headword": "Bestandteil",
+						"pronunciation": {
+							"display": "buh-SHTANT-tile",
+							"ipaUK": "/bəˈʃtantˌtaɪ̯l/",
+							"ipaUS": "/bəˈʃtantˌtaɪ̯l/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bestandteil",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Teil von etwas Größerem",
+										"examples": [
+											"Salz ist ein wichtiger Bestandteil des Gerichts."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Salz ist ein wichtiger Bestandteil des Gerichts.",
+							"ok": true
+						},
+						{
+							"answer": "Salz ist ein wichtiges Bestandteil des Gerichts.",
+							"ok": false
+						},
+						{
+							"answer": "Salz ein wichtiger Bestandteil des Gerichts ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Küche",
+					"summary": "typische Kochart eines Landes",
+					"explain": {
+						"entryId": "Küche",
+						"headword": "Küche",
+						"pronunciation": {
+							"display": "KÜ-khuh",
+							"ipaUK": "/ˈkʏçə/",
+							"ipaUS": "/ˈkʏçə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Küche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die typische Art zu kochen eines Landes",
+										"examples": [
+											"Ich liebe die italienische Küche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich liebe die italienische Küche.",
+							"ok": true
+						},
+						{
+							"answer": "Ich liebe den italienischen Küche.",
+							"ok": false
+						},
+						{
+							"answer": "Ich die italienische Küche liebe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Nachtisch",
+					"summary": "süße Speise am Ende",
+					"explain": {
+						"entryId": "Nachtisch",
+						"headword": "Nachtisch",
+						"pronunciation": {
+							"display": "NAHKH-tish",
+							"ipaUK": "/ˈnaːxˌtɪʃ/",
+							"ipaUS": "/ˈnaːxˌtɪʃ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nachtisch",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Dessert"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die süße Speise am Ende des Essens",
+										"examples": [
+											"Zum Nachtisch gibt es Eis."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zum Nachtisch gibt es Eis.",
+							"ok": true
+						},
+						{
+							"answer": "Zur Nachtisch gibt es Eis.",
+							"ok": false
+						},
+						{
+							"answer": "Zum Nachtisch es gibt Eis.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "essen gehen",
+					"summary": "auswärts essen",
+					"explain": {
+						"entryId": "essen gehen",
+						"headword": "essen gehen",
+						"pronunciation": {
+							"display": "ES-sn GAY-uhn",
+							"ipaUK": "/ˈɛsn̩ ˈɡeːən/",
+							"ipaUS": "/ˈɛsn̩ ˈɡeːən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verbphrase",
+								"grammarType": "Verbphrase",
+								"headwordLine": "essen gehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "auswärts / im Restaurant essen",
+										"examples": [
+											"Am Samstag gehen wir essen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Samstag gehen wir essen.",
+							"ok": true
+						},
+						{
+							"answer": "Am Samstag gehen wir essen gegangen.",
+							"ok": false
+						},
+						{
+							"answer": "Am Samstag wir gehen essen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Speisen",
+					"summary": "das Essen (nominalisiert)",
+					"explain": {
+						"entryId": "Speisen",
+						"headword": "Speisen",
+						"pronunciation": {
+							"display": "SHPY-zn",
+							"ipaUK": "/ˈʃpaɪ̯zn̩/",
+							"ipaUS": "/ˈʃpaɪ̯zn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (nominalisiert)",
+								"grammarType": "Nomen (nominalisiert)",
+								"headwordLine": "Speisen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Essen im feierlichen Rahmen (nominalisiert)",
+										"examples": [
+											"Das gemeinsame Speisen macht Freude."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das gemeinsame Speisen macht Freude.",
+							"ok": true
+						},
+						{
+							"answer": "Das gemeinsame speisen macht Freude.",
+							"ok": false
+						},
+						{
+							"answer": "Das gemeinsame Speisen Freude macht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Abendessen",
+					"summary": "Mahlzeit am Abend",
+					"explain": {
+						"entryId": "Abendessen",
+						"headword": "Abendessen",
+						"pronunciation": {
+							"display": "AH-bnt-es-sn",
+							"ipaUK": "/ˈaːbn̩tˌʔɛsn̩/",
+							"ipaUS": "/ˈaːbn̩tˌʔɛsn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abendessen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Mahlzeit am Abend",
+										"examples": [
+											"Zum Abendessen gibt es einen Salat."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zum Abendessen gibt es einen Salat.",
+							"ok": true
+						},
+						{
+							"answer": "Zur Abendessen gibt es einen Salat.",
+							"ok": false
+						},
+						{
+							"answer": "Zum Abendessen es gibt einen Salat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Gericht",
+					"summary": "eine zubereitete Speise",
+					"explain": {
+						"entryId": "Gericht",
+						"headword": "Gericht",
+						"pronunciation": {
+							"display": "guh-RIKHT",
+							"ipaUK": "/ɡəˈʁɪçt/",
+							"ipaUS": "/ɡəˈʁɪçt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gericht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine zubereitete Speise",
+										"examples": [
+											"Dieses Gericht schmeckt hervorragend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Dieses Gericht schmeckt hervorragend.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Gericht schmeckt hervorragend.",
+							"ok": false
+						},
+						{
+							"answer": "Dieses Gericht hervorragend schmeckt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "trinken",
+					"summary": "Flüssigkeit zu sich nehmen",
+					"explain": {
+						"entryId": "trinken",
+						"headword": "trinken",
+						"pronunciation": {
+							"display": "TRIN-kn",
+							"ipaUK": "/ˈtʁɪŋkn̩/",
+							"ipaUS": "/ˈtʁɪŋkn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "trinken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Flüssigkeit zu sich nehmen",
+										"examples": [
+											"Zum Essen trinken wir Wasser."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zum Essen trinken wir Wasser.",
+							"ok": true
+						},
+						{
+							"answer": "Zum Essen trinkt wir Wasser.",
+							"ok": false
+						},
+						{
+							"answer": "Zum Essen wir trinken Wasser.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

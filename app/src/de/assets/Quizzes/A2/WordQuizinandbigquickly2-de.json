@@ -1,0 +1,545 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizinandbigquickly2-de",
+	"title": "in and big quickly",
+	"updatedDate": 0,
+	"data": [
+		{
+			"sheetname": "WordQuizinandbigquickly2-en",
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "groß",
+					"summary": "Adjektiv: nicht klein",
+					"explain": {
+						"entryId": "groß",
+						"headword": "groß",
+						"pronunciation": {
+							"display": "grohss",
+							"ipaUK": "/ɡʁoːs/",
+							"ipaUS": "/ɡʁoːs/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "groß",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: nicht klein",
+										"examples": [
+											"Sie wohnen in einem großen Haus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie wohnen in einem großen Haus.",
+							"ok": true
+						},
+						{
+							"answer": "Sie wohnen in einem großem Haus.",
+							"ok": false
+						},
+						{
+							"answer": "Sie in einem großen Haus wohnen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "aber",
+					"summary": "Gegensatz (kein Verb-Ende)",
+					"explain": {
+						"entryId": "aber",
+						"headword": "aber",
+						"pronunciation": {
+							"display": "AH-buh",
+							"ipaUK": "/ˈaːbɐ/",
+							"ipaUS": "/ˈaːbɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "aber",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für einen Gegensatz (kein Verb-Ende)",
+										"examples": [
+											"Ich bin müde, aber ich arbeite weiter."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin müde, aber ich arbeite weiter.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin müde, aber ich weiter arbeite.",
+							"ok": false
+						},
+						{
+							"answer": "Ich bin müde, aber arbeite weiter ich.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "kalt",
+					"summary": "Adjektiv: niedrige Temperatur",
+					"explain": {
+						"entryId": "kalt",
+						"headword": "kalt",
+						"pronunciation": {
+							"display": "kalt",
+							"ipaUK": "/kalt/",
+							"ipaUS": "/kalt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "kalt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: mit niedriger Temperatur",
+										"examples": [
+											"Das Wasser ist heute sehr kalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Wasser ist heute sehr kalt.",
+							"ok": true
+						},
+						{
+							"answer": "Das Wasser ist heute sehr kaltes.",
+							"ok": false
+						},
+						{
+							"answer": "Das Wasser heute sehr kalt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "glücklich",
+					"summary": "Adverb: froh, zufrieden",
+					"explain": {
+						"entryId": "glücklich",
+						"headword": "glücklich",
+						"pronunciation": {
+							"display": "GLÜK-likh",
+							"ipaUK": "/ˈɡlʏklɪç/",
+							"ipaUS": "/ˈɡlʏklɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "glücklich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adverb: auf froh und zufriedene Weise",
+										"examples": [
+											"Sie lächelt glücklich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie lächelt glücklich.",
+							"ok": true
+						},
+						{
+							"answer": "Sie lächelt glücklichem.",
+							"ok": false
+						},
+						{
+							"answer": "Sie glücklich lächelt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "froh",
+					"summary": "Adjektiv: zufrieden, fröhlich",
+					"explain": {
+						"entryId": "froh",
+						"headword": "froh",
+						"pronunciation": {
+							"display": "froh",
+							"ipaUK": "/fʁoː/",
+							"ipaUS": "/fʁoː/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "froh",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: zufrieden und fröhlich",
+										"examples": [
+											"Wir sind froh, dass du da bist."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir sind froh, dass du da bist.",
+							"ok": true
+						},
+						{
+							"answer": "Wir sind froh, dass du bist da.",
+							"ok": false
+						},
+						{
+							"answer": "Wir froh sind, dass du da bist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "heiß",
+					"summary": "Adjektiv: sehr warm",
+					"explain": {
+						"entryId": "heiß",
+						"headword": "heiß",
+						"pronunciation": {
+							"display": "hice",
+							"ipaUK": "/haɪ̯s/",
+							"ipaUS": "/haɪ̯s/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "heiß",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: mit sehr hoher Temperatur",
+										"examples": [
+											"Vorsicht, der Tee ist noch sehr heiß!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vorsicht, der Tee ist noch sehr heiß!",
+							"ok": true
+						},
+						{
+							"answer": "Vorsicht, der Tee ist noch sehr heißer!",
+							"ok": false
+						},
+						{
+							"answer": "Vorsicht, der Tee noch sehr heiß ist!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "wenn",
+					"summary": "Bedingung (Verb am Ende)",
+					"explain": {
+						"entryId": "wenn",
+						"headword": "wenn",
+						"pronunciation": {
+							"display": "ven",
+							"ipaUK": "/vɛn/",
+							"ipaUS": "/vɛn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "wenn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für eine Bedingung (Verb am Ende)",
+										"examples": [
+											"Wenn ich Zeit habe, rufe ich dich an."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wenn ich Zeit habe, rufe ich dich an.",
+							"ok": true
+						},
+						{
+							"answer": "Wenn ich Zeit habe, ich rufe dich an.",
+							"ok": false
+						},
+						{
+							"answer": "Wenn ich habe Zeit, rufe ich dich an.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "in",
+					"summary": "in + Dativ (wo?)",
+					"explain": {
+						"entryId": "in",
+						"headword": "in",
+						"pronunciation": {
+							"display": "in",
+							"ipaUK": "/ɪn/",
+							"ipaUS": "/ɪn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Ort, + Dativ)",
+								"headwordLine": "in",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: innerhalb von etwas (wo? Dativ)",
+										"examples": [
+											"Die Milch ist im Kühlschrank."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Milch ist im Kühlschrank.",
+							"ok": true
+						},
+						{
+							"answer": "Die Milch ist in den Kühlschrank.",
+							"ok": false
+						},
+						{
+							"answer": "Die Milch im Kühlschrank ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "vor",
+					"summary": "vor + Dativ (wo?)",
+					"explain": {
+						"entryId": "vor",
+						"headword": "vor",
+						"pronunciation": {
+							"display": "for",
+							"ipaUK": "/foːɐ̯/",
+							"ipaUS": "/foːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Ort, + Dativ)",
+								"headwordLine": "vor",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: an der Vorderseite (wo? Dativ)",
+										"examples": [
+											"Das Auto steht vor dem Haus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Auto steht vor dem Haus.",
+							"ok": true
+						},
+						{
+							"answer": "Das Auto steht vor das Haus.",
+							"ok": false
+						},
+						{
+							"answer": "Das Auto vor dem Haus steht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "in (hinein)",
+					"summary": "in + Akkusativ (wohin? hinein)",
+					"explain": {
+						"entryId": "in (hinein)",
+						"headword": "in (hinein)",
+						"pronunciation": {
+							"display": "in hi-NINE",
+							"ipaUK": "/ɪn hɪˈnaɪ̯n/",
+							"ipaUS": "/ɪn hɪˈnaɪ̯n/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (+ Akkusativ)",
+								"headwordLine": "in (hinein)",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition (+ Akkusativ): Bewegung nach innen (wohin?)",
+										"examples": [
+											"Ich lege das Buch in die Tasche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich lege das Buch in die Tasche.",
+							"ok": true
+						},
+						{
+							"answer": "Ich lege das Buch in der Tasche.",
+							"ok": false
+						},
+						{
+							"answer": "Ich das Buch in die Tasche lege.",
+							"ok": false
+						}
+					]
+				}
+			],
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet."
+		}
+	]
+}

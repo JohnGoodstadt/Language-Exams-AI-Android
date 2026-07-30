@@ -1,0 +1,177 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHome2-de",
+	"title": "Home",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Dach",
+					"summary": "der obere Teil eines Hauses",
+					"explain": {
+						"entryId": "Dach",
+						"headword": "Dach",
+						"pronunciation": {
+							"display": "dakh",
+							"ipaUK": "/dax/",
+							"ipaUS": "/dax/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dach",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der obere Teil eines Hauses",
+										"examples": [
+											"Auf dem Dach sitzt eine Katze."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf dem Dach sitzt eine Katze.",
+							"ok": true
+						},
+						{
+							"answer": "Auf das Dach sitzt eine Katze.",
+							"ok": false
+						},
+						{
+							"answer": "Auf dem Dach eine Katze sitzt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Laden",
+					"summary": "dort kauft man Dinge",
+					"explain": {
+						"entryId": "Laden",
+						"headword": "Laden",
+						"pronunciation": {
+							"display": "LAH-dn",
+							"ipaUK": "/ˈlaːdn̩/",
+							"ipaUS": "/ˈlaːdn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Laden",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Geschäft"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort, an dem man Dinge kauft",
+										"examples": [
+											"Der Laden schließt um acht Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Laden schließt um acht Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Das Laden schließt um acht Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Der Laden um acht Uhr schließt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Fenster",
+					"summary": "durch dieses Glas sieht man nach draußen",
+					"explain": {
+						"entryId": "Fenster",
+						"headword": "Fenster",
+						"pronunciation": {
+							"display": "FEN-stuh",
+							"ipaUK": "/ˈfɛnstɐ/",
+							"ipaUS": "/ˈfɛnstɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fenster",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "durch dieses Glas sieht man nach draußen",
+										"examples": [
+											"Ich öffne das Fenster, weil es warm ist."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich öffne das Fenster, weil es warm ist.",
+							"ok": true
+						},
+						{
+							"answer": "Ich öffne den Fenster, weil es warm ist.",
+							"ok": false
+						},
+						{
+							"answer": "Ich öffne das Fenster, weil es ist warm.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

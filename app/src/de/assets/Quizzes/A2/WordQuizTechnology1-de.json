@@ -1,0 +1,605 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology1-de",
+	"title": "Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Kamera",
+					"summary": "Gerät zum Fotografieren",
+					"explain": {
+						"entryId": "Kamera",
+						"headword": "Kamera",
+						"pronunciation": {
+							"display": "KA-me-ra",
+							"ipaUK": "/ˈkaːmeʁa/",
+							"ipaUS": "/ˈkaːmeʁa/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kamera",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gerät, um Fotos zu machen",
+										"examples": [
+											"Mit dieser Kamera macht man gute Fotos."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit dieser Kamera macht man gute Fotos.",
+							"ok": true
+						},
+						{
+							"answer": "Mit diesem Kamera macht man gute Fotos.",
+							"ok": false
+						},
+						{
+							"answer": "Mit dieser Kamera man macht gute Fotos.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Ladegerät",
+					"summary": "Gerät zum Aufladen des Akkus",
+					"explain": {
+						"entryId": "Ladegerät",
+						"headword": "Ladegerät",
+						"pronunciation": {
+							"display": "LAH-duh-guh-rait",
+							"ipaUK": "/ˈlaːdəɡəˌʁɛːt/",
+							"ipaUS": "/ˈlaːdəɡəˌʁɛːt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ladegerät",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gerät, um den Akku aufzuladen",
+										"examples": [
+											"Ich habe mein Ladegerät zu Hause vergessen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe mein Ladegerät zu Hause vergessen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe meinen Ladegerät zu Hause vergessen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich mein Ladegerät zu Hause vergessen habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Computer",
+					"summary": "Gerät zum Arbeiten und Surfen",
+					"explain": {
+						"entryId": "Computer",
+						"headword": "Computer",
+						"pronunciation": {
+							"display": "kom-PYOO-tuh",
+							"ipaUK": "/kɔmˈpjuːtɐ/",
+							"ipaUS": "/kɔmˈpjuːtɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Computer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Rechner"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gerät zum Arbeiten und Surfen",
+										"examples": [
+											"Der Computer ist heute sehr langsam."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Computer ist heute sehr langsam.",
+							"ok": true
+						},
+						{
+							"answer": "Die Computer ist heute sehr langsam.",
+							"ok": false
+						},
+						{
+							"answer": "Der Computer heute sehr langsam ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "E-Mail",
+					"summary": "Nachricht über das Internet",
+					"explain": {
+						"entryId": "E-Mail",
+						"headword": "E-Mail",
+						"pronunciation": {
+							"display": "EE-mayl",
+							"ipaUK": "/ˈiːmɛɪ̯l/",
+							"ipaUS": "/ˈiːmɛɪ̯l/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "E-Mail",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Nachricht über das Internet",
+										"examples": [
+											"Ich habe deine E-Mail schon gelesen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe deine E-Mail schon gelesen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe deinen E-Mail schon gelesen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich deine E-Mail schon gelesen habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Internet",
+					"summary": "das weltweite Computernetz",
+					"explain": {
+						"entryId": "Internet",
+						"headword": "Internet",
+						"pronunciation": {
+							"display": "IN-tuh-net",
+							"ipaUK": "/ˈɪntɐnɛt/",
+							"ipaUS": "/ˈɪntɐnɛt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Internet",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das weltweite Netz aus Computern",
+										"examples": [
+											"Ich suche die Information im Internet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich suche die Information im Internet.",
+							"ok": true
+						},
+						{
+							"answer": "Ich suche die Information in die Internet.",
+							"ok": false
+						},
+						{
+							"answer": "Ich die Information im Internet suche.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Tastatur",
+					"summary": "damit tippt man am Computer",
+					"explain": {
+						"entryId": "Tastatur",
+						"headword": "Tastatur",
+						"pronunciation": {
+							"display": "tas-ta-TOOR",
+							"ipaUK": "/tastaˈtuːɐ̯/",
+							"ipaUS": "/tastaˈtuːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tastatur",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damit tippt man Buchstaben in den Computer",
+										"examples": [
+											"Auf der Tastatur fehlt eine Taste."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf der Tastatur fehlt eine Taste.",
+							"ok": true
+						},
+						{
+							"answer": "Auf dem Tastatur fehlt eine Taste.",
+							"ok": false
+						},
+						{
+							"answer": "Auf der Tastatur eine Taste fehlt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Maus",
+					"summary": "damit steuert man den Zeiger",
+					"explain": {
+						"entryId": "Maus",
+						"headword": "Maus",
+						"pronunciation": {
+							"display": "mouse",
+							"ipaUK": "/maʊ̯s/",
+							"ipaUS": "/maʊ̯s/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Maus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damit bewegt man den Zeiger am Computer",
+										"examples": [
+											"Die Maus funktioniert nicht mehr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Maus funktioniert nicht mehr.",
+							"ok": true
+						},
+						{
+							"answer": "Der Maus funktioniert nicht mehr.",
+							"ok": false
+						},
+						{
+							"answer": "Die Maus nicht mehr funktioniert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Smartphone",
+					"summary": "modernes Handy mit Internet",
+					"explain": {
+						"entryId": "Smartphone",
+						"headword": "Smartphone",
+						"pronunciation": {
+							"display": "SMART-fohn",
+							"ipaUK": "/ˈsmaːʁtfoːn/",
+							"ipaUS": "/ˈsmaːʁtfoːn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Smartphone",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Handy"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein modernes Handy mit Internet",
+										"examples": [
+											"Mein Smartphone hat einen leeren Akku."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Smartphone hat einen leeren Akku.",
+							"ok": true
+						},
+						{
+							"answer": "Meinen Smartphone hat einen leeren Akku.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Smartphone einen leeren Akku hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Software",
+					"summary": "die Programme eines Computers",
+					"explain": {
+						"entryId": "Software",
+						"headword": "Software",
+						"pronunciation": {
+							"display": "SOFT-vair",
+							"ipaUK": "/ˈsɔftvɛːɐ̯/",
+							"ipaUS": "/ˈsɔftvɛːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Software",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Programme auf einem Computer",
+										"examples": [
+											"Diese Software ist ganz neu."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Software ist ganz neu.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Software ist ganz neu.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Software ganz neu ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Tablet",
+					"summary": "flacher Computer mit Touchscreen",
+					"explain": {
+						"entryId": "Tablet",
+						"headword": "Tablet",
+						"pronunciation": {
+							"display": "TAB-let",
+							"ipaUK": "/ˈtɛblɛt/",
+							"ipaUS": "/ˈtɛblɛt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tablet",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein flacher Computer mit Touchscreen",
+										"examples": [
+											"Auf dem Tablet lese ich die Nachrichten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf dem Tablet lese ich die Nachrichten.",
+							"ok": true
+						},
+						{
+							"answer": "Auf das Tablet lese ich die Nachrichten.",
+							"ok": false
+						},
+						{
+							"answer": "Auf dem Tablet ich lese die Nachrichten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 11,
+					"question": "Webseite",
+					"summary": "eine Seite im Internet",
+					"explain": {
+						"entryId": "Webseite",
+						"headword": "Webseite",
+						"pronunciation": {
+							"display": "VEP-zy-tuh",
+							"ipaUK": "/ˈvɛpˌzaɪ̯tə/",
+							"ipaUS": "/ˈvɛpˌzaɪ̯tə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Webseite",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Website"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Seite im Internet",
+										"examples": [
+											"Die Webseite lädt sehr schnell."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Webseite lädt sehr schnell.",
+							"ok": true
+						},
+						{
+							"answer": "Der Webseite lädt sehr schnell.",
+							"ok": false
+						},
+						{
+							"answer": "Die Webseite sehr schnell lädt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

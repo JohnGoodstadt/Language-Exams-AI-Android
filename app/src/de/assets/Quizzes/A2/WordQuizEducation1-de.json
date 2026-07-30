@@ -1,0 +1,555 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation1-de",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Klassenzimmer",
+					"summary": "der Raum zum Lernen in der Schule",
+					"explain": {
+						"entryId": "Klassenzimmer",
+						"headword": "Klassenzimmer",
+						"pronunciation": {
+							"display": "KLA-sn-tsim-uh",
+							"ipaUK": "/ˈklasn̩ˌtsɪmɐ/",
+							"ipaUS": "/ˈklasn̩ˌtsɪmɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klassenzimmer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Raum, in dem Schüler lernen",
+										"examples": [
+											"Das Klassenzimmer ist hell und groß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Klassenzimmer ist hell und groß.",
+							"ok": true
+						},
+						{
+							"answer": "Der Klassenzimmer ist hell und groß.",
+							"ok": false
+						},
+						{
+							"answer": "Das Klassenzimmer hell und groß ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Prüfung",
+					"summary": "ein Test über das Wissen",
+					"explain": {
+						"entryId": "Prüfung",
+						"headword": "Prüfung",
+						"pronunciation": {
+							"display": "PRÜ-foong",
+							"ipaUK": "/ˈpʁyːfʊŋ/",
+							"ipaUS": "/ˈpʁyːfʊŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Prüfung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Test",
+									"Examen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Test, um Wissen zu zeigen",
+										"examples": [
+											"Morgen schreibe ich eine wichtige Prüfung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Morgen schreibe ich eine wichtige Prüfung.",
+							"ok": true
+						},
+						{
+							"answer": "Morgen schreibe ich einen wichtigen Prüfung.",
+							"ok": false
+						},
+						{
+							"answer": "Morgen ich schreibe eine wichtige Prüfung.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Hausaufgabe",
+					"summary": "Aufgabe für zu Hause",
+					"explain": {
+						"entryId": "Hausaufgabe",
+						"headword": "Hausaufgabe",
+						"pronunciation": {
+							"display": "HOWS-owf-gah-buh",
+							"ipaUK": "/ˈhaʊ̯sˌʔaʊ̯fɡaːbə/",
+							"ipaUS": "/ˈhaʊ̯sˌʔaʊ̯fɡaːbə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hausaufgabe",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Aufgabe, die man zu Hause für die Schule macht",
+										"examples": [
+											"Die Hausaufgabe war heute schwer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Hausaufgabe war heute schwer.",
+							"ok": true
+						},
+						{
+							"answer": "Der Hausaufgabe war heute schwer.",
+							"ok": false
+						},
+						{
+							"answer": "Die Hausaufgabe heute schwer war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Unterricht",
+					"summary": "wenn ein Lehrer etwas beibringt",
+					"explain": {
+						"entryId": "Unterricht",
+						"headword": "Unterricht",
+						"pronunciation": {
+							"display": "OON-tuh-rikht",
+							"ipaUK": "/ˈʊntɐʁɪçt/",
+							"ipaUS": "/ˈʊntɐʁɪçt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unterricht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wenn ein Lehrer den Schülern etwas beibringt",
+										"examples": [
+											"Der Unterricht beginnt um acht Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Unterricht beginnt um acht Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Die Unterricht beginnt um acht Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Der Unterricht um acht Uhr beginnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Bibliothek",
+					"summary": "dort leiht man Bücher aus",
+					"explain": {
+						"entryId": "Bibliothek",
+						"headword": "Bibliothek",
+						"pronunciation": {
+							"display": "bi-blee-oh-TAYK",
+							"ipaUK": "/biblioˈteːk/",
+							"ipaUS": "/biblioˈteːk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bibliothek",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Bücherei"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort, an dem man Bücher ausleihen kann",
+										"examples": [
+											"In der Bibliothek kann man ruhig lernen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Bibliothek kann man ruhig lernen.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Bibliothek kann man ruhig lernen.",
+							"ok": false
+						},
+						{
+							"answer": "In der Bibliothek man kann ruhig lernen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Heft",
+					"summary": "ein dünnes Buch zum Schreiben",
+					"explain": {
+						"entryId": "Heft",
+						"headword": "Heft",
+						"pronunciation": {
+							"display": "heft",
+							"ipaUK": "/hɛft/",
+							"ipaUS": "/hɛft/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Heft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein dünnes Buch zum Schreiben in der Schule",
+										"examples": [
+											"Ich schreibe die Wörter in mein Heft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schreibe die Wörter in mein Heft.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schreibe die Wörter in meine Heft.",
+							"ok": false
+						},
+						{
+							"answer": "Ich schreibe die Wörter in mein Hefte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Schule",
+					"summary": "dort lernen Kinder",
+					"explain": {
+						"entryId": "Schule",
+						"headword": "Schule",
+						"pronunciation": {
+							"display": "SHOO-luh",
+							"ipaUK": "/ˈʃuːlə/",
+							"ipaUS": "/ˈʃuːlə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Schule",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort, an dem Kinder lernen",
+										"examples": [
+											"Meine Kinder gehen gern in die Schule."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Kinder gehen gern in die Schule.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Kinder gehen gern in der Schule.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Kinder gern in die Schule gehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Schüler",
+					"summary": "ein Kind in der Schule",
+					"explain": {
+						"entryId": "Schüler",
+						"headword": "Schüler",
+						"pronunciation": {
+							"display": "SHÜ-luh",
+							"ipaUK": "/ˈʃyːlɐ/",
+							"ipaUS": "/ˈʃyːlɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Schüler",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Schülerin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Kind oder Jugendlicher in der Schule",
+										"examples": [
+											"Der Schüler stellt dem Lehrer eine Frage."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Schüler stellt dem Lehrer eine Frage.",
+							"ok": true
+						},
+						{
+							"answer": "Die Schüler stellt dem Lehrer eine Frage.",
+							"ok": false
+						},
+						{
+							"answer": "Der Schüler dem Lehrer eine Frage stellt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Fach",
+					"summary": "ein Bereich in der Schule (z. B. Mathe)",
+					"explain": {
+						"entryId": "Fach",
+						"headword": "Fach",
+						"pronunciation": {
+							"display": "fakh",
+							"ipaUK": "/fax/",
+							"ipaUS": "/fax/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fach",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Bereich in der Schule, z. B. Deutsch oder Mathe",
+										"examples": [
+											"Mein Lieblingsfach ist Mathematik."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Lieblingsfach ist Mathematik.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Lieblingsfach ist Mathematik.",
+							"ok": false
+						},
+						{
+							"answer": "Mathematik mein Lieblingsfach ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Lehrer",
+					"summary": "unterrichtet in der Schule",
+					"explain": {
+						"entryId": "Lehrer",
+						"headword": "Lehrer",
+						"pronunciation": {
+							"display": "LAY-ruh",
+							"ipaUK": "/ˈleːʁɐ/",
+							"ipaUS": "/ˈleːʁɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Lehrer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Lehrerin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die in der Schule unterrichtet",
+										"examples": [
+											"Der Lehrer erklärt die Grammatik."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Lehrer erklärt die Grammatik.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lehrer erklärt die Grammatik.",
+							"ok": false
+						},
+						{
+							"answer": "Der Lehrer die Grammatik erklärt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

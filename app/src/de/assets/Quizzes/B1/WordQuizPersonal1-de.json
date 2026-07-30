@@ -1,0 +1,550 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonal1-de",
+	"title": "1.Personal",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Bewerbung",
+					"summary": "Schreiben für eine Stelle",
+					"explain": {
+						"entryId": "Bewerbung",
+						"headword": "Bewerbung",
+						"pronunciation": {
+							"display": "buh-VER-boong",
+							"ipaUK": "/bəˈvɛʁbʊŋ/",
+							"ipaUS": "/bəˈvɛʁbʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bewerbung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Schreiben, mit dem man sich um eine Stelle bewirbt",
+										"examples": [
+											"Ich schicke meine Bewerbung per E-Mail."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schicke meine Bewerbung per E-Mail.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schicke meinen Bewerbung per E-Mail.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meine Bewerbung per E-Mail schicke.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Autobiografie",
+					"summary": "selbst geschriebene Lebensgeschichte",
+					"explain": {
+						"entryId": "Autobiografie",
+						"headword": "Autobiografie",
+						"pronunciation": {
+							"display": "ow-to-bio-gra-FEE",
+							"ipaUK": "/aʊ̯tobioɡʁaˈfiː/",
+							"ipaUS": "/aʊ̯tobioɡʁaˈfiː/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Autobiografie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Lebensgeschichte, die man selbst schreibt",
+										"examples": [
+											"Der Sänger schreibt gerade seine Autobiografie."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Sänger schreibt gerade seine Autobiografie.",
+							"ok": true
+						},
+						{
+							"answer": "Der Sänger schreibt gerade seinen Autobiografie.",
+							"ok": false
+						},
+						{
+							"answer": "Der Sänger seine Autobiografie gerade schreibt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Biografie",
+					"summary": "Lebensgeschichte einer Person",
+					"explain": {
+						"entryId": "Biografie",
+						"headword": "Biografie",
+						"pronunciation": {
+							"display": "bio-gra-FEE",
+							"ipaUK": "/bioɡʁaˈfiː/",
+							"ipaUS": "/bioɡʁaˈfiː/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Biografie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Lebensgeschichte einer Person",
+										"examples": [
+											"Die Biografie des Malers ist spannend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Biografie des Malers ist spannend.",
+							"ok": true
+						},
+						{
+							"answer": "Der Biografie des Malers ist spannend.",
+							"ok": false
+						},
+						{
+							"answer": "Die Biografie des Malers spannend ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Kandidat",
+					"summary": "Person, die sich bewirbt",
+					"explain": {
+						"entryId": "Kandidat",
+						"headword": "Kandidat",
+						"pronunciation": {
+							"display": "kan-di-DAHT",
+							"ipaUK": "/kandiˈdaːt/",
+							"ipaUS": "/kandiˈdaːt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kandidat",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Bewerber"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die sich um etwas bewirbt",
+										"examples": [
+											"Der Kandidat beantwortet alle Fragen ruhig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kandidat beantwortet alle Fragen ruhig.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kandidat beantwortet alle Fragen ruhig.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kandidat alle Fragen ruhig beantwortet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Bescheinigung",
+					"summary": "Dokument, das etwas bestätigt",
+					"explain": {
+						"entryId": "Bescheinigung",
+						"headword": "Bescheinigung",
+						"pronunciation": {
+							"display": "buh-SHY-ni-goong",
+							"ipaUK": "/bəˈʃaɪ̯nɪɡʊŋ/",
+							"ipaUS": "/bəˈʃaɪ̯nɪɡʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bescheinigung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Dokument, das etwas offiziell bestätigt",
+										"examples": [
+											"Der Arzt stellt mir eine Bescheinigung aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Arzt stellt mir eine Bescheinigung aus.",
+							"ok": true
+						},
+						{
+							"answer": "Der Arzt stellt mir einen Bescheinigung aus.",
+							"ok": false
+						},
+						{
+							"answer": "Der Arzt mir eine Bescheinigung ausstellt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Dokument",
+					"summary": "amtliches Schriftstück",
+					"explain": {
+						"entryId": "Dokument",
+						"headword": "Dokument",
+						"pronunciation": {
+							"display": "do-koo-MENT",
+							"ipaUK": "/dokuˈmɛnt/",
+							"ipaUS": "/dokuˈmɛnt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dokument",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein wichtiges amtliches Schriftstück",
+										"examples": [
+											"Bitte unterschreiben Sie dieses Dokument."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bitte unterschreiben Sie dieses Dokument.",
+							"ok": true
+						},
+						{
+							"answer": "Bitte unterschreiben Sie diesen Dokument.",
+							"ok": false
+						},
+						{
+							"answer": "Bitte Sie unterschreiben dieses Dokument.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Führerschein",
+					"summary": "Nachweis fürs Autofahren",
+					"explain": {
+						"entryId": "Führerschein",
+						"headword": "Führerschein",
+						"pronunciation": {
+							"display": "FÜ-ruh-shine",
+							"ipaUK": "/ˈfyːʁɐˌʃaɪ̯n/",
+							"ipaUS": "/ˈfyːʁɐˌʃaɪ̯n/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Führerschein",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Nachweis, dass man Auto fahren darf",
+										"examples": [
+											"Mit achtzehn machte er den Führerschein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit achtzehn machte er den Führerschein.",
+							"ok": true
+						},
+						{
+							"answer": "Mit achtzehn machte er die Führerschein.",
+							"ok": false
+						},
+						{
+							"answer": "Mit achtzehn er machte den Führerschein.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Formular",
+					"summary": "Blatt mit Feldern zum Ausfüllen",
+					"explain": {
+						"entryId": "Formular",
+						"headword": "Formular",
+						"pronunciation": {
+							"display": "for-moo-LAR",
+							"ipaUK": "/fɔʁmuˈlaːɐ̯/",
+							"ipaUS": "/fɔʁmuˈlaːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Formular",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Blatt mit Feldern, das man ausfüllt",
+										"examples": [
+											"Füllen Sie bitte das Formular aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Füllen Sie bitte das Formular aus.",
+							"ok": true
+						},
+						{
+							"answer": "Füllen Sie bitte den Formular aus.",
+							"ok": false
+						},
+						{
+							"answer": "Füllen Sie bitte aus das Formular.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Ausweis",
+					"summary": "Dokument, das die Identität zeigt",
+					"explain": {
+						"entryId": "Ausweis",
+						"headword": "Ausweis",
+						"pronunciation": {
+							"display": "OWS-vice",
+							"ipaUK": "/ˈaʊ̯svaɪ̯s/",
+							"ipaUS": "/ˈaʊ̯svaɪ̯s/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ausweis",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Dokument, das die Identität zeigt",
+										"examples": [
+											"An der Grenze zeigt man seinen Ausweis."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "An der Grenze zeigt man seinen Ausweis.",
+							"ok": true
+						},
+						{
+							"answer": "An der Grenze zeigt man sein Ausweis.",
+							"ok": false
+						},
+						{
+							"answer": "An der Grenze man zeigt seinen Ausweis.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Initiale",
+					"summary": "erster Buchstabe eines Namens",
+					"explain": {
+						"entryId": "Initiale",
+						"headword": "Initiale",
+						"pronunciation": {
+							"display": "i-ni-tsi-AH-luh",
+							"ipaUK": "/iniˈtsi̯aːlə/",
+							"ipaUS": "/iniˈtsi̯aːlə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Initiale",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Anfangsbuchstabe"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der erste Buchstabe eines Namens",
+										"examples": [
+											"Auf dem Ring steht eine goldene Initiale."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf dem Ring steht eine goldene Initiale.",
+							"ok": true
+						},
+						{
+							"answer": "Auf dem Ring steht einen goldenen Initiale.",
+							"ok": false
+						},
+						{
+							"answer": "Auf dem Ring eine goldene Initiale steht.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

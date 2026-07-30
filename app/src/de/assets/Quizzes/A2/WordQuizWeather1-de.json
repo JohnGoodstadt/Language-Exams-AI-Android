@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizWeather1-de",
+	"title": "Weather",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Herbst",
+					"summary": "Jahreszeit, wenn Blätter fallen",
+					"explain": {
+						"entryId": "Herbst",
+						"headword": "Herbst",
+						"pronunciation": {
+							"display": "herpst",
+							"ipaUK": "/hɛʁpst/",
+							"ipaUS": "/hɛʁpst/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Herbst",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Jahreszeit, in der die Blätter fallen",
+										"examples": [
+											"Im Herbst werden die Blätter bunt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Herbst werden die Blätter bunt.",
+							"ok": true
+						},
+						{
+							"answer": "In die Herbst werden die Blätter bunt.",
+							"ok": false
+						},
+						{
+							"answer": "Im Herbst die Blätter bunt werden.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "bewölkt",
+					"summary": "viele Wolken am Himmel",
+					"explain": {
+						"entryId": "bewölkt",
+						"headword": "bewölkt",
+						"pronunciation": {
+							"display": "buh-VÖLKT",
+							"ipaUK": "/bəˈvœlkt/",
+							"ipaUS": "/bəˈvœlkt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "bewölkt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wenn viele Wolken am Himmel sind",
+										"examples": [
+											"Heute ist der Himmel stark bewölkt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Heute ist der Himmel stark bewölkt.",
+							"ok": true
+						},
+						{
+							"answer": "Heute ist der Himmel stark bewölkte.",
+							"ok": false
+						},
+						{
+							"answer": "Heute der Himmel ist stark bewölkt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "kalt",
+					"summary": "niedrige Temperatur; nicht warm",
+					"explain": {
+						"entryId": "kalt",
+						"headword": "kalt",
+						"pronunciation": {
+							"display": "kalt",
+							"ipaUK": "/kalt/",
+							"ipaUS": "/kalt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "kalt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit niedriger Temperatur; nicht warm",
+										"examples": [
+											"Im Winter ist es oft sehr kalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Winter ist es oft sehr kalt.",
+							"ok": true
+						},
+						{
+							"answer": "Im Winter ist es oft sehr kalte.",
+							"ok": false
+						},
+						{
+							"answer": "Im Winter es ist oft sehr kalt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "heiß",
+					"summary": "sehr hohe Temperatur",
+					"explain": {
+						"entryId": "heiß",
+						"headword": "heiß",
+						"pronunciation": {
+							"display": "hice",
+							"ipaUK": "/haɪ̯s/",
+							"ipaUS": "/haɪ̯s/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "heiß",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit sehr hoher Temperatur",
+										"examples": [
+											"Im Sommer ist es manchmal zu heiß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer ist es manchmal zu heiß.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer ist es manchmal zu heiße.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer es ist manchmal zu heiß.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "regnerisch",
+					"summary": "mit viel Regen",
+					"explain": {
+						"entryId": "regnerisch",
+						"headword": "regnerisch",
+						"pronunciation": {
+							"display": "RAYG-nuh-rish",
+							"ipaUK": "/ˈʁeːɡnəʁɪʃ/",
+							"ipaUS": "/ˈʁeːɡnəʁɪʃ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "regnerisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit viel Regen",
+										"examples": [
+											"Das Wetter ist heute grau und regnerisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Wetter ist heute grau und regnerisch.",
+							"ok": true
+						},
+						{
+							"answer": "Das Wetter ist heute grau und regnerische.",
+							"ok": false
+						},
+						{
+							"answer": "Das Wetter heute grau und regnerisch ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "verschneit",
+					"summary": "mit Schnee bedeckt",
+					"explain": {
+						"entryId": "verschneit",
+						"headword": "verschneit",
+						"pronunciation": {
+							"display": "fer-SHNITE",
+							"ipaUK": "/fɛɐ̯ˈʃnaɪ̯t/",
+							"ipaUS": "/fɛɐ̯ˈʃnaɪ̯t/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "verschneit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit viel Schnee bedeckt",
+										"examples": [
+											"Die Berge sind im Januar verschneit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Berge sind im Januar verschneit.",
+							"ok": true
+						},
+						{
+							"answer": "Die Berge sind im Januar verschneite.",
+							"ok": false
+						},
+						{
+							"answer": "Die Berge im Januar verschneit sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Frühling",
+					"summary": "Jahreszeit, wenn alles blüht",
+					"explain": {
+						"entryId": "Frühling",
+						"headword": "Frühling",
+						"pronunciation": {
+							"display": "FRÜ-ling",
+							"ipaUK": "/ˈfʁyːlɪŋ/",
+							"ipaUS": "/ˈfʁyːlɪŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Frühling",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Jahreszeit, in der alles blüht",
+										"examples": [
+											"Im Frühling blühen die ersten Blumen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Frühling blühen die ersten Blumen.",
+							"ok": true
+						},
+						{
+							"answer": "In die Frühling blühen die ersten Blumen.",
+							"ok": false
+						},
+						{
+							"answer": "Im Frühling die ersten Blumen blühen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Sommer",
+					"summary": "die warme Jahreszeit",
+					"explain": {
+						"entryId": "Sommer",
+						"headword": "Sommer",
+						"pronunciation": {
+							"display": "ZOM-uh",
+							"ipaUK": "/ˈzɔmɐ/",
+							"ipaUS": "/ˈzɔmɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Sommer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die warme Jahreszeit",
+										"examples": [
+											"Im Sommer fahren wir ans Meer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer fahren wir ans Meer.",
+							"ok": true
+						},
+						{
+							"answer": "In die Sommer fahren wir ans Meer.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer wir fahren ans Meer.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "sonnig",
+					"summary": "mit viel Sonne",
+					"explain": {
+						"entryId": "sonnig",
+						"headword": "sonnig",
+						"pronunciation": {
+							"display": "ZON-ikh",
+							"ipaUK": "/ˈzɔnɪç/",
+							"ipaUS": "/ˈzɔnɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "sonnig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit viel Sonne; klarer Himmel",
+										"examples": [
+											"Am Wochenende soll es sonnig werden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Wochenende soll es sonnig werden.",
+							"ok": true
+						},
+						{
+							"answer": "Am Wochenende soll es sonnige werden.",
+							"ok": false
+						},
+						{
+							"answer": "Am Wochenende es soll sonnig werden.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Temperatur",
+					"summary": "wie warm oder kalt es ist",
+					"explain": {
+						"entryId": "Temperatur",
+						"headword": "Temperatur",
+						"pronunciation": {
+							"display": "tem-pe-ra-TOOR",
+							"ipaUK": "/tɛmpəʁaˈtuːɐ̯/",
+							"ipaUS": "/tɛmpəʁaˈtuːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Temperatur",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wie warm oder kalt es ist",
+										"examples": [
+											"Die Temperatur sinkt in der Nacht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Temperatur sinkt in der Nacht.",
+							"ok": true
+						},
+						{
+							"answer": "Der Temperatur sinkt in der Nacht.",
+							"ok": false
+						},
+						{
+							"answer": "Die Temperatur in der Nacht sinkt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,124 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth2-de",
+	"title": "Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Krankenschwester",
+					"summary": "pflegt Kranke im Krankenhaus",
+					"explain": {
+						"entryId": "Krankenschwester",
+						"headword": "Krankenschwester",
+						"pronunciation": {
+							"display": "KRAN-kn-shves-tuh",
+							"ipaUK": "/ˈkʁaŋkn̩ˌʃvɛstɐ/",
+							"ipaUS": "/ˈkʁaŋkn̩ˌʃvɛstɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Krankenschwester",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Krankenpflegerin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die im Krankenhaus die Kranken pflegt",
+										"examples": [
+											"Die Krankenschwester misst das Fieber."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Krankenschwester misst das Fieber.",
+							"ok": true
+						},
+						{
+							"answer": "Der Krankenschwester misst das Fieber.",
+							"ok": false
+						},
+						{
+							"answer": "Die Krankenschwester das Fieber misst.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "krank",
+					"summary": "nicht gesund",
+					"explain": {
+						"entryId": "krank",
+						"headword": "krank",
+						"pronunciation": {
+							"display": "krank",
+							"ipaUK": "/kʁaŋk/",
+							"ipaUS": "/kʁaŋk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "krank",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nicht gesund; man fühlt sich schlecht",
+										"examples": [
+											"Ich bleibe heute zu Hause, weil ich krank bin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bleibe heute zu Hause, weil ich krank bin.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bleibe heute zu Hause, weil ich kranke bin.",
+							"ok": false
+						},
+						{
+							"answer": "Ich bleibe heute zu Hause, weil ich bin krank.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

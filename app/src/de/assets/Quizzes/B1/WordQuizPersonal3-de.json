@@ -1,0 +1,230 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonal3-de",
+	"title": "3. Personal",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "unterschreiben",
+					"summary": "seinen Namen unter etwas schreiben",
+					"explain": {
+						"entryId": "unterschreiben",
+						"headword": "unterschreiben",
+						"pronunciation": {
+							"display": "oon-tuh-SHRY-bn",
+							"ipaUK": "/ʊntɐˈʃʁaɪ̯bn̩/",
+							"ipaUS": "/ʊntɐˈʃʁaɪ̯bn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "unterschreiben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "seinen Namen unter etwas schreiben",
+										"examples": [
+											"Bitte unterschreiben Sie hier unten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bitte unterschreiben Sie hier unten.",
+							"ok": true
+						},
+						{
+							"answer": "Bitte unterschreibt Sie hier unten.",
+							"ok": false
+						},
+						{
+							"answer": "Bitte Sie unterschreiben hier unten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Unterschrift",
+					"summary": "der selbst geschriebene Name",
+					"explain": {
+						"entryId": "Unterschrift",
+						"headword": "Unterschrift",
+						"pronunciation": {
+							"display": "OON-tuh-shrift",
+							"ipaUK": "/ˈʊntɐˌʃʁɪft/",
+							"ipaUS": "/ˈʊntɐˌʃʁɪft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unterschrift",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der eigene Name, den man selbst schreibt",
+										"examples": [
+											"Auf dem Vertrag fehlt noch Ihre Unterschrift."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf dem Vertrag fehlt noch Ihre Unterschrift.",
+							"ok": true
+						},
+						{
+							"answer": "Auf dem Vertrag fehlt noch Ihr Unterschrift.",
+							"ok": false
+						},
+						{
+							"answer": "Auf dem Vertrag noch Ihre Unterschrift fehlt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Erhebung",
+					"summary": "systematische Sammlung von Daten",
+					"explain": {
+						"entryId": "Erhebung",
+						"headword": "Erhebung",
+						"pronunciation": {
+							"display": "er-HAY-boong",
+							"ipaUK": "/ɛɐ̯ˈheːbʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈheːbʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erhebung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Studie"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine systematische Sammlung von Daten",
+										"examples": [
+											"Die Erhebung der Daten dauerte drei Monate."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Erhebung der Daten dauerte drei Monate.",
+							"ok": true
+						},
+						{
+							"answer": "Der Erhebung der Daten dauerte drei Monate.",
+							"ok": false
+						},
+						{
+							"answer": "Die Erhebung der Daten drei Monate dauerte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Titel",
+					"summary": "Name eines Buches/Films/Amtes",
+					"explain": {
+						"entryId": "Titel",
+						"headword": "Titel",
+						"pronunciation": {
+							"display": "TEE-tl",
+							"ipaUK": "/ˈtiːtl̩/",
+							"ipaUS": "/ˈtiːtl̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Titel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Name eines Buches, Films oder Amtes",
+										"examples": [
+											"Der Titel des Buches gefällt mir."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Titel des Buches gefällt mir.",
+							"ok": true
+						},
+						{
+							"answer": "Die Titel des Buches gefällt mir.",
+							"ok": false
+						},
+						{
+							"answer": "Der Titel des Buches mir gefällt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

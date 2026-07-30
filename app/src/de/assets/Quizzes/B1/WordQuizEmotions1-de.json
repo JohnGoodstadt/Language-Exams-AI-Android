@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEmotions1-de",
+	"title": "1. Emotions",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Können",
+					"summary": "das, was jemand kann",
+					"explain": {
+						"entryId": "Können",
+						"headword": "Können",
+						"pronunciation": {
+							"display": "KÖ-nn",
+							"ipaUK": "/ˈkœnən/",
+							"ipaUS": "/ˈkœnən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Können",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das, was jemand kann; die Fähigkeit",
+										"examples": [
+											"Mit viel Übung wächst das Können."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit viel Übung wächst das Können.",
+							"ok": true
+						},
+						{
+							"answer": "Mit viel Übung wächst der Können.",
+							"ok": false
+						},
+						{
+							"answer": "Mit viel Übung das Können wächst.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Ehrgeiz",
+					"summary": "starker Wunsch nach Erfolg",
+					"explain": {
+						"entryId": "Ehrgeiz",
+						"headword": "Ehrgeiz",
+						"pronunciation": {
+							"display": "AIR-guyts",
+							"ipaUK": "/ˈeːɐ̯ɡaɪ̯ts/",
+							"ipaUS": "/ˈeːɐ̯ɡaɪ̯ts/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ehrgeiz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der starke Wunsch, erfolgreich zu sein",
+										"examples": [
+											"Ihr großer Ehrgeiz führt zum Erfolg."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ihr großer Ehrgeiz führt zum Erfolg.",
+							"ok": true
+						},
+						{
+							"answer": "Ihre große Ehrgeiz führt zum Erfolg.",
+							"ok": false
+						},
+						{
+							"answer": "Ihr großer Ehrgeiz zum Erfolg führt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Streben",
+					"summary": "starkes Wollen nach einem Ziel",
+					"explain": {
+						"entryId": "Streben",
+						"headword": "Streben",
+						"pronunciation": {
+							"display": "SHTRAY-bn",
+							"ipaUK": "/ˈʃtʁeːbn̩/",
+							"ipaUS": "/ˈʃtʁeːbn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Streben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das starke Wollen nach einem Ziel",
+										"examples": [
+											"Sein Streben nach Wissen ist bewundernswert."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sein Streben nach Wissen ist bewundernswert.",
+							"ok": true
+						},
+						{
+							"answer": "Seine Streben nach Wissen ist bewundernswert.",
+							"ok": false
+						},
+						{
+							"answer": "Sein Streben nach Wissen bewundernswert ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Selbstsicherheit",
+					"summary": "sicheres Auftreten",
+					"explain": {
+						"entryId": "Selbstsicherheit",
+						"headword": "Selbstsicherheit",
+						"pronunciation": {
+							"display": "ZELPST-zikh-uh-hite",
+							"ipaUK": "/ˈzɛlpstˌzɪçɐhaɪ̯t/",
+							"ipaUS": "/ˈzɛlpstˌzɪçɐhaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Selbstsicherheit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das sichere Auftreten; Selbstvertrauen",
+										"examples": [
+											"Mit großer Selbstsicherheit hielt sie die Rede."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit großer Selbstsicherheit hielt sie die Rede.",
+							"ok": true
+						},
+						{
+							"answer": "Mit großem Selbstsicherheit hielt sie die Rede.",
+							"ok": false
+						},
+						{
+							"answer": "Mit großer Selbstsicherheit sie hielt die Rede.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Herkunft",
+					"summary": "woher jemand kommt",
+					"explain": {
+						"entryId": "Herkunft",
+						"headword": "Herkunft",
+						"pronunciation": {
+							"display": "HAIR-koonft",
+							"ipaUK": "/ˈheːɐ̯kʊnft/",
+							"ipaUS": "/ˈheːɐ̯kʊnft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Herkunft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "woher jemand kommt (Familie, Land)",
+										"examples": [
+											"Er ist stolz auf seine Herkunft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er ist stolz auf seine Herkunft.",
+							"ok": true
+						},
+						{
+							"answer": "Er ist stolz auf seinen Herkunft.",
+							"ok": false
+						},
+						{
+							"answer": "Er auf seine Herkunft stolz ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Verhalten",
+					"summary": "wie sich jemand benimmt",
+					"explain": {
+						"entryId": "Verhalten",
+						"headword": "Verhalten",
+						"pronunciation": {
+							"display": "fer-HAL-tn",
+							"ipaUK": "/fɛɐ̯ˈhaltn̩/",
+							"ipaUS": "/fɛɐ̯ˈhaltn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verhalten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Art, wie sich jemand benimmt",
+										"examples": [
+											"Sein Verhalten hat mich überrascht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sein Verhalten hat mich überrascht.",
+							"ok": true
+						},
+						{
+							"answer": "Seine Verhalten hat mich überrascht.",
+							"ok": false
+						},
+						{
+							"answer": "Sein Verhalten mich überrascht hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Charakter",
+					"summary": "typische Eigenschaften eines Menschen",
+					"explain": {
+						"entryId": "Charakter",
+						"headword": "Charakter",
+						"pronunciation": {
+							"display": "ka-RAK-tuh",
+							"ipaUK": "/kaˈʁaktɐ/",
+							"ipaUS": "/kaˈʁaktɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Charakter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die typischen Eigenschaften eines Menschen",
+										"examples": [
+											"Sie hat einen starken Charakter."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat einen starken Charakter.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat einen starke Charakter.",
+							"ok": false
+						},
+						{
+							"answer": "Sie einen starken Charakter hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Benehmen",
+					"summary": "wie man sich benimmt",
+					"explain": {
+						"entryId": "Benehmen",
+						"headword": "Benehmen",
+						"pronunciation": {
+							"display": "buh-NAY-mn",
+							"ipaUK": "/bəˈneːmən/",
+							"ipaUS": "/bəˈneːmən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Benehmen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Art, wie man sich in der Gesellschaft benimmt",
+										"examples": [
+											"Sein höfliches Benehmen fällt allen auf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sein höfliches Benehmen fällt allen auf.",
+							"ok": true
+						},
+						{
+							"answer": "Seine höfliche Benehmen fällt allen auf.",
+							"ok": false
+						},
+						{
+							"answer": "Sein höfliches Benehmen allen auffällt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Selbstvertrauen",
+					"summary": "Vertrauen in eigene Fähigkeiten",
+					"explain": {
+						"entryId": "Selbstvertrauen",
+						"headword": "Selbstvertrauen",
+						"pronunciation": {
+							"display": "ZELPST-fer-trow-en",
+							"ipaUK": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/",
+							"ipaUS": "/ˈzɛlpstfɛɐ̯ˌtʁaʊ̯ən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Selbstvertrauen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Vertrauen in die eigenen Fähigkeiten",
+										"examples": [
+											"Durch Erfolg wächst das Selbstvertrauen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Durch Erfolg wächst das Selbstvertrauen.",
+							"ok": true
+						},
+						{
+							"answer": "Durch Erfolg wächst der Selbstvertrauen.",
+							"ok": false
+						},
+						{
+							"answer": "Durch Erfolg das Selbstvertrauen wächst.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Eifer",
+					"summary": "starker Wille, etwas zu tun",
+					"explain": {
+						"entryId": "Eifer",
+						"headword": "Eifer",
+						"pronunciation": {
+							"display": "EYE-fuh",
+							"ipaUK": "/ˈaɪ̯fɐ/",
+							"ipaUS": "/ˈaɪ̯fɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Eifer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der starke Wille, etwas zu tun",
+										"examples": [
+											"Mit großem Eifer lernte er Vokabeln."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit großem Eifer lernte er Vokabeln.",
+							"ok": true
+						},
+						{
+							"answer": "Mit großer Eifer lernte er Vokabeln.",
+							"ok": false
+						},
+						{
+							"answer": "Mit großem Eifer er lernte Vokabeln.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

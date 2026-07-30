@@ -1,0 +1,495 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs3-de",
+	"title": "Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the verb correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "interagieren",
+					"summary": "in Kontakt treten",
+					"explain": {
+						"entryId": "interagieren",
+						"headword": "interagieren",
+						"pronunciation": {
+							"display": "in-tuh-ra-GEE-run",
+							"ipaUK": "/ɪntɐʔaˈɡiːʁən/",
+							"ipaUS": "/ɪntɐʔaˈɡiːʁən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "interagieren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "miteinander in Kontakt treten",
+										"examples": [
+											"Die Kinder interagieren gern miteinander."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Kinder interagieren gern miteinander.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kinder interagiert gern miteinander.",
+							"ok": false
+						},
+						{
+							"answer": "Die Kinder gern miteinander interagieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "einbinden",
+					"summary": "jemanden mit einbeziehen",
+					"explain": {
+						"entryId": "einbinden",
+						"headword": "einbinden",
+						"pronunciation": {
+							"display": "INE-bin-dn",
+							"ipaUK": "/ˈaɪ̯nˌbɪndn̩/",
+							"ipaUS": "/ˈaɪ̯nˌbɪndn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "einbinden",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemanden in etwas mit einbeziehen",
+										"examples": [
+											"Wir binden alle Kollegen in das Projekt ein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir binden alle Kollegen in das Projekt ein.",
+							"ok": true
+						},
+						{
+							"answer": "Wir binden alle Kollegen in das Projekt aus.",
+							"ok": false
+						},
+						{
+							"answer": "Wir alle Kollegen in das Projekt einbinden.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "überreden",
+					"summary": "durch Reden zu etwas bringen",
+					"explain": {
+						"entryId": "überreden",
+						"headword": "überreden",
+						"pronunciation": {
+							"display": "Ü-buh-ray-dn",
+							"ipaUK": "/ˈyːbɐˌʁeːdn̩/",
+							"ipaUS": "/ˈyːbɐˌʁeːdn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "überreden",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemanden durch Reden zu etwas bringen",
+										"examples": [
+											"Sie überredet ihn zu einem Ausflug."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie überredet ihn zu einem Ausflug.",
+							"ok": true
+						},
+						{
+							"answer": "Sie überreden ihn zu einem Ausflug.",
+							"ok": false
+						},
+						{
+							"answer": "Sie ihn zu einem Ausflug überredet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "empfehlen",
+					"summary": "jemandem etwas raten",
+					"explain": {
+						"entryId": "empfehlen",
+						"headword": "empfehlen",
+						"pronunciation": {
+							"display": "emp-FAY-lun",
+							"ipaUK": "/ɛmˈpfeːlən/",
+							"ipaUS": "/ɛmˈpfeːlən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "empfehlen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemandem etwas raten oder vorschlagen",
+										"examples": [
+											"Ich empfehle dir dieses Buch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich empfehle dir dieses Buch.",
+							"ok": true
+						},
+						{
+							"answer": "Ich empfiehlt dir dieses Buch.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir dieses Buch empfehle.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "sich verlassen",
+					"summary": "sich auf jemanden verlassen",
+					"explain": {
+						"entryId": "sich verlassen",
+						"headword": "sich verlassen",
+						"pronunciation": {
+							"display": "fer-LAS-sn",
+							"ipaUK": "/fɛɐ̯ˈlasn̩/",
+							"ipaUS": "/fɛɐ̯ˈlasn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (reflexiv)",
+								"grammarType": "Verb (reflexiv)",
+								"headwordLine": "sich verlassen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sich auf jemanden fest verlassen",
+										"examples": [
+											"Auf ihn kann man sich immer verlassen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf ihn kann man sich immer verlassen.",
+							"ok": true
+						},
+						{
+							"answer": "Auf ihn kann man sich immer verlässt.",
+							"ok": false
+						},
+						{
+							"answer": "Auf ihn man kann sich immer verlassen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "respektieren",
+					"summary": "jemanden achten",
+					"explain": {
+						"entryId": "respektieren",
+						"headword": "respektieren",
+						"pronunciation": {
+							"display": "res-pek-TEE-run",
+							"ipaUK": "/ʁɛspɛkˈtiːʁən/",
+							"ipaUS": "/ʁɛspɛkˈtiːʁən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "respektieren",
+								"inflectionsLine": null,
+								"synonyms": [
+									"achten"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemanden achten und ernst nehmen",
+										"examples": [
+											"Wir sollten die Regeln respektieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir sollten die Regeln respektieren.",
+							"ok": true
+						},
+						{
+							"answer": "Wir sollten die Regeln respektiert.",
+							"ok": false
+						},
+						{
+							"answer": "Wir die Regeln respektieren sollten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "vorschlagen",
+					"summary": "eine Idee nennen",
+					"explain": {
+						"entryId": "vorschlagen",
+						"headword": "vorschlagen",
+						"pronunciation": {
+							"display": "FOR-shlah-gn",
+							"ipaUK": "/ˈfoːɐ̯ˌʃlaːɡn̩/",
+							"ipaUS": "/ˈfoːɐ̯ˌʃlaːɡn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "vorschlagen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Idee nennen",
+										"examples": [
+											"Ich schlage einen anderen Termin vor."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schlage einen anderen Termin vor.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schlage einen anderen Termin auf.",
+							"ok": false
+						},
+						{
+							"answer": "Ich vorschlage einen anderen Termin.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "vertrauen",
+					"summary": "an die Zuverlässigkeit glauben",
+					"explain": {
+						"entryId": "vertrauen",
+						"headword": "vertrauen",
+						"pronunciation": {
+							"display": "fer-TROW-en",
+							"ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
+							"ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "vertrauen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "an die Zuverlässigkeit von jemandem glauben",
+										"examples": [
+											"Ich vertraue meinen Freunden völlig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich vertraue meinen Freunden völlig.",
+							"ok": true
+						},
+						{
+							"answer": "Ich vertraut meinen Freunden völlig.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meinen Freunden völlig vertraue.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "aufdecken",
+					"summary": "Verborgenes ans Licht bringen",
+					"explain": {
+						"entryId": "aufdecken",
+						"headword": "aufdecken",
+						"pronunciation": {
+							"display": "OWF-dek-kn",
+							"ipaUK": "/ˈaʊ̯fˌdɛkn̩/",
+							"ipaUS": "/ˈaʊ̯fˌdɛkn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "aufdecken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas Verborgenes ans Licht bringen",
+										"examples": [
+											"Die Zeitung deckt den Skandal auf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Zeitung deckt den Skandal auf.",
+							"ok": true
+						},
+						{
+							"answer": "Die Zeitung deckt den Skandal ab.",
+							"ok": false
+						},
+						{
+							"answer": "Die Zeitung den Skandal aufdeckt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,440 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPatterns3-de",
+	"title": "Patterns",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "unterrichten",
+					"summary": "jemanden unterrichten",
+					"explain": {
+						"entryId": "unterrichten",
+						"headword": "unterrichten",
+						"pronunciation": {
+							"display": "OON-tuh-rikh-tn",
+							"ipaUK": "/ˈʊntɐˌʁɪçtn̩/",
+							"ipaUS": "/ˈʊntɐˌʁɪçtn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Akkusativ)",
+								"headwordLine": "unterrichten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb: jemanden unterrichten",
+										"examples": [
+											"Der Lehrer unterrichtet die Kinder."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Lehrer unterrichtet die Kinder.",
+							"ok": true
+						},
+						{
+							"answer": "Der Lehrer unterrichten die Kinder.",
+							"ok": false
+						},
+						{
+							"answer": "Der Lehrer die Kinder unterrichtet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "reisen",
+					"summary": "reisen + Ziel (nach)",
+					"explain": {
+						"entryId": "reisen",
+						"headword": "reisen",
+						"pronunciation": {
+							"display": "RY-zn",
+							"ipaUK": "/ˈʁaɪ̯zn̩/",
+							"ipaUS": "/ˈʁaɪ̯zn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Bewegung)",
+								"headwordLine": "reisen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb der Bewegung mit Ziel (Perfekt mit sein)",
+										"examples": [
+											"Im Sommer reisen wir nach Italien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer reisen wir nach Italien.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer reist wir nach Italien.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer wir reisen nach Italien.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "besuchen",
+					"summary": "jemanden besuchen (Akkusativ)",
+					"explain": {
+						"entryId": "besuchen",
+						"headword": "besuchen",
+						"pronunciation": {
+							"display": "buh-ZOO-khn",
+							"ipaUK": "/bəˈzuːxn̩/",
+							"ipaUS": "/bəˈzuːxn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Akkusativ)",
+								"headwordLine": "besuchen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb: jemanden besuchen",
+										"examples": [
+											"Am Sonntag besuchen wir unsere Großeltern."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Sonntag besuchen wir unsere Großeltern.",
+							"ok": true
+						},
+						{
+							"answer": "Am Sonntag besuchen wir unseren Großeltern.",
+							"ok": false
+						},
+						{
+							"answer": "Am Sonntag wir besuchen unsere Großeltern.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "spazieren gehen",
+					"summary": "spazieren gehen",
+					"explain": {
+						"entryId": "spazieren gehen",
+						"headword": "spazieren gehen",
+						"pronunciation": {
+							"display": "shpa-TSEE-run GAY-uhn",
+							"ipaUK": "/ʃpaˈtsiːʁən ˈɡeːən/",
+							"ipaUS": "/ʃpaˈtsiːʁən ˈɡeːən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verbphrase",
+								"grammarType": "Verbphrase (Bewegung)",
+								"headwordLine": "spazieren gehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verbphrase der Bewegung",
+										"examples": [
+											"Nach dem Essen gehen wir spazieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Essen gehen wir spazieren.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Essen wir gehen spazieren.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Essen gehen wir spazieren gegangen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "ansehen",
+					"summary": "sich etwas ansehen (trennbar)",
+					"explain": {
+						"entryId": "ansehen",
+						"headword": "ansehen",
+						"pronunciation": {
+							"display": "AN-zay-uhn",
+							"ipaUK": "/ˈanˌzeːən/",
+							"ipaUS": "/ˈanˌzeːən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar, reflexiv)",
+								"headwordLine": "ansehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "trennbares Verb: sich etwas ansehen",
+										"examples": [
+											"Am Abend sehen wir uns einen Film an."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Abend sehen wir uns einen Film an.",
+							"ok": true
+						},
+						{
+							"answer": "Am Abend ansehen wir uns einen Film.",
+							"ok": false
+						},
+						{
+							"answer": "Am Abend sehen wir uns einen Film auf.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "als",
+					"summary": "als … (Vergangenheit, Verb am Ende)",
+					"explain": {
+						"entryId": "als",
+						"headword": "als",
+						"pronunciation": {
+							"display": "als",
+							"ipaUK": "/als/",
+							"ipaUS": "/als/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "als",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für ein einmaliges Ereignis in der Vergangenheit (Verb am Ende)",
+										"examples": [
+											"Als ich klein war, wohnte ich in Köln."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Als ich klein war, wohnte ich in Köln.",
+							"ok": true
+						},
+						{
+							"answer": "Als ich klein war, ich wohnte in Köln.",
+							"ok": false
+						},
+						{
+							"answer": "Als ich war klein, wohnte ich in Köln.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "arbeiten",
+					"summary": "arbeiten bei + Dativ",
+					"explain": {
+						"entryId": "arbeiten",
+						"headword": "arbeiten",
+						"pronunciation": {
+							"display": "AR-by-tn",
+							"ipaUK": "/ˈaʁbaɪ̯tn̩/",
+							"ipaUS": "/ˈaʁbaɪ̯tn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb + Präposition",
+								"headwordLine": "arbeiten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb mit Präposition: bei einer Firma arbeiten",
+										"examples": [
+											"Sie arbeitet bei einer großen Firma."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie arbeitet bei einer großen Firma.",
+							"ok": true
+						},
+						{
+							"answer": "Sie arbeitet bei eine große Firma.",
+							"ok": false
+						},
+						{
+							"answer": "Sie bei einer großen Firma arbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "schreiben",
+					"summary": "jemandem etwas schreiben",
+					"explain": {
+						"entryId": "schreiben",
+						"headword": "schreiben",
+						"pronunciation": {
+							"display": "SHRY-bn",
+							"ipaUK": "/ˈʃʁaɪ̯bn̩/",
+							"ipaUS": "/ˈʃʁaɪ̯bn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Dativ + Akkusativ)",
+								"headwordLine": "schreiben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb: jemandem etwas schreiben",
+										"examples": [
+											"Ich schreibe meiner Freundin eine Nachricht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schreibe meiner Freundin eine Nachricht.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schreibe meine Freundin eine Nachricht.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meiner Freundin eine Nachricht schreibe.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,496 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel3-de",
+	"title": "3. Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Reservierung",
+					"summary": "festes Vorbestellen",
+					"explain": {
+						"entryId": "Reservierung",
+						"headword": "Reservierung",
+						"pronunciation": {
+							"display": "re-zer-VEE-roong",
+							"ipaUK": "/ʁezɛʁˈviːʁʊŋ/",
+							"ipaUS": "/ʁezɛʁˈviːʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reservierung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das feste Vorbestellen (Tisch, Zimmer)",
+										"examples": [
+											"Ich habe eine Reservierung für zwei Personen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe eine Reservierung für zwei Personen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe einen Reservierung für zwei Personen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich eine Reservierung für zwei Personen habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Fahrplan",
+					"summary": "Liste der Abfahrtszeiten",
+					"explain": {
+						"entryId": "Fahrplan",
+						"headword": "Fahrplan",
+						"pronunciation": {
+							"display": "FAR-plahn",
+							"ipaUK": "/ˈfaːɐ̯ˌplaːn/",
+							"ipaUS": "/ˈfaːɐ̯ˌplaːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fahrplan",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Liste der Abfahrtszeiten von Bus oder Bahn",
+										"examples": [
+											"Der Fahrplan hängt am Bahnsteig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Fahrplan hängt am Bahnsteig.",
+							"ok": true
+						},
+						{
+							"answer": "Die Fahrplan hängt am Bahnsteig.",
+							"ok": false
+						},
+						{
+							"answer": "Der Fahrplan am Bahnsteig hängt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Schiff",
+					"summary": "großes Fahrzeug für das Wasser",
+					"explain": {
+						"entryId": "Schiff",
+						"headword": "Schiff",
+						"pronunciation": {
+							"display": "shif",
+							"ipaUK": "/ʃɪf/",
+							"ipaUS": "/ʃɪf/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Schiff",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großes Fahrzeug für das Wasser",
+										"examples": [
+											"Das Schiff legt am Morgen ab."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Schiff legt am Morgen ab.",
+							"ok": true
+						},
+						{
+							"answer": "Der Schiff legt am Morgen ab.",
+							"ok": false
+						},
+						{
+							"answer": "Das Schiff am Morgen ablegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Besichtigung",
+					"summary": "Ansehen von Sehenswürdigkeiten",
+					"explain": {
+						"entryId": "Besichtigung",
+						"headword": "Besichtigung",
+						"pronunciation": {
+							"display": "buh-ZIKH-ti-goong",
+							"ipaUK": "/bəˈzɪçtɪɡʊŋ/",
+							"ipaUS": "/bəˈzɪçtɪɡʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Besichtigung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Ansehen von Sehenswürdigkeiten",
+										"examples": [
+											"Die Besichtigung der Altstadt dauert zwei Stunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Besichtigung der Altstadt dauert zwei Stunden.",
+							"ok": true
+						},
+						{
+							"answer": "Der Besichtigung der Altstadt dauert zwei Stunden.",
+							"ok": false
+						},
+						{
+							"answer": "Die Besichtigung der Altstadt zwei Stunden dauert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Reisetasche",
+					"summary": "weiche Tasche für die Reise",
+					"explain": {
+						"entryId": "Reisetasche",
+						"headword": "Reisetasche",
+						"pronunciation": {
+							"display": "RY-zuh-tash-uh",
+							"ipaUK": "/ˈʁaɪ̯zəˌtaʃə/",
+							"ipaUS": "/ˈʁaɪ̯zəˌtaʃə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reisetasche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine weiche Tasche für die Reise",
+										"examples": [
+											"Ich packe meine Reisetasche am Abend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich packe meine Reisetasche am Abend.",
+							"ok": true
+						},
+						{
+							"answer": "Ich packe meinen Reisetasche am Abend.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meine Reisetasche am Abend packe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Abflug",
+					"summary": "Starten des Flugzeugs",
+					"explain": {
+						"entryId": "Abflug",
+						"headword": "Abflug",
+						"pronunciation": {
+							"display": "AP-flook",
+							"ipaUK": "/ˈapˌfluːk/",
+							"ipaUS": "/ˈapˌfluːk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abflug",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Starten des Flugzeugs in die Luft",
+										"examples": [
+											"Der Abflug verzögert sich um eine Stunde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Abflug verzögert sich um eine Stunde.",
+							"ok": true
+						},
+						{
+							"answer": "Die Abflug verzögert sich um eine Stunde.",
+							"ok": false
+						},
+						{
+							"answer": "Der Abflug sich um eine Stunde verzögert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Ticket",
+					"summary": "Karte für Fahrt oder Flug",
+					"explain": {
+						"entryId": "Ticket",
+						"headword": "Ticket",
+						"pronunciation": {
+							"display": "TI-ket",
+							"ipaUK": "/ˈtɪkɛt/",
+							"ipaUS": "/ˈtɪkɛt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ticket",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Fahrkarte",
+									"Flugticket"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Karte für eine Fahrt oder einen Flug",
+										"examples": [
+											"Ich habe mein Ticket online gekauft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe mein Ticket online gekauft.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe meinen Ticket online gekauft.",
+							"ok": false
+						},
+						{
+							"answer": "Ich mein Ticket online gekauft habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Rundreise",
+					"summary": "Reise mit mehreren Stationen",
+					"explain": {
+						"entryId": "Rundreise",
+						"headword": "Rundreise",
+						"pronunciation": {
+							"display": "ROONT-ry-zuh",
+							"ipaUK": "/ˈʁʊntˌʁaɪ̯zə/",
+							"ipaUS": "/ˈʁʊntˌʁaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rundreise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Reise mit mehreren Stationen",
+										"examples": [
+											"Die Rundreise führt durch fünf Länder."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Rundreise führt durch fünf Länder.",
+							"ok": true
+						},
+						{
+							"answer": "Der Rundreise führt durch fünf Länder.",
+							"ok": false
+						},
+						{
+							"answer": "Die Rundreise durch fünf Länder führt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Seereise",
+					"summary": "lange Reise über das Meer",
+					"explain": {
+						"entryId": "Seereise",
+						"headword": "Seereise",
+						"pronunciation": {
+							"display": "ZAY-ry-zuh",
+							"ipaUK": "/ˈzeːˌʁaɪ̯zə/",
+							"ipaUS": "/ˈzeːˌʁaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Seereise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine lange Reise über das Meer",
+										"examples": [
+											"Die Seereise nach Amerika dauerte Wochen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Seereise nach Amerika dauerte Wochen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Seereise nach Amerika dauerte Wochen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Seereise nach Amerika Wochen dauerte.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

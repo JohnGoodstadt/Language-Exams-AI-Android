@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonal1-de",
+	"title": "Personal",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Adresse",
+					"summary": "wo man wohnt (Straße, Ort)",
+					"explain": {
+						"entryId": "Adresse",
+						"headword": "Adresse",
+						"pronunciation": {
+							"display": "a-DRES-suh",
+							"ipaUK": "/aˈdʁɛsə/",
+							"ipaUS": "/aˈdʁɛsə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Adresse",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Angabe, wo man wohnt (Straße, Ort)",
+										"examples": [
+											"Meine Adresse steht auf dem Brief."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Adresse steht auf dem Brief.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Adresse steht auf den Brief.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Adresse auf dem Brief steht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Alter",
+					"summary": "wie viele Jahre man alt ist",
+					"explain": {
+						"entryId": "Alter",
+						"headword": "Alter",
+						"pronunciation": {
+							"display": "AL-tuh",
+							"ipaUK": "/ˈaltɐ/",
+							"ipaUS": "/ˈaltɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Alter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wie viele Jahre man alt ist",
+										"examples": [
+											"Mit dem Alter wird man weiser."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit dem Alter wird man weiser.",
+							"ok": true
+						},
+						{
+							"answer": "Mit der Alter wird man weiser.",
+							"ok": false
+						},
+						{
+							"answer": "Mit dem Alter man wird weiser.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Geburtstag",
+					"summary": "der Tag der Geburt",
+					"explain": {
+						"entryId": "Geburtstag",
+						"headword": "Geburtstag",
+						"pronunciation": {
+							"display": "guh-BOORTS-tahk",
+							"ipaUK": "/ɡəˈbuːɐ̯tsˌtaːk/",
+							"ipaUS": "/ɡəˈbuːɐ̯tsˌtaːk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Geburtstag",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Tag, an dem man geboren wurde",
+										"examples": [
+											"Zu meinem Geburtstag lade ich Freunde ein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zu meinem Geburtstag lade ich Freunde ein.",
+							"ok": true
+						},
+						{
+							"answer": "Zu meiner Geburtstag lade ich Freunde ein.",
+							"ok": false
+						},
+						{
+							"answer": "Zu meinem Geburtstag ich lade Freunde ein.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Zähne putzen",
+					"summary": "die Zähne sauber machen",
+					"explain": {
+						"entryId": "Zähne putzen",
+						"headword": "Zähne putzen",
+						"pronunciation": {
+							"display": "TSAY-nuh POO-tsn",
+							"ipaUK": "/ˈtsɛːnə ˈpʊtsn̩/",
+							"ipaUS": "/ˈtsɛːnə ˈpʊtsn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verbphrase",
+								"grammarType": "Verbphrase",
+								"headwordLine": "Zähne putzen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zähne mit einer Zahnbürste sauber machen",
+										"examples": [
+											"Nach dem Essen putze ich mir die Zähne."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Essen putze ich mir die Zähne.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Essen putze ich mir den Zähne.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Essen ich putze mir die Zähne.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "E-Mail",
+					"summary": "Nachricht über das Internet",
+					"explain": {
+						"entryId": "E-Mail",
+						"headword": "E-Mail",
+						"pronunciation": {
+							"display": "EE-mayl",
+							"ipaUK": "/ˈiːmɛɪ̯l/",
+							"ipaUS": "/ˈiːmɛɪ̯l/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "E-Mail",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Nachricht, die man über das Internet schickt",
+										"examples": [
+											"Ich schreibe dir gleich eine E-Mail."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schreibe dir gleich eine E-Mail.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schreibe dir gleich einen E-Mail.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir gleich eine E-Mail schreibe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Geschlecht",
+					"summary": "männlich oder weiblich",
+					"explain": {
+						"entryId": "Geschlecht",
+						"headword": "Geschlecht",
+						"pronunciation": {
+							"display": "guh-SHLEKHT",
+							"ipaUK": "/ɡəˈʃlɛçt/",
+							"ipaUS": "/ɡəˈʃlɛçt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Geschlecht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ob man männlich oder weiblich ist",
+										"examples": [
+											"Bitte geben Sie Ihr Geschlecht an."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bitte geben Sie Ihr Geschlecht an.",
+							"ok": true
+						},
+						{
+							"answer": "Bitte geben Sie Ihren Geschlecht an.",
+							"ok": false
+						},
+						{
+							"answer": "Bitte Sie geben Ihr Geschlecht an.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "zur Arbeit gehen",
+					"summary": "zum Arbeitsplatz gehen",
+					"explain": {
+						"entryId": "zur Arbeit gehen",
+						"headword": "zur Arbeit gehen",
+						"pronunciation": {
+							"display": "tsoor AR-byte GAY-uhn",
+							"ipaUK": "/tsuːɐ̯ ˈaʁbaɪ̯t ˈɡeːən/",
+							"ipaUS": "/tsuːɐ̯ ˈaʁbaɪ̯t ˈɡeːən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verbphrase",
+								"grammarType": "Verbphrase",
+								"headwordLine": "zur Arbeit gehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "morgens zum Arbeitsplatz gehen",
+										"examples": [
+											"Jeden Morgen gehe ich zur Arbeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Jeden Morgen gehe ich zur Arbeit.",
+							"ok": true
+						},
+						{
+							"answer": "Jeden Morgen gehe ich zum Arbeit.",
+							"ok": false
+						},
+						{
+							"answer": "Jeden Morgen ich gehe zur Arbeit.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "frühstücken",
+					"summary": "am Morgen essen",
+					"explain": {
+						"entryId": "frühstücken",
+						"headword": "frühstücken",
+						"pronunciation": {
+							"display": "FRÜ-shtük-kn",
+							"ipaUK": "/ˈfʁyːʃtʏkn̩/",
+							"ipaUS": "/ˈfʁyːʃtʏkn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "frühstücken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die erste Mahlzeit am Morgen essen",
+										"examples": [
+											"Am Sonntag frühstücken wir lange."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Sonntag frühstücken wir lange.",
+							"ok": true
+						},
+						{
+							"answer": "Am Sonntag frühstücke wir lange.",
+							"ok": false
+						},
+						{
+							"answer": "Am Sonntag wir frühstücken lange.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Sprache",
+					"summary": "womit man spricht (z. B. Deutsch)",
+					"explain": {
+						"entryId": "Sprache",
+						"headword": "Sprache",
+						"pronunciation": {
+							"display": "SHPRAH-khuh",
+							"ipaUK": "/ˈʃpʁaːxə/",
+							"ipaUS": "/ˈʃpʁaːxə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Sprache",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Wörter und Regeln, mit denen man spricht",
+										"examples": [
+											"Deutsch ist eine schwere Sprache."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Deutsch ist eine schwere Sprache.",
+							"ok": true
+						},
+						{
+							"answer": "Deutsch ist einen schweren Sprache.",
+							"ok": false
+						},
+						{
+							"answer": "Deutsch eine schwere Sprache ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Familienstand",
+					"summary": "ledig, verheiratet oder geschieden",
+					"explain": {
+						"entryId": "Familienstand",
+						"headword": "Familienstand",
+						"pronunciation": {
+							"display": "fa-MEE-li-en-shtant",
+							"ipaUK": "/faˈmiːli̯ənˌʃtant/",
+							"ipaUS": "/faˈmiːli̯ənˌʃtant/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Familienstand",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ob man ledig, verheiratet oder geschieden ist",
+										"examples": [
+											"Auf dem Formular fehlt der Familienstand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf dem Formular fehlt der Familienstand.",
+							"ok": true
+						},
+						{
+							"answer": "Auf dem Formular fehlt die Familienstand.",
+							"ok": false
+						},
+						{
+							"answer": "Auf dem Formular der Familienstand fehlt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

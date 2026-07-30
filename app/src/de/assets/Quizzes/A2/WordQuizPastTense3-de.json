@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPastTense3-de",
+	"title": "Past Tense",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "schlafen",
+					"summary": "Perfekt: ich habe geschlafen",
+					"explain": {
+						"entryId": "schlafen",
+						"headword": "schlafen",
+						"pronunciation": {
+							"display": "SHLAH-fn",
+							"ipaUK": "/ˈʃlaːfn̩/",
+							"ipaUS": "/ˈʃlaːfn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "schlafen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'schlafen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe letzte Nacht acht Stunden geschlafen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe letzte Nacht acht Stunden geschlafen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin letzte Nacht acht Stunden geschlafen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe letzte Nacht acht Stunden geschlaft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "arbeiten",
+					"summary": "Perfekt: ich habe gearbeitet",
+					"explain": {
+						"entryId": "arbeiten",
+						"headword": "arbeiten",
+						"pronunciation": {
+							"display": "AR-by-tn",
+							"ipaUK": "/ˈaʁbaɪ̯tn̩/",
+							"ipaUS": "/ˈaʁbaɪ̯tn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "arbeiten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'arbeiten' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Er hat den ganzen Tag gearbeitet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat den ganzen Tag gearbeitet.",
+							"ok": true
+						},
+						{
+							"answer": "Er ist den ganzen Tag gearbeitet.",
+							"ok": false
+						},
+						{
+							"answer": "Er hat den ganzen Tag gearbeitt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "wohnen",
+					"summary": "Perfekt: ich habe gewohnt",
+					"explain": {
+						"entryId": "wohnen",
+						"headword": "wohnen",
+						"pronunciation": {
+							"display": "VOH-nn",
+							"ipaUK": "/ˈvoːnən/",
+							"ipaUS": "/ˈvoːnən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "wohnen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'wohnen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Wir haben lange in München gewohnt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir haben lange in München gewohnt.",
+							"ok": true
+						},
+						{
+							"answer": "Wir sind lange in München gewohnt.",
+							"ok": false
+						},
+						{
+							"answer": "Wir haben lange in München gewohnen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "lernen",
+					"summary": "Perfekt: ich habe gelernt",
+					"explain": {
+						"entryId": "lernen",
+						"headword": "lernen",
+						"pronunciation": {
+							"display": "LER-nn",
+							"ipaUK": "/ˈlɛʁnən/",
+							"ipaUS": "/ˈlɛʁnən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "lernen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'lernen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Sie hat viele neue Wörter gelernt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat viele neue Wörter gelernt.",
+							"ok": true
+						},
+						{
+							"answer": "Sie ist viele neue Wörter gelernt.",
+							"ok": false
+						},
+						{
+							"answer": "Sie hat viele neue Wörter gelernen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "kochen",
+					"summary": "Perfekt: ich habe gekocht",
+					"explain": {
+						"entryId": "kochen",
+						"headword": "kochen",
+						"pronunciation": {
+							"display": "KO-khn",
+							"ipaUK": "/ˈkɔxn̩/",
+							"ipaUS": "/ˈkɔxn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "kochen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'kochen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Meine Mutter hat eine Suppe gekocht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Mutter hat eine Suppe gekocht.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Mutter ist eine Suppe gekocht.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Mutter hat eine Suppe gekochen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "besuchen",
+					"summary": "Perfekt: ich habe besucht (ohne ge-)",
+					"explain": {
+						"entryId": "besuchen",
+						"headword": "besuchen",
+						"pronunciation": {
+							"display": "buh-ZOO-khn",
+							"ipaUK": "/bəˈzuːxn̩/",
+							"ipaUS": "/bəˈzuːxn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "besuchen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'besuchen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Wir haben am Sonntag unsere Oma besucht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir haben am Sonntag unsere Oma besucht.",
+							"ok": true
+						},
+						{
+							"answer": "Wir sind am Sonntag unsere Oma besucht.",
+							"ok": false
+						},
+						{
+							"answer": "Wir haben am Sonntag unsere Oma gebesucht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "verstehen",
+					"summary": "Perfekt: ich habe verstanden",
+					"explain": {
+						"entryId": "verstehen",
+						"headword": "verstehen",
+						"pronunciation": {
+							"display": "fer-SHTAY-uhn",
+							"ipaUK": "/fɛɐ̯ˈʃteːən/",
+							"ipaUS": "/fɛɐ̯ˈʃteːən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "verstehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'verstehen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe die Frage nicht verstanden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe die Frage nicht verstanden.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin die Frage nicht verstanden.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe die Frage nicht verstandet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "vergessen",
+					"summary": "Perfekt: ich habe vergessen",
+					"explain": {
+						"entryId": "vergessen",
+						"headword": "vergessen",
+						"pronunciation": {
+							"display": "fer-GES-sn",
+							"ipaUK": "/fɛɐ̯ˈɡɛsn̩/",
+							"ipaUS": "/fɛɐ̯ˈɡɛsn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "vergessen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'vergessen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Er hat seinen Schlüssel vergessen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat seinen Schlüssel vergessen.",
+							"ok": true
+						},
+						{
+							"answer": "Er ist seinen Schlüssel vergessen.",
+							"ok": false
+						},
+						{
+							"answer": "Er hat seinen Schlüssel vergesst.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "gewinnen",
+					"summary": "Perfekt: ich habe gewonnen",
+					"explain": {
+						"entryId": "gewinnen",
+						"headword": "gewinnen",
+						"pronunciation": {
+							"display": "guh-VIN-nn",
+							"ipaUK": "/ɡəˈvɪnən/",
+							"ipaUS": "/ɡəˈvɪnən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "gewinnen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'gewinnen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Unsere Mannschaft hat das Spiel gewonnen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Unsere Mannschaft hat das Spiel gewonnen.",
+							"ok": true
+						},
+						{
+							"answer": "Unsere Mannschaft ist das Spiel gewonnen.",
+							"ok": false
+						},
+						{
+							"answer": "Unsere Mannschaft hat das Spiel gewinnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "verlieren",
+					"summary": "Perfekt: ich habe verloren",
+					"explain": {
+						"entryId": "verlieren",
+						"headword": "verlieren",
+						"pronunciation": {
+							"display": "fer-LEE-run",
+							"ipaUK": "/fɛɐ̯ˈliːʁən/",
+							"ipaUS": "/fɛɐ̯ˈliːʁən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "verlieren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'verlieren' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe meinen Schirm im Zug verloren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe meinen Schirm im Zug verloren.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin meinen Schirm im Zug verloren.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe meinen Schirm im Zug verliert.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,448 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology3-de",
+	"title": "3. Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Programm",
+					"summary": "Software für den Computer",
+					"explain": {
+						"entryId": "Programm",
+						"headword": "Programm",
+						"pronunciation": {
+							"display": "pro-GRAM",
+							"ipaUK": "/pʁoˈɡʁam/",
+							"ipaUS": "/pʁoˈɡʁam/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Programm",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Software für den Computer",
+										"examples": [
+											"Dieses Programm läuft nur auf neuen Geräten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Dieses Programm läuft nur auf neuen Geräten.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Programm läuft nur auf neuen Geräten.",
+							"ok": false
+						},
+						{
+							"answer": "Dieses Programm nur auf neuen Geräten läuft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Suchmaschine",
+					"summary": "Dienst zum Suchen im Internet",
+					"explain": {
+						"entryId": "Suchmaschine",
+						"headword": "Suchmaschine",
+						"pronunciation": {
+							"display": "ZOOKH-ma-shee-nuh",
+							"ipaUK": "/ˈzuːxmaˌʃiːnə/",
+							"ipaUS": "/ˈzuːxmaˌʃiːnə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Suchmaschine",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Dienst zum Suchen im Internet (z. B. Google)",
+										"examples": [
+											"Die Suchmaschine findet Tausende Ergebnisse."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Suchmaschine findet Tausende Ergebnisse.",
+							"ok": true
+						},
+						{
+							"answer": "Der Suchmaschine findet Tausende Ergebnisse.",
+							"ok": false
+						},
+						{
+							"answer": "Die Suchmaschine Tausende Ergebnisse findet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Smartphone",
+					"summary": "modernes Handy mit Internet",
+					"explain": {
+						"entryId": "Smartphone",
+						"headword": "Smartphone",
+						"pronunciation": {
+							"display": "SMART-fohn",
+							"ipaUK": "/ˈsmaːʁtfoːn/",
+							"ipaUS": "/ˈsmaːʁtfoːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Smartphone",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Handy"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein modernes Handy mit Internet",
+										"examples": [
+											"Mein Smartphone hat einen leeren Akku."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Smartphone hat einen leeren Akku.",
+							"ok": true
+						},
+						{
+							"answer": "Meinen Smartphone hat einen leeren Akku.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Smartphone einen leeren Akku hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Software",
+					"summary": "die Programme eines Computers",
+					"explain": {
+						"entryId": "Software",
+						"headword": "Software",
+						"pronunciation": {
+							"display": "SOFT-vair",
+							"ipaUK": "/ˈsɔftvɛːɐ̯/",
+							"ipaUS": "/ˈsɔftvɛːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Software",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Programme auf einem Computer",
+										"examples": [
+											"Diese Software muss man aktualisieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Software muss man aktualisieren.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Software muss man aktualisieren.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Software man muss aktualisieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Registerkarte",
+					"summary": "Reiter im Browser",
+					"explain": {
+						"entryId": "Registerkarte",
+						"headword": "Registerkarte",
+						"pronunciation": {
+							"display": "re-GIS-tuh-kar-tuh",
+							"ipaUK": "/ʁeˈɡɪstɐˌkaʁtə/",
+							"ipaUS": "/ʁeˈɡɪstɐˌkaʁtə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Registerkarte",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Tab"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Reiter im Browser für eine Seite",
+										"examples": [
+											"Ich öffne den Link in einer neuen Registerkarte."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich öffne den Link in einer neuen Registerkarte.",
+							"ok": true
+						},
+						{
+							"answer": "Ich öffne den Link in einem neuen Registerkarte.",
+							"ok": false
+						},
+						{
+							"answer": "Ich den Link in einer neuen Registerkarte öffne.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "virtuell",
+					"summary": "Adjektiv: nur im Computer",
+					"explain": {
+						"entryId": "virtuell",
+						"headword": "virtuell",
+						"pronunciation": {
+							"display": "vir-too-EL",
+							"ipaUK": "/vɪʁtuˈɛl/",
+							"ipaUS": "/vɪʁtuˈɛl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "virtuell",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nur im Computer vorhanden; nicht echt",
+										"examples": [
+											"Das Meeting findet virtuell statt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Meeting findet virtuell statt.",
+							"ok": true
+						},
+						{
+							"answer": "Das Meeting findet virtuelle statt.",
+							"ok": false
+						},
+						{
+							"answer": "Das Meeting virtuell stattfindet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Netz",
+					"summary": "das Web; das Internet",
+					"explain": {
+						"entryId": "Netz",
+						"headword": "Netz",
+						"pronunciation": {
+							"display": "nets",
+							"ipaUK": "/nɛts/",
+							"ipaUS": "/nɛts/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Netz",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Web"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das World Wide Web; das Internet",
+										"examples": [
+											"Im ganzen Haus gibt es schnelles Netz."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im ganzen Haus gibt es schnelles Netz.",
+							"ok": true
+						},
+						{
+							"answer": "Im ganzen Haus gibt es schneller Netz.",
+							"ok": false
+						},
+						{
+							"answer": "Im ganzen Haus schnelles Netz gibt es.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Webseite",
+					"summary": "eine Seite im Internet",
+					"explain": {
+						"entryId": "Webseite",
+						"headword": "Webseite",
+						"pronunciation": {
+							"display": "VEP-zy-tuh",
+							"ipaUK": "/ˈvɛpˌzaɪ̯tə/",
+							"ipaUS": "/ˈvɛpˌzaɪ̯tə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Webseite",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Website"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Seite im Internet",
+										"examples": [
+											"Die Webseite lädt sehr schnell."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Webseite lädt sehr schnell.",
+							"ok": true
+						},
+						{
+							"answer": "Der Webseite lädt sehr schnell.",
+							"ok": false
+						},
+						{
+							"answer": "Die Webseite sehr schnell lädt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

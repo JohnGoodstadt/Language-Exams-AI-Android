@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature1-de",
+	"title": "Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Tier",
+					"summary": "ein Lebewesen (Hund, Katze …)",
+					"explain": {
+						"entryId": "Tier",
+						"headword": "Tier",
+						"pronunciation": {
+							"display": "teer",
+							"ipaUK": "/tiːɐ̯/",
+							"ipaUS": "/tiːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tier",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Lebewesen wie Hund, Katze oder Vogel",
+										"examples": [
+											"Der Hund ist mein liebstes Tier."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Hund ist mein liebstes Tier.",
+							"ok": true
+						},
+						{
+							"answer": "Der Hund ist mein liebster Tier.",
+							"ok": false
+						},
+						{
+							"answer": "Der Hund mein liebstes Tier ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Strand",
+					"summary": "der Sand am Meer",
+					"explain": {
+						"entryId": "Strand",
+						"headword": "Strand",
+						"pronunciation": {
+							"display": "shtrant",
+							"ipaUK": "/ʃtʁant/",
+							"ipaUS": "/ʃtʁant/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Strand",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Sand am Meer",
+										"examples": [
+											"Im Urlaub liegen wir gern am Strand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Urlaub liegen wir gern am Strand.",
+							"ok": true
+						},
+						{
+							"answer": "Im Urlaub liegen wir gern an der Strand.",
+							"ok": false
+						},
+						{
+							"answer": "Im Urlaub wir liegen gern am Strand.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Vogel",
+					"summary": "ein Tier mit Federn, das fliegt",
+					"explain": {
+						"entryId": "Vogel",
+						"headword": "Vogel",
+						"pronunciation": {
+							"display": "FOH-gl",
+							"ipaUK": "/ˈfoːɡl̩/",
+							"ipaUS": "/ˈfoːɡl̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vogel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Tier mit Federn, das fliegen kann",
+										"examples": [
+											"Der Vogel singt am Morgen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Vogel singt am Morgen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Vogel singt am Morgen.",
+							"ok": false
+						},
+						{
+							"answer": "Der Vogel am Morgen singt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Klima",
+					"summary": "das typische Wetter einer Region",
+					"explain": {
+						"entryId": "Klima",
+						"headword": "Klima",
+						"pronunciation": {
+							"display": "KLEE-ma",
+							"ipaUK": "/ˈkliːma/",
+							"ipaUS": "/ˈkliːma/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klima",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das typische Wetter einer Region über lange Zeit",
+										"examples": [
+											"Das Klima wird immer wärmer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Klima wird immer wärmer.",
+							"ok": true
+						},
+						{
+							"answer": "Der Klima wird immer wärmer.",
+							"ok": false
+						},
+						{
+							"answer": "Das Klima immer wärmer wird.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Blume",
+					"summary": "eine Pflanze mit Blüten",
+					"explain": {
+						"entryId": "Blume",
+						"headword": "Blume",
+						"pronunciation": {
+							"display": "BLOO-muh",
+							"ipaUK": "/ˈbluːmə/",
+							"ipaUS": "/ˈbluːmə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Blume",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Pflanze mit bunten Blüten",
+										"examples": [
+											"Ich schenke ihr eine rote Blume."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schenke ihr eine rote Blume.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schenke ihr einen roten Blume.",
+							"ok": false
+						},
+						{
+							"answer": "Ich ihr eine rote Blume schenke.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Wald",
+					"summary": "ein Gebiet mit vielen Bäumen",
+					"explain": {
+						"entryId": "Wald",
+						"headword": "Wald",
+						"pronunciation": {
+							"display": "valt",
+							"ipaUK": "/valt/",
+							"ipaUS": "/valt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wald",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großes Gebiet mit vielen Bäumen",
+										"examples": [
+											"Am Wochenende gehen wir im Wald spazieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Wochenende gehen wir im Wald spazieren.",
+							"ok": true
+						},
+						{
+							"answer": "Am Wochenende gehen wir in der Wald spazieren.",
+							"ok": false
+						},
+						{
+							"answer": "Am Wochenende wir gehen im Wald spazieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Berg",
+					"summary": "eine hohe Erhebung im Gelände",
+					"explain": {
+						"entryId": "Berg",
+						"headword": "Berg",
+						"pronunciation": {
+							"display": "berk",
+							"ipaUK": "/bɛʁk/",
+							"ipaUS": "/bɛʁk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Berg",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine sehr hohe Erhebung in der Landschaft",
+										"examples": [
+											"Der Berg ist über tausend Meter hoch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Berg ist über tausend Meter hoch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Berg ist über tausend Meter hoch.",
+							"ok": false
+						},
+						{
+							"answer": "Der Berg über tausend Meter hoch ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Natur",
+					"summary": "alles ohne den Menschen (Pflanzen, Tiere)",
+					"explain": {
+						"entryId": "Natur",
+						"headword": "Natur",
+						"pronunciation": {
+							"display": "na-TOOR",
+							"ipaUK": "/naˈtuːɐ̯/",
+							"ipaUS": "/naˈtuːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Natur",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "alles, was nicht vom Menschen gemacht ist",
+										"examples": [
+											"In der Natur kann ich mich gut erholen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Natur kann ich mich gut erholen.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Natur kann ich mich gut erholen.",
+							"ok": false
+						},
+						{
+							"answer": "In der Natur ich kann mich gut erholen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Umweltverschmutzung",
+					"summary": "das Schmutzigmachen der Umwelt",
+					"explain": {
+						"entryId": "Umweltverschmutzung",
+						"headword": "Umweltverschmutzung",
+						"pronunciation": {
+							"display": "OOM-velt-fer-shmoot-soong",
+							"ipaUK": "/ˈʊmvɛltfɛɐ̯ˌʃmʊtsʊŋ/",
+							"ipaUS": "/ˈʊmvɛltfɛɐ̯ˌʃmʊtsʊŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Umweltverschmutzung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Schmutzigmachen von Luft, Wasser und Boden",
+										"examples": [
+											"Die Umweltverschmutzung ist ein großes Problem."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Umweltverschmutzung ist ein großes Problem.",
+							"ok": true
+						},
+						{
+							"answer": "Der Umweltverschmutzung ist ein großes Problem.",
+							"ok": false
+						},
+						{
+							"answer": "Die Umweltverschmutzung ein großes Problem ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Recycling",
+					"summary": "Müll wiederverwerten",
+					"explain": {
+						"entryId": "Recycling",
+						"headword": "Recycling",
+						"pronunciation": {
+							"display": "ri-SY-kling",
+							"ipaUK": "/ʁiˈsaɪ̯klɪŋ/",
+							"ipaUS": "/ʁiˈsaɪ̯klɪŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Recycling",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Wiederverwertung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Müll wiederverwerten, statt ihn wegzuwerfen",
+										"examples": [
+											"Durch Recycling sparen wir Rohstoffe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Durch Recycling sparen wir Rohstoffe.",
+							"ok": true
+						},
+						{
+							"answer": "Durch Recyclings sparen wir Rohstoffe.",
+							"ok": false
+						},
+						{
+							"answer": "Durch Recycling wir sparen Rohstoffe.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

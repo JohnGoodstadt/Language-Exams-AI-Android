@@ -1,0 +1,122 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizWeather2-de",
+	"title": "Weather",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "windig",
+					"summary": "mit viel Wind",
+					"explain": {
+						"entryId": "windig",
+						"headword": "windig",
+						"pronunciation": {
+							"display": "VIN-dikh",
+							"ipaUK": "/ˈvɪndɪç/",
+							"ipaUS": "/ˈvɪndɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "windig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit viel Wind",
+										"examples": [
+											"An der Küste ist es oft windig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "An der Küste ist es oft windig.",
+							"ok": true
+						},
+						{
+							"answer": "An der Küste ist es oft windige.",
+							"ok": false
+						},
+						{
+							"answer": "An der Küste es ist oft windig.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Winter",
+					"summary": "die kalte Jahreszeit",
+					"explain": {
+						"entryId": "Winter",
+						"headword": "Winter",
+						"pronunciation": {
+							"display": "VIN-tuh",
+							"ipaUK": "/ˈvɪntɐ/",
+							"ipaUS": "/ˈvɪntɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Winter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die kalte Jahreszeit",
+										"examples": [
+											"Im Winter schneit es sehr oft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Winter schneit es sehr oft.",
+							"ok": true
+						},
+						{
+							"answer": "In die Winter schneit es sehr oft.",
+							"ok": false
+						},
+						{
+							"answer": "Im Winter es schneit sehr oft.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

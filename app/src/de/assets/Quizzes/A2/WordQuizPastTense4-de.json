@@ -1,0 +1,334 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPastTense4-de",
+	"title": "Past Tense",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "fliegen",
+					"summary": "Perfekt: wir sind geflogen",
+					"explain": {
+						"entryId": "fliegen",
+						"headword": "fliegen",
+						"pronunciation": {
+							"display": "FLEE-gn",
+							"ipaUK": "/ˈfliːɡn̩/",
+							"ipaUS": "/ˈfliːɡn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "fliegen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'fliegen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Wir sind im Sommer nach Spanien geflogen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir sind im Sommer nach Spanien geflogen.",
+							"ok": true
+						},
+						{
+							"answer": "Wir haben im Sommer nach Spanien geflogen.",
+							"ok": false
+						},
+						{
+							"answer": "Wir sind im Sommer nach Spanien gefliegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "schwimmen",
+					"summary": "Perfekt: ich bin geschwommen",
+					"explain": {
+						"entryId": "schwimmen",
+						"headword": "schwimmen",
+						"pronunciation": {
+							"display": "SHVIM-mn",
+							"ipaUK": "/ˈʃvɪmən/",
+							"ipaUS": "/ˈʃvɪmən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "schwimmen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'schwimmen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Im Urlaub bin ich jeden Tag geschwommen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Urlaub bin ich jeden Tag geschwommen.",
+							"ok": true
+						},
+						{
+							"answer": "Im Urlaub habe ich jeden Tag geschwommen.",
+							"ok": false
+						},
+						{
+							"answer": "Im Urlaub bin ich jeden Tag geschwimmt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "singen",
+					"summary": "Perfekt: ich habe gesungen",
+					"explain": {
+						"entryId": "singen",
+						"headword": "singen",
+						"pronunciation": {
+							"display": "ZING-uhn",
+							"ipaUK": "/ˈzɪŋən/",
+							"ipaUS": "/ˈzɪŋən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "singen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'singen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Die Kinder haben ein schönes Lied gesungen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Kinder haben ein schönes Lied gesungen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kinder sind ein schönes Lied gesungen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Kinder haben ein schönes Lied gesingt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "tragen",
+					"summary": "Perfekt: ich habe getragen",
+					"explain": {
+						"entryId": "tragen",
+						"headword": "tragen",
+						"pronunciation": {
+							"display": "TRAH-gn",
+							"ipaUK": "/ˈtʁaːɡn̩/",
+							"ipaUS": "/ˈtʁaːɡn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "tragen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'tragen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Er hat den schweren Koffer getragen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat den schweren Koffer getragen.",
+							"ok": true
+						},
+						{
+							"answer": "Er ist den schweren Koffer getragen.",
+							"ok": false
+						},
+						{
+							"answer": "Er hat den schweren Koffer getragt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "waschen",
+					"summary": "Perfekt: ich habe gewaschen",
+					"explain": {
+						"entryId": "waschen",
+						"headword": "waschen",
+						"pronunciation": {
+							"display": "VA-shn",
+							"ipaUK": "/ˈvaʃn̩/",
+							"ipaUS": "/ˈvaʃn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "waschen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'waschen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe mir vor dem Essen die Hände gewaschen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe mir vor dem Essen die Hände gewaschen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin mir vor dem Essen die Hände gewaschen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe mir vor dem Essen die Hände gewascht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "öffnen",
+					"summary": "Perfekt: ich habe geöffnet",
+					"explain": {
+						"entryId": "öffnen",
+						"headword": "öffnen",
+						"pronunciation": {
+							"display": "ÖF-nn",
+							"ipaUK": "/ˈœfnən/",
+							"ipaUS": "/ˈœfnən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "öffnen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'öffnen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Sie hat das Fenster geöffnet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat das Fenster geöffnet.",
+							"ok": true
+						},
+						{
+							"answer": "Sie ist das Fenster geöffnet.",
+							"ok": false
+						},
+						{
+							"answer": "Sie hat das Fenster geöffent.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

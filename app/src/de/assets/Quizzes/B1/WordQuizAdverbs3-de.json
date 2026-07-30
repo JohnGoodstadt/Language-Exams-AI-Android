@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs3-de",
+	"title": "3. Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "einigermaßen",
+					"summary": "Adverb: in akzeptablem Maße",
+					"explain": {
+						"entryId": "einigermaßen",
+						"headword": "einigermaßen",
+						"pronunciation": {
+							"display": "EYE-ni-guh-mah-sn",
+							"ipaUK": "/ˈaɪ̯nɪɡɐˌmaːsn̩/",
+							"ipaUS": "/ˈaɪ̯nɪɡɐˌmaːsn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "einigermaßen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "recht gut; in akzeptablem Maße",
+										"examples": [
+											"Mir geht es einigermaßen gut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mir geht es einigermaßen gut.",
+							"ok": true
+						},
+						{
+							"answer": "Mir geht es einigermaßens gut.",
+							"ok": false
+						},
+						{
+							"answer": "Mir es geht einigermaßen gut.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "relativ",
+					"summary": "Adverb: verhältnismäßig",
+					"explain": {
+						"entryId": "relativ",
+						"headword": "relativ",
+						"pronunciation": {
+							"display": "re-la-TEEF",
+							"ipaUK": "/ʁelaˈtiːf/",
+							"ipaUS": "/ʁelaˈtiːf/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "relativ",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "verhältnismäßig; im Vergleich",
+										"examples": [
+											"Die Aufgabe war relativ einfach."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Aufgabe war relativ einfach.",
+							"ok": true
+						},
+						{
+							"answer": "Die Aufgabe war relative einfach.",
+							"ok": false
+						},
+						{
+							"answer": "Die Aufgabe relativ einfach war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "knapp",
+					"summary": "Adverb: gerade noch",
+					"explain": {
+						"entryId": "knapp",
+						"headword": "knapp",
+						"pronunciation": {
+							"display": "knap",
+							"ipaUK": "/knap/",
+							"ipaUS": "/knap/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "knapp",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "gerade noch; fast nicht",
+										"examples": [
+											"Das Geld reicht knapp bis zum Monatsende."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Geld reicht knapp bis zum Monatsende.",
+							"ok": true
+						},
+						{
+							"answer": "Das Geld reicht knappe bis zum Monatsende.",
+							"ok": false
+						},
+						{
+							"answer": "Das Geld knapp reicht bis zum Monatsende.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "aufrichtig",
+					"summary": "Adverb: ehrlich gemeint",
+					"explain": {
+						"entryId": "aufrichtig",
+						"headword": "aufrichtig",
+						"pronunciation": {
+							"display": "OWF-rikh-tikh",
+							"ipaUK": "/ˈaʊ̯fʁɪçtɪç/",
+							"ipaUS": "/ˈaʊ̯fʁɪçtɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "aufrichtig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ehrlich und ernst gemeint",
+										"examples": [
+											"Ich bedauere den Fehler aufrichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bedauere den Fehler aufrichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bedauere den Fehler aufrichtige.",
+							"ok": false
+						},
+						{
+							"answer": "Ich den Fehler bedauere aufrichtig.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "plötzlich",
+					"summary": "Adverb: schnell, unerwartet",
+					"explain": {
+						"entryId": "plötzlich",
+						"headword": "plötzlich",
+						"pronunciation": {
+							"display": "PLÖTS-likh",
+							"ipaUK": "/ˈplœtslɪç/",
+							"ipaUS": "/ˈplœtslɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "plötzlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ganz schnell und unerwartet",
+										"examples": [
+											"Plötzlich ging das Licht aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Plötzlich ging das Licht aus.",
+							"ok": true
+						},
+						{
+							"answer": "Plötzliche ging das Licht aus.",
+							"ok": false
+						},
+						{
+							"answer": "Plötzlich das Licht ging aus.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "sicherlich",
+					"summary": "Adverb: mit großer Sicherheit",
+					"explain": {
+						"entryId": "sicherlich",
+						"headword": "sicherlich",
+						"pronunciation": {
+							"display": "ZIKH-uh-likh",
+							"ipaUK": "/ˈzɪçɐlɪç/",
+							"ipaUS": "/ˈzɪçɐlɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "sicherlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit großer Sicherheit",
+										"examples": [
+											"Sie hat sicherlich recht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat sicherlich recht.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat sicherliche recht.",
+							"ok": false
+						},
+						{
+							"answer": "Sie sicherlich hat recht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "total",
+					"summary": "Adverb: völlig, komplett",
+					"explain": {
+						"entryId": "total",
+						"headword": "total",
+						"pronunciation": {
+							"display": "to-TAHL",
+							"ipaUK": "/toˈtaːl/",
+							"ipaUS": "/toˈtaːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "total",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "völlig; komplett",
+										"examples": [
+											"Ich bin total müde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin total müde.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin totale müde.",
+							"ok": false
+						},
+						{
+							"answer": "Ich total bin müde.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "echt",
+					"summary": "Adverb: wirklich",
+					"explain": {
+						"entryId": "echt",
+						"headword": "echt",
+						"pronunciation": {
+							"display": "ekht",
+							"ipaUK": "/ɛçt/",
+							"ipaUS": "/ɛçt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "echt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wirklich; tatsächlich",
+										"examples": [
+											"Das Essen war echt lecker."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Essen war echt lecker.",
+							"ok": true
+						},
+						{
+							"answer": "Das Essen war echte lecker.",
+							"ok": false
+						},
+						{
+							"answer": "Das Essen echt lecker war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "unerwartet",
+					"summary": "Adverb: ohne Vorwarnung",
+					"explain": {
+						"entryId": "unerwartet",
+						"headword": "unerwartet",
+						"pronunciation": {
+							"display": "OON-er-var-tet",
+							"ipaUK": "/ˈʊnʔɛɐ̯ˌvaʁtət/",
+							"ipaUS": "/ˈʊnʔɛɐ̯ˌvaʁtət/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "unerwartet",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ohne dass man damit rechnet",
+										"examples": [
+											"Unerwartet kam Besuch vorbei."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Unerwartet kam Besuch vorbei.",
+							"ok": true
+						},
+						{
+							"answer": "Unerwartete kam Besuch vorbei.",
+							"ok": false
+						},
+						{
+							"answer": "Unerwartet Besuch kam vorbei.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "gänzlich",
+					"summary": "Adverb: vollkommen",
+					"explain": {
+						"entryId": "gänzlich",
+						"headword": "gänzlich",
+						"pronunciation": {
+							"display": "GENTS-likh",
+							"ipaUK": "/ˈɡɛntslɪç/",
+							"ipaUS": "/ˈɡɛntslɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "gänzlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "vollkommen; total",
+										"examples": [
+											"Das war gänzlich unmöglich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das war gänzlich unmöglich.",
+							"ok": true
+						},
+						{
+							"answer": "Das war gänzliche unmöglich.",
+							"ok": false
+						},
+						{
+							"answer": "Das gänzlich unmöglich war.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

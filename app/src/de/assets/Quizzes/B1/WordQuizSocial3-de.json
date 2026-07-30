@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial3-de",
+	"title": "3. Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Armut",
+					"summary": "sehr wenig Geld haben",
+					"explain": {
+						"entryId": "Armut",
+						"headword": "Armut",
+						"pronunciation": {
+							"display": "AR-moot",
+							"ipaUK": "/ˈaʁmuːt/",
+							"ipaUS": "/ˈaʁmuːt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Armut",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Zustand, sehr wenig Geld zu haben",
+										"examples": [
+											"Viele Familien leben in großer Armut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele Familien leben in großer Armut.",
+							"ok": true
+						},
+						{
+							"answer": "Viele Familien leben in großem Armut.",
+							"ok": false
+						},
+						{
+							"answer": "Viele Familien in großer Armut leben.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Vorurteil",
+					"summary": "negative Meinung ohne Grund",
+					"explain": {
+						"entryId": "Vorurteil",
+						"headword": "Vorurteil",
+						"pronunciation": {
+							"display": "FOR-oor-tile",
+							"ipaUK": "/ˈfoːɐ̯ˌʔʊʁtaɪ̯l/",
+							"ipaUS": "/ˈfoːɐ̯ˌʔʊʁtaɪ̯l/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorurteil",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine feste, negative Meinung ohne echten Grund",
+										"examples": [
+											"Er hat ein starkes Vorurteil gegen Fremde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat ein starkes Vorurteil gegen Fremde.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat einen starken Vorurteil gegen Fremde.",
+							"ok": false
+						},
+						{
+							"answer": "Er ein starkes Vorurteil gegen Fremde hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Rassismus",
+					"summary": "Benachteiligung wegen Herkunft",
+					"explain": {
+						"entryId": "Rassismus",
+						"headword": "Rassismus",
+						"pronunciation": {
+							"display": "ra-SIS-moos",
+							"ipaUK": "/ʁaˈsɪsmʊs/",
+							"ipaUS": "/ʁaˈsɪsmʊs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rassismus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Benachteiligung wegen der Herkunft oder Hautfarbe",
+										"examples": [
+											"Gegen Rassismus muss man etwas tun."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gegen Rassismus muss man etwas tun.",
+							"ok": true
+						},
+						{
+							"answer": "Gegen Rassismen muss man etwas tun.",
+							"ok": false
+						},
+						{
+							"answer": "Gegen Rassismus man muss etwas tun.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Vorschrift",
+					"summary": "feste Regel",
+					"explain": {
+						"entryId": "Vorschrift",
+						"headword": "Vorschrift",
+						"pronunciation": {
+							"display": "FOR-shrift",
+							"ipaUK": "/ˈfoːɐ̯ˌʃʁɪft/",
+							"ipaUS": "/ˈfoːɐ̯ˌʃʁɪft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorschrift",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Regel"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine feste Regel, an die man sich halten muss",
+										"examples": [
+											"Diese Vorschrift gilt für alle Mitarbeiter."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Vorschrift gilt für alle Mitarbeiter.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Vorschrift gilt für alle Mitarbeiter.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Vorschrift für alle Mitarbeiter gilt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Rechte",
+					"summary": "was einem zusteht (Plural)",
+					"explain": {
+						"entryId": "Rechte",
+						"headword": "Rechte",
+						"pronunciation": {
+							"display": "REKH-tuh",
+							"ipaUK": "/ˈʁɛçtə/",
+							"ipaUS": "/ˈʁɛçtə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rechte",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das, was man tun darf oder was einem zusteht (Plural)",
+										"examples": [
+											"Alle Bürger haben die gleichen Rechte."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Alle Bürger haben die gleichen Rechte.",
+							"ok": true
+						},
+						{
+							"answer": "Alle Bürger haben die gleichen Recht.",
+							"ok": false
+						},
+						{
+							"answer": "Alle Bürger die gleichen Rechte haben.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Gesellschaft",
+					"summary": "alle, die zusammenleben",
+					"explain": {
+						"entryId": "Gesellschaft",
+						"headword": "Gesellschaft",
+						"pronunciation": {
+							"display": "guh-ZEL-shaft",
+							"ipaUK": "/ɡəˈzɛlʃaft/",
+							"ipaUS": "/ɡəˈzɛlʃaft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gesellschaft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "alle Menschen, die zusammenleben",
+										"examples": [
+											"Die Gesellschaft verändert sich sehr schnell."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Gesellschaft verändert sich sehr schnell.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gesellschaft verändert sich sehr schnell.",
+							"ok": false
+						},
+						{
+							"answer": "Die Gesellschaft sich sehr schnell verändert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Tradition",
+					"summary": "alter, weitergegebener Brauch",
+					"explain": {
+						"entryId": "Tradition",
+						"headword": "Tradition",
+						"pronunciation": {
+							"display": "tra-di-TSYOHN",
+							"ipaUK": "/tʁadiˈtsi̯oːn/",
+							"ipaUS": "/tʁadiˈtsi̯oːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tradition",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein alter Brauch, der weitergegeben wird",
+										"examples": [
+											"Diese Tradition ist mehrere hundert Jahre alt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Tradition ist mehrere hundert Jahre alt.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Tradition ist mehrere hundert Jahre alt.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Tradition mehrere hundert Jahre alt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Arbeitslosigkeit",
+					"summary": "keine Arbeit haben",
+					"explain": {
+						"entryId": "Arbeitslosigkeit",
+						"headword": "Arbeitslosigkeit",
+						"pronunciation": {
+							"display": "AR-byts-loh-zikh-kite",
+							"ipaUK": "/ˈaʁbaɪ̯tsˌloːzɪçkaɪ̯t/",
+							"ipaUS": "/ˈaʁbaɪ̯tsˌloːzɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Arbeitslosigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Zustand, keine Arbeit zu haben",
+										"examples": [
+											"Die Arbeitslosigkeit ist dieses Jahr gesunken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Arbeitslosigkeit ist dieses Jahr gesunken.",
+							"ok": true
+						},
+						{
+							"answer": "Der Arbeitslosigkeit ist dieses Jahr gesunken.",
+							"ok": false
+						},
+						{
+							"answer": "Die Arbeitslosigkeit dieses Jahr gesunken ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Abwechslung",
+					"summary": "Wechsel; Verschiedenheit",
+					"explain": {
+						"entryId": "Abwechslung",
+						"headword": "Abwechslung",
+						"pronunciation": {
+							"display": "AP-vek-sloong",
+							"ipaUK": "/ˈapvɛkslʊŋ/",
+							"ipaUS": "/ˈapvɛkslʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abwechslung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Wechsel; die Verschiedenheit zur Auflockerung",
+										"examples": [
+											"Der neue Job bietet viel Abwechslung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der neue Job bietet viel Abwechslung.",
+							"ok": true
+						},
+						{
+							"answer": "Der neue Job bietet viel Abwechslungen.",
+							"ok": false
+						},
+						{
+							"answer": "Der neue Job viel Abwechslung bietet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Gewalt",
+					"summary": "Kraft anwenden, um zu schaden",
+					"explain": {
+						"entryId": "Gewalt",
+						"headword": "Gewalt",
+						"pronunciation": {
+							"display": "guh-VALT",
+							"ipaUK": "/ɡəˈvalt/",
+							"ipaUS": "/ɡəˈvalt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gewalt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Anwenden von Kraft, um zu schaden",
+										"examples": [
+											"Gegen häusliche Gewalt gibt es Hilfe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gegen häusliche Gewalt gibt es Hilfe.",
+							"ok": true
+						},
+						{
+							"answer": "Gegen häuslichen Gewalt gibt es Hilfe.",
+							"ok": false
+						},
+						{
+							"answer": "Gegen häusliche Gewalt es gibt Hilfe.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

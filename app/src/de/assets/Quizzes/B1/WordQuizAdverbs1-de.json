@@ -1,0 +1,550 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs1-de",
+	"title": "1. Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "abrupt",
+					"summary": "Adverb: unvermittelt",
+					"explain": {
+						"entryId": "abrupt",
+						"headword": "abrupt",
+						"pronunciation": {
+							"display": "a-PROOPT",
+							"ipaUK": "/aˈpʁʊpt/",
+							"ipaUS": "/aˈpʁʊpt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "abrupt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "unvermittelt und schroff",
+										"examples": [
+											"Das Gespräch endete ganz abrupt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Gespräch endete ganz abrupt.",
+							"ok": true
+						},
+						{
+							"answer": "Das Gespräch endete ganz abrupte.",
+							"ok": false
+						},
+						{
+							"answer": "Das Gespräch ganz abrupt endete.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "absolut",
+					"summary": "Adverb: völlig",
+					"explain": {
+						"entryId": "absolut",
+						"headword": "absolut",
+						"pronunciation": {
+							"display": "ap-zo-LOOT",
+							"ipaUK": "/apzoˈluːt/",
+							"ipaUS": "/apzoˈluːt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "absolut",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "völlig; ohne Einschränkung",
+										"examples": [
+											"Da hast du absolut recht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Da hast du absolut recht.",
+							"ok": true
+						},
+						{
+							"answer": "Da hast du absolute recht.",
+							"ok": false
+						},
+						{
+							"answer": "Da du hast absolut recht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "kaum",
+					"summary": "Adverb: fast nicht",
+					"explain": {
+						"entryId": "kaum",
+						"headword": "kaum",
+						"pronunciation": {
+							"display": "kowm",
+							"ipaUK": "/kaʊ̯m/",
+							"ipaUS": "/kaʊ̯m/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "kaum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "fast nicht",
+										"examples": [
+											"Ich konnte ihn kaum verstehen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich konnte ihn kaum verstehen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich konnte ihn kaume verstehen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich ihn konnte kaum verstehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "bestimmt",
+					"summary": "Adverb: ganz sicher",
+					"explain": {
+						"entryId": "bestimmt",
+						"headword": "bestimmt",
+						"pronunciation": {
+							"display": "buh-SHTIMT",
+							"ipaUK": "/bəˈʃtɪmt/",
+							"ipaUS": "/bəˈʃtɪmt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "bestimmt",
+								"inflectionsLine": null,
+								"synonyms": [
+									"sicherlich"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ganz sicher",
+										"examples": [
+											"Morgen kommt sie bestimmt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Morgen kommt sie bestimmt.",
+							"ok": true
+						},
+						{
+							"answer": "Morgen kommt sie bestimmte.",
+							"ok": false
+						},
+						{
+							"answer": "Morgen sie kommt bestimmt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "vergleichsweise",
+					"summary": "Adverb: im Vergleich",
+					"explain": {
+						"entryId": "vergleichsweise",
+						"headword": "vergleichsweise",
+						"pronunciation": {
+							"display": "fer-GLYKHS-vy-zuh",
+							"ipaUK": "/fɛɐ̯ˈɡlaɪ̯çsˌvaɪ̯zə/",
+							"ipaUS": "/fɛɐ̯ˈɡlaɪ̯çsˌvaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "vergleichsweise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "im Vergleich; verhältnismäßig",
+										"examples": [
+											"Die Miete ist hier vergleichsweise günstig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Miete ist hier vergleichsweise günstig.",
+							"ok": true
+						},
+						{
+							"answer": "Die Miete ist hier vergleichsweises günstig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Miete hier vergleichsweise günstig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "komplett",
+					"summary": "Adverb: ganz und gar",
+					"explain": {
+						"entryId": "komplett",
+						"headword": "komplett",
+						"pronunciation": {
+							"display": "kom-PLET",
+							"ipaUK": "/kɔmˈplɛt/",
+							"ipaUS": "/kɔmˈplɛt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "komplett",
+								"inflectionsLine": null,
+								"synonyms": [
+									"völlig"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ganz und gar",
+										"examples": [
+											"Der Zug war komplett voll."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Zug war komplett voll.",
+							"ok": true
+						},
+						{
+							"answer": "Der Zug war kompletter voll.",
+							"ok": false
+						},
+						{
+							"answer": "Der Zug komplett voll war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "definitiv",
+					"summary": "Adverb: auf jeden Fall",
+					"explain": {
+						"entryId": "definitiv",
+						"headword": "definitiv",
+						"pronunciation": {
+							"display": "de-fi-ni-TEEF",
+							"ipaUK": "/definiˈtiːf/",
+							"ipaUS": "/definiˈtiːf/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "definitiv",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "auf jeden Fall; ohne Zweifel",
+										"examples": [
+											"Das war definitiv ein Fehler."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das war definitiv ein Fehler.",
+							"ok": true
+						},
+						{
+							"answer": "Das war definitive ein Fehler.",
+							"ok": false
+						},
+						{
+							"answer": "Das definitiv war ein Fehler.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "völlig",
+					"summary": "Adverb: ganz, vollständig",
+					"explain": {
+						"entryId": "völlig",
+						"headword": "völlig",
+						"pronunciation": {
+							"display": "FÖ-likh",
+							"ipaUK": "/ˈfœlɪç/",
+							"ipaUS": "/ˈfœlɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "völlig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ganz; vollständig",
+										"examples": [
+											"Ich bin völlig erschöpft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin völlig erschöpft.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin völlige erschöpft.",
+							"ok": false
+						},
+						{
+							"answer": "Ich völlig bin erschöpft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "äußerst",
+					"summary": "Adverb: in hohem Maße",
+					"explain": {
+						"entryId": "äußerst",
+						"headword": "äußerst",
+						"pronunciation": {
+							"display": "OY-suhst",
+							"ipaUK": "/ˈɔɪ̯sɐst/",
+							"ipaUS": "/ˈɔɪ̯sɐst/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "äußerst",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sehr stark; in hohem Maße",
+										"examples": [
+											"Der Film war äußerst spannend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Film war äußerst spannend.",
+							"ok": true
+						},
+						{
+							"answer": "Der Film war äußerste spannend.",
+							"ok": false
+						},
+						{
+							"answer": "Der Film äußerst spannend war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "ziemlich",
+					"summary": "Adverb: recht, relativ",
+					"explain": {
+						"entryId": "ziemlich",
+						"headword": "ziemlich",
+						"pronunciation": {
+							"display": "TSEEM-likh",
+							"ipaUK": "/ˈtsiːmlɪç/",
+							"ipaUS": "/ˈtsiːmlɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "ziemlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "recht; relativ stark",
+										"examples": [
+											"Es ist heute ziemlich kalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Es ist heute ziemlich kalt.",
+							"ok": true
+						},
+						{
+							"answer": "Es ist heute ziemliche kalt.",
+							"ok": false
+						},
+						{
+							"answer": "Es heute ist ziemlich kalt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

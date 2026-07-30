@@ -1,0 +1,122 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial2-de",
+	"title": "Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "vorschlagen",
+					"summary": "eine Idee nennen",
+					"explain": {
+						"entryId": "vorschlagen",
+						"headword": "vorschlagen",
+						"pronunciation": {
+							"display": "FOR-shlah-gn",
+							"ipaUK": "/ˈfoːɐ̯ˌʃlaːɡn̩/",
+							"ipaUS": "/ˈfoːɐ̯ˌʃlaːɡn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "vorschlagen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Idee nennen",
+										"examples": [
+											"Ich schlage einen Spaziergang vor."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schlage einen Spaziergang vor.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schlage ein Spaziergang vor.",
+							"ok": false
+						},
+						{
+							"answer": "Ich schlage vor einen Spaziergang.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "danken",
+					"summary": "jemandem Dank sagen",
+					"explain": {
+						"entryId": "danken",
+						"headword": "danken",
+						"pronunciation": {
+							"display": "DAN-kn",
+							"ipaUK": "/ˈdaŋkn̩/",
+							"ipaUS": "/ˈdaŋkn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Dativ)",
+								"headwordLine": "danken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemandem Dank sagen",
+										"examples": [
+											"Ich danke dir für die Hilfe."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich danke dir für die Hilfe.",
+							"ok": true
+						},
+						{
+							"answer": "Ich danke dich für die Hilfe.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir danke für die Hilfe.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

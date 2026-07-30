@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial1-de",
+	"title": "1. Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Missbrauch",
+					"summary": "falsche/schädliche Behandlung",
+					"explain": {
+						"entryId": "Missbrauch",
+						"headword": "Missbrauch",
+						"pronunciation": {
+							"display": "MIS-browkh",
+							"ipaUK": "/ˈmɪsˌbʁaʊ̯x/",
+							"ipaUS": "/ˈmɪsˌbʁaʊ̯x/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Missbrauch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die falsche oder schädliche Behandlung von jemandem",
+										"examples": [
+											"Der Missbrauch von Macht ist gefährlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Missbrauch von Macht ist gefährlich.",
+							"ok": true
+						},
+						{
+							"answer": "Die Missbrauch von Macht ist gefährlich.",
+							"ok": false
+						},
+						{
+							"answer": "Der Missbrauch von Macht gefährlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Asyl",
+					"summary": "Schutz für verfolgte Menschen",
+					"explain": {
+						"entryId": "Asyl",
+						"headword": "Asyl",
+						"pronunciation": {
+							"display": "a-ZÜL",
+							"ipaUK": "/aˈzyːl/",
+							"ipaUS": "/aˈzyːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Asyl",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Schutz für verfolgte Menschen in einem anderen Land",
+										"examples": [
+											"Viele Flüchtlinge bitten um Asyl."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele Flüchtlinge bitten um Asyl.",
+							"ok": true
+						},
+						{
+							"answer": "Viele Flüchtlinge bitten um Asyle.",
+							"ok": false
+						},
+						{
+							"answer": "Viele Flüchtlinge um Asyl bitten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Gemeinde",
+					"summary": "Gruppe an einem Ort; Verwaltung",
+					"explain": {
+						"entryId": "Gemeinde",
+						"headword": "Gemeinde",
+						"pronunciation": {
+							"display": "guh-MINE-duh",
+							"ipaUK": "/ɡəˈmaɪ̯ndə/",
+							"ipaUS": "/ɡəˈmaɪ̯ndə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gemeinde",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Gruppe von Menschen an einem Ort; die kommunale Verwaltung",
+										"examples": [
+											"Die Gemeinde organisiert ein Sommerfest."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Gemeinde organisiert ein Sommerfest.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gemeinde organisiert ein Sommerfest.",
+							"ok": false
+						},
+						{
+							"answer": "Die Gemeinde ein Sommerfest organisiert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Verbrechen",
+					"summary": "schwere gesetzeswidrige Tat",
+					"explain": {
+						"entryId": "Verbrechen",
+						"headword": "Verbrechen",
+						"pronunciation": {
+							"display": "fer-BRE-khn",
+							"ipaUK": "/fɛɐ̯ˈbʁɛçn̩/",
+							"ipaUS": "/fɛɐ̯ˈbʁɛçn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verbrechen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine schwere, gesetzeswidrige Tat",
+										"examples": [
+											"Das Verbrechen wurde schnell aufgeklärt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Verbrechen wurde schnell aufgeklärt.",
+							"ok": true
+						},
+						{
+							"answer": "Der Verbrechen wurde schnell aufgeklärt.",
+							"ok": false
+						},
+						{
+							"answer": "Das Verbrechen schnell aufgeklärt wurde.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Kultur",
+					"summary": "Lebensweise, Kunst, Bräuche",
+					"explain": {
+						"entryId": "Kultur",
+						"headword": "Kultur",
+						"pronunciation": {
+							"display": "kool-TOOR",
+							"ipaUK": "/kʊlˈtuːɐ̯/",
+							"ipaUS": "/kʊlˈtuːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kultur",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Lebensweise, Kunst und Bräuche einer Gruppe",
+										"examples": [
+											"Die japanische Kultur fasziniert mich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die japanische Kultur fasziniert mich.",
+							"ok": true
+						},
+						{
+							"answer": "Der japanische Kultur fasziniert mich.",
+							"ok": false
+						},
+						{
+							"answer": "Die japanische Kultur mich fasziniert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Diskriminierung",
+					"summary": "unfaire Benachteiligung",
+					"explain": {
+						"entryId": "Diskriminierung",
+						"headword": "Diskriminierung",
+						"pronunciation": {
+							"display": "dis-kri-mi-NEE-roong",
+							"ipaUK": "/dɪskʁimiˈniːʁʊŋ/",
+							"ipaUS": "/dɪskʁimiˈniːʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Diskriminierung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die unfaire Benachteiligung von Menschen",
+										"examples": [
+											"Diskriminierung am Arbeitsplatz ist verboten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diskriminierung am Arbeitsplatz ist verboten.",
+							"ok": true
+						},
+						{
+							"answer": "Der Diskriminierung am Arbeitsplatz ist verboten.",
+							"ok": false
+						},
+						{
+							"answer": "Diskriminierung am Arbeitsplatz verboten ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Vielfalt",
+					"summary": "große Verschiedenheit",
+					"explain": {
+						"entryId": "Vielfalt",
+						"headword": "Vielfalt",
+						"pronunciation": {
+							"display": "FEEL-falt",
+							"ipaUK": "/ˈfiːlfalt/",
+							"ipaUS": "/ˈfiːlfalt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vielfalt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine große Verschiedenheit; viele Arten",
+										"examples": [
+											"Die kulturelle Vielfalt bereichert die Stadt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die kulturelle Vielfalt bereichert die Stadt.",
+							"ok": true
+						},
+						{
+							"answer": "Der kulturelle Vielfalt bereichert die Stadt.",
+							"ok": false
+						},
+						{
+							"answer": "Die kulturelle Vielfalt die Stadt bereichert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Gleichheit",
+					"summary": "alle werden gleich behandelt",
+					"explain": {
+						"entryId": "Gleichheit",
+						"headword": "Gleichheit",
+						"pronunciation": {
+							"display": "GLYKH-hite",
+							"ipaUK": "/ˈɡlaɪ̯çhaɪ̯t/",
+							"ipaUS": "/ˈɡlaɪ̯çhaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gleichheit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Zustand, dass alle gleich behandelt werden",
+										"examples": [
+											"Die Verfassung garantiert die Gleichheit aller."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Verfassung garantiert die Gleichheit aller.",
+							"ok": true
+						},
+						{
+							"answer": "Die Verfassung garantiert der Gleichheit aller.",
+							"ok": false
+						},
+						{
+							"answer": "Die Verfassung die Gleichheit aller garantiert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Gerechtigkeit",
+					"summary": "faires, gerechtes Handeln",
+					"explain": {
+						"entryId": "Gerechtigkeit",
+						"headword": "Gerechtigkeit",
+						"pronunciation": {
+							"display": "guh-REKH-tikh-kite",
+							"ipaUK": "/ɡəˈʁɛçtɪçkaɪ̯t/",
+							"ipaUS": "/ɡəˈʁɛçtɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gerechtigkeit",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Fairness"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "faires und gerechtes Handeln",
+										"examples": [
+											"Die Menschen kämpfen für mehr Gerechtigkeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Menschen kämpfen für mehr Gerechtigkeit.",
+							"ok": true
+						},
+						{
+							"answer": "Die Menschen kämpfen für mehr Gerechtigkeiten.",
+							"ok": false
+						},
+						{
+							"answer": "Die Menschen für mehr Gerechtigkeit kämpfen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Freiheit",
+					"summary": "Recht, selbst zu entscheiden",
+					"explain": {
+						"entryId": "Freiheit",
+						"headword": "Freiheit",
+						"pronunciation": {
+							"display": "FRY-hite",
+							"ipaUK": "/ˈfʁaɪ̯haɪ̯t/",
+							"ipaUS": "/ˈfʁaɪ̯haɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Freiheit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Recht, selbst zu entscheiden und zu handeln",
+										"examples": [
+											"Die Freiheit der Presse ist wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Freiheit der Presse ist wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Freiheit der Presse ist wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Freiheit der Presse wichtig ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

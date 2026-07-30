@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTechnology2-de",
+	"title": "2. Technology",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "elektronisch",
+					"summary": "Adjektiv: mit Elektronik",
+					"explain": {
+						"entryId": "elektronisch",
+						"headword": "elektronisch",
+						"pronunciation": {
+							"display": "e-lek-TROH-nish",
+							"ipaUK": "/elɛkˈtʁoːnɪʃ/",
+							"ipaUS": "/elɛkˈtʁoːnɪʃ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "elektronisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit Elektronik arbeitend",
+										"examples": [
+											"Die Rechnung kommt heute elektronisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Rechnung kommt heute elektronisch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Rechnung kommt heute elektronische.",
+							"ok": false
+						},
+						{
+							"answer": "Die Rechnung heute elektronisch kommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "E-Mail",
+					"summary": "Nachricht über das Internet",
+					"explain": {
+						"entryId": "E-Mail",
+						"headword": "E-Mail",
+						"pronunciation": {
+							"display": "EE-mayl",
+							"ipaUK": "/ˈiːmɛɪ̯l/",
+							"ipaUS": "/ˈiːmɛɪ̯l/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "E-Mail",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Nachricht über das Internet",
+										"examples": [
+											"Ich schreibe dir gleich eine E-Mail."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schreibe dir gleich eine E-Mail.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schreibe dir gleich einen E-Mail.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir gleich eine E-Mail schreibe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Datei",
+					"summary": "Sammlung von Daten am Computer",
+					"explain": {
+						"entryId": "Datei",
+						"headword": "Datei",
+						"pronunciation": {
+							"display": "da-TYE",
+							"ipaUK": "/daˈtaɪ̯/",
+							"ipaUS": "/daˈtaɪ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Datei",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Sammlung von Daten am Computer",
+										"examples": [
+											"Die Datei ist zu groß zum Senden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Datei ist zu groß zum Senden.",
+							"ok": true
+						},
+						{
+							"answer": "Der Datei ist zu groß zum Senden.",
+							"ok": false
+						},
+						{
+							"answer": "Die Datei zu groß zum Senden ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Gadget",
+					"summary": "kleines technisches Gerät",
+					"explain": {
+						"entryId": "Gadget",
+						"headword": "Gadget",
+						"pronunciation": {
+							"display": "GED-zhet",
+							"ipaUK": "/ˈɡɛdʒɛt/",
+							"ipaUS": "/ˈɡɛdʒɛt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gadget",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein kleines, praktisches technisches Gerät",
+										"examples": [
+											"Er kauft sich jedes neue Gadget."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er kauft sich jedes neue Gadget.",
+							"ok": true
+						},
+						{
+							"answer": "Er kauft sich jeder neue Gadget.",
+							"ok": false
+						},
+						{
+							"answer": "Er sich jedes neue Gadget kauft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Startseite",
+					"summary": "erste Seite einer Webseite",
+					"explain": {
+						"entryId": "Startseite",
+						"headword": "Startseite",
+						"pronunciation": {
+							"display": "SHTART-zy-tuh",
+							"ipaUK": "/ˈʃtaʁtˌzaɪ̯tə/",
+							"ipaUS": "/ˈʃtaʁtˌzaɪ̯tə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Startseite",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Homepage"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die erste Seite einer Webseite",
+										"examples": [
+											"Auf der Startseite findest du das Menü."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf der Startseite findest du das Menü.",
+							"ok": true
+						},
+						{
+							"answer": "Auf dem Startseite findest du das Menü.",
+							"ok": false
+						},
+						{
+							"answer": "Auf der Startseite du findest das Menü.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Posteingang",
+					"summary": "Ordner für neue E-Mails",
+					"explain": {
+						"entryId": "Posteingang",
+						"headword": "Posteingang",
+						"pronunciation": {
+							"display": "POST-ine-gang",
+							"ipaUK": "/ˈpɔstˌʔaɪ̯nɡaŋ/",
+							"ipaUS": "/ˈpɔstˌʔaɪ̯nɡaŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Posteingang",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Ordner für neue E-Mails",
+										"examples": [
+											"In meinem Posteingang sind zehn neue Mails."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In meinem Posteingang sind zehn neue Mails.",
+							"ok": true
+						},
+						{
+							"answer": "In meiner Posteingang sind zehn neue Mails.",
+							"ok": false
+						},
+						{
+							"answer": "In meinem Posteingang zehn neue Mails sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Internet",
+					"summary": "weltweites Computernetz",
+					"explain": {
+						"entryId": "Internet",
+						"headword": "Internet",
+						"pronunciation": {
+							"display": "IN-tuh-net",
+							"ipaUK": "/ˈɪntɐnɛt/",
+							"ipaUS": "/ˈɪntɐnɛt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Internet",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das weltweite Netz aus Computern",
+										"examples": [
+											"Ohne Internet kann ich nicht arbeiten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ohne Internet kann ich nicht arbeiten.",
+							"ok": true
+						},
+						{
+							"answer": "Ohne Internets kann ich nicht arbeiten.",
+							"ok": false
+						},
+						{
+							"answer": "Ohne Internet ich kann nicht arbeiten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Nachricht",
+					"summary": "Mitteilung an jemanden",
+					"explain": {
+						"entryId": "Nachricht",
+						"headword": "Nachricht",
+						"pronunciation": {
+							"display": "NAHKH-rikht",
+							"ipaUK": "/ˈnaːxʁɪçt/",
+							"ipaUS": "/ˈnaːxʁɪçt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nachricht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Mitteilung an jemanden",
+										"examples": [
+											"Ich habe dir eine wichtige Nachricht geschickt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe dir eine wichtige Nachricht geschickt.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe dir einen wichtigen Nachricht geschickt.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir eine wichtige Nachricht geschickt habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Netzwerk",
+					"summary": "verbundene Computer/Menschen",
+					"explain": {
+						"entryId": "Netzwerk",
+						"headword": "Netzwerk",
+						"pronunciation": {
+							"display": "NETS-verk",
+							"ipaUK": "/ˈnɛtsvɛʁk/",
+							"ipaUS": "/ˈnɛtsvɛʁk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Netzwerk",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mehrere verbundene Computer oder Menschen",
+										"examples": [
+											"Das Netzwerk verbindet alle Computer im Büro."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Netzwerk verbindet alle Computer im Büro.",
+							"ok": true
+						},
+						{
+							"answer": "Der Netzwerk verbindet alle Computer im Büro.",
+							"ok": false
+						},
+						{
+							"answer": "Das Netzwerk alle Computer im Büro verbindet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "online",
+					"summary": "Adjektiv: mit dem Internet verbunden",
+					"explain": {
+						"entryId": "online",
+						"headword": "online",
+						"pronunciation": {
+							"display": "ON-line",
+							"ipaUK": "/ˈɔnlaɪ̯n/",
+							"ipaUS": "/ˈɔnlaɪ̯n/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "online",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "mit dem Internet verbunden",
+										"examples": [
+											"Ich bin den ganzen Tag online."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin den ganzen Tag online.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin den ganzen Tag onlines.",
+							"ok": false
+						},
+						{
+							"answer": "Ich den ganzen Tag bin online.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

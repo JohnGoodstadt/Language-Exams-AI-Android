@@ -1,0 +1,336 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizComplexSentences1-de",
+	"title": "1. Complex Sentences",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "nachdem",
+					"summary": "Zeit: nachdem … (Verb am Ende)",
+					"explain": {
+						"entryId": "nachdem",
+						"headword": "nachdem",
+						"pronunciation": {
+							"display": "nakh-DAYM",
+							"ipaUK": "/naːxˈdeːm/",
+							"ipaUS": "/naːxˈdeːm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "nachdem",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion (Zeit): erst A, dann B; Verb am Ende",
+										"examples": [
+											"Nachdem wir gegessen hatten, gingen wir ins Kino."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nachdem wir gegessen hatten, gingen wir ins Kino.",
+							"ok": true
+						},
+						{
+							"answer": "Nachdem wir hatten gegessen, gingen wir ins Kino.",
+							"ok": false
+						},
+						{
+							"answer": "Nachdem wir gegessen hatten, wir gingen ins Kino.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "obwohl",
+					"summary": "Gegensatz: obwohl … (Verb am Ende)",
+					"explain": {
+						"entryId": "obwohl",
+						"headword": "obwohl",
+						"pronunciation": {
+							"display": "op-VOHL",
+							"ipaUK": "/ɔpˈvoːl/",
+							"ipaUS": "/ɔpˈvoːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "obwohl",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion (Gegensatz); Verb am Ende",
+										"examples": [
+											"Obwohl er krank war, ging er zur Arbeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Obwohl er krank war, ging er zur Arbeit.",
+							"ok": true
+						},
+						{
+							"answer": "Obwohl er war krank, ging er zur Arbeit.",
+							"ok": false
+						},
+						{
+							"answer": "Obwohl er krank war, er ging zur Arbeit.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "weil",
+					"summary": "Grund: weil … (Verb am Ende)",
+					"explain": {
+						"entryId": "weil",
+						"headword": "weil",
+						"pronunciation": {
+							"display": "vile",
+							"ipaUK": "/vaɪ̯l/",
+							"ipaUS": "/vaɪ̯l/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "weil",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion (Grund); Verb am Ende",
+										"examples": [
+											"Sie freut sich, weil sie bestanden hat."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie freut sich, weil sie bestanden hat.",
+							"ok": true
+						},
+						{
+							"answer": "Sie freut sich, weil sie hat bestanden.",
+							"ok": false
+						},
+						{
+							"answer": "Sie freut sich, weil hat sie bestanden.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "bevor",
+					"summary": "Zeit: bevor … (Verb am Ende)",
+					"explain": {
+						"entryId": "bevor",
+						"headword": "bevor",
+						"pronunciation": {
+							"display": "buh-FOR",
+							"ipaUK": "/bəˈfoːɐ̯/",
+							"ipaUS": "/bəˈfoːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "bevor",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion (Zeit): A vor B; Verb am Ende",
+										"examples": [
+											"Bevor ich einkaufe, schreibe ich eine Liste."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bevor ich einkaufe, schreibe ich eine Liste.",
+							"ok": true
+						},
+						{
+							"answer": "Bevor ich einkaufe, ich schreibe eine Liste.",
+							"ok": false
+						},
+						{
+							"answer": "Bevor einkaufe ich, schreibe ich eine Liste.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "auch wenn",
+					"summary": "auch wenn … (Verb am Ende)",
+					"explain": {
+						"entryId": "auch wenn",
+						"headword": "auch wenn",
+						"pronunciation": {
+							"display": "owkh ven",
+							"ipaUK": "/aʊ̯x vɛn/",
+							"ipaUS": "/aʊ̯x vɛn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "auch wenn",
+								"inflectionsLine": null,
+								"synonyms": [
+									"obwohl"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion (Gegensatz/Bedingung); Verb am Ende",
+										"examples": [
+											"Auch wenn es teuer ist, kaufe ich es."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auch wenn es teuer ist, kaufe ich es.",
+							"ok": true
+						},
+						{
+							"answer": "Auch wenn es teuer ist, ich kaufe es.",
+							"ok": false
+						},
+						{
+							"answer": "Auch wenn es ist teuer, kaufe ich es.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "wenn",
+					"summary": "Bedingung: wenn … (Verb am Ende)",
+					"explain": {
+						"entryId": "wenn",
+						"headword": "wenn",
+						"pronunciation": {
+							"display": "ven",
+							"ipaUK": "/vɛn/",
+							"ipaUS": "/vɛn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "wenn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion (Bedingung); Verb am Ende",
+										"examples": [
+											"Wenn es regnet, bleiben wir zu Hause."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wenn es regnet, bleiben wir zu Hause.",
+							"ok": true
+						},
+						{
+							"answer": "Wenn es regnet, wir bleiben zu Hause.",
+							"ok": false
+						},
+						{
+							"answer": "Wenn regnet es, bleiben wir zu Hause.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

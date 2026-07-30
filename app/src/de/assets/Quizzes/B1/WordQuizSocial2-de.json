@@ -1,0 +1,550 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial2-de",
+	"title": "2. Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Erbe",
+					"summary": "was von früher bleibt",
+					"explain": {
+						"entryId": "Erbe",
+						"headword": "Erbe",
+						"pronunciation": {
+							"display": "ER-buh",
+							"ipaUK": "/ˈɛʁbə/",
+							"ipaUS": "/ˈɛʁbə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erbe",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das, was von früheren Generationen bleibt (Kultur, Werte)",
+										"examples": [
+											"Das kulturelle Erbe muss geschützt werden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das kulturelle Erbe muss geschützt werden.",
+							"ok": true
+						},
+						{
+							"answer": "Der kulturelle Erbe muss geschützt werden.",
+							"ok": false
+						},
+						{
+							"answer": "Das kulturelle Erbe geschützt werden muss.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Obdachlosigkeit",
+					"summary": "keine Wohnung haben",
+					"explain": {
+						"entryId": "Obdachlosigkeit",
+						"headword": "Obdachlosigkeit",
+						"pronunciation": {
+							"display": "OP-dakh-loh-zikh-kite",
+							"ipaUK": "/ˈɔpdaxˌloːzɪçkaɪ̯t/",
+							"ipaUS": "/ˈɔpdaxˌloːzɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Obdachlosigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Zustand, keine Wohnung zu haben",
+										"examples": [
+											"Die Stadt bekämpft die Obdachlosigkeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Stadt bekämpft die Obdachlosigkeit.",
+							"ok": true
+						},
+						{
+							"answer": "Die Stadt bekämpft der Obdachlosigkeit.",
+							"ok": false
+						},
+						{
+							"answer": "Die Stadt die Obdachlosigkeit bekämpft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Einwanderung",
+					"summary": "Kommen in ein neues Land",
+					"explain": {
+						"entryId": "Einwanderung",
+						"headword": "Einwanderung",
+						"pronunciation": {
+							"display": "INE-van-duh-roong",
+							"ipaUK": "/ˈaɪ̯nˌvandəʁʊŋ/",
+							"ipaUS": "/ˈaɪ̯nˌvandəʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einwanderung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Zuwanderung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Kommen von Menschen in ein neues Land",
+										"examples": [
+											"Die Einwanderung hat viele Ursachen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Einwanderung hat viele Ursachen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Einwanderung hat viele Ursachen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Einwanderung viele Ursachen hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Inklusion",
+					"summary": "alle einbeziehen",
+					"explain": {
+						"entryId": "Inklusion",
+						"headword": "Inklusion",
+						"pronunciation": {
+							"display": "in-kloo-ZYOHN",
+							"ipaUK": "/ɪnkluˈzi̯oːn/",
+							"ipaUS": "/ɪnkluˈzi̯oːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Inklusion",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Einbeziehen aller Menschen in die Gesellschaft",
+										"examples": [
+											"Die Schule setzt auf Inklusion."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Schule setzt auf Inklusion.",
+							"ok": true
+						},
+						{
+							"answer": "Die Schule setzt auf Inklusionen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Schule auf Inklusion setzt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Justiz",
+					"summary": "Rechtssystem und Gerichte",
+					"explain": {
+						"entryId": "Justiz",
+						"headword": "Justiz",
+						"pronunciation": {
+							"display": "yoos-TEETS",
+							"ipaUK": "/jʊsˈtiːts/",
+							"ipaUS": "/jʊsˈtiːts/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Justiz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Rechtssystem und die Gerichte",
+										"examples": [
+											"Die Justiz arbeitet unabhängig von der Politik."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Justiz arbeitet unabhängig von der Politik.",
+							"ok": true
+						},
+						{
+							"answer": "Der Justiz arbeitet unabhängig von der Politik.",
+							"ok": false
+						},
+						{
+							"answer": "Die Justiz unabhängig von der Politik arbeitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Gesetzgebung",
+					"summary": "das Machen von Gesetzen",
+					"explain": {
+						"entryId": "Gesetzgebung",
+						"headword": "Gesetzgebung",
+						"pronunciation": {
+							"display": "guh-ZETS-gay-boong",
+							"ipaUK": "/ɡəˈzɛtsˌɡeːbʊŋ/",
+							"ipaUS": "/ɡəˈzɛtsˌɡeːbʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gesetzgebung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Machen von Gesetzen",
+										"examples": [
+											"Die Gesetzgebung liegt beim Parlament."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Gesetzgebung liegt beim Parlament.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gesetzgebung liegt beim Parlament.",
+							"ok": false
+						},
+						{
+							"answer": "Die Gesetzgebung beim Parlament liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Selbstbestimmung",
+					"summary": "frei über sich bestimmen",
+					"explain": {
+						"entryId": "Selbstbestimmung",
+						"headword": "Selbstbestimmung",
+						"pronunciation": {
+							"display": "ZELPST-buh-shtim-oong",
+							"ipaUK": "/ˈzɛlpstbəˌʃtɪmʊŋ/",
+							"ipaUS": "/ˈzɛlpstbəˌʃtɪmʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Selbstbestimmung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Recht, frei über sich selbst zu bestimmen",
+										"examples": [
+											"Jeder Mensch hat ein Recht auf Selbstbestimmung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Jeder Mensch hat ein Recht auf Selbstbestimmung.",
+							"ok": true
+						},
+						{
+							"answer": "Jeder Mensch hat ein Recht auf Selbstbestimmungen.",
+							"ok": false
+						},
+						{
+							"answer": "Jeder Mensch ein Recht auf Selbstbestimmung hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Migrant",
+					"summary": "Person, die ins Land zieht",
+					"explain": {
+						"entryId": "Migrant",
+						"headword": "Migrant",
+						"pronunciation": {
+							"display": "mi-GRANT",
+							"ipaUK": "/miˈɡʁant/",
+							"ipaUS": "/miˈɡʁant/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Migrant",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Migrantin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die in ein anderes Land zieht",
+										"examples": [
+											"Der Migrant lernt schnell die neue Sprache."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Migrant lernt schnell die neue Sprache.",
+							"ok": true
+						},
+						{
+							"answer": "Die Migrant lernt schnell die neue Sprache.",
+							"ok": false
+						},
+						{
+							"answer": "Der Migrant schnell die neue Sprache lernt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Nachbarschaft",
+					"summary": "die Gegend/die Nachbarn",
+					"explain": {
+						"entryId": "Nachbarschaft",
+						"headword": "Nachbarschaft",
+						"pronunciation": {
+							"display": "NAKH-bar-shaft",
+							"ipaUK": "/ˈnaxbaːɐ̯ʃaft/",
+							"ipaUS": "/ˈnaxbaːɐ̯ʃaft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nachbarschaft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Gegend, in der man wohnt; die Nachbarn",
+										"examples": [
+											"In unserer Nachbarschaft helfen sich alle."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In unserer Nachbarschaft helfen sich alle.",
+							"ok": true
+						},
+						{
+							"answer": "In unserem Nachbarschaft helfen sich alle.",
+							"ok": false
+						},
+						{
+							"answer": "In unserer Nachbarschaft sich alle helfen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Politik",
+					"summary": "Handeln in öffentlichen Fragen",
+					"explain": {
+						"entryId": "Politik",
+						"headword": "Politik",
+						"pronunciation": {
+							"display": "po-li-TEEK",
+							"ipaUK": "/poliˈtiːk/",
+							"ipaUS": "/poliˈtiːk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Politik",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Grundsätze und das Handeln in öffentlichen Fragen",
+										"examples": [
+											"Die Politik der Regierung ist umstritten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Politik der Regierung ist umstritten.",
+							"ok": true
+						},
+						{
+							"answer": "Der Politik der Regierung ist umstritten.",
+							"ok": false
+						},
+						{
+							"answer": "Die Politik der Regierung umstritten ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

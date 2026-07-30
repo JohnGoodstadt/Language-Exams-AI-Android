@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPatterns2-de",
+	"title": "Patterns",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "bestehen auf",
+					"summary": "bestehen auf + Dativ",
+					"explain": {
+						"entryId": "bestehen auf",
+						"headword": "bestehen auf",
+						"pronunciation": {
+							"display": "buh-SHTAY-uhn owf",
+							"ipaUK": "/bəˈʃteːən aʊ̯f/",
+							"ipaUS": "/bəˈʃteːən aʊ̯f/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb + Präposition",
+								"grammarType": "Verb + Präposition (+ Dativ)",
+								"headwordLine": "bestehen auf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb mit fester Präposition: auf etwas bestehen",
+										"examples": [
+											"Er besteht auf seinem Recht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er besteht auf seinem Recht.",
+							"ok": true
+						},
+						{
+							"answer": "Er besteht auf sein Recht.",
+							"ok": false
+						},
+						{
+							"answer": "Er besteht seinem Recht auf.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "zuhören",
+					"summary": "jemandem zuhören (Dativ, trennbar)",
+					"explain": {
+						"entryId": "zuhören",
+						"headword": "zuhören",
+						"pronunciation": {
+							"display": "TSOO-hö-run",
+							"ipaUK": "/ˈtsuːˌhøːʁən/",
+							"ipaUS": "/ˈtsuːˌhøːʁən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar, + Dativ)",
+								"headwordLine": "zuhören",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "trennbares Verb mit Dativ: jemandem zuhören",
+										"examples": [
+											"Die Schüler hören dem Lehrer zu."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Schüler hören dem Lehrer zu.",
+							"ok": true
+						},
+						{
+							"answer": "Die Schüler hören den Lehrer zu.",
+							"ok": false
+						},
+						{
+							"answer": "Die Schüler zuhören dem Lehrer.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "nötig",
+					"summary": "nötig; 'es ist nötig, dass …'",
+					"explain": {
+						"entryId": "nötig",
+						"headword": "nötig",
+						"pronunciation": {
+							"display": "NÖ-tikh",
+							"ipaUK": "/ˈnøːtɪç/",
+							"ipaUS": "/ˈnøːtɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "nötig",
+								"inflectionsLine": null,
+								"synonyms": [
+									"notwendig"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv, oft mit 'es ist nötig, dass …'",
+										"examples": [
+											"Es ist nötig, dass wir jetzt gehen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Es ist nötig, dass wir jetzt gehen.",
+							"ok": true
+						},
+						{
+							"answer": "Es ist nötig, dass wir gehen jetzt.",
+							"ok": false
+						},
+						{
+							"answer": "Es ist nötige, dass wir jetzt gehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "spielen",
+					"summary": "spielen (+ Akkusativ)",
+					"explain": {
+						"entryId": "spielen",
+						"headword": "spielen",
+						"pronunciation": {
+							"display": "SHPEE-ln",
+							"ipaUK": "/ˈʃpiːln̩/",
+							"ipaUS": "/ˈʃpiːln̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Akkusativ)",
+								"headwordLine": "spielen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb mit Akkusativ oder Instrument",
+										"examples": [
+											"Am Abend spiele ich gern Klavier."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Abend spiele ich gern Klavier.",
+							"ok": true
+						},
+						{
+							"answer": "Am Abend spiele ich gern Klaviers.",
+							"ok": false
+						},
+						{
+							"answer": "Am Abend ich spiele gern Klavier.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "lesen",
+					"summary": "lesen + Akkusativ",
+					"explain": {
+						"entryId": "lesen",
+						"headword": "lesen",
+						"pronunciation": {
+							"display": "LAY-zn",
+							"ipaUK": "/ˈleːzn̩/",
+							"ipaUS": "/ˈleːzn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Akkusativ)",
+								"headwordLine": "lesen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb mit Akkusativ-Objekt",
+										"examples": [
+											"Jeden Abend lese ich ein Buch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Jeden Abend lese ich ein Buch.",
+							"ok": true
+						},
+						{
+							"answer": "Jeden Abend lese ich einen Buch.",
+							"ok": false
+						},
+						{
+							"answer": "Jeden Abend ich lese ein Buch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "empfehlen",
+					"summary": "jemandem etwas empfehlen",
+					"explain": {
+						"entryId": "empfehlen",
+						"headword": "empfehlen",
+						"pronunciation": {
+							"display": "emp-FAY-lun",
+							"ipaUK": "/ɛmˈpfeːlən/",
+							"ipaUS": "/ɛmˈpfeːlən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Dativ + Akkusativ)",
+								"headwordLine": "empfehlen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb: jemandem etwas empfehlen",
+										"examples": [
+											"Ich empfehle dir dieses Restaurant."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich empfehle dir dieses Restaurant.",
+							"ok": true
+						},
+						{
+							"answer": "Ich empfehle dich dieses Restaurant.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir dieses Restaurant empfehle.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "laufen",
+					"summary": "laufen (Bewegung)",
+					"explain": {
+						"entryId": "laufen",
+						"headword": "laufen",
+						"pronunciation": {
+							"display": "LOW-fn",
+							"ipaUK": "/ˈlaʊ̯fn̩/",
+							"ipaUS": "/ˈlaʊ̯fn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Bewegung)",
+								"headwordLine": "laufen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb der Bewegung (Perfekt mit sein)",
+										"examples": [
+											"Jeden Morgen laufe ich im Park."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Jeden Morgen laufe ich im Park.",
+							"ok": true
+						},
+						{
+							"answer": "Jeden Morgen läufst ich im Park.",
+							"ok": false
+						},
+						{
+							"answer": "Jeden Morgen ich laufe im Park.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "anfangen",
+					"summary": "anfangen (trennbar)",
+					"explain": {
+						"entryId": "anfangen",
+						"headword": "anfangen",
+						"pronunciation": {
+							"display": "AN-fang-uhn",
+							"ipaUK": "/ˈanˌfaŋən/",
+							"ipaUS": "/ˈanˌfaŋən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "anfangen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "trennbares Verb: (mit etwas) anfangen",
+										"examples": [
+											"Der Film fängt um acht Uhr an."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Film fängt um acht Uhr an.",
+							"ok": true
+						},
+						{
+							"answer": "Der Film anfängt um acht Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Der Film fängt um acht Uhr auf.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "studieren",
+					"summary": "studieren + Fach",
+					"explain": {
+						"entryId": "studieren",
+						"headword": "studieren",
+						"pronunciation": {
+							"display": "shtoo-DEE-run",
+							"ipaUK": "/ʃtuˈdiːʁən/",
+							"ipaUS": "/ʃtuˈdiːʁən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Fach)",
+								"headwordLine": "studieren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb: ein Fach an der Universität studieren",
+										"examples": [
+											"Meine Schwester studiert Medizin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Schwester studiert Medizin.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Schwester studieren Medizin.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Schwester Medizin studiert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "vorschlagen",
+					"summary": "vorschlagen, dass … (trennbar)",
+					"explain": {
+						"entryId": "vorschlagen",
+						"headword": "vorschlagen",
+						"pronunciation": {
+							"display": "FOR-shlah-gn",
+							"ipaUK": "/ˈfoːɐ̯ˌʃlaːɡn̩/",
+							"ipaUS": "/ˈfoːɐ̯ˌʃlaːɡn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "vorschlagen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "trennbares Verb: 'vorschlagen, dass …'",
+										"examples": [
+											"Ich schlage vor, dass wir zusammen lernen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schlage vor, dass wir zusammen lernen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schlage vor, dass wir lernen zusammen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich vorschlage, dass wir zusammen lernen.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

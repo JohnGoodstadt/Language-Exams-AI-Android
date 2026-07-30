@@ -1,0 +1,440 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizinandbigquickly5-de",
+	"title": "in and big quickly",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "groß",
+					"summary": "Adjektiv: von großer Höhe",
+					"explain": {
+						"entryId": "groß",
+						"headword": "groß",
+						"pronunciation": {
+							"display": "grohss",
+							"ipaUK": "/ɡʁoːs/",
+							"ipaUS": "/ɡʁoːs/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "groß",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: von großer Höhe (Person)",
+										"examples": [
+											"Mein Bruder ist sehr groß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Bruder ist sehr groß.",
+							"ok": true
+						},
+						{
+							"answer": "Mein Bruder ist sehr großer.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Bruder sehr groß ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "obwohl",
+					"summary": "Gegensatz (Verb am Ende)",
+					"explain": {
+						"entryId": "obwohl",
+						"headword": "obwohl",
+						"pronunciation": {
+							"display": "op-VOHL",
+							"ipaUK": "/ɔpˈvoːl/",
+							"ipaUS": "/ɔpˈvoːl/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "obwohl",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für einen Gegensatz (Verb am Ende)",
+										"examples": [
+											"Obwohl er müde ist, geht er joggen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Obwohl er müde ist, geht er joggen.",
+							"ok": true
+						},
+						{
+							"answer": "Obwohl er müde ist, er geht joggen.",
+							"ok": false
+						},
+						{
+							"answer": "Obwohl er ist müde, geht er joggen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "unter",
+					"summary": "unter + Dativ (wo?)",
+					"explain": {
+						"entryId": "unter",
+						"headword": "unter",
+						"pronunciation": {
+							"display": "OON-tuh",
+							"ipaUK": "/ˈʊntɐ/",
+							"ipaUS": "/ˈʊntɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Ort, + Dativ)",
+								"headwordLine": "unter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: tiefer als etwas (wo? Dativ)",
+										"examples": [
+											"Die Katze liegt unter dem Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Katze liegt unter dem Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Katze liegt unter den Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Die Katze unter dem Tisch liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "bis",
+					"summary": "bis + Zeitpunkt",
+					"explain": {
+						"entryId": "bis",
+						"headword": "bis",
+						"pronunciation": {
+							"display": "bis",
+							"ipaUK": "/bɪs/",
+							"ipaUS": "/bɪs/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Zeit)",
+								"headwordLine": "bis",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: bis zu einem Zeitpunkt",
+										"examples": [
+											"Das Geschäft ist bis acht Uhr geöffnet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Geschäft ist bis acht Uhr geöffnet.",
+							"ok": true
+						},
+						{
+							"answer": "Das Geschäft ist bis acht Uhr geöffnete.",
+							"ok": false
+						},
+						{
+							"answer": "Das Geschäft bis acht Uhr geöffnet ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "gut",
+					"summary": "Adverb: auf gute Weise",
+					"explain": {
+						"entryId": "gut",
+						"headword": "gut",
+						"pronunciation": {
+							"display": "goot",
+							"ipaUK": "/ɡuːt/",
+							"ipaUS": "/ɡuːt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "gut",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv/Adverb: auf gute Weise",
+										"examples": [
+											"Sie spricht sehr gut Deutsch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie spricht sehr gut Deutsch.",
+							"ok": true
+						},
+						{
+							"answer": "Sie spricht sehr gute Deutsch.",
+							"ok": false
+						},
+						{
+							"answer": "Sie sehr gut Deutsch spricht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "wann",
+					"summary": "Fragewort: zu welcher Zeit?",
+					"explain": {
+						"entryId": "wann",
+						"headword": "wann",
+						"pronunciation": {
+							"display": "van",
+							"ipaUK": "/van/",
+							"ipaUS": "/van/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Fragewort",
+								"grammarType": "Fragewort",
+								"headwordLine": "wann",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Fragewort nach der Zeit",
+										"examples": [
+											"Wann beginnt der Film?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wann beginnt der Film?",
+							"ok": true
+						},
+						{
+							"answer": "Wann der Film beginnt?",
+							"ok": false
+						},
+						{
+							"answer": "Wann beginnt der Film beginnt?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "während",
+					"summary": "gleichzeitig: während … (Verb am Ende)",
+					"explain": {
+						"entryId": "während",
+						"headword": "während",
+						"pronunciation": {
+							"display": "VAY-rent",
+							"ipaUK": "/ˈvɛːʁənt/",
+							"ipaUS": "/ˈvɛːʁənt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "während",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion: gleichzeitig (Verb am Ende)",
+										"examples": [
+											"Während ich koche, hört sie Musik."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Während ich koche, hört sie Musik.",
+							"ok": true
+						},
+						{
+							"answer": "Während ich koche, sie hört Musik.",
+							"ok": false
+						},
+						{
+							"answer": "Während koche ich, hört sie Musik.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "jung",
+					"summary": "Adjektiv: nicht alt",
+					"explain": {
+						"entryId": "jung",
+						"headword": "jung",
+						"pronunciation": {
+							"display": "yoong",
+							"ipaUK": "/jʊŋ/",
+							"ipaUS": "/jʊŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "jung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: nicht alt",
+										"examples": [
+											"Sie ist noch sehr jung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie ist noch sehr jung.",
+							"ok": true
+						},
+						{
+							"answer": "Sie ist noch sehr junge.",
+							"ok": false
+						},
+						{
+							"answer": "Sie noch sehr jung ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

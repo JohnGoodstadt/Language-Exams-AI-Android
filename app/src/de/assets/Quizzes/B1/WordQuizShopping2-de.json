@@ -1,0 +1,555 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizShopping2-de",
+	"title": "2. Shopping",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Kurier",
+					"summary": "liefert Pakete schnell",
+					"explain": {
+						"entryId": "Kurier",
+						"headword": "Kurier",
+						"pronunciation": {
+							"display": "koo-REER",
+							"ipaUK": "/kuˈʁiːɐ̯/",
+							"ipaUS": "/kuˈʁiːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kurier",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die Pakete schnell liefert",
+										"examples": [
+											"Der Kurier bringt das Paket noch heute."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kurier bringt das Paket noch heute.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kurier bringt das Paket noch heute.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kurier das Paket noch heute bringt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Käufer",
+					"summary": "Person, die etwas kauft",
+					"explain": {
+						"entryId": "Käufer",
+						"headword": "Käufer",
+						"pronunciation": {
+							"display": "KOY-fuh",
+							"ipaUK": "/ˈkɔɪ̯fɐ/",
+							"ipaUS": "/ˈkɔɪ̯fɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Käufer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Käuferin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die etwas kauft",
+										"examples": [
+											"Der Käufer prüft die Ware genau."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Käufer prüft die Ware genau.",
+							"ok": true
+						},
+						{
+							"answer": "Die Käufer prüft die Ware genau.",
+							"ok": false
+						},
+						{
+							"answer": "Der Käufer die Ware genau prüft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Angebot",
+					"summary": "Ware zu günstigem Preis",
+					"explain": {
+						"entryId": "Angebot",
+						"headword": "Angebot",
+						"pronunciation": {
+							"display": "AN-guh-boht",
+							"ipaUK": "/ˈanɡəˌboːt/",
+							"ipaUS": "/ˈanɡəˌboːt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Angebot",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Sonderangebot"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Ware zu einem günstigen Preis",
+										"examples": [
+											"Diese Woche gibt es ein tolles Angebot."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Woche gibt es ein tolles Angebot.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Woche gibt es einen tollen Angebot.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Woche es gibt ein tolles Angebot.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Lieferung",
+					"summary": "Bringen einer bestellten Ware",
+					"explain": {
+						"entryId": "Lieferung",
+						"headword": "Lieferung",
+						"pronunciation": {
+							"display": "LEE-fuh-roong",
+							"ipaUK": "/ˈliːfəʁʊŋ/",
+							"ipaUS": "/ˈliːfəʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Lieferung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Bringen einer bestellten Ware",
+										"examples": [
+											"Die Lieferung kommt am Dienstag an."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Lieferung kommt am Dienstag an.",
+							"ok": true
+						},
+						{
+							"answer": "Der Lieferung kommt am Dienstag an.",
+							"ok": false
+						},
+						{
+							"answer": "Die Lieferung am Dienstag ankommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Rabatt",
+					"summary": "Preisnachlass",
+					"explain": {
+						"entryId": "Rabatt",
+						"headword": "Rabatt",
+						"pronunciation": {
+							"display": "ra-BAT",
+							"ipaUK": "/ʁaˈbat/",
+							"ipaUS": "/ʁaˈbat/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rabatt",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Preisnachlass"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Preisnachlass; man zahlt weniger",
+										"examples": [
+											"Auf Schuhe gibt es zwanzig Prozent Rabatt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf Schuhe gibt es zwanzig Prozent Rabatt.",
+							"ok": true
+						},
+						{
+							"answer": "Auf Schuhe gibt es zwanzig Prozent Rabatte.",
+							"ok": false
+						},
+						{
+							"answer": "Auf Schuhe es gibt zwanzig Prozent Rabatt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Umtausch",
+					"summary": "Zurückgeben und Tauschen",
+					"explain": {
+						"entryId": "Umtausch",
+						"headword": "Umtausch",
+						"pronunciation": {
+							"display": "OOM-towsh",
+							"ipaUK": "/ˈʊmˌtaʊ̯ʃ/",
+							"ipaUS": "/ˈʊmˌtaʊ̯ʃ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Umtausch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Zurückgeben und Tauschen einer Ware",
+										"examples": [
+											"Der Umtausch ist nur mit Bon möglich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Umtausch ist nur mit Bon möglich.",
+							"ok": true
+						},
+						{
+							"answer": "Die Umtausch ist nur mit Bon möglich.",
+							"ok": false
+						},
+						{
+							"answer": "Der Umtausch nur mit Bon möglich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Einkaufszentrum",
+					"summary": "Gebäude mit vielen Geschäften",
+					"explain": {
+						"entryId": "Einkaufszentrum",
+						"headword": "Einkaufszentrum",
+						"pronunciation": {
+							"display": "INE-kowfs-tsen-troom",
+							"ipaUK": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/",
+							"ipaUS": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einkaufszentrum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großes Gebäude mit vielen Geschäften",
+										"examples": [
+											"Im Einkaufszentrum gibt es hundert Läden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Einkaufszentrum gibt es hundert Läden.",
+							"ok": true
+						},
+						{
+							"answer": "In die Einkaufszentrum gibt es hundert Läden.",
+							"ok": false
+						},
+						{
+							"answer": "Im Einkaufszentrum hundert Läden gibt es.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Kaufbeleg",
+					"summary": "Nachweis über einen Kauf",
+					"explain": {
+						"entryId": "Kaufbeleg",
+						"headword": "Kaufbeleg",
+						"pronunciation": {
+							"display": "KOWF-buh-layk",
+							"ipaUK": "/ˈkaʊ̯fbəˌleːk/",
+							"ipaUS": "/ˈkaʊ̯fbəˌleːk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kaufbeleg",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Nachweis, dass man etwas gekauft hat",
+										"examples": [
+											"Bewahren Sie den Kaufbeleg gut auf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bewahren Sie den Kaufbeleg gut auf.",
+							"ok": true
+						},
+						{
+							"answer": "Bewahren Sie das Kaufbeleg gut auf.",
+							"ok": false
+						},
+						{
+							"answer": "Bewahren Sie gut den Kaufbeleg auf.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Kauf",
+					"summary": "das Kaufen von etwas",
+					"explain": {
+						"entryId": "Kauf",
+						"headword": "Kauf",
+						"pronunciation": {
+							"display": "kowf",
+							"ipaUK": "/kaʊ̯f/",
+							"ipaUS": "/kaʊ̯f/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kauf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Kaufen von etwas",
+										"examples": [
+											"Der Kauf des Hauses war eine gute Entscheidung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kauf des Hauses war eine gute Entscheidung.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kauf des Hauses war eine gute Entscheidung.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kauf des Hauses eine gute Entscheidung war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Kassenbon",
+					"summary": "Zettel über den Einkauf",
+					"explain": {
+						"entryId": "Kassenbon",
+						"headword": "Kassenbon",
+						"pronunciation": {
+							"display": "KA-sn-bong",
+							"ipaUK": "/ˈkasn̩ˌbɔŋ/",
+							"ipaUS": "/ˈkasn̩ˌbɔŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kassenbon",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Quittung",
+									"Beleg"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Zettel, der zeigt, was man bezahlt hat",
+										"examples": [
+											"Ohne Kassenbon gibt es kein Geld zurück."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ohne Kassenbon gibt es kein Geld zurück.",
+							"ok": true
+						},
+						{
+							"answer": "Ohne Kassenbons gibt es kein Geld zurück.",
+							"ok": false
+						},
+						{
+							"answer": "Ohne Kassenbon es gibt kein Geld zurück.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

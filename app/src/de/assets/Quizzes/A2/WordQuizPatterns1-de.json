@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPatterns1-de",
+	"title": "Patterns",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "nachdem",
+					"summary": "Konjunktion: erst A, dann B",
+					"explain": {
+						"entryId": "nachdem",
+						"headword": "nachdem",
+						"pronunciation": {
+							"display": "nakh-DAYM",
+							"ipaUK": "/naːxˈdeːm/",
+							"ipaUS": "/naːxˈdeːm/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "nachdem",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für die Zeit: erst A, dann B (Verb am Ende)",
+										"examples": [
+											"Nachdem ich gegessen hatte, ging ich spazieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nachdem ich gegessen hatte, ging ich spazieren.",
+							"ok": true
+						},
+						{
+							"answer": "Nachdem ich hatte gegessen, ging ich spazieren.",
+							"ok": false
+						},
+						{
+							"answer": "Nachdem ich gegessen hatte, ich ging spazieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "obwohl",
+					"summary": "Gegensatz: obwohl … (Verb am Ende)",
+					"explain": {
+						"entryId": "obwohl",
+						"headword": "obwohl",
+						"pronunciation": {
+							"display": "op-VOHL",
+							"ipaUK": "/ɔpˈvoːl/",
+							"ipaUS": "/ɔpˈvoːl/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "obwohl",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für einen Gegensatz (Verb am Ende)",
+										"examples": [
+											"Obwohl es regnet, gehen wir spazieren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Obwohl es regnet, gehen wir spazieren.",
+							"ok": true
+						},
+						{
+							"answer": "Obwohl es regnet, wir gehen spazieren.",
+							"ok": false
+						},
+						{
+							"answer": "Obwohl regnet es, gehen wir spazieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "weil",
+					"summary": "Grund: weil … (Verb am Ende)",
+					"explain": {
+						"entryId": "weil",
+						"headword": "weil",
+						"pronunciation": {
+							"display": "vile",
+							"ipaUK": "/vaɪ̯l/",
+							"ipaUS": "/vaɪ̯l/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "weil",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für einen Grund (Verb am Ende)",
+										"examples": [
+											"Ich bleibe zu Hause, weil ich krank bin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bleibe zu Hause, weil ich krank bin.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bleibe zu Hause, weil ich bin krank.",
+							"ok": false
+						},
+						{
+							"answer": "Ich bleibe zu Hause, weil bin ich krank.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "kaufen",
+					"summary": "jemandem (Dativ) etwas kaufen",
+					"explain": {
+						"entryId": "kaufen",
+						"headword": "kaufen",
+						"pronunciation": {
+							"display": "KOW-fn",
+							"ipaUK": "/ˈkaʊ̯fn̩/",
+							"ipaUS": "/ˈkaʊ̯fn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Dativ + Akkusativ)",
+								"headwordLine": "kaufen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb mit Dativ und Akkusativ: jemandem etwas kaufen",
+										"examples": [
+											"Ich kaufe meinem Bruder ein Geschenk."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich kaufe meinem Bruder ein Geschenk.",
+							"ok": true
+						},
+						{
+							"answer": "Ich kaufe meinen Bruder ein Geschenk.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meinem Bruder ein Geschenk kaufe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "trinken",
+					"summary": "trinken + Akkusativ",
+					"explain": {
+						"entryId": "trinken",
+						"headword": "trinken",
+						"pronunciation": {
+							"display": "TRIN-kn",
+							"ipaUK": "/ˈtʁɪŋkn̩/",
+							"ipaUS": "/ˈtʁɪŋkn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Akkusativ)",
+								"headwordLine": "trinken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb mit Akkusativ-Objekt",
+										"examples": [
+											"Zum Frühstück trinke ich einen Tee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zum Frühstück trinke ich einen Tee.",
+							"ok": true
+						},
+						{
+							"answer": "Zum Frühstück trinke ich einem Tee.",
+							"ok": false
+						},
+						{
+							"answer": "Zum Frühstück ich trinke einen Tee.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "fahren",
+					"summary": "fahren + Richtung (wohin? Akkusativ)",
+					"explain": {
+						"entryId": "fahren",
+						"headword": "fahren",
+						"pronunciation": {
+							"display": "FAH-run",
+							"ipaUK": "/ˈfaːʁən/",
+							"ipaUS": "/ˈfaːʁən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Richtung)",
+								"headwordLine": "fahren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb der Bewegung mit Richtung (wohin?)",
+										"examples": [
+											"Am Freitag fahre ich in die Stadt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Freitag fahre ich in die Stadt.",
+							"ok": true
+						},
+						{
+							"answer": "Am Freitag fahre ich in der Stadt.",
+							"ok": false
+						},
+						{
+							"answer": "Am Freitag ich fahre in die Stadt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "essen",
+					"summary": "essen + Akkusativ",
+					"explain": {
+						"entryId": "essen",
+						"headword": "essen",
+						"pronunciation": {
+							"display": "ES-sn",
+							"ipaUK": "/ˈɛsn̩/",
+							"ipaUS": "/ˈɛsn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Akkusativ)",
+								"headwordLine": "essen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb mit Akkusativ-Objekt",
+										"examples": [
+											"Mittags esse ich einen Salat."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mittags esse ich einen Salat.",
+							"ok": true
+						},
+						{
+							"answer": "Mittags esse ich einem Salat.",
+							"ok": false
+						},
+						{
+							"answer": "Mittags ich esse einen Salat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "gehen",
+					"summary": "gehen + Ziel",
+					"explain": {
+						"entryId": "gehen",
+						"headword": "gehen",
+						"pronunciation": {
+							"display": "GAY-uhn",
+							"ipaUK": "/ˈɡeːən/",
+							"ipaUS": "/ˈɡeːən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Ziel)",
+								"headwordLine": "gehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Verb der Bewegung mit Ziel (wohin?)",
+										"examples": [
+											"Nach der Arbeit gehe ich zum Sport."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach der Arbeit gehe ich zum Sport.",
+							"ok": true
+						},
+						{
+							"answer": "Nach der Arbeit gehe ich zur Sport.",
+							"ok": false
+						},
+						{
+							"answer": "Nach der Arbeit ich gehe zum Sport.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "wenn",
+					"summary": "Bedingung: wenn … (Verb am Ende)",
+					"explain": {
+						"entryId": "wenn",
+						"headword": "wenn",
+						"pronunciation": {
+							"display": "ven",
+							"ipaUK": "/vɛn/",
+							"ipaUS": "/vɛn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "wenn",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für eine Bedingung (Verb am Ende)",
+										"examples": [
+											"Wenn es morgen schneit, bleiben wir zu Hause."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wenn es morgen schneit, bleiben wir zu Hause.",
+							"ok": true
+						},
+						{
+							"answer": "Wenn es morgen schneit, wir bleiben zu Hause.",
+							"ok": false
+						},
+						{
+							"answer": "Wenn schneit es morgen, bleiben wir zu Hause.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "wichtig",
+					"summary": "wichtig; 'es ist wichtig, dass …'",
+					"explain": {
+						"entryId": "wichtig",
+						"headword": "wichtig",
+						"pronunciation": {
+							"display": "VIKH-tikh",
+							"ipaUK": "/ˈvɪçtɪç/",
+							"ipaUS": "/ˈvɪçtɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "wichtig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv, oft mit 'es ist wichtig, dass …'",
+										"examples": [
+											"Es ist wichtig, dass du genug schläfst."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Es ist wichtig, dass du genug schläfst.",
+							"ok": true
+						},
+						{
+							"answer": "Es ist wichtig, dass du schläfst genug.",
+							"ok": false
+						},
+						{
+							"answer": "Es ist wichtige, dass du genug schläfst.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

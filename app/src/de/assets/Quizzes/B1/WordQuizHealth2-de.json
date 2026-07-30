@@ -1,0 +1,552 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth2-de",
+	"title": "2. Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Bewegung",
+					"summary": "körperliche Aktivität",
+					"explain": {
+						"entryId": "Bewegung",
+						"headword": "Bewegung",
+						"pronunciation": {
+							"display": "buh-VAY-goong",
+							"ipaUK": "/bəˈveːɡʊŋ/",
+							"ipaUS": "/bəˈveːɡʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bewegung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Sport"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "körperliche Aktivität für die Gesundheit",
+										"examples": [
+											"Regelmäßige Bewegung ist gesund."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Regelmäßige Bewegung ist gesund.",
+							"ok": true
+						},
+						{
+							"answer": "Regelmäßiger Bewegung ist gesund.",
+							"ok": false
+						},
+						{
+							"answer": "Regelmäßige Bewegung gesund ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Gesundheit",
+					"summary": "der Zustand, gesund zu sein",
+					"explain": {
+						"entryId": "Gesundheit",
+						"headword": "Gesundheit",
+						"pronunciation": {
+							"display": "guh-ZOONT-hite",
+							"ipaUK": "/ɡəˈzʊnthaɪ̯t/",
+							"ipaUS": "/ɡəˈzʊnthaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gesundheit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Zustand, gesund zu sein",
+										"examples": [
+											"Die Gesundheit ist das Wichtigste."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Gesundheit ist das Wichtigste.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gesundheit ist das Wichtigste.",
+							"ok": false
+						},
+						{
+							"answer": "Die Gesundheit das Wichtigste ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Krankenhaus",
+					"summary": "dort werden Kranke behandelt",
+					"explain": {
+						"entryId": "Krankenhaus",
+						"headword": "Krankenhaus",
+						"pronunciation": {
+							"display": "KRAN-kn-house",
+							"ipaUK": "/ˈkʁaŋkn̩ˌhaʊ̯s/",
+							"ipaUS": "/ˈkʁaŋkn̩ˌhaʊ̯s/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Krankenhaus",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Klinik"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort, an dem Kranke behandelt werden",
+										"examples": [
+											"Nach dem Unfall kam er ins Krankenhaus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Unfall kam er ins Krankenhaus.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Unfall kam er in die Krankenhaus.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Unfall er kam ins Krankenhaus.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Verletzung",
+					"summary": "Schaden am Körper",
+					"explain": {
+						"entryId": "Verletzung",
+						"headword": "Verletzung",
+						"pronunciation": {
+							"display": "fer-LET-soong",
+							"ipaUK": "/fɛɐ̯ˈlɛtsʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈlɛtsʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verletzung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Schaden am Körper, z. B. eine Wunde",
+										"examples": [
+											"Die Verletzung am Knie tut sehr weh."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Verletzung am Knie tut sehr weh.",
+							"ok": true
+						},
+						{
+							"answer": "Der Verletzung am Knie tut sehr weh.",
+							"ok": false
+						},
+						{
+							"answer": "Die Verletzung am Knie sehr weh tut.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Versicherung",
+					"summary": "Vertrag, der bei Schäden zahlt",
+					"explain": {
+						"entryId": "Versicherung",
+						"headword": "Versicherung",
+						"pronunciation": {
+							"display": "fer-ZIKH-uh-roong",
+							"ipaUK": "/fɛɐ̯ˈzɪçəʁʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈzɪçəʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Versicherung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Vertrag, der bei Schäden zahlt",
+										"examples": [
+											"Ohne Versicherung zahlt man alles selbst."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ohne Versicherung zahlt man alles selbst.",
+							"ok": true
+						},
+						{
+							"answer": "Ohne Versicherungen zahlt man alles selbst.",
+							"ok": false
+						},
+						{
+							"answer": "Ohne Versicherung man zahlt alles selbst.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Medikament",
+					"summary": "Mittel gegen Krankheit",
+					"explain": {
+						"entryId": "Medikament",
+						"headword": "Medikament",
+						"pronunciation": {
+							"display": "me-di-ka-MENT",
+							"ipaUK": "/medikaˈmɛnt/",
+							"ipaUS": "/medikaˈmɛnt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Medikament",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Arznei"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Mittel gegen Krankheit",
+										"examples": [
+											"Das Medikament wirkt schnell."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Medikament wirkt schnell.",
+							"ok": true
+						},
+						{
+							"answer": "Der Medikament wirkt schnell.",
+							"ok": false
+						},
+						{
+							"answer": "Das Medikament schnell wirkt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Nahrung",
+					"summary": "das Essen als Nährstoff",
+					"explain": {
+						"entryId": "Nahrung",
+						"headword": "Nahrung",
+						"pronunciation": {
+							"display": "NAH-roong",
+							"ipaUK": "/ˈnaːʁʊŋ/",
+							"ipaUS": "/ˈnaːʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Nahrung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "alles, was der Körper zum Leben isst",
+										"examples": [
+											"Der Körper braucht gesunde Nahrung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Körper braucht gesunde Nahrung.",
+							"ok": true
+						},
+						{
+							"answer": "Der Körper braucht gesunden Nahrung.",
+							"ok": false
+						},
+						{
+							"answer": "Der Körper gesunde Nahrung braucht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Police",
+					"summary": "Vertrag einer Versicherung",
+					"explain": {
+						"entryId": "Police",
+						"headword": "Police",
+						"pronunciation": {
+							"display": "po-LEE-suh",
+							"ipaUK": "/poˈliːsə/",
+							"ipaUS": "/poˈliːsə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Police",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Vertrag einer Versicherung",
+										"examples": [
+											"Die Police deckt auch Zahnbehandlungen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Police deckt auch Zahnbehandlungen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Police deckt auch Zahnbehandlungen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Police auch Zahnbehandlungen deckt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Rezept",
+					"summary": "Zettel vom Arzt für ein Medikament",
+					"explain": {
+						"entryId": "Rezept",
+						"headword": "Rezept",
+						"pronunciation": {
+							"display": "re-TSEPT",
+							"ipaUK": "/ʁeˈtsɛpt/",
+							"ipaUS": "/ʁeˈtsɛpt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rezept",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Zettel vom Arzt für ein Medikament",
+										"examples": [
+											"Für dieses Medikament braucht man ein Rezept."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Für dieses Medikament braucht man ein Rezept.",
+							"ok": true
+						},
+						{
+							"answer": "Für dieses Medikament braucht man einen Rezept.",
+							"ok": false
+						},
+						{
+							"answer": "Für dieses Medikament man braucht ein Rezept.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Reaktion",
+					"summary": "Antwort des Körpers auf etwas",
+					"explain": {
+						"entryId": "Reaktion",
+						"headword": "Reaktion",
+						"pronunciation": {
+							"display": "re-ak-TSYOHN",
+							"ipaUK": "/ʁeakˈtsi̯oːn/",
+							"ipaUS": "/ʁeakˈtsi̯oːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reaktion",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Antwort des Körpers auf etwas",
+										"examples": [
+											"Seine Reaktion auf das Mittel war stark."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Seine Reaktion auf das Mittel war stark.",
+							"ok": true
+						},
+						{
+							"answer": "Seinen Reaktion auf das Mittel war stark.",
+							"ok": false
+						},
+						{
+							"answer": "Seine Reaktion auf das Mittel stark war.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

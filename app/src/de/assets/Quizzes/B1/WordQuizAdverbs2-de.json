@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdverbs2-de",
+	"title": "2. Adverbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "vollständig",
+					"summary": "Adverb: ganz, komplett",
+					"explain": {
+						"entryId": "vollständig",
+						"headword": "vollständig",
+						"pronunciation": {
+							"display": "FOL-shten-dikh",
+							"ipaUK": "/ˈfɔlˌʃtɛndɪç/",
+							"ipaUS": "/ˈfɔlˌʃtɛndɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "vollständig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ganz; komplett",
+										"examples": [
+											"Der Termin ist vollständig ausgebucht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Termin ist vollständig ausgebucht.",
+							"ok": true
+						},
+						{
+							"answer": "Der Termin ist vollständige ausgebucht.",
+							"ok": false
+						},
+						{
+							"answer": "Der Termin vollständig ausgebucht ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "wirklich",
+					"summary": "Adverb: tatsächlich",
+					"explain": {
+						"entryId": "wirklich",
+						"headword": "wirklich",
+						"pronunciation": {
+							"display": "VIRK-likh",
+							"ipaUK": "/ˈvɪʁklɪç/",
+							"ipaUS": "/ˈvɪʁklɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "wirklich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "tatsächlich; echt",
+										"examples": [
+											"Ich bin wirklich froh darüber."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin wirklich froh darüber.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin wirkliche froh darüber.",
+							"ok": false
+						},
+						{
+							"answer": "Ich wirklich bin froh darüber.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "erheblich",
+					"summary": "Adverb: in großem Maße",
+					"explain": {
+						"entryId": "erheblich",
+						"headword": "erheblich",
+						"pronunciation": {
+							"display": "er-HAYB-likh",
+							"ipaUK": "/ɛɐ̯ˈheːblɪç/",
+							"ipaUS": "/ɛɐ̯ˈheːblɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "erheblich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in großem Maße; deutlich",
+										"examples": [
+											"Die Preise sind erheblich gestiegen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Preise sind erheblich gestiegen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Preise sind erhebliche gestiegen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Preise erheblich gestiegen sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "kaum",
+					"summary": "Adverb: fast nicht",
+					"explain": {
+						"entryId": "kaum",
+						"headword": "kaum",
+						"pronunciation": {
+							"display": "kowm",
+							"ipaUK": "/kaʊ̯m/",
+							"ipaUS": "/kaʊ̯m/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "kaum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "fast nicht",
+										"examples": [
+											"Er hat kaum etwas gegessen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat kaum etwas gegessen.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat kaume etwas gegessen.",
+							"ok": false
+						},
+						{
+							"answer": "Er kaum hat etwas gegessen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "höchst",
+					"summary": "Adverb: in hohem Grad",
+					"explain": {
+						"entryId": "höchst",
+						"headword": "höchst",
+						"pronunciation": {
+							"display": "höxt",
+							"ipaUK": "/høːçst/",
+							"ipaUS": "/høːçst/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "höchst",
+								"inflectionsLine": null,
+								"synonyms": [
+									"äußerst"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sehr; in hohem Grad",
+										"examples": [
+											"Die Lage ist höchst gefährlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Lage ist höchst gefährlich.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lage ist höchste gefährlich.",
+							"ok": false
+						},
+						{
+							"answer": "Die Lage höchst gefährlich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "vielleicht",
+					"summary": "Adverb: möglicherweise",
+					"explain": {
+						"entryId": "vielleicht",
+						"headword": "vielleicht",
+						"pronunciation": {
+							"display": "fi-LYKHT",
+							"ipaUK": "/fiˈlaɪ̯çt/",
+							"ipaUS": "/fiˈlaɪ̯çt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "vielleicht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "möglicherweise; eventuell",
+										"examples": [
+											"Vielleicht regnet es später."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vielleicht regnet es später.",
+							"ok": true
+						},
+						{
+							"answer": "Vielleichte regnet es später.",
+							"ok": false
+						},
+						{
+							"answer": "Vielleicht es regnet später.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "mäßig",
+					"summary": "Adverb: in mittlerem Maße",
+					"explain": {
+						"entryId": "mäßig",
+						"headword": "mäßig",
+						"pronunciation": {
+							"display": "MAY-sikh",
+							"ipaUK": "/ˈmɛːsɪç/",
+							"ipaUS": "/ˈmɛːsɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "mäßig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in mittlerem Maße; nicht zu stark",
+										"examples": [
+											"Das Konzert war nur mäßig besucht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Konzert war nur mäßig besucht.",
+							"ok": true
+						},
+						{
+							"answer": "Das Konzert war nur mäßige besucht.",
+							"ok": false
+						},
+						{
+							"answer": "Das Konzert nur mäßig besucht war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "eventuell",
+					"summary": "Adverb: unter Umständen",
+					"explain": {
+						"entryId": "eventuell",
+						"headword": "eventuell",
+						"pronunciation": {
+							"display": "e-ven-tu-EL",
+							"ipaUK": "/evɛntuˈɛl/",
+							"ipaUS": "/evɛntuˈɛl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "eventuell",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "möglicherweise; unter Umständen",
+										"examples": [
+											"Eventuell komme ich etwas später."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eventuell komme ich etwas später.",
+							"ok": true
+						},
+						{
+							"answer": "Eventuelle komme ich etwas später.",
+							"ok": false
+						},
+						{
+							"answer": "Eventuell ich komme etwas später.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "möglicherweise",
+					"summary": "Adverb: unter Umständen",
+					"explain": {
+						"entryId": "möglicherweise",
+						"headword": "möglicherweise",
+						"pronunciation": {
+							"display": "MÖK-likh-uh-vy-zuh",
+							"ipaUK": "/ˈmøːklɪçɐˌvaɪ̯zə/",
+							"ipaUS": "/ˈmøːklɪçɐˌvaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "möglicherweise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "unter Umständen; vielleicht",
+										"examples": [
+											"Möglicherweise hat er sich verspätet."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Möglicherweise hat er sich verspätet.",
+							"ok": true
+						},
+						{
+							"answer": "Möglicherweises hat er sich verspätet.",
+							"ok": false
+						},
+						{
+							"answer": "Möglicherweise er hat sich verspätet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "recht",
+					"summary": "Adverb: ziemlich, relativ",
+					"explain": {
+						"entryId": "recht",
+						"headword": "recht",
+						"pronunciation": {
+							"display": "rekht",
+							"ipaUK": "/ʁɛçt/",
+							"ipaUS": "/ʁɛçt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "recht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ziemlich; relativ",
+										"examples": [
+											"Das war eine recht gute Idee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das war eine recht gute Idee.",
+							"ok": true
+						},
+						{
+							"answer": "Das war eine rechte gute Idee.",
+							"ok": false
+						},
+						{
+							"answer": "Das eine recht gute Idee war.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

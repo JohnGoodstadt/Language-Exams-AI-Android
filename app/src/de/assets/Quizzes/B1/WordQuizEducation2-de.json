@@ -1,0 +1,552 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation2-de",
+	"title": "2. Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Mitarbeiter",
+					"summary": "Person, die in einer Firma arbeitet",
+					"explain": {
+						"entryId": "Mitarbeiter",
+						"headword": "Mitarbeiter",
+						"pronunciation": {
+							"display": "MIT-ar-by-tuh",
+							"ipaUK": "/ˈmɪtˌʔaʁbaɪ̯tɐ/",
+							"ipaUS": "/ˈmɪtˌʔaʁbaɪ̯tɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Mitarbeiter",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Angestellter"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die in einer Firma arbeitet",
+										"examples": [
+											"Die Firma sucht einen neuen Mitarbeiter."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Firma sucht einen neuen Mitarbeiter.",
+							"ok": true
+						},
+						{
+							"answer": "Die Firma sucht ein neues Mitarbeiter.",
+							"ok": false
+						},
+						{
+							"answer": "Die Firma einen neuen Mitarbeiter sucht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Arbeitgeber",
+					"summary": "beschäftigt andere Menschen",
+					"explain": {
+						"entryId": "Arbeitgeber",
+						"headword": "Arbeitgeber",
+						"pronunciation": {
+							"display": "AR-byte-gay-buh",
+							"ipaUK": "/ˈaʁbaɪ̯tˌɡeːbɐ/",
+							"ipaUS": "/ˈaʁbaɪ̯tˌɡeːbɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Arbeitgeber",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person oder Firma, die andere beschäftigt",
+										"examples": [
+											"Mein Arbeitgeber zahlt ein gutes Gehalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Arbeitgeber zahlt ein gutes Gehalt.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Arbeitgeber zahlt ein gutes Gehalt.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Arbeitgeber ein gutes Gehalt zahlt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Erfahrung",
+					"summary": "Wissen aus der Praxis",
+					"explain": {
+						"entryId": "Erfahrung",
+						"headword": "Erfahrung",
+						"pronunciation": {
+							"display": "er-FAH-roong",
+							"ipaUK": "/ɛɐ̯ˈfaːʁʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈfaːʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erfahrung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Wissen und Können aus der Praxis",
+										"examples": [
+											"Für die Stelle braucht man viel Erfahrung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Für die Stelle braucht man viel Erfahrung.",
+							"ok": true
+						},
+						{
+							"answer": "Für die Stelle braucht man viel Erfahrungen.",
+							"ok": false
+						},
+						{
+							"answer": "Für die Stelle man braucht viel Erfahrung.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Hausaufgabe",
+					"summary": "Aufgabe für zu Hause",
+					"explain": {
+						"entryId": "Hausaufgabe",
+						"headword": "Hausaufgabe",
+						"pronunciation": {
+							"display": "HOWS-owf-gah-buh",
+							"ipaUK": "/ˈhaʊ̯sˌʔaʊ̯fɡaːbə/",
+							"ipaUS": "/ˈhaʊ̯sˌʔaʊ̯fɡaːbə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hausaufgabe",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Aufgaben für zu Hause (Schule)",
+										"examples": [
+											"Die Hausaufgabe für morgen ist sehr lang."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Hausaufgabe für morgen ist sehr lang.",
+							"ok": true
+						},
+						{
+							"answer": "Der Hausaufgabe für morgen ist sehr lang.",
+							"ok": false
+						},
+						{
+							"answer": "Die Hausaufgabe für morgen sehr lang ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Praktikum",
+					"summary": "Beruf praktisch lernen",
+					"explain": {
+						"entryId": "Praktikum",
+						"headword": "Praktikum",
+						"pronunciation": {
+							"display": "PRAK-ti-koom",
+							"ipaUK": "/ˈpʁaktikʊm/",
+							"ipaUS": "/ˈpʁaktikʊm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Praktikum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Zeit, in der man einen Beruf praktisch lernt",
+										"examples": [
+											"Im Sommer mache ich ein Praktikum bei einer Bank."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer mache ich ein Praktikum bei einer Bank.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer mache ich einen Praktikum bei einer Bank.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer ich mache ein Praktikum bei einer Bank.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Vorlesung",
+					"summary": "Vortrag an der Universität",
+					"explain": {
+						"entryId": "Vorlesung",
+						"headword": "Vorlesung",
+						"pronunciation": {
+							"display": "FOR-lay-zoong",
+							"ipaUK": "/ˈfoːɐ̯ˌleːzʊŋ/",
+							"ipaUS": "/ˈfoːɐ̯ˌleːzʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorlesung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Vortrag an der Universität",
+										"examples": [
+											"Die Vorlesung beginnt um neun Uhr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Vorlesung beginnt um neun Uhr.",
+							"ok": true
+						},
+						{
+							"answer": "Der Vorlesung beginnt um neun Uhr.",
+							"ok": false
+						},
+						{
+							"answer": "Die Vorlesung um neun Uhr beginnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Dozent",
+					"summary": "unterrichtet an der Uni",
+					"explain": {
+						"entryId": "Dozent",
+						"headword": "Dozent",
+						"pronunciation": {
+							"display": "do-TSENT",
+							"ipaUK": "/doˈtsɛnt/",
+							"ipaUS": "/doˈtsɛnt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dozent",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Dozentin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die an der Uni unterrichtet",
+										"examples": [
+											"Der Dozent erklärt das Thema sehr klar."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Dozent erklärt das Thema sehr klar.",
+							"ok": true
+						},
+						{
+							"answer": "Die Dozent erklärt das Thema sehr klar.",
+							"ok": false
+						},
+						{
+							"answer": "Der Dozent das Thema sehr klar erklärt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Manager",
+					"summary": "Führungskraft im Unternehmen",
+					"explain": {
+						"entryId": "Manager",
+						"headword": "Manager",
+						"pronunciation": {
+							"display": "MEN-ed-zhuh",
+							"ipaUK": "/ˈmɛnɛdʒɐ/",
+							"ipaUS": "/ˈmɛnɛdʒɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Manager",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Managerin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Führungskraft in einem Unternehmen",
+										"examples": [
+											"Der Manager leitet ein großes Team."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Manager leitet ein großes Team.",
+							"ok": true
+						},
+						{
+							"answer": "Die Manager leitet ein großes Team.",
+							"ok": false
+						},
+						{
+							"answer": "Der Manager ein großes Team leitet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Tätigkeit",
+					"summary": "die ausgeübte Arbeit",
+					"explain": {
+						"entryId": "Tätigkeit",
+						"headword": "Tätigkeit",
+						"pronunciation": {
+							"display": "TAY-tikh-kite",
+							"ipaUK": "/ˈtɛːtɪçkaɪ̯t/",
+							"ipaUS": "/ˈtɛːtɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tätigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Arbeit, die man ausübt",
+										"examples": [
+											"Diese Tätigkeit macht mir großen Spaß."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Tätigkeit macht mir großen Spaß.",
+							"ok": true
+						},
+						{
+							"answer": "Dieser Tätigkeit macht mir großen Spaß.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Tätigkeit mir großen Spaß macht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Beruf",
+					"summary": "die gelernte Arbeit",
+					"explain": {
+						"entryId": "Beruf",
+						"headword": "Beruf",
+						"pronunciation": {
+							"display": "buh-ROOF",
+							"ipaUK": "/bəˈʁuːf/",
+							"ipaUS": "/bəˈʁuːf/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Beruf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Arbeit, die man gelernt hat",
+										"examples": [
+											"Sie übt einen interessanten Beruf aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie übt einen interessanten Beruf aus.",
+							"ok": true
+						},
+						{
+							"answer": "Sie übt ein interessantes Beruf aus.",
+							"ok": false
+						},
+						{
+							"answer": "Sie einen interessanten Beruf ausübt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

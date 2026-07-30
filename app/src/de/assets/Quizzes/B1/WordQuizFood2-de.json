@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFood2-de",
+	"title": "2. Food",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Element",
+					"summary": "ein einzelner Teil eines Ganzen",
+					"explain": {
+						"entryId": "Element",
+						"headword": "Element",
+						"pronunciation": {
+							"display": "e-le-MENT",
+							"ipaUK": "/eleˈmɛnt/",
+							"ipaUS": "/eleˈmɛnt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Element",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Bestandteil"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein einzelner Teil eines Ganzen",
+										"examples": [
+											"Wasser ist ein wichtiges Element beim Kochen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wasser ist ein wichtiges Element beim Kochen.",
+							"ok": true
+						},
+						{
+							"answer": "Wasser ist ein wichtiger Element beim Kochen.",
+							"ok": false
+						},
+						{
+							"answer": "Wasser ein wichtiges Element beim Kochen ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Häppchen",
+					"summary": "kleiner Snack als Vorspeise",
+					"explain": {
+						"entryId": "Häppchen",
+						"headword": "Häppchen",
+						"pronunciation": {
+							"display": "HEP-khn",
+							"ipaUK": "/ˈhɛpçən/",
+							"ipaUS": "/ˈhɛpçən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Häppchen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein kleiner Snack als Vorspeise",
+										"examples": [
+											"Auf der Party gab es kleine Häppchen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auf der Party gab es kleine Häppchen.",
+							"ok": true
+						},
+						{
+							"answer": "Auf der Party gab es kleiner Häppchen.",
+							"ok": false
+						},
+						{
+							"answer": "Auf der Party es gab kleine Häppchen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Zutat",
+					"summary": "Sache, die man zum Kochen braucht",
+					"explain": {
+						"entryId": "Zutat",
+						"headword": "Zutat",
+						"pronunciation": {
+							"display": "TSOO-taht",
+							"ipaUK": "/ˈtsuːˌtaːt/",
+							"ipaUS": "/ˈtsuːˌtaːt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zutat",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Sache, die man zum Kochen braucht",
+										"examples": [
+											"Mehl ist die wichtigste Zutat für Brot."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mehl ist die wichtigste Zutat für Brot.",
+							"ok": true
+						},
+						{
+							"answer": "Mehl ist der wichtigste Zutat für Brot.",
+							"ok": false
+						},
+						{
+							"answer": "Mehl die wichtigste Zutat für Brot ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Anleitung",
+					"summary": "Erklärung, wie man etwas macht",
+					"explain": {
+						"entryId": "Anleitung",
+						"headword": "Anleitung",
+						"pronunciation": {
+							"display": "AN-ly-toong",
+							"ipaUK": "/ˈanˌlaɪ̯tʊŋ/",
+							"ipaUS": "/ˈanˌlaɪ̯tʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Anleitung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Erklärung, wie man etwas macht",
+										"examples": [
+											"Die Anleitung erklärt jeden Schritt genau."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Anleitung erklärt jeden Schritt genau.",
+							"ok": true
+						},
+						{
+							"answer": "Der Anleitung erklärt jeden Schritt genau.",
+							"ok": false
+						},
+						{
+							"answer": "Die Anleitung jeden Schritt genau erklärt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Liste",
+					"summary": "geordnete Aufzählung",
+					"explain": {
+						"entryId": "Liste",
+						"headword": "Liste",
+						"pronunciation": {
+							"display": "LIS-tuh",
+							"ipaUK": "/ˈlɪstə/",
+							"ipaUS": "/ˈlɪstə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Liste",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine geordnete Aufzählung",
+										"examples": [
+											"Ich schreibe eine Liste für den Einkauf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schreibe eine Liste für den Einkauf.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schreibe einen Liste für den Einkauf.",
+							"ok": false
+						},
+						{
+							"answer": "Ich eine Liste für den Einkauf schreibe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "fleischlos",
+					"summary": "Adjektiv: ohne Fleisch",
+					"explain": {
+						"entryId": "fleischlos",
+						"headword": "fleischlos",
+						"pronunciation": {
+							"display": "FLYSH-lohs",
+							"ipaUK": "/ˈflaɪ̯ʃloːs/",
+							"ipaUS": "/ˈflaɪ̯ʃloːs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "fleischlos",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ohne Fleisch",
+										"examples": [
+											"Wir kochen heute ein fleischloses Gericht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir kochen heute ein fleischloses Gericht.",
+							"ok": true
+						},
+						{
+							"answer": "Wir kochen heute ein fleischlosen Gericht.",
+							"ok": false
+						},
+						{
+							"answer": "Wir kochen heute fleischloses ein Gericht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Speisekarte",
+					"summary": "Liste der Gerichte im Restaurant",
+					"explain": {
+						"entryId": "Speisekarte",
+						"headword": "Speisekarte",
+						"pronunciation": {
+							"display": "SHPY-zuh-kar-tuh",
+							"ipaUK": "/ˈʃpaɪ̯zəˌkaʁtə/",
+							"ipaUS": "/ˈʃpaɪ̯zəˌkaʁtə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Speisekarte",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Liste der Gerichte im Restaurant",
+										"examples": [
+											"Der Kellner bringt uns die Speisekarte."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kellner bringt uns die Speisekarte.",
+							"ok": true
+						},
+						{
+							"answer": "Der Kellner bringt uns den Speisekarte.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kellner uns die Speisekarte bringt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Methode",
+					"summary": "bestimmte Art, etwas zu tun",
+					"explain": {
+						"entryId": "Methode",
+						"headword": "Methode",
+						"pronunciation": {
+							"display": "me-TOH-duh",
+							"ipaUK": "/meˈtoːdə/",
+							"ipaUS": "/meˈtoːdə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Methode",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine bestimmte Art, etwas zu tun",
+										"examples": [
+											"Er kennt eine bessere Methode zum Backen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er kennt eine bessere Methode zum Backen.",
+							"ok": true
+						},
+						{
+							"answer": "Er kennt einen besseren Methode zum Backen.",
+							"ok": false
+						},
+						{
+							"answer": "Er eine bessere Methode zum Backen kennt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "knabbern",
+					"summary": "in kleinen Bissen essen",
+					"explain": {
+						"entryId": "knabbern",
+						"headword": "knabbern",
+						"pronunciation": {
+							"display": "KNAB-buhn",
+							"ipaUK": "/ˈknabɐn/",
+							"ipaUS": "/ˈknabɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "knabbern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "in kleinen Bissen essen",
+										"examples": [
+											"Vor dem Fernseher knabbern wir Nüsse."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vor dem Fernseher knabbern wir Nüsse.",
+							"ok": true
+						},
+						{
+							"answer": "Vor dem Fernseher knabbert wir Nüsse.",
+							"ok": false
+						},
+						{
+							"answer": "Vor dem Fernseher wir knabbern Nüsse.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Pudding",
+					"summary": "süße, weiche Nachspeise",
+					"explain": {
+						"entryId": "Pudding",
+						"headword": "Pudding",
+						"pronunciation": {
+							"display": "POO-ding",
+							"ipaUK": "/ˈpʊdɪŋ/",
+							"ipaUS": "/ˈpʊdɪŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Pudding",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine süße, weiche Nachspeise",
+										"examples": [
+											"Als Nachtisch mag ich einen süßen Pudding."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Als Nachtisch mag ich einen süßen Pudding.",
+							"ok": true
+						},
+						{
+							"answer": "Als Nachtisch mag ich ein süßes Pudding.",
+							"ok": false
+						},
+						{
+							"answer": "Als Nachtisch ich mag einen süßen Pudding.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

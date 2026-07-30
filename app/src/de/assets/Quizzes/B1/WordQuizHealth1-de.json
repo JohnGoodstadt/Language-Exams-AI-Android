@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth1-de",
+	"title": "1. Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Allergie",
+					"summary": "Überreaktion auf einen Stoff",
+					"explain": {
+						"entryId": "Allergie",
+						"headword": "Allergie",
+						"pronunciation": {
+							"display": "a-ler-GEE",
+							"ipaUK": "/alɛʁˈɡiː/",
+							"ipaUS": "/alɛʁˈɡiː/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Allergie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Überreaktion des Körpers auf einen Stoff",
+										"examples": [
+											"Er hat eine starke Allergie gegen Pollen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat eine starke Allergie gegen Pollen.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat einen starken Allergie gegen Pollen.",
+							"ok": false
+						},
+						{
+							"answer": "Er eine starke Allergie gegen Pollen hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Termin",
+					"summary": "feste Verabredung (z. B. beim Arzt)",
+					"explain": {
+						"entryId": "Termin",
+						"headword": "Termin",
+						"pronunciation": {
+							"display": "ter-MEEN",
+							"ipaUK": "/tɛʁˈmiːn/",
+							"ipaUS": "/tɛʁˈmiːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Termin",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine feste Verabredung, z. B. beim Arzt",
+										"examples": [
+											"Ich habe morgen einen Termin beim Arzt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe morgen einen Termin beim Arzt.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe morgen ein Termin beim Arzt.",
+							"ok": false
+						},
+						{
+							"answer": "Ich morgen einen Termin beim Arzt habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "ausgewogen",
+					"summary": "Adjektiv: im Gleichgewicht",
+					"explain": {
+						"entryId": "ausgewogen",
+						"headword": "ausgewogen",
+						"pronunciation": {
+							"display": "OWS-guh-voh-gn",
+							"ipaUK": "/ˈaʊ̯sɡəˌvoːɡn̩/",
+							"ipaUS": "/ˈaʊ̯sɡəˌvoːɡn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "ausgewogen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "im richtigen Gleichgewicht (z. B. Ernährung)",
+										"examples": [
+											"Eine ausgewogene Ernährung ist wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eine ausgewogene Ernährung ist wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Eine ausgewogenen Ernährung ist wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Eine ausgewogene Ernährung wichtig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Untersuchung",
+					"summary": "ärztliche Kontrolle",
+					"explain": {
+						"entryId": "Untersuchung",
+						"headword": "Untersuchung",
+						"pronunciation": {
+							"display": "oon-tuh-ZOO-khoong",
+							"ipaUK": "/ʊntɐˈzuːxʊŋ/",
+							"ipaUS": "/ʊntɐˈzuːxʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Untersuchung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine ärztliche Kontrolle der Gesundheit",
+										"examples": [
+											"Beim Arzt gab es eine gründliche Untersuchung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Beim Arzt gab es eine gründliche Untersuchung.",
+							"ok": true
+						},
+						{
+							"answer": "Beim Arzt gab es einen gründlichen Untersuchung.",
+							"ok": false
+						},
+						{
+							"answer": "Beim Arzt es gab eine gründliche Untersuchung.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Beratung",
+					"summary": "Gespräch, in dem man Rat bekommt",
+					"explain": {
+						"entryId": "Beratung",
+						"headword": "Beratung",
+						"pronunciation": {
+							"display": "buh-RAH-toong",
+							"ipaUK": "/bəˈʁaːtʊŋ/",
+							"ipaUS": "/bəˈʁaːtʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Beratung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gespräch, in dem man Rat bekommt",
+										"examples": [
+											"Die Beratung in der Apotheke war sehr hilfreich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Beratung in der Apotheke war sehr hilfreich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Beratung in der Apotheke war sehr hilfreich.",
+							"ok": false
+						},
+						{
+							"answer": "Die Beratung in der Apotheke sehr hilfreich war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Versicherungsschutz",
+					"summary": "Schutz durch eine Versicherung",
+					"explain": {
+						"entryId": "Versicherungsschutz",
+						"headword": "Versicherungsschutz",
+						"pronunciation": {
+							"display": "fer-ZIKH-uh-roongs-shoots",
+							"ipaUK": "/fɛɐ̯ˈzɪçəʁʊŋsˌʃʊts/",
+							"ipaUS": "/fɛɐ̯ˈzɪçəʁʊŋsˌʃʊts/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Versicherungsschutz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Schutz durch eine Versicherung",
+										"examples": [
+											"Der Versicherungsschutz gilt auch im Ausland."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Versicherungsschutz gilt auch im Ausland.",
+							"ok": true
+						},
+						{
+							"answer": "Die Versicherungsschutz gilt auch im Ausland.",
+							"ok": false
+						},
+						{
+							"answer": "Der Versicherungsschutz auch im Ausland gilt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Heilung",
+					"summary": "das Gesundwerden",
+					"explain": {
+						"entryId": "Heilung",
+						"headword": "Heilung",
+						"pronunciation": {
+							"display": "HY-loong",
+							"ipaUK": "/ˈhaɪ̯lʊŋ/",
+							"ipaUS": "/ˈhaɪ̯lʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Heilung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Gesundwerden von einer Krankheit",
+										"examples": [
+											"Die Heilung dauert einige Wochen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Heilung dauert einige Wochen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Heilung dauert einige Wochen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Heilung einige Wochen dauert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Ernährung",
+					"summary": "die Art, wie man sich ernährt",
+					"explain": {
+						"entryId": "Ernährung",
+						"headword": "Ernährung",
+						"pronunciation": {
+							"display": "er-NAY-roong",
+							"ipaUK": "/ɛɐ̯ˈnɛːʁʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈnɛːʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ernährung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Art, wie man sich ernährt",
+										"examples": [
+											"Eine gesunde Ernährung hält fit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Eine gesunde Ernährung hält fit.",
+							"ok": true
+						},
+						{
+							"answer": "Ein gesundes Ernährung hält fit.",
+							"ok": false
+						},
+						{
+							"answer": "Eine gesunde Ernährung fit hält.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Dosis",
+					"summary": "Menge eines Medikaments",
+					"explain": {
+						"entryId": "Dosis",
+						"headword": "Dosis",
+						"pronunciation": {
+							"display": "DOH-zis",
+							"ipaUK": "/ˈdoːzɪs/",
+							"ipaUS": "/ˈdoːzɪs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Dosis",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Menge eines Medikaments, die man nimmt",
+										"examples": [
+											"Der Arzt empfiehlt eine kleine Dosis."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Arzt empfiehlt eine kleine Dosis.",
+							"ok": true
+						},
+						{
+							"answer": "Der Arzt empfiehlt einen kleinen Dosis.",
+							"ok": false
+						},
+						{
+							"answer": "Der Arzt eine kleine Dosis empfiehlt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Notfall",
+					"summary": "plötzliche gefährliche Situation",
+					"explain": {
+						"entryId": "Notfall",
+						"headword": "Notfall",
+						"pronunciation": {
+							"display": "NOHT-fal",
+							"ipaUK": "/ˈnoːtˌfal/",
+							"ipaUS": "/ˈnoːtˌfal/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Notfall",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine plötzliche, gefährliche Situation",
+										"examples": [
+											"Im Notfall ruft man die 112."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Notfall ruft man die 112.",
+							"ok": true
+						},
+						{
+							"answer": "In der Notfall ruft man die 112.",
+							"ok": false
+						},
+						{
+							"answer": "Im Notfall man ruft die 112.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,552 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel1-de",
+	"title": "Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Flugzeug",
+					"summary": "fliegt durch die Luft",
+					"explain": {
+						"entryId": "Flugzeug",
+						"headword": "Flugzeug",
+						"pronunciation": {
+							"display": "FLOOK-tsoyk",
+							"ipaUK": "/ˈfluːkˌtsɔɪ̯k/",
+							"ipaUS": "/ˈfluːkˌtsɔɪ̯k/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Flugzeug",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Fahrzeug, das durch die Luft fliegt",
+										"examples": [
+											"Das Flugzeug landet in einer Stunde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Flugzeug landet in einer Stunde.",
+							"ok": true
+						},
+						{
+							"answer": "Der Flugzeug landet in einer Stunde.",
+							"ok": false
+						},
+						{
+							"answer": "Das Flugzeug in einer Stunde landet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Flughafen",
+					"summary": "dort starten Flugzeuge",
+					"explain": {
+						"entryId": "Flughafen",
+						"headword": "Flughafen",
+						"pronunciation": {
+							"display": "FLOOK-hah-fn",
+							"ipaUK": "/ˈfluːkˌhaːfn̩/",
+							"ipaUS": "/ˈfluːkˌhaːfn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Flughafen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Ort, von dem Flugzeuge starten",
+										"examples": [
+											"Wir müssen früh zum Flughafen fahren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir müssen früh zum Flughafen fahren.",
+							"ok": true
+						},
+						{
+							"answer": "Wir müssen früh zur Flughafen fahren.",
+							"ok": false
+						},
+						{
+							"answer": "Wir früh zum Flughafen fahren müssen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Fahrrad",
+					"summary": "Fahrzeug mit zwei Rädern",
+					"explain": {
+						"entryId": "Fahrrad",
+						"headword": "Fahrrad",
+						"pronunciation": {
+							"display": "FAR-raht",
+							"ipaUK": "/ˈfaːɐ̯ˌʁaːt/",
+							"ipaUS": "/ˈfaːɐ̯ˌʁaːt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fahrrad",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Rad"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Fahrzeug mit zwei Rädern und Pedalen",
+										"examples": [
+											"Ich fahre jeden Tag mit dem Fahrrad."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich fahre jeden Tag mit dem Fahrrad.",
+							"ok": true
+						},
+						{
+							"answer": "Ich fahre jeden Tag mit der Fahrrad.",
+							"ok": false
+						},
+						{
+							"answer": "Ich jeden Tag mit dem Fahrrad fahre.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Bus",
+					"summary": "großes Fahrzeug für viele Leute",
+					"explain": {
+						"entryId": "Bus",
+						"headword": "Bus",
+						"pronunciation": {
+							"display": "boos",
+							"ipaUK": "/bʊs/",
+							"ipaUS": "/bʊs/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großes Fahrzeug für viele Fahrgäste",
+										"examples": [
+											"Der Bus kommt in fünf Minuten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Bus kommt in fünf Minuten.",
+							"ok": true
+						},
+						{
+							"answer": "Die Bus kommt in fünf Minuten.",
+							"ok": false
+						},
+						{
+							"answer": "Der Bus in fünf Minuten kommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Auto",
+					"summary": "Fahrzeug mit vier Rädern",
+					"explain": {
+						"entryId": "Auto",
+						"headword": "Auto",
+						"pronunciation": {
+							"display": "OW-toh",
+							"ipaUK": "/ˈaʊ̯to/",
+							"ipaUS": "/ˈaʊ̯to/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Auto",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Wagen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Fahrzeug mit vier Rädern und Motor",
+										"examples": [
+											"Mein Auto steht vor dem Haus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Auto steht vor dem Haus.",
+							"ok": true
+						},
+						{
+							"answer": "Meinen Auto steht vor dem Haus.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Auto vor dem Haus steht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Reise",
+					"summary": "eine Fahrt an einen anderen Ort",
+					"explain": {
+						"entryId": "Reise",
+						"headword": "Reise",
+						"pronunciation": {
+							"display": "RY-zuh",
+							"ipaUK": "/ˈʁaɪ̯zə/",
+							"ipaUS": "/ˈʁaɪ̯zə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Fahrt an einen anderen Ort",
+										"examples": [
+											"Die lange Reise war sehr anstrengend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die lange Reise war sehr anstrengend.",
+							"ok": true
+						},
+						{
+							"answer": "Der lange Reise war sehr anstrengend.",
+							"ok": false
+						},
+						{
+							"answer": "Die lange Reise sehr anstrengend war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Gepäck",
+					"summary": "Taschen und Koffer für die Reise",
+					"explain": {
+						"entryId": "Gepäck",
+						"headword": "Gepäck",
+						"pronunciation": {
+							"display": "guh-PEK",
+							"ipaUK": "/ɡəˈpɛk/",
+							"ipaUS": "/ɡəˈpɛk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gepäck",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Taschen und Koffer für die Reise",
+										"examples": [
+											"Mein Gepäck ist ziemlich schwer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Gepäck ist ziemlich schwer.",
+							"ok": true
+						},
+						{
+							"answer": "Meinen Gepäck ist ziemlich schwer.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Gepäck ziemlich schwer ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Karte",
+					"summary": "zeigt den Weg oder ein Gebiet",
+					"explain": {
+						"entryId": "Karte",
+						"headword": "Karte",
+						"pronunciation": {
+							"display": "KAR-tuh",
+							"ipaUK": "/ˈkaʁtə/",
+							"ipaUS": "/ˈkaʁtə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Karte",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Landkarte"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Bild, das den Weg oder ein Gebiet zeigt",
+										"examples": [
+											"Ich schaue auf die Karte, um den Weg zu finden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schaue auf die Karte, um den Weg zu finden.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schaue auf den Karte, um den Weg zu finden.",
+							"ok": false
+						},
+						{
+							"answer": "Ich auf die Karte schaue, um den Weg zu finden.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Bahnhof",
+					"summary": "dort halten die Züge",
+					"explain": {
+						"entryId": "Bahnhof",
+						"headword": "Bahnhof",
+						"pronunciation": {
+							"display": "BAHN-hohf",
+							"ipaUK": "/ˈbaːnˌhoːf/",
+							"ipaUS": "/ˈbaːnˌhoːf/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Bahnhof",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Ort, an dem Züge halten",
+										"examples": [
+											"Am Bahnhof warten viele Menschen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Bahnhof warten viele Menschen.",
+							"ok": true
+						},
+						{
+							"answer": "An die Bahnhof warten viele Menschen.",
+							"ok": false
+						},
+						{
+							"answer": "Am Bahnhof viele Menschen warten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Taxi",
+					"summary": "Auto, mit dem man gegen Geld fährt",
+					"explain": {
+						"entryId": "Taxi",
+						"headword": "Taxi",
+						"pronunciation": {
+							"display": "TAK-si",
+							"ipaUK": "/ˈtaksi/",
+							"ipaUS": "/ˈtaksi/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Taxi",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Auto, mit dem man gegen Geld fährt",
+										"examples": [
+											"Wir nehmen ein Taxi zum Hotel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir nehmen ein Taxi zum Hotel.",
+							"ok": true
+						},
+						{
+							"answer": "Wir nehmen einen Taxi zum Hotel.",
+							"ok": false
+						},
+						{
+							"answer": "Wir ein Taxi zum Hotel nehmen.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

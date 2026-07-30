@@ -1,0 +1,556 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth1-de",
+	"title": "Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Körper",
+					"summary": "der ganze Mensch (Kopf bis Fuß)",
+					"explain": {
+						"entryId": "Körper",
+						"headword": "Körper",
+						"pronunciation": {
+							"display": "KÖR-puh",
+							"ipaUK": "/ˈkœʁpɐ/",
+							"ipaUS": "/ˈkœʁpɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Körper",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der ganze Mensch von Kopf bis Fuß",
+										"examples": [
+											"Der menschliche Körper braucht Wasser."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der menschliche Körper braucht Wasser.",
+							"ok": true
+						},
+						{
+							"answer": "Die menschliche Körper braucht Wasser.",
+							"ok": false
+						},
+						{
+							"answer": "Der menschliche Körper Wasser braucht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Klinik",
+					"summary": "eine Art Krankenhaus",
+					"explain": {
+						"entryId": "Klinik",
+						"headword": "Klinik",
+						"pronunciation": {
+							"display": "KLEE-nik",
+							"ipaUK": "/ˈkliːnɪk/",
+							"ipaUS": "/ˈkliːnɪk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klinik",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Krankenhaus, oft für eine spezielle Behandlung",
+										"examples": [
+											"Nach dem Unfall kam er in die Klinik."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Unfall kam er in die Klinik.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Unfall kam er in der Klinik.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Unfall er kam in die Klinik.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Husten",
+					"summary": "ein Symptom bei Erkältung",
+					"explain": {
+						"entryId": "Husten",
+						"headword": "Husten",
+						"pronunciation": {
+							"display": "HOO-stn",
+							"ipaUK": "/ˈhuːstn̩/",
+							"ipaUS": "/ˈhuːstn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Husten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wenn man bei Erkältung laut Luft aus dem Hals stößt",
+										"examples": [
+											"Bei einer Erkältung hat man oft Husten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bei einer Erkältung hat man oft Husten.",
+							"ok": true
+						},
+						{
+							"answer": "Bei einer Erkältung hat man oft Hustens.",
+							"ok": false
+						},
+						{
+							"answer": "Bei einer Erkältung man hat oft Husten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Arzt",
+					"summary": "behandelt kranke Menschen",
+					"explain": {
+						"entryId": "Arzt",
+						"headword": "Arzt",
+						"pronunciation": {
+							"display": "artst",
+							"ipaUK": "/aːɐ̯tst/",
+							"ipaUS": "/aːɐ̯tst/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Arzt",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Ärztin",
+									"Doktor"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die kranke Menschen behandelt",
+										"examples": [
+											"Wenn ich krank bin, gehe ich zum Arzt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wenn ich krank bin, gehe ich zum Arzt.",
+							"ok": true
+						},
+						{
+							"answer": "Wenn ich krank bin, gehe ich zur Arzt.",
+							"ok": false
+						},
+						{
+							"answer": "Wenn ich krank bin, ich gehe zum Arzt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Sport",
+					"summary": "körperliche Bewegung",
+					"explain": {
+						"entryId": "Sport",
+						"headword": "Sport",
+						"pronunciation": {
+							"display": "shport",
+							"ipaUK": "/ʃpɔʁt/",
+							"ipaUS": "/ʃpɔʁt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Sport",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Bewegung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "körperliche Bewegung, um fit zu bleiben",
+										"examples": [
+											"Ich mache dreimal pro Woche Sport."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich mache dreimal pro Woche Sport.",
+							"ok": true
+						},
+						{
+							"answer": "Ich mache dreimal pro Woche Sports.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dreimal pro Woche Sport mache.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Fieber",
+					"summary": "zu hohe Körpertemperatur",
+					"explain": {
+						"entryId": "Fieber",
+						"headword": "Fieber",
+						"pronunciation": {
+							"display": "FEE-buh",
+							"ipaUK": "/ˈfiːbɐ/",
+							"ipaUS": "/ˈfiːbɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fieber",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine zu hohe Körpertemperatur bei Krankheit",
+										"examples": [
+											"Das Kind hat hohes Fieber."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Kind hat hohes Fieber.",
+							"ok": true
+						},
+						{
+							"answer": "Das Kind hat hoher Fieber.",
+							"ok": false
+						},
+						{
+							"answer": "Das Kind hohes Fieber hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Kopfschmerzen",
+					"summary": "Schmerzen im Kopf",
+					"explain": {
+						"entryId": "Kopfschmerzen",
+						"headword": "Kopfschmerzen",
+						"pronunciation": {
+							"display": "KOPF-shmer-tsn",
+							"ipaUK": "/ˈkɔpfˌʃmɛʁtsn̩/",
+							"ipaUS": "/ˈkɔpfˌʃmɛʁtsn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kopfschmerzen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Schmerzen im Kopf",
+										"examples": [
+											"Ich habe seit gestern starke Kopfschmerzen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe seit gestern starke Kopfschmerzen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe seit gestern starken Kopfschmerzen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich seit gestern starke Kopfschmerzen habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "gesund",
+					"summary": "gut für den Körper; nicht krank",
+					"explain": {
+						"entryId": "gesund",
+						"headword": "gesund",
+						"pronunciation": {
+							"display": "guh-ZOONT",
+							"ipaUK": "/ɡəˈzʊnt/",
+							"ipaUS": "/ɡəˈzʊnt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "gesund",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "nicht krank; gut für den Körper",
+										"examples": [
+											"Obst und Gemüse sind sehr gesund."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Obst und Gemüse sind sehr gesund.",
+							"ok": true
+						},
+						{
+							"answer": "Obst und Gemüse sind sehr gesunde.",
+							"ok": false
+						},
+						{
+							"answer": "Obst und Gemüse sehr gesund sind.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Krankenhaus",
+					"summary": "dort werden Kranke behandelt",
+					"explain": {
+						"entryId": "Krankenhaus",
+						"headword": "Krankenhaus",
+						"pronunciation": {
+							"display": "KRAN-kn-house",
+							"ipaUK": "/ˈkʁaŋkn̩ˌhaʊ̯s/",
+							"ipaUS": "/ˈkʁaŋkn̩ˌhaʊ̯s/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Krankenhaus",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Klinik"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort, an dem kranke Menschen behandelt werden",
+										"examples": [
+											"Meine Oma liegt im Krankenhaus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Oma liegt im Krankenhaus.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Oma liegt in die Krankenhaus.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Oma im Krankenhaus liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Medikament",
+					"summary": "ein Mittel gegen Krankheit",
+					"explain": {
+						"entryId": "Medikament",
+						"headword": "Medikament",
+						"pronunciation": {
+							"display": "me-di-ka-MENT",
+							"ipaUK": "/medikaˈmɛnt/",
+							"ipaUS": "/medikaˈmɛnt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Medikament",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Arznei",
+									"Medizin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Mittel, das man bei Krankheit nimmt",
+										"examples": [
+											"Der Arzt gibt mir ein Medikament."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Arzt gibt mir ein Medikament.",
+							"ok": true
+						},
+						{
+							"answer": "Der Arzt gibt mir einen Medikament.",
+							"ok": false
+						},
+						{
+							"answer": "Der Arzt mir ein Medikament gibt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

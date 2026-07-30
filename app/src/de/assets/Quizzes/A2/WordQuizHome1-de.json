@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHome1-de",
+	"title": "Home",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Wohnung",
+					"summary": "ein Zuhause in einem Gebäude",
+					"explain": {
+						"entryId": "Wohnung",
+						"headword": "Wohnung",
+						"pronunciation": {
+							"display": "VOH-noong",
+							"ipaUK": "/ˈvoːnʊŋ/",
+							"ipaUS": "/ˈvoːnʊŋ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wohnung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Zuhause in einem größeren Gebäude",
+										"examples": [
+											"Wir suchen eine größere Wohnung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir suchen eine größere Wohnung.",
+							"ok": true
+						},
+						{
+							"answer": "Wir suchen einen größeren Wohnung.",
+							"ok": false
+						},
+						{
+							"answer": "Wir eine größere Wohnung suchen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Badezimmer",
+					"summary": "der Raum mit Dusche/Toilette",
+					"explain": {
+						"entryId": "Badezimmer",
+						"headword": "Badezimmer",
+						"pronunciation": {
+							"display": "BAH-duh-tsim-uh",
+							"ipaUK": "/ˈbaːdəˌtsɪmɐ/",
+							"ipaUS": "/ˈbaːdəˌtsɪmɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Badezimmer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Bad"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Raum mit Dusche und Toilette",
+										"examples": [
+											"Das Badezimmer hat eine Dusche."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Badezimmer hat eine Dusche.",
+							"ok": true
+						},
+						{
+							"answer": "Der Badezimmer hat eine Dusche.",
+							"ok": false
+						},
+						{
+							"answer": "Das Badezimmer eine Dusche hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Schlafzimmer",
+					"summary": "der Raum zum Schlafen",
+					"explain": {
+						"entryId": "Schlafzimmer",
+						"headword": "Schlafzimmer",
+						"pronunciation": {
+							"display": "SHLAHF-tsim-uh",
+							"ipaUK": "/ˈʃlaːfˌtsɪmɐ/",
+							"ipaUS": "/ˈʃlaːfˌtsɪmɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Schlafzimmer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Raum, in dem man schläft",
+										"examples": [
+											"In die Schlafzimmer stelle ich ein Bett."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In die Schlafzimmer stelle ich ein Bett.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Schlafzimmer stelle ich ein Bett.",
+							"ok": false
+						},
+						{
+							"answer": "Im Schlafzimmer ein Bett ich stelle.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Esszimmer",
+					"summary": "der Raum zum Essen",
+					"explain": {
+						"entryId": "Esszimmer",
+						"headword": "Esszimmer",
+						"pronunciation": {
+							"display": "ES-tsim-uh",
+							"ipaUK": "/ˈɛsˌtsɪmɐ/",
+							"ipaUS": "/ˈɛsˌtsɪmɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Esszimmer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Raum, in dem man isst",
+										"examples": [
+											"Wir essen zusammen im Esszimmer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir essen zusammen im Esszimmer.",
+							"ok": true
+						},
+						{
+							"answer": "Wir essen zusammen in die Esszimmer.",
+							"ok": false
+						},
+						{
+							"answer": "Wir zusammen im Esszimmer essen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Tür",
+					"summary": "damit geht man in einen Raum",
+					"explain": {
+						"entryId": "Tür",
+						"headword": "Tür",
+						"pronunciation": {
+							"display": "tür",
+							"ipaUK": "/tyːɐ̯/",
+							"ipaUS": "/tyːɐ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tür",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "damit geht man in einen Raum hinein",
+										"examples": [
+											"Bitte mach die Tür zu."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bitte mach die Tür zu.",
+							"ok": true
+						},
+						{
+							"answer": "Bitte mach den Tür zu.",
+							"ok": false
+						},
+						{
+							"answer": "Bitte die Tür mach zu.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Garage",
+					"summary": "ein Raum für das Auto",
+					"explain": {
+						"entryId": "Garage",
+						"headword": "Garage",
+						"pronunciation": {
+							"display": "ga-RAH-zhuh",
+							"ipaUK": "/ɡaˈʁaːʒə/",
+							"ipaUS": "/ɡaˈʁaːʒə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Garage",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Raum für das Auto",
+										"examples": [
+											"Das Auto steht in der Garage."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Auto steht in der Garage.",
+							"ok": true
+						},
+						{
+							"answer": "Das Auto steht in dem Garage.",
+							"ok": false
+						},
+						{
+							"answer": "Das Auto in der Garage steht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Garten",
+					"summary": "Land mit Pflanzen am Haus",
+					"explain": {
+						"entryId": "Garten",
+						"headword": "Garten",
+						"pronunciation": {
+							"display": "GAR-tn",
+							"ipaUK": "/ˈɡaʁtn̩/",
+							"ipaUS": "/ˈɡaʁtn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Garten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Stück Land mit Pflanzen am Haus",
+										"examples": [
+											"Im Sommer sitzen wir im Garten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer sitzen wir im Garten.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer sitzen wir in die Garten.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer wir sitzen im Garten.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Haus",
+					"summary": "ein Gebäude zum Wohnen",
+					"explain": {
+						"entryId": "Haus",
+						"headword": "Haus",
+						"pronunciation": {
+							"display": "house",
+							"ipaUK": "/haʊ̯s/",
+							"ipaUS": "/haʊ̯s/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Haus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gebäude, in dem man wohnt",
+										"examples": [
+											"Sie wohnen in einem großen Haus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie wohnen in einem großen Haus.",
+							"ok": true
+						},
+						{
+							"answer": "Sie wohnen in einer großen Haus.",
+							"ok": false
+						},
+						{
+							"answer": "Sie in einem großen Haus wohnen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Küche",
+					"summary": "der Raum zum Kochen",
+					"explain": {
+						"entryId": "Küche",
+						"headword": "Küche",
+						"pronunciation": {
+							"display": "KÜ-khuh",
+							"ipaUK": "/ˈkʏçə/",
+							"ipaUS": "/ˈkʏçə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Küche",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Raum, in dem man kocht",
+										"examples": [
+											"In der Küche koche ich das Essen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Küche koche ich das Essen.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Küche koche ich das Essen.",
+							"ok": false
+						},
+						{
+							"answer": "In der Küche ich koche das Essen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Wohnzimmer",
+					"summary": "der Raum zum Entspannen",
+					"explain": {
+						"entryId": "Wohnzimmer",
+						"headword": "Wohnzimmer",
+						"pronunciation": {
+							"display": "VOHN-tsim-uh",
+							"ipaUK": "/ˈvoːnˌtsɪmɐ/",
+							"ipaUS": "/ˈvoːnˌtsɪmɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wohnzimmer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Raum, in dem man sich entspannt",
+										"examples": [
+											"Am Abend sitzen wir im Wohnzimmer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Abend sitzen wir im Wohnzimmer.",
+							"ok": true
+						},
+						{
+							"answer": "Am Abend sitzen wir in die Wohnzimmer.",
+							"ok": false
+						},
+						{
+							"answer": "Am Abend wir sitzen im Wohnzimmer.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

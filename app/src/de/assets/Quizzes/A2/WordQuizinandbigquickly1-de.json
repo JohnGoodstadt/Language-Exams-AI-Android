@@ -1,0 +1,546 @@
+ {
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizinandbigquickly1-de",
+	"title": "in and big quickly",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "obwohl",
+					"summary": "Gegensatz (Verb am Ende)",
+					"explain": {
+						"entryId": "obwohl",
+						"headword": "obwohl",
+						"pronunciation": {
+							"display": "op-VOHL",
+							"ipaUK": "/ɔpˈvoːl/",
+							"ipaUS": "/ɔpˈvoːl/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "obwohl",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für einen Gegensatz (Verb am Ende)",
+										"examples": [
+											"Obwohl es kalt ist, trage ich keine Jacke."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Obwohl es kalt ist, trage ich keine Jacke.",
+							"ok": true
+						},
+						{
+							"answer": "Obwohl es kalt ist, ich trage keine Jacke.",
+							"ok": false
+						},
+						{
+							"answer": "Obwohl kalt es ist, trage ich keine Jacke.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "immer",
+					"summary": "Häufigkeit: zu jeder Zeit",
+					"explain": {
+						"entryId": "immer",
+						"headword": "immer",
+						"pronunciation": {
+							"display": "IM-uh",
+							"ipaUK": "/ˈɪmɐ/",
+							"ipaUS": "/ˈɪmɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb (Häufigkeit)",
+								"headwordLine": "immer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adverb der Häufigkeit: zu jeder Zeit",
+										"examples": [
+											"Am Morgen trinke ich immer einen Kaffee."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Morgen trinke ich immer einen Kaffee.",
+							"ok": true
+						},
+						{
+							"answer": "Am Morgen ich immer trinke einen Kaffee.",
+							"ok": false
+						},
+						{
+							"answer": "Am Morgen trinke immer ich einen Kaffee.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "und",
+					"summary": "verbindet zwei Dinge",
+					"explain": {
+						"entryId": "und",
+						"headword": "und",
+						"pronunciation": {
+							"display": "oont",
+							"ipaUK": "/ʊnt/",
+							"ipaUS": "/ʊnt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "und",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion, die zwei Dinge verbindet (kein Verb-Ende)",
+										"examples": [
+											"Ich kaufe Brot und Milch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich kaufe Brot und Milch.",
+							"ok": true
+						},
+						{
+							"answer": "Ich kaufe Brot und Milch kaufe.",
+							"ok": false
+						},
+						{
+							"answer": "Ich und kaufe Brot Milch.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "um",
+					"summary": "um + Akkusativ (rund um)",
+					"explain": {
+						"entryId": "um",
+						"headword": "um",
+						"pronunciation": {
+							"display": "oom",
+							"ipaUK": "/ʊm/",
+							"ipaUS": "/ʊm/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (+ Akkusativ)",
+								"headwordLine": "um",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition (+ Akkusativ): rund um etwas",
+										"examples": [
+											"Die Kinder sitzen um den Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Kinder sitzen um den Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kinder sitzen um dem Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Die Kinder um den Tisch sitzen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "an",
+					"summary": "an + Dativ (Ort: wo?)",
+					"explain": {
+						"entryId": "an",
+						"headword": "an",
+						"pronunciation": {
+							"display": "an",
+							"ipaUK": "/an/",
+							"ipaUS": "/an/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Ort, + Dativ)",
+								"headwordLine": "an",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: an einem Platz (wo? Dativ)",
+										"examples": [
+											"Wir sitzen am Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir sitzen am Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Wir sitzen an den Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Wir am Tisch sitzen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "schlecht",
+					"summary": "Adverb: nicht gut",
+					"explain": {
+						"entryId": "schlecht",
+						"headword": "schlecht",
+						"pronunciation": {
+							"display": "shlekht",
+							"ipaUK": "/ʃlɛçt/",
+							"ipaUS": "/ʃlɛçt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "schlecht",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adverb: nicht gut",
+										"examples": [
+											"Er hat gestern schlecht geschlafen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat gestern schlecht geschlafen.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat schlecht gestern geschlafen.",
+							"ok": false
+						},
+						{
+							"answer": "Er gestern schlecht geschlafen hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "schön",
+					"summary": "Adjektiv: hübsch, angenehm",
+					"explain": {
+						"entryId": "schön",
+						"headword": "schön",
+						"pronunciation": {
+							"display": "shön",
+							"ipaUK": "/ʃøːn/",
+							"ipaUS": "/ʃøːn/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "schön",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: hübsch und angenehm",
+										"examples": [
+											"Das ist ein schönes Bild."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das ist ein schönes Bild.",
+							"ok": true
+						},
+						{
+							"answer": "Das ist ein schöner Bild.",
+							"ok": false
+						},
+						{
+							"answer": "Das ein schönes Bild ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "weil",
+					"summary": "Grund (Verb am Ende)",
+					"explain": {
+						"entryId": "weil",
+						"headword": "weil",
+						"pronunciation": {
+							"display": "vile",
+							"ipaUK": "/vaɪ̯l/",
+							"ipaUS": "/vaɪ̯l/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "weil",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für einen Grund (Verb am Ende)",
+										"examples": [
+											"Sie freut sich, weil sie Urlaub hat."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie freut sich, weil sie Urlaub hat.",
+							"ok": true
+						},
+						{
+							"answer": "Sie freut sich, weil sie hat Urlaub.",
+							"ok": false
+						},
+						{
+							"answer": "Sie freut sich, weil hat sie Urlaub.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "hinter",
+					"summary": "hinter + Dativ (wo?)",
+					"explain": {
+						"entryId": "hinter",
+						"headword": "hinter",
+						"pronunciation": {
+							"display": "HIN-tuh",
+							"ipaUK": "/ˈhɪntɐ/",
+							"ipaUS": "/ˈhɪntɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Ort, + Dativ)",
+								"headwordLine": "hinter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: auf der Rückseite von etwas (wo? Dativ)",
+										"examples": [
+											"Der Garten liegt hinter dem Haus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Garten liegt hinter dem Haus.",
+							"ok": true
+						},
+						{
+							"answer": "Der Garten liegt hinter das Haus.",
+							"ok": false
+						},
+						{
+							"answer": "Der Garten hinter dem Haus liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "zwischen",
+					"summary": "zwischen + Dativ (wo?)",
+					"explain": {
+						"entryId": "zwischen",
+						"headword": "zwischen",
+						"pronunciation": {
+							"display": "TSVISH-n",
+							"ipaUK": "/ˈtsvɪʃn̩/",
+							"ipaUS": "/ˈtsvɪʃn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Ort, + Dativ)",
+								"headwordLine": "zwischen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: in der Mitte von zwei Dingen (wo? Dativ)",
+										"examples": [
+											"Die Bank steht zwischen den Bäumen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Bank steht zwischen den Bäumen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Bank steht zwischen die Bäume.",
+							"ok": false
+						},
+						{
+							"answer": "Die Bank zwischen den Bäumen steht.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

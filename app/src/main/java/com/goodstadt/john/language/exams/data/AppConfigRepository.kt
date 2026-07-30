@@ -528,7 +528,7 @@ class AppConfigRepository @Inject constructor(
                "SpanishLanguage",
                "AdjectivesGroup",
                "EnglishDefinitionsFormat1",
-               "PairsGroup",
+               "PairsGroup"
              ]
            },
            "meTab": {

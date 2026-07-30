@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel1-de",
+	"title": "1. Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Unterkunft",
+					"summary": "Ort zum Übernachten",
+					"explain": {
+						"entryId": "Unterkunft",
+						"headword": "Unterkunft",
+						"pronunciation": {
+							"display": "OON-tuh-koonft",
+							"ipaUK": "/ˈʊntɐˌkʊnft/",
+							"ipaUS": "/ˈʊntɐˌkʊnft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unterkunft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort zum Übernachten (Hotel, Wohnung)",
+										"examples": [
+											"Wir suchen eine günstige Unterkunft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir suchen eine günstige Unterkunft.",
+							"ok": true
+						},
+						{
+							"answer": "Wir suchen einen günstigen Unterkunft.",
+							"ok": false
+						},
+						{
+							"answer": "Wir eine günstige Unterkunft suchen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Ankunft",
+					"summary": "das Ankommen an einem Ort",
+					"explain": {
+						"entryId": "Ankunft",
+						"headword": "Ankunft",
+						"pronunciation": {
+							"display": "AN-koonft",
+							"ipaUK": "/ˈankʊnft/",
+							"ipaUS": "/ˈankʊnft/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ankunft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Ankommen an einem Ort",
+										"examples": [
+											"Die Ankunft des Zuges verzögert sich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Ankunft des Zuges verzögert sich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Ankunft des Zuges verzögert sich.",
+							"ok": false
+						},
+						{
+							"answer": "Die Ankunft des Zuges sich verzögert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Sehenswürdigkeit",
+					"summary": "Ort für Touristen",
+					"explain": {
+						"entryId": "Sehenswürdigkeit",
+						"headword": "Sehenswürdigkeit",
+						"pronunciation": {
+							"display": "ZAY-uhns-vür-dikh-kite",
+							"ipaUK": "/ˈzeːənsvʏʁdɪçkaɪ̯t/",
+							"ipaUS": "/ˈzeːənsvʏʁdɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Sehenswürdigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort, den Touristen gern besuchen",
+										"examples": [
+											"Der Turm ist eine bekannte Sehenswürdigkeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Turm ist eine bekannte Sehenswürdigkeit.",
+							"ok": true
+						},
+						{
+							"answer": "Der Turm ist einen bekannten Sehenswürdigkeit.",
+							"ok": false
+						},
+						{
+							"answer": "Der Turm eine bekannte Sehenswürdigkeit ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Gepäck",
+					"summary": "Taschen und Koffer auf Reisen",
+					"explain": {
+						"entryId": "Gepäck",
+						"headword": "Gepäck",
+						"pronunciation": {
+							"display": "guh-PEK",
+							"ipaUK": "/ɡəˈpɛk/",
+							"ipaUS": "/ɡəˈpɛk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Gepäck",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Taschen und Koffer auf einer Reise",
+										"examples": [
+											"Mein Gepäck ist ziemlich schwer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Gepäck ist ziemlich schwer.",
+							"ok": true
+						},
+						{
+							"answer": "Meinen Gepäck ist ziemlich schwer.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Gepäck ziemlich schwer ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Buchung",
+					"summary": "das Reservieren",
+					"explain": {
+						"entryId": "Buchung",
+						"headword": "Buchung",
+						"pronunciation": {
+							"display": "BOO-khoong",
+							"ipaUK": "/ˈbuːxʊŋ/",
+							"ipaUS": "/ˈbuːxʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Buchung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Reservieren von etwas (Reise, Zimmer)",
+										"examples": [
+											"Die Buchung des Fluges war einfach."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Buchung des Fluges war einfach.",
+							"ok": true
+						},
+						{
+							"answer": "Der Buchung des Fluges war einfach.",
+							"ok": false
+						},
+						{
+							"answer": "Die Buchung des Fluges einfach war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Check-in",
+					"summary": "Anmelden am Flughafen/Hotel",
+					"explain": {
+						"entryId": "Check-in",
+						"headword": "Check-in",
+						"pronunciation": {
+							"display": "CHEK-in",
+							"ipaUK": "/ˈtʃɛkˌʔɪn/",
+							"ipaUS": "/ˈtʃɛkˌʔɪn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Check-in",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Anmelden am Flughafen oder Hotel",
+										"examples": [
+											"Der Check-in beginnt zwei Stunden vorher."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Check-in beginnt zwei Stunden vorher.",
+							"ok": true
+						},
+						{
+							"answer": "Die Check-in beginnt zwei Stunden vorher.",
+							"ok": false
+						},
+						{
+							"answer": "Der Check-in zwei Stunden vorher beginnt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Kreuzfahrt",
+					"summary": "Urlaubsreise mit dem Schiff",
+					"explain": {
+						"entryId": "Kreuzfahrt",
+						"headword": "Kreuzfahrt",
+						"pronunciation": {
+							"display": "KROYTS-fart",
+							"ipaUK": "/ˈkʁɔɪ̯tsˌfaːɐ̯t/",
+							"ipaUS": "/ˈkʁɔɪ̯tsˌfaːɐ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Kreuzfahrt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Urlaubsreise mit einem großen Schiff",
+										"examples": [
+											"Im Sommer machen wir eine Kreuzfahrt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer machen wir eine Kreuzfahrt.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer machen wir einen Kreuzfahrt.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer wir machen eine Kreuzfahrt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Zoll",
+					"summary": "Kontrolle von Waren an der Grenze",
+					"explain": {
+						"entryId": "Zoll",
+						"headword": "Zoll",
+						"pronunciation": {
+							"display": "tsol",
+							"ipaUK": "/tsɔl/",
+							"ipaUS": "/tsɔl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zoll",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Kontrolle von Waren an der Grenze",
+										"examples": [
+											"Am Zoll muss man das Gepäck zeigen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Zoll muss man das Gepäck zeigen.",
+							"ok": true
+						},
+						{
+							"answer": "An dem Zoll muss man das Gepäck zeigen.",
+							"ok": false
+						},
+						{
+							"answer": "Am Zoll man muss das Gepäck zeigen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Abfahrt",
+					"summary": "das Losfahren",
+					"explain": {
+						"entryId": "Abfahrt",
+						"headword": "Abfahrt",
+						"pronunciation": {
+							"display": "AP-fart",
+							"ipaUK": "/ˈapˌfaːɐ̯t/",
+							"ipaUS": "/ˈapˌfaːɐ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abfahrt",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Abflug"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Losfahren von einem Ort",
+										"examples": [
+											"Die Abfahrt des Busses ist um acht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Abfahrt des Busses ist um acht.",
+							"ok": true
+						},
+						{
+							"answer": "Der Abfahrt des Busses ist um acht.",
+							"ok": false
+						},
+						{
+							"answer": "Die Abfahrt des Busses um acht ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Reiseziel",
+					"summary": "Ort, zu dem man reist",
+					"explain": {
+						"entryId": "Reiseziel",
+						"headword": "Reiseziel",
+						"pronunciation": {
+							"display": "RY-zuh-tseel",
+							"ipaUK": "/ˈʁaɪ̯zəˌtsiːl/",
+							"ipaUS": "/ˈʁaɪ̯zəˌtsiːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reiseziel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Ort, zu dem man reist",
+										"examples": [
+											"Unser Reiseziel ist dieses Jahr Italien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Unser Reiseziel ist dieses Jahr Italien.",
+							"ok": true
+						},
+						{
+							"answer": "Unsere Reiseziel ist dieses Jahr Italien.",
+							"ok": false
+						},
+						{
+							"answer": "Unser Reiseziel dieses Jahr Italien ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

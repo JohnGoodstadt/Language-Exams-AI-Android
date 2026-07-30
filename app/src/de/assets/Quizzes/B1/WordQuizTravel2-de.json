@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel2-de",
+	"title": "2. Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Flugsteig",
+					"summary": "Ausgang zum Flugzeug",
+					"explain": {
+						"entryId": "Flugsteig",
+						"headword": "Flugsteig",
+						"pronunciation": {
+							"display": "FLOOK-shtike",
+							"ipaUK": "/ˈfluːkˌʃtaɪ̯k/",
+							"ipaUS": "/ˈfluːkˌʃtaɪ̯k/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Flugsteig",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Gate"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Ausgang zum Flugzeug am Flughafen",
+										"examples": [
+											"Der Flugsteig befindet sich im ersten Stock."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Flugsteig befindet sich im ersten Stock.",
+							"ok": true
+						},
+						{
+							"answer": "Die Flugsteig befindet sich im ersten Stock.",
+							"ok": false
+						},
+						{
+							"answer": "Der Flugsteig sich im ersten Stock befindet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Jugendherberge",
+					"summary": "einfache, günstige Unterkunft",
+					"explain": {
+						"entryId": "Jugendherberge",
+						"headword": "Jugendherberge",
+						"pronunciation": {
+							"display": "YOO-gnt-her-ber-guh",
+							"ipaUK": "/ˈjuːɡn̩thɛʁˌbɛʁɡə/",
+							"ipaUS": "/ˈjuːɡn̩thɛʁˌbɛʁɡə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Jugendherberge",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine einfache, günstige Unterkunft für Reisende",
+										"examples": [
+											"In der Jugendherberge ist es sehr günstig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Jugendherberge ist es sehr günstig.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Jugendherberge ist es sehr günstig.",
+							"ok": false
+						},
+						{
+							"answer": "In der Jugendherberge es ist sehr günstig.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Hotel",
+					"summary": "Haus zum Übernachten",
+					"explain": {
+						"entryId": "Hotel",
+						"headword": "Hotel",
+						"pronunciation": {
+							"display": "ho-TEL",
+							"ipaUK": "/hoˈtɛl/",
+							"ipaUS": "/hoˈtɛl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hotel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Haus, in dem man gegen Geld übernachtet",
+										"examples": [
+											"Das Hotel liegt direkt am Strand."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Hotel liegt direkt am Strand.",
+							"ok": true
+						},
+						{
+							"answer": "Der Hotel liegt direkt am Strand.",
+							"ok": false
+						},
+						{
+							"answer": "Das Hotel direkt am Strand liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Einreise",
+					"summary": "Ankommen in einem Land",
+					"explain": {
+						"entryId": "Einreise",
+						"headword": "Einreise",
+						"pronunciation": {
+							"display": "INE-ry-zuh",
+							"ipaUK": "/ˈaɪ̯nˌʁaɪ̯zə/",
+							"ipaUS": "/ˈaɪ̯nˌʁaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einreise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Ankommen in einem anderen Land (mit Kontrolle)",
+										"examples": [
+											"Für die Einreise braucht man ein Visum."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Für die Einreise braucht man ein Visum.",
+							"ok": true
+						},
+						{
+							"answer": "Für die Einreise braucht man ein Visum ein.",
+							"ok": false
+						},
+						{
+							"answer": "Für die Einreise man braucht ein Visum.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Reiseplan",
+					"summary": "genauer Plan einer Reise",
+					"explain": {
+						"entryId": "Reiseplan",
+						"headword": "Reiseplan",
+						"pronunciation": {
+							"display": "RY-zuh-plahn",
+							"ipaUK": "/ˈʁaɪ̯zəˌplaːn/",
+							"ipaUS": "/ˈʁaɪ̯zəˌplaːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reiseplan",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der genaue Plan einer Reise",
+										"examples": [
+											"Unser Reiseplan ist gut durchdacht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Unser Reiseplan ist gut durchdacht.",
+							"ok": true
+						},
+						{
+							"answer": "Unsere Reiseplan ist gut durchdacht.",
+							"ok": false
+						},
+						{
+							"answer": "Unser Reiseplan gut durchdacht ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Reise",
+					"summary": "Fahrt an einen anderen Ort",
+					"explain": {
+						"entryId": "Reise",
+						"headword": "Reise",
+						"pronunciation": {
+							"display": "RY-zuh",
+							"ipaUK": "/ˈʁaɪ̯zə/",
+							"ipaUS": "/ˈʁaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Fahrt an einen anderen Ort",
+										"examples": [
+											"Die lange Reise war sehr anstrengend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die lange Reise war sehr anstrengend.",
+							"ok": true
+						},
+						{
+							"answer": "Der lange Reise war sehr anstrengend.",
+							"ok": false
+						},
+						{
+							"answer": "Die lange Reise sehr anstrengend war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Landung",
+					"summary": "Aufsetzen des Flugzeugs",
+					"explain": {
+						"entryId": "Landung",
+						"headword": "Landung",
+						"pronunciation": {
+							"display": "LAN-doong",
+							"ipaUK": "/ˈlandʊŋ/",
+							"ipaUS": "/ˈlandʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Landung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Aufsetzen des Flugzeugs auf dem Boden",
+										"examples": [
+											"Die Landung war sehr sanft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Landung war sehr sanft.",
+							"ok": true
+						},
+						{
+							"answer": "Der Landung war sehr sanft.",
+							"ok": false
+						},
+						{
+							"answer": "Die Landung sehr sanft war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Koffer",
+					"summary": "große Reisetasche",
+					"explain": {
+						"entryId": "Koffer",
+						"headword": "Koffer",
+						"pronunciation": {
+							"display": "KOF-fuh",
+							"ipaUK": "/ˈkɔfɐ/",
+							"ipaUS": "/ˈkɔfɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Koffer",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine große Tasche für Kleidung auf Reisen",
+										"examples": [
+											"Mein Koffer ist leider zu schwer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Koffer ist leider zu schwer.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Koffer ist leider zu schwer.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Koffer leider zu schwer ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Passkontrolle",
+					"summary": "Kontrolle des Reisepasses",
+					"explain": {
+						"entryId": "Passkontrolle",
+						"headword": "Passkontrolle",
+						"pronunciation": {
+							"display": "PAS-kon-trol-luh",
+							"ipaUK": "/ˈpaskɔnˌtʁɔlə/",
+							"ipaUS": "/ˈpaskɔnˌtʁɔlə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Passkontrolle",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Kontrolle des Reisepasses an der Grenze",
+										"examples": [
+											"An der Passkontrolle war eine lange Schlange."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "An der Passkontrolle war eine lange Schlange.",
+							"ok": true
+						},
+						{
+							"answer": "An dem Passkontrolle war eine lange Schlange.",
+							"ok": false
+						},
+						{
+							"answer": "An der Passkontrolle eine lange Schlange war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Plan",
+					"summary": "überlegte Vorbereitung",
+					"explain": {
+						"entryId": "Plan",
+						"headword": "Plan",
+						"pronunciation": {
+							"display": "plahn",
+							"ipaUK": "/plaːn/",
+							"ipaUS": "/plaːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Plan",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine überlegte Vorbereitung für etwas",
+										"examples": [
+											"Wir haben einen genauen Plan gemacht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir haben einen genauen Plan gemacht.",
+							"ok": true
+						},
+						{
+							"answer": "Wir haben ein genaues Plan gemacht.",
+							"ok": false
+						},
+						{
+							"answer": "Wir einen genauen Plan gemacht haben.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

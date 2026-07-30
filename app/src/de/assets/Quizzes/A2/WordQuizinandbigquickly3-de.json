@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizinandbigquickly3-de",
+	"title": "in and big quickly",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "laut",
+					"summary": "mit viel Lautstärke",
+					"explain": {
+						"entryId": "laut",
+						"headword": "laut",
+						"pronunciation": {
+							"display": "lowt",
+							"ipaUK": "/laʊ̯t/",
+							"ipaUS": "/laʊ̯t/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "laut",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv/Adverb: mit viel Lautstärke",
+										"examples": [
+											"Die Musik ist heute sehr laut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Musik ist heute sehr laut.",
+							"ok": true
+						},
+						{
+							"answer": "Die Musik ist heute sehr laute.",
+							"ok": false
+						},
+						{
+							"answer": "Die Musik heute sehr laut ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "nie",
+					"summary": "Häufigkeit: zu keiner Zeit",
+					"explain": {
+						"entryId": "nie",
+						"headword": "nie",
+						"pronunciation": {
+							"display": "nee",
+							"ipaUK": "/niː/",
+							"ipaUS": "/niː/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb (Häufigkeit)",
+								"headwordLine": "nie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adverb der Häufigkeit: zu keiner Zeit",
+										"examples": [
+											"Ich trinke nie Alkohol."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich trinke nie Alkohol.",
+							"ok": true
+						},
+						{
+							"answer": "Ich nie trinke Alkohol.",
+							"ok": false
+						},
+						{
+							"answer": "Ich trinke Alkohol nie nicht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "neu",
+					"summary": "Adjektiv: nicht alt",
+					"explain": {
+						"entryId": "neu",
+						"headword": "neu",
+						"pronunciation": {
+							"display": "noy",
+							"ipaUK": "/nɔɪ̯/",
+							"ipaUS": "/nɔɪ̯/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "neu",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: nicht alt",
+										"examples": [
+											"Ich habe ein neues Auto gekauft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe ein neues Auto gekauft.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe ein neuer Auto gekauft.",
+							"ok": false
+						},
+						{
+							"answer": "Ich ein neues Auto gekauft habe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "neben",
+					"summary": "neben + Dativ (wo?)",
+					"explain": {
+						"entryId": "neben",
+						"headword": "neben",
+						"pronunciation": {
+							"display": "NAY-bn",
+							"ipaUK": "/ˈneːbn̩/",
+							"ipaUS": "/ˈneːbn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Ort, + Dativ)",
+								"headwordLine": "neben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: direkt an der Seite (wo? Dativ)",
+										"examples": [
+											"Die Lampe steht neben dem Sofa."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Lampe steht neben dem Sofa.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lampe steht neben das Sofa.",
+							"ok": false
+						},
+						{
+							"answer": "Die Lampe neben dem Sofa steht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "oft",
+					"summary": "Häufigkeit: viele Male",
+					"explain": {
+						"entryId": "oft",
+						"headword": "oft",
+						"pronunciation": {
+							"display": "oft",
+							"ipaUK": "/ɔft/",
+							"ipaUS": "/ɔft/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb (Häufigkeit)",
+								"headwordLine": "oft",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adverb der Häufigkeit: viele Male",
+										"examples": [
+											"Wir gehen oft ins Kino."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir gehen oft ins Kino.",
+							"ok": true
+						},
+						{
+							"answer": "Wir oft gehen ins Kino.",
+							"ok": false
+						},
+						{
+							"answer": "Wir gehen ins Kino oft nicht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "alt",
+					"summary": "Adjektiv: nicht neu/jung",
+					"explain": {
+						"entryId": "alt",
+						"headword": "alt",
+						"pronunciation": {
+							"display": "alt",
+							"ipaUK": "/alt/",
+							"ipaUS": "/alt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "alt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: nicht neu oder jung",
+										"examples": [
+											"Mein Großvater ist schon sehr alt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mein Großvater ist schon sehr alt.",
+							"ok": true
+						},
+						{
+							"answer": "Mein Großvater ist schon sehr alte.",
+							"ok": false
+						},
+						{
+							"answer": "Mein Großvater schon sehr alt ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "auf",
+					"summary": "auf + Dativ (wo?)",
+					"explain": {
+						"entryId": "auf",
+						"headword": "auf",
+						"pronunciation": {
+							"display": "owf",
+							"ipaUK": "/aʊ̯f/",
+							"ipaUS": "/aʊ̯f/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Ort, + Dativ)",
+								"headwordLine": "auf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: auf einer Oberfläche (wo? Dativ)",
+										"examples": [
+											"Das Buch liegt auf dem Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Buch liegt auf dem Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Das Buch liegt auf den Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Das Buch auf dem Tisch liegt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "oder",
+					"summary": "Auswahl: A oder B",
+					"explain": {
+						"entryId": "oder",
+						"headword": "oder",
+						"pronunciation": {
+							"display": "OH-duh",
+							"ipaUK": "/ˈoːdɐ/",
+							"ipaUS": "/ˈoːdɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Konjunktion",
+								"grammarType": "Konjunktion",
+								"headwordLine": "oder",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Konjunktion für eine Auswahl (kein Verb-Ende)",
+										"examples": [
+											"Möchtest du Tee oder Kaffee?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Möchtest du Tee oder Kaffee?",
+							"ok": true
+						},
+						{
+							"answer": "Möchtest du Tee oder Kaffee möchtest?",
+							"ok": false
+						},
+						{
+							"answer": "Möchtest du oder Tee Kaffee?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "aus",
+					"summary": "aus + Dativ (heraus)",
+					"explain": {
+						"entryId": "aus",
+						"headword": "aus",
+						"pronunciation": {
+							"display": "owss",
+							"ipaUK": "/aʊ̯s/",
+							"ipaUS": "/aʊ̯s/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (+ Dativ)",
+								"headwordLine": "aus",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition (+ Dativ): von innen nach außen",
+										"examples": [
+											"Er kommt gerade aus dem Haus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er kommt gerade aus dem Haus.",
+							"ok": true
+						},
+						{
+							"answer": "Er kommt gerade aus das Haus.",
+							"ok": false
+						},
+						{
+							"answer": "Er gerade aus dem Haus kommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "über",
+					"summary": "über + Dativ (wo?)",
+					"explain": {
+						"entryId": "über",
+						"headword": "über",
+						"pronunciation": {
+							"display": "Ü-buh",
+							"ipaUK": "/ˈyːbɐ/",
+							"ipaUS": "/ˈyːbɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (Ort, + Dativ)",
+								"headwordLine": "über",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition: höher als etwas (wo? Dativ)",
+										"examples": [
+											"Die Lampe hängt über dem Tisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Lampe hängt über dem Tisch.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lampe hängt über den Tisch.",
+							"ok": false
+						},
+						{
+							"answer": "Die Lampe über dem Tisch hängt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

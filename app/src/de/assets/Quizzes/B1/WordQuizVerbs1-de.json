@@ -1,0 +1,550 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs1-de",
+	"title": "1. Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the verb correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "erreichen",
+					"summary": "ein Ziel schaffen",
+					"explain": {
+						"entryId": "erreichen",
+						"headword": "erreichen",
+						"pronunciation": {
+							"display": "er-RY-khn",
+							"ipaUK": "/ɛɐ̯ˈʁaɪ̯çn̩/",
+							"ipaUS": "/ɛɐ̯ˈʁaɪ̯çn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "erreichen",
+								"inflectionsLine": null,
+								"synonyms": [
+									"schaffen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ziel schaffen; vollenden",
+										"examples": [
+											"Mit Fleiß kannst du viel erreichen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Mit Fleiß kannst du viel erreichen.",
+							"ok": true
+						},
+						{
+							"answer": "Mit Fleiß kannst du viel erreichst.",
+							"ok": false
+						},
+						{
+							"answer": "Mit Fleiß du kannst viel erreichen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "erzielen",
+					"summary": "ein Ergebnis erreichen",
+					"explain": {
+						"entryId": "erzielen",
+						"headword": "erzielen",
+						"pronunciation": {
+							"display": "er-TSEE-lun",
+							"ipaUK": "/ɛɐ̯ˈtsiːlən/",
+							"ipaUS": "/ɛɐ̯ˈtsiːlən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "erzielen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "durch Mühe ein Ergebnis erreichen",
+										"examples": [
+											"Die Firma erzielt einen hohen Gewinn."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Firma erzielt einen hohen Gewinn.",
+							"ok": true
+						},
+						{
+							"answer": "Die Firma erzielen einen hohen Gewinn.",
+							"ok": false
+						},
+						{
+							"answer": "Die Firma einen hohen Gewinn erzielt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "bewundern",
+					"summary": "jemanden sehr schätzen",
+					"explain": {
+						"entryId": "bewundern",
+						"headword": "bewundern",
+						"pronunciation": {
+							"display": "buh-VOON-duhn",
+							"ipaUK": "/bəˈvʊndɐn/",
+							"ipaUS": "/bəˈvʊndɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "bewundern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemanden oder etwas sehr schätzen",
+										"examples": [
+											"Ich bewundere ihren Mut sehr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bewundere ihren Mut sehr.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bewundert ihren Mut sehr.",
+							"ok": false
+						},
+						{
+							"answer": "Ich ihren Mut sehr bewundere.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "beraten",
+					"summary": "einen Rat geben",
+					"explain": {
+						"entryId": "beraten",
+						"headword": "beraten",
+						"pronunciation": {
+							"display": "buh-RAH-tn",
+							"ipaUK": "/bəˈʁaːtn̩/",
+							"ipaUS": "/bəˈʁaːtn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "beraten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemandem einen Rat geben",
+										"examples": [
+											"Der Verkäufer berät die Kunden gut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Verkäufer berät die Kunden gut.",
+							"ok": true
+						},
+						{
+							"answer": "Der Verkäufer beraten die Kunden gut.",
+							"ok": false
+						},
+						{
+							"answer": "Der Verkäufer die Kunden gut berät.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "schätzen",
+					"summary": "den Wert erkennen",
+					"explain": {
+						"entryId": "schätzen",
+						"headword": "schätzen",
+						"pronunciation": {
+							"display": "SHET-sn",
+							"ipaUK": "/ˈʃɛtsn̩/",
+							"ipaUS": "/ˈʃɛtsn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "schätzen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "den Wert von etwas erkennen; wertschätzen",
+										"examples": [
+											"Ich schätze deine ehrliche Meinung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich schätze deine ehrliche Meinung.",
+							"ok": true
+						},
+						{
+							"answer": "Ich schätzt deine ehrliche Meinung.",
+							"ok": false
+						},
+						{
+							"answer": "Ich deine ehrliche Meinung schätze.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "ausdrücken",
+					"summary": "Gedanken in Worte fassen",
+					"explain": {
+						"entryId": "ausdrücken",
+						"headword": "ausdrücken",
+						"pronunciation": {
+							"display": "OWS-drük-kn",
+							"ipaUK": "/ˈaʊ̯sˌdʁʏkn̩/",
+							"ipaUS": "/ˈaʊ̯sˌdʁʏkn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "ausdrücken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Gedanken in Worte fassen",
+										"examples": [
+											"Sie kann ihre Gefühle gut ausdrücken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie kann ihre Gefühle gut ausdrücken.",
+							"ok": true
+						},
+						{
+							"answer": "Sie kann ihre Gefühle gut ausdrückt.",
+							"ok": false
+						},
+						{
+							"answer": "Sie kann ihre Gefühle gut ausdrucken.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "versichern",
+					"summary": "etwas fest zusagen",
+					"explain": {
+						"entryId": "versichern",
+						"headword": "versichern",
+						"pronunciation": {
+							"display": "fer-ZIKH-uhn",
+							"ipaUK": "/fɛɐ̯ˈzɪçɐn/",
+							"ipaUS": "/fɛɐ̯ˈzɪçɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "versichern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemandem etwas fest zusagen",
+										"examples": [
+											"Ich versichere dir, dass alles klappt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich versichere dir, dass alles klappt.",
+							"ok": true
+						},
+						{
+							"answer": "Ich versichert dir, dass alles klappt.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir versichere, dass alles klappt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "erlangen",
+					"summary": "etwas durch Mühe bekommen",
+					"explain": {
+						"entryId": "erlangen",
+						"headword": "erlangen",
+						"pronunciation": {
+							"display": "er-LANG-uhn",
+							"ipaUK": "/ɛɐ̯ˈlaŋən/",
+							"ipaUS": "/ɛɐ̯ˈlaŋən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "erlangen",
+								"inflectionsLine": null,
+								"synonyms": [
+									"erreichen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas durch Anstrengung bekommen",
+										"examples": [
+											"Durch Übung erlangt man Sicherheit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Durch Übung erlangt man Sicherheit.",
+							"ok": true
+						},
+						{
+							"answer": "Durch Übung erlangen man Sicherheit.",
+							"ok": false
+						},
+						{
+							"answer": "Durch Übung man erlangt Sicherheit.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "kommunizieren",
+					"summary": "Informationen austauschen",
+					"explain": {
+						"entryId": "kommunizieren",
+						"headword": "kommunizieren",
+						"pronunciation": {
+							"display": "ko-moo-ni-TSEE-run",
+							"ipaUK": "/kɔmuniˈtsiːʁən/",
+							"ipaUS": "/kɔmuniˈtsiːʁən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "kommunizieren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Informationen austauschen",
+										"examples": [
+											"Wir kommunizieren meistens per E-Mail."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir kommunizieren meistens per E-Mail.",
+							"ok": true
+						},
+						{
+							"answer": "Wir kommuniziert meistens per E-Mail.",
+							"ok": false
+						},
+						{
+							"answer": "Wir meistens per E-Mail kommunizieren.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "vermitteln",
+					"summary": "etwas weitergeben",
+					"explain": {
+						"entryId": "vermitteln",
+						"headword": "vermitteln",
+						"pronunciation": {
+							"display": "fer-MIT-ln",
+							"ipaUK": "/fɛɐ̯ˈmɪtl̩n/",
+							"ipaUS": "/fɛɐ̯ˈmɪtl̩n/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "vermitteln",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas weitergeben oder übermitteln",
+										"examples": [
+											"Der Lehrer vermittelt das Wissen anschaulich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Lehrer vermittelt das Wissen anschaulich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Lehrer vermitteln das Wissen anschaulich.",
+							"ok": false
+						},
+						{
+							"answer": "Der Lehrer das Wissen anschaulich vermittelt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

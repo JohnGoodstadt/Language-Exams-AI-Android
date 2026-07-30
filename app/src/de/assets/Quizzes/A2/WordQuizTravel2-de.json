@@ -1,0 +1,125 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizTravel2-de",
+	"title": "Travel",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Fahrkarte",
+					"summary": "Karte für Bus oder Zug",
+					"explain": {
+						"entryId": "Fahrkarte",
+						"headword": "Fahrkarte",
+						"pronunciation": {
+							"display": "FAR-kar-tuh",
+							"ipaUK": "/ˈfaːɐ̯ˌkaʁtə/",
+							"ipaUS": "/ˈfaːɐ̯ˌkaʁtə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fahrkarte",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Ticket",
+									"Fahrschein"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Karte, die man für Bus oder Zug kauft",
+										"examples": [
+											"Ich kaufe eine Fahrkarte nach Berlin."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich kaufe eine Fahrkarte nach Berlin.",
+							"ok": true
+						},
+						{
+							"answer": "Ich kaufe einen Fahrkarte nach Berlin.",
+							"ok": false
+						},
+						{
+							"answer": "Ich eine Fahrkarte nach Berlin kaufe.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Zug",
+					"summary": "fährt auf Schienen",
+					"explain": {
+						"entryId": "Zug",
+						"headword": "Zug",
+						"pronunciation": {
+							"display": "tsook",
+							"ipaUK": "/tsuːk/",
+							"ipaUS": "/tsuːk/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zug",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein langes Fahrzeug, das auf Schienen fährt",
+										"examples": [
+											"Der Zug fährt pünktlich ab."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Zug fährt pünktlich ab.",
+							"ok": true
+						},
+						{
+							"answer": "Die Zug fährt pünktlich ab.",
+							"ok": false
+						},
+						{
+							"answer": "Der Zug pünktlich ab fährt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

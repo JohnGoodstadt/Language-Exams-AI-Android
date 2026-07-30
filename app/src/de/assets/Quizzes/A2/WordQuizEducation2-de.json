@@ -1,0 +1,124 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizEducation2-de",
+	"title": "Education",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Lehrbuch",
+					"summary": "ein Buch zum Lernen",
+					"explain": {
+						"entryId": "Lehrbuch",
+						"headword": "Lehrbuch",
+						"pronunciation": {
+							"display": "LAYR-bookh",
+							"ipaUK": "/ˈleːɐ̯ˌbuːx/",
+							"ipaUS": "/ˈleːɐ̯ˌbuːx/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Lehrbuch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Buch zum Lernen für Schule oder Universität",
+										"examples": [
+											"Das Lehrbuch kostet dreißig Euro."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Lehrbuch kostet dreißig Euro.",
+							"ok": true
+						},
+						{
+							"answer": "Der Lehrbuch kostet dreißig Euro.",
+							"ok": false
+						},
+						{
+							"answer": "Das Lehrbuch dreißig Euro kostet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Universität",
+					"summary": "dort studieren Erwachsene",
+					"explain": {
+						"entryId": "Universität",
+						"headword": "Universität",
+						"pronunciation": {
+							"display": "oo-ni-ver-zi-TAYT",
+							"ipaUK": "/univɛʁziˈtɛːt/",
+							"ipaUS": "/univɛʁziˈtɛːt/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Universität",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Uni"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Schule für Erwachsene nach dem Abitur",
+										"examples": [
+											"Meine Tochter studiert an der Universität."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Meine Tochter studiert an der Universität.",
+							"ok": true
+						},
+						{
+							"answer": "Meine Tochter studiert an dem Universität.",
+							"ok": false
+						},
+						{
+							"answer": "Meine Tochter an der Universität studiert.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

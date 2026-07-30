@@ -1,0 +1,554 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPersonal2-de",
+	"title": "2. Personal",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Vorstellungsgespräch",
+					"summary": "Gespräch für eine Stelle",
+					"explain": {
+						"entryId": "Vorstellungsgespräch",
+						"headword": "Vorstellungsgespräch",
+						"pronunciation": {
+							"display": "FOR-shtel-oongs-guh-shpraikh",
+							"ipaUK": "/ˈfoːɐ̯ʃtɛlʊŋsɡəˌʃpʁɛːç/",
+							"ipaUS": "/ˈfoːɐ̯ʃtɛlʊŋsɡəˌʃpʁɛːç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorstellungsgespräch",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Interview"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Gespräch, um eine Stelle zu bekommen",
+										"examples": [
+											"Das Vorstellungsgespräch verlief sehr gut."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Vorstellungsgespräch verlief sehr gut.",
+							"ok": true
+						},
+						{
+							"answer": "Der Vorstellungsgespräch verlief sehr gut.",
+							"ok": false
+						},
+						{
+							"answer": "Das Vorstellungsgespräch sehr gut verlief.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Interviewer",
+					"summary": "stellt die Fragen",
+					"explain": {
+						"entryId": "Interviewer",
+						"headword": "Interviewer",
+						"pronunciation": {
+							"display": "IN-tuh-vyoo-uh",
+							"ipaUK": "/ˈɪntɐvjuːɐ/",
+							"ipaUS": "/ˈɪntɐvjuːɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Interviewer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Interviewerin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Person, die die Fragen stellt",
+										"examples": [
+											"Der Interviewer stellte schwierige Fragen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Interviewer stellte schwierige Fragen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Interviewer stellte schwierige Fragen.",
+							"ok": false
+						},
+						{
+							"answer": "Der Interviewer schwierige Fragen stellte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Memoiren",
+					"summary": "aufgeschriebene Erinnerungen (Plural)",
+					"explain": {
+						"entryId": "Memoiren",
+						"headword": "Memoiren",
+						"pronunciation": {
+							"display": "me-mo-AH-run",
+							"ipaUK": "/meˈmo̯aːʁən/",
+							"ipaUS": "/meˈmo̯aːʁən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Memoiren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Erinnerungen, die jemand aufschreibt",
+										"examples": [
+											"Sie veröffentlicht bald ihre Memoiren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie veröffentlicht bald ihre Memoiren.",
+							"ok": true
+						},
+						{
+							"answer": "Sie veröffentlicht bald ihr Memoiren.",
+							"ok": false
+						},
+						{
+							"answer": "Sie ihre Memoiren bald veröffentlicht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Reisepass",
+					"summary": "Dokument für Auslandsreisen",
+					"explain": {
+						"entryId": "Reisepass",
+						"headword": "Reisepass",
+						"pronunciation": {
+							"display": "RY-zuh-pas",
+							"ipaUK": "/ˈʁaɪ̯zəˌpas/",
+							"ipaUS": "/ˈʁaɪ̯zəˌpas/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Reisepass",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Pass"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Dokument für Reisen ins Ausland",
+										"examples": [
+											"Für die Reise brauche ich meinen Reisepass."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Für die Reise brauche ich meinen Reisepass.",
+							"ok": true
+						},
+						{
+							"answer": "Für die Reise brauche ich meine Reisepass.",
+							"ok": false
+						},
+						{
+							"answer": "Für die Reise ich brauche meinen Reisepass.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Umfrage",
+					"summary": "Befragung vieler Menschen",
+					"explain": {
+						"entryId": "Umfrage",
+						"headword": "Umfrage",
+						"pronunciation": {
+							"display": "OOM-frah-guh",
+							"ipaUK": "/ˈʊmˌfʁaːɡə/",
+							"ipaUS": "/ˈʊmˌfʁaːɡə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Umfrage",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Befragung vieler Menschen zu einem Thema",
+										"examples": [
+											"Die Umfrage zeigt ein klares Ergebnis."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Umfrage zeigt ein klares Ergebnis.",
+							"ok": true
+						},
+						{
+							"answer": "Der Umfrage zeigt ein klares Ergebnis.",
+							"ok": false
+						},
+						{
+							"answer": "Die Umfrage ein klares Ergebnis zeigt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Stelle",
+					"summary": "Arbeitsplatz in einer Firma",
+					"explain": {
+						"entryId": "Stelle",
+						"headword": "Stelle",
+						"pronunciation": {
+							"display": "SHTEL-luh",
+							"ipaUK": "/ˈʃtɛlə/",
+							"ipaUS": "/ˈʃtɛlə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Stelle",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Position"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Arbeitsplatz in einer Firma",
+										"examples": [
+											"Sie bewirbt sich um eine neue Stelle."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie bewirbt sich um eine neue Stelle.",
+							"ok": true
+						},
+						{
+							"answer": "Sie bewirbt sich um einen neuen Stelle.",
+							"ok": false
+						},
+						{
+							"answer": "Sie sich um eine neue Stelle bewirbt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Fragebogen",
+					"summary": "Blatt mit vielen Fragen",
+					"explain": {
+						"entryId": "Fragebogen",
+						"headword": "Fragebogen",
+						"pronunciation": {
+							"display": "FRAH-guh-boh-gn",
+							"ipaUK": "/ˈfʁaːɡəˌboːɡn̩/",
+							"ipaUS": "/ˈfʁaːɡəˌboːɡn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Fragebogen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Blatt mit vielen Fragen zum Ausfüllen",
+										"examples": [
+											"Bitte füllen Sie den Fragebogen aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bitte füllen Sie den Fragebogen aus.",
+							"ok": true
+						},
+						{
+							"answer": "Bitte füllen Sie das Fragebogen aus.",
+							"ok": false
+						},
+						{
+							"answer": "Bitte Sie füllen den Fragebogen aus.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Rang",
+					"summary": "Stufe in einer Hierarchie",
+					"explain": {
+						"entryId": "Rang",
+						"headword": "Rang",
+						"pronunciation": {
+							"display": "rang",
+							"ipaUK": "/ʁaŋ/",
+							"ipaUS": "/ʁaŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rang",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Stufe in einer Ordnung oder Hierarchie",
+										"examples": [
+											"Er erreichte einen hohen Rang beim Militär."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er erreichte einen hohen Rang beim Militär.",
+							"ok": true
+						},
+						{
+							"answer": "Er erreichte ein hohes Rang beim Militär.",
+							"ok": false
+						},
+						{
+							"answer": "Er einen hohen Rang beim Militär erreichte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Register",
+					"summary": "amtliches Verzeichnis",
+					"explain": {
+						"entryId": "Register",
+						"headword": "Register",
+						"pronunciation": {
+							"display": "re-GIS-tuh",
+							"ipaUK": "/ʁeˈɡɪstɐ/",
+							"ipaUS": "/ʁeˈɡɪstɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Register",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein amtliches Verzeichnis oder eine Liste",
+										"examples": [
+											"Das Register listet alle Namen auf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Register listet alle Namen auf.",
+							"ok": true
+						},
+						{
+							"answer": "Der Register listet alle Namen auf.",
+							"ok": false
+						},
+						{
+							"answer": "Das Register alle Namen auflistet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Anmeldung",
+					"summary": "Sich-Eintragen für etwas",
+					"explain": {
+						"entryId": "Anmeldung",
+						"headword": "Anmeldung",
+						"pronunciation": {
+							"display": "AN-mel-doong",
+							"ipaUK": "/ˈanˌmɛldʊŋ/",
+							"ipaUS": "/ˈanˌmɛldʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Anmeldung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Sich-Eintragen/Anmelden für etwas",
+										"examples": [
+											"Die Anmeldung für den Kurs ist kostenlos."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Anmeldung für den Kurs ist kostenlos.",
+							"ok": true
+						},
+						{
+							"answer": "Der Anmeldung für den Kurs ist kostenlos.",
+							"ok": false
+						},
+						{
+							"answer": "Die Anmeldung für den Kurs kostenlos ist.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

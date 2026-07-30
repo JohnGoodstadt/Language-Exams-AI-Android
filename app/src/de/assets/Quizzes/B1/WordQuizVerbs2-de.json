@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizVerbs2-de",
+	"title": "2. Verbs",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the verb correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "überzeugen",
+					"summary": "durch Argumente umstimmen",
+					"explain": {
+						"entryId": "überzeugen",
+						"headword": "überzeugen",
+						"pronunciation": {
+							"display": "Ü-buh-tsoy-gn",
+							"ipaUK": "/ˈyːbɐˌtsɔɪ̯ɡn̩/",
+							"ipaUS": "/ˈyːbɐˌtsɔɪ̯ɡn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "überzeugen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemanden durch Argumente umstimmen",
+										"examples": [
+											"Seine Argumente überzeugen mich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Seine Argumente überzeugen mich.",
+							"ok": true
+						},
+						{
+							"answer": "Seine Argumente überzeugt mich.",
+							"ok": false
+						},
+						{
+							"answer": "Seine Argumente mich überzeugen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "abhängen",
+					"summary": "von etwas bestimmt werden",
+					"explain": {
+						"entryId": "abhängen",
+						"headword": "abhängen",
+						"pronunciation": {
+							"display": "AP-heng-uhn",
+							"ipaUK": "/ˈapˌhɛŋən/",
+							"ipaUS": "/ˈapˌhɛŋən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "abhängen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "von etwas bestimmt werden; auf etwas angewiesen sein",
+										"examples": [
+											"Der Erfolg hängt von deinem Fleiß ab."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Erfolg hängt von deinem Fleiß ab.",
+							"ok": true
+						},
+						{
+							"answer": "Der Erfolg hängen von deinem Fleiß ab.",
+							"ok": false
+						},
+						{
+							"answer": "Der Erfolg von deinem Fleiß hängt auf.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "entwickeln",
+					"summary": "etwas nach und nach schaffen",
+					"explain": {
+						"entryId": "entwickeln",
+						"headword": "entwickeln",
+						"pronunciation": {
+							"display": "ent-VIK-ln",
+							"ipaUK": "/ɛntˈvɪkl̩n/",
+							"ipaUS": "/ɛntˈvɪkl̩n/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "entwickeln",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas nach und nach schaffen oder verbessern",
+										"examples": [
+											"Die Firma entwickelt eine neue App."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Firma entwickelt eine neue App.",
+							"ok": true
+						},
+						{
+							"answer": "Die Firma entwickeln eine neue App.",
+							"ok": false
+						},
+						{
+							"answer": "Die Firma eine neue App entwickelt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "entdecken",
+					"summary": "etwas Neues finden",
+					"explain": {
+						"entryId": "entdecken",
+						"headword": "entdecken",
+						"pronunciation": {
+							"display": "ent-DEK-kn",
+							"ipaUK": "/ɛntˈdɛkn̩/",
+							"ipaUS": "/ɛntˈdɛkn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "entdecken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas Neues finden",
+										"examples": [
+											"Forscher entdecken oft neue Arten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Forscher entdecken oft neue Arten.",
+							"ok": true
+						},
+						{
+							"answer": "Forscher entdeckt oft neue Arten.",
+							"ok": false
+						},
+						{
+							"answer": "Forscher oft neue Arten entdecken.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "beteiligen",
+					"summary": "sich aktiv beteiligen",
+					"explain": {
+						"entryId": "beteiligen",
+						"headword": "beteiligen",
+						"pronunciation": {
+							"display": "buh-TY-li-gn",
+							"ipaUK": "/bəˈtaɪ̯lɪɡn̩/",
+							"ipaUS": "/bəˈtaɪ̯lɪɡn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (reflexiv)",
+								"grammarType": "Verb (reflexiv)",
+								"headwordLine": "beteiligen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sich an etwas aktiv beteiligen",
+										"examples": [
+											"Viele Bürger beteiligen sich an der Wahl."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele Bürger beteiligen sich an der Wahl.",
+							"ok": true
+						},
+						{
+							"answer": "Viele Bürger beteiligt sich an der Wahl.",
+							"ok": false
+						},
+						{
+							"answer": "Viele Bürger sich an der Wahl beteiligen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "verbessern",
+					"summary": "etwas besser machen",
+					"explain": {
+						"entryId": "verbessern",
+						"headword": "verbessern",
+						"pronunciation": {
+							"display": "fer-BES-suhn",
+							"ipaUK": "/fɛɐ̯ˈbɛsɐn/",
+							"ipaUS": "/fɛɐ̯ˈbɛsɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "verbessern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas besser machen",
+										"examples": [
+											"Übung verbessert deine Aussprache."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Übung verbessert deine Aussprache.",
+							"ok": true
+						},
+						{
+							"answer": "Übung verbessern deine Aussprache.",
+							"ok": false
+						},
+						{
+							"answer": "Übung deine Aussprache verbessert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "äußern",
+					"summary": "eine Meinung sagen",
+					"explain": {
+						"entryId": "äußern",
+						"headword": "äußern",
+						"pronunciation": {
+							"display": "OY-suhn",
+							"ipaUK": "/ˈɔɪ̯sɐn/",
+							"ipaUS": "/ˈɔɪ̯sɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "äußern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Meinung oder ein Gefühl sagen",
+										"examples": [
+											"Er äußert seine Meinung sehr offen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er äußert seine Meinung sehr offen.",
+							"ok": true
+						},
+						{
+							"answer": "Er äußern seine Meinung sehr offen.",
+							"ok": false
+						},
+						{
+							"answer": "Er seine Meinung sehr offen äußert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "finden",
+					"summary": "etwas Gesuchtes entdecken",
+					"explain": {
+						"entryId": "finden",
+						"headword": "finden",
+						"pronunciation": {
+							"display": "FIN-dn",
+							"ipaUK": "/ˈfɪndn̩/",
+							"ipaUS": "/ˈfɪndn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "finden",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas Gesuchtes entdecken",
+										"examples": [
+											"Ich finde meinen Schlüssel nicht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich finde meinen Schlüssel nicht.",
+							"ok": true
+						},
+						{
+							"answer": "Ich findet meinen Schlüssel nicht.",
+							"ok": false
+						},
+						{
+							"answer": "Ich meinen Schlüssel nicht finde.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "steigern",
+					"summary": "größer/besser machen",
+					"explain": {
+						"entryId": "steigern",
+						"headword": "steigern",
+						"pronunciation": {
+							"display": "SHTY-guhn",
+							"ipaUK": "/ˈʃtaɪ̯ɡɐn/",
+							"ipaUS": "/ˈʃtaɪ̯ɡɐn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "steigern",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "größer oder besser machen; erhöhen",
+										"examples": [
+											"Sport steigert das Wohlbefinden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sport steigert das Wohlbefinden.",
+							"ok": true
+						},
+						{
+							"answer": "Sport steigern das Wohlbefinden.",
+							"ok": false
+						},
+						{
+							"answer": "Sport das Wohlbefinden steigert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "einbeziehen",
+					"summary": "etwas mit dazunehmen",
+					"explain": {
+						"entryId": "einbeziehen",
+						"headword": "einbeziehen",
+						"pronunciation": {
+							"display": "INE-buh-tsee-uhn",
+							"ipaUK": "/ˈaɪ̯nbəˌtsiːən/",
+							"ipaUS": "/ˈaɪ̯nbəˌtsiːən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "einbeziehen",
+								"inflectionsLine": null,
+								"synonyms": [
+									"einschließen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas mit dazunehmen",
+										"examples": [
+											"Der Chef bezieht das Team in die Planung ein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Chef bezieht das Team in die Planung ein.",
+							"ok": true
+						},
+						{
+							"answer": "Der Chef bezieht das Team in die Planung aus.",
+							"ok": false
+						},
+						{
+							"answer": "Der Chef das Team in die Planung einbezieht.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

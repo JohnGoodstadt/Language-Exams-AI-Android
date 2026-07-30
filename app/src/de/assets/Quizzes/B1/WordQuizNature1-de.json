@@ -1,0 +1,550 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature1-de",
+	"title": "1. Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Artenvielfalt",
+					"summary": "Vielfalt an Tier- und Pflanzenarten",
+					"explain": {
+						"entryId": "Artenvielfalt",
+						"headword": "Artenvielfalt",
+						"pronunciation": {
+							"display": "AR-tn-feel-falt",
+							"ipaUK": "/ˈaʁtn̩ˌfiːlfalt/",
+							"ipaUS": "/ˈaʁtn̩ˌfiːlfalt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Artenvielfalt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Vielfalt an Tier- und Pflanzenarten",
+										"examples": [
+											"Der Regenwald hat eine große Artenvielfalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Regenwald hat eine große Artenvielfalt.",
+							"ok": true
+						},
+						{
+							"answer": "Der Regenwald hat einen großen Artenvielfalt.",
+							"ok": false
+						},
+						{
+							"answer": "Der Regenwald eine große Artenvielfalt hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Klima",
+					"summary": "typisches Wetter über lange Zeit",
+					"explain": {
+						"entryId": "Klima",
+						"headword": "Klima",
+						"pronunciation": {
+							"display": "KLEE-ma",
+							"ipaUK": "/ˈkliːma/",
+							"ipaUS": "/ˈkliːma/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klima",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das typische Wetter einer Region über lange Zeit",
+										"examples": [
+											"Das Klima in der Wüste ist trocken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Klima in der Wüste ist trocken.",
+							"ok": true
+						},
+						{
+							"answer": "Der Klima in der Wüste ist trocken.",
+							"ok": false
+						},
+						{
+							"answer": "Das Klima in der Wüste trocken ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Klimawandel",
+					"summary": "langfristige Veränderung des Klimas",
+					"explain": {
+						"entryId": "Klimawandel",
+						"headword": "Klimawandel",
+						"pronunciation": {
+							"display": "KLEE-ma-van-dl",
+							"ipaUK": "/ˈkliːmaˌvandl̩/",
+							"ipaUS": "/ˈkliːmaˌvandl̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Klimawandel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die langfristige Veränderung des Klimas",
+										"examples": [
+											"Der Klimawandel bedroht viele Arten."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Klimawandel bedroht viele Arten.",
+							"ok": true
+						},
+						{
+							"answer": "Die Klimawandel bedroht viele Arten.",
+							"ok": false
+						},
+						{
+							"answer": "Der Klimawandel viele Arten bedroht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Naturschutz",
+					"summary": "Schutz der Natur",
+					"explain": {
+						"entryId": "Naturschutz",
+						"headword": "Naturschutz",
+						"pronunciation": {
+							"display": "na-TOOR-shoots",
+							"ipaUK": "/naˈtuːɐ̯ˌʃʊts/",
+							"ipaUS": "/naˈtuːɐ̯ˌʃʊts/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Naturschutz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Schutz der Natur und ihrer Arten",
+										"examples": [
+											"Der Naturschutz ist heute sehr wichtig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Naturschutz ist heute sehr wichtig.",
+							"ok": true
+						},
+						{
+							"answer": "Die Naturschutz ist heute sehr wichtig.",
+							"ok": false
+						},
+						{
+							"answer": "Der Naturschutz heute sehr wichtig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Verschmutzung",
+					"summary": "Verunreinigen von Wasser/Luft/Boden",
+					"explain": {
+						"entryId": "Verschmutzung",
+						"headword": "Verschmutzung",
+						"pronunciation": {
+							"display": "fer-SHMOOT-soong",
+							"ipaUK": "/fɛɐ̯ˈʃmʊtsʊŋ/",
+							"ipaUS": "/fɛɐ̯ˈʃmʊtsʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Verschmutzung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verunreinigen von Wasser, Luft oder Boden",
+										"examples": [
+											"Die Verschmutzung der Flüsse nimmt zu."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Verschmutzung der Flüsse nimmt zu.",
+							"ok": true
+						},
+						{
+							"answer": "Der Verschmutzung der Flüsse nimmt zu.",
+							"ok": false
+						},
+						{
+							"answer": "Die Verschmutzung der Flüsse zunimmt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Ökosystem",
+					"summary": "Zusammenspiel von Lebewesen und Umwelt",
+					"explain": {
+						"entryId": "Ökosystem",
+						"headword": "Ökosystem",
+						"pronunciation": {
+							"display": "Ö-ko-züs-taym",
+							"ipaUK": "/ˈøːkozʏsˌteːm/",
+							"ipaUS": "/ˈøːkozʏsˌteːm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ökosystem",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Zusammenspiel von Lebewesen und Umwelt",
+										"examples": [
+											"Ein Ökosystem ist leicht zu stören."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein Ökosystem ist leicht zu stören.",
+							"ok": true
+						},
+						{
+							"answer": "Eine Ökosystem ist leicht zu stören.",
+							"ok": false
+						},
+						{
+							"answer": "Ein Ökosystem leicht zu stören ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Umwelt",
+					"summary": "die Natur, die uns umgibt",
+					"explain": {
+						"entryId": "Umwelt",
+						"headword": "Umwelt",
+						"pronunciation": {
+							"display": "OOM-velt",
+							"ipaUK": "/ˈʊmvɛlt/",
+							"ipaUS": "/ˈʊmvɛlt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Umwelt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Natur, die uns umgibt",
+										"examples": [
+											"Wir müssen die Umwelt besser schützen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir müssen die Umwelt besser schützen.",
+							"ok": true
+						},
+						{
+							"answer": "Wir müssen den Umwelt besser schützen.",
+							"ok": false
+						},
+						{
+							"answer": "Wir die Umwelt besser schützen müssen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Tierwelt",
+					"summary": "alle Tiere eines Gebiets",
+					"explain": {
+						"entryId": "Tierwelt",
+						"headword": "Tierwelt",
+						"pronunciation": {
+							"display": "TEER-velt",
+							"ipaUK": "/ˈtiːɐ̯ˌvɛlt/",
+							"ipaUS": "/ˈtiːɐ̯ˌvɛlt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Tierwelt",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Fauna"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "alle Tiere eines Gebiets",
+										"examples": [
+											"Die Tierwelt Afrikas ist beeindruckend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Tierwelt Afrikas ist beeindruckend.",
+							"ok": true
+						},
+						{
+							"answer": "Der Tierwelt Afrikas ist beeindruckend.",
+							"ok": false
+						},
+						{
+							"answer": "Die Tierwelt Afrikas beeindruckend ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Pflanzenwelt",
+					"summary": "alle Pflanzen eines Gebiets",
+					"explain": {
+						"entryId": "Pflanzenwelt",
+						"headword": "Pflanzenwelt",
+						"pronunciation": {
+							"display": "PFLAN-tsn-velt",
+							"ipaUK": "/ˈpflantsn̩ˌvɛlt/",
+							"ipaUS": "/ˈpflantsn̩ˌvɛlt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Pflanzenwelt",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Flora"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "alle Pflanzen eines Gebiets",
+										"examples": [
+											"Die Pflanzenwelt der Alpen ist vielfältig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Pflanzenwelt der Alpen ist vielfältig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Pflanzenwelt der Alpen ist vielfältig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Pflanzenwelt der Alpen vielfältig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Erderwärmung",
+					"summary": "Erwärmung der ganzen Erde",
+					"explain": {
+						"entryId": "Erderwärmung",
+						"headword": "Erderwärmung",
+						"pronunciation": {
+							"display": "AIRT-er-ver-moong",
+							"ipaUK": "/ˈeːɐ̯tʔɛɐ̯ˌvɛʁmʊŋ/",
+							"ipaUS": "/ˈeːɐ̯tʔɛɐ̯ˌvɛʁmʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erderwärmung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Erwärmung der ganzen Erde",
+										"examples": [
+											"Die Erderwärmung lässt das Eis schmelzen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Erderwärmung lässt das Eis schmelzen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Erderwärmung lässt das Eis schmelzen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Erderwärmung das Eis schmelzen lässt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

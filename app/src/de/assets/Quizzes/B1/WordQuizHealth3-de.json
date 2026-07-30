@@ -1,0 +1,548 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizHealth3-de",
+	"title": "3. Health",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Genesung",
+					"summary": "Wiedergesundwerden",
+					"explain": {
+						"entryId": "Genesung",
+						"headword": "Genesung",
+						"pronunciation": {
+							"display": "guh-NAY-zoong",
+							"ipaUK": "/ɡəˈneːzʊŋ/",
+							"ipaUS": "/ɡəˈneːzʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Genesung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Erholung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Wiedergesundwerden nach Krankheit",
+										"examples": [
+											"Wir wünschen dir eine schnelle Genesung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir wünschen dir eine schnelle Genesung.",
+							"ok": true
+						},
+						{
+							"answer": "Wir wünschen dir einen schnellen Genesung.",
+							"ok": false
+						},
+						{
+							"answer": "Wir dir eine schnelle Genesung wünschen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Routine",
+					"summary": "feste, regelmäßige Gewohnheit",
+					"explain": {
+						"entryId": "Routine",
+						"headword": "Routine",
+						"pronunciation": {
+							"display": "roo-TEE-nuh",
+							"ipaUK": "/ʁuˈtiːnə/",
+							"ipaUS": "/ʁuˈtiːnə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Routine",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine feste, regelmäßige Gewohnheit",
+										"examples": [
+											"Sport gehört zu meiner täglichen Routine."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sport gehört zu meiner täglichen Routine.",
+							"ok": true
+						},
+						{
+							"answer": "Sport gehört zu meinem täglichen Routine.",
+							"ok": false
+						},
+						{
+							"answer": "Sport zu meiner täglichen Routine gehört.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Zeitplan",
+					"summary": "Plan, wann was passiert",
+					"explain": {
+						"entryId": "Zeitplan",
+						"headword": "Zeitplan",
+						"pronunciation": {
+							"display": "TSITE-plahn",
+							"ipaUK": "/ˈtsaɪ̯tˌplaːn/",
+							"ipaUS": "/ˈtsaɪ̯tˌplaːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Zeitplan",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Plan, wann was passiert",
+										"examples": [
+											"Der Arzt hat einen vollen Zeitplan."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Arzt hat einen vollen Zeitplan.",
+							"ok": true
+						},
+						{
+							"answer": "Der Arzt hat ein volles Zeitplan.",
+							"ok": false
+						},
+						{
+							"answer": "Der Arzt einen vollen Zeitplan hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Symptome",
+					"summary": "Zeichen einer Krankheit (Plural)",
+					"explain": {
+						"entryId": "Symptome",
+						"headword": "Symptome",
+						"pronunciation": {
+							"display": "zümp-TOH-muh",
+							"ipaUK": "/zʏmpˈtoːmə/",
+							"ipaUS": "/zʏmpˈtoːmə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Symptome",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeichen einer Krankheit (Plural)",
+										"examples": [
+											"Die Symptome verschwinden nach zwei Tagen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Symptome verschwinden nach zwei Tagen.",
+							"ok": true
+						},
+						{
+							"answer": "Die Symptom verschwinden nach zwei Tagen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Symptome nach zwei Tagen verschwinden.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Therapie",
+					"summary": "Behandlung, um gesund zu werden",
+					"explain": {
+						"entryId": "Therapie",
+						"headword": "Therapie",
+						"pronunciation": {
+							"display": "te-ra-PEE",
+							"ipaUK": "/teʁaˈpiː/",
+							"ipaUS": "/teʁaˈpiː/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Therapie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Behandlung, um gesund zu werden",
+										"examples": [
+											"Die Therapie hilft ihm sehr."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Therapie hilft ihm sehr.",
+							"ok": true
+						},
+						{
+							"answer": "Der Therapie hilft ihm sehr.",
+							"ok": false
+						},
+						{
+							"answer": "Die Therapie ihm sehr hilft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Behandlung",
+					"summary": "ärztliche Hilfe bei Krankheit",
+					"explain": {
+						"entryId": "Behandlung",
+						"headword": "Behandlung",
+						"pronunciation": {
+							"display": "buh-HAND-loong",
+							"ipaUK": "/bəˈhandlʊŋ/",
+							"ipaUS": "/bəˈhandlʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Behandlung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die ärztliche Hilfe bei Krankheit",
+										"examples": [
+											"Die Behandlung war leider teuer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Behandlung war leider teuer.",
+							"ok": true
+						},
+						{
+							"answer": "Der Behandlung war leider teuer.",
+							"ok": false
+						},
+						{
+							"answer": "Die Behandlung leider teuer war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "dringend",
+					"summary": "Adjektiv: sehr eilig",
+					"explain": {
+						"entryId": "dringend",
+						"headword": "dringend",
+						"pronunciation": {
+							"display": "DRING-ent",
+							"ipaUK": "/ˈdʁɪŋənt/",
+							"ipaUS": "/ˈdʁɪŋənt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "dringend",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sehr eilig; muss sofort passieren",
+										"examples": [
+											"Der Fall ist wirklich dringend."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Fall ist wirklich dringend.",
+							"ok": true
+						},
+						{
+							"answer": "Der Fall ist wirklich dringende.",
+							"ok": false
+						},
+						{
+							"answer": "Der Fall wirklich dringend ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Wohlbefinden",
+					"summary": "Gefühl, dass es einem gut geht",
+					"explain": {
+						"entryId": "Wohlbefinden",
+						"headword": "Wohlbefinden",
+						"pronunciation": {
+							"display": "VOHL-buh-fin-dn",
+							"ipaUK": "/ˈvoːlbəˌfɪndn̩/",
+							"ipaUS": "/ˈvoːlbəˌfɪndn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wohlbefinden",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Gefühl, dass es einem gut geht",
+										"examples": [
+											"Ausreichend Schlaf steigert das Wohlbefinden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ausreichend Schlaf steigert das Wohlbefinden.",
+							"ok": true
+						},
+						{
+							"answer": "Ausreichend Schlaf steigert der Wohlbefinden.",
+							"ok": false
+						},
+						{
+							"answer": "Ausreichend Schlaf das Wohlbefinden steigert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Training",
+					"summary": "Übungen zum Fitwerden",
+					"explain": {
+						"entryId": "Training",
+						"headword": "Training",
+						"pronunciation": {
+							"display": "TRAY-ning",
+							"ipaUK": "/ˈtʁɛːnɪŋ/",
+							"ipaUS": "/ˈtʁɛːnɪŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Training",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "körperliche Übungen zum Fitwerden",
+										"examples": [
+											"Ein hartes Training macht stark."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein hartes Training macht stark.",
+							"ok": true
+						},
+						{
+							"answer": "Ein harter Training macht stark.",
+							"ok": false
+						},
+						{
+							"answer": "Ein hartes Training stark macht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Wunde",
+					"summary": "Verletzung der Haut",
+					"explain": {
+						"entryId": "Wunde",
+						"headword": "Wunde",
+						"pronunciation": {
+							"display": "VOON-duh",
+							"ipaUK": "/ˈvʊndə/",
+							"ipaUS": "/ˈvʊndə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wunde",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Verletzung der Haut",
+										"examples": [
+											"Die Wunde muss sauber bleiben."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Wunde muss sauber bleiben.",
+							"ok": true
+						},
+						{
+							"answer": "Der Wunde muss sauber bleiben.",
+							"ok": false
+						},
+						{
+							"answer": "Die Wunde sauber bleiben muss.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

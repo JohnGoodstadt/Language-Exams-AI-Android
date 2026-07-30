@@ -1,0 +1,493 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizAdjectives3-de",
+	"title": "3. Adjectives",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "nervös",
+					"summary": "Adjektiv: unruhig, angespannt",
+					"explain": {
+						"entryId": "nervös",
+						"headword": "nervös",
+						"pronunciation": {
+							"display": "ner-VÖS",
+							"ipaUK": "/nɛʁˈvøːs/",
+							"ipaUS": "/nɛʁˈvøːs/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "nervös",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "unruhig und angespannt",
+										"examples": [
+											"Vor der Prüfung war ich sehr nervös."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vor der Prüfung war ich sehr nervös.",
+							"ok": true
+						},
+						{
+							"answer": "Vor der Prüfung war ich sehr nervöse.",
+							"ok": false
+						},
+						{
+							"answer": "Vor der Prüfung ich war sehr nervös.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "geduldig",
+					"summary": "Adjektiv: voller Geduld",
+					"explain": {
+						"entryId": "geduldig",
+						"headword": "geduldig",
+						"pronunciation": {
+							"display": "guh-DOOL-dikh",
+							"ipaUK": "/ɡəˈdʊldɪç/",
+							"ipaUS": "/ɡəˈdʊldɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "geduldig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "voller Geduld; ruhig wartend",
+										"examples": [
+											"Die Lehrerin blieb immer geduldig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Lehrerin blieb immer geduldig.",
+							"ok": true
+						},
+						{
+							"answer": "Die Lehrerin blieb immer geduldige.",
+							"ok": false
+						},
+						{
+							"answer": "Die Lehrerin immer geduldig blieb.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "friedlich",
+					"summary": "Adjektiv: ohne Streit",
+					"explain": {
+						"entryId": "friedlich",
+						"headword": "friedlich",
+						"pronunciation": {
+							"display": "FREET-likh",
+							"ipaUK": "/ˈfʁiːtlɪç/",
+							"ipaUS": "/ˈfʁiːtlɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "friedlich",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ohne Streit; ruhig",
+										"examples": [
+											"Der Abend war ruhig und friedlich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Abend war ruhig und friedlich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Abend war ruhig und friedliche.",
+							"ok": false
+						},
+						{
+							"answer": "Der Abend ruhig und friedlich war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "entspannt",
+					"summary": "Adjektiv: locker, ruhig",
+					"explain": {
+						"entryId": "entspannt",
+						"headword": "entspannt",
+						"pronunciation": {
+							"display": "ent-SHPANT",
+							"ipaUK": "/ɛntˈʃpant/",
+							"ipaUS": "/ɛntˈʃpant/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "entspannt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "locker und ruhig",
+										"examples": [
+											"Nach dem Urlaub war er ganz entspannt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Urlaub war er ganz entspannt.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Urlaub war er ganz entspannte.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Urlaub er war ganz entspannt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "angespannt",
+					"summary": "Adjektiv: voller Anspannung",
+					"explain": {
+						"entryId": "angespannt",
+						"headword": "angespannt",
+						"pronunciation": {
+							"display": "AN-guh-shpant",
+							"ipaUK": "/ˈanɡəˌʃpant/",
+							"ipaUS": "/ˈanɡəˌʃpant/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "angespannt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "voller Anspannung; nicht locker",
+										"examples": [
+											"Vor dem Ergebnis war die Stimmung angespannt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vor dem Ergebnis war die Stimmung angespannt.",
+							"ok": true
+						},
+						{
+							"answer": "Vor dem Ergebnis war die Stimmung angespannte.",
+							"ok": false
+						},
+						{
+							"answer": "Vor dem Ergebnis die Stimmung angespannt war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "dankbar",
+					"summary": "Adjektiv: voller Dankbarkeit",
+					"explain": {
+						"entryId": "dankbar",
+						"headword": "dankbar",
+						"pronunciation": {
+							"display": "DANK-bar",
+							"ipaUK": "/ˈdaŋkbaːɐ̯/",
+							"ipaUS": "/ˈdaŋkbaːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "dankbar",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "voller Dankbarkeit",
+										"examples": [
+											"Für deine Unterstützung bin ich dankbar."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Für deine Unterstützung bin ich dankbar.",
+							"ok": true
+						},
+						{
+							"answer": "Für deine Unterstützung bin ich dankbare.",
+							"ok": false
+						},
+						{
+							"answer": "Für deine Unterstützung ich bin dankbar.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "tolerant",
+					"summary": "Adjektiv: andere akzeptierend",
+					"explain": {
+						"entryId": "tolerant",
+						"headword": "tolerant",
+						"pronunciation": {
+							"display": "to-le-RANT",
+							"ipaUK": "/toləˈʁant/",
+							"ipaUS": "/toləˈʁant/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "tolerant",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "andere Meinungen akzeptierend",
+										"examples": [
+											"Gegenüber anderen Kulturen ist sie sehr tolerant."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gegenüber anderen Kulturen ist sie sehr tolerant.",
+							"ok": true
+						},
+						{
+							"answer": "Gegenüber anderen Kulturen ist sie sehr tolerante.",
+							"ok": false
+						},
+						{
+							"answer": "Gegenüber anderen Kulturen sie ist sehr tolerant.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "gelassen",
+					"summary": "Adjektiv: ruhig, ausgeglichen",
+					"explain": {
+						"entryId": "gelassen",
+						"headword": "gelassen",
+						"pronunciation": {
+							"display": "guh-LAH-sn",
+							"ipaUK": "/ɡəˈlasn̩/",
+							"ipaUS": "/ɡəˈlasn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "gelassen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ruhig und ausgeglichen",
+										"examples": [
+											"Auch bei Stress bleibt er gelassen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Auch bei Stress bleibt er gelassen.",
+							"ok": true
+						},
+						{
+							"answer": "Auch bei Stress bleibt er gelassene.",
+							"ok": false
+						},
+						{
+							"answer": "Auch bei Stress er bleibt gelassen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "besorgt",
+					"summary": "Adjektiv: voller Sorge",
+					"explain": {
+						"entryId": "besorgt",
+						"headword": "besorgt",
+						"pronunciation": {
+							"display": "buh-ZORKT",
+							"ipaUK": "/bəˈzɔʁkt/",
+							"ipaUS": "/bəˈzɔʁkt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "besorgt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "voller Sorge",
+										"examples": [
+											"Wegen der Nachricht war sie besorgt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wegen der Nachricht war sie besorgt.",
+							"ok": true
+						},
+						{
+							"answer": "Wegen der Nachricht war sie besorgte.",
+							"ok": false
+						},
+						{
+							"answer": "Wegen der Nachricht sie war besorgt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,497 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizNature3-de",
+	"title": "3. Nature",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "erneuerbar",
+					"summary": "Adjektiv: immer wieder nutzbar",
+					"explain": {
+						"entryId": "erneuerbar",
+						"headword": "erneuerbar",
+						"pronunciation": {
+							"display": "er-NOY-uh-bar",
+							"ipaUK": "/ɛɐ̯ˈnɔɪ̯ɐbaːɐ̯/",
+							"ipaUS": "/ɛɐ̯ˈnɔɪ̯ɐbaːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "erneuerbar",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "immer wieder neu nutzbar (z. B. Energie)",
+										"examples": [
+											"Sonnenenergie ist erneuerbar."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sonnenenergie ist erneuerbar.",
+							"ok": true
+						},
+						{
+							"answer": "Sonnenenergie ist erneuerbare.",
+							"ok": false
+						},
+						{
+							"answer": "Sonnenenergie erneuerbar ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "wiederverwenden",
+					"summary": "etwas noch einmal benutzen",
+					"explain": {
+						"entryId": "wiederverwenden",
+						"headword": "wiederverwenden",
+						"pronunciation": {
+							"display": "VEE-duh-fer-ven-dn",
+							"ipaUK": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/",
+							"ipaUS": "/ˈviːdɐfɛɐ̯ˌvɛndn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "wiederverwenden",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas noch einmal benutzen",
+										"examples": [
+											"Man kann alte Gläser gut wiederverwenden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Man kann alte Gläser gut wiederverwenden.",
+							"ok": true
+						},
+						{
+							"answer": "Man kann alte Gläser gut wiederverwendet.",
+							"ok": false
+						},
+						{
+							"answer": "Man alte Gläser gut wiederverwenden kann.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Unterschlupf",
+					"summary": "geschützter Ort zum Unterkommen",
+					"explain": {
+						"entryId": "Unterschlupf",
+						"headword": "Unterschlupf",
+						"pronunciation": {
+							"display": "OON-tuh-shloopf",
+							"ipaUK": "/ˈʊntɐˌʃlʊpf/",
+							"ipaUS": "/ˈʊntɐˌʃlʊpf/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Unterschlupf",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Zuflucht"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein geschützter Ort zum Unterkommen",
+										"examples": [
+											"Die Katze suchte einen trockenen Unterschlupf."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Katze suchte einen trockenen Unterschlupf.",
+							"ok": true
+						},
+						{
+							"answer": "Die Katze suchte ein trockenes Unterschlupf.",
+							"ok": false
+						},
+						{
+							"answer": "Die Katze einen trockenen Unterschlupf suchte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Umgebung",
+					"summary": "alles, was um einen herum liegt",
+					"explain": {
+						"entryId": "Umgebung",
+						"headword": "Umgebung",
+						"pronunciation": {
+							"display": "oom-GAY-boong",
+							"ipaUK": "/ʊmˈɡeːbʊŋ/",
+							"ipaUS": "/ʊmˈɡeːbʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Umgebung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "alles, was um einen herum liegt",
+										"examples": [
+											"Die Umgebung des Sees ist sehr ruhig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Umgebung des Sees ist sehr ruhig.",
+							"ok": true
+						},
+						{
+							"answer": "Der Umgebung des Sees ist sehr ruhig.",
+							"ok": false
+						},
+						{
+							"answer": "Die Umgebung des Sees sehr ruhig ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "nachhaltig",
+					"summary": "Adjektiv: Ressourcen bleiben erhalten",
+					"explain": {
+						"entryId": "nachhaltig",
+						"headword": "nachhaltig",
+						"pronunciation": {
+							"display": "NAHKH-hal-tikh",
+							"ipaUK": "/ˈnaːxˌhaltɪç/",
+							"ipaUS": "/ˈnaːxˌhaltɪç/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "nachhaltig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "so, dass Ressourcen für die Zukunft bleiben",
+										"examples": [
+											"Diese Firma produziert sehr nachhaltig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Diese Firma produziert sehr nachhaltig.",
+							"ok": true
+						},
+						{
+							"answer": "Diese Firma produziert sehr nachhaltige.",
+							"ok": false
+						},
+						{
+							"answer": "Diese Firma sehr nachhaltig produziert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Temperatur",
+					"summary": "wie warm oder kalt es ist",
+					"explain": {
+						"entryId": "Temperatur",
+						"headword": "Temperatur",
+						"pronunciation": {
+							"display": "tem-pe-ra-TOOR",
+							"ipaUK": "/tɛmpəʁaˈtuːɐ̯/",
+							"ipaUS": "/tɛmpəʁaˈtuːɐ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Temperatur",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "wie warm oder kalt es ist",
+										"examples": [
+											"Die Temperatur steigt im Sommer stark."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Temperatur steigt im Sommer stark.",
+							"ok": true
+						},
+						{
+							"answer": "Der Temperatur steigt im Sommer stark.",
+							"ok": false
+						},
+						{
+							"answer": "Die Temperatur im Sommer stark steigt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Abfall",
+					"summary": "Dinge, die man wegwirft",
+					"explain": {
+						"entryId": "Abfall",
+						"headword": "Abfall",
+						"pronunciation": {
+							"display": "AP-fal",
+							"ipaUK": "/ˈapfal/",
+							"ipaUS": "/ˈapfal/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Abfall",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Müll"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Dinge, die man wegwirft; Müll",
+										"examples": [
+											"Der Abfall wird jeden Montag abgeholt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Abfall wird jeden Montag abgeholt.",
+							"ok": true
+						},
+						{
+							"answer": "Die Abfall wird jeden Montag abgeholt.",
+							"ok": false
+						},
+						{
+							"answer": "Der Abfall jeden Montag abgeholt wird.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Wetter",
+					"summary": "Zustand der Luft (Regen, Sonne)",
+					"explain": {
+						"entryId": "Wetter",
+						"headword": "Wetter",
+						"pronunciation": {
+							"display": "VET-tuh",
+							"ipaUK": "/ˈvɛtɐ/",
+							"ipaUS": "/ˈvɛtɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wetter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Zustand der Luft (Regen, Sonne …)",
+										"examples": [
+											"Das Wetter ist heute sehr wechselhaft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Wetter ist heute sehr wechselhaft.",
+							"ok": true
+						},
+						{
+							"answer": "Der Wetter ist heute sehr wechselhaft.",
+							"ok": false
+						},
+						{
+							"answer": "Das Wetter heute sehr wechselhaft ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Wildtiere",
+					"summary": "frei lebende Tiere (Plural)",
+					"explain": {
+						"entryId": "Wildtiere",
+						"headword": "Wildtiere",
+						"pronunciation": {
+							"display": "VILT-tee-ruh",
+							"ipaUK": "/ˈvɪltˌtiːʁə/",
+							"ipaUS": "/ˈvɪltˌtiːʁə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Wildtiere",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die frei lebenden Tiere in der Natur",
+										"examples": [
+											"Im Nationalpark leben viele Wildtiere."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Nationalpark leben viele Wildtiere.",
+							"ok": true
+						},
+						{
+							"answer": "Im Nationalpark leben viele Wildtier.",
+							"ok": false
+						},
+						{
+							"answer": "Im Nationalpark viele Wildtiere leben.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

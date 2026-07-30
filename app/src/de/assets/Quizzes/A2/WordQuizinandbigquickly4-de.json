@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizinandbigquickly4-de",
+	"title": "Common adjectives, adverbs and linkers",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "schnell",
+					"summary": "mit hoher Geschwindigkeit",
+					"explain": {
+						"entryId": "schnell",
+						"headword": "schnell",
+						"pronunciation": {
+							"display": "shnel",
+							"ipaUK": "/ʃnɛl/",
+							"ipaUS": "/ʃnɛl/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "schnell",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv/Adverb: mit hoher Geschwindigkeit",
+										"examples": [
+											"Er läuft sehr schnell."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er läuft sehr schnell.",
+							"ok": true
+						},
+						{
+							"answer": "Er läuft sehr schnelle.",
+							"ok": false
+						},
+						{
+							"answer": "Er sehr schnell läuft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "leise",
+					"summary": "mit wenig Lautstärke",
+					"explain": {
+						"entryId": "leise",
+						"headword": "leise",
+						"pronunciation": {
+							"display": "LY-zuh",
+							"ipaUK": "/ˈlaɪ̯zə/",
+							"ipaUS": "/ˈlaɪ̯zə/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "leise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv/Adverb: mit wenig Lautstärke",
+										"examples": [
+											"Bitte sprich leise, das Baby schläft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bitte sprich leise, das Baby schläft.",
+							"ok": true
+						},
+						{
+							"answer": "Bitte sprich leises, das Baby schläft.",
+							"ok": false
+						},
+						{
+							"answer": "Bitte leise sprich, das Baby schläft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "selten",
+					"summary": "Häufigkeit: fast nie",
+					"explain": {
+						"entryId": "selten",
+						"headword": "selten",
+						"pronunciation": {
+							"display": "ZEL-tn",
+							"ipaUK": "/ˈzɛltn̩/",
+							"ipaUS": "/ˈzɛltn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb (Häufigkeit)",
+								"headwordLine": "selten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adverb der Häufigkeit: fast nie",
+										"examples": [
+											"Ich esse selten Fleisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich esse selten Fleisch.",
+							"ok": true
+						},
+						{
+							"answer": "Ich selten esse Fleisch.",
+							"ok": false
+						},
+						{
+							"answer": "Ich esse Fleisch selten nicht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "traurig",
+					"summary": "Adjektiv: nicht fröhlich",
+					"explain": {
+						"entryId": "traurig",
+						"headword": "traurig",
+						"pronunciation": {
+							"display": "TROW-rikh",
+							"ipaUK": "/ˈtʁaʊ̯ʁɪç/",
+							"ipaUS": "/ˈtʁaʊ̯ʁɪç/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "traurig",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: nicht fröhlich",
+										"examples": [
+											"Nach dem Film war sie ganz traurig."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Film war sie ganz traurig.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Film war sie ganz traurige.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Film sie war ganz traurig.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "leider",
+					"summary": "Adverb: unglücklicherweise",
+					"explain": {
+						"entryId": "leider",
+						"headword": "leider",
+						"pronunciation": {
+							"display": "LY-duh",
+							"ipaUK": "/ˈlaɪ̯dɐ/",
+							"ipaUS": "/ˈlaɪ̯dɐ/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "leider",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adverb: unglücklicherweise",
+										"examples": [
+											"Leider habe ich heute keine Zeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Leider habe ich heute keine Zeit.",
+							"ok": true
+						},
+						{
+							"answer": "Leider ich habe heute keine Zeit.",
+							"ok": false
+						},
+						{
+							"answer": "Ich leider habe heute keine Zeit.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "kurz",
+					"summary": "Adjektiv: nicht lang",
+					"explain": {
+						"entryId": "kurz",
+						"headword": "kurz",
+						"pronunciation": {
+							"display": "koorts",
+							"ipaUK": "/kʊʁts/",
+							"ipaUS": "/kʊʁts/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "kurz",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: nicht lang",
+										"examples": [
+											"Das war ein kurzer Film."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das war ein kurzer Film.",
+							"ok": true
+						},
+						{
+							"answer": "Das war ein kurzes Film.",
+							"ok": false
+						},
+						{
+							"answer": "Das ein kurzer Film war.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "seit",
+					"summary": "seit + Dativ (Zeit)",
+					"explain": {
+						"entryId": "seit",
+						"headword": "seit",
+						"pronunciation": {
+							"display": "zite",
+							"ipaUK": "/zaɪ̯t/",
+							"ipaUS": "/zaɪ̯t/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Präposition",
+								"grammarType": "Präposition (+ Dativ)",
+								"headwordLine": "seit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Präposition (+ Dativ): ab einem Zeitpunkt bis jetzt",
+										"examples": [
+											"Ich lerne seit einem Jahr Deutsch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich lerne seit einem Jahr Deutsch.",
+							"ok": true
+						},
+						{
+							"answer": "Ich lerne seit einen Jahr Deutsch.",
+							"ok": false
+						},
+						{
+							"answer": "Ich seit einem Jahr Deutsch lerne.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "langsam",
+					"summary": "mit wenig Geschwindigkeit",
+					"explain": {
+						"entryId": "langsam",
+						"headword": "langsam",
+						"pronunciation": {
+							"display": "LANG-zahm",
+							"ipaUK": "/ˈlaŋzaːm/",
+							"ipaUS": "/ˈlaŋzaːm/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "langsam",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv/Adverb: mit wenig Geschwindigkeit",
+										"examples": [
+											"Bitte fahr langsam!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Bitte fahr langsam!",
+							"ok": true
+						},
+						{
+							"answer": "Bitte fahr langsames!",
+							"ok": false
+						},
+						{
+							"answer": "Bitte langsam fahr!",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "klein",
+					"summary": "Adjektiv: nicht groß",
+					"explain": {
+						"entryId": "klein",
+						"headword": "klein",
+						"pronunciation": {
+							"display": "kline",
+							"ipaUK": "/klaɪ̯n/",
+							"ipaUS": "/klaɪ̯n/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "klein",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adjektiv: nicht groß",
+										"examples": [
+											"Sie hat einen kleinen Hund."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat einen kleinen Hund.",
+							"ok": true
+						},
+						{
+							"answer": "Sie hat einen kleines Hund.",
+							"ok": false
+						},
+						{
+							"answer": "Sie einen kleinen Hund hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "so",
+					"summary": "Adverb: in diesem Maße (so …)",
+					"explain": {
+						"entryId": "so",
+						"headword": "so",
+						"pronunciation": {
+							"display": "zoh",
+							"ipaUK": "/zoː/",
+							"ipaUS": "/zoː/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adverb",
+								"grammarType": "Adverb",
+								"headwordLine": "so",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Adverb: in diesem Maße (verstärkt ein Adjektiv)",
+										"examples": [
+											"Der Film war so spannend!"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Film war so spannend!",
+							"ok": true
+						},
+						{
+							"answer": "Der Film war so spannendes!",
+							"ok": false
+						},
+						{
+							"answer": "Der Film so spannend war!",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

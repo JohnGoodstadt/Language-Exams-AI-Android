@@ -1,0 +1,550 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizLeisure2-de",
+	"title": "2. Leisure",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Ausstellung",
+					"summary": "Schau von Kunst/Objekten",
+					"explain": {
+						"entryId": "Ausstellung",
+						"headword": "Ausstellung",
+						"pronunciation": {
+							"display": "OWS-shtel-oong",
+							"ipaUK": "/ˈaʊ̯sˌʃtɛlʊŋ/",
+							"ipaUS": "/ˈaʊ̯sˌʃtɛlʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Ausstellung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Schau von Kunst oder Objekten",
+										"examples": [
+											"Die Ausstellung zeigt moderne Bilder."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Ausstellung zeigt moderne Bilder.",
+							"ok": true
+						},
+						{
+							"answer": "Der Ausstellung zeigt moderne Bilder.",
+							"ok": false
+						},
+						{
+							"answer": "Die Ausstellung moderne Bilder zeigt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Film",
+					"summary": "Werk, das man im Kino sieht",
+					"explain": {
+						"entryId": "Film",
+						"headword": "Film",
+						"pronunciation": {
+							"display": "film",
+							"ipaUK": "/fɪlm/",
+							"ipaUS": "/fɪlm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Film",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Kinofilm"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Werk, das man im Kino sieht",
+										"examples": [
+											"Gestern habe ich einen guten Film gesehen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gestern habe ich einen guten Film gesehen.",
+							"ok": true
+						},
+						{
+							"answer": "Gestern habe ich ein gutes Film gesehen.",
+							"ok": false
+						},
+						{
+							"answer": "Gestern ich habe einen guten Film gesehen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Freizeit",
+					"summary": "Zeit ohne Arbeit",
+					"explain": {
+						"entryId": "Freizeit",
+						"headword": "Freizeit",
+						"pronunciation": {
+							"display": "FRY-tsite",
+							"ipaUK": "/ˈfʁaɪ̯ˌtsaɪ̯t/",
+							"ipaUS": "/ˈfʁaɪ̯ˌtsaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Freizeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Zeit ohne Arbeit oder Pflichten",
+										"examples": [
+											"In meiner Freizeit spiele ich Gitarre."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In meiner Freizeit spiele ich Gitarre.",
+							"ok": true
+						},
+						{
+							"answer": "In meinem Freizeit spiele ich Gitarre.",
+							"ok": false
+						},
+						{
+							"answer": "In meiner Freizeit ich spiele Gitarre.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Galerie",
+					"summary": "Raum, in dem Kunst gezeigt wird",
+					"explain": {
+						"entryId": "Galerie",
+						"headword": "Galerie",
+						"pronunciation": {
+							"display": "ga-luh-REE",
+							"ipaUK": "/ɡaləˈʁiː/",
+							"ipaUS": "/ɡaləˈʁiː/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Galerie",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Raum, in dem Kunst gezeigt wird",
+										"examples": [
+											"In der Galerie hängen teure Gemälde."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Galerie hängen teure Gemälde.",
+							"ok": true
+						},
+						{
+							"answer": "In dem Galerie hängen teure Gemälde.",
+							"ok": false
+						},
+						{
+							"answer": "In der Galerie teure Gemälde hängen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Spiel",
+					"summary": "Tätigkeit zum Spaß mit Regeln",
+					"explain": {
+						"entryId": "Spiel",
+						"headword": "Spiel",
+						"pronunciation": {
+							"display": "shpeel",
+							"ipaUK": "/ʃpiːl/",
+							"ipaUS": "/ʃpiːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Spiel",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Tätigkeit zum Spaß mit Regeln",
+										"examples": [
+											"Das Spiel hat allen Spaß gemacht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Spiel hat allen Spaß gemacht.",
+							"ok": true
+						},
+						{
+							"answer": "Der Spiel hat allen Spaß gemacht.",
+							"ok": false
+						},
+						{
+							"answer": "Das Spiel allen Spaß gemacht hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Hobby",
+					"summary": "Lieblingsbeschäftigung in der Freizeit",
+					"explain": {
+						"entryId": "Hobby",
+						"headword": "Hobby",
+						"pronunciation": {
+							"display": "HO-bi",
+							"ipaUK": "/ˈhɔbi/",
+							"ipaUS": "/ˈhɔbi/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Hobby",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Lieblingsbeschäftigung in der Freizeit",
+										"examples": [
+											"Fotografieren ist mein liebstes Hobby."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Fotografieren ist mein liebstes Hobby.",
+							"ok": true
+						},
+						{
+							"answer": "Fotografieren ist mein liebster Hobby.",
+							"ok": false
+						},
+						{
+							"answer": "Fotografieren mein liebstes Hobby ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Erholung",
+					"summary": "Ruhe und Entspannung",
+					"explain": {
+						"entryId": "Erholung",
+						"headword": "Erholung",
+						"pronunciation": {
+							"display": "er-HOH-loong",
+							"ipaUK": "/ɛɐ̯ˈhoːlʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈhoːlʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erholung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Ruhe und Entspannung nach der Arbeit",
+										"examples": [
+											"Nach dem Stress brauche ich Erholung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Nach dem Stress brauche ich Erholung.",
+							"ok": true
+						},
+						{
+							"answer": "Nach dem Stress brauche ich Erholungen.",
+							"ok": false
+						},
+						{
+							"answer": "Nach dem Stress ich brauche Erholung.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Museum",
+					"summary": "Ort mit Kunst und Geschichte",
+					"explain": {
+						"entryId": "Museum",
+						"headword": "Museum",
+						"pronunciation": {
+							"display": "moo-ZAY-oom",
+							"ipaUK": "/muˈzeːʊm/",
+							"ipaUS": "/muˈzeːʊm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Museum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Ort, an dem man Kunst und Geschichte sieht",
+										"examples": [
+											"Am Sonntag besuchen wir ein Museum."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Sonntag besuchen wir ein Museum.",
+							"ok": true
+						},
+						{
+							"answer": "Am Sonntag besuchen wir einen Museum.",
+							"ok": false
+						},
+						{
+							"answer": "Am Sonntag wir besuchen ein Museum.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "Aufführung",
+					"summary": "Vorstellung auf einer Bühne",
+					"explain": {
+						"entryId": "Aufführung",
+						"headword": "Aufführung",
+						"pronunciation": {
+							"display": "OWF-fü-roong",
+							"ipaUK": "/ˈaʊ̯fˌfyːʁʊŋ/",
+							"ipaUS": "/ˈaʊ̯fˌfyːʁʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Aufführung",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Vorstellung"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Vorstellung auf einer Bühne",
+										"examples": [
+											"Die Aufführung dauerte zwei Stunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Aufführung dauerte zwei Stunden.",
+							"ok": true
+						},
+						{
+							"answer": "Der Aufführung dauerte zwei Stunden.",
+							"ok": false
+						},
+						{
+							"answer": "Die Aufführung zwei Stunden dauerte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "Theaterstück",
+					"summary": "Stück, das im Theater gespielt wird",
+					"explain": {
+						"entryId": "Theaterstück",
+						"headword": "Theaterstück",
+						"pronunciation": {
+							"display": "te-AH-tuh-shtük",
+							"ipaUK": "/teˈaːtɐˌʃtʏk/",
+							"ipaUS": "/teˈaːtɐˌʃtʏk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Theaterstück",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Stück, das im Theater gespielt wird",
+										"examples": [
+											"Das Theaterstück hat mich sehr berührt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Theaterstück hat mich sehr berührt.",
+							"ok": true
+						},
+						{
+							"answer": "Der Theaterstück hat mich sehr berührt.",
+							"ok": false
+						},
+						{
+							"answer": "Das Theaterstück mich sehr berührt hat.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

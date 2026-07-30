@@ -1,0 +1,334 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizRelationships3-de",
+	"title": "3. Relationships",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Beziehung",
+					"summary": "Verbindung zwischen zwei Menschen",
+					"explain": {
+						"entryId": "Beziehung",
+						"headword": "Beziehung",
+						"pronunciation": {
+							"display": "buh-TSEE-oong",
+							"ipaUK": "/bəˈtsiːʊŋ/",
+							"ipaUS": "/bəˈtsiːʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Beziehung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Verbindung zwischen zwei Menschen (z. B. Partner)",
+										"examples": [
+											"Die beiden führen eine glückliche Beziehung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die beiden führen eine glückliche Beziehung.",
+							"ok": true
+						},
+						{
+							"answer": "Die beiden führen einen glücklichen Beziehung.",
+							"ok": false
+						},
+						{
+							"answer": "Die beiden eine glückliche Beziehung führen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Romanze",
+					"summary": "romantische Liebesbeziehung",
+					"explain": {
+						"entryId": "Romanze",
+						"headword": "Romanze",
+						"pronunciation": {
+							"display": "ro-MAN-tsuh",
+							"ipaUK": "/ʁoˈmantsə/",
+							"ipaUS": "/ʁoˈmantsə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Romanze",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine romantische Liebesbeziehung",
+										"examples": [
+											"Im Urlaub begann eine kurze Romanze."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Urlaub begann eine kurze Romanze.",
+							"ok": true
+						},
+						{
+							"answer": "Im Urlaub begann einen kurzen Romanze.",
+							"ok": false
+						},
+						{
+							"answer": "Im Urlaub eine kurze Romanze begann.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "soziale Medien",
+					"summary": "Plattformen wie Instagram",
+					"explain": {
+						"entryId": "soziale Medien",
+						"headword": "soziale Medien",
+						"pronunciation": {
+							"display": "zo-tsi-AH-luh MAY-di-en",
+							"ipaUK": "/zoˈtsi̯aːlə ˈmeːdi̯ən/",
+							"ipaUS": "/zoˈtsi̯aːlə ˈmeːdi̯ən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen (Plural)",
+								"grammarType": "Nomen (Plural)",
+								"headwordLine": "soziale Medien",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "Plattformen im Internet zum Teilen und Chatten",
+										"examples": [
+											"Viele Jugendliche nutzen soziale Medien."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Viele Jugendliche nutzen soziale Medien.",
+							"ok": true
+						},
+						{
+							"answer": "Viele Jugendliche nutzen sozialen Medien.",
+							"ok": false
+						},
+						{
+							"answer": "Viele Jugendliche soziale Medien nutzen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Rückhalt",
+					"summary": "emotionale Unterstützung",
+					"explain": {
+						"entryId": "Rückhalt",
+						"headword": "Rückhalt",
+						"pronunciation": {
+							"display": "RÜK-halt",
+							"ipaUK": "/ˈʁʏkˌhalt/",
+							"ipaUS": "/ˈʁʏkˌhalt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rückhalt",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die emotionale Unterstützung durch andere",
+										"examples": [
+											"In der Familie findet sie großen Rückhalt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "In der Familie findet sie großen Rückhalt.",
+							"ok": true
+						},
+						{
+							"answer": "In der Familie findet sie großes Rückhalt.",
+							"ok": false
+						},
+						{
+							"answer": "In der Familie sie findet großen Rückhalt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Band",
+					"summary": "enge gefühlsmäßige Verbindung",
+					"explain": {
+						"entryId": "Band",
+						"headword": "Band",
+						"pronunciation": {
+							"display": "bant",
+							"ipaUK": "/bant/",
+							"ipaUS": "/bant/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Band",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine enge, gefühlsmäßige Verbindung",
+										"examples": [
+											"Ein starkes Band verbindet die Geschwister."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ein starkes Band verbindet die Geschwister.",
+							"ok": true
+						},
+						{
+							"answer": "Ein starker Band verbindet die Geschwister.",
+							"ok": false
+						},
+						{
+							"answer": "Ein starkes Band die Geschwister verbindet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Vertrauen",
+					"summary": "Glaube an die Zuverlässigkeit",
+					"explain": {
+						"entryId": "Vertrauen",
+						"headword": "Vertrauen",
+						"pronunciation": {
+							"display": "fer-TROW-en",
+							"ipaUK": "/fɛɐ̯ˈtʁaʊ̯ən/",
+							"ipaUS": "/fɛɐ̯ˈtʁaʊ̯ən/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vertrauen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der feste Glaube an die Zuverlässigkeit von jemandem",
+										"examples": [
+											"Vertrauen muss man sich erst verdienen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Vertrauen muss man sich erst verdienen.",
+							"ok": true
+						},
+						{
+							"answer": "Vertrauens muss man sich erst verdienen.",
+							"ok": false
+						},
+						{
+							"answer": "Vertrauen man muss sich erst verdienen.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

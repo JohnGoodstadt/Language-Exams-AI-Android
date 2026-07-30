@@ -1,0 +1,495 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizShopping3-de",
+	"title": "3. Shopping",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Rückerstattung",
+					"summary": "Zurückzahlen von Geld",
+					"explain": {
+						"entryId": "Rückerstattung",
+						"headword": "Rückerstattung",
+						"pronunciation": {
+							"display": "RÜK-er-shtat-oong",
+							"ipaUK": "/ˈʁʏkʔɛɐ̯ˌʃtatʊŋ/",
+							"ipaUS": "/ˈʁʏkʔɛɐ̯ˌʃtatʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rückerstattung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Zurückzahlen von Geld",
+										"examples": [
+											"Ich bitte um eine volle Rückerstattung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bitte um eine volle Rückerstattung.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bitte um einen vollen Rückerstattung.",
+							"ok": false
+						},
+						{
+							"answer": "Ich um eine volle Rückerstattung bitte.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Erstattung",
+					"summary": "Rückzahlung von Geld",
+					"explain": {
+						"entryId": "Erstattung",
+						"headword": "Erstattung",
+						"pronunciation": {
+							"display": "er-SHTAT-oong",
+							"ipaUK": "/ɛɐ̯ˈʃtatʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈʃtatʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erstattung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "die Rückzahlung von ausgegebenem Geld",
+										"examples": [
+											"Die Erstattung der Kosten dauert zwei Wochen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Erstattung der Kosten dauert zwei Wochen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Erstattung der Kosten dauert zwei Wochen.",
+							"ok": false
+						},
+						{
+							"answer": "Die Erstattung der Kosten zwei Wochen dauert.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Rückgabe",
+					"summary": "Zurückbringen einer Ware",
+					"explain": {
+						"entryId": "Rückgabe",
+						"headword": "Rückgabe",
+						"pronunciation": {
+							"display": "RÜK-gah-buh",
+							"ipaUK": "/ˈʁʏkˌɡaːbə/",
+							"ipaUS": "/ˈʁʏkˌɡaːbə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rückgabe",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Zurückbringen einer gekauften Ware",
+										"examples": [
+											"Die Rückgabe ist innerhalb von 14 Tagen möglich."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Rückgabe ist innerhalb von 14 Tagen möglich.",
+							"ok": true
+						},
+						{
+							"answer": "Der Rückgabe ist innerhalb von 14 Tagen möglich.",
+							"ok": false
+						},
+						{
+							"answer": "Die Rückgabe innerhalb von 14 Tagen möglich ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Schlussverkauf",
+					"summary": "Verkauf am Saisonende, billig",
+					"explain": {
+						"entryId": "Schlussverkauf",
+						"headword": "Schlussverkauf",
+						"pronunciation": {
+							"display": "SHLOOS-fer-kowf",
+							"ipaUK": "/ˈʃlʊsfɛɐ̯ˌkaʊ̯f/",
+							"ipaUS": "/ˈʃlʊsfɛɐ̯ˌkaʊ̯f/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Schlussverkauf",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "der Verkauf am Saisonende zu niedrigen Preisen",
+										"examples": [
+											"Im Schlussverkauf kaufte sie einen günstigen Mantel."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Schlussverkauf kaufte sie einen günstigen Mantel.",
+							"ok": true
+						},
+						{
+							"answer": "In der Schlussverkauf kaufte sie einen günstigen Mantel.",
+							"ok": false
+						},
+						{
+							"answer": "Im Schlussverkauf sie kaufte einen günstigen Mantel.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Versand",
+					"summary": "Verschicken von Waren",
+					"explain": {
+						"entryId": "Versand",
+						"headword": "Versand",
+						"pronunciation": {
+							"display": "fer-ZANT",
+							"ipaUK": "/fɛɐ̯ˈzant/",
+							"ipaUS": "/fɛɐ̯ˈzant/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Versand",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verschicken von Waren",
+										"examples": [
+											"Der Versand ins Ausland ist teuer."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Versand ins Ausland ist teuer.",
+							"ok": true
+						},
+						{
+							"answer": "Die Versand ins Ausland ist teuer.",
+							"ok": false
+						},
+						{
+							"answer": "Der Versand ins Ausland teuer ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Einkäufer",
+					"summary": "Person, die einkauft",
+					"explain": {
+						"entryId": "Einkäufer",
+						"headword": "Einkäufer",
+						"pronunciation": {
+							"display": "INE-koy-fuh",
+							"ipaUK": "/ˈaɪ̯nˌkɔɪ̯fɐ/",
+							"ipaUS": "/ˈaɪ̯nˌkɔɪ̯fɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einkäufer",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Einkäuferin"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Person, die einkaufen geht",
+										"examples": [
+											"Der Einkäufer sucht die besten Produkte aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Einkäufer sucht die besten Produkte aus.",
+							"ok": true
+						},
+						{
+							"answer": "Die Einkäufer sucht die besten Produkte aus.",
+							"ok": false
+						},
+						{
+							"answer": "Der Einkäufer die besten Produkte aussucht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Shoppingcenter",
+					"summary": "Zentrum mit vielen Läden",
+					"explain": {
+						"entryId": "Shoppingcenter",
+						"headword": "Shoppingcenter",
+						"pronunciation": {
+							"display": "SHOP-ping-sen-tuh",
+							"ipaUK": "/ˈʃɔpɪŋˌsɛntɐ/",
+							"ipaUS": "/ˈʃɔpɪŋˌsɛntɐ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Shoppingcenter",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Zentrum mit vielen Läden",
+										"examples": [
+											"Das Shoppingcenter hat sonntags geschlossen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Shoppingcenter hat sonntags geschlossen.",
+							"ok": true
+						},
+						{
+							"answer": "Der Shoppingcenter hat sonntags geschlossen.",
+							"ok": false
+						},
+						{
+							"answer": "Das Shoppingcenter sonntags geschlossen hat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Einkaufszentrum",
+					"summary": "großes überdachtes Zentrum",
+					"explain": {
+						"entryId": "Einkaufszentrum",
+						"headword": "Einkaufszentrum",
+						"pronunciation": {
+							"display": "INE-kowfs-tsen-troom",
+							"ipaUK": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/",
+							"ipaUS": "/ˈaɪ̯nkaʊ̯fsˌtsɛntʁʊm/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Einkaufszentrum",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein großes überdachtes Einkaufszentrum",
+										"examples": [
+											"Am Rand der Stadt entsteht ein neues Einkaufszentrum."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Rand der Stadt entsteht ein neues Einkaufszentrum.",
+							"ok": true
+						},
+						{
+							"answer": "Am Rand der Stadt entsteht ein neuer Einkaufszentrum.",
+							"ok": false
+						},
+						{
+							"answer": "Am Rand der Stadt ein neues Einkaufszentrum entsteht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "tauschen",
+					"summary": "eine Sache gegen eine andere geben",
+					"explain": {
+						"entryId": "tauschen",
+						"headword": "tauschen",
+						"pronunciation": {
+							"display": "TOW-shn",
+							"ipaUK": "/ˈtaʊ̯ʃn̩/",
+							"ipaUS": "/ˈtaʊ̯ʃn̩/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "tauschen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Sache gegen eine andere geben",
+										"examples": [
+											"Wir tauschen die Bücher untereinander."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir tauschen die Bücher untereinander.",
+							"ok": true
+						},
+						{
+							"answer": "Wir tauscht die Bücher untereinander.",
+							"ok": false
+						},
+						{
+							"answer": "Wir die Bücher untereinander tauschen.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

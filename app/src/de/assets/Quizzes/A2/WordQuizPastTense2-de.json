@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPastTense2-de",
+	"title": "Past Tense",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "geben",
+					"summary": "Perfekt: ich habe gegeben",
+					"explain": {
+						"entryId": "geben",
+						"headword": "geben",
+						"pronunciation": {
+							"display": "GAY-bn",
+							"ipaUK": "/ˈɡeːbn̩/",
+							"ipaUS": "/ˈɡeːbn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "geben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'geben' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Sie hat mir das Buch gegeben."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat mir das Buch gegeben.",
+							"ok": true
+						},
+						{
+							"answer": "Sie ist mir das Buch gegeben.",
+							"ok": false
+						},
+						{
+							"answer": "Sie hat mir das Buch gegebt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "nehmen",
+					"summary": "Perfekt: ich habe genommen",
+					"explain": {
+						"entryId": "nehmen",
+						"headword": "nehmen",
+						"pronunciation": {
+							"display": "NAY-mn",
+							"ipaUK": "/ˈneːmən/",
+							"ipaUS": "/ˈneːmən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "nehmen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'nehmen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe den Bus genommen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe den Bus genommen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin den Bus genommen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe den Bus genehmt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "lesen",
+					"summary": "Perfekt: ich habe gelesen",
+					"explain": {
+						"entryId": "lesen",
+						"headword": "lesen",
+						"pronunciation": {
+							"display": "LAY-zn",
+							"ipaUK": "/ˈleːzn̩/",
+							"ipaUS": "/ˈleːzn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "lesen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'lesen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Er hat das ganze Buch gelesen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er hat das ganze Buch gelesen.",
+							"ok": true
+						},
+						{
+							"answer": "Er ist das ganze Buch gelesen.",
+							"ok": false
+						},
+						{
+							"answer": "Er hat das ganze Buch gelest.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "schreiben",
+					"summary": "Perfekt: ich habe geschrieben",
+					"explain": {
+						"entryId": "schreiben",
+						"headword": "schreiben",
+						"pronunciation": {
+							"display": "SHRY-bn",
+							"ipaUK": "/ˈʃʁaɪ̯bn̩/",
+							"ipaUS": "/ˈʃʁaɪ̯bn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "schreiben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'schreiben' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe einen langen Brief geschrieben."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe einen langen Brief geschrieben.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin einen langen Brief geschrieben.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe einen langen Brief geschreibt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "finden",
+					"summary": "Perfekt: ich habe gefunden",
+					"explain": {
+						"entryId": "finden",
+						"headword": "finden",
+						"pronunciation": {
+							"display": "FIN-dn",
+							"ipaUK": "/ˈfɪndn̩/",
+							"ipaUS": "/ˈfɪndn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "finden",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'finden' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Wir haben den Schlüssel gefunden."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir haben den Schlüssel gefunden.",
+							"ok": true
+						},
+						{
+							"answer": "Wir sind den Schlüssel gefunden.",
+							"ok": false
+						},
+						{
+							"answer": "Wir haben den Schlüssel gefindet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "bleiben",
+					"summary": "Perfekt: ich bin geblieben",
+					"explain": {
+						"entryId": "bleiben",
+						"headword": "bleiben",
+						"pronunciation": {
+							"display": "BLY-bn",
+							"ipaUK": "/ˈblaɪ̯bn̩/",
+							"ipaUS": "/ˈblaɪ̯bn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "bleiben",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'bleiben' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich bin am Wochenende zu Hause geblieben."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich bin am Wochenende zu Hause geblieben.",
+							"ok": true
+						},
+						{
+							"answer": "Ich habe am Wochenende zu Hause geblieben.",
+							"ok": false
+						},
+						{
+							"answer": "Ich bin am Wochenende zu Hause gebleibt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "laufen",
+					"summary": "Perfekt: er ist gelaufen",
+					"explain": {
+						"entryId": "laufen",
+						"headword": "laufen",
+						"pronunciation": {
+							"display": "LOW-fn",
+							"ipaUK": "/ˈlaʊ̯fn̩/",
+							"ipaUS": "/ˈlaʊ̯fn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "laufen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'laufen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Er ist sehr schnell gelaufen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er ist sehr schnell gelaufen.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat sehr schnell gelaufen.",
+							"ok": false
+						},
+						{
+							"answer": "Er ist sehr schnell gelauft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "helfen",
+					"summary": "Perfekt: ich habe geholfen",
+					"explain": {
+						"entryId": "helfen",
+						"headword": "helfen",
+						"pronunciation": {
+							"display": "HEL-fn",
+							"ipaUK": "/ˈhɛlfn̩/",
+							"ipaUS": "/ˈhɛlfn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "helfen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'helfen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Sie hat mir im Garten geholfen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie hat mir im Garten geholfen.",
+							"ok": true
+						},
+						{
+							"answer": "Sie ist mir im Garten geholfen.",
+							"ok": false
+						},
+						{
+							"answer": "Sie hat mir im Garten gehelft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "treffen",
+					"summary": "Perfekt: ich habe getroffen",
+					"explain": {
+						"entryId": "treffen",
+						"headword": "treffen",
+						"pronunciation": {
+							"display": "TREF-fn",
+							"ipaUK": "/ˈtʁɛfn̩/",
+							"ipaUS": "/ˈtʁɛfn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "treffen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'treffen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe gestern einen Freund getroffen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe gestern einen Freund getroffen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin gestern einen Freund getroffen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe gestern einen Freund getrefft.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "bringen",
+					"summary": "Perfekt: ich habe gebracht",
+					"explain": {
+						"entryId": "bringen",
+						"headword": "bringen",
+						"pronunciation": {
+							"display": "BRING-uhn",
+							"ipaUK": "/ˈbʁɪŋən/",
+							"ipaUS": "/ˈbʁɪŋən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "bringen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'bringen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Der Kellner hat uns das Essen gebracht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Kellner hat uns das Essen gebracht.",
+							"ok": true
+						},
+						{
+							"answer": "Der Kellner ist uns das Essen gebracht.",
+							"ok": false
+						},
+						{
+							"answer": "Der Kellner hat uns das Essen gebringt.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizSocial1-de",
+	"title": "Social",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "raten",
+					"summary": "jemandem einen Rat geben",
+					"explain": {
+						"entryId": "raten",
+						"headword": "raten",
+						"pronunciation": {
+							"display": "RAH-tn",
+							"ipaUK": "/ˈʁaːtn̩/",
+							"ipaUS": "/ˈʁaːtn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Dativ)",
+								"headwordLine": "raten",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemandem sagen, was er tun soll",
+										"examples": [
+											"Ich rate dir, mehr zu schlafen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich rate dir, mehr zu schlafen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich rate dich, mehr zu schlafen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir rate, mehr zu schlafen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "zustimmen",
+					"summary": "dieselbe Meinung haben",
+					"explain": {
+						"entryId": "zustimmen",
+						"headword": "zustimmen",
+						"pronunciation": {
+							"display": "TSOO-shtim-mn",
+							"ipaUK": "/ˈtsuːˌʃtɪmən/",
+							"ipaUS": "/ˈtsuːˌʃtɪmən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar, + Dativ)",
+								"headwordLine": "zustimmen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagen, dass man dieselbe Meinung hat",
+										"examples": [
+											"Ich stimme deinem Vorschlag zu."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich stimme deinem Vorschlag zu.",
+							"ok": true
+						},
+						{
+							"answer": "Ich stimme deinen Vorschlag zu.",
+							"ok": false
+						},
+						{
+							"answer": "Ich stimme zu deinem Vorschlag.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "sich entschuldigen",
+					"summary": "sagen, dass es einem leidtut",
+					"explain": {
+						"entryId": "sich entschuldigen",
+						"headword": "sich entschuldigen",
+						"pronunciation": {
+							"display": "ent-SHOOL-di-gn",
+							"ipaUK": "/ɛntˈʃʊldɪɡn̩/",
+							"ipaUS": "/ɛntˈʃʊldɪɡn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (reflexiv)",
+								"headwordLine": "sich entschuldigen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagen, dass einem etwas leidtut",
+										"examples": [
+											"Ich entschuldige mich für meinen Fehler."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich entschuldige mich für meinen Fehler.",
+							"ok": true
+						},
+						{
+							"answer": "Ich entschuldige mir für meinen Fehler.",
+							"ok": false
+						},
+						{
+							"answer": "Ich mich entschuldige für meinen Fehler.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "fragen",
+					"summary": "eine Frage stellen",
+					"explain": {
+						"entryId": "fragen",
+						"headword": "fragen",
+						"pronunciation": {
+							"display": "FRAH-gn",
+							"ipaUK": "/ˈfʁaːɡn̩/",
+							"ipaUS": "/ˈfʁaːɡn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "fragen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Frage stellen",
+										"examples": [
+											"Darf ich dich etwas fragen?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Darf ich dich etwas fragen?",
+							"ok": true
+						},
+						{
+							"answer": "Darf ich dir etwas fragen?",
+							"ok": false
+						},
+						{
+							"answer": "Darf ich dich etwas frage?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "ein Kompliment machen",
+					"summary": "jemandem etwas Nettes sagen",
+					"explain": {
+						"entryId": "ein Kompliment machen",
+						"headword": "ein Kompliment machen",
+						"pronunciation": {
+							"display": "kom-pli-MENT MA-khn",
+							"ipaUK": "/ˌkɔmpliˈmɛnt ˈmaxn̩/",
+							"ipaUS": "/ˌkɔmpliˈmɛnt ˈmaxn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verbphrase",
+								"grammarType": "Verbphrase",
+								"headwordLine": "ein Kompliment machen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemandem etwas Nettes sagen",
+										"examples": [
+											"Er macht ihr ein nettes Kompliment."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er macht ihr ein nettes Kompliment.",
+							"ok": true
+						},
+						{
+							"answer": "Er macht ihr einen netten Kompliment.",
+							"ok": false
+						},
+						{
+							"answer": "Er ihr ein nettes Kompliment macht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "gratulieren",
+					"summary": "jemandem Glück wünschen",
+					"explain": {
+						"entryId": "gratulieren",
+						"headword": "gratulieren",
+						"pronunciation": {
+							"display": "gra-too-LEE-ruhn",
+							"ipaUK": "/ɡʁatuˈliːʁən/",
+							"ipaUS": "/ɡʁatuˈliːʁən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Dativ)",
+								"headwordLine": "gratulieren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemandem zu etwas Glück wünschen",
+										"examples": [
+											"Ich gratuliere dir zum Geburtstag."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich gratuliere dir zum Geburtstag.",
+							"ok": true
+						},
+						{
+							"answer": "Ich gratuliere dich zum Geburtstag.",
+							"ok": false
+						},
+						{
+							"answer": "Ich dir gratuliere zum Geburtstag.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "widersprechen",
+					"summary": "anderer Meinung sein",
+					"explain": {
+						"entryId": "widersprechen",
+						"headword": "widersprechen",
+						"pronunciation": {
+							"display": "vee-duh-SHPRE-khn",
+							"ipaUK": "/viːdɐˈʃpʁɛçn̩/",
+							"ipaUS": "/viːdɐˈʃpʁɛçn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (+ Dativ)",
+								"headwordLine": "widersprechen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "sagen, dass man anderer Meinung ist",
+										"examples": [
+											"Da muss ich dir leider widersprechen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Da muss ich dir leider widersprechen.",
+							"ok": true
+						},
+						{
+							"answer": "Da muss ich dich leider widersprechen.",
+							"ok": false
+						},
+						{
+							"answer": "Da ich muss dir leider widersprechen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "begrüßen",
+					"summary": "jemanden willkommen heißen",
+					"explain": {
+						"entryId": "begrüßen",
+						"headword": "begrüßen",
+						"pronunciation": {
+							"display": "buh-GRÜ-sn",
+							"ipaUK": "/bəˈɡʁyːsn̩/",
+							"ipaUS": "/bəˈɡʁyːsn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb",
+								"headwordLine": "begrüßen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemanden freundlich willkommen heißen",
+										"examples": [
+											"Der Gastgeber begrüßt seine Gäste."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Der Gastgeber begrüßt seine Gäste.",
+							"ok": true
+						},
+						{
+							"answer": "Der Gastgeber begrüßen seine Gäste.",
+							"ok": false
+						},
+						{
+							"answer": "Der Gastgeber seine Gäste begrüßt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "vorstellen",
+					"summary": "jemandes Namen bekannt machen",
+					"explain": {
+						"entryId": "vorstellen",
+						"headword": "vorstellen",
+						"pronunciation": {
+							"display": "FOR-shtel-ln",
+							"ipaUK": "/ˈfoːɐ̯ˌʃtɛlən/",
+							"ipaUS": "/ˈfoːɐ̯ˌʃtɛlən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "vorstellen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemandes Namen anderen sagen",
+										"examples": [
+											"Darf ich dir meinen Freund vorstellen?"
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Darf ich dir meinen Freund vorstellen?",
+							"ok": true
+						},
+						{
+							"answer": "Darf ich dir meinen Freund vorstelle?",
+							"ok": false
+						},
+						{
+							"answer": "Darf ich dir vorstellen meinen Freund?",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "einladen",
+					"summary": "jemanden bitten zu kommen",
+					"explain": {
+						"entryId": "einladen",
+						"headword": "einladen",
+						"pronunciation": {
+							"display": "INE-lah-dn",
+							"ipaUK": "/ˈaɪ̯nˌlaːdn̩/",
+							"ipaUS": "/ˈaɪ̯nˌlaːdn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb (trennbar)",
+								"grammarType": "Verb (trennbar)",
+								"headwordLine": "einladen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "jemanden bitten, zu kommen",
+										"examples": [
+											"Ich lade dich zu meiner Party ein."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich lade dich zu meiner Party ein.",
+							"ok": true
+						},
+						{
+							"answer": "Ich lade dir zu meiner Party ein.",
+							"ok": false
+						},
+						{
+							"answer": "Ich lade ein dich zu meiner Party.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

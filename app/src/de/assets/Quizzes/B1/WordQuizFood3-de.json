@@ -1,0 +1,550 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizFood3-de",
+	"title": "3. Food",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "Rezept",
+					"summary": "Anleitung zum Kochen",
+					"explain": {
+						"entryId": "Rezept",
+						"headword": "Rezept",
+						"pronunciation": {
+							"display": "re-TSEPT",
+							"ipaUK": "/ʁeˈtsɛpt/",
+							"ipaUS": "/ʁeˈtsɛpt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Rezept",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Anleitung zum Kochen eines Gerichts",
+										"examples": [
+											"Ich probiere heute ein neues Rezept aus."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich probiere heute ein neues Rezept aus.",
+							"ok": true
+						},
+						{
+							"answer": "Ich probiere heute einen neuen Rezept aus.",
+							"ok": false
+						},
+						{
+							"answer": "Ich heute ein neues Rezept ausprobiere.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "Erfrischung",
+					"summary": "Getränk/Snack, der erfrischt",
+					"explain": {
+						"entryId": "Erfrischung",
+						"headword": "Erfrischung",
+						"pronunciation": {
+							"display": "er-FRISH-oong",
+							"ipaUK": "/ɛɐ̯ˈfʁɪʃʊŋ/",
+							"ipaUS": "/ɛɐ̯ˈfʁɪʃʊŋ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Erfrischung",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein Getränk oder Snack, der erfrischt",
+										"examples": [
+											"Im Sommer ist Eis eine willkommene Erfrischung."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Sommer ist Eis eine willkommene Erfrischung.",
+							"ok": true
+						},
+						{
+							"answer": "Im Sommer ist Eis ein willkommener Erfrischung.",
+							"ok": false
+						},
+						{
+							"answer": "Im Sommer Eis eine willkommene Erfrischung ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "Auswahl",
+					"summary": "Menge zum Auswählen",
+					"explain": {
+						"entryId": "Auswahl",
+						"headword": "Auswahl",
+						"pronunciation": {
+							"display": "OWS-vahl",
+							"ipaUK": "/ˈaʊ̯sˌvaːl/",
+							"ipaUS": "/ˈaʊ̯sˌvaːl/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Auswahl",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine Menge Dinge, aus denen man wählen kann",
+										"examples": [
+											"Das Restaurant bietet eine große Auswahl."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Das Restaurant bietet eine große Auswahl.",
+							"ok": true
+						},
+						{
+							"answer": "Das Restaurant bietet einen großen Auswahl.",
+							"ok": false
+						},
+						{
+							"answer": "Das Restaurant eine große Auswahl bietet.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "Snack",
+					"summary": "kleine Mahlzeit zwischendurch",
+					"explain": {
+						"entryId": "Snack",
+						"headword": "Snack",
+						"pronunciation": {
+							"display": "snek",
+							"ipaUK": "/snɛk/",
+							"ipaUS": "/snɛk/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Snack",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Imbiss"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine kleine Mahlzeit zwischendurch",
+										"examples": [
+											"Am Nachmittag esse ich einen kleinen Snack."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Nachmittag esse ich einen kleinen Snack.",
+							"ok": true
+						},
+						{
+							"answer": "Am Nachmittag esse ich ein kleines Snack.",
+							"ok": false
+						},
+						{
+							"answer": "Am Nachmittag ich esse einen kleinen Snack.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "Spezialität",
+					"summary": "typisches, besonderes Gericht",
+					"explain": {
+						"entryId": "Spezialität",
+						"headword": "Spezialität",
+						"pronunciation": {
+							"display": "shpe-tsi-a-li-TAYT",
+							"ipaUK": "/ʃpetsi̯aliˈtɛːt/",
+							"ipaUS": "/ʃpetsi̯aliˈtɛːt/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Spezialität",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ein typisches, besonderes Gericht",
+										"examples": [
+											"Die Spezialität des Hauses ist Fisch."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Spezialität des Hauses ist Fisch.",
+							"ok": true
+						},
+						{
+							"answer": "Der Spezialität des Hauses ist Fisch.",
+							"ok": false
+						},
+						{
+							"answer": "Die Spezialität des Hauses Fisch ist.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "Vorspeise",
+					"summary": "erstes Gericht (Starter)",
+					"explain": {
+						"entryId": "Vorspeise",
+						"headword": "Vorspeise",
+						"pronunciation": {
+							"display": "FOR-shpy-zuh",
+							"ipaUK": "/ˈfoːɐ̯ˌʃpaɪ̯zə/",
+							"ipaUS": "/ˈfoːɐ̯ˌʃpaɪ̯zə/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Vorspeise",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das erste Gericht einer Mahlzeit (Starter)",
+										"examples": [
+											"Als Vorspeise wähle ich den Salat."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Als Vorspeise wähle ich den Salat.",
+							"ok": true
+						},
+						{
+							"answer": "Als Vorspeise wähle ich das Salat.",
+							"ok": false
+						},
+						{
+							"answer": "Als Vorspeise ich wähle den Salat.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "Süßigkeit",
+					"summary": "etwas Süßes (Bonbon, Schokolade)",
+					"explain": {
+						"entryId": "Süßigkeit",
+						"headword": "Süßigkeit",
+						"pronunciation": {
+							"display": "ZÜ-sikh-kite",
+							"ipaUK": "/ˈzyːsɪçkaɪ̯t/",
+							"ipaUS": "/ˈzyːsɪçkaɪ̯t/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Süßigkeit",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "etwas Süßes wie Bonbons oder Schokolade",
+										"examples": [
+											"Kinder essen gern eine Süßigkeit."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Kinder essen gern eine Süßigkeit.",
+							"ok": true
+						},
+						{
+							"answer": "Kinder essen gern einen Süßigkeit.",
+							"ok": false
+						},
+						{
+							"answer": "Kinder gern eine Süßigkeit essen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "Leckerei",
+					"summary": "besondere Leckerei",
+					"explain": {
+						"entryId": "Leckerei",
+						"headword": "Leckerei",
+						"pronunciation": {
+							"display": "lek-uh-RYE",
+							"ipaUK": "/lɛkəˈʁaɪ̯/",
+							"ipaUS": "/lɛkəˈʁaɪ̯/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Nomen",
+								"grammarType": "Nomen",
+								"headwordLine": "Leckerei",
+								"inflectionsLine": null,
+								"synonyms": [
+									"Leckerbissen"
+								],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "eine besondere Leckerei zum Genießen",
+										"examples": [
+											"Zum Kaffee gab es eine kleine Leckerei."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zum Kaffee gab es eine kleine Leckerei.",
+							"ok": true
+						},
+						{
+							"answer": "Zum Kaffee gab es einen kleinen Leckerei.",
+							"ok": false
+						},
+						{
+							"answer": "Zum Kaffee es gab eine kleine Leckerei.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "vegan",
+					"summary": "Adjektiv: ohne Tierprodukte",
+					"explain": {
+						"entryId": "vegan",
+						"headword": "vegan",
+						"pronunciation": {
+							"display": "ve-GAHN",
+							"ipaUK": "/veˈɡaːn/",
+							"ipaUS": "/veˈɡaːn/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "vegan",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ohne Produkte von Tieren",
+										"examples": [
+											"Sie kocht immer vegan."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Sie kocht immer vegan.",
+							"ok": true
+						},
+						{
+							"answer": "Sie kocht immer veganes.",
+							"ok": false
+						},
+						{
+							"answer": "Sie immer vegan kocht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "vegetarisch",
+					"summary": "Adjektiv: ohne Fleisch und Fisch",
+					"explain": {
+						"entryId": "vegetarisch",
+						"headword": "vegetarisch",
+						"pronunciation": {
+							"display": "ve-ge-TAH-rish",
+							"ipaUK": "/veɡeˈtaːʁɪʃ/",
+							"ipaUS": "/veɡeˈtaːʁɪʃ/"
+						},
+						"labels": [
+							"B1"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Adjektiv",
+								"grammarType": "Adjektiv",
+								"headwordLine": "vegetarisch",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "ohne Fleisch und Fisch",
+										"examples": [
+											"Im Restaurant gibt es viele vegetarische Gerichte."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Im Restaurant gibt es viele vegetarische Gerichte.",
+							"ok": true
+						},
+						{
+							"answer": "Im Restaurant gibt es viele vegetarischen Gerichte.",
+							"ok": false
+						},
+						{
+							"answer": "Im Restaurant es gibt viele vegetarische Gerichte.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}

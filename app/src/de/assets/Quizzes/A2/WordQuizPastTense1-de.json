@@ -1,0 +1,546 @@
+{
+	"fileformat": 13,
+	"location": 0,
+	"sheetname": "WordQuizPastTense1-de",
+	"title": "Past Tense",
+	"updatedDate": 0,
+	"data": [
+		{
+			"title": "Choose the sentence that uses the word correctly.",
+			"description": "Wählen Sie den Satz, der das Wort richtig verwendet.",
+			"sortorder": 1,
+			"sections": [
+				{
+					"title": "",
+					"page": 1,
+					"question": "gehen",
+					"summary": "Perfekt: ich bin gegangen",
+					"explain": {
+						"entryId": "gehen",
+						"headword": "gehen",
+						"pronunciation": {
+							"display": "GAY-uhn",
+							"ipaUK": "/ˈɡeːən/",
+							"ipaUS": "/ˈɡeːən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "gehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'gehen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Gestern bin ich ins Kino gegangen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Gestern bin ich ins Kino gegangen.",
+							"ok": true
+						},
+						{
+							"answer": "Gestern habe ich ins Kino gegangen.",
+							"ok": false
+						},
+						{
+							"answer": "Gestern bin ich ins Kino gegeht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 2,
+					"question": "essen",
+					"summary": "Perfekt: ich habe gegessen",
+					"explain": {
+						"entryId": "essen",
+						"headword": "essen",
+						"pronunciation": {
+							"display": "ES-sn",
+							"ipaUK": "/ˈɛsn̩/",
+							"ipaUS": "/ˈɛsn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "essen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'essen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Zum Mittag habe ich eine Suppe gegessen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Zum Mittag habe ich eine Suppe gegessen.",
+							"ok": true
+						},
+						{
+							"answer": "Zum Mittag bin ich eine Suppe gegessen.",
+							"ok": false
+						},
+						{
+							"answer": "Zum Mittag habe ich eine Suppe geessen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 3,
+					"question": "trinken",
+					"summary": "Perfekt: ich habe getrunken",
+					"explain": {
+						"entryId": "trinken",
+						"headword": "trinken",
+						"pronunciation": {
+							"display": "TRIN-kn",
+							"ipaUK": "/ˈtʁɪŋkn̩/",
+							"ipaUS": "/ˈtʁɪŋkn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "trinken",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'trinken' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Am Morgen habe ich einen Kaffee getrunken."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Am Morgen habe ich einen Kaffee getrunken.",
+							"ok": true
+						},
+						{
+							"answer": "Am Morgen bin ich einen Kaffee getrunken.",
+							"ok": false
+						},
+						{
+							"answer": "Am Morgen habe ich einen Kaffee getrinkt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 4,
+					"question": "kaufen",
+					"summary": "Perfekt: ich habe gekauft",
+					"explain": {
+						"entryId": "kaufen",
+						"headword": "kaufen",
+						"pronunciation": {
+							"display": "KOW-fn",
+							"ipaUK": "/ˈkaʊ̯fn̩/",
+							"ipaUS": "/ˈkaʊ̯fn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "kaufen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'kaufen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe mir ein neues Buch gekauft."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe mir ein neues Buch gekauft.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin mir ein neues Buch gekauft.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe mir ein neues Buch gekaufen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 5,
+					"question": "fahren",
+					"summary": "Perfekt: wir sind gefahren",
+					"explain": {
+						"entryId": "fahren",
+						"headword": "fahren",
+						"pronunciation": {
+							"display": "FAH-run",
+							"ipaUK": "/ˈfaːʁən/",
+							"ipaUS": "/ˈfaːʁən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "fahren",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'fahren' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Wir sind nach Berlin gefahren."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir sind nach Berlin gefahren.",
+							"ok": true
+						},
+						{
+							"answer": "Wir haben nach Berlin gefahren.",
+							"ok": false
+						},
+						{
+							"answer": "Wir sind nach Berlin gefahrt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 6,
+					"question": "kommen",
+					"summary": "Perfekt: er ist gekommen",
+					"explain": {
+						"entryId": "kommen",
+						"headword": "kommen",
+						"pronunciation": {
+							"display": "KOM-mn",
+							"ipaUK": "/ˈkɔmən/",
+							"ipaUS": "/ˈkɔmən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "kommen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'kommen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Er ist heute zu spät gekommen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Er ist heute zu spät gekommen.",
+							"ok": true
+						},
+						{
+							"answer": "Er hat heute zu spät gekommen.",
+							"ok": false
+						},
+						{
+							"answer": "Er ist heute zu spät gekommt.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 7,
+					"question": "machen",
+					"summary": "Perfekt: ich habe gemacht",
+					"explain": {
+						"entryId": "machen",
+						"headword": "machen",
+						"pronunciation": {
+							"display": "MA-khn",
+							"ipaUK": "/ˈmaxn̩/",
+							"ipaUS": "/ˈmaxn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "machen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'machen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe die Hausaufgaben gemacht."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe die Hausaufgaben gemacht.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin die Hausaufgaben gemacht.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe die Hausaufgaben gemachen.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 8,
+					"question": "sehen",
+					"summary": "Perfekt: ich habe gesehen",
+					"explain": {
+						"entryId": "sehen",
+						"headword": "sehen",
+						"pronunciation": {
+							"display": "ZAY-uhn",
+							"ipaUK": "/ˈzeːən/",
+							"ipaUS": "/ˈzeːən/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "sehen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'sehen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Wir haben einen guten Film gesehen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Wir haben einen guten Film gesehen.",
+							"ok": true
+						},
+						{
+							"answer": "Wir sind einen guten Film gesehen.",
+							"ok": false
+						},
+						{
+							"answer": "Wir haben einen guten Film geseht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 9,
+					"question": "sprechen",
+					"summary": "Perfekt: ich habe gesprochen",
+					"explain": {
+						"entryId": "sprechen",
+						"headword": "sprechen",
+						"pronunciation": {
+							"display": "SHPRE-khn",
+							"ipaUK": "/ˈʃpʁɛçn̩/",
+							"ipaUS": "/ˈʃpʁɛçn̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "sprechen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'sprechen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Ich habe mit dem Chef gesprochen."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Ich habe mit dem Chef gesprochen.",
+							"ok": true
+						},
+						{
+							"answer": "Ich bin mit dem Chef gesprochen.",
+							"ok": false
+						},
+						{
+							"answer": "Ich habe mit dem Chef gesprecht.",
+							"ok": false
+						}
+					]
+				},
+				{
+					"title": "",
+					"page": 10,
+					"question": "spielen",
+					"summary": "Perfekt: ich habe gespielt",
+					"explain": {
+						"entryId": "spielen",
+						"headword": "spielen",
+						"pronunciation": {
+							"display": "SHPEE-ln",
+							"ipaUK": "/ˈʃpiːln̩/",
+							"ipaUS": "/ˈʃpiːln̩/"
+						},
+						"labels": [
+							"A2"
+						],
+						"partsOfSpeech": [
+							{
+								"ordinal": "1 of 1",
+								"pos": "Verb",
+								"grammarType": "Verb (Perfekt)",
+								"headwordLine": "spielen",
+								"inflectionsLine": null,
+								"synonyms": [],
+								"senses": [
+									{
+										"senseNumber": 1,
+										"definition": "das Verb 'spielen' in der Vergangenheit (Perfekt)",
+										"examples": [
+											"Die Kinder haben im Park gespielt."
+										]
+									}
+								]
+							}
+						],
+						"version": 1,
+						"updatedDate": 0
+					},
+					"answers": [
+						{
+							"answer": "Die Kinder haben im Park gespielt.",
+							"ok": true
+						},
+						{
+							"answer": "Die Kinder sind im Park gespielt.",
+							"ok": false
+						},
+						{
+							"answer": "Die Kinder haben im Park gespielen.",
+							"ok": false
+						}
+					]
+				}
+			]
+		}
+	]
+}
