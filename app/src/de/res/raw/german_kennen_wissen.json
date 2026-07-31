@@ -1,0 +1,82 @@
+{
+  "fileformat": 2,
+  "location": 0,
+  "sheetname": "german_kennen_wissen",
+  "title": "Kennen oder wissen?",
+  "updatedDate": 0,
+  "description": "Lerne den Unterschied zwischen „kennen“ und „wissen“ und benutze beide Verben richtig.",
+  "data": [
+	{
+	  "title": "Der einfache Unterschied",
+	  "description": "„Kennen“ benutzen wir für Personen, Orte und Dinge. „Wissen“ benutzen wir für Fakten und Informationen.",
+	  "sortorder": 1,
+	  "wordsAndSentences": [
+		{
+		  "word": "kennen, wissen",
+		  "definition": "KENNEN bedeutet: mit einer Person, einem Ort oder einer Sache vertraut sein. WISSEN bedeutet: eine Information haben.",
+		  "sentences": [
+			{ "sentence": "Ich kenne Maria." },
+			{ "sentence": "Wir kennen diese Stadt." },
+			{ "sentence": "Ich weiß die Antwort." },
+			{ "sentence": "Weißt du seinen Namen?" },
+			{ "sentence": "Er weiß, wo der Bahnhof ist." }
+		  ]
+		}
+	  ]
+	},
+	{
+	  "title": "Typische Satzmuster",
+	  "description": "„Kennen“ steht oft mit einer Person oder Sache. Nach „wissen“ kann eine Information oder ein Nebensatz folgen.",
+	  "sortorder": 2,
+	  "wordsAndSentences": [
+		{
+		  "word": "kennen, wissen",
+		  "definition": "Benutze KENNEN mit einem Nomen im Akkusativ. Benutze WISSEN für eine Tatsache oder mit einem Satz, der zum Beispiel mit „dass“ beginnt.",
+		  "sentences": [
+			{ "sentence": "Kennst du meinen Bruder?" },
+			{ "sentence": "Sie kennt den Weg zur Schule." },
+			{ "sentence": "Ich weiß, dass der Laden heute geschlossen ist." },
+			{ "sentence": "Wir wissen die genaue Uhrzeit nicht." },
+			{ "sentence": "Kennst du dieses Buch?" }
+		  ]
+		}
+	  ]
+	},
+	{
+	  "title": "Informationen und Erfahrungen",
+	  "description": "Mit „wissen“ sprechen wir über Informationen. Mit „kennen“ sprechen wir über eigene Erfahrungen mit Personen, Orten oder Dingen.",
+	  "sortorder": 3,
+	  "wordsAndSentences": [
+		{
+		  "word": "kennen, wissen",
+		  "definition": "Benutze WISSEN oft vor „wo“, „wie“, „wann“ oder „warum“. Benutze KENNEN, wenn dir etwas oder jemand bereits vertraut ist.",
+		  "sentences": [
+			{ "sentence": "Ich weiß, wo meine Schlüssel sind." },
+			{ "sentence": "Kennst du ein gutes Restaurant hier?" },
+			{ "sentence": "Sie weiß, wie der Computer funktioniert." },
+			{ "sentence": "Wir kennen dieses Problem schon." },
+			{ "sentence": "Weißt du, wann der Zug kommt?" }
+		  ]
+		}
+	  ]
+	},
+	{
+	  "title": "Kennen und wissen im Vergleich",
+	  "description": "Man kann eine Person oder Sache kennen, ohne alle Informationen darüber zu wissen.",
+	  "sortorder": 4,
+	  "wordsAndSentences": [
+		{
+		  "word": "kennen, wissen",
+		  "definition": "KENNEN beschreibt Vertrautheit. WISSEN beschreibt Kenntnisse über Fakten. Deshalb können beide Verben im gleichen Satz stehen.",
+		  "sentences": [
+			{ "sentence": "Ich kenne ihn, aber ich weiß nicht, wo er wohnt." },
+			{ "sentence": "Sie kennt den Film, weiß aber das Ende nicht." },
+			{ "sentence": "Kennst du die neue Lehrerin, oder weißt du nur ihren Namen?" },
+			{ "sentence": "Wir wissen viel über Berlin, aber wir kennen die Stadt nicht gut." },
+			{ "sentence": "Er kennt die Regeln und weiß, warum sie wichtig sind." }
+		  ]
+		}
+	  ]
+	}
+  ]
+}

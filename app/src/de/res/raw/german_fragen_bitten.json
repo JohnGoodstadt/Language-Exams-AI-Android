@@ -1,0 +1,122 @@
+{
+  "fileformat": 2,
+  "location": 0,
+  "sheetname": "german_fragen_bitten",
+  "title": "Fragen oder bitten?",
+  "updatedDate": 0,
+  "description": "Lerne den Unterschied zwischen „fragen“ und „bitten“ und benutze beide Verben richtig.",
+  "data": [
+    {
+      "title": "Der einfache Unterschied",
+      "description": "Mit „fragen“ möchten wir eine Information bekommen. Mit „bitten“ möchten wir, dass jemand etwas gibt oder tut.",
+      "sortorder": 1,
+      "wordsAndSentences": [
+        {
+          "word": "fragen, bitten",
+          "definition": "FRAGEN bedeutet: eine Frage stellen. BITTEN bedeutet: einen Wunsch oder eine Bitte ausdrücken.",
+          "sentences": [
+            {
+              "sentence": "Ich frage die Lehrerin nach der Antwort."
+            },
+            {
+              "sentence": "Sie fragt, wann der Bus kommt."
+            },
+            {
+              "sentence": "Kann ich dich etwas fragen?"
+            },
+            {
+              "sentence": "Ich bitte meinen Nachbarn um Hilfe."
+            },
+            {
+              "sentence": "Wir bitten die Gäste, leise zu sein."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Typische Satzmuster",
+      "description": "Wir fragen jemanden nach etwas. Wir bitten jemanden um etwas oder bitten jemanden, etwas zu tun.",
+      "sortorder": 2,
+      "wordsAndSentences": [
+        {
+          "word": "fragen, bitten",
+          "definition": "Benutze FRAGEN mit „nach“ für Informationen. Benutze BITTEN mit „um“ für einen Wunsch oder mit einem Infinitivsatz.",
+          "sentences": [
+            {
+              "sentence": "Er fragt die Ärztin nach dem Termin."
+            },
+            {
+              "sentence": "Darf ich Sie nach Ihrem Namen fragen?"
+            },
+            {
+              "sentence": "Sie bittet ihren Chef um einen freien Tag."
+            },
+            {
+              "sentence": "Der Vater bittet das Kind, die Tür zu schließen."
+            },
+            {
+              "sentence": "Wir bitten um eine schnelle Antwort."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fragen und Bitten im Alltag",
+      "description": "Eine Frage sucht eine Antwort. Eine Bitte sucht Hilfe, eine Sache oder eine Handlung.",
+      "sortorder": 3,
+      "wordsAndSentences": [
+        {
+          "word": "fragen, bitten",
+          "definition": "FRAGEN benutzen wir für Auskünfte. BITTEN benutzen wir, wenn eine andere Person etwas für uns tun soll.",
+          "sentences": [
+            {
+              "sentence": "Am Bahnhof frage ich, welcher Zug nach Bonn fährt."
+            },
+            {
+              "sentence": "Er fragt, ob das Museum heute geöffnet ist."
+            },
+            {
+              "sentence": "Sie bittet den Kellner um die Rechnung."
+            },
+            {
+              "sentence": "Meine Mutter bittet mich, Brot zu kaufen."
+            },
+            {
+              "sentence": "Hast du ihn nach dem Weg gefragt?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fragen und bitten im Vergleich",
+      "description": "In derselben Situation können wir zuerst nach einer Information fragen und danach um etwas bitten.",
+      "sortorder": 4,
+      "wordsAndSentences": [
+        {
+          "word": "fragen, bitten",
+          "definition": "Wenn du etwas wissen möchtest, fragst du. Wenn du etwas brauchst oder einen Wunsch hast, bittest du.",
+          "sentences": [
+            {
+              "sentence": "Ich frage ihn nach der Uhrzeit und bitte ihn dann um Hilfe."
+            },
+            {
+              "sentence": "Wenn du etwas wissen willst, musst du fragen."
+            },
+            {
+              "sentence": "Wenn du etwas brauchst, kannst du darum bitten."
+            },
+            {
+              "sentence": "Der Kunde fragt nach dem Preis und bittet um eine Quittung."
+            },
+            {
+              "sentence": "Fragst du nach einer Information, oder bittest du um etwas?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

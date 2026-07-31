@@ -59,8 +59,11 @@ object LanguageConfig {
             "conjugations_to_have" -> "GermanConjugationsToHave"
             "conjugations_to_do" -> "GermanConjugationsToDo"
             "conjugations_to_get" -> "GermanConjugationsToGet"
-            "prepositions_de" -> "GermanPrepositions"
-
+            "german_prepositions" -> "GermanPrepositions"
+            "german_a1_adjectives" -> "GermanA1Adjectives"
+            "german_a2_adjectives" -> "GermanA1Adjectives"
+            "german_b1_adjectives" -> "GermanB1Adjectives"
+            "german_b2_adjectives" -> "GermanB2Adjectives"
 
             // Add any other legacy mappings here
 
@@ -82,7 +85,10 @@ object LanguageConfig {
             "GermanConjugationsToDo" -> "conjugations_to_do"
             "GermanConjugationsToGet" -> "conjugations_to_get"
             "GermanConjugationsToGet" -> "prepositions_de"
-            // Add other mappings here as needed
+            "GermanA1Adjectives" -> "german_a1_adjectives"
+            "GermanA2Adjectives" -> "german_a2_adjectives"
+            "GermanB1Adjectives" -> "german_b1_adjectives"
+            "GermanB2Adjectives" -> "german_b2_adjectives"
             else -> sheet_name // Fallback for other files
         }
     }

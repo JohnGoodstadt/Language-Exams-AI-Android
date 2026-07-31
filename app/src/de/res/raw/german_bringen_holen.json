@@ -1,0 +1,122 @@
+{
+  "fileformat": 2,
+  "location": 0,
+  "sheetname": "german_bringen_holen",
+  "title": "Bringen oder holen?",
+  "updatedDate": 0,
+  "description": "Lerne den Unterschied zwischen „bringen“ und „holen“ und benutze beide Verben richtig.",
+  "data": [
+    {
+      "title": "Der einfache Unterschied",
+      "description": "Mit „bringen“ bewegt man etwas zu einer Person oder an einen Ort. Mit „holen“ geht man zu etwas und kommt damit zurück.",
+      "sortorder": 1,
+      "wordsAndSentences": [
+        {
+          "word": "bringen, holen",
+          "definition": "BRINGEN bedeutet: etwas zu einem Ziel tragen oder fahren. HOLEN bedeutet: zu etwas gehen und es mitnehmen oder zurückbringen.",
+          "sentences": [
+            {
+              "sentence": "Ich bringe dir ein Glas Wasser."
+            },
+            {
+              "sentence": "Bitte bring die Bücher zur Schule."
+            },
+            {
+              "sentence": "Bringst du mich morgen zum Bahnhof?"
+            },
+            {
+              "sentence": "Ich hole die Kinder von der Schule."
+            },
+            {
+              "sentence": "Hol bitte Milch aus dem Kühlschrank."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Typische Satzmuster",
+      "description": "Wir bringen jemandem etwas oder bringen jemanden zu einem Ort. Wir holen etwas aus oder von einem Ort.",
+      "sortorder": 2,
+      "wordsAndSentences": [
+        {
+          "word": "bringen, holen",
+          "definition": "Benutze BRINGEN für die Bewegung zum Ziel. Benutze HOLEN für den Weg zu einer Person oder Sache und wieder zurück.",
+          "sentences": [
+            {
+              "sentence": "Der Kellner bringt uns die Speisekarte."
+            },
+            {
+              "sentence": "Sie bringt ihren Sohn zum Arzt."
+            },
+            {
+              "sentence": "Ich hole meine Jacke aus dem Schlafzimmer."
+            },
+            {
+              "sentence": "Er holt das Paket bei der Post."
+            },
+            {
+              "sentence": "Kannst du die Zeitung aus dem Briefkasten holen?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Bringen und holen im Alltag",
+      "description": "Oft holt man zuerst eine Sache oder Person und bringt sie danach an einen anderen Ort.",
+      "sortorder": 3,
+      "wordsAndSentences": [
+        {
+          "word": "bringen, holen",
+          "definition": "HOLEN beschreibt den Weg zur Sache oder Person. BRINGEN beschreibt den Weg mit ihr zum Ziel.",
+          "sentences": [
+            {
+              "sentence": "Ich hole einen Stuhl und bringe ihn in die Küche."
+            },
+            {
+              "sentence": "Am Abend holt Paul seine Freundin ab und bringt sie nach Hause."
+            },
+            {
+              "sentence": "Die Mutter bringt das Kind morgens zur Schule."
+            },
+            {
+              "sentence": "Nachmittags holt der Vater das Kind von der Schule."
+            },
+            {
+              "sentence": "Wer bringt dich zur Arbeit und wer holt dich ab?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Bringen und holen im Vergleich",
+      "description": "Die Wahl hängt davon ab, ob die Bewegung zum Ziel oder der Weg zum Abholen wichtig ist.",
+      "sortorder": 4,
+      "wordsAndSentences": [
+        {
+          "word": "bringen, holen",
+          "definition": "Bei BRINGEN liegt das Ziel im Mittelpunkt. Bei HOLEN liegt das Abholen am Anfang der Bewegung.",
+          "sentences": [
+            {
+              "sentence": "Hol bitte die Getränke aus dem Keller und bring sie ins Wohnzimmer."
+            },
+            {
+              "sentence": "Der Fahrer holt die Gäste am Hotel ab und bringt sie zum Bahnhof."
+            },
+            {
+              "sentence": "Ich bringe den Brief zur Post, aber ich hole kein Paket."
+            },
+            {
+              "sentence": "Sie holt ihren Laptop aus dem Büro und bringt ihn nach Hause."
+            },
+            {
+              "sentence": "Musst du das Buch zur Schule bringen oder dort holen?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

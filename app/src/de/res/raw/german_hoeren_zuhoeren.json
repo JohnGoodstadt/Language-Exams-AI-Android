@@ -1,0 +1,122 @@
+{
+  "fileformat": 2,
+  "location": 0,
+  "sheetname": "german_hoeren_zuhoeren",
+  "title": "Hören oder zuhören?",
+  "updatedDate": 0,
+  "description": "Lerne den Unterschied zwischen „hören“ und „zuhören“ und benutze beide Verben richtig.",
+  "data": [
+    {
+      "title": "Der einfache Unterschied",
+      "description": "Mit „hören“ nehmen wir einen Ton oder ein Geräusch wahr. Mit „zuhören“ geben wir einer Person bewusst Aufmerksamkeit.",
+      "sortorder": 1,
+      "wordsAndSentences": [
+        {
+          "word": "hören, zuhören",
+          "definition": "HÖREN bedeutet: einen Ton, ein Wort oder ein Geräusch wahrnehmen. ZUHÖREN bedeutet: aufmerksam hören, was jemand sagt.",
+          "sentences": [
+            {
+              "sentence": "Ich höre Musik."
+            },
+            {
+              "sentence": "Wir hören ein lautes Geräusch."
+            },
+            {
+              "sentence": "Hörst du das Telefon?"
+            },
+            {
+              "sentence": "Die Kinder hören der Lehrerin zu."
+            },
+            {
+              "sentence": "Bitte hör mir gut zu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Akkusativ und Dativ",
+      "description": "Nach „hören“ steht das Gehörte oft im Akkusativ. Die Person nach „zuhören“ steht im Dativ.",
+      "sortorder": 2,
+      "wordsAndSentences": [
+        {
+          "word": "hören, zuhören",
+          "definition": "Wir hören ETWAS oder JEMANDEN. Wir hören JEMANDEM zu. „Zuhören“ ist außerdem ein trennbares Verb.",
+          "sentences": [
+            {
+              "sentence": "Sie hört jeden Morgen die Nachrichten."
+            },
+            {
+              "sentence": "Ich höre meinen Namen."
+            },
+            {
+              "sentence": "Der Schüler hört seinem Freund aufmerksam zu."
+            },
+            {
+              "sentence": "Wir hören dem Arzt ruhig zu."
+            },
+            {
+              "sentence": "Warum hörst du mir nicht zu?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Nachrichten und Gespräche",
+      "description": "Mit „hören“ können wir auch eine Information bekommen. Bei einem Gespräch sollten wir der anderen Person zuhören.",
+      "sortorder": 3,
+      "wordsAndSentences": [
+        {
+          "word": "hören, zuhören",
+          "definition": "Benutze HÖREN für Geräusche und erhaltene Informationen. Benutze ZUHÖREN für bewusste Aufmerksamkeit in einem Gespräch.",
+          "sentences": [
+            {
+              "sentence": "Ich habe gehört, dass der Kurs morgen ausfällt."
+            },
+            {
+              "sentence": "Sie hört, wie jemand an die Tür klopft."
+            },
+            {
+              "sentence": "Beim Gespräch hört er seiner Kollegin genau zu."
+            },
+            {
+              "sentence": "Die Eltern hören den Kindern zu, wenn sie ein Problem haben."
+            },
+            {
+              "sentence": "Hast du gehört, was sie gesagt hat?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Hören und zuhören im Vergleich",
+      "description": "Man kann die Worte einer Person hören, ohne ihr wirklich aufmerksam zuzuhören.",
+      "sortorder": 4,
+      "wordsAndSentences": [
+        {
+          "word": "hören, zuhören",
+          "definition": "HÖREN beschreibt, was das Ohr wahrnimmt. ZUHÖREN beschreibt die bewusste Aufmerksamkeit für eine sprechende Person.",
+          "sentences": [
+            {
+              "sentence": "Ich höre deine Worte, aber ich höre dir nicht richtig zu."
+            },
+            {
+              "sentence": "Im Radio hören wir einen Bericht und hören danach einer Expertin zu."
+            },
+            {
+              "sentence": "Wer gut zuhört, versteht andere Menschen besser."
+            },
+            {
+              "sentence": "Sie hörte das Geräusch, während sie ihrem Freund zuhörte."
+            },
+            {
+              "sentence": "Kannst du gleichzeitig Musik hören und mir zuhören?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
